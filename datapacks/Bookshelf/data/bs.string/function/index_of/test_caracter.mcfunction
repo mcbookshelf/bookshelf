@@ -1,0 +1,1 @@
+return run data modify storage bs:ctx _.char set string storage bs:ctx _.str 0 1

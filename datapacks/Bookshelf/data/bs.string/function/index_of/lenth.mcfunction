@@ -1,0 +1,1 @@
+execute store result score #string.lenth bs.data run data get storage bs:data string.current
