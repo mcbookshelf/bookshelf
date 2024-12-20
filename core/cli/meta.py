@@ -39,13 +39,15 @@ def update() -> None:
     if not update_manifest():
         sys.exit(1)
 
-    if env := os.getenv("GITHUB_OUTPUT"):
-        if update_versions():
-            with Path(env).open("a") as output:
-                description = f"MC {", ".join(MINECRAFT_VERSIONS)}"
-                output.write(f"release_tag=v{VERSION}\n")
-                output.write(f"release_name=v{VERSION} - {description}\n")
-        commit_changes()
+    update_versions()
+    commit_changes()
+
+    env = os.getenv("GITHUB_OUTPUT")
+    if env and not version_exists(VERSION):
+        with Path(env).open("a") as output:
+            name = f"MC {", ".join(MINECRAFT_VERSIONS)}"
+            output.write(f"release_tag=v{VERSION}\n")
+            output.write(f"release_name=v{VERSION} - {name}\n")
 
 
 def check_modules() -> bool:
@@ -53,6 +55,7 @@ def check_modules() -> bool:
     with log_step("⏳ Checking module metadata files…") as logger:
         for module in MODULES_DIR.iterdir():
             get_module_meta(module / "module.json", logger)
+
     return not logger.errors
 
 
@@ -61,6 +64,7 @@ def check_features() -> bool:
     with log_step("⏳ Checking feature metadata files…") as logger:
         for feature in MODULES_DIR.rglob("*.json"):
             get_feature_meta(feature, logger)
+
     return not logger.errors
 
 
@@ -73,7 +77,7 @@ def commit_changes() -> None:
 
     for cmd in [
         [git, "add", META_MANIFEST, META_VERSIONS],
-        [git, "commit", "-m", "🔖 Update metadata files"],
+        [git, "commit", "-m", f"🔖 Update metadata for version v{VERSION}"],
         [git, "push"],
     ]:
         subprocess.run(cmd, cwd=ROOT_DIR, check=True)
@@ -85,16 +89,17 @@ def update_manifest() -> bool:
         if manifest := build_manifest(logger):
             with Path(ROOT_DIR / META_MANIFEST).open("w", newline="\n") as file:
                 json.dump(manifest, file, indent=2)
+
     return not logger.errors
 
 
-def update_versions() -> bool:
+def update_versions() -> None:
     """Generate and update the versions file."""
     with log_step("⚙️ Generating versions file…") as logger:
         versions =  json.loads((ROOT_DIR / META_VERSIONS).read_text("utf-8"))
         if any(entry["version"] == VERSION for entry in versions):
             logger.debug("Version %s already exists. No update needed.", VERSION)
-            return False
+            return
 
         with Path(ROOT_DIR / META_VERSIONS).open("w", newline="\n") as file:
             json.dump([{
@@ -102,4 +107,21 @@ def update_versions() -> bool:
                 "minecraft_versions": MINECRAFT_VERSIONS,
                 "manifest": f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/tags/v{VERSION}/{META_MANIFEST}",
             }, *versions], file, indent=2)
-    return True
+
+
+def version_exists(version: str) -> bool:
+    """Check if the specified version tag already exists."""
+    git = shutil.which("git")
+    if not git:
+        error_msg = "The 'git' command was not found."
+        raise FileNotFoundError(error_msg)
+
+    result = subprocess.run(
+        [git, "tag", "--list", f"v{version}"],
+        cwd=ROOT_DIR,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    return bool(result.stdout.strip())

@@ -16,22 +16,24 @@ def beet_default(ctx: Context) -> None:
     ctx.generate("bs.load:exclusive",
         render=Function(source_path="core/load/exclusive.jinja"),
     )
-    ctx.generate(f"bs.load:v{VERSION}/enumerate/bs.load",
-        **version,
-        render=Function(source_path="core/load/enumerate/load.jinja"),
-    )
-    ctx.generate(f"bs.load:v{VERSION}/enumerate/{ctx.data.name}",
+    ctx.generate(f"bs.load:enumerate/{ctx.data.name}/v{VERSION}",
         **version,
         module=ctx.data.name,
-        render=Function(source_path="core/load/enumerate/module.jinja"),
+        render=Function(source_path="core/load/enumerate.jinja"),
     )
-    ctx.generate(f"bs.load:v{VERSION}/validate",
+    ctx.generate(f"bs.load:resolve/{ctx.data.name}",
+        **version,
+        module=ctx.data.name,
+        render=Function(source_path="core/load/resolve.jinja"),
+    )
+    ctx.generate("bs.load:validate",
         **version,
         modules=MODULES,
         render=Function(source_path="core/load/validate.jinja"),
     )
 
     ctx.data[f"bs.load:module/{ctx.data.name}"] = FunctionTag({
+        "replace": True,
         "values": get_load_tag_values(
             ctx.directory.name,
             ctx.meta.get("dependencies", []) or [],
@@ -42,7 +44,8 @@ def beet_default(ctx: Context) -> None:
         "values": [
             "bs.load:cleanup",
             "#bs.load:enumerate",
-            "#bs.load:validate",
+            "#bs.load:resolve",
+            "bs.load:validate",
         ] + [
             {"id": f"#bs.load:module/{mod}", "required": False}
             for mod in MODULES

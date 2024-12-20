@@ -1,0 +1,6 @@
+#!tag "bs.load:resolve"
+
+{% include 'core/header.jinja' %}
+data modify storage bs:data load.modules[{module:"{{ module }}",version:[I;{{ major }},{{ minor }},{{ patch }}]}].enabled set value 1b
+
+execute unless score ${{ module }}.major load.status matches {{ major }} unless score ${{ module }}.minor load.status matches {{ minor }} unless score ${{ module }}.patch load.status matches {{ patch }}.. run say SOFT ERROR

@@ -1,14 +1,2 @@
-#!tag "bs.load:validate"
-
 {% include 'core/header.jinja' %}
-execute unless score $bs.load.major load.status matches {{ major }} run return 0
-execute unless score $bs.load.minor load.status matches {{ minor }} run return 0
-execute unless score $bs.load.patch load.status matches {{ patch }} run return 0
-
-data remove storage bs:ctx _
-{% for module in modules -%}
-execute store result score #bs.load.count load.status if data storage bs:data load[{modules:["{{ module }}"]}].version
-execute if score #bs.load.count load.status matches 2.. run data modify storage bs:ctx _ append value {module:"{{ module }}"}
-execute if score #bs.load.count load.status matches 2.. run data modify storage bs:ctx _[-1].versions append from storage bs:data load[{modules:["{{ module }}"]}].version
-{% endfor -%}
-execute if data storage bs:ctx _ run tellraw @a ["PROBLEM"]
+execute if data storage bs:data load.errors run tellraw @a ["PROBLEM"]

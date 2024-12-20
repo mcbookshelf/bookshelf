@@ -1,6 +1,0 @@
-#!tag "bs.load:enumerate"
-
-{% include 'core/header.jinja' %}
-execute unless score $bs.load.major load.status matches {{ major }}.. run scoreboard players set $bs.load.major load.status {{ major }}
-execute if score $bs.load.major load.status matches {{ major }} unless score $bs.load.minor load.status matches {{ minor }}.. run scoreboard players set $bs.load.minor load.status {{ minor }}
-execute if score $bs.load.major load.status matches {{ major }} if score $bs.load.minor load.status matches {{ minor }} unless score $bs.load.patch load.status matches {{ patch }}.. run scoreboard players set $bs.load.patch load.status {{ patch }}
