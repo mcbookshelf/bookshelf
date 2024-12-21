@@ -16,4 +16,4 @@
 scoreboard players operation #move.nx bs.data -= #move.w bs.data
 scoreboard players remove #move.nx bs.data 10000000
 
-$execute positioned ~-.00000001 ~ ~ run function bs.move:collision/recurse/setup/$(sy) with storage bs:data move
+$function bs.move:collision/recurse/setup/$(sy) with storage bs:data move
