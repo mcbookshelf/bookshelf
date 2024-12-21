@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" alt="Bookshelf" srcset="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/banner-dark.png" width="600px">
-    <img alt="Bookshelf" src="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/banner-light.png" width="600px">
+    <source media="(prefers-color-scheme: dark)" alt="Bookshelf" srcset=".imgs/banner-dark.png" width="600px">
+    <img alt="Bookshelf" src=".imgs/banner-light.png" width="600px">
   </picture>
 </div>
 
@@ -23,15 +23,15 @@ Bookshelf (formerly known as Gunivers Libs) is a modular library datapack design
 <div align="center">
     <a href="https://docs.mcbookshelf.dev/en/latest/quickstart.html">
       <picture>
-        <source alt="quickstart" srcset="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/quickstart.svg" width="140px">
-        <img alt="quickstart" src="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/quickstart.svg" width="140px">
+        <source alt="quickstart" srcset=".imgs/quickstart.svg" width="140px">
+        <img alt="quickstart" src=".imgs/quickstart.svg" width="140px">
       </picture>
     </a>
     &nbsp;
     <a href="https://www.youtube.com/watch?v=E2nKYEvjETk">
       <picture>
-        <source alt="watch-trailer" srcset="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/watch-trailer.svg" width="140px">
-        <img alt="watch-trailer" src="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/watch-trailer.svg" width="140px">
+        <source alt="watch-trailer" srcset=".imgs/watch-trailer.svg" width="140px">
+        <img alt="watch-trailer" src=".imgs/watch-trailer.svg" width="140px">
       </picture>
     </a>
 </div>
@@ -40,33 +40,33 @@ Bookshelf (formerly known as Gunivers Libs) is a modular library datapack design
 
 <div align="center">
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="math" srcset="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/math-dark.svg">
-        <img alt="math" src="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/math.svg">
+        <source media="(prefers-color-scheme: dark)" alt="math" srcset=".imgs/math-dark.svg">
+        <img alt="math" src=".imgs/math.svg">
     </picture>
   &nbsp;
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="move" srcset="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/move-dark.svg">
-        <img alt="move" src="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/move.svg">
+        <source media="(prefers-color-scheme: dark)" alt="move" srcset=".imgs/move-dark.svg">
+        <img alt="move" src=".imgs/move.svg">
     </picture>
   &nbsp;
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="id" srcset="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/id-dark.svg">
-        <img alt="id" src="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/id.svg">
+        <source media="(prefers-color-scheme: dark)" alt="id" srcset=".imgs/id-dark.svg">
+        <img alt="id" src=".imgs/id.svg">
     </picture>
   &nbsp;
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="link" srcset="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/link-dark.svg">
-        <img alt="link" src="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/link.svg">
+        <source media="(prefers-color-scheme: dark)" alt="link" srcset=".imgs/link-dark.svg">
+        <img alt="link" src=".imgs/link.svg">
     </picture>
   &nbsp;
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="block" srcset="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/block-dark.svg">
+        <source media="(prefers-color-scheme: dark)" alt="block" srcset=".imgs/block-dark.svg">
         <img alt="block" src="https://raw.githubusercontent.com/mcbookshelf/.github/main/raw.githubusercontent.com/mcbookshelf/.github/main/images/block.svg">
     </picture>
   &nbsp;
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="health" srcset="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/health-dark.svg">
-        <img alt="health" src="https://raw.githubusercontent.com/mcbookshelf/.github/main/images/health.svg">
+        <source media="(prefers-color-scheme: dark)" alt="health" srcset=".imgs/health-dark.svg">
+        <img alt="health" src=".imgs/health.svg">
     </picture>
 </div>
 

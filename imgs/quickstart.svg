@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fond du bouton avec coins arrondis -->
+    <rect
+        x="0"
+        y="0"
+        width="150"
+        height="40"
+        rx="5"
+        ry="5"
+        fill="#3b6bc4"
+        stroke="#3b6bc4"
+        stroke-width="1"
+    />
+
+    <!-- Texte -->
+    <text
+        x="75"
+        y="26"
+        font-family="Arial"
+        font-size="16"
+        font-weight="bold"
+        fill="#ffffff"
+        text-anchor="middle"
+    >🚀 Quickstart!</text>
+</svg>

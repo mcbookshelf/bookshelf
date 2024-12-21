@@ -29,7 +29,7 @@ Si vous souhaitez contribuer mais que votre anglais n'est pas au point, vous pou
 definitions
 getting-started
 nomenclature
-global-resources
+shared-resources
 tree-structure
 file-format
 ````

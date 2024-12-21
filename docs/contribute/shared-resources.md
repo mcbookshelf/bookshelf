@@ -2,7 +2,7 @@
 html_theme.sidebar_secondary.remove: true
 ---
 
-# 🌐 Global Resources
+# 🌐 Shared Resources
 
 To minimize redundancy and enhance efficiency, the library provides shared objectives, storages, blocks, and entities that modules can leverage.
 
