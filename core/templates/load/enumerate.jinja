@@ -3,7 +3,7 @@
 {% include 'core/header.jinja' %}
 data modify storage bs:data load.modules append value {module:"{{ module }}",version:[I;{{ major }},{{ minor }},{{ patch }}]}
 
-execute if score ${{ module }}.major load.status matches 0.. unless score ${{ module }}.major load.status matches {{ major }} run data modify storage bs:data load.errors append value {module:"{{ module }}",resolvable:0b}
+execute if score ${{ module }}.major load.status matches 0.. unless score ${{ module }}.major load.status matches {{ major }} run scoreboard players add #{{ module }}.errors load.status 1
 
 execute unless score ${{ module }}.major load.status matches {{ major }}.. run scoreboard players set ${{ module }}.major load.status {{ major }}
 execute if score ${{ module }}.major load.status matches {{ major }} unless score ${{ module }}.minor load.status matches {{ minor }}.. run scoreboard players set ${{ module }}.minor load.status {{ minor }}

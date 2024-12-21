@@ -1,2 +1,3 @@
 {% include 'core/header.jinja' %}
-execute if data storage bs:data load.errors run tellraw @a ["PROBLEM"]
+execute unless data storage bs:data load.errors run return 0
+tellraw @a ["PROBLEM"]

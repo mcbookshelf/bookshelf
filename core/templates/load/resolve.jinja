@@ -3,4 +3,12 @@
 {% include 'core/header.jinja' %}
 data modify storage bs:data load.modules[{module:"{{ module }}",version:[I;{{ major }},{{ minor }},{{ patch }}]}].enabled set value 1b
 
-execute unless score ${{ module }}.major load.status matches {{ major }} unless score ${{ module }}.minor load.status matches {{ minor }} unless score ${{ module }}.patch load.status matches {{ patch }}.. run say SOFT ERROR
+execute unless score #{{ module }}.errors load.status matches 1.. \
+  if score ${{ module }}.major load.status matches {{ major }} \
+  if score ${{ module }}.minor load.status matches {{ minor }} \
+  if score ${{ module }}.patch load.status matches {{ patch }} \
+  run return 1
+
+# format error message for modules errors
+# if not #{{ module }}.errors load.status matches 1.. format fix message for modules
+return fail
