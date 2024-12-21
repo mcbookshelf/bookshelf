@@ -2,6 +2,13 @@
 
 ---
 
+## 📦 Bookshelf - 2.2.1
+
+Bookshelf is now based on **Minecraft 1.21.4**.
+
+### 🐛 Fixes
+- **[#288](https://github.com/Gunivers/Bookshelf/issues/288)** Fix `bs.move` collisions.
+
 ## 📦 Bookshelf - 2.2.0
 
 ```{epigraph}
