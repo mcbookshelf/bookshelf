@@ -36,6 +36,7 @@ docs = [
   "sphinx-togglebutton>=0.3.2",
   "sphinx-treeview>=0.1.3",
   "sphinx>=8.1.3",
+  "sphinx-minecraft>=1.0.0",
 ]
 
 [project.scripts]

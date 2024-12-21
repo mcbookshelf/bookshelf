@@ -17,6 +17,8 @@ extensions = [
     "sphinx_design",
     "sphinx_togglebutton",
     "sphinx_treeview",
+    "sphinx_copybutton",
+    "sphinx_minecraft",
 ]
 
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
