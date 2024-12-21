@@ -5,7 +5,7 @@
 groups = ["default", "dev", "docs"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:a700e48ded47f45bcc35c32599f4832f8611a9e3cb9c9be894663d988fe6a640"
+content_hash = "sha256:c7ba730f5188361a5ce523e0b5a3431448c9cf2537b141b2ea16396a2dea0213"
 
 [[metadata.targets]]
 requires_python = "==3.12.*"
@@ -692,6 +692,21 @@ files = [
 ]
 
 [[package]]
+name = "sphinx-minecraft"
+version = "1.0.0"
+requires_python = "==3.12.*"
+summary = "Add different Minecraft-oriented components to Sphinx."
+groups = ["docs"]
+dependencies = [
+    "sphinx",
+    "sphinx-treeview==1.0.0",
+]
+files = [
+    {file = "sphinx_minecraft-1.0.0-py3-none-any.whl", hash = "sha256:5135a738e2426bc4ead1c644067db19fc4860aa96497bc57aa5f86668bcc2b81"},
+    {file = "sphinx_minecraft-1.0.0.tar.gz", hash = "sha256:68a79254ea0d818f231cb5b5c226c6dab9a131fe4b3ce5e4f586765f2316b392"},
+]
+
+[[package]]
 name = "sphinx-togglebutton"
 version = "0.3.2"
 summary = "Toggle page content and collapse admonitions in Sphinx."
@@ -709,7 +724,7 @@ files = [
 
 [[package]]
 name = "sphinx-treeview"
-version = "0.1.3"
+version = "1.0.0"
 requires_python = "==3.12.*"
 summary = "Add support for tree view to Sphinx."
 groups = ["default", "docs"]
@@ -718,8 +733,8 @@ dependencies = [
     "sphinx",
 ]
 files = [
-    {file = "sphinx_treeview-0.1.3-py3-none-any.whl", hash = "sha256:fd8b79ab674c51d0860be9d3bce769727d3fc8a58f57930fd491b73d94ac6834"},
-    {file = "sphinx_treeview-0.1.3.tar.gz", hash = "sha256:ee5f8b242ff96fd513c4a4c8af17a6e877cb4a16b45245c8b335045dfc50c737"},
+    {file = "sphinx_treeview-1.0.0-py3-none-any.whl", hash = "sha256:02cd39bee9e4516c5f080f8d73e3e164d2d6a81597d83a259ee5c61526846a8b"},
+    {file = "sphinx_treeview-1.0.0.tar.gz", hash = "sha256:fca3ab4ab6601cd7a24a10e953698e799e30cd15edb2f33de4357faa21199230"},
 ]
 
 [[package]]

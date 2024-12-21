@@ -1,7 +1,5 @@
 import os
 
-from sphinx_treeview import DecoratorType, imagesToDecoratorIcons
-
 # -- Project information -----------------------------------------------------
 
 project = "Bookshelf"
@@ -14,11 +12,11 @@ author = "Gunivers"
 extensions = [
     "myst_parser",
     "sphinx_copybutton",
+    "sphinx_copybutton",
     "sphinx_design",
+    "sphinx_minecraft",
     "sphinx_togglebutton",
     "sphinx_treeview",
-    "sphinx_copybutton",
-    "sphinx_minecraft",
 ]
 
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
@@ -42,20 +40,6 @@ myst_enable_extensions = [
     "strikethrough",
     "substitution",
     "tasklist",
-]
-
-# -- TreeView options  -------------------------------------------------------
-
-stv_disable_default_decorators = True
-stv_decorators = [
-    DecoratorType(
-        name="dir",
-        icons=imagesToDecoratorIcons("_static/icons/dir", "icons/dir"),
-    ),
-    DecoratorType(
-        name="nbt",
-        icons=imagesToDecoratorIcons("_static/icons/nbt", "icons/nbt"),
-    ),
 ]
 
 # -- Options for HTML output -------------------------------------------------

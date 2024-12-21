@@ -10,7 +10,7 @@ Bookshelf respects a certain tree structure which can be similar to Java package
 
 :::::{grid} 1 2 2 2
 ::::{grid-item}
-:columns: 12 6 7 7
+:columns: 12 6 6 6
 
 **Module Requirements:**
 
@@ -27,31 +27,31 @@ Bookshelf respects a certain tree structure which can be similar to Java package
 
 - A feature is equal to a unique utility, so we should not hesitate to decompose its features in order to make it more readable and to promote reusability.
 
-In addition to these few constraints, the Bookshelf contributor is free to organise their files as they wishes as long as it remains coherent, understandable and it respects the global structure.
+In addition to these few constraints, contributors are free to organize their files as they wish as long as it remains coherent and it respects the global structure.
 ::::
 ::::{grid-item}
-:columns: 12 6 5 5
+:columns: 12 6 6 6
 
 :::{treeview}
-- {dir}`folder` modules
-  - {dir}`folder` \<module\>
-    - {dir}`folder` data/\<module\>
-      - {dir}`folder` function
-        - {dir}`folder` \<feature1\>
-          - {dir}`mcfunction` \<feature1\>.mcfunction
-          - {dir}`mcfunction` ...
-        - {dir}`mcfunction` \<feature2\>.mcfunction
-        - {dir}`mcfunction` \_\_load\_\_.mcfunction
-        - {dir}`mcfunction` \_\_unload\_\_.mcfunction
-      - {dir}`folder` \<predicate|loot_table|...\>
-        - {dir}`json` \<feature1\>.json
-        - {dir}`json` ...
-      - {dir}`folder` tags
-        - {dir}`folder` function
-          - {dir}`json` \<feature1\>.json
-          - {dir}`json` ...
-    - {dir}`json` module.json
-  - {dir}`folder` ...
+- {mcdir}`folder` modules
+  - {mcdir}`folder` \<module\>
+    - {mcdir}`folder` data/\<module\>
+      - {mcdir}`folder` function
+        - {mcdir}`folder` \<feature1\>
+          - {mcdir}`mcfunction` \<feature1\>.mcfunction
+          - {mcdir}`mcfunction` ...
+        - {mcdir}`mcfunction` \<feature2\>.mcfunction
+        - {mcdir}`mcfunction` \_\_load\_\_.mcfunction
+        - {mcdir}`mcfunction` \_\_unload\_\_.mcfunction
+      - {mcdir}`folder` \<predicate|loot_table|...\>
+        - {mcdir}`json` \<feature1\>.json
+        - {mcdir}`json` ...
+      - {mcdir}`folder` tags
+        - {mcdir}`folder` function
+          - {mcdir}`json` \<feature1\>.json
+          - {mcdir}`json` ...
+    - {mcdir}`json` module.json
+  - {mcdir}`folder` ...
 :::
 ::::
 :::::
