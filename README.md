@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" alt="Bookshelf" srcset="imgs/banner-dark.png" width="600px">
-    <img alt="Bookshelf" src="imgs/banner-light.png" width="600px">
+    <source media="(prefers-color-scheme: dark)" alt="Bookshelf" srcset="docs/_imgs/banner-dark.png" width="600px">
+    <img alt="Bookshelf" src="docs/_imgs/banner-light.png" width="600px">
   </picture>
 </div>
 
