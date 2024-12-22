@@ -22,15 +22,15 @@ Bookshelf (formerly known as Gunivers Libs) is a modular library datapack design
 <div align="center">
     <a href="https://docs.mcbookshelf.dev/en/latest/quickstart.html">
       <picture>
-        <source alt="quickstart" srcset="imgs/quickstart.svg" width="140px">
-        <img alt="quickstart" src="imgs/quickstart.svg" width="140px">
+        <source alt="quickstart" srcset="docs/_imgs/readme/quickstart.svg" width="140px">
+        <img alt="quickstart" src="docs/_imgs/readme/quickstart.svg" width="140px">
       </picture>
     </a>
     &nbsp;
     <a href="https://www.youtube.com/watch?v=E2nKYEvjETk">
       <picture>
-        <source alt="watch-trailer" srcset="imgs/watch-trailer.svg" width="140px">
-        <img alt="watch-trailer" src="imgs/watch-trailer.svg" width="140px">
+        <source alt="watch-trailer" srcset="docs/_imgs/readme/watch-trailer.svg" width="140px">
+        <img alt="watch-trailer" src="docs/_imgs/readme/watch-trailer.svg" width="140px">
       </picture>
     </a>
 </div>
@@ -39,33 +39,33 @@ Bookshelf (formerly known as Gunivers Libs) is a modular library datapack design
 
 <div align="center">
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="block" srcset="imgs/block-dark.svg">
-        <img alt="block" src="imgs/block.svg">
+        <source media="(prefers-color-scheme: dark)" alt="block" srcset="docs/_imgs/readme/block-dark.svg">
+        <img alt="block" src="docs/_imgs/readme/block.svg">
     </picture>
   &nbsp;
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="raycast" srcset="imgs/raycast-dark.svg">
-        <img alt="raycast" src="imgs/raycast.svg">
+        <source media="(prefers-color-scheme: dark)" alt="raycast" srcset="docs/_imgs/readme/raycast-dark.svg">
+        <img alt="raycast" src="docs/_imgs/readme/raycast.svg">
     </picture>
   &nbsp;
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="math" srcset="imgs/math-dark.svg">
-        <img alt="math" src="imgs/math.svg">
+        <source media="(prefers-color-scheme: dark)" alt="math" srcset="docs/_imgs/readme/math-dark.svg">
+        <img alt="math" src="docs/_imgs/readme/math.svg">
     </picture>
   &nbsp;
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="generate" srcset="imgs/generate-dark.svg">
-        <img alt="generate" src="imgs/generate.svg">
+        <source media="(prefers-color-scheme: dark)" alt="generate" srcset="docs/_imgs/readme/generate-dark.svg">
+        <img alt="generate" src="docs/_imgs/readme/generate.svg">
     </picture>
   &nbsp;
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="random" srcset="imgs/random-dark.svg">
-        <img alt="random" src="imgs/random.svg">
+        <source media="(prefers-color-scheme: dark)" alt="random" srcset="docs/_imgs/readme/random-dark.svg">
+        <img alt="random" src="docs/_imgs/readme/random.svg">
     </picture>
   &nbsp;
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="health" srcset="imgs/health-dark.svg">
-        <img alt="health" src="imgs/health.svg">
+        <source media="(prefers-color-scheme: dark)" alt="health" srcset="docs/_imgs/readme/health-dark.svg">
+        <img alt="health" src="docs/_imgs/readme/health.svg">
     </picture>
 </div>
 

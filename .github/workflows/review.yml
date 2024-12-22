@@ -8,18 +8,19 @@ on:
 
 jobs:
   check:
-    name: 🔍 Check modules
+    name: 🔍 Check Modules
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: pdm-project/setup-pdm@v4
         with:
           cache: true
-      - run: pdm install
-      - name: Check modules
-        run: pdm run modules check
+      - name: Check Modules
+        run: |
+          pdm install
+          pdm run modules check
   test:
-    name: 🧪 Test modules
+    name: 🧪 Test Modules
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,6 +31,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-      - run: pdm install
-      - name: Test modules
-        run: pdm run modules test
+      - name: Test Modules
+        run: |
+          pdm install
+          pdm run modules test

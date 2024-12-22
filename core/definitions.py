@@ -1,10 +1,12 @@
-from os import listdir
+import os
+import sys
 from pathlib import Path
 
-VERSION = "2.2.0"
-MINECRAFT_VERSIONS = ["1.21.2", "1.21.3"]
+VERSION = "2.2.1"
+MINECRAFT_VERSIONS = ["1.21.2", "1.21.3", "1.21.4"]
 
 DOC_URL = "https://docs.mcbookshelf.dev/"
+DOC_SWITCHER = "docs/_static/switcher.json"
 GITHUB_REPO = "mcbookshelf/Bookshelf"
 META_MANIFEST = "meta/manifest.json"
 META_VERSIONS = "meta/versions.json"
@@ -12,7 +14,7 @@ META_VERSIONS = "meta/versions.json"
 ROOT_DIR = Path(__file__).resolve().parents[1]
 MODULES_DIR = ROOT_DIR / "modules"
 
-MODULES = [mod for mod in listdir(MODULES_DIR) if (MODULES_DIR / mod).is_dir()]
+MODULES = [mod for mod in os.listdir(MODULES_DIR) if (MODULES_DIR / mod).is_dir()]
 
 BIOMES_URL = "https://raw.githubusercontent.com/misode/mcmeta/{}-summary/data/worldgen/biome/data.min.json"
 BLOCKS_URL = "https://raw.githubusercontent.com/misode/mcmeta/{}-summary/blocks/data.min.json"
@@ -102,3 +104,8 @@ SPECIAL_ITEMS = {
   "minecraft:yellow_wall_banner": "minecraft:yellow_banner",
   "minecraft:zombie_wall_head": "minecraft:zombie_head",
 }
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        value = globals().get(sys.argv[1], None)
+        print(str(value)) # noqa: T201

@@ -697,6 +697,9 @@
       "description": "Generate diverse terrains and landscapes, incorporating natural features.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generate.html",
       "kind": "data_pack",
+      "dependencies": [
+        "bs.random"
+      ],
       "features": [
         {
           "id": "#bs.generate:fractal_shape_2d",
@@ -751,6 +754,9 @@
       "description": "Efficiently manage the lifecycle and vital aspects of an entity.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html",
       "kind": "data_pack",
+      "weak_dependencies": [
+        "bs.log"
+      ],
       "features": [
         {
           "id": "#bs.health:add_health",
@@ -1232,6 +1238,9 @@
       "description": "A low-level API to create GUI based on Interaction entity by binding events to it.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html",
       "kind": "data_pack",
+      "weak_dependencies": [
+        "bs.log"
+      ],
       "features": [
         {
           "id": "#bs.interaction:clear_events",
@@ -1336,6 +1345,10 @@
       "description": "Construct coherent entity structures by linking entities\u2019 positions and rotations.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html",
       "kind": "data_pack",
+      "dependencies": [
+        "bs.id",
+        "bs.position"
+      ],
       "features": [
         {
           "id": "bs.link:has_link",
@@ -2293,6 +2306,9 @@
       "description": "Make your entity move exactly the way you want them to!",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html",
       "kind": "data_pack",
+      "dependencies": [
+        "bs.hitbox"
+      ],
       "features": [
         {
           "id": "#bs.move:apply_local_vel",
@@ -3081,6 +3097,9 @@
       "description": "Cast rays and see if they collide with blocks or entities.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html",
       "kind": "data_pack",
+      "dependencies": [
+        "bs.hitbox"
+      ],
       "features": [
         {
           "id": "#bs.raycast:run",
@@ -3105,6 +3124,9 @@
       "description": "Enhance command scheduling. Cancel commands and maintain execution context (entity & location).",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html",
       "kind": "data_pack",
+      "weak_dependencies": [
+        "bs.log"
+      ],
       "features": [
         {
           "id": "#bs.schedule:cancel_all",
@@ -3178,6 +3200,9 @@
       "description": "Create a visually appealing and dynamic sidebar using the scoreboard.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/sidebar.html",
       "kind": "data_pack",
+      "weak_dependencies": [
+        "bs.log"
+      ],
       "features": [
         {
           "id": "#bs.sidebar:create",

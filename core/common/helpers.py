@@ -76,6 +76,13 @@ def gen_loot_table_tree(items: list[T], entry: EFmt, conditions: CFmt) -> dict:
     return {"pools":[{"rolls":1,"entries":[subtree(items)]}]}
 
 
+def has_same_major_minor(version1: str, version2: str) -> bool:
+    """Check if two semantic version strings have the same major and minor."""
+    major_minor1 = ".".join(version1.split(".")[:2])
+    major_minor2 = ".".join(version2.split(".")[:2])
+    return major_minor1 == major_minor2
+
+
 def matching_len(a: Iterable, b: Iterable) -> int:
     """Return the length of the longest matching prefix between two sequences."""
     return len(list(takewhile(

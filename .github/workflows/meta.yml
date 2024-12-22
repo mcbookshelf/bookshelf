@@ -1,0 +1,29 @@
+name: 🏷️ Update Metadata
+
+on: ["pull_request_target"]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    name: ⚙️ Generate Metadata
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+      - uses: fregante/setup-git-user@v2
+      - uses: pdm-project/setup-pdm@v4
+        with:
+          cache: true
+      - name: Generate Metadata
+        run: |
+          pdm install
+          pdm run meta update
+      - name: Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git push origin HEAD:${{ github.event.pull_request.head.ref }}

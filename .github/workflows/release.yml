@@ -1,0 +1,48 @@
+name: 📦️ Release Modules
+
+on:
+  push:
+    branches: ["master"]
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    name: 🔍 Check Version
+    runs-on: ubuntu-latest
+    outputs:
+      release_tag: ${{ steps.definitions.outputs.release_tag }}
+      release_name: ${{ steps.definitions.outputs.release_name }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Versions
+        id: definitions
+        run: |
+          VERSION=$(python core/definitions.py VERSION)
+          MINECRAFT_VERSIONS=$(python core/definitions.py MINECRAFT_VERSIONS)
+          name=$(echo $MINECRAFT_VERSIONS | sed 's/ /,/g')
+          echo "release_tag=v$VERSION" >> $GITHUB_OUTPUT
+          echo "release_name=v$VERSION - MC $name" >> $GITHUB_OUTPUT
+  release:
+    name: 🔖 Create Release
+    needs: check
+    runs-on: ubuntu-latest
+    if: ${{ needs.check.outputs.release_tag != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: fregante/setup-git-user@v2
+      - uses: pdm-project/setup-pdm@v4
+        with:
+          cache: true
+      - name: Build Release Files
+        run: |
+          pdm install
+          pdm run modules release
+      - uses: softprops/action-gh-release@v2
+        with:
+          body_path: docs/_templates/changelog/${{ needs.check.outputs.release_tag }}.md
+          name: ${{ needs.check.outputs.release_name }}
+          tag_name: ${{ needs.check.outputs.release_tag }}
+          make_latest: true
+          files: release/*.zip
