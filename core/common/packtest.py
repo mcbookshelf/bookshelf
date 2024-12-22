@@ -64,7 +64,7 @@ class Assets:
         if versions := [
             version
             for version in versions
-            if mc_version in version["game_versions"]
+            if any(v.startswith(mc_version) for v in version["game_versions"])
         ]:
             return versions[0]["files"][0]["url"]
 
