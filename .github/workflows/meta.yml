@@ -1,6 +1,6 @@
 name: 🏷️ Update Metadata
 
-on: ["pull_request_target"]
+on: pull_request
 
 permissions:
   contents: write
@@ -13,8 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.head_ref }}
       - uses: fregante/setup-git-user@v2
       - uses: pdm-project/setup-pdm@v4
         with:
@@ -24,6 +23,4 @@ jobs:
           pdm install
           pdm run meta update
       - name: Push Changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: git push origin HEAD:${{ github.event.pull_request.head.ref }}
+        run: git push
