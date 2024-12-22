@@ -12,7 +12,6 @@ author = "Gunivers"
 extensions = [
     "myst_parser",
     "sphinx_copybutton",
-    "sphinx_copybutton",
     "sphinx_design",
     "sphinx_minecraft",
     "sphinx_togglebutton",

@@ -5,6 +5,7 @@
   "require": [
     "core.plugins.setup_pack",
     "core.plugins.setup_jinja",
+    "core.plugins.setup_tags",
     "core.plugins.auto_import",
     "core.plugins.dependencies"
   ],

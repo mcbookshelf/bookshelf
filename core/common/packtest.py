@@ -129,7 +129,11 @@ class Runner:
 
     def _handle_test_batch(self, match: re.Match, logger: StepLogger) -> None:
         """Handle test batch start logs."""
-        logger.debug("Test '%s' module (%s tests)", match["name"], match["count"])
+        logger.debug(
+            "Test '%s' module (%s tests)",
+            match["name"],
+            int(match["count"]) - 1,
+        )
 
     def _handle_test_error(self, match: re.Match, logger: StepLogger) -> None:
         """Handle individual test error logs."""
@@ -138,7 +142,7 @@ class Runner:
         logger.error(match["message"], extra={
             "title": f"Test '{name}' failed",
             "file": f"modules/{name[:i]}/data/{name[:i]}/test/{name[i+1:]}.mcfunction",
-            "line": int(match["line"]) - 2,
+            "line": int(match["line"]) - 1,
         })
 
     def _monitor_process(self, process: subprocess.Popen, logger: StepLogger) -> None:
