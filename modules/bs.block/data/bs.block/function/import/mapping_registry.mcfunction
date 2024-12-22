@@ -56,6 +56,7 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"button",attrs:["jungle"],type:"minecraft:jungle_button"}, \
   {set:"button",attrs:["mangrove"],type:"minecraft:mangrove_button"}, \
   {set:"button",attrs:["oak"],type:"minecraft:oak_button"}, \
+  {set:"button",attrs:["pale_oak"],type:"minecraft:pale_oak_button"}, \
   {set:"button",attrs:["spruce"],type:"minecraft:spruce_button"}, \
   {set:"button",attrs:["stone"],type:"minecraft:stone_button"}, \
   {set:"button",attrs:["warped"],type:"minecraft:warped_button"}, \
@@ -369,6 +370,12 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"cube",attrs:["orange","terracotta","glazed"],type:"minecraft:orange_glazed_terracotta"}, \
   {set:"cube",attrs:["orange","terracotta"],type:"minecraft:orange_terracotta"}, \
   {set:"cube",attrs:["orange","wool"],type:"minecraft:orange_wool"}, \
+  {set:"cube",attrs:["pale_oak","leaves"],type:"minecraft:pale_oak_leaves"}, \
+  {set:"cube",attrs:["pale_oak","log"],type:"minecraft:pale_oak_log"}, \
+  {set:"cube",attrs:["pale_oak","planks"],type:"minecraft:pale_oak_planks"}, \
+  {set:"cube",attrs:["pale_oak","stripped_log"],type:"minecraft:stripped_pale_oak_log"}, \
+  {set:"cube",attrs:["pale_oak","stripped_wood"],type:"minecraft:stripped_pale_oak_wood"}, \
+  {set:"cube",attrs:["pale_oak","wood"],type:"minecraft:pale_oak_wood"}, \
   {set:"cube",attrs:["pink","concrete","powder"],type:"minecraft:pink_concrete_powder"}, \
   {set:"cube",attrs:["pink","concrete"],type:"minecraft:pink_concrete"}, \
   {set:"cube",attrs:["pink","glass"],type:"minecraft:pink_stained_glass"}, \
@@ -405,6 +412,8 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"cube",attrs:["red","wool"],type:"minecraft:red_wool"}, \
   {set:"cube",attrs:["redstone","light"],type:"minecraft:redstone_lamp"}, \
   {set:"cube",attrs:["redstone"],type:"minecraft:redstone_block"}, \
+  {set:"cube",attrs:["resin","brick"],type:"minecraft:resin_bricks"}, \
+  {set:"cube",attrs:["resin"],type:"minecraft:resin_block"}, \
   {set:"cube",attrs:["sand","red","stone","chiseled"],type:"minecraft:chiseled_red_sandstone"}, \
   {set:"cube",attrs:["sand","red","stone","cut"],type:"minecraft:cut_red_sandstone"}, \
   {set:"cube",attrs:["sand","red","stone","smooth"],type:"minecraft:smooth_red_sandstone"}, \
@@ -488,6 +497,7 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"door",attrs:["jungle"],type:"minecraft:jungle_door"}, \
   {set:"door",attrs:["mangrove"],type:"minecraft:mangrove_door"}, \
   {set:"door",attrs:["oak"],type:"minecraft:oak_door"}, \
+  {set:"door",attrs:["pale_oak"],type:"minecraft:pale_oak_door"}, \
   {set:"door",attrs:["spruce"],type:"minecraft:spruce_door"}, \
   {set:"door",attrs:["warped"],type:"minecraft:warped_door"}, \
   {set:"fence_gate",attrs:["acacia"],type:"minecraft:acacia_fence_gate"}, \
@@ -499,6 +509,7 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"fence_gate",attrs:["jungle"],type:"minecraft:jungle_fence_gate"}, \
   {set:"fence_gate",attrs:["mangrove"],type:"minecraft:mangrove_fence_gate"}, \
   {set:"fence_gate",attrs:["oak"],type:"minecraft:oak_fence_gate"}, \
+  {set:"fence_gate",attrs:["pale_oak"],type:"minecraft:pale_oak_fence_gate"}, \
   {set:"fence_gate",attrs:["spruce"],type:"minecraft:spruce_fence_gate"}, \
   {set:"fence_gate",attrs:["warped"],type:"minecraft:warped_fence_gate"}, \
   {set:"fence",attrs:["acacia"],type:"minecraft:acacia_fence"}, \
@@ -511,6 +522,7 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"fence",attrs:["mangrove"],type:"minecraft:mangrove_fence"}, \
   {set:"fence",attrs:["nether","brick"],type:"minecraft:nether_brick_fence"}, \
   {set:"fence",attrs:["oak"],type:"minecraft:oak_fence"}, \
+  {set:"fence",attrs:["pale_oak"],type:"minecraft:pale_oak_fence"}, \
   {set:"fence",attrs:["spruce"],type:"minecraft:spruce_fence"}, \
   {set:"fence",attrs:["warped"],type:"minecraft:warped_fence"}, \
   {set:"hanging_sign",attrs:["acacia"],type:"minecraft:acacia_hanging_sign"}, \
@@ -522,6 +534,7 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"hanging_sign",attrs:["jungle"],type:"minecraft:jungle_hanging_sign"}, \
   {set:"hanging_sign",attrs:["mangrove"],type:"minecraft:mangrove_hanging_sign"}, \
   {set:"hanging_sign",attrs:["oak"],type:"minecraft:oak_hanging_sign"}, \
+  {set:"hanging_sign",attrs:["pale_oak"],type:"minecraft:pale_oak_hanging_sign"}, \
   {set:"hanging_sign",attrs:["spruce"],type:"minecraft:spruce_hanging_sign"}, \
   {set:"hanging_sign",attrs:["warped"],type:"minecraft:warped_hanging_sign"}, \
   {set:"pane",attrs:["black","glass"],type:"minecraft:black_stained_glass_pane"}, \
@@ -554,9 +567,22 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"pressure_plate",attrs:["jungle"],type:"minecraft:jungle_pressure_plate"}, \
   {set:"pressure_plate",attrs:["mangrove"],type:"minecraft:mangrove_pressure_plate"}, \
   {set:"pressure_plate",attrs:["oak"],type:"minecraft:oak_pressure_plate"}, \
+  {set:"pressure_plate",attrs:["pale_oak"],type:"minecraft:pale_oak_pressure_plate"}, \
   {set:"pressure_plate",attrs:["spruce"],type:"minecraft:spruce_pressure_plate"}, \
   {set:"pressure_plate",attrs:["stone"],type:"minecraft:stone_pressure_plate"}, \
   {set:"pressure_plate",attrs:["warped"],type:"minecraft:warped_pressure_plate"}, \
+  {set:"sapling",attrs:["acacia"],type:"minecraft:acacia_sapling"}, \
+  {set:"sapling",attrs:["bamboo"],type:"minecraft:bamboo_sapling"}, \
+  {set:"sapling",attrs:["birch"],type:"minecraft:birch_sapling"}, \
+  {set:"sapling",attrs:["cherry"],type:"minecraft:cherry_sapling"}, \
+  {set:"sapling",attrs:["crimson"],type:"minecraft:crimson_fungus"}, \
+  {set:"sapling",attrs:["dark_oak"],type:"minecraft:dark_oak_sapling"}, \
+  {set:"sapling",attrs:["jungle"],type:"minecraft:jungle_sapling"}, \
+  {set:"sapling",attrs:["mangrove"],type:"minecraft:mangrove_propagule"}, \
+  {set:"sapling",attrs:["oak"],type:"minecraft:oak_sapling"}, \
+  {set:"sapling",attrs:["pale_oak"],type:"minecraft:pale_oak_sapling"}, \
+  {set:"sapling",attrs:["spruce"],type:"minecraft:spruce_sapling"}, \
+  {set:"sapling",attrs:["warped"],type:"minecraft:warped_fungus"}, \
   {set:"sign",attrs:["acacia"],type:"minecraft:acacia_sign"}, \
   {set:"sign",attrs:["bamboo"],type:"minecraft:bamboo_sign"}, \
   {set:"sign",attrs:["birch"],type:"minecraft:birch_sign"}, \
@@ -566,6 +592,7 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"sign",attrs:["jungle"],type:"minecraft:jungle_sign"}, \
   {set:"sign",attrs:["mangrove"],type:"minecraft:mangrove_sign"}, \
   {set:"sign",attrs:["oak"],type:"minecraft:oak_sign"}, \
+  {set:"sign",attrs:["pale_oak"],type:"minecraft:pale_oak_sign"}, \
   {set:"sign",attrs:["spruce"],type:"minecraft:spruce_sign"}, \
   {set:"sign",attrs:["warped"],type:"minecraft:warped_sign"}, \
   {set:"slab",attrs:["acacia","planks"],type:"minecraft:acacia_slab"}, \
@@ -604,6 +631,7 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"slab",attrs:["nether","brick"],type:"minecraft:nether_brick_slab"}, \
   {set:"slab",attrs:["nether","red","brick"],type:"minecraft:red_nether_brick_slab"}, \
   {set:"slab",attrs:["oak","planks"],type:"minecraft:oak_slab"}, \
+  {set:"slab",attrs:["pale_oak","planks"],type:"minecraft:pale_oak_slab"}, \
   {set:"slab",attrs:["prismarine","brick"],type:"minecraft:prismarine_brick_slab"}, \
   {set:"slab",attrs:["prismarine","dark"],type:"minecraft:dark_prismarine_slab"}, \
   {set:"slab",attrs:["prismarine"],type:"minecraft:prismarine_slab"}, \
@@ -663,6 +691,7 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"stairs",attrs:["nether","brick"],type:"minecraft:nether_brick_stairs"}, \
   {set:"stairs",attrs:["nether","red","brick"],type:"minecraft:red_nether_brick_stairs"}, \
   {set:"stairs",attrs:["oak","planks"],type:"minecraft:oak_stairs"}, \
+  {set:"stairs",attrs:["pale_oak","planks"],type:"minecraft:pale_oak_stairs"}, \
   {set:"stairs",attrs:["prismarine","brick"],type:"minecraft:prismarine_brick_stairs"}, \
   {set:"stairs",attrs:["prismarine","dark"],type:"minecraft:dark_prismarine_stairs"}, \
   {set:"stairs",attrs:["prismarine"],type:"minecraft:prismarine_stairs"}, \
@@ -701,6 +730,7 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"trapdoor",attrs:["jungle"],type:"minecraft:jungle_trapdoor"}, \
   {set:"trapdoor",attrs:["mangrove"],type:"minecraft:mangrove_trapdoor"}, \
   {set:"trapdoor",attrs:["oak"],type:"minecraft:oak_trapdoor"}, \
+  {set:"trapdoor",attrs:["pale_oak"],type:"minecraft:pale_oak_trapdoor"}, \
   {set:"trapdoor",attrs:["spruce"],type:"minecraft:spruce_trapdoor"}, \
   {set:"trapdoor",attrs:["warped"],type:"minecraft:warped_trapdoor"}, \
   {set:"wall_banner",attrs:["black"],type:"minecraft:black_wall_banner"}, \
@@ -728,6 +758,7 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"wall_hanging_sign",attrs:["jungle"],type:"minecraft:jungle_wall_hanging_sign"}, \
   {set:"wall_hanging_sign",attrs:["mangrove"],type:"minecraft:mangrove_wall_hanging_sign"}, \
   {set:"wall_hanging_sign",attrs:["oak"],type:"minecraft:oak_wall_hanging_sign"}, \
+  {set:"wall_hanging_sign",attrs:["pale_oak"],type:"minecraft:pale_oak_wall_hanging_sign"}, \
   {set:"wall_hanging_sign",attrs:["spruce"],type:"minecraft:spruce_wall_hanging_sign"}, \
   {set:"wall_hanging_sign",attrs:["warped"],type:"minecraft:warped_wall_hanging_sign"}, \
   {set:"wall_sign",attrs:["acacia"],type:"minecraft:acacia_wall_sign"}, \
@@ -739,6 +770,7 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"wall_sign",attrs:["jungle"],type:"minecraft:jungle_wall_sign"}, \
   {set:"wall_sign",attrs:["mangrove"],type:"minecraft:mangrove_wall_sign"}, \
   {set:"wall_sign",attrs:["oak"],type:"minecraft:oak_wall_sign"}, \
+  {set:"wall_sign",attrs:["pale_oak"],type:"minecraft:pale_oak_wall_sign"}, \
   {set:"wall_sign",attrs:["spruce"],type:"minecraft:spruce_wall_sign"}, \
   {set:"wall_sign",attrs:["warped"],type:"minecraft:warped_wall_sign"}, \
   {set:"wall",attrs:["andesite"],type:"minecraft:andesite_wall"}, \
