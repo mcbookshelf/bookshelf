@@ -8,9 +8,9 @@ version = "1.0.0"
 description = "Scripts for Bookshelf and the Github pipeline."
 authors = [{ name = "Bookshelf Contributors", email = "contact@gunivers.net" }]
 dependencies = [
-  "beet>=0.108.5",
+  "beet>=0.109.2",
   "bookshelf[docs]",
-  "click>=8.1.7",
+  "click>=8.1.8",
   "colorama>=0.4.6",
   "pydantic>=2.9.2",
   "requests>=2.32.3",
@@ -33,7 +33,7 @@ docs = [
   "sphinx-autobuild>=2024.10.3",
   "sphinx-copybutton>=0.5.2",
   "sphinx-design>=0.6.1",
-  "sphinx-minecraft>=1.0.0",
+  "sphinx-minecraft>=1.0.1",
   "sphinx-togglebutton>=0.3.2",
   "sphinx>=8.1.3",
 ]

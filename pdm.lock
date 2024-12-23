@@ -5,7 +5,7 @@
 groups = ["default", "dev", "docs"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:19b06e63dc37c52bca92c0b977098a4e0af8fe961f5258755f21505fb09a3162"
+content_hash = "sha256:97fb27e9867e857867d52ba33f155f6167f678dcfc83dac5ec241fb321c10df7"
 
 [[metadata.targets]]
 requires_python = "==3.12.*"
@@ -96,7 +96,7 @@ files = [
 
 [[package]]
 name = "beet"
-version = "0.109.1"
+version = "0.109.2"
 requires_python = "<4.0,>=3.10"
 summary = "The Minecraft pack development kit"
 groups = ["default"]
@@ -113,8 +113,8 @@ dependencies = [
     "typing-extensions<5.0.0,>=4.8.0",
 ]
 files = [
-    {file = "beet-0.109.1-py3-none-any.whl", hash = "sha256:f5cbeb7d2e6689b7b710fe3968ff63dd67609f603596fbca7ff52aa5af979b2d"},
-    {file = "beet-0.109.1.tar.gz", hash = "sha256:c84262a6a1a0168db1b55880569df253ace719f3546ddc9567106353a58477c1"},
+    {file = "beet-0.109.2-py3-none-any.whl", hash = "sha256:d3a73f8f064f5ad10d161e6af42fb39728dbba4e8111e33de0278c88a45c5c99"},
+    {file = "beet-0.109.2.tar.gz", hash = "sha256:68fca0e6e17adf86c42859e975671ed4e9013ead3a4365a3976f6f6a3ab84b08"},
 ]
 
 [[package]]
@@ -156,7 +156,7 @@ files = [
 
 [[package]]
 name = "click"
-version = "8.1.7"
+version = "8.1.8"
 requires_python = ">=3.7"
 summary = "Composable command line interface toolkit"
 groups = ["default", "docs"]
@@ -165,8 +165,8 @@ dependencies = [
     "importlib-metadata; python_version < \"3.8\"",
 ]
 files = [
-    {file = "click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28"},
-    {file = "click-8.1.7.tar.gz", hash = "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"},
+    {file = "click-8.1.8-py3-none-any.whl", hash = "sha256:63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2"},
+    {file = "click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a"},
 ]
 
 [[package]]
@@ -693,17 +693,17 @@ files = [
 
 [[package]]
 name = "sphinx-minecraft"
-version = "1.0.0"
+version = "1.0.1"
 requires_python = "==3.12.*"
 summary = "Add different Minecraft-oriented components to Sphinx."
 groups = ["docs"]
 dependencies = [
     "sphinx",
-    "sphinx-treeview==1.0.0",
+    "sphinx-treeview==1.0.1",
 ]
 files = [
-    {file = "sphinx_minecraft-1.0.0-py3-none-any.whl", hash = "sha256:5135a738e2426bc4ead1c644067db19fc4860aa96497bc57aa5f86668bcc2b81"},
-    {file = "sphinx_minecraft-1.0.0.tar.gz", hash = "sha256:68a79254ea0d818f231cb5b5c226c6dab9a131fe4b3ce5e4f586765f2316b392"},
+    {file = "sphinx_minecraft-1.0.1-py3-none-any.whl", hash = "sha256:4b139944ae93bce5d65e13c83625543382a8140565b5cbd841e3ae1a6b8a4294"},
+    {file = "sphinx_minecraft-1.0.1.tar.gz", hash = "sha256:e8430b749fecd31d61d9d9eff5e838318e8999ce4b81132cd4994012ad1f025d"},
 ]
 
 [[package]]
@@ -724,7 +724,7 @@ files = [
 
 [[package]]
 name = "sphinx-treeview"
-version = "1.0.0"
+version = "1.0.1"
 requires_python = "==3.12.*"
 summary = "Add support for tree view to Sphinx."
 groups = ["default", "docs"]
@@ -733,8 +733,8 @@ dependencies = [
     "sphinx",
 ]
 files = [
-    {file = "sphinx_treeview-1.0.0-py3-none-any.whl", hash = "sha256:02cd39bee9e4516c5f080f8d73e3e164d2d6a81597d83a259ee5c61526846a8b"},
-    {file = "sphinx_treeview-1.0.0.tar.gz", hash = "sha256:fca3ab4ab6601cd7a24a10e953698e799e30cd15edb2f33de4357faa21199230"},
+    {file = "sphinx_treeview-1.0.1-py3-none-any.whl", hash = "sha256:7ee0b2f531fbc9b3926c0934cf1e1263b3316186556f150d3c5e6095ea83ee7d"},
+    {file = "sphinx_treeview-1.0.1.tar.gz", hash = "sha256:78075d015d57d8f7d5b9c08ae309fdea871cf8eeb94a4aa5f8afe53b933d4c8a"},
 ]
 
 [[package]]
