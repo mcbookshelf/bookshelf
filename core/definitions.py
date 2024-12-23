@@ -14,7 +14,11 @@ META_VERSIONS = "meta/versions.json"
 ROOT_DIR = Path(__file__).resolve().parents[1]
 MODULES_DIR = ROOT_DIR / "modules"
 
-MODULES = [mod for mod in os.listdir(MODULES_DIR) if (MODULES_DIR / mod).is_dir()]
+MODULES = sorted([
+    mod
+    for mod in os.listdir(MODULES_DIR)
+    if (MODULES_DIR / mod).is_dir()
+])
 
 BIOMES_URL = "https://raw.githubusercontent.com/misode/mcmeta/{}-summary/data/worldgen/biome/data.min.json"
 BLOCKS_URL = "https://raw.githubusercontent.com/misode/mcmeta/{}-summary/blocks/data.min.json"

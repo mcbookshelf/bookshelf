@@ -1,6 +1,4 @@
 import json
-import shutil
-import subprocess
 import sys
 from pathlib import Path
 
@@ -43,17 +41,6 @@ def update() -> None:
     update_switcher()
     update_versions()
 
-    git = shutil.which("git")
-    if not git:
-        error_msg = "The 'git' command was not found."
-        raise FileNotFoundError(error_msg)
-
-    for cmd in [
-        [git, "add", META_MANIFEST, META_VERSIONS],
-        [git, "commit", "-m", f"🔖 Update metadata for version v{VERSION}"],
-    ]:
-        subprocess.run(cmd, cwd=ROOT_DIR, check=True)
-
 
 def check_modules() -> bool:
     """Check metadata for all module files."""
@@ -89,7 +76,7 @@ def update_switcher() -> None:
         switcher_path = ROOT_DIR / DOC_SWITCHER
         switcher: list[dict] = json.loads(switcher_path.read_text("utf-8"))
 
-        if any(entry["version"] == VERSION for entry in switcher):
+        if any(entry["version"][1:] == VERSION for entry in switcher):
             logger.debug("Version %s already exists. No update needed.", VERSION)
             return
 
@@ -99,7 +86,7 @@ def update_switcher() -> None:
             "url": f"https://docs.mcbookshelf.dev/en/v{VERSION}/",
         }
 
-        if has_same_major_minor(switcher[2]["version"], VERSION):
+        if has_same_major_minor(switcher[2]["version"][1:], VERSION):
             switcher[2] = entry
         else:
             switcher.insert(2, entry)

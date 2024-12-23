@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field, ValidationError
 
 from core.common.helpers import extract_feature_id
 from core.common.logger import StepLogger
-from core.definitions import DOC_URL, MODULES_DIR, ROOT_DIR
+from core.definitions import DOC_URL, MODULES, MODULES_DIR, ROOT_DIR
 
 
 class Updated(BaseModel):
@@ -114,14 +114,14 @@ def get_module_meta(file: Path, logger: StepLogger) -> ModuleMeta | None:
 def build_manifest(logger: StepLogger) -> dict | None:
     """Build the manifest by gathering metadata for all modules and their features."""
     manifest: dict[str, list[dict]] = {"modules":[]}
-    for module_dir in MODULES_DIR.iterdir():
-        if module_meta := get_module_meta(module_dir / "module.json", logger):
+    for module in MODULES:
+        if module_meta := get_module_meta(MODULES_DIR / module / "module.json", logger):
             module_dict = module_meta.model_dump(
                 exclude_defaults=True,
                 exclude_none=True,
             )
             module_dict["features"] = []
-            for file_path in (module_dir / "data") .rglob("*.json"):
+            for file_path in (MODULES_DIR / module / "data") .rglob("*.json"):
                 if feature_meta := get_feature_meta(file_path, logger):
                     feature_dict = feature_meta.model_dump(
                         exclude_defaults=True,
