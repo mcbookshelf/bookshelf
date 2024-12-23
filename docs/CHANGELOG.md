@@ -6,7 +6,7 @@
 
 ### 🐛 Fixes
 
-- **[#293](https://github.com/Gunivers/Bookshelf/issues/293)** Entity `creaking_transient` was removed from Minecraft 1.21.4, causing `bs.hitbox` to stop working.
+- **[#293](https://github.com/Gunivers/Bookshelf/issues/293)** Entity `creaking_transient` was removed from Minecraft 1.21.4, causing `bs.hitbox` to stop working for entities.
 
 ---
 
