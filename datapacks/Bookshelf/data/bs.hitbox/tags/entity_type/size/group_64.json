@@ -9,6 +9,9 @@
     "minecraft:villager",
     "minecraft:armadillo",
     "minecraft:creaking",
-    "minecraft:creaking_transient"
+    {
+      "id": "minecraft:creaking_transient",
+      "required": false
+    }
   ]
 }

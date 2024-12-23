@@ -2,6 +2,14 @@
 
 ---
 
+## 📦 Bookshelf - 2.2.2
+
+### 🐛 Fixes
+
+- **[#293](https://github.com/Gunivers/Bookshelf/issues/293)** Entity `creaking_transient` was removed from Minecraft 1.21.4, causing `bs.hitbox` to stop working for entities.
+
+---
+
 ## 📦 Bookshelf - 2.2.1
 
 Bookshelf is now based on **Minecraft 1.21.4**.
@@ -9,6 +17,8 @@ Bookshelf is now based on **Minecraft 1.21.4**.
 ### 🐛 Fixes
 - **[#288](https://github.com/Gunivers/Bookshelf/issues/288)** Fix `bs.move` collisions.
 - **[#290](https://github.com/Gunivers/Bookshelf/issues/290)** Add missing blocks in `bs.block` registries.
+
+---
 
 ## 📦 Bookshelf - 2.2.0
 
