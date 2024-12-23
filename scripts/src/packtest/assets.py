@@ -41,6 +41,10 @@ def get_modrinth_url(project_id: str, mc_version: str) -> str:
     response = requests.get(f"https://api.modrinth.com/v2/project/{project_id}/version")
     response.raise_for_status()
     versions = response.json()
-    if versions := [version for version in versions if mc_version in version["game_versions"]]:
+    if versions := [
+            version
+            for version in versions
+            if any(v.startswith(mc_version) for v in version["game_versions"])
+        ]:
         return versions[0]["files"][0]["url"]
     raise RuntimeError(f"Could not find a version for {project_id} that matches the MC version: {mc_version}")
