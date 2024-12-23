@@ -8,7 +8,7 @@
       "kind": "data_pack",
       "features": [
         {
-          "id": "#bs.bitwise:and",
+          "id": "#bs.bitwise:or",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html#logical-operators",
           "authors": [
             "Aksiome",
@@ -21,37 +21,6 @@
           "updated": {
             "date": "2023/08/22",
             "minecraft_version": "23w33a"
-          }
-        },
-        {
-          "id": "#bs.bitwise:bit_count",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html#bit-count",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.bitwise:bit_length",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html#bit-length",
-          "authors": [
-            "Aksiome",
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2020/09/06",
-            "minecraft_version": "1.16"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
           }
         },
         {
@@ -71,7 +40,7 @@
           }
         },
         {
-          "id": "#bs.bitwise:or",
+          "id": "#bs.bitwise:xor",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html#logical-operators",
           "authors": [
             "Aksiome",
@@ -103,7 +72,23 @@
           }
         },
         {
-          "id": "#bs.bitwise:xor",
+          "id": "#bs.bitwise:bit_length",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html#bit-length",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2020/09/06",
+            "minecraft_version": "1.16"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.bitwise:and",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html#logical-operators",
           "authors": [
             "Aksiome",
@@ -117,6 +102,21 @@
             "date": "2023/08/22",
             "minecraft_version": "23w33a"
           }
+        },
+        {
+          "id": "#bs.bitwise:bit_count",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html#bit-count",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
         }
       ]
     },
@@ -128,72 +128,25 @@
       "kind": "data_pack",
       "features": [
         {
-          "id": "#bs.block:emit_block_particle",
+          "id": "#bs.block:match",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#match",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.block:spawn_falling_block",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
           "authors": [
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2024/10/09",
-            "minecraft_version": "1.21.1"
-          },
-          "updated": {
-            "date": "2024/10/09",
-            "minecraft_version": "1.21.1"
-          }
-        },
-        {
-          "id": "#bs.block:fill_block",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#fill",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/09/11",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.block:fill_random",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#fill",
-          "authors": [
-            "Aksiome"
-          ],
-          "contributors": [
-            "SBtree-bit"
-          ],
-          "created": {
-            "date": "2024/06/16",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/09/11",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.block:fill_type",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#fill",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/09/11",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.block:get_block",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get",
-          "authors": [
             "Aksiome",
             "theogiraudet"
           ],
@@ -207,23 +160,7 @@
           }
         },
         {
-          "id": "#bs.block:get_type",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get",
-          "authors": [
-            "Aksiome",
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.block:keep_properties",
+          "id": "#bs.block:replace_properties",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-state",
           "authors": [
             "Aksiome"
@@ -253,8 +190,180 @@
           }
         },
         {
+          "id": "#bs.block:emit_block_particle",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2024/10/09",
+            "minecraft_version": "1.21.1"
+          },
+          "updated": {
+            "date": "2024/10/09",
+            "minecraft_version": "1.21.1"
+          }
+        },
+        {
+          "id": "#bs.block:merge_properties",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-state",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.block:fill_block",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#fill",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/09/11",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.block:replace_type",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-type",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.block:fill_type",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#fill",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/09/11",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.block:set_type",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#set",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.block:set_block",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#set",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.block:spawn_solid_block_display",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.block:shift_properties",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-state",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
           "id": "#bs.block:lookup_type",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-type",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.block:fill_random",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#fill",
+          "authors": [
+            "Aksiome"
+          ],
+          "contributors": [
+            "SBtree-bit"
+          ],
+          "created": {
+            "date": "2024/06/16",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/09/11",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.block:get_block",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -287,8 +396,23 @@
           }
         },
         {
-          "id": "#bs.block:match",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#match",
+          "id": "#bs.block:keep_properties",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-state",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/01/15",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.block:get_type",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -303,7 +427,7 @@
           }
         },
         {
-          "id": "#bs.block:merge_properties",
+          "id": "#bs.block:remove_properties",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-state",
           "authors": [
             "Aksiome"
@@ -336,131 +460,7 @@
           }
         },
         {
-          "id": "#bs.block:remove_properties",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-state",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.block:replace_properties",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-state",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.block:replace_type",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-type",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.block:set_block",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#set",
-          "authors": [
-            "Aksiome",
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.block:set_type",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#set",
-          "authors": [
-            "Aksiome",
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.block:shift_properties",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-state",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
           "id": "#bs.block:spawn_block_display",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
-          "authors": [
-            "Aksiome",
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.block:spawn_falling_block",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
-          "authors": [
-            "Aksiome",
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.block:spawn_solid_block_display",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
           "authors": [
             "Aksiome",
@@ -485,18 +485,18 @@
       "kind": "data_pack",
       "features": [
         {
-          "id": "#bs.color:hex_to_int",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html#convert-to-int",
+          "id": "#bs.color:int_to_hex",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html#convert-to-hex",
           "authors": [
             "Aksiome"
           ],
           "created": {
-            "date": "2024/04/22",
-            "minecraft_version": "1.20.5"
+            "date": "2024/01/20",
+            "minecraft_version": "1.20.4"
           },
           "updated": {
-            "date": "2024/04/22",
-            "minecraft_version": "1.20.5"
+            "date": "2024/01/20",
+            "minecraft_version": "1.20.4"
           }
         },
         {
@@ -515,7 +515,22 @@
           }
         },
         {
-          "id": "#bs.color:int_to_hex",
+          "id": "#bs.color:hex_to_int",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html#convert-to-int",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/04/22",
+            "minecraft_version": "1.20.5"
+          },
+          "updated": {
+            "date": "2024/04/22",
+            "minecraft_version": "1.20.5"
+          }
+        },
+        {
+          "id": "#bs.color:rgb_to_hex",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html#convert-to-hex",
           "authors": [
             "Aksiome"
@@ -545,21 +560,6 @@
           "updated": {
             "date": "2023/10/22",
             "minecraft_version": "1.20.2"
-          }
-        },
-        {
-          "id": "#bs.color:rgb_to_hex",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html#convert-to-hex",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/01/20",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/01/20",
-            "minecraft_version": "1.20.4"
           }
         },
         {
@@ -614,21 +614,6 @@
       "kind": "data_pack",
       "features": [
         {
-          "id": "bs.environment:can_rain",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#can-it-rain",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/04/22",
-            "minecraft_version": "1.20.5"
-          },
-          "updated": {
-            "date": "2024/11/24",
-            "minecraft_version": "1.21.3"
-          }
-        },
-        {
           "id": "bs.environment:is_raining",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#is-it-raining",
           "authors": [
@@ -646,6 +631,21 @@
         {
           "id": "bs.environment:is_thundering",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#is-it-thundering",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/04/22",
+            "minecraft_version": "1.20.5"
+          },
+          "updated": {
+            "date": "2024/11/24",
+            "minecraft_version": "1.21.3"
+          }
+        },
+        {
+          "id": "bs.environment:can_rain",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#can-it-rain",
           "authors": [
             "Aksiome"
           ],
@@ -702,7 +702,7 @@
       ],
       "features": [
         {
-          "id": "#bs.generate:fractal_shape_2d",
+          "id": "#bs.generate:simplex_shape_2d",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generate.html#shape-2d",
           "authors": [
             "Aksiome"
@@ -732,7 +732,7 @@
           }
         },
         {
-          "id": "#bs.generate:simplex_shape_2d",
+          "id": "#bs.generate:fractal_shape_2d",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generate.html#shape-2d",
           "authors": [
             "Aksiome"
@@ -774,6 +774,37 @@
           }
         },
         {
+          "id": "#bs.health:get_max_health",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html#get",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/10/23",
+            "minecraft_version": "1.20.2"
+          },
+          "updated": {
+            "date": "2024/03/19",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.health:time_to_live",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html#time-to-live",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2018/07/08",
+            "minecraft_version": "1.13"
+          },
+          "updated": {
+            "date": "2023/11/19",
+            "minecraft_version": "1.20.3"
+          }
+        },
+        {
           "id": "#bs.health:add_max_health",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html#add-remove",
           "authors": [
@@ -790,21 +821,6 @@
         },
         {
           "id": "#bs.health:get_health",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html#get",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/10/23",
-            "minecraft_version": "1.20.2"
-          },
-          "updated": {
-            "date": "2024/03/19",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.health:get_max_health",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html#get",
           "authors": [
             "Aksiome"
@@ -847,22 +863,6 @@
             "date": "2024/03/19",
             "minecraft_version": "1.20.4"
           }
-        },
-        {
-          "id": "#bs.health:time_to_live",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html#time-to-live",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2018/07/08",
-            "minecraft_version": "1.13"
-          },
-          "updated": {
-            "date": "2023/11/19",
-            "minecraft_version": "1.20.3"
-          }
         }
       ]
     },
@@ -886,6 +886,111 @@
           "updated": {
             "date": "2024/09/28",
             "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.hitbox:is_in_block",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/11/21",
+            "minecraft_version": "1.20.3"
+          },
+          "updated": {
+            "date": "2024/09/28",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.hitbox:get_entity",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/11/21",
+            "minecraft_version": "1.20.3"
+          },
+          "updated": {
+            "date": "2024/09/28",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.hitbox:is_in_entity",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/11/21",
+            "minecraft_version": "1.20.3"
+          },
+          "updated": {
+            "date": "2024/09/28",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.hitbox:get_block",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/11/21",
+            "minecraft_version": "1.20.3"
+          },
+          "updated": {
+            "date": "2024/09/28",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.hitbox:is_entity_in_blocks",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/09/28",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/09/28",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.hitbox:is_entity_in_block",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/09/28",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/09/28",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.hitbox:is_sized",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-sized",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/10/28",
+            "minecraft_version": "1.21.2"
+          },
+          "updated": {
+            "date": "2024/10/28",
+            "minecraft_version": "1.21.2"
           }
         },
         {
@@ -917,111 +1022,6 @@
             "date": "2024/09/28",
             "minecraft_version": "1.21"
           }
-        },
-        {
-          "id": "#bs.hitbox:is_sized",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-sized",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/10/28",
-            "minecraft_version": "1.21.2"
-          },
-          "updated": {
-            "date": "2024/10/28",
-            "minecraft_version": "1.21.2"
-          }
-        },
-        {
-          "id": "#bs.hitbox:get_block",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/11/21",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.hitbox:get_entity",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/11/21",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.hitbox:is_entity_in_block",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.hitbox:is_entity_in_blocks",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.hitbox:is_in_block",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/11/21",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.hitbox:is_in_entity",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/11/21",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          }
         }
       ]
     },
@@ -1033,23 +1033,8 @@
       "kind": "data_pack",
       "features": [
         {
-          "id": "bs.id:cuid_equal",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-chain-unique-id",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/08/28",
-            "minecraft_version": "23w33a"
-          },
-          "updated": {
-            "date": "2023/08/28",
-            "minecraft_version": "23w33a"
-          }
-        },
-        {
-          "id": "bs.id:cuid_lower",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-chain-unique-id",
+          "id": "bs.id:has_suid",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-simple-unique-id",
           "authors": [
             "Aksiome"
           ],
@@ -1064,21 +1049,6 @@
         },
         {
           "id": "bs.id:cuid_match",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-chain-unique-id",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/08/28",
-            "minecraft_version": "23w33a"
-          },
-          "updated": {
-            "date": "2023/08/28",
-            "minecraft_version": "23w33a"
-          }
-        },
-        {
-          "id": "bs.id:cuid_upper",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-chain-unique-id",
           "authors": [
             "Aksiome"
@@ -1108,7 +1078,67 @@
           }
         },
         {
-          "id": "bs.id:has_suid",
+          "id": "bs.id:suid_upper",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-simple-unique-id",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/08/28",
+            "minecraft_version": "23w33a"
+          },
+          "updated": {
+            "date": "2023/08/28",
+            "minecraft_version": "23w33a"
+          }
+        },
+        {
+          "id": "bs.id:cuid_upper",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-chain-unique-id",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/08/28",
+            "minecraft_version": "23w33a"
+          },
+          "updated": {
+            "date": "2023/08/28",
+            "minecraft_version": "23w33a"
+          }
+        },
+        {
+          "id": "bs.id:suid_lower",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-simple-unique-id",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/08/28",
+            "minecraft_version": "23w33a"
+          },
+          "updated": {
+            "date": "2023/08/28",
+            "minecraft_version": "23w33a"
+          }
+        },
+        {
+          "id": "bs.id:cuid_lower",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-chain-unique-id",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/08/28",
+            "minecraft_version": "23w33a"
+          },
+          "updated": {
+            "date": "2023/08/28",
+            "minecraft_version": "23w33a"
+          }
+        },
+        {
+          "id": "bs.id:suid_match",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-simple-unique-id",
           "authors": [
             "Aksiome"
@@ -1138,8 +1168,8 @@
           }
         },
         {
-          "id": "bs.id:suid_lower",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-simple-unique-id",
+          "id": "bs.id:cuid_equal",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-chain-unique-id",
           "authors": [
             "Aksiome"
           ],
@@ -1153,38 +1183,8 @@
           }
         },
         {
-          "id": "bs.id:suid_match",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-simple-unique-id",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/08/28",
-            "minecraft_version": "23w33a"
-          },
-          "updated": {
-            "date": "2023/08/28",
-            "minecraft_version": "23w33a"
-          }
-        },
-        {
-          "id": "bs.id:suid_upper",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-simple-unique-id",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/08/28",
-            "minecraft_version": "23w33a"
-          },
-          "updated": {
-            "date": "2023/08/28",
-            "minecraft_version": "23w33a"
-          }
-        },
-        {
-          "id": "#bs.id:give_cuid",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#give-chain-unique-id",
+          "id": "#bs.id:give_suid",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#give-simple-unique-id",
           "authors": [
             "Aksiome",
             "KubbyDev"
@@ -1199,8 +1199,8 @@
           }
         },
         {
-          "id": "#bs.id:give_suid",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#give-simple-unique-id",
+          "id": "#bs.id:give_cuid",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#give-chain-unique-id",
           "authors": [
             "Aksiome",
             "KubbyDev"
@@ -1243,6 +1243,22 @@
       ],
       "features": [
         {
+          "id": "#bs.interaction:on_right_click",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html#on-event",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2024/03/30",
+            "minecraft_version": "24w13a"
+          },
+          "updated": {
+            "date": "2024/11/01",
+            "minecraft_version": "1.21.3"
+          }
+        },
+        {
           "id": "#bs.interaction:clear_events",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html#clear-events",
           "authors": [
@@ -1251,6 +1267,22 @@
           "created": {
             "date": "2024/11/01",
             "minecraft_version": "1.21.3"
+          },
+          "updated": {
+            "date": "2024/11/01",
+            "minecraft_version": "1.21.3"
+          }
+        },
+        {
+          "id": "#bs.interaction:on_hover_leave",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html#on-event",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2024/03/30",
+            "minecraft_version": "24w13a"
           },
           "updated": {
             "date": "2024/11/01",
@@ -1290,39 +1322,7 @@
           }
         },
         {
-          "id": "#bs.interaction:on_hover_leave",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html#on-event",
-          "authors": [
-            "Aksiome",
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2024/03/30",
-            "minecraft_version": "24w13a"
-          },
-          "updated": {
-            "date": "2024/11/01",
-            "minecraft_version": "1.21.3"
-          }
-        },
-        {
           "id": "#bs.interaction:on_left_click",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html#on-event",
-          "authors": [
-            "Aksiome",
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2024/03/30",
-            "minecraft_version": "24w13a"
-          },
-          "updated": {
-            "date": "2024/11/01",
-            "minecraft_version": "1.21.3"
-          }
-        },
-        {
-          "id": "#bs.interaction:on_right_click",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html#on-event",
           "authors": [
             "Aksiome",
@@ -1351,21 +1351,6 @@
       ],
       "features": [
         {
-          "id": "bs.link:has_link",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#has-link",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/11/07",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2023/11/07",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
           "id": "bs.link:link_equal",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#link-equal",
           "authors": [
@@ -1381,63 +1366,96 @@
           }
         },
         {
-          "id": "#bs.link:as_children",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#relationships",
+          "id": "bs.link:has_link",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#has-link",
           "authors": [
             "Aksiome"
           ],
           "created": {
-            "date": "2024/09/07",
-            "minecraft_version": "1.21"
+            "date": "2023/11/07",
+            "minecraft_version": "1.20.4"
           },
           "updated": {
-            "date": "2024/09/07",
-            "minecraft_version": "1.21"
+            "date": "2023/11/07",
+            "minecraft_version": "1.20.4"
           }
         },
         {
-          "id": "#bs.link:as_parent",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#relationships",
+          "id": "#bs.link:reverse_rot",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#reverse-behaviors",
           "authors": [
-            "Aksiome"
+            "Aksiome",
+            "Leirof"
           ],
           "created": {
-            "date": "2024/09/07",
-            "minecraft_version": "1.21"
+            "date": "2018/06/29",
+            "minecraft_version": "1.13"
           },
           "updated": {
-            "date": "2024/09/07",
-            "minecraft_version": "1.21"
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.4"
           }
         },
         {
-          "id": "#bs.link:at_children",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#relationships",
+          "id": "#bs.link:reverse_pos_x",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#reverse-behaviors",
           "authors": [
-            "Aksiome"
+            "Aksiome",
+            "Leirof"
           ],
           "created": {
-            "date": "2024/09/07",
-            "minecraft_version": "1.21"
+            "date": "2018/06/29",
+            "minecraft_version": "1.13"
           },
           "updated": {
-            "date": "2024/09/07",
-            "minecraft_version": "1.21"
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.4"
           }
         },
         {
-          "id": "#bs.link:at_parent",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#relationships",
+          "id": "#bs.link:mirror_x_plane",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#mirror-plane",
           "authors": [
             "Aksiome"
           ],
           "created": {
-            "date": "2024/09/07",
-            "minecraft_version": "1.21"
+            "date": "2023/09/10",
+            "minecraft_version": "1.20.1"
           },
           "updated": {
-            "date": "2024/09/07",
-            "minecraft_version": "1.21"
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.1"
+          }
+        },
+        {
+          "id": "#bs.link:imitate_rot_v",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#imitate-behaviors",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2018/06/29",
+            "minecraft_version": "1.13"
+          },
+          "updated": {
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.link:mirror_point_ata",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#mirror-point",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/09/10",
+            "minecraft_version": "1.20.1"
+          },
+          "updated": {
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.1"
           }
         },
         {
@@ -1457,8 +1475,23 @@
           }
         },
         {
-          "id": "#bs.link:imitate_pos",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#imitate-behaviors",
+          "id": "#bs.link:at_parent",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#relationships",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/09/07",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/09/07",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.link:reverse_pos",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#reverse-behaviors",
           "authors": [
             "Aksiome",
             "Leirof"
@@ -1470,6 +1503,21 @@
           "updated": {
             "date": "2023/09/11",
             "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.link:at_children",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#relationships",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/09/07",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/09/07",
+            "minecraft_version": "1.21"
           }
         },
         {
@@ -1505,22 +1553,6 @@
           }
         },
         {
-          "id": "#bs.link:imitate_pos_y",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#imitate-behaviors",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2018/06/29",
-            "minecraft_version": "1.13"
-          },
-          "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
           "id": "#bs.link:imitate_pos_z",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#imitate-behaviors",
           "authors": [
@@ -1537,179 +1569,7 @@
           }
         },
         {
-          "id": "#bs.link:imitate_rot",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#imitate-behaviors",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2018/06/29",
-            "minecraft_version": "1.13"
-          },
-          "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.link:imitate_rot_h",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#imitate-behaviors",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2018/06/29",
-            "minecraft_version": "1.13"
-          },
-          "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.link:imitate_rot_v",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#imitate-behaviors",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2018/06/29",
-            "minecraft_version": "1.13"
-          },
-          "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.link:keep_local_pos",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#keep-local-position",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2019/07/13",
-            "minecraft_version": "1.14"
-          },
-          "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.1"
-          }
-        },
-        {
-          "id": "#bs.link:mirror_point_ata",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#mirror-point",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/09/10",
-            "minecraft_version": "1.20.1"
-          },
-          "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.1"
-          }
-        },
-        {
-          "id": "#bs.link:mirror_x_plane",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#mirror-plane",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/09/10",
-            "minecraft_version": "1.20.1"
-          },
-          "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.1"
-          }
-        },
-        {
-          "id": "#bs.link:mirror_z_plane",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#mirror-plane",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/09/10",
-            "minecraft_version": "1.20.1"
-          },
-          "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.1"
-          }
-        },
-        {
-          "id": "#bs.link:remove_link",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#remove-link",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/07",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/09/07",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.link:reverse_pos",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#reverse-behaviors",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2018/06/29",
-            "minecraft_version": "1.13"
-          },
-          "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.link:reverse_pos_and_rot",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#reverse-behaviors",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2018/06/29",
-            "minecraft_version": "1.13"
-          },
-          "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.link:reverse_pos_x",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#reverse-behaviors",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2018/06/29",
-            "minecraft_version": "1.13"
-          },
-          "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.link:reverse_pos_y",
+          "id": "#bs.link:reverse_rot_h",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#reverse-behaviors",
           "authors": [
             "Aksiome",
@@ -1741,8 +1601,8 @@
           }
         },
         {
-          "id": "#bs.link:reverse_rot",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#reverse-behaviors",
+          "id": "#bs.link:update_link",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#update-link",
           "authors": [
             "Aksiome",
             "Leirof"
@@ -1752,24 +1612,8 @@
             "minecraft_version": "1.13"
           },
           "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.link:reverse_rot_h",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#reverse-behaviors",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2018/06/29",
-            "minecraft_version": "1.13"
-          },
-          "updated": {
-            "date": "2023/09/11",
-            "minecraft_version": "1.20.4"
+            "date": "2023/10/20",
+            "minecraft_version": "1.20.2"
           }
         },
         {
@@ -1789,8 +1633,8 @@
           }
         },
         {
-          "id": "#bs.link:update_link",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#update-link",
+          "id": "#bs.link:imitate_pos",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#imitate-behaviors",
           "authors": [
             "Aksiome",
             "Leirof"
@@ -1800,8 +1644,164 @@
             "minecraft_version": "1.13"
           },
           "updated": {
-            "date": "2023/10/20",
-            "minecraft_version": "1.20.2"
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.link:remove_link",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#remove-link",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/09/07",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/09/07",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.link:as_parent",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#relationships",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/09/07",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/09/07",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.link:keep_local_pos",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#keep-local-position",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2019/07/13",
+            "minecraft_version": "1.14"
+          },
+          "updated": {
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.1"
+          }
+        },
+        {
+          "id": "#bs.link:reverse_pos_y",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#reverse-behaviors",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2018/06/29",
+            "minecraft_version": "1.13"
+          },
+          "updated": {
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.link:imitate_rot",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#imitate-behaviors",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2018/06/29",
+            "minecraft_version": "1.13"
+          },
+          "updated": {
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.link:mirror_z_plane",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#mirror-plane",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/09/10",
+            "minecraft_version": "1.20.1"
+          },
+          "updated": {
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.1"
+          }
+        },
+        {
+          "id": "#bs.link:imitate_pos_y",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#imitate-behaviors",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2018/06/29",
+            "minecraft_version": "1.13"
+          },
+          "updated": {
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.link:reverse_pos_and_rot",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#reverse-behaviors",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2018/06/29",
+            "minecraft_version": "1.13"
+          },
+          "updated": {
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.link:as_children",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#relationships",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/09/07",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/09/07",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.link:imitate_rot_h",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#imitate-behaviors",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2018/06/29",
+            "minecraft_version": "1.13"
+          },
+          "updated": {
+            "date": "2023/09/11",
+            "minecraft_version": "1.20.4"
           }
         }
       ]
@@ -1844,6 +1844,36 @@
           }
         },
         {
+          "id": "#bs.log:warn",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html#warn",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2023/08/05",
+            "minecraft_version": "23w31a"
+          },
+          "updated": {
+            "date": "2024/09/06",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.log:info",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html#info",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2023/08/05",
+            "minecraft_version": "23w31a"
+          },
+          "updated": {
+            "date": "2024/09/06",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
           "id": "#bs.log:error",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html#error",
           "authors": [
@@ -1872,36 +1902,6 @@
             "date": "2024/09/06",
             "minecraft_version": "1.21"
           }
-        },
-        {
-          "id": "#bs.log:info",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html#info",
-          "authors": [
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2023/08/05",
-            "minecraft_version": "23w31a"
-          },
-          "updated": {
-            "date": "2024/09/06",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.log:warn",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html#warn",
-          "authors": [
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2023/08/05",
-            "minecraft_version": "23w31a"
-          },
-          "updated": {
-            "date": "2024/09/06",
-            "minecraft_version": "1.21"
-          }
         }
       ]
     },
@@ -1913,82 +1913,52 @@
       "kind": "data_pack",
       "features": [
         {
-          "id": "#bs.math:acos",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#inverse-trigonometry",
+          "id": "#bs.math:ipow",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#power",
           "authors": [
             "Aksiome",
             "KubbyDev"
           ],
           "created": {
-            "date": "2017/09/04",
-            "minecraft_version": "1.12.1"
-          },
-          "updated": {
-            "date": "2023/09/05",
-            "minecraft_version": "23w33a"
-          }
-        },
-        {
-          "id": "#bs.math:asin",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#inverse-trigonometry",
-          "authors": [
-            "Aksiome",
-            "KubbyDev"
-          ],
-          "created": {
-            "date": "2017/08/24",
+            "date": "2017/05/14",
             "minecraft_version": "1.12"
           },
           "updated": {
-            "date": "2023/09/05",
-            "minecraft_version": "23w33a"
-          }
-        },
-        {
-          "id": "#bs.math:atan",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#inverse-trigonometry",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2018/10/01",
-            "minecraft_version": "1.13.2"
-          },
-          "updated": {
-            "date": "2023/09/05",
-            "minecraft_version": "23w33a"
-          }
-        },
-        {
-          "id": "#bs.math:atan2",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#inverse-trigonometry",
-          "authors": [
-            "Aksiome",
-            "KubbyDev"
-          ],
-          "created": {
-            "date": "2023/09/05",
-            "minecraft_version": "23w33a"
-          },
-          "updated": {
-            "date": "2024/02/27",
+            "date": "2024/01/29",
             "minecraft_version": "1.20.4"
           }
         },
         {
-          "id": "#bs.math:combine",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#combine",
+          "id": "#bs.math:frexp",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#float-manipulation",
           "authors": [
-            "Ethanout"
+            "Aksiome"
           ],
           "created": {
-            "date": "2023/08/13",
-            "minecraft_version": "23w31a"
+            "date": "2023/09/02",
+            "minecraft_version": "23w33a"
           },
           "updated": {
-            "date": "2023/08/13",
-            "minecraft_version": "23w31a"
+            "date": "2024/01/31",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.math:sin",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#trigonometry",
+          "authors": [
+            "Leirof"
+          ],
+          "contributors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2017/05/16",
+            "minecraft_version": "1.12"
+          },
+          "updated": {
+            "date": "2023/08/31",
+            "minecraft_version": "23w33a"
           }
         },
         {
@@ -2008,6 +1978,116 @@
           }
         },
         {
+          "id": "#bs.math:ldexp",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#float-manipulation",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/01/28",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/01/28",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.math:loga",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#logarithm",
+          "authors": [
+            "Aksiome",
+            "KubbyDev"
+          ],
+          "created": {
+            "date": "2019/01/07",
+            "minecraft_version": "1.13.2"
+          },
+          "updated": {
+            "date": "2024/01/29",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.math:acos",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#inverse-trigonometry",
+          "authors": [
+            "Aksiome",
+            "KubbyDev"
+          ],
+          "created": {
+            "date": "2017/09/04",
+            "minecraft_version": "1.12.1"
+          },
+          "updated": {
+            "date": "2023/09/05",
+            "minecraft_version": "23w33a"
+          }
+        },
+        {
+          "id": "#bs.math:log2",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#logarithm",
+          "authors": [
+            "Aksiome",
+            "KubbyDev"
+          ],
+          "created": {
+            "date": "2019/01/07",
+            "minecraft_version": "1.13.2"
+          },
+          "updated": {
+            "date": "2024/01/29",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.math:combine",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#combine",
+          "authors": [
+            "Ethanout"
+          ],
+          "created": {
+            "date": "2023/08/13",
+            "minecraft_version": "23w31a"
+          },
+          "updated": {
+            "date": "2023/08/13",
+            "minecraft_version": "23w31a"
+          }
+        },
+        {
+          "id": "#bs.math:pow",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#pow",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/01/30",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/01/30",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.math:sqrt",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#square-root",
+          "authors": [
+            "Aksiome",
+            "Ethanout",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2017/05/14",
+            "minecraft_version": "1.12"
+          },
+          "updated": {
+            "date": "2024/01/28",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
           "id": "#bs.math:divide",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#rounded-division",
           "authors": [
@@ -2024,34 +2104,19 @@
           }
         },
         {
-          "id": "#bs.math:exp",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#exponential",
+          "id": "#bs.math:gcd",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#greatest-common-denominator",
           "authors": [
             "Aksiome",
-            "KubbyDev"
+            "Leirof"
           ],
           "created": {
-            "date": "2018/12/25",
-            "minecraft_version": "1.13.2"
+            "date": "2017/10/28",
+            "minecraft_version": "1.12.2"
           },
           "updated": {
-            "date": "2024/01/31",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.math:exp2",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#exponential",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/01/31",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/01/31",
-            "minecraft_version": "1.20.4"
+            "date": "2023/08/03",
+            "minecraft_version": "23w33a"
           }
         },
         {
@@ -2075,53 +2140,6 @@
           }
         },
         {
-          "id": "#bs.math:frexp",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#float-manipulation",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/09/02",
-            "minecraft_version": "23w33a"
-          },
-          "updated": {
-            "date": "2024/01/31",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.math:gcd",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#greatest-common-denominator",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2017/10/28",
-            "minecraft_version": "1.12.2"
-          },
-          "updated": {
-            "date": "2023/08/03",
-            "minecraft_version": "23w33a"
-          }
-        },
-        {
-          "id": "#bs.math:ipow",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#power",
-          "authors": [
-            "Aksiome",
-            "KubbyDev"
-          ],
-          "created": {
-            "date": "2017/05/14",
-            "minecraft_version": "1.12"
-          },
-          "updated": {
-            "date": "2024/01/29",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
           "id": "#bs.math:isqrt",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#square-root",
           "authors": [
@@ -2139,33 +2157,17 @@
           }
         },
         {
-          "id": "#bs.math:ldexp",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#float-manipulation",
+          "id": "#bs.math:sincos",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#trigonometry",
           "authors": [
             "Aksiome"
           ],
           "created": {
-            "date": "2024/01/28",
-            "minecraft_version": "1.20.4"
+            "date": "2023/09/05",
+            "minecraft_version": "23w33a"
           },
           "updated": {
-            "date": "2024/01/28",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.math:log",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#logarithm",
-          "authors": [
-            "Aksiome",
-            "KubbyDev"
-          ],
-          "created": {
-            "date": "2019/01/06",
-            "minecraft_version": "1.13.2"
-          },
-          "updated": {
-            "date": "2024/01/29",
+            "date": "2024/02/27",
             "minecraft_version": "1.20.4"
           }
         },
@@ -2186,75 +2188,58 @@
           }
         },
         {
-          "id": "#bs.math:log2",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#logarithm",
+          "id": "#bs.math:exp2",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#exponential",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/01/31",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/01/31",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.math:asin",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#inverse-trigonometry",
           "authors": [
             "Aksiome",
             "KubbyDev"
           ],
           "created": {
-            "date": "2019/01/07",
-            "minecraft_version": "1.13.2"
-          },
-          "updated": {
-            "date": "2024/01/29",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.math:loga",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#logarithm",
-          "authors": [
-            "Aksiome",
-            "KubbyDev"
-          ],
-          "created": {
-            "date": "2019/01/07",
-            "minecraft_version": "1.13.2"
-          },
-          "updated": {
-            "date": "2024/01/29",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.math:pow",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#pow",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/01/30",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/01/30",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.math:sin",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#trigonometry",
-          "authors": [
-            "Leirof"
-          ],
-          "contributors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2017/05/16",
+            "date": "2017/08/24",
             "minecraft_version": "1.12"
           },
           "updated": {
-            "date": "2023/08/31",
+            "date": "2023/09/05",
             "minecraft_version": "23w33a"
           }
         },
         {
-          "id": "#bs.math:sincos",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#trigonometry",
+          "id": "#bs.math:log",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#logarithm",
           "authors": [
-            "Aksiome"
+            "Aksiome",
+            "KubbyDev"
+          ],
+          "created": {
+            "date": "2019/01/06",
+            "minecraft_version": "1.13.2"
+          },
+          "updated": {
+            "date": "2024/01/29",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.math:atan2",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#inverse-trigonometry",
+          "authors": [
+            "Aksiome",
+            "KubbyDev"
           ],
           "created": {
             "date": "2023/09/05",
@@ -2262,23 +2247,6 @@
           },
           "updated": {
             "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.math:sqrt",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#square-root",
-          "authors": [
-            "Aksiome",
-            "Ethanout",
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2017/05/14",
-            "minecraft_version": "1.12"
-          },
-          "updated": {
-            "date": "2024/01/28",
             "minecraft_version": "1.20.4"
           }
         },
@@ -2297,6 +2265,38 @@
             "date": "2024/02/27",
             "minecraft_version": "1.20.4"
           }
+        },
+        {
+          "id": "#bs.math:atan",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#inverse-trigonometry",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2018/10/01",
+            "minecraft_version": "1.13.2"
+          },
+          "updated": {
+            "date": "2023/09/05",
+            "minecraft_version": "23w33a"
+          }
+        },
+        {
+          "id": "#bs.math:exp",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#exponential",
+          "authors": [
+            "Aksiome",
+            "KubbyDev"
+          ],
+          "created": {
+            "date": "2018/12/25",
+            "minecraft_version": "1.13.2"
+          },
+          "updated": {
+            "date": "2024/01/31",
+            "minecraft_version": "1.20.4"
+          }
         }
       ]
     },
@@ -2311,18 +2311,17 @@
       ],
       "features": [
         {
-          "id": "#bs.move:apply_local_vel",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html#apply-velocity",
+          "id": "#bs.move:local_to_canonical",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html#local-to-canonical",
           "authors": [
-            "Aksiome",
-            "Leirof"
+            "Aksiome"
           ],
           "created": {
-            "date": "2018/05/28",
-            "minecraft_version": "1.13"
+            "date": "2023/12/25",
+            "minecraft_version": "1.20.4"
           },
           "updated": {
-            "date": "2024/02/27",
+            "date": "2024/04/19",
             "minecraft_version": "1.20.4"
           }
         },
@@ -2343,32 +2342,18 @@
           }
         },
         {
-          "id": "#bs.move:canonical_to_local",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html#canonical-to-local",
+          "id": "#bs.move:apply_local_vel",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html#apply-velocity",
           "authors": [
-            "Aksiome"
+            "Aksiome",
+            "Leirof"
           ],
           "created": {
-            "date": "2023/12/25",
-            "minecraft_version": "1.20.4"
+            "date": "2018/05/28",
+            "minecraft_version": "1.13"
           },
           "updated": {
             "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.move:local_to_canonical",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html#local-to-canonical",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/12/25",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/04/19",
             "minecraft_version": "1.20.4"
           }
         },
@@ -2387,6 +2372,21 @@
             "date": "2023/12/13",
             "minecraft_version": "1.20.4"
           }
+        },
+        {
+          "id": "#bs.move:canonical_to_local",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html#canonical-to-local",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/12/25",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
         }
       ]
     },
@@ -2398,7 +2398,7 @@
       "kind": "data_pack",
       "features": [
         {
-          "id": "#bs.position:add_pos",
+          "id": "#bs.position:add_rot",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#add-position-and-rotation",
           "authors": [
             "Aksiome",
@@ -2414,7 +2414,169 @@
           }
         },
         {
+          "id": "#bs.position:get_distance_ata",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-distance",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "contributors": [
+            "Triton365"
+          ],
+          "created": {
+            "date": "2019/07/14",
+            "minecraft_version": "1.14.3"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:local_to_canonical",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#local-to-canonical",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/12/25",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/04/12",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:set_pos_and_rot",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2023/09/09",
+            "minecraft_version": "1.20.1"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:set_pos",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#set-position-and-rotation",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2017/05/14",
+            "minecraft_version": "1.12"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:get_pos",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-position-and-rotation",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2017/05/14",
+            "minecraft_version": "1.12"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
           "id": "#bs.position:add_pos_and_rot",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#add-position-and-rotation",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2024/01/22",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:set_pos_y",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#set-position-and-rotation",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2017/05/14",
+            "minecraft_version": "1.12"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:add_rot_v",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#add-position-and-rotation",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2024/01/22",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:get_pos_y",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-position-and-rotation",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2017/05/14",
+            "minecraft_version": "1.12"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:get_pos_and_rot",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-position-and-rotation",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2023/09/09",
+            "minecraft_version": "1.20.1"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:add_pos_z",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#add-position-and-rotation",
           "authors": [
             "Aksiome",
@@ -2462,173 +2624,12 @@
           }
         },
         {
-          "id": "#bs.position:add_pos_z",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#add-position-and-rotation",
+          "id": "#bs.position:set_rot_h",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#set-rotation",
           "authors": [
             "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2024/01/22",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:add_rot",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#add-position-and-rotation",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2024/01/22",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:add_rot_h",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#add-position-and-rotation",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2024/01/22",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:add_rot_v",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#add-position-and-rotation",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2024/01/22",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:canonical_to_local",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#canonical-to-local",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/10/20",
-            "minecraft_version": "1.20.2"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:get_distance_ata",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-distance",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "contributors": [
-            "Triton365"
-          ],
-          "created": {
-            "date": "2019/07/14",
-            "minecraft_version": "1.14.3"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:get_distance_squared_ata",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-distance",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2019/07/14",
-            "minecraft_version": "1.14.3"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:get_pos",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-position-and-rotation",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2017/05/14",
-            "minecraft_version": "1.12"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:get_pos_and_rot",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-position-and-rotation",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2023/09/09",
-            "minecraft_version": "1.20.1"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:get_pos_x",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-position-and-rotation",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2017/05/14",
-            "minecraft_version": "1.12"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:get_pos_y",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-position-and-rotation",
-          "authors": [
-            "Aksiome",
-            "Leirof"
+            "Leirof",
+            "theogiraudet"
           ],
           "created": {
             "date": "2017/05/14",
@@ -2656,15 +2657,15 @@
           }
         },
         {
-          "id": "#bs.position:get_relative_ata",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-relative",
+          "id": "#bs.position:set_pos_z",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#set-position-and-rotation",
           "authors": [
             "Aksiome",
             "Leirof"
           ],
           "created": {
-            "date": "2019/07/14",
-            "minecraft_version": "1.14.3"
+            "date": "2017/05/14",
+            "minecraft_version": "1.12"
           },
           "updated": {
             "date": "2024/02/27",
@@ -2680,23 +2681,6 @@
           "created": {
             "date": "2023/10/20",
             "minecraft_version": "1.20.2"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:get_rot",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-rotation",
-          "authors": [
-            "Aksiome",
-            "Leirof",
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2017/05/14",
-            "minecraft_version": "1.12"
           },
           "updated": {
             "date": "2024/02/27",
@@ -2738,53 +2722,6 @@
           }
         },
         {
-          "id": "#bs.position:local_to_canonical",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#local-to-canonical",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/12/25",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/04/12",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:set_pos",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#set-position-and-rotation",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2017/05/14",
-            "minecraft_version": "1.12"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:set_pos_and_rot",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2023/09/09",
-            "minecraft_version": "1.20.1"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
           "id": "#bs.position:set_pos_x",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#set-position-and-rotation",
           "authors": [
@@ -2801,15 +2738,15 @@
           }
         },
         {
-          "id": "#bs.position:set_pos_y",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#set-position-and-rotation",
+          "id": "#bs.position:get_distance_squared_ata",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-distance",
           "authors": [
             "Aksiome",
             "Leirof"
           ],
           "created": {
-            "date": "2017/05/14",
-            "minecraft_version": "1.12"
+            "date": "2019/07/14",
+            "minecraft_version": "1.14.3"
           },
           "updated": {
             "date": "2024/02/27",
@@ -2817,24 +2754,8 @@
           }
         },
         {
-          "id": "#bs.position:set_pos_z",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#set-position-and-rotation",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2017/05/14",
-            "minecraft_version": "1.12"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.position:set_rot",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#set-rotation",
+          "id": "#bs.position:get_rot",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-rotation",
           "authors": [
             "Aksiome",
             "Leirof",
@@ -2850,7 +2771,86 @@
           }
         },
         {
-          "id": "#bs.position:set_rot_h",
+          "id": "#bs.position:add_rot_h",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#add-position-and-rotation",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2024/01/22",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:get_pos_x",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-position-and-rotation",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2017/05/14",
+            "minecraft_version": "1.12"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:get_relative_ata",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-relative",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2019/07/14",
+            "minecraft_version": "1.14.3"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:add_pos",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#add-position-and-rotation",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2024/01/22",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:canonical_to_local",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#canonical-to-local",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/10/20",
+            "minecraft_version": "1.20.2"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.position:set_rot",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#set-rotation",
           "authors": [
             "Aksiome",
@@ -2893,79 +2893,30 @@
       "kind": "data_pack",
       "features": [
         {
-          "id": "#bs.random:binomial",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#random-distributions",
-          "authors": [
-            "SBtree"
-          ],
-          "contributors": [
-            "Aeldrion"
-          ],
-          "created": {
-            "date": "2024/06/15",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/08/05",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.random:choice",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#random-choice",
-          "authors": [
-            "SBtree"
-          ],
-          "created": {
-            "date": "2024/06/17",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/08/05",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.random:fractal_noise_2d",
+          "id": "#bs.random:white_noise_mat_2d",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#noise",
           "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/08/05",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/08/05",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.random:fractal_noise_mat_2d",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#noise",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/08/05",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/08/05",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.random:geometric",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#random-distributions",
-          "authors": [
+            "Aksiome",
             "SBtree"
           ],
-          "contributors": [
-            "Aeldrion"
+          "created": {
+            "date": "2024/06/20",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/08/05",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.random:white_noise_mat_1d",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#noise",
+          "authors": [
+            "Aksiome",
+            "SBtree"
           ],
           "created": {
-            "date": "2024/06/16",
+            "date": "2024/06/20",
             "minecraft_version": "1.21"
           },
           "updated": {
@@ -3010,6 +2961,84 @@
           }
         },
         {
+          "id": "#bs.random:weighted_choice",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#random-choice",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/09/04",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/09/04",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.random:binomial",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#random-distributions",
+          "authors": [
+            "SBtree"
+          ],
+          "contributors": [
+            "Aeldrion"
+          ],
+          "created": {
+            "date": "2024/06/15",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/08/05",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.random:fractal_noise_mat_2d",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#noise",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/08/05",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/08/05",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.random:choice",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#random-choice",
+          "authors": [
+            "SBtree"
+          ],
+          "created": {
+            "date": "2024/06/17",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/08/05",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
+          "id": "#bs.random:fractal_noise_2d",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#noise",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/08/05",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/08/05",
+            "minecraft_version": "1.21"
+          }
+        },
+        {
           "id": "#bs.random:simplex_noise_mat_2d",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#noise",
           "authors": [
@@ -3043,45 +3072,16 @@
           }
         },
         {
-          "id": "#bs.random:weighted_choice",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#random-choice",
+          "id": "#bs.random:geometric",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#random-distributions",
           "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/04",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/09/04",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.random:white_noise_mat_1d",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#noise",
-          "authors": [
-            "Aksiome",
             "SBtree"
           ],
-          "created": {
-            "date": "2024/06/20",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/08/05",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.random:white_noise_mat_2d",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#noise",
-          "authors": [
-            "Aksiome",
-            "SBtree"
+          "contributors": [
+            "Aeldrion"
           ],
           "created": {
-            "date": "2024/06/20",
+            "date": "2024/06/16",
             "minecraft_version": "1.21"
           },
           "updated": {
@@ -3129,22 +3129,6 @@
       ],
       "features": [
         {
-          "id": "#bs.schedule:cancel_all",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html#cancel",
-          "authors": [
-            "Aksiome",
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2023/09/10",
-            "minecraft_version": "1.20.2"
-          },
-          "updated": {
-            "date": "2024/01/20",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
           "id": "#bs.schedule:cancel_one",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html#cancel",
           "authors": [
@@ -3154,6 +3138,22 @@
           "created": {
             "date": "2019/07/31",
             "minecraft_version": "1.14"
+          },
+          "updated": {
+            "date": "2024/01/20",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.schedule:cancel_all",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html#cancel",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2023/09/10",
+            "minecraft_version": "1.20.2"
           },
           "updated": {
             "date": "2024/01/20",
@@ -3280,34 +3280,19 @@
       "kind": "data_pack",
       "features": [
         {
-          "id": "#bs.vector:abs_max",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#absolute-max",
+          "id": "#bs.vector:normalize",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#normalize",
           "authors": [
             "Aksiome",
             "Leirof"
           ],
           "created": {
-            "date": "2023/02/23",
+            "date": "2018/02/19",
             "minecraft_version": "1.19.2"
           },
           "updated": {
-            "date": "2024/05/09",
-            "minecraft_version": "1.20.6"
-          }
-        },
-        {
-          "id": "#bs.vector:abs_min",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#absolute-min",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/10/17",
-            "minecraft_version": "1.20.2"
-          },
-          "updated": {
-            "date": "2024/05/09",
-            "minecraft_version": "1.20.6"
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
           }
         },
         {
@@ -3327,34 +3312,49 @@
           }
         },
         {
-          "id": "#bs.vector:cartesian_to_spherical",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#cartesian-to-spherical",
+          "id": "#bs.vector:length_squared",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#length",
           "authors": [
             "Aksiome",
-            "Leirof"
+            "Leirof",
+            "KubbyDev"
           ],
           "created": {
-            "date": "2023/10/20",
-            "minecraft_version": "1.20.2"
-          },
-          "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.vector:cross_product",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#cross-product",
-          "authors": [
-            "Aksiome",
-            "Majoras16"
-          ],
-          "created": {
-            "date": "2023/04/27",
+            "date": "2018/04/01",
             "minecraft_version": "1.19.2"
           },
           "updated": {
             "date": "2023/10/17",
+            "minecraft_version": "1.20.2"
+          }
+        },
+        {
+          "id": "#bs.vector:pos_from_vec",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#helpers",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/10/17",
+            "minecraft_version": "1.20.2"
+          },
+          "updated": {
+            "date": "2023/10/17",
+            "minecraft_version": "1.20.2"
+          }
+        },
+        {
+          "id": "#bs.vector:vec_from_vel",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#helpers",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/10/17",
+            "minecraft_version": "1.20.2"
+          },
+          "updated": {
+            "date": "2023/02/17",
             "minecraft_version": "1.20.2"
           }
         },
@@ -3371,6 +3371,37 @@
           },
           "updated": {
             "date": "2023/10/17",
+            "minecraft_version": "1.20.2"
+          }
+        },
+        {
+          "id": "#bs.vector:cartesian_to_spherical",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#cartesian-to-spherical",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2023/10/20",
+            "minecraft_version": "1.20.2"
+          },
+          "updated": {
+            "date": "2024/02/27",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.vector:vec_from_pos",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#helpers",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/10/17",
+            "minecraft_version": "1.20.2"
+          },
+          "updated": {
+            "date": "2023/02/17",
             "minecraft_version": "1.20.2"
           }
         },
@@ -3392,68 +3423,19 @@
           }
         },
         {
-          "id": "#bs.vector:length_squared",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#length",
-          "authors": [
-            "Aksiome",
-            "Leirof",
-            "KubbyDev"
-          ],
-          "created": {
-            "date": "2018/04/01",
-            "minecraft_version": "1.19.2"
-          },
-          "updated": {
-            "date": "2023/10/17",
-            "minecraft_version": "1.20.2"
-          }
-        },
-        {
-          "id": "#bs.vector:normalize",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#normalize",
+          "id": "#bs.vector:abs_max",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#absolute-max",
           "authors": [
             "Aksiome",
             "Leirof"
           ],
           "created": {
-            "date": "2018/02/19",
+            "date": "2023/02/23",
             "minecraft_version": "1.19.2"
           },
           "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.vector:normalize_max_component",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#length",
-          "authors": [
-            "Aksiome",
-            "Leirof",
-            "KubbyDev"
-          ],
-          "created": {
-            "date": "2018/04/01",
-            "minecraft_version": "1.19.2"
-          },
-          "updated": {
-            "date": "2023/11/20",
-            "minecraft_version": "23w46a"
-          }
-        },
-        {
-          "id": "#bs.vector:pos_from_vec",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#helpers",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/10/17",
-            "minecraft_version": "1.20.2"
-          },
-          "updated": {
-            "date": "2023/10/17",
-            "minecraft_version": "1.20.2"
+            "date": "2024/05/09",
+            "minecraft_version": "1.20.6"
           }
         },
         {
@@ -3487,7 +3469,22 @@
           }
         },
         {
-          "id": "#bs.vector:vec_from_pos",
+          "id": "#bs.vector:abs_min",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#absolute-min",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/10/17",
+            "minecraft_version": "1.20.2"
+          },
+          "updated": {
+            "date": "2024/05/09",
+            "minecraft_version": "1.20.6"
+          }
+        },
+        {
+          "id": "#bs.vector:vel_from_vec",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#helpers",
           "authors": [
             "Aksiome"
@@ -3517,33 +3514,36 @@
           }
         },
         {
-          "id": "#bs.vector:vec_from_vel",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#helpers",
+          "id": "#bs.vector:cross_product",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#cross-product",
           "authors": [
-            "Aksiome"
+            "Aksiome",
+            "Majoras16"
           ],
           "created": {
-            "date": "2023/10/17",
-            "minecraft_version": "1.20.2"
+            "date": "2023/04/27",
+            "minecraft_version": "1.19.2"
           },
           "updated": {
-            "date": "2023/02/17",
+            "date": "2023/10/17",
             "minecraft_version": "1.20.2"
           }
         },
         {
-          "id": "#bs.vector:vel_from_vec",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#helpers",
+          "id": "#bs.vector:normalize_max_component",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#length",
           "authors": [
-            "Aksiome"
+            "Aksiome",
+            "Leirof",
+            "KubbyDev"
           ],
           "created": {
-            "date": "2023/10/17",
-            "minecraft_version": "1.20.2"
+            "date": "2018/04/01",
+            "minecraft_version": "1.19.2"
           },
           "updated": {
-            "date": "2023/02/17",
-            "minecraft_version": "1.20.2"
+            "date": "2023/11/20",
+            "minecraft_version": "23w46a"
           }
         }
       ]
@@ -3558,6 +3558,98 @@
         "bs.raycast"
       ],
       "features": [
+        {
+          "id": "#bs.view:at_block_placement",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#block-placement",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/01/24",
+            "minecraft_version": "1.20.4"
+          },
+          "updated": {
+            "date": "2024/05/09",
+            "minecraft_version": "1.20.6"
+          }
+        },
+        {
+          "id": "#bs.view:in_view_ata",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#in-view-as-to-at",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2019/05/20",
+            "minecraft_version": "1.20.3"
+          },
+          "updated": {
+            "date": "2024/04/20",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.view:at_aimed_point",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#aimed-point",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/01/25",
+            "minecraft_version": "1.20.3"
+          },
+          "updated": {
+            "date": "2024/03/30",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.view:can_see_ata",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#can-see-as-to-at",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2019/05/20",
+            "minecraft_version": "1.20.3"
+          },
+          "updated": {
+            "date": "2024/04/20",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.view:at_looked_entity",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#looked-entity",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/12/06",
+            "minecraft_version": "1.20.3"
+          },
+          "updated": {
+            "date": "2024/03/30",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.view:at_aimed_block",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#aimed-block",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2023/11/30",
+            "minecraft_version": "1.20.3"
+          },
+          "updated": {
+            "date": "2024/03/30",
+            "minecraft_version": "1.20.4"
+          }
+        },
         {
           "id": "#bs.view:as_aimed_entity",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#aimed-entity",
@@ -3589,21 +3681,6 @@
           }
         },
         {
-          "id": "#bs.view:at_aimed_block",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#aimed-block",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/11/30",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2024/03/30",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
           "id": "#bs.view:at_aimed_entity",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#aimed-entity",
           "authors": [
@@ -3617,83 +3694,6 @@
             "date": "2024/03/30",
             "minecraft_version": "1.20.4"
           }
-        },
-        {
-          "id": "#bs.view:at_aimed_point",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#aimed-point",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/01/25",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2024/03/30",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.view:at_block_placement",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#block-placement",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/01/24",
-            "minecraft_version": "1.20.4"
-          },
-          "updated": {
-            "date": "2024/05/09",
-            "minecraft_version": "1.20.6"
-          }
-        },
-        {
-          "id": "#bs.view:at_looked_entity",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#looked-entity",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/12/06",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2024/03/30",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.view:can_see_ata",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#can-see-as-to-at",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2019/05/20",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2024/04/20",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.view:in_view_ata",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#in-view-as-to-at",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2019/05/20",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2024/04/20",
-            "minecraft_version": "1.20.4"
-          }
         }
       ]
     },
@@ -3705,8 +3705,24 @@
       "kind": "data_pack",
       "features": [
         {
-          "id": "#bs.xp:add_levels",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#add-remove",
+          "id": "#bs.xp:get_remaining_points",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#get",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2023/08/31",
+            "minecraft_version": "1.20.1"
+          },
+          "updated": {
+            "date": "2023/11/20",
+            "minecraft_version": "23w46a"
+          }
+        },
+        {
+          "id": "#bs.xp:set_points",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#set",
           "authors": [
             "Aksiome",
             "Leirof"
@@ -3721,8 +3737,8 @@
           }
         },
         {
-          "id": "#bs.xp:add_points",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#add-remove",
+          "id": "#bs.xp:get_total_points",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#get",
           "authors": [
             "Aksiome",
             "Leirof"
@@ -3730,6 +3746,22 @@
           "created": {
             "date": "2022/04/14",
             "minecraft_version": "1.18.2"
+          },
+          "updated": {
+            "date": "2023/11/20",
+            "minecraft_version": "23w46a"
+          }
+        },
+        {
+          "id": "#bs.xp:get_max_points",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#get",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2023/08/31",
+            "minecraft_version": "1.20.1"
           },
           "updated": {
             "date": "2023/11/20",
@@ -3753,56 +3785,8 @@
           }
         },
         {
-          "id": "#bs.xp:get_max_points",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#get",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2023/08/31",
-            "minecraft_version": "1.20.1"
-          },
-          "updated": {
-            "date": "2023/11/20",
-            "minecraft_version": "23w46a"
-          }
-        },
-        {
-          "id": "#bs.xp:get_progress",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#get",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2022/04/14",
-            "minecraft_version": "1.18.2"
-          },
-          "updated": {
-            "date": "2024/03/08",
-            "minecraft_version": "1.20.4"
-          }
-        },
-        {
-          "id": "#bs.xp:get_remaining_points",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#get",
-          "authors": [
-            "Aksiome",
-            "Leirof"
-          ],
-          "created": {
-            "date": "2023/08/31",
-            "minecraft_version": "1.20.1"
-          },
-          "updated": {
-            "date": "2023/11/20",
-            "minecraft_version": "23w46a"
-          }
-        },
-        {
-          "id": "#bs.xp:get_total_points",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#get",
+          "id": "#bs.xp:add_points",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#add-remove",
           "authors": [
             "Aksiome",
             "Leirof"
@@ -3833,7 +3817,23 @@
           }
         },
         {
-          "id": "#bs.xp:set_points",
+          "id": "#bs.xp:get_progress",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#get",
+          "authors": [
+            "Aksiome",
+            "Leirof"
+          ],
+          "created": {
+            "date": "2022/04/14",
+            "minecraft_version": "1.18.2"
+          },
+          "updated": {
+            "date": "2024/03/08",
+            "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.xp:set_total_points",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#set",
           "authors": [
             "Aksiome",
@@ -3865,8 +3865,8 @@
           }
         },
         {
-          "id": "#bs.xp:set_total_points",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#set",
+          "id": "#bs.xp:add_levels",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html#add-remove",
           "authors": [
             "Aksiome",
             "Leirof"
