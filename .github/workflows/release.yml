@@ -2,20 +2,42 @@ name: 📦️ Release Modules
 
 on:
   push:
-    branches: ["master"]
+    branches:
+      - '**'
 
 permissions:
   contents: write
 
 jobs:
-  check:
-    name: 🔍 Check Version
+  meta:
+    name: 🏷️ Update Metadata
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+      - uses: fregante/setup-git-user@v2
+      - uses: pdm-project/setup-pdm@v4
+        with:
+          cache: true
+      - name: Generate Metadata
+        run: |
+          pdm install
+          pdm run meta update
+      - name: Push Changes
+        run: git push origin HEAD:${{ github.ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  version:
+    name: 🔍 Check Version
+    needs: meta
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     outputs:
       release_tag: ${{ steps.definitions.outputs.release_tag }}
       release_name: ${{ steps.definitions.outputs.release_name }}
     steps:
-      - uses: actions/checkout@v4
       - name: Check Versions
         id: definitions
         run: |
@@ -26,11 +48,10 @@ jobs:
           echo "release_name=v$VERSION - MC $name" >> $GITHUB_OUTPUT
   release:
     name: 🔖 Create Release
-    needs: check
+    needs: version
     runs-on: ubuntu-latest
-    if: ${{ needs.check.outputs.release_tag != '' }}
+    if: ${{ needs.version.outputs.release_tag != '' }}
     steps:
-      - uses: actions/checkout@v4
       - uses: fregante/setup-git-user@v2
       - uses: pdm-project/setup-pdm@v4
         with:
@@ -41,8 +62,8 @@ jobs:
           pdm run modules release
       - uses: softprops/action-gh-release@v2
         with:
-          body_path: docs/_templates/changelog/${{ needs.check.outputs.release_tag }}.md
-          name: ${{ needs.check.outputs.release_name }}
-          tag_name: ${{ needs.check.outputs.release_tag }}
+          body_path: docs/_templates/changelog/${{ needs.version.outputs.release_tag }}.md
+          name: ${{ needs.version.outputs.release_name }}
+          tag_name: ${{ needs.version.outputs.release_tag }}
           make_latest: true
           files: release/*.zip
