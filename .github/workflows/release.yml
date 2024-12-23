@@ -1,4 +1,4 @@
-name: 📦️ Release Modules
+name: 🔖 Release Modules
 
 on:
   push:
@@ -9,64 +9,72 @@ permissions:
   contents: write
 
 jobs:
-  meta:
-    name: 🏷️ Update Metadata
+  update-metadata:
+    name: 📝 Update Metadata Files
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-tags: true
           ref: ${{ github.ref }}
       - uses: fregante/setup-git-user@v2
       - uses: pdm-project/setup-pdm@v4
         with:
           cache: true
-      - name: Generate Metadata
-        run: |
-          pdm install
-          pdm run meta update
+      - name: Install Dependencies
+        run: pdm install
+      - name: Update Metadata
+        run: pdm run meta update
       - name: Commit Changes
         run: |
           git add .
           git commit -m "🔖 Update generated metadata" || echo "No changes to commit"
           git push origin HEAD:${{ github.ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  version:
-    name: 🔍 Check Version
-    needs: meta
+
+  check-versions:
+    name: 🔍 Check Release Necessity
+    needs: update-metadata
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     outputs:
-      release_tag: ${{ steps.definitions.outputs.release_tag }}
-      release_name: ${{ steps.definitions.outputs.release_name }}
+      release_tag: ${{ steps.check-versions.outputs.release_tag }}
+      release_name: ${{ steps.check-versions.outputs.release_name }}
+      version_exists: ${{ steps.check-versions.outputs.version_exists }}
     steps:
       - name: Check Versions
-        id: definitions
+        id: check-versions
         run: |
           VERSION=$(python core/definitions.py VERSION)
           MINECRAFT_VERSIONS=$(python core/definitions.py MINECRAFT_VERSIONS)
-          name=$(echo $MINECRAFT_VERSIONS | sed 's/ /,/g')
+
+          game_versions=$(echo $MINECRAFT_VERSIONS | sed 's/ /,/g')
           echo "release_tag=v$VERSION" >> $GITHUB_OUTPUT
-          echo "release_name=v$VERSION - MC $name" >> $GITHUB_OUTPUT
-  release:
-    name: 🔖 Create Release
-    needs: version
+          echo "release_name=v$VERSION - MC $game_versions" >> $GITHUB_OUTPUT
+
+          if [ -n "$(git tag -l "v$VERSION")" ]; then
+            echo "version_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "version_exists=false" >> $GITHUB_OUTPUT
+          fi
+
+  create-release:
+    name: 📦 Create Release
+    needs: check-versions
     runs-on: ubuntu-latest
-    if: ${{ needs.version.outputs.release_tag != '' }}
+    if: ${{ needs.check-versions.outputs.version_exists == 'false' }}
     steps:
       - uses: fregante/setup-git-user@v2
       - uses: pdm-project/setup-pdm@v4
         with:
           cache: true
+      - name: Install Dependencies
+        run: pdm install
       - name: Build Release Files
-        run: |
-          pdm install
-          pdm run modules release
+        run: pdm run modules release
       - uses: softprops/action-gh-release@v2
         with:
-          body_path: docs/_templates/changelog/${{ needs.version.outputs.release_tag }}.md
-          name: ${{ needs.version.outputs.release_name }}
-          tag_name: ${{ needs.version.outputs.release_tag }}
+          body_path: docs/_templates/changelog/${{ needs.check-versions.outputs.release_tag }}.md
+          name: ${{ needs.check-versions.outputs.release_name }}
+          tag_name: ${{ needs.check-versions.outputs.release_tag }}
           make_latest: true
           files: release/*.zip

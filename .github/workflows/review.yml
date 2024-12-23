@@ -15,10 +15,11 @@ jobs:
       - uses: pdm-project/setup-pdm@v4
         with:
           cache: true
+      - name: Install Dependencies
+        run: pdm install
       - name: Check Modules
-        run: |
-          pdm install
-          pdm run modules check
+        run: pdm run modules check
+
   test:
     name: 🧪 Test Modules
     runs-on: ubuntu-latest
@@ -31,7 +32,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
+      - name: Install Dependencies
+        run: pdm install
       - name: Test Modules
-        run: |
-          pdm install
-          pdm run modules test
+        run: pdm run modules test
