@@ -2,14 +2,16 @@ import os
 import sys
 from pathlib import Path
 
-VERSION = "2.2.1"
+VERSION = "2.2.2"
 MINECRAFT_VERSIONS = ["1.21.2", "1.21.3", "1.21.4"]
 
-DOC_URL = "https://docs.mcbookshelf.dev/"
+DOC_URL = "https://docs.mcbookshelf.dev"
 DOC_SWITCHER = "docs/_static/switcher.json"
 GITHUB_REPO = "mcbookshelf/Bookshelf"
 META_MANIFEST = "meta/manifest.json"
 META_VERSIONS = "meta/versions.json"
+MODRINTH_API = "https://api.modrinth.com/v3"
+SMITHED_API = "https://api.smithed.dev/v2"
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 MODULES_DIR = ROOT_DIR / "modules"
@@ -17,7 +19,7 @@ MODULES_DIR = ROOT_DIR / "modules"
 MODULES = sorted([
     mod
     for mod in os.listdir(MODULES_DIR)
-    if (MODULES_DIR / mod).is_dir()
+    if (MODULES_DIR / mod).is_dir() and mod.startswith("bs.")
 ])
 
 BIOMES_URL = "https://raw.githubusercontent.com/misode/mcmeta/{}-summary/data/worldgen/biome/data.min.json"

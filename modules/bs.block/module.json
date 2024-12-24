@@ -1,13 +1,15 @@
 {
-  "extend": "../../module.json",
+  "extend": "../config.json",
   "data_pack": {
     "name": "bs.block",
     "load": "."
   },
   "meta": {
     "name": "Block",
+    "slug": "bookshelf-block",
     "description": "Manage blocks, including states and NBTs, while offering advanced tools for seamless transformations.",
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html"
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html",
+    "tags": ["default"]
   },
   "pipeline": [
     "gen_blocks"

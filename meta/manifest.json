@@ -6,6 +6,9 @@
       "description": "A collection of various bitwise operations, providing versatile tools for manipulating binary data.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": [
         {
           "id": "#bs.bitwise:and",
@@ -126,6 +129,9 @@
       "description": "Manage blocks, including states and NBTs, while offering advanced tools for seamless transformations.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": [
         {
           "id": "#bs.block:emit_block_particle",
@@ -483,6 +489,9 @@
       "description": "Facilitate color conversion between various formats.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": [
         {
           "id": "#bs.color:hex_to_int",
@@ -588,6 +597,9 @@
       "description": "Dump the content of given variables to the chat.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/dump.html",
       "kind": "data_pack",
+      "tags": [
+        "dev"
+      ],
       "features": [
         {
           "id": "#bs.dump:var",
@@ -612,6 +624,9 @@
       "description": "Comprehensive information and tools related to weather and biome properties.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": [
         {
           "id": "#bs.environment:get_biome",
@@ -697,6 +712,9 @@
       "description": "Generate diverse terrains and landscapes, incorporating natural features.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generate.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "dependencies": [
         "bs.random"
       ],
@@ -754,6 +772,9 @@
       "description": "Efficiently manage the lifecycle and vital aspects of an entity.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "weak_dependencies": [
         "bs.log"
       ],
@@ -872,6 +893,9 @@
       "description": "Get and check the hitboxes of blocks or entities.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": [
         {
           "id": "#bs.hitbox:get_block",
@@ -1031,6 +1055,9 @@
       "description": "Manage entity IDs, essential in scenarios like shooting games where you need to track who is targeting whom.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": [
         {
           "id": "#bs.id:give_cuid",
@@ -1238,6 +1265,9 @@
       "description": "A low-level API to create GUI based on Interaction entity by binding events to it.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "weak_dependencies": [
         "bs.log"
       ],
@@ -1345,6 +1375,9 @@
       "description": "Construct coherent entity structures by linking entities\u2019 positions and rotations.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "dependencies": [
         "bs.id",
         "bs.position"
@@ -1812,6 +1845,9 @@
       "description": "Log messages in the chat with varying levels of severity.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html",
       "kind": "data_pack",
+      "tags": [
+        "dev"
+      ],
       "features": [
         {
           "id": "#bs.log:clear_history",
@@ -1911,6 +1947,9 @@
       "description": "The beatifull world of mathematics\u2026 in Minecraft!",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": [
         {
           "id": "#bs.math:acos",
@@ -2306,6 +2345,9 @@
       "description": "Make your entity move exactly the way you want them to!",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "dependencies": [
         "bs.hitbox"
       ],
@@ -2396,6 +2438,9 @@
       "description": "Manage entity positions and rotations using scores.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": [
         {
           "id": "#bs.position:add_pos",
@@ -2891,6 +2936,9 @@
       "description": "Contains many random functions for different distributions.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": [
         {
           "id": "#bs.random:binomial",
@@ -3097,6 +3145,9 @@
       "description": "Cast rays and see if they collide with blocks or entities.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "dependencies": [
         "bs.hitbox"
       ],
@@ -3124,6 +3175,9 @@
       "description": "Enhance command scheduling. Cancel commands and maintain execution context (entity & location).",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "weak_dependencies": [
         "bs.log"
       ],
@@ -3200,6 +3254,9 @@
       "description": "Create a visually appealing and dynamic sidebar using the scoreboard.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/sidebar.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "weak_dependencies": [
         "bs.log"
       ],
@@ -3242,6 +3299,9 @@
       "description": "Get information about the system time effortlessly.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/time.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": [
         {
           "id": "#bs.time:get",
@@ -3270,6 +3330,9 @@
       "description": "Simplicity meets utility in this bank of trees.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/tree.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": []
     },
     {
@@ -3278,6 +3341,9 @@
       "description": "Vectors are fundamental and incredibly powerful tools to manage motions, forces and\u2026 well\u2026 do physics!",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": [
         {
           "id": "#bs.vector:abs_max",
@@ -3554,6 +3620,9 @@
       "description": "Execute commands based on what an entity sees.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "dependencies": [
         "bs.raycast"
       ],
@@ -3703,6 +3772,9 @@
       "description": "Efficiently manage the experience points and levels of players.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html",
       "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
       "features": [
         {
           "id": "#bs.xp:add_levels",

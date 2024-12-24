@@ -11,7 +11,7 @@ from core.cli.meta import check_features, check_modules
 from core.common.helpers import render_template
 from core.common.logger import log_step
 from core.common.packtest import Assets, Runner
-from core.definitions import MINECRAFT_VERSIONS, MODULES_DIR, ROOT_DIR
+from core.definitions import MINECRAFT_VERSIONS, MODULES, MODULES_DIR, ROOT_DIR
 
 
 @click.group()
@@ -88,10 +88,11 @@ def release() -> None:
             zipped=True,
         )
         create_project(create_config(
+            ("bookshelf", *MODULES),
             data_pack=pack_config,
             resource_pack=pack_config,
-            output=ROOT_DIR / "release",
             meta={"autosave":{"link":False}},
+            require=["core.plugins.release_pack"],
         )).build()
 
 
@@ -155,7 +156,7 @@ def create_config(
     **kwargs: object,
 ) -> ProjectConfig:
     """Create a configuration for the project."""
-    modules = modules if modules else ("*",)
+    modules = modules if modules else tuple(MODULES)
     require = kwargs.get("require", [])
 
     kwargs["extend"] = "module.json"
@@ -178,7 +179,7 @@ def check_headers() -> bool:
     template = render_template(ROOT_DIR / "core/templates/header.jinja")
 
     with log_step("⏳ Checking function file headers…") as logger:
-        for file_path in MODULES_DIR.rglob("*.mcfunction"):
+        for file_path in MODULES_DIR.rglob("*/data/**/*.mcfunction"):
             lines = file_path.read_text("utf-8").splitlines()
             header = "\n".join(lines[:len(template.splitlines())])
 
@@ -199,17 +200,17 @@ def check_headers() -> bool:
 def check_requirements() -> bool:
     """Check that all modules have the required files."""
     with log_step("⏳ Checking required module files…") as logger:
-        for module in MODULES_DIR.iterdir():
+        for module in MODULES:
             for file in [
-                module / "module.json",
-                module / f"data/{module.name}/function/__load__.mcfunction",
-                module / f"data/{module.name}/function/__unload__.mcfunction",
+                MODULES_DIR / module / "module.json",
+                MODULES_DIR / module / f"data/{module}/function/__load__.mcfunction",
+                MODULES_DIR / module / f"data/{module}/function/__unload__.mcfunction",
             ]:
                 if not file.exists():
                     logger.error(
                         "File '%s' is missing from module '%s'.",
                         file.name,
-                        module.name,
+                        module,
                         extra={"title": "Missing required file", "file": file},
                     )
 

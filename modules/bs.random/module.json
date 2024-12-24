@@ -1,12 +1,14 @@
 {
-  "extend": "../../module.json",
+  "extend": "../config.json",
   "data_pack": {
     "name": "bs.random",
     "load": "."
   },
   "meta": {
     "name": "Random",
+    "slug": "bookshelf-random",
     "description": "Contains many random functions for different distributions.",
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html"
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html",
+    "tags": ["default"]
   }
 }

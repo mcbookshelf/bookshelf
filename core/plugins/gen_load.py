@@ -1,5 +1,6 @@
 from beet import Context, Function, FunctionTag
 
+from core.common.helpers import parse_version
 from core.definitions import MODULES, VERSION
 
 
@@ -10,37 +11,63 @@ def beet_default(ctx: Context) -> None:
     ctx.require("beet.contrib.lantern_load.base_data_pack")
     ctx.data["load:load"] = FunctionTag({"values": ["#bs.load:load"]})
 
-    ctx.generate("bs.load:cleanup",
-        render=Function(source_path="core/load/cleanup.jinja"),
-    )
-    ctx.generate("bs.load:exclusive",
-        render=Function(source_path="core/load/exclusive.jinja"),
-    )
-    ctx.generate(f"bs.load:enumerate/{ctx.data.name}/v{VERSION}",
-        **version,
-        module=ctx.data.name,
-        render=Function(source_path="core/load/enumerate.jinja"),
-    )
-    ctx.generate(f"bs.load:resolve/{ctx.data.name}",
-        **version,
-        module=ctx.data.name,
-        render=Function(source_path="core/load/resolve.jinja"),
-    )
-    ctx.generate("bs.load:validate",
-        **version,
-        modules=MODULES,
-        render=Function(source_path="core/load/validate.jinja"),
+    for file, template in [
+        ("cleanup", "cleanup"),
+        ("exclusive", "exclusive"),
+        ("validate", "validate"),
+        (f"enumerate/{ctx.directory.name}/v{VERSION}", "enumerate"),
+        (f"resolve/{ctx.directory.name}", "resolve"),
+    ]:
+        ctx.generate(
+            f"bs.load:{file}",
+            **version,
+            module=ctx.directory.name,
+            modules=MODULES,
+            render=Function(source_path=f"core/load/{template}.jinja"),
+        )
+
+    ctx.data["bs.load:load"] = gen_load_tag(MODULES)
+    ctx.data["bs.load:unload"] = gen_unload_tag(MODULES)
+    ctx.data[f"bs.load:module/{ctx.data.name}"] = gen_module_load_tag(
+        ctx.directory.name,
+        ctx.meta.get("dependencies", []) or [],
+        ctx.meta.get("weak_dependencies", []) or [],
     )
 
-    ctx.data[f"bs.load:module/{ctx.data.name}"] = FunctionTag({
+
+def gen_module_load_tag(
+    module: str,
+    dependencies: list[str],
+    weak_dependencies: list[str],
+) -> FunctionTag:
+    """Generate a tag to load a module and its dependencies."""
+    return FunctionTag({
         "replace": True,
-        "values": get_load_tag_values(
-            ctx.directory.name,
-            ctx.meta.get("dependencies", []) or [],
-            ctx.meta.get("weak_dependencies", []) or [],
-        ),
+        "values": [
+            f"#bs.load:module/{dep}"
+            for dep in dependencies
+        ] + [
+            {"id": f"#bs.load:module/{dep}", "required": False}
+            for dep in weak_dependencies
+        ] + [
+            f"{module}:__load__",
+        ],
     })
-    ctx.data["bs.load:load"] = FunctionTag({
+
+
+def gen_unload_tag(modules: list[str]) -> FunctionTag:
+    """Generate a tag to unload all modules."""
+    return FunctionTag({
+        "values": [
+            {"id": f"{mod}:__unload__", "required": False}
+            for mod in modules
+        ],
+    })
+
+
+def gen_load_tag(modules: list[str]) -> FunctionTag:
+    """Generate a tag to load all modules."""
+    return FunctionTag({
         "values": [
             "bs.load:cleanup",
             "#bs.load:enumerate",
@@ -48,35 +75,6 @@ def beet_default(ctx: Context) -> None:
             "bs.load:validate",
         ] + [
             {"id": f"#bs.load:module/{mod}", "required": False}
-            for mod in MODULES
+            for mod in modules
         ],
     })
-    ctx.data["bs.load:unload"] = FunctionTag({
-        "values": [
-            {"id": f"{mod}:__unload__", "required": False}
-            for mod in MODULES
-        ],
-    })
-
-
-def parse_version(version_str: str) -> dict:
-    """Parse the version string into a dictionary with major, minor, and patch."""
-    major, minor, patch = map(int, version_str.split("."))
-    return {"major": major, "minor": minor, "patch": patch}
-
-
-def get_load_tag_values(
-    module: str,
-    dependencies: list[str],
-    weak_dependencies: list[str],
-) -> list[dict | str]:
-    """Generate a list of functions for loading a module and its dependencies."""
-    return [
-        f"#bs.load:module/{dep}"
-        for dep in dependencies
-    ] + [
-        {"id": f"#bs.load:module/{dep}", "required": False}
-        for dep in weak_dependencies
-    ] + [
-        f"{module}:__load__",
-    ]

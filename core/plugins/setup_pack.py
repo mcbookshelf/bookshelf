@@ -1,9 +1,9 @@
 import json
 from collections.abc import Generator
 
-from beet import Context
+from beet import Context, PngFile
 
-from core.definitions import MINECRAFT_VERSIONS
+from core.definitions import MINECRAFT_VERSIONS, MODULES_DIR
 
 
 def beet_default(ctx: Context) -> Generator:
@@ -11,15 +11,25 @@ def beet_default(ctx: Context) -> Generator:
     yield
     formats = get_supported_formats(ctx, MINECRAFT_VERSIONS)
 
-    ctx.assets.pack_format = formats["assets"]["max_inclusive"]
-    ctx.assets.supported_formats = formats["assets"]
+    if ctx.assets.path:
+        ctx.assets.pack_format = formats["assets"]["max_inclusive"]
+        ctx.assets.supported_formats = formats["assets"]
+        ctx.assets.extra.setdefault(
+            "pack.png",
+            PngFile(source_path=MODULES_DIR / "pack.png"),
+        )
 
-    ctx.data.pack_format = formats["data"]["max_inclusive"]
-    ctx.data.supported_formats = formats["data"]
-    ctx.data.mcmeta.set_content({
-        "id": ctx.directory.name,
-        **ctx.data.mcmeta.data,
-    })
+    if ctx.data.path:
+        ctx.data.pack_format = formats["data"]["max_inclusive"]
+        ctx.data.supported_formats = formats["data"]
+        ctx.data.mcmeta.set_content({
+            "id": ctx.directory.name,
+            **ctx.data.mcmeta.data,
+        })
+        ctx.data.extra.setdefault(
+            "pack.png",
+            PngFile(source_path=MODULES_DIR / "pack.png"),
+        )
 
 
 def get_supported_formats(ctx: Context, versions: list) -> dict:

@@ -13,6 +13,7 @@ from core.definitions import (
     META_MANIFEST,
     META_VERSIONS,
     MINECRAFT_VERSIONS,
+    MODULES,
     MODULES_DIR,
     ROOT_DIR,
     VERSION,
@@ -45,8 +46,8 @@ def update() -> None:
 def check_modules() -> bool:
     """Check metadata for all module files."""
     with log_step("⏳ Checking module metadata files…") as logger:
-        for module in MODULES_DIR.iterdir():
-            get_module_meta(module / "module.json", logger)
+        for module in MODULES:
+            get_module_meta(MODULES_DIR / module / "module.json", logger)
 
     return not logger.errors
 
@@ -54,7 +55,7 @@ def check_modules() -> bool:
 def check_features() -> bool:
     """Check metadata for all feature files."""
     with log_step("⏳ Checking feature metadata files…") as logger:
-        for feature in MODULES_DIR.rglob("*.json"):
+        for feature in MODULES_DIR.rglob("*/data/**/*.json"):
             get_feature_meta(feature, logger)
 
     return not logger.errors

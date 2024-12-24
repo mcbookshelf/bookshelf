@@ -1,12 +1,14 @@
 {
-  "extend": "../../module.json",
+  "extend": "../config.json",
   "data_pack": {
     "name": "bs.time",
     "load": "."
   },
   "meta": {
     "name": "Time",
+    "slug": "bookshelf-time",
     "description": "Get information about the system time effortlessly.",
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/time.html"
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/time.html",
+    "tags": ["default"]
   }
 }

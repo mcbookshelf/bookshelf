@@ -1,4 +1,5 @@
 import json
+import os
 from collections.abc import Callable, Iterable
 from datetime import datetime
 from functools import wraps
@@ -17,6 +18,20 @@ T = TypeVar("T")
 Fn = Callable[..., dict | list]
 EFmt = Callable[[T], dict]
 CFmt = Callable[[list[T]], list]
+
+
+class SecureString(str):
+    """A string wrapper that prevents the accidental exposure of sensitive data."""
+
+    __slots__ = ()
+
+    def __new__(cls, value: str) -> "SecureString":
+        """Create a new SecureString instance."""
+        return super().__new__(cls, value)
+
+    def __repr__(self) -> str:
+        """Return the string representation, hiding the sensitive data."""
+        return "<SecureString>"
 
 
 def cache_result(cache: Cache, key: str) -> Callable[[Fn], Fn]:
@@ -76,6 +91,13 @@ def gen_loot_table_tree(items: list[T], entry: EFmt, conditions: CFmt) -> dict:
     return {"pools":[{"rolls":1,"entries":[subtree(items)]}]}
 
 
+def getenv_secure(key: str, default: str | None = None) -> SecureString | None:
+    """Get an environment variable by key and return it as a SecureString."""
+    if value := os.getenv(key):
+        return SecureString(value)
+    return SecureString(default) if default else None
+
+
 def has_same_major_minor(version1: str, version2: str) -> bool:
     """Check if two semantic version strings have the same major and minor."""
     major_minor1 = ".".join(version1.split(".")[:2])
@@ -89,6 +111,12 @@ def matching_len(a: Iterable, b: Iterable) -> int:
         lambda x: x[0] == x[1],
         zip(a, b, strict=False),
     )))
+
+
+def parse_version(version_str: str) -> dict:
+    """Parse the version string into a dictionary with major, minor, and patch."""
+    major, minor, patch = map(int, version_str.split("."))
+    return {"major": major, "minor": minor, "patch": patch}
 
 
 def render_snbt(obj: object) -> str:
