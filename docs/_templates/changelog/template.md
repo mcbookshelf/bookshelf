@@ -1,6 +1,12 @@
 ## 📦 Bookshelf - x.x.x
 
-Bookshelf is now based on **Minecraft 1.x.x**.
+```{epigraph}
+**<emoji> Name!**
+
+*<description>*
+```
+
+(Bookshelf is now based on **Minecraft 1.x.x**.)
 
 - ⚠️ **[#id](issue/pr)** - Breaking Changes
 - 🎉 **[#id](issue/pr)** - New Modules
