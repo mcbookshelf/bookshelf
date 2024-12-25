@@ -171,6 +171,11 @@ def log_step(message: str | None = None) -> Generator[StepLogger, None, None]:
         step.close()
 
 
+def get_step_logger() -> StepLogger:
+    """Get the current StepLogger or create a new one."""
+    return StepLogger.contexts[-1] if len(StepLogger.contexts) else StepLogger(logger)
+
+
 # Set up custom log record factory
 logging.setLogRecordFactory(lambda *args, **kwargs: CustomLogRecord(*args, **kwargs))
 

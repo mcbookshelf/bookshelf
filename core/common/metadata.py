@@ -21,7 +21,7 @@ class FeatureMeta(BaseModel):
     """Represents metadata for a feature within the library."""
 
     id: str
-    documentation: str = Field(pattern=rf"^{re.escape(DOC_URL)}en/latest/modules/.+$")
+    documentation: str = Field(pattern=rf"^{re.escape(DOC_URL)}/en/latest/modules/.+$")
     authors: list[str]
     contributors: list[str] = []
     created: Updated
@@ -33,7 +33,7 @@ class ModuleMeta(BaseModel):
     id: str = Field(pattern=r"^bs\..+$")
     name: str
     description: str
-    documentation: str = Field(pattern=rf"^{re.escape(DOC_URL)}en/latest/modules/.+$")
+    documentation: str = Field(pattern=rf"^{re.escape(DOC_URL)}/en/latest/modules/.+$")
     image: str | None = None
     kind: Literal["data_pack", "resource_pack"]
     tags: list[str] = []

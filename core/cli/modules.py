@@ -11,7 +11,13 @@ from core.cli.meta import check_features, check_modules
 from core.common.helpers import render_template
 from core.common.logger import log_step
 from core.common.packtest import Assets, Runner
-from core.definitions import MINECRAFT_VERSIONS, MODULES, MODULES_DIR, ROOT_DIR
+from core.definitions import (
+    BUILD_DIR,
+    MINECRAFT_VERSIONS,
+    MODULES,
+    MODULES_DIR,
+    ROOT_DIR,
+)
 
 
 @click.group()
@@ -26,11 +32,8 @@ def build(modules: tuple[str, ...]) -> None:
     with log_step("🔨 Building project…"):
         create_project(create_config(
             modules,
-            output=ROOT_DIR / "build",
-            require=[
-                "core.plugins.log_build",
-                "core.plugins.setup_tests",
-            ],
+            output=BUILD_DIR,
+            require=["core.plugins.setup_tests"],
         )).build()
 
 
@@ -81,7 +84,7 @@ def link(
 @modules.command()
 def release() -> None:
     """Build zipped modules for a release."""
-    with log_step("🔨 Building project…"):
+    with log_step("🔨 Building project…") as logger:
         pack_config = PackConfig(
             compression="bzip2",
             compression_level=9,
@@ -94,6 +97,8 @@ def release() -> None:
             meta={"autosave":{"link":False}},
             require=["core.plugins.release_pack"],
         )).build()
+
+    sys.exit(logger.errors)
 
 
 @modules.command()
@@ -123,7 +128,7 @@ def watch(modules: tuple[str, ...]) -> None:
         config = create_config(
             modules,
             require=["beet.contrib.livereload","core.plugins.setup_tests"],
-            output=ROOT_DIR / "build",
+            output=BUILD_DIR,
         )
         project = create_project(config.copy())
 
@@ -203,6 +208,8 @@ def check_requirements() -> bool:
         for module in MODULES:
             for file in [
                 MODULES_DIR / module / "module.json",
+                MODULES_DIR / module / "README.md",
+                MODULES_DIR / module / "pack.png",
                 MODULES_DIR / module / f"data/{module}/function/__load__.mcfunction",
                 MODULES_DIR / module / f"data/{module}/function/__unload__.mcfunction",
             ]:

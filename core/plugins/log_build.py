@@ -1,9 +1,8 @@
-import logging
-
 from beet import Context
 
-logger = logging.getLogger("bookshelf")
+from core.common.logger import get_step_logger
+
 
 def beet_default(ctx: Context) -> None:
     """Log the module build process with a debug message."""
-    logger.debug("Build module '%s'", ctx.directory.name, extra={"depth":1})
+    get_step_logger().debug("Build module '%s'", ctx.directory.name)

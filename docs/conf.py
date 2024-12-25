@@ -53,7 +53,7 @@ html_css_files = ["bookshelf.css"]
 html_js_files = ["bookshelf.js"]
 
 html_context = {
-    "github_user": "Gunivers",
+    "github_user": "mcbookshelf",
     "github_repo": "Bookshelf",
     "github_version": "master",
     "doc_path": "docs",

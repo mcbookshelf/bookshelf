@@ -4,6 +4,9 @@
 ```{include} _templates/changelog/v3.0.0.md
 ```
 ---
+```{include} _templates/changelog/v2.2.2.md
+```
+---
 ```{include} _templates/changelog/v2.2.1.md
 ```
 ---

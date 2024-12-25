@@ -3,7 +3,7 @@ import subprocess
 
 import click
 
-from core.definitions import ROOT_DIR
+from core.definitions import DOC_DIR
 
 
 @click.group()
@@ -23,7 +23,7 @@ def build(output: str | None = None) -> None:
     subprocess.run(
         [sphinx, ".", output if output else "_build"],
         check=True,
-        cwd=ROOT_DIR / "docs",
+        cwd=DOC_DIR,
     )
 
 
@@ -40,7 +40,7 @@ def watch(output: str | None = None) -> None:
         subprocess.run(
             [sphinx, ".", output if output else "_build"],
             check=True,
-            cwd=ROOT_DIR / "docs",
+            cwd=DOC_DIR,
         )
 
     except KeyboardInterrupt:

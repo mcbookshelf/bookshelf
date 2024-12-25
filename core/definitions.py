@@ -14,7 +14,10 @@ MODRINTH_API = "https://api.modrinth.com/v3"
 SMITHED_API = "https://api.smithed.dev/v2"
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
+BUILD_DIR = ROOT_DIR / "build"
+DOC_DIR = ROOT_DIR / "docs"
 MODULES_DIR = ROOT_DIR / "modules"
+RELEASE_DIR = ROOT_DIR / "release"
 
 MODULES = sorted([
     mod
