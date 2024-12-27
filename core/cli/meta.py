@@ -86,8 +86,10 @@ def update_switcher() -> None:
             "url": f"https://docs.mcbookshelf.dev/en/v{VERSION}/",
         }
 
-        if ".".join(switcher[2]["version"][1:].split(".")[:2]) == ".".join(VERSION[:2]):
-            switcher[2] = entry
+        for i in range(len(switcher)):
+            if switcher[i]["version"][1:].split(".")[:2] == VERSION.split(".")[:2]:
+                switcher[i] = entry
+                break
         else:
             switcher.insert(2, entry)
 
