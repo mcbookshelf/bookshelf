@@ -12,13 +12,15 @@
 #
 # For more details, refer to the MPL v2.0.
 #
-# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#index-of
+# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#concat
 # ------------------------------------------------------------------------------------------------------------
+execute store result score #string.n_string bs.data run data get storage bs:in string.concat.list
+execute if score #string.n_string bs.data matches 3.. run return run function bs.string:concat/main
+execute unless score #string.n_string bs.data matches 2 run return -1
 
-data modify storage bs:ctx _.char set from storage bs:data string.caracter
-execute if score #c bs.ctx >= #string.lenth bs.data run return run scoreboard players set #c bs.ctx -1
-execute unless function bs.string:index_of/test_caracter run scoreboard players add #o bs.ctx 1
-execute if score #o bs.ctx = #string.occurence bs.data run return run scoreboard players get #c bs.ctx
-scoreboard players add #c bs.ctx 1
-data modify storage bs:ctx _.str set string storage bs:ctx _.str 1
-function bs.string:index_of/recurcive_search
+# Only 2 strings: Combine
+data modify storage bs:ctx _.s.1 set from storage bs:in string.concat.list[0]
+data modify storage bs:ctx _.s.2 set from storage bs:in string.concat.list[1]
+function bs.string:concat/combine/1c with storage bs:ctx _.s
+data modify storage bs:out string.concat set from storage bs:ctx _.s.1
+data remove storage bs:ctx _.s

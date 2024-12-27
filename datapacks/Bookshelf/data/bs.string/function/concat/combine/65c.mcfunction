@@ -12,13 +12,7 @@
 #
 # For more details, refer to the MPL v2.0.
 #
-# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#index-of
+# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#concat
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _.char set from storage bs:data string.caracter
-execute if score #c bs.ctx >= #string.lenth bs.data run return run scoreboard players set #c bs.ctx -1
-execute unless function bs.string:index_of/test_caracter run scoreboard players add #o bs.ctx 1
-execute if score #o bs.ctx = #string.occurence bs.data run return run scoreboard players get #c bs.ctx
-scoreboard players add #c bs.ctx 1
-data modify storage bs:ctx _.str set string storage bs:ctx _.str 1
-function bs.string:index_of/recurcive_search
+$data modify storage bs:ctx _.s.1 set value "$(66)$(65)$(64)$(63)$(62)$(61)$(60)$(59)$(58)$(57)$(56)$(55)$(54)$(53)$(52)$(51)$(50)$(49)$(48)$(47)$(46)$(45)$(44)$(43)$(42)$(41)$(40)$(39)$(38)$(37)$(36)$(35)$(34)$(33)$(32)$(31)$(30)$(29)$(28)$(27)$(26)$(25)$(24)$(23)$(22)$(21)$(20)$(19)$(18)$(17)$(16)$(15)$(14)$(13)$(12)$(11)$(10)$(9)$(8)$(7)$(6)$(5)$(4)$(3)$(2)$(1)"
