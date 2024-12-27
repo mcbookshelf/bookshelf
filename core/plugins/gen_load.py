@@ -12,11 +12,14 @@ def beet_default(ctx: Context) -> None:
     ctx.data["load:load"] = FunctionTag({"values": ["#bs.load:load"]})
 
     for file, template in [
-        ("cleanup", "cleanup"),
         ("exclusive", "exclusive"),
-        ("validate", "validate"),
-        (f"enumerate/{ctx.directory.name}/v{VERSION}", "enumerate"),
-        (f"resolve/{ctx.directory.name}", "resolve"),
+        (f"resolve/{ctx.directory.name}", "steps/resolve"),
+        (f"v{VERSION}/bundle/append", "bundle/append"),
+        (f"v{VERSION}/bundle/concat", "bundle/concat"),
+        (f"v{VERSION}/cleanup", "steps/cleanup"),
+        (f"v{VERSION}/errors/{ctx.directory.name}", "errors"),
+        (f"v{VERSION}/enumerate/{ctx.directory.name}", "steps/enumerate"),
+        (f"v{VERSION}/validate", "steps/validate"),
     ]:
         ctx.generate(
             f"bs.load:{file}",
@@ -69,10 +72,10 @@ def gen_load_tag(modules: list[str]) -> FunctionTag:
     """Generate a tag to load all modules."""
     return FunctionTag({
         "values": [
-            "bs.load:cleanup",
-            "#bs.load:enumerate",
-            "#bs.load:resolve",
-            "bs.load:validate",
+            "#bs.load:steps/cleanup",
+            "#bs.load:steps/enumerate",
+            "#bs.load:steps/resolve",
+            "#bs.load:steps/validate",
         ] + [
             {"id": f"#bs.load:module/{mod}", "required": False}
             for mod in modules
