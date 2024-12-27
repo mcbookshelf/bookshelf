@@ -1,10 +1,8 @@
 ## 📦 Bookshelf - x.x.x
 
-```{epigraph}
-**<emoji> Name!**
-
-*<description>*
-```
+> **...**
+>
+> *...*
 
 (Bookshelf is now based on **Minecraft 1.x.x**.)
 
