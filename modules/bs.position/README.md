@@ -1,17 +1,12 @@
-# 📚 Bookshelf Library
+# 🧭 Bookshelf Position
 
-This datapack brings together the full suite of **Bookshelf modules**, offering a versatile toolkit for Minecraft mapmakers. It includes modules such as:
+This datapack allows you to manage entity positions and rotations using scores.
 
-- **🧱 Block**: Get and manipulate blocks (supports BlockStates and NBT).
-- **🔦 Raycast**: Cast rays and see if they collide with blocks or entities.
-- **🧮 Math**: Mathematical functions: sin, cos, exp, log, sqrt and much more!
-- **🏗️ Generate**: Generate terrains and landscapes, incorporating natural features.
-- **🎲 Random**: Random functions for different distributions and noise patterns.
-- **❤️ Health**: Easily manage the health of a player or the lifetime of an entity!
+> “The excitement lies in the exploration of the world around us.”
+>
+> -- Jim Peebles
 
-*And much more...*
-
-For more details and usage examples, check out the [documentation](https://docs.mcbookshelf.dev/en/latest/index.html).
+For more details and usage examples, check out the Bookshelf [documentation](https://docs.mcbookshelf.dev/en/latest/modules/position.html).
 
 
 ## 🔥 Motivation
@@ -23,7 +18,7 @@ That’s why we started this project, to provide a variety of reusable tools and
 While we strive to keep our modules as optimized as possible, our top priority is accessibility. We focus on creating features that are easy to use and simple to install, ensuring they’re practical for everyone.
 
 > “I have seen further than others because I have stood on the shoulders of giants.”
-> 
+>
 > -- Isaac Newton
 
 
