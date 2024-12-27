@@ -1,4 +1,5 @@
 import json
+import re
 from collections.abc import Generator
 from pathlib import Path
 
@@ -8,6 +9,7 @@ from beet import Context, PluginOptions, configurable
 from core.common.helpers import getenv_secure
 from core.common.logger import get_step_logger
 from core.definitions import (
+    DOC_DIR,
     GITHUB_REPO,
     MINECRAFT_VERSIONS,
     MODRINTH_API,
@@ -44,7 +46,7 @@ def beet_default(ctx: Context) -> Generator:
     if module_slug := ctx.meta.get("slug"):
         ctx.require(publish_pack(
             file=file,
-            changelog="",
+            changelog=create_specialized_changelog(ctx.directory.name),
             module_name=ctx.meta.get("name", "Bookshelf"),
             module_slug=module_slug,
             module_description=ctx.meta.get("description", ""),
@@ -74,6 +76,17 @@ def publish_pack(_: Context, opts: PublishOptions) -> None:
         or create_smithed_project(opts)
     ):
         create_smithed_version(opts)
+
+
+def create_specialized_changelog(module: str) -> str:
+    """Create a changelog specific to the given module."""
+    changelog = (DOC_DIR / f"_templates/changelog/v{VERSION}.md").read_text("utf-8")
+    sections = re.split(r"(###.*?)$", changelog, flags=re.MULTILINE)
+    return sections.pop(0) + "".join(
+        "".join(sections[i:i+2])
+        for i in range(0, len(sections) - 1, 2)
+        if module in sections[i]
+    ) if module.startswith("bs.") else changelog
 
 
 def get_modrinth_project_id(slug: str) -> str | None:

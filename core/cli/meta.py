@@ -4,7 +4,6 @@ from pathlib import Path
 
 import click
 
-from core.common.helpers import has_same_major_minor
 from core.common.logger import log_step
 from core.common.metadata import build_manifest, get_feature_meta, get_module_meta
 from core.definitions import (
@@ -87,7 +86,7 @@ def update_switcher() -> None:
             "url": f"https://docs.mcbookshelf.dev/en/v{VERSION}/",
         }
 
-        if has_same_major_minor(switcher[2]["version"][1:], VERSION):
+        if ".".join(switcher[2]["version"][1:].split(".")[:2]) == ".".join(VERSION[:2]):
             switcher[2] = entry
         else:
             switcher.insert(2, entry)
