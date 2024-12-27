@@ -8,7 +8,7 @@ Bookshelf is designed with modularity in mind. Features that serve a common purp
 
 ---
 
-## 🌟 Featured modules
+## 🌟 Featured Modules
 
 ```{include} _templates/featured-modules.md
 ```

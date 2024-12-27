@@ -43,7 +43,7 @@ Once Bookshelf is installed on your map with specific modules (rather than the e
 Upon exploring the main datapack, you may notice files within the minecraft namespace. These files facilitate the autoloading of modules and the ticking of specific functions. While they are not strictly needed for Bookshelf to work, without them, you have the responsibility to manually call tick functions or reload modules.
 
 
-### 🏗️ Structural overview
+### 🏗️ Structural Overview
 
 The Github repository includes a demo map (still a work in progress) and four datapacks:
 
@@ -68,14 +68,14 @@ This datapack contains code utilized by the world itself. It is not intended for
 
 ---
 
-## 👶 First steps
+## 👶 First Steps
 
 :::{important}
 
 Bookshelf relies on persistent entities to enhance performances. Therefore, it's important not to kill all entities. Instead, you can use the command `kill @e[tag=!bs.persistent]`. [Learn more here](contribute/shared-resources.md#entities)
 :::
 
-### 📖 Good practices
+### 📖 Good Practices
 
 Bookshelf is designed to minimize unintended side effects. However, complications can arise when multiple datapacks utilize the same one. To prevent potential issues, it’s always recommended to set inputs prior to executing a function. This holds true even though Bookshelf adheres to a strict policy of preserving inputs. By following this practice, you can ensure smoother operation and prevent unexpected behaviors.
 

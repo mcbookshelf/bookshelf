@@ -25,7 +25,7 @@ Mathematical functions: sin, cos, exp, log, sqrt and much more!
 :::
 
 :::{grid-item-card} 🏗️ Generate
-:link: modules/id
+:link: modules/generate
 :link-type: doc
 :margin: 0 3 0 0
 
@@ -33,7 +33,7 @@ Generate terrains and landscapes, incorporating natural features.
 :::
 
 :::{grid-item-card} 🎲 Random
-:link: modules/link
+:link: modules/random
 :link-type: doc
 :margin: 0 3 0 0
 

@@ -38,7 +38,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Absolute max
+### Absolute Max
 
 ```{function} #bs.vector:abs_max
 
@@ -70,7 +70,7 @@ tellraw @a [{"text":" Max component: ","color":"dark_gray"},{"score":{"name":"$v
 
 ---
 
-### Absolute min
+### Absolute Min
 
 ```{function} #bs.vector:abs_min
 
@@ -102,7 +102,7 @@ tellraw @a [{"text":" Min component: ","color":"dark_gray"},{"score":{"name":"$v
 
 ---
 
-### Basis rotation 3D
+### Basis Rotation 3D
 
 ```{function} #bs.vector:basis_rot_3d {scaling:<value>}
 
@@ -123,7 +123,7 @@ Get the equivalent of the vector passed in parameter in a base with a different 
   **Scores `$vector.basis_rot_3d.[0,1,2] bs.out`**: Vector coordinates $=(X',Y',Z')$ in the target base.
 ```
 
-```{admonition} Basis system
+```{admonition} Basis System
 :class: info
 
 This system uses the Minecraft coordinate system. Thus:
@@ -184,7 +184,7 @@ tellraw @a [{"text": "X = ", "color": "dark_gray"},{"score":{"name":"$vector.bas
 
 ---
 
-### Cartesian to spherical
+### Cartesian to Spherical
 
 ```{function} #bs.vector:cartesian_to_spherical {scaling:<value>}
 
@@ -203,7 +203,7 @@ Convert cartesian coordinates to spherical coordinates.
   **Scores `$vector.cartesian_to_spherical.[0,1,2] bs.out`**: Vector representing the spherical coordinates $=(H,V,R)$.
 ```
 
-```{admonition} Spherical coordinates
+```{admonition} Spherical Coordinates
 :class: warning
 
 This system returns non conventional [spherical coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system).
@@ -231,7 +231,7 @@ tellraw @a [{"text":"Spherical coordinates: ","color":"dark_gray"},{"score":{"na
 
 ---
 
-### Cross product
+### Cross Product
 
 ```{function} #bs.vector:cross_product {scaling:<value>}
 
@@ -275,7 +275,7 @@ tellraw @a [{"text":"Cross product: ","color":"dark_gray"},{"score":{"name":"$ve
 
 ---
 
-### Dot product
+### Dot Product
 
 ```{function} #bs.vector:dot_product {scaling:<value>}
 
@@ -348,7 +348,7 @@ function #bs.vector:length
 tellraw @a [{"text":" Vector length: ","color":"dark_gray"},{"score":{"name":"$vector.length","objective":"bs.out"}}]
 ```
 
-```{admonition} Performance tip
+```{admonition} Performance Tip
 :class: tip
 
 If you want to minimize the performance impact, we recomande you to use the `length_squared` function instead of this one when it's possible. In fact, computing the length of a vector requires to perform square root operation which is not a simple task for a computer, especially in Minecraft.
@@ -359,7 +359,7 @@ If you want to minimize the performance impact, we recomande you to use the `len
 ```
 
 ::::
-::::{tab-item} Length squared
+::::{tab-item} Length Squared
 
 ```{function} #bs.vector:length_squared {scaling:<value>}
 
@@ -420,7 +420,7 @@ Normalize the vector by putting the length at the given scale while keeping prop
   **Scores `$vector.normalize.[0,1,2] bs.out`**: Normalized vector components.
 ```
 
-```{admonition} Performance tip
+```{admonition} Performance Tip
 :class: tip
 
 A vector doesn’t always need to be normalized by its length. Often, the `normalize_max_component` function can be used instead. While this method doesn’t normalize the length, it simplifies some operations and enhances performance.
@@ -442,7 +442,7 @@ tellraw @a [{"text":"Normalized vector: ","color":"dark_gray"},{"score":{"name":
 ```
 
 ::::
-::::{tab-item} Max component
+::::{tab-item} Max Component
 
 ```{function} #bs.vector:normalize_max_component {scale:<scaling>}
 
@@ -485,7 +485,7 @@ tellraw @a [{"text":"Normalized vector: ","color":"dark_gray"},{"score":{"name":
 
 ---
 
-### Spherical to cartesian
+### Spherical to Cartesian
 
 ```{function} #bs.vector:spherical_to_cartesian {scaling:<value>}
 
@@ -504,7 +504,7 @@ Convert spherical coordinates to cartesian coordinates.
   **Scores `$vector.spherical_to_cartesian.[0,1,2] bs.out`**: Vector representing the cartesian coordinates $=(X,Y,Z)$.
 ```
 
-```{admonition} Spherical coordinates
+```{admonition} Spherical Coordinates
 :class: warning
 
 This system uses non conventional [spherical coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system).

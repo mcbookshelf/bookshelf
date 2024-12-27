@@ -10,7 +10,7 @@ Manage blocks, including states and NBTs, while offering advanced tools for seam
 -- Louis Kahn
 ```
 
-```{admonition} Virtual block format
+```{admonition} Virtual Block Format
 :class: info
 
 To manipulate blocks and their states, Bookshelf utilizes a [virtual block format](#get) stored in the block output. It's crucial not to update it manually; instead, utilize the helper functions provided in the library.
@@ -233,7 +233,7 @@ data get storage bs:out block
 ::::
 :::::
 
-```{admonition} Read-only output
+```{admonition} Read-only Output
 :class: warning
 
 The `bs:out block` output is intended to be read-only. Modifying parts manually could lead to potential bugs. That's why the module provides numerous functions capable of making modifications to the output while preserving its integrity.
@@ -243,7 +243,7 @@ The `bs:out block` output is intended to be read-only. Modifying parts manually 
 
 ---
 
-### Manage state
+### Manage State
 
 :::::{tab-set}
 ::::{tab-item} Keep
@@ -431,7 +431,7 @@ data get storage bs:out block.block
 
 ---
 
-### Manage type
+### Manage Type
 
 :::::{tab-set}
 ::::{tab-item} Replace
@@ -579,7 +579,7 @@ data get storage bs:out block.block
 ```
 
 ::::
-::::{tab-item} Lookup item
+::::{tab-item} Lookup Item
 
 ```{function} #bs.block:lookup_item {item:<value>}
 
@@ -611,7 +611,7 @@ Minecraft does not perfectly map between blocks and items. Some items may corres
 ```
 
 ::::
-::::{tab-item} Lookup type
+::::{tab-item} Lookup Type
 
 ```{function} #bs.block:lookup_type {type:<value>}
 
@@ -751,7 +751,7 @@ execute positioned 0 0 0 run function #bs.block:set_type
 ### Produce
 
 :::::{tab-set}
-::::{tab-item} Block display
+::::{tab-item} Block Display
 
 ```{function} #bs.block:spawn_block_display
 
@@ -786,7 +786,7 @@ function #bs.block:spawn_block_display
 ```
 
 ::::
-::::{tab-item} Falling block
+::::{tab-item} Falling Block
 
 ```{function} #bs.block:spawn_falling_block
 
@@ -821,7 +821,7 @@ function #bs.block:spawn_falling_block
 ```
 
 ::::
-::::{tab-item} Solid block display
+::::{tab-item} Solid Block Display
 
 ```{function} #bs.block:spawn_solid_block_display
 
@@ -856,7 +856,7 @@ function #bs.block:spawn_solid_block_display
 ```
 
 ::::
-::::{tab-item} Block particle
+::::{tab-item} Block Particle
 
 ```{function} #bs.block:emit_block_particle
 
@@ -901,7 +901,7 @@ function #bs.block:emit_block_particle
 ---
 
 (custom-mapping-registry)=
-## 🎓 Custom mapping registry
+## 🎓 Custom Mapping Registry
 
 This module allows you to create a personalized mapping registry tailored to your specific needs.
 

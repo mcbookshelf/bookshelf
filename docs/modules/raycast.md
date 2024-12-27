@@ -22,7 +22,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Run the raycast
+### Run the Raycast
 
 ```{function} #bs.raycast:run {with:{}}
 

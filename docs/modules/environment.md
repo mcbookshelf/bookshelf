@@ -24,7 +24,7 @@ You can find below all functions available in this module.
 ---
 
 
-### Get biome
+### Get Biome
 
 ```{function} #bs.environment:get_biome
 
@@ -55,7 +55,7 @@ data get storage bs:out environment.get_biome
 
 ---
 
-### Get temperature
+### Get Temperature
 
 ```{function} #bs.environment:get_temperature {scale:<scaling>}
 
@@ -91,7 +91,7 @@ You can find below all predicates available in this module.
 
 ---
 
-### Can it rain?
+### Can It Rain?
 
 **`bs.environment:can_rain`**
 
@@ -101,7 +101,7 @@ Determine if it can rain or not.
 
 ---
 
-### Can it snow?
+### Can It Snow?
 
 **`bs.environment:can_snow`**
 
@@ -111,7 +111,7 @@ Determine if it can snow or not.
 
 ---
 
-### Can it rain or snow?
+### Can It Rain or Snow?
 
 **`bs.environment:has_precipitation`**
 
@@ -121,7 +121,7 @@ Determine if the biome has precipitation or not.
 
 ---
 
-### Is it raining?
+### Is It Raining?
 
 **`bs.environment:is_raining`**
 
@@ -131,7 +131,7 @@ Determine if it is raining or not.
 
 ---
 
-### Is it thundering?
+### Is It Thundering?
 
 **`bs.environment:is_thundering`**
 

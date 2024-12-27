@@ -79,7 +79,7 @@ function #bs.xp:add_points {points:42}
 ```
 
 ::::
-::::{tab-item} Progress bar
+::::{tab-item} Progress Bar
 
 ```{function} #bs.xp:add_progress {progress:<value>}
 
@@ -111,7 +111,7 @@ function #bs.xp:add_progress {progress:0.25}
 ::::
 :::::
 
-```{admonition} How to remove
+```{admonition} How to remove?
 :class: tip
 
 You can use negative numbers to remove experience from the player.
@@ -125,7 +125,7 @@ You can use negative numbers to remove experience from the player.
 ### Get
 
 :::::{tab-set}
-::::{tab-item} Max points
+::::{tab-item} Max Points
 
 ```{function} #bs.xp:get_max_points
 
@@ -149,7 +149,7 @@ tellraw @a [{"text":"I need a total of "},{"score":{"name":"$xp.get_max_points",
 ```
 
 ::::
-::::{tab-item} Remaining points
+::::{tab-item} Remaining Points
 
 ```{function} #bs.xp:get_remaining_points
 
@@ -173,7 +173,7 @@ tellraw @a [{"text":"I need "},{"score":{"name":"$xp.get_remaining_points","obje
 ```
 
 ::::
-::::{tab-item} Total points
+::::{tab-item} Total Points
 
 ```{function} #bs.xp:get_total_points
 
@@ -197,7 +197,7 @@ tellraw @a [{"text":"I have "},{"score":{"name":"$xp.get_total_points","objectiv
 ```
 
 ::::
-::::{tab-item} Progress bar
+::::{tab-item} Progress Bar
 
 ```{function} #bs.xp:get_progress {scale:<scaling>}
 
@@ -296,7 +296,7 @@ function #bs.xp:set_points {points:42}
 ```
 
 ::::
-::::{tab-item} Total points
+::::{tab-item} Total Points
 
 ```{function} #bs.xp:set_total_points {points:<value>}
 
@@ -326,7 +326,7 @@ function #bs.xp:set_total_points {points:42}
 ```
 
 ::::
-::::{tab-item} Progress bar
+::::{tab-item} Progress Bar
 
 ```{function} #bs.xp:set_progress {progress:<value>}
 

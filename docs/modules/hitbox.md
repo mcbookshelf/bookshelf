@@ -87,10 +87,10 @@ Static entities, such as paintings and item frames, do not provide height and wi
 
 ---
 
-### Is entity inside
+### Is Entity Inside
 
 :::::{tab-set}
-::::{tab-item} Entity in block
+::::{tab-item} Entity in Block
 
 ```{function} #bs.hitbox:is_entity_in_block
 
@@ -119,7 +119,7 @@ execute summon minecraft:cow if function #bs.hitbox:is_entity_in_block run say I
 ```
 
 ::::
-::::{tab-item} Entity in blocks
+::::{tab-item} Entity in Blocks
 
 ```{function} #bs.hitbox:is_entity_in_blocks
 

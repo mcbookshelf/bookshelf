@@ -51,7 +51,7 @@ Compute the combine of 2 numbers.
   **Return | Score `$math.combine bs.out`**: Result of the operation.
 ```
 
-```{admonition} Technical limitation
+```{admonition} Technical Limitation
 :class: important
 
 The value of `bs.out` is incorrect if the result is greater than 2,147,483,647 or `$math.combine.[n,k] bs.in` are not both positive.
@@ -137,7 +137,7 @@ Compute the factorial of the number.
   **Return | Score `$math.factorial bs.out`**: Result of the operation.
 ```
 
-```{admonition} Technical limitation
+```{admonition} Technical Limitation
 :class: important
 
 Due to the limit of integers that can be stored in a score, the interval of `$math.factorial.n bs.in` is limited to `[0,12]`.
@@ -157,7 +157,7 @@ tellraw @a [{"text": "3! = ","color":"dark_gray"},{"score":{"name":"$math.factor
 
 ---
 
-### Float manipulation
+### Float Manipulation
 
 ::::{tab-set}
 :::{tab-item} Frexp
@@ -215,7 +215,7 @@ data get storage bs:out math.ldexp
 
 ---
 
-### Greatest common denominator
+### Greatest Common Denominator
 
 ```{function} #bs.math:gcd
 
@@ -403,7 +403,7 @@ tellraw @a [{"text": "3.5^2.25 = ", "color": "dark_gray"},{"nbt": "math.pow", "s
 
 ---
 
-### Rounded division
+### Rounded Division
 
 ```{function} #bs.math:divide
 
@@ -432,7 +432,7 @@ tellraw @a [{"text": "9 / 5 = ", "color": "dark_gray"},{"score":{"name":"$math.d
 
 ---
 
-### Square root
+### Square Root
 
 ::::{tab-set}
 

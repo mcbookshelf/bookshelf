@@ -12,7 +12,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Dump var
+### Dump Var
 
 ```{function} #bs.dump:var {var:<values>}
 

@@ -59,7 +59,7 @@ Generates a shape in 2D space at the specified origin, with the callback execute
 ```
 
 ::::
-::::{tab-item} Simplex shape 2D
+::::{tab-item} Simplex Shape 2D
 
 ```{function} #bs.generate:simplex_shape_2d
 
@@ -90,7 +90,7 @@ Generates a shape in 2D space using a Simplex noise algorithm. The shape is gene
 ```
 
 ::::
-::::{tab-item} Fractal shape 2D
+::::{tab-item} Fractal Shape 2D
 
 ```{function} #bs.generate:fractal_shape_2d
 

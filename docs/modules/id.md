@@ -18,7 +18,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Give simple unique ID
+### Give Simple Unique ID
 
 ```{function} #bs.id:give_suid
 
@@ -44,7 +44,7 @@ scoreboard objective setdisplay sidebar bs.id
 
 ---
 
-### Give chain unique ID
+### Give Chain Unique ID
 
 ```{function} #bs.id:give_cuid
 
@@ -57,7 +57,7 @@ Give a unique `bs.cid` score to each entity.
   **Score `@s bs.cid`**: Generated chain unique id.
 ```
 
-```{admonition} How it works
+```{admonition} How it works?
 :class: info
 
 The chain ID is similar to the simple ID. However with chain IDs, you can use the function `#bs.id:update_cuids` to make sure there are no gaps in the ID sequence, thus creating a continuous chain.
@@ -76,7 +76,7 @@ scoreboard objective setdisplay sidebar bs.cid
 
 ---
 
-### Update chain unique ID
+### Update Chain Unique ID
 
 ```{function} #bs.id:update_cuids
 
@@ -102,7 +102,7 @@ You can find below all predicates available in this module.
 
 ---
 
-### Check simple unique ID
+### Check Simple Unique ID
 
 ::::{tab-set}
 :::{tab-item} Has
@@ -200,7 +200,7 @@ execute as @e[predicate=bs.id:suid_match,limit=1] run say In range
 
 ---
 
-### Check chain unique ID
+### Check Chain Unique ID
 
 ::::{tab-set}
 :::{tab-item} Has
