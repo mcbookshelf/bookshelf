@@ -3,6 +3,7 @@
     {
       "id": "bs.bitwise",
       "name": "Bookshelf Bitwise",
+      "slug": "bookshelf-bitwise",
       "description": "A collection of various bitwise operations, providing versatile tools for manipulating binary data.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html",
       "kind": "data_pack",
@@ -126,6 +127,7 @@
     {
       "id": "bs.block",
       "name": "Bookshelf Block",
+      "slug": "bookshelf-block",
       "description": "Manage blocks, including states and NBTs, while offering advanced tools for seamless transformations.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html",
       "kind": "data_pack",
@@ -486,6 +488,7 @@
     {
       "id": "bs.color",
       "name": "Bookshelf Color",
+      "slug": "bookshelf-color",
       "description": "Facilitate color conversion between various formats.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html",
       "kind": "data_pack",
@@ -594,6 +597,7 @@
     {
       "id": "bs.dump",
       "name": "Bookshelf Dump",
+      "slug": "bookshelf-dump",
       "description": "Dump the content of given variables to the chat.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/dump.html",
       "kind": "data_pack",
@@ -621,6 +625,7 @@
     {
       "id": "bs.environment",
       "name": "Bookshelf Environment",
+      "slug": "bookshelf-environment",
       "description": "Comprehensive information and tools related to weather and biome properties.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html",
       "kind": "data_pack",
@@ -709,6 +714,7 @@
     {
       "id": "bs.generate",
       "name": "Bookshelf Generate",
+      "slug": "bookshelf-generate",
       "description": "Generate diverse terrains and landscapes, incorporating natural features.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generate.html",
       "kind": "data_pack",
@@ -769,6 +775,7 @@
     {
       "id": "bs.health",
       "name": "Bookshelf Health",
+      "slug": "bookshelf-health",
       "description": "Efficiently manage the lifecycle and vital aspects of an entity.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html",
       "kind": "data_pack",
@@ -890,6 +897,7 @@
     {
       "id": "bs.hitbox",
       "name": "Bookshelf Hitbox",
+      "slug": "bookshelf-hitbox",
       "description": "Get and check the hitboxes of blocks or entities.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html",
       "kind": "data_pack",
@@ -1052,6 +1060,7 @@
     {
       "id": "bs.id",
       "name": "Bookshelf ID",
+      "slug": "bookshelf-id",
       "description": "Manage entity IDs, essential in scenarios like shooting games where you need to track who is targeting whom.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html",
       "kind": "data_pack",
@@ -1262,6 +1271,7 @@
     {
       "id": "bs.interaction",
       "name": "Bookshelf Interaction",
+      "slug": "bookshelf-interaction",
       "description": "A low-level API to create GUI based on Interaction entity by binding events to it.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html",
       "kind": "data_pack",
@@ -1372,6 +1382,7 @@
     {
       "id": "bs.link",
       "name": "Bookshelf Link",
+      "slug": "bookshelf-link",
       "description": "Construct coherent entity structures by linking entities\u2019 positions and rotations.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html",
       "kind": "data_pack",
@@ -1842,6 +1853,7 @@
     {
       "id": "bs.log",
       "name": "Bookshelf Log",
+      "slug": "bookshelf-log",
       "description": "Log messages in the chat with varying levels of severity.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html",
       "kind": "data_pack",
@@ -1944,6 +1956,7 @@
     {
       "id": "bs.math",
       "name": "Bookshelf Math",
+      "slug": "bookshelf-math",
       "description": "The beatifull world of mathematics\u2026 in Minecraft!",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html",
       "kind": "data_pack",
@@ -2342,6 +2355,7 @@
     {
       "id": "bs.move",
       "name": "Bookshelf Move",
+      "slug": "bookshelf-move",
       "description": "Make your entity move exactly the way you want them to!",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html",
       "kind": "data_pack",
@@ -2435,6 +2449,7 @@
     {
       "id": "bs.position",
       "name": "Bookshelf Position",
+      "slug": "bookshelf-position",
       "description": "Manage entity positions and rotations using scores.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html",
       "kind": "data_pack",
@@ -2933,6 +2948,7 @@
     {
       "id": "bs.random",
       "name": "Bookshelf Random",
+      "slug": "bookshelf-random",
       "description": "Contains many random functions for different distributions.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html",
       "kind": "data_pack",
@@ -3142,6 +3158,7 @@
     {
       "id": "bs.raycast",
       "name": "Bookshelf Raycast",
+      "slug": "bookshelf-raycast",
       "description": "Cast rays and see if they collide with blocks or entities.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html",
       "kind": "data_pack",
@@ -3172,6 +3189,7 @@
     {
       "id": "bs.schedule",
       "name": "Bookshelf Schedule",
+      "slug": "bookshelf-schedule",
       "description": "Enhance command scheduling. Cancel commands and maintain execution context (entity & location).",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html",
       "kind": "data_pack",
@@ -3251,6 +3269,7 @@
     {
       "id": "bs.sidebar",
       "name": "Bookshelf Sidebar",
+      "slug": "bookshelf-sidebar",
       "description": "Create a visually appealing and dynamic sidebar using the scoreboard.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/sidebar.html",
       "kind": "data_pack",
@@ -3296,6 +3315,7 @@
     {
       "id": "bs.time",
       "name": "Bookshelf Time",
+      "slug": "bookshelf-time",
       "description": "Get information about the system time effortlessly.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/time.html",
       "kind": "data_pack",
@@ -3327,6 +3347,7 @@
     {
       "id": "bs.tree",
       "name": "Bookshelf Tree",
+      "slug": "bookshelf-tree",
       "description": "Simplicity meets utility in this bank of trees.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/tree.html",
       "kind": "data_pack",
@@ -3338,6 +3359,7 @@
     {
       "id": "bs.vector",
       "name": "Bookshelf Vector",
+      "slug": "bookshelf-vector",
       "description": "Vectors are fundamental and incredibly powerful tools to manage motions, forces and\u2026 well\u2026 do physics!",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html",
       "kind": "data_pack",
@@ -3617,6 +3639,7 @@
     {
       "id": "bs.view",
       "name": "Bookshelf View",
+      "slug": "bookshelf-view",
       "description": "Execute commands based on what an entity sees.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html",
       "kind": "data_pack",
@@ -3769,6 +3792,7 @@
     {
       "id": "bs.xp",
       "name": "Bookshelf XP",
+      "slug": "bookshelf-xp",
       "description": "Efficiently manage the experience points and levels of players.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html",
       "kind": "data_pack",
