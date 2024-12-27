@@ -32,6 +32,7 @@ class ModuleMeta(BaseModel):
 
     id: str = Field(pattern=r"^bs\..+$")
     name: str
+    slug: str
     description: str
     documentation: str = Field(pattern=rf"^{re.escape(DOC_URL)}/en/latest/modules/.+$")
     image: str | None = None

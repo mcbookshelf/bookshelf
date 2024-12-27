@@ -20,6 +20,14 @@ Generate diverse terrains and landscapes, incorporating natural features.
 -- Anonymous
 ```
 
+```{button-link} https://youtu.be/uDenmF9l8a4
+:color: primary
+:align: center
+:shadow:
+
+{octicon}`device-camera-video` Watch a demo
+```
+
 ---
 
 ## 🔧 Functions

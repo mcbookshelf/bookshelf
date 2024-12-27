@@ -15,6 +15,14 @@ Make your entity move exactly the way you want them to!
 -- Heraclitus
 ```
 
+```{button-link} https://youtu.be/V6NxxpN_hhc
+:color: primary
+:align: center
+:shadow:
+
+{octicon}`device-camera-video` Watch a demo
+```
+
 ---
 
 ## 🔧 Functions
