@@ -32,6 +32,7 @@ class PublishOptions(PluginOptions):
     module_slug: str
     module_description: str
     module_documentation: str
+    module_icon: Path
     module_readme: Path
     version_name: str
 
@@ -51,6 +52,7 @@ def beet_default(ctx: Context) -> Generator:
             module_slug=module_slug,
             module_description=ctx.meta.get("description", ""),
             module_documentation=ctx.meta.get("documentation", ""),
+            module_icon=ctx.directory / "pack.png",
             module_readme=ctx.directory / "README.md",
             version_name=f"{ctx.directory.name} v{VERSION}",
         ))
@@ -66,13 +68,13 @@ def beet_default(ctx: Context) -> Generator:
 def publish_pack(_: Context, opts: PublishOptions) -> None:
     """Attempt to publish pack to platforms."""
     if MODRINTH_TOKEN and (
-        get_modrinth_project_id(opts.module_slug)
+        update_modrinth_project(opts)
         or create_modrinth_project(opts)
     ):
         create_modrinth_version(opts)
 
     if SMITHED_TOKEN and (
-        get_smithed_project_id(opts.module_slug)
+        update_smithed_project(opts)
         or create_smithed_project(opts)
     ):
         create_smithed_version(opts)
@@ -96,26 +98,11 @@ def get_modrinth_project_id(slug: str) -> str | None:
         "User-Agent": "mcbookshelf/Bookshelf/release (contact@gunivers.net)",
     })
 
-    if response.status_code == requests.codes.ok:
-        return response.json()["id"]
-    return None
-
-
-def get_smithed_project_id(slug: str) -> str | None:
-    """Attempt to get the Smithed pack id."""
-    response = requests.get(f"{SMITHED_API}/packs/{slug}", timeout=5)
-
-    if response.status_code == requests.codes.ok:
-        return response.json()["id"]
-    return None
+    return response.json()["id"] if response.status_code == requests.codes.ok else None
 
 
 def create_modrinth_project(opts: PublishOptions) -> bool:
     """Attempt to create a new Modrinth project."""
-    readme = opts.module_readme.read_text("utf-8") \
-        if opts.module_readme.is_file() \
-        else ""
-
     return handle_response_error(requests.post(
         f"{MODRINTH_API}/project",
         timeout=5,
@@ -123,11 +110,11 @@ def create_modrinth_project(opts: PublishOptions) -> bool:
             "Authorization": MODRINTH_TOKEN,
             "User-Agent": "mcbookshelf/Bookshelf/release (contact@gunivers.net)",
         },
-        files={"data":json.dumps({
+        files={"icon": opts.module_icon.read_bytes(), "data":json.dumps({
             "name": opts.module_name,
             "slug": opts.module_slug,
             "summary": opts.module_description,
-            "description": readme,
+            "description": opts.module_readme.read_text("utf-8"),
             "is_draft": True,
             "initial_versions": [],
             "categories": ["library"],
@@ -146,31 +133,26 @@ def create_modrinth_project(opts: PublishOptions) -> bool:
     ), f"Failed to create project '{opts.module_name}' on Modrinth.")
 
 
-def create_smithed_project(opts: PublishOptions) -> bool:
-    """Attempt to create a new Smithed project."""
-    return handle_response_error(requests.post(
-        f"{SMITHED_API}/packs",
+def update_modrinth_project(opts: PublishOptions) -> bool:
+    """Attempt to update a Modrinth project."""
+    response = requests.patch(
+        f"{MODRINTH_API}/project/{opts.module_slug}",
         timeout=5,
-        headers={"Content-Type": "application/json"},
-        params={"token": SMITHED_TOKEN, "id": opts.module_slug},
-        json={"data": {
-            "categories": ["Library"],
-            "display": {
-                "name": opts.module_name,
-                "description": opts.module_description,
-                "icon": "",
-                "webPage": (
-                    f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/heads/master/"
-                    f"{opts.module_readme.relative_to(ROOT_DIR)}"
-                ),
-                "urls": {
-                    "discord": "https://discord.gg/aV5SF3JsAZ",
-                    "source": f"https://github.com/{GITHUB_REPO}",
-                    "homepage": opts.module_documentation,
-                },
-            },
-        }},
-    ), f"Failed to create project '{opts.module_name}' on Smithed.")
+        headers={
+            "Authorization": MODRINTH_TOKEN,
+            "User-Agent": "mcbookshelf/Bookshelf/release (contact@gunivers.net)",
+        },
+        json={
+            "summary": opts.module_description,
+            "description": opts.module_readme.read_text("utf-8"),
+            "link_urls": {"wiki": opts.module_documentation},
+        },
+    )
+
+    return handle_response_error(
+        response,
+        f"Failed to update project '{opts.module_name}' on Modrinth.",
+    ) if response.status_code != requests.codes.not_found else False
 
 
 def create_modrinth_version(opts: PublishOptions) -> bool:
@@ -211,6 +193,57 @@ def create_modrinth_version(opts: PublishOptions) -> bool:
             "featured": True,
         }), opts.file.name: opts.file.read_bytes()}, # type: ignore[arg-type]
     ), f"Failed to create version '{VERSION}' on Modrinth.")
+
+
+def create_smithed_project(opts: PublishOptions) -> bool:
+    """Attempt to create a new Smithed project."""
+    return handle_response_error(requests.post(
+        f"{SMITHED_API}/packs",
+        timeout=5,
+        headers={"Content-Type": "application/json"},
+        params={"token": SMITHED_TOKEN, "id": opts.module_slug},
+        json={"data": {
+            "categories": ["Library"],
+            "display": {
+                "name": opts.module_name,
+                "description": opts.module_description,
+                "icon": (
+                    f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/heads/master/"
+                    f"{opts.module_icon.relative_to(ROOT_DIR)}"
+                ),
+                "webPage": (
+                    f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/heads/master/"
+                    f"{opts.module_readme.relative_to(ROOT_DIR)}"
+                ),
+                "urls": {
+                    "discord": "https://discord.gg/aV5SF3JsAZ",
+                    "source": f"https://github.com/{GITHUB_REPO}",
+                    "homepage": opts.module_documentation,
+                },
+            },
+        }},
+    ), f"Failed to create project '{opts.module_name}' on Smithed.")
+
+
+def update_smithed_project(opts: PublishOptions) -> bool:
+    """Attempt to update a Smithed project."""
+    response = requests.patch(
+        f"{SMITHED_API}/packs/{opts.module_slug}",
+        timeout=5,
+        headers={"Content-Type": "application/json"},
+        params={"token": SMITHED_TOKEN},
+        json={"data": {
+            "display": {
+                "description": opts.module_description,
+                "urls": {"homepage": opts.module_documentation},
+            },
+        }},
+    )
+
+    return handle_response_error(
+        response,
+        f"Failed to update project '{opts.module_name}' on Smithed.",
+    ) if response.status_code != requests.codes.not_found else False
 
 
 def create_smithed_version(opts: PublishOptions) -> bool:
