@@ -14,9 +14,9 @@ Bookshelf respects a certain tree structure which can be similar to Java package
 
 **Module Requirements:**
 
-- Each module must declare a `module.json` file as detailed in the [metadata page](project:metadata.md).
+- Each module must include a `module.json` file, as described in the [metadata page](project:metadata.md).
 
-- Each module should have `__load__` and `__unload__` functions and be responsible for loading and unloading itself. This includes redefining objectives, constants, and any other necessary elements.
+- Each module should also provide a `pack.png` image and a `README.md` file. Additionally, it must define `__load__` and `__unload__` functions to manage its own loading and unloading. This includes resetting objectives, constants, and any other necessary elements.
 
 
 **Feature Requirements:**

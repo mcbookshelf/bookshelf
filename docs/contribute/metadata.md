@@ -6,7 +6,7 @@ To support automation by tools like the Bookshelf Manager, modules must declare 
 
 ## ⭐ Feature Metadata
 
-eature metadata are defined directly within each `.json` file, as shown below:
+Feature metadata are defined directly within each `.json` file, as shown below:
 
 ```{code-block} json
 :force:
