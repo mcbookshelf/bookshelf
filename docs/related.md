@@ -9,7 +9,7 @@ Through the three sub-pages of this related page, we want to pay tribute to diff
 
 ::::{grid} 3
 
-:::{grid-item-card} 📂 Projects using Bookshelf
+:::{grid-item-card} 📂 Projects Using Bookshelf
 :link: related/use-bookshelf
 :link-type: doc
 :margin: 0 3 0 0
@@ -17,7 +17,7 @@ Through the three sub-pages of this related page, we want to pay tribute to diff
 Pojects that use Bookshelf.
 :::
 
-:::{grid-item-card} 📚 Related libraries
+:::{grid-item-card} 📚 Related Libraries
 :link: related/related-libraries
 :link-type: doc
 :margin: 0 3 0 0
