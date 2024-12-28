@@ -48,7 +48,7 @@ def beet_default(ctx: Context) -> Generator:
         ctx.require(publish_pack(
             file=file,
             changelog=create_specialized_changelog(ctx.directory.name),
-            module_name=ctx.meta.get("name", "Bookshelf"),
+            module_name=f"Bookshelf {ctx.meta.get('name', '')}".strip(),
             module_slug=module_slug,
             module_description=ctx.meta.get("description", ""),
             module_documentation=ctx.meta.get("documentation", ""),
