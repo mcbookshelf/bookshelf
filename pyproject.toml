@@ -39,9 +39,11 @@ docs = [
 ]
 
 [project.scripts]
+build = "core.cli.modules:build"
 docs = "core.cli.docs:docs"
 meta = "core.cli.meta:meta"
 modules = "core.cli.modules:modules"
+watch = "core.cli.modules:watch"
 
 [tool.mypy]
 files = ["core", "modules"]
