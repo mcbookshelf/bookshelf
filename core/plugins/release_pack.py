@@ -11,6 +11,7 @@ from core.common.logger import get_step_logger
 from core.definitions import (
     DOC_DIR,
     GITHUB_REPO,
+    MASTER_URL,
     MINECRAFT_VERSIONS,
     MODRINTH_API,
     RELEASE_DIR,
@@ -207,13 +208,11 @@ def create_smithed_project(opts: PublishOptions) -> bool:
             "display": {
                 "name": opts.module_name,
                 "description": opts.module_description,
-                "icon": (
-                    f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/heads/master/"
-                    f"{opts.module_icon.relative_to(ROOT_DIR)}"
+                "icon": MASTER_URL.format(
+                    opts.module_icon.relative_to(ROOT_DIR).as_posix(),
                 ),
-                "webPage": (
-                    f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/heads/master/"
-                    f"{opts.module_readme.relative_to(ROOT_DIR)}"
+                "webPage": MASTER_URL.format(
+                    opts.module_readme.relative_to(ROOT_DIR).as_posix(),
                 ),
                 "urls": {
                     "discord": "https://discord.gg/aV5SF3JsAZ",

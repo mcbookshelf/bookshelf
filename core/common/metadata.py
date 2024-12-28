@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field, ValidationError
 
 from core.common.helpers import extract_feature_id
 from core.common.logger import StepLogger
-from core.definitions import DOC_URL, MODULES, MODULES_DIR, ROOT_DIR
+from core.definitions import DOC_URL, MASTER_URL, MODULES, MODULES_DIR, ROOT_DIR
 
 
 class Updated(BaseModel):
@@ -33,9 +33,12 @@ class ModuleMeta(BaseModel):
     id: str = Field(pattern=r"^bs\..+$")
     name: str
     slug: str
+    icon: str | None = None
+    banner: str | None = None
+    readme: str | None = None
     description: str
     documentation: str = Field(pattern=rf"^{re.escape(DOC_URL)}/en/latest/modules/.+$")
-    image: str | None = None
+
     kind: Literal["data_pack", "resource_pack"]
     tags: list[str] = []
     authors: list[str] = []
@@ -88,12 +91,24 @@ def get_module_meta(file: Path, logger: StepLogger) -> ModuleMeta | None:
         if "resource_pack" in data:
             meta["kind"] = "resource_pack"
 
-        for key in ["image", "tags"]:
+        for key in ["tags"]:
             if key not in meta:
                 logger.warning(
                     "Metadata file for module '%s' is missing optional key '%s'. "
-                    "You should consider adding it."
-                , module_id, key)
+                    "You should consider adding it.",
+                    module_id,
+                    key,
+                )
+
+        for key, value in [
+            ("icon", "pack.png"),
+            ("readme", "README.md"),
+            ("banner", "banner.png"),
+        ]:
+            if (file.parent / value).exists():
+                meta[key] = MASTER_URL.format(
+                    (relative_path.parent / value).as_posix(),
+                )
 
         return ModuleMeta(id=module_id, **meta)
 

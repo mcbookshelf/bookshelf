@@ -3,7 +3,7 @@ from collections.abc import Generator
 
 from beet import Context
 
-from core.definitions import MINECRAFT_VERSIONS
+from core.definitions import MINECRAFT_VERSIONS, VERSION_URL
 
 
 def beet_default(ctx: Context) -> Generator:
@@ -25,11 +25,11 @@ def beet_default(ctx: Context) -> Generator:
 def get_supported_formats(ctx: Context, versions: list) -> dict:
     """Retrieve the supported formats for the given Minecraft versions."""
     cache = ctx.cache[f"version/{versions[0]}"]
-    file = cache.download(f"https://raw.githubusercontent.com/misode/mcmeta/refs/tags/{versions[0]}-summary/version.json")
+    file = cache.download(VERSION_URL.format(versions[0]))
     min_version = json.loads(file.read_text("utf-8"))
 
     cache = ctx.cache[f"version/{versions[-1]}"]
-    file = cache.download(f"https://raw.githubusercontent.com/misode/mcmeta/refs/tags/{versions[-1]}-summary/version.json")
+    file = cache.download(VERSION_URL.format(versions[-1]))
     max_version = json.loads(file.read_text("utf-8"))
 
     return {

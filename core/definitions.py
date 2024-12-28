@@ -25,10 +25,12 @@ MODULES = sorted([
     if (MODULES_DIR / mod).is_dir() and mod.startswith("bs.")
 ])
 
+MASTER_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/heads/master/{{}}"
 BIOMES_URL = "https://raw.githubusercontent.com/misode/mcmeta/{}-summary/data/worldgen/biome/data.min.json"
 BLOCKS_URL = "https://raw.githubusercontent.com/misode/mcmeta/{}-summary/blocks/data.min.json"
 ITEMS_URL = "https://raw.githubusercontent.com/misode/mcmeta/{}-registries/item/data.min.json"
 SHAPES_URL = "https://raw.githubusercontent.com/mcbookshelf/Bookshelf-McData/refs/tags/{}/blocks/shapes.min.json"
+VERSION_URL = "https://raw.githubusercontent.com/misode/mcmeta/refs/tags/{}-summary/version.json"
 
 SPECIAL_ITEMS = {
   "minecraft:acacia_wall_hanging_sign": "minecraft:acacia_hanging_sign",
