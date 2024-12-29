@@ -1,16 +1,9 @@
-#!tag "bs.load:steps/validate"
-
 {% include 'core/header.jinja' %}
-# Return early to ensure code runs only on the latest available version
-execute unless score $bs.hitbox.major load.status matches {{ major }} run return 0
-execute unless score $bs.hitbox.minor load.status matches {{ minor }} run return 0
-execute unless score $bs.hitbox.patch load.status matches {{ patch }} run return 0
-
 # Return early if no loading errors are found
 execute unless data storage bs:data load.errors run return 0
 
 # Retry sending error messages if no players are present
-execute unless entity @n run return run schedule function bs.load:v{{ major }}.{{ minor }}.{{ patch }}/validate 5t
+execute unless entity @p run return run schedule function bs.load:validate 5t
 
 # Display error messages for major and minor version conflicts
 tellraw @a [{"text":"\n⚠ ","color":"#E84635","underlined":true},{"text":"BOOKSHELF","bold":true},{"text":" • Version Conflict Detected\n"}]

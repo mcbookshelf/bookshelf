@@ -13,13 +13,13 @@ def beet_default(ctx: Context) -> None:
 
     for file, template in [
         ("exclusive", "exclusive"),
+        ("validate", "validate"),
         (f"resolve/{ctx.directory.name}", "steps/resolve"),
         (f"v{VERSION}/bundle/append", "bundle/append"),
         (f"v{VERSION}/bundle/concat", "bundle/concat"),
         (f"v{VERSION}/cleanup", "steps/cleanup"),
         (f"v{VERSION}/errors/{ctx.directory.name}", "errors"),
         (f"v{VERSION}/enumerate/{ctx.directory.name}", "steps/enumerate"),
-        (f"v{VERSION}/validate", "steps/validate"),
     ]:
         ctx.generate(
             f"bs.load:{file}",
@@ -75,7 +75,7 @@ def gen_load_tag(modules: list[str]) -> FunctionTag:
             "#bs.load:steps/cleanup",
             "#bs.load:steps/enumerate",
             "#bs.load:steps/resolve",
-            "#bs.load:steps/validate",
+            "bs.load:validate",
         ] + [
             {"id": f"#bs.load:module/{mod}", "required": False}
             for mod in modules

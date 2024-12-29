@@ -5,7 +5,7 @@
 data modify storage bs:data load.modules[{module:"{{ module }}",version:"{{ major }}.{{ minor }}.{{ patch }}"}].enabled set value 1b
 
 # Return early if all versions have the same major version and the most recent one is enabled
-execute unless score #{{ module }}.major_conflicts load.status matches 1.. \
+execute unless score #{{ module }}.major_versions load.status matches 2.. \
   if score ${{ module }}.major load.status matches {{ major }} \
   if score ${{ module }}.minor load.status matches {{ minor }} \
   if score ${{ module }}.patch load.status matches {{ patch }} \
