@@ -1,9 +1,0 @@
-{
-  "name": "bs.random",
-  "display_name": "Random",
-  "description": "Contains many random functions for different distributions.",
-  "documentation": "https://bookshelf.docs.gunivers.net/en/latest/modules/random.html",
-  "weak_dependencies": [
-    "bs.log"
-  ]
-}

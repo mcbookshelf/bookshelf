@@ -10,7 +10,7 @@ Bookshelf respects certain naming conventions in order to reduce the effort need
 
 :::{list-table}
 *   - **Files**
-    - Use the snake_case convention. A few names are reserved for [special functions](project:../contribute/special-functions.md) at the root of each module: `__help__`, `__load__`, `__tick__`, and `__unload__`.
+    - Use the snake_case convention. A few names are reserved for [special functions](project:../contribute/special-functions.md) at the root of each module: `__help__`, `__load__`, and `__unload__`.
 
       *Example: `function/<my_function>.mcfunction`*
 *   - **Entity tags**
@@ -18,11 +18,11 @@ Bookshelf respects certain naming conventions in order to reduce the effort need
 
       *Example: `bs.<module>.my_tag`*
 *   - **Data storage**
-    - Use the snake_case convention. Is limited to what is defined in the [shared data](project:shared-data.md) section.
+    - Use the snake_case convention. Is limited to what is defined in the [Shared Resources](project:shared-resources.md) section.
 
       *Example: `bs:data <module>.<feature>`*
 *   - **Objectives**
-    - Use the snake_case convention and `bs.` prefix. Only create new objectives if no existing objective defined in the [shared data](project:shared-data.md) section can be used.
+    - Use the snake_case convention and `bs.` prefix. Only create new objectives if no existing objective defined in the [Shared Resources](project:shared-resources.md) section can be used.
 
       *Example: `bs.my_objective`*
 *   - **Scoreholders**

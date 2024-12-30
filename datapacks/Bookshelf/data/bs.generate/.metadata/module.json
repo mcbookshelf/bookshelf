@@ -1,9 +1,0 @@
-{
-  "name": "bs.generate",
-  "display_name": "Generate",
-  "description": "Generate diverse terrains and landscapes, incorporating natural features.",
-  "documentation": "https://bookshelf.docs.gunivers.net/en/latest/modules/generate.html",
-  "dependencies": [
-    "bs.random"
-  ]
-}

@@ -1,9 +1,0 @@
-{
-  "name": "bs.interaction",
-  "display_name": "Interaction",
-  "description": "A low-level API to create GUI based on Interaction entity by binding events to it.",
-  "documentation": "https://bookshelf.docs.gunivers.net/en/latest/modules/interaction.html",
-  "weak_dependencies": [
-    "bs.log"
-  ]
-}

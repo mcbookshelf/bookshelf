@@ -36,7 +36,7 @@ function #bs.schedule:cancel_all {with:{id:"foo"}}
 ```
 
 ::::
-::::{tab-item} Single one
+::::{tab-item} Single One
 
 ```{function} #bs.schedule:cancel_one {with:{}}
 

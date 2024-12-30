@@ -28,7 +28,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Bit count
+### Bit Count
 
 ```{function} #bs.bitwise:bit_count
 
@@ -55,7 +55,7 @@ tellraw @a [{"text":"Number of bits for 12 = ","color":"#e0c7ff"},{"score":{"nam
 
 ---
 
-### Bit length
+### Bit Length
 
 ```{function} #bs.bitwise:bit_length
 
@@ -109,7 +109,7 @@ tellraw @a [{"text":"Two's complement of -12 = ","color":"#e0c7ff"},{"score":{"n
 
 ---
 
-### Logical operators
+### Logical Operators
 
 ::::{tab-set}
 :::{tab-item} And

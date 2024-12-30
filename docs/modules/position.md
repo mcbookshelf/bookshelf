@@ -23,7 +23,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Add position and rotation
+### Add Position and Rotation
 
 :::::{tab-set}
 ::::{tab-item} x,y,z
@@ -247,7 +247,7 @@ Add position scores to the entity's coordinates and rotate it according to its r
 
 ---
 
-### Canonical to local
+### Canonical to Local
 
 ```{function} #bs.position:canonical_to_local
 
@@ -262,7 +262,7 @@ Convert a canonical position (using the relative reference frame) into a local p
   **Scores `@s bs.pos.[x,y,z]`**: Converted position.
 ```
 
-```{admonition} Local position... 🥶 What's this?
+```{admonition} Local Position... 🥶 What's this?
 :class: dropdown
 
 Unlike relative position (canonical), this reference frame considers the entity's rotation. Therefore, when the parent entity rotates, the child entity rotates around it. For those familiar with Minecraft commands, local coordinates are available through the `^` symbol.
@@ -272,7 +272,7 @@ Unlike relative position (canonical), this reference frame considers the entity'
 
 ---
 
-### Get distance
+### Get Distance
 
 :::::{tab-set}
 ::::{tab-item} Normal
@@ -306,7 +306,7 @@ execute at @e[type=sheep,limit=1,sort=nearest] run function #bs.position:get_dis
 tellraw @a [{"text": "Distance: ", "color": "dark_gray"},{"score":{"name":"$position.get_distance_ata", "objective": "bs.out"}, "color": "gold"}]
 ```
 
-```{admonition} Performance tip
+```{admonition} Performance Tip
 :class: tip
 
 For several applications such as comparing distances, you can use the squared distance instead of the "normal" distance. It is a bit faster to compute.
@@ -344,7 +344,7 @@ execute at @e[type=sheep,limit=1,sort=nearest] run function #bs.position:get_dis
 tellraw @a [{"text": "Distance^2: ", "color": "dark_gray"},{"score":{"name":"$position.get_distance_squared_ata", "objective": "bs.out"}, "color": "gold"}]
 ```
 
-```{admonition} Score limitation
+```{admonition} Score Limitation
 :class: warning
 
 Scores in Minecraft have a limited size similar to a signed integer variable. The latter is huge, but not unlimited and can overflow. Since this function uses powers of 2 to calculate the result, you should prefer the "normal" version (which does not rely on powers) when working over big distances.
@@ -357,7 +357,7 @@ Scores in Minecraft have a limited size similar to a signed integer variable. Th
 
 ---
 
-### Get position and rotation
+### Get Position and Rotation
 
 :::::{tab-set}
 ::::{tab-item} x,y,z
@@ -584,7 +584,7 @@ Get the execution position and rotation of the function and store the coordinate
 
 ---
 
-### Get relative
+### Get Relative
 
 :::::{tab-set}
 ::::{tab-item} As to at
@@ -619,7 +619,7 @@ tellraw @a [{"text": "Relative position : X=", "color": "dark_gray"},{"score":{"
 ```
 
 ::::
-::::{tab-item} From direction
+::::{tab-item} From Direction
 
 ```{function} #bs.position:get_relative_from_dir {scale:<scaling>}
 
@@ -657,7 +657,7 @@ tellraw @a [{"text": "Relative position : X=", "color": "dark_gray"},{"score":{"
 
 ---
 
-### Local to canonical
+### Local to Canonical
 
 ```{function} #bs.position:local_to_canonical
 
@@ -672,7 +672,7 @@ Convert a local position (using the local reference frame) into a canonical posi
   **Scores `@s bs.pos.[x,y,z]`**: Converted position.
 ```
 
-```{admonition} Local position... 🥶 What's this?
+```{admonition} Local Position... 🥶 What's this?
 :class: dropdown
 
 Unlike relative position (canonical), this reference frame considers the entity's rotation. Therefore, when the parent entity rotates, the child entity rotates around it. For those familiar with Minecraft commands, local coordinates are available through the `^` symbol.
@@ -682,7 +682,7 @@ Unlike relative position (canonical), this reference frame considers the entity'
 
 ---
 
-### Set position and rotation
+### Set Position and Rotation
 
 :::::{tab-set}
 ::::{tab-item} x,y,z

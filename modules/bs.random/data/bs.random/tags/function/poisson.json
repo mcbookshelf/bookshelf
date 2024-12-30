@@ -1,0 +1,23 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#random-distributions",
+    "authors": [
+      "SBtree"
+    ],
+    "contributors": [
+      "Aeldrion"
+    ],
+    "created": {
+      "date": "2024/06/16",
+      "minecraft_version": "1.21"
+    },
+    "updated": {
+      "date": "2024/08/05",
+      "minecraft_version": "1.21"
+    }
+  },
+  "values": [
+    "bs.random:distributions/poisson/poisson"
+  ]
+}

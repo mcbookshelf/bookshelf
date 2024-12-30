@@ -1,38 +1,40 @@
-# ✅ Contribution validation
+# ✅ Contribution Validation
 
-A Bookshelf contribution often requires some additional modifications other than the code itself.
-To ensure the different modifications are correctly contributed, we have set up different validation steps.
-
----
-
-## ⚙️ Automatic validation
-
-First, we have defined some scripts that are automatically executed when proposing a pull request (and after each commit inside the pull request).
-These scripts verify:
-- If the metadata of the features, modules, and datapacks are defined and up to date (see [metadata page](project:metadata.md)).
-- If there is no regression in the code, by executing the different unit tests (see [debug page](project:debug.md#-unit-tests)).
-
-A Bookshelf contributor can also manually and locally execute these checks using the `all.ipynb` notebook in the `scripts` folder (requires Python, see `scripts/pyproject.toml` file).
-
-Some checks about the metadata can fail because the specified metadata are not up to date.
-Indeed, some module/feature metadata such as the dependencies are computed, and the Bookshelf contributor needs to manually run the generators to enable their computation.
-These generators are available in the `scripts/all.ipynb` notebook and are not executed by the CI/CD.
+Contributing often requires additional changes beyond the code itself. To ensure all contributions are properly integrated, we follow a series of validation steps.
 
 ---
 
-## 📄 Pull request template
+## ⚙️ Automatic Validation
 
-When a Bookshelf contributor opens a pull request on the Bookshelf repository, the message of the pull request is filled with a checklist.
-This checklist helps the Bookshelf contributor to ensure that they have not forgotten any changes we cannot automatically verify, such as the modification of the changelog file.
-Here is a non-exhaustive list of what a feature contribution requires:
-- Update the changelog with the content of the contribution and the ID of the pull request.
-- Document the new features in the documentation and update the documentation for existing features (if needed).
-- Provide some unit tests if possible.
-- Link the pull request to an existing issue.
+We use automated scripts to validate contributions whenever a pull request is opened or updated with new commits. These scripts check:
+- Whether metadata is defined and up to date (see [metadata page](project:metadata.md)).
+- Whether the code passes all unit tests, ensuring no regressions (see [debug page](project:debug-tools.md#-unit-tests)).
+
+Bookshelf contributors can also manually run these checks locally using the following commands:
+```sh
+pdm run modules check
+pdm run modules test
+```
 
 ---
 
-## 🔎 Manual review
+## 📄 Pull Request Template
 
-Finally, other Bookshelf contributors manually review the pull request before approving it.
+When creating a pull request, contributors are provided with a checklist template to ensure no essential steps are overlooked. This checklist covers changes that cannot be automatically validated, such as:
+- Updating the changelog with details about the contribution and the pull request ID.
+- Adding or updating documentation for new or existing features.
+- Including unit tests where applicable.
+- Linking the pull request to an existing issue.
 
+This checklist ensures contributions meet project standards before submission.
+
+---
+
+## 🔎 Manual Review
+
+After automated checks, other Bookshelf contributors manually review the pull request. This review ensures:
+- Code quality and alignment with project standards.
+- Adequate documentation and testing.
+- Compliance with the overall contribution guidelines.
+
+Once the review process is complete, the contribution is approved and merged.

@@ -20,6 +20,14 @@ Generate diverse terrains and landscapes, incorporating natural features.
 -- Anonymous
 ```
 
+```{button-link} https://youtu.be/uDenmF9l8a4
+:color: primary
+:align: center
+:shadow:
+
+{octicon}`device-camera-video` Watch a demo
+```
+
 ---
 
 ## 🔧 Functions
@@ -59,7 +67,7 @@ Generates a shape in 2D space at the specified origin, with the callback execute
 ```
 
 ::::
-::::{tab-item} Simplex shape 2D
+::::{tab-item} Simplex Shape 2D
 
 ```{function} #bs.generate:simplex_shape_2d
 
@@ -90,7 +98,7 @@ Generates a shape in 2D space using a Simplex noise algorithm. The shape is gene
 ```
 
 ::::
-::::{tab-item} Fractal shape 2D
+::::{tab-item} Fractal Shape 2D
 
 ```{function} #bs.generate:fractal_shape_2d
 
@@ -128,15 +136,16 @@ Generates a shape in 2D space using a Fractal noise algorithm. The shape is gene
 
 *Generate a 3D terrain using a heightmap. This function employs a linear approach; for more interesting terrain, consider scaling the noise values differently according to various ranges. Check out [this video](https://www.youtube.com/watch?v=CSa5O6knuwI) for more insights on terrain generation:*
 
-```mcfunction
+```{code-block} mcfunction
+:force:
 # Once
-function #bs.generate:fractal_shape_2d {width:64,height:64,run:"function bs.generate:shape_2d/demo/heightmap/heightmap",with:{}}
+function #bs.generate:fractal_shape_2d {width:64,height:64,run:"function mypack:generate",with:{}}
 
-# bs.generate:shape_2d/demo/heightmap/heightmaps
+# mypack:generate
 execute store result storage bs:ctx y int .01 run scoreboard players add $random.fractal_noise_2d bs.out 1000
-function bs.generate:shape_2d/demo/heightmap/run with storage bs:ctx
+function mypack:fill with storage bs:ctx
 
-# bs.generate:shape_2d/demo/heightmap/run
+# mypack:fill
 $fill ~ ~ ~ ~ ~$(y) ~ stone
 ```
 

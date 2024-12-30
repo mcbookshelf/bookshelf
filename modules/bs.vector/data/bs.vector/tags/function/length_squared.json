@@ -1,0 +1,22 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html#length",
+    "authors": [
+      "Aksiome",
+      "Leirof",
+      "KubbyDev"
+    ],
+    "created": {
+      "date": "2018/04/01",
+      "minecraft_version": "1.19.2"
+    },
+    "updated": {
+      "date": "2023/10/17",
+      "minecraft_version": "1.20.2"
+    }
+  },
+  "values": [
+    "bs.vector:length_squared"
+  ]
+}

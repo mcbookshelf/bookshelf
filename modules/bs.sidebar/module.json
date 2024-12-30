@@ -1,0 +1,17 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.sidebar",
+    "load": "."
+  },
+  "meta": {
+    "name": "Sidebar",
+    "slug": "bookshelf-sidebar",
+    "description": "Create a visually appealing and dynamic sidebar using the scoreboard.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/sidebar.html",
+    "tags": ["default"],
+    "weak_dependencies": [
+      "bs.log"
+    ]
+  }
+}

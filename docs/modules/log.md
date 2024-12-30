@@ -4,7 +4,7 @@
 
 Log messages in the chat with varying levels of severity.
 
-```{admonition} Enable command blocks
+```{admonition} Enable Command Blocks
 :class: warning
 
 This module uses a command block to get the system time. For the time to be displayed as intended, be sure that `enable-command-block` is set to `true` in you `server.properties` file and that the `sendCommandFeedback` gamerule is enabled.
@@ -18,7 +18,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Log messages
+### Log Messages
 
 :::::{tab-set}
 ::::{tab-item} Error
@@ -123,10 +123,10 @@ function #bs.log:debug { namespace: "bs.foo", path: "bs.foo:bar", tag: "bar", me
 
 ---
 
-### Log history
+### Log History
 
 :::::{tab-set}
-::::{tab-item} View history
+::::{tab-item} View History
 
 ```{function} #bs.log:history {with:{}}
 
@@ -151,7 +151,7 @@ function #bs.log:history {with: {severity: "warn", namespace: "bs.foo", tag: "ba
 ```
 
 ::::
-::::{tab-item} Clear history
+::::{tab-item} Clear History
 
 ```{function} #bs.log:clear_history {with:{}}
 
@@ -183,7 +183,7 @@ function #bs.log:clear_history {with: {severity: "warn", namespace: "bs.foo", ta
 ---
 
 (usage)=
-## 🎓 How to use?
+## 🎓 How to Use?
 
 Different log levels are available for various types of logs:
 1. **Debug**: Detailed debug information.
@@ -193,7 +193,7 @@ Different log levels are available for various types of logs:
 
 ---
 
-### Manage granularity
+### Manage Granularity
 
 A significant number of logs can quickly flood the chat. To prevent this, Bookshelf's log module can be configured to display specific logs based on two parameters: the **log level**, the **tag** and the **namespace**.
 
@@ -211,7 +211,7 @@ Each level allows the visualization of subsequent levels. For example, if a user
 
 ---
 
-### Define the message
+### Define the Message
 
 Log functions take four variables as input. The `path` of the current function that inform users of the log origin, the `tag`, the `namespace` and the `message`.
 
@@ -237,12 +237,13 @@ Will display the following message if the user has one of these tags: `bs.foo.lo
 
 ![](/_imgs/modules/log/example-2.png)
 
-### Customize the format
+### Customize the Format
 
 Bookshelf proposes to define different log message format according to the namespace.
 To add new log message formats, you have to write directly inside the storage array `bs:const log.messages`:
 
-```mcfunction
+```{code-block} mcfunction
+:force:
 {
   namespaces: ["<namespace>"],
   format: {
@@ -276,7 +277,8 @@ Bookshelf exposes several values that can be used directly in the log messages f
 
 A simple example to define custom log message formats for the namespace `bs.foo`:
 
-```mcfunction
+```{code-block} mcfunction
+:force:
 data modify storage bs:const log.messages append value { \
     namespaces: ["bs.foo"], \
     format: { \

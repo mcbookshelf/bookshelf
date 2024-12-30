@@ -1,0 +1,38 @@
+name: 📋 Review Modules
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    name: 🔍 Check Modules
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pdm-project/setup-pdm@v4
+        with:
+          cache: true
+      - name: Install Dependencies
+        run: pdm install
+      - name: Check Modules
+        run: pdm run modules check
+
+  test:
+    name: 🧪 Test Modules
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pdm-project/setup-pdm@v4
+        with:
+          cache: true
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+      - name: Install Dependencies
+        run: pdm install
+      - name: Test Modules
+        run: pdm run modules test

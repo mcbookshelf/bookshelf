@@ -1,0 +1,14 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.xp",
+    "load": "."
+  },
+  "meta": {
+    "name": "XP",
+    "slug": "bookshelf-xp",
+    "description": "Efficiently manage the experience points and levels of players.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html",
+    "tags": ["default"]
+  }
+}

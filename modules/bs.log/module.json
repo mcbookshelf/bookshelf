@@ -1,0 +1,14 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.log",
+    "load": "."
+  },
+  "meta": {
+    "name": "Log",
+    "slug": "bookshelf-log",
+    "description": "Log messages in the chat with varying levels of severity.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html",
+    "tags": ["dev"]
+  }
+}

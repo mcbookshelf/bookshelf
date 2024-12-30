@@ -1,0 +1,14 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.dump",
+    "load": "."
+  },
+  "meta": {
+    "name": "Dump",
+    "slug": "bookshelf-dump",
+    "description": "Dump the content of given variables to the chat.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/dump.html",
+    "tags": ["dev"]
+  }
+}

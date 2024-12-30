@@ -23,7 +23,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Random choice
+### Random Choice
 
 :::::{tab-set}
 ::::{tab-item} Choice
@@ -94,7 +94,7 @@ tellraw @a [{"text":"Value: ","color":"dark_gray"},{"nbt":"random.weighted_choic
 
 ---
 
-### Random distributions
+### Random Distributions
 
 :::::{tab-set}
 ::::{tab-item} Uniform
@@ -251,7 +251,7 @@ A Poisson distribution produces values that tend to cluster around an average va
 
 ---
 
-### Noise algorithms
+### Noise Algorithms
 
 :::::{tab-set}
 ::::{tab-item} Simplex Noise
@@ -321,10 +321,10 @@ function #bs.random:fractal_noise_2d
 
 ---
 
-### Noise matrices
+### Noise Matrices
 
 :::::{tab-set}
-::::{tab-item} White noise 1D
+::::{tab-item} White Noise 1D
 
 ```{function} #bs.random:white_noise_mat_1d {length:<length>,with:{}}
 
@@ -354,7 +354,7 @@ tellraw @a [{"text": "Noise: ", "color": "dark_gray"},{"nbt":"white_noise_mat_1d
 ```
 
 ::::
-::::{tab-item} White noise 2D
+::::{tab-item} White Noise 2D
 
 ```{function} #bs.random:white_noise_mat_2d {width:<width>,height:<height>,with:{}}
 
@@ -457,7 +457,7 @@ tellraw @a [{"text": "Noise: ", "color": "dark_gray"},{"nbt":"fractal_noise_mat_
 :::::
 
 ::::{grid} 3
-:::{grid-item-card} White noise
+:::{grid-item-card} White Noise
 :margin: 0 3 0 0
 :text-align: center
 
@@ -465,14 +465,14 @@ tellraw @a [{"text": "Noise: ", "color": "dark_gray"},{"nbt":"fractal_noise_mat_
 
 :::
 
-:::{grid-item-card} Simplex noise
+:::{grid-item-card} Simplex Noise
 :margin: 0 3 0 0
 :text-align: center
 
 ![](/_imgs/modules/random/simplex_noise.png)
 :::
 
-:::{grid-item-card} Fractal noise
+:::{grid-item-card} Fractal Noise
 :margin: 0 3 0 0
 :text-align: center
 

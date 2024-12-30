@@ -4,10 +4,11 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.12"
+  commands:
+    - python -m pip install pdm
+    - pdm install -G docs
+    - cat docs/conf.py
+    - pdm run docs build $READTHEDOCS_OUTPUT/html
 
 sphinx:
-   configuration: docs/conf.py
-
-python:
-   install:
-   - requirements: docs/requirements.txt
+  configuration: docs/conf.py

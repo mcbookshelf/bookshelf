@@ -1,0 +1,17 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.raycast",
+    "load": "."
+  },
+  "meta": {
+    "name": "Raycast",
+    "slug": "bookshelf-raycast",
+    "description": "Cast rays and see if they collide with blocks or entities.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html",
+    "tags": ["default"],
+    "dependencies": [
+      "bs.hitbox"
+    ]
+  }
+}

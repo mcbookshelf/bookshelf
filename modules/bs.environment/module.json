@@ -1,0 +1,17 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.environment",
+    "load": "."
+  },
+  "meta": {
+    "name": "Environment",
+    "slug": "bookshelf-environment",
+    "description": "Comprehensive information and tools related to weather and biome properties.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html",
+    "tags": ["default"]
+  },
+  "pipeline": [
+    "gen_biomes"
+  ]
+}

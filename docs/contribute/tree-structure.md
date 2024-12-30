@@ -2,68 +2,58 @@
 html_theme.sidebar_secondary.remove: true
 ---
 
-# 🌳 Tree structure
+# 🌳 Tree Structure
 
 Bookshelf respects a certain tree structure which can be similar to Java packages, called "modules" in this project. The added features must therefore be positioned in these various modules according to their usefulness.
 
 ---
 
-**Module requirements:**
+:::::{grid} 1 2 2 2
+::::{grid-item}
+:columns: 12 6 6 7
 
-- Each module must declare a metadata file as detailed in the [metadata page](project:metadata.md).
+**Module Requirements:**
 
-- Each module should be responsible for loading and unloading itself. This includes redefining objectives, constants, and any other necessary elements.
+- Each module must include a `module.json`, as described in the [metadata page](project:metadata.md).
 
-- Each module should have a help function tag, a load function tag (responsible for loading the module and its dependencies) and an unload function tag.
+- Each module must also include a `pack.png` and a `README.md`.
 
-- Each module's load and unload function tags should be referenced as optional in `#minecraft:load` and `#minecraft:unload` respectively.
+- The `__load__` and `__unload__` functions are required to manage the module's loading and unloading. This includes resetting objectives, storages, and any other necessary elements.
 
-- The load function tag for each module must start by unloading all other modules using `#minecraft:unload`. After that, it should load the module and its dependencies. Weak dependencies can be specified with `"required"`: false. For example, in the health module:
-  ```json
-  {
-    "values": [
-      "#minecraft:unload",
-      "bs.health:__load__",
-      {
-        "id": "#bs.log:load",
-        "required": false
-      }
-    ]
-  }
-  ```
 
-**Feature requirements:**
+**Feature Requirements:**
 
-- Each feature function should have its own function tag.
+- Each feature function should have a dedicated function tag that declares metadata, as detailed in the [metadata page](project:metadata.md).
+
+- Each feature should declares metadata, as detailed in the [metadata page](project:metadata.md).
 
 - A feature is equal to a unique utility, so we should not hesitate to decompose its features in order to make it more readable and to promote reusability.
 
-In addition to these few constraints, the Bookshelf contributor is free to organise their files as they wishes as long as it remains coherent, understandable and it respects the global structure detailed below:
+In addition to these few constraints, contributors are free to organize their files as they wish as long as it remains coherent and it respects the global structure.
+::::
+::::{grid-item}
+:columns: 12 6 6 5
 
-```
-📁data
- ├─ 📁 <module>
- |   ├─ 📁 .metadata
- |   |   └─ 📄 module.json
- │   ├─ 📁 function
- │   │   ├─ 📁 <feature1>
- │   │   │   ├─ 📄 <feature1>.mcfunction
- │   │   │   └─ 📄 ...
- │   │   ├─ 📄 <feature2>.mcfunction
- │   │   ├─ 📄 __load__.mcfunction
- │   │   ├─ 📄 __unload__.mcfunction
- │   ├─ 📁 <predicate|loot_table|...>
- │   │   ├─ 📁 <feature1>
- │   │   │   ├─ 📄 <feature1>.json
- │   │   │   └─ 📄 ...
- │   │   ├─ 📄 <feature2>.json
- │   └─ 📁 tags
- │       └─ 📁 function
- │           ├─ 📄 <feature1>.json
- │           └─ 📄 ...
- └─ 📁 ...
-```
-
-:::{note}
-   Functions, predicates, structures, loot tables etc. must respect the same structure.
+:::{treeview}
+- {mcdir}`folder` modules
+  - {mcdir}`folder` \<module\>
+    - {mcdir}`folder` data/\<module\>
+      - {mcdir}`folder` function
+        - {mcdir}`folder` \<feature1\>
+          - {mcdir}`mcfunction` ...
+        - {mcdir}`mcfunction` \<feature2\>.mcfunction
+        - {mcdir}`mcfunction` \_\_load\_\_.mcfunction
+        - {mcdir}`mcfunction` \_\_unload\_\_.mcfunction
+      - {mcdir}`folder` \<predicate|loot_table|...\>
+        - {mcdir}`json` \<feature1\>.json
+        - {mcdir}`json` ...
+      - {mcdir}`folder` tags/function
+        - {mcdir}`json` \<feature1\>.json
+        - {mcdir}`json` ...
+    - {mcdir}`json` module.json
+    - {mcdir}`image` pack.png
+    - {mcdir}`file` README\.md
+  - {mcdir}`folder` ...
 :::
+::::
+:::::

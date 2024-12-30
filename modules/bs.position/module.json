@@ -1,0 +1,14 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.position",
+    "load": "."
+  },
+  "meta": {
+    "name": "Position",
+    "slug": "bookshelf-position",
+    "description": "Manage entity positions and rotations using scores.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html",
+    "tags": ["default"]
+  }
+}

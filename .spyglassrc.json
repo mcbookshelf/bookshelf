@@ -3,16 +3,13 @@
     "exclude": [
       ".github/",
       ".vscode/",
-      "build/",
       "docs/",
-      "generated/",
-      "region/",
       "scripts/",
       "@gitignore"
     ],
     "mcmetaSummaryOverrides": {
       "commands": {
-        "path": "./commands.json",
+        "path": ".spyglasscmds.json",
         "replace": false
       }
     }

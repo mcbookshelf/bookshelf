@@ -16,7 +16,7 @@ Construct coherent entity structures by linking entities' positions and rotation
 ```
 
 ```{important}
-This module limits the world size to 2,147,480 to prevent scoreboard overflow.
+This module uses scaled integers and can overflow when coordinates are higher than 2,000,000.
 ```
 
 ---
@@ -27,7 +27,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Create link
+### Create Link
 
 ```{function} #bs.link:create_link_ata
 
@@ -60,7 +60,7 @@ You should generally avoid changing output scores, as they serve as parameters f
 
 ---
 
-### Imitate behaviors
+### Imitate Behaviors
 
 ::::{tab-set}
 :::{tab-item} Pos & Rot
@@ -143,7 +143,7 @@ execute as @e[predicate=bs.link:has_link] run function #bs.link:imitate_rot
 ```
 
 :::
-:::{tab-item} Single axis
+:::{tab-item} Single Axis
 
 ```{function} #bs.link:imitate_pos_[x|y|z]
 
@@ -173,7 +173,7 @@ execute as @e[predicate=bs.link:has_link] run function #bs.link:imitate_pos_z
 ```
 
 :::
-:::{tab-item} Single angle
+:::{tab-item} Single Angle
 
 ```{function} #bs.link:imitate_rot_[h|v]
 
@@ -211,7 +211,7 @@ While chaining behavior functions is possible, it's not advisable because it inv
 
 ---
 
-### Keep local position
+### Keep Local Position
 
 ```{function} #bs.link:keep_local_pos
 
@@ -236,7 +236,7 @@ execute as @e[type=armor_stand] run function #bs.link:create_link_ata
 execute as @e[predicate=bs.link:has_link] run function #bs.link:keep_local_pos
 ```
 
-```{admonition} Local position... 🥶 What's this?
+```{admonition} Local Position... 🥶 What's this?
 :class: dropdown
 
 Unlike relative coordinates, this reference frame considers the entity's rotation. Therefore, when the parent entity rotates, the child entity rotates around it. For those familiar with Minecraft commands, local coordinates are available through the `^` symbol.
@@ -246,7 +246,7 @@ Unlike relative coordinates, this reference frame considers the entity's rotatio
 
 ---
 
-### Mirror plane
+### Mirror Plane
 
 ```{function} #bs.link:mirror_[x|z]_plane
 
@@ -279,7 +279,7 @@ execute as @e[predicate=bs.link:has_link] run function #bs.link:mirror_z_plane
 
 ---
 
-### Mirror point
+### Mirror Point
 
 ```{function} #bs.link:mirror_point_ata
 
@@ -311,7 +311,7 @@ execute as @e[predicate=bs.link:has_link] positioned 0 0 0 run function #bs.link
 ### Relationships
 
 ::::{tab-set}
-:::{tab-item} As children
+:::{tab-item} As Children
 
 ```{function} #bs.link:as_children {run:<command>}
 
@@ -333,7 +333,7 @@ function #bs.link:as_children {run:"say Hello World"}
 ```
 
 :::
-:::{tab-item} As parent
+:::{tab-item} As Parent
 
 ```{function} #bs.link:as_children {run:<command>}
 
@@ -355,7 +355,7 @@ execute as @n[type=armor_stand] run function #bs.link:as_parent {run:"say Hello 
 ```
 
 :::
-:::{tab-item} At children
+:::{tab-item} At Children
 
 ```{function} #bs.link:as_children {run:<command>}
 
@@ -377,7 +377,7 @@ function #bs.link:at_children {run:"summon lightning_bolt"}
 ```
 
 :::
-:::{tab-item} At parent
+:::{tab-item} At Parent
 
 ```{function} #bs.link:as_children {run:<command>}
 
@@ -405,7 +405,7 @@ execute as @n[type=armor_stand] run function #bs.link:at_parent {run:"summon lig
 
 ---
 
-### Remove link
+### Remove Link
 
 ```{function} #bs.link:remove_link
 
@@ -429,7 +429,7 @@ execute as @n[type=armor_stand] run function #bs.link:remove_link
 
 ---
 
-### Reverse behaviors
+### Reverse Behaviors
 
 ::::{tab-set}
 :::{tab-item} Pos & Rot
@@ -512,7 +512,7 @@ execute as @e[predicate=bs.link:has_link] run function #bs.link:reverse_rot
 ```
 
 :::
-:::{tab-item} Single axis
+:::{tab-item} Single Axis
 
 ```{function} #bs.link:reverse_pos_[x|y|z]
 
@@ -542,7 +542,7 @@ execute as @e[predicate=bs.link:has_link] run function #bs.link:reverse_pos_z
 ```
 
 :::
-:::{tab-item} Single angle
+:::{tab-item} Single Angle
 
 ```{function} #bs.link:reverse_rot_[h|v]
 
@@ -580,7 +580,7 @@ While chaining behavior functions is possible, it's not advisable because it inv
 
 ---
 
-### Update link
+### Update Link
 
 ```{function} #bs.link:update_link
 
@@ -616,7 +616,7 @@ You can find below all predicates available in this module.
 
 ---
 
-### Has link
+### Has Link
 
 **`bs.link:has_link`**
 
@@ -626,7 +626,7 @@ Determine if an entity has a `bs.link.to` score.
 
 ---
 
-### Link equal
+### Link Equal
 
 ```{function} bs.link:link_equal
 
@@ -647,7 +647,7 @@ execute as @n[predicate=bs.link:link_equal] run say I'm the one
 ---
 
 (custom-behaviors)=
-## 🎓 Custom behaviors
+## 🎓 Custom Behaviors
 
 This module allows you to combine multiple behaviors to create your very own optimized custom one.
 

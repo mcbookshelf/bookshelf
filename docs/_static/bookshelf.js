@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (comments) {
     const giscusAttributes = {
       "src": "https://giscus.app/client.js",
-      "data-repo": "Gunivers/Bookshelf",
+      "data-repo": "mcbookshelf/Bookshelf",
       "data-repo-id": "R_kgDOHQjqYg",
       "data-category": "Documentation",
       "data-category-id": "DIC_kwDOHQjqYs4CUQpy",

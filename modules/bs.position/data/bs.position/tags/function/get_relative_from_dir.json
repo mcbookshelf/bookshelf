@@ -1,0 +1,20 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html#get-relative",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2023/10/20",
+      "minecraft_version": "1.20.2"
+    },
+    "updated": {
+      "date": "2024/02/27",
+      "minecraft_version": "1.20.4"
+    }
+  },
+  "values": [
+    "bs.position:get/relative/relative_from_dir/relative_from_dir"
+  ]
+}

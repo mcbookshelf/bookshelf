@@ -12,7 +12,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Dump var
+### Dump Var
 
 ```{function} #bs.dump:var {var:<values>}
 
@@ -29,7 +29,8 @@ Dump the content of given variables to the chat.
 ```
 
 *View position scores as an array:*
-```mcfunction
+```{code-block} mcfunction
+:force:
 function #bs.position:get_pos {scale:1}
 function #bs.dump:var {var: ["@s bs.pos.x", "@s bs.pos.y", "@s bs.pos.z"]}
 ```

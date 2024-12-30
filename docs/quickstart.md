@@ -21,7 +21,7 @@ We are actively searching for web developers to create the new version of the Bo
 ::::
 ::::{tab-item} 🏷️ from release
 
-Bookshelf releases are available on both [Github](https://github.com/Gunivers/Bookshelf/releases) and [Modrinth](https://modrinth.com/datapack/bookshelf-library). In each release, you will find zipped datapacks. You have multiple options for installation:
+Bookshelf releases are available on both [Github](https://github.com/mcbookshelf/Bookshelf/releases) and [Modrinth](https://modrinth.com/datapack/bookshelf-library). In each release, you will find zipped datapacks. You have multiple options for installation:
 
 📚 **Whole Datapacks:** You can download entire datapacks which includes all modules and dependencies. This is a good option if you want to explore everything Bookshelf has to offer.
 
@@ -36,14 +36,14 @@ If you like the project, don't hesitate to star it on Github and/or follow it on
 ::::
 ::::{tab-item} 🗃️ from source
 
-If you know how datapacks work, and want to handle the installation process on your own 💪😎, first familiarize yourself with the structure of the project below. Then rendez-vous on [github](https://github.com/Gunivers/Bookshelf) to download the repository, and extract only what you need!
+If you know how datapacks work, and want to handle the installation process on your own 💪😎, first familiarize yourself with the structure of the project below. Then rendez-vous on [github](https://github.com/mcbookshelf/Bookshelf) to download the repository, and extract only what you need!
 
 Once Bookshelf is installed on your map with specific modules (rather than the entire library), the initial step is to ensure that each module can be properly loaded with all its dependencies. Verify this by calling the `#bs.<module>:load` function for each module or check your game console for any errors.
 
 Upon exploring the main datapack, you may notice files within the minecraft namespace. These files facilitate the autoloading of modules and the ticking of specific functions. While they are not strictly needed for Bookshelf to work, without them, you have the responsibility to manually call tick functions or reload modules.
 
 
-### 🏗️ Structural overview
+### 🏗️ Structural Overview
 
 The Github repository includes a demo map (still a work in progress) and four datapacks:
 
@@ -68,14 +68,14 @@ This datapack contains code utilized by the world itself. It is not intended for
 
 ---
 
-## 👶 First steps
+## 👶 First Steps
 
 :::{important}
 
-Bookshelf relies on persistent entities to enhance performances. Therefore, it's important not to kill all entities. Instead, you can use the command `kill @e[tag=!bs.persistent]`. [Learn more here](contribute/shared-data.md#shared-entities)
+Bookshelf relies on persistent entities to enhance performances. Therefore, it's important not to kill all entities. Instead, you can use the command `kill @e[tag=!bs.persistent]`. [Learn more here](contribute/shared-resources.md#entities)
 :::
 
-### 📖 Good practices
+### 📖 Good Practices
 
 Bookshelf is designed to minimize unintended side effects. However, complications can arise when multiple datapacks utilize the same one. To prevent potential issues, it’s always recommended to set inputs prior to executing a function. This holds true even though Bookshelf adheres to a strict policy of preserving inputs. By following this practice, you can ensure smoother operation and prevent unexpected behaviors.
 

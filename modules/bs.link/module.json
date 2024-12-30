@@ -1,0 +1,18 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.link",
+    "load": "."
+  },
+  "meta": {
+    "name": "Link",
+    "slug": "bookshelf-link",
+    "description": "Construct coherent entity structures by linking entities’ positions and rotations.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html",
+    "tags": ["default"],
+    "dependencies": [
+      "bs.id",
+      "bs.position"
+    ]
+  }
+}

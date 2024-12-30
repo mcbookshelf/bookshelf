@@ -1,18 +1,15 @@
 # 🔖 Metadata
 
-To facilitate the work of bots such as the Bookshelf Manager, each feature, module, and data pack should include some metadata.
-Contributors need to manually specify some of these, which are then used to produce more complete metadata files that bots can consume.
-
-To generate the full metadata, contributors need to execute the metadata generators in the  `scripts/all.ipynb` notebook (requires Python, see the `scripts/pyproject.toml` file).
-All metadata are verified by the CI/CD pipeline (see the [contribution validation page](project:../contribute/contribution-validation.md)).
+To support automation by tools like the Bookshelf Manager, modules must declare specific metadata. All metadata are verified during the CI/CD process (see the [contribution validation page](project:../contribute/contribution-validation.md)).
 
 ---
 
-## ⭐ Feature metadata
+## ⭐ Feature Metadata
 
-The feature metadata are directly placed on the function tag of the feature:
+Feature metadata are defined directly within each `.json` file, as shown below:
 
-```json
+```{code-block} json
+:force:
 {
   "__bookshelf__": {
     "feature": true,
@@ -32,86 +29,71 @@ The feature metadata are directly placed on the function tag of the feature:
       "minecraft_version": "<VERSION>"
     }
   },
-  "values": [
-    ...
-  ]
+  ...
 }
 ```
 
 | Field | Description | Mandatory |
 |-------|-------------|---------- |
-| feature | Indicate if the current function tag is the end point of a feature or not. | yes |
-| documentation | The link to the documentation of the feature. | yes |
-| authors | The list of authors of the feature. Cannot be empty. | yes |
-| contributors | The list of contributors to the feature. A contributor is someone who helps to create the function without developing it (the one who gives a track to realize the function or the one who fixes a bug for example). Cannot be empty. | no |
-| created | Date and minecraft version in which the system was originally created (for history purpose) | yes |
-| updated | Date and minecraft version in which the system was modified for the last time | yes |
-
-The generated metadata are placed in `<module>/data/.metadata/generated/features.json`.
+| feature | Indicates whether the current function tag is the endpoint of a feature. | yes |
+| documentation | A link to the feature's documentation. | yes |
+| authors | A list of feature authors. Cannot be empty. | yes |
+| contributors | A list of contributors (e.g., those who provided insights, fixes, or indirect help). | no |
+| created | The creation date and Minecraft version for historical purposes. | yes |
+| updated | The date and Minecraft version of the most recent update. | yes |
 
 ---
 
-## 🧩 Module metadata
+## 🧩 Module Metadata
 
-The module metadata are specified in `<module>/data/.metadata/module.json` (see [tree structure page](project:../contribute/tree-structure.md)).
-Here is the format:
+Module metadata are defined in `modules/<module>/module.json`. Below is an example:
 
-```json
+```{code-block} json
+:force:
 {
-  "name": "<NAME>",
-  "display_name": "<DISPLAY NAME>",
-  "description": "<DESCRIPTION>",
-  "documentation": "<DOCUMENTATION>",
-  "icon": "<ICON NAME>",
-  "authors": [
-    "<AUTHOR1>"
-  ],
-  "contributors": [
-    "<CONTRIBUTOR1>"
-  ],
-  "weak_dependencies": [
-    "<MODULE1>"
-  ]
-}
-```
-
-| Field | Description | Mandatory |
-|-------|-------------|---------- |
-| name | The name of the module. Format: `bs.foo`. | yes |
-| display_name | The display name of the module. For instance: `Foo`. | yes |
-| description | A description for the module. | yes |
-| documentation | The link to the documentation of the module. | yes |
-| icon | The name of the module icon image. Should be placed on the same folder than the `metadata` file. | no (but trigger warnings) |
-| authors | The list of authors of the module. Cannot be empty. The authors are automatically computed from the features, this field allows defining authors that are not indicated inside the features. | no |
-| contributors | The list of contributors to the feature. A contributor is someone who helps to create the function without developing it (the one who gives a track to realize the function or the one who fixes a bug for example). The contributors are automatically computed from the features, this field allows defining contributors that are not indicated inside the features. | no |
-| weak dependencies | List of the feature weak dependencies. A weak dependency is a dependency module that is not essential to the functioning of the feature. For instance, `bs.log`. | no |
-
-The generated metadata are placed in `<module>/data/.metadata/generated/module.json`.
-
----
-
-## 📦 Datapack metadata
-
-The datapack metadata are the `pack.mcmeta` file:
-
-```json
-{
-  "pack": {
-    "pack_format": 41,
-    "description": "Bookshelf - Library designed for mapmakers"
+  ...
+  "meta": {
+    "name": "<NAME>",
+    "slug": "<SLUG>",
+    "description": "<DESCRIPTION>",
+    "documentation": "<DOCUMENTATION>",
+    "tags": [
+      "<TAG1>"
+    ],
+    "authors": [
+      "<AUTHOR1>"
+    ],
+    "contributors": [
+      "<CONTRIBUTOR1>"
+    ],
+    "dependencies": [
+      "<MODULE1>"
+    ],
+    "weak_dependencies": [
+      "<MODULE1>"
+    ]
   }
 }
-
 ```
 
 | Field | Description | Mandatory |
 |-------|-------------|---------- |
-| pack_format | See the [Minecraft wiki](https://minecraft.wiki/w/Pack_format). | yes |
-| description | A description for the datapack. | yes |
+| name | The module's display name (e.g. `Foo`). | yes |
+| slug | The module's slug used to publish to platforms (e.g. `bookshelf-foo`). | yes |
+| description | A description of the module's purpose. | yes |
+| documentation | A link to the module's documentation. | yes |
+| tags | A list of tags for categorizing or identifying modules. Tags are also used to generate bundles (e.g. `default` and `dev`). | no (but trigger warnings) |
+| authors | A list of module authors (supplements authors from features). Cannot be empty. | no |
+| contributors | A list of contributors (supplements contributors from features). | no |
+| dependencies | Essential modules required for this module to function (e.g., `bs.hitbox`). | no |
+| weak dependencies | Optional modules that enhance functionality but are not essential (e.g., `bs.log`). | no |
 
 ---
 
 ## 📜 Manifest
 
-The manifest is the file containing the metadata of all datapacks, modules, and features of Bookshelf.
-This manifest is automatically generated and it is located at `generated/manifest.json`.
+The manifest consolidates metadata for all modules and features in Bookshelf. It is automatically generated and can be updated using the following command:
+```sh
+pdm run meta update
+```
+The generated file is located at `meta/manifest.json`.

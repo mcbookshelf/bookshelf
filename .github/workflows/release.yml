@@ -1,48 +1,80 @@
-name: 🔖 Upload build assets
+name: 🔖 Release Modules
 
 on:
   push:
-    tags: [ 'v*.*.*' ]
+    branches:
+      - '**'
+
+permissions:
+  contents: write
 
 jobs:
-  release:
+  update-metadata:
+    name: 📝 Update Metadata Files
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
         with:
-          python-version: '3.12'
-
-      - name: Install dependencies
-        run: pip install -e ./scripts
-
-      - name: Set environment variables
+          fetch-tags: true
+          ref: ${{ github.ref }}
+      - uses: fregante/setup-git-user@v2
+      - uses: pdm-project/setup-pdm@v4
+        with:
+          cache: true
+      - name: Install Dependencies
+        run: pdm install
+      - name: Update Metadata
+        run: pdm run meta update
+      - name: Commit Changes
         run: |
-          TAG=${{ github.ref_name }}
-          echo "VERSION=${TAG#v}" >> $GITHUB_ENV
-          echo "MC_VERSION=$(python -c 'import definitions; print(definitions.MC_VERSION)')" >> $GITHUB_ENV
-          echo "BUILD_PATH=$(python -c 'import definitions; print(definitions.BUILD_PATH)')" >> $GITHUB_ENV
+          git add .
+          git commit -m "🔖 Update generated metadata" || echo "No changes to commit"
+          git push origin HEAD:${{ github.ref }}
 
-      - name: Package datapacks
-        run: python scripts/workflows/distribute_release.py -v ${{ env.MC_VERSION }}-${{ env.VERSION }}
+  check-versions:
+    name: 🔍 Check Release Necessity
+    needs: update-metadata
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    outputs:
+      release_tag: ${{ steps.check-versions.outputs.release_tag }}
+      release_name: ${{ steps.check-versions.outputs.release_name }}
+      version_exists: ${{ steps.check-versions.outputs.version_exists }}
+    steps:
+      - name: Check Versions
+        id: check-versions
+        run: |
+          VERSION=$(python core/definitions.py VERSION)
+          MINECRAFT_VERSIONS=$(python core/definitions.py MINECRAFT_VERSIONS)
 
-      - name: Package world
-        uses: aksiome/minecraft-package@master
+          game_versions=$(echo $MINECRAFT_VERSIONS | sed 's/ /,/g')
+          echo "release_tag=v$VERSION" >> $GITHUB_OUTPUT
+          echo "release_name=v$VERSION - MC $game_versions" >> $GITHUB_OUTPUT
+
+          if [ -n "$(git tag -l "v$VERSION")" ]; then
+            echo "version_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "version_exists=false" >> $GITHUB_OUTPUT
+          fi
+
+  create-release:
+    name: 📦 Create Release
+    needs: check-versions
+    runs-on: ubuntu-latest
+    if: ${{ needs.check-versions.outputs.version_exists == 'false' }}
+    steps:
+      - uses: fregante/setup-git-user@v2
+      - uses: pdm-project/setup-pdm@v4
         with:
-          config: .mcwpack.yml
-          source: .
-          target: ${{ env.BUILD_PATH }}/bookshelf-world-${{ env.MC_VERSION }}-${{ env.VERSION }}.zip
-
-      - name: Upload artifacts
-        uses: softprops/action-gh-release@v2
+          cache: true
+      - name: Install Dependencies
+        run: pdm install
+      - name: Build Release Files
+        run: pdm run modules release
+      - uses: softprops/action-gh-release@v2
         with:
-          files: ${{ env.BUILD_PATH }}/*.zip
-
-      - name: Update latest tag
-        uses: EndBug/latest-tag@latest
+          body_path: docs/_templates/changelog/${{ needs.check-versions.outputs.release_tag }}.md
+          name: ${{ needs.check-versions.outputs.release_name }}
+          tag_name: ${{ needs.check-versions.outputs.release_tag }}
+          make_latest: true
+          files: release/*.zip

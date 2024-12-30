@@ -1,0 +1,21 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html#on-event",
+    "authors": [
+      "Aksiome",
+      "theogiraudet"
+    ],
+    "created": {
+      "date": "2024/03/30",
+      "minecraft_version": "24w13a"
+    },
+    "updated": {
+      "date": "2024/11/01",
+      "minecraft_version": "1.21.3"
+    }
+  },
+  "values": [
+    "bs.interaction:register/right_click"
+  ]
+}

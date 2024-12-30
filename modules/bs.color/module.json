@@ -1,0 +1,14 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.color",
+    "load": "."
+  },
+  "meta": {
+    "name": "Color",
+    "slug": "bookshelf-color",
+    "description": "Facilitate color conversion between various formats.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html",
+    "tags": ["default"]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#inverse-trigonometry",
+    "authors": [
+      "Aksiome",
+      "Leirof"
+    ],
+    "created": {
+      "date": "2018/10/01",
+      "minecraft_version": "1.13.2"
+    },
+    "updated": {
+      "date": "2023/09/05",
+      "minecraft_version": "23w33a"
+    }
+  },
+  "values": [
+    "bs.math:atan/atan"
+  ]
+}
