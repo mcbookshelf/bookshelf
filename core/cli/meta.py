@@ -34,7 +34,7 @@ def check() -> None:
 
 @meta.command()
 def update() -> None:
-    """Update and commit metadata changes."""
+    """Update metadata changes."""
     if not update_manifest():
         sys.exit(1)
 

@@ -46,3 +46,10 @@ contribution-validation
 special-functions
 good-practices
 ````
+
+````{toctree}
+:hidden:
+:maxdepth: 1
+:caption: Quick References
+cli-reference
+````
