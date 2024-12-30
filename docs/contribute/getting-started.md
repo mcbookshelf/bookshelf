@@ -13,7 +13,7 @@ This guide will walk you through setting up a local development environment to b
 Before getting started, ensure your system is prepared by following these steps:
 
 1. Install [**PDM**](https://pdm-project.org/en/latest/), the Python Dependency Manager.
-2. Open a terminal and run the following command to install all required dependencies:
+2. Open a terminal at the root of the project and run the following command to install all required dependencies:
   ```sh
   pdm install
   ```

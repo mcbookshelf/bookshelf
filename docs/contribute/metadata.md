@@ -82,7 +82,7 @@ Module metadata are defined in `modules/<module>/module.json`. Below is an examp
 | slug | The module's slug used to publish to platforms (e.g. `bookshelf-foo`). | yes |
 | description | A description of the module's purpose. | yes |
 | documentation | A link to the module's documentation. | yes |
-| tags | A list of tags for categorizing or identifying modules. | no (but trigger warnings) |
+| tags | A list of tags for categorizing or identifying modules. Tags are also used to generate bundles (e.g. `default` and `dev`). | no (but trigger warnings) |
 | authors | A list of module authors (supplements authors from features). Cannot be empty. | no |
 | contributors | A list of contributors (supplements contributors from features). | no |
 | dependencies | Essential modules required for this module to function (e.g., `bs.hitbox`). | no |

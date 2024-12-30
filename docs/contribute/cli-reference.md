@@ -14,7 +14,7 @@ This page provides a quick reference to the available commands. Use this referen
 | **🔖 `meta update`**     | Update metadata changes.                                    | No arguments.                                                            |
 | **🧩 `modules build`**   | Build the specified modules.                                | `[modules...]` - List of modules to build (optional).                    |
 | **🧩 `modules check`**   | Check modules requirements.                                 | No arguments.                                                            |
-| **🧩 `modules link`**    | Link the generated resource and data packs to Minecraft.    | `[world]`, `--minecraft`, `--data-pack`, `--resource-pack` - Paths to their respective directories. |
+| **🧩 `modules link`**    | Link the generated packs to Minecraft. More information [here](project:getting-started.md#linking-modules-to-minecraft). | `[world]`, `--minecraft`, `--data-pack`, `--resource-pack` - Paths to their respective directories. |
 | **🧩 `modules release`** | Build zipped modules for release.                           | No arguments.                                                            |
 | **🧩 `modules test`**    | Build and test the specified modules.                       | `[modules...]` - List of modules to test (optional).                     |
 | **🧩 `modules watch`**   | Watch and rebuild the specified modules when changes occur. | `[modules...]` - List of modules to watch (optional).                    |

@@ -1,6 +1,6 @@
 # ⚙️ Generated Files
 
-When building modules with **Beet**, several files are automatically generated to simplify development and improve consistency. This page outlines what happens behind the scenes.
+When building modules with **[Beet](https://github.com/mcbeet/beet)**, several files are automatically generated to simplify development and improve consistency. This page outlines what happens behind the scenes.
 
 ---
 

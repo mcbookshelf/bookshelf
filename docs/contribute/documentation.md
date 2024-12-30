@@ -1,6 +1,6 @@
 # 📝 Documentation
 
-Bookshelf aims to simplify datapack development and make it accessible. We’ve worked hard to create a comprehensive documentation website and ask that every new feature be documented properly.
+Bookshelf aims to simplify map making and make it accessible. We’ve worked hard to create a comprehensive documentation website and ask that every new feature be documented properly.
 
 ---
 
