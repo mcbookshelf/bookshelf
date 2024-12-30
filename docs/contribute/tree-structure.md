@@ -10,13 +10,15 @@ Bookshelf respects a certain tree structure which can be similar to Java package
 
 :::::{grid} 1 2 2 2
 ::::{grid-item}
-:columns: 12 6 6 6
+:columns: 12 6 6 7
 
 **Module Requirements:**
 
-- Each module must include a `module.json` file, as described in the [metadata page](project:metadata.md).
+- Each module must include a `module.json`, as described in the [metadata page](project:metadata.md).
 
-- Each module should also provide a `pack.png` image and a `README.md` file. Additionally, it must define `__load__` and `__unload__` functions to manage its own loading and unloading. This includes resetting objectives, constants, and any other necessary elements.
+- Each module must also include a `pack.png` and a `README.md`.
+
+- The `__load__` and `__unload__` functions are required to manage the module's loading and unloading. This includes resetting objectives, storages, and any other necessary elements.
 
 
 **Feature Requirements:**
@@ -30,7 +32,7 @@ Bookshelf respects a certain tree structure which can be similar to Java package
 In addition to these few constraints, contributors are free to organize their files as they wish as long as it remains coherent and it respects the global structure.
 ::::
 ::::{grid-item}
-:columns: 12 6 6 6
+:columns: 12 6 6 5
 
 :::{treeview}
 - {mcdir}`folder` modules
@@ -38,7 +40,6 @@ In addition to these few constraints, contributors are free to organize their fi
     - {mcdir}`folder` data/\<module\>
       - {mcdir}`folder` function
         - {mcdir}`folder` \<feature1\>
-          - {mcdir}`mcfunction` \<feature1\>.mcfunction
           - {mcdir}`mcfunction` ...
         - {mcdir}`mcfunction` \<feature2\>.mcfunction
         - {mcdir}`mcfunction` \_\_load\_\_.mcfunction
@@ -46,11 +47,12 @@ In addition to these few constraints, contributors are free to organize their fi
       - {mcdir}`folder` \<predicate|loot_table|...\>
         - {mcdir}`json` \<feature1\>.json
         - {mcdir}`json` ...
-      - {mcdir}`folder` tags
-        - {mcdir}`folder` function
-          - {mcdir}`json` \<feature1\>.json
-          - {mcdir}`json` ...
+      - {mcdir}`folder` tags/function
+        - {mcdir}`json` \<feature1\>.json
+        - {mcdir}`json` ...
     - {mcdir}`json` module.json
+    - {mcdir}`image` pack.png
+    - {mcdir}`file` README\.md
   - {mcdir}`folder` ...
 :::
 ::::

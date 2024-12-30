@@ -68,18 +68,10 @@ pdm run modules link <world> --minecraft </path/to/.minecraft>
 pdm run modules watch <module>
 ```
 
+---
+
 ## 🧪 Testing Modules
 
-Testing modules ensures their functionality and reliability within the Minecraft environment. This section outlines how to execute and create tests for your modules.
+Testing is a fundamental aspect of software development. It helps ensure the correctness of your code and can save you from potential bugs in the future.
 
-### Running Tests
-You can run all tests for the modules using [PackTest](https://github.com/misode/packtest), a tool designed for Minecraft datapack testing. Make sure you have Java installed on your system, as it's required for PackTest to function.
-
-To execute the tests, run:
-```sh
-pdm run modules test
-```
-
-### Writing Tests
-
-To learn how to write effective tests for your modules, refer to the [Debug Section](project:debug-tools.md#-unit-tests).
+To learn how to write and run tests for your modules, refer to the [Debug Section](project:debug-tools.md#-unit-tests).

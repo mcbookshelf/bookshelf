@@ -13,22 +13,18 @@ Tests are essential for ensuring code correctness and preventing future bugs. Th
 
 To run the tests, you have two options:
 
-1. **Headless Mode**: We provide a simple command `pdm run modules test` that allows you to run the tests headlessly, without having to open the game. This is a more convenient option for continuous integration environments.
-
+1. **Headless Mode**: We provide a simple command `pdm run modules test` that allows you to run the tests headlessly, without having to open the game.
 2. **In-Game**: Download and install the Minecraft fabric mod. Once that's done, you can run the tests using the test command in Minecraft.
 
+```{admonition} Java Required
+:class: warning
+Ensure that Java is installed on your system, as it is required for the command to work.
+```
 
 ### ✍️ Writing Tests
 
 Each test is a `.mcfunction` file inside the `test` folder.
 When writing tests, make sure to clearly define what you are testing and what the expected outcome is. It's also a good idea to include edge cases to ensure your code can handle all possible inputs.
-
-```{admonition} Learn more...
-:class: info
-
-If you need more information than this page provides, visit Misode's [repository](https://github.com/misode/packtest) for detailed guidance on writing tests.
-```
-
 
 ### 🛠️ Custom Commands
 
@@ -63,7 +59,7 @@ PackTest allows you to spawn and control "dummies," simulated players for testin
 - `dummy <name> use item`: Simulates the dummy using an item.
 - `dummy <name> mine <pos>`: Commands the dummy to mine a block.
 
-### 📋 Additional Directives
+### 📋 Test Directives
 
 You can customize tests using directives (special comments at the beginning of the test):
 
@@ -72,6 +68,12 @@ You can customize tests using directives (special comments at the beginning of t
 - `@dummy`: Spawns a dummy for testing (e.g., `@dummy ~0.5 ~ ~0.5`).
 - `@optional`: Marks the test as allowed to fail (useful for non-critical cases).
 
+
+```{admonition} Learn more...
+:class: info
+
+If you need more information than this page provides, visit Misode's [repository](https://github.com/misode/packtest) for detailed guidance on writing tests.
+```
 
 ---
 

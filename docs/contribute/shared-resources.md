@@ -44,6 +44,8 @@ setblock -30000000 0 1606 minecraft:decorated_pot
 setblock -30000000 0 1605 minecraft:repeating_command_block[facing=up]{auto:1b,Command:"help me",TrackOutput:1}
 ```
 
+---
+
 ## Entities
 
 Global entities are summoned with specific UUIDs, ensuring they remain accessible and avoid selector conflicts. They must persist in always-loaded chunks (`-30000000 1600`) at the end of each tick. The UUID `B5-0-0-0-0` is reserved for temporary contextual entities that must not persist beyond the current tick.
