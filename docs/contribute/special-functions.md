@@ -1,7 +1,3 @@
----
-html_theme.sidebar_secondary.remove: true
----
-
 # 🌟 Special Functions
 
 Some functions follow specific conventions to streamline functionality and ensure consistency across modules.

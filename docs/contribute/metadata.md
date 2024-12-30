@@ -53,11 +53,10 @@ Module metadata are defined in `modules/<module>/module.json`. Below is an examp
 {
   ...
   "meta": {
-    "id": "<ID>",
     "name": "<NAME>",
+    "slug": "<SLUG>",
     "description": "<DESCRIPTION>",
     "documentation": "<DOCUMENTATION>",
-    "image": "<IMAGE>",
     "tags": [
       "<TAG1>"
     ],
@@ -79,11 +78,10 @@ Module metadata are defined in `modules/<module>/module.json`. Below is an examp
 
 | Field | Description | Mandatory |
 |-------|-------------|---------- |
-| id | The module ID, formatted as `bs.foo`. | yes |
 | name | The module's display name (e.g. `Foo`). | yes |
+| slug | The module's slug used to publish to platforms (e.g. `bookshelf-foo`). | yes |
 | description | A description of the module's purpose. | yes |
 | documentation | A link to the module's documentation. | yes |
-| image | The module image name, stored in the same directory as the metadata file. | no (but trigger warnings) |
 | tags | A list of tags for categorizing or identifying modules. | no (but trigger warnings) |
 | authors | A list of module authors (supplements authors from features). Cannot be empty. | no |
 | contributors | A list of contributors (supplements contributors from features). | no |

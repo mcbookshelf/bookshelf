@@ -82,4 +82,4 @@ pdm run modules test
 
 ### Writing Tests
 
-To learn how to write effective tests for your modules, refer to the [Debug Section](project:debug.md#-unit-tests).
+To learn how to write effective tests for your modules, refer to the [Debug Section](project:debug-tools.md#-unit-tests).

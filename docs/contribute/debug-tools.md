@@ -1,35 +1,13 @@
-# 🕵️ Debug
+# 🕵️ Debug Tools
 
-Learn about Bookshelf's debugging tools.
-
----
-
-## 📦 Modules
-
-Bookshelf includes a variety of modules designed to enhance your development experience.
-
----
-
-### ⬥ 📄 Logging
-
-Centralizes and streamlines log management, making it easier to monitor and troubleshoot your project. For more details, refer to the [log module documentation](project:../modules/log.md).
-
-### ⬥ 🔬 Var Dumping
-
-Provides an easy way to display scores or storage values at any given time, helping with debugging and tracking. For more details, refer to the [dump module documentation](project:../modules/dump.md).
+Debugging is a fundamental aspect of software development. Bookshelf provides tools to help identify and resolve issues effectively.
 
 ---
 
 ## 🧪 Unit Tests
 
-Tests are an integral part of any software development process. They help ensure the correctness of your code and can save you from potential bugs in the future. In this project, we use a Minecraft fabric mod made by Misode called [PackTest](https://github.com/misode/packtest).
+Tests are essential for ensuring code correctness and preventing future bugs. This project uses Misode's Minecraft Fabric mod, [PackTest](https://github.com/misode/packtest), for testing.
 
----
-
-### ✍️ Writing Tests
-
-Each test is a `.mcfunction` file inside the `test` folder.
-When writing tests, make sure to clearly define what you are testing and what the expected outcome is. It's also a good idea to include edge cases to ensure your code can handle all possible inputs.
 
 ### ⚙️ Running Tests
 
@@ -39,7 +17,20 @@ To run the tests, you have two options:
 
 2. **In-Game**: Download and install the Minecraft fabric mod. Once that's done, you can run the tests using the test command in Minecraft.
 
-### 🛠️ PackTest Commands
+
+### ✍️ Writing Tests
+
+Each test is a `.mcfunction` file inside the `test` folder.
+When writing tests, make sure to clearly define what you are testing and what the expected outcome is. It's also a good idea to include edge cases to ensure your code can handle all possible inputs.
+
+```{admonition} Learn more...
+:class: info
+
+If you need more information than this page provides, visit Misode's [repository](https://github.com/misode/packtest) for detailed guidance on writing tests.
+```
+
+
+### 🛠️ Custom Commands
 
 PackTest offers a variety of commands to control test flow, validate conditions, and interact with Minecraft's environment:
 
@@ -60,7 +51,7 @@ PackTest offers a variety of commands to control test flow, validate conditions,
 - `score <target>`: Compares scores using Minecraft's score-based conditions.
 - `chat <pattern> [<receivers>]`: Matches chat messages against a regex pattern.
 
-### 🧍 PackTest Dummies
+### 🧍 Player Dummies
 
 PackTest allows you to spawn and control "dummies," simulated players for testing:
 
@@ -72,7 +63,7 @@ PackTest allows you to spawn and control "dummies," simulated players for testin
 - `dummy <name> use item`: Simulates the dummy using an item.
 - `dummy <name> mine <pos>`: Commands the dummy to mine a block.
 
-### 📋 PackTest Directives
+### 📋 Additional Directives
 
 You can customize tests using directives (special comments at the beginning of the test):
 
@@ -81,6 +72,17 @@ You can customize tests using directives (special comments at the beginning of t
 - `@dummy`: Spawns a dummy for testing (e.g., `@dummy ~0.5 ~ ~0.5`).
 - `@optional`: Marks the test as allowed to fail (useful for non-critical cases).
 
+
 ---
 
-For more information on how to write and run tests, you can refer to Misode's [PackTest repository](https://github.com/misode/packtest).
+## 📦 Modules
+
+Bookshelf includes a variety of modules designed to enhance your development experience.
+
+### 📄 Logging
+
+Centralizes and streamlines log management, making it easier to monitor and troubleshoot your project. For more details, refer to the [log module documentation](project:../modules/log.md).
+
+### 🔬 Var Dumping
+
+Provides an easy way to display scores or storage values at any given time, helping with debugging and tracking. For more details, refer to the [dump module documentation](project:../modules/dump.md).

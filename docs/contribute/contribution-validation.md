@@ -8,7 +8,7 @@ Contributing often requires additional changes beyond the code itself. To ensure
 
 We use automated scripts to validate contributions whenever a pull request is opened or updated with new commits. These scripts check:
 - Whether metadata is defined and up to date (see [metadata page](project:metadata.md)).
-- Whether the code passes all unit tests, ensuring no regressions (see [debug page](project:debug.md#-unit-tests)).
+- Whether the code passes all unit tests, ensuring no regressions (see [debug page](project:debug-tools.md#-unit-tests)).
 
 Bookshelf contributors can also manually run these checks locally using the following commands:
 ```sh

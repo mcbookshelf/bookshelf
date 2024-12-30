@@ -38,11 +38,11 @@ file-format
 :hidden:
 :maxdepth: 1
 :caption: Key Concepts
-debug
-metadata
+debug-tools
 documentation
+metadata
+generated-files
 contribution-validation
-conservation-principle
 special-functions
-comments
+good-practices
 ````
