@@ -12,7 +12,7 @@
 #
 # For more details, refer to the MPL v2.0.
 #
-# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html
+# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string#to_number.html
 # ------------------------------------------------------------------------------------------------------------
 
 $data modify storage bs:out string.to_number set value $(str)

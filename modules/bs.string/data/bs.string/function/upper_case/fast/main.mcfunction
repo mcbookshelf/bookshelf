@@ -12,7 +12,7 @@
 #
 # For more details, refer to the MPL v2.0.
 #
-# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#index-of
+# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#upper-case
 # ------------------------------------------------------------------------------------------------------------
 #setup
 data modify storage bs:ctx _.st set from storage bs:in string.upper.str

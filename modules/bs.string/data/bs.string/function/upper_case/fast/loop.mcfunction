@@ -12,7 +12,7 @@
 #
 # For more details, refer to the MPL v2.0.
 #
-# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#index-of
+# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#upper-case
 # ------------------------------------------------------------------------------------------------------------
 
 data remove storage bs:ctx _.lt
