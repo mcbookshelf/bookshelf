@@ -12,12 +12,17 @@
 #
 # For more details, refer to the MPL v2.0.
 #
-# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html
+# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#concat
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard objectives add bs.data dummy [{"text":"BS ","color":"dark_gray"},{"text":"Data","color":"aqua"}]
-scoreboard objectives add bs.out dummy [{"text":"BS ","color":"dark_gray"},{"text":"Output","color":"aqua"}]
-scoreboard objectives add bs.ctx dummy [{"text":"BS ","color":"dark_gray"},{"text":"Ctx","color":"aqua"}]
+# Modified from https://github.com/CMDred/StringLib/
 
+data modify storage bs:ctx _.l set from storage bs:in string.concat.list
+data modify storage bs:ctx _.s.1 set from storage bs:ctx _.l[-1]
+data remove storage bs:ctx _.l[-1]
+execute store result storage bs:ctx x int 1 store result score #n bs.ctx run data get storage bs:ctx _.l
 
-#define storage bs:string
+function bs.string:concat/dispatch with storage bs:ctx
+
+data modify storage bs:out string.concat set from storage bs:ctx _.s.1
+return 1

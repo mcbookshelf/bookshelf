@@ -1,0 +1,17 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.string",
+    "load": "."
+  },
+  "meta": {
+    "name": "String",
+    "slug": "bookshelf-string",
+    "description": "Get information about the system string effortlessly.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html",
+    "tags": ["default"]
+  },
+  "pipeline": [
+    "gen_file"
+  ]
+}

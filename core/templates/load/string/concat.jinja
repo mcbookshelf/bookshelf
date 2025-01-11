@@ -1,0 +1,12 @@
+{% include 'core/header.jinja' %}
+
+scoreboard players remove #n bs.ctx {{a}}
+
+{% for i in range(a) -%}
+data modify storage bs:ctx _.s.{{i+2}} set from storage bs:ctx _.l[-1]
+data remove storage bs:ctx _.l[-1]
+{% endfor -%}
+function bs.string:concat/combine/{{a}}c with storage bs:ctx _.s
+{%if a == max -%}
+execute if score #n bs.ctx matches 2048.. run function bs.string:concat/combine/{{max}}
+{%endif -%}
