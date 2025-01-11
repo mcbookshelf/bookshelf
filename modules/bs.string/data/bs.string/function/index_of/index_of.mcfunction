@@ -19,7 +19,7 @@ data modify storage bs:ctx _.str set from storage bs:in string.index_of.str
 data modify storage bs:data string.current set from storage bs:in string.index_of.str 
 $data modify storage bs:data string.caracter set value $(char)
 $scoreboard players set #string.occurence bs.data $(occurence)
-function bs.string:index_of/lenth
+execute store result score #n bs.data run data get storage bs:data string.current
 scoreboard players set #c bs.ctx 0
-function bs.string:index_of/recurcive_search
+function bs.string:index_of/recursive_search
 return run scoreboard players operation $string.index_of bs.out = #c bs.ctx

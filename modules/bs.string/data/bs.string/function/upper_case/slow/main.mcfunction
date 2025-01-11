@@ -14,15 +14,20 @@
 #
 # Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#index-of
 # ------------------------------------------------------------------------------------------------------------
-
-data remove storage bs:ctx _.lt
-$data modify storage bs:ctx _.lt set from storage bs:data string.CharMap.Fast[{u:"$(ch)"}].l
-data modify storage bs:ctx _.l append from storage bs:ctx _.lt
-execute unless data storage bs:ctx _.lt run data modify storage bs:ctx _.l append from storage bs:ctx _.ch
+#setup
+data modify storage bs:ctx _.st set from storage bs:in string.upper.str
+execute store result score #c bs.ctx store result score #n bs.ctx run data get storage bs:in string.upper.str
+data modify storage bs:ctx _.ch set string storage bs:ctx _.st 0 1
+data remove storage bs:ctx _.l
 
 #loop
-execute if score #c bs.ctx matches 1 run return 0
-scoreboard players remove #c bs.ctx 1
-data modify storage bs:ctx _.st set string storage bs:ctx _.st 1
-data modify storage bs:ctx _.ch set string storage bs:ctx _.st 0 1
-function bs.string:lower_case/fast/loop with storage bs:ctx _
+function bs.string:upper_case/slow/loop with storage bs:ctx _
+
+#concat
+data remove storage bs:ctx _.s
+data modify storage bs:ctx _.s.1 set from storage bs:ctx _.l[-1]
+data remove storage bs:ctx _.l[-1]
+execute store result storage bs:ctx x int 1 run scoreboard players remove #n bs.ctx 1
+function bs.string:concat/dispatch with storage bs:ctx
+
+data modify storage bs:out string.upper set from storage bs:ctx _.s.1
