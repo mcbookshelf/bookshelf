@@ -1,7 +1,7 @@
 {
   "__bookshelf__": {
     "feature": true,
-    "documentation": "https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#lenth",
+    "documentation": "https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#find",
     "authors": [
       "aure31"
     ],
@@ -11,6 +11,6 @@
     }
   },
   "values": [
-    "bs.string:lenth"
+    "bs.string:find/main"
   ]
 }
