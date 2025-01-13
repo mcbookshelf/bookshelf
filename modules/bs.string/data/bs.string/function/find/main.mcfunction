@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2024 Gunivers
+# Copyright (c) 2025 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/Gunivers/Bookshelf).
 #
@@ -12,7 +12,7 @@
 #
 # For more details, refer to the MPL v2.0.
 #
-# Documentation of the feature: https://bookshelf.docs.gunivers.net/en/latest/modules/string.html#find
+# Documentation of the feature: https://docs.mcbookshelf.dev/en/latest/modules/string.html#find
 # ------------------------------------------------------------------------------------------------------------
 
 $scoreboard players set #bs.string.occurence bs.data $(occurence)
@@ -20,9 +20,9 @@ data modify storage bs:out string.find set value []
 scoreboard players set #c bs.ctx 0
 execute store result storage bs:ctx x int 1 run scoreboard players set #i bs.ctx 0
 data modify storage bs:ctx _.str set from storage bs:in string.find.str
-data modify storage bs:ctx _.test set from storage bs:in string.find.pat
+data modify storage bs:ctx _.test set from storage bs:in string.find.needle
 execute store result score #bs.string.lenth bs.data run data get storage bs:in string.find.str
-execute store result score #p bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.pat
+execute store result score #p bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.needle
 
 execute if score #p bs.ctx > #bs.string.lenth bs.data run return 0
 scoreboard players operation #bs.string.lenth bs.data -= #p bs.ctx
