@@ -3332,6 +3332,125 @@
       ]
     },
     {
+      "id": "bs.string",
+      "name": "String",
+      "slug": "bookshelf-string",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.string/README.md",
+      "description": "Get information about the system string effortlessly.",
+      "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html",
+      "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
+      "features": [
+        {
+          "id": "#bs.string:concat",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#concat",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/01/10",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/13",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.string:find",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#find",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/01/12",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/13",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.string:index_of",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#index-of",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2024/10/27",
+            "minecraft_version": "1.21.3"
+          },
+          "updated": {
+            "date": "2025/01/13",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.string:lower",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#case",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/01/11",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/13",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.string:to_number",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#to_number",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/01/11",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/13",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.string:to_string",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#to_string",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/01/11",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/13",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.string:upper",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#case",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/01/11",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/13",
+            "minecraft_version": "1.21.4"
+          }
+        }
+      ]
+    },
+    {
       "id": "bs.time",
       "name": "Time",
       "slug": "bookshelf-time",
