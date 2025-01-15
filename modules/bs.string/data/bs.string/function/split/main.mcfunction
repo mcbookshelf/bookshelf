@@ -24,11 +24,10 @@ execute store result score #l bs.ctx run data get storage bs:in string.split.str
 execute store result score #p bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.split.separator
 
 execute if score #p bs.ctx > #l bs.ctx run return 0
-
+scoreboard players add #l bs.ctx 1
 
 #moving values
 data modify storage bs:ctx _.str set from storage bs:in string.split.str
-data modify storage bs:ctx _.test set from storage bs:in string.split.separator
 
 scoreboard players operation #l bs.ctx -= #p bs.ctx
 

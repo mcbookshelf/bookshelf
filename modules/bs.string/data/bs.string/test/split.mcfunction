@@ -14,11 +14,23 @@
 # ------------------------------------------------------------------------------------------------------------
 
 #normal
+data modify storage bs:in string.split.str set value "a sentance all more normal"
+data modify storage bs:in string.split.separator set value " "
+
+function #bs.string:split {maxsplit:0}
+assert data storage bs:out {string:{split:["a","sentance","all","more","normal"]}}
+execute store result score #t bs.ctx run data get storage bs:out string.split
+assert score #t bs.ctx matches 5
+
+
 data modify storage bs:in string.split.str set value "a sentance all more normal "
 data modify storage bs:in string.split.separator set value " "
 
 function #bs.string:split {maxsplit:0}
 assert data storage bs:out {string:{split:["a","sentance","all","more","normal",""]}}
+execute store result score #t bs.ctx run data get storage bs:out string.split
+assert score #t bs.ctx matches 6
+
 
 #count
 function #bs.string:split {maxsplit:2}
@@ -26,3 +38,5 @@ assert data storage bs:out {string:{split:["a","sentance","all more normal "]}}
 
 function #bs.string:split {maxsplit:20}
 assert data storage bs:out {string:{split:["a","sentance","all", "more", "normal",""]}}
+execute store result score #t bs.ctx run data get storage bs:out string.split
+assert score #t bs.ctx matches 6

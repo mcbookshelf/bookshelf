@@ -19,6 +19,12 @@ data modify storage bs:in string.find.needle set value "motus"
 function #bs.string:find {occurrence:0}
 assert data storage bs:out {string:{find:[]}}
 
+# unique reference
+data modify storage bs:in string.find.str set value "motmott"
+data modify storage bs:in string.find.needle set value "t"
+function #bs.string:find {occurrence:0}
+assert data storage bs:out {string:{find:[2,5,6]}}
+
 #normal one
 data modify storage bs:in string.find.str set value "mot cacher est un mot trés en motte"
 data modify storage bs:in string.find.needle set value "mot"

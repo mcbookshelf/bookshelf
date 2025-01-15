@@ -12,3 +12,32 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+
+#reset
+data modify storage bs:ctx _.l set value []
+execute store result storage bs:ctx x int 1 store result storage bs:ctx z int 1 run scoreboard players set #i bs.ctx 0
+
+#size check
+execute store result score #l bs.ctx run data get storage bs:in string.replace.str
+execute store result score #p bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.replace.old
+execute if score #p bs.ctx > #l bs.ctx run return 0
+
+#moving values
+data modify storage bs:ctx _.str set from storage bs:in string.replace.str
+
+scoreboard players add #l bs.ctx 1
+scoreboard players operation #l bs.ctx -= #p bs.ctx
+
+#check values
+function bs.string:replace/loop with storage bs:ctx
+
+tellraw @a [{"storage": "bs:ctx","nbt": "_.l"}]
+#concat
+data remove storage bs:ctx _.s
+data modify storage bs:ctx _.s.1 set from storage bs:ctx _.l[-1]
+data remove storage bs:ctx _.l[-1]
+execute store result score #n bs.ctx store result storage bs:ctx x int 1 run data get storage bs:ctx _.l
+tellraw @a [{"storage": "bs:ctx","nbt": "_.s"}," ",{"storage": "bs:ctx","nbt": "x"}]
+function bs.string:concat/dispatch with storage bs:ctx
+
+data modify storage bs:out string.replace set from storage bs:ctx _.s.1

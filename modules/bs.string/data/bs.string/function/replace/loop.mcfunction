@@ -13,14 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if score #l bs.ctx <= #i bs.ctx run return run function bs.string:split/last with storage bs:ctx
+execute if score #l bs.ctx <= #i bs.ctx run return run function bs.string:replace/last with storage bs:ctx
 
 $data modify storage bs:ctx _.test set string storage bs:ctx _.str 0 $(y)
-execute store success score #t bs.ctx run data modify storage bs:ctx _.test set from storage bs:in string.split.separator
-execute if score #t bs.ctx matches 0 run return run function bs.string:split/count/cut with storage bs:ctx
+execute store success score #t bs.ctx run data modify storage bs:ctx _.test set from storage bs:in string.replace.old
+execute if score #t bs.ctx matches 0 run return run function bs.string:replace/cut with storage bs:ctx
 
 
 execute store result storage bs:ctx x int 1 run scoreboard players add #i bs.ctx 1
 data modify storage bs:ctx _.str set string storage bs:ctx _.str 1
 
-function bs.string:split/count/loop with storage bs:ctx
+function bs.string:replace/loop with storage bs:ctx
