@@ -13,13 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _.test set string storage bs:ctx _.str 0 $(y)
-execute store success score #t bs.ctx run data modify storage bs:ctx _.test set from storage bs:in string.find.needle
-execute if score #t bs.ctx matches 0 run data modify storage bs:out string.find append from storage bs:ctx x
+data modify storage bs:ctx _.str set from storage bs:in string.to_list.str
+data modify storage bs:out string.list set value []
+scoreboard players set #i bs.ctx 0
+execute store result score #l bs.ctx run data get storage bs:in string.to_list.str
 
-execute if score #l bs.ctx = #i bs.ctx run return run data get storage bs:out string.find
-
-execute store result storage bs:ctx x int 1 run scoreboard players add #i bs.ctx 1
-data modify storage bs:ctx _.str set string storage bs:ctx _.str 1
-
-function bs.string:find/normal_search with storage bs:ctx
+function bs.string:type/to_list/loop
+return run scoreboard players get #l bs.ctx

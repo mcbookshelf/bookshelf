@@ -13,13 +13,16 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _.test set string storage bs:ctx _.str 0 $(y)
-execute store success score #t bs.ctx run data modify storage bs:ctx _.test set from storage bs:in string.find.needle
-execute if score #t bs.ctx matches 0 run data modify storage bs:out string.find append from storage bs:ctx x
+#normal
+data modify storage bs:in string.split.str set value "a sentance all more normal "
+data modify storage bs:in string.split.separator set value " "
 
-execute if score #l bs.ctx = #i bs.ctx run return run data get storage bs:out string.find
+function #bs.string:split {maxsplit:0}
+assert data storage bs:out {string:{split:["a","sentance","all","more","normal",""]}}
 
-execute store result storage bs:ctx x int 1 run scoreboard players add #i bs.ctx 1
-data modify storage bs:ctx _.str set string storage bs:ctx _.str 1
+#count
+function #bs.string:split {maxsplit:2}
+assert data storage bs:out {string:{split:["a","sentance","all more normal "]}}
 
-function bs.string:find/normal_search with storage bs:ctx
+function #bs.string:split {maxsplit:20}
+assert data storage bs:out {string:{split:["a","sentance","all", "more", "normal",""]}}

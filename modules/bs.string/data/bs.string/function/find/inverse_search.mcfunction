@@ -20,7 +20,7 @@ execute if score #t bs.ctx matches 0 run scoreboard players remove #c bs.ctx 1
 
 
 execute if score #i bs.ctx matches 0 run return run data get storage bs:out string.find
-execute if score #c bs.ctx = #bs.string.occurence bs.data run return run data get storage bs:out string.find
+execute if score #c bs.ctx = #bs.string.occurrence bs.data run return run data get storage bs:out string.find
 
 execute store result storage bs:ctx x int 1 run scoreboard players remove #i bs.ctx 1
 data modify storage bs:ctx _.str set string storage bs:ctx _.str 0 -1

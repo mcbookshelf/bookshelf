@@ -13,13 +13,23 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _.test set string storage bs:ctx _.str 0 $(y)
-execute store success score #t bs.ctx run data modify storage bs:ctx _.test set from storage bs:in string.find.needle
-execute if score #t bs.ctx matches 0 run data modify storage bs:out string.find append from storage bs:ctx x
+# bad size
+data modify storage bs:in string.find.str set value "mot"
+data modify storage bs:in string.find.needle set value "motus"
+function #bs.string:find {occurrence:0}
+assert data storage bs:out {string:{find:[]}}
 
-execute if score #l bs.ctx = #i bs.ctx run return run data get storage bs:out string.find
+#normal one
+data modify storage bs:in string.find.str set value "mot cacher est un mot trés en motte"
+data modify storage bs:in string.find.needle set value "mot"
 
-execute store result storage bs:ctx x int 1 run scoreboard players add #i bs.ctx 1
-data modify storage bs:ctx _.str set string storage bs:ctx _.str 1
+function #bs.string:find {occurrence:0}
+assert data storage bs:out {string:{find:[0, 18, 30]}}
 
-function bs.string:find/normal_search with storage bs:ctx
+#count test
+function #bs.string:find {occurrence:2}
+assert data storage bs:out {string:{find:[0, 18]}}
+
+#reversed test 
+function #bs.string:find {occurrence:-2}
+assert data storage bs:out {string:{find:[18, 30]}}
