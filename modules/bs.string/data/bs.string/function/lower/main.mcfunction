@@ -19,7 +19,8 @@ data modify storage bs:ctx _.ch set string storage bs:ctx _.st 0 1
 data remove storage bs:ctx _.l
 
 #loop
-function bs.string:lower_case/slow/loop with storage bs:ctx _
+function bs.string:lower/loop with storage bs:ctx _
+#tellraw @a [{"text":"[DEBUG] "},{"storage":"bs:ctx","nbt":"_.l"}]
 
 #concat
 data remove storage bs:ctx _.s

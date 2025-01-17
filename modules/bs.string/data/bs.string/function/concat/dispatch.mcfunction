@@ -15,7 +15,7 @@
 
 # Modified from https://github.com/CMDred/StringLib/
 
-$execute if score #n bs.ctx matches ..8 run return run function bs.string:concat/combine/$(x)
+execute if score #n bs.ctx matches ..64 run return run function bs.string:concat/macro with storage bs:ctx
 
 execute if score #n bs.ctx matches 2048.. run function bs.string:concat/combine/2048
 execute if score #n bs.ctx matches 1024.. run function bs.string:concat/combine/1024
