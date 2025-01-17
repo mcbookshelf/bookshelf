@@ -3369,7 +3369,7 @@
             "minecraft_version": "1.21.4"
           },
           "updated": {
-            "date": "2025/01/13",
+            "date": "2025/01/15",
             "minecraft_version": "1.21.4"
           }
         },
@@ -3404,6 +3404,51 @@
           }
         },
         {
+          "id": "#bs.string:replace",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#replace",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/01/15",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/15",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.string:split",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#split",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/01/15",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/15",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.string:to_list",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#to_list",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/01/15",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/15",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
           "id": "#bs.string:to_number",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#to_number",
           "authors": [
@@ -3414,7 +3459,7 @@
             "minecraft_version": "1.21.4"
           },
           "updated": {
-            "date": "2025/01/13",
+            "date": "2025/01/15",
             "minecraft_version": "1.21.4"
           }
         },
@@ -3429,7 +3474,7 @@
             "minecraft_version": "1.21.4"
           },
           "updated": {
-            "date": "2025/01/13",
+            "date": "2025/01/15",
             "minecraft_version": "1.21.4"
           }
         },
