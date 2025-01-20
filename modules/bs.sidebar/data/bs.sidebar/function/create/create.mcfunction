@@ -34,16 +34,16 @@ execute unless score #s bs.ctx matches 1 run return run function #bs.log:error {
 }
 
 # check that the contents have between 1 and 15 entries
-execute store result score #l bs.ctx if data storage bs:ctx _.contents[]
-execute unless score #l bs.ctx matches 1..15 run return run function #bs.log:error { \
+execute store result score #s bs.ctx if data storage bs:ctx _.contents[]
+execute unless score #s bs.ctx matches 1..15 run return run function #bs.log:error { \
   namespace: "bs.sidebar", \
   path: "#bs.sidebar:create", \
   tag: "create", \
-  message: '[{"text":"The contents must have between 1 and 15 lines (","color":"red"},{"score":{"name":"#l","objective":"bs.ctx"}},{"text":" given)."}]', \
+  message: '[{"text":"The contents must have between 1 and 15 lines (","color":"red"},{"score":{"name":"#s","objective":"bs.ctx"}},{"text":" given)."}]', \
 }
 
 # start the recursion to create each line abort if a line failed
 execute as B5-0-0-0-2 run function bs.sidebar:create/recurse/start with storage bs:ctx _
 data remove entity @s CustomName
-execute if score #l bs.ctx = #i bs.ctx run return 1
+execute if score #s bs.ctx = #i bs.ctx run return 1
 return run function bs.sidebar:create/recurse/abort with storage bs:ctx _
