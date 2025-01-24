@@ -3332,6 +3332,18 @@
       ]
     },
     {
+      "id": "bs.spline",
+      "name": "Spline",
+      "slug": "bookshelf-spline",
+      "description": "Manipulate smooth curves created from control points.",
+      "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html",
+      "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
+      "features": []
+    },
+    {
       "id": "bs.time",
       "name": "Time",
       "slug": "bookshelf-time",
