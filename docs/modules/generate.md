@@ -43,7 +43,7 @@ You can find below all functions available in this module.
 
 ```{function} #bs.generate:shape_2d
 
-Generates a shape in 2D space at the specified origin, with the callback executed at each step, allowing the user to handle the X and Y coordinates directly.
+Generate a shape in 2D space at the specified origin, with the callback executed at each step, allowing the user to handle the X and Y coordinates directly.
 
 :Inputs:
   **Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: Origin of the shape.
@@ -71,7 +71,7 @@ Generates a shape in 2D space at the specified origin, with the callback execute
 
 ```{function} #bs.generate:simplex_shape_2d
 
-Generates a shape in 2D space using a Simplex noise algorithm. The shape is generated at the specified origin, with the callback executed at each step to facilitate custom behavior during the generation process.
+Generate a shape in 2D space using a Simplex noise algorithm. The shape is generated at the specified origin, with the callback executed at each step to facilitate custom behavior during the generation process.
 
 :Inputs:
   **Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: Origin of the shape.
@@ -102,7 +102,7 @@ Generates a shape in 2D space using a Simplex noise algorithm. The shape is gene
 
 ```{function} #bs.generate:fractal_shape_2d
 
-Generates a shape in 2D space using a Fractal noise algorithm. The shape is generated at the specified origin, with the callback executed at each step to facilitate custom behavior during the generation process.
+Generate a shape in 2D space using a Fractal noise algorithm. The shape is generated at the specified origin, with the callback executed at each step to facilitate custom behavior during the generation process.
 
 :Inputs:
   **Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: Origin of the shape.
@@ -150,7 +150,6 @@ $fill ~ ~ ~ ~ ~$(y) ~ stone
 ```
 
 > **Credits**: Aksiome
-
 
 ---
 
