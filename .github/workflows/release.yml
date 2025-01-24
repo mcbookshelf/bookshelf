@@ -15,7 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-tags: true
           ref: ${{ github.ref }}
       - uses: fregante/setup-git-user@v2
       - uses: pdm-project/setup-pdm@v4
@@ -41,6 +40,9 @@ jobs:
       release_name: ${{ steps.check-versions.outputs.release_name }}
       version_exists: ${{ steps.check-versions.outputs.version_exists }}
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-tags: true
       - name: Check Versions
         id: check-versions
         run: |
@@ -63,6 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ needs.check-versions.outputs.version_exists == 'false' }}
     steps:
+      - uses: actions/checkout@v4
       - uses: fregante/setup-git-user@v2
       - uses: pdm-project/setup-pdm@v4
         with:
