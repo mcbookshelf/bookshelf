@@ -15,12 +15,8 @@
 
 # Modified from https://github.com/CMDred/StringLib/
 
-data modify storage bs:ctx _.l set from storage bs:in string.concat.list
-data modify storage bs:ctx _.s.1 set from storage bs:ctx _.l[-1]
-data remove storage bs:ctx _.l[-1]
-execute store result storage bs:ctx x int 1 store result score #n bs.ctx run data get storage bs:ctx _.l
+data modify storage bs:ctx _ set from storage bs:in string.concat
 
 function bs.string:concat/dispatch
 
 data modify storage bs:out string.concat set from storage bs:ctx _.s.1
-return 1

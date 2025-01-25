@@ -31,13 +31,13 @@ scoreboard players operation #l bs.ctx -= #p bs.ctx
 #check values
 function bs.string:replace/loop with storage bs:ctx
 
-tellraw @a [{"storage": "bs:ctx","nbt": "_.l"}]
+#tellraw @a [{"storage": "bs:ctx","nbt": "_.l"}]
 #concat
 data remove storage bs:ctx _.s
 data modify storage bs:ctx _.s.1 set from storage bs:ctx _.l[-1]
 data remove storage bs:ctx _.l[-1]
 execute store result score #n bs.ctx store result storage bs:ctx x int 1 run data get storage bs:ctx _.l
-tellraw @a [{"storage": "bs:ctx","nbt": "_.s"}," ",{"storage": "bs:ctx","nbt": "x"}]
+#tellraw @a [{"storage": "bs:ctx","nbt": "_.s"}," ",{"storage": "bs:ctx","nbt": "x"}]
 function bs.string:concat/dispatch with storage bs:ctx
 
 data modify storage bs:out string.replace set from storage bs:ctx _.s.1
