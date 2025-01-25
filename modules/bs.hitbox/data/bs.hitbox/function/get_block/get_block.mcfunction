@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless block ~ ~ ~ #bs.hitbox:is_composite run \
+execute unless block ~ ~ ~ #bs.hitbox:not_full_cube run \
   return run data modify storage bs:out hitbox set value {shape:[[0.0,0.0,0.0,16.0,16.0,16.0]]}
 
 loot replace block -30000000 0 1606 container.0 loot bs.hitbox:get/get_block

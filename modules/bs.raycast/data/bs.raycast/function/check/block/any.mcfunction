@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless block ~ ~ ~ #bs.hitbox:is_composite run return run function bs.raycast:collide/cube
+execute unless block ~ ~ ~ #bs.hitbox:not_full_cube run return run function bs.raycast:collide/cube
 
 function #bs.hitbox:get_block
 execute store result score #raycast.ox bs.data run data get storage bs:out hitbox.offset.x 10000000

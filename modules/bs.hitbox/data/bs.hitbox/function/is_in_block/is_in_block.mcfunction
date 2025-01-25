@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute if block ~ ~ ~ #bs.hitbox:intangible run return 0
-execute unless block ~ ~ ~ #bs.hitbox:is_composite run return 1
+execute unless block ~ ~ ~ #bs.hitbox:not_full_cube run return 1
 
 execute summon minecraft:marker run function bs.hitbox:utils/get_fract_pos
 execute store result score #x bs.ctx run data get storage bs:ctx _[0] 1000000
