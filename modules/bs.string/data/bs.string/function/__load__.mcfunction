@@ -16,3 +16,7 @@
 scoreboard objectives add bs.data dummy [{"text":"BS ","color":"dark_gray"},{"text":"Data","color":"aqua"}]
 scoreboard objectives add bs.out dummy [{"text":"BS ","color":"dark_gray"},{"text":"Output","color":"aqua"}]
 scoreboard objectives add bs.ctx dummy [{"text":"BS ","color":"dark_gray"},{"text":"Ctx","color":"aqua"}]
+scoreboard objectives add bs.const dummy [{"text":"BS ","color":"dark_gray"},{"text":"Const","color":"aqua"}]
+
+#set constant
+scoreboard players set 8 bs.const 8

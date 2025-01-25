@@ -12,5 +12,14 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+#setup
+data modify storage bs:ctx _.st set from storage bs:in string.upper.str
+execute store result score #c bs.ctx store result score #n bs.ctx run data get storage bs:in string.upper.str
+data modify storage bs:ctx _.ch set string storage bs:ctx _.st 0 1
+data remove storage bs:ctx _.list
 
-$function bs.string:concat/combine/$(x)
+function bs.string:upper/loop with storage bs:ctx _
+
+function bs.string:concat/concat
+
+data modify storage bs:out string.upper set from storage bs:ctx _.s.1

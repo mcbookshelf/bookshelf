@@ -15,8 +15,8 @@
 
 data remove storage bs:ctx _.lt
 $data modify storage bs:ctx _.lt set from storage bs:const string.char_map.upper."$(ch)"
-data modify storage bs:ctx _.l append from storage bs:ctx _.lt
-execute unless data storage bs:ctx _.lt run data modify storage bs:ctx _.l append from storage bs:ctx _.ch
+data modify storage bs:ctx _.list append from storage bs:ctx _.lt
+execute unless data storage bs:ctx _.lt run data modify storage bs:ctx _.list append from storage bs:ctx _.ch
 
 #loop
 execute if score #c bs.ctx matches 1 run return 0

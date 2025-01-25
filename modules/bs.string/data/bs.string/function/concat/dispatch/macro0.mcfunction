@@ -12,20 +12,4 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-#setup
-data modify storage bs:ctx _.st set from storage bs:in string.upper.str
-execute store result score #c bs.ctx store result score #n bs.ctx run data get storage bs:in string.upper.str
-data modify storage bs:ctx _.ch set string storage bs:ctx _.st 0 1
-data remove storage bs:ctx _.l
-
-#loop
-function bs.string:upper/loop with storage bs:ctx _
-
-#concat
-data remove storage bs:ctx _.s
-data modify storage bs:ctx _.s.1 set from storage bs:ctx _.l[-1]
-data remove storage bs:ctx _.l[-1]
-execute store result storage bs:ctx x int 1 run scoreboard players remove #n bs.ctx 1
-function bs.string:concat/dispatch with storage bs:ctx
-
-data modify storage bs:out string.upper set from storage bs:ctx _.s.1
+$function bs.string:concat/combine/$(x)

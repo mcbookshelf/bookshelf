@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _.l append string storage bs:in string.replace.str $(z)
+$data modify storage bs:ctx _.list append string storage bs:in string.replace.str $(z)

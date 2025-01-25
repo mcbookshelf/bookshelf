@@ -16,17 +16,13 @@
 data modify storage bs:ctx _.st set from storage bs:in string.lower.str
 execute store result score #c bs.ctx store result score #n bs.ctx run data get storage bs:in string.lower.str
 data modify storage bs:ctx _.ch set string storage bs:ctx _.st 0 1
-data remove storage bs:ctx _.l
+data remove storage bs:ctx _.list
 
 #loop
 function bs.string:lower/loop with storage bs:ctx _
-#tellraw @a [{"text":"[DEBUG] "},{"storage":"bs:ctx","nbt":"_.l"}]
+#tellraw @a [{"text":"[DEBUG] "},{"storage":"bs:ctx","nbt":"_.list"}]
 
 #concat
-data remove storage bs:ctx _.s
-data modify storage bs:ctx _.s.1 set from storage bs:ctx _.l[-1]
-data remove storage bs:ctx _.l[-1]
-execute store result storage bs:ctx x int 1 run scoreboard players remove #n bs.ctx 1
-function bs.string:concat/dispatch with storage bs:ctx
+function bs.string:concat/concat
 
 data modify storage bs:out string.lower set from storage bs:ctx _.s.1

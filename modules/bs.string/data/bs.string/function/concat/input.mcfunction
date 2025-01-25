@@ -17,6 +17,6 @@
 
 data modify storage bs:ctx _ set from storage bs:in string.concat
 
-function bs.string:concat/dispatch
+function bs.string:concat/concat
 
 data modify storage bs:out string.concat set from storage bs:ctx _.s.1

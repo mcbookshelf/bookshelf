@@ -16,18 +16,8 @@
 #Setup fast storage
 data modify storage bs:in string.lower.str set value "HELLO WORLD"
 data modify storage bs:in string.upper.str set value "hello world"
-function #bs.string:lower {type:"fast"}
-function #bs.string:upper {type:"fast"}
-
-#Test
-assert data storage bs:out {string:{lower:"hello world"}}
-assert data storage bs:out {string:{upper:"HELLO WORLD"}}
-
-#Setup Slow storage
-data modify storage bs:in string.lower.str set value "HELLO WORLD"
-data modify storage bs:in string.upper.str set value "hello world"
-function #bs.string:lower {type:"slow"}
-function #bs.string:upper {type:"slow"}
+function #bs.string:lower
+function #bs.string:upper
 
 #Test
 assert data storage bs:out {string:{lower:"hello world"}}
