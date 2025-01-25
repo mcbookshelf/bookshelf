@@ -15,11 +15,12 @@
 
 $data modify storage bs:ctx _.test set string storage bs:ctx _.str 0 $(y)
 execute store success score #t bs.ctx run data modify storage bs:ctx _.test set from storage bs:in string.find.needle
-execute if score #t bs.ctx matches 0 run function bs.string:find/count_up
+execute if score #t bs.ctx matches 0 run data modify storage bs:out string.find append from storage bs:ctx x
 
-execute if score #l bs.ctx = #i bs.ctx run return run data get storage bs:out string.find
+data modify storage bs:ctx z set from storage bs:ctx y
+execute if score #t bs.ctx matches 0 run return run function bs.string:find/normal/skip with storage bs:ctx
 
-execute store result storage bs:ctx x int 1 run scoreboard players add #i bs.ctx 1
-data modify storage bs:ctx _.str set string storage bs:ctx _.str 1
+data modify storage bs:ctx _.ltr set string storage bs:ctx _.str 0 1
+function bs.string:find/match_patern with storage bs:ctx
 
-function bs.string:find/count_search with storage bs:ctx
+function bs.string:find/normal/skip with storage bs:ctx

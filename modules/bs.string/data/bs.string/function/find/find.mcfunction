@@ -17,14 +17,19 @@ $scoreboard players set #bs.string.occurrence bs.data $(occurrence)
 data modify storage bs:out string.find set value []
 scoreboard players set #c bs.ctx 0
 execute store result storage bs:ctx x int 1 run scoreboard players set #i bs.ctx 0
-data modify storage bs:ctx _.str set from storage bs:in string.find.str
+data modify storage bs:ctx _ set from storage bs:in string.find
 execute store result score #l bs.ctx run data get storage bs:in string.find.str
-execute store result score #p bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.needle
+execute store result score #p bs.ctx store result score #e bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.needle
 
 execute if score #p bs.ctx > #l bs.ctx run return 0
 scoreboard players operation #l bs.ctx -= #p bs.ctx
 
-execute if score #bs.string.occurrence bs.data matches 0 run return run function bs.string:find/normal_search with storage bs:ctx
-execute if score #bs.string.occurrence bs.data matches 1.. run return run function bs.string:find/count_search with storage bs:ctx
+#precompute
+data modify storage bs:ctx _.ltr set string storage bs:ctx _.needle 0 1
+data modify storage bs:ctx _.needle set string storage bs:ctx _.needle 1
+function bs.string:find/precompute with storage bs:ctx _
+
+execute if score #bs.string.occurrence bs.data matches 0 run return run function bs.string:find/normal/normal with storage bs:ctx
+execute if score #bs.string.occurrence bs.data matches 1.. run return run function bs.string:find/count/count with storage bs:ctx
 execute store result storage bs:ctx x int 1 store result score #i bs.ctx run scoreboard players get #l bs.ctx
-return run function bs.string:find/inverse_search with storage bs:ctx
+return run function bs.string:find/inverse/inverse with storage bs:ctx
