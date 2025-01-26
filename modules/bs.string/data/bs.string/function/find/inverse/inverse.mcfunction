@@ -14,12 +14,13 @@
 # ------------------------------------------------------------------------------------------------------------
 say inverse
 $data modify storage bs:ctx _.test set string storage bs:ctx _.str -$(y)
+data modify storage bs:ctx _.ltr set string storage bs:ctx _.test 0 1
 execute store success score #t bs.ctx run data modify storage bs:ctx _.test set from storage bs:in string.find.needle
 
 data modify storage bs:ctx z set from storage bs:ctx y
 execute if score #t bs.ctx matches 0 run return run function bs.string:find/inverse/up
 
-data modify storage bs:ctx _.ltr set string storage bs:ctx _.str -1
+
 function bs.string:find/match_patern with storage bs:ctx
 
 function bs.string:find/inverse/skip with storage bs:ctx

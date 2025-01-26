@@ -31,5 +31,5 @@ function bs.string:find/precompute with storage bs:ctx _
 
 execute if score #bs.string.occurrence bs.data matches 0 run return run function bs.string:find/normal/normal with storage bs:ctx
 execute if score #bs.string.occurrence bs.data matches 1.. run return run function bs.string:find/count/count with storage bs:ctx
-execute store result storage bs:ctx x int 1 store result score #i bs.ctx run scoreboard players get #l bs.ctx
-return run function bs.string:find/inverse/inverse with storage bs:ctx
+#execute store result storage bs:ctx x int 1 store result score #i bs.ctx run scoreboard players get #l bs.ctx
+#return run function bs.string:find/inverse/inverse with storage bs:ctx
