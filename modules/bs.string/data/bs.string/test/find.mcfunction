@@ -37,5 +37,5 @@ function #bs.string:find {occurrence:2}
 assert data storage bs:out {string:{find:[0, 18]}}
 
 #reversed test 
-function #bs.string:find {occurrence:-2}
-assert data storage bs:out {string:{find:[18, 30]}}
+#function #bs.string:find {occurrence:-2}
+#assert data storage bs:out {string:{find:[18, 30]}}

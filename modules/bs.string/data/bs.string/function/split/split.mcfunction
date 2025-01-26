@@ -27,9 +27,13 @@ execute if score #p bs.ctx > #l bs.ctx run return 0
 scoreboard players add #l bs.ctx 1
 
 #moving values
-data modify storage bs:ctx _.str set from storage bs:in string.split.str
-
+data modify storage bs:ctx _ set from storage bs:in string.split
 scoreboard players operation #l bs.ctx -= #p bs.ctx
+
+#precompute
+data modify storage bs:ctx _.ltr set string storage bs:ctx _.separator 0 1
+data modify storage bs:ctx _.separator set string storage bs:ctx _.separator 1
+function bs.string:find/precompute with storage bs:ctx _
 
 #check values
 execute if score #bs.string.maxsplit bs.data matches 0 run return run function bs.string:split/normal/loop with storage bs:ctx
