@@ -15,7 +15,6 @@
 
 data modify storage bs:out string.find append from storage bs:ctx x
 
-say up
 scoreboard players add #c bs.ctx 1
 execute if score #c bs.ctx = #bs.string.occurrence bs.data run return 0
 
