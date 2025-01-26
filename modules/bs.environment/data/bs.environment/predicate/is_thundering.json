@@ -1,0 +1,19 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#is-it-thundering",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2024/04/22",
+      "minecraft_version": "1.20.5"
+    },
+    "updated": {
+      "date": "2024/11/24",
+      "minecraft_version": "1.21.3"
+    }
+  },
+  "condition": "weather_check",
+  "thundering": true
+}

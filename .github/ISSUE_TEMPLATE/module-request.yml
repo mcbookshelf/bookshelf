@@ -1,0 +1,33 @@
+name: "✨ Module request"
+description: Suggest a new module.
+labels:
+  - '✨ Module'
+body:
+  - type: input
+    attributes:
+      label: Module Name
+      description: Choose a short and descriptive name for the module.
+      placeholder: block, health, ...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: |
+        Provide a detailed description of what this module would do:
+        - What problem does it solve?
+        - What key features and functionalities would it include?
+      placeholder: |
+        Example:
+        - A module to handle physics calculations and complex movements.
+        - A collection of small medieval house structures for building.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: Provide any extra information, references, or examples to clarify your request.
+    validations:
+      required: false

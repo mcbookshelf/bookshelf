@@ -1,0 +1,21 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-shaped",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2024/09/28",
+      "minecraft_version": "1.21"
+    },
+    "updated": {
+      "date": "2024/09/28",
+      "minecraft_version": "1.21"
+    }
+  },
+  "values": [
+    "#bs.hitbox:size/item_frame",
+    "minecraft:painting"
+  ]
+}

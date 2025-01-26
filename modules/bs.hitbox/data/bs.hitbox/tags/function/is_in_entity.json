@@ -1,0 +1,20 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2023/11/21",
+      "minecraft_version": "1.20.3"
+    },
+    "updated": {
+      "date": "2024/09/28",
+      "minecraft_version": "1.21"
+    }
+  },
+  "values": [
+    "bs.hitbox:is_in_entity"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "values": [
+    "minecraft:blaze",
+    "#bs.hitbox:size/boat",
+    "minecraft:camel",
+    "#bs.hitbox:size/cat_like",
+    "minecraft:cave_spider",
+    "minecraft:chicken",
+    "minecraft:cod",
+    "#bs.hitbox:size/cow_like",
+    "minecraft:frog",
+    "minecraft:ghast",
+    "minecraft:giant",
+    "minecraft:evoker_fangs",
+    "minecraft:guardian",
+    "#bs.hitbox:size/hoglin",
+    "#bs.hitbox:size/horse_like",
+    "minecraft:interaction",
+    "minecraft:phantom",
+    "minecraft:pig",
+    "minecraft:polar_bear",
+    "minecraft:pufferfish",
+    "minecraft:rabbit",
+    "minecraft:ravager",
+    "minecraft:salmon",
+    "minecraft:sheep",
+    "minecraft:squid",
+    "minecraft:strider",
+    "minecraft:tadpole",
+    "minecraft:tropical_fish",
+    "minecraft:turtle",
+    "minecraft:vex",
+    "minecraft:warden",
+    "minecraft:wither",
+    "minecraft:creaking",
+    {
+      "id": "minecraft:creaking_transient",
+      "required": false
+    }
+  ]
+}

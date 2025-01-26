@@ -1,0 +1,24 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/time.html#system-time",
+    "authors": [
+      "Aksiome"
+    ],
+    "contributors": [
+      "Awhikax",
+      "RedCoal"
+    ],
+    "created": {
+      "date": "2021/10/30",
+      "minecraft_version": "1.17.1"
+    },
+    "updated": {
+      "date": "2023/08/30",
+      "minecraft_version": "23w33a"
+    }
+  },
+  "values": [
+    "bs.time:get/get"
+  ]
+}

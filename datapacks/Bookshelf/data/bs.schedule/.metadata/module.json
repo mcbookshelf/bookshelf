@@ -1,9 +1,0 @@
-{
-  "name": "bs.schedule",
-  "display_name": "Schedule",
-  "description": "Enhance command scheduling with this module, providing flexibility beyond vanilla capabilities. Cancel commands and maintain execution context (entity & location).",
-  "documentation": "https://bookshelf.docs.gunivers.net/en/latest/modules/schedule.html",
-  "weak_dependencies": [
-    "bs.log"
-  ]
-}

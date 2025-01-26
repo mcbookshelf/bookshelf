@@ -1,0 +1,17 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.schedule",
+    "load": "."
+  },
+  "meta": {
+    "name": "Schedule",
+    "slug": "bookshelf-schedule",
+    "description": "Enhance command scheduling. Cancel commands and maintain execution context (entity & location).",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html",
+    "tags": ["default"],
+    "weak_dependencies": [
+      "bs.log"
+    ]
+  }
+}

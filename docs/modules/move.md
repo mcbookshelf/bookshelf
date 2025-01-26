@@ -15,8 +15,12 @@ Make your entity move exactly the way you want them to!
 -- Heraclitus
 ```
 
-```{important}
-This module limits the world size to 2,147,480 to prevent scoreboard overflow.
+```{button-link} https://youtu.be/V6NxxpN_hhc
+:color: primary
+:align: center
+:shadow:
+
+{octicon}`device-camera-video` Watch a demo
 ```
 
 ---
@@ -27,7 +31,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Apply velocity
+### Apply Velocity
 
 :::::{tab-set}
 ::::{tab-item} Canonical
@@ -90,7 +94,8 @@ Teleport an entity by its velocity scores, using the local reference frame, whil
 
 *Move a cube (block_display) by its velocity scores (uses an interaction as the hitbox):*
 
-```mcfunction
+```{code-block} mcfunction
+:force:
 # Once
 summon minecraft:block_display ~ ~ ~ {block_state:{Name:"stone"},teleport_duration:3,transformation:[1f,0f,0f,-0.5f,0f,1f,0f,0f,0f,0f,1f,-0.5f,0f,0f,0f,1f],Passengers:[{id:"minecraft:interaction",width:1f,height:1f}]}
 scoreboard players set @e[type=minecraft:block_display] bs.vel.x 100
@@ -107,7 +112,7 @@ execute as @e[type=minecraft:block_display] run function #bs.move:apply_vel {sca
 execute as @e[type=minecraft:block_display] run function #bs.move:apply_vel {scale:0.001,with:{on_collision:"#bs.move:on_collision/stick"}}
 ```
 
-```{admonition} Performance tip
+```{admonition} Performance Tip
 :class: tip
 
 Although this system doesn't set specific limits, it's important to note that performance is influenced by both the speed and size of the entity.
@@ -117,7 +122,7 @@ Although this system doesn't set specific limits, it's important to note that pe
 
 ---
 
-### Canonical to local
+### Canonical to Local
 
 ```{function} #bs.move:canonical_to_local
 
@@ -132,7 +137,7 @@ Convert a canonical velocity (using the relative reference frame) into a local v
   **Scores `@s bs.vel.[x,y,z]`**: Converted velocity.
 ```
 
-```{admonition} Local velocity... 🥶 What's this?
+```{admonition} Local Velocity... 🥶 What's this?
 :class: dropdown
 
 Unlike relative velocity (canonical), this reference frame considers the entity's rotation. Therefore, when the parent entity rotates, the child entity rotates around it. For those familiar with Minecraft commands, local coordinates are available through the `^` symbol.
@@ -142,7 +147,7 @@ Unlike relative velocity (canonical), this reference frame considers the entity'
 
 ---
 
-### Local to canonical
+### Local to Canonical
 
 ```{function} #bs.move:local_to_canonical
 
@@ -157,7 +162,7 @@ Convert a local velocity (using the local reference frame) into a canonical velo
   **Scores `@s bs.vel.[x,y,z]`**: Converted velocity.
 ```
 
-```{admonition} Local velocity... 🥶 What's this?
+```{admonition} Local Velocity... 🥶 What's this?
 :class: dropdown
 
 Unlike relative velocity (canonical), this reference frame considers the entity's rotation. Therefore, when the parent entity rotates, the child entity rotates around it. For those familiar with Minecraft commands, local coordinates are available through the `^` symbol.
@@ -167,7 +172,7 @@ Unlike relative velocity (canonical), this reference frame considers the entity'
 
 ---
 
-### Set motion
+### Set Motion
 
 ```{function} #bs.move:set_motion {scale:<scaling>}
 
@@ -205,7 +210,7 @@ execute as @e[type=minecraft:pig] run function #bs.move:set_motion {scale:0.001}
 
 ---
 
-## 🎓 Custom collisions
+## 🎓 Custom Collisions
 
 This module allows you to customize collision behaviors according to your specific needs.
 
@@ -224,9 +229,9 @@ By modifying the `on_collision` input key, you have the freedom to specify the f
       - The entity will stop and stick to the collision surface.
 :::
 
-### How it works?
+### How It Works?
 
-Upon collision, you have the freedom to update both the velocity score that will be used in the next tick `@s bs.vel.[x,y,z]` and the remaining velocity `$move.vel_remaining.[x,y,z] bs.data`, which is always scaled by 1000. Since the module will attempt to continue moving based on the remaining velocity, it's crucial to avoid introducing a race condition.
+Upon collision, you have the freedom to update both the velocity score that will be used in the next tick `@s bs.vel.[x,y,z]` and the remaining velocity `$move.vel_remaining.[x,y,z] bs.data`. Since the module will attempt to continue moving based on the remaining velocity, it's crucial to avoid introducing a race condition.
 
 The simplest collision resolution is to stop the movement.
 

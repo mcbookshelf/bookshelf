@@ -1,0 +1,20 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#random-choice",
+    "authors": [
+      "SBtree"
+    ],
+    "created": {
+      "date": "2024/06/17",
+      "minecraft_version": "1.21"
+    },
+    "updated": {
+      "date": "2024/08/05",
+      "minecraft_version": "1.21"
+    }
+  },
+  "values": [
+    "bs.random:choice/choice"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "env": {
+    "exclude": [
+      ".github/",
+      ".vscode/",
+      "docs/",
+      "scripts/",
+      "@gitignore"
+    ],
+    "mcmetaSummaryOverrides": {
+      "commands": {
+        "path": ".spyglasscmds.json",
+        "replace": false
+      }
+    }
+  },
+  "lint": {
+    "nameOfNbtKey": "^[a-z0-9_]+$",
+    "nameOfObjective": "^bs\\.[a-z0-9_.]+$",
+    "nameOfScoreHolder": "^[#$\\-]?[a-z0-9_.]+$",
+    "nameOfTag": "^(?:bs|smithed)\\.[a-z0-9_.]+$",
+    "nameOfTeam": "^bs\\.[a-z0-9_.]+$",
+    "nbtArrayLengthCheck": true,
+    "nbtListLengthCheck": true,
+    "nbtTypeCheck": "loosely"
+  }
+}

@@ -1,5 +1,12 @@
 ::::{grid} 2
 
+:::{grid-item-card} 🎬 Animated java
+:link: https://animated-java.dev/
+:margin: 0 3 0 0
+
+Animated Java is a plugin for Blockbench that allows you to create custom animations and models for Vanilla Minecraft. It uses the power of Java Edition's Data Pack and Resource Pack systems to bring your creations to life!
+:::
+
 :::{grid-item-card} 🔨 Data-pack Helper Plus
 :link: https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server
 :margin: 0 3 0 0

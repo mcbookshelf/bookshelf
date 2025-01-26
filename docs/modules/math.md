@@ -51,7 +51,7 @@ Compute the combine of 2 numbers.
   **Return | Score `$math.combine bs.out`**: Result of the operation.
 ```
 
-```{admonition} Technical limitation
+```{admonition} Technical Limitation
 :class: important
 
 The value of `bs.out` is incorrect if the result is greater than 2,147,483,647 or `$math.combine.[n,k] bs.in` are not both positive.
@@ -137,7 +137,7 @@ Compute the factorial of the number.
   **Return | Score `$math.factorial bs.out`**: Result of the operation.
 ```
 
-```{admonition} Technical limitation
+```{admonition} Technical Limitation
 :class: important
 
 Due to the limit of integers that can be stored in a score, the interval of `$math.factorial.n bs.in` is limited to `[0,12]`.
@@ -157,7 +157,7 @@ tellraw @a [{"text": "3! = ","color":"dark_gray"},{"score":{"name":"$math.factor
 
 ---
 
-### Float manipulation
+### Float Manipulation
 
 ::::{tab-set}
 :::{tab-item} Frexp
@@ -215,7 +215,7 @@ data get storage bs:out math.ldexp
 
 ---
 
-### Greatest common denominator
+### Greatest Common Denominator
 
 ```{function} #bs.math:gcd
 
@@ -240,111 +240,6 @@ tellraw @a [{"text": "gcd(16,12) = ", "color": "dark_gray"},{"score":{"name":"$m
 ![](/_imgs/modules/math/gcd.png)
 
 > **Credits**: Aksiome, Leirof
-
----
-
-### Inverse trigonometry
-
-::::{tab-set}
-:::{tab-item} Acos
-
-```{function} #bs.math:acos
-
-Compute the arc cosine of a value between -1 and 1.
-
-:Inputs:
-  **Score `$math.acos.x bs.in`**: Value you want to compute the arccosine of, shifted by 3 digits (1,2345 → 1234) for better precision in integer scores.
-
-:Outputs:
-  **Return | Score `$math.acos bs.out`**: Result of the operation in degrees, shifted by 2 digits.
-```
-
-*Compute and display the arccosine of 0.42:*
-```mcfunction
-# Once
-scoreboard players set $math.acos.x bs.in 420
-function #bs.math:acos
-tellraw @a [{"text":"acos(0.42) = ","color":"dark_gray"},{"score":{"name":"$math.acos","objective":"bs.out"},"color":"gold"}]
-```
-
-![](/_imgs/modules/math/arccos.png)
-
-:::
-:::{tab-item} Asin
-
-```{function} #bs.math:asin
-
-Compute the arc sine of a value between -1 and 1.
-
-:Inputs:
-  **Score `$math.asin.x bs.in`**: Value you want to compute the arcsine of, shifted by 3 digits (1,2345 → 1234) for better precision in integer scores.
-
-:Outputs:
-  **Return | Score `$math.asin bs.out`**: Result of the operation in degrees, shifted by 2 digits.
-```
-
-*Compute and display the arcsine of 0.42:*
-```mcfunction
-# Once
-scoreboard players set $math.asin.x bs.in 420
-function #bs.math:asin
-tellraw @a [{"text":"asin(0.42) = ","color":"dark_gray"},{"score":{"name":"$math.asin","objective":"bs.out"},"color":"gold"}]
-```
-
-![](/_imgs/modules/math/arcsin.png)
-
-:::
-:::{tab-item} Atan
-
-```{function} #bs.math:atan
-
-Compute the arc tangent of a value between -infinite and +infinite.
-
-:Inputs:
-  **Score `$math.atan.x bs.in`**: Value you want to compute the arctangent of, shifted by 3 digits (1,2345 → 1234) for better precision in integer scores.
-
-:Outputs:
-  **Return | Score `$math.atan bs.out`**: Result of the operation in degrees, shifted by 2 digits.
-```
-
-*Compute and display the arctan of 0.42:*
-```mcfunction
-# Once
-scoreboard players set $math.atan.x bs.in 420
-function #bs.math:atan
-tellraw @a [{"text":"atan(0.42) = ","color":"dark_gray"},{"score":{"name":"$math.atan","objective":"bs.out"},"color":"gold"}]
-```
-
-![](/_imgs/modules/math/arctan.png)
-
-:::
-:::{tab-item} Atan2
-
-```{function} #bs.math:atan2
-
-Compute the 2-argument arctangent of y and x.
-
-:Inputs:
-  **Scores `$math.atan2.[y,x] bs.in`**: Values you want to compute the arctangent of, shifted by 3 digits (1,2345 → 1234) for better precision in integer scores.
-
-:Outputs:
-  **Return | Score `$math.atan2 bs.out`**: Result of the operation in degrees, shifted by 2 digits.
-```
-
-*Compute and display the atan2 of (0.42, 0.8):*
-```mcfunction
-# Once
-scoreboard players set $math.atan2.y bs.in 420
-scoreboard players set $math.atan2.x bs.in 800
-function #bs.math:atan2
-tellraw @a [{"text":"atan2(0.42, 0.8) = ","color":"dark_gray"},{"score":{"name":"$math.atan2","objective":"bs.out"},"color":"gold"}]
-```
-
-:::
-::::
-
-
-> **Credits**: Aksiome, KubbyDev, Leirof
 
 ---
 
@@ -508,7 +403,7 @@ tellraw @a [{"text": "3.5^2.25 = ", "color": "dark_gray"},{"nbt": "math.pow", "s
 
 ---
 
-### Rounded division
+### Rounded Division
 
 ```{function} #bs.math:divide
 
@@ -537,7 +432,7 @@ tellraw @a [{"text": "9 / 5 = ", "color": "dark_gray"},{"score":{"name":"$math.d
 
 ---
 
-### Square root
+### Square Root
 
 ::::{tab-set}
 
@@ -595,6 +490,101 @@ tellraw @a [{"text": "sqrt(42) = ", "color": "dark_gray"},{"nbt": "math.sqrt", "
 ### Trigonometry
 
 ::::{tab-set}
+:::{tab-item} Acos
+
+```{function} #bs.math:acos
+
+Compute the arc cosine of a value between -1 and 1.
+
+:Inputs:
+  **Score `$math.acos.x bs.in`**: Value you want to compute the arccosine of, shifted by 3 digits (1,2345 → 1234) for better precision in integer scores.
+
+:Outputs:
+  **Return | Score `$math.acos bs.out`**: Result of the operation in degrees, shifted by 2 digits.
+```
+
+*Compute and display the arccosine of 0.42:*
+```mcfunction
+# Once
+scoreboard players set $math.acos.x bs.in 420
+function #bs.math:acos
+tellraw @a [{"text":"acos(0.42) = ","color":"dark_gray"},{"score":{"name":"$math.acos","objective":"bs.out"},"color":"gold"}]
+```
+
+![](/_imgs/modules/math/arccos.png)
+
+:::
+:::{tab-item} Asin
+
+```{function} #bs.math:asin
+
+Compute the arc sine of a value between -1 and 1.
+
+:Inputs:
+  **Score `$math.asin.x bs.in`**: Value you want to compute the arcsine of, shifted by 3 digits (1,2345 → 1234) for better precision in integer scores.
+
+:Outputs:
+  **Return | Score `$math.asin bs.out`**: Result of the operation in degrees, shifted by 2 digits.
+```
+
+*Compute and display the arcsine of 0.42:*
+```mcfunction
+# Once
+scoreboard players set $math.asin.x bs.in 420
+function #bs.math:asin
+tellraw @a [{"text":"asin(0.42) = ","color":"dark_gray"},{"score":{"name":"$math.asin","objective":"bs.out"},"color":"gold"}]
+```
+
+![](/_imgs/modules/math/arcsin.png)
+
+:::
+:::{tab-item} Atan
+
+```{function} #bs.math:atan
+
+Compute the arc tangent of a value between -infinite and +infinite.
+
+:Inputs:
+  **Score `$math.atan.x bs.in`**: Value you want to compute the arctangent of, shifted by 3 digits (1,2345 → 1234) for better precision in integer scores.
+
+:Outputs:
+  **Return | Score `$math.atan bs.out`**: Result of the operation in degrees, shifted by 2 digits.
+```
+
+*Compute and display the arctan of 0.42:*
+```mcfunction
+# Once
+scoreboard players set $math.atan.x bs.in 420
+function #bs.math:atan
+tellraw @a [{"text":"atan(0.42) = ","color":"dark_gray"},{"score":{"name":"$math.atan","objective":"bs.out"},"color":"gold"}]
+```
+
+![](/_imgs/modules/math/arctan.png)
+
+:::
+:::{tab-item} Atan2
+
+```{function} #bs.math:atan2
+
+Compute the 2-argument arctangent of y and x.
+
+:Inputs:
+  **Scores `$math.atan2.[y,x] bs.in`**: Values you want to compute the arctangent of, shifted by 3 digits (1,2345 → 1234) for better precision in integer scores.
+
+:Outputs:
+  **Return | Score `$math.atan2 bs.out`**: Result of the operation in degrees, shifted by 2 digits.
+```
+
+*Compute and display the atan2 of (0.42, 0.8):*
+```mcfunction
+# Once
+scoreboard players set $math.atan2.y bs.in 420
+scoreboard players set $math.atan2.x bs.in 800
+function #bs.math:atan2
+tellraw @a [{"text":"atan2(0.42, 0.8) = ","color":"dark_gray"},{"score":{"name":"$math.atan2","objective":"bs.out"},"color":"gold"}]
+```
+
+:::
 :::{tab-item} Cos
 
 ```{function} #bs.math:cos
@@ -738,7 +728,7 @@ This function utilizes Minecraft teleportation to calculate both the cosine and 
 :::
 ::::
 
-> **Credits**: Aksiome, Leirof
+> **Credits**: Aksiome, KubbyDev, Leirof
 
 ---
 

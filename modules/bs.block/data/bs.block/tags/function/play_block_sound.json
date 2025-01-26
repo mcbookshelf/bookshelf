@@ -1,0 +1,20 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+    "authors": [
+      "theogiraudet"
+    ],
+    "created": {
+      "date": "2025/01/25",
+      "minecraft_version": "1.21.4"
+    },
+    "updated": {
+      "date": "2025/01/25",
+      "minecraft_version": "1.21.4"
+    }
+  },
+  "values": [
+    "bs.block:produce/block_sound/play_block_sound"
+  ]
+}

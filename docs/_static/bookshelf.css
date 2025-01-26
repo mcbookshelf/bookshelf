@@ -1,6 +1,7 @@
 html[data-theme="light"] {
   --pst-color-primary: #538fef;
-  --pst-color-secondary: rgb(247, 110, 19);
+  --pst-color-secondary: #f76e13;
+  --pst-color-accent: #ff8000;
   --sd-color-card-border-hover: var(--pst-color-primary);
   --pst-color-primary-highlight: var(--pst-color-secondary);
   --scrollbar-thumb-bg: #00000019;
@@ -8,6 +9,7 @@ html[data-theme="light"] {
   --scrollbar-thumb-bg-active: #0000002b;
   --pst-color-on-background: #f9f9f9;
   --bs-border-color: #dee2e699;
+  --pst-color-table-row-hover-bg: #79a3f244;
 }
 
 html[data-theme="light"] .highlight .c1 {
@@ -17,19 +19,34 @@ html[data-theme="light"] .highlight .c1 {
 html[data-theme="dark"] {
   --pst-color-primary: #79a3f2;
   --pst-color-secondary: #ec8423;
+  --pst-color-accent: #ff8000;
   --pst-color-primary-highlight: var(--pst-color-secondary);
   --sd-color-primary: #3b6bc4;
   --pst-color-secondary-text: #fff;
   --sd-color-primary-text: #fff;
   --sd-color-card-border-hover: var(--pst-color-primary);
-  --pst-color-info-bg: #1f407e;
-  --pst-color-warning-bg: #803e12;
+  --pst-color-info-bg: #324f84;
+  --pst-color-warning-bg: #894c21;
   --pst-color-success-bg: #064224;
   --pst-color-danger-bg: #6d0c0c;
   --scrollbar-thumb-bg: #ffffff19;
   --scrollbar-thumb-bg-hover: #ffffff26;
   --scrollbar-thumb-bg-active: #ffffff2b;
   --bs-border-color: #dee2e611;
+  --pst-color-table-row-hover-bg: #538fef44;
+}
+
+
+html[data-theme=dark] .bd-content .sd-tab-set .sd-tab-content, html[data-theme=dark] .bd-content .sd-tab-set>label {
+  background-color: #191d25;
+}
+
+.bd-content .sd-tab-set>input:checked+label {
+  border-color: var(--pst-color-table-row-hover-bg);
+}
+
+.bd-content .sd-tab-set .sd-tab-content {
+  border: .125rem solid var(--pst-color-table-row-hover-bg);
 }
 
 html[data-theme="dark"] .highlight .c1 {
@@ -109,18 +126,6 @@ hr {
   border-top: 1px solid #888;
 }
 
-a.headerlink {
-    color: var(--pst-color-secondary);
-}
-
-nav a:hover, nav button:hover {
-  text-decoration: none!important;
-}
-
-.bd-header .navbar-nav>.current>.nav-link {
-  border-bottom: none;
-}
-
 .bd-content .sd-tab-set>label {
   border-top: none;
 }
@@ -150,147 +155,3 @@ button.btn.version-switcher__button {
 .bd-header .navbar-nav li a.nav-link {
   text-align: center;
 }
-
-
-.bs-treeview ul, .bs-treeview li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  list-style-image: none;
-}
-
-.bs-treeview li li {
-  position: relative;
-  padding: .15rem 0 .15rem 1rem;
-  margin-left: .5rem;
-  border-left: 1px solid #636363;
-}
-
-.bs-treeview li li::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -1px;
-  width: .75rem;
-  height: 1.15rem;
-  border-left: 1px solid #636363;
-  border-bottom: 1px solid #636363;
-}
-
-.bs-treeview li li:last-child {
-  border-color: transparent;
-}
-
-.bs-treeview {
-  margin-bottom: 1rem;
-}
-
-[class^="bs-dir-"] {
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  width: 1.3em;
-  height: 1.3em;
-}
-
-[class^="bs-nbt-"] {
-  display: inline-block;
-  background-image: url('nbt-sprite.png');
-  background-position: -16px -48px;
-  background-repeat: no-repeat;
-  background-size: 64px;
-  vertical-align: middle;
-  width: 1em;
-  height: 1em;
-}
-
-.bs-nbt-byte {
-  background-position: 0px 0px;
-}
-
-.bs-nbt-double {
-  background-position: -16px 0px;
-}
-
-.bs-nbt-float {
-  background-position: -32px 0px;
-}
-
-.bs-nbt-int {
-  background-position: -48px 0px;
-}
-
-.bs-nbt-long {
-  background-position: 0px -16px;
-}
-
-.bs-nbt-short {
-  background-position: -16px -16px;
-}
-
-.bs-nbt-string {
-  background-position: -32px -16px;
-}
-
-.bs-nbt-compound {
-  background-position: -48px -16px;
-}
-
-.bs-nbt-byte-array {
-  background-position: 0px -32px;
-}
-
-.bs-nbt-int-array {
-  background-position: -16px -32px;
-}
-
-.bs-nbt-list {
-  background-position: -32px -32px;
-}
-
-.bs-nbt-bool {
-  background-position: -48px -32px;
-}
-
-.bs-nbt-long-array {
-  background-position: 0px -48px;
-}
-
-.bs-nbt-any {
-  background-position: -16px -48px;
-}
-
-.bs-nbt-number {
-  background-position: -32px -48px;
-}
-
-.bs-dir-folder {
-  background-image: url('folder.svg');
-}
-
-.bs-dir-json {
-  background-image: url('json.svg');
-}
-
-.bs-dir-mcfunction {
-  background-image: url('mcfunction.svg');
-}
-
-.bs-dir-mcmeta {
-  background-image: url('mcmeta.svg');
-}
-
-.bs-dir-image {
-  background-image: url('image.svg');
-}
-
-.bs-dir-nbt {
-  background-image: url('nbt.svg');
-}
-
-.bs-dir-audio {
-  background-image: url('audio.svg');
-}
-
-
-

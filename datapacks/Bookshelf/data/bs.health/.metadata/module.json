@@ -1,9 +1,0 @@
-{
-  "name": "bs.health",
-  "display_name": "Health",
-  "description": "Efficiently manage the lifecycle and vital aspects of an entity.",
-  "documentation": "https://bookshelf.docs.gunivers.net/en/latest/modules/health.html",
-  "weak_dependencies": [
-    "bs.log"
-  ]
-}

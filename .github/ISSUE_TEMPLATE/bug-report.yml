@@ -1,0 +1,80 @@
+name: "🐛 Bug report"
+description: Report a reproducible bug for investigation.
+labels:
+  - '🐛 Bug'
+body:
+  - type: input
+    attributes:
+      label: Module
+      description: Specify the module where the bug occurred (e.g., block, health, ...).
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Feature
+      description: Specify the feature related to the bug (e.g., get_block, set_max_health, ...).
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Version
+      description: Specify the version of Bookshelf you are using.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: |
+        Describe what should happen under normal conditions:
+        - What is the expected output or behavior?
+      placeholder: |
+        Example:
+        - The command returns the correct result.
+        - The system behaves as described in the documentation.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Actual Behavior
+      description: |
+        Describe what happens instead of the expected behavior:
+        - Is there an error message or a malfunction?
+        - How does it differ from what is expected?
+      placeholder: |
+        Example:
+        - The command throws an unexpected error.
+        - The system behaves incorrectly or inconsistently.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Possible Fix
+      description: |
+        If you have a suggestion for a fix or a reason for the bug, please provide it here.
+      placeholder: |
+        Example:
+        - The issue may be caused by a missing dependency.
+        - Updating a block tag could resolve this.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        Provide a step-by-step guide to help us replicate the issue:
+        1.
+        2.
+        3.
+        4.
+      placeholder: |
+        Example:
+        1. Call feature A with parameter X.
+        2. Call feature B and observe behavior Y.
+    validations:
+      required: false

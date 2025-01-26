@@ -1,4 +1,8 @@
-# 📁 Projects that use Bookshelf
+---
+html_theme.sidebar_secondary.remove: true
+---
+
+# 📁 Projects Using Bookshelf
 
 Bookshelf is a project with a long history.
 Starting with the name of LGDir following by Gunivers-Lib (Glib), this library was used by several projects of the Gunivers community.

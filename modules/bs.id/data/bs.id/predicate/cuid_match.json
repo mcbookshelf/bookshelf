@@ -1,0 +1,39 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html#check-chain-unique-id",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2023/08/28",
+      "minecraft_version": "23w33a"
+    },
+    "updated": {
+      "date": "2023/08/28",
+      "minecraft_version": "23w33a"
+    }
+  },
+  "condition": "minecraft:entity_scores",
+  "entity": "this",
+  "scores": {
+    "bs.cid": {
+      "min": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$id.cuid.min"
+        },
+        "score": "bs.in"
+      },
+      "max": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$id.cuid.max"
+        },
+        "score": "bs.in"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+name: "✨ Feature request"
+description: Suggest a new feature or improvement.
+labels:
+  - '✨ Feature'
+body:
+  - type: input
+    attributes:
+      label: Feature Name
+      description: Choose a short and descriptive name for the feature.
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Target Module
+      description: Specify the module where this feature should be added.
+      placeholder: block, health, ...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Feature Description
+      description: |
+        Provide a clear description of the feature:
+        - What functionality does it offer?
+        - Why is this feature important or useful?
+      placeholder: |
+        Example:
+        - Adds functionality for managing block states.
+        - Enhances performance for specific tasks.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: Provide any extra information, references, or examples to clarify your request.
+    validations:
+      required: false

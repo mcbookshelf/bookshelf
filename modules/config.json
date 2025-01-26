@@ -1,0 +1,16 @@
+{
+  "data_pack": {
+    "description": "Bookshelf - Library designed for mapmakers"
+  },
+  "require": [
+    "core.plugins.setup_pack",
+    "core.plugins.setup_jinja",
+    "core.plugins.setup_tags",
+    "core.plugins.auto_import",
+    "core.plugins.dependencies"
+  ],
+  "pipeline": [
+    "core.plugins.gen_help",
+    "core.plugins.gen_load"
+  ]
+}

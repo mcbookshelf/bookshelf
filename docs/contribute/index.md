@@ -4,13 +4,15 @@ html_theme.sidebar_secondary.remove: true
 
 # 🤝 Contribute
 
-Bookshelf is a community project and can therefore be developed by several people at the same time. To keep the project clean and consistent, it is necessary for the different developers to respect some conventions when developing functions. In the following page, you can find all the Bookshelf standards. This standard is signed by the prefix `bs.` in the namespaces so you can identify all the datapacks that use it.
+Welcome to the Contribute section of our documentation! Whether you're fixing bugs, adding features, or writing new modules, this guide will help you get started and align with our project's standards.
 
 To contribute on this project, you must
 
 - Know the structure of a minecraft datapack (5-10 min to learn on internet)
 - Know the basic usage of git projects (20-30 min to learn on internet)
 - Be accessible to answer questions about your work
+
+If you're not familiar with GitHub pull requests or open-source collaboration, we recommend this guide to help you get started quickly: [First Contributions Guide](https://github.com/firstcontributions/first-contributions/blob/main/README.md).
 
 :::{admonition} **For french speakers**
 :class: note
@@ -23,23 +25,31 @@ Si vous souhaitez contribuer mais que votre anglais n'est pas au point, vous pou
 ````{toctree}
 :hidden:
 :maxdepth: 1
-:caption: Basic stuff
-
+:caption: Fundamentals
 definitions
-tree-structure
+getting-started
 nomenclature
-shared-data
+shared-resources
+tree-structure
 file-format
-metadata
-contribution-validation
 ````
 
 ````{toctree}
 :hidden:
 :maxdepth: 1
-:caption: Advanced stuff
-comments
-debug
-conservation-principle
+:caption: Key Concepts
+debug-tools
+documentation
+metadata
+generated-files
+contribution-validation
 special-functions
+good-practices
+````
+
+````{toctree}
+:hidden:
+:maxdepth: 1
+:caption: Quick References
+cli-reference
 ````

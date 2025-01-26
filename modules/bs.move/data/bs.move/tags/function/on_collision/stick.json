@@ -1,0 +1,20 @@
+{
+  "__bookshelf__": {
+    "feature": false,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html#custom-collisions",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2023/12/25",
+      "minecraft_version": "1.20.4"
+    },
+    "updated": {
+      "date": "2024/11/04",
+      "minecraft_version": "1.21.3"
+    }
+  },
+  "values": [
+    "bs.move:collision/resolvers/behaviors/stick"
+  ]
+}

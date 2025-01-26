@@ -15,7 +15,7 @@ Facilitate color conversion between various formats.
 -- Henri Matisse
 ```
 
-```{admonition} Minecraft color format
+```{admonition} Minecraft Color Format
 :class: info
 
 The internal color format for Minecraft is decimal. This module facilitates the conversion between this integer (decimal) format and other commonly used formats.
@@ -29,10 +29,10 @@ You can find below all functions available in this module.
 
 ---
 
-### Convert to hexadecimal
+### Convert to Hexadecimal
 
 :::::{tab-set}
-::::{tab-item} RGB to hexadecimal
+::::{tab-item} RGB to Hexadecimal
 
 ```{function} #bs.color:rgb_to_hex {color:[]}
 
@@ -60,7 +60,7 @@ data get storage bs:out color.rgb_to_hex
 ```
 
 ::::
-::::{tab-item} Integer to hexadecimal
+::::{tab-item} Integer to Hexadecimal
 
 ```{function} #bs.color:int_to_hex {color:<value>}
 
@@ -94,10 +94,10 @@ data get storage bs:out color.int_to_hex
 
 ---
 
-### Convert to integer
+### Convert to Integer
 
 :::::{tab-set}
-::::{tab-item} Hexadecimal to integer
+::::{tab-item} Hexadecimal to Integer
 
 ```{function} #bs.color:hex_to_int {color:<value>}
 
@@ -127,7 +127,7 @@ execute as @e[type=minecraft:zombie,sort=nearest,limit=1] store result entity @s
 ```
 
 ::::
-::::{tab-item} RGB to integer
+::::{tab-item} RGB to Integer
 
 ```{function} #bs.color:rgb_to_int {color:[]}
 
@@ -239,4 +239,3 @@ data get storage bs:out color.int_to_rgb
 Feel free to leave your questions and feedbacks below!
 
 </div>
-

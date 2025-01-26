@@ -127,6 +127,13 @@ Player Motion is a fork of Delta.
 Retina 2.0 is a raycasting library datapack using voxel traversal.
 :::
 
+:::{grid-item-card} 🏷️ Taglib
+:link: https://github.com/HeDeAnTheonlyone/Taglib
+:margin: 0 3 0 0
+
+A tags library for Minecraft data packs.
+:::
+
 :::{grid-item-card} ⏲️ TimeLib
 :link: https://modrinth.com/datapack/timelib
 :margin: 0 3 0 0

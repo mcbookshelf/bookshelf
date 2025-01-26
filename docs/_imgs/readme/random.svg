@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="120" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fond de la tuile avec coins arrondis -->
+    <rect
+        x="0"
+        y="0"
+        width="300"
+        height="100"
+        rx="5"
+        ry="5"
+        fill="#ffffff"
+        stroke="#e0e0e0"
+        stroke-width="1"
+    />
+
+    <!-- Titre -->
+    <text
+        x="30"
+        y="30"
+        font-family="Arial"
+        font-size="18"
+        font-weight="bold"
+        fill="#333333"
+    >🎲 Random</text>
+
+    <!-- Description -->
+    <text
+        x="30"
+        y="60"
+        font-family="Arial"
+        font-size="14"
+        fill="#666666"
+    >Random functions for different</text>
+
+    <text
+        x="30"
+        y="80"
+        font-family="Arial"
+        font-size="14"
+        fill="#666666"
+    >distributions and noise patterns.</text>
+</svg>

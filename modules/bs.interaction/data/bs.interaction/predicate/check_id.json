@@ -1,0 +1,18 @@
+{
+  "condition": "minecraft:entity_scores",
+  "entity": "this",
+  "scores": {
+    "bs.interaction.id": {
+      "min": {
+        "type": "minecraft:storage",
+        "storage": "bs:ctx",
+        "path": "y"
+      },
+      "max": {
+        "type": "minecraft:storage",
+        "storage": "bs:ctx",
+        "path": "y"
+      }
+    }
+  }
+}

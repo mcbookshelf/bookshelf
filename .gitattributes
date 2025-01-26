@@ -1,9 +1,8 @@
 * text=auto
-*.ipynb filter=strip-notebook-output
 
 /.github export-ignore
+/.vscode export-ignore
 .editorconfig export-ignore
 .gitattributes export-ignore
 .gitignore export-ignore
-.mcwpack.yml export-ignore
 .readthedocs.yml export-ignore

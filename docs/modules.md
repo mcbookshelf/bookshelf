@@ -8,7 +8,7 @@ Bookshelf is designed with modularity in mind. Features that serve a common purp
 
 ---
 
-## 🌟 Featured modules
+## 🌟 Featured Modules
 
 ```{include} _templates/featured-modules.md
 ```
@@ -17,17 +17,20 @@ Bookshelf is designed with modularity in mind. Features that serve a common purp
 :hidden:
 :caption: Base modules
 
-modules/biome
 modules/bitwise
 modules/block
 modules/color
+modules/environment
+modules/generate
 modules/health
 modules/hitbox
 modules/id
+modules/interaction
 modules/link
 modules/math
 modules/move
 modules/position
+modules/random
 modules/raycast
 modules/schedule
 modules/sidebar
@@ -35,7 +38,6 @@ modules/time
 modules/tree
 modules/vector
 modules/view
-modules/weather
 modules/xp
 ```
 

@@ -1,0 +1,39 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html#link-equal",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2024/09/07",
+      "minecraft_version": "1.21"
+    },
+    "updated": {
+      "date": "2024/09/07",
+      "minecraft_version": "1.21"
+    }
+  },
+  "condition": "minecraft:entity_scores",
+  "entity": "this",
+  "scores": {
+    "bs.link.to": {
+      "min": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$link.to"
+        },
+        "score": "bs.in"
+      },
+      "max": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$link.to"
+        },
+        "score": "bs.in"
+      }
+    }
+  }
+}

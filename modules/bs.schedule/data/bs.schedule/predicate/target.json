@@ -1,0 +1,18 @@
+{
+  "condition": "minecraft:entity_scores",
+  "entity": "this",
+  "scores": {
+    "bs.schedule.id": {
+      "min": {
+        "type": "minecraft:storage",
+        "storage": "bs:data",
+        "path": "schedule.slice[-1].esid"
+      },
+      "max": {
+        "type": "minecraft:storage",
+        "storage": "bs:data",
+        "path": "schedule.slice[-1].esid"
+      }
+    }
+  }
+}

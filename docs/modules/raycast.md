@@ -22,7 +22,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Run the raycast
+### Run the Raycast
 
 ```{function} #bs.raycast:run {with:{}}
 
@@ -36,10 +36,14 @@ Cast a ray from the execution position and check if it hits something.
   - {nbt}`compound` Arguments
     - {nbt}`compound` **with**: Ray input data.
       - {nbt}`bool` **blocks**: Whether the ray should stop on blocks (default: true).
-      - {nbt}`bool` {nbt}`string` **entities**: Whether the ray should stop on entities (default: false). Can also be a tag that entities must have.
+      - {nbt}`bool` {nbt}`string` **entities**: Whether the ray should stop on entities (default: false). Can also be a required entity tag.
+      - {nbt}`int` **piercing**: Number of blocks or entities the ray can pass through (default: 0).
       - {nbt}`number` **max_distance**: Maximum ray travel distance (default: 16.0).
       - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:intangible`).
       - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`).
+      - {nbt}`string` **on_hit_point**: Command to run at the exact point where the ray makes contact.
+      - {nbt}`string` **on_targeted_block**: Command to run at the block hit by the ray.
+      - {nbt}`string` **on_targeted_entity**: Command to run as and at the entity hit by the ray.
   :::
 
 :Outputs:

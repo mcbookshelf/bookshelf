@@ -24,7 +24,7 @@ You can find below all functions available in this module.
 
 ---
 
-### Aimed block
+### Aimed Block
 
 ```{function} #bs.view:at_aimed_block {run:<command>,with:{}}
 
@@ -48,7 +48,7 @@ Run a command at the aligned coordinates of the block an entity is aiming at.
 function #bs.view:at_aimed_block {run:"setblock ~ ~ ~ minecraft:sponge",with:{}}
 ```
 
-```{admonition} Advanced usage
+```{admonition} Advanced Usage
 :class: dropdown
 
 This system is a simplified, specific use case of the `#bs.raycast:run` function. It internally relies on it, allowing you to read its output and providing the flexibility to alter its behavior by modifying its input. [Learn more here](raycast.md)
@@ -58,7 +58,7 @@ This system is a simplified, specific use case of the `#bs.raycast:run` function
 
 ---
 
-### Aimed entity
+### Aimed Entity
 
 :::::{tab-set}
 ::::{tab-item} As
@@ -113,13 +113,13 @@ function #bs.view:at_aimed_entity {run:"particle minecraft:heart ~ ~2 ~ 0 0 0 0 
 ::::
 :::::
 
-```{admonition} Advanced usage
+```{admonition} Advanced Usage
 :class: dropdown
 
 This system is a simplified, specific use case of the `#bs.raycast:run` function. It internally relies on it, allowing you to read its output and providing the flexibility to alter its behavior by modifying its input. [Learn more here](raycast.md)
 ```
 
-```{admonition} Performance tip
+```{admonition} Performance Tip
 :class: tip
 
 In Minecraft, predicates can check if a player is looking at an entity. If you only need a simple player specific check, you should consider using the [Looked entity](#looked-entity) functions.
@@ -129,7 +129,7 @@ In Minecraft, predicates can check if a player is looking at an entity. If you o
 
 ---
 
-### Aimed point
+### Aimed Point
 
 ```{function} #bs.view:at_aimed_point {run:<command>,with:{}}
 
@@ -153,7 +153,7 @@ Run a command at the point that was hit by a raycast.
 function #bs.view:at_aimed_point {run:"particle minecraft:flame ~ ~ ~ 0 0 0 0 1 force",with:{}}
 ```
 
-```{admonition} Advanced usage
+```{admonition} Advanced Usage
 :class: dropdown
 
 This system is a simplified, specific use case of the `#bs.raycast:run` function. It internally relies on it, allowing you to read its output and providing the flexibility to alter its behavior by modifying its input. [Learn more here](raycast.md)
@@ -163,7 +163,7 @@ This system is a simplified, specific use case of the `#bs.raycast:run` function
 
 ---
 
-### Block placement
+### Block Placement
 
 ```{function} #bs.view:at_block_placement {run:<command>,with:{}}
 
@@ -187,13 +187,13 @@ Run a command at the precise coordinates where a block would align if placed, co
 function #bs.view:at_block_placement {run:"setblock ~ ~ ~ minecraft:sponge"}
 ```
 
-```{admonition} Advanced usage
+```{admonition} Advanced Usage
 :class: dropdown
 
 This system is a simplified, specific use case of the `#bs.raycast:run` function. It internally relies on it, allowing you to read its output and providing the flexibility to alter its behavior by modifying its input. [Learn more here](raycast.md)
 ```
 
-```{admonition} Avoid the advancement
+```{admonition} Avoid Advancements
 :class: important
 
 This function simulates block placement but is discouraged for use with the `placed_block` advancement due to potential differences in precision compared to Minecraft. Rapid mouse movements during the same tick may also result in the wrong block being targeted.
@@ -203,7 +203,7 @@ This function simulates block placement but is discouraged for use with the `pla
 
 ---
 
-### Can see "as to at"
+### Can See "as to at"
 
 ```{function} #bs.view:can_see_ata {with:{}}
 
@@ -233,7 +233,7 @@ execute at @s as @e[distance=0.1..,sort=nearest,limit=1] store success score #su
 execute if score #success bs.data matches 1 run say You're not hiding very well...
 ```
 
-```{admonition} Advanced usage
+```{admonition} Advanced Usage
 :class: dropdown
 
 This system is a simplified, specific use case of the `#bs.raycast:run` function. It internally relies on it, allowing you to read its output and providing the flexibility to alter its behavior by modifying its input. [Learn more here](raycast.md)
@@ -243,7 +243,7 @@ This system is a simplified, specific use case of the `#bs.raycast:run` function
 
 ---
 
-### In view "as to at"
+### In View "as to at"
 
 ```{function} #bs.view:in_view_ata {angle:<value>}
 
@@ -272,7 +272,7 @@ execute as @s positioned 0 5 0 run function #bs.view:in_view_ata {angle:90}
 
 ---
 
-### Looked entity
+### Looked Entity
 
 :::::{tab-set}
 ::::{tab-item} As
@@ -331,11 +331,33 @@ function #bs.view:at_looked_entity {run:"particle minecraft:crit ~ ~2 ~ 0 0 0 0 
 ::::
 :::::
 
-```{admonition} Technical limitations
+```{admonition} Technical Limitations
 :class: important
 
 As this function relies on a player specific predicate, it is exclusively designed for players. Additionally, to optimize performance, only a maximum of 255 entities are allowed to have the `bs.view.is_lookable` tag simultaneously.
 ```
+
+> **Credits**: Aksiome
+
+---
+
+## 🏷️ Tags
+
+You can find below all tags available in this module.
+
+---
+
+### Blocks
+
+::::{tab-set}
+:::{tab-item} Can See Through
+
+**`#bs.view:can_see_through`**
+
+Determine if the block is transparent.
+
+:::
+::::
 
 > **Credits**: Aksiome
 

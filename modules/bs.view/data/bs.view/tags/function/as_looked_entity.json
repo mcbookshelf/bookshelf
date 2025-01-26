@@ -1,0 +1,20 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#looked-entity",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2023/12/06",
+      "minecraft_version": "1.20.3"
+    },
+    "updated": {
+      "date": "2024/03/30",
+      "minecraft_version": "1.20.4"
+    }
+  },
+  "values": [
+    "bs.view:looked_entity/as_looked_entity"
+  ]
+}

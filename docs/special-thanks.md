@@ -2,11 +2,11 @@
 html_theme.sidebar_secondary.remove: true
 ---
 
-# ❤️ Special&nbsp;thanks
+# ❤️ Special Thanks
 
 Bookshelf is a collaborative project, made possible by the dedication and contributions of numerous individuals. We extend special thanks to those who have made significant contributions to this project, without whom it would not be what it is today.
 
-```{button-link} https://github.com/Gunivers/Bookshelf/graphs/contributors
+```{button-link} https://github.com/mcbookshelf/Bookshelf/graphs/contributors
 :color: primary
 :align: center
 :shadow:
