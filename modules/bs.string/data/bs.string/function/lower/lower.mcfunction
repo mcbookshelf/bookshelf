@@ -23,6 +23,6 @@ function bs.string:lower/loop with storage bs:ctx _
 #tellraw @a [{"text":"[DEBUG] "},{"storage":"bs:ctx","nbt":"_.list"}]
 
 #concat
-function bs.string:concat/concat
+function bs.string:concat/run
 
 data modify storage bs:out string.lower set from storage bs:ctx _.s.1

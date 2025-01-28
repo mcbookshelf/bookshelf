@@ -35,12 +35,12 @@ modules/random
 modules/raycast
 modules/schedule
 modules/sidebar
+modules/string
 modules/time
 modules/tree
 modules/vector
 modules/view
 modules/xp
-modules/string
 ```
 
 ```{toctree}

@@ -2,6 +2,8 @@
 
 **`#bs.string:help`**
 
+Manage strings (text), allowing easy transformation and searching within the text
+
 ---
 
 ## 🔧 Functions
@@ -14,23 +16,23 @@ You can find below all functions available in this module.
 
 ```{function} #bs.string:concat
 
-Merges a list of strings together into one string
+Merge a list of strings together into one string
 
 :Inputs:
-  **Storage `bs:in string.concat.list`**: {nbt}`string` The list of strings that will be merged.
+  **Storage `bs:in string.concat.list`**: {nbt}`string` The list of strings that will be merge.
 
 :Outputs:
-  **Storage `bs:out string.concat`**: {nbt}`string` The merged string.
+  **Storage `bs:out string.concat`**: {nbt}`string` The merge string.
 ```
 
-_Merged Hello and World:_
+_Merge `Hello` and `World`:_
 
 ```mcfunction
 data modify storage bs:in string.concat.list set value ["Hello ","World"]
 
 function #bs.string:concat
 
-tellraw @a [{"text":"The merged string is \""},{"storage":"bs:out","nbt":"string.concat"},{"text":"\""}]
+tellraw @a [{"text":"The merge string is \""},{"storage":"bs:out","nbt":"string.concat"},{"text":"\""}]
 ```
 
 > **Credits**: Aure31
@@ -48,12 +50,6 @@ Converts the text to uppercase
 
 :Inputs:
   **Storage `bs:in string.upper.str`**: {nbt}`string` The string to convert to uppercase
-
-  **Function Macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-   - {nbt}`string` **type** : the size of the character table (`fast` or `slow`)
-  :::
 
 :Outputs:
   **Strorage `bs:out string.upper`**: {nbt}`string` The uppercase string
@@ -78,12 +74,6 @@ Converts the text to lowercase
 
 :Inputs:
   **Storage `bs:in string.lower.str`**: {nbt}`string` The string to convert to lowercase
-
-  **Function Macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-   - {nbt}`string` **type** : the size of the character table (`fast` or `slow`)
-  :::
 
 :Outputs:
   **Strorage `bs:out string.lower`**: {nbt}`string` The lowercase string

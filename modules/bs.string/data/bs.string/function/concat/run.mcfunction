@@ -12,15 +12,19 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-say inverse
-$data modify storage bs:ctx _.test set string storage bs:ctx _.str -$(y)
-data modify storage bs:ctx _.ltr set string storage bs:ctx _.test 0 1
-execute store success score #t bs.ctx run data modify storage bs:ctx _.test set from storage bs:in string.find.needle
 
-data modify storage bs:ctx z set from storage bs:ctx y
-execute if score #t bs.ctx matches 0 run return run function bs.string:find/inverse/up
+# Modified from https://github.com/CMDred/StringLib/
 
+data modify storage bs:ctx _.s.1 set from storage bs:ctx _.list[-1]
+data remove storage bs:ctx _.list[-1]
+execute store result storage bs:ctx x int 1 store result score #c bs.ctx store result score #n bs.ctx if data storage bs:ctx _.list[]
 
-function bs.string:find/match_patern with storage bs:ctx
+# we dont need below 64 since it's already handled in a single cycle
+execute if score #n bs.ctx matches 64.. run function bs.string:concat/binary
 
-function bs.string:find/inverse/skip with storage bs:ctx
+# if stuff remains
+scoreboard players remove #c bs.ctx 1
+# Which dispatch to call
+execute store result storage bs:ctx y int 1 run scoreboard players operation #c bs.ctx /= 8 bs.const
+
+execute if score #n bs.ctx matches 1.. run function bs.string:concat/dipatch with storage bs:ctx

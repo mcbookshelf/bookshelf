@@ -15,17 +15,8 @@
 
 # Modified from https://github.com/CMDred/StringLib/
 
-data modify storage bs:ctx _.s.1 set from storage bs:ctx _.list[-1]
-data remove storage bs:ctx _.list[-1]
-execute store result score #n bs.ctx run data get storage bs:ctx _.list
+data modify storage bs:ctx _ set from storage bs:in string.concat
 
-# we dont need below 64 since it's already handled in a single cycle
-execute if score #n bs.ctx matches 64.. run function bs.string:concat/binary
-say Macros
-# if stuff remains
-execute store result storage bs:ctx x int 1 store result score #c bs.ctx run scoreboard players get #n bs.ctx
-scoreboard players remove #c bs.ctx 1
-# Which dispatch to call
-execute store result storage bs:ctx y int 1 run scoreboard players operation #c bs.ctx /= 8 bs.const
+function bs.string:concat/run
 
-execute if score #n bs.ctx matches 1.. run function bs.string:concat/macro with storage bs:ctx
+data modify storage bs:out string.concat set from storage bs:ctx _.s.1

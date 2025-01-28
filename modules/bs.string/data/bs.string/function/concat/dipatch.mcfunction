@@ -13,10 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# Modified from https://github.com/CMDred/StringLib/
-
-data modify storage bs:ctx _ set from storage bs:in string.concat
-
-function bs.string:concat/concat
-
-data modify storage bs:out string.concat set from storage bs:ctx _.s.1
+$function bs.string:concat/dispatch/$(y) with storage bs:ctx

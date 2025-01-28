@@ -34,6 +34,6 @@ function bs.string:replace/loop with storage bs:ctx
 #tellraw @a [{"storage": "bs:ctx","nbt": "_.l"}]
 #concat
 #tellraw @a [{"storage": "bs:ctx","nbt": "_.s"}," ",{"storage": "bs:ctx","nbt": "x"}]
-function bs.string:concat/concat
+function bs.string:concat/run
 
 data modify storage bs:out string.replace set from storage bs:ctx _.s.1

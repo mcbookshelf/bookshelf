@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$scoreboard players set #bs.string.occurrence bs.data $(occurrence)
+$scoreboard players set #o bs.ctx $(occurrence)
 data modify storage bs:out string.find set value []
 scoreboard players set #c bs.ctx 0
 execute store result storage bs:ctx x int 1 run scoreboard players set #i bs.ctx 0
@@ -29,7 +29,5 @@ data modify storage bs:ctx _.ltr set string storage bs:ctx _.needle 0 1
 data modify storage bs:ctx _.needle set string storage bs:ctx _.needle 1
 function bs.string:find/precompute with storage bs:ctx _
 
-execute if score #bs.string.occurrence bs.data matches 0 run return run function bs.string:find/normal/normal with storage bs:ctx
-execute if score #bs.string.occurrence bs.data matches 1.. run return run function bs.string:find/count/count with storage bs:ctx
-#execute store result storage bs:ctx x int 1 store result score #i bs.ctx run scoreboard players get #l bs.ctx
-#return run function bs.string:find/inverse/inverse with storage bs:ctx
+execute if score #o bs.ctx matches 0 run return run function bs.string:find/normal/normal with storage bs:ctx
+execute if score #o bs.ctx matches 1.. run return run function bs.string:find/count/count with storage bs:ctx
