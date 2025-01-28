@@ -15,8 +15,7 @@
 
 $scoreboard players set #o bs.ctx $(occurrence)
 data modify storage bs:out string.find set value []
-scoreboard players set #c bs.ctx 0
-execute store result storage bs:ctx x int 1 run scoreboard players set #i bs.ctx 0
+execute store result score #c bs.ctx store result storage bs:ctx x int 1 run scoreboard players set #i bs.ctx 0
 data modify storage bs:ctx _ set from storage bs:in string.find
 execute store result score #l bs.ctx run data get storage bs:in string.find.str
 execute store result score #p bs.ctx store result score #e bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.needle

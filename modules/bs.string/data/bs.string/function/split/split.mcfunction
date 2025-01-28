@@ -16,8 +16,7 @@ $scoreboard players set #o bs.ctx $(maxsplit)
 
 #reset
 data modify storage bs:out string.split set value []
-scoreboard players set #c bs.ctx 0
-scoreboard players set #i bs.ctx 0
+execute store result score #c bs.ctx run scoreboard players set #i bs.ctx 0
 scoreboard players set #d bs.ctx -1
 
 #size check
