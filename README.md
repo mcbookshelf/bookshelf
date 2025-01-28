@@ -57,8 +57,8 @@ Bookshelf (formerly known as Gunivers Libs) is a modular library datapack design
     </picture>
   &nbsp;
     <picture>
-        <source media="(prefers-color-scheme: dark)" alt="generate" srcset="docs/_imgs/readme/generate-dark.svg">
-        <img alt="generate" src="docs/_imgs/readme/generate.svg">
+        <source media="(prefers-color-scheme: dark)" alt="generation" srcset="docs/_imgs/readme/generation-dark.svg">
+        <img alt="generation" src="docs/_imgs/readme/generation.svg">
     </picture>
   &nbsp;
     <picture>
@@ -86,7 +86,7 @@ That’s why we started this project, to provide a variety of reusable tools and
 While we strive to keep our modules as optimized as possible, our top priority is accessibility. We focus on creating features that are easy to use and simple to install, ensuring they’re practical for everyone.
 
 > “I have seen further than others because I have stood on the shoulders of giants.”
-> 
+>
 > -- Isaac Newton
 
 

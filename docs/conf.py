@@ -3,7 +3,7 @@ import os
 # -- Project information -----------------------------------------------------
 
 project = "Bookshelf"
-copyright = "2024, Gunivers"  # noqa: A001
+copyright = "2025, Gunivers"  # noqa: A001
 author = "Gunivers"
 
 

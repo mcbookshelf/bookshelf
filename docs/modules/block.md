@@ -183,6 +183,12 @@ Get all data related to the block at the current location, including its state a
     - {nbt}`string` **state**: Represent the state of a block (e.g., `[shape=straight]`).
     - {nbt}`compound` **nbt**: Data tags used by block entities or an empty string.
     - {nbt}`compound` **properties**: Block state as properties (used by entities like falling blocks).
+    - {nbt}`compound` **sounds**: The sound list of a block.
+      - {nbt}`string` **break**: The sound played when a player break the block.
+      - {nbt}`string` **hit**: The sound played when a player hit the block.
+      - {nbt}`string` **fall**: The sound played when a player fall on the block.
+      - {nbt}`string` **place**: The sound played when a player place the block.
+      - {nbt}`string` **step**: The sound played when a player step on the block.
   :::
 ```
 
@@ -217,6 +223,12 @@ Get the block type at the current location. Although states, NBTs, and propertie
     - {nbt}`string` **state**: Represent the state of a block **[empty string]**.
     - {nbt}`compound` **nbt**: Data tags used by block entities **[empty string]**.
     - {nbt}`compound` **properties**: Block state as properties **[empty compound]**.
+    - {nbt}`compound` **sounds**: The sound list of a block.
+      - {nbt}`string` **break**: The sound played when a player break the block.
+      - {nbt}`string` **hit**: The sound played when a player hit the block.
+      - {nbt}`string` **fall**: The sound played when a player fall on the block.
+      - {nbt}`string` **place**: The sound played when a player place the block.
+      - {nbt}`string` **step**: The sound played when a player step on the block.
   :::
 ```
 
@@ -891,6 +903,46 @@ data modify storage bs:in block.emit_block_particle merge value { delta: "0 0 0"
 
 # Emit the block particle
 function #bs.block:emit_block_particle
+```
+
+::::
+::::{tab-item} Block Sound
+
+```{function} #bs.block:play_block_sound
+
+Play a block sound of the given block.
+
+:Inputs:
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where the sound will be played.
+
+  **Storage `bs:in block.play_block_sound`**:
+  :::{treeview}
+  - {nbt}`compound` Block sound data
+    - {nbt}`string` **sound**: The sound to play. Usually took from the `sounds` property of the virtual block (cf get functions).
+    - {nbt}`string` **source**: The source of the sound. Similar to the /playsound command.
+    - {nbt}`string` **targets**: The targets of the sound. Similar to the /playsound command.
+    - {nbt}`string` **pos**: X Y Z coordinates, the position of the sound. Similar to the /playsound command.
+    - {nbt}`int` **volume**: Volume of the sound. Similar to the /playsound command.
+    - {nbt}`int` **pitch**: Pitch of the sound. Similar to the /playsound command.
+    - {nbt}`int` **min_volume**: Minimum volume of the sound. Similar to the /playsound command.
+  :::
+
+:Outputs:
+  **State**: The sound is played.
+```
+
+*Play the sound of the block at 0 0 0:*
+
+```mcfunction
+# Get block data
+execute positioned 0 0 0 run function #bs.block:get_block
+
+# Setup the input
+data modify storage bs:in block.play_block_sound set value { source: "block", targets: "@s", pos: "~ ~ ~", volume: 1, pitch: 1, min_volume: 0 }
+data modify storage bs:in block.play_block_sound.sound set from storage bs:out block.sounds.break
+
+# Play the block sound
+function #bs.block:play_block_sound
 ```
 
 ::::

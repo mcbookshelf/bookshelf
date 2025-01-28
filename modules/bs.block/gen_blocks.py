@@ -5,6 +5,7 @@ from itertools import chain, permutations
 
 import numpy as np
 from beet import BlockTag, Context, Function, LootTable
+from core.common.logger import log_step
 from pydantic import BaseModel
 
 from core.common.helpers import (
@@ -19,6 +20,7 @@ from core.definitions import (
     BLOCKS_URL,
     ITEMS_URL,
     MINECRAFT_VERSIONS,
+    SOUNDS_URL,
     SPECIAL_ITEMS,
 )
 
@@ -26,6 +28,7 @@ type StrDict = dict[str, str]
 type StatesDict = dict[str, list[str]]
 type StatesTuple = tuple[tuple[str, tuple[str, ...]], ...]
 type RawBlocks = dict[str, tuple[StatesDict, StrDict]]
+type RawSounds = dict[str, dict[str, str]]
 
 class Block(BaseModel):
     """Represents a Minecraft block."""
@@ -33,6 +36,7 @@ class Block(BaseModel):
     type: str
     item: str | None
     group: int
+    sounds: dict[str, str]
     states: list["State"]
 
 class State(BaseModel):
@@ -95,25 +99,32 @@ def get_blocks(ctx: Context, version: str) -> list[Block]:
             error_msg = f"Expected a list, but got {type(raw_items)}"
             raise TypeError(error_msg)
 
+        raw_sounds = download_and_parse_json(cache, SOUNDS_URL.format(version))
+        if not isinstance(raw_sounds, dict):
+            error_msg = f"Expected a dict, but got {type(raw_sounds)}"
+            raise TypeError(error_msg)
+
         items = {
             with_prefix(item): with_prefix(item)
             for item in raw_items
         } | SPECIAL_ITEMS
-        return group_and_optimize_blocks(raw_blocks, items)
+        return group_and_optimize_blocks(raw_blocks, items, raw_sounds)
 
     return [Block.model_validate(data) for data in get_optimized_blocks()]
 
 
-def group_and_optimize_blocks(raw_blocks: RawBlocks, items: StrDict) -> list:
+def group_and_optimize_blocks(raw_blocks: RawBlocks, items: StrDict, raw_sounds: RawSounds) -> list:
     """Group blocks and optimizes block state sequences."""
     blocks: list[dict] = []
     groups: dict[StatesTuple, int] = {(): 0}
 
     for block, (states, properties) in raw_blocks.items():
         ordered_states = reorder_states_options(states, properties)
+        prefixed_block = with_prefix(block)
         insort(blocks, {
-            "type": with_prefix(block),
-            "item": items.get(with_prefix(block)),
+            "type": prefixed_block,
+            "item": items.get(prefixed_block),
+            "sounds": raw_sounds.get(prefixed_block, {}),
             "group": groups.setdefault(ordered_states, len(groups)),
         }, key=lambda x: x["group"])
 

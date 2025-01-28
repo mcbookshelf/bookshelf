@@ -30,7 +30,7 @@ Clear events registered for the specified interaction entity.
 :Inputs:
   **Execution `as <entity>`**: Interaction entity for which the events will be cleared.
 
-  **Function Macro**:
+  **Function macro**:
   :::{treeview}
   - {nbt}`compound` **Arguments**:
     - {nbt}`compound` **with**: Parameters to filter which events to clear. Clear all events if empty.
@@ -98,7 +98,7 @@ Each interaction can respond to multiple events.
 :Inputs:
   **Execution `as <entity>`**: Interaction entity for which the event is registered.
 
-  **Function Macro**:
+  **Function macro**:
   :::{treeview}
   - {nbt}`compound` **Arguments**:
     - {nbt}`string` **run**: Command to execute upon right-click.
@@ -123,7 +123,7 @@ Each interaction can respond to multiple events.
 :Inputs:
   **Execution `as <entity>`**: Interaction entity for which the event is registered.
 
-  **Function Macro**:
+  **Function macro**:
   :::{treeview}
   - {nbt}`compound` **Arguments**:
     - {nbt}`string` **run**: Command to execute while hovering over the interaction.
@@ -148,7 +148,7 @@ Each interaction can respond to multiple events.
 :Inputs:
   **Execution `as <entity>`**: Interaction entity for which the event is registered.
 
-  **Function Macro**:
+  **Function macro**:
   :::{treeview}
   - {nbt}`compound` **Arguments**:
     - {nbt}`string` **run**: Command to execute when hovering begins.
@@ -173,7 +173,7 @@ Each interaction can respond to multiple events.
 :Inputs:
   **Execution `as <entity>`**: Interaction entity for which the event is registered.
 
-  **Function Macro**:
+  **Function macro**:
   :::{treeview}
   - {nbt}`compound` **Arguments**:
     - {nbt}`string` **run**: Command to execute when hovering ends.

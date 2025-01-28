@@ -346,6 +346,21 @@
           }
         },
         {
+          "id": "#bs.block:play_block_sound",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
           "id": "#bs.block:remove_properties",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-state",
           "authors": [
@@ -717,12 +732,12 @@
       ]
     },
     {
-      "id": "bs.generate",
-      "name": "Generate",
-      "slug": "bookshelf-generate",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.generate/README.md",
+      "id": "bs.generation",
+      "name": "Generation",
+      "slug": "bookshelf-generation",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.generation/README.md",
       "description": "Generate diverse terrains and landscapes, incorporating natural features.",
-      "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generate.html",
+      "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html",
       "kind": "data_pack",
       "tags": [
         "default"
@@ -732,8 +747,8 @@
       ],
       "features": [
         {
-          "id": "#bs.generate:fractal_shape_2d",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generate.html#shape-2d",
+          "id": "#bs.generation:gen_fractal_shape_2d",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#shape-2d",
           "authors": [
             "Aksiome"
           ],
@@ -747,8 +762,8 @@
           }
         },
         {
-          "id": "#bs.generate:shape_2d",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generate.html#shape-2d",
+          "id": "#bs.generation:gen_shape_2d",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#shape-2d",
           "authors": [
             "Aksiome"
           ],
@@ -762,8 +777,8 @@
           }
         },
         {
-          "id": "#bs.generate:simplex_shape_2d",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generate.html#shape-2d",
+          "id": "#bs.generation:gen_simplex_shape_2d",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#shape-2d",
           "authors": [
             "Aksiome"
           ],
@@ -914,6 +929,21 @@
       ],
       "features": [
         {
+          "id": "#bs.hitbox:can_pass_through",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/24",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/24",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
           "id": "#bs.hitbox:get_block",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get",
           "authors": [
@@ -960,7 +990,7 @@
         },
         {
           "id": "#bs.hitbox:intangible",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#intangible",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
           "authors": [
             "Aksiome"
           ],
@@ -3974,6 +4004,21 @@
           "updated": {
             "date": "2024/04/20",
             "minecraft_version": "1.20.4"
+          }
+        },
+        {
+          "id": "#bs.view:can_see_through",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#blocks",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/24",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/24",
+            "minecraft_version": "1.21.4"
           }
         },
         {

@@ -22,7 +22,7 @@ modules/bitwise
 modules/block
 modules/color
 modules/environment
-modules/generate
+modules/generation
 modules/health
 modules/hitbox
 modules/id

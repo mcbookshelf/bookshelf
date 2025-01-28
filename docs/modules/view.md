@@ -341,6 +341,28 @@ As this function relies on a player specific predicate, it is exclusively design
 
 ---
 
+## 🏷️ Tags
+
+You can find below all tags available in this module.
+
+---
+
+### Blocks
+
+::::{tab-set}
+:::{tab-item} Can See Through
+
+**`#bs.view:can_see_through`**
+
+Determine if the block is transparent.
+
+:::
+::::
+
+> **Credits**: Aksiome
+
+---
+
 <div id="comments" align=center>
 
 **💬 Did it help you?**

@@ -31,7 +31,7 @@ def beet_default(ctx: Context) -> None:
 
     with ctx.override(generate_namespace=namespace):
         ctx.generate("has_offset", gen_has_offset_block_tag(shapes, version))
-        ctx.generate("is_composite", gen_is_composite_block_tag(shapes, version))
+        ctx.generate("not_full_cube", gen_not_full_cube_block_tag(shapes, version))
 
         ctx.generate("get/get_block", gen_get_block_loot_table(shapes, namespace))
         for entry in filter(lambda entry: entry.group > 0, shapes):
@@ -155,7 +155,7 @@ def gen_has_offset_block_tag(shapes: list[BlockShapes], version: str) -> BlockTa
     return BlockTag({
         "__bookshelf__": {
             "feature": True,
-            "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#has-offset",
+            "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
             "authors": ["Aksiome"],
             "created": {"date": "2024/09/28", "minecraft_version": "1.21"},
             "updated": {
@@ -167,12 +167,12 @@ def gen_has_offset_block_tag(shapes: list[BlockShapes], version: str) -> BlockTa
     })
 
 
-def gen_is_composite_block_tag(shapes: list[BlockShapes], version: str) -> BlockTag:
+def gen_not_full_cube_block_tag(shapes: list[BlockShapes], version: str) -> BlockTag:
     """Generate a block tag for non simple cubes."""
     return BlockTag({
         "__bookshelf__": {
             "feature": True,
-            "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-composite",
+            "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
             "authors": ["Aksiome"],
             "created": {"date": "2024/09/28", "minecraft_version": "1.21"},
             "updated": {

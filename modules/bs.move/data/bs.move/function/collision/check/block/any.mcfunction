@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2024 Gunivers
+# Copyright (c) 2025 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
 #
@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless block ~ ~ ~ #bs.hitbox:is_composite run return run function bs.move:collision/check/block/cube
+execute unless block ~ ~ ~ #bs.hitbox:not_full_cube run return run function bs.move:collision/check/block/cube
 
 function #bs.hitbox:get_block
 execute store result score #move.ox bs.data run data get storage bs:out hitbox.offset.x 10000000

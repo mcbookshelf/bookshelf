@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2024 Gunivers
+# Copyright (c) 2025 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
 #
@@ -17,11 +17,3 @@ forceload add -30000000 1600
 execute unless entity B5-0-0-0-1 run summon minecraft:marker -30000000 0 1600 {UUID:[I;181,0,0,1],Tags:["bs.entity","bs.persistent","smithed.entity","smithed.strict"]}
 
 scoreboard objectives add bs.data dummy [{"text":"BS ","color":"dark_gray"},{"text":"Data","color":"aqua"}]
-
-execute unless data storage bs:in view.can_see_ata run data modify storage bs:in view.can_see_ata set value { \
-  ignored_blocks: "#bs.view:can_see_through", \
-}
-
-execute unless data storage bs:in view.in_view_ata run data modify storage bs:in view.in_view_ata set value { \
-  angle: 120.0, \
-}
