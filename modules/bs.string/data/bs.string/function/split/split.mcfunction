@@ -12,12 +12,13 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-$scoreboard players set #bs.string.maxsplit bs.data $(maxsplit)
+$scoreboard players set #o bs.ctx $(maxsplit)
 
 #reset
 data modify storage bs:out string.split set value []
 scoreboard players set #c bs.ctx 0
-execute store result storage bs:ctx x int 1 store result storage bs:ctx z int 1 run scoreboard players set #i bs.ctx 0
+scoreboard players set #i bs.ctx 0
+scoreboard players set #d bs.ctx -1
 
 #size check
 execute store result score #l bs.ctx run data get storage bs:in string.split.str
@@ -28,14 +29,16 @@ scoreboard players add #l bs.ctx 1
 
 #moving values
 data modify storage bs:ctx _ set from storage bs:in string.split
+data modify storage bs:ctx _.cut set from storage bs:in string.split.str
 scoreboard players operation #l bs.ctx -= #p bs.ctx
 
 #precompute
 data modify storage bs:ctx _.ltr set string storage bs:ctx _.separator 0 1
 data modify storage bs:ctx _.separator set string storage bs:ctx _.separator 1
-function bs.string:find/precompute with storage bs:ctx _
+data remove storage bs:ctx _.patern
+function bs.string:split/precompute with storage bs:ctx _
 
 #check values
-execute if score #bs.string.maxsplit bs.data matches 0 run return run function bs.string:split/normal/loop with storage bs:ctx
-execute if score #bs.string.maxsplit bs.data matches 1.. run return run function bs.string:split/count/loop with storage bs:ctx
+execute if score #o bs.ctx matches 0 run return run function bs.string:split/normal/normal with storage bs:ctx
+execute if score #o bs.ctx matches 1.. run return run function bs.string:split/count/count with storage bs:ctx
 tellraw @a [{"text":"[Bookshelf] ","color":"gold"},{"text":"Error: ","color":"red"},{"text":"Doesn't support reversed split","color":"red"}]

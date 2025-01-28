@@ -12,15 +12,11 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+say skip
+$scoreboard players add #i bs.ctx $(z)
 
-execute if score #l bs.ctx <= #i bs.ctx run return run function bs.string:split/last with storage bs:ctx
+execute if score #l bs.ctx <= #i bs.ctx run return run data modify storage bs:out string.split append from storage bs:ctx _.cut
 
-$data modify storage bs:ctx _.test set string storage bs:ctx _.str 0 $(y)
-execute store success score #t bs.ctx run data modify storage bs:ctx _.test set from storage bs:in string.split.separator
-execute if score #t bs.ctx matches 0 run return run function bs.string:split/count/cut with storage bs:ctx
+$data modify storage bs:ctx _.str set string storage bs:ctx _.str $(z)
 
-
-execute store result storage bs:ctx x int 1 run scoreboard players add #i bs.ctx 1
-data modify storage bs:ctx _.str set string storage bs:ctx _.str 1
-
-function bs.string:split/count/loop with storage bs:ctx
+function bs.string:split/count/count with storage bs:ctx

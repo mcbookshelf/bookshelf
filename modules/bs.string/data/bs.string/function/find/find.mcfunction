@@ -27,7 +27,9 @@ scoreboard players operation #l bs.ctx -= #p bs.ctx
 #precompute
 data modify storage bs:ctx _.ltr set string storage bs:ctx _.needle 0 1
 data modify storage bs:ctx _.needle set string storage bs:ctx _.needle 1
+data remove storage bs:ctx _.patern
 function bs.string:find/precompute with storage bs:ctx _
 
 execute if score #o bs.ctx matches 0 run return run function bs.string:find/normal/normal with storage bs:ctx
 execute if score #o bs.ctx matches 1.. run return run function bs.string:find/count/count with storage bs:ctx
+tellraw @a [{"text":"[Bookshelf] ","color":"gold"},{"text":"Error: ","color":"red"},{"text":"does not accept negative values","color":"red"}]

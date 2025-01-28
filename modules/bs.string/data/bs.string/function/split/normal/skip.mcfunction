@@ -13,4 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:out string.split append string storage bs:in string.split.str $(z)
+$scoreboard players add #i bs.ctx $(z)
+
+execute if score #l bs.ctx <= #i bs.ctx run return run data modify storage bs:out string.split append from storage bs:ctx _.cut
+
+$data modify storage bs:ctx _.str set string storage bs:ctx _.str $(z)
+
+function bs.string:split/normal/normal with storage bs:ctx

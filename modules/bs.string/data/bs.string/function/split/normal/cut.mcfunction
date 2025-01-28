@@ -13,8 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:out string.split append string storage bs:in string.split.str $(z) $(x)
-execute store result storage bs:ctx x int 1 store result storage bs:ctx z int 1 run scoreboard players operation #i bs.ctx += #p bs.ctx
-
+$data modify storage bs:out string.split append string storage bs:ctx _.cut 0 $(x)
 $data modify storage bs:ctx _.str set string storage bs:ctx _.str $(y)
-function bs.string:split/normal/loop with storage bs:ctx
+$scoreboard players add #i bs.ctx $(y)
+data modify storage bs:ctx _.cut set from storage bs:ctx _.str
+
+execute if score #l bs.ctx <= #i bs.ctx run return run data modify storage bs:out string.split append from storage bs:ctx _.cut
+
+scoreboard players set #d bs.ctx -1
+function bs.string:split/normal/normal with storage bs:ctx
