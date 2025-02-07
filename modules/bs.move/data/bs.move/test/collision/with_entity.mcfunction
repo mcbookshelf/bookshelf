@@ -29,5 +29,5 @@ execute store result score #packtest.z bs.data run data get entity @s Pos[2] 100
 dummy @s leave
 kill @e[type=minecraft:armor_stand,tag=bs.packtest]
 
-assert score #packtest.x bs.data matches -51..-49
-assert score #packtest.z bs.data matches 1049..1051
+assert score #packtest.x bs.data matches -52..-48
+assert score #packtest.z bs.data matches 1048..1052

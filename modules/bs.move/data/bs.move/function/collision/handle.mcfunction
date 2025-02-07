@@ -20,19 +20,22 @@ execute store result storage bs:data move.x int -1 run data get storage bs:ctx _
 execute store result storage bs:data move.y int -1 run data get storage bs:ctx _[1]
 execute store result storage bs:data move.z int -1 run data get storage bs:ctx _[2]
 execute summon minecraft:marker run function bs.move:collision/utils/get_relative_pos with storage bs:data move
-execute store result score #move.vx bs.data store result score #move.rx bs.data store result score #move.sx bs.data run data get storage bs:ctx _[0] -10000000
-execute store result score #move.vy bs.data store result score #move.ry bs.data store result score #move.sy bs.data run data get storage bs:ctx _[1] -10000000
-execute store result score #move.vz bs.data store result score #move.rz bs.data store result score #move.sz bs.data run data get storage bs:ctx _[2] -10000000
+execute store result score #move.rx bs.data store result score #move.sx bs.data run data get storage bs:ctx _[0] 10000000
+execute store result score #move.ry bs.data store result score #move.sy bs.data run data get storage bs:ctx _[1] 10000000
+execute store result score #move.rz bs.data store result score #move.sz bs.data run data get storage bs:ctx _[2] 10000000
 execute in minecraft:overworld positioned as @s as B5-0-0-0-1 run function bs.move:collision/utils/get_relative_entity_pos with storage bs:data move
-execute store result score #move.nx bs.data run data get storage bs:ctx _[0] -10000000
-execute store result score #move.ny bs.data run data get storage bs:ctx _[1] -10000000
-execute store result score #move.nz bs.data run data get storage bs:ctx _[2] -10000000
-execute store result score #move.nx bs.data run scoreboard players operation #move.vx bs.data -= #move.nx bs.data
-execute store result score #move.ny bs.data run scoreboard players operation #move.vy bs.data -= #move.ny bs.data
-execute store result score #move.nz bs.data run scoreboard players operation #move.vz bs.data -= #move.nz bs.data
-scoreboard players operation #move.rx bs.data %= -10000000 bs.const
-scoreboard players operation #move.ry bs.data %= -10000000 bs.const
-scoreboard players operation #move.rz bs.data %= -10000000 bs.const
+execute store result score #move.vx bs.data run data get storage bs:ctx _[0] 10000000
+execute store result score #move.vy bs.data run data get storage bs:ctx _[1] 10000000
+execute store result score #move.vz bs.data run data get storage bs:ctx _[2] 10000000
+execute store result score #move.nx bs.data run scoreboard players operation #move.vx bs.data -= #move.rx bs.data
+execute store result score #move.ny bs.data run scoreboard players operation #move.vy bs.data -= #move.ry bs.data
+execute store result score #move.nz bs.data run scoreboard players operation #move.vz bs.data -= #move.rz bs.data
+scoreboard players operation #move.rx bs.data %= 10000000 bs.const
+scoreboard players operation #move.ry bs.data %= 10000000 bs.const
+scoreboard players operation #move.rz bs.data %= 10000000 bs.const
+scoreboard players operation #move.rx bs.data *= -1 bs.const
+scoreboard players operation #move.ry bs.data *= -1 bs.const
+scoreboard players operation #move.rz bs.data *= -1 bs.const
 scoreboard players operation #move.vx bs.data /= 10000 bs.const
 scoreboard players operation #move.vy bs.data /= 10000 bs.const
 scoreboard players operation #move.vz bs.data /= 10000 bs.const
