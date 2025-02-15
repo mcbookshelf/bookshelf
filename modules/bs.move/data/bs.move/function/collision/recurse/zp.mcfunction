@@ -17,4 +17,4 @@ $execute if score #move.b bs.data matches 1 unless block ~ ~ ~ $(ignored_blocks)
 $execute if score #move.e bs.data matches 1 as @e[type=!$(ignored_entities),tag=$(entities),tag=!bs.move.omit,dx=0] run function bs.move:collision/check/entity/any
 
 scoreboard players add #move.z bs.data 10000000
-execute if score #move.z bs.data <= #move.nz bs.data positioned ~ ~ ~1 run function bs.move:collision/recurse/zp with storage bs:data move
+execute if score #move.z bs.data <= #move.mz bs.data positioned ~ ~ ~1 run function bs.move:collision/recurse/zp with storage bs:data move

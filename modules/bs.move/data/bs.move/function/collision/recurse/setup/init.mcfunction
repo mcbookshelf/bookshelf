@@ -13,4 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute align xyz run function bs.move:collision/recurse/setup/$(sx) with storage bs:data move
+$function bs.move:collision/recurse/setup/$(dx)
+$function bs.move:collision/recurse/setup/$(dy)
+$function bs.move:collision/recurse/setup/$(dz)
+
+function bs.move:collision/recurse/run with storage bs:data move

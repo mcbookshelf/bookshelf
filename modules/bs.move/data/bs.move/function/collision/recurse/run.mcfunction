@@ -13,8 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players operation #move.y bs.data = #move.ry bs.data
-$function bs.move:collision/recurse/$(dy) with storage bs:data move
-
-scoreboard players add #move.x bs.data 10000000
-execute if score #move.x bs.data <= #move.mx bs.data positioned ~1 ~ ~ run function bs.move:collision/recurse/xp with storage bs:data move
+scoreboard players operation #move.x bs.data = #move.rx bs.data
+$execute positioned ~$(rx) ~$(ry) ~$(rz) run function bs.move:collision/recurse/$(dx) with storage bs:data move

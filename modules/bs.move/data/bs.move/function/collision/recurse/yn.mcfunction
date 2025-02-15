@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 scoreboard players operation #move.z bs.data = #move.rz bs.data
-$function bs.move:collision/recurse/$(sz) with storage bs:data move
+$function bs.move:collision/recurse/$(dz) with storage bs:data move
 
 scoreboard players remove #move.y bs.data 10000000
-execute if score #move.y bs.data >= #move.ny bs.data positioned ~ ~-1 ~ run function bs.move:collision/recurse/yn with storage bs:data move
+execute if score #move.y bs.data >= #move.my bs.data positioned ~ ~-1 ~ run function bs.move:collision/recurse/yn with storage bs:data move

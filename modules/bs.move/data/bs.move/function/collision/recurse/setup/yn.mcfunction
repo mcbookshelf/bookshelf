@@ -13,6 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players remove #move.ny bs.data 10000000
-
-$function bs.move:collision/recurse/setup/$(sz) with storage bs:data move
+execute store result score #move.my bs.data run scoreboard players operation #move.ry bs.data *= -1 bs.const
+execute store result score #r bs.ctx run scoreboard players operation #move.ry bs.data %= -10000000 bs.const
+execute store result storage bs:data move.ry int -.0000000999999999999999 run scoreboard players operation #r bs.ctx -= #move.h bs.data
+execute store result score #r bs.ctx run data get storage bs:data move.ry 10000000
+scoreboard players operation #move.ry bs.data += #r bs.ctx

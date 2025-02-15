@@ -13,6 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players operation #move.nx bs.data += #move.w bs.data
-
-$function bs.move:collision/recurse/setup/$(sy) with storage bs:data move
+scoreboard players operation #move.rx bs.data *= -1 bs.const
+scoreboard players operation #move.mx bs.data -= #move.rx bs.data
+execute store result score #r bs.ctx run scoreboard players operation #move.rx bs.data %= -10000000 bs.const
+scoreboard players operation #move.mx bs.data += #move.rx bs.data
+scoreboard players operation #r bs.ctx += #move.w bs.data
+execute store result storage bs:data move.rx int 1 run scoreboard players operation #r bs.ctx /= -10000000 bs.const
+scoreboard players operation #r bs.ctx *= -10000000 bs.const
+scoreboard players operation #move.rx bs.data -= #r bs.ctx
+scoreboard players operation #move.mx bs.data -= #move.w bs.data
+scoreboard players operation #move.mx bs.data /= -10000000 bs.const
+scoreboard players operation #move.mx bs.data *= 10000000 bs.const
