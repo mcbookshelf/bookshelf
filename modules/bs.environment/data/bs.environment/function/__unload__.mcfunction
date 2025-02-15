@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-setblock -30000000 0 1606 minecraft:air
+kill B5-0-0-0-3
 forceload remove -30000000 1600
 
 data remove storage bs:out environment

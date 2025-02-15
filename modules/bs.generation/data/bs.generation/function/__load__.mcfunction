@@ -14,7 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 forceload add -30000000 1600
-setblock -30000000 0 1606 minecraft:decorated_pot
 execute unless entity B5-0-0-0-1 run summon minecraft:marker -30000000 0 1600 {UUID:[I;181,0,0,1],Tags:["bs.entity","bs.persistent","smithed.entity","smithed.strict"]}
 
 scoreboard objectives add bs.ctx dummy [{"text":"BS ","color":"dark_gray"},{"text":"Context","color":"aqua"}]

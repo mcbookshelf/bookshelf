@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data remove storage bs:out block
-loot replace block -30000000 0 1606 container.0 loot bs.block:get/get_type
-data modify storage bs:out block set from block -30000000 0 1606 item.components."minecraft:custom_data"
+loot replace entity B5-0-0-0-3 container.0 loot bs.block:get/get_type
+data modify storage bs:out block set from entity B5-0-0-0-3 item.components."minecraft:custom_data"
