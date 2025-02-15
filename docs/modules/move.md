@@ -64,7 +64,15 @@ Teleport an entity by its velocity scores while handling collisions.
 ::::
 ::::{tab-item} Local
 
-```{function} #bs.move:apply_local_vel {scale:<scaling>,with:{}}
+`````{function} #bs.move:apply_local_vel {scale:<scaling>,with:{}}
+
+```{admonition} Experimental
+:class: warning
+
+Always prefer the canonical version. Constant conversion between bases can lead to loss of accuracy, sometimes causing unpredictable behavior.
+
+If you need to "shoot" an entity in a direction, you can still set velocity as a local vector and run `#bs.move:canonical_to_local` before using `#bs.move:apply_vel`.
+```
 
 Teleport an entity by its velocity scores, using the local reference frame, while handling collisions.
 
@@ -87,7 +95,7 @@ Teleport an entity by its velocity scores, using the local reference frame, whil
 
 :Outputs:
   **State**: Entity is teleported according to its local velocity scores.
-```
+`````
 
 ::::
 :::::
@@ -232,6 +240,13 @@ By modifying the `on_collision` input key, you have the freedom to specify the f
 ### How It Works?
 
 Upon collision, you have the freedom to update both the velocity score that will be used in the next tick `@s bs.vel.[x,y,z]` and the remaining velocity `$move.vel_remaining.[x,y,z] bs.data`. Since the module will attempt to continue moving based on the remaining velocity, it's crucial to avoid introducing a race condition.
+
+```{admonition} Velocity Scaling
+:class: warning
+Remaining velocity scores are stored as scaled integers, but the scaling factor may change without breaking compatibility.
+
+To ensure stability, always manipulate these values independently of the scaling factor.
+```
 
 The simplest collision resolution is to stop the movement.
 
