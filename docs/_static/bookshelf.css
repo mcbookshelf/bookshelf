@@ -126,6 +126,11 @@ hr {
   border-top: 1px solid #888;
 }
 
+abbr[title] {
+  text-decoration: none;
+  border-bottom: none;
+}
+
 .bd-content .sd-tab-set>label {
   border-top: none;
 }
