@@ -18,8 +18,8 @@ execute if score #generation.i bs.data matches 0 run return run function bs.gene
 $execute if score #generation.i bs.data matches 1.. run function bs.generation:shape_2d/strategy/$(impl)/run with storage bs:data generation._
 scoreboard players remove #generation.i bs.data 1
 
-scoreboard players add $generation.x bs.data 1
-$execute if score $generation.x bs.data < #generation.w bs.data positioned ^ ^$(spacing) ^ run return run function bs.generation:shape_2d/recurse/next with storage bs:data generation._
-scoreboard players set $generation.x bs.data 0
-scoreboard players add $generation.y bs.data 1
-$execute if score $generation.y bs.data < #generation.h bs.data positioned ~ $(oy) $(oz) positioned ^$(spacing) ^ ^ run function bs.generation:shape_2d/recurse/next with storage bs:data generation._
+scoreboard players add $generation.x bs.lambda 1
+$execute if score $generation.x bs.lambda < #generation.w bs.data positioned ^ ^$(spacing) ^ run return run function bs.generation:shape_2d/recurse/next with storage bs:data generation._
+scoreboard players set $generation.x bs.lambda 0
+scoreboard players add $generation.y bs.lambda 1
+$execute if score $generation.y bs.lambda < #generation.h bs.data positioned ~ $(oy) $(oz) positioned ^$(spacing) ^ ^ run function bs.generation:shape_2d/recurse/next with storage bs:data generation._

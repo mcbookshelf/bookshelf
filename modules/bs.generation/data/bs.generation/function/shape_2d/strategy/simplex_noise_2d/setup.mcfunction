@@ -15,8 +15,8 @@
 
 execute store result score $random.simplex_noise_2d.seed bs.in run data get storage bs:data generation._.seed
 
-execute store result score $generation.x bs.data run data get storage bs:data generation._.x
-execute store result score $generation.y bs.data run data get storage bs:data generation._.y
+execute store result score $generation.x bs.lambda run data get storage bs:data generation._.x
+execute store result score $generation.y bs.lambda run data get storage bs:data generation._.y
 execute store result score #generation.w bs.data run data get storage bs:data generation._.w
 execute store result score #generation.h bs.data run data get storage bs:data generation._.h
 execute store result score #generation.k bs.data run data get storage bs:data generation._.k

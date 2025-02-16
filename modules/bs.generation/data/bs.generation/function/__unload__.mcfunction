@@ -16,4 +16,8 @@
 kill B5-0-0-0-1
 forceload remove -30000000 1600
 
+scoreboard objectives remove bs.ctx
+scoreboard objectives remove bs.data
+scoreboard objectives remove bs.lambda
+
 data remove storage bs:data generation

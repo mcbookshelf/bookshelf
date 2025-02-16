@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players reset $random.simplex_noise_2d bs.out
-function #bs.generation:gen_simplex_shape_2d {width:1,height:2,run:"assert score $random.simplex_noise_2d bs.out matches -1000..1000",with:{limit:1}}
-scoreboard players reset $random.simplex_noise_2d bs.out
+scoreboard players reset $generation.noise bs.lambda
+function #bs.generation:gen_simplex_shape_2d {width:1,height:2,run:"assert score $generation.noise bs.lambda matches -1000..1000",with:{limit:1}}
+scoreboard players reset $generation.noise bs.lambda
