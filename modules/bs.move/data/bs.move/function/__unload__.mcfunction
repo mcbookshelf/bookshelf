@@ -18,8 +18,10 @@ forceload remove -30000000 1600
 
 scoreboard objectives remove bs.in
 scoreboard objectives remove bs.data
+scoreboard objectives remove bs.lambda
 scoreboard objectives remove bs.const
 scoreboard objectives remove bs.ctx
+
 scoreboard objectives remove bs.vel.x
 scoreboard objectives remove bs.vel.y
 scoreboard objectives remove bs.vel.z
