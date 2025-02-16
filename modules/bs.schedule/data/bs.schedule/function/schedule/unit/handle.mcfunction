@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store success score #s bs.ctx run function bs.schedule:schedule/unit/normalize with storage bs:const schedule.units[{name:'$(unit)'}]
+$return run function bs.schedule:schedule/unit/normalize with storage bs:const schedule.units[{name:'$(unit)'}]

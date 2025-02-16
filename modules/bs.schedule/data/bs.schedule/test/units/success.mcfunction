@@ -14,12 +14,12 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"t"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"tick"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"s"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"second"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"m"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"minute"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"h"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"hour"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"t"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"tick"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"s"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"second"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"m"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"minute"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"h"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"hour"}}
 assert not chat "(?i).*error.*"
