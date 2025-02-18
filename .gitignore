@@ -3,6 +3,7 @@ __pycache__/
 .beet_cache/
 .DS_Store
 .env
+.idea/
 .ipynb_checkpoints
 .LSOverride
 .mypy_cache/
@@ -14,6 +15,8 @@ __pycache__/
 *.egg
 *.egg-info/
 *.py[cod]
+*.swp
+*~
 *$py.class
 build/
 docs/_build/

@@ -1,10 +1,10 @@
 {
   "data_pack": {
-    "name": "bookshelf"
+    "name": "bookshelf-sdk"
   },
   "meta": {
-    "name": "Library",
-    "slug": "bookshelf-library",
+    "name": "SDK",
+    "slug": "bookshelf-dev",
     "description": "Bookshelf is a modular library datapack designed to simplify complex systems in Minecraft maps. Ideal for mapmakers looking for easy-to-implement tools.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
   },
@@ -13,6 +13,6 @@
     "core.plugins.setup_jinja"
   ],
   "pipeline": [
-    "core.plugins.bundle_packs.default"
+    "core.plugins.bundle_packs.dev"
   ]
 }

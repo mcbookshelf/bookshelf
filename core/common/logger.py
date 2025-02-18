@@ -139,13 +139,6 @@ class StepLogger(logging.LoggerAdapter):
 
     def close(self) -> None:
         """Close the context and log a summary message if there are no more parent."""
-        StepLogger.contexts.pop()
-
-        if StepLogger.contexts:
-            StepLogger.contexts[-1].errors += self.errors
-            StepLogger.contexts[-1].warnings += self.warnings
-            return
-
         kwargs = {"extra": {"end_step": True}}
         match self.errors, self.warnings:
             case 0, 0:
@@ -157,6 +150,12 @@ class StepLogger(logging.LoggerAdapter):
             case e, w:
                 self.info(f"🚨 Done with {e} error(s) and {w} warning(s).", **kwargs)
 
+        StepLogger.contexts.pop()
+
+        if StepLogger.contexts:
+            StepLogger.contexts[-1].errors += self.errors
+            StepLogger.contexts[-1].warnings += self.warnings
+            return
 
 @contextmanager
 def log_step(message: str | None = None) -> Generator[StepLogger, None, None]:

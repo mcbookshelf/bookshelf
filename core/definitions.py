@@ -25,7 +25,7 @@ MODULES = sorted([
     if (MODULES_DIR / mod).is_dir() and mod.startswith("bs.")
 ])
 
-MASTER_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/heads/master/{{}}"
+PROJECT_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/tags/v{VERSION}/{{}}"
 BIOMES_URL = "https://raw.githubusercontent.com/misode/mcmeta/{}-summary/data/worldgen/biome/data.min.json"
 BLOCKS_URL = "https://raw.githubusercontent.com/misode/mcmeta/{}-summary/blocks/data.min.json"
 ITEMS_URL = "https://raw.githubusercontent.com/misode/mcmeta/{}-registries/item/data.min.json"

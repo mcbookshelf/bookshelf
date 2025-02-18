@@ -11,9 +11,9 @@ from core.common.logger import get_step_logger
 from core.definitions import (
     DOC_DIR,
     GITHUB_REPO,
-    MASTER_URL,
     MINECRAFT_VERSIONS,
     MODRINTH_API,
+    PROJECT_URL,
     RELEASE_DIR,
     ROOT_DIR,
     SMITHED_API,
@@ -111,25 +111,28 @@ def create_modrinth_project(opts: PublishOptions) -> bool:
             "Authorization": MODRINTH_TOKEN,
             "User-Agent": "mcbookshelf/Bookshelf/release (contact@gunivers.net)",
         },
-        files={"icon": opts.module_icon.read_bytes(), "data":json.dumps({
-            "name": opts.module_name,
-            "slug": opts.module_slug,
-            "summary": opts.module_description,
-            "description": opts.module_readme.read_text("utf-8"),
-            "is_draft": True,
-            "initial_versions": [],
-            "categories": ["library"],
-            "additional_categories": ["game-mechanics"],
-            "organization_id": "CeDKAOAS",
-            "license_id": "MPL-2.0",
-            "license_url": f"https://github.com/{GITHUB_REPO}/blob/master/LICENSE",
-            "link_urls": {
-                "issues": f"https://github.com/{GITHUB_REPO}/issues",
-                "source": f"https://github.com/{GITHUB_REPO}",
-                "wiki": opts.module_documentation,
-                "discord": "https://discord.gg/aV5SF3JsAZ",
-                "other": "https://www.helloasso.com/associations/altearn/formulaires/3/en",
-            }}),
+        files={
+            "icon": opts.module_icon.read_bytes(),
+            "data":json.dumps({
+                "name": opts.module_name,
+                "slug": opts.module_slug,
+                "summary": opts.module_description,
+                "description": opts.module_readme.read_text("utf-8"),
+                "is_draft": True,
+                "initial_versions": [],
+                "categories": ["library"],
+                "additional_categories": ["game-mechanics"],
+                "organization_id": "CeDKAOAS",
+                "license_id": "MPL-2.0",
+                "license_url": f"https://github.com/{GITHUB_REPO}/blob/master/LICENSE",
+                "link_urls": {
+                    "issues": f"https://github.com/{GITHUB_REPO}/issues",
+                    "source": f"https://github.com/{GITHUB_REPO}",
+                    "wiki": opts.module_documentation,
+                    "discord": "https://discord.gg/aV5SF3JsAZ",
+                    "other": "https://www.helloasso.com/associations/altearn/formulaires/3/en",
+                },
+            }).encode("utf-8"),
         },
     ), f"Failed to create project '{opts.module_name}' on Modrinth.")
 
@@ -208,10 +211,10 @@ def create_smithed_project(opts: PublishOptions) -> bool:
             "display": {
                 "name": opts.module_name,
                 "description": opts.module_description,
-                "icon": MASTER_URL.format(
+                "icon": PROJECT_URL.format(
                     opts.module_icon.relative_to(ROOT_DIR).as_posix(),
                 ),
-                "webPage": MASTER_URL.format(
+                "webPage": PROJECT_URL.format(
                     opts.module_readme.relative_to(ROOT_DIR).as_posix(),
                 ),
                 "urls": {

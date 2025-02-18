@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field, ValidationError
 
 from core.common.helpers import extract_feature_id
 from core.common.logger import StepLogger
-from core.definitions import DOC_URL, MASTER_URL, MODULES, MODULES_DIR, ROOT_DIR
+from core.definitions import DOC_URL, MODULES, MODULES_DIR, PROJECT_URL, ROOT_DIR
 
 
 class Updated(BaseModel):
@@ -106,7 +106,7 @@ def get_module_meta(file: Path, logger: StepLogger) -> ModuleMeta | None:
             ("banner", "banner.png"),
         ]:
             if (file.parent / value).exists():
-                meta[key] = MASTER_URL.format(
+                meta[key] = PROJECT_URL.format(
                     (relative_path.parent / value).as_posix(),
                 )
 
