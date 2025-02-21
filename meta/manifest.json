@@ -9,7 +9,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "features": [
         {
@@ -134,7 +134,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "features": [
         {
@@ -511,7 +511,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "features": [
         {
@@ -650,7 +650,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "features": [
         {
@@ -740,7 +740,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "dependencies": [
         "bs.random"
@@ -802,7 +802,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "weak_dependencies": [
         "bs.log"
@@ -925,7 +925,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "features": [
         {
@@ -1104,7 +1104,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "features": [
         {
@@ -1316,7 +1316,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "weak_dependencies": [
         "bs.log"
@@ -1428,7 +1428,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "dependencies": [
         "bs.id",
@@ -2004,7 +2004,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "features": [
         {
@@ -2404,7 +2404,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "dependencies": [
         "bs.hitbox"
@@ -2499,7 +2499,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "features": [
         {
@@ -2999,7 +2999,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "features": [
         {
@@ -3210,7 +3210,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "dependencies": [
         "bs.hitbox"
@@ -3242,7 +3242,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "weak_dependencies": [
         "bs.log"
@@ -3323,7 +3323,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/sidebar.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "weak_dependencies": [
         "bs.log"
@@ -3373,7 +3373,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/time.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "features": [
         {
@@ -3419,7 +3419,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "features": [
         {
@@ -3700,7 +3700,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "dependencies": [
         "bs.raycast"
@@ -3869,7 +3869,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html",
       "kind": "data_pack",
       "tags": [
-        "lib"
+        "runtime"
       ],
       "features": [
         {
