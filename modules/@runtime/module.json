@@ -1,0 +1,18 @@
+{
+  "data_pack": {
+    "name": "bookshelf-runtime"
+  },
+  "meta": {
+    "name": "Runtime",
+    "slug": "bookshelf-runtime",
+    "description": "Bookshelf Runtime is a modular toolkit that provides essential utilities for building Minecraft datapacks.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
+  },
+  "require": [
+    "core.plugins.setup_pack",
+    "core.plugins.setup_jinja"
+  ],
+  "pipeline": [
+    "core.plugins.bundle_packs.runtime"
+  ]
+}
