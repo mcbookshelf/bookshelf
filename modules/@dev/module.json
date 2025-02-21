@@ -1,11 +1,11 @@
 {
   "data_pack": {
-    "name": "bookshelf-sdk"
+    "name": "bookshelf-dev"
   },
   "meta": {
-    "name": "SDK",
+    "name": "Development",
     "slug": "bookshelf-dev",
-    "description": "Bookshelf is a modular library datapack designed to simplify complex systems in Minecraft maps. Ideal for mapmakers looking for easy-to-implement tools.",
+    "description": "Bookshelf Development is a developer-focused toolkit that provides debugging, logging, and testing utilities for Minecraft datapacks.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
   },
   "require": [

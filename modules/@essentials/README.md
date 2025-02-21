@@ -1,6 +1,6 @@
-# 📖 Bookshelf Library
+# 🧰 Bookshelf Essentials
 
-The **Bookshelf Library** is a powerful toolkit designed for mapmakers. It provides essential utilities for building datapacks such as:
+The **Bookshelf Essentials** is a modular toolkit that provides essential utilities for building Minecraft datapacks. It includes modules such as:
 
 - **🧱 Block**: Get and manipulate blocks (supports BlockStates and NBT).
 - **🔦 Raycast**: Cast rays and see if they collide with blocks or entities.
