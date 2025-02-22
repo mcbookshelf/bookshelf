@@ -9,7 +9,7 @@ def beet_default(ctx: Context) -> None:
     version = parse_version(VERSION)
 
     ctx.require("beet.contrib.lantern_load.base_data_pack")
-    ctx.data["load:load"] = FunctionTag({"values": ["#bs.load:load"]})
+    ctx.data.function_tags.setdefault("load:load", FunctionTag()).add("#bs.load:load")
 
     for file, template in [
         ("exclusive", "exclusive"),

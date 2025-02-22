@@ -1,4 +1,4 @@
-{% include 'core/header.jinja' %}
+{% include 'bookshelf/header.jinja' %}
 execute unless data storage bs:data load.bundle run data modify storage bs:data load.bundle set value { \
   link: "https://api.mcbookshelf.dev/download?version={{ major }}.{{ minor }}.{{ patch }},modules=", \
   message: {text:"[bundle]",clickEvent:{action:"open_url"},hoverEvent:{action:"show_text",value:"Click to open URL"}}, \

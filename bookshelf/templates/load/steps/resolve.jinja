@@ -1,6 +1,6 @@
 #!tag "bs.load:steps/resolve"
 
-{% include 'core/header.jinja' %}
+{% include 'bookshelf/header.jinja' %}
 # Identify the enabled version (the last one in the datapack list) and mark it as active
 data modify storage bs:data load.modules[{module:"{{ module }}",version:"{{ major }}.{{ minor }}.{{ patch }}"}].enabled set value 1b
 

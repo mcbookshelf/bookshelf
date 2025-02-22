@@ -1,6 +1,6 @@
 #!tag "bs.load:errors/" + module
 
-{% include 'core/header.jinja' %}
+{% include 'bookshelf/header.jinja' %}
 # Return early to ensure code runs only on the latest available version
 execute unless score ${{ module }}.major load.status matches {{ major }} run return 0
 execute unless score ${{ module }}.minor load.status matches {{ minor }} run return 0
