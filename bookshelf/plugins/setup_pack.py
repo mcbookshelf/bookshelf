@@ -3,13 +3,15 @@ from collections.abc import Generator
 
 from beet import Context
 
-from core.definitions import MINECRAFT_VERSIONS, VERSION_URL
+from bookshelf.definitions import MC_VERSIONS
+
+VERSION_META = "https://raw.githubusercontent.com/misode/mcmeta/refs/tags/{}-summary/version.json"
 
 
 def beet_default(ctx: Context) -> Generator:
     """Set the pack format for the module based on supported Minecraft versions."""
     yield
-    formats = get_supported_formats(ctx, MINECRAFT_VERSIONS)
+    formats = get_supported_formats(ctx, MC_VERSIONS)
 
     ctx.assets.pack_format = formats["assets"]["max_inclusive"]
     ctx.assets.supported_formats = formats["assets"]
@@ -25,11 +27,11 @@ def beet_default(ctx: Context) -> Generator:
 def get_supported_formats(ctx: Context, versions: list) -> dict:
     """Retrieve the supported formats for the given Minecraft versions."""
     cache = ctx.cache[f"version/{versions[0]}"]
-    file = cache.download(VERSION_URL.format(versions[0]))
+    file = cache.download(VERSION_META.format(versions[0]))
     min_version = json.loads(file.read_text("utf-8"))
 
     cache = ctx.cache[f"version/{versions[-1]}"]
-    file = cache.download(VERSION_URL.format(versions[-1]))
+    file = cache.download(VERSION_META.format(versions[-1]))
     max_version = json.loads(file.read_text("utf-8"))
 
     return {

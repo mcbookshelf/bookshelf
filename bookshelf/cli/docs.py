@@ -3,7 +3,7 @@ import subprocess
 
 import click
 
-from core.definitions import DOC_DIR
+from bookshelf.definitions import DOC_DIR
 
 
 @click.group()

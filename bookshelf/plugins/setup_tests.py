@@ -16,7 +16,7 @@ def beet_default(ctx: Context) -> Generator:
     ctx.data.extend_namespace.append(TestFunction)
     yield
     batch = f"# @batch {ctx.directory.name}\n"
-    header = ctx.template.render("core/header.jinja")
+    header = ctx.template.render("bookshelf/header.jinja")
     offset = len(header)
 
     for _, file in ctx.data.all(extend=TestFunction):

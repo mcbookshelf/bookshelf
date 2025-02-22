@@ -11,7 +11,7 @@ from beet import Cache
 from jinja2 import Template
 from pydantic import BaseModel
 
-from core.definitions import MODULES_DIR
+from bookshelf.definitions import MODULES_DIR
 
 T = TypeVar("T")
 
@@ -31,7 +31,68 @@ class SecureString(str):
 
     def __repr__(self) -> str:
         """Return the string representation, hiding the sensitive data."""
-        return "<SecureString>"
+        return "<Redacted>"
+
+
+def download_and_parse_json(cache: Cache, url: str) -> dict|list:
+    """Get cached downloaded JSON data."""
+    file = cache.download(url)
+    return json.loads(file.read_text("utf-8"))
+
+
+def getenv_secure(key: str, default: str | None = None) -> SecureString | None:
+    """Get an environment variable by key and return it as a SecureString."""
+    if value := os.getenv(key):
+        return SecureString(value)
+    return SecureString(default) if default else None
+
+
+def matching_len(a: Iterable, b: Iterable) -> int:
+    """Return the length of the longest matching prefix between two sequences."""
+    return len(list(takewhile(
+        lambda x: x[0] == x[1],
+        zip(a, b, strict=False),
+    )))
+
+
+def parse_version(version_str: str) -> dict:
+    """Parse the version string into a dictionary with major, minor, and patch."""
+    major, minor, patch = map(int, version_str.split("."))
+    return {"major": major, "minor": minor, "patch": patch}
+
+
+def with_prefix(value: str, prefix: str = "minecraft:") -> str:
+    """Ensure a string starts with the specified prefix."""
+    return value if value.startswith(prefix) else f"{prefix}{value}"
+
+
+def render_template(file: Path, **kwargs: dict[str, object]) -> str:
+    """Load and render a Jinja2 template from a file."""
+    template = Template(file.read_text(encoding="utf-8"))
+    return template.render(now=datetime.now, **kwargs)
+
+
+def render_snbt(obj: object) -> str:
+    """Render a Python object to SNBT."""
+    def quote_key(k: str) -> str:
+        return f'"{k}"' if ":" in k else k
+    if isinstance(obj, BaseModel):
+        return render_snbt(obj.model_dump())
+    if isinstance(obj, dict):
+        items = ",".join(
+            f"{quote_key(str(k))}:{render_snbt(v)}"
+            for k, v in obj.items()
+            if v is not None
+        )
+        return f"{{{items}}}"
+    if isinstance(obj, list):
+        values = ",".join([render_snbt(v) for v in obj])
+        return f"[{values}]"
+    if isinstance(obj, str):
+        return f'"{obj}"'
+    if isinstance(obj, bool):
+        return "1b" if obj else "0b"
+    return str(obj)
 
 
 def cache_result(cache: Cache, key: str) -> Callable[[Fn], Fn]:
@@ -48,12 +109,6 @@ def cache_result(cache: Cache, key: str) -> Callable[[Fn], Fn]:
             return result
         return wrapper
     return decorator
-
-
-def download_and_parse_json(cache: Cache, url: str) -> dict|list:
-    """Get cached downloaded JSON data."""
-    file = cache.download(url)
-    return json.loads(file.read_text("utf-8"))
 
 
 def extract_feature_id(file: Path) -> str | None:
@@ -89,58 +144,3 @@ def gen_loot_table_tree(items: list[T], entry: EFmt, conditions: CFmt) -> dict:
         return {"type":"alternatives","children":[left_tree, right_tree]}
 
     return {"pools":[{"rolls":1,"entries":[subtree(items)]}]}
-
-
-def getenv_secure(key: str, default: str | None = None) -> SecureString | None:
-    """Get an environment variable by key and return it as a SecureString."""
-    if value := os.getenv(key):
-        return SecureString(value)
-    return SecureString(default) if default else None
-
-
-def matching_len(a: Iterable, b: Iterable) -> int:
-    """Return the length of the longest matching prefix between two sequences."""
-    return len(list(takewhile(
-        lambda x: x[0] == x[1],
-        zip(a, b, strict=False),
-    )))
-
-
-def parse_version(version_str: str) -> dict:
-    """Parse the version string into a dictionary with major, minor, and patch."""
-    major, minor, patch = map(int, version_str.split("."))
-    return {"major": major, "minor": minor, "patch": patch}
-
-
-def render_snbt(obj: object) -> str:
-    """Render a Python object to SNBT."""
-    def quote_key(k: str) -> str:
-        return f'"{k}"' if ":" in k else k
-    if isinstance(obj, BaseModel):
-        return render_snbt(obj.model_dump())
-    if isinstance(obj, dict):
-        items = ",".join(
-            f"{quote_key(str(k))}:{render_snbt(v)}"
-            for k, v in obj.items()
-            if v is not None
-        )
-        return f"{{{items}}}"
-    if isinstance(obj, list):
-        values = ",".join([render_snbt(v) for v in obj])
-        return f"[{values}]"
-    if isinstance(obj, str):
-        return f'"{obj}"'
-    if isinstance(obj, bool):
-        return "1b" if obj else "0b"
-    return str(obj)
-
-
-def render_template(file: Path, **kwargs: dict[str, object]) -> str:
-    """Load and render a Jinja2 template from a file."""
-    template = Template(file.read_text(encoding="utf-8"))
-    return template.render(now=datetime.now, **kwargs)
-
-
-def with_prefix(value: str, prefix: str = "minecraft:") -> str:
-    """Ensure a string starts with the specified prefix."""
-    return value if value.startswith(prefix) else f"{prefix}{value}"

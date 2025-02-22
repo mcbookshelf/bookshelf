@@ -4,19 +4,21 @@ from pathlib import Path
 
 import click
 
-from core.common.logger import log_step
-from core.common.metadata import build_manifest, get_feature_meta, get_module_meta
-from core.definitions import (
-    DOC_SWITCHER,
+from bookshelf.definitions import (
+    DOC_DIR,
+    DOC_URL,
     GITHUB_REPO,
-    META_MANIFEST,
-    META_VERSIONS,
-    MINECRAFT_VERSIONS,
+    MC_VERSIONS,
     MODULES,
     MODULES_DIR,
     ROOT_DIR,
     VERSION,
 )
+from bookshelf.logger import log_step
+from bookshelf.meta import build_manifest, get_feature_meta, get_module_meta
+
+MANIFEST_FILE = "data/manifest.json"
+VERSIONS_FILE = "data/versions.json"
 
 
 @click.group()
@@ -64,7 +66,7 @@ def update_manifest() -> bool:
     """Generate and update the manifest file."""
     with log_step("⚙️ Generating manifest file…") as logger:
         if manifest := build_manifest(logger):
-            with Path(ROOT_DIR / META_MANIFEST).open("w", newline="\n") as file:
+            with Path(ROOT_DIR / MANIFEST_FILE).open("w", newline="\n") as file:
                 json.dump(manifest, file, indent=2)
 
     return not logger.errors
@@ -73,7 +75,7 @@ def update_manifest() -> bool:
 def update_switcher() -> None:
     """Generate and update the switcher file."""
     with log_step("⚙️ Generating switcher file…") as logger:
-        switcher_path = ROOT_DIR / DOC_SWITCHER
+        switcher_path = DOC_DIR / "_static/switcher.json"
         switcher: list[dict] = json.loads(switcher_path.read_text("utf-8"))
 
         if any(entry["version"][1:] == VERSION for entry in switcher):
@@ -83,7 +85,7 @@ def update_switcher() -> None:
         entry = {
             "name": VERSION,
             "version": f"v{VERSION}",
-            "url": f"https://docs.mcbookshelf.dev/en/v{VERSION}/",
+            "url": f"{DOC_URL}/en/v{VERSION}/",
         }
 
         for i in range(len(switcher)):
@@ -99,7 +101,7 @@ def update_switcher() -> None:
 def update_versions() -> None:
     """Generate and update the versions file."""
     with log_step("⚙️ Generating versions file…") as logger:
-        versions_path = ROOT_DIR / META_VERSIONS
+        versions_path = ROOT_DIR / VERSIONS_FILE
         versions: list[dict] = json.loads(versions_path.read_text("utf-8"))
 
         if any(entry["version"] == VERSION for entry in versions):
@@ -108,8 +110,8 @@ def update_versions() -> None:
 
         versions.insert(0, {
             "version": VERSION,
-            "minecraft_versions": MINECRAFT_VERSIONS,
-            "manifest": f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/tags/v{VERSION}/{META_MANIFEST}",
+            "minecraft_versions": MC_VERSIONS,
+            "manifest": f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/tags/v{VERSION}/{MANIFEST_FILE}",
         })
 
         versions_path.write_text(json.dumps(versions, indent=2), "utf-8")

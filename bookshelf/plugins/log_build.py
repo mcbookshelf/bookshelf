@@ -1,6 +1,6 @@
 from beet import Context
 
-from core.common.logger import get_step_logger
+from bookshelf.logger import get_step_logger
 
 
 def beet_default(ctx: Context) -> None:

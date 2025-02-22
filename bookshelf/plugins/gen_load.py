@@ -1,7 +1,7 @@
 from beet import Context, Function, FunctionTag
 
-from core.common.helpers import parse_version
-from core.definitions import MODULES, VERSION
+from bookshelf.definitions import MODULES, VERSION
+from bookshelf.helpers import parse_version
 
 
 def beet_default(ctx: Context) -> None:
@@ -26,7 +26,7 @@ def beet_default(ctx: Context) -> None:
             **version,
             module=ctx.directory.name,
             modules=MODULES,
-            render=Function(source_path=f"core/load/{template}.jinja"),
+            render=Function(source_path=f"bookshelf/load/{template}.jinja"),
         )
 
     ctx.data["bs.load:load"] = gen_load_tag(MODULES)
