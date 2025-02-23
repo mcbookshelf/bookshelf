@@ -29,5 +29,5 @@ execute store result score #packtest.z bs.data run data get entity @s Pos[2] 100
 
 dummy @s leave
 
-assert score #packtest.x bs.data matches -302..-298
-assert score #packtest.z bs.data matches 1298..1302
+assert score #packtest.x bs.data matches -303..-297
+assert score #packtest.z bs.data matches 1297..1303

@@ -10,7 +10,7 @@ This is a reduction of "as to at". Several functions require two positions to wo
 
 ---
 
-## 🔗 The `chained` Functions
+## 🔗 The `runner` Functions
 
 These functions use the `run` callback to specify an action that will often be executed immediately. It works like a subcommand, defining what action should take place after the function call.
 
