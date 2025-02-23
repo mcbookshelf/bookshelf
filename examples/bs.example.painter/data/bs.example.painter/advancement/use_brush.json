@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:brush",
+          "predicates": {
+            "minecraft:custom_data": "{\"bs.example.painter:brush\":true}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "bs.example.painter:use_brush"
+  }
+}
