@@ -5,7 +5,7 @@
 Facilitate color conversion between various formats.
 
 ```{image} /_imgs/modules/color.png
-:align: center
+:width: 100%
 :class: dark_light
 ```
 

@@ -15,7 +15,7 @@ Bookshelf is designed with modularity in mind. Features that serve a common purp
 
 ```{toctree}
 :hidden:
-:caption: Base modules
+:caption: Runtime
 
 modules/bitwise
 modules/block
@@ -35,7 +35,6 @@ modules/raycast
 modules/schedule
 modules/sidebar
 modules/time
-modules/tree
 modules/vector
 modules/view
 modules/xp
@@ -43,8 +42,15 @@ modules/xp
 
 ```{toctree}
 :hidden:
-:caption: Dev modules
+:caption: Development
 
 modules/dump
 modules/log
+```
+
+```{toctree}
+:hidden:
+:caption: Prefabs
+
+modules/tree
 ```

@@ -5,12 +5,12 @@
 Vectors are fundamental and incredibly powerful tools to manage motions, forces and.. well... do physics!
 
 ```{image} /_imgs/modules/vector-light.png
-:align: center
+:width: 100%
 :class: only-light
 ```
 
 ```{image} /_imgs/modules/vector-dark.png
-:align: center
+:width: 100%
 :class: only-dark
 ```
 

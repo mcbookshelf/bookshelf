@@ -5,12 +5,12 @@
 Generate diverse terrains and landscapes, incorporating natural features.
 
 ```{image} /_imgs/modules/generation-light.png
-:align: center
+:width: 100%
 :class: only-light
 ```
 
 ```{image} /_imgs/modules/generation-dark.png
-:align: center
+:width: 100%
 :class: only-dark
 ```
 
