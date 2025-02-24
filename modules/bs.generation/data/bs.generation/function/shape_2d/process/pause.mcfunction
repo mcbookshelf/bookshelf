@@ -16,8 +16,8 @@
 execute summon minecraft:marker run function bs.generation:utils/get_location
 execute unless data storage bs:data generation._.dim run function bs.generation:utils/get_dimension
 
-execute store result storage bs:data generation._.x int 1 run scoreboard players get $generation.x bs.data
-execute store result storage bs:data generation._.y int 1 run scoreboard players get $generation.y bs.data
+execute store result storage bs:data generation._.x int 1 run scoreboard players get $generation.x bs.lambda
+execute store result storage bs:data generation._.y int 1 run scoreboard players get $generation.y bs.lambda
 
 data modify storage bs:data generation.shape_2d prepend from storage bs:data generation._
 schedule function bs.generation:shape_2d/process/scheduled 1t replace

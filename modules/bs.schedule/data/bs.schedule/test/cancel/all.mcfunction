@@ -14,9 +14,9 @@
 # ------------------------------------------------------------------------------------------------------------
 
 scoreboard players set #packtest.schedule.ca bs.data 0
-function #bs.schedule:schedule {with:{command:"scoreboard players add #packtest.schedule.ca bs.data 1",time:1}}
-function #bs.schedule:schedule {with:{command:"scoreboard players add #packtest.schedule.ca bs.data 1",time:1,id:{cancel:"all"}}}
-function #bs.schedule:schedule {with:{command:"scoreboard players add #packtest.schedule.ca bs.data 1",time:1,id:{cancel:"all"}}}
+function #bs.schedule:schedule {run:"scoreboard players add #packtest.schedule.ca bs.data 1",with:{}}
+function #bs.schedule:schedule {run:"scoreboard players add #packtest.schedule.ca bs.data 1",with:{id:{cancel:"all"}}}
+function #bs.schedule:schedule {run:"scoreboard players add #packtest.schedule.ca bs.data 1",with:{id:{cancel:"all"}}}
 function #bs.schedule:cancel_all {with:{id:{cancel:"all"}}}
 
 await delay 1t

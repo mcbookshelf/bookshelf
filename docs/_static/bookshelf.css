@@ -225,6 +225,10 @@ button.btn.version-switcher__button:hover {
   box-shadow: 0 0 0 .0875rem var(--pst-color-link-hover);
 }
 
+abbr[title] {
+  text-decoration: none;
+  border-bottom: none;
+}
 
 .bd-content .sd-tab-set>label {
   border-top: none;

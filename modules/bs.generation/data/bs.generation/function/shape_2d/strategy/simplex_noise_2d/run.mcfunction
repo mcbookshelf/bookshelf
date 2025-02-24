@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players operation $random.simplex_noise_2d.x bs.in = $generation.x bs.data
-scoreboard players operation $random.simplex_noise_2d.y bs.in = $generation.y bs.data
+scoreboard players operation $random.simplex_noise_2d.x bs.in = $generation.x bs.lambda
+scoreboard players operation $random.simplex_noise_2d.y bs.in = $generation.y bs.lambda
 scoreboard players operation $random.simplex_noise_2d.x bs.in *= #generation.k bs.data
 scoreboard players operation $random.simplex_noise_2d.y bs.in *= #generation.k bs.data
 
-function #bs.random:simplex_noise_2d
+execute store result score $generation.noise bs.lambda run function #bs.random:simplex_noise_2d
 $$(cb)
