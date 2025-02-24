@@ -9,6 +9,7 @@ description = "Scripts for Bookshelf and the Github pipeline."
 authors = [{ name = "Bookshelf Contributors", email = "contact@gunivers.net" }]
 dependencies = [
   "beet>=0.109.2",
+  "bolt>=0.49.1",
   "bookshelf[docs]",
   "click>=8.1.8",
   "colorama>=0.4.6",
@@ -20,7 +21,7 @@ license = { text = "MPL-2.0" }
 
 [project.optional-dependencies]
 dev = [
-  "mypy>=1.13.0",
+  "mypy>=1.14.1",
   "ruff>=0.8.3",
   "types-colorama>=0.4.15.20240311",
   "types-docutils>=0.21.0.20241128",
