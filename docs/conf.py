@@ -96,7 +96,7 @@ html_theme_options = {
         },
         {
             "name": "Support us",
-            "url": "https://www.helloasso.com/associations/altearn/formulaires/3/en",
+            "url": "https://www.helloasso.com/associations/altearn/formulaires/6/en",
             "icon": "fa-solid fa-heart",
         },
         {
