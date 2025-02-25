@@ -1,0 +1,18 @@
+{
+  "data_pack": {
+    "name": "bookshelf-suite"
+  },
+  "meta": {
+    "name": "Suite",
+    "slug": "bookshelf-suite",
+    "description": "Bookshelf Suite is the complete collection of all Bookshelf modules, combining core utilities, prefabs, and developer tools into a single package.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
+  },
+  "require": [
+    "core.plugins.setup_pack",
+    "core.plugins.setup_jinja"
+  ],
+  "pipeline": [
+    "core.plugins.bundle_packs"
+  ]
+}

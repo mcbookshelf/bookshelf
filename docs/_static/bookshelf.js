@@ -5,7 +5,7 @@ const getTheme = () => {
   )
 }
 
-const observer = new MutationObserver((mutations) => {
+const observer = new MutationObserver(() => {
   const sendMessage = (message) => {
     const iframe = document.querySelector('iframe.giscus-frame');
     if (iframe) {

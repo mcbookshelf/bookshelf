@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$return run execute store result storage bs:ctx _.time int $(scale) run data get storage bs:ctx _.time
+$return run execute store result storage bs:ctx _.with.time int $(scale) run data get storage bs:ctx _.with.time

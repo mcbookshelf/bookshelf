@@ -15,9 +15,9 @@
 
 # get the travelled distance and the surface that was hit
 scoreboard players operation #move.ctime bs.data = #x bs.ctx
-execute if score #move.vx bs.data matches ..-1 run scoreboard players set $move.hit_face bs.data 5
-execute if score #move.vx bs.data matches 0.. run scoreboard players set $move.hit_face bs.data 4
-execute if score #move.ctime bs.data = #z bs.ctx if score #move.vz bs.data matches ..-1 run scoreboard players set $move.hit_face bs.data 3
-execute if score #move.ctime bs.data = #z bs.ctx if score #move.vz bs.data matches 0.. run scoreboard players set $move.hit_face bs.data 2
-execute if score #move.ctime bs.data = #y bs.ctx if score #move.vy bs.data matches ..-1 run scoreboard players set $move.hit_face bs.data 1
-execute if score #move.ctime bs.data = #y bs.ctx if score #move.vy bs.data matches 0.. run scoreboard players set $move.hit_face bs.data 0
+execute if score #move.vx bs.data matches ..-1 run scoreboard players set $move.hit_face bs.lambda 5
+execute if score #move.vx bs.data matches 0.. run scoreboard players set $move.hit_face bs.lambda 4
+execute if score #move.ctime bs.data = #z bs.ctx if score #move.vz bs.data matches ..-1 run scoreboard players set $move.hit_face bs.lambda 3
+execute if score #move.ctime bs.data = #z bs.ctx if score #move.vz bs.data matches 0.. run scoreboard players set $move.hit_face bs.lambda 2
+execute if score #move.ctime bs.data = #y bs.ctx if score #move.vy bs.data matches ..-1 run scoreboard players set $move.hit_face bs.lambda 1
+execute if score #move.ctime bs.data = #y bs.ctx if score #move.vy bs.data matches 0.. run scoreboard players set $move.hit_face bs.lambda 0

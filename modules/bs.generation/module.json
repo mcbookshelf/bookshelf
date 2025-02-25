@@ -9,7 +9,7 @@
     "slug": "bookshelf-generation",
     "description": "Generate diverse terrains and landscapes, incorporating natural features.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html",
-    "tags": ["default"],
+    "tags": ["runtime"],
     "dependencies": [
       "bs.random"
     ]

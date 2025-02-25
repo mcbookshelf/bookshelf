@@ -1,0 +1,18 @@
+{
+  "data_pack": {
+    "name": "bookshelf-dev"
+  },
+  "meta": {
+    "name": "Development",
+    "slug": "bookshelf-dev",
+    "description": "Bookshelf Development is a developer-focused toolkit that provides debugging, logging, and testing utilities for Minecraft datapacks.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
+  },
+  "require": [
+    "core.plugins.setup_pack",
+    "core.plugins.setup_jinja"
+  ],
+  "pipeline": [
+    "core.plugins.bundle_packs.dev"
+  ]
+}

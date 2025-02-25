@@ -79,7 +79,7 @@ html_theme_options = {
     "navbar_persistent": ["search-button"],
     "navigation_with_keys": True,
     "use_edit_page_button": True,
-    "header_links_before_dropdown": 4,
+    "header_links_before_dropdown": 3,
     "logo": {
         "text": "Bookshelf",
         "image_dark": "_static/logo-bookshelf.png",
@@ -96,7 +96,7 @@ html_theme_options = {
         },
         {
             "name": "Support us",
-            "url": "https://www.helloasso.com/associations/altearn/formulaires/3/en",
+            "url": "https://www.helloasso.com/associations/altearn/formulaires/6/en",
             "icon": "fa-solid fa-heart",
         },
         {

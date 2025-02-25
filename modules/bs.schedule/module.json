@@ -9,7 +9,7 @@
     "slug": "bookshelf-schedule",
     "description": "Enhance command scheduling. Cancel commands and maintain execution context (entity & location).",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html",
-    "tags": ["default"],
+    "tags": ["runtime"],
     "weak_dependencies": [
       "bs.log"
     ]

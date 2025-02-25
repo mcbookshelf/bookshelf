@@ -91,7 +91,7 @@ def release() -> None:
             zipped=True,
         )
         create_project(create_config(
-            ("bookshelf", *MODULES),
+            ("@*", *MODULES),
             data_pack=pack_config,
             resource_pack=pack_config,
             meta={"autosave":{"link":False}},

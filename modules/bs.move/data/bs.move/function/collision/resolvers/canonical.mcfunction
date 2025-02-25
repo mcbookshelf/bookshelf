@@ -14,8 +14,8 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # resolve collision using the on_collision callback
-$function $(on_collision)
-execute store result storage bs:ctx x double .0000001 run scoreboard players get $move.vel_remaining.x bs.data
-execute store result storage bs:ctx y double .0000001 run scoreboard players get $move.vel_remaining.y bs.data
-execute store result storage bs:ctx z double .0000001 run scoreboard players get $move.vel_remaining.z bs.data
+$$(on_collision)
+execute store result storage bs:ctx x double .0000001 run scoreboard players get $move.vel.x bs.lambda
+execute store result storage bs:ctx y double .0000001 run scoreboard players get $move.vel.y bs.lambda
+execute store result storage bs:ctx z double .0000001 run scoreboard players get $move.vel.z bs.lambda
 execute unless data storage bs:ctx {x:0d,y:0d,z:0d} at @s run function bs.move:teleport/canonical/run with storage bs:ctx

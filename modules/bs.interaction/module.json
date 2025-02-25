@@ -9,7 +9,7 @@
     "slug": "bookshelf-interaction",
     "description": "A low-level API to create GUI based on Interaction entity by binding events to it.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html",
-    "tags": ["default"],
+    "tags": ["runtime"],
     "weak_dependencies": [
       "bs.log"
     ]

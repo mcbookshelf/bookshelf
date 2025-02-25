@@ -4,12 +4,12 @@
       "id": "bs.bitwise",
       "name": "Bitwise",
       "slug": "bookshelf-bitwise",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.bitwise/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.bitwise/README.md",
       "description": "A collection of various bitwise operations, providing versatile tools for manipulating binary data.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {
@@ -129,12 +129,12 @@
       "id": "bs.block",
       "name": "Block",
       "slug": "bookshelf-block",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.block/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.block/README.md",
       "description": "Manage blocks, including states and NBTs, while offering advanced tools for seamless transformations.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {
@@ -506,12 +506,12 @@
       "id": "bs.color",
       "name": "Color",
       "slug": "bookshelf-color",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.color/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.color/README.md",
       "description": "Facilitate color conversion between various formats.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {
@@ -616,7 +616,7 @@
       "id": "bs.dump",
       "name": "Dump",
       "slug": "bookshelf-dump",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.dump/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.dump/README.md",
       "description": "Dump the content of given variables to the chat.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/dump.html",
       "kind": "data_pack",
@@ -645,12 +645,12 @@
       "id": "bs.environment",
       "name": "Environment",
       "slug": "bookshelf-environment",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.environment/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.environment/README.md",
       "description": "Comprehensive information and tools related to weather and biome properties.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {
@@ -735,12 +735,12 @@
       "id": "bs.generation",
       "name": "Generation",
       "slug": "bookshelf-generation",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.generation/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.generation/README.md",
       "description": "Generate diverse terrains and landscapes, incorporating natural features.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "dependencies": [
         "bs.random"
@@ -797,12 +797,12 @@
       "id": "bs.health",
       "name": "Health",
       "slug": "bookshelf-health",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.health/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.health/README.md",
       "description": "Efficiently manage the lifecycle and vital aspects of an entity.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "weak_dependencies": [
         "bs.log"
@@ -920,12 +920,12 @@
       "id": "bs.hitbox",
       "name": "Hitbox",
       "slug": "bookshelf-hitbox",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.hitbox/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.hitbox/README.md",
       "description": "Get and check the hitboxes of blocks or entities.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {
@@ -1099,12 +1099,12 @@
       "id": "bs.id",
       "name": "ID",
       "slug": "bookshelf-id",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.id/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.id/README.md",
       "description": "Manage entity IDs, essential in scenarios like shooting games where you need to track who is targeting whom.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {
@@ -1311,12 +1311,12 @@
       "id": "bs.interaction",
       "name": "Interaction",
       "slug": "bookshelf-interaction",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.interaction/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.interaction/README.md",
       "description": "A low-level API to create GUI based on Interaction entity by binding events to it.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "weak_dependencies": [
         "bs.log"
@@ -1423,12 +1423,12 @@
       "id": "bs.link",
       "name": "Link",
       "slug": "bookshelf-link",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.link/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.link/README.md",
       "description": "Construct coherent entity structures by linking entities\u2019 positions and rotations.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "dependencies": [
         "bs.id",
@@ -1895,7 +1895,7 @@
       "id": "bs.log",
       "name": "Log",
       "slug": "bookshelf-log",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.log/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.log/README.md",
       "description": "Log messages in the chat with varying levels of severity.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html",
       "kind": "data_pack",
@@ -1999,12 +1999,12 @@
       "id": "bs.math",
       "name": "Math",
       "slug": "bookshelf-math",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.math/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.math/README.md",
       "description": "The beatifull world of mathematics\u2026 in Minecraft!",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {
@@ -2399,12 +2399,12 @@
       "id": "bs.move",
       "name": "Move",
       "slug": "bookshelf-move",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.move/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.move/README.md",
       "description": "Make your entity move exactly the way you want them to!",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "dependencies": [
         "bs.hitbox"
@@ -2494,12 +2494,12 @@
       "id": "bs.position",
       "name": "Position",
       "slug": "bookshelf-position",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.position/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.position/README.md",
       "description": "Manage entity positions and rotations using scores.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {
@@ -2994,12 +2994,12 @@
       "id": "bs.random",
       "name": "Random",
       "slug": "bookshelf-random",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.random/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.random/README.md",
       "description": "Contains many random functions for different distributions.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {
@@ -3205,12 +3205,12 @@
       "id": "bs.raycast",
       "name": "Raycast",
       "slug": "bookshelf-raycast",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.raycast/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.raycast/README.md",
       "description": "Cast rays and see if they collide with blocks or entities.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "dependencies": [
         "bs.hitbox"
@@ -3237,12 +3237,12 @@
       "id": "bs.schedule",
       "name": "Schedule",
       "slug": "bookshelf-schedule",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.schedule/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.schedule/README.md",
       "description": "Enhance command scheduling. Cancel commands and maintain execution context (entity & location).",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "weak_dependencies": [
         "bs.log"
@@ -3318,12 +3318,12 @@
       "id": "bs.sidebar",
       "name": "Sidebar",
       "slug": "bookshelf-sidebar",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.sidebar/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.sidebar/README.md",
       "description": "Create a visually appealing and dynamic sidebar using the scoreboard.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/sidebar.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "weak_dependencies": [
         "bs.log"
@@ -3368,12 +3368,12 @@
       "id": "bs.time",
       "name": "Time",
       "slug": "bookshelf-time",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.time/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.time/README.md",
       "description": "Get information about the system time effortlessly.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/time.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {
@@ -3401,12 +3401,12 @@
       "id": "bs.tree",
       "name": "Tree",
       "slug": "bookshelf-tree",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.tree/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.tree/README.md",
       "description": "Simplicity meets utility in this bank of trees.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/tree.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "prefabs"
       ],
       "features": []
     },
@@ -3414,12 +3414,12 @@
       "id": "bs.vector",
       "name": "Vector",
       "slug": "bookshelf-vector",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.vector/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.vector/README.md",
       "description": "Vectors are fundamental and incredibly powerful tools to manage motions, forces and\u2026 well\u2026 do physics!",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {
@@ -3695,12 +3695,12 @@
       "id": "bs.view",
       "name": "View",
       "slug": "bookshelf-view",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.view/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.view/README.md",
       "description": "Execute commands based on what an entity sees.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "dependencies": [
         "bs.raycast"
@@ -3864,12 +3864,12 @@
       "id": "bs.xp",
       "name": "XP",
       "slug": "bookshelf-xp",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/heads/master/modules/bs.xp/README.md",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/Bookshelf/refs/tags/v2.2.2/modules/bs.xp/README.md",
       "description": "Efficiently manage the experience points and levels of players.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {

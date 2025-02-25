@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute at @s in $(dimension) run $(command)
+$execute at @s in $(dimension) run $(run)

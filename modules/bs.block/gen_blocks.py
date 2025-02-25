@@ -5,7 +5,6 @@ from itertools import chain, permutations
 
 import numpy as np
 from beet import BlockTag, Context, Function, LootTable
-from core.common.logger import log_step
 from pydantic import BaseModel
 
 from core.common.helpers import (
@@ -27,8 +26,9 @@ from core.definitions import (
 type StrDict = dict[str, str]
 type StatesDict = dict[str, list[str]]
 type StatesTuple = tuple[tuple[str, tuple[str, ...]], ...]
-type RawBlocks = dict[str, tuple[StatesDict, StrDict]]
-type RawSounds = dict[str, dict[str, str]]
+type Blocks = dict[str, tuple[StatesDict, StrDict]]
+type Items = StrDict
+type Sounds = dict[str, StrDict]
 
 class Block(BaseModel):
     """Represents a Minecraft block."""
@@ -89,47 +89,49 @@ def get_blocks(ctx: Context, version: str) -> list[Block]:
 
     @cache_result(cache, "blocks.json")
     def get_optimized_blocks() -> list:
-        raw_blocks = download_and_parse_json(cache, BLOCKS_URL.format(version))
-        if not isinstance(raw_blocks, dict):
-            error_msg = f"Expected a dict, but got {type(raw_blocks)}"
+        blocks = download_and_parse_json(cache, BLOCKS_URL.format(version))
+        if not isinstance(blocks, dict):
+            error_msg = f"Expected a dict, but got {type(blocks)}"
             raise TypeError(error_msg)
 
-        raw_items = download_and_parse_json(cache, ITEMS_URL.format(version))
-        if not isinstance(raw_items, list):
-            error_msg = f"Expected a list, but got {type(raw_items)}"
+        items = download_and_parse_json(cache, ITEMS_URL.format(version))
+        if not isinstance(items, list):
+            error_msg = f"Expected a list, but got {type(items)}"
             raise TypeError(error_msg)
 
-        raw_sounds = download_and_parse_json(cache, SOUNDS_URL.format(version))
-        if not isinstance(raw_sounds, dict):
-            error_msg = f"Expected a dict, but got {type(raw_sounds)}"
+        sounds = download_and_parse_json(cache, SOUNDS_URL.format(version))
+        if not isinstance(sounds, dict):
+            error_msg = f"Expected a dict, but got {type(sounds)}"
             raise TypeError(error_msg)
 
-        items = {
+        return group_and_optimize_blocks(blocks, {
             with_prefix(item): with_prefix(item)
-            for item in raw_items
-        } | SPECIAL_ITEMS
-        return group_and_optimize_blocks(raw_blocks, items, raw_sounds)
+            for item in items
+        } | SPECIAL_ITEMS, sounds)
 
     return [Block.model_validate(data) for data in get_optimized_blocks()]
 
 
-def group_and_optimize_blocks(raw_blocks: RawBlocks, items: StrDict, raw_sounds: RawSounds) -> list:
+def group_and_optimize_blocks(blocks: Blocks, items: Items, sounds: Sounds) -> list:
     """Group blocks and optimizes block state sequences."""
-    blocks: list[dict] = []
+    formatted_blocks: list[dict] = []
     groups: dict[StatesTuple, int] = {(): 0}
 
-    for block, (states, properties) in raw_blocks.items():
+    for block, (states, properties) in blocks.items():
         ordered_states = reorder_states_options(states, properties)
-        prefixed_block = with_prefix(block)
-        insort(blocks, {
-            "type": prefixed_block,
-            "item": items.get(prefixed_block),
-            "sounds": raw_sounds.get(prefixed_block, {}),
+        namespaced_block = with_prefix(block)
+        insort(formatted_blocks, {
+            "type": namespaced_block,
+            "item": items.get(namespaced_block),
+            "sounds": sounds.get(namespaced_block, {}),
             "group": groups.setdefault(ordered_states, len(groups)),
         }, key=lambda x: x["group"])
 
     optimized_groups = optimize_states_sequences(list(groups.keys()))
-    return [{**block, "states": optimized_groups[block["group"]]} for block in blocks]
+    return [
+        {**block, "states": optimized_groups[block["group"]]}
+        for block in formatted_blocks
+    ]
 
 
 def reorder_states_options(states: StatesDict, properties: StrDict) -> StatesTuple:

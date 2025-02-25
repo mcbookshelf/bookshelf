@@ -8,6 +8,12 @@ from core.definitions import MODULES, MODULES_DIR
 
 __path__ = ""
 
+def beet_default(ctx: Context) -> None:
+    """Include all modules."""
+    for mod in MODULES or []:
+        config = {"directory": f"../{mod}", "extend": "module.json"}
+        ctx.require(subproject(config))
+
 @cache
 def __getattr__(tag: str) -> Callable[[Context], None]:
     def plugin(ctx: Context) -> None:

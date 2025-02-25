@@ -1,0 +1,18 @@
+{
+  "data_pack": {
+    "name": "bookshelf-prefabs"
+  },
+  "meta": {
+    "name": "Prefabs",
+    "slug": "bookshelf-prefabs",
+    "description": "Bookshelf Prefabs is a collection of ready-to-use structures and templates designed to simplify world-building.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
+  },
+  "require": [
+    "core.plugins.setup_pack",
+    "core.plugins.setup_jinja"
+  ],
+  "pipeline": [
+    "core.plugins.bundle_packs.prefabs"
+  ]
+}

@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute at @s in $(dimension) as @e[predicate=bs.schedule:target] run $(command)
+$execute at @s in $(dimension) as @e[predicate=bs.schedule:target] run $(run)

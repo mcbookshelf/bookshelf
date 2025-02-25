@@ -9,7 +9,7 @@
     "slug": "bookshelf-hitbox",
     "description": "Get and check the hitboxes of blocks or entities.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html",
-    "tags": ["default"]
+    "tags": ["runtime"]
   },
   "pipeline": [
     "gen_shapes"
