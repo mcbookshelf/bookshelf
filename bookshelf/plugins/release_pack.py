@@ -6,19 +6,19 @@ from pathlib import Path
 import requests
 from beet import Context, PluginOptions, configurable
 
-from core.common.helpers import getenv_secure
-from core.common.logger import get_step_logger
-from core.definitions import (
+from bookshelf.definitions import (
     DOC_DIR,
     GITHUB_REPO,
-    MINECRAFT_VERSIONS,
+    MC_VERSIONS,
     MODRINTH_API,
-    PROJECT_URL,
+    RAW_PROJECT_URL,
     RELEASE_DIR,
     ROOT_DIR,
     SMITHED_API,
     VERSION,
 )
+from bookshelf.helpers import getenv_secure
+from bookshelf.logger import get_step_logger
 
 MODRINTH_TOKEN = getenv_secure("MODRINTH_TOKEN")
 SMITHED_TOKEN = getenv_secure("SMITHED_TOKEN")
@@ -42,7 +42,7 @@ def beet_default(ctx: Context) -> Generator:
     """Build pack to output then attempt to publish them to platforms."""
     yield
     for pack in list(filter(None, ctx.packs)):
-        pack.name = f"{pack.name}-{MINECRAFT_VERSIONS[-1]}-v{VERSION}" # type: ignore[attr-defined]
+        pack.name = f"{pack.name}-{MC_VERSIONS[-1]}-v{VERSION}" # type: ignore[attr-defined]
         file = pack.save(RELEASE_DIR, overwrite=True) # type: ignore[attr-defined]
 
     if module_slug := ctx.meta.get("slug"):
@@ -192,7 +192,7 @@ def create_modrinth_version(opts: PublishOptions) -> bool:
             "version_body": opts.changelog,
             "dependencies": [],
             "release_channel": "release",
-            "game_versions": MINECRAFT_VERSIONS,
+            "game_versions": MC_VERSIONS,
             "loaders": ["datapack"],
             "featured": True,
         }), opts.file.name: opts.file.read_bytes()}, # type: ignore[arg-type]
@@ -211,10 +211,10 @@ def create_smithed_project(opts: PublishOptions) -> bool:
             "display": {
                 "name": opts.module_name,
                 "description": opts.module_description,
-                "icon": PROJECT_URL.format(
+                "icon": RAW_PROJECT_URL.format(
                     opts.module_icon.relative_to(ROOT_DIR).as_posix(),
                 ),
-                "webPage": PROJECT_URL.format(
+                "webPage": RAW_PROJECT_URL.format(
                     opts.module_readme.relative_to(ROOT_DIR).as_posix(),
                 ),
                 "urls": {
@@ -279,7 +279,7 @@ def create_smithed_version(opts: PublishOptions) -> bool:
         params={"token": SMITHED_TOKEN, "version": VERSION},
         json={"data": {
             "name": VERSION,
-            "supports": MINECRAFT_VERSIONS,
+            "supports": MC_VERSIONS,
             "downloads": {
                 data["project_types"][0]: data["files"][0]["url"],
             },

@@ -9,10 +9,10 @@
     "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
   },
   "require": [
-    "core.plugins.setup_pack",
-    "core.plugins.setup_jinja"
+    "bookshelf.plugins.setup_pack",
+    "bookshelf.plugins.setup_jinja"
   ],
   "pipeline": [
-    "core.plugins.bundle_packs"
+    "bookshelf.plugins.bundle_packs"
   ]
 }

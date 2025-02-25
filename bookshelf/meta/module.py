@@ -5,7 +5,7 @@ from typing import Literal
 
 from pydantic import BaseModel, Field, ValidationError
 
-from bookshelf.definitions import DOC_URL, ROOT_DIR
+from bookshelf.definitions import DOC_URL, RAW_PROJECT_URL, ROOT_DIR
 from bookshelf.logger import StepLogger
 
 
@@ -31,7 +31,7 @@ class ModuleMeta(BaseModel):
 
 def get_module_meta(file: Path, logger: StepLogger) -> ModuleMeta | None:
     """Retrieve module metadata from a JSON file."""
-    relative_path = file.relative_to(ROOT_DIR)
+    relpath = file.relative_to(ROOT_DIR)
     module_id = file.parent.name
 
     try:
@@ -61,22 +61,20 @@ def get_module_meta(file: Path, logger: StepLogger) -> ModuleMeta | None:
             ("banner", "banner.png"),
         ]:
             if (file.parent / value).exists():
-                meta[key] = MASTER_URL.format(
-                    (relative_path.parent / value).as_posix(),
-                )
+                meta[key] = RAW_PROJECT_URL.format((relpath.parent / value).as_posix())
 
         return ModuleMeta(id=module_id, **meta)
 
     except ValidationError:
         logger.exception("Found errors in module '%s'.", module_id, extra={
             "title": "Validation Error",
-            "file": relative_path,
+            "file": relpath,
         })
 
     except json.JSONDecodeError as e:
-        logger.exception("File '%s' has invalid JSON.", relative_path, extra={
+        logger.exception("File '%s' has invalid JSON.", relpath, extra={
             "title": "Malformed Json",
-            "file": relative_path,
+            "file": relpath,
             "line": e.lineno,
         })
 

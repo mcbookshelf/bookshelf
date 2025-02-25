@@ -10,6 +10,7 @@ MODRINTH_API = "https://api.modrinth.com/v3"
 SMITHED_API = "https://api.smithed.dev/v2"
 
 GITHUB_REPO = "mcbookshelf/Bookshelf"
+RAW_PROJECT_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/tags/v{VERSION}/{{}}"
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 DOC_DIR = ROOT_DIR / "docs"

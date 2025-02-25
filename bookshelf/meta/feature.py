@@ -28,7 +28,7 @@ class FeatureMeta(BaseModel):
 
 def get_feature_meta(file: Path, logger: StepLogger) -> FeatureMeta | None:
     """Retrieve feature metadata from a JSON file."""
-    relative_path = file.relative_to(ROOT_DIR)
+    relpath = file.relative_to(ROOT_DIR)
     feature_id = extract_feature_id(file)
     if not feature_id:
         return None
@@ -40,13 +40,13 @@ def get_feature_meta(file: Path, logger: StepLogger) -> FeatureMeta | None:
     except ValidationError:
         logger.exception("Found errors in feature '%s'.", feature_id, extra={
             "title": "Validation Error",
-            "file": relative_path,
+            "file": relpath,
         })
 
     except json.JSONDecodeError as e:
-        logger.exception("File '%s' has invalid JSON.", relative_path, extra={
+        logger.exception("File '%s' has invalid JSON.", relpath, extra={
             "title": "Malformed Json",
-            "file": relative_path,
+            "file": relpath,
             "line": e.lineno,
         })
 
