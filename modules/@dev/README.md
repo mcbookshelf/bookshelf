@@ -1,6 +1,6 @@
 # 🔧 Bookshelf Development
 
-The **Bookshelf Development** is a developer-focused toolkit that provides debugging, logging, and testing utilities for Minecraft datapacks. It includes modules such as:
+The **Bookshelf Development** is a toolkit for developers, offering debugging, logging, and testing utilities to streamline datapack creation.
 
 - **🔬 Dump**: Inspect and print the state of variables for debugging.
 - **📄 Log**: Log messages in chat with different severity levels.

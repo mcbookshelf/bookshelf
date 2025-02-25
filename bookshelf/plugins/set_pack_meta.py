@@ -13,13 +13,15 @@ def beet_default(ctx: Context) -> Generator:
     yield
     formats = get_supported_formats(ctx, MC_VERSIONS)
 
+    ctx.assets.description = ctx.meta["description"]
     ctx.assets.pack_format = formats["assets"]["max_inclusive"]
     ctx.assets.supported_formats = formats["assets"]
 
+    ctx.data.description = ctx.meta["description"]
     ctx.data.pack_format = formats["data"]["max_inclusive"]
     ctx.data.supported_formats = formats["data"]
     ctx.data.mcmeta.set_content({
-        "id": ctx.directory.name,
+        "id": ctx.data.name,
         **ctx.data.mcmeta.data,
     })
 

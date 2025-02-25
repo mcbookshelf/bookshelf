@@ -30,10 +30,10 @@ def modules() -> None:
 def build(modules: tuple[str, ...]) -> None:
     """Build the specified modules."""
     with log_step("🔨 Building project…"):
-        create_project(create_config(
-            modules,
+        Project(create_config(
+            modules=modules,
             output=BUILD_DIR,
-            require=["bookshelf.plugins.setup_tests"],
+            require=["bookshelf.plugins.load_tests"],
         )).build()
 
 
@@ -71,7 +71,7 @@ def link(
     resource_pack: str | None,
 ) -> None:
     """Link the generated resource pack and data pack to Minecraft."""
-    project = create_project(create_config())
+    project = Project(ProjectConfig())
     with log_step("🔗 Linking project…"):
         click.echo(project.link(
             world,
@@ -85,16 +85,10 @@ def link(
 def release() -> None:
     """Build zipped modules for a release."""
     with log_step("🔨 Building project…") as logger:
-        pack_config = PackConfig(
-            compression="bzip2",
-            compression_level=9,
-            zipped=True,
-        )
-        create_project(create_config(
-            ("@*", *MODULES),
-            data_pack=pack_config,
-            resource_pack=pack_config,
+        Project(create_config(
+            modules=["@*", *MODULES],
             meta={"autosave":{"link":False}},
+            zipped=True,
             require=["bookshelf.plugins.release_pack"],
         )).build()
 
@@ -107,11 +101,11 @@ def test(modules: tuple[str, ...]) -> None:
     """Build and test the specified modules."""
     with TemporaryDirectory(prefix="mcbs-") as tmpdir:
         with log_step("🔨 Building project…"):
-            create_project(create_config(
-                modules,
+            Project(create_config(
+                modules=modules,
                 output=Path(tmpdir) / "world/datapacks",
                 meta={"autosave":{"link":False}},
-                require=["bookshelf.plugins.setup_tests"],
+                require=["bookshelf.plugins.load_tests"],
             )).build()
 
         runner = Runner(Assets(MC_VERSIONS[-1]))
@@ -126,11 +120,14 @@ def watch(modules: tuple[str, ...]) -> None:
     """Watch for changes in specified modules and rebuild them."""
     with log_step("🔨 Watching project…") as logger:
         config = create_config(
-            modules,
-            require=["beet.contrib.livereload","bookshelf.plugins.setup_tests"],
+            modules=modules,
             output=BUILD_DIR,
+            require=[
+                "beet.contrib.livereload",
+                "bookshelf.plugins.load_tests",
+            ],
         )
-        project = create_project(config.copy())
+        project = Project(config.copy().resolve(ROOT_DIR))
 
         for changes in project.watch(0.5):
             filename, action = next(iter(changes.items()))
@@ -158,25 +155,31 @@ def watch(modules: tuple[str, ...]) -> None:
 
 def create_config(
     modules: tuple[str, ...] | None = None,
-    **kwargs: object,
+    output: Path | None = None,
+    meta: dict | None = None,
+    zipped: bool | None = None,
+    require: list[str] | None = None,
 ) -> ProjectConfig:
     """Create a configuration for the project."""
-    modules = modules if modules else tuple(MODULES)
-    require = kwargs.get("require", [])
+    pack_config = PackConfig(
+        compression="bzip2",
+        compression_level=9,
+        zipped=True,
+    ) if zipped else PackConfig()
 
-    kwargs["extend"] = "module.json"
-    kwargs["broadcast"] = [f"modules/{mod}" for mod in modules]
-    kwargs["require"] = [
-        "bookshelf.plugins.log_build",
-        *(require if isinstance(require, list) else [require]),
-    ]
-
-    return ProjectConfig(**kwargs) # type: ignore[arg-type]
-
-
-def create_project(config: ProjectConfig) -> Project:
-    """Create a project based on the provided configuration."""
-    return Project(config.resolve(ROOT_DIR))
+    return ProjectConfig(
+        extend="module.json",
+        broadcast=[MODULES_DIR / mod for mod in modules or MODULES],
+        data_pack=pack_config,
+        resource_pack=pack_config,
+        output=output,
+        meta=meta or {},
+        require=[
+            "bookshelf.plugins.log_build",
+            *require,
+            "bookshelf.plugins.set_pack_meta",
+        ],
+    ).resolve(ROOT_DIR)
 
 
 def check_headers() -> bool:

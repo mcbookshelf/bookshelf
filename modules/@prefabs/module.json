@@ -5,13 +5,9 @@
   "meta": {
     "name": "Prefabs",
     "slug": "bookshelf-prefabs",
-    "description": "Bookshelf Prefabs is a collection of ready-to-use structures and templates designed to simplify world-building.",
+    "description": "A Bookshelf collection of ready-to-use structures and templates to simplify world-building.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
   },
-  "require": [
-    "bookshelf.plugins.setup_pack",
-    "bookshelf.plugins.setup_jinja"
-  ],
   "pipeline": [
     "bookshelf.plugins.bundle_packs.prefabs"
   ]
