@@ -20,6 +20,7 @@ data modify storage bs:data block._ set value { \
   limit: 4096, \
   masks: [], \
   impl: "set_random", \
+  on_finished: "return 0", \
 }
 data modify storage bs:data block._ merge from storage bs:in block.fill_random
 
