@@ -2,8 +2,8 @@ name: 🔖 Release Modules
 
 on:
   push:
-    branches:
-      - '**'
+    branches: ["master"]
+  pull_request:
 
 permissions:
   contents: write
@@ -34,6 +34,7 @@ jobs:
     name: 🔍 Check Release Necessity
     needs: update-metadata
     runs-on: ubuntu-latest
+    environment: release
     if: github.ref == 'refs/heads/master'
     outputs:
       release_tag: ${{ steps.check-versions.outputs.release_tag }}
@@ -70,6 +71,7 @@ jobs:
     name: 📦 Create Release
     needs: check-versions
     runs-on: ubuntu-latest
+    environment: release
     if: ${{ needs.check-versions.outputs.version_exists == 'false' }}
     steps:
       - uses: actions/checkout@v4

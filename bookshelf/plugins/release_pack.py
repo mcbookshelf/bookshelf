@@ -96,7 +96,7 @@ def get_modrinth_project_id(slug: str) -> str | None:
     """Attempt to get the Modrinth project id."""
     response = requests.get(f"{MODRINTH_API}/project/{slug}/check", timeout=5, headers={
         "Authorization": MODRINTH_TOKEN,
-        "User-Agent": "mcbookshelf/Bookshelf/release (contact@gunivers.net)",
+        "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
     })
 
     return response.json()["id"] if response.status_code == requests.codes.ok else None
@@ -109,7 +109,7 @@ def create_modrinth_project(opts: PublishOptions) -> bool:
         timeout=5,
         headers={
             "Authorization": MODRINTH_TOKEN,
-            "User-Agent": "mcbookshelf/Bookshelf/release (contact@gunivers.net)",
+            "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
         },
         files={
             "icon": opts.module_icon.read_bytes(),
@@ -144,7 +144,7 @@ def update_modrinth_project(opts: PublishOptions) -> bool:
         timeout=5,
         headers={
             "Authorization": MODRINTH_TOKEN,
-            "User-Agent": "mcbookshelf/Bookshelf/release (contact@gunivers.net)",
+            "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
         },
         json={
             "summary": opts.module_description,
@@ -166,7 +166,7 @@ def create_modrinth_version(opts: PublishOptions) -> bool:
         timeout=5,
         headers={
             "Authorization": MODRINTH_TOKEN,
-            "User-Agent": "mcbookshelf/Bookshelf/release (contact@gunivers.net)",
+            "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
         },
     ).status_code == requests.codes.ok:
         get_step_logger().warning(
@@ -182,7 +182,7 @@ def create_modrinth_version(opts: PublishOptions) -> bool:
         timeout=5,
         headers={
             "Authorization": MODRINTH_TOKEN,
-            "User-Agent": "mcbookshelf/Bookshelf/release (contact@gunivers.net)",
+            "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
         },
         files={"data": json.dumps({
             "project_id": get_modrinth_project_id(opts.module_slug),

@@ -9,7 +9,7 @@ FABRIC_API = "https://meta.fabricmc.net/v2"
 MODRINTH_API = "https://api.modrinth.com/v3"
 SMITHED_API = "https://api.smithed.dev/v2"
 
-GITHUB_REPO = "mcbookshelf/Bookshelf"
+GITHUB_REPO = "mcbookshelf/bookshelf"
 RAW_PROJECT_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/tags/v{VERSION}/{{}}"
 
 ROOT_DIR = Path(__file__).resolve().parents[1]

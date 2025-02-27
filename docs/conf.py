@@ -91,7 +91,7 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "GitHub",
-            "url": "https://github.com/mcbookshelf/Bookshelf",
+            "url": "https://github.com/mcbookshelf/bookshelf",
             "icon": "fa-brands fa-github",
         },
         {
