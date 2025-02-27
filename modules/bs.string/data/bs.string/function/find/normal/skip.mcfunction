@@ -15,7 +15,7 @@
 
 $execute store result storage bs:ctx x int 1 run scoreboard players add #i bs.ctx $(z)
 
-execute if score #l bs.ctx <= #i bs.ctx run return run data get storage bs:out string.find
+execute if score #l bs.ctx < #i bs.ctx run return run data get storage bs:out string.find
 
 $data modify storage bs:ctx _.str set string storage bs:ctx _.str $(z)
 

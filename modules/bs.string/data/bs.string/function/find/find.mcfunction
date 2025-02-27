@@ -31,4 +31,4 @@ function bs.string:find/precompute with storage bs:ctx _
 
 execute if score #o bs.ctx matches 0 run return run function bs.string:find/normal/normal with storage bs:ctx
 execute if score #o bs.ctx matches 1.. run return run function bs.string:find/count/count with storage bs:ctx
-tellraw @a [{"text":"[Bookshelf] ","color":"gold"},{"text":"Error: ","color":"red"},{"text":"does not accept negative values","color":"red"}]
+function #bs.log:error { namespace: "bs.string", path: "bs.string:find", tag: "find", message: '"does not accept negative values"' }
