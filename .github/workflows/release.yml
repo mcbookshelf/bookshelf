@@ -2,8 +2,8 @@ name: 🔖 Release Modules
 
 on:
   push:
-    branches: ["master"]
-  pull_request:
+    branches:
+      - '**'
 
 permissions:
   contents: write
