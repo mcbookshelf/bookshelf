@@ -80,7 +80,6 @@ html_theme_options = {
     "navigation_with_keys": True,
     "use_edit_page_button": True,
     "footer_center": ["mention-legales-footer.html"],
-    # "extra_footer": '<a href="/mentions-legales">Mentions Légales</a>',
     "header_links_before_dropdown": 3,
     "logo": {
         "text": "Bookshelf",

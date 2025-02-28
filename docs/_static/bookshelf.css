@@ -18,6 +18,7 @@ html[data-theme="light"] {
   --pst-color-background: #f3f4f5;
   --pst-color-surface: #fefefe;
   --pst-color-on-background: #f9f9f9;
+  --pst-color-table-outer-border: #77777722;
 }
 
 html[data-theme="light"] .highlight .c1 {
@@ -42,6 +43,7 @@ html[data-theme="dark"] {
   --scrollbar-thumb-bg-active: #ffffff2b;
   --bs-border-color: #dee2e611;
   --pst-color-table-row-hover-bg: #79a3f266;
+  --pst-color-table-outer-border: #79a3f244;
 }
 
 
@@ -260,12 +262,20 @@ button.btn.version-switcher__button {
   text-align: center;
   padding-inline: 6px 12px!important;
 }
+.bd-header ul.navbar-nav .dropdown .dropdown-menu .dropdown-item {
+  padding-inline: 1.5rem !important;
+}
 
 .bd-sidebar-primary .sidebar-header-items {
   row-gap: 2rem;
 }
 .bd-sidebar-primary .sidebar-primary-items__start {
   padding-top: 1rem;
+}
+button.btn.version-switcher__button {
+  max-width: 8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
