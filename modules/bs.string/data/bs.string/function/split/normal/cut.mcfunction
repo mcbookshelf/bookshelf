@@ -18,7 +18,7 @@ $data modify storage bs:ctx _.str set string storage bs:ctx _.str $(y)
 $scoreboard players add #i bs.ctx $(y)
 data modify storage bs:ctx _.cut set from storage bs:ctx _.str
 
-execute if score #l bs.ctx <= #i bs.ctx run return run data modify storage bs:out string.split append from storage bs:ctx _.cut
+execute if score #l bs.ctx < #i bs.ctx run return run data modify storage bs:out string.split append from storage bs:ctx _.cut
 
 scoreboard players set #d bs.ctx -1
 function bs.string:split/normal/normal with storage bs:ctx

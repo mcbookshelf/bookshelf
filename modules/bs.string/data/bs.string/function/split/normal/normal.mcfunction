@@ -15,7 +15,7 @@
 
 
 execute store result storage bs:ctx x int 1 run scoreboard players add #d bs.ctx 1
-tellraw @a ["i :",{"score": {"name": "#i","objective": "bs.ctx"}}," y :",{"storage": "bs:ctx","nbt": "y"}," x :",{"storage": "bs:ctx","nbt": "x"}]
+tellraw @a ["i :",{"score": {"name": "#i","objective": "bs.ctx"}}," y :",{"storage": "bs:ctx","nbt": "y"}," x :",{"storage": "bs:ctx","nbt": "x"},{"storage": "bs:ctx","nbt": "_"}]
 
 $data modify storage bs:ctx _.test set string storage bs:ctx _.str 0 $(y)
 data modify storage bs:ctx _.ltr set string storage bs:ctx _.test -1
@@ -25,5 +25,5 @@ data modify storage bs:ctx z set from storage bs:ctx y
 execute if score #t bs.ctx matches 0 run return run function bs.string:split/normal/cut with storage bs:ctx
 
 function bs.string:find/match_patern with storage bs:ctx _
-#tellraw @a ["z : ",{"storage": "bs:ctx","nbt": "z"}," ltr : ",{"storage": "bs:ctx","nbt": "_.ltr"},"\n"]
+tellraw @a ["z : ",{"storage": "bs:ctx","nbt": "z"}," ltr : ",{"storage": "bs:ctx","nbt": "_.ltr"},"\n"]
 function bs.string:split/normal/skip with storage bs:ctx

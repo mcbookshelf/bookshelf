@@ -13,4 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _.list append string storage bs:in string.replace.str $(z)
+$scoreboard players add #i bs.ctx $(z)
+$scoreboard players add #d bs.ctx $(z)
+scoreboard players remove #d bs.ctx 1
+
+execute if score #l bs.ctx < #i bs.ctx run return run data modify storage bs:ctx _.list append from storage bs:ctx _.rep
+
+$data modify storage bs:ctx _.str set string storage bs:ctx _.str $(z)
+
+function bs.string:replace/loop with storage bs:ctx

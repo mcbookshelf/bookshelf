@@ -14,8 +14,10 @@
 # ------------------------------------------------------------------------------------------------------------
 
 $scoreboard players add #i bs.ctx $(z)
+$scoreboard players add #d bs.ctx $(z)
+scoreboard players remove #d bs.ctx 1
 
-execute if score #l bs.ctx <= #i bs.ctx run return run data modify storage bs:out string.split append from storage bs:ctx _.cut
+execute if score #l bs.ctx < #i bs.ctx run return run data modify storage bs:out string.split append from storage bs:ctx _.cut
 
 $data modify storage bs:ctx _.str set string storage bs:ctx _.str $(z)
 

@@ -22,8 +22,7 @@ execute if score #l bs.ctx <= #i bs.ctx run return run data modify storage bs:ou
 
 #count operations
 scoreboard players add #c bs.ctx 1
-execute if score #c bs.ctx = #o bs.ctx run return run data modify storage bs:out string.split append from storage bs:ctx _.str
-
+execute if score #c bs.ctx = #o bs.ctx run return run data modify storage bs:out string.split append from storage bs:ctx _.cut
 
 scoreboard players set #d bs.ctx -1
 function bs.string:split/count/count with storage bs:ctx

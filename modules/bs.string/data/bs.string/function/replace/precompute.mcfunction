@@ -12,14 +12,11 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+execute if score #e bs.ctx matches 1 run return 1
+execute store result storage bs:ctx z int 1 run scoreboard players remove #e bs.ctx 1
+$data modify storage bs:ctx _.patern."$(ltr)" set from storage bs:ctx z
+tellraw @a ["debug : e : ",{"score": {"name": "#e","objective": "bs.ctx"}}," z : ",{"storage": "bs:ctx","nbt": "z"}]
 
-$data modify storage bs:ctx _.list append string storage bs:ctx _.rep 0 $(x)
-data modify storage bs:ctx _.list append from storage bs:in string.replace.new
-$data modify storage bs:ctx _.str set string storage bs:ctx _.str $(y)
-$scoreboard players add #i bs.ctx $(y)
-data modify storage bs:ctx _.rep set from storage bs:ctx _.str
-
-execute if score #l bs.ctx <= #i bs.ctx run return run data modify storage bs:ctx _.list append from storage bs:ctx _.rep
-
-scoreboard players set #d bs.ctx -1
-function bs.string:replace/loop with storage bs:ctx
+data modify storage bs:ctx _.ltr set string storage bs:ctx _.old 0 1
+data modify storage bs:ctx _.old set string storage bs:ctx _.old 1
+function bs.string:replace/precompute with storage bs:ctx _

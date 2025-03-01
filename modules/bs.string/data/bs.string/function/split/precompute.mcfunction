@@ -12,10 +12,9 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-execute store result storage bs:ctx z int 1 run scoreboard players remove #e bs.ctx 1
-$data modify storage bs:ctx _.patern.$(ltr) set from storage bs:ctx z
-
 execute if score #e bs.ctx matches 1 run return 1
+execute store result storage bs:ctx z int 1 run scoreboard players remove #e bs.ctx 1
+$data modify storage bs:ctx _.patern."$(ltr)" set from storage bs:ctx z
 
 data modify storage bs:ctx _.ltr set string storage bs:ctx _.separator 0 1
 data modify storage bs:ctx _.separator set string storage bs:ctx _.separator 1

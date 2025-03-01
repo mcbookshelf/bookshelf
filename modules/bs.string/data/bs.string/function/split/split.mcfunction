@@ -13,22 +13,20 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 $scoreboard players set #o bs.ctx $(maxsplit)
-
 #reset
 data modify storage bs:out string.split set value []
-execute store result score #c bs.ctx run scoreboard players set #i bs.ctx 0
+execute store result score #c bs.ctx store result storage bs:ctx x int 1 run scoreboard players set #i bs.ctx 0
 scoreboard players set #d bs.ctx -1
 
 #size check
 execute store result score #l bs.ctx run data get storage bs:in string.split.str
-execute store result score #p bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.split.separator
-
-execute if score #p bs.ctx > #l bs.ctx run return 0
-scoreboard players add #l bs.ctx 1
+execute store result score #p bs.ctx store result score #e bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.split.separator
 
 #moving values
 data modify storage bs:ctx _ set from storage bs:in string.split
 data modify storage bs:ctx _.cut set from storage bs:in string.split.str
+
+execute if score #p bs.ctx > #l bs.ctx run return 0
 scoreboard players operation #l bs.ctx -= #p bs.ctx
 
 #precompute

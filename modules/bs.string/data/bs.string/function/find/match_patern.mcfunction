@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx z set from storage bs:ctx _.patern.$(ltr)
+$data modify storage bs:ctx z set from storage bs:ctx _.patern."$(ltr)"
