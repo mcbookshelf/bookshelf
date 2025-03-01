@@ -218,6 +218,22 @@ execute as @e[type=minecraft:pig] run function #bs.move:set_motion {scale:0.001}
 
 ---
 
+## 👁️ Predicates
+
+You can find below all predicates available in this module.
+
+---
+
+### Has Velocity?
+
+**`bs.move:has_vel`**
+
+Determine if an entity has a nonzero velocity score.
+
+> **Credits**: Aksiome
+
+---
+
 ## 🎓 Custom Collisions
 
 This module allows you to customize collision behaviors according to your specific needs.
