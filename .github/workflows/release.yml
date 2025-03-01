@@ -34,6 +34,7 @@ jobs:
     name: 🔍 Check Release Necessity
     needs: update-metadata
     runs-on: ubuntu-latest
+    environment: release
     if: github.ref == 'refs/heads/master'
     outputs:
       release_tag: ${{ steps.check-versions.outputs.release_tag }}
@@ -48,12 +49,12 @@ jobs:
       - name: Check Versions
         id: check-versions
         run: |
-          VERSION=$(python core/definitions.py VERSION)
-          MINECRAFT_VERSIONS=$(python core/definitions.py MINECRAFT_VERSIONS)
+          VERSION=$(python -m bookshelf version)
+          MC_VERSIONS=$(python -m bookshelf mc_versions)
 
-          game_versions=$(echo $MINECRAFT_VERSIONS | sed 's/ /,/g')
+          mc_versions=$(echo $MC_VERSIONS | sed 's/ /,/g')
           echo "release_tag=v$VERSION" >> $GITHUB_OUTPUT
-          echo "release_name=v$VERSION - MC $game_versions" >> $GITHUB_OUTPUT
+          echo "release_name=v$VERSION - MC $mc_versions" >> $GITHUB_OUTPUT
 
           if [ -n "$(git tag -l "v$VERSION")" ]; then
             echo "version_exists=true" >> $GITHUB_OUTPUT
@@ -70,6 +71,7 @@ jobs:
     name: 📦 Create Release
     needs: check-versions
     runs-on: ubuntu-latest
+    environment: release
     if: ${{ needs.check-versions.outputs.version_exists == 'false' }}
     steps:
       - uses: actions/checkout@v4

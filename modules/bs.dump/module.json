@@ -7,7 +7,7 @@
   "meta": {
     "name": "Dump",
     "slug": "bookshelf-dump",
-    "description": "Dump the content of given variables to the chat.",
+    "description": "Bookshelf debugging tool that outputs variable contents directly to chat.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/dump.html",
     "tags": ["dev"]
   }

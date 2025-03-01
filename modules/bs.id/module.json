@@ -7,7 +7,7 @@
   "meta": {
     "name": "ID",
     "slug": "bookshelf-id",
-    "description": "Manage entity IDs, essential in scenarios like shooting games where you need to track who is targeting whom.",
+    "description": "Bookshelf module for assigning and managing entity IDs.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html",
     "tags": ["runtime"]
   }

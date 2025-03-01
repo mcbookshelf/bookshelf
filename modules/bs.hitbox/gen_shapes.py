@@ -4,12 +4,14 @@ from datetime import datetime, timezone
 from beet import BlockTag, Context, LootTable
 from pydantic import BaseModel
 
-from core.common.helpers import (
+from bookshelf.definitions import MC_VERSIONS
+from bookshelf.helpers import (
     download_and_parse_json,
     gen_loot_table_tree,
     render_snbt,
 )
-from core.definitions import MINECRAFT_VERSIONS, SHAPES_URL
+
+SHAPES_META = "https://raw.githubusercontent.com/mcbookshelf/mcdata/refs/tags/{}/blocks/shapes.min.json"
 
 type Properties = dict[str, str]
 type VoxelShape = list[list[float]]
@@ -27,7 +29,7 @@ class BlockShapes(BaseModel):
 def beet_default(ctx: Context) -> None:
     """Generate files used by the bs.hitbox module."""
     namespace = ctx.directory.name
-    shapes = get_block_shapes(ctx, version := MINECRAFT_VERSIONS[-1])
+    shapes = get_block_shapes(ctx, version := MC_VERSIONS[-1])
 
     with ctx.override(generate_namespace=namespace):
         ctx.generate("has_offset", gen_has_offset_block_tag(shapes, version))
@@ -41,7 +43,7 @@ def beet_default(ctx: Context) -> None:
 def get_block_shapes(ctx: Context, version: str) -> list[BlockShapes]:
     """Retrieve and processes block shapes from the provided version."""
     cache = ctx.cache[f"version/{version}"]
-    raw_shapes = download_and_parse_json(cache, SHAPES_URL.format(version))
+    raw_shapes = download_and_parse_json(cache, SHAPES_META.format(version))
     if not isinstance(raw_shapes, (dict)):
         error_msg = f"Expected a dict, but got {type(raw_shapes)}"
         raise TypeError(error_msg)

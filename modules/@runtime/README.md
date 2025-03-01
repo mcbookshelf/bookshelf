@@ -1,6 +1,6 @@
 # 🧰 Bookshelf Runtime
 
-The **Bookshelf Runtime** is a modular toolkit that provides essential utilities for building Minecraft datapacks. It includes modules such as:
+The **Bookshelf Runtime** is a collection of modules that provide essential utilities for building Minecraft datapacks. It includes modules such as:
 
 - **🧱 Block**: Get and manipulate blocks (supports BlockStates and NBT).
 - **🔦 Raycast**: Cast rays and see if they collide with blocks or entities.

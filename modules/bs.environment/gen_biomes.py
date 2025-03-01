@@ -4,14 +4,15 @@ from datetime import datetime, timezone
 from beet import Context, LootTable, Predicate
 from pydantic import BaseModel
 
-from core.common.helpers import (
+from bookshelf.definitions import MC_VERSIONS
+from bookshelf.helpers import (
     download_and_parse_json,
     gen_loot_table_tree,
     render_snbt,
     with_prefix,
 )
-from core.definitions import BIOMES_URL, MINECRAFT_VERSIONS
 
+BIOMES_META = "https://raw.githubusercontent.com/misode/mcmeta/{}-summary/data/worldgen/biome/data.min.json"
 SNOW_THRESHOLD = 0.4
 
 class Biome(BaseModel):
@@ -25,7 +26,7 @@ class Biome(BaseModel):
 def beet_default(ctx: Context) -> None:
     """Generate files used by the bs.environment module."""
     namespace = ctx.directory.name
-    biomes = get_biomes(ctx, version := MINECRAFT_VERSIONS[-1])
+    biomes = get_biomes(ctx, version := MC_VERSIONS[-1])
 
     with ctx.override(generate_namespace=namespace):
         ctx.generate("get/get_biome", gen_get_biome_loot_table(biomes))
@@ -39,7 +40,7 @@ def beet_default(ctx: Context) -> None:
 def get_biomes(ctx: Context, version: str) -> list[Biome]:
     """Retrieve biomes from the provided version."""
     cache = ctx.cache[f"version/{version}"]
-    raw_biomes = download_and_parse_json(cache, BIOMES_URL.format(version))
+    raw_biomes = download_and_parse_json(cache, BIOMES_META.format(version))
     if not isinstance(raw_biomes, dict):
         error_msg = f"Expected a dict, but got {type(raw_biomes)}"
         raise TypeError(error_msg)
