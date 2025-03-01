@@ -13,7 +13,50 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in string.insert.str set value "my friend"
-data modify storage bs:in string.insert.needle set value " best"
+# Test basic insert
+data modify storage bs:in string.insert.str set value "Hello World"
+data modify storage bs:in string.insert.needle set value "Beautiful "
+function #bs.string:insert {index:6}
+assert data storage bs:out {string:{insert:"Hello Beautiful World"}}
+
+# Test insert at start
+data modify storage bs:in string.insert.str set value "World"
+data modify storage bs:in string.insert.needle set value "Hello "
+function #bs.string:insert {index:0}
+assert data storage bs:out {string:{insert:"Hello World"}}
+
+# Test insert at end
+data modify storage bs:in string.insert.str set value "Hello"
+data modify storage bs:in string.insert.needle set value " World"
+function #bs.string:insert {index:5}
+assert data storage bs:out {string:{insert:"Hello World"}}
+
+# Test insert into empty string
+data modify storage bs:in string.insert.str set value ""
+data modify storage bs:in string.insert.needle set value "test"
+function #bs.string:insert {index:0}
+assert data storage bs:out {string:{insert:"test"}}
+
+# Test insert empty string
+data modify storage bs:in string.insert.str set value "test"
+data modify storage bs:in string.insert.needle set value ""
 function #bs.string:insert {index:2}
-assert data storage bs:out {string:{insert:"my best friend"}}
+assert data storage bs:out {string:{insert:"test"}}
+
+# Test with Unicode
+data modify storage bs:in string.insert.str set value "éë"
+data modify storage bs:in string.insert.needle set value "à"
+function #bs.string:insert {index:1}
+assert data storage bs:out {string:{insert:"éàë"}}
+
+# Test with index beyond string length
+# data modify storage bs:in string.insert.str set value "test"
+# data modify storage bs:in string.insert.needle set value " append"
+# function #bs.string:insert {index:99}
+# assert data storage bs:out {string:{insert:"test append"}}
+
+# Test with negative index
+data modify storage bs:in string.insert.str set value "test"
+data modify storage bs:in string.insert.needle set value "pre "
+function #bs.string:insert {index:-4}
+assert data storage bs:out {string:{insert:"pre test"}}

@@ -20,8 +20,13 @@ data modify storage bs:ctx _ set from storage bs:in string.find
 execute store result score #l bs.ctx run data get storage bs:in string.find.str
 execute store result score #p bs.ctx store result score #e bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.needle
 
+#corner case
+execute if score #l bs.ctx matches 0 run return 0
+execute if score #p bs.ctx matches 0 run return 0
+
 execute if score #p bs.ctx > #l bs.ctx run return 0
 scoreboard players operation #l bs.ctx -= #p bs.ctx
+
 
 #precompute
 data modify storage bs:ctx _.ltr set string storage bs:ctx _.needle 0 1

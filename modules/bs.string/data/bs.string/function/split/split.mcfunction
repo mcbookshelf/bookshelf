@@ -26,6 +26,11 @@ execute store result score #p bs.ctx store result score #e bs.ctx store result s
 data modify storage bs:ctx _ set from storage bs:in string.split
 data modify storage bs:ctx _.cut set from storage bs:in string.split.str
 
+#corner case
+execute if score #l bs.ctx matches 0 run return run data modify storage bs:out string.split append value ""
+execute if score #p bs.ctx matches 0 run function bs.string:type/to_list/run
+execute if score #p bs.ctx matches 0 run return run data modify storage bs:out string.split set from storage bs:ctx _.l
+
 execute if score #p bs.ctx > #l bs.ctx run return 0
 scoreboard players operation #l bs.ctx -= #p bs.ctx
 

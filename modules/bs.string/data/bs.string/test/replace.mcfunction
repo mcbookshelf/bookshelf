@@ -13,25 +13,65 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-#one char
-data modify storage bs:in string.replace.str set value "a sentance all more normal "
-data modify storage bs:in string.replace.old set value " "
-data modify storage bs:in string.replace.new set value "_"
-
+# Test basic replacement
+data modify storage bs:in string.replace.str set value "hello world"
+data modify storage bs:in string.replace.old set value "world"
+data modify storage bs:in string.replace.new set value "minecraft"
 function #bs.string:replace
-assert data storage bs:out {string:{replace:"a_sentance_all_more_normal_"}}
+assert data storage bs:out {string:{replace:"hello minecraft"}}
 
-
-data modify storage bs:in string.replace.str set value "a sentance all more normal "
-data modify storage bs:in string.replace.old set value "all more"
-data modify storage bs:in string.replace.new set value "no more"
-
+# Test empty string
+data modify storage bs:in string.replace.str set value ""
+data modify storage bs:in string.replace.old set value "test"
+data modify storage bs:in string.replace.new set value "replace"
 function #bs.string:replace
-assert data storage bs:out {string:{replace:"a sentance no more normal "}}
+assert data storage bs:out {string:{replace:""}}
 
-data modify storage bs:in string.replace.str set value "a secret message"
-data modify storage bs:in string.replace.old set value "e"
-data modify storage bs:in string.replace.new set value "#"
-
+# Test empty old string
+data modify storage bs:in string.replace.str set value "test string"
+data modify storage bs:in string.replace.old set value ""
+data modify storage bs:in string.replace.new set value "X"
 function #bs.string:replace
-assert data storage bs:out {string:{replace:"a s#cr#t m#ssag#"}}
+assert data storage bs:out {string:{replace:"test string"}}
+
+# Test empty new string
+data modify storage bs:in string.replace.str set value "remove this"
+data modify storage bs:in string.replace.old set value "this"
+data modify storage bs:in string.replace.new set value ""
+function #bs.string:replace
+assert data storage bs:out {string:{replace:"remove "}}
+
+# Test multiple replacements
+data modify storage bs:in string.replace.str set value "a a a a"
+data modify storage bs:in string.replace.old set value "a"
+data modify storage bs:in string.replace.new set value "b"
+function #bs.string:replace
+assert data storage bs:out {string:{replace:"b b b b"}}
+
+# Test case sensitivity
+data modify storage bs:in string.replace.str set value "Test test TEST"
+data modify storage bs:in string.replace.old set value "test"
+data modify storage bs:in string.replace.new set value "replaced"
+function #bs.string:replace
+assert data storage bs:out {string:{replace:"Test replaced TEST"}}
+
+# Test with Unicode
+data modify storage bs:in string.replace.str set value "éàêë"
+data modify storage bs:in string.replace.old set value "ê"
+data modify storage bs:in string.replace.new set value "e"
+function #bs.string:replace
+assert data storage bs:out {string:{replace:"éàeë"}}
+
+# Test replacing with longer string
+data modify storage bs:in string.replace.str set value "short"
+data modify storage bs:in string.replace.old set value "short"
+data modify storage bs:in string.replace.new set value "very long replacement"
+function #bs.string:replace
+assert data storage bs:out {string:{replace:"very long replacement"}}
+
+# Test replacing with shorter string
+data modify storage bs:in string.replace.str set value "very long original"
+data modify storage bs:in string.replace.old set value "very long"
+data modify storage bs:in string.replace.new set value "short"
+function #bs.string:replace
+assert data storage bs:out {string:{replace:"short original"}}

@@ -13,44 +13,56 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-#normal
-data modify storage bs:in string.split.str set value "a sentance all more normal"
-data modify storage bs:in string.split.separator set value " "
-
+# Test basic split
+data modify storage bs:in string.split.str set value "a,b,c,d"
+data modify storage bs:in string.split.separator set value ","
 function #bs.string:split {maxsplit:0}
-assert data storage bs:out {string:{split:["a","sentance","all","more","normal"]}}
-execute store result score #t bs.ctx run data get storage bs:out string.split
-assert score #t bs.ctx matches 5
+assert data storage bs:out {string:{split:["a","b","c","d"]}}
 
-data modify storage bs:in string.split.str set value "islotcoolotlotbutlot "
-data modify storage bs:in string.split.separator set value "lot"
-
+# Test with empty string
+data modify storage bs:in string.split.str set value ""
+data modify storage bs:in string.split.separator set value ","
 function #bs.string:split {maxsplit:0}
-assert data storage bs:out {string:{split:["is","coo","","but"," "]}}
-execute store result score #t bs.ctx run data get storage bs:out string.split
-assert score #t bs.ctx matches 5
+assert data storage bs:out {string:{split:[""]}}
 
-data modify storage bs:in string.split.str set value "a sentance all more normal "
-data modify storage bs:in string.split.separator set value " "
-
+# Test with empty separator (to hard to implement use to_list insted)
+data modify storage bs:in string.split.str set value "abc"
+data modify storage bs:in string.split.separator set value ""
 function #bs.string:split {maxsplit:0}
-assert data storage bs:out {string:{split:["a","sentance","all","more","normal",""]}}
-execute store result score #t bs.ctx run data get storage bs:out string.split
-assert score #t bs.ctx matches 6
+assert data storage bs:out {string:{split:["a","b","c"]}}
 
-#count
+# Test with multiple consecutive separators
+data modify storage bs:in string.split.str set value "a,,b,,,c"
+data modify storage bs:in string.split.separator set value ","
+function #bs.string:split {maxsplit:0}
+assert data storage bs:out {string:{split:["a","","b","","","c"]}}
+
+# Test with separator at start/end
+data modify storage bs:in string.split.str set value ",start,middle,end,"
+data modify storage bs:in string.split.separator set value ","
+function #bs.string:split {maxsplit:0}
+assert data storage bs:out {string:{split:["","start","middle","end",""]}}
+
+# Test with maxsplit
+data modify storage bs:in string.split.str set value "a:b:c:d:e"
+data modify storage bs:in string.split.separator set value ":"
 function #bs.string:split {maxsplit:2}
-assert data storage bs:out {string:{split:["a","sentance","all more normal "]}}
+assert data storage bs:out {string:{split:["a","b","c:d:e"]}}
 
-function #bs.string:split {maxsplit:20}
-assert data storage bs:out {string:{split:["a","sentance","all", "more", "normal",""]}}
-execute store result score #t bs.ctx run data get storage bs:out string.split
-assert score #t bs.ctx matches 6
+# Test with spaces
+data modify storage bs:in string.split.str set value "  spaces  between  words  "
+data modify storage bs:in string.split.separator set value " "
+function #bs.string:split {maxsplit:0}
+assert data storage bs:out {string:{split:["","","spaces","","between","","words","",""]}}
 
-data modify storage bs:in string.split.str set value "islotcoolotlotbutlot "
-data modify storage bs:in string.split.separator set value "lot"
+# Test with longer separator
+data modify storage bs:in string.split.str set value "word<->split<->by<->arrow"
+data modify storage bs:in string.split.separator set value "<->"
+function #bs.string:split {maxsplit:0}
+assert data storage bs:out {string:{split:["word","split","by","arrow"]}}
 
-function #bs.string:split {maxsplit:3}
-assert data storage bs:out {string:{split:["is","coo","","butlot "]}}
-execute store result score #t bs.ctx run data get storage bs:out string.split
-assert score #t bs.ctx matches 4
+# Test with Unicode
+data modify storage bs:in string.split.str set value "é★à★ê★ë"
+data modify storage bs:in string.split.separator set value "★"
+function #bs.string:split {maxsplit:0}
+assert data storage bs:out {string:{split:["é","à","ê","ë"]}}

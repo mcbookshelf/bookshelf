@@ -13,29 +13,56 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# bad size
-data modify storage bs:in string.find.str set value "mot"
-data modify storage bs:in string.find.needle set value "motus"
+# Test basic find
+data modify storage bs:in string.find.str set value "hello world"
+data modify storage bs:in string.find.needle set value "world"
+function #bs.string:find {occurrence:0}
+assert data storage bs:out {string:{find:[6]}}
+
+# Test empty string
+data modify storage bs:in string.find.str set value ""
+data modify storage bs:in string.find.needle set value "test"
 function #bs.string:find {occurrence:0}
 assert data storage bs:out {string:{find:[]}}
 
-# unique reference
-data modify storage bs:in string.find.str set value "motmott"
-data modify storage bs:in string.find.needle set value "t"
+# Test empty needle
+data modify storage bs:in string.find.str set value "test string"
+data modify storage bs:in string.find.needle set value ""
 function #bs.string:find {occurrence:0}
-assert data storage bs:out {string:{find:[2,5,6]}}
+assert data storage bs:out {string:{find:[]}}
 
-#normal one
-data modify storage bs:in string.find.str set value "mot cacher est un mot trés en motte"
-data modify storage bs:in string.find.needle set value "mot"
-
+# Test multiple occurrences
+data modify storage bs:in string.find.str set value "test test test"
+data modify storage bs:in string.find.needle set value "test"
 function #bs.string:find {occurrence:0}
-assert data storage bs:out {string:{find:[0, 18, 30]}}
+assert data storage bs:out {string:{find:[0,5,10]}}
 
-#count test
+# Test with occurrence limit
+data modify storage bs:in string.find.str set value "find find find find"
+data modify storage bs:in string.find.needle set value "find"
 function #bs.string:find {occurrence:2}
-assert data storage bs:out {string:{find:[0, 18]}}
+assert data storage bs:out {string:{find:[0,5]}}
 
-#reversed test 
-#function #bs.string:find {occurrence:-2}
-#assert data storage bs:out {string:{find:[18, 30]}}
+# Test with Unicode
+data modify storage bs:in string.find.str set value "éàêëàéêë"
+data modify storage bs:in string.find.needle set value "êë"
+function #bs.string:find {occurrence:0}
+assert data storage bs:out {string:{find:[2,6]}}
+
+# Test case sensitivity
+data modify storage bs:in string.find.str set value "Test TEST test"
+data modify storage bs:in string.find.needle set value "test"
+function #bs.string:find {occurrence:0}
+assert data storage bs:out {string:{find:[10]}}
+
+# Test overlapping patterns
+data modify storage bs:in string.find.str set value "aaaaa"
+data modify storage bs:in string.find.needle set value "aa"
+function #bs.string:find {occurrence:0}
+assert data storage bs:out {string:{find:[0,1,2,3]}}
+
+# Test needle not found
+data modify storage bs:in string.find.str set value "hello world"
+data modify storage bs:in string.find.needle set value "notfound"
+function #bs.string:find {occurrence:0}
+assert data storage bs:out {string:{find:[]}}

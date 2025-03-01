@@ -26,6 +26,10 @@ execute store result score #p bs.ctx store result score #e bs.ctx store result s
 data modify storage bs:ctx _ set from storage bs:in string.replace
 data modify storage bs:ctx _.rep set from storage bs:in string.replace.str
 
+#corner case
+execute if score #l bs.ctx matches 0 run return run data modify storage bs:out string.replace set value ""
+execute if score #p bs.ctx matches 0 run return run data modify storage bs:out string.replace set from storage bs:in string.replace.str
+
 execute if score #p bs.ctx > #l bs.ctx run return 0
 scoreboard players operation #l bs.ctx -= #p bs.ctx
 

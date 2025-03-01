@@ -20,8 +20,8 @@ execute store success score #t bs.ctx run data modify storage bs:ctx _.test set 
 execute if score #t bs.ctx matches 0 run data modify storage bs:out string.find append from storage bs:ctx x
 
 data modify storage bs:ctx z set from storage bs:ctx y
+function bs.string:find/match_patern with storage bs:ctx _
 execute if score #t bs.ctx matches 0 run return run function bs.string:find/normal/skip with storage bs:ctx
 
-function bs.string:find/match_patern with storage bs:ctx _
 #tellraw @a ["z : ",{"storage": "bs:ctx","nbt": "z"}," ltr : ",{"storage": "bs:ctx","nbt": "_.ltr"},"\n"]
 function bs.string:find/normal/skip with storage bs:ctx

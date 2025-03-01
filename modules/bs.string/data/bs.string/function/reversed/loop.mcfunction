@@ -13,10 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _.str set from storage bs:in string.to_list.str
-data modify storage bs:out string.list set value []
-scoreboard players set #i bs.ctx 0
-execute store result score #l bs.ctx run data get storage bs:in string.to_list.str
-
-function bs.string:type/to_list/loop
-return run scoreboard players get #l bs.ctx
+data modify storage bs:ctx _.list append string storage bs:ctx _.str -1
+data modify storage bs:ctx _.str set string storage bs:ctx _.str 0 -1
+execute if score #i bs.ctx >= #l bs.ctx run return 0
+scoreboard players add #i bs.ctx 1
+function bs.string:reversed/loop
