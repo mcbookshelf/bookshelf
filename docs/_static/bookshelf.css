@@ -278,6 +278,21 @@ button.btn.version-switcher__button {
   text-overflow: ellipsis;
 }
 
+.bd-footer {
+  font-size: .9em;
+}
+
+.bd-footer .bd-footer__inner {
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .bd-footer .bd-footer__inner {
+    flex-direction: row;
+  }
+}
 
 @media (min-width: 960px) {
   .bd-page-width {
