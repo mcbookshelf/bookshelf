@@ -1,0 +1,17 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.component",
+    "load": "."
+  },
+  "meta": {
+    "name": "Component",
+    "slug": "bookshelf-component",
+    "description": "A set of components that can be used to simplify the development of complex GUI in Minecraft.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/component.html",
+    "tags": ["runtime"],
+    "dependencies": [
+      "bs.interaction"
+    ]
+  }
+}
