@@ -239,8 +239,8 @@ tellraw @a [{"text":"The list of strings is \""},{"storage":"bs:out","nbt":"stri
 
 ### Transform Type
 
-::::{tab-set}
-:::{tab-item} To List
+:::::{tab-set}
+::::{tab-item} To List
 
 ```{function} #bs.string:to_list
 
@@ -263,8 +263,8 @@ function #bs.string:to_list
 tellraw @a [{"text":"The list of characters is \""},{"storage":"bs:out","nbt":"string.to_list"},{"text":"\""}]
 ```
 
-:::
-:::{tab-item} To String
+::::
+::::{tab-item} To String
 
 ```{function} #bs.string:to_string
 
@@ -281,7 +281,7 @@ Transform a number into a string
   **Strorage `bs:out string.to_string`**: {nbt}`string` The string
 ```
 
-_transform 42 into a string:_
+_transform `42` into a string:_
 
 ```mcfunction
 function #bs.string:to_string {number:42}
@@ -289,9 +289,62 @@ function #bs.string:to_string {number:42}
 tellraw @a [{"text":"The string is \""},{"storage":"bs:out","nbt":"string.to_string"},{"text":"\""}]
 ```
 
-:::
+::::
+::::{tab-item} To Number
+
+```{function} #bs.string:to_number
+
+Transform a string into a number
+
+:Inputs:
+  **Macro**:
+  :::{treeview}
+  - {nbt}`compound` Arguments
+    - {nbt}`string` **str**: The string to transform
+  :::
+
+:Outputs:
+  **Strorage `bs:out string.to_number`**: {nbt}`int` The number
+```
+
+_transform `42` into a number:_
+
+```mcfunction
+function #bs.string:to_number {str:"42"}
+
+tellraw @a [{"text":"The number is \""},{"storage":"bs:out","nbt":"string.to_number"},{"text":"\""}]
+```
 
 ::::
+
+:::::
+
+> **Credits**: Aure31
+
+---
+
+### Reverse
+
+```{function} #bs.string:reverse
+
+Reverse a string
+
+:Inputs:
+  **Storage `bs:in string.reverse.str`**: {nbt}`string` The string to reverse
+
+:Outputs:
+  **Strorage `bs:out string.reverse`**: {nbt}`string` The reversed string
+```
+
+_reverse `hello world`:_
+
+```mcfunction
+data modify storage bs:in string.reverse.str set value "hello world"
+
+function #bs.string:reverse
+
+tellraw @a [{"text":"The reversed string is \""},{"storage":"bs:out","nbt":"string.reverse"},{"text":"\""}]
+```
 
 > **Credits**: Aure31
 

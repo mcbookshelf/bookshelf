@@ -43,4 +43,4 @@ function bs.string:split/precompute with storage bs:ctx _
 #check values
 execute if score #o bs.ctx matches 0 run return run function bs.string:split/normal/normal with storage bs:ctx
 execute if score #o bs.ctx matches 1.. run return run function bs.string:split/count/count with storage bs:ctx
-tellraw @a [{"text":"[Bookshelf] ","color":"gold"},{"text":"Error: ","color":"red"},{"text":"Doesn't support reversed split","color":"red"}]
+function #bs.log:error { namespace: "bs.string", path: "bs.string:split", tag: "split", message: '"does not accept negative values"' }

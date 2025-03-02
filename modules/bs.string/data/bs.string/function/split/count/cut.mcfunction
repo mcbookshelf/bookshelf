@@ -12,7 +12,7 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-#say cut
+
 $data modify storage bs:out string.split append string storage bs:ctx _.cut 0 $(x)
 $data modify storage bs:ctx _.str set string storage bs:ctx _.str $(y)
 $scoreboard players add #i bs.ctx $(y)

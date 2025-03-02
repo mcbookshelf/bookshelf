@@ -20,7 +20,6 @@ data remove storage bs:ctx _.list
 
 #loop
 function bs.string:lower/loop with storage bs:ctx _
-#tellraw @a [{"text":"[DEBUG] "},{"storage":"bs:ctx","nbt":"_.list"}]
 
 #concat
 function bs.string:concat/run
