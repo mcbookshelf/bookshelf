@@ -15,17 +15,13 @@
 
 # Note: Thanks to XanBelOr for giving the idea to use an advancement to subtick heal the player.
 
-$execute store result score #h bs.ctx run data get storage bs:const health.point $(points)
-
-execute store success score #s bs.ctx run attribute @s minecraft:max_health modifier value get bs.health:limit
-execute if score #s bs.ctx matches 1 store result score #p bs.ctx run attribute @s minecraft:max_health get 100000
-execute if score #s bs.ctx matches 0 store result score #p bs.ctx run data get entity @s Health 100000
-scoreboard players operation #h bs.ctx += #p bs.ctx
-
+execute store result score #h bs.ctx run data get entity @s Health 100000
 execute store result score #m bs.ctx run attribute @s minecraft:max_health get 100000
-execute store result score #a bs.ctx run attribute @s minecraft:max_health modifier value get bs.health:limit 100000
-scoreboard players operation #a bs.ctx -= #m bs.ctx
-execute store result storage bs:ctx x double 0.00001 run scoreboard players operation #a bs.ctx += #h bs.ctx
-execute if score #a bs.ctx matches 1.. run data modify storage bs:ctx x set value 0
-execute if score #p bs.ctx > #h bs.ctx run return run function bs.health:apply/decrease_health with storage bs:ctx
-execute if score #p bs.ctx < #h bs.ctx run return run function bs.health:apply/increase_health with storage bs:ctx
+$execute store result score #p bs.ctx run data get storage bs:const health.point $(points)
+execute unless score @s bs.hmod matches 1.. run scoreboard players operation @s bs.hmod = #h bs.ctx
+scoreboard players operation @s bs.hmod += #p bs.ctx
+scoreboard players operation @s bs.hmod < #m bs.ctx
+
+execute if score @s bs.hmod > #h bs.ctx run return run effect give @s minecraft:instant_health 1 28 true
+execute store result storage bs:ctx y double .00001 run scoreboard players operation @s bs.hmod -= #m bs.ctx
+function bs.health:apply/decrease_health with storage bs:ctx
