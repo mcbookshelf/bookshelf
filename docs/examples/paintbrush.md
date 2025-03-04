@@ -1,0 +1,2 @@
+```{include} ../../examples/paintbrush.md
+```

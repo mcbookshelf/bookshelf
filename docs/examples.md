@@ -9,5 +9,5 @@ TODO
 ```{toctree}
 :hidden:
 
-examples/painter
+examples/paintbrush
 ```
