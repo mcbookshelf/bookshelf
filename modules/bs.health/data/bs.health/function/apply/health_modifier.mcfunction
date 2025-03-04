@@ -13,4 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-attribute @s minecraft:max_health modifier remove bs.health:limit
+advancement revoke @s only bs.health:apply_modifier
+execute store result score #m bs.ctx run attribute @s minecraft:max_health get 100000
+execute store result storage bs:ctx y double 0.00001 run scoreboard players operation @s bs.hmod -= #m bs.ctx
+function bs.health:apply/decrease_health with storage bs:ctx

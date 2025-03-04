@@ -15,6 +15,7 @@
 
 scoreboard objectives remove bs.ctx
 scoreboard objectives remove bs.ttl
+scoreboard objectives remove bs.hmod
 
 data remove storage bs:const health
 data remove storage bs:data health

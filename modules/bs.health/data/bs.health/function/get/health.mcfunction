@@ -13,7 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store success score #s bs.ctx run attribute @s minecraft:max_health modifier value get bs.health:limit
-execute if score #s bs.ctx matches 1 store result storage bs:out health.get_health double 0.00001 run attribute @s minecraft:max_health get 100000
-execute if score #s bs.ctx matches 0 run data modify storage bs:out health.get_health set from entity @s Health
+execute if score @s bs.hmod matches 1.. store result storage bs:out health.get_health double 0.00001 run scoreboard players get @s bs.hmod
+execute unless score @s bs.hmod matches 1.. run data modify storage bs:out health.get_health set from entity @s Health
 $return run data get storage bs:out health.get_health $(scale)

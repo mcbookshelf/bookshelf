@@ -13,7 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #m bs.ctx run attribute @s minecraft:max_health get 100000
-execute store result score #a bs.ctx run attribute @s minecraft:max_health modifier value get bs.health:limit 100000
-execute store result storage bs:out health.get_max_health double 0.00001 run scoreboard players operation #m bs.ctx -= #a bs.ctx
+execute store result storage bs:out health.get_max_health double 0.00001 run attribute @s minecraft:max_health get 100000
 $return run data get storage bs:out health.get_max_health $(scale)
