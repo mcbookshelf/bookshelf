@@ -7,7 +7,8 @@ html_theme.sidebar_secondary.remove: true
 TODO
 
 ```{toctree}
+:glob:
 :hidden:
 
-examples/paintbrush
+*
 ```

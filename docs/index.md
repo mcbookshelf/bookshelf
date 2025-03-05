@@ -86,7 +86,7 @@ If you want to contribute, please refer to the [contribution docs](https://docs.
 quickstart
 modules
 contribute/index
-examples
+examples/index
 related
 CHANGELOG
 faq
