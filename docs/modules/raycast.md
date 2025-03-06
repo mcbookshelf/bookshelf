@@ -53,10 +53,10 @@ Cast a ray from the execution position and check if it hits something.
   :::{treeview}
   - {nbt}`compound` Ray output data
     - {nbt}`double` **distance**: The distance from the ray's origin to the impact point.
-    - {nbt}`array` **hit_point**: The coordintates of the impact point.
-    - {nbt}`array` **hit_normal**: The normal of the surface the ray hit.
-    - {nbt}`array` **targeted_block**: The coordinates of the block that was hit.
-    - {nbt}`array` **targeted_entity**: The UUID array of the entity that was hit.
+    - {nbt}`list` **hit_point**: The coordintates of the impact point.
+    - {nbt}`list` **hit_normal**: The normal of the surface the ray hit.
+    - {nbt}`list` **targeted_block**: The coordinates of the block that was hit.
+    - {nbt}`list` **targeted_entity**: The UUID array of the entity that was hit.
   :::
 ```
 

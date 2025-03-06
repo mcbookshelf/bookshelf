@@ -6,12 +6,12 @@ The beatifull world of mathematics... **in Minecraft!**
 
 
 ```{image} /_imgs/modules/math-light.png
-:align: center
+:width: 100%
 :class: only-light
 ```
 
 ```{image} /_imgs/modules/math-dark.png
-:align: center
+:width: 100%
 :class: only-dark
 ```
 

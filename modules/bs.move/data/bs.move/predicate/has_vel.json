@@ -1,4 +1,19 @@
 {
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html#has-velocity",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2025/01/03",
+      "minecraft_version": "1.21.4"
+    },
+    "updated": {
+      "date": "2025/01/03",
+      "minecraft_version": "1.21.4"
+    }
+  },
   "condition": "minecraft:any_of",
   "terms": [
     {

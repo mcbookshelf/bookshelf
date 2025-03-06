@@ -1,0 +1,2 @@
+{% include 'bookshelf/header.jinja' %}
+tellraw @s [{"text": "[{{ module_name }} documentation]", "color": "dark_aqua", "clickEvent": {"action": "open_url", "value": "{{ documentation }}"}, "hoverEvent": {"action": "show_text", "contents": "Click to open URL"}}]

@@ -1,0 +1,14 @@
+{
+  "data_pack": {
+    "name": "bookshelf-dev"
+  },
+  "meta": {
+    "name": "Development",
+    "slug": "bookshelf-dev",
+    "description": "A Bookshelf toolkit for developers, offering debugging, logging, and testing utilities to streamline datapack creation.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
+  },
+  "pipeline": [
+    "bookshelf.plugins.bundle_packs.dev"
+  ]
+}

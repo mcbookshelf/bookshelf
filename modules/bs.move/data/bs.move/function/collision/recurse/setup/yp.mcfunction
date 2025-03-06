@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -13,6 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players operation #move.ny bs.data += #move.h bs.data
-
-$function bs.move:collision/recurse/setup/$(sz) with storage bs:data move
+scoreboard players operation #move.ry bs.data *= -1 bs.const
+scoreboard players operation #move.my bs.data -= #move.ry bs.data
+scoreboard players operation #move.ry bs.data %= -10000000 bs.const
+scoreboard players operation #move.my bs.data += #move.ry bs.data
+scoreboard players operation #move.my bs.data -= #move.h bs.data
+scoreboard players operation #move.my bs.data /= -10000000 bs.const
+scoreboard players operation #move.my bs.data *= 10000000 bs.const

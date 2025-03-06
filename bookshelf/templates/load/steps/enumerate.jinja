@@ -1,0 +1,19 @@
+#!tag "bs.load:steps/enumerate"
+
+{% include 'bookshelf/header.jinja' %}
+# Add the version of the module to the list of available modules
+data modify storage bs:data load.modules append value {module:"{{ module }}",version:"{{ major }}.{{ minor }}.{{ patch }}",enabled:0b}
+scoreboard players add ${{ module }}.major load.status 0
+scoreboard players add ${{ module }}.minor load.status 0
+scoreboard players add ${{ module }}.patch load.status 0
+
+# Count the number of major versions
+execute unless score ${{ module }}.major load.status matches {{ major }} run scoreboard players add #{{ module }}.major_versions load.status 1
+
+# Set the latest available version for the module
+execute unless score ${{ module }}.major load.status matches ..{{ major }} run return 0
+execute if score ${{ module }}.major load.status matches {{ major }} unless score ${{ module }}.minor load.status matches ..{{ minor }} run return 0
+execute if score ${{ module }}.major load.status matches {{ major }} if score ${{ module }}.minor load.status matches {{ minor }} unless score ${{ module }}.patch load.status matches ..{{ patch }} run return 0
+scoreboard players set ${{ module }}.major load.status {{ major }}
+scoreboard players set ${{ module }}.minor load.status {{ minor }}
+scoreboard players set ${{ module }}.patch load.status {{ patch }}

@@ -10,25 +10,27 @@ To minimize redundancy and enhance efficiency, the library provides shared objec
 
 ## Objectives
 
-| Objectives | Description |
-|------------|-------------|
-| `bs.ctx`   | Contextual scoreboard for fast temporary values. Format: `#<single_letter>` |
-| `bs.const` | Stores constant values. Format: `<value>` |
-| `bs.data`  | Global score storage. Format:  `#<module>.<my_key>` |
-| `bs.in`    | Default scores for input values. Format:  `$<module>.<feature>.<input_key>` |
-| `bs.out`   | Default scores for output values. Format:  `$<module>.<feature>` or `$<module>.<feature>.<output_key>` |
+| Objectives  | Description |
+|-------------|-------------|
+| `bs.in`     | Stores input values. Format: `$<module>.<feature>.<input_key>` |
+| `bs.out`    | Stores output values. Format:  `$<module>.<feature>` or `$<module>.<feature>.<output_key>` |
+| `bs.ctx`    | Temporary contextual objective for fast computations. Format: `#<single_letter>` |
+| `bs.data`   | Global score storage. Format:  `#<module>.<my_key>` |
+| `bs.const`  | Stores constant values. Format: `<value>` |
+| `bs.lambda` | Stores values used in callbacks. Format: `$<module>.<my_key>` |
 
 ---
 
 ## Storages
 
-| Namespaces | Description |
-|------------|-------------|
-| `bs:ctx`   | Fast contextual storage. Keys: `x`, `y`, `z` for numeric values (store) and `_` for other data. |
-| `bs:const` | Stores constant data. Path format: `<module>.<my_key>` |
-| `bs:data`  | General-purpose global storage. Path format: `<module>.<my_key>` |
-| `bs:in`    | Input data storage. Path format: `<module>.<feature>.<input_key>` |
-| `bs:out`   | Output data storage. Path format: `<module>.<feature>` or `<module>.<feature>.<output_key>` |
+| Namespaces  | Description |
+|-------------|-------------|
+| `bs:in`     | Stores input data. Path: `<module>.<feature>.<input_key>` |
+| `bs:out`    | Stores output data. Path: `<module>.<feature>` or `<module>.<feature>.<output_key>` |
+| `bs:ctx`    | Fast contextual storage. Uses `x`, `y`, `z` for numeric values (ie: execute store) and `_` for other data. |
+| `bs:data`   | General-purpose global storage. Path: `<module>.<my_key>` |
+| `bs:const`  | Stores constant data. Path: `<module>.<my_key>` |
+| `bs:lambda` | Stores data used in callbacks. Path: `<module>.<my_key>` |
 
 ---
 
@@ -59,5 +61,5 @@ execute unless entity B5-0-0-0-1 run summon minecraft:marker -30000000 0 1600 {U
 execute unless entity B5-0-0-0-2 run summon minecraft:text_display -30000000 0 1600 {UUID:[I;181,0,0,2],Tags:["bs.entity","bs.persistent","smithed.entity","smithed.strict"],view_range:0f,alignment:"center"}
 
 # Item display entity for manipulating loots or computing transformations
-execute unless entity B5-0-0-0-3 run summon minecraft:item_display -30000000 0 1600 {UUID:[I;181,0,0,3],Tags:["bs.entity","bs.persistent","smithed.entity","smithed.strict"],view_range:0f,alignment:"center"}
+execute unless entity B5-0-0-0-3 run summon minecraft:item_display -30000000 0 1600 {UUID:[I;181,0,0,3],Tags:["bs.entity","bs.persistent","smithed.entity","smithed.strict"],view_range:0f}
 ```

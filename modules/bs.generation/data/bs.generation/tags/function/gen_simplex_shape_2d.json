@@ -1,0 +1,20 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#shape-2d",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2024/09/09",
+      "minecraft_version": "1.21"
+    },
+    "updated": {
+      "date": "2024/09/09",
+      "minecraft_version": "1.21"
+    }
+  },
+  "values": [
+    "bs.generation:shape_2d/gen_simplex_shape_2d"
+  ]
+}

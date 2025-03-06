@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -18,8 +18,10 @@ forceload remove -30000000 1600
 
 scoreboard objectives remove bs.in
 scoreboard objectives remove bs.data
+scoreboard objectives remove bs.lambda
 scoreboard objectives remove bs.const
 scoreboard objectives remove bs.ctx
+
 scoreboard objectives remove bs.vel.x
 scoreboard objectives remove bs.vel.y
 scoreboard objectives remove bs.vel.z

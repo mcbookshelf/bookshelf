@@ -1,0 +1,17 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.generation",
+    "load": "."
+  },
+  "meta": {
+    "name": "Generation",
+    "slug": "bookshelf-generation",
+    "description": "Bookshelf world manipulation module, useful for iterating over blocks and creating structures or landscapes.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html",
+    "tags": ["runtime"],
+    "dependencies": [
+      "bs.random"
+    ]
+  }
+}

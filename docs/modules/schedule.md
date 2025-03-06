@@ -81,20 +81,20 @@ function #bs.schedule:clear
 
 ### Schedule
 
-```{function} #bs.schedule:schedule {with:{}}
+```{function} #bs.schedule:schedule {run:<command>,with:{}}
 
 Schedule a command for execution.
-If a command is registered in a tick where commands are already registered, adds the command after those already registered.
+If a command is registered during a tick where other commands are already scheduled, it is added after those previously registered.
 
 :Inputs:
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`compound` **with**: Schedule data.
-      - {nbt}`string` **command**: Command to schedule.
-      - {nbt}`int` **time**: Time to wait. In ticks by default if unit is not defined.
-      - {nbt}`string` **unit**: Unit of the specified time (tick, second, minute, hour, t, s, m, h).
-      - {nbt}`any` **id**: Optional parameter used to identify the scheduled command.
+    - {nbt}`string` **run**: The command to schedule.
+    - {nbt}`compound` **with**: Optional scheduling parameters.
+      - {nbt}`any` **id**: Optional identifier for the scheduled command.
+      - {nbt}`int` **time**: Delay before execution. Defaults to `1` if not specified.
+      - {nbt}`string` **unit**: Time unit (`tick`, `second`, `minute`, `hour`, `t`, `s`, `m`, `h`). Defaults to `tick`.
   :::
 
 :Outputs:
@@ -104,15 +104,15 @@ If a command is registered in a tick where commands are already registered, adds
 *Execute `say foo` in 2 seconds:*
 
 ```mcfunction
-function #bs.schedule:schedule {with:{command:"say foo",time:2,unit:"s"}}
+function #bs.schedule:schedule {run:"say foo",with:{time:2,unit:"s"}}
 ```
 
 *Schedule then cancel commands that match a complex ID:*
 
 ```mcfunction
-function #bs.schedule:schedule {with:{id:{foo:"bar",fails:true},command:"say failure",time:10,unit:"s"}}
-function #bs.schedule:schedule {with:{id:{foo:"bar"},command:"say success",time:10,unit:"s"}}
-function #bs.schedule:cancel {with:{id:{fails:true}}}
+function #bs.schedule:schedule {run:"say failure",with:{id:{foo:"bar",fails:true},time:10,unit:"s"}}
+function #bs.schedule:schedule {run:"say success",with:{id:{foo:"bar"},time:10,unit:"s"}}
+function #bs.schedule:cancel_all {with:{id:{fails:true}}}
 ```
 
 > **Credits**: Aksiome, theogiraudet

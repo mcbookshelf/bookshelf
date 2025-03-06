@@ -90,5 +90,6 @@ examples/index
 related
 CHANGELOG
 faq
+related
 special-thanks
 ```
