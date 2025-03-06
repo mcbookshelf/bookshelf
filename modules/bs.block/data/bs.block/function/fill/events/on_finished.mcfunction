@@ -13,5 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# if there is an on_finished signal, execute it's command
 $$(on_finished)

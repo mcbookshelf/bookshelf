@@ -40,9 +40,9 @@ Fill all or part of a region with a specific block.
     - {nbt}`string` **block**: Block to fill the region with.
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
+    - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
     - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
     - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
-    - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
         - {nbt}`string` **block**: Block acting as a filter.
@@ -89,9 +89,9 @@ Fill all or part of a region with a specific block type, preserving states and N
     - {nbt}`string` **type**: Block id to fill the region with.
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
+    - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
     - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
     - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
-    - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
         - {nbt}`string` **block**: Block acting as a filter.
@@ -131,9 +131,9 @@ Fill all or part of a region with random blocks or types.
         - {nbt}`int` **weight**: Determine the likelihood of selecting the entry (default: 1).
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
+    - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
     - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
     - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
-    - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
         - {nbt}`string` **block**: Block acting as a filter.

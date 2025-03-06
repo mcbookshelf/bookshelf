@@ -13,6 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in block.fill_block set value {block:"minecraft:stone",from:[0,100,0],to:[1,101,1],on_finished:"succeed"}
+data modify storage bs:in block.fill_block set value {block:"minecraft:stone",from:"~ ~ ~",to:"~ ~1 ~",limit:1,on_finished:"setblock ~ ~ ~ minecraft:bookshelf"}
 function #bs.block:fill_block
-fail "Failed to run on_completed command"
+assert block ~ ~ ~ minecraft:stone
+assert not block ~ ~1 ~ minecraft:stone
+await delay 1t
+assert block ~ ~1 ~ minecraft:bookshelf
