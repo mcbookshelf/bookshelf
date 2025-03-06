@@ -39,6 +39,32 @@ Please note that while the datapacks from releases are stable, they might not in
 If you like the project, don't hesitate to star it on Github and/or follow it on Modrinth 😉.
 
 ::::
+::::{tab-item} 🐍 from PyPI
+
+If you're using the [beet](https://github.com/mcbeet/beet) build pipeline, you can install the Bookshelf package (`mcbookshelf`) from PyPI to include Bookshelf modules in your build.
+
+```shell
+pip install mcbookshelf
+```
+
+Once installed, you can reference Bookshelf modules directly in your beet pipeline configuration.
+
+To include a specific module:
+```yaml
+pipeline:
+  - bookshelf.module.raycast
+  - bookshelf.module.<name_of_other_module>
+```
+
+To include a full bundle:
+```yaml
+pipeline:
+  - bookshelf.bundle.dev
+  - bookshelf.bundle.<name_of_other_bundle>
+```
+
+
+::::
 ::::{tab-item} 🗃️ from source
 
 If you know how datapacks work, and want to handle the installation process on your own 💪😎, first familiarize yourself with the structure of the project below. Then rendez-vous on [github](https://github.com/mcbookshelf/bookshelf) to download the repository, and extract only what you need!
