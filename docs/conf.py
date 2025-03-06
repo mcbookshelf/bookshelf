@@ -79,6 +79,7 @@ html_theme_options = {
     "navbar_persistent": ["search-button"],
     "navigation_with_keys": True,
     "use_edit_page_button": True,
+    "footer_center": ["mention-legales-footer.html"],
     "header_links_before_dropdown": 3,
     "logo": {
         "text": "Bookshelf",
@@ -91,7 +92,7 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "GitHub",
-            "url": "https://github.com/mcbookshelf/Bookshelf",
+            "url": "https://github.com/mcbookshelf/bookshelf",
             "icon": "fa-brands fa-github",
         },
         {

@@ -26,7 +26,7 @@ This method is recommended for creators who want precise control over their inst
 ::::
 ::::{tab-item} 🏷️ from release
 
-Bookshelf releases are available on both [Github](https://github.com/mcbookshelf/Bookshelf/releases) and [Modrinth](https://modrinth.com/datapack/bookshelf-library). In each release, you will find zipped datapacks. You have multiple options for installation:
+Bookshelf releases are available on both [Github](https://github.com/mcbookshelf/bookshelf/releases) and [Modrinth](https://modrinth.com/datapack/bookshelf-library). In each release, you will find zipped datapacks. You have multiple options for installation:
 
 📚 **Whole Datapacks:** You can download entire datapacks which includes all modules and dependencies. This is a good option if you want to explore everything Bookshelf has to offer.
 
@@ -39,9 +39,35 @@ Please note that while the datapacks from releases are stable, they might not in
 If you like the project, don't hesitate to star it on Github and/or follow it on Modrinth 😉.
 
 ::::
+::::{tab-item} 🐍 from PyPI
+
+If you're using the [beet](https://github.com/mcbeet/beet) build pipeline, you can install the Bookshelf package (`mcbookshelf`) from PyPI to include Bookshelf modules in your build.
+
+```shell
+pip install mcbookshelf
+```
+
+Once installed, you can reference Bookshelf modules directly in your beet pipeline configuration.
+
+To include a specific module:
+```yaml
+pipeline:
+  - bookshelf.module.raycast
+  - bookshelf.module.<name_of_other_module>
+```
+
+To include a full bundle:
+```yaml
+pipeline:
+  - bookshelf.bundle.dev
+  - bookshelf.bundle.<name_of_other_bundle>
+```
+
+
+::::
 ::::{tab-item} 🗃️ from source
 
-If you know how datapacks work, and want to handle the installation process on your own 💪😎, first familiarize yourself with the structure of the project below. Then rendez-vous on [github](https://github.com/mcbookshelf/Bookshelf) to download the repository, and extract only what you need!
+If you know how datapacks work, and want to handle the installation process on your own 💪😎, first familiarize yourself with the structure of the project below. Then rendez-vous on [github](https://github.com/mcbookshelf/bookshelf) to download the repository, and extract only what you need!
 
 Once Bookshelf is installed on your map with specific modules (rather than the entire library), the initial step is to ensure that each module can be properly loaded with all its dependencies. Verify this by calling the `#bs.<module>:load` function for each module or check your game console for any errors.
 

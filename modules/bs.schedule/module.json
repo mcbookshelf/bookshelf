@@ -7,7 +7,7 @@
   "meta": {
     "name": "Schedule",
     "slug": "bookshelf-schedule",
-    "description": "Enhance command scheduling. Cancel commands and maintain execution context (entity & location).",
+    "description": "Bookshelf command scheduler, including cancellation and execution context tracking.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html",
     "tags": ["runtime"],
     "weak_dependencies": [
