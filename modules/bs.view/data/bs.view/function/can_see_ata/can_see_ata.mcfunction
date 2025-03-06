@@ -18,7 +18,7 @@ data modify storage bs:ctx x set from storage bs:ctx _[0]
 data modify storage bs:ctx y set from storage bs:ctx _[1]
 data modify storage bs:ctx z set from storage bs:ctx _[2]
 execute summon minecraft:marker run function bs.view:can_see_ata/max_distance/get_rpos with storage bs:ctx
-function bs.view:can_see_ata/max_distance/compute with storage bs:ctx
+execute as B5-0-0-0-2 run function bs.view:can_see_ata/max_distance/compute with storage bs:ctx
 
 execute facing entity @s eyes run function bs.raycast:run
 return run execute if score #raycast.distance bs.data matches 2147483647
