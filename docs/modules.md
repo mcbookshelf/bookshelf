@@ -42,6 +42,7 @@ Here are some of the key terms used throughout the documentation.
 modules/bitwise
 modules/block
 modules/color
+modules/component
 modules/environment
 modules/generation
 modules/health
