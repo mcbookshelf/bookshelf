@@ -18,7 +18,9 @@ Our paintbrush system will:
 
 Before we start, make sure you have:
 - Minecraft Java Edition 1.21.4 or later
-- Bookshelf library (specifically the `bs.block` and `bs.view` modules), see [Quickstart](https://docs.mcbookshelf.dev/en/latest/quickstart.html) for installation
+- Bookshelf `bs.block` and `bs.view` modules, see [Quickstart](https://docs.mcbookshelf.dev/en/latest/quickstart.html) for installation
+  - `@require bookshelf.module.block`
+  - `@require bookshelf.module.view`
 - Basic knowledge of datapack development, including functions, tags, and scoreboards
 
 ---

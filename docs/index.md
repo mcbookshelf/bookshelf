@@ -84,12 +84,11 @@ If you want to contribute, please refer to the [contribution docs](https://docs.
 :maxdepth: 1
 
 quickstart
-modules
-contribute/index
+modules/index
 examples/index
-related
+contribute/index
+related/index
 CHANGELOG
 faq
-related
 special-thanks
 ```
