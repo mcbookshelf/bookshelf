@@ -40,5 +40,5 @@ More questions? Join us on Discord!
 
 ---
 
-```{include} ../_templates/comments.md
+```{include} _templates/comments.md
 ```

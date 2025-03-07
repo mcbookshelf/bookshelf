@@ -88,7 +88,7 @@ modules/index
 examples/index
 contribute/index
 related/index
-CHANGELOG
 faq
+CHANGELOG
 special-thanks
 ```

@@ -160,5 +160,5 @@ This section is in progress. If you have some ideas about how to improves the fi
 ---
 -->
 
-```{include} ../_templates/comments.md
+```{include} _templates/comments.md
 ```
