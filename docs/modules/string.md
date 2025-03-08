@@ -2,7 +2,7 @@
 
 **`#bs.string:help`**
 
-Manage strings (text), allowing easy transformation and searching within the text
+Manage strings (text), allowing easy transformation and searching within the text.
 
 ---
 
@@ -16,7 +16,7 @@ You can find below all functions available in this module.
 
 ```{function} #bs.string:concat
 
-Merge a list of strings together into one string
+Merge a list of strings together into one string.
 
 :Inputs:
   **Storage `bs:in string.concat.list`**: {nbt}`string` The list of strings that will be merge.
@@ -39,6 +39,40 @@ tellraw @a [{"text":"The merge string is \""},{"storage":"bs:out","nbt":"string.
 
 ---
 
+### Find
+
+```{function} #bs.string:find {occurrence:<int>}
+
+Find a string in another string.
+
+:Inputs:
+
+  **Storage `bs:in string.find`**:
+  :::{treeview}
+  - {nbt}`compound` Find data
+    - {nbt}`string` **str**: The string to search in
+    - {nbt}`string` **needle**: The string to find.
+    - {nbt}`int` **occurrence**: The number of occurrence to find (if 0, find all)
+  :::
+
+:Outputs:
+  **Strorage `bs:out string.find`**: {nbt}`list` The list of index where the string is found.
+```
+
+_Find `world` in `hello world`:_
+
+```mcfunction
+data modify storage bs:in string.find set value {str:"hello world",needle:"world",occurrence:0}
+
+function #bs.string:find
+
+tellraw @a [{"text":"The string is found at index \""},{"storage":"bs:out","nbt":"string.find"},{"text":"\""}]
+```
+
+> **Credits**: Aure31
+
+---
+
 ### Uppercase / Lowercase
 
 :::::{tab-set}
@@ -46,7 +80,7 @@ tellraw @a [{"text":"The merge string is \""},{"storage":"bs:out","nbt":"string.
 
 ```{function} #bs.string:upper
 
-Converts the text to uppercase
+Converts the text to uppercase.
 
 :Inputs:
   **Storage `bs:in string.upper.str`**: {nbt}`string` The string to convert to uppercase
@@ -103,62 +137,26 @@ tellraw @a [{"text":"The lowercase string is \""},{"storage":"bs:out","nbt":"str
 Replace a string by another
 
 :Inputs:
-  **Storage `bs:in string.replace.str`**: {nbt}`string` The string to replace
-
-  **Storage `bs:in string.replace.old`**: {nbt}`string` The string to replace
-
-  **Storage `bs:in string.replace.new`**: {nbt}`string` The string to replace by
+  **Storage `bs:in string.replace`**:
+  :::{treeview}
+  - {nbt}`compound` Replace data
+    - {nbt}`string` **str**: The string to replace
+    - {nbt}`string` **old**: The string to replace
+    - {nbt}`string` **new**: The string to replace by
+  :::
 
 :Outputs:
   **Strorage `bs:out string.replace`**: {nbt}`string` The replaced string
 ```
 
-_replace world by minecraft:_
+_replace `world` by `minecraft`:_
 
 ```mcfunction
-data modify storage bs:in string.replace.str set value "hello world"
-data modify storage bs:in string.replace.old set value "world"
-data modify storage bs:in string.replace.new set value "minecraft"
+data modify storage bs:in string.replace set value {str:"hello world",old:"world",new:"minecraft"}
 
-function #bs.string:replace {type:'fast'}
+function #bs.string:replace
 
 tellraw @a [{"text":"The new string is \""},{"storage":"bs:out","nbt":"string.replace"},{"text":"\""}]
-```
-
-> **Credits**: Aure31
-
----
-
-### Find
-
-```{function} #bs.string:find {occurrence:<int>}
-
-Find a string in another string
-
-:Inputs:
-  **Storage `bs:in string.find.str`**: {nbt}`string` The string to find
-
-  **Storage `bs:in string.find.needle`**: {nbt}`string` The string to find
-
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`int` **occurrence**: The number of occurrence to find (if 0, find all)
-  :::
-
-:Outputs:
-  **Strorage `bs:out string.find`**: {nbt}`list` The list of index where the string is found
-```
-
-_find `world` in `hello world`:_
-
-```mcfunction
-data modify storage bs:in string.find.str set value "hello world"
-data modify storage bs:in string.find.needle set value "world"
-
-function #bs.string:find {occurrence:0}
-
-tellraw @a [{"text":"The string is found at index \""},{"storage":"bs:out","nbt":"string.find"},{"text":"\""}]
 ```
 
 > **Credits**: Aure31

@@ -13,10 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if score #e bs.ctx matches 1 run return 1
-execute store result storage bs:ctx z int 1 run scoreboard players remove #e bs.ctx 1
-$data modify storage bs:ctx _.patern."$(ltr)" set from storage bs:ctx z
+$execute store result storage bs:ctx _.patern."$(ltr)" int 1 run scoreboard players remove #p bs.ctx 1
 
 data modify storage bs:ctx _.ltr set string storage bs:ctx _.needle 0 1
 data modify storage bs:ctx _.needle set string storage bs:ctx _.needle 1
-function bs.string:find/precompute with storage bs:ctx _
+execute unless score #p bs.ctx matches 1 run function bs.string:find/precompute/precompute_loop with storage bs:ctx _

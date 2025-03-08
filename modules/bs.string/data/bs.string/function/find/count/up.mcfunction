@@ -13,9 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out string.find append from storage bs:ctx x
-
+data modify storage bs:out string.find append value 0
+execute store result storage bs:out string.find[-1] int 1 run scoreboard players get #i bs.ctx 
 scoreboard players add #c bs.ctx 1
-execute if score #c bs.ctx = #o bs.ctx run return 0
-
-function bs.string:find/count/skip with storage bs:ctx

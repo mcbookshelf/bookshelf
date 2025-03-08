@@ -14,55 +14,46 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Test basic find
-data modify storage bs:in string.find.str set value "hello world"
-data modify storage bs:in string.find.needle set value "world"
+data modify storage bs:in string.find merge value {str:"hello world",needle:"world"}
 function #bs.string:find {occurrence:0}
 assert data storage bs:out {string:{find:[6]}}
 
 # Test empty string
-data modify storage bs:in string.find.str set value ""
-data modify storage bs:in string.find.needle set value "test"
+data modify storage bs:in string.find merge value {str:"",needle:"test"}
 function #bs.string:find {occurrence:0}
 assert data storage bs:out {string:{find:[]}}
 
 # Test empty needle
-data modify storage bs:in string.find.str set value "test string"
-data modify storage bs:in string.find.needle set value ""
+data modify storage bs:in string.find merge value {str:"test string",needle:""}
 function #bs.string:find {occurrence:0}
 assert data storage bs:out {string:{find:[]}}
 
 # Test multiple occurrences
-data modify storage bs:in string.find.str set value "test test test"
-data modify storage bs:in string.find.needle set value "test"
+data modify storage bs:in string.find merge value {str:"test test test",needle:"test"}
 function #bs.string:find {occurrence:0}
 assert data storage bs:out {string:{find:[0,5,10]}}
 
 # Test with occurrence limit
-data modify storage bs:in string.find.str set value "find find find find"
-data modify storage bs:in string.find.needle set value "find"
+data modify storage bs:in string.find merge value {str:"find find find find",needle:"find"}
 function #bs.string:find {occurrence:2}
 assert data storage bs:out {string:{find:[0,5]}}
 
 # Test with Unicode
-data modify storage bs:in string.find.str set value "éàêëàéêë"
-data modify storage bs:in string.find.needle set value "êë"
+data modify storage bs:in string.find merge value {str:"éàêëàéêë",needle:"êë"}
 function #bs.string:find {occurrence:0}
 assert data storage bs:out {string:{find:[2,6]}}
 
 # Test case sensitivity
-data modify storage bs:in string.find.str set value "Test TEST test"
-data modify storage bs:in string.find.needle set value "test"
+data modify storage bs:in string.find merge value {str:"Test TEST test",needle:"test"}
 function #bs.string:find {occurrence:0}
 assert data storage bs:out {string:{find:[10]}}
 
 # Test overlapping patterns
-data modify storage bs:in string.find.str set value "aaaaa"
-data modify storage bs:in string.find.needle set value "aa"
+data modify storage bs:in string.find merge value {str:"aaaaa",needle:"aa"}
 function #bs.string:find {occurrence:0}
 assert data storage bs:out {string:{find:[0,1,2,3]}}
 
 # Test needle not found
-data modify storage bs:in string.find.str set value "hello world"
-data modify storage bs:in string.find.needle set value "notfound"
+data modify storage bs:in string.find merge value {str:"hello world",needle:"notfound"}
 function #bs.string:find {occurrence:0}
 assert data storage bs:out {string:{find:[]}}

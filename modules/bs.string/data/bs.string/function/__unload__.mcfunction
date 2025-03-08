@@ -16,6 +16,7 @@
 scoreboard objectives remove bs.data
 scoreboard objectives remove bs.out
 scoreboard objectives remove bs.ctx
+scoreboard objectives remove bs.const
 
-#data remove storage bs:in string
+data remove storage bs:in string
 data remove storage bs:data string
