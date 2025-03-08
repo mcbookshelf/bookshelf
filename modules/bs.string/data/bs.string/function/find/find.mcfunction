@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -19,7 +19,7 @@ execute store result score #o bs.ctx run data get storage bs:in string.find.occu
 execute store result score #c bs.ctx run scoreboard players set #i bs.ctx 0
 data modify storage bs:ctx _ set from storage bs:in string.find
 execute store result score #l bs.ctx run data get storage bs:in string.find.str
-execute store result score #p bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.needle
+execute store result score #p bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.substr
 
 # Corner case
 execute if score #l bs.ctx matches 0 run return 0

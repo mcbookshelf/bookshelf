@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -23,5 +23,5 @@ execute store success score #t bs.ctx run data modify storage bs:ctx _.test set 
 data modify storage bs:ctx z set from storage bs:ctx y
 execute if score #t bs.ctx matches 0 run return run function bs.string:split/normal/cut with storage bs:ctx
 
-function bs.string:find/match_patern with storage bs:ctx _
+function bs.string:find/match_pattern with storage bs:ctx _
 function bs.string:split/normal/skip with storage bs:ctx

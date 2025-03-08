@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -36,7 +36,7 @@ scoreboard players operation #l bs.ctx -= #p bs.ctx
 #precompute
 data modify storage bs:ctx _.ltr set string storage bs:ctx _.old 0 1
 data modify storage bs:ctx _.old set string storage bs:ctx _.old 1
-data remove storage bs:ctx _.patern
+data remove storage bs:ctx _.pattern
 function bs.string:replace/precompute with storage bs:ctx _
 
 function bs.string:replace/loop with storage bs:ctx

@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -13,8 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result storage bs:ctx _.patern."$(ltr)" int 1 run scoreboard players remove #p bs.ctx 1
-
-data modify storage bs:ctx _.ltr set string storage bs:ctx _.needle 0 1
-data modify storage bs:ctx _.needle set string storage bs:ctx _.needle 1
-execute unless score #p bs.ctx matches 1 run function bs.string:find/precompute/precompute_loop with storage bs:ctx _
+$execute store result storage bs:ctx _.pattern."$(ltr)" int 1 run scoreboard players remove #p bs.ctx 1
