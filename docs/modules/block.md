@@ -487,7 +487,7 @@ Swap related block types while ensuring coherent replacements within the defined
 
 ```{code-block} mcfunction
 :force:
-data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
+data modify storage bs:const block.mapping_registry.bs.colors set value [ \
   { set: "wool", attrs: ["red"], type: "minecraft:red_wool" }, \
   { set: "wool", attrs: ["green"], type: "minecraft:green_wool" }, \
   { set: "carpet", attrs: ["red"], type: "minecraft:red_carpet" }, \
