@@ -13,8 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# @batch bs.vector
-
 scoreboard players set $vector.length_squared.0 bs.in 4000
 scoreboard players set $vector.length_squared.1 bs.in 5000
 scoreboard players set $vector.length_squared.2 bs.in 1000

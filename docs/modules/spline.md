@@ -25,7 +25,7 @@ Evaluate a Bézier curve using 4 control points and a time parameter.
   **Storage `bs:in spline.evaluate_bezier`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: The 4 control points defining the curve, where each point is an array of coordinates (e.g., 2D, 3D, ...).
+    - {nbt}`list` **points**: The 4 control points, where each point is a coordinates list (e.g., 2D, 3D, ...).
     - {nbt}`double` **time**: Position along the curve. Values must be between 0 and 1.
   :::
 
@@ -43,7 +43,7 @@ Evaluate a B-Spline curve using 4 control points and a time parameter.
   **Storage `bs:in spline.evaluate_bspline`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: The 4 control points defining the curve, where each point is an array of coordinates (e.g., 2D, 3D, ...).
+    - {nbt}`list` **points**: The 4 control points, where each point is a coordinates list (e.g., 2D, 3D, ...).
     - {nbt}`double` **time**: Position along the curve. Values must be between 0 and 1.
   :::
 
@@ -61,7 +61,7 @@ Evaluate a Catmull-Rom curve using 4 control points and a time parameter.
   **Storage `bs:in spline.evaluate_catmull_rom`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: The 4 control points defining the curve, where each point is an array of coordinates (e.g., 2D, 3D, ...).
+    - {nbt}`list` **points**: The 4 control points, where each point is a coordinates list (e.g., 2D, 3D, ...).
     - {nbt}`double` **time**: Position along the curve. Values must be between 0 and 1.
   :::
 
@@ -79,7 +79,7 @@ Evaluate a Hermite curve using 4 control points and a time parameter.
   **Storage `bs:in spline.evaluate_hermite`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: The 4 control points defining the curve, where each point is an array of coordinates (e.g., 2D, 3D, ...).
+    - {nbt}`list` **points**: The 4 control points, where each point is a coordinates list (e.g., 2D, 3D, ...).
     - {nbt}`double` **time**: Position along the curve. Values must be between 0 and 1.
   :::
 
@@ -202,7 +202,8 @@ Stream a Bézier curve using control points and a step parameter. Each segment i
   - {nbt}`compound` Arguments
     - {nbt}`list` **points**: Control points for the curve, where each segment uses 4 points and shares the last point with the next.
     - {nbt}`double` **step**: Interval at which the curve is sampled. Smaller values generate more points.
-    - {nbt}`string` **run**: Command executed at each step of the curve sampling process.
+    - {nbt}`string` **run**: Command executed at each step of the curve sampling process. For each step, the following storage can be used:
+      - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
 ::::
@@ -218,7 +219,8 @@ Stream a B-Spline curve using control points and a step parameter. Each segment 
   - {nbt}`compound` Arguments
     - {nbt}`list` **points**: Control points for the curve, where each segment uses 4 points and shares 3 points with the next.
     - {nbt}`double` **step**: Interval at which the curve is sampled. Smaller values generate more points.
-    - {nbt}`string` **run**: Command string executed at each step of the curve sampling process.
+    - {nbt}`string` **run**: Command string executed at each step of the curve sampling process. For each step, the following storage can be used:
+      - **`bs:lambda spline.point`**: The evaluated point.
   :::
 
 ```
@@ -235,7 +237,8 @@ Stream a Catmull-Rom curve using control points and a step parameter. Each segme
   - {nbt}`compound` Arguments
     - {nbt}`list` **points**: Control points for the curve, where each segment uses 4 points and shares 3 points with the next.
     - {nbt}`double` **step**: Interval at which the curve is sampled. Smaller values generate more points.
-    - {nbt}`string` **run**: Command string executed at each step of the curve sampling process.
+    - {nbt}`string` **run**: Command string executed at each step of the curve sampling process. For each step, the following storage can be used:
+      - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
 ::::
@@ -251,7 +254,8 @@ Stream a Hermite curve using control points and a step parameter. Each segment i
   - {nbt}`compound` Arguments
     - {nbt}`list` **points**: Control points for the curve, where each segment uses 4 points and shares 2 points with the next.
     - {nbt}`double` **step**: Interval at which the curve is sampled. Smaller values generate more points.
-    - {nbt}`string` **run**: Command string executed at each step of the curve sampling process.
+    - {nbt}`string` **run**: Command string executed at each step of the curve sampling process. For each step, the following storage can be used:
+      - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
 ::::
@@ -260,7 +264,7 @@ Stream a Hermite curve using control points and a step parameter. Each segment i
 *Stream 10 points along a Bézier curve in 2D space and execute a command at each step:*
 
 ```mcfunction
-data modify storage bs:in spline.stream_bezier set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1,run:'tellraw @a {"storage":"bs:out","nbt":"spline.stream_bezier"}'}
+data modify storage bs:in spline.stream_bezier set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1,run:'tellraw @a {"storage":"bs:lambda","nbt":"spline.point"}'}
 function #bs.spline:stream_bezier
 ```
 

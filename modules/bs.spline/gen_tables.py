@@ -1,6 +1,6 @@
 from beet import Context, Function
 
-from core.common.helpers import render_snbt
+from bookshelf.helpers import render_snbt
 
 
 def beet_default(ctx: Context) -> None:

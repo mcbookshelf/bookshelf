@@ -74,24 +74,26 @@ def render_template(file: Path, **kwargs: dict[str, object]) -> str:
 
 def render_snbt(obj: object) -> str:
     """Render a Python object to SNBT."""
+    handlers = {
+        BaseModel: lambda o: render_snbt(o.model_dump()),
+        str: lambda o: f'"{o}"',
+        float: lambda o: f"{o}d",
+        bool: lambda o: "1b" if o else "0b",
+        list: lambda o: f'[{",".join(render_snbt(v) for v in o)}]',
+        dict: lambda o: f'{{{",".join(
+            f"{quote_key(str(k))}:{render_snbt(v)}"
+            for k, v in o.items()
+            if v is not None
+        )}}}',
+    }
+
     def quote_key(k: str) -> str:
         return f'"{k}"' if ":" in k else k
-    if isinstance(obj, BaseModel):
-        return render_snbt(obj.model_dump())
-    if isinstance(obj, dict):
-        items = ",".join(
-            f"{quote_key(str(k))}:{render_snbt(v)}"
-            for k, v in obj.items()
-            if v is not None
-        )
-        return f"{{{items}}}"
-    if isinstance(obj, list):
-        values = ",".join([render_snbt(v) for v in obj])
-        return f"[{values}]"
-    if isinstance(obj, str):
-        return f'"{obj}"'
-    if isinstance(obj, bool):
-        return "1b" if obj else "0b"
+
+    for t, handler in handlers.items():
+        if isinstance(obj, t):
+            return handler(obj)
+
     return str(obj)
 
 

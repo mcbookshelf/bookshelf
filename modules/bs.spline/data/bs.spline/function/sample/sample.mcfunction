@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -18,7 +18,8 @@ $function bs.spline:utils/$(type)/lookup_coefficients with storage bs:ctx
 function bs.spline:utils/compute with storage bs:ctx _
 
 data modify storage bs:ctx _.sout append from storage bs:ctx _.out
+data remove storage bs:ctx _.out
 
 execute store result storage bs:ctx x int 1 run scoreboard players operation #t bs.ctx += #s bs.ctx
 $execute if score #t bs.ctx matches 1000.. run function bs.spline:utils/$(type)/next_segment
-execute if data storage bs:ctx _.points[3] run function bs.spline:sample/sample
+$execute if data storage bs:ctx _.points[3] run function bs.spline:sample/sample { type: $(type) }
