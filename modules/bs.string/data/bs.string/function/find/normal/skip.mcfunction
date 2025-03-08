@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$scoreboard players add #i bs.ctx $(z)
+scoreboard players operation #i bs.ctx += #z bs.ctx
 
 execute if score #l bs.ctx < #i bs.ctx run return run data get storage bs:out string.find
 

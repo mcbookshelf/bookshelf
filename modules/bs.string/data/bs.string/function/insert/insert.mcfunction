@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _.s.3 set string storage bs:in string.insert.str 0 $(index)
-data modify storage bs:ctx _.s.2 set string storage bs:in string.insert.substr
-$data modify storage bs:ctx _.s.1 set string storage bs:in string.insert.str $(index)
+data modify storage bs:ctx _ set from storage bs:in string.insert 
 
+data modify storage bs:ctx _.s.2 set string storage bs:in string.insert.substr
+function bs.string:insert/macro_loader with storage bs:ctx _
 function bs.string:concat/combine/2c with storage bs:ctx _.s
 
 data modify storage bs:out string.insert set from storage bs:ctx _.s.1
