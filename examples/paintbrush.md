@@ -22,6 +22,7 @@ Before we start, make sure you have:
   - `@require bookshelf.module.block`
   - `@require bookshelf.module.view`
 - Basic knowledge of datapack development, including functions, tags, and scoreboards
+- A ready to use empty datapack
 
 ---
 
@@ -161,7 +162,7 @@ Now, let’s move on to painting! We’ll use the `bs.block` module to apply the
 
 1. Load the targeted block into storage (`bs:out block`) as a "virtual block"
 2. Transform the virtual block using various operations (`mix_type` in this case)
-3. Generate the final result, which can be a block, item, particle, block display, etc. (here, we’ll replace the block with its transformed version).
+3. Generate the final result from the virtual block, which can be a block, item, particle, block display, etc. (here, we’ll replace the block with its transformed version).
 
 ---
 
@@ -169,7 +170,7 @@ Now, let’s move on to painting! We’ll use the `bs.block` module to apply the
 
 The `mix_type` function uses a mapping registry to determine how blocks are transformed. Bookshelf provides two built-in registries:
 - `bs.colors`: This registry is used to transform blocks based on color properties. For example, if the held item is a colored block, it will attempt to apply the color transformation to the targeted block.
-- `bs.shapes`: This registry is used to transform blocks based on their shape. For instance, if the held block is an oak plank, and the targeted block is a birch stair, this registry would map the oak plank to a corresponding block shape like oak stairs. This is ideal for transforming between blocks that have a similar structural shape.
+- `bs.shapes`: This registry is used to transform blocks based on their shape. For instance, if the held block is an oak planks, and the targeted block is a birch stairs, this registry would map the oak plank to a corresponding block shape like oak stairs. This is ideal for transforming between blocks that have a similar structural shape.
 
 These registries allow for more specific control over how block transformations occur. In this example we'll use `bs.shapes`. To set up the transformation, we specify the `mapping_registry` and store the block `type` from the player's offhand into an arbitrary storage.
 
