@@ -19,6 +19,7 @@ extensions = [
 ]
 
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+suppress_warnings = ["misc.highlighting_failure"]
 templates_path = ["_templates"]
 
 
@@ -80,7 +81,7 @@ html_theme_options = {
     "navigation_with_keys": True,
     "use_edit_page_button": True,
     "footer_center": ["mention-legales-footer.html"],
-    "header_links_before_dropdown": 3,
+    "header_links_before_dropdown": 4,
     "logo": {
         "text": "Bookshelf",
         "image_dark": "_static/logo-bookshelf.png",

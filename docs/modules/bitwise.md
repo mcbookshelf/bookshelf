@@ -223,10 +223,5 @@ tellraw @a [{"text":"~452 = ","color":"#e0c7ff"},{"score":{"name":"$bitwise.not"
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

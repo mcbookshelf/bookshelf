@@ -3,7 +3,6 @@
 It provides a wide range of modules that can be used individually,
 giving developers the flexibility to pick only the features they need.
 """
-
 from bookshelf.definitions import MC_VERSIONS, VERSION
 
 

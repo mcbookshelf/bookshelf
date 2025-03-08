@@ -94,6 +94,6 @@ Module metadata are defined in `modules/<module>/module.json`. Below is an examp
 
 The manifest consolidates metadata for all modules and features in Bookshelf. It is automatically generated and can be updated using the following command:
 ```sh
-pdm run meta update
+pdm run modules update
 ```
 The generated file is located at `meta/manifest.json`.

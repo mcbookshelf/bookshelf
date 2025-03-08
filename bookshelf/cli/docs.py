@@ -3,7 +3,7 @@ import subprocess
 
 import click
 
-from bookshelf.definitions import DOC_DIR
+from bookshelf.definitions import DOC_DIR, EXAMPLES_DIR
 
 
 @click.group()
@@ -38,7 +38,7 @@ def watch(output: str | None = None) -> None:
             raise FileNotFoundError(error_msg)
 
         subprocess.run(
-            [sphinx, ".", output if output else "_build"],
+            [sphinx, ".", output if output else "_build", "--watch", f"{EXAMPLES_DIR}"],
             check=True,
             cwd=DOC_DIR,
         )

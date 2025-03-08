@@ -13,6 +13,7 @@ dependencies = [
   "colorama>=0.4.6",
   "pydantic>=2.10.6",
   "requests>=2.32.3",
+  "lectern>=0.34.0",
 ]
 requires-python = ">=3.12"
 license = { text = "MPL-2.0" }
@@ -20,10 +21,10 @@ license = { text = "MPL-2.0" }
 [dependency-groups]
 dev = [
   "mypy>=1.15.0",
-  "ruff>=0.9.7",
+  "ruff>=0.9.10",
   "types-colorama>=0.4.15.20240311",
   "types-docutils>=0.21.0.20241128",
-  "types-requests>=2.32.0.20241016",
+  "types-requests>=2.32.0.20250306",
 ]
 docs = [
   "linkify-it-py>=2.0.3",
@@ -34,13 +35,13 @@ docs = [
   "sphinx-design>=0.6.1",
   "sphinx-minecraft>=1.0.2",
   "sphinx-togglebutton>=0.3.2",
-  "sphinx>=8.2.1",
+  "sphinx>=8.2.3",
 ]
 
 [project.scripts]
 build = "bookshelf.cli.modules:build"
 docs = "bookshelf.cli.docs:docs"
-meta = "bookshelf.cli.meta:meta"
+examples = "bookshelf.cli.examples:examples"
 modules = "bookshelf.cli.modules:modules"
 watch = "bookshelf.cli.modules:watch"
 

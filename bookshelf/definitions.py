@@ -16,6 +16,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 DOC_DIR = ROOT_DIR / "docs"
 BUILD_DIR = ROOT_DIR / "build"
 RELEASE_DIR = ROOT_DIR / "release"
+EXAMPLES_DIR = ROOT_DIR / "examples"
 MODULES_DIR = ROOT_DIR / "bookshelf/modules" \
     if (ROOT_DIR / "bookshelf/modules").exists() \
     else ROOT_DIR / "modules"

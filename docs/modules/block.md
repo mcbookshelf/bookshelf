@@ -548,7 +548,7 @@ Mix block types while ensuring coherent replacements within the defined mapping 
 
 ```{code-block} mcfunction
 :force:
-data modify storage bs:const block.mapping_registry.bs.colors set value [ \
+data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   { set: "cube", attrs: ["stone"], type: "minecraft:stone" }, \
   { set: "cube", attrs: ["brick"], type: "minecraft:bricks" }, \
   { set: "cube", attrs: ["stone", "brick"], type: "minecraft:stone_bricks" }, \
@@ -980,10 +980,5 @@ data modify storage bs:const block.mapping_registry.<namespace>.<name> [
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```
