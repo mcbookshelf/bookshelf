@@ -13,11 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-
 data modify storage bs:out string.find set value []
-execute store result score #o bs.ctx run data get storage bs:in string.find.occurrence
 execute store result score #c bs.ctx run scoreboard players set #i bs.ctx 0
 data modify storage bs:ctx _ set from storage bs:in string.find
+execute store result score #o bs.ctx run data get storage bs:ctx _.occurrence
 execute store result score #l bs.ctx run data get storage bs:in string.find.str
 execute store result score #p bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.substr
 
