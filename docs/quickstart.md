@@ -9,19 +9,24 @@ This page gives a quick overview of how to get started with the Bookshelf librar
 :::::{tab-set}
 ::::{tab-item} 🔌 from manager
 
-The Bookshelf Manager is still in its development phase, and there is no straightforward installation process at the moment. If you're not familiar with datapacks, feel free to join our Discord, we'll be delighted to assist you with the installation and usage of the library!
+The [Bookshelf Manager](https://mcbookshelf.dev) is the official tool for creating your own custom Bookshelf bundle. Here are its main advantages:
 
+- 🎯 **Precise Selection**: Choose exactly the modules you need
+- 📊 **Dependency Visualization**: Intuitive interface showing relationships between modules
+- 🏷️ **Tag System**: Easily identify modules with tags, grouping them by purpose
 
-```{admonition} 🤝 Help us improve the installation process
-:class: info
+Getting started:
+1. Visit [mcbookshelf.dev](https://mcbookshelf.dev)
+2. Select your desired modules
+3. Review automatically added dependencies
+4. Download your custom bundle
 
-We are actively searching for web developers to create the new version of the Bookshelf Manager, a website that helps users download modules and their respective dependencies. We've already finalized the mockup for the website, you can [check it here](https://www.figma.com/file/kVAmQnmP5pWWzun0Iq2kBa/Bookshelf-Manager-V2.0-prod?type=design&node-id=0-1). If you are interested in helping us, please contact us on Discord!
-```
+This method is recommended for creators who want precise control over their installation.
 
 ::::
 ::::{tab-item} 🏷️ from release
 
-Bookshelf releases are available on both [Github](https://github.com/mcbookshelf/Bookshelf/releases) and [Modrinth](https://modrinth.com/datapack/bookshelf-library). In each release, you will find zipped datapacks. You have multiple options for installation:
+Bookshelf releases are available on both [Github](https://github.com/mcbookshelf/bookshelf/releases) and [Modrinth](https://modrinth.com/datapack/bookshelf-library). In each release, you will find zipped datapacks. You have multiple options for installation:
 
 📚 **Whole Datapacks:** You can download entire datapacks which includes all modules and dependencies. This is a good option if you want to explore everything Bookshelf has to offer.
 
@@ -34,9 +39,35 @@ Please note that while the datapacks from releases are stable, they might not in
 If you like the project, don't hesitate to star it on Github and/or follow it on Modrinth 😉.
 
 ::::
+::::{tab-item} 🐍 from PyPI
+
+If you're using the [beet](https://github.com/mcbeet/beet) build pipeline, you can install the Bookshelf package (`mcbookshelf`) from PyPI to include Bookshelf modules in your build.
+
+```shell
+pip install mcbookshelf
+```
+
+Once installed, you can reference Bookshelf modules directly in your beet pipeline configuration.
+
+To include a specific module:
+```yaml
+pipeline:
+  - bookshelf.module.raycast
+  - bookshelf.module.<name_of_other_module>
+```
+
+To include a full bundle:
+```yaml
+pipeline:
+  - bookshelf.bundle.dev
+  - bookshelf.bundle.<name_of_other_bundle>
+```
+
+
+::::
 ::::{tab-item} 🗃️ from source
 
-If you know how datapacks work, and want to handle the installation process on your own 💪😎, first familiarize yourself with the structure of the project below. Then rendez-vous on [github](https://github.com/mcbookshelf/Bookshelf) to download the repository, and extract only what you need!
+If you know how datapacks work, and want to handle the installation process on your own 💪😎, first familiarize yourself with the structure of the project below. Then rendez-vous on [github](https://github.com/mcbookshelf/bookshelf) to download the repository, and extract only what you need!
 
 Once Bookshelf is installed on your map with specific modules (rather than the entire library), the initial step is to ensure that each module can be properly loaded with all its dependencies. Verify this by calling the `#bs.<module>:load` function for each module or check your game console for any errors.
 
@@ -77,7 +108,7 @@ Bookshelf relies on persistent entities to enhance performances. Therefore, it's
 
 ### 📖 Good Practices
 
-Bookshelf is designed to minimize unintended side effects. However, complications can arise when multiple datapacks utilize the same one. To prevent potential issues, it’s always recommended to set inputs prior to executing a function. This holds true even though Bookshelf adheres to a strict policy of preserving inputs. By following this practice, you can ensure smoother operation and prevent unexpected behaviors.
+Bookshelf is designed to minimize unintended side effects. However, complications can arise when multiple datapacks utilize the same one. To prevent potential issues, it's always recommended to set inputs prior to executing a function. This holds true even though Bookshelf adheres to a strict policy of preserving inputs. By following this practice, you can ensure smoother operation and prevent unexpected behaviors.
 
 :::{note}
 This section is in progress. If you have some ideas about how to improve the first steps with Bookshelf, please share it on our [Discord server](https://discord.gg/MkXytNjmBt).

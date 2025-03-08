@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2024 Gunivers
+# Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -13,8 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players operation #move.nz bs.data -= #move.w bs.data
-scoreboard players remove #move.nz bs.data 10000000
-
-scoreboard players operation #move.x bs.data = #move.rx bs.data
-$function bs.move:collision/recurse/$(sx) with storage bs:data move
+scoreboard players operation #move.rz bs.data *= -1 bs.const
+scoreboard players operation #move.mz bs.data %= 10000000 bs.const
+scoreboard players operation #move.mz bs.data -= #move.rz bs.data
+execute store result score #r bs.ctx run scoreboard players operation #move.rz bs.data %= -10000000 bs.const
+scoreboard players operation #move.mz bs.data += #move.rz bs.data
+scoreboard players operation #r bs.ctx -= #move.w bs.data
+execute store result storage bs:data move.rz int 1 run scoreboard players operation #r bs.ctx /= -10000000 bs.const
+scoreboard players operation #r bs.ctx *= -10000000 bs.const
+scoreboard players operation #move.rz bs.data -= #r bs.ctx
+scoreboard players operation #move.mz bs.data += #move.w bs.data
+scoreboard players operation #move.mz bs.data /= -10000000 bs.const
+scoreboard players operation #move.mz bs.data *= 10000000 bs.const

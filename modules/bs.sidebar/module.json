@@ -7,9 +7,9 @@
   "meta": {
     "name": "Sidebar",
     "slug": "bookshelf-sidebar",
-    "description": "Create a visually appealing and dynamic sidebar using the scoreboard.",
+    "description": "Bookshelf utility for creating dynamic and visually appealing scoreboard-based sidebars.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/sidebar.html",
-    "tags": ["default"],
+    "tags": ["runtime"],
     "weak_dependencies": [
       "bs.log"
     ]

@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2024 Gunivers
+# Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute if block ~ ~ ~ #bs.hitbox:intangible run return 0
-execute unless block ~ ~ ~ #bs.hitbox:is_composite run return 1
+execute unless block ~ ~ ~ #bs.hitbox:not_full_cube run return 1
 
 execute summon minecraft:marker run function bs.hitbox:utils/get_fract_pos
 execute store result score #x bs.ctx run data get storage bs:ctx _[0] 1000000

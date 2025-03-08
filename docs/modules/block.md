@@ -40,8 +40,9 @@ Fill all or part of a region with a specific block.
     - {nbt}`string` **block**: Block to fill the region with.
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
     - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
+    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
         - {nbt}`string` **block**: Block acting as a filter.
@@ -55,11 +56,11 @@ Fill all or part of a region with a specific block.
   **State**: Blocks are placed in the world.
 ```
 
-*Replace the top layer of dirt by grass:*
+*Replace the top layer of dirt by grass and use a say command when finished:*
 
 ```mcfunction
 # Setup the input
-data modify storage bs:in block.fill_block set value {block:"minecraft:grass_block",from:[-16,100,0],to:[-1,103,15],masks:[{block:"minecraft:dirt"},{block:"minecraft:air",y:1}]}
+data modify storage bs:in block.fill_block set value {block:"minecraft:grass_block",from:[-16,100,0],to:[-1,103,15],on_finished:"say added grass on top",masks:[{block:"minecraft:dirt"},{block:"minecraft:air",y:1}]}
 
 # Run the process
 function #bs.block:fill_block
@@ -88,8 +89,9 @@ Fill all or part of a region with a specific block type, preserving states and N
     - {nbt}`string` **type**: Block id to fill the region with.
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
     - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
+    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
         - {nbt}`string` **block**: Block acting as a filter.
@@ -103,11 +105,11 @@ Fill all or part of a region with a specific block type, preserving states and N
   **State**: Blocks are placed in the world.
 ```
 
-*Replace oak stairs with spruce stairs while preserving states:*
+*Replace oak stairs with spruce stairs while preserving states and use a say command when finished:*
 
 ```mcfunction
 # Setup the input
-data modify storage bs:in block.fill_type set value {type:"minecraft:spruce_stairs",from:[-16,100,0],to:[-1,103,15],masks:[{block:"minecraft:oak_stairs"}]}
+data modify storage bs:in block.fill_type set value {type:"minecraft:spruce_stairs",from:[-16,100,0],to:[-1,103,15],on_finished:"say replaced the stairs",masks:[{block:"minecraft:oak_stairs"}]}
 
 # Run the process
 function #bs.block:fill_type
@@ -129,8 +131,9 @@ Fill all or part of a region with random blocks or types.
         - {nbt}`int` **weight**: Determine the likelihood of selecting the entry (default: 1).
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
     - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
+    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
         - {nbt}`string` **block**: Block acting as a filter.
@@ -144,11 +147,11 @@ Fill all or part of a region with random blocks or types.
   **State**: Blocks are placed in the world.
 ```
 
-*Randomly fill an area with stone or air:*
+*Randomly fill an area with stone or air and use a say command when finished:*
 
 ```mcfunction
 # Setup the input
-data modify storage bs:in block.fill_random set value {entries:[{block:"minecraft:stone"},{block:"minecraft:air"}],from:[-16,100,0],to:[-1,103,15]}
+data modify storage bs:in block.fill_random set value {entries:[{block:"minecraft:stone"},{block:"minecraft:air"}],from:[-16,100,0],to:[-1,103,15],on_finished:"say randomly placed stone"}
 
 # Run the process
 function #bs.block:fill_random
@@ -183,6 +186,12 @@ Get all data related to the block at the current location, including its state a
     - {nbt}`string` **state**: Represent the state of a block (e.g., `[shape=straight]`).
     - {nbt}`compound` **nbt**: Data tags used by block entities or an empty string.
     - {nbt}`compound` **properties**: Block state as properties (used by entities like falling blocks).
+    - {nbt}`compound` **sounds**: The sound list of a block.
+      - {nbt}`string` **break**: The sound played when a player break the block.
+      - {nbt}`string` **hit**: The sound played when a player hit the block.
+      - {nbt}`string` **fall**: The sound played when a player fall on the block.
+      - {nbt}`string` **place**: The sound played when a player place the block.
+      - {nbt}`string` **step**: The sound played when a player step on the block.
   :::
 ```
 
@@ -217,6 +226,12 @@ Get the block type at the current location. Although states, NBTs, and propertie
     - {nbt}`string` **state**: Represent the state of a block **[empty string]**.
     - {nbt}`compound` **nbt**: Data tags used by block entities **[empty string]**.
     - {nbt}`compound` **properties**: Block state as properties **[empty compound]**.
+    - {nbt}`compound` **sounds**: The sound list of a block.
+      - {nbt}`string` **break**: The sound played when a player break the block.
+      - {nbt}`string` **hit**: The sound played when a player hit the block.
+      - {nbt}`string` **fall**: The sound played when a player fall on the block.
+      - {nbt}`string` **place**: The sound played when a player place the block.
+      - {nbt}`string` **step**: The sound played when a player step on the block.
   :::
 ```
 
@@ -891,6 +906,46 @@ data modify storage bs:in block.emit_block_particle merge value { delta: "0 0 0"
 
 # Emit the block particle
 function #bs.block:emit_block_particle
+```
+
+::::
+::::{tab-item} Block Sound
+
+```{function} #bs.block:play_block_sound
+
+Play a block sound of the given block.
+
+:Inputs:
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where the sound will be played.
+
+  **Storage `bs:in block.play_block_sound`**:
+  :::{treeview}
+  - {nbt}`compound` Block sound data
+    - {nbt}`string` **sound**: The sound to play. Usually took from the `sounds` property of the virtual block (cf get functions).
+    - {nbt}`string` **source**: The source of the sound. Similar to the /playsound command.
+    - {nbt}`string` **targets**: The targets of the sound. Similar to the /playsound command.
+    - {nbt}`string` **pos**: X Y Z coordinates, the position of the sound. Similar to the /playsound command.
+    - {nbt}`int` **volume**: Volume of the sound. Similar to the /playsound command.
+    - {nbt}`int` **pitch**: Pitch of the sound. Similar to the /playsound command.
+    - {nbt}`int` **min_volume**: Minimum volume of the sound. Similar to the /playsound command.
+  :::
+
+:Outputs:
+  **State**: The sound is played.
+```
+
+*Play the sound of the block at 0 0 0:*
+
+```mcfunction
+# Get block data
+execute positioned 0 0 0 run function #bs.block:get_block
+
+# Setup the input
+data modify storage bs:in block.play_block_sound set value { source: "block", targets: "@s", pos: "~ ~ ~", volume: 1, pitch: 1, min_volume: 0 }
+data modify storage bs:in block.play_block_sound.sound set from storage bs:out block.sounds.break
+
+# Play the block sound
+function #bs.block:play_block_sound
 ```
 
 ::::

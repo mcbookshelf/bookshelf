@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2024 Gunivers
+# Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -14,12 +14,12 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"t"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"tick"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"s"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"second"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"m"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"minute"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"h"}}
-function #bs.schedule:schedule {with:{command:"say _",time:1,unit:"hour"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"t"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"tick"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"s"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"second"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"m"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"minute"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"h"}}
+function #bs.schedule:schedule {run:"say _",with:{unit:"hour"}}
 assert not chat "(?i).*error.*"

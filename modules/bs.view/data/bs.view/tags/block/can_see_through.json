@@ -1,4 +1,19 @@
 {
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html#blocks",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2025/01/24",
+      "minecraft_version": "1.21.4"
+    },
+    "updated": {
+      "date": "2025/01/24",
+      "minecraft_version": "1.21.4"
+    }
+  },
   "values": [
     "#bs.hitbox:intangible",
     "#minecraft:banners",
@@ -19,7 +34,6 @@
     "minecraft:bubble_coral_wall_fan",
     "minecraft:bubble_coral",
     "minecraft:cobweb",
-    "minecraft:comparator",
     "minecraft:crimson_roots",
     "minecraft:dead_brain_coral_fan",
     "minecraft:dead_brain_coral_wall_fan",
@@ -55,7 +69,6 @@
     "minecraft:redstone_torch",
     "minecraft:redstone_wall_torch",
     "minecraft:redstone_wire",
-    "minecraft:repeater",
     "minecraft:sculk_vein",
     "minecraft:seagrass",
     "minecraft:short_grass",

@@ -3,7 +3,7 @@ import os
 # -- Project information -----------------------------------------------------
 
 project = "Bookshelf"
-copyright = "2024, Gunivers"  # noqa: A001
+copyright = "2025, Gunivers"  # noqa: A001
 author = "Gunivers"
 
 
@@ -79,7 +79,8 @@ html_theme_options = {
     "navbar_persistent": ["search-button"],
     "navigation_with_keys": True,
     "use_edit_page_button": True,
-    "header_links_before_dropdown": 4,
+    "footer_center": ["mention-legales-footer.html"],
+    "header_links_before_dropdown": 3,
     "logo": {
         "text": "Bookshelf",
         "image_dark": "_static/logo-bookshelf.png",
@@ -91,12 +92,12 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "GitHub",
-            "url": "https://github.com/mcbookshelf/Bookshelf",
+            "url": "https://github.com/mcbookshelf/bookshelf",
             "icon": "fa-brands fa-github",
         },
         {
             "name": "Support us",
-            "url": "https://www.helloasso.com/associations/altearn/formulaires/3/en",
+            "url": "https://www.helloasso.com/associations/altearn/formulaires/6/en",
             "icon": "fa-solid fa-heart",
         },
         {

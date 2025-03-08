@@ -5,8 +5,8 @@
 Comprehensive information and tools related to weather and biome properties.
 
 ```{image} /_imgs/modules/environment.png
-:align: center
-:class: dark_light p-2
+:width: 100%
+:class: dark_light
 ```
 
 ```{epigraph}

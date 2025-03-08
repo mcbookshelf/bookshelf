@@ -5,7 +5,7 @@ const getTheme = () => {
   )
 }
 
-const observer = new MutationObserver((mutations) => {
+const observer = new MutationObserver(() => {
   const sendMessage = (message) => {
     const iframe = document.querySelector('iframe.giscus-frame');
     if (iframe) {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (comments) {
     const giscusAttributes = {
       "src": "https://giscus.app/client.js",
-      "data-repo": "mcbookshelf/Bookshelf",
+      "data-repo": "mcbookshelf/bookshelf",
       "data-repo-id": "R_kgDOHQjqYg",
       "data-category": "Documentation",
       "data-category-id": "DIC_kwDOHQjqYs4CUQpy",
