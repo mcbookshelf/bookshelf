@@ -13,8 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# @batch bs.vector
-
 await entity B5-0-0-0-2
 
 scoreboard players set $vector.length.0 bs.in 37216

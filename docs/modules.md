@@ -56,6 +56,7 @@ modules/random
 modules/raycast
 modules/schedule
 modules/sidebar
+modules/spline
 modules/time
 modules/vector
 modules/view
