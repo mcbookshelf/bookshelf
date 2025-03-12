@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-#to_list
+# to_list
 data modify storage bs:in string.to_list.str set value "le mot"
 function #bs.string:to_list
 assert data storage bs:out {string:{to_list:["l","e"," ","m","o","t"]}}

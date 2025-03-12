@@ -15,6 +15,6 @@
     ]
   },
   "pipeline": [
-    "gen_file"
+    "gen_concat_files"
   ]
 }

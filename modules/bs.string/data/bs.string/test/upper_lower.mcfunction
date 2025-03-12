@@ -13,12 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-#Setup fast storage
+# setup fast storage
 data modify storage bs:in string.lower.str set value "HELLO WORLD"
 data modify storage bs:in string.upper.str set value "hello world"
 function #bs.string:lower
 function #bs.string:upper
 
-#Test
+# test
 assert data storage bs:out {string:{lower:"hello world"}}
 assert data storage bs:out {string:{upper:"HELLO WORLD"}}

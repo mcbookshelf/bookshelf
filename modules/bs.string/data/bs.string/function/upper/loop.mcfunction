@@ -13,14 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data remove storage bs:ctx _.lt
-$data modify storage bs:ctx _.lt set from storage bs:const string.char_map.upper."$(ch)"
-data modify storage bs:ctx _.list append from storage bs:ctx _.lt
-execute unless data storage bs:ctx _.lt run data modify storage bs:ctx _.list append from storage bs:ctx _.ch
+$execute store success score #s bs.ctx run data modify storage bs:ctx _.list append from storage bs:const string.upper."$(ch)"
+execute if score #s bs.ctx matches 0 run data modify storage bs:ctx _.list append from storage bs:ctx _.ch
 
-#loop
-execute if score #c bs.ctx matches 1 run return 0
 scoreboard players remove #c bs.ctx 1
-data modify storage bs:ctx _.st set string storage bs:ctx _.st 1
-data modify storage bs:ctx _.ch set string storage bs:ctx _.st 0 1
-function bs.string:upper/loop with storage bs:ctx _
+data modify storage bs:ctx _.str set string storage bs:ctx _.str 1
+data modify storage bs:ctx _.ch set string storage bs:ctx _.str 0 1
+execute if score #c bs.ctx matches 1.. run function bs.string:upper/loop with storage bs:ctx _

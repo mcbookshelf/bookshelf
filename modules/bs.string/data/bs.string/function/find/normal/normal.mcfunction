@@ -20,8 +20,7 @@ execute store success score #t bs.ctx run data modify storage bs:ctx _.test set 
 execute if score #t bs.ctx matches 0 run data modify storage bs:out string.find append value 0
 execute if score #t bs.ctx matches 0 store result storage bs:out string.find[-1] int 1 run scoreboard players get #i bs.ctx 
 
-
 function bs.string:find/match_pattern with storage bs:ctx _
-execute if score #z bs.ctx matches 0 store result score #z bs.ctx run data modify storage bs:ctx z set from storage bs:ctx y
+execute if score #z bs.ctx matches 0 store result score #z bs.ctx store result storage bs:ctx z int 1 run data get storage bs:ctx y
 
 function bs.string:find/normal/skip with storage bs:ctx

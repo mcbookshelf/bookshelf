@@ -12,11 +12,10 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-#setup
-data modify storage bs:ctx _.st set from storage bs:in string.upper.str
-execute store result score #c bs.ctx store result score #n bs.ctx run data get storage bs:in string.upper.str
-data modify storage bs:ctx _.ch set string storage bs:ctx _.st 0 1
-data remove storage bs:ctx _.list
+
+data modify storage bs:ctx _ set from storage bs:in string.upper
+execute store result score #c bs.ctx run data get storage bs:in string.upper.str
+data modify storage bs:ctx _.ch set string storage bs:ctx _.str 0 1
 
 function bs.string:upper/loop with storage bs:ctx _
 

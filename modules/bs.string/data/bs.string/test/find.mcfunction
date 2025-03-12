@@ -14,46 +14,46 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Test basic find
-data modify storage bs:in string.find merge value {str:"hello world",substr:"world"}
-function #bs.string:find {occurrence:0}
+data modify storage bs:in string.find merge value {str:"hello world",substr:"world",occurrence:0}
+function #bs.string:find
 assert data storage bs:out {string:{find:[6]}}
 
 # Test empty string
-data modify storage bs:in string.find merge value {str:"",substr:"test"}
-function #bs.string:find {occurrence:0}
+data modify storage bs:in string.find merge value {str:"",substr:"test",occurrence:0}
+function #bs.string:find
 assert data storage bs:out {string:{find:[]}}
 
 # Test empty substr
-data modify storage bs:in string.find merge value {str:"test string",substr:""}
-function #bs.string:find {occurrence:0}
+data modify storage bs:in string.find merge value {str:"test string",substr:"",occurrence:0}
+function #bs.string:find
 assert data storage bs:out {string:{find:[]}}
 
 # Test multiple occurrences
-data modify storage bs:in string.find merge value {str:"test test test",substr:"test"}
-function #bs.string:find {occurrence:0}
+data modify storage bs:in string.find merge value {str:"test test test",substr:"test",occurrence:0}
+function #bs.string:find
 assert data storage bs:out {string:{find:[0,5,10]}}
 
 # Test with occurrence limit
-data modify storage bs:in string.find merge value {str:"find find find find",substr:"find"}
-function #bs.string:find {occurrence:2}
+data modify storage bs:in string.find merge value {str:"find find find find",substr:"find",occurrence:2}
+function #bs.string:find
 assert data storage bs:out {string:{find:[0,5]}}
 
 # Test with Unicode
-data modify storage bs:in string.find merge value {str:"éàêëàéêë",substr:"êë"}
-function #bs.string:find {occurrence:0}
+data modify storage bs:in string.find merge value {str:"éàêëàéêë",substr:"êë",occurrence:0}
+function #bs.string:find
 assert data storage bs:out {string:{find:[2,6]}}
 
 # Test case sensitivity
-data modify storage bs:in string.find merge value {str:"Test TEST test",substr:"test"}
-function #bs.string:find {occurrence:0}
+data modify storage bs:in string.find merge value {str:"Test TEST test",substr:"test",occurrence:0}
+function #bs.string:find
 assert data storage bs:out {string:{find:[10]}}
 
 # Test overlapping patterns
-data modify storage bs:in string.find merge value {str:"aaaaa",substr:"aa"}
-function #bs.string:find {occurrence:0}
+data modify storage bs:in string.find merge value {str:"aaaaa",substr:"aa",occurrence:0}
+function #bs.string:find
 assert data storage bs:out {string:{find:[0,1,2,3]}}
 
 # Test substr not found
-data modify storage bs:in string.find merge value {str:"hello world",substr:"notfound"}
-function #bs.string:find {occurrence:0}
+data modify storage bs:in string.find merge value {str:"hello world",substr:"notfound",occurrence:0}
+function #bs.string:find
 assert data storage bs:out {string:{find:[]}}
