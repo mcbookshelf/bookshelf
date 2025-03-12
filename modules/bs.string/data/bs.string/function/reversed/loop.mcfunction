@@ -15,6 +15,5 @@
 
 data modify storage bs:ctx _.list append string storage bs:ctx _.str -1
 data modify storage bs:ctx _.str set string storage bs:ctx _.str 0 -1
-execute if score #i bs.ctx >= #l bs.ctx run return 0
-scoreboard players add #i bs.ctx 1
-function bs.string:reversed/loop
+scoreboard players remove #l bs.ctx 1
+execute if score #l bs.ctx matches 1.. run function bs.string:reversed/loop

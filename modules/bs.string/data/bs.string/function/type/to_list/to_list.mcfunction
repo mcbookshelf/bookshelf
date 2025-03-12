@@ -13,10 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data remove storage bs:ctx _
-data modify storage bs:ctx _.str set from storage bs:in string.to_list.str
-
+data modify storage bs:ctx _ set from storage bs:in string.to_list
+say ok
 function bs.string:type/to_list/run
 
 data modify storage bs:out string.to_list set from storage bs:ctx _.l
-return run scoreboard players get #l bs.ctx

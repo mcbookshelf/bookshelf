@@ -27,7 +27,7 @@ execute if score #p bs.ctx > #l bs.ctx run return 0
 
 scoreboard players operation #l bs.ctx -= #p bs.ctx
 
-execute unless score #p bs.ctx matches 1 run function bs.string:find/precompute/precompute
+execute unless score #p bs.ctx matches 1 run function bs.string:precompute/precompute
 
 execute if score #o bs.ctx matches 0.. run return run function bs.string:find/count/count with storage bs:ctx
 function #bs.log:error { namespace: "bs.string", path: "bs.string:find", tag: "find", message: '"does not accept negative values"' }

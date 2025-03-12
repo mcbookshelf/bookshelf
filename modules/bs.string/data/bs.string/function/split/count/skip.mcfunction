@@ -13,12 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$scoreboard players add #i bs.ctx $(z)
-$scoreboard players add #d bs.ctx $(z)
-scoreboard players remove #d bs.ctx 1
+scoreboard players operation #l bs.ctx -= #z bs.ctx 
+scoreboard players operation #d bs.ctx += #z bs.ctx
 
-execute if score #l bs.ctx < #i bs.ctx run return run data modify storage bs:out string.split append from storage bs:ctx _.cut
-
+execute if score #l bs.ctx matches ..-1 run return run data modify storage bs:out string.split append from storage bs:ctx _.cut
 $data modify storage bs:ctx _.str set string storage bs:ctx _.str $(z)
 
 function bs.string:split/count/count with storage bs:ctx
