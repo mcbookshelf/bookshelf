@@ -1,13 +1,14 @@
 from beet import Context, Function
 
-MAX = 2**11
+ITERATION = 8
+MAX = 2**ITERATION
 
 def beet_default(ctx: Context) -> None:
     """Generate a help function for the current module."""
     with ctx.override(generate_namespace=ctx.directory.name):
         for a in range(64) :
             gen_concat_functions(a+1,ctx)
-        for i in range(11) :
+        for i in range(ITERATION) :
             a = (2**(i+1))
             gen_concat_functions(a,ctx)
 

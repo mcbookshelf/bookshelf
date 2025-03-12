@@ -12,6 +12,7 @@
 #
 # For more details, refer to the MPL v2.0.
 # -----------------------------------------------------------------------------------------------------------
+
 # first small test
 data modify storage bs:in string.concat.list set value ['a','b','c','d','e','f','g','h','i','j','k','l','m']
 function #bs.string:concat

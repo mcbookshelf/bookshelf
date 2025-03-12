@@ -7,5 +7,5 @@ data remove storage bs:ctx _.list[-1]
 {% endfor -%}
 function bs.string:concat/combine/{{a}}c with storage bs:ctx _.s
 {%if a == max -%}
-execute if score #n bs.ctx matches 2048.. run function bs.string:concat/combine/{{max}}
+execute if score #n bs.ctx matches {{max}}.. run function bs.string:concat/combine/{{max}}
 {%endif -%}
