@@ -54,6 +54,12 @@ function #bs.view:at_aimed_block {run:"setblock ~ ~ ~ minecraft:sponge",with:{}}
 This system is a simplified, specific use case of the `#bs.raycast:run` function. It internally relies on it, allowing you to read its output and providing the flexibility to alter its behavior by modifying its input. [Learn more here](raycast.md)
 ```
 
+```{admonition} Avoid Advancements
+:class: important
+
+This function *can* be used with the `placed_block` advancement to detect block placement, but this is discouraged due to potential precision differences compared to Minecraft's native detection. Additionally, rapid mouse movements within the same tick may cause the wrong block to be targeted.
+```
+
 > **Credits**: Aksiome
 
 ---
@@ -191,12 +197,6 @@ function #bs.view:at_block_placement {run:"setblock ~ ~ ~ minecraft:sponge"}
 :class: dropdown
 
 This system is a simplified, specific use case of the `#bs.raycast:run` function. It internally relies on it, allowing you to read its output and providing the flexibility to alter its behavior by modifying its input. [Learn more here](raycast.md)
-```
-
-```{admonition} Avoid Advancements
-:class: important
-
-This function simulates block placement but is discouraged for use with the `placed_block` advancement due to potential differences in precision compared to Minecraft. Rapid mouse movements during the same tick may also result in the wrong block being targeted.
 ```
 
 > **Credits**: Aksiome

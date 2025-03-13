@@ -13,4 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute unless block ~ ~ ~ $(ignored_blocks) run return run function bs.hitbox:is_entity_in_block/check/check
+execute if entity @s[type=#bs.hitbox:intangible] run return 0
+
+function #bs.hitbox:get_entity
+execute if entity @s[type=#bs.hitbox:is_shaped] run function bs.hitbox:is_entity_in_blocks/entity/shaped
+execute unless entity @s[type=#bs.hitbox:is_shaped] run function bs.hitbox:is_entity_in_blocks/entity/sized
+
+data modify storage bs:ctx _ set value {ignored:"#bs.hitbox:can_pass_through",kind:"collision"}
+return run function bs.hitbox:is_entity_in_blocks/recurse/init with storage bs:ctx

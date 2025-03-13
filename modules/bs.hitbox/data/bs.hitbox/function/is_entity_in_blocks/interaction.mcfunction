@@ -13,12 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data raycast set value { \
-  blocks: true, \
-  entities: false, \
-  max_distance: 16.0, \
-  hitbox_shape: "interaction", \
-  ignored_blocks: "#bs.hitbox:intangible", \
-  ignored_entities: "#bs.hitbox:intangible", \
-}
-$data modify storage bs:data raycast merge value $(with)
+execute if entity @s[type=#bs.hitbox:intangible] run return 0
+
+function #bs.hitbox:get_entity
+execute if entity @s[type=#bs.hitbox:is_shaped] run function bs.hitbox:is_entity_in_blocks/entity/shaped
+execute unless entity @s[type=#bs.hitbox:is_shaped] run function bs.hitbox:is_entity_in_blocks/entity/sized
+
+data modify storage bs:ctx _ set value {ignored:"#bs.hitbox:intangible",kind:"interaction"}
+return run function bs.hitbox:is_entity_in_blocks/recurse/init with storage bs:ctx

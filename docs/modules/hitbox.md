@@ -34,7 +34,8 @@ Get the hitbox of a block as a shape, represented by a list of boxes coordinates
   **Storage `bs:out hitbox`**:
   :::{treeview}
   - {nbt}`compound` Block collision box
-    - {nbt}`list` **shape**: A list of cube coordinates (`[[min_x, min_y, min_z, max_x, max_y, max_z]]`).
+    - {nbt}`list` **collision_shape**: A list of cube coordinates (`[[min_x, min_y, min_z, max_x, max_y, max_z]]`).
+    - {nbt}`list` **interaction_shape**: A list of cube coordinates (`[[min_x, min_y, min_z, max_x, max_y, max_z]]`).
     - {nbt}`compound` **offset**: Hitbox offset (used for example by flowers).
       - {nbt}`double` **x**: Number describing the X coordinate offset.
       - {nbt}`double` **z**: Number describing the Z coordinate offset.
@@ -77,7 +78,7 @@ data get storage bs:out hitbox
 ```
 
 ```{important}
-Static entities, such as paintings and item frames, do not provide height and width information. Instead, they return a shape similar to blocks in `bs:out hitbox`.
+Static entities, such as paintings and item frames, do not provide height and width information. Instead, they return a shape similar to blocks in `bs:out hitbox.shape`.
 ```
 
 ::::
@@ -239,11 +240,11 @@ Determine if the block's hitbox has an intentional random offset. This is common
 Indicate whether the block is intangible, meaning it is typically invisible and lacks interaction collision.
 
 :::
-:::{tab-item} Not Full Cube
+:::{tab-item} Is Full Cube
 
-**`#bs.hitbox:not_full_cube`**
+**`#bs.hitbox:is_full_cube`**
 
-Check if the block is not a full cube of 16\*16\*16 and has a special shape.
+Check if the block is a full cube of 16\*16\*16.
 
 :::
 ::::

@@ -13,12 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data raycast set value { \
-  blocks: true, \
-  entities: false, \
-  max_distance: 16.0, \
-  hitbox_shape: "interaction", \
-  ignored_blocks: "#bs.hitbox:intangible", \
-  ignored_entities: "#bs.hitbox:intangible", \
-}
-$data modify storage bs:data raycast merge value $(with)
+execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return 1
+execute if block ~ ~ ~ #bs.hitbox:can_pass_through run return 0
+return run function bs.hitbox:is_in_block/check/check {kind:"collision"}

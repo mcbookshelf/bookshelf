@@ -13,9 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless block ~ ~ ~ #bs.hitbox:not_full_cube run return run function bs.raycast:collide/cube
+execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return run function bs.raycast:collide/cube
 
 function #bs.hitbox:get_block
+$execute store success score #s bs.ctx run data modify storage bs:ctx _ set from storage bs:out hitbox.$(hitbox_shape)_shape
+execute if score #s bs.ctx matches 0 run return 0
 execute store result score #raycast.ox bs.data run data get storage bs:out hitbox.offset.x 10000000
 execute store result score #raycast.oz bs.data run data get storage bs:out hitbox.offset.z 10000000
 

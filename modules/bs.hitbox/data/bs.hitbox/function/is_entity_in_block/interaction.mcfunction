@@ -13,12 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+execute if block ~ ~ ~ #bs.hitbox:intangible run return 0
 execute if entity @s[type=#bs.hitbox:intangible] run return 0
 
-function #bs.hitbox:get_entity
-execute if entity @s[type=#bs.hitbox:is_shaped] run function bs.hitbox:is_entity_in_blocks/shaped
-execute unless entity @s[type=#bs.hitbox:is_shaped] run function bs.hitbox:is_entity_in_blocks/sized
-
-data modify storage bs:ctx _ set value {ignored_blocks:"#bs.hitbox:intangible"}
-$data modify storage bs:ctx _ merge value $(with)
-return run function bs.hitbox:is_entity_in_blocks/recurse/init with storage bs:ctx
+return run function bs.hitbox:is_entity_in_block/check/check {kind:"interaction"}

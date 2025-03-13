@@ -8,10 +8,6 @@
     "minecraft:goat",
     "minecraft:villager",
     "minecraft:armadillo",
-    "minecraft:creaking",
-    {
-      "id": "minecraft:creaking_transient",
-      "required": false
-    }
+    "minecraft:creaking"
   ]
 }

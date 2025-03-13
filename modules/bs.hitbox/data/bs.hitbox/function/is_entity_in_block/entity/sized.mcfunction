@@ -30,5 +30,3 @@ scoreboard players operation #z bs.ctx -= #w bs.ctx
 scoreboard players operation #l bs.ctx += #w bs.ctx
 scoreboard players operation #m bs.ctx += #h bs.ctx
 scoreboard players operation #n bs.ctx += #w bs.ctx
-
-return run function bs.hitbox:is_entity_in_block/check/check

@@ -1,7 +1,7 @@
 {
   "__bookshelf__": {
     "feature": true,
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
     "authors": [
       "Aksiome"
     ],
@@ -15,6 +15,6 @@
     }
   },
   "values": [
-    "<GENERATED>"
+    "bs.hitbox:is_entity_in_block/interaction"
   ]
 }

@@ -13,12 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-## |TEST CASE|: Bottom stone slab
+# Bottom stone slab shape
 setblock ~ ~ ~ minecraft:stone_slab[type=bottom]
 function #bs.hitbox:get_block
-assert data storage bs:out hitbox{ shape: [[0.0, 0.0, 0.0, 16.0, 8.0, 16.0]] }
+assert data storage bs:out hitbox{ collision_shape: [[0.0, 0.0, 0.0, 16.0, 8.0, 16.0]], interaction_shape: [[0.0, 0.0, 0.0, 16.0, 8.0, 16.0]] }
 
-## |TEST CASE|: Top stone slab
+# Top stone slab shape
 setblock ~ ~ ~ minecraft:stone_slab[type=top]
 function #bs.hitbox:get_block
-assert data storage bs:out hitbox{ shape: [[0.0, 8.0, 0.0, 16.0, 16.0, 16.0]] }
+assert data storage bs:out hitbox{ collision_shape: [[0.0, 0.0, 0.0, 16.0, 8.0, 16.0]], interaction_shape: [[0.0, 0.0, 0.0, 16.0, 8.0, 16.0]] }
