@@ -4,21 +4,20 @@ build-backend = "pdm.backend"
 
 [project]
 name = "bookshelf"
-version = "2.2.2"
+dynamic = ["version"]
 description = "Scripts for Bookshelf and the Github pipeline."
 authors = [{ name = "Bookshelf Contributors", email = "contact@gunivers.net" }]
 dependencies = [
   "beet>=0.109.4",
-  "bookshelf[docs]",
   "click>=8.1.8",
   "colorama>=0.4.6",
   "pydantic>=2.10.6",
   "requests>=2.32.3",
 ]
-requires-python = "==3.12.*"
+requires-python = ">=3.12"
 license = { text = "MPL-2.0" }
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
   "mypy>=1.15.0",
   "ruff>=0.9.7",
@@ -33,26 +32,31 @@ docs = [
   "sphinx-autobuild>=2024.10.3",
   "sphinx-copybutton>=0.5.2",
   "sphinx-design>=0.6.1",
-  "sphinx-minecraft>=1.0.1",
+  "sphinx-minecraft>=1.0.2",
   "sphinx-togglebutton>=0.3.2",
-  "sphinx>=8.2.0",
+  "sphinx>=8.2.1",
 ]
 
 [project.scripts]
-build = "core.cli.modules:build"
-docs = "core.cli.docs:docs"
-meta = "core.cli.meta:meta"
-modules = "core.cli.modules:modules"
-watch = "core.cli.modules:watch"
+build = "bookshelf.cli.modules:build"
+docs = "bookshelf.cli.docs:docs"
+meta = "bookshelf.cli.meta:meta"
+modules = "bookshelf.cli.modules:modules"
+watch = "bookshelf.cli.modules:watch"
+
+[tool.pdm]
+distribution = true
+build.custom-hook = "build.py"
+build.source-includes = ["modules"]
+version.getter = "bookshelf:version"
+version.source = "call"
 
 [tool.mypy]
-files = ["core", "modules"]
+files = ["bs", "modules"]
 explicit_package_bases = true
 namespace_packages = true
 
 [tool.ruff]
-namespace-packages = ["core"]
-
-[tool.ruff.lint]
-select = ["ALL"]
-ignore = ["D100", "D203", "D213", "INP001", "S603", "UP017"]
+namespace-packages = ["bs"]
+lint.select = ["ALL"]
+lint.ignore = ["D100", "D203", "D213", "INP001", "S603", "UP017"]

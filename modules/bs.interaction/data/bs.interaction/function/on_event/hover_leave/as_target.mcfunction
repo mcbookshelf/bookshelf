@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -16,5 +16,6 @@
 tag @s add bs.interaction.target
 scoreboard players remove @s bs.interaction.hover 1
 scoreboard players remove #interaction.active_hover bs.data 1
+execute if score @s bs.interaction.hover matches ..0 run tag @s remove bs.interaction.hovered
 execute if entity @s[tag=bs.interaction.listen_hover_leave] run function bs.interaction:on_event/hover_leave/dispatch with storage bs:ctx
 tag @s remove bs.interaction.target

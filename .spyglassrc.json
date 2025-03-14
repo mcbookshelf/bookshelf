@@ -1,11 +1,12 @@
 {
   "env": {
     "exclude": [
-      ".github/",
-      ".vscode/",
-      "docs/",
-      "scripts/",
-      "@gitignore"
+      ".*/**",
+      "bookshelf/**",
+      "data/**",
+      "docs/**",
+      "build/**",
+      "release/**"
     ],
     "mcmetaSummaryOverrides": {
       "commands": {

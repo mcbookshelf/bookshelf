@@ -7,7 +7,7 @@
   "meta": {
     "name": "Health",
     "slug": "bookshelf-health",
-    "description": "Efficiently manage the lifecycle and vital aspects of an entity.",
+    "description": "Bookshelf health module for efficiently healing and damaging entities.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html",
     "tags": ["runtime"],
     "weak_dependencies": [

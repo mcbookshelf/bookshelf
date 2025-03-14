@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -27,3 +27,6 @@ execute if score #block.y bs.data > #block.max_y bs.data run scoreboard players 
 execute if score #block.z bs.data > #block.min_z bs.data positioned ~ ~ ~1 run return run function bs.block:fill/recurse/next with storage bs:data block._
 $execute if score #block.y bs.data > #block.min_y bs.data positioned ~ ~1 $(min_z) run return run function bs.block:fill/recurse/next with storage bs:data block._
 $execute if score #block.x bs.data <= #block.max_x bs.data positioned ~1 $(min_y) $(min_z) run return run function bs.block:fill/recurse/next with storage bs:data block._
+
+# if present, the on_finished command is only executed at the end of the recursion
+execute if data storage bs:data block._.on_finished run function bs.block:fill/events/on_finished with storage bs:data block._
