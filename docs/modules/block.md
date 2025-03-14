@@ -465,6 +465,8 @@ Replace the block type while trying to conserve the state. State is preserved on
   **Storage `bs:out block`**: {nbt}`compound` There’s no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
 
 :Outputs:
+  **Return**: Whether a type was found and the replacement occurred.
+
   **Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and `properties` are updated to reflect this change.
 ```
 
