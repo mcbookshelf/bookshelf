@@ -33,7 +33,7 @@ execute if score #p bs.ctx > #l bs.ctx run return run data modify storage bs:out
 
 scoreboard players operation #l bs.ctx -= #p bs.ctx
 
-execute unless score #p bs.ctx matches 1 run function bs.string:precompute/precompute
+execute unless score #p bs.ctx matches 1 run function bs.string:char_table/compute
 
 execute if score #o bs.ctx matches 0.. run return run function bs.string:split/count/count with storage bs:ctx
 function #bs.log:error { namespace: "bs.string", path: "bs.string:split", tag: "split", message: '"does not accept negative values"' }

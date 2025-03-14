@@ -13,7 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _.ltr set string storage bs:ctx _.substr 0 1
-data modify storage bs:ctx _.substr set string storage bs:ctx _.substr 1
-function bs.string:precompute/macro_pattern with storage bs:ctx _
-execute unless score #p bs.ctx matches 1 run function bs.string:precompute/precompute
+execute if score #o bs.ctx matches 1.. run scoreboard players remove #o bs.ctx 1
+
+$data modify storage bs:out string.split append string storage bs:ctx _.str $(z) $(x)
+
+scoreboard players operation #a bs.ctx = #s bs.ctx
+
+execute store result storage bs:ctx z int 1 run scoreboard players operation #z bs.ctx = #y bs.ctx

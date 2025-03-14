@@ -13,9 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data remove storage bs:ctx _.l
-data modify storage bs:out string.list set value []
-execute store result score #l bs.ctx run data get storage bs:ctx _.str
-#tellraw @a ["l : ",{"score": {"name":"#l","objective":"bs.ctx"}}]
-
-function bs.string:type/to_list/loop
+execute store result score #p bs.ctx store result storage bs:ctx y int 1 run data get storage bs:ctx _.substr
+data modify storage bs:ctx _.char set string storage bs:ctx _.substr 0 1
+data modify storage bs:ctx _.substr set string storage bs:ctx _.substr 1
+execute unless score #p bs.ctx matches 1 run function bs.string:char_table/loop with storage bs:ctx _

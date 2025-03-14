@@ -13,9 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data remove storage bs:ctx _.l
-data modify storage bs:out string.list set value []
-execute store result score #l bs.ctx run data get storage bs:ctx _.str
-#tellraw @a ["l : ",{"score": {"name":"#l","objective":"bs.ctx"}}]
-
-function bs.string:type/to_list/loop
+$execute store result score #z bs.ctx store result storage bs:ctx z int 1 run data get storage bs:ctx _.table."$(ltr)"

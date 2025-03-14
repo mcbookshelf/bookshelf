@@ -18,13 +18,6 @@ execute store result score #s bs.ctx run data get storage bs:in string.insert.st
 execute store result score #e bs.ctx run data get storage bs:in string.insert.end
 execute store result score #l bs.ctx run data get storage bs:in string.insert.str
 
-execute if score #s bs.ctx matches 0.. if score #s bs.ctx > #e bs.ctx run return run function #bs.log:error { \
-  namespace: bs.string, \
-  path: "#bs.string:insert", \
-  tag: "insert", \
-  message: '"The start index must be less than the end index."', \
-}
-
 
 data modify storage bs:ctx _.s.2 set string storage bs:in string.insert.substr
 function bs.string:insert/macro_loader with storage bs:ctx _

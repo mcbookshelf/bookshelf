@@ -13,10 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players operation #i bs.ctx += #z bs.ctx
 
-execute if score #l bs.ctx < #i bs.ctx run return run data get storage bs:out string.find
-
-$data modify storage bs:ctx _.str set string storage bs:ctx _.str $(z)
 
 function bs.string:find/count/count with storage bs:ctx

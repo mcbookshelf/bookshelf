@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result storage bs:ctx _.pattern."$(ltr)" int 1 run scoreboard players remove #p bs.ctx 1
+$data modify storage bs:out string.split append string storage bs:ctx _.str $(z)

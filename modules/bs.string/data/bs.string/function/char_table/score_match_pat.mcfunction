@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result score #z bs.ctx store result storage bs:ctx z int 1 run data get storage bs:ctx _.pattern."$(ltr)"
+$execute store result score #a bs.ctx run data get storage bs:ctx _.table."$(ltr)"
