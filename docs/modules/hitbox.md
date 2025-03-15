@@ -42,6 +42,12 @@ Get the hitbox of a block as a shape, represented by a list of boxes coordinates
   :::
 ```
 
+```{admonition} Collision / Interaction Shape
+:class: info
+- **Collision Shape**: Defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block.
+- **Interaction Shape**: Defines the area where the player can interact with or break the block. This includes actions such as right-clicking to open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have an interaction shape but no collision, such as crops or scaffolding.
+```
+
 *Get the hitbox of stairs:*
 
 ```mcfunction
@@ -70,15 +76,15 @@ Get the width and height of an entity.
   :::
 ```
 
+```{important}
+Static entities, such as paintings and item frames, do not provide height and width information. Instead, they return a shape similar to blocks in `bs:out hitbox.shape`.
+```
+
 *Get the hitbox of an armor_stand:*
 
 ```mcfunction
 execute summon minecraft:armor_stand run function #bs.hitbox:get_entity
 data get storage bs:out hitbox
-```
-
-```{important}
-Static entities, such as paintings and item frames, do not provide height and width information. Instead, they return a shape similar to blocks in `bs:out hitbox.shape`.
 ```
 
 ::::
@@ -91,7 +97,7 @@ Static entities, such as paintings and item frames, do not provide height and wi
 ### Is Entity Inside
 
 :::::{tab-set}
-::::{tab-item} Any Block Collision
+::::{tab-item} Block Collision Boxes
 
 ```{function} #bs.hitbox:is_entity_in_blocks_collision
 
@@ -117,7 +123,7 @@ execute summon minecraft:cow if function #bs.hitbox:is_entity_in_blocks_collisio
 ```
 
 ::::
-::::{tab-item} Any Block Interaction
+::::{tab-item} Block Interaction Boxes
 
 ```{function} #bs.hitbox:is_entity_in_blocks_interaction
 
@@ -143,7 +149,7 @@ execute summon minecraft:cow if function #bs.hitbox:is_entity_in_blocks_collisio
 ```
 
 ::::
-::::{tab-item} Block Collision
+::::{tab-item} Block Collision Box
 
 ```{function} #bs.hitbox:is_entity_in_block_collision
 
@@ -172,7 +178,7 @@ execute summon minecraft:cow if function #bs.hitbox:is_entity_in_block_collision
 ```
 
 ::::
-::::{tab-item} Block Interaction
+::::{tab-item} Block Interaction Box
 
 ```{function} #bs.hitbox:is_entity_in_block_interaction
 
@@ -210,7 +216,7 @@ execute summon minecraft:cow if function #bs.hitbox:is_entity_in_block_interacti
 ### Is inside
 
 ::::{tab-set}
-:::{tab-item} Block Collision
+:::{tab-item} Block Collision Box
 
 ```{function} #bs.hitbox:is_in_block_collision
 
@@ -230,7 +236,7 @@ execute if function #bs.hitbox:is_in_block_collision run say My name is Pavel
 ```
 
 :::
-:::{tab-item} Block Interaction
+:::{tab-item} Block Interaction Box
 
 ```{function} #bs.hitbox:is_in_block_interaction
 

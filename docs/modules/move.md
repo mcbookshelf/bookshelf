@@ -102,6 +102,12 @@ Teleport an entity by its velocity scores, using the local reference frame, whil
 ::::
 :::::
 
+```{admonition} Collision / Interaction Shape
+:class: info
+- **Collision Shape**: Defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block.
+- **Interaction Shape**: Defines the area where the player can interact with or break the block. This includes actions such as right-clicking to open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have an interaction shape but no collision, such as crops or scaffolding.
+```
+
 *Move a cube (block_display) by its velocity scores (uses an interaction as the hitbox):*
 
 ```{code-block} mcfunction

@@ -61,6 +61,12 @@ Cast a ray from the execution position and check if it hits something.
   :::
 ```
 
+```{admonition} Collision / Interaction Shape
+:class: info
+- **Collision Shape**: Defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block.
+- **Interaction Shape**: Defines the area where the player can interact with or break the block. This includes actions such as right-clicking to open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have an interaction shape but no collision, such as crops or scaffolding.
+```
+
 *Cast a ray from your eyes and see, if it stopped, where it stopped:*
 
 ```mcfunction
