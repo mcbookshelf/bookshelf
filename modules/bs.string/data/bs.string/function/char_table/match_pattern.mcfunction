@@ -14,3 +14,4 @@
 # ------------------------------------------------------------------------------------------------------------
 
 $execute store result score #z bs.ctx store result storage bs:ctx z int 1 run data get storage bs:ctx _.table."$(ltr)"
+execute if score #z bs.ctx matches 0 store result storage bs:ctx z int 1 run scoreboard players operation #z bs.ctx = #y bs.ctx

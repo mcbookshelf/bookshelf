@@ -18,7 +18,6 @@ execute store result score #s bs.ctx run data get storage bs:in string.insert.st
 execute store result score #e bs.ctx run data get storage bs:in string.insert.end
 execute store result score #l bs.ctx run data get storage bs:in string.insert.str
 
-
 data modify storage bs:ctx _.s.2 set string storage bs:in string.insert.substr
 function bs.string:insert/macro_loader with storage bs:ctx _
 function bs.string:concat/combine/2c with storage bs:ctx _.s

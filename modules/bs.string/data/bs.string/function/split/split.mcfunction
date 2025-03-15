@@ -23,7 +23,7 @@ data modify storage bs:ctx _.cut set from storage bs:in string.split.str
 
 execute store result score #o bs.ctx run data get storage bs:ctx _.maxsplit
 execute store result score #l bs.ctx run data get storage bs:in string.split.str
-execute store result score #p bs.ctx store result score #e bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.split.separator
+execute store result score #p bs.ctx store result score #y bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.split.separator
 
 #corner case
 execute if score #l bs.ctx matches 0 run return run data modify storage bs:out string.split append value ""

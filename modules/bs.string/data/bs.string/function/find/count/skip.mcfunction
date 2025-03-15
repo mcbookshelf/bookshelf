@@ -13,6 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-
-
-function bs.string:find/count/count with storage bs:ctx
+$data modify storage bs:ctx _.str set string storage bs:ctx _.str $(z)

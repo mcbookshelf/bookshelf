@@ -49,12 +49,6 @@ data modify storage bs:in string.insert.substr set value "à"
 function #bs.string:insert {index:1}
 assert data storage bs:out {string:{insert:"éàë"}}
 
-# Test with index beyond string length
-# data modify storage bs:in string.insert.str set value "test"
-# data modify storage bs:in string.insert.substr set value " append"
-# function #bs.string:insert {index:99}
-# assert data storage bs:out {string:{insert:"test append"}}
-
 # Test with negative index
 data modify storage bs:in string.insert.str set value "test"
 data modify storage bs:in string.insert.substr set value "pre "

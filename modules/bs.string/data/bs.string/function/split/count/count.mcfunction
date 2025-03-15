@@ -21,6 +21,5 @@ execute if score #t bs.ctx matches 0 store result storage bs:ctx x int 1 run sco
 execute if score #t bs.ctx matches 0 run return run function bs.string:split/count/cut with storage bs:ctx
 
 function bs.string:char_table/match_pattern with storage bs:ctx _
-execute if score #z bs.ctx matches 0 store result score #z bs.ctx store result storage bs:ctx z int 1 run scoreboard players get #e bs.ctx
 
 function bs.string:split/count/skip with storage bs:ctx

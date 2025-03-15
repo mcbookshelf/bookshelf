@@ -18,7 +18,7 @@ execute store result score #c bs.ctx run scoreboard players set #i bs.ctx 0
 data modify storage bs:ctx _ set from storage bs:in string.find
 execute store result score #o bs.ctx run data get storage bs:ctx _.occurrence
 execute store result score #l bs.ctx run data get storage bs:in string.find.str
-execute store result score #p bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.substr
+execute store result score #p bs.ctx store result score #y bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.substr
 
 # Corner case
 execute if score #l bs.ctx matches 0 run return 0
