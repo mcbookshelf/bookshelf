@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# Modified from https://github.com/CMDred/StringLib/
+# modified from https://github.com/CMDred/StringLib/
 
 data modify storage bs:ctx _ set from storage bs:in string.concat
 

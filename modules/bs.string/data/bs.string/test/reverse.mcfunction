@@ -14,26 +14,26 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Test empty string
-data modify storage bs:in string.reversed.str set value ""
-function #bs.string:reversed
-assert data storage bs:out {string:{reversed:""}}
+data modify storage bs:in string.reverse.str set value ""
+function #bs.string:reverse
+assert data storage bs:out {string:{reverse:""}}
 
 # Test single character
-data modify storage bs:in string.reversed.str set value "a"
-function #bs.string:reversed
-assert data storage bs:out {string:{reversed:"a"}}
+data modify storage bs:in string.reverse.str set value "a"
+function #bs.string:reverse
+assert data storage bs:out {string:{reverse:"a"}}
 
 # Test normal string
-data modify storage bs:in string.reversed.str set value "Hello World"
-function #bs.string:reversed
-assert data storage bs:out {string:{reversed:"dlroW olleH"}}
+data modify storage bs:in string.reverse.str set value "Hello World"
+function #bs.string:reverse
+assert data storage bs:out {string:{reverse:"dlroW olleH"}}
 
 # Test string with special characters
-data modify storage bs:in string.reversed.str set value "!@#$%^"
-function #bs.string:reversed
-assert data storage bs:out {string:{reversed:"^%$#@!"}}
+data modify storage bs:in string.reverse.str set value "!@#$%^"
+function #bs.string:reverse
+assert data storage bs:out {string:{reverse:"^%$#@!"}}
 
 # Test string with numbers
-data modify storage bs:in string.reversed.str set value "12345"
-function #bs.string:reversed
-assert data storage bs:out {string:{reversed:"54321"}}
+data modify storage bs:in string.reverse.str set value "12345"
+function #bs.string:reverse
+assert data storage bs:out {string:{reverse:"54321"}}

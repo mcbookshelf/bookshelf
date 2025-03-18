@@ -164,7 +164,7 @@ tellraw @a [{"text":"Result: \""},{"storage":"bs:out","nbt":"string.replace"},{"
 
 ```{function} #bs.string:replace_range
 
-Replaces characters in a string between specified start and end positions with a new substring.
+Replace characters in a string between specified start and end positions with a new substring.
 
 :Inputs:
   **Storage `bs:in string.replace_range`**:
@@ -188,7 +188,7 @@ function #bs.string:replace_range
 tellraw @a [{"text":"The new string is \""},{"storage":"bs:out","nbt":"string.replace_range"},{"text":"\""}]
 ```
 
-```{admonition} Used as Insert
+```{admonition} Use as Insert
 :class: tip
 To insert text without removing any characters, set both `start` and `end` to the same position. This will insert the new text at that position while preserving all existing characters.
 ```
@@ -201,7 +201,7 @@ To insert text without removing any characters, set both `start` and `end` to th
 
 ```{function} #bs.string:reverse
 
-Reverses the order of all characters in a string. For example, "hello" becomes "olleh".
+Reverse the order of all characters in a string. For example, "hello" become "olleh".
 
 :Inputs:
   **Storage `bs:in string.reverse.str`**: {nbt}`string` The string to be reversed.
@@ -260,7 +260,7 @@ tellraw @a [{"text":"The list of strings is \""},{"storage":"bs:out","nbt":"stri
 
 ```{function} #bs.string:to_list
 
-Convert a string into a list where each character becomes a separate element.
+Convert a string into a list where each character become a separate element.
 
 :Inputs:
   **Storage `bs:in string.to_list.str`**: {nbt}`string` The string to convert into a character list.
@@ -282,10 +282,10 @@ tellraw @a [{"text":"The list of characters is \""},{"storage":"bs:out","nbt":"s
 
 ```{function} #bs.string:to_string
 
-Converts a numerical value into its string representation.
+Convert any value into it's string representation.
 
 :Inputs:
-  **Storage `bs:in string.to_string.number`**: {nbt}`int` The number to convert into a string.
+  **Storage `bs:in string.to_string.number`**: {nbt}`any` The value to convert into a string.
 
 :Outputs:
   **Storage `bs:out string.to_string`**: {nbt}`string` The number converted to its string representation.

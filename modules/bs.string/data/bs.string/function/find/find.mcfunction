@@ -20,7 +20,7 @@ execute store result score #o bs.ctx run data get storage bs:ctx _.occurrence
 execute store result score #l bs.ctx run data get storage bs:in string.find.str
 execute store result score #p bs.ctx store result score #y bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.substr
 
-# Corner case
+# corner case
 execute if score #l bs.ctx matches 0 run return 0
 execute if score #p bs.ctx matches 0 run return 0
 execute if score #p bs.ctx > #l bs.ctx run return 0

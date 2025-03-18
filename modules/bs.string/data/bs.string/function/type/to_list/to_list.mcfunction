@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set from storage bs:in string.to_list
-say ok
+
 function bs.string:type/to_list/run
 
 data modify storage bs:out string.to_list set from storage bs:ctx _.l

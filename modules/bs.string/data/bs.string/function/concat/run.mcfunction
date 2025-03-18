@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# Modified from https://github.com/CMDred/StringLib/
+# modified from https://github.com/CMDred/StringLib/
 
 data modify storage bs:ctx _.s.1 set from storage bs:ctx _.list[-1]
 data remove storage bs:ctx _.list[-1]
@@ -22,7 +22,7 @@ execute store result score #n bs.ctx if data storage bs:ctx _.list[]
 # we dont need below 64 since it's already handled in a single cycle
 execute if score #n bs.ctx matches 64.. run function bs.string:concat/binary
 
-# Which dispatch to call
+# which dispatch to call
 execute store result storage bs:ctx x int 1 run scoreboard players operation #c bs.ctx = #n bs.ctx
 execute store result storage bs:ctx y int 1 run scoreboard players operation #c bs.ctx /= 8 bs.const
 execute if score #n bs.ctx matches 1.. run function bs.string:concat/dipatch with storage bs:ctx

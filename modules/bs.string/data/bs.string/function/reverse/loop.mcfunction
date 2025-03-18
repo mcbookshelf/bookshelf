@@ -13,13 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set from storage bs:in string.reversed
-execute store result score #l bs.ctx run data get storage bs:in string.reversed.str
-
-execute if score #l bs.ctx matches ..1 run return run data modify storage bs:out string.reversed set from storage bs:in string.reversed.str
-
-function bs.string:reversed/loop
-
-function bs.string:concat/run
-
-data modify storage bs:out string.reversed set from storage bs:ctx _.s.1
+data modify storage bs:ctx _.list append string storage bs:ctx _.str -1
+data modify storage bs:ctx _.str set string storage bs:ctx _.str 0 -1
+scoreboard players remove #l bs.ctx 1
+execute if score #l bs.ctx matches 1.. run function bs.string:reverse/loop
