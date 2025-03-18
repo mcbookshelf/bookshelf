@@ -3410,21 +3410,6 @@
           }
         },
         {
-          "id": "#bs.string:index_of",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#index-of",
-          "authors": [
-            "aure31"
-          ],
-          "created": {
-            "date": "2024/10/27",
-            "minecraft_version": "1.21.3"
-          },
-          "updated": {
-            "date": "2025/01/13",
-            "minecraft_version": "1.21.4"
-          }
-        },
-        {
           "id": "#bs.string:insert",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#find",
           "authors": [
@@ -3466,6 +3451,21 @@
           },
           "updated": {
             "date": "2025/01/15",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.string:reverse",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#concat",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/03/01",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/03/01",
             "minecraft_version": "1.21.4"
           }
         },
