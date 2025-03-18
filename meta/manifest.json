@@ -3410,21 +3410,6 @@
           }
         },
         {
-          "id": "#bs.string:insert",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#find",
-          "authors": [
-            "aure31"
-          ],
-          "created": {
-            "date": "2025/01/25",
-            "minecraft_version": "1.21.4"
-          },
-          "updated": {
-            "date": "2025/01/25",
-            "minecraft_version": "1.21.4"
-          }
-        },
-        {
           "id": "#bs.string:lower",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#case",
           "authors": [
@@ -3436,6 +3421,21 @@
           },
           "updated": {
             "date": "2025/01/13",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.string:parse",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#parse",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/01/11",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/15",
             "minecraft_version": "1.21.4"
           }
         },
@@ -3455,8 +3455,23 @@
           }
         },
         {
+          "id": "#bs.string:replace_range",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#replace_range",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
           "id": "#bs.string:reverse",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#concat",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#reverse",
           "authors": [
             "aure31"
           ],
@@ -3492,21 +3507,6 @@
           ],
           "created": {
             "date": "2025/01/15",
-            "minecraft_version": "1.21.4"
-          },
-          "updated": {
-            "date": "2025/01/15",
-            "minecraft_version": "1.21.4"
-          }
-        },
-        {
-          "id": "#bs.string:to_number",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#to_number",
-          "authors": [
-            "aure31"
-          ],
-          "created": {
-            "date": "2025/01/11",
             "minecraft_version": "1.21.4"
           },
           "updated": {
