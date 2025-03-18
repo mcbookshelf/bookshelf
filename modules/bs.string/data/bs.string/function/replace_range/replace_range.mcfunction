@@ -13,5 +13,13 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _.s.3 set string storage bs:in string.insert.str 0 $(start)
-$data modify storage bs:ctx _.s.1 set string storage bs:in string.insert.str $(end)
+data modify storage bs:ctx _ set from storage bs:in string.replace_range
+execute store result score #s bs.ctx run data get storage bs:in string.replace_range.start
+execute store result score #e bs.ctx run data get storage bs:in string.replace_range.end
+execute store result score #l bs.ctx run data get storage bs:in string.replace_range.str
+
+data modify storage bs:ctx _.s.2 set string storage bs:in string.replace_range.substr
+function bs.string:replace_range/macro_parser with storage bs:ctx _
+function bs.string:concat/combine/2c with storage bs:ctx _.s
+
+data modify storage bs:out string.replace_range set from storage bs:ctx _.s.1

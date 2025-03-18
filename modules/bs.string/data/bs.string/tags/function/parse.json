@@ -1,7 +1,7 @@
 {
   "__bookshelf__": {
     "feature": true,
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#to_number",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#parse",
     "authors": [
       "aure31"
     ],
@@ -15,6 +15,6 @@
     }
   },
   "values": [
-    "bs.string:type/to_number"
+    "bs.string:type/parse/parse"
   ]
 }

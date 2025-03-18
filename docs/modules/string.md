@@ -285,7 +285,7 @@ tellraw @a [{"text":"The list of characters is \""},{"storage":"bs:out","nbt":"s
 Convert any value into it's string representation.
 
 :Inputs:
-  **Storage `bs:in string.to_string.number`**: {nbt}`any` The value to convert into a string.
+  **Storage `bs:in string.to_string.val`**: {nbt}`any` The value to convert into a string.
 
 :Outputs:
   **Storage `bs:out string.to_string`**: {nbt}`string` The number converted to its string representation.

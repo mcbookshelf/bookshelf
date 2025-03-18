@@ -1,7 +1,7 @@
 {
   "__bookshelf__": {
     "feature": true,
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#find",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#replace_range",
     "authors": [
       "aure31"
     ],
@@ -15,6 +15,6 @@
     }
   },
   "values": [
-    "bs.string:insert/insert"
+    "bs.string:replace_range/replace_range"
   ]
 }

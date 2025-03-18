@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set from storage bs:in string.to_string
-function bs.string:type/to_string/macro with storage bs:ctx _
+data modify storage bs:ctx _ set from storage bs:in string.parse
+function bs.string:type/parse/macro with storage bs:ctx _
