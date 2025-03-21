@@ -21,4 +21,4 @@ function bs.string:upper/loop with storage bs:ctx _
 
 function bs.string:concat/run
 
-data modify storage bs:out string.upper set from storage bs:ctx _.s.1
+data modify storage bs:out string.upper set from storage bs:ctx _.1

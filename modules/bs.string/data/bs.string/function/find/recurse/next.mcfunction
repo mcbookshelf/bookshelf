@@ -17,13 +17,14 @@ $data modify storage bs:ctx _.test set string storage bs:ctx _.str 0 $(y)
 data modify storage bs:ctx _.ltr set string storage bs:ctx _.test -1
 execute store success score #t bs.ctx run data modify storage bs:ctx _.test set from storage bs:in string.find.substr
 
-execute if score #t bs.ctx matches 0 run function bs.string:find/count/up
-execute unless score #o bs.ctx matches 0 if score #t bs.ctx matches 0 if score #c bs.ctx >= #o bs.ctx run return 0
+execute if score #t bs.ctx matches 0 run function bs.string:find/recurse/found
+execute unless score #o bs.ctx matches 0 if score #t bs.ctx matches 0 if score #c bs.ctx >= #o bs.ctx run return run scoreboard players get #c bs.ctx
 
 function bs.string:char_table/match_pattern with storage bs:ctx _
 
 scoreboard players operation #i bs.ctx += #z bs.ctx
-execute if score #l bs.ctx < #i bs.ctx run return run data get storage bs:out string.find
-function bs.string:find/count/skip with storage bs:ctx
+execute if score #l bs.ctx < #i bs.ctx run return run scoreboard players get #c bs.ctx
 
-function bs.string:find/count/count with storage bs:ctx
+function bs.string:find/recurse/substr with storage bs:ctx
+
+function bs.string:find/recurse/next with storage bs:ctx

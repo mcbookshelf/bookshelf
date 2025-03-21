@@ -13,21 +13,22 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out string.find set value []
-execute store result score #c bs.ctx run scoreboard players set #i bs.ctx 0
 data modify storage bs:ctx _ set from storage bs:in string.find
 execute store result score #o bs.ctx run data get storage bs:ctx _.occurrence
 execute store result score #l bs.ctx run data get storage bs:in string.find.str
 execute store result score #p bs.ctx store result score #y bs.ctx store result storage bs:ctx y int 1 run data get storage bs:in string.find.substr
+data modify storage bs:out string.find set value []
 
 # corner case
 execute if score #l bs.ctx matches 0 run return 0
 execute if score #p bs.ctx matches 0 run return 0
 execute if score #p bs.ctx > #l bs.ctx run return 0
 
+execute store result score #c bs.ctx run scoreboard players set #i bs.ctx 0
+
 scoreboard players operation #l bs.ctx -= #p bs.ctx
 
 execute unless score #p bs.ctx matches 1 run function bs.string:char_table/compute
 
-execute if score #o bs.ctx matches 0.. run return run function bs.string:find/count/count with storage bs:ctx
+execute if score #o bs.ctx matches 0.. run function bs.string:find/recurse/next with storage bs:ctx
 function #bs.log:error { namespace: "bs.string", path: "bs.string:find", tag: "find", message: '"does not accept negative values"' }

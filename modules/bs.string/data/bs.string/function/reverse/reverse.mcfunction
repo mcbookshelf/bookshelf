@@ -22,4 +22,4 @@ function bs.string:reverse/loop
 
 function bs.string:concat/run
 
-data modify storage bs:out string.reverse set from storage bs:ctx _.s.1
+data modify storage bs:out string.reverse set from storage bs:ctx _.1

@@ -113,7 +113,9 @@ Search for a substring within a string. Locate all occurrences or a specific num
   :::
 
 :Outputs:
-  **Storage `bs:out string.find`**: {nbt}`list` List of indices where the substring was found
+  **Storage `bs:out string.find`**: {nbt}`list` List of indices where the substring was found.
+
+  **Return**: Number of occurrences found.
 ```
 
 _Find `world` in `hello world`:_

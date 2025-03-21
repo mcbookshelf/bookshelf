@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$function bs.string:concat/combine/$(x)
+$function bs.string:concat/pair/$(x)

@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _.s.1 set value "$(3)$(2)$(1)"
+$data modify storage bs:ctx _.1 set value "$(3)$(2)$(1)"

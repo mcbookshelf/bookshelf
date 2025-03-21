@@ -37,4 +37,4 @@ function bs.string:replace/loop with storage bs:ctx
 
 function bs.string:concat/run
 
-data modify storage bs:out string.replace set from storage bs:ctx _.s.1
+data modify storage bs:out string.replace set from storage bs:ctx _.1

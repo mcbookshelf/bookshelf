@@ -18,8 +18,8 @@ execute store result score #s bs.ctx run data get storage bs:in string.replace_r
 execute store result score #e bs.ctx run data get storage bs:in string.replace_range.end
 execute store result score #l bs.ctx run data get storage bs:in string.replace_range.str
 
-data modify storage bs:ctx _.s.2 set string storage bs:in string.replace_range.substr
+data modify storage bs:ctx _.2 set string storage bs:in string.replace_range.substr
 function bs.string:replace_range/macro_parser with storage bs:ctx _
 function bs.string:concat/combine/2c with storage bs:ctx _.s
 
-data modify storage bs:out string.replace_range set from storage bs:ctx _.s.1
+data modify storage bs:out string.replace_range set from storage bs:ctx _.1
