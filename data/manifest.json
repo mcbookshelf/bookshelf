@@ -3515,8 +3515,23 @@
           }
         },
         {
+          "id": "#bs.string:find_all",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#find",
+          "authors": [
+            "aure31"
+          ],
+          "created": {
+            "date": "2025/03/21",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/03/21",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
           "id": "#bs.string:lower",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#case",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#convert-case",
           "authors": [
             "aure31"
           ],
@@ -3531,7 +3546,7 @@
         },
         {
           "id": "#bs.string:parse",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#parse",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#transform-type",
           "authors": [
             "aure31"
           ],
@@ -3561,7 +3576,7 @@
         },
         {
           "id": "#bs.string:replace_range",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#replace_range",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#replace-range",
           "authors": [
             "aure31"
           ],
@@ -3606,7 +3621,7 @@
         },
         {
           "id": "#bs.string:to_list",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#to_list",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#transform-type",
           "authors": [
             "aure31"
           ],
@@ -3621,7 +3636,7 @@
         },
         {
           "id": "#bs.string:to_string",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#to_string",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#transform-type",
           "authors": [
             "aure31"
           ],
@@ -3636,7 +3651,7 @@
         },
         {
           "id": "#bs.string:upper",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#case",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html#convert-case",
           "authors": [
             "aure31"
           ],
