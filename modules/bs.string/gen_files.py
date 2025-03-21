@@ -1,4 +1,8 @@
+import unicodedata
+
 from beet import Context, Function
+
+from bookshelf.helpers import render_snbt
 
 ITERATION = 8
 MAX = 2**ITERATION
@@ -12,9 +16,11 @@ def beet_default(ctx: Context) -> None:
         for i in range(ITERATION):
             a = (2**(i+1))
             gen_concat_functions(a,ctx)
+
         ctx.generate("import/char_table",
-            lower=render_snbt(),
-            upper=
+            upper=render_snbt({chr(c): chr(c).upper() for c in range(0x110000) if chr(c).islower()}),
+            lower=render_snbt({chr(c): chr(c).lower() for c in range(0x110000) if chr(c).isupper()}),
+            render=Function(source_path="char_table.jinja"),
         )
 
 

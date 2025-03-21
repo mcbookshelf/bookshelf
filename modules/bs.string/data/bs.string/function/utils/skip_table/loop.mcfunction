@@ -13,6 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #l bs.ctx run data get storage bs:ctx _.str
-
-function bs.string:type/to_list/loop
+$execute store result storage bs:ctx _.table."$(char)" int 1 run scoreboard players remove #p bs.ctx 1
+data modify storage bs:ctx _.char set string storage bs:ctx _.substr 0 1
+data modify storage bs:ctx _.substr set string storage bs:ctx _.substr 1
+execute unless score #p bs.ctx matches 1 run function bs.string:utils/skip_table/loop with storage bs:ctx _

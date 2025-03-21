@@ -13,5 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _.3 set string storage bs:in string.replace_range.str 0 $(start)
-$data modify storage bs:ctx _.1 set string storage bs:in string.replace_range.str $(end)
+$data modify storage bs:ctx _.str set string storage bs:ctx _.str $(z)

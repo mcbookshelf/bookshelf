@@ -19,7 +19,32 @@ You can find below all functions available in this module.
 
 ---
 
-### Case Conversion
+### Concat
+
+```{function} #bs.string:concat
+
+Merge multiple strings from the input list into a single string.
+
+:Inputs:
+  **Storage `bs:in string.concat.list`**: {nbt}`string` List of strings to merge
+
+:Outputs:
+  **Storage `bs:out string.concat`**: {nbt}`string` The merged string
+```
+
+_Merge `Hello ` and `World`:_
+
+```mcfunction
+data modify storage bs:in string.concat.list set value ["Hello ","World"]
+function #bs.string:concat
+tellraw @a [{"text":"The merged string is \""},{"storage":"bs:out","nbt":"string.concat"},{"text":"\""}]
+```
+
+> **Credits**: Aure31
+
+---
+
+### Convert Case
 
 :::::{tab-set}
 ::::{tab-item} Uppercase
@@ -67,31 +92,6 @@ tellraw @a [{"text":"The lowercase string is \""},{"storage":"bs:out","nbt":"str
 
 ::::
 :::::
-
-> **Credits**: Aure31
-
----
-
-### Concat
-
-```{function} #bs.string:concat
-
-Merge multiple strings from the input list into a single string.
-
-:Inputs:
-  **Storage `bs:in string.concat.list`**: {nbt}`string` List of strings to merge
-
-:Outputs:
-  **Storage `bs:out string.concat`**: {nbt}`string` The merged string
-```
-
-_Merge `Hello ` and `World`:_
-
-```mcfunction
-data modify storage bs:in string.concat.list set value ["Hello ","World"]
-function #bs.string:concat
-tellraw @a [{"text":"The merged string is \""},{"storage":"bs:out","nbt":"string.concat"},{"text":"\""}]
-```
 
 > **Credits**: Aure31
 
@@ -306,7 +306,7 @@ tellraw @a [{"text":"The string is \""},{"storage":"bs:out","nbt":"string.to_str
 
 ```{function} #bs.string:parse
 
-Try to convert the string into the value it represents. 
+Try to convert the string into the value it represents.
 
 :Inputs:
   **Storage `bs:in string.parse.str`**: {nbt}`string` The string containing the number to be extracted.

@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out string.find append value 0
-execute store result storage bs:out string.find[-1] int 1 run scoreboard players get #i bs.ctx 
+data modify storage bs:ctx _.ret append value 0
+execute store result storage bs:ctx _.ret[-1] int 1 run scoreboard players get #i bs.ctx
 scoreboard players add #c bs.ctx 1

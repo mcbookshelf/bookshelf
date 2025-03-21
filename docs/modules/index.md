@@ -43,6 +43,7 @@ random
 raycast
 schedule
 sidebar
+string
 time
 vector
 view

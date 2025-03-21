@@ -13,9 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# setup
 data modify storage bs:ctx _ set from storage bs:in string.lower
-execute store result score #c bs.ctx run data get storage bs:in string.lower.str
+execute store result score #c bs.ctx run data get storage bs:ctx _.str
 data modify storage bs:ctx _.ch set string storage bs:ctx _.str 0 1
 
 function bs.string:lower/loop with storage bs:ctx _

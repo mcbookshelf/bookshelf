@@ -16,7 +16,6 @@
 $execute store success score #s bs.ctx run data modify storage bs:ctx _.list append from storage bs:const string.lower."$(ch)"
 execute if score #s bs.ctx matches 0 run data modify storage bs:ctx _.list append from storage bs:ctx _.ch
 
-# loop
 scoreboard players remove #c bs.ctx 1
 data modify storage bs:ctx _.str set string storage bs:ctx _.str 1
 data modify storage bs:ctx _.ch set string storage bs:ctx _.str 0 1
