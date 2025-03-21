@@ -1,0 +1,14 @@
+{
+  "data_pack": {
+    "name": "bookshelf-suite"
+  },
+  "meta": {
+    "name": "Suite",
+    "slug": "bookshelf-suite",
+    "description": "The complete Bookshelf package, combining all modules into one unified bundle.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
+  },
+  "pipeline": [
+    "bookshelf.plugins.bundle_packs"
+  ]
+}

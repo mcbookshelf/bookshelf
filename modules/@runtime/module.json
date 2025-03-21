@@ -1,0 +1,14 @@
+{
+  "data_pack": {
+    "name": "bookshelf-runtime"
+  },
+  "meta": {
+    "name": "Runtime",
+    "slug": "bookshelf-runtime",
+    "description": "A Bookshelf collection of modules that provide essential utilities for building Minecraft datapacks.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
+  },
+  "pipeline": [
+    "bookshelf.plugins.bundle_packs.runtime"
+  ]
+}

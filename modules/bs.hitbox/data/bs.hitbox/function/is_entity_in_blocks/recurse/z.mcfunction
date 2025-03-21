@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -13,7 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if function bs.hitbox:is_entity_in_blocks/check/check run return 1
+execute store result score #r bs.ctx run function bs.hitbox:is_entity_in_blocks/check/check with storage bs:ctx _
+execute if score #r bs.ctx matches 1 run return 1
 
 scoreboard players remove #z bs.ctx 1000000
 scoreboard players remove #n bs.ctx 1000000

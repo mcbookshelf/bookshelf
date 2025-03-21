@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players operation $random.simplex_noise_2d.x bs.in = $generation.x bs.data
-scoreboard players operation $random.simplex_noise_2d.y bs.in = $generation.y bs.data
+scoreboard players operation $random.simplex_noise_2d.x bs.in = $generation.x bs.lambda
+scoreboard players operation $random.simplex_noise_2d.y bs.in = $generation.y bs.lambda
 scoreboard players operation $random.simplex_noise_2d.x bs.in *= #generation.k bs.data
 scoreboard players operation $random.simplex_noise_2d.y bs.in *= #generation.k bs.data
 
-function #bs.random:simplex_noise_2d
+execute store result score $generation.noise bs.lambda run function #bs.random:simplex_noise_2d
 $$(cb)

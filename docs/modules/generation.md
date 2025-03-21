@@ -5,12 +5,12 @@
 Generate diverse terrains and landscapes, incorporating natural features.
 
 ```{image} /_imgs/modules/generation-light.png
-:align: center
+:width: 100%
 :class: only-light
 ```
 
 ```{image} /_imgs/modules/generation-dark.png
-:align: center
+:width: 100%
 :class: only-dark
 ```
 
@@ -52,8 +52,8 @@ Generate a shape in 2D space at the specified origin, with the callback executed
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`string` **run**: Callback to run at each step. For each step, the following scores can be used:
-      - **`$generation.x bs.data`**: The X coordinate of the current step.
-      - **`$generation.y bs.data`**: The Y coordinate of the current step.
+      - **`$generation.x bs.lambda`**: The X coordinate of the current step.
+      - **`$generation.y bs.lambda`**: The Y coordinate of the current step.
     - {nbt}`int` **width**: Width of the shape to generate.
     - {nbt}`int` **height**: Height of the shape to generate.
     - {nbt}`compound` **with**: Shape settings.
@@ -80,9 +80,9 @@ Generate a shape in 2D space using a Simplex noise algorithm. The shape is gener
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`string` **run**: Callback to run at each step. For each step, the following scores can be used:
-      - **`$random.simplex_noise_2d bs.out`**: The noise value in the range [-1000, 1000].
-      - **`$generation.x bs.data`**: The X coordinate of the current step.
-      - **`$generation.y bs.data`**: The Y coordinate of the current step.
+      - **`$generation.noise bs.lambda`**: The noise value in the range [-1000, 1000].
+      - **`$generation.x bs.lambda`**: The X coordinate of the current step.
+      - **`$generation.y bs.lambda`**: The Y coordinate of the current step.
     - {nbt}`int` **width**: Width of the shape to generate.
     - {nbt}`int` **height**: Height of the shape to generate.
     - {nbt}`compound` **with**: Shape settings.
@@ -111,9 +111,9 @@ Generate a shape in 2D space using a Fractal noise algorithm. The shape is gener
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`string` **run**: Callback to run at each step. For each step, the following scores can be used:
-      - **`$random.fractal_noise_2d bs.out`**: The noise value in the range [-1000, 1000].
-      - **`$generation.x bs.data`**: The X coordinate of the current step.
-      - **`$generation.y bs.data`**: The Y coordinate of the current step.
+      - **`$generation.noise bs.lambda`**: The noise value in the range [-1000, 1000].
+      - **`$generation.x bs.lambda`**: The X coordinate of the current step.
+      - **`$generation.y bs.lambda`**: The Y coordinate of the current step.
     - {nbt}`int` **width**: Width of the shape to generate.
     - {nbt}`int` **height**: Height of the shape to generate.
     - {nbt}`compound` **with**: Shape settings.
@@ -154,10 +154,5 @@ $fill ~ ~ ~ ~ ~$(y) ~ stone
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

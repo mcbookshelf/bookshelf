@@ -1,17 +1,17 @@
 from collections import defaultdict
-from datetime import datetime, timezone
 
 from beet import Context, LootTable, Predicate
 from pydantic import BaseModel
 
-from core.common.helpers import (
+from bookshelf.definitions import MC_VERSIONS
+from bookshelf.helpers import (
     download_and_parse_json,
     gen_loot_table_tree,
     render_snbt,
     with_prefix,
 )
-from core.definitions import BIOMES_URL, MINECRAFT_VERSIONS
 
+BIOMES_META = "https://raw.githubusercontent.com/misode/mcmeta/{}-summary/data/worldgen/biome/data.min.json"
 SNOW_THRESHOLD = 0.4
 
 class Biome(BaseModel):
@@ -25,21 +25,18 @@ class Biome(BaseModel):
 def beet_default(ctx: Context) -> None:
     """Generate files used by the bs.environment module."""
     namespace = ctx.directory.name
-    biomes = get_biomes(ctx, version := MINECRAFT_VERSIONS[-1])
+    biomes = get_biomes(ctx, MC_VERSIONS[-1])
 
     with ctx.override(generate_namespace=namespace):
         ctx.generate("get/get_biome", gen_get_biome_loot_table(biomes))
-        ctx.generate("can_snow", gen_can_snow_predicate(biomes, version))
-        ctx.generate(
-            "has_precipitation",
-            gen_has_precipitation_predicate(biomes, version),
-        )
+        ctx.generate("can_snow", gen_can_snow_predicate(biomes))
+        ctx.generate("has_precipitation", gen_has_precipitation_predicate(biomes))
 
 
 def get_biomes(ctx: Context, version: str) -> list[Biome]:
     """Retrieve biomes from the provided version."""
     cache = ctx.cache[f"version/{version}"]
-    raw_biomes = download_and_parse_json(cache, BIOMES_URL.format(version))
+    raw_biomes = download_and_parse_json(cache, BIOMES_META.format(version))
     if not isinstance(raw_biomes, dict):
         error_msg = f"Expected a dict, but got {type(raw_biomes)}"
         raise TypeError(error_msg)
@@ -64,7 +61,7 @@ def gen_get_biome_loot_table(biomes: list[Biome]) -> LootTable:
     )
 
 
-def gen_can_snow_predicate(biomes: list[Biome], version: str) -> Predicate:
+def gen_can_snow_predicate(biomes: list[Biome]) -> Predicate:
     """Generate a predicate to determine where snow can occur."""
     groups = defaultdict(list)
     for biome in filter(
@@ -81,10 +78,7 @@ def gen_can_snow_predicate(biomes: list[Biome], version: str) -> Predicate:
             "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#can-it-snow",
             "authors": ["Aksiome"],
             "created": {"date": "2024/04/22", "minecraft_version": "1.20.5"},
-            "updated": {
-                "date": datetime.now(timezone.utc).strftime("%Y/%m/%d"),
-                "minecraft_version": version,
-            },
+            "updated": {"date": "2025/03/10", "minecraft_version": "1.21.4"},
         },
         "condition":"minecraft:any_of",
         "terms": [{
@@ -97,7 +91,7 @@ def gen_can_snow_predicate(biomes: list[Biome], version: str) -> Predicate:
     })
 
 
-def gen_has_precipitation_predicate(biomes: list[Biome], version: str) -> Predicate:
+def gen_has_precipitation_predicate(biomes: list[Biome]) -> Predicate:
     """Generate a predicate to determine biomes with precipitation."""
     return Predicate({
         "__bookshelf__": {
@@ -105,10 +99,7 @@ def gen_has_precipitation_predicate(biomes: list[Biome], version: str) -> Predic
             "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#can-it-rain-or-snow",
             "authors": ["Aksiome"],
             "created": {"date": "2024/04/22", "minecraft_version": "1.20.5"},
-            "updated": {
-                "date": datetime.now(timezone.utc).strftime("%Y/%m/%d"),
-                "minecraft_version": version,
-            },
+            "updated": {"date": "2025/03/10", "minecraft_version": "1.21.4"},
         },
         "condition": "minecraft:location_check",
         "predicate": {"biomes": [b.type for b in biomes if b.has_precipitation]},

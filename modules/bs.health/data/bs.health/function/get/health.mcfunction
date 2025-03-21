@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -13,7 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store success score #s bs.ctx run attribute @s minecraft:max_health modifier value get bs.health:limit
-execute if score #s bs.ctx matches 1 store result storage bs:out health.get_health double 0.00001 run attribute @s minecraft:max_health get 100000
-execute if score #s bs.ctx matches 0 run data modify storage bs:out health.get_health set from entity @s Health
+execute if score @s bs.hmod matches 1.. store result storage bs:out health.get_health double 0.00001 run scoreboard players get @s bs.hmod
+execute unless score @s bs.hmod matches 1.. run data modify storage bs:out health.get_health set from entity @s Health
 $return run data get storage bs:out health.get_health $(scale)

@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -14,10 +14,10 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-## |TEST CASE|: Player should not be inside the entity
+# Position is outside the entity
 execute positioned ~.5 ~2 ~.5 if function #bs.hitbox:is_in_entity run fail "Should not be inside the entity"
 
-## |TEST CASE|: Player should be inside the entity at various positions
+# Position is inside the entity at various positions
 execute positioned ~.5 ~1.5 ~.5 unless function #bs.hitbox:is_in_entity run fail "Should be inside the entity"
 execute positioned ~.5 ~ ~.5 unless function #bs.hitbox:is_in_entity run fail "Should be inside the entity"
 

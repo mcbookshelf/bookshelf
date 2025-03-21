@@ -244,6 +244,42 @@ You can find below all tags available in this API.
 
 ---
 
+### Is Hovered?
+
+**`bs.interaction.hovered`**
+
+Determine if an interaction is currently hovered by a player.
+
+```{note}
+This is useful in `hover_enter` and `hover_leave` events, which are per player. Since `hover_leave` triggers when a player stops hovering but doesn't check if all players have stopped, this tag can be used to determine when every player has left the interaction.
+```
+
+> **Credits**: Aksiome
+
+---
+
+### Is Source?
+
+**`bs.interaction.source`**
+
+Usable only in the callback of an event.
+Determine if the current entity is the source of the event.
+
+> **Credits**: theogiraudet
+
+---
+
+### Is Target?
+
+**`bs.interaction.target`**
+
+Usable only in the callback of an event.
+Determine if the current entity is the target of the event.
+
+> **Credits**: theogiraudet
+
+---
+
 ### Listen to a Specific Event?
 
 :::::{tab-set}
@@ -284,32 +320,5 @@ Determine if the current interaction listen to leave hover interaction.
 
 ---
 
-### Is Source?
-
-**`bs.interaction.source`**
-
-Usable only in the callback of an event.
-Determine if the current entity is the source of the event.
-
-> **Credits**: theogiraudet
-
----
-
-### Is Target?
-
-**`bs.interaction.target`**
-
-Usable only in the callback of an event.
-Determine if the current entity is the target of the event.
-
-> **Credits**: theogiraudet
-
----
-
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

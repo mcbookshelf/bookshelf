@@ -5,12 +5,12 @@
 Vectors are fundamental and incredibly powerful tools to manage motions, forces and.. well... do physics!
 
 ```{image} /_imgs/modules/vector-light.png
-:align: center
+:width: 100%
 :class: only-light
 ```
 
 ```{image} /_imgs/modules/vector-dark.png
-:align: center
+:width: 100%
 :class: only-dark
 ```
 
@@ -532,10 +532,5 @@ tellraw @a [{"text":"Cartesian coordinates: ","color":"dark_gray"},{"score":{"na
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

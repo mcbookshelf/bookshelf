@@ -40,8 +40,9 @@ Fill all or part of a region with a specific block.
     - {nbt}`string` **block**: Block to fill the region with.
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
     - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
+    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
         - {nbt}`string` **block**: Block acting as a filter.
@@ -55,11 +56,11 @@ Fill all or part of a region with a specific block.
   **State**: Blocks are placed in the world.
 ```
 
-*Replace the top layer of dirt by grass:*
+*Replace the top layer of dirt by grass and use a say command when finished:*
 
 ```mcfunction
 # Setup the input
-data modify storage bs:in block.fill_block set value {block:"minecraft:grass_block",from:[-16,100,0],to:[-1,103,15],masks:[{block:"minecraft:dirt"},{block:"minecraft:air",y:1}]}
+data modify storage bs:in block.fill_block set value {block:"minecraft:grass_block",from:[-16,100,0],to:[-1,103,15],on_finished:"say added grass on top",masks:[{block:"minecraft:dirt"},{block:"minecraft:air",y:1}]}
 
 # Run the process
 function #bs.block:fill_block
@@ -88,8 +89,9 @@ Fill all or part of a region with a specific block type, preserving states and N
     - {nbt}`string` **type**: Block id to fill the region with.
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
     - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
+    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
         - {nbt}`string` **block**: Block acting as a filter.
@@ -103,11 +105,11 @@ Fill all or part of a region with a specific block type, preserving states and N
   **State**: Blocks are placed in the world.
 ```
 
-*Replace oak stairs with spruce stairs while preserving states:*
+*Replace oak stairs with spruce stairs while preserving states and use a say command when finished:*
 
 ```mcfunction
 # Setup the input
-data modify storage bs:in block.fill_type set value {type:"minecraft:spruce_stairs",from:[-16,100,0],to:[-1,103,15],masks:[{block:"minecraft:oak_stairs"}]}
+data modify storage bs:in block.fill_type set value {type:"minecraft:spruce_stairs",from:[-16,100,0],to:[-1,103,15],on_finished:"say replaced the stairs",masks:[{block:"minecraft:oak_stairs"}]}
 
 # Run the process
 function #bs.block:fill_type
@@ -129,8 +131,9 @@ Fill all or part of a region with random blocks or types.
         - {nbt}`int` **weight**: Determine the likelihood of selecting the entry (default: 1).
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
     - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
+    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
         - {nbt}`string` **block**: Block acting as a filter.
@@ -144,11 +147,11 @@ Fill all or part of a region with random blocks or types.
   **State**: Blocks are placed in the world.
 ```
 
-*Randomly fill an area with stone or air:*
+*Randomly fill an area with stone or air and use a say command when finished:*
 
 ```mcfunction
 # Setup the input
-data modify storage bs:in block.fill_random set value {entries:[{block:"minecraft:stone"},{block:"minecraft:air"}],from:[-16,100,0],to:[-1,103,15]}
+data modify storage bs:in block.fill_random set value {entries:[{block:"minecraft:stone"},{block:"minecraft:air"}],from:[-16,100,0],to:[-1,103,15],on_finished:"say randomly placed stone"}
 
 # Run the process
 function #bs.block:fill_random
@@ -462,6 +465,8 @@ Replace the block type while trying to conserve the state. State is preserved on
   **Storage `bs:out block`**: {nbt}`compound` There’s no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
 
 :Outputs:
+  **Return**: Whether a type was found and the replacement occurred.
+
   **Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and `properties` are updated to reflect this change.
 ```
 
@@ -545,7 +550,7 @@ Mix block types while ensuring coherent replacements within the defined mapping 
 
 ```{code-block} mcfunction
 :force:
-data modify storage bs:const block.mapping_registry.bs.colors set value [ \
+data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   { set: "cube", attrs: ["stone"], type: "minecraft:stone" }, \
   { set: "cube", attrs: ["brick"], type: "minecraft:bricks" }, \
   { set: "cube", attrs: ["stone", "brick"], type: "minecraft:stone_bricks" }, \
@@ -977,10 +982,5 @@ data modify storage bs:const block.mapping_registry.<namespace>.<name> [
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

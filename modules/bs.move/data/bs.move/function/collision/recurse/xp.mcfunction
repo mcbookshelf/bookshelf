@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 scoreboard players operation #move.y bs.data = #move.ry bs.data
-$function bs.move:collision/recurse/$(sy) with storage bs:data move
+$function bs.move:collision/recurse/$(dy) with storage bs:data move
 
 scoreboard players add #move.x bs.data 10000000
-execute if score #move.x bs.data <= #move.nx bs.data positioned ~1 ~ ~ run function bs.move:collision/recurse/xp with storage bs:data move
+execute if score #move.x bs.data <= #move.mx bs.data positioned ~1 ~ ~ run function bs.move:collision/recurse/xp with storage bs:data move

@@ -6,12 +6,12 @@ The beatifull world of mathematics... **in Minecraft!**
 
 
 ```{image} /_imgs/modules/math-light.png
-:align: center
+:width: 100%
 :class: only-light
 ```
 
 ```{image} /_imgs/modules/math-dark.png
-:align: center
+:width: 100%
 :class: only-dark
 ```
 
@@ -732,10 +732,5 @@ This function utilizes Minecraft teleportation to calculate both the cosine and 
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

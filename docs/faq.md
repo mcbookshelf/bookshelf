@@ -28,7 +28,7 @@ Bookshelf prioritizes accessibility and versatility. While this may occasionally
 
 ## What about copyrights?
 
-Bookshelf is licensed to allow you to use and modify it for personal use and distribute maps or datapacks that use Bookshelf without any issues, as long as you share any modification made to the original source code. For that, we chose the [MPL 2.0](https://github.com/mcbookshelf/Bookshelf/blob/master/LICENSE) (Mozila Public License 2.0).
+Bookshelf is licensed to allow you to use and modify it for personal use and distribute maps or datapacks that use Bookshelf without any issues, as long as you share any modification made to the original source code. For that, we chose the [MPL 2.0](https://github.com/mcbookshelf/bookshelf/blob/master/LICENSE) (Mozila Public License 2.0).
 
 ```{button-link} https://discord.gg/MkXytNjmBt
 :color: primary
@@ -40,10 +40,5 @@ More questions? Join us on Discord!
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} _templates/comments.md
+```

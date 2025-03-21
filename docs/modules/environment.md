@@ -5,8 +5,8 @@
 Comprehensive information and tools related to weather and biome properties.
 
 ```{image} /_imgs/modules/environment.png
-:align: center
-:class: dark_light p-2
+:width: 100%
+:class: dark_light
 ```
 
 ```{epigraph}
@@ -141,10 +141,5 @@ Determine if it is thundering or not.
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

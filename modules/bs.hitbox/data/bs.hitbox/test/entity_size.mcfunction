@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -14,6 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-## |TEST CASE|: Entity size (width and height)
+# Default player size (width and height)
 function #bs.hitbox:get_entity
 assert data storage bs:out hitbox{ width: 0.6, height: 1.8 }

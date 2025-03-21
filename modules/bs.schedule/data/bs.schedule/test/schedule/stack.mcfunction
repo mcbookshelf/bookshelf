@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2025 Gunivers
 #
-# This file is part of the Bookshelf project (https://github.com/mcbookshelf/Bookshelf).
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
 # This source code is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-function #bs.schedule:schedule {with:{command:"scoreboard players add #packtest.schedule.stack bs.data 1",time:1}}
-function #bs.schedule:schedule {with:{command:"scoreboard players add #packtest.schedule.stack bs.data 1",time:1}}
+function #bs.schedule:schedule {run:"scoreboard players add #packtest.schedule.stack bs.data 1",with:{}}
+function #bs.schedule:schedule {run:"scoreboard players add #packtest.schedule.stack bs.data 1",with:{}}
 await delay 1t
 assert score #packtest.schedule.stack bs.data matches 2
