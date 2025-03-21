@@ -52,10 +52,10 @@ Cast a ray from the execution position and check if it hits something.
 
   **Storage `bs:lambda raycast`**:
   :::{treeview}
-  - {nbt}`compound` Ray lambda data, accessible in callbacks (`on_*`)
+  - {nbt}`compound` Ray lambda data, accessible only in callbacks (`on_*`)
     - {nbt}`double` **distance**: The distance from the ray's origin to the impact point.
-    - {nbt}`list` **hit_point**: The coordintates of the impact point.
-    - {nbt}`list` **hit_normal**: The normal of the surface the ray hit.
+    - {nbt}`list` **hit_point**: The coordinates of the impact point.
+    - {nbt}`list` **hit_normal**: The normal of the surface the ray hits.
     - {nbt}`list` **targeted_block**: The coordinates of the block that was hit.
     - {nbt}`list` **targeted_entity**: The UUID array of the entity that was hit.
   :::
