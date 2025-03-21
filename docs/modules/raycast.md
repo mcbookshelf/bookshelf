@@ -47,6 +47,19 @@ Cast a ray from the execution position and check if it hits something.
       - {nbt}`string` **on_targeted_entity**: Command to run as and at the entity hit by the ray.
   :::
 
+:Lambdas:
+  **Score `$raycast.piercing bs.lambda`**: The remaining number of blocks or entities the ray can pass through. This score can be dynamically updated inside callbacks (`on_*`) to modify ray behavior.
+
+  **Storage `bs:lambda raycast`**:
+  :::{treeview}
+  - {nbt}`compound` Ray lambda data, accessible in callbacks (`on_*`)
+    - {nbt}`double` **distance**: The distance from the ray's origin to the impact point.
+    - {nbt}`list` **hit_point**: The coordintates of the impact point.
+    - {nbt}`list` **hit_normal**: The normal of the surface the ray hit.
+    - {nbt}`list` **targeted_block**: The coordinates of the block that was hit.
+    - {nbt}`list` **targeted_entity**: The UUID array of the entity that was hit.
+  :::
+
 :Outputs:
   **Return**: Whether the ray collides with a hitbox or not (1 or 0).
 

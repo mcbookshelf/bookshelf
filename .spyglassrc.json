@@ -3,9 +3,9 @@
     "exclude": [
       ".*/**",
       "bookshelf/**",
+      "build/**",
       "data/**",
       "docs/**",
-      "build/**",
       "release/**"
     ],
     "mcmetaSummaryOverrides": {

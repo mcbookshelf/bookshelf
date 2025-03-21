@@ -15,6 +15,6 @@
 
 data modify entity @s Pos set from storage bs:data raycast.pos
 $execute positioned as @s run tp @s ^ ^ ^$(distance)
-data modify storage bs:out raycast.hit_point set from entity @s Pos
+data modify storage bs:lambda raycast.hit_point set from entity @s Pos
 execute if data storage bs:data raycast.on_hit_point at @s run function bs.raycast:react/hit_point with storage bs:data raycast
 kill @s

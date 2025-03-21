@@ -21,10 +21,10 @@ scoreboard players operation #raycast.distance bs.data > #raycast.lx bs.data
 scoreboard players operation #raycast.distance bs.data > #raycast.ly bs.data
 
 # get the normal of the surface that was hit
-data modify storage bs:out raycast.hit_normal set value [0,0,0]
-execute if score #raycast.distance bs.data = #raycast.lx bs.data store result storage bs:out raycast.hit_normal[0] int -1 run data get storage bs:data raycast.sx
-execute if score #raycast.distance bs.data = #raycast.ly bs.data store result storage bs:out raycast.hit_normal[1] int -1 run data get storage bs:data raycast.sy
-execute if score #raycast.distance bs.data = #raycast.lz bs.data store result storage bs:out raycast.hit_normal[2] int -1 run data get storage bs:data raycast.sz
+data modify storage bs:lambda raycast.hit_normal set value [0,0,0]
+execute if score #raycast.distance bs.data = #raycast.lx bs.data store result storage bs:lambda raycast.hit_normal[0] int -1 run data get storage bs:data raycast.sx
+execute if score #raycast.distance bs.data = #raycast.ly bs.data store result storage bs:lambda raycast.hit_normal[1] int -1 run data get storage bs:data raycast.sy
+execute if score #raycast.distance bs.data = #raycast.lz bs.data store result storage bs:lambda raycast.hit_normal[2] int -1 run data get storage bs:data raycast.sz
 
 scoreboard players operation #raycast.lx bs.data += #raycast.dx bs.data
 scoreboard players operation #raycast.ly bs.data += #raycast.dy bs.data
