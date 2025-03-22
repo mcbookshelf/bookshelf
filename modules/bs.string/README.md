@@ -1,8 +1,8 @@
-# ⌚ Bookshelf Time
+# 🔠 Bookshelf String
 
-This datapack allows you to easily retrieve system time information in Minecraft.
+This module allows you to easily manage string in Minecraft.
 
-For more details and usage examples, check out the Bookshelf [documentation](https://docs.mcbookshelf.dev/en/latest/modules/time.html).
+For more details and usage examples, check out the Bookshelf [documentation](https://docs.mcbookshelf.dev/en/latest/modules/string.html).
 
 ## 📖 About Bookshelf
 
