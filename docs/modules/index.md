@@ -43,6 +43,7 @@ random
 raycast
 schedule
 sidebar
+spline
 time
 vector
 view
