@@ -21,7 +21,7 @@ execute unless data storage bs:out block.properties run data modify storage bs:o
 # escape the nbt or default to an empty string
 execute store success score #s bs.ctx if data storage bs:out block.nbt{}
 execute if score #s bs.ctx matches 0 run data modify storage bs:out block.nbt set value ""
-execute if score #s bs.ctx matches 1 run data modify entity B5-0-0-0-2 text set value '{"storage":"bs:out","nbt":"block.nbt"}'
+execute if score #s bs.ctx matches 1 run data modify entity B5-0-0-0-2 text set value {storage:"bs:out",nbt:"block.nbt"}
 
 # generate the full block string representation
 data modify storage bs:ctx _ set from storage bs:out block
