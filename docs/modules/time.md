@@ -41,10 +41,5 @@ tellraw @a [{"text":"It is "},{"score":{"name":"$time.hours","objective":"bs.out
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

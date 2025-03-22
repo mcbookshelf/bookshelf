@@ -32,10 +32,6 @@
     "minecraft:vex",
     "minecraft:warden",
     "minecraft:wither",
-    "minecraft:creaking",
-    {
-      "id": "minecraft:creaking_transient",
-      "required": false
-    }
+    "minecraft:creaking"
   ]
 }

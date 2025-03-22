@@ -13,11 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if block ~ ~ ~ #bs.hitbox:intangible run return 0
 execute if entity @s[type=#bs.hitbox:intangible] run return 0
 
 function #bs.hitbox:get_entity
-execute if entity @s[type=#bs.hitbox:is_shaped] run function bs.hitbox:is_entity_in_block/shaped
-execute unless entity @s[type=#bs.hitbox:is_shaped] run function bs.hitbox:is_entity_in_block/sized
+execute if entity @s[type=#bs.hitbox:is_shaped] run function bs.hitbox:is_entity_in_blocks/entity/shaped
+execute unless entity @s[type=#bs.hitbox:is_shaped] run function bs.hitbox:is_entity_in_blocks/entity/sized
 
-return run function bs.hitbox:is_entity_in_block/check/check
+data modify storage bs:ctx _ set value {ignored:"#bs.hitbox:can_pass_through",kind:"collision"}
+return run function bs.hitbox:is_entity_in_blocks/recurse/init with storage bs:ctx

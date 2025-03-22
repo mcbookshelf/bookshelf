@@ -141,10 +141,5 @@ Determine if it is thundering or not.
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

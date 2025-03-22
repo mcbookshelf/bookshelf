@@ -269,10 +269,5 @@ execute as @e[type=minecraft:creeper,limit=1] run function #bs.health:time_to_li
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

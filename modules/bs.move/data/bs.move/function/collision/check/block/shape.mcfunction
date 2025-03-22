@@ -14,13 +14,13 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # get hitbox coordinates
-execute store result score #x bs.ctx run data get storage bs:out hitbox.shape[-1][0] 625000
-execute store result score #y bs.ctx run data get storage bs:out hitbox.shape[-1][1] 625000
-execute store result score #z bs.ctx run data get storage bs:out hitbox.shape[-1][2] 625000
-execute store result score #i bs.ctx run data get storage bs:out hitbox.shape[-1][3] 625000
-execute store result score #j bs.ctx run data get storage bs:out hitbox.shape[-1][4] 625000
-execute store result score #k bs.ctx run data get storage bs:out hitbox.shape[-1][5] 625000
-data remove storage bs:out hitbox.shape[-1]
+execute store result score #x bs.ctx run data get storage bs:ctx _[-1][0] 625000
+execute store result score #y bs.ctx run data get storage bs:ctx _[-1][1] 625000
+execute store result score #z bs.ctx run data get storage bs:ctx _[-1][2] 625000
+execute store result score #i bs.ctx run data get storage bs:ctx _[-1][3] 625000
+execute store result score #j bs.ctx run data get storage bs:ctx _[-1][4] 625000
+execute store result score #k bs.ctx run data get storage bs:ctx _[-1][5] 625000
+data remove storage bs:ctx _[-1]
 
 # add the relative coordinates to the hitbox
 scoreboard players operation #x bs.ctx += #move.ox bs.data
@@ -62,4 +62,4 @@ execute if score #i bs.ctx matches 0.. \
   if score #move.ctime bs.data > #x bs.ctx \
   run function bs.move:collision/collide
 
-execute if data storage bs:out hitbox.shape[0] run function bs.move:collision/check/block/shape
+execute if data storage bs:ctx _[0] run function bs.move:collision/check/block/shape

@@ -2,7 +2,7 @@
 html_theme.sidebar_secondary.remove: true
 ---
 
-# 🤝 Contribute
+# 🤝&nbsp;Contribute
 
 Welcome to the Contribute section of our documentation! Whether you're fixing bugs, adding features, or writing new modules, this guide will help you get started and align with our project's standards.
 

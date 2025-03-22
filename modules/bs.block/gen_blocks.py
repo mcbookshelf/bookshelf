@@ -1,6 +1,5 @@
 from bisect import insort
 from collections import Counter
-from datetime import datetime, timezone
 from itertools import chain, permutations
 
 import numpy as np
@@ -134,10 +133,12 @@ def beet_default(ctx: Context) -> None:
     """Generate files used by the bs.block module."""
     ctx.template.add_package(__name__)
     namespace = ctx.directory.name
-    blocks = get_blocks(ctx, version := MC_VERSIONS[-1])
+    blocks = get_blocks(ctx, MC_VERSIONS[-1])
 
     with ctx.override(generate_namespace=namespace):
-        ctx.generate("has_state", gen_has_state_block_tag(blocks, version))
+        ctx.data.block_tags \
+            .get(f"{namespace}:has_state") \
+            .merge(gen_has_state_block_tag(blocks))
 
         ctx.generate("get/get_type", gen_get_type_loot_table(blocks))
         ctx.generate("get/get_block", gen_get_block_loot_table(blocks, namespace))
@@ -366,18 +367,9 @@ def gen_get_state_loot_table(state: State, namespace: str) -> LootTable:
     )
 
 
-def gen_has_state_block_tag(blocks: list[Block], version: str) -> BlockTag:
+def gen_has_state_block_tag(blocks: list[Block]) -> BlockTag:
     """Generate a block tag for blocks with states."""
     return BlockTag({
-        "__bookshelf__": {
-            "feature": True,
-            "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#has-state",
-            "authors": ["Aksiome"],
-            "created": {"date": "2024/01/15", "minecraft_version": "1.20.5"},
-            "updated": {
-                "date": datetime.now(timezone.utc).strftime("%Y/%m/%d"),
-                "minecraft_version": version,
-            },
-        },
+        "replace": True,
         "values": [b.type for b in blocks if b.group > 0],
     })

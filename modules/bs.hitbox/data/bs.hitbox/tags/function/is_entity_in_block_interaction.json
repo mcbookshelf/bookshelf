@@ -1,7 +1,7 @@
 {
   "__bookshelf__": {
     "feature": true,
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-entity-inside",
     "authors": [
       "Aksiome"
     ],
@@ -10,11 +10,11 @@
       "minecraft_version": "1.21"
     },
     "updated": {
-      "date": "2024/09/28",
-      "minecraft_version": "1.21"
+      "date": "2025/03/10",
+      "minecraft_version": "1.21.4"
     }
   },
   "values": [
-    "bs.hitbox:is_entity_in_block/is_entity_in_block"
+    "bs.hitbox:is_entity_in_block/interaction"
   ]
 }

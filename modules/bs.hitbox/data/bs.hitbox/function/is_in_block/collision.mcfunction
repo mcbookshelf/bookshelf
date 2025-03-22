@@ -13,4 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-attribute @s minecraft:max_health modifier remove bs.health:limit
+execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return 1
+execute if block ~ ~ ~ #bs.hitbox:can_pass_through run return 0
+return run function bs.hitbox:is_in_block/check/check {kind:"collision"}

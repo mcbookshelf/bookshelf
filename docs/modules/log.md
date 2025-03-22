@@ -298,10 +298,5 @@ function #bs.log:warn { namespace: "bs.foo", path: "bs.foo:bar", tag: "bar", mes
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

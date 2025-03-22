@@ -2,7 +2,7 @@
 html_theme.sidebar_secondary.remove: true
 ---
 
-# 🏷️ Nomenclature
+# 🏷️ Nomenclature & Conventions
 
 Bookshelf respects certain naming conventions in order to reduce the effort needed to read and understand code.
 
@@ -29,4 +29,21 @@ Bookshelf respects certain naming conventions in order to reduce the effort need
     - Use the snake_case convention. Must be prefixed with the name of the module. Each score should also be prefixed by either `#` for private scores or `$` for public ones.
 
       *Example: `$<module>.debug` or `#<module>.any`*
+:::
+
+Moreover, Bookshelf follows Smithed's [conventions](https://docs.smithed.dev/conventions/), especially for the entity tags.
+Here are the list of entity tags used in Bookshelf:
+
+:::{list-table}
+*   - **smithed.entity**
+    - Used to identify entities that are created by datapacks and that should not be modified by datapacks targetting vanilla entities.
+
+*   - **smithed.strict**
+    - Used to identify entities that are created by datapacks and that should not be modified by other datapacks.
+
+*   - **bs.persistent**
+    - Used to identify Bookshelf entities that are persistent and should not be despawned/killed.
+
+*   - **bs.entity**
+    - Used to identify entities that are created by Bookshelf.
 :::

@@ -674,10 +674,5 @@ To create a new behavior, you first need to create a new function tag. The tag m
 ```
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

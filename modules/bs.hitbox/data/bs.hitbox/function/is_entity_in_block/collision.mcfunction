@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-attribute @s minecraft:max_health modifier remove bs.health:limit
-$attribute @s minecraft:max_health modifier add bs.health:limit $(x) add_value
-effect give @s minecraft:instant_health 1 28 true
-advancement revoke @s only bs.health:restore_health
+execute if block ~ ~ ~ #bs.hitbox:can_pass_through run return 0
+execute if entity @s[type=#bs.hitbox:intangible] run return 0
+
+return run function bs.hitbox:is_entity_in_block/check/check {kind:"collision"}

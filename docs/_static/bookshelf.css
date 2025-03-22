@@ -288,6 +288,12 @@ button.btn.version-switcher__button {
   gap: 1rem;
 }
 
+.bd-header .navbar-header-items__center,
+.bd-header .navbar-header-items__end,
+ul.navbar-icon-links {
+  column-gap: .75rem;
+}
+
 @media (min-width: 720px) {
   .bd-footer .bd-footer__inner {
     flex-direction: row;
@@ -312,5 +318,8 @@ button.btn.version-switcher__button {
   }
   .bd-sidebar-primary {
     width: 20%;
+  }
+  .bd-header ul.navbar-nav {
+    gap: .4rem;
   }
 }

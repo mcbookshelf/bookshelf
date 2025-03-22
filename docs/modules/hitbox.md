@@ -34,11 +34,18 @@ Get the hitbox of a block as a shape, represented by a list of boxes coordinates
   **Storage `bs:out hitbox`**:
   :::{treeview}
   - {nbt}`compound` Block collision box
-    - {nbt}`list` **shape**: A list of cube coordinates (`[[min_x, min_y, min_z, max_x, max_y, max_z]]`).
+    - {nbt}`list` **collision_shape**: A list of cube coordinates (`[[min_x, min_y, min_z, max_x, max_y, max_z]]`).
+    - {nbt}`list` **interaction_shape**: A list of cube coordinates (`[[min_x, min_y, min_z, max_x, max_y, max_z]]`).
     - {nbt}`compound` **offset**: Hitbox offset (used for example by flowers).
       - {nbt}`double` **x**: Number describing the X coordinate offset.
       - {nbt}`double` **z**: Number describing the Z coordinate offset.
   :::
+```
+
+```{admonition} Collision / Interaction Shape
+:class: info
+- **Collision Shape**: Defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block.
+- **Interaction Shape**: Defines the area where the player can interact with or break the block. This includes actions such as right-clicking to open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have an interaction shape but no collision, such as crops or scaffolding.
 ```
 
 *Get the hitbox of stairs:*
@@ -69,15 +76,15 @@ Get the width and height of an entity.
   :::
 ```
 
+```{important}
+Static entities, such as paintings and item frames, do not provide height and width information. Instead, they return a shape similar to blocks in `bs:out hitbox.shape`.
+```
+
 *Get the hitbox of an armor_stand:*
 
 ```mcfunction
 execute summon minecraft:armor_stand run function #bs.hitbox:get_entity
 data get storage bs:out hitbox
-```
-
-```{important}
-Static entities, such as paintings and item frames, do not provide height and width information. Instead, they return a shape similar to blocks in `bs:out hitbox`.
 ```
 
 ::::
@@ -90,50 +97,14 @@ Static entities, such as paintings and item frames, do not provide height and wi
 ### Is Entity Inside
 
 :::::{tab-set}
-::::{tab-item} Entity in Block
+::::{tab-item} Block Collision Boxes
 
-```{function} #bs.hitbox:is_entity_in_block
+```{function} #bs.hitbox:is_entity_in_blocks_collision
 
-Check if the specified entity is within the block at the execution position.
-
-:Inputs:
-  **Execution `as <entity>`**: Entity to check.
-
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to check.
-
-:Outputs:
-  **Return**: Success or failure.
-```
-
-```{note}
-This function checks if the entity's bounding box is inside the block at the current position, not any other blocks the entity might touch.
-```
-
-*Check if a summoned cow is inside the fence at your position:*
-
-```mcfunction
-setblock ~ ~ ~ minecraft:oak_fence
-# move to the edge of the fence, then run
-execute summon minecraft:cow if function #bs.hitbox:is_entity_in_block run say I'm in the fence
-# since the cow is bigger than the player, you should see the message
-```
-
-::::
-::::{tab-item} Entity in Blocks
-
-```{function} #bs.hitbox:is_entity_in_blocks
-
-Check if the specified entity is within a block.
+Check if the specified entity is within the `collision` hitbox of any block.
 
 :Inputs:
   **Execution `as <entity>`**: Entity to check.
-
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`compound` **with**: Optional settings.
-      - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:intangible`).
-  :::
 
 :Outputs:
   **Return**: Success or failure.
@@ -147,8 +118,92 @@ Since an entity's bounding box can extend across multiple blocks, this function 
 
 ```mcfunction
 # move to the edge of a block, then run
-execute summon minecraft:cow run function #bs.hitbox:is_entity_in_blocks {with:{}}
+execute summon minecraft:cow if function #bs.hitbox:is_entity_in_blocks_collision run say I'm in the fence
 # since the cow is bigger than the player, you should get a success
+```
+
+::::
+::::{tab-item} Block Interaction Boxes
+
+```{function} #bs.hitbox:is_entity_in_blocks_interaction
+
+Check if the specified entity is within the `interaction` hitbox of any block.
+
+:Inputs:
+  **Execution `as <entity>`**: Entity to check.
+
+:Outputs:
+  **Return**: Success or failure.
+```
+
+```{note}
+Since an entity's bounding box can extend across multiple blocks, this function checks all blocks the entity might be in contact with.
+```
+
+*Check if a summoned cow is inside a block:*
+
+```mcfunction
+# move to the edge of a block, then run
+execute summon minecraft:cow if function #bs.hitbox:is_entity_in_blocks_collision run say I'm in the fence
+# since the cow is bigger than the player, you should get a success
+```
+
+::::
+::::{tab-item} Block Collision Box
+
+```{function} #bs.hitbox:is_entity_in_block_collision
+
+Check if the specified entity is within the `collision` hitbox of the block at the execution position.
+
+:Inputs:
+  **Execution `as <entity>`**: Entity to check.
+
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to check.
+
+:Outputs:
+  **Return**: Success or failure.
+```
+
+```{note}
+This function checks whether the entity's bounding box intersects with the block at the execution position. It does *not* consider other blocks the entity might be touching.
+```
+
+*Check if a summoned cow is inside the fence at your position:*
+
+```mcfunction
+setblock ~ ~ ~ minecraft:oak_fence
+# move to the edge of the fence, then run
+execute summon minecraft:cow if function #bs.hitbox:is_entity_in_block_collision run say I'm in the fence
+# since the cow is bigger than the player, you should see the message
+```
+
+::::
+::::{tab-item} Block Interaction Box
+
+```{function} #bs.hitbox:is_entity_in_block_interaction
+
+Check if the specified entity is within the `interaction` hitbox of the block at the execution position.
+
+:Inputs:
+  **Execution `as <entity>`**: Entity to check.
+
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to check.
+
+:Outputs:
+  **Return**: Success or failure.
+```
+
+```{note}
+This function checks whether the entity's bounding box intersects with the block at the execution position. It does *not* consider other blocks the entity might be touching.
+```
+
+*Check if a summoned cow is inside the fence at your position:*
+
+```mcfunction
+setblock ~ ~ ~ minecraft:oak_fence
+# move to the edge of the fence, then run
+execute summon minecraft:cow if function #bs.hitbox:is_entity_in_block_interaction run say I'm in the fence
+# since the cow is bigger than the player, you should see the message
 ```
 
 ::::
@@ -161,11 +216,11 @@ execute summon minecraft:cow run function #bs.hitbox:is_entity_in_blocks {with:{
 ### Is inside
 
 ::::{tab-set}
-:::{tab-item} Block
+:::{tab-item} Block Collision Box
 
-```{function} #bs.hitbox:is_in_block
+```{function} #bs.hitbox:is_in_block_collision
 
-Check if the execution position is inside the hitbox of a block.
+Check if the execution position is within the `collision` hitbox of a block.
 
 :Inputs:
   **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to check.
@@ -177,7 +232,27 @@ Check if the execution position is inside the hitbox of a block.
 *Say "My name is Pavel" if you are inside a block:*
 
 ```mcfunction
-execute if function #bs.hitbox:is_in_block run say My name is Pavel
+execute if function #bs.hitbox:is_in_block_collision run say My name is Pavel
+```
+
+:::
+:::{tab-item} Block Interaction Box
+
+```{function} #bs.hitbox:is_in_block_interaction
+
+Check if the execution position is within the `interaction` hitbox of a block.
+
+:Inputs:
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to check.
+
+:Outputs:
+  **Return**: Success or failure.
+```
+
+*Say "My name is Pavel" if you are inside a block:*
+
+```mcfunction
+execute if function #bs.hitbox:is_in_block_interaction run say My name is Pavel
 ```
 
 :::
@@ -239,11 +314,11 @@ Determine if the block's hitbox has an intentional random offset. This is common
 Indicate whether the block is intangible, meaning it is typically invisible and lacks interaction collision.
 
 :::
-:::{tab-item} Not Full Cube
+:::{tab-item} Is Full Cube
 
-**`#bs.hitbox:not_full_cube`**
+**`#bs.hitbox:is_full_cube`**
 
-Check if the block is not a full cube of 16\*16\*16 and has a special shape.
+Check if the block is a full cube of 16\*16\*16.
 
 :::
 ::::
@@ -282,10 +357,5 @@ Identifies if the entity has a rectangular hitbox size.
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

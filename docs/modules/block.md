@@ -41,7 +41,7 @@ Fill all or part of a region with a specific block.
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace|strict] (default: replace).
     - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
@@ -90,7 +90,7 @@ Fill all or part of a region with a specific block type, preserving states and N
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace|strict] (default: replace).
     - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
@@ -132,7 +132,7 @@ Fill all or part of a region with random blocks or types.
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace|strict] (default: replace).
     - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
@@ -465,6 +465,8 @@ Replace the block type while trying to conserve the state. State is preserved on
   **Storage `bs:out block`**: {nbt}`compound` There’s no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
 
 :Outputs:
+  **Return**: Whether a type was found and the replacement occurred.
+
   **Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and `properties` are updated to reflect this change.
 ```
 
@@ -548,7 +550,7 @@ Mix block types while ensuring coherent replacements within the defined mapping 
 
 ```{code-block} mcfunction
 :force:
-data modify storage bs:const block.mapping_registry.bs.colors set value [ \
+data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   { set: "cube", attrs: ["stone"], type: "minecraft:stone" }, \
   { set: "cube", attrs: ["brick"], type: "minecraft:bricks" }, \
   { set: "cube", attrs: ["stone", "brick"], type: "minecraft:stone_bricks" }, \
@@ -708,7 +710,7 @@ Place a block at the current location.
   :::{treeview}
   - {nbt}`compound` Set block data
     - {nbt}`string` **block**: Full string representation of the block to set.
-    - {nbt}`string` **mode**: Mode used to set the block [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **mode**: Mode used to set the block [destroy|keep|replace|strict] (default: replace).
   :::
 
 :Outputs:
@@ -739,7 +741,7 @@ Replace the block type at the current location while trying to conserve its stat
   :::{treeview}
   - {nbt}`compound` Set type data
     - {nbt}`string` **type**: String representation of the block id to set.
-    - {nbt}`string` **mode**: Mode used to set the block [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **mode**: Mode used to set the block [destroy|keep|replace|strict] (default: replace).
   :::
 
 :Outputs:
@@ -980,10 +982,5 @@ data modify storage bs:const block.mapping_registry.<namespace>.<name> [
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

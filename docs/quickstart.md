@@ -1,4 +1,4 @@
-# 🚀 Quickstart
+# 🚀&nbsp;Quickstart
 
 This page gives a quick overview of how to get started with the Bookshelf library, and how to use it.
 
@@ -160,10 +160,5 @@ This section is in progress. If you have some ideas about how to improves the fi
 ---
 -->
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} _templates/comments.md
+```

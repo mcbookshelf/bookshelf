@@ -52,9 +52,10 @@ Teleport an entity by its velocity scores while handling collisions.
     - {nbt}`compound` **with**: Collision settings.
       - {nbt}`bool` **blocks**: Whether the entity should collide with blocks (default: true).
       - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false). Can also be a tag that entities must have.
-      - {nbt}`string` **on_collision**: Command to run when a collision occurs, used to resolve the collision (default: `function #bs.move:callback/bounce`).
-      - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:intangible`).
+      - {nbt}`string` **hitbox_shape**: Hitbox type: `interaction` or `collision` (default: `collision`).
+      - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:can_pass_through`).
       - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`).
+      - {nbt}`string` **on_collision**: Command to run when a collision occurs, used to resolve the collision (default: `function #bs.move:callback/bounce`).
   :::
 
 :Outputs:
@@ -88,9 +89,10 @@ Teleport an entity by its velocity scores, using the local reference frame, whil
     - {nbt}`compound` **with**: Collision settings.
       - {nbt}`bool` **blocks**: Whether the entity should collide with blocks (default: true).
       - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false). Can also be a tag that entities must have.
-      - {nbt}`string` **on_collision**: Command to run when a collision occurs, used to resolve the collision (default: `function #bs.move:callback/bounce`).
-      - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:intangible`).
+      - {nbt}`string` **hitbox_shape**: Hitbox type: `interaction` or `collision` (default: `collision`).
+      - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:can_pass_through`).
       - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`).
+      - {nbt}`string` **on_collision**: Command to run when a collision occurs, used to resolve the collision (default: `function #bs.move:callback/bounce`).
   :::
 
 :Outputs:
@@ -99,6 +101,12 @@ Teleport an entity by its velocity scores, using the local reference frame, whil
 
 ::::
 :::::
+
+```{admonition} Collision / Interaction Shape
+:class: info
+- **Collision Shape**: Defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block.
+- **Interaction Shape**: Defines the area where the player can interact with or break the block. This includes actions such as right-clicking to open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have an interaction shape but no collision, such as crops or scaffolding.
+```
 
 *Move a cube (block_display) by its velocity scores (uses an interaction as the hitbox):*
 
@@ -288,10 +296,5 @@ To simplify the creation of these behaviors, there's no need to handle a local v
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedbacks below!
-
-</div>
+```{include} ../_templates/comments.md
+```

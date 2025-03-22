@@ -1,5 +1,4 @@
 from collections import defaultdict
-from datetime import datetime, timezone
 
 from beet import BlockTag, Context, LootTable
 from pydantic import BaseModel
@@ -15,7 +14,7 @@ SHAPES_META = "https://raw.githubusercontent.com/mcbookshelf/mcdata/refs/tags/{}
 
 type Properties = dict[str, str]
 type VoxelShape = list[list[float]]
-type BlockShape = tuple[Properties, VoxelShape]
+type BlockShape = tuple[Properties, dict[str, VoxelShape]]
 
 class BlockShapes(BaseModel):
     """Groups multiple blocks with similar shape definitions."""
@@ -29,12 +28,22 @@ class BlockShapes(BaseModel):
 def beet_default(ctx: Context) -> None:
     """Generate files used by the bs.hitbox module."""
     namespace = ctx.directory.name
-    shapes = get_block_shapes(ctx, version := MC_VERSIONS[-1])
+    shapes = get_block_shapes(ctx, MC_VERSIONS[-1])
+
+    ctx.data.block_tags \
+        .get(f"{namespace}:can_pass_through") \
+        .merge(gen_can_pass_through_block_tag(shapes))
+    ctx.data.block_tags \
+        .get(f"{namespace}:has_offset") \
+        .merge(gen_has_offset_block_tag(shapes))
+    ctx.data.block_tags \
+        .get(f"{namespace}:intangible") \
+        .merge(gen_intangible_block_tag(shapes))
+    ctx.data.block_tags \
+        .get(f"{namespace}:is_full_cube") \
+        .merge(gen_is_full_cube_block_tag(shapes))
 
     with ctx.override(generate_namespace=namespace):
-        ctx.generate("has_offset", gen_has_offset_block_tag(shapes, version))
-        ctx.generate("not_full_cube", gen_not_full_cube_block_tag(shapes, version))
-
         ctx.generate("get/get_block", gen_get_block_loot_table(shapes, namespace))
         for entry in filter(lambda entry: entry.group > 0, shapes):
             ctx.generate(f"get/{entry.group}", gen_get_states_loot_table(entry.shapes))
@@ -50,32 +59,30 @@ def get_block_shapes(ctx: Context, version: str) -> list[BlockShapes]:
 
     grouped_blocks = defaultdict(list)
     for block, entries in raw_shapes.items():
-        if not is_default_shape(entries):
-            offset = any(e["has_offset"] for e in entries)
-            grouped_shapes = group_shapes_by_properties(entries)
-            grouped_blocks[(offset, tuple(grouped_shapes.items()))].append(block)
+        offset = any(e["has_offset"] for e in entries)
+        grouped_shapes = group_shapes_by_properties(entries)
+        grouped_blocks[(offset, tuple(grouped_shapes.items()))].append(block)
 
     group = 0
     return [BlockShapes(
         blocks=blocks,
         offset=offset,
-        shapes=[(dict(properties), shape) for properties, shape in shapes],
+        shapes=[(dict(properties), dict(shape)) for properties, shape in shapes],
         group=(group := group + 1) if len(shapes) > 1 else 0,
     ) for (offset, shapes), blocks in grouped_blocks.items()]
-
-
-def is_default_shape(entries: list[dict]) -> bool:
-    """Check if the entries contain only the default or empty shapes."""
-    return all(e["shape"] in ([[0.0, 0.0, 0.0, 1.0, 1.0, 1.0]], []) for e in entries)
 
 
 def group_shapes_by_properties(entries: list[dict]) -> dict:
     """Group shapes by their properties, keeping only those that affect the shape."""
     grouped_shapes = {
-        frozenset(tuple(entry["properties"].items())): tuple(
-            tuple(v * 16 for v in box)
-            for box in entry["shape"]
-        )
+        frozenset(tuple(entry["properties"].items())): frozenset({
+            key: tuple(tuple(v * 16 for v in box) for box in entry[field])
+            for key, field in {
+                "collision_shape": "collision_shape",
+                "interaction_shape": "shape",
+            }.items()
+            if entry.get(field)
+        }.items())
         for entry in entries
     }
 
@@ -84,7 +91,10 @@ def group_shapes_by_properties(entries: list[dict]) -> dict:
         for key, shape in grouped_shapes.items():
             group[frozenset(k for k in key if k[0] != prop)].append(shape)
         if all(all(s == shapes[0] for s in shapes) for shapes in group.values()):
-            grouped_shapes = {key: tuple(shapes[0]) for key, shapes in group.items()}
+            grouped_shapes = {
+                key: frozenset(shapes[0])
+                for key, shapes in group.items()
+            }
 
     return grouped_shapes
 
@@ -97,11 +107,11 @@ def format_shape_node(shapes: list[BlockShape], properties: list[str]) -> dict:
     }
 
 
-def format_shape_entry(shape: VoxelShape) -> dict:
+def format_shape_entry(shape: dict[str, VoxelShape]) -> dict:
     """Format a loot table entry for the given shape."""
     return {"type": "item", "name": "egg", "functions": [{
         "function": "set_custom_data",
-        "tag": render_snbt({"shape": shape}),
+        "tag": render_snbt(shape),
     }]}
 
 
@@ -152,35 +162,57 @@ def gen_get_states_loot_table(shape: list[BlockShape]) -> LootTable:
     }]}]})
 
 
-def gen_has_offset_block_tag(shapes: list[BlockShapes], version: str) -> BlockTag:
-    """Generate a block tag for blocks with offsets."""
+def gen_can_pass_through_block_tag(shapes: list[BlockShapes]) -> BlockTag:
+    """Generate a block tag for blocks that have no collision shape."""
     return BlockTag({
-        "__bookshelf__": {
-            "feature": True,
-            "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
-            "authors": ["Aksiome"],
-            "created": {"date": "2024/09/28", "minecraft_version": "1.21"},
-            "updated": {
-                "date": datetime.now(timezone.utc).strftime("%Y/%m/%d"),
-                "minecraft_version": version,
-            },
-        },
-        "values": sorted([b for group in shapes for b in group.blocks if group.offset]),
+        "replace": True,
+        "values": sorted([
+            block for group in shapes
+            for block in group.blocks
+            if all(
+                "collision_shape" not in shape[1]
+                for shape in group.shapes
+            ) and block != "minecraft:powder_snow"
+        ]),
     })
 
 
-def gen_not_full_cube_block_tag(shapes: list[BlockShapes], version: str) -> BlockTag:
-    """Generate a block tag for non simple cubes."""
+def gen_has_offset_block_tag(shapes: list[BlockShapes]) -> BlockTag:
+    """Generate a block tag for blocks with offsets."""
     return BlockTag({
-        "__bookshelf__": {
-            "feature": True,
-            "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
-            "authors": ["Aksiome"],
-            "created": {"date": "2024/09/28", "minecraft_version": "1.21"},
-            "updated": {
-                "date": datetime.now(timezone.utc).strftime("%Y/%m/%d"),
-                "minecraft_version": version,
-            },
-        },
-        "values": sorted([block for group in shapes for block in group.blocks]),
+        "replace": True,
+        "values": sorted([
+            block for group in shapes
+            for block in group.blocks
+            if group.offset
+        ]),
+    })
+
+
+def gen_intangible_block_tag(shapes: list[BlockShapes]) -> BlockTag:
+    """Generate a block tag for blocks that have no hitbox."""
+    return BlockTag({
+        "replace": True,
+        "values": sorted([
+            "minecraft:structure_void",
+        ] + [
+            block for group in shapes
+            for block in group.blocks
+            if all(shape[1] == {} for shape in group.shapes)
+        ]),
+    })
+
+
+def gen_is_full_cube_block_tag(shapes: list[BlockShapes]) -> BlockTag:
+    """Generate a block tag for simple cubes."""
+    return BlockTag({
+        "replace": True,
+        "values": sorted([
+            block for group in shapes
+            for block in group.blocks
+            if all(shape[1] == {
+                "collision_shape": [[0.0, 0.0, 0.0, 16.0, 16.0, 16.0]],
+                "interaction_shape": [[0.0, 0.0, 0.0, 16.0, 16.0, 16.0]],
+            } for shape in group.shapes)
+        ]),
     })

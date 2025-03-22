@@ -13,4 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-return run function bs.hitbox:is_entity_in_blocks/check/run with storage bs:ctx _
+$execute if block ~ ~ ~ $(ignored) run return 0
+
+function #bs.hitbox:get_block
+$execute store success score #s bs.ctx run data modify storage bs:ctx _.shape set from storage bs:out hitbox.$(kind)_shape
+execute if score #s bs.ctx matches 0 run return 0
+execute store result score #u bs.ctx run data get storage bs:out hitbox.offset.x 1000000
+execute store result score #v bs.ctx run data get storage bs:out hitbox.offset.z 1000000
+return run function bs.hitbox:is_entity_in_blocks/check/shape
