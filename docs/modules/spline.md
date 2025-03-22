@@ -4,6 +4,17 @@
 
 Manipulate smooth curves created from control points.
 
+```{image} /_imgs/modules/spline.png
+:align: center
+:class: dark_light p-2
+```
+
+```{epigraph}
+"Do not go where the path may lead, go instead where there is no path and leave a trail."
+
+-- Ralph Waldo Emerson
+```
+
 ---
 
 ## 🔧 Functions
@@ -32,6 +43,15 @@ Evaluate a Bézier curve using 4 control points and a time parameter.
 :Outputs:
   **Storage `bs:out spline.evaluate_bezier`**: {nbt}`list` Point at the evaluated time.
 ```
+
+*Evaluate the point in the middle of a Bézier curve in 2D space ([visualize the curve](#about-splines)):*
+
+```mcfunction
+data modify storage bs:in spline.evaluate_bezier set value {points:[[0,0],[1,2],[2,-1],[3,1]],time:0.5}
+function #bs.spline:evaluate_bezier
+data get storage bs:out spline.evaluate_bezier
+```
+
 ::::
 ::::{tab-item} B-Spline
 
@@ -50,6 +70,15 @@ Evaluate a B-Spline curve using 4 control points and a time parameter.
 :Outputs:
   **Storage `bs:out spline.evaluate_bspline`**: {nbt}`list` Point at the evaluated time.
 ```
+
+*Evaluate the point in the middle of a B-Spline curve in 2D space ([visualize the curve](#about-splines)):*
+
+```mcfunction
+data modify storage bs:in spline.evaluate_bspline set value {points:[[0,0],[1,2],[2,-1],[3,1]],time:0.5}
+function #bs.spline:evaluate_bspline
+data get storage bs:out spline.evaluate_bspline
+```
+
 ::::
 ::::{tab-item} Catmull-Rom
 
@@ -68,6 +97,15 @@ Evaluate a Catmull-Rom curve using 4 control points and a time parameter.
 :Outputs:
   **Storage `bs:out spline.evaluate_catmull_rom`**: {nbt}`list` Point at the evaluated time.
 ```
+
+*Evaluate the point in the middle of a Catmull-Rom curve in 2D space ([visualize the curve](#about-splines)):*
+
+```mcfunction
+data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[0,0],[1,2],[2,-1],[3,1]],time:0.5}
+function #bs.spline:evaluate_catmull_rom
+data get storage bs:out spline.evaluate_catmull_rom
+```
+
 ::::
 ::::{tab-item} Hermite
 
@@ -86,16 +124,17 @@ Evaluate a Hermite curve using 4 control points and a time parameter.
 :Outputs:
   **Storage `bs:out spline.evaluate_hermite`**: {nbt}`list` Point at the evaluated time.
 ```
-::::
-:::::
 
-*Evaluate the point in the middle of a Bézier curve in 2D space:*
+*Evaluate the point in the middle of a Hermite curve in 2D space ([visualize the curve](#about-splines)):*
 
 ```mcfunction
-data modify storage bs:in spline.evaluate_bezier set value {points:[[0,0],[1,2],[2,-1],[3,1]],time:0.5}
-function #bs.spline:evaluate_bezier
-data get storage bs:out spline.evaluate_bezier
+data modify storage bs:in spline.evaluate_hermite set value {points:[[0,0],[1,2],[2,-1],[3,1]],time:0.5}
+function #bs.spline:evaluate_hermite
+data get storage bs:out spline.evaluate_hermite
 ```
+
+::::
+:::::
 
 > **Credits**: Aksiome
 
@@ -119,6 +158,15 @@ Sample a Bézier curve using control points and a step parameter. Each segment i
 :Outputs:
   **Storage `bs:out spline.sample_bezier`**: {nbt}`list` Sampled points along the curve.
 ```
+
+*Sample 10 points along a Bézier curve in 2D space ([visualize the curve](#about-splines)):*
+
+```mcfunction
+data modify storage bs:in spline.sample_bezier set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1}
+function #bs.spline:sample_bezier
+data get storage bs:out spline.sample_bezier
+```
+
 ::::
 ::::{tab-item} B-Spline
 
@@ -137,6 +185,15 @@ Sample a B-Spline curve using control points and a step parameter. Each segment 
 :Outputs:
   **Storage `bs:out spline.sample_bspline`**: {nbt}`list` Sampled points along the curve.
 ```
+
+*Sample 10 points along a B-Spline curve in 2D space ([visualize the curve](#about-splines)):*
+
+```mcfunction
+data modify storage bs:in spline.sample_bspline set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1}
+function #bs.spline:sample_bspline
+data get storage bs:out spline.sample_bspline
+```
+
 ::::
 ::::{tab-item} Catmull-Rom
 
@@ -155,6 +212,15 @@ Sample a Catmull-Rom curve using control points and a step parameter. Each segme
 :Outputs:
   **Storage `bs:out spline.sample_catmull_rom`**: {nbt}`list` Sampled points along the curve.
 ```
+
+*Sample 10 points along a Catmull-Rom curve in 2D space ([visualize the curve](#about-splines)):*
+
+```mcfunction
+data modify storage bs:in spline.sample_catmull_rom set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1}
+function #bs.spline:sample_catmull_rom
+data get storage bs:out spline.sample_catmull_rom
+```
+
 ::::
 ::::{tab-item} Hermite
 
@@ -174,16 +240,17 @@ Sample a Hermite curve using control points and a step parameter. Each segment i
 :Outputs:
   **Storage `bs:out spline.sample_hermite`**: {nbt}`list` Sampled points along the curve.
 ```
-::::
-:::::
 
-*Sample 10 points along a Bézier curve in 2D space:*
+*Sample 10 points along a Hermite curve in 2D space ([visualize the curve](#about-splines)):*
 
 ```mcfunction
-data modify storage bs:in spline.sample_bezier set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1}
-function #bs.spline:sample_bezier
-data get storage bs:out spline.sample_bezier
+data modify storage bs:in spline.sample_hermite set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1}
+function #bs.spline:sample_hermite
+data get storage bs:out spline.sample_hermite
 ```
+
+::::
+:::::
 
 > **Credits**: Aksiome
 
@@ -206,6 +273,14 @@ Stream a Bézier curve using control points and a step parameter. Each segment i
       - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
+
+*Stream 10 points along a Bézier curve in 2D space and execute a command at each step ([visualize the curve](#about-splines)):*
+
+```mcfunction
+data modify storage bs:in spline.stream_bezier set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1,run:'tellraw @a {"storage":"bs:lambda","nbt":"spline.point"}'}
+function #bs.spline:stream_bezier
+```
+
 ::::
 ::::{tab-item} B-Spline
 
@@ -224,6 +299,14 @@ Stream a B-Spline curve using control points and a step parameter. Each segment 
   :::
 
 ```
+
+*Stream 10 points along a B-Spline curve in 2D space and execute a command at each step ([visualize the curve](#about-splines)):*
+
+```mcfunction
+data modify storage bs:in spline.stream_bspline set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1,run:'tellraw @a {"storage":"bs:lambda","nbt":"spline.point"}'}
+function #bs.spline:stream_bspline
+```
+
 ::::
 ::::{tab-item} Catmull-Rom
 
@@ -241,6 +324,14 @@ Stream a Catmull-Rom curve using control points and a step parameter. Each segme
       - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
+
+*Stream 10 points along a Catmull-Rom curve in 2D space and execute a command at each step ([visualize the curve](#about-splines)):*
+
+```mcfunction
+data modify storage bs:in spline.stream_catmull_rom set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1,run:'tellraw @a {"storage":"bs:lambda","nbt":"spline.point"}'}
+function #bs.spline:stream_catmull_rom
+```
+
 ::::
 ::::{tab-item} Hermite
 
@@ -258,20 +349,22 @@ Stream a Hermite curve using control points and a step parameter. Each segment i
       - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
-::::
-:::::
 
-*Stream 10 points along a Bézier curve in 2D space and execute a command at each step:*
+*Stream 10 points along a Hermite curve in 2D space and execute a command at each step ([visualize the curve](#about-splines)):*
 
 ```mcfunction
-data modify storage bs:in spline.stream_bezier set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1,run:'tellraw @a {"storage":"bs:lambda","nbt":"spline.point"}'}
-function #bs.spline:stream_bezier
+data modify storage bs:in spline.stream_hermite set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1,run:'tellraw @a {"storage":"bs:lambda","nbt":"spline.point"}'}
+function #bs.spline:stream_hermite
 ```
+
+::::
+:::::
 
 > **Credits**: Aksiome
 
 ---
 
+(about-splines)=
 ## 🎓 About Splines
 
 Discover how these curves behave through these visual examples. For more in-depth insights into splines, watch [this video](https://www.youtube.com/watch?v=jvPPXbo87ds).
