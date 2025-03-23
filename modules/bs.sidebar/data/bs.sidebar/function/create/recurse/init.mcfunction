@@ -15,22 +15,20 @@
 
 $scoreboard objectives add $(id) dummy
 $scoreboard objectives modify $(id) displayname $(name)
-$data remove storage bs:data sidebar[{id:'$(id)'}]
 
 execute store result storage bs:ctx _.line int 1 run scoreboard players set #i bs.ctx 0
 
-data modify storage bs:ctx _.dynleft set from storage bs:ctx _.contents[0]
-data modify storage bs:ctx _.dynleft set from storage bs:ctx _.contents[0][0]
-data modify entity @s CustomName set from storage bs:ctx _.dynleft
-data modify entity @s text set from storage bs:ctx _.dynleft
-data modify storage bs:ctx _.left set from entity @s CustomName
-execute store success score #l bs.ctx run data modify storage bs:ctx _.left set from entity @s text
-
-data modify storage bs:ctx _.dynright set value '""'
-data modify storage bs:ctx _.dynright set from storage bs:ctx _.contents[0][1]
-data modify entity @s CustomName set from storage bs:ctx _.dynright
-data modify entity @s text set from storage bs:ctx _.dynright
-data modify storage bs:ctx _.right set from entity @s CustomName
-execute store success score #r bs.ctx run data modify storage bs:ctx _.right set from entity @s text
+data modify storage bs:ctx _.left set from storage bs:ctx _.contents[0]
+data modify storage bs:ctx _.left set from storage bs:ctx _.contents[0][0]
+data modify entity @s text set from storage bs:ctx _.left
+data modify entity @s CustomName set from storage bs:ctx _.left
+execute store success score #l bs.ctx run data modify entity @s text set from entity @s CustomName
+data modify storage bs:ctx _.right set value ""
+data modify storage bs:ctx _.right set from storage bs:ctx _.contents[0][1]
+data modify entity @s text set from storage bs:ctx _.right
+data modify entity @s CustomName set from storage bs:ctx _.right
+execute store success score #r bs.ctx run data modify entity @s text set from entity @s CustomName
 
 function bs.sidebar:create/recurse/next with storage bs:ctx _
+$data remove storage bs:data sidebar.'$(id)'
+$data modify storage bs:data sidebar.'$(id)' set from storage bs:ctx _.dyn

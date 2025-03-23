@@ -13,10 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set from storage bs:data sidebar[{id:'$(objective)'}]
+$data modify storage bs:ctx _ set from storage bs:data sidebar.'$(objective)'
 
-data modify storage bs:ctx _.cmd set from storage bs:ctx _.dyn[0].cmd
-data modify entity B5-0-0-0-2 text set from storage bs:ctx _.dyn[0].text
-data modify storage bs:ctx _.text set from entity B5-0-0-0-2 text
-
-return run function bs.sidebar:refresh/loop with storage bs:ctx _
+execute if data storage bs:ctx _[0] run function bs.sidebar:refresh/loop with storage bs:ctx _[0]

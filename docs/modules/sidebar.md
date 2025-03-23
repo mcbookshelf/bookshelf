@@ -25,7 +25,7 @@ Create and register a new sidebar.
     - {nbt}`string` **objective**: An objective used for the sidebar.
     - {nbt}`string` **display_name**: Displayed objective name. Must be a valid JSON text component.
     - {nbt}`list` **contents**: Lines displayed on the sidebar.
-      - {nbt}`list` {nbt}`string`: Must either be a valid JSON text component or an array with two JSON text components for the left and right sides.
+      - {nbt}`list` {nbt}`string`: Must either be a valid text component or an array with two text components for the left and right sides.
   :::
 ```
 
@@ -35,12 +35,12 @@ Create and register a new sidebar.
 # Create a new sidebar
 function #bs.sidebar:create { \
     objective: "my_guessing_game", \
-    display_name: '{"text":"Guess my name"}', \
+    display_name: { text: "Guess my name" }, \
     contents: [ \
-        '{"text":" Clues:","color":"gold","bold":true}', \
-        '{"text":"  • I gave my name to a famous test"}', \
-        '{"text":"  • I am a pioneer of computer science and AI"}', \
-        '[{"text":" My name is: "},{"score":{"objective":"enigma","name":"VHVyaW5n"}}]', \
+        { text: " Clues:", color: "gold", bold: true }, \
+        { text: "  • I gave my name to a famous test" }, \
+        { text: "  • I am a pioneer of computer science and AI" }, \
+        [{ text: " My name is: " }, { score: { objective: "enigma", name: "VHVyaW5n" }}], \
     ], \
 }
 
@@ -54,12 +54,12 @@ scoreboard objectives setdisplay sidebar my_guessing_game
 # Create a new sidebar
 function #bs.sidebar:create { \
     objective: "my_guessing_game_2", \
-    display_name: '{"text":"Guess my name V2"}', \
+    display_name: { text: "Guess my name V2" }, \
     contents: [ \
-        ['""','{"text":" Clues:","color":"gold","bold":true}'], \
-        ['""','{"text":"  • I gave my name to a famous test"}'], \
-        ['""','{"text":"  • I am a pioneer of computer science and AI"}'], \
-        ['""','[{"text":" My name is: "},{"score":{"objective":"enigma","name":"VHVyaW5n"}}]'], \
+        ["", { text: " Clues:", color: "gold", bold: true }], \
+        ["", { text: "  • I gave my name to a famous test" }], \
+        ["", { text: "  • I am a pioneer of computer science and AI" }], \
+        ["", [{ text: " My name is: " }, { score: { objective: "enigma", name: "VHVyaW5n" }}]], \
     ], \
 }
 
