@@ -403,10 +403,5 @@ Discover how these curves behave through these visual examples. For more in-dept
 
 ---
 
-<div id="gs-comments" align=center>
-
-**💬 Did it help you?**
-
-Feel free to leave your questions and feedback below!
-
-</div>
+```{include} ../_templates/comments.md
+```
