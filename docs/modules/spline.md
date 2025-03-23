@@ -19,7 +19,7 @@ Manipulate smooth curves created from control points.
 
 ## 🔧 Functions
 
-You can find below all functions available in this module.
+Below, you can find all functions available in this module.
 
 ---
 
