@@ -4,13 +4,6 @@
 
 Manage strings (text), allowing easy transformation and searching within the text.
 
-```{admonition} Technical Limitation
-:class: warning
-
-Due to the way string are handled, we don't support using `"` you need to use the `\"` instead.
-
-```
-
 ---
 
 ## 🔧 Functions
@@ -38,6 +31,13 @@ _Merge `Hello ` and `World`:_
 data modify storage bs:in string.concat.list set value ["Hello ","World"]
 function #bs.string:concat
 tellraw @a [{"text":"The merged string is \""},{"storage":"bs:out","nbt":"string.concat"},{"text":"\""}]
+```
+
+```{admonition} Technical Limitation
+:class: warning
+
+Due to the way string are handled, we don't support using `"` you need to use the `\"` instead.
+
 ```
 
 > **Credits**: Aure31
@@ -92,6 +92,20 @@ tellraw @a [{"text":"The lowercase string is \""},{"storage":"bs:out","nbt":"str
 
 ::::
 :::::
+
+```{admonition} Support
+:class: hint
+
+this function actually support all UTF-8 characters so you can use it with any language.
+
+```
+
+```{admonition} Technical Limitation
+:class: warning
+
+this functions just don't support using `"`.
+
+```
 
 > **Credits**: Aure31
 
@@ -160,6 +174,13 @@ tellraw @a [{"text":"Found at index: \""},{"score":{"name":"#c","objective":"bs.
 ::::
 :::::
 
+```{admonition} Technical Limitation
+:class: warning
+
+this functions just don't support using `"`.
+
+```
+
 > **Credits**: Aure31
 
 ---
@@ -191,6 +212,13 @@ data modify storage bs:in string.replace set value {str:"hello world",old:"world
 function #bs.string:replace
 tellraw @a [{"text":"Result: \""},{"storage":"bs:out","nbt":"string.replace"},{"text":"\""}]
 # return "hello minecraft"
+```
+
+```{admonition} Technical Limitation
+:class: warning
+
+this functions just don't support using `"`.
+
 ```
 
 > **Credits**: Aure31
@@ -231,6 +259,13 @@ tellraw @a [{"text":"The new string is \""},{"storage":"bs:out","nbt":"string.re
 To insert text without removing any characters, set both `start` and `end` to the same position. This will insert the new text at that position while preserving all existing characters.
 ```
 
+```{admonition} Technical Limitation
+:class: warning
+
+this functions just don't support using `"` you need to use the `\"` instead.
+
+```
+
 > **Credits**: Aure31
 
 ---
@@ -255,6 +290,13 @@ data modify storage bs:in string.reverse.str set value "hello world"
 function #bs.string:reverse
 tellraw @a [{"text":"The reversed string is \""},{"storage":"bs:out","nbt":"string.reverse"},{"text":"\""}]
 # return "dlrow olleh"
+```
+
+```{admonition} Technical Limitation
+:class: warning
+
+this functions just don't support using `"`.
+
 ```
 
 > **Credits**: Aure31
@@ -287,6 +329,13 @@ data modify storage bs:in string.split set value {str:"hello world",separator:" 
 function #bs.string:split
 tellraw @a [{"text":"The list of strings is \""},{"storage":"bs:out","nbt":"string.split"},{"text":"\""}]
 # returns "["hello","world"]"
+```
+
+```{admonition} Technical Limitation
+:class: warning
+
+this function just don't support using `"`.
+
 ```
 
 > **Credits**: Aure31
@@ -364,5 +413,12 @@ tellraw @a [{"text":"The number is \""},{"storage":"bs:out","nbt":"string.parse"
 
 ::::
 :::::
+
+```{admonition} Technical Limitation
+:class: warning
+
+this functions just don't support using `"`.
+
+```
 
 > **Credits**: Aure31
