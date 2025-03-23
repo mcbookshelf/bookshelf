@@ -14,27 +14,27 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Test basic split
-data modify storage bs:in string.split merge value {str:"a,b,c,d",separator:",",maxsplit:0}
+data modify storage bs:in string.split merge value {str:"a,b,c,d",separator:",",maxsplit:-1}
 function #bs.string:split
 assert data storage bs:out {string:{split:["a","b","c","d"]}}
 
 # Test with empty string
-data modify storage bs:in string.split merge value {str:"",separator:",",maxsplit:0}
+data modify storage bs:in string.split merge value {str:"",separator:",",maxsplit:-1}
 function #bs.string:split
 assert data storage bs:out {string:{split:[""]}}
 
 # Test with empty separator (to hard to implement use to_list insted)
-data modify storage bs:in string.split merge value {str:"abc",separator:"",maxsplit:0}
+data modify storage bs:in string.split merge value {str:"abc",separator:"",maxsplit:-1}
 function #bs.string:split
 assert data storage bs:out {string:{split:["a","b","c"]}}
 
 # Test with multiple consecutive separators
-data modify storage bs:in string.split merge value {str:"a,,b,,,c",separator:",",maxsplit:0}
+data modify storage bs:in string.split merge value {str:"a,,b,,,c",separator:",",maxsplit:-1}
 function #bs.string:split
 assert data storage bs:out {string:{split:["a","","b","","","c"]}}
 
 # Test with separator at start/end
-data modify storage bs:in string.split merge value {str:",start,middle,end,",separator:",",maxsplit:0}
+data modify storage bs:in string.split merge value {str:",start,middle,end,",separator:",",maxsplit:-1}
 function #bs.string:split
 assert data storage bs:out {string:{split:["","start","middle","end",""]}}
 
@@ -44,16 +44,16 @@ function #bs.string:split
 assert data storage bs:out {string:{split:["a","b","c:d:e"]}}
 
 # Test with spaces
-data modify storage bs:in string.split merge value {str:"  spaces  between  words  ",separator:" ",maxsplit:0}
+data modify storage bs:in string.split merge value {str:"  spaces  between  words  ",separator:" ",maxsplit:-1}
 function #bs.string:split
 assert data storage bs:out {string:{split:["","","spaces","","between","","words","",""]}}
 
 # Test with longer separator
-data modify storage bs:in string.split merge value {str:"word<->split<->by<->arrow",separator:"<->",maxsplit:0}
+data modify storage bs:in string.split merge value {str:"word<->split<->by<->arrow",separator:"<->",maxsplit:-1}
 function #bs.string:split
 assert data storage bs:out {string:{split:["word","split","by","arrow"]}}
 
 # Test with Unicode
-data modify storage bs:in string.split merge value {str:"é★à★ê★ë",separator:"★",maxsplit:0}
+data modify storage bs:in string.split merge value {str:"é★à★ê★ë",separator:"★",maxsplit:-1}
 function #bs.string:split
 assert data storage bs:out {string:{split:["é","à","ê","ë"]}}

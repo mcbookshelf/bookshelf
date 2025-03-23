@@ -33,8 +33,6 @@ execute unless score #p bs.ctx matches 1 run function bs.string:utils/skip_table
 
 data modify storage bs:ctx _.substr set from storage bs:in string.find_all.substr
 
-execute unless score #o bs.ctx matches 0.. run return run function #bs.log:error { namespace: "bs.string", path: "bs.string:find", tag: "find", message: '"does not accept negative values"' }
-
 function bs.string:find/recurse/next with storage bs:ctx
 data modify storage bs:out string.find_all set from storage bs:ctx _.ret
 return run scoreboard players get #c bs.ctx

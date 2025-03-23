@@ -17,3 +17,7 @@
 data modify storage bs:in string.find merge value {str:"hello world",substr:"world"}
 execute store result score #c bs.ctx run function #bs.string:find
 assert score #c bs.ctx matches 6
+
+data modify storage bs:in string.find merge value {str:"hello minecraft",substr:"world"}
+execute store result score #c bs.ctx run function #bs.string:find
+assert score #c bs.ctx matches 6

@@ -33,4 +33,5 @@ execute unless score #p bs.ctx matches 1 run function bs.string:utils/skip_table
 data modify storage bs:ctx _.substr set from storage bs:in string.find.substr
 
 function bs.string:find/recurse/next with storage bs:ctx
+execute unless data storage bs:ctx _.ret[0] run return -1
 return run data get storage bs:ctx _.ret[0]

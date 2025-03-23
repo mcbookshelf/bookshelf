@@ -34,5 +34,4 @@ scoreboard players operation #l bs.ctx -= #p bs.ctx
 
 execute unless score #p bs.ctx matches 1 run function bs.string:utils/skip_table/compute
 
-execute if score #o bs.ctx matches 0.. run return run function bs.string:split/recurse/next with storage bs:ctx
-function #bs.log:error { namespace: "bs.string", path: "bs.string:split", tag: "split", message: '"does not accept negative values"' }
+function bs.string:split/recurse/next with storage bs:ctx

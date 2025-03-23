@@ -14,42 +14,42 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Test basic replacement
-data modify storage bs:in string.replace merge value {str:"hello world", old:"world", new:"minecraft", maxreplace:0}
+data modify storage bs:in string.replace merge value {str:"hello world", old:"world", new:"minecraft", maxreplace:-1}
 function #bs.string:replace
 assert data storage bs:out {string:{replace:"hello minecraft"}}
 
 # Test empty string
-data modify storage bs:in string.replace merge value {str:"", old:"test", new:"replace", maxreplace:0}
+data modify storage bs:in string.replace merge value {str:"", old:"test", new:"replace", maxreplace:-1}
 function #bs.string:replace
 assert data storage bs:out {string:{replace:""}}
 
 # Test empty new string
-data modify storage bs:in string.replace merge value {str:"remove this", old:"this", new:"", maxreplace:0}
+data modify storage bs:in string.replace merge value {str:"remove this", old:"this", new:"", maxreplace:-1}
 function #bs.string:replace
 assert data storage bs:out {string:{replace:"remove "}}
 
 # Test multiple replacements
-data modify storage bs:in string.replace merge value {str:"a a a a", old:"a", new:"b", maxreplace:0}
+data modify storage bs:in string.replace merge value {str:"a a a a", old:"a", new:"b", maxreplace:-1}
 function #bs.string:replace
 assert data storage bs:out {string:{replace:"b b b b"}}
 
 # Test case sensitivity
-data modify storage bs:in string.replace merge value {str:"Test test TEST", old:"test", new:"replaced", maxreplace:0}
+data modify storage bs:in string.replace merge value {str:"Test test TEST", old:"test", new:"replaced", maxreplace:-1}
 function #bs.string:replace
 assert data storage bs:out {string:{replace:"Test replaced TEST"}}
 
 # Test with Unicode
-data modify storage bs:in string.replace merge value {str:"éàêë", old:"ê", new:"e", maxreplace:0}
+data modify storage bs:in string.replace merge value {str:"éàêë", old:"ê", new:"e", maxreplace:-1}
 function #bs.string:replace
 assert data storage bs:out {string:{replace:"éàeë"}}
 
 # Test replacing with longer string
-data modify storage bs:in string.replace merge value {str:"short", old:"short", new:"very long replacement", maxreplace:0}
+data modify storage bs:in string.replace merge value {str:"short", old:"short", new:"very long replacement", maxreplace:-1}
 function #bs.string:replace
 assert data storage bs:out {string:{replace:"very long replacement"}}
 
 # Test replacing with shorter string
-data modify storage bs:in string.replace merge value {str:"very long original", old:"very long", new:"short", maxreplace:0}
+data modify storage bs:in string.replace merge value {str:"very long original", old:"very long", new:"short", maxreplace:-1}
 function #bs.string:replace
 assert data storage bs:out {string:{replace:"short original"}}
 
@@ -61,4 +61,4 @@ assert data storage bs:out {string:{replace:"changed changed replace replace"}}
 # Test with maxreplace=1
 data modify storage bs:in string.replace merge value {str:"test test test", old:"test", new:"done", maxreplace:1}
 function #bs.string:replace
-assert data storage bs:out {string:{replace:"done test test"}} 
+assert data storage bs:out {string:{replace:"done test test"}}

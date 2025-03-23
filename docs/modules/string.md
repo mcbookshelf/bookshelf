@@ -60,7 +60,7 @@ Convert text to uppercase.
   **Storage `bs:out string.upper`**: {nbt}`string` The uppercase string.
 ```
 
-_Convert `hello world` to uppercase:_
+_Convert `hello world` to its uppercase version `HELLO WORLD`:_
 
 ```mcfunction
 data modify storage bs:in string.upper.str set value "hello world"
@@ -82,7 +82,7 @@ Convert text to lowercase.
   **Storage `bs:out string.lower`**: {nbt}`string` The lowercase string.
 ```
 
-_Convert `HELLO WORLD` to lowercase:_
+_Convert `HELLO WORLD` to its lowercase version `hello world`:_
 
 ```mcfunction
 data modify storage bs:in string.lower.str set value "HELLO WORLD"
@@ -99,9 +99,43 @@ tellraw @a [{"text":"The lowercase string is \""},{"storage":"bs:out","nbt":"str
 
 ### Find
 
-```{function} #bs.string:find
+:::::{tab-set}
+::::{tab-item} Find all
+
+```{function} #bs.string:find_all
 
 Search for a substring within a string. Locate all occurrences or a specific number of matches.
+
+:Inputs:
+  **Storage `bs:in string.find_all`**:
+  :::{treeview}
+  - {nbt}`compound` Find data
+    - {nbt}`string` **str**: String to search in.
+    - {nbt}`string` **substr**: String to find.
+    - {nbt}`int` **occurrence**: Number of occurrences to find (-1 or less for all occurrences).
+  :::
+
+:Outputs:
+  **Storage `bs:out string.find_all`**: {nbt}`list` List of indices where the substring was found.
+
+  **Return**: Number of occurrences found.
+```
+
+_Find `world` in `hello world world`:_
+
+```mcfunction
+data modify storage bs:in string.find set value {str:"hello world",substr:"world",occurrence:-1}
+function #bs.string:find_all
+tellraw @a [{"text":"Found at indices: \""},{"storage":"bs:out","nbt":"string.find"},{"text":"\""}]
+# return [6,12]
+```
+
+::::
+::::{tab-item} Find first
+
+```{function} #bs.string:find
+
+Search for a substring within a string. Locate the first occurrence.
 
 :Inputs:
   **Storage `bs:in string.find`**:
@@ -109,22 +143,22 @@ Search for a substring within a string. Locate all occurrences or a specific num
   - {nbt}`compound` Find data
     - {nbt}`string` **str**: String to search in.
     - {nbt}`string` **substr**: String to find.
-    - {nbt}`int` **occurrence**: Number of occurrences to find (0 for all).
   :::
 
 :Outputs:
-  **Storage `bs:out string.find`**: {nbt}`list` List of indices where the substring was found.
+  **Return**: Index of the first occurrence or -1 if not found.
 
-  **Return**: Number of occurrences found.
 ```
-
 _Find `world` in `hello world`:_
 
 ```mcfunction
-data modify storage bs:in string.find set value {str:"hello world",substr:"world",occurrence:0}
-function #bs.string:find
-tellraw @a [{"text":"Found at indices: \""},{"storage":"bs:out","nbt":"string.find"},{"text":"\""}]
+data modify storage bs:in string.find set value {str:"hello world",substr:"world"}
+execute store result score #c bs.ctx run function #bs.string:find
+tellraw @a [{"text":"Found at index: \""},{"score":{"name":"#c","objective":"bs.ctx"}},{"text":"\""}]
+# return 6
 ```
+::::
+:::::
 
 > **Credits**: Aure31
 
@@ -134,7 +168,7 @@ tellraw @a [{"text":"Found at indices: \""},{"storage":"bs:out","nbt":"string.fi
 
 ```{function} #bs.string:replace
 
-Replace occurrences of a substring with new text.
+Replace occurrences of a substring by a new text.
 
 :Inputs:
   **Storage `bs:in string.replace`**:
@@ -143,7 +177,7 @@ Replace occurrences of a substring with new text.
     - {nbt}`string` **str**: Base string for replacements.
     - {nbt}`string` **old**: Substring to replace.
     - {nbt}`string` **new**: Replacement string.
-    - {nbt}`int` **maxreplace**: Maximum replacements. (0 for unlimited)
+    - {nbt}`int` **maxreplace**: Maximum replacements. (-1 or less for unlimited)
   :::
 
 :Outputs:
@@ -153,9 +187,10 @@ Replace occurrences of a substring with new text.
 _Replace `world` with `minecraft`:_
 
 ```mcfunction
-data modify storage bs:in string.replace set value {str:"hello world",old:"world",new:"minecraft",maxreplace:0}
+data modify storage bs:in string.replace set value {str:"hello world",old:"world",new:"minecraft",maxreplace:-1}
 function #bs.string:replace
 tellraw @a [{"text":"Result: \""},{"storage":"bs:out","nbt":"string.replace"},{"text":"\""}]
+# return "hello minecraft"
 ```
 
 > **Credits**: Aure31
@@ -188,6 +223,7 @@ _replace the space in `hello world` by ` beautiful `:_
 data modify storage bs:in string.replace_range set value {str:"hello world",substr:" beautiful ",start:5,end:6}
 function #bs.string:replace_range
 tellraw @a [{"text":"The new string is \""},{"storage":"bs:out","nbt":"string.replace_range"},{"text":"\""}]
+# return "hello beautiful world"
 ```
 
 ```{admonition} Use as Insert
@@ -218,6 +254,7 @@ _reverse `hello world`:_
 data modify storage bs:in string.reverse.str set value "hello world"
 function #bs.string:reverse
 tellraw @a [{"text":"The reversed string is \""},{"storage":"bs:out","nbt":"string.reverse"},{"text":"\""}]
+# return "dlrow olleh"
 ```
 
 > **Credits**: Aure31
@@ -236,7 +273,7 @@ Divide a string into smaller parts using a specified separator, creating a list 
   - {nbt}`compound` Split data
     - {nbt}`string` **str**: The string to be split into parts.
     - {nbt}`string` **separator**: The character or string that marks where to split.
-    - {nbt}`int` **maxsplit**: Maximum number of splits to perform (0 or negative for unlimited).
+    - {nbt}`int` **maxsplit**: Maximum number of splits to perform (-1 or less for unlimited).
   :::
 
 :Outputs:
@@ -246,9 +283,10 @@ Divide a string into smaller parts using a specified separator, creating a list 
 _split `hello world` by `" "`:_
 
 ```mcfunction
-data modify storage bs:in string.split set value {str:"hello world",separator:" ",maxsplit:0}
+data modify storage bs:in string.split set value {str:"hello world",separator:" ",maxsplit:-1}
 function #bs.string:split
 tellraw @a [{"text":"The list of strings is \""},{"storage":"bs:out","nbt":"string.split"},{"text":"\""}]
+# returns "["hello","world"]"
 ```
 
 > **Credits**: Aure31
@@ -262,7 +300,7 @@ tellraw @a [{"text":"The list of strings is \""},{"storage":"bs:out","nbt":"stri
 
 ```{function} #bs.string:to_list
 
-Convert a string into a list where each character become a separate element.
+Convert a string into a list where each character becomes a separate element.
 
 :Inputs:
   **Storage `bs:in string.to_list.str`**: {nbt}`string` The string to convert into a character list.
@@ -277,6 +315,7 @@ _transform `hello world` into a list:_
 data modify storage bs:in string.to_list.str set value "hello world"
 function #bs.string:to_list
 tellraw @a [{"text":"The list of characters is \""},{"storage":"bs:out","nbt":"string.to_list"},{"text":"\""}]
+# returns ["h","e","l","l","o"," ","w","o","r","l","d"]
 ```
 
 ::::
@@ -284,13 +323,13 @@ tellraw @a [{"text":"The list of characters is \""},{"storage":"bs:out","nbt":"s
 
 ```{function} #bs.string:to_string
 
-Convert any value into it's string representation.
+Convert any value into its string representation.
 
 :Inputs:
   **Storage `bs:in string.to_string.val`**: {nbt}`any` The value to convert into a string.
 
 :Outputs:
-  **Storage `bs:out string.to_string`**: {nbt}`string` The number converted to its string representation.
+  **Storage `bs:out string.to_string`**: {nbt}`string` The value converted to its string representation.
 ```
 
 _transform `42` into a string:_
@@ -315,7 +354,7 @@ Try to convert the string into the value it represents.
   **Storage `bs:out string.parse`**: {nbt}`any` The extracted value (ex: "true" -> boolean, "42" -> int, "42.0" -> double).
 ```
 
-_transform `42` into a integer:_
+_transform `"42"` into a integer:_
 
 ```mcfunction
 data modify storage bs:in string.parse.str set value "42"

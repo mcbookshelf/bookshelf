@@ -23,6 +23,6 @@ scoreboard players set #d bs.ctx 0
 scoreboard players operation #l bs.ctx -= #y bs.ctx
 
 execute if score #l bs.ctx matches ..-1 run return run data modify storage bs:out string.split append from storage bs:ctx _.ret
-execute unless score #o bs.ctx matches 0 if score #c bs.ctx = #o bs.ctx run return run data modify storage bs:out string.split append from storage bs:ctx _.ret
+execute unless score #o bs.ctx matches ..-1 if score #c bs.ctx = #o bs.ctx run return run data modify storage bs:out string.split append from storage bs:ctx _.ret
 
 function bs.string:split/recurse/next with storage bs:ctx

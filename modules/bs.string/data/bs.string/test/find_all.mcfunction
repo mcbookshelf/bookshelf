@@ -14,22 +14,22 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Test basic find all
-data modify storage bs:in string.find_all merge value {str:"hello world",substr:"world",occurrence:0}
+data modify storage bs:in string.find_all merge value {str:"hello world",substr:"world",occurrence:-1}
 function #bs.string:find_all
 assert data storage bs:out {string:{find_all:[6]}}
 
 # Test empty string
-data modify storage bs:in string.find_all merge value {str:"",substr:"test",occurrence:0}
+data modify storage bs:in string.find_all merge value {str:"",substr:"test",occurrence:-1}
 function #bs.string:find_all
 assert data storage bs:out {string:{find_all:[]}}
 
 # Test empty substr
-data modify storage bs:in string.find_all merge value {str:"test string",substr:"",occurrence:0}
+data modify storage bs:in string.find_all merge value {str:"test string",substr:"",occurrence:-1}
 function #bs.string:find_all
 assert data storage bs:out {string:{find_all:[]}}
 
 # Test multiple occurrences
-data modify storage bs:in string.find_all merge value {str:"test test test",substr:"test",occurrence:0}
+data modify storage bs:in string.find_all merge value {str:"test test test",substr:"test",occurrence:-1}
 function #bs.string:find_all
 assert data storage bs:out {string:{find_all:[0,5,10]}}
 
@@ -39,21 +39,21 @@ function #bs.string:find_all
 assert data storage bs:out {string:{find_all:[0,5]}}
 
 # Test with Unicode
-data modify storage bs:in string.find_all merge value {str:"éàêëàéêë",substr:"êë",occurrence:0}
+data modify storage bs:in string.find_all merge value {str:"éàêëàéêë",substr:"êë",occurrence:-1}
 function #bs.string:find_all
 assert data storage bs:out {string:{find_all:[2,6]}}
 
 # Test case sensitivity
-data modify storage bs:in string.find_all merge value {str:"Test TEST test",substr:"test",occurrence:0}
+data modify storage bs:in string.find_all merge value {str:"Test TEST test",substr:"test",occurrence:-1}
 function #bs.string:find_all
 assert data storage bs:out {string:{find_all:[10]}}
 
 # Test overlapping patterns
-data modify storage bs:in string.find_all merge value {str:"aaaaa",substr:"aa",occurrence:0}
+data modify storage bs:in string.find_all merge value {str:"aaaaa",substr:"aa",occurrence:-1}
 function #bs.string:find_all
 assert data storage bs:out {string:{find_all:[0,1,2,3]}}
 
 # Test substr not found
-data modify storage bs:in string.find_all merge value {str:"hello world",substr:"notfound",occurrence:0}
+data modify storage bs:in string.find_all merge value {str:"hello world",substr:"notfound",occurrence:-1}
 function #bs.string:find_all
 assert data storage bs:out {string:{find_all:[]}}
