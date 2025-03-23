@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 VERSION = "2.2.2"
-MC_VERSIONS = ["1.21.2", "1.21.3", "1.21.4"]
+MC_VERSIONS = ["1.21.5"]
 
 DOC_URL = "https://docs.mcbookshelf.dev"
 FABRIC_API = "https://meta.fabricmc.net/v2"

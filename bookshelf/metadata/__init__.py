@@ -4,8 +4,8 @@ from bisect import insort
 
 from bookshelf.definitions import MODULES, MODULES_DIR
 from bookshelf.logger import StepLogger
-from bookshelf.meta.feature import get_feature_meta
-from bookshelf.meta.module import get_module_meta
+from bookshelf.metadata.feature import get_feature_meta
+from bookshelf.metadata.module import get_module_meta
 
 
 def build_manifest(logger: StepLogger) -> dict | None:

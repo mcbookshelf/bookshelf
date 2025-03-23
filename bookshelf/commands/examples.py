@@ -3,7 +3,7 @@ from pathlib import Path
 
 import click
 from beet import PackConfig, Project, ProjectConfig
-from beet.toolchain.cli import error_handler
+from beet.toolchain.commands import error_handler
 
 from bookshelf.definitions import (
     BUILD_DIR,
