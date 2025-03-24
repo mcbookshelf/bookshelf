@@ -28,3 +28,5 @@ execute if entity @s[tag=bs.interaction.is_hoverable] \
   unless score @s bs.interaction.hover matches ..2147483647 \
   store result score @s bs.interaction.hover \
   run scoreboard players add #counter bs.interaction.hover 1
+
+return run scoreboard players get #i bs.ctx
