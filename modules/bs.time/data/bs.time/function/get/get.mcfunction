@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data time.full set string block -30000000 0 1605 LastOutput 10 18
+data modify storage bs:data time.full set string block -30000000 0 1605 LastOutput.text 1 9
 data modify storage bs:data time.hours set string storage bs:data time.full 0 2
 data modify storage bs:data time.minutes set string storage bs:data time.full 3 5
 data modify storage bs:data time.seconds set string storage bs:data time.full 6 8
