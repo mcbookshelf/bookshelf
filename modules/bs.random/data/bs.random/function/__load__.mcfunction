@@ -44,5 +44,3 @@ scoreboard players set 48550 bs.const 48550
 scoreboard players set 53656 bs.const 53656
 scoreboard players set 59299 bs.const 59299
 scoreboard players set 1000000000 bs.const 1000000000
-
-execute unless data storage bs:const log.messages[{namespaces: ["bs.random"]}] run data modify storage bs:const log.messages[{namespaces: ["bs"]}].namespaces append value "bs.random"
