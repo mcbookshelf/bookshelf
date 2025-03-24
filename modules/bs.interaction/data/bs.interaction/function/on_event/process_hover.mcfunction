@@ -13,6 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set value $(with)
-execute store result storage bs:ctx y int 1 run scoreboard players get @s bs.interaction.id
-return run function bs.interaction:clear_events/remove_matching with storage bs:ctx
+execute store result storage bs:ctx y double .000001 run attribute @s minecraft:entity_interaction_range get 1000000
+execute unless score @s bs.interaction.hover matches ..2147483647 run return run function bs.interaction:on_event/hover_enter/try_enter with storage bs:ctx
+execute if score @s bs.interaction.hover matches ..2147483647 run function bs.interaction:on_event/hover/hover with storage bs:ctx
+scoreboard players remove #interaction.await_hover bs.data 1

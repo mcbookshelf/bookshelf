@@ -13,6 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data interaction.run set value []
-$data modify storage bs:data interaction.run append from storage bs:data interaction.$(y)[{type:"right_click"}]
-execute if data storage bs:data interaction.run[-1] run function bs.interaction:on_event/run with storage bs:data interaction.run[-1]
+execute on target unless entity @s[tag=bs.interaction.source] run return fail
+return 1

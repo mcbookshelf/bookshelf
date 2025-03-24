@@ -13,10 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players operation #interaction.unhandled_hover bs.data = #interaction.active_hover bs.data
-execute as @a at @s run function bs.interaction:on_event/player_process
-execute if score #interaction.unhandled_hover bs.data matches 1.. \
-  as @n[type=minecraft:interaction,scores={bs.interaction.hover=1..},limit=2147483647] \
+scoreboard players operation #interaction.await_hover bs.data = #interaction.hovered bs.data
+execute as @a[scores={bs.interaction.logout=1..}] run function bs.interaction:on_event/hover/reset
+execute as @a at @s run function bs.interaction:on_event/process_hover
+
+execute if score #interaction.await_hover bs.data matches 1.. \
+  as @e[type=minecraft:interaction,tag=bs.interaction.hovered] \
   run function bs.interaction:on_event/hover_leave/try_leave
 
-execute if score #interaction.process bs.data matches 1 run schedule function bs.interaction:on_event/process 1t
+execute if entity @n[type=minecraft:interaction,tag=bs.interaction.is_hoverable,sort=arbitrary] run schedule function bs.interaction:on_event/process 1t

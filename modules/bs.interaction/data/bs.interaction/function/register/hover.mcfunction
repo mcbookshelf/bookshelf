@@ -17,7 +17,7 @@ execute unless entity @s[type=interaction] run return run function #bs.log:error
   namespace: bs.interaction, \
   path: "#bs.interaction:on_hover", \
   tag: "on_hover", \
-  message: '"The current entity is not an interaction."', \
+  message: "The current entity is not an interaction.", \
 }
 $data modify storage bs:ctx _ set value { run: '$(run)', executor: $(executor), type: "hover" }
 
@@ -26,7 +26,7 @@ execute unless score #s bs.ctx matches 1 run return run function #bs.log:error {
   namespace: bs.interaction, \
   path: "#bs.interaction:on_hover", \
   tag: "on_hover", \
-  message: '"The command is not valid."', \
+  message: "The command is not valid.", \
 }
 
 execute unless function bs.interaction:register/utils/executor/setup \
@@ -34,18 +34,17 @@ execute unless function bs.interaction:register/utils/executor/setup \
     namespace: bs.interaction, \
     path: "#bs.interaction:on_hover", \
     tag: "on_hover", \
-    message: '"The executor is not valid or cannot be interpreted."', \
+    message: "The executor is not valid or cannot be interpreted.", \
   }
 
 execute if score #i bs.ctx matches 2.. run function #bs.log:warn { \
   namespace: bs.interaction, \
   path: "#bs.interaction:on_hover", \
   tag: "on_hover", \
-  message: '"The selector points to multiple entities. Only the first one is selected."' \
+  message: "The selector points to multiple entities. Only the first one is selected." \
 }
 
 tag @s add bs.interaction.is_hoverable
 tag @s add bs.interaction.listen_hover
-scoreboard players set #interaction.process bs.data 1
 schedule function bs.interaction:on_event/process 1t replace
 return run function bs.interaction:register/utils/setup_listener

@@ -13,6 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data interaction.run set value []
-$data modify storage bs:data interaction.run append from storage bs:data interaction.$(y)[{type:"hover_enter"}]
-execute if data storage bs:data interaction.run[-1] run function bs.interaction:on_event/run with storage bs:data interaction.run[-1]
+$execute if predicate {condition:entity_properties,entity:this,predicate:{type_specific:{type:player,looking_at:{type:interaction,nbt:"{Tags:[bs.interaction.is_hoverable]}",distance:{absolute:{max:$(y)}}}}}} run function bs.interaction:on_event/hover_enter/hover_enter

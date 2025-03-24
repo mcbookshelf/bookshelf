@@ -13,8 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if score @s bs.interaction.logout matches 1.. run return run function bs.interaction:on_event/hover/reset
-execute store result storage bs:ctx y double .000001 run attribute @s minecraft:entity_interaction_range get 1000000
-execute unless score @s bs.interaction.id matches 1.. run return run function bs.interaction:on_event/hover_enter/hover_enter with storage bs:ctx
-execute if score @s bs.interaction.id matches 1.. run function bs.interaction:on_event/hover/hover with storage bs:ctx
-scoreboard players remove #interaction.unhandled_hover bs.data 1
+data modify storage bs:data interaction set value []
+data modify storage bs:data interaction append from entity @s data."bs.interaction".events[{type:"hover_leave"}]
+execute if data storage bs:data interaction[-1] run function bs.interaction:on_event/run with storage bs:data interaction[-1]

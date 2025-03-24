@@ -17,7 +17,7 @@ execute unless entity @s[type=interaction] run return run function #bs.log:error
   namespace: bs.interaction, \
   path: "#bs.interaction:on_right_click", \
   tag: "on_right_click", \
-  message: '"The current entity is not an interaction."', \
+  message: "The current entity is not an interaction.", \
 }
 $data modify storage bs:ctx _ set value { run: '$(run)', executor: $(executor), type: "right_click" }
 
@@ -26,7 +26,7 @@ execute unless score #s bs.ctx matches 1 run return run function #bs.log:error {
   namespace: bs.interaction, \
   path: "#bs.interaction:on_right_click", \
   tag: "on_right_click", \
-  message: '"The command is not valid."', \
+  message: "The command is not valid.", \
 }
 
 execute unless function bs.interaction:register/utils/executor/setup \
@@ -34,14 +34,14 @@ execute unless function bs.interaction:register/utils/executor/setup \
     namespace: bs.interaction, \
     path: "#bs.interaction:on_right_click", \
     tag: "on_right_click", \
-    message: '"The executor is not valid or cannot be interpreted."', \
+    message: "The executor is not valid or cannot be interpreted.", \
   }
 
 execute if score #i bs.ctx matches 2.. run function #bs.log:warn { \
   namespace: bs.interaction, \
   path: "#bs.interaction:on_right_click", \
   tag: "on_right_click", \
-  message: '"The selector points to multiple entities. Only the first one is selected."' \
+  message: "The selector points to multiple entities. Only the first one is selected." \
 }
 
 tag @s add bs.interaction.listen_right_click

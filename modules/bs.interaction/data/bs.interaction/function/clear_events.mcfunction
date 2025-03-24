@@ -13,20 +13,20 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result score #i bs.ctx run data remove storage bs:data interaction.$(y)[$(_)]
+$execute store result score #i bs.ctx run data remove entity @s data."bs.interaction".events[$(with)]
+data modify storage bs:ctx _ set from entity @s data."bs.interaction".events
 
-$execute unless data storage bs:data interaction.$(y)[-1] run scoreboard players reset @s bs.interaction.id
-$execute unless data storage bs:data interaction.$(y)[{type:"hover"}] run tag @s remove bs.interaction.listen_hover
-$execute unless data storage bs:data interaction.$(y)[{type:"hover_enter"}] run tag @s remove bs.interaction.listen_hover_enter
-$execute unless data storage bs:data interaction.$(y)[{type:"hover_leave"}] run tag @s remove bs.interaction.listen_hover_leave
-$execute unless data storage bs:data interaction.$(y)[{type:"left_click"}] run tag @s remove bs.interaction.listen_left_click
-$execute unless data storage bs:data interaction.$(y)[{type:"right_click"}] run tag @s remove bs.interaction.listen_right_click
+execute unless data storage bs:ctx _[{type:"hover"}] run tag @s remove bs.interaction.listen_hover
+execute unless data storage bs:ctx _[{type:"hover_enter"}] run tag @s remove bs.interaction.listen_hover_enter
+execute unless data storage bs:ctx _[{type:"hover_leave"}] run tag @s remove bs.interaction.listen_hover_leave
+execute unless data storage bs:ctx _[{type:"left_click"}] run tag @s remove bs.interaction.listen_left_click
+execute unless data storage bs:ctx _[{type:"right_click"}] run tag @s remove bs.interaction.listen_right_click
 
 execute unless entity @s[tag=bs.interaction.listen_hover] \
   unless entity @s[tag=bs.interaction.listen_hover_enter] \
   unless entity @s[tag=bs.interaction.listen_hover_leave] \
   run tag @s remove bs.interaction.is_hoverable
 
-execute unless entity @s[tag=bs.interaction.is_hoverable] run scoreboard players set #interaction.process bs.data 0
+scoreboard players reset @s[tag=!bs.interaction.is_hoverable] bs.interaction.hover
 
 return run scoreboard players get #i bs.ctx

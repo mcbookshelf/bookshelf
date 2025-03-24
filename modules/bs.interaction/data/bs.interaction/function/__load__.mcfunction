@@ -20,7 +20,6 @@ scoreboard objectives add bs.ctx dummy [{"text":"BS ","color":"dark_gray"},{"tex
 scoreboard objectives add bs.data dummy [{"text":"BS ","color":"dark_gray"},{"text":"Data","color":"aqua"}]
 scoreboard objectives add bs.const dummy [{"text":"BS ","color":"dark_gray"},{"text":"Constants","color":"aqua"}]
 
-scoreboard objectives add bs.interaction.id dummy [{"text":"BS ","color":"dark_gray"},{"text":"Interaction ID","color":"aqua"}]
 scoreboard objectives add bs.interaction.hover dummy [{"text":"BS ","color":"dark_gray"},{"text":"Interaction Hover","color":"aqua"}]
 scoreboard objectives add bs.interaction.logout minecraft.custom:leave_game [{"text":"BS ","color":"dark_gray"},{"text":"Interaction Logout","color":"aqua"}]
 

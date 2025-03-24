@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+scoreboard players reset @s bs.interaction.hover
 execute as @n[type=minecraft:interaction,tag=bs.interaction.target] run function bs.interaction:on_event/hover_leave/as_target
 tag @s remove bs.interaction.source
-scoreboard players reset @s bs.interaction.id

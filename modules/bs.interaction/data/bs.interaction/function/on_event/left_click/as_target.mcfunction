@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute on attacker unless entity @s[tag=bs.interaction.source] run return fail
 tag @s add bs.interaction.target
-execute store result storage bs:ctx y int 1 run scoreboard players get @s bs.interaction.id
-function bs.interaction:on_event/left_click/dispatch with storage bs:ctx
+data modify storage bs:data interaction set value []
+data modify storage bs:data interaction append from entity @s data."bs.interaction".events[{type:"left_click"}]
+execute if data storage bs:data interaction[-1] run function bs.interaction:on_event/run with storage bs:data interaction[-1]
 tag @s remove bs.interaction.target

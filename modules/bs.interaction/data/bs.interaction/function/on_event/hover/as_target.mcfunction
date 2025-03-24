@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if entity @s[tag=bs.interaction.listen_hover] run function bs.interaction:on_event/hover/dispatch with storage bs:ctx
+execute if entity @s[tag=bs.interaction.listen_hover] run function bs.interaction:on_event/hover/run
 tag @s remove bs.interaction.target
