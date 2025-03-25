@@ -22,7 +22,7 @@ To do so, you only have access to scaffoldings and concrete powders, so every st
 :link: https://creative-olympics.org/
 :margin: 0 3 0 0
 
-Creative Olympics is a week-long charity event. During this week, different team that come from all around the world compete to make the best creation (map, resource-pack, datapack, build) in a short amount of time.
+Creative Olympics is a week-long charity event. During this week, different teams that come from all around the world compete to make the best creation (map, resource-pack, datapack, build) in a short amount of time.
 :::
 
 :::{grid-item-card} ⚔️ Hierarchy
@@ -43,7 +43,7 @@ Link in French. In one of these videos, the Youtuber Sotshi used Bookshelf to cr
 :link: https://www.planetminecraft.com/project/rush-reloaded-1-14/
 :margin: 0 3 0 0
 
-One of the most iconic maps in Minecraft’s history, which Gunivers has brought up to date. Gunivers lets you rediscover this competitive game mode whose décor is now as modern as it is colourful.
+One of the most iconic maps in Minecraft's history, which Gunivers has brought up to date. Gunivers lets you rediscover this competitive game mode whose décor is now as modern as it is colourful.
 :::
 
 :::{grid-item-card} 🐟 Scuba Diving
@@ -64,7 +64,7 @@ Usine 4.0 is a mini-game designed for the University of Poitiers as a teaching a
 :link: https://www.curseforge.com/minecraft/worlds/witchery
 :margin: 0 3 0 0
 
-Witchery is a map incorporating an advanced ball physics, allowing among other things to bounce on all surfaces, just like … One bullet! You will be able to feign your enemies by throwing the ball against the walls to retrieve it immediately after, making two with your friends (if you have one).
+Witchery is a map incorporating an advanced ball physics, allowing among other things to bounce on all surfaces, just like … One bullet! You will be able to fool your enemies by throwing the ball against the walls to retrieve it immediately after, making two with your friends (if you have one).
 :::
 
 

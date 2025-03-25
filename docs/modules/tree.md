@@ -8,7 +8,7 @@ Simplicity meets utility in this bank of trees.
 
 ## 🗿 Structures
 
-You can find below all structures available in this module.
+You can find below below all structures available in this module.
 
 ---
 

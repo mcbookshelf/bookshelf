@@ -8,7 +8,7 @@ Each function of Bookshelf should have a header to indicate the license.
 
 ---
 
-Header to put at the beggining of each function:
+Header to put at the beginning of each function:
 ```
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) <YEAR> Gunivers
@@ -26,5 +26,5 @@ Header to put at the beggining of each function:
 # ------------------------------------------------------------------------------------------------------------
 ```
 
-If a Bookshelf contributor forgot to put a header at the beggining of a function, the CI/CD pipeline will reject the merge of the contribution in Bookshelf.
-To be sure the code meets the minimal requirements, see the [contribution validation page](project:contribution-validation.md).
+If a Bookshelf contributor forgot to put a header at the beginning of a function, the CI/CD pipeline will reject the merge of the contribution in Bookshelf.
+To ensure the code meets the minimal requirements, see the [contribution validation page](project:contribution-validation.md).

@@ -46,10 +46,10 @@ Convert a color from RGB to hexadecimal.
   :::
 
 :Outputs:
-  **Storage `bs:out color.rgb_to_hex`**: {nbt}`string` Color as an hexadecimal string.
+  **Storage `bs:out color.rgb_to_hex`**: {nbt}`string` Color as a hexadecimal string.
 ```
 
-*Convert an RGB color to hexadecimal:*
+*Example: Convert an RGB color to hexadecimal:*
 
 ```mcfunction
 # Get the RGB color
@@ -74,10 +74,10 @@ Convert a color from integer to hexadecimal.
   :::
 
 :Outputs:
-  **Storage `bs:out color.int_to_hex`**: {nbt}`string` Color as an hexadecimal string.
+  **Storage `bs:out color.int_to_hex`**: {nbt}`string` Color as a hexadecimal string.
 ```
 
-*Get the hexadecimal color of the nearest zombie's leather helmet:*
+*Example: Get the hexadecimal color of the nearest zombie's leather helmet:*
 
 ```mcfunction
 # Get the hexadecimal color
@@ -107,7 +107,7 @@ Convert a color from hexadecimal to integer.
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`string` **color**: Color as an hexadecimal string (example: #ffffff).
+    - {nbt}`string` **color**: Color as a hexadecimal string (example: #ffffff).
   :::
 
 :Outputs:
@@ -116,7 +116,7 @@ Convert a color from hexadecimal to integer.
   **Storage `bs:out color.hex_to_int`**: {nbt}`int` Color as an integer.
 ```
 
-*Change the color of the nearest zombie's leather helmet using the hexadecimal format:*
+*Example: Change the color of the nearest zombie's leather helmet using the hexadecimal format:*
 
 ```mcfunction
 # Summon a test subject
@@ -146,7 +146,7 @@ Convert a color from RGB to integer.
   **Storage `bs:out color.rgb_to_int`**: {nbt}`int` Color as an integer.
 ```
 
-*Change the color of the nearest zombie's leather helmet using the RGB format:*
+*Example: Change the color of the nearest zombie's leather helmet using the RGB format:*
 
 ```mcfunction
 # Summon a test subject
@@ -176,7 +176,7 @@ Convert a color from hexadecimal to RGB.
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`string` **color**: Color as an hexadecimal string (example: #ffffff).
+    - {nbt}`string` **color**: Color as a hexadecimal string (example: #ffffff).
   :::
 
 :Outputs:
@@ -185,7 +185,7 @@ Convert a color from hexadecimal to RGB.
   **Scores `$color.hex_to_rgb.[r,g,b] bs.out`**: Vector components representing the RGB color.
 ```
 
-*Convert an hexadecimal color to RGB:*
+*Example: Convert a hexadecimal color to RGB:*
 
 ```mcfunction
 # Get the RGB color
@@ -215,7 +215,7 @@ Convert a color from integer to RGB.
   **Scores `$color.int_to_rgb.[r,g,b] bs.out`**: Vector components representing the RGB color.
 ```
 
-*Get the RGB color of the nearest zombie's leather helmet:*
+*Example: Get the RGB color of the nearest zombie's leather helmet:*
 
 ```mcfunction
 # Get the RGB color

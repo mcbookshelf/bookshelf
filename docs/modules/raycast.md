@@ -2,10 +2,10 @@
 
 **`#bs.raycast:help`**
 
-Cast rays and see if they collide with blocks or entities.
+Cast rays and detect collisions with blocks or entities.
 
 ```{note}
-Unlike traditional raycasts, this module uses a [voxel traversal algorithm](http://www.cse.yorku.ca/~amana/research/grid.pdf) which is a lot more precise. Also, thanks to the `bs.hitbox` module, it supports all different hitboxes, including both blocks & entities.
+Unlike traditional raycasts, this module uses a [voxel traversal algorithm](http://www.cse.yorku.ca/~amana/research/grid.pdf) which provides much greater precision. Additionally, thanks to the `bs.hitbox` module, it supports all different hitbox types, including both blocks and entities.
 ```
 
 ```{epigraph}
@@ -48,7 +48,7 @@ Cast a ray from the execution position and check if it hits something.
   :::
 
 :Lambdas:
-  **Score `$raycast.piercing bs.lambda`**: The remaining number of blocks or entities the ray can pass through. This score can be dynamically updated inside callbacks (`on_*`) to modify ray behavior.
+  **Score `$raycast.piercing bs.lambda`**: The remaining number of blocks or entities the ray can pass through before stopping. This score can be dynamically updated inside callbacks (`on_*`) to modify ray behavior.
 
   **Storage `bs:lambda raycast`**:
   :::{treeview}
@@ -67,7 +67,7 @@ Cast a ray from the execution position and check if it hits something.
   :::{treeview}
   - {nbt}`compound` Ray output data
     - {nbt}`double` **distance**: The distance from the ray's origin to the impact point.
-    - {nbt}`list` **hit_point**: The coordintates of the impact point.
+    - {nbt}`list` **hit_point**: The coordinates of the impact point.
     - {nbt}`list` **hit_normal**: The normal of the surface the ray hit.
     - {nbt}`list` **targeted_block**: The coordinates of the block that was hit.
     - {nbt}`list` **targeted_entity**: The UUID array of the entity that was hit.
@@ -80,13 +80,13 @@ Cast a ray from the execution position and check if it hits something.
 - **Interaction Shape**: Defines the area where the player can interact with or break the block. This includes actions such as right-clicking to open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have an interaction shape but no collision, such as crops or scaffolding.
 ```
 
-*Cast a ray from your eyes and see, if it stopped, where it stopped:*
+*Example: Cast a ray from your eyes and detect any collisions:*
 
 ```mcfunction
-# Once (return 0 if no collision occured)
+# Once (returns 0 if no collision occurred)
 execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{}}
 
-# If a collision occured, see the collision point
+# If a collision occurred, see the collision point
 data get storage bs:out raycast.hit_point
 ```
 

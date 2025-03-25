@@ -2,7 +2,7 @@
 
 **`#bs.dump:help`**
 
-The dump module provides mechanisms for printing the state of any “variables”.
+The dump module provides mechanisms for printing the state of any "variables".
 
 ---
 
@@ -28,7 +28,8 @@ Dump the content of given variables to the chat.
   :::
 ```
 
-*View position scores as an array:*
+*Example: View position scores as an array:*
+
 ```{code-block} mcfunction
 :force:
 function #bs.position:get_pos {scale:1}
@@ -37,9 +38,9 @@ function #bs.dump:var {var: ["@s bs.pos.x", "@s bs.pos.y", "@s bs.pos.z"]}
 
 ![](/_imgs/modules/dump/example-1.png)
 
-*View an undefined score and the player recipe book (with a depth of 1):*
-```mcfunction
+*Example: View an undefined score and the player recipe book (with a depth of 1):*
 
+```mcfunction
 function #bs.dump:var {var: {_: "foo bar", recipes: "entity @s recipeBook 1"}}
 ```
 

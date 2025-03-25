@@ -13,8 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# @batch bs.vector
-
 await entity B5-0-0-0-1
 
 scoreboard players set $vector.basis_rot_3d.pos.0 bs.in 577

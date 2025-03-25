@@ -125,7 +125,7 @@ Sysadmin and legal referent.
 :link-type: url
 :margin: 0 3 0 0
 
-```{image} /_imgs/credits/aeris.jpg
+```{image} /_imgs/credits/ultimatech.jpg
 :align: center
 :class: dark_light, bs-rounded
 ```

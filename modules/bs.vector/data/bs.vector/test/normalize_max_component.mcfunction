@@ -13,8 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# @batch bs.vector
-
 scoreboard players set $vector.normalize_max_component.0 bs.in 37216
 scoreboard players set $vector.normalize_max_component.1 bs.in 3383
 scoreboard players set $vector.normalize_max_component.2 bs.in 19172

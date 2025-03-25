@@ -47,7 +47,7 @@ Add position scores to the entity's coordinates.
   **State**: Entity is teleported based on position scores.
 ```
 
-*Teleport to ~48.85 ~ ~2.29:*
+*Example: Teleport to ~48.85 ~ ~2.29:*
 
 ```mcfunction
 # Once
@@ -79,7 +79,7 @@ Add the x axis position score to the entity's coordinates.
   **State**: Entity is teleported based on the x axis position score.
 ```
 
-*Teleport to ~70 ~ ~:*
+*Example: Teleport to ~70 ~ ~:*
 
 ```mcfunction
 # Once
@@ -109,7 +109,7 @@ Add the y axis position score to the entity's coordinates.
   **State**: Entity is teleported based on the y axis position score.
 ```
 
-*Teleport to ~ ~82 ~:*
+*Example: Teleport to ~ ~82 ~:*
 
 ```mcfunction
 # Once
@@ -139,7 +139,7 @@ Add the z axis position score to the entity's coordinates.
   **State**: Entity is teleported based on the z axis position score.
 ```
 
-*Teleport to ~ ~ ~65:*
+*Example: Teleport to ~ ~ ~65:*
 
 ```mcfunction
 # Once
@@ -298,7 +298,7 @@ Compute the distance between the source entity and the execution position of the
 
 *Calculate the distance between you and the nearest sheep (in blocks, without scaling):*
 
-```mcfunction
+```Example: mcfunction
 # Once
 execute at @e[type=sheep,limit=1,sort=nearest] run function #bs.position:get_distance_ata {scale:1}
 
@@ -309,7 +309,7 @@ tellraw @a [{"text": "Distance: ", "color": "dark_gray"},{"score":{"name":"$posi
 ```{admonition} Performance Tip
 :class: tip
 
-For several applications such as comparing distances, you can use the squared distance instead of the "normal" distance. It is a bit faster to compute.
+For several applications such as comparing distances, using the squared distance instead of the "normal" distance is more efficient to compute.
 ```
 
 ::::
@@ -334,7 +334,7 @@ Compute the squared distance between the source entity and the execution positio
   **Return | Score `$position.get_distance_squared_ata bs.out`**: Squared distance between the two positions.
 ```
 
-*Calculate the squared distance between you and the nearest sheep (in blocks, without scaling):*
+*Example: Calculate the squared distance between you and the nearest sheep (in blocks, without scaling):*
 
 ```mcfunction
 # Once
@@ -347,7 +347,7 @@ tellraw @a [{"text": "Distance^2: ", "color": "dark_gray"},{"score":{"name":"$po
 ```{admonition} Score Limitation
 :class: warning
 
-Scores in Minecraft have a limited size similar to a signed integer variable. The latter is huge, but not unlimited and can overflow. Since this function uses powers of 2 to calculate the result, you should prefer the "normal" version (which does not rely on powers) when working over big distances.
+Scores in Minecraft have a limited size similar to a signed integer variable. While this limit is substantial, it is not unlimited and can overflow. Since this function uses powers of 2 to calculate the result, prefer the "normal" version (which does not rely on powers) when working with large distances.
 ```
 
 ::::
@@ -381,13 +381,13 @@ Get the execution position of the function and store the coordinates in 3 scores
   **Scores `@s bs.pos.[x,y,z]`**: Coordinates of the position.
 ```
 
-*Detect and display the position of the nearest spider (without scaling):*
+*Example: Detect and display the position of the nearest spider (without scaling):*
 
 ```mcfunction
 # Once
 execute as @e[type=spider,limit=1,sort=nearest] run function #bs.position:get_pos {scale:1}
 
-# See the resluts
+# See the results
 tellraw @a [{"text": "X = ", "color": "dark_gray"},{"score":{"name":"@e[type=spider,limit=1,sort=nearest]", "objective": "bs.pos.x"}, "color": "gold"},{"text":", Y = ", "color": "dark_gray"},{"score":{"name":"@e[type=spider,limit=1,sort=nearest]", "objective": "bs.pos.y"}, "color": "gold"},{"text":", Z = ", "color": "dark_gray"},{"score":{"name":"@e[type=spider,limit=1,sort=nearest]", "objective": "bs.pos.z"}, "color": "gold"}]
 ```
 
@@ -413,7 +413,7 @@ Get the execution x position of the function and store the coordinate in a score
   **Score `@s bs.pos.x`**: Coordinate of the position.
 ```
 
-*Detect and display the x position of the nearest spider (without scaling):*
+*Example: Detect and display the x position of the nearest spider (without scaling):*
 
 ```mcfunction
 # Once
@@ -445,7 +445,7 @@ Get the execution y position of the function and store the coordinate in a score
   **Score `@s bs.pos.y`**: Coordinate of the position.
 ```
 
-*Detect and display the y position of the nearest spider (without scaling):*
+*Example: Detect and display the y position of the nearest spider (without scaling):*
 
 ```mcfunction
 # Once
@@ -477,7 +477,7 @@ Get the execution z position of the function and store the coordinate in a score
   **Score `@s bs.pos.z`**: Coordinate of the position.
 ```
 
-*Detect and display the z position of the nearest spider (without scaling):*
+*Example: Detect and display the z position of the nearest spider (without scaling):*
 
 ```mcfunction
 # Once
@@ -608,7 +608,7 @@ Get the execution position of the function relatively to the position of the exe
   **Scores `@s bs.pos.[x,y,z]`**: Relative coordinates.
 ```
 
-*Get your position relative to the nearest Creeper (without scaling):*
+*Example: Get your position relative to the nearest Creeper (without scaling):*
 
 ```mcfunction
 # Once
@@ -640,7 +640,7 @@ Get a direction vector based on the execution position and rotation. Scale is us
   **Scores `@s bs.pos.[x,y,z]`**: Relative coordinates.
 ```
 
-*Get your position relative to the position that is 2 blocks in front of you (scaled by 1000):*
+*Example: Get your position relative to the position that is 2 blocks in front of you (scaled by 1000):*
 
 ```mcfunction
 # Once
@@ -706,7 +706,7 @@ Place an entity at coordinates given by scores.
   **State**: Entity is teleported to the coordinates indicated by the scores.
 ```
 
-*Teleport to 48.85 0 2.29:*
+*Example: Teleport to 48.85 0 2.29:*
 
 ```mcfunction
 # Once
@@ -737,7 +737,7 @@ Place an entity at a precise x coordinate given by scores.
   **State**: Entity is teleported to the x coordinate indicated by the score.
 ```
 
-*Teleport to 70 ~ ~:*
+*Example: Teleport to 70 ~ ~:*
 
 ```mcfunction
 # Once
@@ -767,7 +767,7 @@ Place an entity at a precise y coordinate given by scores.
   **State**: Entity is teleported to the y coordinate indicated by the score.
 ```
 
-*Teleport to ~ 82 ~:*
+*Example: Teleport to ~ 82 ~:*
 
 ```mcfunction
 # Once
@@ -797,7 +797,7 @@ Place an entity at a precise z coordinate given by scores.
   **State**: Entity is teleported to the z coordinate indicated by the score.
 ```
 
-*Teleport to ~ ~ 65:*
+*Example: Teleport to ~ ~ 65:*
 
 ```mcfunction
 # Once
@@ -880,9 +880,7 @@ Place and rotate an entity according to its position and rotation scores.
 
 :Inputs:
   **Execution `as <entities>`**: Entity to teleport.
-
-  **Scores `@s bs.rot.[x,y,z]`**: Coordinates to teleport to.
-
+  **Scores `@s bs.pos.[x,y,z]`**: Coordinates to teleport to.
   **Scores `@s bs.rot.[h,v]`**: Rotation to teleport to.
 
   **Function macro**:

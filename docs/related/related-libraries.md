@@ -26,14 +26,14 @@ This pack provides a giant loot-table that extracts the BlockState data of the b
 :link: https://github.com/CloudWolfYT/CW-Callback-Scheduler
 :margin: 0 3 0 0
 
-This datapack allows you to easily run commands at a later time AS one or more entities!
+This datapack allows you to easily run commands at a later time as one or more entities!
 :::
 
 :::{grid-item-card} 📙 Data API
 :link: https://modrinth.com/datapack/developer-resources
 :margin: 0 3 0 0
 
-A multi-purpose datapack, more focused about Minecraft object manipulation.
+A multi-purpose datapack, more focused on Minecraft object manipulation.
 :::
 
 :::{grid-item-card} 🔻 Delta
@@ -110,7 +110,7 @@ A basic utility pack to do math with floats and/or doubles.
 :link: https://github.com/K-bai/Minecraft-Ray-Collision-Detector
 :margin: 0 3 0 0
 
-Minecraft Ray Collision Detector is a super precise raycast system in vanilla minecraft!
+Minecraft Ray Collision Detector is a super precise raycast system in vanilla Minecraft!
 :::
 
 :::{grid-item-card} ❤️ Minecraft-Simple-Custom-Heal
@@ -160,7 +160,7 @@ This library allows for easy and highly efficient checking for the swapping of e
 :link: https://modrinth.com/datapack/unif-logger
 :margin: 0 3 0 0
 
-UniF-Logger is a datapack for logger.
+UniF-Logger is a datapack for logging.
 :::
 
 ::::

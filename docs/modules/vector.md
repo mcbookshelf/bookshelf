@@ -2,7 +2,7 @@
 
 **`#bs.vector:help`**
 
-Vectors are fundamental and incredibly powerful tools to manage motions, forces and.. well... do physics!
+Vectors are fundamental and incredibly powerful tools to manage motions, forces and... well... do physics!
 
 ```{image} /_imgs/modules/vector-light.png
 :width: 100%
@@ -51,7 +51,7 @@ Get the number furthest to zero, regardless of sign.
   **Return | Score `$vector.abs_max bs.out`**: Component with the value furthest from 0.
 ```
 
-I want to get the max component of the vector (1000, 2000, 3000):
+*Example: I want to get the max component of the vector (1000, 2000, 3000):*
 
 ```mcfunction
 # Define the vector
@@ -83,7 +83,7 @@ Get the number closest to zero, regardless of sign.
   **Return | Score `$vector.abs_min bs.out`**: Component with the value closest to 0.
 ```
 
-I want to get the min component of the vector (1000, 2000, 3000):
+*Example: I want to get the min component of the vector (1000, 2000, 3000):*
 
 ```mcfunction
 # Define the vector
@@ -116,7 +116,7 @@ Get the equivalent of the vector passed in parameter in a base with a different 
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`number` **scaling**: Scalar for the function’s input and output.
+    - {nbt}`number` **scaling**: Scalar for the function's input and output.
   :::
 
 :Outputs:
@@ -132,7 +132,7 @@ This system uses the Minecraft coordinate system. Thus:
 - $\theta=0$ (starting point of the vertical angle) is on the horizontal plane.
 ```
 
-*A block is in ~2 ~5 ~10 from me, I want to have this position in local coordinate (^? ^? ^?):*
+*Example: A block is located at ~2 ~5 ~10 relative to me, I want to have this position in local coordinate (^? ^? ^?):*
 
 ```mcfunction
 # One time
@@ -142,7 +142,7 @@ scoreboard players set $vector.basis_rot_3d.pos.0 bs.in 2000
 scoreboard players set $vector.basis_rot_3d.pos.1 bs.in 5000
 scoreboard players set $vector.basis_rot_3d.pos.2 bs.in 10000
 
-# Difference between my rotation (= that of the coondata grid ^X ^Y ^Z) and the rotation of the Minecraft blocks grid (~X ~Y ~Z)
+# Difference between my rotation (= that of the coordinate grid ^X ^Y ^Z) and the rotation of the Minecraft blocks grid (~X ~Y ~Z)
 function #bs.position:get_rot {scale:1000}
 scoreboard players operation $vector.basis_rot_3d.rot.0 bs.in = @s bs.rot.h
 scoreboard players operation $vector.basis_rot_3d.rot.1 bs.in = @s bs.rot.v
@@ -154,7 +154,7 @@ function #bs.vector:basis_rot_3d {scaling:1000}
 tellraw @a [{"text": "X = ", "color": "dark_gray"},{"score":{"name":"$vector.basis_rot_3d.0", "objective": "bs.out"}, "color": "gold"},{"text":", Y = ", "color": "dark_gray"},{"score":{"name":"$vector.basis_rot_3d.1", "objective": "bs.out"},"color":"gold"},{"text":", Z = ","color":"dark_gray"},{"score":{"name":"$vector.basis_rot_3d.2","objective":"bs.out"},"color":"gold"}]
 ```
 
-*I want to have a vector pointing to where I'm looking at, but in relative coordinates ~X ~Y ~Z:*
+*Example: I want to have a vector pointing to where I'm looking at, but in relative coordinates ~X ~Y ~Z:*
 
 ```mcfunction
 # Once
@@ -196,7 +196,7 @@ Convert cartesian coordinates to spherical coordinates.
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`number` **scaling**: Scalar for the function’s input and output.
+    - {nbt}`number` **scaling**: Scalar for the function's input and output.
   :::
 
 :Outputs:
@@ -212,7 +212,7 @@ This system returns non conventional [spherical coordinates](https://en.wikipedi
 - $R$ is the radial distance.
 ```
 
-I want to convert the vector (1000, 2000, 3000) to spherical coordinates:
+*Example: I want to convert the vector (1000, 2000, 3000) to spherical coordinates:*
 
 ```mcfunction
 # Define the vector
@@ -245,14 +245,14 @@ Compute the vector product between $u$ and $v$.
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`number` **scaling**: Scalar for the function’s input and output.
+    - {nbt}`number` **scaling**: Scalar for the function's input and output.
   :::
 
 :Outputs:
   **Scores `$vector.cross_product.[0,1,2] bs.out`**: Result of the operation $=u \times v$.
 ```
 
-I want to perform $u \times v$ with $u=(1,2,3)$ and $v=(4,5,6)$:
+*Example: I want to perform $u \times v$ with $u=(1,2,3)$ and $v=(4,5,6):*
 
 ```mcfunction
 # Define the vectors
@@ -289,14 +289,14 @@ Compute the scalar product between $u$ and $v$.
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`number` **scaling**: Scalar for the function’s input and output.
+    - {nbt}`number` **scaling**: Scalar for the function's input and output.
   :::
 
 :Outputs:
   **Scores `$vector.dot_product bs.out`**: Result of the operation $=u · v$.
 ```
 
-I want to perform $u \cdot v$ with $u=(1,2,3)$ and $v=(4,5,6)$:
+*Example: I want to perform $u \cdot v$ with $u=(1,2,3)$ and $v=(4,5,6):*
 
 ```mcfunction
 # Define the vectors
@@ -335,7 +335,7 @@ Compute the norm of the vector.
   **Return | Score `$vector.length bs.out`**: Vector length.
 ```
 
-*Compute the length of a vector:*
+*Example: Compute the length of a vector:*
 
 ```mcfunction
 scoreboard players set $vector.length.0 bs.in 1000
@@ -351,11 +351,11 @@ tellraw @a [{"text":" Vector length: ","color":"dark_gray"},{"score":{"name":"$v
 ```{admonition} Performance Tip
 :class: tip
 
-If you want to minimize the performance impact, we recomande you to use the `length_squared` function instead of this one when it's possible. In fact, computing the length of a vector requires to perform square root operation which is not a simple task for a computer, especially in Minecraft.
+To minimize performance impact, we recommend using the `length_squared` function instead of this one when possible. Computing the length of a vector requires a square root operation, which is computationally intensive, especially in Minecraft.
 
-`length_squared` can often be used in the following cases:
-- You want to compare the length with a given one, then compute manually the square of the given value and compare it with the result of `length_squared`, which is faster than computing the real length.
-- You want to compare a vector length with another one, then you can compare the result of `length_squared` instead of computing the real length of both vectors.
+`length_squared` can be used effectively in these cases:
+- When comparing a vector's length with a given value, compute the square of the given value manually and compare it with the result of `length_squared`.
+- When comparing the lengths of two vectors, compare their `length_squared` results instead of computing their actual lengths.
 ```
 
 ::::
@@ -371,14 +371,14 @@ Compute the squared norm of the vector.
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`number` **scaling**: Scalar for the function’s input and output.
+    - {nbt}`number` **scaling**: Scalar for the function's input and output.
   :::
 
 :Outputs:
   **Return | Score `$vector.length_squared bs.out`**: Vector length squared.
 ```
 
-*Compute the squared length of a vector:*
+*Example: Compute the squared length of a vector:*
 
 ```mcfunction
 scoreboard players set $vector.length_squared.0 bs.in 1000
@@ -423,10 +423,10 @@ Normalize the vector by putting the length at the given scale while keeping prop
 ```{admonition} Performance Tip
 :class: tip
 
-A vector doesn’t always need to be normalized by its length. Often, the `normalize_max_component` function can be used instead. While this method doesn’t normalize the length, it simplifies some operations and enhances performance.
+Vector normalization doesn't always require using the length. Often, the `normalize_max_component` function can be used instead. While this method doesn't normalize the length, it simplifies operations and improves performance.
 ```
 
-*Normalize the vector (1000, 2000, 3000) with a scale of 1000:*
+*Example: Normalize the vector (1000, 2000, 3000) with a scale of 1000:*
 
 ```mcfunction
 # Define the vector
@@ -463,7 +463,7 @@ Normalize the vector by placing the largest component at the given scale while k
   **Score `$vector.normalize_max_component.factor bs.out`**: Normalization factor.
 ```
 
-*Fast normalize the vector (1000, 2000, 3000) with a scale of 1000:*
+*Example: Fast normalize the vector (1000, 2000, 3000) with a scale of 1000:*
 
 ```mcfunction
 # Define the vector
@@ -497,7 +497,7 @@ Convert spherical coordinates to cartesian coordinates.
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`number` **scaling**: Scalar for the function’s input and output.
+    - {nbt}`number` **scaling**: Scalar for the function's input and output.
   :::
 
 :Outputs:
@@ -513,7 +513,7 @@ This system uses non conventional [spherical coordinates](https://en.wikipedia.o
 - $R$ is the radial distance.
 ```
 
-I want to convert the spherical coordinates $(45°, 30°, 1)$ to cartesian coordinates:
+*Example: I want to convert the spherical coordinates $(45°, 30°, 1)$ to cartesian coordinates:*
 
 ```mcfunction
 # Define the spherical coordinates

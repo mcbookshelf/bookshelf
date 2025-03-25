@@ -2,7 +2,7 @@
 
 **`#bs.move:help`**
 
-Make your entity move exactly the way you want them to!
+Make your entity move exactly the way you want it to!
 
 ```{image} /_imgs/modules/move.png
 :align: center
@@ -108,10 +108,9 @@ Teleport an entity by its velocity scores, using the local reference frame, whil
 - **Interaction Shape**: Defines the area where the player can interact with or break the block. This includes actions such as right-clicking to open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have an interaction shape but no collision, such as crops or scaffolding.
 ```
 
-*Move a cube (block_display) by its velocity scores (uses an interaction as the hitbox):*
+*Example: Move a cube (block_display) by its velocity scores (uses an interaction as the hitbox):*
 
-```{code-block} mcfunction
-:force:
+```mcfunction
 # Once
 summon minecraft:block_display ~ ~ ~ {block_state:{Name:"stone"},teleport_duration:3,transformation:[1f,0f,0f,-0.5f,0f,1f,0f,0f,0f,0f,1f,-0.5f,0f,0f,0f,1f],Passengers:[{id:"minecraft:interaction",width:1f,height:1f}]}
 scoreboard players set @e[type=minecraft:block_display] bs.vel.x 100
@@ -192,7 +191,7 @@ Unlike relative velocity (canonical), this reference frame considers the entity'
 
 ```{function} #bs.move:set_motion {scale:<scaling>}
 
-Set the motion nbt of an entity using velocity scores.
+Set the motion NBT of an entity using velocity scores.
 
 :Inputs:
   **Execution `as <entities>`**: Entity to move.
@@ -209,7 +208,7 @@ Set the motion nbt of an entity using velocity scores.
   **State**: Motion is applied to the given entity.
 ```
 
-*Move a pig by its velocity scores:*
+*Example: Move a pig by its velocity scores:*
 
 ```mcfunction
 # Once

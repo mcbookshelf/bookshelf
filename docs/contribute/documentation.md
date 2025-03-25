@@ -1,6 +1,6 @@
 # 📝 Documentation
 
-Bookshelf aims to simplify map making and make it accessible. We’ve worked hard to create a comprehensive documentation website and ask that every new feature be documented properly.
+Bookshelf aims to simplify map making and make it accessible. We've worked hard to create a comprehensive documentation website and ask that every new feature be documented properly.
 
 ---
 
@@ -12,8 +12,9 @@ The documentation is written in Markdown, extended with Myst Parser. You can vie
 
 ## 🔨 Build the Documentation
 
-To verify that your documentation changes work as expected, you can build and view it locally on your computer.
-1. Open a terminal (or Powershell if you are on Windows).
+To verify that your documentation changes work as expected, you can build and view it locally on your computer:
+
+1. Open a terminal (or PowerShell if you are on Windows)
 2. Choose one of the following options to build and view the documentation:
 
 ### Option 1: Build Documentation

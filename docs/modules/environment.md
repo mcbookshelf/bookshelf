@@ -10,7 +10,7 @@ Comprehensive information and tools related to weather and biome properties.
 ```
 
 ```{epigraph}
-"The most dangerous worldview is the worldview of those have not viewed the world."
+"The most dangerous worldview is the worldview of those who have not viewed the world."
 
 -- Alexander von Humboldt
 ```
@@ -22,7 +22,6 @@ Comprehensive information and tools related to weather and biome properties.
 You can find below all functions available in this module.
 
 ---
-
 
 ### Get Biome
 
@@ -37,13 +36,13 @@ Get biome data at the execution position of the function.
   **Storage `bs:out environment.get_biome`**:
   :::{treeview}
   - {nbt}`compound` Biome data
-    - {nbt}`string` **type**: String representation of the id (e.g., `minecraft:plains`).
+    - {nbt}`string` **type**: String representation of the biome ID (e.g., `minecraft:plains`).
     - {nbt}`double` **temperature**: The base temperature of the biome.
     - {nbt}`bool` **has_precipitation**: Whether the biome has precipitation or not.
   :::
 ```
 
-*Get biome data at the current location:*
+*Example: Get biome data at the current location:*
 
 ```mcfunction
 # Once
@@ -59,7 +58,7 @@ data get storage bs:out environment.get_biome
 
 ```{function} #bs.environment:get_temperature {scale:<scaling>}
 
-Get the temperature at the execution position of the function taking the altitude into account.
+Get the temperature at the execution position of the function, taking the altitude into account.
 
 :Inputs:
   **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from which you want to get the temperature.
@@ -71,10 +70,10 @@ Get the temperature at the execution position of the function taking the altitud
   :::
 
 :Outputs:
-  **Return | Score `$environment.get_temperature bs.out`**: Temperature at a given position.
+  **Return | Score `$environment.get_temperature bs.out`**: Temperature at the given position.
 ```
 
-*Get the temperature at the current altitude:*
+*Example: Get the temperature at the current altitude:*
 
 ```mcfunction
 # Once
@@ -125,7 +124,7 @@ Determine if the biome has precipitation or not.
 
 **`bs.environment:is_raining`**
 
-Determine if it is raining or not.
+Determine if it is currently raining or not.
 
 > **Credits**: Aksiome, theogiraudet
 
@@ -135,7 +134,7 @@ Determine if it is raining or not.
 
 **`bs.environment:is_thundering`**
 
-Determine if it is thundering or not.
+Determine if it is currently thundering or not.
 
 > **Credits**: Aksiome, theogiraudet
 

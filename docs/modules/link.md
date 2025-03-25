@@ -46,7 +46,8 @@ Create a link between the entity executing the function and the entity closest t
   **Scores `@s bs.link.to`**: ID of the parent entity to which it is linked.
 ```
 
-*Link armor stands to the nearest sheep:*
+*Example: Link armor stands to the nearest sheep:*
+
 ```mcfunction
 # Once
 execute as @e[type=armor_stand] at @e[type=sheep,limit=1,sort=nearest] run function #bs.link:create_link_ata
@@ -80,7 +81,7 @@ Replace the entity at its relative position and local rotation. This operation r
   **State**: The entity is moved to maintain its relative position and local rotation relative to the parent entity.
 ```
 
-*Make armor stands mimic your moves:*
+*Example: Make armor stands mimic your moves:*
 
 ```mcfunction
 # Once
@@ -106,7 +107,7 @@ Replace the entity at its relative position. This operation repeated in a loop s
   **State**: The entity is moved to maintain its relative position with the parent entity.
 ```
 
-*Make armor stands mimic your moves:*
+*Example: Make armor stands mimic your moves:*
 
 ```mcfunction
 # Once
@@ -132,7 +133,7 @@ Replace the entity at its local rotation. This operation repeated in a loop simu
   **State**: The entity is moved to maintain its local rotation relative to the parent entity.
 ```
 
-*Make armor stands mimic your moves:*
+*Example: Make armor stands mimic your moves:*
 
 ```mcfunction
 # Once
@@ -158,7 +159,7 @@ Replace the entity at its relative position along an axis. This operation repeat
   **State**: The entity is moved to maintain its relative position with the parent entity on a single axis.
 ```
 
-*Make armor stands mimic your moves:*
+*Example: Make armor stands mimic your moves:*
 
 ```mcfunction
 # Once
@@ -188,7 +189,7 @@ Replace the entity at its horizontal or vertical local rotation. This operation 
   **State**: The entity is moved to maintain its local rotation relative to the parent entity on a single rotation axis.
 ```
 
-*Make armor stands mimic your moves:*
+*Example: Make armor stands mimic your moves:*
 
 ```mcfunction
 # Once
@@ -226,7 +227,7 @@ Keep the local position relative to the parent entity.
   **State**: The entity is moved to maintain its local position relative to the parent entity.
 ```
 
-*Make armor stands lock to your rotation:*
+*Example: Make armor stands lock to your rotation:*
 
 ```mcfunction
 # Once
@@ -263,7 +264,7 @@ Mirror the position and rotation of an entity along a plane.
   **State**: The entity is moved such as it mirrors the relative position and rotation of the parent entity.
 ```
 
-*Make armor stands mirror your position and rotation along a plane:*
+*Example: Make armor stands mirror your position and rotation along a plane:*
 
 ```mcfunction
 # Once
@@ -291,10 +292,10 @@ Mirror the position and rotation of an entity around a given point.
   **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position of the point around which the entity is mirrored.
 
 :Outputs:
-  **State**: The entity is moved such as it mirrors the position and rotation of the the parent entity around the given point.
+  **State**: The entity is moved such as it mirrors the position and rotation of the parent entity around the given point.
 ```
 
-*Make armor stands mirror your position and rotation around 0 0 0:*
+*Example: Make armor stands mirror your position and rotation around 0 0 0:*
 
 ```mcfunction
 # Once
@@ -324,7 +325,7 @@ Execute a command as child entities linked to the executing parent entity.
   **Return**: Fails if the execution entity has no linked child entities.
 ```
 
-*Execute a command as all armor stand children:*
+*Example: Execute a command as all armor stand children:*
 
 ```mcfunction
 # Once
@@ -335,7 +336,7 @@ function #bs.link:as_children {run:"say Hello World"}
 :::
 :::{tab-item} As Parent
 
-```{function} #bs.link:as_children {run:<command>}
+```{function} #bs.link:as_parent {run:<command>}
 
 Execute a command as the parent entity linked to the executing child entity.
 
@@ -346,7 +347,7 @@ Execute a command as the parent entity linked to the executing child entity.
   **Return**: Fails if the execution entity has no linked parent entity.
 ```
 
-*Execute a command as the parent of an armor stand:*
+*Example: Execute a command as the parent of an armor stand:*
 
 ```mcfunction
 # Once
@@ -357,7 +358,7 @@ execute as @n[type=armor_stand] run function #bs.link:as_parent {run:"say Hello 
 :::
 :::{tab-item} At Children
 
-```{function} #bs.link:as_children {run:<command>}
+```{function} #bs.link:at_children {run:<command>}
 
 Execute a command at the location of child entities linked to the executing parent entity.
 
@@ -368,7 +369,7 @@ Execute a command at the location of child entities linked to the executing pare
   **Return**: Fails if the execution entity has no linked child entities.
 ```
 
-*Execute a command at the location of all armor stand children:*
+*Example: Execute a command at the location of all armor stand children:*
 
 ```mcfunction
 # Once
@@ -379,7 +380,7 @@ function #bs.link:at_children {run:"summon lightning_bolt"}
 :::
 :::{tab-item} At Parent
 
-```{function} #bs.link:as_children {run:<command>}
+```{function} #bs.link:at_parent {run:<command>}
 
 Execute a command at the location of the parent entity linked to the executing child entity.
 
@@ -390,7 +391,7 @@ Execute a command at the location of the parent entity linked to the executing c
   **Return**: Fails if the execution entity has no linked parent entity.
 ```
 
-*Execute a command at the location of the parent of an armor stand:*
+*Example: Execute a command at the location of the parent of an armor stand:*
 
 ```mcfunction
 # Once
@@ -418,7 +419,8 @@ Removes an existing link between entities. When executed on a parent entity, it 
   **Scores `<children> bs.link.[...]`**: Resets all link-related scores.
 ```
 
-*Unlink the nearest armor stand from a sheep:*
+*Example: Unlink the nearest armor stand from a sheep:*
+
 ```mcfunction
 # Once
 execute as @e[type=armor_stand] at @e[type=sheep,limit=1,sort=nearest] run function #bs.link:create_link_ata
@@ -449,7 +451,7 @@ Determine the rotation and movement made by the parent entity, and reproduce the
   **State**: The entity is moved and rotated opposingly to the movements and rotations of the parent entity.
 ```
 
-*Make armor stands invert your moves and rotations:*
+*Example: Make armor stands invert your moves and rotations:*
 
 ```mcfunction
 # Once
@@ -475,7 +477,7 @@ Determine the movement made by the parent entity, and reproduce it in the opposi
   **State**: The entity is moved opposingly to the movements of the parent entity.
 ```
 
-*Make armor stands do the opposite of your moves:*
+*Example: Make armor stands do the opposite of your moves:*
 
 ```mcfunction
 # Once
@@ -501,7 +503,7 @@ Determine the rotation performed by the parent entity, and reproduce it in the o
   **State**: The entity is rotated opposingly to the rotations of the parent entity.
 ```
 
-*Make armor stands invert your rotations:*
+*Example: Make armor stands invert your rotations:*
 
 ```mcfunction
 # Once
@@ -527,7 +529,7 @@ Determine the movement made by the parent entity along a single axis, and reprod
   **State**: The entity is moved opposingly to the movements of the parent entity along a single axis.
 ```
 
-*Make armor stands do the opposite of your moves along an axis:*
+*Example: Make armor stands do the opposite of your moves along an axis:*
 
 ```mcfunction
 # Once
@@ -557,7 +559,7 @@ Determine the rotation performed by the parent entity along a rotation axis, and
   **State**: The entity is rotated opposingly to the rotations of the parent entity.
 ```
 
-*Make armor stands invert your rotations along a rotation axis:*
+*Example: Make armor stands invert your rotations along a rotation axis:*
 
 ```mcfunction
 # Once
@@ -595,7 +597,7 @@ Update scores that represent the link between an entity and its parent.
   **Scores `@s bs.link.l[x,y,z,h,v]`**: Local position and rotation relative to the parent entity.
 ```
 
-*Update armor stands link:*
+*Example: Update armor stands link:*
 
 ```mcfunction
 # Once
@@ -636,12 +638,13 @@ Find an entity that has the same `bs.link.to` as the input value.
   **Score `$link.to bs.in`**: Value to check against.
 ```
 
-*Find the entity that has a `bs.link.to` equal to 1:*
+*Example: Find the entity that has a `bs.link.to` equal to 1:*
 
 ```mcfunction
 scoreboard players set $link.to bs.in 1
 execute as @n[predicate=bs.link:link_equal] run say I'm the one
 ```
+
 > **Credits**: Aksiome
 
 ---
@@ -655,9 +658,7 @@ This module allows you to combine multiple behaviors to create your very own opt
 
 To create a new behavior, you first need to create a new function tag. The tag must start with `#bs.link:behaviors/setup` and end with `#bs.link:behaviors/apply`. Between those 2 functions you are free to use any behaviors that are provided inside the `#bs.link:behaviors` folder.
 
-
-
-*This is how `#bs.link:mirror_x_plane` is implemented inside bookshelf:*
+*Example: This is how `#bs.link:mirror_x_plane` is implemented inside bookshelf:*
 
 ```json
 {
@@ -672,6 +673,7 @@ To create a new behavior, you first need to create a new function tag. The tag m
   ]
 }
 ```
+
 ---
 
 ```{include} ../_templates/comments.md

@@ -19,7 +19,7 @@
 
 # 🕵️‍♂️ What is Bookshelf?
 
-Bookshelf (formerly known as Gunivers Libs) is a modular library datapack designed to simplify complex systems in Minecraft maps. Ideal for mapmakers looking for easy-to-implement tools.
+Bookshelf (formerly known as Gunivers Libs) is a modular library datapack designed to simplify complex systems in Minecraft maps. It is ideal for mapmakers seeking easy-to-implement tools.
 
 <div align="center">
     <a href="https://docs.mcbookshelf.dev/en/latest/quickstart.html">
@@ -79,19 +79,19 @@ Bookshelf (formerly known as Gunivers Libs) is a modular library datapack design
 
 # 🔥 Motivation
 
-As developers, we understand the value of libraries: they save time, streamline workflows, and eliminate the need to reinvent the wheel. However, we’ve noticed that many mapmakers in the Minecraft community are less familiar with this concept.
+As developers, we understand the value of libraries: they save time, streamline workflows, and eliminate the need to reinvent the wheel. However, we have noticed that many mapmakers in the Minecraft community are less familiar with this concept.
 
-That’s why we started this project, to provide a variety of reusable tools and encourage mapmakers to embrace the use of libraries.
+That is why we started this project: to provide a variety of reusable tools and encourage mapmakers to embrace the use of libraries.
 
-While we strive to keep our modules as optimized as possible, our top priority is accessibility. We focus on creating features that are easy to use and simple to install, ensuring they’re practical for everyone.
+While we strive to keep our modules as optimized as possible, our top priority is accessibility. We focus on creating features that are easy to use and simple to install, ensuring they are practical for everyone.
 
-> “I have seen further than others because I have stood on the shoulders of giants.”
+> "I have seen further than others because I have stood on the shoulders of giants."
 >
 > -- Isaac Newton
 
 
 # 🤝 Contribution
 
-If you have any doubts related to the project or want to discuss something, join [our Discord](https://discord.gg/MkXytNjmBt) server.
+If you have any questions about the project or want to discuss something, join [our Discord](https://discord.gg/MkXytNjmBt) server.
 
 If you want to contribute, please refer to the [contribution docs](https://docs.mcbookshelf.dev/en/latest/contribute/index.html) for more information.

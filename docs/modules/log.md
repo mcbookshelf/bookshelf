@@ -7,7 +7,7 @@ Log messages in the chat with varying levels of severity.
 ```{admonition} Enable Command Blocks
 :class: warning
 
-This module uses a command block to get the system time. For the time to be displayed as intended, be sure that `enable-command-block` is set to `true` in you `server.properties` file and that the `sendCommandFeedback` gamerule is enabled.
+This module uses a command block to get the system time. For the time to be displayed as intended, be sure that `enable-command-block` is set to `true` in your `server.properties` file and that the `sendCommandFeedback` gamerule is enabled.
 ```
 
 ---
@@ -25,7 +25,7 @@ You can find below all functions available in this module.
 
 ```{function} #bs.log:error
 
-Log an error message. For more information on how it works see the [usage](#usage) section. By default, it’s printed as: [ERROR] <tag> > <message> and hovering over the left part of the log reveals the timestamp and log function path.
+Log an error message. For more information on how it works see the [usage](#usage) section. By default, it's printed as: [ERROR] <tag> > <message> and hovering over the left part of the log reveals the timestamp and log function path.
 
 :Inputs:
   **Function macro**:
@@ -38,7 +38,7 @@ Log an error message. For more information on how it works see the [usage](#usag
   :::
 ```
 
-*Log an error message that originates from the `bs.foo:bar` function:*
+*Example: Log an error message that originates from the `bs.foo:bar` function:*
 
 ```mcfunction
 function #bs.log:error { namespace: "bs.foo", path: "bs.foo:bar", tag: "bar", message: '"Error"' }
@@ -49,7 +49,7 @@ function #bs.log:error { namespace: "bs.foo", path: "bs.foo:bar", tag: "bar", me
 
 ```{function} #bs.log:warn
 
-Log a warning message. For more information on how it works see the [usage](#usage) section. By default, it’s printed as: [WARN] <tag> > <message> and hovering over the left part of the log reveals the timestamp and log function path.
+Log a warning message. For more information on how it works see the [usage](#usage) section. By default, it's printed as: [WARN] <tag> > <message> and hovering over the left part of the log reveals the timestamp and log function path.
 
 :Inputs:
   **Function macro**:
@@ -62,7 +62,7 @@ Log a warning message. For more information on how it works see the [usage](#usa
   :::
 ```
 
-*Log a warn message that originates from the `bs.foo:bar` function:*
+*Example: Log a warning message that originates from the `bs.foo:bar` function:*
 
 ```mcfunction
 function #bs.log:warn { namespace: "bs.foo", path: "bs.foo:bar", tag: "bar", message: '"Warning"' }
@@ -73,7 +73,7 @@ function #bs.log:warn { namespace: "bs.foo", path: "bs.foo:bar", tag: "bar", mes
 
 ```{function} #bs.log:info
 
-Log an information message. For more information on how it works see the [usage](#usage) section. By default, it’s printed as: [INFO] <tag> > <message> and hovering over the left part of the log reveals the timestamp and log function path.
+Log an information message. For more information on how it works see the [usage](#usage) section. By default, it's printed as: [INFO] <tag> > <message> and hovering over the left part of the log reveals the timestamp and log function path.
 
 :Inputs:
   **Function macro**:
@@ -86,7 +86,7 @@ Log an information message. For more information on how it works see the [usage]
   :::
 ```
 
-*Log an info message that originates from the `bs.foo:bar` function:*
+*Example: Log an info message that originates from the `bs.foo:bar` function:*
 
 ```mcfunction
 function #bs.log:info { namespace: "bs.foo", path: "bs.foo:bar", tag: "bar", message: '"Info"' }
@@ -97,7 +97,7 @@ function #bs.log:info { namespace: "bs.foo", path: "bs.foo:bar", tag: "bar", mes
 
 ```{function} #bs.log:debug
 
-Log a debug message. For more information on how it works see the [usage](#usage) section. By default, it’s printed as: [DEBUG] <tag> > <message> and hovering over the left part of the log reveals the timestamp and log function path.
+Log a debug message. For more information on how it works see the [usage](#usage) section. By default, it's printed as: [DEBUG] <tag> > <message> and hovering over the left part of the log reveals the timestamp and log function path.
 
 :Inputs:
   **Function macro**:
@@ -110,7 +110,7 @@ Log a debug message. For more information on how it works see the [usage](#usage
   :::
 ```
 
-*Log a debug message that originates from the `bs.foo:bar` function:*
+*Example: Log a debug message that originates from the `bs.foo:bar` function:*
 
 ```mcfunction
 function #bs.log:debug { namespace: "bs.foo", path: "bs.foo:bar", tag: "bar", message: '"Debug"' }
@@ -143,7 +143,7 @@ Retrieve the log history. It shows all the previously logged messages.
   :::
 ```
 
-*View the log history for a specific namespace, tag, and severity level:*
+*Example: View the log history for a specific namespace, tag, and severity level:*
 
 ```mcfunction
 # Once
@@ -168,7 +168,7 @@ Clear the log history.
   :::
 ```
 
-*Clear the log history for a specific namespace, tag, and severity level:*
+*Example: Clear the log history for a specific namespace, tag, and severity level:*
 
 ```mcfunction
 # Once
@@ -206,7 +206,7 @@ The `_` symbol acts as a wildcard, logging all tags or all levels:
 - `_.log._._`: show all logs.
 
 ```{note}
-Each level allows the visualization of subsequent levels. For example, if a user give themselves a tag ending with warn, they can visualize logs of warn and error levels. By default, logs are not displayed to any user.
+Each level allows the visualization of subsequent levels. For example, if a user gives themselves a tag ending with warn, they can visualize logs of warn and error levels. By default, logs are not displayed to any user.
 ```
 
 ---
@@ -216,19 +216,21 @@ Each level allows the visualization of subsequent levels. For example, if a user
 Log functions take four variables as input. The `path` of the current function that inform users of the log origin, the `tag`, the `namespace` and the `message`.
 
 ```{warning}
-The `message` string must be a valid JSON text component. Thus, to specify a plain string text as a message, the message needs to be escaped  (`"\"message\""` or `'"message"'`).
+The `message` string must be a valid JSON text component. Thus, to specify a plain string text as a message, the message needs to be escaped (`"\"message\""` or `'"message"'`).
 ```
 
-*Log a simple warning message. We assume the log originates from the `bs.foo:bar` function:*
+*Example: Log a simple warning message. We assume the log originates from the `bs.foo:bar` function:*
+
 ```mcfunction
 function #bs.log:warn { namespace: "bs.foo", path: "bs.foo:bar", tag: "bar", message: '"A warning message"' }
 ```
-Will display the following message if the user has one of these tags: `bs.foo.log.bar.warn`, `bs.foo.log.bar.info`, `bs.foo.log.bar.debug`, `bs.foo.log._.warn`, `bs.foo.log._.info`, `bs.foo.log._.debug`, `bs.foo.log._._`, `bs.foo.log.bar._`, `_.log.bar.warn`, `_.log.bar.info`, `_.log.bar.debug`, `_.log._.warn`, `_.log._.info`, `_.log._.debug`, `_.log._._`, `_.log.bar._`.
 
+Will display the following message if the user has one of these tags: `bs.foo.log.bar.warn`, `bs.foo.log.bar.info`, `bs.foo.log.bar.debug`, `bs.foo.log._.warn`, `bs.foo.log._.info`, `bs.foo.log._.debug`, `bs.foo.log._._`, `bs.foo.log.bar._`, `_.log.bar.warn`, `_.log.bar.info`, `_.log.bar.debug`, `_.log._.warn`, `_.log._.info`, `_.log._.debug`, `_.log._._`, `_.log.bar._`.
 
 ![](/_imgs/modules/log/example-1.png)
 
-*Log a complex info message. We assume the log originates from the `bs.foo:baz` function:*
+*Example: Log a complex info message. We assume the log originates from the `bs.foo:baz` function:*
+
 ```mcfunction
 function #bs.log:info { namespace: "bs.foo", path: "bs.foo:baz", tag: "baz", message: '[{"text":"Score: ","color":"light_purple"},{"score":{"name":"-1","objective":"bs.const"}},{"text":", "},{"text":"@p: ","color":"light_purple"},{"selector":"@p"},{"text":", "},{"text":"[hover me]","color":"light_purple","hoverEvent":{"action":"show_text","contents":"That tickles!"}}]' }
 ```
@@ -239,7 +241,7 @@ Will display the following message if the user has one of these tags: `bs.foo.lo
 
 ### Customize the Format
 
-Bookshelf proposes to define different log message format according to the namespace.
+Bookshelf proposes to define different log message formats according to the namespace.
 To add new log message formats, you have to write directly inside the storage array `bs:const log.messages`:
 
 ```{code-block} mcfunction
@@ -275,7 +277,7 @@ Bookshelf exposes several values that can be used directly in the log messages f
 {nbt}`string` | bs:const | log.time_hms       | A JSON text component to display time in the in hh:mm:ss format                         |
 {nbt}`string` | bs:const | log.time_hmst      | A JSON text component to display time in the in hh:mm:ss:tt format                      |
 
-A simple example to define custom log message formats for the namespace `bs.foo`:
+*Example: Define custom log message formats for the namespace `bs.foo`:*
 
 ```{code-block} mcfunction
 :force:

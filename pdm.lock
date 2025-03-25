@@ -119,6 +119,21 @@ files = [
 ]
 
 [[package]]
+name = "bolt"
+version = "0.49.1"
+requires_python = "<4.0,>=3.10"
+summary = "Supercharge Minecraft commands with Python"
+groups = ["default"]
+dependencies = [
+    "beet>=0.108.0",
+    "mecha>=0.95.0",
+]
+files = [
+    {file = "bolt-0.49.1-py3-none-any.whl", hash = "sha256:912496abb4ed2593db1e44ec6655685d63d0003ee7218a2740ce91ad8ad9e36e"},
+    {file = "bolt-0.49.1.tar.gz", hash = "sha256:40cd165e6eb438161cc8cd91fbebc90672169ee7114a3a79d3351e127a08dec7"},
+]
+
+[[package]]
 name = "certifi"
 version = "2025.1.31"
 requires_python = ">=3.6"
@@ -373,6 +388,21 @@ groups = ["default", "docs"]
 files = [
     {file = "mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"},
     {file = "mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"},
+]
+
+[[package]]
+name = "mecha"
+version = "0.96.0"
+requires_python = "<4.0,>=3.10"
+summary = "A powerful Minecraft command library"
+groups = ["default"]
+dependencies = [
+    "beet>=0.108.0",
+    "tokenstream<2.0.0,>=1.7.0",
+]
+files = [
+    {file = "mecha-0.96.0-py3-none-any.whl", hash = "sha256:eb382c0b804d3e9dc8f0d232fa0d10ebe8bd3fc1de4d98386cb89814c6b688a3"},
+    {file = "mecha-0.96.0.tar.gz", hash = "sha256:e92ad8adc3efa46356bcaf776e607b47143b69c980c8a321d31242e40c2127c9"},
 ]
 
 [[package]]
@@ -925,6 +955,17 @@ dependencies = [
 files = [
     {file = "starlette-0.46.0-py3-none-any.whl", hash = "sha256:913f0798bd90ba90a9156383bcf1350a17d6259451d0d8ee27fc0cf2db609038"},
     {file = "starlette-0.46.0.tar.gz", hash = "sha256:b359e4567456b28d473d0193f34c0de0ed49710d75ef183a74a5ce0499324f50"},
+]
+
+[[package]]
+name = "tokenstream"
+version = "1.7.0"
+requires_python = ">=3.10,<4.0"
+summary = "A versatile token stream for handwritten parsers"
+groups = ["default"]
+files = [
+    {file = "tokenstream-1.7.0-py3-none-any.whl", hash = "sha256:fdbb20e8a99b07e94ce88016e5f243a1582630a7459bd2e7a1c786f33543fcf9"},
+    {file = "tokenstream-1.7.0.tar.gz", hash = "sha256:9f98387c7e74d224f7cca874ce77bb775ece6cb585e9ba18441960e2b35fae61"},
 ]
 
 [[package]]

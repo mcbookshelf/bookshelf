@@ -14,22 +14,22 @@ Bookshelf respects a certain tree structure which can be similar to Java package
 
 **Module Requirements:**
 
-- Each module must include a `module.json`, as described in the [metadata page](project:metadata.md).
+- Each module must include a `module.json`, as described in the [metadata page](project:metadata.md)
 
-- Each module must also include a `pack.png` and a `README.md`.
+- Each module must also include a `pack.png` and a `README.md`
 
-- The `__load__` and `__unload__` functions are required to manage the module's loading and unloading. This includes resetting objectives, storages, and any other necessary elements.
+- The `__load__` and `__unload__` functions are required to manage the module's loading and unloading. This includes resetting objectives, storages, and any other necessary elements
 
 
 **Feature Requirements:**
 
-- Each feature function should have a dedicated function tag that declares metadata, as detailed in the [metadata page](project:metadata.md).
+- Each feature function should have a dedicated function tag that declares metadata, as detailed in the [metadata page](project:metadata.md)
 
-- Each feature should declares metadata, as detailed in the [metadata page](project:metadata.md).
+- Each feature should declare metadata, as detailed in the [metadata page](project:metadata.md)
 
-- A feature is equal to a unique utility, so we should not hesitate to decompose its features in order to make it more readable and to promote reusability.
+- A feature is equal to a unique utility, so we should not hesitate to decompose its features in order to make it more readable and to promote reusability
 
-In addition to these few constraints, contributors are free to organize their files as they wish as long as it remains coherent and it respects the global structure.
+In addition to these few constraints, contributors are free to organize their files as they wish as long as it remains coherent and respects the global structure.
 ::::
 ::::{grid-item}
 :columns: 12 6 6 5
