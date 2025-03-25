@@ -17,5 +17,4 @@ data modify storage bs:in block.fill_block set value {block:"minecraft:stone",fr
 function #bs.block:fill_block
 assert block ~ ~ ~ minecraft:stone
 assert not block ~ ~1 ~ minecraft:stone
-await delay 1t
-assert block ~ ~1 ~ minecraft:bookshelf
+await block ~ ~1 ~ minecraft:bookshelf

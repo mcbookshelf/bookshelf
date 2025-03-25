@@ -18,5 +18,4 @@ function #bs.block:fill_block
 
 assert block ~ ~ ~ minecraft:stone
 assert not block ~1 ~ ~ minecraft:stone
-await delay 1t
-assert block ~1 ~ ~ minecraft:stone
+await block ~1 ~ ~ minecraft:stone

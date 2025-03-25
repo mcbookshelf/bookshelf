@@ -16,14 +16,16 @@ class Runner:
     assets: Assets
 
     PATTERNS = MappingProxyType({
-        "any_error": re.compile(r"::error title=(?P<title>.*?)::(?P<message>.*)"),
-        "test_error": re.compile(
-            r"::error title=Test (?P<name>.*?) "
-            r"failed on line (?P<line>\d+)!::(?P<message>.*)",
+        "any_error": re.compile(
+            r"::error title=(?P<title>.*?)::(?P<message>.*)",
         ),
-        "test_batch": re.compile(
-            r"Running test batch '(?P<name>.*?):0' "
+        "test_environment": re.compile(
+            r"Running test environment '(?P<name>bs.*?):default' batch 0 "
             r"\((?P<count>\d+) tests\)",
+        ),
+        "test_error": re.compile(
+            r"::error title=Test (?P<name>bs.*?) "
+            r"failed on line (?P<line>\d+)!::(?P<message>.*)",
         ),
     })
 
@@ -61,12 +63,12 @@ class Runner:
         """Handle generic errors detected in the process output."""
         logger.error(match["message"], extra={"title": match["title"]})
 
-    def _handle_test_batch(self, match: re.Match, logger: StepLogger) -> None:
-        """Handle test batch start logs."""
+    def _handle_test_environment(self, match: re.Match, logger: StepLogger) -> None:
+        """Handle test environment start logs."""
         logger.debug(
             "Test '%s' module (%s tests)",
             match["name"],
-            int(match["count"]) - 1,
+            int(match["count"]),
         )
 
     def _handle_test_error(self, match: re.Match, logger: StepLogger) -> None:
@@ -85,9 +87,9 @@ class Runner:
             return
         for line in iter(process.stdout.readline, ""):
             for pattern, callback in (
-                (self.PATTERNS["test_error"], self._handle_test_error),
-                (self.PATTERNS["test_batch"], self._handle_test_batch),
                 (self.PATTERNS["any_error"], self._handle_any_error),
+                (self.PATTERNS["test_environment"], self._handle_test_environment),
+                (self.PATTERNS["test_error"], self._handle_test_error),
             ):
                 if match := pattern.search(line):
                     callback(match, logger)
