@@ -17,6 +17,6 @@ $function #bs.log:error { \
   namespace: bs.interaction, \
   path: "#bs.interaction:$(event)", \
   tag: "$(event)", \
-  message: "The current entity is not an interaction.", \
+  message: ["The current entity is not an interaction."], \
 }
 return fail

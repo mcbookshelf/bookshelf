@@ -17,6 +17,6 @@ $function #bs.log:error { \
   namespace: bs.interaction, \
   path: "#bs.interaction:$(event)", \
   tag: "$(event)", \
-  message: "The executor is not valid or cannot be interpreted.", \
+  message: ["The executor is not valid or cannot be interpreted."], \
 }
 return fail

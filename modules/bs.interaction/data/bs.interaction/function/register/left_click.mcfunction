@@ -27,7 +27,7 @@ execute if score #i bs.ctx matches 2.. run function #bs.log:warn { \
   namespace: bs.interaction, \
   path: "#bs.interaction:on_left_click", \
   tag: "on_left_click", \
-  message: "The selector points to multiple entities. Only the first one is selected." \
+  message: ["The selector points to multiple entities. Only the first one is selected."] \
 }
 
 tag @s add bs.interaction.listen_left_click

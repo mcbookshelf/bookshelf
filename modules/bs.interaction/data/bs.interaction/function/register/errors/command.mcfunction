@@ -17,6 +17,6 @@ $function #bs.log:error { \
   namespace: bs.interaction, \
   path: "#bs.interaction:$(event)", \
   tag: "$(event)", \
-  message: "The command is not valid.", \
+  message: ["The command is not valid."], \
 }
 return fail
