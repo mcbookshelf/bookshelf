@@ -13,4 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _.executor set value $(text)
+$function #bs.log:error { \
+  namespace: bs.interaction, \
+  path: "#bs.interaction:$(event)", \
+  tag: "$(event)", \
+  message: "The executor is not valid or cannot be interpreted.", \
+}
+return fail

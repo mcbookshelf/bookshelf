@@ -13,6 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+scoreboard players add @s bs.interaction.logout 1
 scoreboard players add #interaction.hovered bs.data 1
 scoreboard players operation @p[distance=0,tag=bs.interaction.source] bs.interaction.hover = @s bs.interaction.hover
 

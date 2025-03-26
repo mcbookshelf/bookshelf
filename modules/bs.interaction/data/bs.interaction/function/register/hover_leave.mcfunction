@@ -13,29 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless entity @s[type=interaction] run return run function #bs.log:error { \
-  namespace: bs.interaction, \
-  path: "#bs.interaction:on_hover_leave", \
-  tag: "on_hover_leave", \
-  message: "The current entity is not an interaction.", \
-}
+execute unless entity @s[type=minecraft:interaction] run return run function bs.interaction:register/errors/entity { event: "on_hover_leave" }
+
 $data modify storage bs:ctx _ set value { run: '$(run)', executor: $(executor), type: "hover_leave" }
 
 execute store success score #s bs.ctx run function bs.interaction:register/utils/check_command with storage bs:ctx _
-execute unless score #s bs.ctx matches 1 run return run function #bs.log:error { \
-  namespace: bs.interaction, \
-  path: "#bs.interaction:on_hover_leave", \
-  tag: "on_hover_leave", \
-  message: "The command is not valid.", \
-}
+execute unless score #s bs.ctx matches 1 run return run function bs.interaction:register/errors/command { event: "on_hover_leave" }
 
 execute unless function bs.interaction:register/utils/executor/setup \
-  run return run function #bs.log:error { \
-    namespace: bs.interaction, \
-    path: "#bs.interaction:on_hover_leave", \
-    tag: "on_hover_leave", \
-    message: "The executor is not valid or cannot be interpreted.", \
-  }
+  run return run function bs.interaction:register/errors/executor { event: "on_hover_leave" }
 
 execute if score #i bs.ctx matches 2.. run function #bs.log:warn { \
   namespace: bs.interaction, \
