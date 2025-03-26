@@ -30,7 +30,7 @@ execute unless score #s bs.ctx matches 1 run return run function #bs.log:error {
   namespace: "bs.sidebar", \
   path: "#bs.sidebar:create", \
   tag: "create", \
-  message: [{text:"The name [",color:"red"},{storage:"bs:ctx",nbt:"_.name"},{text:"] must be a valid JSON text component."}], \
+  message: [{text:"The name [",color:"red"},{storage:"bs:ctx",nbt:"_.name"},{text:"] must be a valid SNBT text component."}], \
 }
 
 # check that the contents have between 1 and 15 entries

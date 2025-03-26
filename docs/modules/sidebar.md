@@ -23,9 +23,9 @@ Create and register a new sidebar.
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`string` **objective**: An objective used for the sidebar.
-    - {nbt}`string` **display_name**: Displayed objective name. Must be a valid JSON text component.
+    - {nbt}`string` **display_name**: Displayed objective name. Must be a valid SNBT text component.
     - {nbt}`list` **contents**: Lines displayed on the sidebar.
-      - {nbt}`list` {nbt}`string`: Must either be a valid text component or an array with two text components for the left and right sides.
+      - {nbt}`list` {nbt}`string`: Must either be a valid SNBT text component or an array with two SNBT text components for the left and right sides.
   :::
 ```
 
