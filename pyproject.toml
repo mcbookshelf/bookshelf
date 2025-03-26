@@ -21,7 +21,7 @@ license = { text = "MPL-2.0" }
 [dependency-groups]
 dev = [
   "mypy>=1.15.0",
-  "ruff>=0.9.10",
+  "ruff>=0.11.2",
   "types-colorama>=0.4.15.20240311",
   "types-docutils>=0.21.0.20241128",
   "types-requests>=2.32.0.20250306",
@@ -39,11 +39,11 @@ docs = [
 ]
 
 [project.scripts]
-build = "bookshelf.cli.modules:build"
-docs = "bookshelf.cli.docs:docs"
-examples = "bookshelf.cli.examples:examples"
-modules = "bookshelf.cli.modules:modules"
-watch = "bookshelf.cli.modules:watch"
+build = "bookshelf.commands.modules:build"
+docs = "bookshelf.commands.docs:docs"
+examples = "bookshelf.commands.examples:examples"
+modules = "bookshelf.commands.modules:modules"
+watch = "bookshelf.commands.modules:watch"
 
 [tool.pdm]
 distribution = true

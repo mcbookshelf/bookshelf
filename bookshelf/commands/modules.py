@@ -6,7 +6,7 @@ from tempfile import TemporaryDirectory
 
 import click
 from beet import PackConfig, Project, ProjectConfig
-from beet.toolchain.cli import error_handler
+from beet.toolchain.commands import error_handler
 
 from bookshelf.definitions import (
     BUILD_DIR,
@@ -21,7 +21,7 @@ from bookshelf.definitions import (
 )
 from bookshelf.helpers import render_template
 from bookshelf.logger import log_step
-from bookshelf.meta import build_manifest, get_feature_meta, get_module_meta
+from bookshelf.metadata import build_manifest, get_feature_meta, get_module_meta
 from bookshelf.packtest import Assets, Runner
 
 MANIFEST_FILE = "data/manifest.json"
