@@ -1,4 +1,4 @@
-name: 📋 Review Modules
+name: 📋 Modules Review
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   check:
-    name: 🔍 Check Modules
+    name: 🔍 Modules Check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -24,7 +24,7 @@ jobs:
         run: pdm run modules check
 
   test:
-    name: 🧪 Test Modules
+    name: 🧪 Modules Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository

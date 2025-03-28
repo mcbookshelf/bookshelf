@@ -1,4 +1,4 @@
-name: 🏷️ Release Modules
+name: 🏷️ Release Build
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ jobs:
     uses: ./.github/workflows/review.yml
 
   check:
-    name: 🔍 Check Release Necessity
+    name: 🔍 Release Check
     needs: [metadata, review]
     runs-on: ubuntu-latest
     environment: release
@@ -36,9 +36,8 @@ jobs:
           VERSION=$(python -c "from bookshelf import version; print(version())")
           MC_VERSIONS=$(python -c "from bookshelf import mc_versions; print(mc_versions())")
 
-          mc_versions=$(echo $MC_VERSIONS | sed 's/ /,/g')
           echo "release_tag=v$VERSION" >> $GITHUB_OUTPUT
-          echo "release_name=v$VERSION - MC $mc_versions" >> $GITHUB_OUTPUT
+          echo "release_name=v$VERSION - MC $MC_VERSIONS" >> $GITHUB_OUTPUT
 
           if [ -n "$(git tag -l "v$VERSION")" ]; then
             echo "version_exists=true" >> $GITHUB_OUTPUT
@@ -51,25 +50,8 @@ jobs:
           echo "release_name=${{ steps.check.outputs.release_name }}"
           echo "version_exists=${{ steps.check.outputs.version_exists }}"
 
-  publish:
-    name: 🚀 Publish to PyPI
-    needs: check
-    if: ${{ needs.check.outputs.version_exists == 'false' }}
-    runs-on: ubuntu-latest
-    environment: release
-    permissions:
-      contents: read
-      id-token: write
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Install PDM
-        uses: pdm-project/setup-pdm@v4
-      - name: Publish to PyPI
-        run: pdm publish
-
   release:
-    name: 📦 Create Release
+    name: 📦 Release Build
     needs: check
     if: ${{ needs.check.outputs.version_exists == 'false' }}
     runs-on: ubuntu-latest
@@ -94,7 +76,23 @@ jobs:
           tag_name: ${{ needs.check.outputs.release_tag }}
           make_latest: true
           files: release/*.zip
-      - name: Update Latest Tag
+      - name: Update Tag
         run: |
           git tag -f latest ${{ needs.check.outputs.release_tag }}
           git push -f origin latest
+
+  publish:
+    name: 🚀 PyPI Publish
+    needs: release
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Install PDM
+        uses: pdm-project/setup-pdm@v4
+      - name: Publish to PyPI
+        run: pdm publish

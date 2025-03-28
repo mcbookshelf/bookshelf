@@ -1,4 +1,4 @@
-name: 🏷️ Pre-Release Modules
+name: 🏷️ Pre-Release Build
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   check:
-    name: 🔍 Check Release Necessity
+    name: 🔍 Pre-Release Check
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     outputs:
@@ -29,9 +29,8 @@ jobs:
           VERSION=$(python -c "from bookshelf import version; print(version())")
           MC_VERSIONS=$(python -c "from bookshelf import mc_versions; print(mc_versions())")
 
-          mc_versions=$(echo $MC_VERSIONS | sed 's/ /,/g')
           echo "release_tag=v$VERSION" >> $GITHUB_OUTPUT
-          echo "release_name=v$VERSION - MC $mc_versions" >> $GITHUB_OUTPUT
+          echo "release_name=v$VERSION - MC $MC_VERSIONS" >> $GITHUB_OUTPUT
 
           if [ -n "$(git tag -l "v$VERSION")" ]; then
             echo "version_exists=true" >> $GITHUB_OUTPUT
@@ -45,7 +44,7 @@ jobs:
           echo "version_exists=${{ steps.check.outputs.version_exists }}"
 
   release:
-    name: 📦 Create Pre-Release
+    name: 📦 Pre-Release Build
     needs: check
     if: ${{ needs.check.outputs.version_exists == 'false' }}
     runs-on: ubuntu-latest
@@ -69,3 +68,7 @@ jobs:
           tag_name: dev
           prerelease: true
           files: release/*.zip
+      - name: Update Tag
+        run: |
+          git tag -f dev
+          git push -f origin dev
