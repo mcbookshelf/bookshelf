@@ -4,6 +4,7 @@ on:
   push:
     branches: ["master"]
   pull_request:
+  workflow_call:
   workflow_dispatch:
 
 jobs:
@@ -11,8 +12,10 @@ jobs:
     name: 🔍 Check Modules
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pdm-project/setup-pdm@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Install PDM
+        uses: pdm-project/setup-pdm@v4
         with:
           cache: true
       - name: Install Dependencies
@@ -24,11 +27,14 @@ jobs:
     name: 🧪 Test Modules
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pdm-project/setup-pdm@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Install PDM
+        uses: pdm-project/setup-pdm@v4
         with:
           cache: true
-      - uses: actions/setup-java@v4
+      - name: Install Java
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'

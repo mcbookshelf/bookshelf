@@ -1,0 +1,35 @@
+name: 🔍 Check Metadata
+
+on:
+  push:
+    branches:
+      - '**'
+  workflow_call:
+
+permissions:
+  contents: write
+
+jobs:
+  commit:
+    name: 🔖 Commit Metadata
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - name: Set Up Git User
+        uses: fregante/setup-git-user@v2
+      - name: Install PDM
+        uses: pdm-project/setup-pdm@v4
+        with:
+          cache: true
+      - name: Install Dependencies
+        run: pdm install
+      - name: Update Metadata
+        run: pdm run modules update
+      - name: Commit and Push Changes
+        run: |
+          git add .
+          git commit -m "⚙️ ci: update generated metadata" || echo "No metadata updates"
+          git push origin HEAD:${{ github.ref }}
