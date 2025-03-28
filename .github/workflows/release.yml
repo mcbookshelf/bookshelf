@@ -9,6 +9,8 @@ permissions:
 jobs:
   metadata:
     uses: ./.github/workflows/metadata.yml
+    with:
+      versions: true
 
   review:
     uses: ./.github/workflows/review.yml

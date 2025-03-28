@@ -5,6 +5,11 @@ on:
     branches:
       - '**'
   workflow_call:
+    inputs:
+      versions:
+        type: boolean
+        default: false
+        required: false
 
 permissions:
   contents: write
@@ -27,7 +32,12 @@ jobs:
       - name: Install Dependencies
         run: pdm install
       - name: Update Metadata
-        run: pdm run modules update
+        run: |
+          if ${{ inputs.versions }}; then
+            pdm run modules update --versions
+          else
+            pdm run modules update
+          fi
       - name: Commit and Push Changes
         run: |
           git add .
