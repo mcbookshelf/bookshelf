@@ -10,6 +10,8 @@ def version() -> str:
     """Get the current version of Bookshelf."""
     return VERSION
 
-def mc_versions() -> list[str]:
+def mc_versions() -> str:
     """Get Minecraft versions compatible with the current Bookshelf version."""
-    return MC_VERSIONS
+    return MC_VERSIONS[0] \
+        if len(MC_VERSIONS) == 1 \
+        else f"{MC_VERSIONS[0]}-{MC_VERSIONS[-1]}"

@@ -1,25 +1,16 @@
-name: 🏷️ Release Build
+name: 🏷️ Pre-Release Build
 
 on:
-  workflow_dispatch:
+  push:
+    branches: ["master"]
 
 permissions:
   contents: write
 
 jobs:
-  metadata:
-    uses: ./.github/workflows/metadata.yml
-    with:
-      versions: true
-
-  review:
-    uses: ./.github/workflows/review.yml
-
   check:
-    name: 🔍 Release Check
-    needs: [metadata, review]
+    name: 🔍 Pre-Release Check
     runs-on: ubuntu-latest
-    environment: release
     if: github.ref == 'refs/heads/master'
     outputs:
       release_tag: ${{ steps.check.outputs.release_tag }}
@@ -53,11 +44,10 @@ jobs:
           echo "version_exists=${{ steps.check.outputs.version_exists }}"
 
   release:
-    name: 📦 Release Build
+    name: 📦 Pre-Release Build
     needs: check
     if: ${{ needs.check.outputs.version_exists == 'false' }}
     runs-on: ubuntu-latest
-    environment: release
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -75,26 +65,10 @@ jobs:
         with:
           body_path: docs/_templates/changelog/${{ needs.check.outputs.release_tag }}.md
           name: ${{ needs.check.outputs.release_name }}
-          tag_name: ${{ needs.check.outputs.release_tag }}
-          make_latest: true
+          tag_name: dev
+          prerelease: true
           files: release/*.zip
       - name: Update Tag
         run: |
-          git tag -f latest ${{ needs.check.outputs.release_tag }}
-          git push -f origin latest
-
-  publish:
-    name: 🚀 PyPI Publish
-    needs: release
-    runs-on: ubuntu-latest
-    environment: release
-    permissions:
-      contents: read
-      id-token: write
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Install PDM
-        uses: pdm-project/setup-pdm@v4
-      - name: Publish to PyPI
-        run: pdm publish
+          git tag -f dev
+          git push -f origin dev

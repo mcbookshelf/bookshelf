@@ -188,13 +188,14 @@ def check() -> None:
 
 
 @modules.command()
-def update() -> None:
+@click.option("--versions", is_flag=True)
+def update(versions: bool) -> None: # noqa: FBT001
     """Update metadata changes."""
     if not update_manifest():
         sys.exit(1)
-
-    update_switcher()
-    update_versions()
+    if versions:
+        update_switcher()
+        update_versions()
 
 
 def check_modules() -> bool:
