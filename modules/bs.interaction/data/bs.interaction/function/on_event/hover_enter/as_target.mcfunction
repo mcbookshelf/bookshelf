@@ -13,10 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players add @s bs.interaction.hover 1
-scoreboard players add #interaction.active_hover bs.data 1
-execute store result storage bs:ctx y int 1 run scoreboard players operation @p[distance=0,tag=bs.interaction.source] bs.interaction.id = @s bs.interaction.id
-execute if entity @s[tag=bs.interaction.listen_hover_enter] run function bs.interaction:on_event/hover_enter/dispatch with storage bs:ctx
+scoreboard players add @s bs.interaction.logout 1
+scoreboard players add #interaction.hovered bs.data 1
+scoreboard players operation @p[distance=0,tag=bs.interaction.source] bs.interaction.hover = @s bs.interaction.hover
+
+execute if entity @s[tag=bs.interaction.listen_hover_enter] run function bs.interaction:on_event/hover_enter/run
 tag @s add bs.interaction.hovered
-execute if entity @s[tag=bs.interaction.listen_hover] run function bs.interaction:on_event/hover/dispatch with storage bs:ctx
+execute if entity @s[tag=bs.interaction.listen_hover] run function bs.interaction:on_event/hover/run
 tag @s remove bs.interaction.target

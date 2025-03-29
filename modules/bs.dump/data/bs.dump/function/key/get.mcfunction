@@ -13,12 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify entity B5-0-0-0-2 text set value '{"storage":"bs:data","nbt":"dump[-1].var"}'
-function bs.dump:key/unquote with entity B5-0-0-0-2
+data modify entity B5-0-0-0-2 text set value {storage:"bs:data",nbt:"dump.stack[-1].var"}
+data modify storage bs:data dump.stack[-1].key set from entity B5-0-0-0-2 text
+data modify storage bs:data dump.char set string storage bs:data dump.stack[-1].key 1 2
+data modify storage bs:data dump.parse set string storage bs:data dump.stack[-1].key 2
 
-data modify storage bs:ctx _ set string storage bs:data dump[-1].key 1 2
-execute store result storage bs:ctx x int 1 run scoreboard players set #dump.cursor bs.data 2
-execute store result storage bs:ctx y int 1 run scoreboard players add #dump.cursor bs.data 1
-execute if data storage bs:ctx {_:'"'} run return run function bs.dump:key/parse/quoted/double with storage bs:ctx
-execute if data storage bs:ctx {_:"'"} run return run function bs.dump:key/parse/quoted/single with storage bs:ctx
-function bs.dump:key/parse/unquoted with storage bs:ctx
+scoreboard players set #dump.cursor bs.data 2
+execute if data storage bs:data dump{char:'"'} run return run function bs.dump:key/parse/quoted/double
+execute if data storage bs:data dump{char:"'"} run return run function bs.dump:key/parse/quoted/single
+function bs.dump:key/parse/unquoted

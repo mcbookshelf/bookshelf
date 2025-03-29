@@ -15,7 +15,7 @@
 
 # Note: Thanks to tryashtar and PiggyPig for inspiring the idea behind this module.
 
-data modify storage bs:out dump set value ['[{"text":"[","color":"#cccccc"},{"selector":"@s"},"] ⇒ "]']
-$data modify storage bs:data dump set value [{var:$(var),indent:'"\\u2000"'}]
+$data modify storage bs:data dump.stack set value [{var:$(var),indent:"\u2000"}]
+data modify storage bs:data dump.out set value [[{text:"[",color:"#cccccc"},{selector:"@s"},"] ⇒ "]]
 function bs.dump:interpret/any
-tellraw @a {"type":"nbt","storage":"bs:out","nbt":"dump[]","separator":"","interpret":true}
+tellraw @a {type:"nbt",storage:"bs:data",nbt:"dump.out[]",separator:"",interpret:true}

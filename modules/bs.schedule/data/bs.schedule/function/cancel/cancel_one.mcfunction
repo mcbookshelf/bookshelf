@@ -16,4 +16,4 @@
 # Find the last element of the queue with the given data.
 $data modify storage bs:ctx _ set from storage bs:data schedule.queue[$(with)]
 execute store success score #i bs.ctx run function bs.schedule:cancel/remove_one with storage bs:ctx _
-function #bs.log:info {namespace:"bs.schedule", tag:"cancel_one", path:"#bs.schedule:cancel_one", message:'["Canceled ",{"score":{"name":"#i","objective":"bs.ctx"}}," command."]'}
+function #bs.log:info {namespace:"bs.schedule", tag:"cancel_one", path:"#bs.schedule:cancel_one", message:["Canceled ",{score:{name:"#i",objective:"bs.ctx"}}," command."]}

@@ -13,9 +13,9 @@ To minimize redundancy and enhance efficiency, the library provides shared objec
 | Objectives  | Description |
 |-------------|-------------|
 | `bs.in`     | Stores input values. Format: `$<module>.<feature>.<input_key>` |
-| `bs.out`    | Stores output values. Format:  `$<module>.<feature>` or `$<module>.<feature>.<output_key>` |
+| `bs.out`    | Stores output values. Format: `$<module>.<feature>` or `$<module>.<feature>.<output_key>` |
 | `bs.ctx`    | Temporary contextual objective for fast computations. Format: `#<single_letter>` |
-| `bs.data`   | Global score storage. Format:  `#<module>.<my_key>` |
+| `bs.data`   | Global score storage. Format: `#<module>.<my_key>` |
 | `bs.const`  | Stores constant values. Format: `<value>` |
 | `bs.lambda` | Stores values used in callbacks. Format: `$<module>.<my_key>` |
 
@@ -27,7 +27,7 @@ To minimize redundancy and enhance efficiency, the library provides shared objec
 |-------------|-------------|
 | `bs:in`     | Stores input data. Path: `<module>.<feature>.<input_key>` |
 | `bs:out`    | Stores output data. Path: `<module>.<feature>` or `<module>.<feature>.<output_key>` |
-| `bs:ctx`    | Fast contextual storage. Uses `x`, `y`, `z` for numeric values (ie: execute store) and `_` for other data. |
+| `bs:ctx`    | Fast contextual storage. Uses `x`, `y`, `z` for numeric values (i.e., execute store) and `_` for other data |
 | `bs:data`   | General-purpose global storage. Path: `<module>.<my_key>` |
 | `bs:const`  | Stores constant data. Path: `<module>.<my_key>` |
 | `bs:lambda` | Stores data used in callbacks. Path: `<module>.<my_key>` |

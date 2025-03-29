@@ -73,7 +73,7 @@ execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store res
 execute unless score #i bs.ctx matches 2 run fail "Clear events should clear all events when using the type"
 execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] if entity @s[tag=bs.interaction.listen_hover] run fail "Interaction should stop listening to hover events when they are cleared"
 execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] if entity @s[tag=bs.interaction.is_hoverable] run fail "Interaction should stop listening to all hover events when they are cleared"
-execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] if score @s bs.interaction.id matches 1.. run fail "Clear events should reset the interaction id when all events are cleared"
+execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] if score @s bs.interaction.hover matches 1.. run fail "Clear events should reset the interaction id when all events are cleared"
 
 ## === EXPECTED BEHAVIORS (CLEAR ALL) ===
 

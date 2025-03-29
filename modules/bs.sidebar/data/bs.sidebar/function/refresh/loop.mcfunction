@@ -13,13 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$$(cmd) $(text)
+$scoreboard players display $(target) {storage:"bs:ctx",nbt:"_[0].value",interpret:true}
 
-data remove storage bs:ctx _.dyn[0]
-execute unless data storage bs:ctx _.dyn[0] run return 1
-
-data modify storage bs:ctx _.cmd set from storage bs:ctx _.dyn[0].cmd
-data modify entity B5-0-0-0-2 text set from storage bs:ctx _.dyn[0].text
-data modify storage bs:ctx _.text set from entity B5-0-0-0-2 text
-
-return run function bs.sidebar:refresh/loop with storage bs:ctx _
+data remove storage bs:ctx _[0]
+execute if data storage bs:ctx _[0] run function bs.sidebar:refresh/loop with storage bs:ctx _[0]

@@ -41,11 +41,11 @@ execute unless entity @s[tag=bs.packtest.lazy] run fail "Failed to run callback 
 
 ## === INPUT ERRORS ===
 
-execute store result score #s bs.ctx run function #bs.interaction:on_left_click { run: "", executor: "source" }
+execute store success score #s bs.ctx run function #bs.interaction:on_left_click { run: "", executor: "source" }
 execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when function is called on a non interaction entity"
-execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store result score #s bs.ctx run function #bs.interaction:on_left_click { run: "", executor: "target" }
+execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store success score #s bs.ctx run function #bs.interaction:on_left_click { run: "", executor: "target" }
 execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when the command is invalid"
-execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store result score #s bs.ctx run function #bs.interaction:on_left_click { run: "help", executor: { selector: "¯\\_(ツ)_/¯" } }
+execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store success score #s bs.ctx run function #bs.interaction:on_left_click { run: "help", executor: { selector: "¯\\_(ツ)_/¯" } }
 execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when the selector is invalid"
-execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store result score #s bs.ctx run function #bs.interaction:on_left_click { run: "help", executor: { selector: "@n[type=minecraft:allay,tag=bs.is_never_gonna_be_released]", lazy: false } }
+execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store success score #s bs.ctx run function #bs.interaction:on_left_click { run: "help", executor: { selector: "@n[type=minecraft:allay,tag=bs.is_never_gonna_be_released]", lazy: false } }
 execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when the selector is interpreted and points to no entity"

@@ -46,7 +46,8 @@ Add or remove health points from players.
   **State**: Health is scheduled for update.
 ```
 
-*Heal yourself by 5 HP:*
+*Example: Heal yourself by 5 HP:*
+
 ```mcfunction
 # Once (execute on you)
 function #bs.health:add_health {points:5.0}
@@ -78,9 +79,10 @@ Add or remove maximum health points from players.
   **State**: Max health is scheduled for update.
 ```
 
-*Increase your max HP by 5:*
+*Example: Increase your max HP by 5:*
+
 ```mcfunction
-# Once (execute on you)
+# Add 5 maximum health points to the executing player
 function #bs.health:add_max_health {points:5.0}
 ```
 
@@ -112,16 +114,17 @@ Get a player's health points.
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`number` **scale**: Scalar for the function’s returned value.
+    - {nbt}`number` **scale**: Scalar for the function's returned value.
   :::
 
 :Outputs:
   **Return | Storage `bs:out health.get_health`**: {nbt}`double` Player's health points.
 ```
 
-*Get your current HP (scaled by 1000):*
+*Example: Get your current HP (scaled by 1000):*
+
 ```mcfunction
-# See the returned value (execute on you)
+# Get and display the current health of the executing player
 function #bs.health:get_health {scale:1000}
 ```
 
@@ -138,14 +141,15 @@ Get a player's maximum health points.
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`number` **scale**: Scalar for the function’s returned value.
+    - {nbt}`number` **scale**: Scalar for the function's returned value.
   :::
 
 :Outputs:
   **Return | Storage `bs:out health.get_max_health`**: {nbt}`double` Player's max health points.
 ```
 
-*Get your maximum HP (scaled by 1000):*
+*Example: Get your maximum HP (scaled by 1000):*
+
 ```mcfunction
 # See the returned value (execute on you)
 function #bs.health:get_max_health {scale:1000}
@@ -165,7 +169,7 @@ function #bs.health:get_max_health {scale:1000}
 
 ```{function} #bs.health:set_health {points:<value>}
 
-Set players health points.
+Set players' health points.
 
 :Inputs:
   **Execution `as <players>`**: Players whose health will be updated.
@@ -180,7 +184,8 @@ Set players health points.
   **State**: Health is scheduled for update.
 ```
 
-*Set your HP to 10:*
+*Example: Set your HP to 10:*
+
 ```mcfunction
 # Once (execute on you)
 function #bs.health:set_health {points:5.0}
@@ -191,7 +196,7 @@ function #bs.health:set_health {points:5.0}
 
 ```{function} #bs.health:set_max_health {points:<value>}
 
-Set players maximum health points.
+Set players' maximum health points.
 
 :Inputs:
   **Execution `as <players>`**: Players whose max health will be updated.
@@ -206,7 +211,8 @@ Set players maximum health points.
   **State**: Max health is scheduled for update.
 ```
 
-*Set your max HP to 10:*
+*Example: Set your max HP to 10:*
+
 ```mcfunction
 # Once (execute on you)
 function #bs.health:set_max_health {points:5.0}
@@ -223,42 +229,42 @@ function #bs.health:set_max_health {points:5.0}
 
 ```{function} #bs.health:time_to_live {with:{}}
 
-Set the life time of entities.
+Set the lifetime of entities.
 
 :Inputs:
-  **Execution `as <entities>`**: Entities to add a life time to.
+  **Execution `as <entities>`**: Entities to add a lifetime to.
 
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`compound` **with**: Life time data.
+    - {nbt}`compound` **with**: Lifetime data.
       - {nbt}`int` **time**: Time to live. In ticks by default if unit is not defined.
       - {nbt}`string` **unit**: Unit of the specified time (tick, second, minute, hour, t, s, m, h).
       - {nbt}`string` **on_death**: Command that will be run as the entity on its death.
   :::
 
 :Outputs:
-  **State**: The entity has now a finite life time.
+  **State**: The entity now has a finite lifetime.
 ```
 
-*Give creepers a 10 seconds life time:*
+*Example: Give creepers a 10-second lifetime:*
 
 ```mcfunction
-# Once
+# Set a 10-second lifetime for all creepers
 execute as @e[type=minecraft:creeper] run function #bs.health:time_to_live {with:{time:10,unit:"s"}}
 ```
 
-*Give an explosion effect to creepers at the end of their life:*
+*Example: Give an explosion effect to creepers at the end of their life:*
 
 ```mcfunction
-# Once
+# Set a lifetime with explosion effect for all creepers
 execute as @e[type=minecraft:creeper] run function #bs.health:time_to_live {with:{time:10,on_death:"execute at @s run particle minecraft:explosion_emitter ~ ~ ~"}}
 ```
 
-*Update the on_death callback at any given time:*
+*Example: Update the on_death callback at any given time:*
 
 ```mcfunction
-# Once
+# Set initial lifetime with explosion effect
 execute as @e[type=minecraft:creeper] run function #bs.health:time_to_live {with:{time:100,on_death:"execute at @s run particle minecraft:explosion_emitter ~ ~ ~"}}
 
 # At any time before the entity's death

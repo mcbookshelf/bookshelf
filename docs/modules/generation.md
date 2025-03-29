@@ -86,11 +86,11 @@ Generate a shape in 2D space using a Simplex noise algorithm. The shape is gener
     - {nbt}`int` **width**: Width of the shape to generate.
     - {nbt}`int` **height**: Height of the shape to generate.
     - {nbt}`compound` **with**: Shape settings.
-      - {nbt}`string` **direction**: Plane used to generate the shape (`xz`, `xy` or `zy`, default: `xz`).
+      - {nbt}`string` **direction**: Plane used to generate the shape (`xz`, `xy`, or `zy`, default: `xz`).
       - {nbt}`int` **spacing**: Distance between blocks in the generated shape (default: 1).
       - {nbt}`int` **limit**: Limit how many steps are executed in a single tick (default: 256).
       - {nbt}`int` **size**: Granularity of the noise. Lower values increase detail (default: 32).
-      - {nbt}`int` **seed**:  Seed for the noise generation, allowing for reproducibility (default: random).
+      - {nbt}`int` **seed**: Seed for the noise generation, allowing for reproducibility (default: random).
   :::
 
 :Outputs:
@@ -117,11 +117,11 @@ Generate a shape in 2D space using a Fractal noise algorithm. The shape is gener
     - {nbt}`int` **width**: Width of the shape to generate.
     - {nbt}`int` **height**: Height of the shape to generate.
     - {nbt}`compound` **with**: Shape settings.
-      - {nbt}`string` **direction**: Plane used to generate the shape (`xz`, `xy` or `zy`, default: `xz`).
+      - {nbt}`string` **direction**: Plane used to generate the shape (`xz`, `xy`, or `zy`, default: `xz`).
       - {nbt}`int` **spacing**: Distance between blocks in the generated shape (default: 1).
       - {nbt}`int` **limit**: Limit how many steps are executed in a single tick (default: 256).
       - {nbt}`int` **size**: Granularity of the noise. Lower values increase detail (default: 32).
-      - {nbt}`int` **seed**:  Seed for the noise generation, allowing for reproducibility (default: random).
+      - {nbt}`int` **seed**: Seed for the noise generation, allowing for reproducibility (default: random).
       - {nbt}`int` **octaves**: Number of noise layers; more octaves enhance detail (default: 2).
       - {nbt}`double` **persistence**: Contribution of each octave. Higher means more detail (default: 0.5).
       - {nbt}`double` **lacunarity**: Frequency increase for each octave. Higher means more rapid frequency increase (default: 2.0).
@@ -134,7 +134,7 @@ Generate a shape in 2D space using a Fractal noise algorithm. The shape is gener
 ::::
 :::::
 
-*Generate a 3D terrain using a heightmap. This function employs a linear approach; for more interesting terrain, consider scaling the noise values differently according to various ranges. Check out [this video](https://www.youtube.com/watch?v=CSa5O6knuwI) for more insights on terrain generation:*
+*Example: Generate a 3D terrain using a heightmap. This function employs a linear approach; for more interesting terrain, consider scaling the noise values differently according to various ranges. Check out [this video](https://www.youtube.com/watch?v=CSa5O6knuwI) for more insights on terrain generation:*
 
 ```{code-block} mcfunction
 :force:
@@ -150,7 +150,6 @@ $fill ~ ~ ~ ~ ~$(y) ~ stone
 ```
 
 > **Credits**: Aksiome
-
 
 ---
 

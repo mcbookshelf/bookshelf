@@ -13,8 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# @batch bs.vector
-
 scoreboard players set $vector.dot_product.u.0 bs.in 24
 scoreboard players set $vector.dot_product.u.1 bs.in 35
 scoreboard players set $vector.dot_product.u.2 bs.in 42

@@ -41,7 +41,7 @@ Select a random value from a list.
   **Return**: The index of the chosen value.
 ```
 
-*Pick a random fruit from the list:*
+*Example: Pick a random fruit from the list:*
 
 ```mcfunction
 # Populate list with values
@@ -72,7 +72,7 @@ Select a random value from a list based on specified weights.
   **Return**: The index of the chosen value.
 ```
 
-*Pick a random fruit from the list based on weights:*
+*Example: Pick a random fruit from the list based on weights:*
 
 ```mcfunction
 # Populate list with values
@@ -115,7 +115,7 @@ Generate a random number uniformly distributed between `min` and `max`.
   **Return | Score `$random.uniform bs.out`**: A random integer in range [`min`, `max`].
 ```
 
-*Generate a random number between 1 and 100:*
+*Example: Generate a random number between 1 and 100:*
 
 ```mcfunction
 # Generate random number
@@ -125,10 +125,10 @@ function #bs.random:uniform {min:1,max:100}
 tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.uniform", "objective": "bs.out"}, "color": "gold"}]
 ```
 
-```{admonition} Uniform Distribution... 🥶 What’s this?
+```{admonition} Uniform Distribution... 🥶 What's this?
 :class: dropdown
 
-Every outcome has an equal chance of happening. It's like rolling a fair die. Each number (1 through 6) is equally likely.
+Every outcome has an equal probability of occurring. It's like rolling a fair die where each number (1 through 6) has the same probability.
 ```
 
 ::::
@@ -150,7 +150,7 @@ Generate a random number with a binomial distribution using the specified `trial
   **Return | Score `$random.binomial bs.out`**: A random integer in range [0, `trials`].
 ```
 
-*Generate a random number with 10 trials and a 20% success chance:*
+*Example: Generate a random number with 10 trials and a 20% success chance:*
 
 ```mcfunction
 # Generate random number
@@ -160,10 +160,10 @@ function #bs.random:binomial {trials:10,probability:0.2}
 tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.binomial", "objective": "bs.out"}, "color": "gold"}]
 ```
 
-```{admonition} Binomial Distribution... 🥶 What’s this?
+```{admonition} Binomial Distribution... 🥶 What's this?
 :class: dropdown
 
-Used when you have a fixed number of trials, each with two possible outcomes (like success or failure). It tells you the probability of getting a certain number of successes. For example, flipping a coin 10 times and counting how many heads you get.
+Used when you have a fixed number of trials, each with two possible outcomes (success or failure). It calculates the probability of obtaining a specific number of successes. For example, flipping a coin 10 times and counting the number of heads.
 ```
 
 ::::
@@ -184,7 +184,7 @@ Generate a random number following a geometric distribution with the given `prob
   **Return | Score `$random.geometric bs.out`**: A random integer in range [0, 1000].
 ```
 
-*Generate a random number with a 2% chance of stopping:*
+*Example: Generate a random number with a 2% chance of stopping:*
 
 ```mcfunction
 # Generate random number
@@ -194,10 +194,10 @@ function #bs.random:geometric {probability:0.02}
 tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.geometric", "objective": "bs.out"}, "color": "gold"}]
 ```
 
-```{admonition} Geometric Distribution... 🥶 What’s this?
+```{admonition} Geometric Distribution... 🥶 What's this?
 :class: dropdown
 
-Measures the number of trials needed to get the first success in a series of independent and identical trials. For instance, how many times you need to roll a die before getting a six.
+Measures the number of trials required to achieve the first success in a sequence of independent and identical trials. For example, the number of dice rolls needed to obtain a six.
 ```
 
 ::::
@@ -218,7 +218,7 @@ Generate a random number following a Poisson distribution with the expected valu
   **Return | Score `$random.poisson bs.out`**: A random integer, biased towards the `lambda` value.
 ```
 
-*Generate a random number biased towards 5:*
+*Example: Generate a random number biased towards 5:*
 
 ```mcfunction
 # Generate random number
@@ -228,10 +228,10 @@ function #bs.random:poisson {lambda:5}
 tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.poisson", "objective": "bs.out"}, "color": "gold"}]
 ```
 
-```{admonition} Poisson Distribution... 🥶 What’s this?
+```{admonition} Poisson Distribution... 🥶 What's this?
 :class: dropdown
 
-A Poisson distribution produces values that tend to cluster around an average value, **λ (lambda)**. Most results will be close to this average, which makes it useful for modeling random events happening at a consistent rate.
+A Poisson distribution generates values that cluster around an average value, **λ (lambda)**. Results tend to concentrate near this average, making it ideal for modeling random events occurring at a consistent rate.
 ```
 
 ::::
@@ -269,7 +269,7 @@ Compute the simplex noise value at given coordinates. Simplex noise is a type of
   **Return | Score `$random.simplex_noise_2d bs.out`**: The noise value in range [-1000,1000]
 ```
 
-*Generate a random noise value:*
+*Example: Generate a random noise value:*
 
 ```mcfunction
 # Generate random noise value
@@ -301,7 +301,7 @@ Generate fractal noise by combining multiple noise layers at different scales, o
   **Return | Score `$random.fractal_noise_2d bs.out`**: The noise value in range [-1000,1000]
 ```
 
-*Generate a random noise value:*
+*Example: Generate a random noise value:*
 
 ```mcfunction
 # Generate random noise value
@@ -343,7 +343,7 @@ Generate a 1-dimensional array of white noise values.
   **Storage `bs:out random.white_noise_mat_1d`**: {nbt}`list` Array of values between 0 and {scale}.
 ```
 
-*Generate 4 random values:*
+*Example: Generate 4 random values:*
 
 ```mcfunction
 # Generate random noise
@@ -374,7 +374,7 @@ Generate a 2-dimensional array of white noise values.
   **Storage `bs:out random.white_noise_mat_2d`**: {nbt}`list` 2D array of values between 0 and {scale}.
 ```
 
-*Generate a 4x4 random noise pattern:*
+*Example: Generate a 4x4 random noise pattern:*
 
 ```mcfunction
 # Generate random noise
@@ -406,7 +406,7 @@ Generate a 2D simplex noise texture of size `width` by `height`. Simplex noise i
   **Storage `bs:out random.simplex_noise_mat_2d`**: 2D array of values between {-scale} and {scale}.
 ```
 
-*Generate a 16×16 simplex noise pattern:*
+*Example: Generate a 16×16 simplex noise pattern:*
 
 ```mcfunction
 # Generate random noise
@@ -442,7 +442,7 @@ Generate a 2D fractal noise texture of size `width` by `height`. Fractal noise c
   **Storage `bs:out random.fractal_noise_mat_2d`**: 2D array of values between {-scale} and {scale}.
 ```
 
-*Generate a 16×16 fractal noise pattern:*
+*Example: Generate a 16×16 fractal noise pattern:*
 
 ```mcfunction
 # Generate random noise

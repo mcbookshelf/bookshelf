@@ -28,7 +28,7 @@ Beyond module management, Bookshelf automatically generates data across multiple
 Bookshelf enhances the contributor and user experience by:
 
 - Automatically adding functions from the module's `import` folder to the `__load__` function.
-- Generating a `__help__` function and its `help` tag linking to the documentation of the module.
+- Generating a `__help__` function and its `help` tag linking to the module's documentation.
 
 ### 🧪 Test Related
 

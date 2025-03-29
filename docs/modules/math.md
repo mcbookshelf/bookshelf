@@ -2,8 +2,7 @@
 
 **`#bs.math:help`**
 
-The beatifull world of mathematics... **in Minecraft!**
-
+The beautiful world of mathematics... **in Minecraft!**
 
 ```{image} /_imgs/modules/math-light.png
 :width: 100%
@@ -20,7 +19,6 @@ The beatifull world of mathematics... **in Minecraft!**
 
 -- René Descartes
 ```
-
 
 ```{button-link} https://youtu.be/Bt0HKaOosqU
 :color: primary
@@ -42,7 +40,7 @@ You can find below all functions available in this module.
 
 ```{function} #bs.math:combine
 
-Compute the combine of 2 numbers.
+Compute the combination of 2 numbers.
 
 :Inputs:
   **Scores `$math.combine.[n,k] bs.in`**: Numbers to be combined, the smaller input will be taken from the greater input.
@@ -57,7 +55,8 @@ Compute the combine of 2 numbers.
 The value of `bs.out` is incorrect if the result is greater than 2,147,483,647 or `$math.combine.[n,k] bs.in` are not both positive.
 ```
 
-*Compute $combine(4,2)$:*
+*Example: Compute $combine(4,2)$:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.combine.n bs.in 4
@@ -86,7 +85,8 @@ Compute the exponential function.
   **Storage `bs:out math.exp`**: {nbt}`float` Result of the operation.
 ```
 
-*Compute $exp(3)$:*
+*Example: Compute $exp(3)$:*
+
 ```mcfunction
 # Once
 data modify storage bs:in math.exp.x set value 3.0
@@ -108,7 +108,8 @@ Compute the exponential function in base 2.
   **Storage `bs:out math.exp2`**: {nbt}`float` Result of the operation.
 ```
 
-*Compute $exp2(3)$:*
+*Example: Compute $exp2(3)$:*
+
 ```mcfunction
 # Once
 data modify storage bs:in math.exp2.x set value 3.0
@@ -143,7 +144,8 @@ Compute the factorial of the number.
 Due to the limit of integers that can be stored in a score, the interval of `$math.factorial.n bs.in` is limited to `[0,12]`.
 ```
 
-*Compute $3!$:*
+*Example: Compute $3!$:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.factorial.n bs.in 3
@@ -175,7 +177,8 @@ Decompose a floating point number into a normalized fraction and an integral pow
   **Storage `bs:out math.frexp.x`**: {nbt}`float` Normalized fraction in range  `]-1,-0.5]` or `[0.5,1[`.
 ```
 
-*Decompose 5.8 into its mantissa and exponent:*
+*Example: Decompose 5.8 into its mantissa and exponent:*
+
 ```mcfunction
 # Once
 data modify storage bs:in math.frexp.x set value 5.8
@@ -199,7 +202,8 @@ Build a floating point number from a normalized fraction and an integral power o
   **Storage `bs:out math.ldexp`**: {nbt}`float` Resulting floating-point number.
 ```
 
-*Compose a floating-point number:*
+*Example: Compose a floating-point number:*
+
 ```mcfunction
 # Once
 data modify storage bs:in math.ldexp.e set value 3
@@ -228,7 +232,8 @@ Compute the greatest common denominator of two numbers.
   **Return | Score `$math.gcd bs.out`**: The greatest common denominator.
 ```
 
-*Calculate the greatest common denominator between 16 and 12:*
+*Example: Calculate the greatest common denominator between 16 and 12:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.gcd.a bs.in 16
@@ -260,7 +265,8 @@ Compute the natural logarithm (base e) of a number.
   **Storage `bs:out math.log`**: {nbt}`float` Result of the operation.
 ```
 
-*Calculate $ln(28)$:*
+*Example: Calculate $ln(28)$:*
+
 ```mcfunction
 # Once
 data modify storage bs:in math.log.x set value 28.0
@@ -282,13 +288,15 @@ Compute the logarithm in base 2 of a number.
   **Storage `bs:out math.log2`**: {nbt}`float` Result of the operation.
 ```
 
-*Calculate $log_2(28)$:*
+*Example: Calculate $log_2(28)$:*
+
 ```mcfunction
 # Once
 data modify storage bs:in math.log2.x set value 28.0
 function #bs.math:log2
 data get storage bs:out math.log2
 ```
+
 :::
 :::{tab-item} Base 10
 
@@ -303,7 +311,8 @@ Compute the logarithm in base 10 of a number.
   **Storage `bs:out math.log10`**: {nbt}`float` Result of the operation.
 ```
 
-*Calculate $log_{10}(28)$:*
+*Example: Calculate $log_{10}(28)$:*
+
 ```mcfunction
 # Once
 data modify storage bs:in math.log10.x set value 28.0
@@ -327,7 +336,8 @@ Compute the logarithm in base a of a number.
   **Storage `bs:out math.loga`**: {nbt}`float` Result of the operation.
 ```
 
-*Calculate $log_4(28)$:*
+*Example: Calculate $log_4(28)$:*
+
 ```mcfunction
 # Once
 data modify storage bs:in math.loga.a set value 4
@@ -357,11 +367,13 @@ Compute the power of integer numbers.
   **Score `$math.ipow.x bs.in`**: The base.
 
   **Score `$math.ipow.y bs.in`**: The exponent.
+
 :Outputs:
   **Return | Score `$math.ipow bs.out`**: Result of the operation.
 ```
 
-*Compute and display $3^6$:*
+*Example: Compute and display $3^6$:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.ipow.x bs.in 3
@@ -386,7 +398,8 @@ Compute the power of floating numbers.
   **Storage `bs:out math.pow`**: {nbt}`float` Result of the operation.
 ```
 
-*Compute and display $pow(3.5, 2.25)$:*
+*Example: Compute and display $pow(3.5, 2.25)$:*
+
 ```mcfunction
 # Once
 data modify storage bs:in math.pow set value {x:3.5,y:2.25}
@@ -413,11 +426,13 @@ Divide a number by another then round the result to the nearest integer (Minecra
   **Score `$math.divide.x bs.in`**: The numerator.
 
   **Score `$math.divide.y bs.in`**: The denominator.
+
 :Outputs:
   **Return | Score `$math.divide bs.out`**: Result of the division.
 ```
 
-*Calculate $9/5$:*
+*Example: Calculate $9/5$:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.divide.x bs.in 9
@@ -449,7 +464,8 @@ Compute the square root of an integer number.
   **Return | Score `$math.isqrt bs.out`**: Floored result of the square root.
 ```
 
-*Calculate and display $\sqrt{42}$:*
+*Example: Calculate and display $\sqrt{42}$:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.isqrt.x bs.in 42
@@ -471,13 +487,15 @@ Compute the square root of a floating number.
   **Storage `bs:out math.sqrt`**: {nbt}`float` Result of the operation.
 ```
 
-*Calculate and display $\sqrt{42}$:*
+*Example: Calculate and display $\sqrt{42}$:*
+
 ```mcfunction
 # Once
 data modify storage bs:in math.sqrt.x set value 42
 function #bs.math:sqrt
 tellraw @a [{"text": "sqrt(42) = ", "color": "dark_gray"},{"nbt": "math.sqrt", "storage": "bs:out", "color": "gold"}]
 ```
+
 :::
 ::::
 
@@ -503,7 +521,8 @@ Compute the arc cosine of a value between -1 and 1.
   **Return | Score `$math.acos bs.out`**: Result of the operation in degrees, shifted by 2 digits.
 ```
 
-*Compute and display the arccosine of 0.42:*
+*Example: Compute and display the arccosine of 0.42:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.acos.x bs.in 420
@@ -527,7 +546,8 @@ Compute the arc sine of a value between -1 and 1.
   **Return | Score `$math.asin bs.out`**: Result of the operation in degrees, shifted by 2 digits.
 ```
 
-*Compute and display the arcsine of 0.42:*
+*Example: Compute and display the arcsine of 0.42:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.asin.x bs.in 420
@@ -551,7 +571,8 @@ Compute the arc tangent of a value between -infinite and +infinite.
   **Return | Score `$math.atan bs.out`**: Result of the operation in degrees, shifted by 2 digits.
 ```
 
-*Compute and display the arctan of 0.42:*
+*Example: Compute and display the arctan of 0.42:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.atan.x bs.in 420
@@ -575,7 +596,8 @@ Compute the 2-argument arctangent of y and x.
   **Return | Score `$math.atan2 bs.out`**: Result of the operation in degrees, shifted by 2 digits.
 ```
 
-*Compute and display the atan2 of (0.42, 0.8):*
+*Example: Compute and display the atan2 of (0.42, 0.8):*
+
 ```mcfunction
 # Once
 scoreboard players set $math.atan2.y bs.in 420
@@ -598,7 +620,8 @@ Compute the cosine of an angle between 0 and 360.
   **Return | Score `$math.cos bs.out`**: Cosine of the angle shifted by 3 digits (ex: 0.42 → 420).
 ```
 
-*Compute and display the cosine of 42:*
+*Example: Compute and display the cosine of 42:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.cos.x bs.in 4200
@@ -611,20 +634,19 @@ tellraw @a [{"text": "cos(42) = ", "color": "dark_gray"},{"score":{"name":"$math
 ```{admonition} How does it work?
 :class: dropdown
 
-This functions use the Bhaskara approximation which tell us that
+This function uses the Bhaskara approximation which tells us that
 
 $$
 \sin(x) \approx \frac{4x(180-x)}{40500-x(180-x)} \quad \forall x \in [0, 180]
 $$
 
 From this relation, and using the properties
-- $\sin(-x) = -\sin(x)$ (antisymetry)
+- $\sin(-x) = -\sin(x)$ (antisymmetry)
 - $\sin(x+360) = \sin(x)$ (periodicity)
 
 We can compute the sine of any angle and thus the cosine.
 
 ![](/_imgs/modules/math/bhaskara.png)
-
 ```
 
 :::
@@ -641,7 +663,8 @@ Compute the sine of an angle between 0 and 360.
   **Return | Score `$math.sin bs.out`**: Sine of the angle shifted by 3 digits (ex: 0.42 → 420).
 ```
 
-*Compute and display the sine of 42:*
+*Example: Compute and display the sine of 42:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.sin.x bs.in 4200
@@ -654,20 +677,19 @@ tellraw @a [{"text": "sin(42) = ", "color": "dark_gray"},{"score":{"name":"$math
 ```{admonition} How does it work?
 :class: dropdown
 
-This functions use the Bhaskara approximation which tell us that
+This function uses the Bhaskara approximation which tells us that
 
 $$
 \sin(x) \approx \frac{4x(180-x)}{40500-x(180-x)} \quad \forall x \in [0, 180]
 $$
 
 From this relation, and using the properties
-- $\sin(-x) = -\sin(x)$ (antisymetry)
+- $\sin(-x) = -\sin(x)$ (antisymmetry)
 - $\sin(x+360) = \sin(x)$ (periodicity)
 
 We can compute the sine of any angle.
 
 ![](/_imgs/modules/math/bhaskara.png)
-
 ```
 
 :::
@@ -684,7 +706,8 @@ Compute the tangent of an angle between 0 and 360.
   **Return | Score `$math.tan bs.out`**: Tangent of the angle shifted by 3 digits (ex: 0.42 → 420).
 ```
 
-*Compute and display the tangent of 42:*
+*Example: Compute and display the tangent of 42:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.tan.x bs.in 4200
@@ -710,7 +733,8 @@ Compute both the sine and cosine of an angle between 0 and 360 in a single opera
   **Score `$math.sincos.sin bs.out`**: Sine of the angle shifted by 3 digits (ex: 0.42 → 420).
 ```
 
-*Compute and display the sine and cosine of 42:*
+*Example: Compute and display the sine and cosine of 42:*
+
 ```mcfunction
 # Once
 scoreboard players set $math.sincos.x bs.in 4200

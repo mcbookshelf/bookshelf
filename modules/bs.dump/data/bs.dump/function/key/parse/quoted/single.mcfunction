@@ -13,9 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set string storage bs:data dump[-1].key $(x) $(y)
-execute store result storage bs:ctx x int 1 run scoreboard players get #dump.cursor bs.data
-execute store result storage bs:ctx y int 1 run scoreboard players add #dump.cursor bs.data 1
-execute unless score #dump.escape bs.data matches 1 if data storage bs:ctx {_:"'"} run return run function bs.dump:key/parse/terminate with storage bs:ctx
-execute store result score #dump.escape bs.data if data storage bs:ctx {_:"\\"}
-function bs.dump:key/parse/quoted/single with storage bs:ctx
+data modify storage bs:data dump.char set string storage bs:data dump.parse 0 1
+data modify storage bs:data dump.parse set string storage bs:data dump.parse 1
+execute store result storage bs:data dump.cursor int 1 run scoreboard players add #dump.cursor bs.data 1
+execute unless score #dump.escape bs.data matches 1 if data storage bs:data dump{char:"'"} run return run function bs.dump:key/parse/terminate with storage bs:data dump
+execute store result score #dump.escape bs.data if data storage bs:data dump{char:"\\"}
+function bs.dump:key/parse/quoted/single

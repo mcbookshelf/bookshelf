@@ -21,4 +21,3 @@ scoreboard objectives remove bs.data
 
 data remove storage bs:const dump
 data remove storage bs:data dump
-data remove storage bs:out dump

@@ -21,7 +21,7 @@ Cast rays and see if they collide with blocks or entities.
 :link-type: doc
 :margin: 0 3 0 0
 
-Mathematical functions: sin, cos, exp, log, sqrt and much more!
+Mathematical functions: sin, cos, exp, log, sqrt, and much more!
 :::
 
 :::{grid-item-card} 🏗️ Generation

@@ -1,0 +1,17 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.spline",
+    "load": "."
+  },
+  "meta": {
+    "name": "Spline",
+    "slug": "bookshelf-spline",
+    "description": "Manipulate smooth curves created from control points.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html",
+    "tags": ["default"]
+  },
+  "pipeline": [
+    "gen_tables"
+  ]
+}

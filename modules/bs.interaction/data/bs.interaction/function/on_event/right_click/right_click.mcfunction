@@ -13,10 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# Note:
-#  Function called when a right click is done on a right click listener.
+# function called when a right click is done on a right click listener.
+tag @s add bs.interaction.source
+execute as @e[type=minecraft:interaction,tag=bs.interaction.listen_right_click,distance=..24] \
+  if function bs.interaction:on_event/is_target \
+  run function bs.interaction:on_event/right_click/as_target
+tag @s remove bs.interaction.source
 
 advancement revoke @s only bs.interaction:right_click
-tag @s add bs.interaction.source
-execute as @n[type=minecraft:interaction,tag=bs.interaction.listen_right_click,distance=..24,limit=2147483647] run function bs.interaction:on_event/right_click/as_target
-tag @s remove bs.interaction.source

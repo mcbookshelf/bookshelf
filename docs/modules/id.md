@@ -28,15 +28,16 @@ Give a unique `bs.id` score to each entity.
   **Execution `as <entities>`**: Entities to assign an ID to.
 
 :Outputs:
-  **Score `@s bs.id`**: Generated simple unique id.
+  **Score `@s bs.id`**: Generated simple unique ID.
 ```
 
-*Give an ID to all players:*
+*Example: Give an ID to all players:*
+
 ```mcfunction
-# Give an id to all players who don’t already have one
+# Give an ID to all players who don't already have one
 execute as @a[predicate=!bs.id:has_suid] run function #bs.id:give_suid
 
-# See the result
+# Display the results in the sidebar
 scoreboard objective setdisplay sidebar bs.id
 ```
 
@@ -54,21 +55,22 @@ Give a unique `bs.cid` score to each entity.
   **Execution `as <entities>`**: Entities to assign an ID to.
 
 :Outputs:
-  **Score `@s bs.cid`**: Generated chain unique id.
+  **Score `@s bs.cid`**: Generated chain unique ID.
 ```
 
 ```{admonition} How it works?
 :class: info
 
-The chain ID is similar to the simple ID. However with chain IDs, you can use the function `#bs.id:update_cuids` to make sure there are no gaps in the ID sequence, thus creating a continuous chain.
+The chain ID is similar to the simple ID. However, with chain IDs, you can use the function `#bs.id:update_cuids` to make sure there are no gaps in the ID sequence, thus creating a continuous chain.
 ```
 
-*Give an ID to all players:*
+*Example: Give an ID to all players:*
+
 ```mcfunction
-# Give an id to all players who don’t have one
+# Give an ID to all players who don't have one
 execute as @a[predicate=!bs.id:has_cuid] run function #bs.id:give_cuid
 
-# See the result
+# Display the results in the sidebar
 scoreboard objective setdisplay sidebar bs.cid
 ```
 
@@ -80,10 +82,10 @@ scoreboard objective setdisplay sidebar bs.cid
 
 ```{function} #bs.id:update_cuids
 
-Update all entities CUIDs to ensure the chain is continuous.
+Update all entities' CUIDs to ensure the chain is continuous.
 ```
 
-*Ensure the chain is free of gaps and duplicates:*
+*Example: Ensure the chain is free of gaps and duplicates:*
 
 ```mcfunction
 function #bs.id:update_cuids
@@ -112,7 +114,7 @@ You can find below all predicates available in this module.
 Determine if an entity has a `bs.id` score.
 ```
 
-*Give an suid to all entities that aren't identified by a `bs.id` score:*
+*Example: Give an SUID to all entities that aren't identified by a `bs.id` score:*
 
 ```mcfunction
 execute as @e[predicate=!bs.id:has_suid] run function #bs.id:give_suid
@@ -129,7 +131,7 @@ Find an entity that has the same `bs.id` as the input value.
   **Score `$id.suid bs.in`**: Value to check against.
 ```
 
-*Find the entity that has a `bs.id` equal to 1:*
+*Example: Find the entity that has a `bs.id` equal to 1:*
 
 ```mcfunction
 scoreboard players set $id.suid bs.in 1
@@ -147,7 +149,7 @@ Filter entities that have a `bs.id` less than or equal to the input value.
   **Score `$id.suid bs.in`**: Value to check against.
 ```
 
-*Filter entities that have a `bs.id` less than or equal to 17:*
+*Example: Filter entities that have a `bs.id` less than or equal to 17:*
 
 ```mcfunction
 scoreboard players set $id.suid bs.in 17
@@ -165,7 +167,7 @@ Filter entities that have a `bs.id` greater than or equal to the input value.
   **Score `$id.suid bs.in`**: Value to check against.
 ```
 
-*Filter entities that have a `bs.id` greater than or equal to 18:*
+*Example: Filter entities that have a `bs.id` greater than or equal to 18:*
 
 ```mcfunction
 scoreboard players set $id.suid bs.in 18
@@ -185,7 +187,7 @@ Filter entities that have a `bs.id` between the given values.
   **Score `$id.suid.max bs.in`**: Max value to check against.
 ```
 
-*Filter entities that have a `bs.id` between 2 and 4:*
+*Example: Filter entities that have a `bs.id` between 2 and 4:*
 
 ```mcfunction
 scoreboard players set $id.suid.min bs.in 2
@@ -210,7 +212,7 @@ execute as @e[predicate=bs.id:suid_match,limit=1] run say In range
 Determine if an entity has a `bs.cid` score.
 ```
 
-*Give an cuid to all entities that aren't identified by a `bs.cid` score:*
+*Example: Give a CUID to all entities that aren't identified by a `bs.cid` score:*
 
 ```mcfunction
 execute as @e[predicate=!bs.id:has_cuid] run function #bs.id:give_cuid
@@ -227,7 +229,7 @@ Find an entity that has the same `bs.cid` as the input value.
   **Score `$id.cuid bs.in`**: Value to check against.
 ```
 
-*Find the entity that has a `bs.cid` equal to 1:*
+*Example: Find the entity that has a `bs.cid` equal to 1:*
 
 ```mcfunction
 scoreboard players set $id.cuid bs.in 1
@@ -245,7 +247,7 @@ Filter entities that have a `bs.cid` less than or equal to the input value.
   **Score `$id.cuid bs.in`**: Value to check against.
 ```
 
-*Filter entities that have a `bs.cid` less than or equal to 17:*
+*Example: Filter entities that have a `bs.cid` less than or equal to 17:*
 
 ```mcfunction
 scoreboard players set $id.cuid bs.in 17
@@ -263,7 +265,7 @@ Filter entities that have a `bs.cid` greater than or equal to the input value.
   **Score `$id.cuid bs.in`**: Value to check against.
 ```
 
-*Filter entities that have a `bs.cid` greater than or equal to 18:*
+*Example: Filter entities that have a `bs.cid` greater than or equal to 18:*
 
 ```mcfunction
 scoreboard players set $id.cuid bs.in 18
@@ -283,7 +285,7 @@ Filter entities that have a `bs.cid` between the given values.
   **Score `$id.cuid.max bs.in`**: Max value to check against.
 ```
 
-*Filter entities that have a `bs.cid` between 2 and 4:*
+*Example: Filter entities that have a `bs.cid` between 2 and 4:*
 
 ```mcfunction
 scoreboard players set $id.cuid.min bs.in 2

@@ -13,8 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute unless predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","looking_at":{"type":"minecraft:interaction","nbt":"{\"Tags\":[\"bs.interaction.is_hoverable\"]}","distance":{"absolute":{"max":$(y)}}}}}} run return fail
-
 tag @s add bs.interaction.source
 tag @n[type=minecraft:interaction,tag=bs.interaction.is_hoverable,distance=..24,limit=2147483647] add bs.interaction.target
 function bs.interaction:on_event/hover_enter/get_target/filter

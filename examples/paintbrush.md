@@ -1,6 +1,6 @@
 # 🖌️ Paintbrush
 
-This example shows how to create a paintbrush in Minecraft using the Bookshelf library. The paintbrush changes a block's material to match the item in the player's hand, while preserving important properties like orientation, waterlogging, and other block states. For instance, if the player holds oak planks, birch stairs will transform into oak stairs.
+This example demonstrates how to create a paintbrush in Minecraft using the Bookshelf library. The paintbrush changes a block's material to match the item in the player's hand, while preserving important properties like orientation, waterlogging, and other block states. For instance, if the player holds oak planks, birch stairs will transform into oak stairs.
 
 ---
 
@@ -22,7 +22,7 @@ Before we start, make sure you have:
   - `@require bookshelf.module.block`
   - `@require bookshelf.module.view`
 - Basic knowledge of datapack development, including functions, tags, and scoreboards
-- A ready to use empty datapack
+- A ready-to-use empty datapack
 
 ---
 
@@ -93,7 +93,7 @@ First, we need to create an item that the player can use to paint a block. For t
 
 The reward enables us to trigger a specific function when the brush is used. We'll use the `paintbrush:use` function here.
 
-> Note that this advancement triggers the function only if the brush has the custom data `{"paintbrush":true}`, ensuring that vanilla brushes continue to function normally.
+> Note that this advancement triggers the function only if the brush has the custom data `{paintbrush: true}`, ensuring that vanilla brushes continue to function normally.
 
 **➔ create the `use` function**
 
@@ -107,9 +107,9 @@ say Paintbrush used!
 `@function paintbrush:give`
 ```mcfunction
 give @s minecraft:brush[ \
-  minecraft:custom_data={ "paintbrush": true }, \
-  minecraft:item_name='["",{"text":"MAGIC BRUSH","color":"light_purple","bold":true,"italic":true},{"text":" - Right click to use","color":"gray"}]', \
-  minecraft:lore=['{"text":"A brushstroke of creation.","color":"dark_gray","italic":false}','""','{"text":"Imbue the aimed block with the properties","color":"gray","italic":false}','{"text":"of the block held in your offhand.","color":"gray","italic":false}'], \
+  minecraft:custom_data={ paintbrush: true }, \
+  minecraft:item_name=["",{text:"MAGIC BRUSH",color:"light_purple",bold:true,italic:true},{text:" - Right click to use",color:"gray"}], \
+  minecraft:lore=[{text:"A brushstroke of creation.",color:"dark_gray",italic:false},"",{text:"Imbue the aimed block with the properties",color:"gray",italic:false},{text:"of the block held in your offhand.",color:"gray",italic:false}], \
 ]
 ```
 
@@ -158,11 +158,11 @@ Now, each time the player uses the paintbrush, the `paintbrush:use` function wil
 
 ### 4. Paint the Targeted Block
 
-Now, let’s move on to painting! We’ll use the `bs.block` module to apply the block type from the item held in the offhand (slot -106) to the targeted block. This process involves three steps:
+Now, let's move on to painting! We'll use the `bs.block` module to apply the block type from the item held in the offhand to the targeted block. This process involves three steps:
 
 1. Load the targeted block into storage (`bs:out block`) as a "virtual block"
 2. Transform the virtual block using various operations (`mix_type` in this case)
-3. Generate the final result from the virtual block, which can be a block, item, particle, block display, etc. (here, we’ll replace the block with its transformed version).
+3. Generate the final result from the virtual block, which can be a block, item, particle, block display, etc. (here, we'll replace the block with its transformed version).
 
 ---
 
@@ -170,17 +170,18 @@ Now, let’s move on to painting! We’ll use the `bs.block` module to apply the
 
 The `mix_type` function uses a mapping registry to determine how blocks are transformed. Bookshelf provides two built-in registries:
 - `bs.colors`: This registry is used to transform blocks based on color properties. For example, if the held item is a colored block, it will attempt to apply the color transformation to the targeted block.
-- `bs.shapes`: This registry is used to transform blocks based on their shape. For instance, if the held block is an oak planks, and the targeted block is a birch stairs, this registry would map the oak plank to a corresponding block shape like oak stairs. This is ideal for transforming between blocks that have a similar structural shape.
+- `bs.shapes`: This registry is used to transform blocks based on their shape. For instance, if the held block is oak planks, and the targeted block is birch stairs, this registry would map the oak plank to a corresponding block shape like oak stairs. This is ideal for transforming between blocks that have a similar structural shape.
 
-These registries allow for more specific control over how block transformations occur. In this example we'll use `bs.shapes`. To set up the transformation, we specify the `mapping_registry` and store the block `type` from the player's offhand into an arbitrary storage.
+These registries allow for more specific control over how block transformations occur. In this example, we'll use `bs.shapes`. To set up the transformation, we specify the `mapping_registry` and store the block `type` from the player's offhand into an arbitrary storage.
 
 **➔ update the `replace_block` function**
 
 `@function paintbrush:replace_block`
 ```mcfunction
 # Prepare the input of the mix_type function
+data remove storage painterbrush:input type
 data modify storage painterbrush:input mapping_registry set value "bs.shapes"
-execute store success score #success data run data modify storage painterbrush:input type set from entity @s Inventory[{Slot:-106b}].id
+execute store success score #success data run data modify storage painterbrush:input type set from entity @s equipment.offhand.id
 execute if score #success data matches 0 run return fail
 ```
 
@@ -197,8 +198,9 @@ The `#bs.view:at_aimed_block` function ensures that execution is already at the 
 `@function paintbrush:replace_block`
 ```mcfunction
 # Prepare the input of the mix_type function
+data remove storage painterbrush:input type
 data modify storage painterbrush:input mapping_registry set value "bs.shapes"
-execute store success score #success data run data modify storage painterbrush:input type set from entity @s Inventory[{Slot:-106b}].id
+execute store success score #success data run data modify storage painterbrush:input type set from entity @s equipment.offhand.id
 execute if score #success data matches 0 run return fail
 
 # Load the aimed block
@@ -216,8 +218,9 @@ Now that the block is loaded and the transformation input is ready, we can apply
 `@function paintbrush:replace_block`
 ```mcfunction
 # Prepare the input of the mix_type function
+data remove storage painterbrush:input type
 data modify storage painterbrush:input mapping_registry set value "bs.shapes"
-execute store success score #success data run data modify storage painterbrush:input type set from entity @s Inventory[{Slot:-106b}].id
+execute store success score #success data run data modify storage painterbrush:input type set from entity @s equipment.offhand.id
 execute if score #success data matches 0 run return fail
 
 # Load the aimed block
@@ -241,8 +244,9 @@ Finally, we apply the transformed block to the world using `set_block`.
 `@function paintbrush:replace_block`
 ```mcfunction
 # Prepare the input of the mix_type function
+data remove storage painterbrush:input type
 data modify storage painterbrush:input mapping_registry set value "bs.shapes"
-execute store success score #success data run data modify storage painterbrush:input type set from entity @s Inventory[{Slot:-106b}].id
+execute store success score #success data run data modify storage painterbrush:input type set from entity @s equipment.offhand.id
 execute if score #success data matches 0 run return fail
 
 # Load the aimed block
@@ -299,7 +303,7 @@ And… That's it! You can now paint blocks with the painter tool, and as you can
 
 ## ✔️ Conclusion
 
-Congratulations! You’ve successfully created a functional paintbrush using Bookshelf! This project demonstrates how to:
+Congratulations! You've successfully created a functional paintbrush using Bookshelf! This project demonstrates how to:
 
 - Use Bookshelf's view module to get the aimed block
 - Use Bookshelf's block module for block manipulation

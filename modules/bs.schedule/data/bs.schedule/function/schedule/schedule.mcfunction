@@ -18,7 +18,7 @@ data modify storage bs:ctx _.id set from storage bs:ctx _.with.id
 
 # Handle the unit, return early on failure
 execute if data storage bs:ctx _.with.unit store success score #s bs.ctx run function bs.schedule:schedule/unit/handle with storage bs:ctx _.with
-execute if data storage bs:ctx _.with.unit if score #s bs.ctx matches 0 run return run function #bs.log:error {namespace:"bs.schedule", tag:"schedule", path:"#bs.schedule:schedule", message:'["Unit \\\'",{"storage":"bs:ctx","nbt":"_.with.unit"},"\\\' is not supported."]'}
+execute if data storage bs:ctx _.with.unit if score #s bs.ctx matches 0 run return run function #bs.log:error {namespace:"bs.schedule", tag:"schedule", path:"#bs.schedule:schedule", message:["Unit '",{storage:"bs:ctx",nbt:"_.with.unit"},"' is not supported."]}
 
 # Schedule the callback, update the gametime and add a unique id
 execute unless data storage bs:ctx _.with.time run data modify storage bs:ctx _.with.time set value 1

@@ -14,4 +14,5 @@
 - [ ] I have updated the [changelog](https://github.com/mcbookshelf/bookshelf/blob/master/docs/CHANGELOG.md) to reflect my contribution.
 - [ ] If this pull request adds or modifies a feature:
   - [ ] I have documented my changes in the `/docs` folder.
-  - [ ] I have thoroughly tested my changes. See [testing guidelines](https://docs.mcbookshelf.dev/en/latest/contribute/debug.html#unit-tests).
+  - [ ] I have updated the metadata of the feature. See [feature metadata](https://docs.mcbookshelf.dev/en/master/contribute/metadata.html#feature-metadata).
+  - [ ] I have thoroughly tested my changes. See [testing guidelines](https://docs.mcbookshelf.dev/en/master/contribute/debug.html#unit-tests).

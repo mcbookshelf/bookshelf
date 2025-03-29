@@ -14,7 +14,7 @@ Through the three sub-pages of this related page, we want to pay tribute to diff
 :link-type: doc
 :margin: 0 3 0 0
 
-Pojects that use Bookshelf.
+Projects that use Bookshelf.
 :::
 
 :::{grid-item-card} 📚 Related Libraries

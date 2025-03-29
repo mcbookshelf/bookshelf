@@ -15,5 +15,5 @@
 
 data modify storage bs:data log.messages set value []
 $data modify storage bs:data log.messages append from storage bs:data log.history[$(with)].message
-execute if data storage bs:data log.messages[0] run tellraw @s {"storage": "bs:data", "nbt": "log.messages[]", "separator": "\n", "interpret": true}
-execute unless data storage bs:data log.messages[0] run tellraw @s {"text": "No log entries to show…","color":"gray"}
+execute if data storage bs:data log.messages[0] run tellraw @s {storage: "bs:data", nbt: "log.messages[]", separator: "\n", interpret: true}
+execute unless data storage bs:data log.messages[0] run tellraw @s {text: "No log entries to show…",color:"gray"}

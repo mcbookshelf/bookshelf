@@ -10,7 +10,6 @@ Execute commands based on what an entity sees.
 ```
 
 ```{epigraph}
-
 "Vision is the act of seeing things as they could be, not as they are."
 
 -- Gretchen Rubin
@@ -41,7 +40,7 @@ Run a command at the aligned coordinates of the block an entity is aiming at.
   :::
 ```
 
-*Change the block you are looking at:*
+*Example: Change the block you are looking at:*
 
 ```mcfunction
 # Once (will run if you are targeting a block)
@@ -84,7 +83,7 @@ Run a command as the entity that is aimed by the current entity.
   :::
 ```
 
-*Run a command as the entity that you are looking at:*
+*Example: Run a command as the entity that you are looking at:*
 
 ```mcfunction
 # Once (will run if you are targeting an entity)
@@ -109,7 +108,7 @@ Run a command at the entity that is aimed by the current entity.
   :::
 ```
 
-*Run a command at the entity that you are looking at:*
+*Example: Run a command at the entity that you are looking at:*
 
 ```mcfunction
 # Once (will run if you are targeting an entity)
@@ -128,7 +127,7 @@ This system is a simplified, specific use case of the `#bs.raycast:run` function
 ```{admonition} Performance Tip
 :class: tip
 
-In Minecraft, predicates can check if a player is looking at an entity. If you only need a simple player specific check, you should consider using the [Looked entity](#looked-entity) functions.
+In Minecraft, predicates can check if a player is looking at an entity. If you only need a simple player-specific check, you should consider using the [Looked entity](#looked-entity) functions.
 ```
 
 > **Credits**: Aksiome
@@ -152,7 +151,7 @@ Run a command at the point that was hit by a raycast.
   :::
 ```
 
-*Run a command at the point you are looking at:*
+*Example: Run a command at the point you are looking at:*
 
 ```mcfunction
 # Once (will run if you are aiming at a solid block or entity)
@@ -186,7 +185,7 @@ Run a command at the precise coordinates where a block would align if placed, co
   :::
 ```
 
-*Set a block as if the player was placing it:*
+*Example: Set a block as if the player was placing it:*
 
 ```mcfunction
 # Once (will run if you are targeting a block)
@@ -224,7 +223,7 @@ Determine if an entity, from its current position, can have an unobstructed view
   **Return**: Whether the check is a success or a failure (1 or 0).
 ```
 
-*See if the nearest entity is able to see you:*
+*Example: See if the nearest entity is able to see you:*
 
 ```mcfunction
 # Once
@@ -261,7 +260,7 @@ Determine if an entity has a specific position within its field of view, which i
   :::
 ```
 
-*Check whether the position 0 5 0 is in your field of view::*
+*Example: Check whether the position 0 5 0 is in your field of view:*
 
 ```mcfunction
 # Once
@@ -293,7 +292,7 @@ Run a command as the entity a player is looking at.
   **Tag `bs.view.is_lookable`**: Tag that must be added to entities that can be looked at.
 ```
 
-*Make the armor_stand the player is looking at glow:*
+*Example: Make the armor_stand the player is looking at glow:*
 
 ```mcfunction
 # Once
@@ -320,7 +319,7 @@ Run a command at the entity a player is looking at.
   **Tag `bs.view.is_lookable`**: Tag that must be added to entities that can be looked at.
 ```
 
-*Summon particles at the armor_stand the player is looking at:*
+*Example: Summon particles at the armor_stand the player is looking at:*
 
 ```mcfunction
 # Once
@@ -334,7 +333,7 @@ function #bs.view:at_looked_entity {run:"particle minecraft:crit ~ ~2 ~ 0 0 0 0 
 ```{admonition} Technical Limitations
 :class: important
 
-As this function relies on a player specific predicate, it is exclusively designed for players. Additionally, to optimize performance, only a maximum of 255 entities are allowed to have the `bs.view.is_lookable` tag simultaneously.
+As this function relies on a player-specific predicate, it is exclusively designed for players. Additionally, to optimize performance, only a maximum of 255 entities are allowed to have the `bs.view.is_lookable` tag simultaneously.
 ```
 
 > **Credits**: Aksiome
@@ -343,7 +342,7 @@ As this function relies on a player specific predicate, it is exclusively design
 
 ## 🏷️ Tags
 
-You can find below all tags available in this module.
+You can find below below all tags available in this module.
 
 ---
 

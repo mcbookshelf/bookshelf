@@ -650,8 +650,8 @@
             "minecraft_version": "1.20.4"
           },
           "updated": {
-            "date": "2024/03/02",
-            "minecraft_version": "1.20.4"
+            "date": "2025/03/25",
+            "minecraft_version": "1.21.5"
           }
         }
       ]
@@ -1423,8 +1423,8 @@
             "minecraft_version": "1.21.3"
           },
           "updated": {
-            "date": "2024/11/01",
-            "minecraft_version": "1.21.3"
+            "date": "2025/03/24",
+            "minecraft_version": "1.21.5"
           }
         },
         {
@@ -1439,8 +1439,8 @@
             "minecraft_version": "24w13a"
           },
           "updated": {
-            "date": "2024/11/01",
-            "minecraft_version": "1.21.3"
+            "date": "2025/03/24",
+            "minecraft_version": "1.21.5"
           }
         },
         {
@@ -1455,8 +1455,8 @@
             "minecraft_version": "24w13a"
           },
           "updated": {
-            "date": "2024/11/01",
-            "minecraft_version": "1.21.3"
+            "date": "2025/03/24",
+            "minecraft_version": "1.21.5"
           }
         },
         {
@@ -1471,8 +1471,8 @@
             "minecraft_version": "24w13a"
           },
           "updated": {
-            "date": "2024/11/01",
-            "minecraft_version": "1.21.3"
+            "date": "2025/03/24",
+            "minecraft_version": "1.21.5"
           }
         },
         {
@@ -1487,8 +1487,8 @@
             "minecraft_version": "24w13a"
           },
           "updated": {
-            "date": "2024/11/01",
-            "minecraft_version": "1.21.3"
+            "date": "2025/03/24",
+            "minecraft_version": "1.21.5"
           }
         },
         {
@@ -1503,8 +1503,8 @@
             "minecraft_version": "24w13a"
           },
           "updated": {
-            "date": "2024/11/01",
-            "minecraft_version": "1.21.3"
+            "date": "2025/03/24",
+            "minecraft_version": "1.21.5"
           }
         }
       ]
@@ -2004,8 +2004,8 @@
             "minecraft_version": "1.21"
           },
           "updated": {
-            "date": "2024/09/06",
-            "minecraft_version": "1.21"
+            "date": "2025/03/23",
+            "minecraft_version": "1.21.5"
           }
         },
         {
@@ -2019,8 +2019,8 @@
             "minecraft_version": "23w31a"
           },
           "updated": {
-            "date": "2024/09/06",
-            "minecraft_version": "1.21"
+            "date": "2025/03/23",
+            "minecraft_version": "1.21.5"
           }
         },
         {
@@ -2034,8 +2034,8 @@
             "minecraft_version": "23w31a"
           },
           "updated": {
-            "date": "2024/09/06",
-            "minecraft_version": "1.21"
+            "date": "2025/03/23",
+            "minecraft_version": "1.21.5"
           }
         },
         {
@@ -2049,8 +2049,8 @@
             "minecraft_version": "1.21"
           },
           "updated": {
-            "date": "2024/09/06",
-            "minecraft_version": "1.21"
+            "date": "2025/03/23",
+            "minecraft_version": "1.21.5"
           }
         },
         {
@@ -2064,8 +2064,8 @@
             "minecraft_version": "23w31a"
           },
           "updated": {
-            "date": "2024/09/06",
-            "minecraft_version": "1.21"
+            "date": "2025/03/23",
+            "minecraft_version": "1.21.5"
           }
         },
         {
@@ -2079,8 +2079,8 @@
             "minecraft_version": "23w31a"
           },
           "updated": {
-            "date": "2024/09/06",
-            "minecraft_version": "1.21"
+            "date": "2025/03/23",
+            "minecraft_version": "1.21.5"
           }
         }
       ]
@@ -3448,8 +3448,8 @@
             "minecraft_version": "23w32a"
           },
           "updated": {
-            "date": "2023/12/07",
-            "minecraft_version": "1.20.3"
+            "date": "2025/03/24",
+            "minecraft_version": "1.21.5"
           }
         },
         {
@@ -3463,8 +3463,201 @@
             "minecraft_version": "23w32a"
           },
           "updated": {
-            "date": "2023/12/07",
-            "minecraft_version": "1.20.3"
+            "date": "2025/03/24",
+            "minecraft_version": "1.21.5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bs.spline",
+      "name": "Spline",
+      "slug": "bookshelf-spline",
+      "description": "Manipulate smooth curves created from control points.",
+      "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html",
+      "kind": "data_pack",
+      "tags": [
+        "default"
+      ],
+      "features": [
+        {
+          "id": "#bs.spline:evaluate_bezier",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#evaluate",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.spline:evaluate_bspline",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#evaluate",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.spline:evaluate_catmull_rom",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#evaluate",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.spline:evaluate_hermite",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#evaluate",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.spline:sample_bezier",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#sample",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.spline:sample_bspline",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#sample",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.spline:sample_catmull_rom",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#sample",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.spline:sample_hermite",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#sample",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.spline:stream_bezier",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#stream",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.spline:stream_bspline",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#stream",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.spline:stream_catmull_rom",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#stream",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.spline:stream_hermite",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#stream",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
+          },
+          "updated": {
+            "date": "2025/01/25",
+            "minecraft_version": "1.21.4"
           }
         }
       ]

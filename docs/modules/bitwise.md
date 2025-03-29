@@ -41,7 +41,8 @@ Get the number of ones in the binary representation of a number.
   **Return | Score `$bitwise.bit_count bs.out`**: Number of positive bits needed to represent the number.
 ```
 
-*Compute and display how much positive bits 12 has:*
+*Example: Compute and display the number of positive bits in 12:*
+
 ```mcfunction
 # Once
 scoreboard players set $bitwise.bit_count.n bs.in 12
@@ -68,7 +69,8 @@ Get the number of bits necessary to represent a number.
   **Return | Score `$bitwise.bit_length bs.out`**: Number of bits needed to represent the number.
 ```
 
-*Compute and display how much bits 12 has:*
+*Example: Compute and display the number of bits needed to represent 12:*
+
 ```mcfunction
 # Once
 scoreboard players set $bitwise.bit_length.n bs.in 12
@@ -95,7 +97,8 @@ Compute the two's complement of a number.
   **Return | Score `$bitwise.two_complement bs.out`**: The two's complement of the number.
 ```
 
-*Compute and display the two's complement of -12:*
+*Example: Compute and display the two's complement of -12:*
+
 ```mcfunction
 # Once
 scoreboard players set $bitwise.two_complement.n bs.in -12
@@ -127,7 +130,8 @@ Compute the bitwise conjunction of two numbers.
   **Return | Score `$bitwise.and bs.out`**: Result of the operation $=a \land b$.
 ```
 
-*Compute and display $-9 \land 57$:*
+*Example: Compute and display $-9 \land 57$:*
+
 ```mcfunction
 # Once
 scoreboard players set $bitwise.and.a bs.in -9
@@ -154,7 +158,8 @@ Compute the bitwise disjunction of two numbers.
   **Return | Score `$bitwise.or bs.out`**: Result of the operation $=a \lor b$.
 ```
 
-*Compute and display $-9 \lor 57$:*
+*Example: Compute and display $-9 \lor 57$:*
+
 ```mcfunction
 # Once
 scoreboard players set $bitwise.or.a bs.in -9
@@ -181,7 +186,8 @@ Compute the exclusive bitwise disjunction of two numbers.
   **Return | Score `$bitwise.xor bs.out`**: Result of the operation $=a \oplus b$.
 ```
 
-*Compute and display $-9 \oplus 57$:*
+*Example: Compute and display $-9 \oplus 57$:*
+
 ```mcfunction
 # Once
 scoreboard players set $bitwise.xor.a bs.in -9
@@ -206,7 +212,8 @@ Compute the bitwise negation of a number.
   **Return | Score `$bitwise.not bs.out`**: Result of the not operation.
 ```
 
-*Compute and display $\lnot 452$:*
+*Example: Compute and display $\lnot 452$:*
+
 ```mcfunction
 # Once
 scoreboard players set $bitwise.not.n bs.in 452

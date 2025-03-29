@@ -14,11 +14,11 @@
 # ------------------------------------------------------------------------------------------------------------
 
 $scoreboard objectives remove $(id)
-$data remove storage bs:data sidebar[{id:'$(id)'}]
+$data remove storage bs:data sidebar.'$(id)'
 
 function #bs.log:error { \
   namespace: "bs.sidebar", \
   path: "#bs.sidebar:create", \
   tag: "create", \
-  message: '[{"text":"The line at position ","color":"red"},{"score":{"name":"#i","objective":"bs.ctx"}},{"text":" must have valid JSON text components."}]', \
+  message: [{text:"The line at position ",color:"red"},{score:{name:"#i",objective:"bs.ctx"}},{text:" must have valid SNBT text components."}], \
 }

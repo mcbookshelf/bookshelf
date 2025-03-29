@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set value {id:'$(objective)',name:'$(display_name)',contents:$(contents)}
+$data modify storage bs:ctx _ set value {id:'$(objective)',name:$(display_name),contents:$(contents)}
 
 # check that the objective format is valid
 execute store success score #s bs.ctx run function bs.sidebar:create/check/objective with storage bs:ctx _
@@ -21,7 +21,7 @@ execute unless score #s bs.ctx matches 1 run return run function #bs.log:error {
   namespace: "bs.sidebar", \
   path: "#bs.sidebar:create", \
   tag: "create", \
-  message: '[{"text":"The objective [","color":"red"},{"storage":"bs:ctx","nbt":"_.id"},{"text":"] contain invalid characters."}]', \
+  message: [{text:"The objective [",color:"red"},{storage:"bs:ctx",nbt:"_.id"},{text:"] contain invalid characters."}], \
 }
 
 # check that the name format is valid
@@ -30,7 +30,7 @@ execute unless score #s bs.ctx matches 1 run return run function #bs.log:error {
   namespace: "bs.sidebar", \
   path: "#bs.sidebar:create", \
   tag: "create", \
-  message: '[{"text":"The name [","color":"red"},{"storage":"bs:ctx","nbt":"_.name"},{"text":"] must be a valid JSON text component."}]', \
+  message: [{text:"The name [",color:"red"},{storage:"bs:ctx",nbt:"_.name"},{text:"] must be a valid SNBT text component."}], \
 }
 
 # check that the contents have between 1 and 15 entries
@@ -39,11 +39,9 @@ execute unless score #s bs.ctx matches 1..15 run return run function #bs.log:err
   namespace: "bs.sidebar", \
   path: "#bs.sidebar:create", \
   tag: "create", \
-  message: '[{"text":"The contents must have between 1 and 15 lines (","color":"red"},{"score":{"name":"#s","objective":"bs.ctx"}},{"text":" given)."}]', \
+  message: [{text:"The contents must have between 1 and 15 lines (",color:"red"},{score:{name:"#s",objective:"bs.ctx"}},{text:" given)."}], \
 }
 
 # start the recursion to create each line abort if a line failed
-execute as B5-0-0-0-2 run function bs.sidebar:create/recurse/start with storage bs:ctx _
-data remove entity @s CustomName
-execute if score #s bs.ctx = #i bs.ctx run return 1
-return run function bs.sidebar:create/recurse/abort with storage bs:ctx _
+execute as B5-0-0-0-2 run function bs.sidebar:create/recurse/init with storage bs:ctx _
+execute unless score #s bs.ctx = #i bs.ctx run function bs.sidebar:create/recurse/abort with storage bs:ctx _

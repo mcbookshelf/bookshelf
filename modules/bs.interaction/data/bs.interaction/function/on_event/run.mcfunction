@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 $execute as $(executor) run $(run)
-data remove storage bs:data interaction.run[-1]
-execute if data storage bs:data interaction.run[-1] run function bs.interaction:on_event/run with storage bs:data interaction.run[-1]
+data remove storage bs:data interaction[-1]
+execute if data storage bs:data interaction[-1] run function bs.interaction:on_event/run with storage bs:data interaction[-1]

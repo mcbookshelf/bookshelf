@@ -30,7 +30,7 @@ execute as @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,d
 await delay 1t
 execute if entity @s[tag=bs.packtest.source] run fail "Callback should not run before the interaction is hovered"
 tp @s ~.5 ~ ~.5 180 0
-await delay 1t
+await delay 2t
 execute unless entity @s[tag=bs.packtest.source] run fail "Failed to run callback on source entity"
 execute unless entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.target,distance=..2] run fail "Failed to run callback on target entity"
 execute unless entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.interpreted,distance=..2] run fail "Failed to run callback using an interpreted selector"
@@ -41,7 +41,7 @@ tag @s remove bs.packtest.source
 tag @e[distance=..2] remove bs.packtest.target
 tag @e[distance=..2] remove bs.packtest.interpreted
 tag @e[distance=..2] remove bs.packtest.lazy
-await delay 1t
+await delay 2t
 
 execute unless entity @s[tag=bs.packtest.source] run fail "Callback should run continuously"
 execute unless entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.target,distance=..2] run fail "Callback should run continuously"
@@ -54,7 +54,7 @@ tag @e[distance=..2] remove bs.packtest.lazy
 tag @e[distance=..2] remove bs.packtest.executor
 tag @s add bs.packtest.executor
 
-await delay 1t
+await delay 2t
 execute unless entity @s[tag=bs.packtest.source] run fail "Failed to run callback on source entity"
 execute unless entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.target,distance=..2] run fail "Failed to run callback on target entity"
 execute unless entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.interpreted,distance=..2] run fail "Failed to run callback using an interpreted selector"
@@ -63,11 +63,11 @@ execute unless entity @s[tag=bs.packtest.lazy] run fail "Failed to run callback 
 
 ## === UNEXPECTED INPUT THAT SHOULD RETURN AN ERROR ===
 
-execute store result score #s bs.ctx run function #bs.interaction:on_hover { run: "", executor: "source" }
+execute store success score #s bs.ctx run function #bs.interaction:on_hover { run: "", executor: "source" }
 execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when function is called on a non interaction entity"
-execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store result score #s bs.ctx run function #bs.interaction:on_hover { run: "", executor: "target" }
+execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store success score #s bs.ctx run function #bs.interaction:on_hover { run: "", executor: "target" }
 execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when the command is invalid"
-execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store result score #s bs.ctx run function #bs.interaction:on_hover { run: "help", executor: { selector: "¯\\_(ツ)_/¯" } }
+execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store success score #s bs.ctx run function #bs.interaction:on_hover { run: "help", executor: { selector: "¯\\_(ツ)_/¯" } }
 execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when the selector is invalid"
-execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store result score #s bs.ctx run function #bs.interaction:on_hover { run: "help", executor: { selector: "@n[type=minecraft:allay,tag=bs.is_never_gonna_be_released]", lazy: false } }
+execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2] store success score #s bs.ctx run function #bs.interaction:on_hover { run: "help", executor: { selector: "@n[type=minecraft:allay,tag=bs.is_never_gonna_be_released]", lazy: false } }
 execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when the selector is interpreted and points to no entity"

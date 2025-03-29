@@ -35,10 +35,10 @@ Add levels to the player.
   :::
 
 :Outputs:
-  **State**: Players XP is updated.
+  **State**: Players' XP is updated.
 ```
 
-*Add 42 levels:*
+*Example: Add 42 levels:*
 
 ```mcfunction
 # Once (execute on you)
@@ -65,10 +65,10 @@ Add experience points to the player.
   :::
 
 :Outputs:
-  **State**: Players XP is updated.
+  **State**: Players' XP is updated.
 ```
 
-*Add 42 experience points:*
+*Example: Add 42 experience points:*
 
 ```mcfunction
 # Once (execute on you)
@@ -95,10 +95,10 @@ Fill the XP bar partially.
   :::
 
 :Outputs:
-  **State**: Players XP is updated.
+  **State**: Players' XP is updated.
 ```
 
-*Add 25% to the fill level of your bar:*
+*Example: Add 25% to the fill level of your bar:*
 
 ```mcfunction
 # Once (execute on you)
@@ -129,7 +129,7 @@ You can use negative numbers to remove experience from the player.
 
 ```{function} #bs.xp:get_max_points
 
-Get the total amount of points required to pass to the next level.
+Get the total amount of points required to reach the next level.
 
 :Inputs:
   **Execution `as <players>`**: Players from whom you want to get the max amount of points.
@@ -138,7 +138,7 @@ Get the total amount of points required to pass to the next level.
   **Return | Score `$xp.get_max_points bs.out`**: Total amount of points required for the next level.
 ```
 
-*Get the total amount of points required to pass to the next level:*
+*Example: Get the total amount of points required to pass to the next level:*
 
 ```mcfunction
 # Once (execute on you)
@@ -153,7 +153,7 @@ tellraw @a [{"text":"I need a total of "},{"score":{"name":"$xp.get_max_points",
 
 ```{function} #bs.xp:get_remaining_points
 
-Get the remaining amount of points needed to pass to the next level.
+Get the remaining amount of points needed to reach the next level.
 
 :Inputs:
   **Execution `as <players>`**: Players from whom you want to get the remaining points.
@@ -162,7 +162,7 @@ Get the remaining amount of points needed to pass to the next level.
   **Return | Score `$xp.get_remaining_points bs.out`**: Points needed for the next level.
 ```
 
-*Get the amount of points needed to pass to the next level:*
+*Example: Get the amount of points needed to pass to the next level:*
 
 ```mcfunction
 # Once (execute on you)
@@ -186,7 +186,7 @@ Get the sum of all points a player has gathered.
   **Return | Score `$xp.get_total_points bs.out`**: Total amount of points.
 ```
 
-*Get your total amount of points:*
+*Example: Get your total amount of points:*
 
 ```mcfunction
 # Once (execute on you)
@@ -213,10 +213,10 @@ Get the fill progress of the XP bar.
   :::
 
 :Outputs:
-  **Return | Score `$xp.get_progress bs.out`**: Fill level of the xp bar after scaling.
+  **Return | Score `$xp.get_progress bs.out`**: Fill level of the XP bar after scaling.
 ```
 
-*Get the fill percentage of the xp bar:*
+*Example: Get the fill percentage of the xp bar:*
 
 ```mcfunction
 # Once (execute on you)
@@ -255,7 +255,7 @@ Set players levels.
   **State**: Players XP is updated.
 ```
 
-*Set your level to 42:*
+*Example: Set your level to 42:*
 
 ```mcfunction
 # Once (execute on you)
@@ -285,7 +285,7 @@ Set players experience points.
   **State**: Players XP is updated.
 ```
 
-*Set your points to 42:*
+*Example: Set your points to 42:*
 
 ```mcfunction
 # Once (execute on you)
@@ -315,7 +315,7 @@ Set players total experience points.
   **State**: Players XP is updated.
 ```
 
-*Set your total XP amount to 42:*
+*Example: Set your total XP amount to 42:*
 
 ```mcfunction
 # Once (execute on you)
@@ -345,7 +345,7 @@ Fill the XP bar partially.
   **State**: Players XP is updated.
 ```
 
-*Fill your bar at 50%:*
+*Example: Fill your bar at 50%:*
 
 ```mcfunction
 # Once

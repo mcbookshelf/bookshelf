@@ -12,7 +12,6 @@ def beet_default(ctx: Context) -> None:
     ctx.data.function_tags.setdefault("load:load", FunctionTag()).add("#bs.load:load")
 
     for file, template in [
-        ("exclusive", "exclusive"),
         ("validate", "validate"),
         (f"resolve/{ctx.directory.name}", "steps/resolve"),
         (f"v{VERSION}/bundle/append", "bundle/append"),
@@ -31,41 +30,14 @@ def beet_default(ctx: Context) -> None:
 
     ctx.data["bs.load:load"] = gen_load_tag(MODULES)
     ctx.data["bs.load:unload"] = gen_unload_tag(MODULES)
-    ctx.data[f"bs.load:module/{ctx.data.name}"] = gen_module_load_tag(
-        ctx.directory.name,
-        ctx.meta.get("dependencies", []) or [],
-        ctx.meta.get("weak_dependencies", []) or [],
-    )
 
-
-def gen_module_load_tag(
-    module: str,
-    dependencies: list[str],
-    weak_dependencies: list[str],
-) -> FunctionTag:
-    """Generate a tag to load a module and its dependencies."""
-    return FunctionTag({
-        "replace": True,
-        "values": [
-            f"#bs.load:module/{dep}"
-            for dep in dependencies
-        ] + [
-            {"id": f"#bs.load:module/{dep}", "required": False}
-            for dep in weak_dependencies
-        ] + [
-            f"{module}:__load__",
-        ],
-    })
-
-
-def gen_unload_tag(modules: list[str]) -> FunctionTag:
-    """Generate a tag to unload all modules."""
-    return FunctionTag({
-        "values": [
-            {"id": f"{mod}:__unload__", "required": False}
-            for mod in modules
-        ],
-    })
+    for kind in ["load", "unload"]:
+        ctx.data[f"{ctx.data.name}:{kind}"] = gen_module_tag(
+            kind,
+            ctx.directory.name,
+            ctx.meta.get("dependencies", []) or [],
+            ctx.meta.get("weak_dependencies", []) or [],
+        )
 
 
 def gen_load_tag(modules: list[str]) -> FunctionTag:
@@ -77,7 +49,38 @@ def gen_load_tag(modules: list[str]) -> FunctionTag:
             "#bs.load:steps/resolve",
             "bs.load:validate",
         ] + [
-            {"id": f"#bs.load:module/{mod}", "required": False}
+            {"id": f"#{mod}:load", "required": False}
             for mod in modules
+        ],
+    })
+
+
+def gen_unload_tag(modules: list[str]) -> FunctionTag:
+    """Generate a tag to unload all modules."""
+    return FunctionTag({
+        "values": [
+            {"id": f"#{mod}:unload", "required": False}
+            for mod in modules
+        ],
+    })
+
+
+def gen_module_tag(
+    kind: str,
+    module: str,
+    dependencies: list[str],
+    weak_dependencies: list[str],
+) -> FunctionTag:
+    """Generate a tag for a module and its dependencies."""
+    return FunctionTag({
+        "replace": True,
+        "values": [
+            f"#{dep}:{kind}"
+            for dep in dependencies
+        ] + [
+            {"id": f"#{dep}:{kind}", "required": False}
+            for dep in weak_dependencies
+        ] + [
+            f"{module}:__{kind}__",
         ],
     })

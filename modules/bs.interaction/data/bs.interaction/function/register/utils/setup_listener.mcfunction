@@ -13,7 +13,20 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless score @s bs.interaction.id matches 1.. store result score @s bs.interaction.id run scoreboard players add #counter bs.interaction.id 1
-execute store result storage bs:ctx y int 1 run scoreboard players get @s bs.interaction.id
+# The registered event has the following properties:
+# - id: The ID of the event.
+# - type: The type of event.
+# - run: The command to execute.
+# - executor: The executor of the command.
 
-return run function bs.interaction:register/utils/register_listener with storage bs:ctx
+# Get a new event ID based on the ID of the last registered event incremented by 1.
+execute store result score #i bs.ctx run data get entity @s data."bs.interaction".events[0].id
+execute store result storage bs:ctx _.id int 1 run scoreboard players add #i bs.ctx 1
+data modify entity @s data."bs.interaction".events prepend from storage bs:ctx _
+
+execute if entity @s[tag=bs.interaction.is_hoverable] \
+  unless score @s bs.interaction.hover matches ..2147483647 \
+  store result score @s bs.interaction.hover \
+  run scoreboard players add #counter bs.interaction.hover 1
+
+return run scoreboard players get #i bs.ctx

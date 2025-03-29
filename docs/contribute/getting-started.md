@@ -12,7 +12,7 @@ This guide will walk you through setting up a local development environment to b
 
 Before getting started, ensure your system is prepared by following these steps:
 
-1. Install [**PDM**](https://pdm-project.org/en/latest/), the Python Dependency Manager.
+1. Install [**PDM**](https://pdm-project.org/en/latest/), the Python Dependency Manager
 2. Open a terminal at the root of the project and run the following command to install all required dependencies:
   ```sh
   pdm install
@@ -28,13 +28,13 @@ The `modules` directory contains the source files for all modules. Use the follo
 
 :::{list-table}
 *   - `pdm run modules build`
-    - Build all modules.
+    - Build all modules
 *   - `pdm run modules watch`
-    - Monitor changes and rebuild modules automatically.
+    - Monitor changes and rebuild modules automatically
 *   - `pdm run modules <build|watch> <module1> ...`
-    - Build or watch only the specified modules.
+    - Build or watch only the specified modules
 *   - `pdm run modules link [world]`
-    - Link the generated resource and data packs to a Minecraft world.
+    - Link the generated resource and data packs to a Minecraft world
 :::
 
 ```{admonition} Watching Modules
@@ -49,15 +49,14 @@ The `link` command allows you to integrate generated packs directly into a Minec
 
 :::{list-table}
 *   - `world (optional)`
-    - The name of the Minecraft world to link.
+    - The name of the Minecraft world to link
 *   - `--minecraft <DIRECTORY>`
-    - Path to the `.minecraft` directory (location of Minecraft files).
+    - Path to the `.minecraft` directory (location of Minecraft files)
 *   - `--data-pack <DIRECTORY>`
-    - Path to the directory where data packs are stored.
+    - Path to the directory where data packs are stored
 *   - `--resource-pack <DIRECTORY>`
-    - Path to the directory where resource packs are stored.
+    - Path to the directory where resource packs are stored
 :::
-
 
 This workflow demonstrates how to link and continuously test your modules directly in Minecraft:
 ```sh

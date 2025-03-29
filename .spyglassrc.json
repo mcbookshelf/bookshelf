@@ -1,11 +1,12 @@
 {
   "env": {
+    "useFilePolling": false,
     "exclude": [
       ".*/**",
       "bookshelf/**",
+      "build/**",
       "data/**",
       "docs/**",
-      "build/**",
       "release/**"
     ],
     "mcmetaSummaryOverrides": {

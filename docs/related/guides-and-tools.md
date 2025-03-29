@@ -6,7 +6,7 @@ html_theme.sidebar_secondary.remove: true
 
 Map making is an aspect of Minecraft that becomes increasingly difficult with each new version of the game.
 To help beginner (and even advanced) map makers, the community provides numerous guides and tools.
-This page listes some of them.
+This page lists some of them.
 
 ## 📚 Guides & Documentation
 
@@ -23,7 +23,7 @@ Smithed's convention to keep datapacks compatible together.
 :link: https://www.minecraft-france.fr/tutoriel-guide-mapmaking-le-developpement/
 :margin: 0 3 0 0
 
-This french guide presents the MCFunction part of Minecraft as well as good development practices.
+This French guide presents the MCFunction part of Minecraft as well as good development practices.
 :::
 
 :::{grid-item-card} 📕 Minecraft Wiki
@@ -38,7 +38,7 @@ The Wiki also proposes some tutorials about creating different aspects of a data
 :link: https://www.youtube.com/@slicedlime
 :margin: 0 3 0 0
 
-A youtuber and developer of Mojang who presents the technical features in video at each new snapshot.
+A YouTuber and developer of Mojang who presents the technical features in video at each new snapshot.
 :::
 
 ::::
@@ -135,7 +135,7 @@ NBT Autocomplete is a client-side mod adding suggestions for NBT tags in command
 :link: https://github.com/SnaveSutit/mcworld-performance-dp
 :margin: 0 3 0 0
 
-This is a datapack to mesure performance of other datapacks or commands directly in game.
+This is a datapack to measure performance of other datapacks or commands directly in game.
 :::
 
 :::{grid-item-card} 🔧 Suggestion Tweaker

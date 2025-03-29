@@ -2,25 +2,25 @@
 
 **`#bs.time:help`**
 
-Get information about the system time effortlessly.
+Get system time information effortlessly.
 
 ```{admonition} Enable Command Blocks
 :class: warning
 
-This module uses a command block to get the system time. For the time to be displayed as intended, be sure that `enable-command-block` is set to `true` in you `server.properties` file and that the `sendCommandFeedback` gamerule is enabled.
+This module uses a command block to get the system time. For the time to be displayed as intended, ensure that `enable-command-block` is set to `true` in your `server.properties` file and that the `sendCommandFeedback` gamerule is enabled.
 ```
 
-##  🔧 Functions
+## 🔧 Functions
 
 You can find below all functions available in this module.
 
 ---
 
-###  System Time
+### System Time
 
 ```{function} #bs.time:get
 
-Get the system time corresponding to the real hours, minutes and seconds.
+Get the system time corresponding to the real hours, minutes, and seconds.
 
 :Outputs:
   **Score `$time.hours bs.out`**: System time hours.
@@ -30,7 +30,8 @@ Get the system time corresponding to the real hours, minutes and seconds.
   **Score `$time.seconds bs.out`**: System time seconds.
 ```
 
-*The moment we all dread:*
+*Example: The moment we all dread:*
+
 ```mcfunction
 function #bs.time:get
 

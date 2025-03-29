@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players reset @s bs.interaction.id
+scoreboard players reset @s bs.interaction.hover
 scoreboard players reset @s bs.interaction.logout

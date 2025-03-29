@@ -49,9 +49,9 @@ Reserved functions are special functions within each module that serve predefine
 
 :::{list-table}
 *   - `__help__`
-    - This function provides a path to the documentation for the module. **(Automatically generated)**
+    - This function provides a path to the documentation for the module **(Automatically generated)**
 *   - `__load__`
-    - This function is executed when the module is loaded. **(Must be present in every module)**
+    - This function is executed when the module is loaded **(Must be present in every module)**
 *   - `__unload__`
-    - This function is executed when the module is unloaded. **(Must be present in every module)**
+    - This function is executed when the module is unloaded **(Must be present in every module)**
 :::

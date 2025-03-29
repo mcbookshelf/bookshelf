@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:in log merge value {severity: "warn", namespace: "$(namespace)", tag: "$(tag)", path: "$(path)", message: '$(message)'}
+$data modify storage bs:in log merge value {severity: "warn", namespace: "$(namespace)", tag: "$(tag)", path: "$(path)", message: $(message)}
 
 data modify storage bs:data log.message set from storage bs:const log.messages[{default: true}].format.warn
 $data modify storage bs:data log.message set from storage bs:const log.messages[{namespaces: ["$(namespace)"]}].format.warn
@@ -35,4 +35,4 @@ $execute as @a unless entity @s[ \
   tag=!_.log._.warn, \
   tag=!_.log.$(tag)._, \
   tag=!_.log._._ \
-] run tellraw @s {"storage": "bs:data", "nbt": "log.message", "interpret": true}
+] run tellraw @s {storage: "bs:data", nbt: "log.message", interpret: true}

@@ -13,7 +13,7 @@ Manage blocks, including states and NBTs, while offering advanced tools for seam
 ```{admonition} Virtual Block Format
 :class: info
 
-To manipulate blocks and their states, Bookshelf utilizes a [virtual block format](#get) stored in the block output. It's crucial not to update it manually; instead, utilize the helper functions provided in the library.
+To manipulate blocks and their states, Bookshelf utilizes a [virtual block format](#get) stored in the block output. It's crucial not to update the virtual block format manually; instead, utilize the helper functions provided in the library.
 ```
 
 ---
@@ -41,9 +41,9 @@ Fill all or part of a region with a specific block.
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace|strict] (default: replace).
     - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
-    - {nbt}`list` **masks**: Determine which blocks will be replaced.
+    - {nbt}`list` **masks**: Determine which blocks will be replaced by the fill operation.
       - {nbt}`compound` Block mask
         - {nbt}`string` **block**: Block acting as a filter.
         - {nbt}`bool` **negate**: Reverse the mask (default: false).
@@ -56,7 +56,7 @@ Fill all or part of a region with a specific block.
   **State**: Blocks are placed in the world.
 ```
 
-*Replace the top layer of dirt by grass and use a say command when finished:*
+*Example: Replace the top layer of dirt by grass and use a say command when finished:*
 
 ```mcfunction
 # Setup the input
@@ -66,7 +66,7 @@ data modify storage bs:in block.fill_block set value {block:"minecraft:grass_blo
 function #bs.block:fill_block
 ```
 
-*Fill an area with stone a few blocks at a time:*
+*Example: Fill an area with stone a few blocks at a time:*
 
 ```mcfunction
 # Setup the input
@@ -90,7 +90,7 @@ Fill all or part of a region with a specific block type, preserving states and N
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace|strict] (default: replace).
     - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
@@ -105,7 +105,7 @@ Fill all or part of a region with a specific block type, preserving states and N
   **State**: Blocks are placed in the world.
 ```
 
-*Replace oak stairs with spruce stairs while preserving states and use a say command when finished:*
+*Example: Replace oak stairs with spruce stairs while preserving states and use a say command when finished:*
 
 ```mcfunction
 # Setup the input
@@ -132,7 +132,7 @@ Fill all or part of a region with random blocks or types.
     - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
     - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace|strict] (default: replace).
     - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
     - {nbt}`list` **masks**: Determine which blocks will be replaced.
       - {nbt}`compound` Block mask
@@ -147,7 +147,7 @@ Fill all or part of a region with random blocks or types.
   **State**: Blocks are placed in the world.
 ```
 
-*Randomly fill an area with stone or air and use a say command when finished:*
+*Example: Randomly fill an area with stone or air and use a say command when finished:*
 
 ```mcfunction
 # Setup the input
@@ -187,15 +187,15 @@ Get all data related to the block at the current location, including its state a
     - {nbt}`compound` **nbt**: Data tags used by block entities or an empty string.
     - {nbt}`compound` **properties**: Block state as properties (used by entities like falling blocks).
     - {nbt}`compound` **sounds**: The sound list of a block.
-      - {nbt}`string` **break**: The sound played when a player break the block.
-      - {nbt}`string` **hit**: The sound played when a player hit the block.
-      - {nbt}`string` **fall**: The sound played when a player fall on the block.
-      - {nbt}`string` **place**: The sound played when a player place the block.
-      - {nbt}`string` **step**: The sound played when a player step on the block.
+      - {nbt}`string` **break**: The sound played when a player breaks the block.
+      - {nbt}`string` **hit**: The sound played when a player hits the block.
+      - {nbt}`string` **fall**: The sound played when a player falls on the block.
+      - {nbt}`string` **place**: The sound played when a player places the block.
+      - {nbt}`string` **step**: The sound played when a player steps on the block.
   :::
 ```
 
-*Get all data related to a block:*
+*Example: Get all data related to a block:*
 
 ```mcfunction
 # Run the get function on a block
@@ -227,15 +227,15 @@ Get the block type at the current location. Although states, NBTs, and propertie
     - {nbt}`compound` **nbt**: Data tags used by block entities **[empty string]**.
     - {nbt}`compound` **properties**: Block state as properties **[empty compound]**.
     - {nbt}`compound` **sounds**: The sound list of a block.
-      - {nbt}`string` **break**: The sound played when a player break the block.
-      - {nbt}`string` **hit**: The sound played when a player hit the block.
-      - {nbt}`string` **fall**: The sound played when a player fall on the block.
-      - {nbt}`string` **place**: The sound played when a player place the block.
-      - {nbt}`string` **step**: The sound played when a player step on the block.
+      - {nbt}`string` **break**: The sound played when a player breaks the block.
+      - {nbt}`string` **hit**: The sound played when a player hits the block.
+      - {nbt}`string` **fall**: The sound played when a player falls on the block.
+      - {nbt}`string` **place**: The sound played when a player places the block.
+      - {nbt}`string` **step**: The sound played when a player steps on the block.
   :::
 ```
 
-*Get only type data related to a block (no property value is selected):*
+*Example: Get only type data related to a block (no property value is selected):*
 
 ```mcfunction
 # Run the get function on a block
@@ -276,13 +276,13 @@ Filter properties to keep only the desired ones. This function acts on the [virt
         - {nbt}`string` **name**: Name of the property (e.g., `shape`).
   :::
 
-  **Storage `bs:out block`**: {nbt}`compound` There’s no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
+  **Storage `bs:out block`**: {nbt}`compound` There's no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
 
 :Outputs:
   **Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and `properties` are updated to reflect this change.
 ```
 
-*Keep only the facing and shape properties:*
+*Example: Keep only the facing and shape properties:*
 
 ```mcfunction
 # Once (on stairs)
@@ -313,13 +313,13 @@ Merge state properties from the current location into the output. The merge occu
         - {nbt}`string` **name**: Name of the property (e.g., `shape`).
   :::
 
-  **Storage `bs:out block`**: {nbt}`compound` There’s no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
+  **Storage `bs:out block`**: {nbt}`compound` There's no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
 
 :Outputs:
   **Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and `properties` are updated to reflect this change.
 ```
 
-*Merge the facing of a block onto stairs:*
+*Example: Merge the facing of a block onto stairs:*
 
 ```mcfunction
 # Once (on stairs)
@@ -348,13 +348,13 @@ Filter properties by removing the undesired ones. This function acts on the [vir
         - {nbt}`string` **name**: Name of the property (e.g., `shape`).
   :::
 
-  **Storage `bs:out block`**: {nbt}`compound` There’s no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
+  **Storage `bs:out block`**: {nbt}`compound` There's no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
 
 :Outputs:
   **Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and `properties` are updated to reflect this change.
 ```
 
-*Remove the facing and shape properties:*
+*Example: Remove the facing and shape properties:*
 
 ```mcfunction
 # Once (on stairs)
@@ -384,13 +384,13 @@ Replace property values. Invalid values will not be replaced. This function acts
         - {nbt}`string` **value**: Value of the property (e.g., `east`).
   :::
 
-  **Storage `bs:out block`**: {nbt}`compound` There’s no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
+  **Storage `bs:out block`**: {nbt}`compound` There's no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
 
 :Outputs:
   **Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and `properties` are updated to reflect this change.
 ```
 
-*Replace the facing property value:*
+*Example: Replace the facing property value:*
 
 ```mcfunction
 # Once (on stairs)
@@ -420,13 +420,13 @@ Shift properties by any amount, allowing cycling through their values. This func
         - {nbt}`string` **by**: Shift amount (defaults to 1).
   :::
 
-  **Storage `bs:out block`**: {nbt}`compound` There’s no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
+  **Storage `bs:out block`**: {nbt}`compound` There's no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
 
 :Outputs:
   **Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and `properties` are updated to reflect this change.
 ```
 
-*Shift the facing property value by 2:*
+*Example: Shift the facing property value by 2:*
 
 ```mcfunction
 # Once (on stairs)
@@ -462,7 +462,7 @@ Replace the block type while trying to conserve the state. State is preserved on
     - {nbt}`string` **type**: String representation of the id (e.g., `minecraft:stone`).
   :::
 
-  **Storage `bs:out block`**: {nbt}`compound` There’s no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
+  **Storage `bs:out block`**: {nbt}`compound` There's no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
 
 :Outputs:
   **Return**: Whether a type was found and the replacement occurred.
@@ -470,7 +470,7 @@ Replace the block type while trying to conserve the state. State is preserved on
   **Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and `properties` are updated to reflect this change.
 ```
 
-*Replace oak stairs with spruce stairs, preserving the current state:*
+*Example: Replace oak stairs with spruce stairs, preserving the current state:*
 
 ```mcfunction
 # Once (on oak_stairs)
@@ -514,7 +514,7 @@ Bookshelf includes two predefined mapping registries (`bs.shapes` and `bs.colors
     - {nbt}`string` **mapping_registry**: A path to the mapping registry used for the replacement (e.g., `bs.shapes`).
   :::
 
-  **Storage `bs:out block`**: {nbt}`compound` There’s no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
+  **Storage `bs:out block`**: {nbt}`compound` There's no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
 
 :Outputs:
   **Return**: Whether a type was found and the replacement occurred.
@@ -522,7 +522,7 @@ Bookshelf includes two predefined mapping registries (`bs.shapes` and `bs.colors
   **Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and `properties` are updated to reflect this change.
 `````
 
-*Replace all oak-related blocks with spruce ones (the function replaces the oak stairs block with a spruce stairs block):*
+*Example: Replace all oak-related blocks with spruce ones (the function replaces the oak stairs block with a spruce stairs block):*
 
 ```mcfunction
 # Once (on oak_stairs)
@@ -574,7 +574,7 @@ Bookshelf includes two predefined mapping registries (`bs.shapes` and `bs.colors
     - {nbt}`string` **mapping_registry**: A path to the mapping registry used for the replacement (e.g., `bs.shapes`).
   :::
 
-  **Storage `bs:out block`**: {nbt}`compound` There’s no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
+  **Storage `bs:out block`**: {nbt}`compound` There's no need for manual specification; rather, employ the relevant functions, such as [`get_block`](#get).
 
 :Outputs:
   **Return**: Whether a type was found and the replacement occurred.
@@ -582,7 +582,7 @@ Bookshelf includes two predefined mapping registries (`bs.shapes` and `bs.colors
   **Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and `properties` are updated to reflect this change.
 `````
 
-*Mix a mossy cobblestone block with bricks resulting in a mossy stone bricks block:*
+*Example: Mix a mossy cobblestone block with bricks resulting in a mossy stone bricks block:*
 
 ```mcfunction
 # Once (on mossy_cobblestone)
@@ -613,7 +613,7 @@ Get block data from the given item string id.
   **Storage `bs:out block`**: {nbt}`compound` Equivalent to the [`#bs.block:get_type`](#get) function.
 ```
 
-*Get block data for the stone item:*
+*Example: Get block data for the stone item:*
 
 ```mcfunction
 # Get block type data
@@ -645,7 +645,7 @@ Get block data from the given type string id.
   **Storage `bs:out block`**: {nbt}`compound` Equivalent to the [`#bs.block:get_type`](#get) function.
 ```
 
-*Get block data for the stone type:*
+*Example: Get block data for the stone type:*
 
 ```mcfunction
 # Get block type data
@@ -677,7 +677,7 @@ Determine if the block at the specified location matches the provided one.
   **Return**: Whether the check is a success or a failure (1 or 0).
 ```
 
-*Check that the block at 0 0 0 matches the block at 0 1 0:*
+*Example: Check that the block at 0 0 0 matches the block at 0 1 0:*
 
 ```mcfunction
 # Get block data at 0 0 0
@@ -710,14 +710,14 @@ Place a block at the current location.
   :::{treeview}
   - {nbt}`compound` Set block data
     - {nbt}`string` **block**: Full string representation of the block to set.
-    - {nbt}`string` **mode**: Mode used to set the block [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **mode**: Mode used to set the block [destroy|keep|replace|strict] (default: replace).
   :::
 
 :Outputs:
   **State**: A block is placed in the world.
 ```
 
-*Place a block of stone at 0 0 0 by destroying the existing one:*
+*Example: Place a block of stone at 0 0 0 by destroying the existing one:*
 
 ```mcfunction
 # Setup the input
@@ -741,14 +741,14 @@ Replace the block type at the current location while trying to conserve its stat
   :::{treeview}
   - {nbt}`compound` Set type data
     - {nbt}`string` **type**: String representation of the block id to set.
-    - {nbt}`string` **mode**: Mode used to set the block [destroy|keep|replace] (default: replace).
+    - {nbt}`string` **mode**: Mode used to set the block [destroy|keep|replace|strict] (default: replace).
   :::
 
 :Outputs:
   **State**: A block is placed in the world.
 ```
 
-*Replace any stairs with oak stairs, preserving the current state:*
+*Example: Replace any stairs with oak stairs, preserving the current state:*
 
 ```mcfunction
 # Setup the input
@@ -789,7 +789,7 @@ Spawn a block display representing the given block.
   **State**: The entity is summoned.
 ```
 
-*Summon a block display using the block at 0 0 0:*
+*Example: Summon a block display using the block at 0 0 0:*
 
 ```mcfunction
 # Get block data
@@ -824,7 +824,7 @@ Spawn a falling block representing the given block.
   **State**: The entity is summoned.
 ```
 
-*Summon a falling block using the block at 0 0 0:*
+*Example: Summon a falling block using the block at 0 0 0:*
 
 ```mcfunction
 # Get block data
@@ -859,7 +859,7 @@ Spawn a block display with a hitbox, representing the given block.
   **State**: The entity is summoned.
 ```
 
-*Summon a block display with a hitbox using the block at 0 0 0:*
+*Example: Summon a block display with a hitbox using the block at 0 0 0:*
 
 ```mcfunction
 # Get block data
@@ -896,7 +896,7 @@ Emit block particle of the given block.
   **State**: The particle is emitted.
 ```
 
-*Emit the particle of the block at 0 0 0:*
+*Example: Emit the particle of the block at 0 0 0:*
 
 ```mcfunction
 # Get block data
@@ -936,7 +936,7 @@ Play a block sound of the given block.
   **State**: The sound is played.
 ```
 
-*Play the sound of the block at 0 0 0:*
+*Example: Play the sound of the block at 0 0 0:*
 
 ```mcfunction
 # Get block data
@@ -964,7 +964,7 @@ This module allows you to create a personalized mapping registry tailored to you
 
 ---
 
-To create a new registry, you need to define an array within the `bs:const block.mapping_registry` storage. Each new registry should be namespaced, and each element must include `set`, `attrs`, and `type`. Here’s how you can define a new mapping registry:
+To create a new registry, you need to define an array within the `bs:const block.mapping_registry` storage. Each new registry should be namespaced, and each element must include `set`, `attrs`, and `type`. Here's how you can define a new mapping registry:
 
 ```{code-block} mcfunction
 :force:

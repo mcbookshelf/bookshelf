@@ -13,7 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless data storage bs:ctx _[2][1] run data modify storage bs:data dump[-1]._ set string storage bs:data dump[-1].var -1
-execute unless data storage bs:ctx _[2][1] run data modify storage bs:data dump[-1].var set string storage bs:data dump[-1].var 0 -1
-$data modify entity B5-0-0-0-2 text set value '[{"storage":"bs:data","nbt":"dump[-1].var","color":"$(number)"},{"storage":"bs:data","nbt":"dump[-1]._","color":"$(type)"}]'
-data modify storage bs:out dump append from entity B5-0-0-0-2 text
+data modify storage bs:data dump.char set string storage bs:data dump.value -1
+execute unless data storage bs:data dump{char:"b"} \
+  unless data storage bs:data dump{char:"s"} \
+  unless data storage bs:data dump{char:"l"} \
+  unless data storage bs:data dump{char:"f"} \
+  unless data storage bs:data dump{char:"d"} \
+  run data remove storage bs:data dump.char
+
+execute if data storage bs:data dump.char run data modify storage bs:data dump.value set string storage bs:data dump.value 0 -1
+$data modify entity B5-0-0-0-2 text set value [{storage:"bs:data",nbt:"dump.value",color:"$(number)"},{storage:"bs:data",nbt:"dump.char",color:"$(type)"}]
+data modify storage bs:data dump.out append from entity B5-0-0-0-2 text
