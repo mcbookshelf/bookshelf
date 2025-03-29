@@ -51,21 +51,29 @@ PackTest offers a variety of commands to control test flow, validate conditions,
 PackTest allows you to spawn and control "dummies," simulated players for testing:
 
 - `dummy <name> spawn`: Spawns a new dummy
-- `dummy <name> respawn`: Respawns a killed dummy
+- `dummy <name> respawn`: Respawns the dummy after it has been killed
+- `dummy <name> leave`: Makes the dummy leave the server
 - `dummy <name> jump`: Makes the dummy jump
-- `dummy <name> sneak [true|false]`: Toggles sneaking
-- `dummy <name> sprint [true|false]`: Toggles sprinting
-- `dummy <name> use item`: Simulates the dummy using an item
-- `dummy <name> mine <pos>`: Commands the dummy to mine a block
+- `dummy <name> sneak [true|false]`: Makes the dummy hold shift or un-shift (not the same as currently crouching)
+- `dummy <name> sprint [true|false]`: Makes the dummy sprint or un-sprint
+- `dummy <name> drop [all]`: Makes the dummy drop the current mainhand, either one item or the entire stack
+- `dummy <name> swap`: Makes the dummy swap its mainhand and offhand
+- `dummy <name> selectslot`: Makes the dummy select a different hotbar slot
+- `dummy <name> use item`: Makes the dummy use its hand item, either mainhand or offhand
+- `dummy <name> use block <pos> [<direction>]`: Makes the dummy use its hand item on a block position
+- `dummy <name> use entity <entity>`: Makes the dummy use its hand item on an entity
+- `dummy <name> attack <entity>`: Makes the dummy attack an entity with its mainhand
+- `dummy <name> mine <pos>`: Makes the dummy mine a block
 
 ### 📋 Test Directives
 
 You can customize tests using directives (special comments at the beginning of the test):
 
-- `@template`: Specifies the resource location of a structure template to use for the test
-- `@timeout`: Sets the maximum time (in ticks) before the test fails (default: 100)
-- `@dummy`: Spawns a dummy for testing (e.g., `@dummy ~0.5 ~ ~0.5`)
-- `@optional`: Marks the test as allowed to fail (useful for non-critical cases)
+- `@template`: The resource location of a structure template to use for the test, defaults to `minecraft:empty`, which is an empty 1×1×1 structure
+- `@timeout`: An integer specifying the timeout, defaults to `100`
+- `@optional`: Whether this test is allowed to fail, defaults to `false`, if there is no value after the directive it is considered as `true`
+- `@skyaccess`: Whether this test needs sky access, defaults to `false`, which will place barrier blocks above the test
+- `@dummy`: Whether to spawn a dummy at the start of the test and set `@s` to this dummy, taking a position which defaults to `~0.5 ~ ~0.5`
 
 ```{admonition} Learn more...
 :class: info
