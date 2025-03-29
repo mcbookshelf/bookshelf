@@ -16,7 +16,5 @@
 # modified from https://github.com/CMDred/StringLib/
 
 data modify storage bs:ctx _ set from storage bs:in string.concat
-
 function bs.string:concat/run
-
 data modify storage bs:out string.concat set from storage bs:ctx _.1

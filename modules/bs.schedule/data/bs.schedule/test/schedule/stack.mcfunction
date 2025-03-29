@@ -15,5 +15,4 @@
 
 function #bs.schedule:schedule {run:"scoreboard players add #packtest.schedule.stack bs.data 1",with:{}}
 function #bs.schedule:schedule {run:"scoreboard players add #packtest.schedule.stack bs.data 1",with:{}}
-await delay 1t
-assert score #packtest.schedule.stack bs.data matches 2
+await score #packtest.schedule.stack bs.data matches 2

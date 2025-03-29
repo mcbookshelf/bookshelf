@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:out string.to_string set value "$(val)"
+$data modify storage bs:out string.to_string set value "$(value)"

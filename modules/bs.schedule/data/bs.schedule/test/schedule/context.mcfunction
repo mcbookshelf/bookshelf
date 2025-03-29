@@ -16,9 +16,7 @@
 
 setblock ~ ~1 ~ minecraft:bookshelf
 function #bs.schedule:schedule {run:"execute if block ~ ~1 ~ minecraft:bookshelf run scoreboard players set @s bs.data 1",with:{}}
-await delay 1t
-assert score @s bs.data matches 1
+await score @s bs.data matches 1
 
 execute in minecraft:the_nether run function #bs.schedule:schedule {run:"execute if dimension minecraft:the_nether run scoreboard players set @s bs.data 2",with:{}}
-await delay 1t
-assert score @s bs.data matches 2
+await score @s bs.data matches 2

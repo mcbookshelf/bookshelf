@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
+# @skyaccess true
 
-fill -1 -1 -1 1 1 1 air
 setblock 0 0 0 minecraft:bookshelf
 tp @s -.5 0.0 1.5 0.0 0.0
 

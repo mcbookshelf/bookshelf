@@ -1,4 +1,4 @@
-#!tag "bs.load:steps/resolve"
+#!tag "bs.load:process/resolve"
 
 {% include 'bookshelf/header.jinja' %}
 # Identify the enabled version (the last one in the datapack list) and mark it as active
@@ -12,5 +12,5 @@ execute unless score #{{ module }}.major_versions load.status matches 2.. \
   run return 1
 
 # Format module specific errors
-function #bs.load:errors/{{ module }}
+function #bs.load:process/errors/{{ module[3:] }}
 return fail

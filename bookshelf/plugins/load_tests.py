@@ -3,6 +3,8 @@ from typing import ClassVar
 
 from beet import Context, Function, JsonFile, NamespaceFileScope, TextFile
 
+from bookshelf.definitions import VERSION
+
 
 class TestEnvironment(JsonFile):
     """Represents a Minecraft Test Environment file."""
@@ -23,8 +25,8 @@ def beet_default(ctx: Context) -> Generator:
     ctx.data.extend_namespace.append(TestEnvironment)
     ctx.data.extend_namespace.append(TestFunction)
     yield
-
-    env = f"# @environment {ctx.directory.name}:default\n"
+    module = ctx.directory.name[3:]
+    env = f"# @environment bs.load:{module}\n"
     header = ctx.template.render("bookshelf/header.jinja")
     offset = len(header)
     count = 0
@@ -34,18 +36,14 @@ def beet_default(ctx: Context) -> Generator:
         file.set_content(f"{file.text[:offset]}{env}{file.text[offset:]}")
 
     if count > 0:
-        ctx.data[f"bs.load:test/{ctx.directory.name}/__setup__"] = Function([
+        ctx.data[f"bs.load:v{VERSION}/test/{module}"] = Function([
             header,
-            f"function #{ctx.directory.name}:load",
+            "function #bs.load:unload",
+            f"function #bs.load:module/{module}",
+            "forceload add 0 0",
         ])
 
-        ctx.data[f"bs.load:test/{ctx.directory.name}/__teardown__"] = Function([
-            header,
-            f"function #{ctx.directory.name}:unload",
-        ])
-
-        ctx.data[f"{ctx.directory.name}:default"] = TestEnvironment({
+        ctx.data[f"bs.load:{module}"] = TestEnvironment({
             "type": "minecraft:function",
-            "setup": f"bs.load:test/{ctx.directory.name}/__setup__",
-            "teardown": f"bs.load:test/{ctx.directory.name}/__teardown__",
+            "setup": f"bs.load:v{VERSION}/test/{module}",
         })

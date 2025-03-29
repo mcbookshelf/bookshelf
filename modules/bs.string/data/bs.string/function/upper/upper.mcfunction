@@ -14,11 +14,10 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set from storage bs:in string.upper
+
 execute store result score #c bs.ctx run data get storage bs:ctx _.str
 data modify storage bs:ctx _.ch set string storage bs:ctx _.str 0 1
-
 function bs.string:upper/loop with storage bs:ctx _
 
 function bs.string:concat/run
-
 data modify storage bs:out string.upper set from storage bs:ctx _.1

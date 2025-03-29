@@ -16,18 +16,15 @@
 data modify storage bs:ctx _ set from storage bs:in string.find
 execute store result score #l bs.ctx run data get storage bs:ctx _.str
 execute store result score #p bs.ctx store result score #y bs.ctx store result storage bs:ctx y int 1 run data get storage bs:ctx _.substr
-data modify storage bs:out string.find set value []
 
-# corner case: empty string, empty substring, substring longer than string
+# edge cases: empty string, empty substring, substring longer than string
 execute if score #l bs.ctx matches 0 run return 0
 execute if score #p bs.ctx matches 0 run return 0
 execute if score #p bs.ctx > #l bs.ctx run return 0
 
 scoreboard players set #o bs.ctx 1
 execute store result score #c bs.ctx run scoreboard players set #i bs.ctx 0
-
 scoreboard players operation #l bs.ctx -= #p bs.ctx
-
 execute unless score #p bs.ctx matches 1 run function bs.string:utils/skip_table/compute
 
 data modify storage bs:ctx _.substr set from storage bs:in string.find.substr

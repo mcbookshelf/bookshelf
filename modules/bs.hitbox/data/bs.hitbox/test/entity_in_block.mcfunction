@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
+# @skyaccess true
 
-fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:air replace minecraft:barrier
 setblock ~ ~ ~ minecraft:stone_slab[type=bottom]
 
 # Entity is outside the slab

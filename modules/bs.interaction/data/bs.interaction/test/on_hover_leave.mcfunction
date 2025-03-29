@@ -27,11 +27,10 @@ execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..2,limit=4] r
 
 ## === EXPECTED BEHAVIORS ===
 
-await delay 1t
+await delay 2t
 execute if entity @s[tag=bs.packtest.source] run fail "Callback should not run before the interaction is unhovered"
 tp @s ~.5 ~ ~.5 180 0
-await delay 2t
-execute unless entity @s[tag=bs.packtest.source] run fail "Failed to run callback on source entity"
+await entity @s[tag=bs.packtest.source]
 execute unless entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.target,distance=..2] run fail "Failed to run callback on target entity"
 execute unless entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.interpreted,distance=..2] run fail "Failed to run callback using an interpreted selector"
 execute unless entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.lazy,distance=..2] run fail "Failed to run callback using a lazy selector"
@@ -41,9 +40,8 @@ tag @s remove bs.packtest.source
 tag @e[distance=..2] remove bs.packtest.target
 tag @e[distance=..2] remove bs.packtest.interpreted
 tag @e[distance=..2] remove bs.packtest.lazy
-await delay 2t
 
-execute if entity @s[tag=bs.packtest.source] run fail "Callback should run only once on leave"
+await not entity @s[tag=bs.packtest.source]
 execute if entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.target,distance=..2] run fail "Callback should run only once on leave"
 execute if entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.interpreted,distance=..2] run fail "Callback should run only once on leave"
 execute if entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.lazy,distance=..2] run fail "Callback should run only once on leave"
@@ -54,8 +52,7 @@ tag @s add bs.packtest.executor
 tp @s ~.5 ~ ~.5 0 0
 await delay 2t
 tp @s ~.5 ~ ~.5 180 0
-await delay 2t
-execute unless entity @s[tag=bs.packtest.source] run fail "Failed to run callback on source entity"
+await entity @s[tag=bs.packtest.source]
 execute unless entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.target,distance=..2] run fail "Failed to run callback on target entity"
 execute unless entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.interpreted,distance=..2] run fail "Failed to run callback using an interpreted selector"
 execute if entity @n[type=minecraft:interaction,tag=bs.packtest,tag=!bs.packtest.trap,tag=bs.packtest.lazy,distance=..2] run fail "Failed to run callback using a lazy selector"

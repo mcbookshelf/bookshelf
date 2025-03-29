@@ -13,11 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set value {}
-data modify storage bs:ctx _.name set from storage bs:in block.emit_block_particle.type
-data modify storage bs:ctx _.properties set from storage bs:in block.emit_block_particle.properties
-data modify storage bs:ctx _.delta set from storage bs:in block.emit_block_particle.delta
-data modify storage bs:ctx _.speed set from storage bs:in block.emit_block_particle.speed
-data modify storage bs:ctx _.count set from storage bs:in block.emit_block_particle.count
+data modify storage bs:ctx _ set value {properties:{},delta:"0 0 0",speed:1,count:1,mode:"normal",viewers:"@a"}
+data modify storage bs:ctx _ merge from storage bs:in block.emit_block_particle
 
 function bs.block:produce/block_particle/run with storage bs:ctx _

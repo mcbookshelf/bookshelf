@@ -25,9 +25,7 @@ execute as @n[type=minecraft:interaction,tag=bs.packtest,distance=..3,limit=2] r
 ## === EXPECTED BEHAVIORS ===
 
 tp @s ~.5 ~ ~.5 45 0
-await delay 2t
-execute unless entity @n[type=minecraft:interaction,tag=bs.packtest.1,tag=bs.packtest.target,distance=..2] run fail "Failed to run callback on target entity"
+await entity @n[type=minecraft:interaction,tag=bs.packtest.1,tag=bs.packtest.target,distance=..2]
 tp @s ~.5 ~ ~.5 -45 0
-await delay 3t
-execute if entity @n[type=minecraft:interaction,tag=bs.packtest.1,tag=bs.packtest.target,distance=..2] run fail "Failed to swap hover to an other target entity"
-execute unless entity @n[type=minecraft:interaction,tag=bs.packtest.2,tag=bs.packtest.target,distance=..2] run fail "Failed to swap hover to an other target entity"
+await entity @n[type=minecraft:interaction,tag=bs.packtest.2,tag=bs.packtest.target,distance=..2]
+await not entity @n[type=minecraft:interaction,tag=bs.packtest.1,tag=bs.packtest.target,distance=..2]

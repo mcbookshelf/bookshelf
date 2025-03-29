@@ -13,4 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-function bs.block:produce/block_sound/run with storage bs:in block.play_block_sound
+data modify storage bs:ctx _ set value {source:"master",targets:"@s",pos:"~ ~ ~",volume:1,pitch:1,min_volume:0}
+data modify storage bs:ctx _ merge from storage bs:in block.play_block_sound
+
+function bs.block:produce/block_sound/run with storage bs:ctx _

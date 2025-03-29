@@ -2,7 +2,18 @@
 
 **`#bs.string:help`**
 
-Manage strings (text), allowing easy transformation and searching within the text.
+Manage and transform strings with a versatile set of manipulation and search functions.
+
+```{image} /_imgs/modules/string.png
+:align: center
+:class: dark_light p-2
+```
+
+```{epigraph}
+"Words are the most powerful drug used by mankind."
+
+-- Rudyard Kipling
+```
 
 ---
 
@@ -16,16 +27,16 @@ You can find below all functions available in this module.
 
 ```{function} #bs.string:concat
 
-Merge multiple strings from the input list into a single string.
+Merge multiple strings from an array into a single concatenated string.
 
 :Inputs:
-  **Storage `bs:in string.concat.list`**: {nbt}`string` List of strings to merge
+  **Storage `bs:in string.concat.list`**: {nbt}`list` List of strings to concatenate.
 
 :Outputs:
-  **Storage `bs:out string.concat`**: {nbt}`string` The merged string
+  **Storage `bs:out string.concat`**: {nbt}`string` The concatenated string.
 ```
 
-_Merge `Hello ` and `World`:_
+*Example: Concatenate `Hello `, and `World` then display the result:*
 
 ```mcfunction
 data modify storage bs:in string.concat.list set value ["Hello ","World"]
@@ -36,8 +47,7 @@ tellraw @a [{"text":"The merged string is \""},{"storage":"bs:out","nbt":"string
 ```{admonition} Technical Limitation
 :class: warning
 
-If you want to use double quotes (") in a string, you need to escape them: "\"".
-
+If you want to use double quotes (`"`) within a string, you must escape them with a backslash: `\"`.
 ```
 
 > **Credits**: Aure31
@@ -60,7 +70,7 @@ Convert text to uppercase.
   **Storage `bs:out string.upper`**: {nbt}`string` The uppercase string.
 ```
 
-_Convert `hello world` to its uppercase version `HELLO WORLD`:_
+*Example: Convert `hello world` to `HELLO WORLD` then display the result:*
 
 ```mcfunction
 data modify storage bs:in string.upper.str set value "hello world"
@@ -82,7 +92,7 @@ Convert text to lowercase.
   **Storage `bs:out string.lower`**: {nbt}`string` The lowercase string.
 ```
 
-_Convert `HELLO WORLD` to its lowercase version `hello world`:_
+*Example: Convert `HELLO WORLD` to `hello world` then display the result:*
 
 ```mcfunction
 data modify storage bs:in string.lower.str set value "HELLO WORLD"
@@ -93,17 +103,10 @@ tellraw @a [{"text":"The lowercase string is \""},{"storage":"bs:out","nbt":"str
 ::::
 :::::
 
-```{admonition} Support
-:class: hint
-
-This function actually supports all UTF-8 characters.
-
-```
-
 ```{admonition} Technical Limitation
 :class: warning
 
-this functions just don't support using `"`.
+These functions support most UTF-8 characters, but they do not support the double quote character (`"`). Attempts to use or escape double quotes will result in errors.
 
 ```
 
@@ -114,70 +117,70 @@ this functions just don't support using `"`.
 ### Find
 
 :::::{tab-set}
-::::{tab-item} Find all
-
-```{function} #bs.string:find_all
-
-Search for a substring within a string. Locate all occurrences or a specific number of matches.
-
-:Inputs:
-  **Storage `bs:in string.find_all`**:
-  :::{treeview}
-  - {nbt}`compound` Find data
-    - {nbt}`string` **str**: String to search in.
-    - {nbt}`string` **substr**: String to find.
-    - {nbt}`int` **occurrence**: Number of occurrences to find (-1 or less for all occurrences).
-  :::
-
-:Outputs:
-  **Storage `bs:out string.find_all`**: {nbt}`list` List of indices where the substring was found.
-
-  **Return**: Number of occurrences found.
-```
-
-_Find `world` in `hello world world`:_
-
-```mcfunction
-data modify storage bs:in string.find set value {str:"hello world",substr:"world",occurrence:-1}
-function #bs.string:find_all
-tellraw @a [{"text":"Found at indices: \""},{"storage":"bs:out","nbt":"string.find"},{"text":"\""}]
-# return [6,12]
-```
-
-::::
-::::{tab-item} Find first
+::::{tab-item} Find
 
 ```{function} #bs.string:find
 
-Search for a substring within a string. Locate the first occurrence.
+Search for a substring within a string. Find the first occurrence.
 
 :Inputs:
   **Storage `bs:in string.find`**:
   :::{treeview}
   - {nbt}`compound` Find data
     - {nbt}`string` **str**: String to search in.
-    - {nbt}`string` **substr**: String to find.
+    - {nbt}`string` **substr**: Substring to search for.
   :::
 
 :Outputs:
-  **Return**: Index of the first occurrence or -1 if not found.
+  **Return**: Integer index of the first occurrence or -1 if not found.
 
 ```
-_Find `world` in `hello world`:_
+*Example: Find the first occurrence of `world` in `hello world` then display the index:*
 
 ```mcfunction
 data modify storage bs:in string.find set value {str:"hello world",substr:"world"}
 execute store result score #c bs.ctx run function #bs.string:find
-tellraw @a [{"text":"Found at index: \""},{"score":{"name":"#c","objective":"bs.ctx"}},{"text":"\""}]
 # return 6
+tellraw @a [{"text":"Found at index: \""},{"score":{"name":"#c","objective":"bs.ctx"}},{"text":"\""}]
 ```
+::::
+::::{tab-item} Find all
+
+```{function} #bs.string:find_all
+
+Search for a substring within a string. Find all occurrences or a specific number of matches.
+
+:Inputs:
+  **Storage `bs:in string.find_all`**:
+  :::{treeview}
+  - {nbt}`compound` Find data
+    - {nbt}`string` **str**: String to search in.
+    - {nbt}`string` **substr**: Substring to search for.
+    - {nbt}`int` **occurrence**: Number of occurrences to find (-1 for all occurrences).
+  :::
+
+:Outputs:
+  **Storage `bs:out string.find_all`**: {nbt}`list` List of indices where the substring was found, in order of occurrence.
+
+  **Return**: Number of occurrences found.
+```
+
+*Example: Find all occurrences of `world` in `hello world world` then display the indices:*
+
+```mcfunction
+data modify storage bs:in string.find set value {str:"hello world",substr:"world",occurrence:-1}
+function #bs.string:find_all
+# return [6,12]
+tellraw @a [{"text":"Found at indices: \""},{"storage":"bs:out","nbt":"string.find"},{"text":"\""}]
+```
+
 ::::
 :::::
 
 ```{admonition} Technical Limitation
 :class: warning
 
-this functions just don't support using `"`.
+These functions do not support the double quote character (`"`). Attempts to use or escape double quotes will result in errors.
 
 ```
 
@@ -189,7 +192,7 @@ this functions just don't support using `"`.
 
 ```{function} #bs.string:replace
 
-Replace occurrences of a substring by a new text.
+Replace occurrences of a substring with a new text.
 
 :Inputs:
   **Storage `bs:in string.replace`**:
@@ -198,26 +201,26 @@ Replace occurrences of a substring by a new text.
     - {nbt}`string` **str**: Base string for replacements.
     - {nbt}`string` **old**: Substring to replace.
     - {nbt}`string` **new**: Replacement string.
-    - {nbt}`int` **maxreplace**: Maximum replacements. (-1 or less for unlimited)
+    - {nbt}`int` **maxreplace**: Maximum replacements. (-1 for unlimited)
   :::
 
 :Outputs:
   **Storage `bs:out string.replace`**: {nbt}`string` String after replacements.
 ```
 
-_Replace `world` with `minecraft`:_
+*Example: Replace `world` with `minecraft` in `hello world` then display the result::*
 
 ```mcfunction
 data modify storage bs:in string.replace set value {str:"hello world",old:"world",new:"minecraft",maxreplace:-1}
 function #bs.string:replace
-tellraw @a [{"text":"Result: \""},{"storage":"bs:out","nbt":"string.replace"},{"text":"\""}]
 # return "hello minecraft"
+tellraw @a [{"text":"Result: \""},{"storage":"bs:out","nbt":"string.replace"},{"text":"\""}]
 ```
 
 ```{admonition} Technical Limitation
 :class: warning
 
-this functions just don't support using `"`.
+This function do not support the double quote character (`"`). Attempts to use or escape double quotes will result in errors.
 
 ```
 
@@ -245,25 +248,25 @@ Replace characters in a string between specified start and end positions with a 
   **Storage `bs:out string.replace_range`**: {nbt}`string` The modified string with the specified range replaced.
 ```
 
-_replace the space in `hello world` by ` beautiful `:_
+*Example: Replace the space in `hello world` with ` beautiful ` then display the result:*
 
 ```mcfunction
 data modify storage bs:in string.replace_range set value {str:"hello world",substr:" beautiful ",start:5,end:6}
 function #bs.string:replace_range
-tellraw @a [{"text":"The new string is \""},{"storage":"bs:out","nbt":"string.replace_range"},{"text":"\""}]
 # return "hello beautiful world"
+tellraw @a [{"text":"The new string is \""},{"storage":"bs:out","nbt":"string.replace_range"},{"text":"\""}]
 ```
 
-```{admonition} Use as Insert
+```{admonition} How to Insert?
 :class: tip
+
 To insert text without removing any characters, set both `start` and `end` to the same position. This will insert the new text at that position while preserving all existing characters.
 ```
 
 ```{admonition} Technical Limitation
 :class: warning
 
-If you want to use double quotes (") in a string, you need to escape them: "\"".
-
+If you want to use double quotes (`"`) within a string, you must escape them with a backslash: `\"`.
 ```
 
 > **Credits**: Aure31
@@ -274,28 +277,28 @@ If you want to use double quotes (") in a string, you need to escape them: "\"".
 
 ```{function} #bs.string:reverse
 
-Reverse the order of all characters in a string. For example, "hello" become "olleh".
+Reverse the order of all characters in a string.
 
 :Inputs:
-  **Storage `bs:in string.reverse.str`**: {nbt}`string` The string to be reversed.
+  **Storage `bs:in string.reverse.str`**: {nbt}`string` The string to reverse.
 
 :Outputs:
   **Storage `bs:out string.reverse`**: {nbt}`string` The string with all characters in reverse order.
 ```
 
-_reverse `hello world`:_
+*Example: Reverse `hello world` then display the result:*
 
 ```mcfunction
 data modify storage bs:in string.reverse.str set value "hello world"
 function #bs.string:reverse
-tellraw @a [{"text":"The reversed string is \""},{"storage":"bs:out","nbt":"string.reverse"},{"text":"\""}]
 # return "dlrow olleh"
+tellraw @a [{"text":"The reversed string is \""},{"storage":"bs:out","nbt":"string.reverse"},{"text":"\""}]
 ```
 
 ```{admonition} Technical Limitation
 :class: warning
 
-this functions just don't support using `"`.
+This function do not support the double quote character (`"`). Attempts to use or escape double quotes will result in errors.
 
 ```
 
@@ -315,26 +318,27 @@ Divide a string into smaller parts using a specified separator, creating a list 
   - {nbt}`compound` Split data
     - {nbt}`string` **str**: The string to be split into parts.
     - {nbt}`string` **separator**: The character or string that marks where to split.
-    - {nbt}`int` **maxsplit**: Maximum number of splits to perform (-1 or less for unlimited).
+    - {nbt}`int` **maxsplit**: Maximum number of splits to perform (-1 for unlimited).
   :::
 
 :Outputs:
-  **Storage `bs:out string.split`**: {nbt}`list` A list containing all the split parts of the original string.
+  **Storage `bs:out string.split`**: {nbt}`list` A list containing the split parts of the original string, in the order they appear.
 ```
 
-_split `hello world` by `" "`:_
+*Example: Split `hello world` by `" "` then display the result:*
 
 ```mcfunction
 data modify storage bs:in string.split set value {str:"hello world",separator:" ",maxsplit:-1}
 function #bs.string:split
+# return "["hello","world"]"
 tellraw @a [{"text":"The list of strings is \""},{"storage":"bs:out","nbt":"string.split"},{"text":"\""}]
-# returns "["hello","world"]"
+
 ```
 
 ```{admonition} Technical Limitation
 :class: warning
 
-this function just don't support using `"`.
+This function do not support the double quote character (`"`). Attempts to use or escape double quotes will result in errors.
 
 ```
 
@@ -345,6 +349,28 @@ this function just don't support using `"`.
 ### Transform Type
 
 :::::{tab-set}
+::::{tab-item} Parse
+
+```{function} #bs.string:parse
+
+Attempt to convert the string into its corresponding value.
+
+:Inputs:
+  **Storage `bs:in string.parse.str`**: {nbt}`string` The string containing the value to be extracted.
+
+:Outputs:
+  **Storage `bs:out string.parse`**: {nbt}`any` The extracted value. Possible types: boolean, integer, double, string.
+```
+
+*Example: Transform `"42"` into an integer then display the result:*
+
+```mcfunction
+data modify storage bs:in string.parse.str set value "42"
+function #bs.string:parse
+tellraw @a [{"text":"The number is \""},{"storage":"bs:out","nbt":"string.parse"},{"text":"\""}]
+```
+
+::::
 ::::{tab-item} To List
 
 ```{function} #bs.string:to_list
@@ -358,13 +384,13 @@ Convert a string into a list where each character becomes a separate element.
   **Storage `bs:out string.to_list`**: {nbt}`list` A list containing each character as a separate element.
 ```
 
-_transform `hello world` into a list:_
+*Example: Transform `hello world` into a character list then display the result:*
 
 ```mcfunction
 data modify storage bs:in string.to_list.str set value "hello world"
 function #bs.string:to_list
+# return ["h","e","l","l","o"," ","w","o","r","l","d"]
 tellraw @a [{"text":"The list of characters is \""},{"storage":"bs:out","nbt":"string.to_list"},{"text":"\""}]
-# returns ["h","e","l","l","o"," ","w","o","r","l","d"]
 ```
 
 ::::
@@ -375,13 +401,13 @@ tellraw @a [{"text":"The list of characters is \""},{"storage":"bs:out","nbt":"s
 Convert any value into its string representation.
 
 :Inputs:
-  **Storage `bs:in string.to_string.val`**: {nbt}`any` The value to convert into a string.
+  **Storage `bs:in string.to_string.value`**: {nbt}`any` The value to convert into a string.
 
 :Outputs:
   **Storage `bs:out string.to_string`**: {nbt}`string` The value converted to its string representation.
 ```
 
-_transform `42` into a string:_
+*Example: Transform `42` into its string representation then display the result:*
 
 ```mcfunction
 data modify storage bs:in string.to_string.number set value 42
@@ -390,35 +416,11 @@ tellraw @a [{"text":"The string is \""},{"storage":"bs:out","nbt":"string.to_str
 ```
 
 ::::
-::::{tab-item} Parse
-
-```{function} #bs.string:parse
-
-Try to convert the string into the value it represents.
-
-:Inputs:
-  **Storage `bs:in string.parse.str`**: {nbt}`string` The string containing the number to be extracted.
-
-:Outputs:
-  **Storage `bs:out string.parse`**: {nbt}`any` The extracted value (ex: "true" -> boolean, "42" -> int, "42.0" -> double).
-```
-
-_transform `"42"` into a integer:_
-
-```mcfunction
-data modify storage bs:in string.parse.str set value "42"
-function #bs.string:parse
-tellraw @a [{"text":"The number is \""},{"storage":"bs:out","nbt":"string.parse"},{"text":"\""}]
-```
-
-::::
 :::::
 
-```{admonition} Technical Limitation
-:class: warning
-
-this functions just don't support using `"`.
-
-```
-
 > **Credits**: Aure31
+
+---
+
+```{include} ../_templates/comments.md
+```

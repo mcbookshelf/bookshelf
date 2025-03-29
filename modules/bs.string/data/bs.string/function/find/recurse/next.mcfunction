@@ -20,11 +20,10 @@ execute store success score #t bs.ctx run data modify storage bs:ctx _.test set 
 execute if score #t bs.ctx matches 0 run function bs.string:find/recurse/found
 execute unless score #o bs.ctx matches ..-1 if score #t bs.ctx matches 0 if score #c bs.ctx >= #o bs.ctx run return 1
 
-function bs.string:utils/skip_table/match_pattern with storage bs:ctx _
+function bs.string:utils/skip_table/match with storage bs:ctx _
 
 scoreboard players operation #i bs.ctx += #z bs.ctx
 execute if score #l bs.ctx < #i bs.ctx run return 1
 
 function bs.string:find/recurse/substr with storage bs:ctx
-
 function bs.string:find/recurse/next with storage bs:ctx

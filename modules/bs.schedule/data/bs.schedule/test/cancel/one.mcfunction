@@ -19,5 +19,4 @@ function #bs.schedule:schedule {run:"scoreboard players add #packtest.schedule.c
 function #bs.schedule:schedule {run:"scoreboard players add #packtest.schedule.co bs.data 1",with:{id:{cancel:"one"}}}
 function #bs.schedule:cancel_one {with:{id:{cancel:"one"}}}
 
-await delay 1t
-assert score #packtest.schedule.co bs.data matches 2
+await score #packtest.schedule.co bs.data matches 2

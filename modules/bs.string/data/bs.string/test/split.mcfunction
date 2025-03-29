@@ -13,47 +13,47 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# Test basic split
-data modify storage bs:in string.split merge value {str:"a,b,c,d",separator:",",maxsplit:-1}
+# Test simple split
+data modify storage bs:in string.split set value {str:"a,b,c,d",separator:",",maxsplit:-1}
 function #bs.string:split
-assert data storage bs:out {string:{split:["a","b","c","d"]}}
+assert data storage bs:out string{split:["a","b","c","d"]}
 
 # Test with empty string
-data modify storage bs:in string.split merge value {str:"",separator:",",maxsplit:-1}
+data modify storage bs:in string.split set value {str:"",separator:",",maxsplit:-1}
 function #bs.string:split
-assert data storage bs:out {string:{split:[""]}}
+assert data storage bs:out string{split:[""]}
 
-# Test with empty separator (to hard to implement use to_list insted)
-data modify storage bs:in string.split merge value {str:"abc",separator:"",maxsplit:-1}
+# Test with empty separator
+data modify storage bs:in string.split set value {str:"abc",separator:"",maxsplit:-1}
 function #bs.string:split
-assert data storage bs:out {string:{split:["a","b","c"]}}
+assert data storage bs:out string{split:["a","b","c"]}
 
-# Test with multiple consecutive separators
-data modify storage bs:in string.split merge value {str:"a,,b,,,c",separator:",",maxsplit:-1}
+# Test with consecutive separators
+data modify storage bs:in string.split set value {str:"a,,b,,,c",separator:",",maxsplit:-1}
 function #bs.string:split
-assert data storage bs:out {string:{split:["a","","b","","","c"]}}
+assert data storage bs:out string{split:["a","","b","","","c"]}
 
 # Test with separator at start/end
-data modify storage bs:in string.split merge value {str:",start,middle,end,",separator:",",maxsplit:-1}
+data modify storage bs:in string.split set value {str:",start,middle,end,",separator:",",maxsplit:-1}
 function #bs.string:split
-assert data storage bs:out {string:{split:["","start","middle","end",""]}}
+assert data storage bs:out string{split:["","start","middle","end",""]}
 
 # Test with maxsplit
-data modify storage bs:in string.split merge value {str:"a:b:c:d:e",separator:":",maxsplit:2}
+data modify storage bs:in string.split set value {str:"a:b:c:d:e",separator:":",maxsplit:2}
 function #bs.string:split
-assert data storage bs:out {string:{split:["a","b","c:d:e"]}}
+assert data storage bs:out string{split:["a","b","c:d:e"]}
 
 # Test with spaces
-data modify storage bs:in string.split merge value {str:"  spaces  between  words  ",separator:" ",maxsplit:-1}
+data modify storage bs:in string.split set value {str:"  spaces  between  words  ",separator:" ",maxsplit:-1}
 function #bs.string:split
-assert data storage bs:out {string:{split:["","","spaces","","between","","words","",""]}}
+assert data storage bs:out string{split:["","","spaces","","between","","words","",""]}
 
 # Test with longer separator
-data modify storage bs:in string.split merge value {str:"word<->split<->by<->arrow",separator:"<->",maxsplit:-1}
+data modify storage bs:in string.split set value {str:"word<->split<->by<->arrow",separator:"<->",maxsplit:-1}
 function #bs.string:split
-assert data storage bs:out {string:{split:["word","split","by","arrow"]}}
+assert data storage bs:out string{split:["word","split","by","arrow"]}
 
-# Test with Unicode
-data modify storage bs:in string.split merge value {str:"é★à★ê★ë",separator:"★",maxsplit:-1}
+# Test with special characters
+data modify storage bs:in string.split set value {str:"é★à★ê★ë",separator:"★",maxsplit:-1}
 function #bs.string:split
-assert data storage bs:out {string:{split:["é","à","ê","ë"]}}
+assert data storage bs:out string{split:["é","à","ê","ë"]}

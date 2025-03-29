@@ -23,10 +23,10 @@ await delay 1t
 assert not score #packtest.schedule.time bs.data matches 1
 await delay 1t
 assert not score #packtest.schedule.time bs.data matches 1
-await delay 1t
-assert score #packtest.schedule.time bs.data matches 1
+await score #packtest.schedule.time bs.data matches 1
 
 function #bs.schedule:schedule {run:"scoreboard players set #packtest.schedule.time bs.data 2",with:{time:1,unit:"s"}}
 assert not score #packtest.schedule.time bs.data matches 2
-await delay 1s
-assert score #packtest.schedule.time bs.data matches 2
+await delay 19t
+assert not score #packtest.schedule.time bs.data matches 2
+await score #packtest.schedule.time bs.data matches 2

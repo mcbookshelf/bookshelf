@@ -111,7 +111,7 @@ function #bs.xp:add_progress {progress:0.25}
 ::::
 :::::
 
-```{admonition} How to remove?
+```{admonition} How to Remove?
 :class: tip
 
 You can use negative numbers to remove experience from the player.

@@ -16,4 +16,4 @@
 setblock ~ ~ ~ minecraft:stone_stairs[facing=west,half=top,shape=straight,waterlogged=false]
 function #bs.block:get_type
 
-assert data storage bs:out block{ block: "minecraft:stone_stairs", type: "minecraft:stone_stairs", state: "", properties: {} }
+assert data storage bs:out block{ block: "minecraft:stone_stairs", type: "minecraft:stone_stairs" }

@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
+# @skyaccess true
 
-fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:air replace minecraft:barrier
 setblock ~-1 ~ ~-1 minecraft:bookshelf
 
 # Entity is outside a block

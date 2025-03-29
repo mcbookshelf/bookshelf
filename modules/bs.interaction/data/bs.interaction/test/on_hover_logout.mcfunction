@@ -25,8 +25,6 @@ scoreboard players set #packtest.interaction_hover_count bs.data 0
 ## === EXPECTED BEHAVIORS ===
 
 execute positioned ~.5 ~ ~.5 run dummy on_hover_logout spawn
-await delay 2t
-assert score #packtest.interaction_hover_count bs.data matches 2
+await score #packtest.interaction_hover_count bs.data matches 2
 dummy on_hover_logout leave
-await delay 1t
-assert score #packtest.interaction_hover_count bs.data matches 1
+await score #packtest.interaction_hover_count bs.data matches 1

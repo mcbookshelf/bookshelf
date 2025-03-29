@@ -14,9 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set from storage bs:in string.replace_range
-execute store result score #s bs.ctx run data get storage bs:ctx _.start
-execute store result score #e bs.ctx run data get storage bs:ctx _.end
-execute store result score #l bs.ctx run data get storage bs:ctx _.str
 
 function bs.string:replace_range/split with storage bs:ctx _
 function bs.string:replace_range/concat with storage bs:ctx _

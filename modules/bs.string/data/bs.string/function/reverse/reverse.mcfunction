@@ -14,12 +14,10 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set from storage bs:in string.reverse
+
 execute store result score #l bs.ctx run data get storage bs:ctx _.str
-
 execute if score #l bs.ctx matches ..1 run return run data modify storage bs:out string.reverse set from storage bs:ctx _.str
-
 function bs.string:reverse/loop
 
 function bs.string:concat/run
-
 data modify storage bs:out string.reverse set from storage bs:ctx _.1

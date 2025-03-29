@@ -13,11 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# Test basic find
-data modify storage bs:in string.find merge value {str:"hello world",substr:"world"}
+# Test simple case
+data modify storage bs:in string.find set value {str:"hello world",substr:"world"}
 execute store result score #c bs.ctx run function #bs.string:find
 assert score #c bs.ctx matches 6
 
-data modify storage bs:in string.find merge value {str:"hello minecraft",substr:"world"}
+# Test not found case
+data modify storage bs:in string.find set value {str:"hello minecraft",substr:"world"}
 execute store result score #c bs.ctx run function #bs.string:find
-assert score #c bs.ctx matches 6
+assert score #c bs.ctx matches -1

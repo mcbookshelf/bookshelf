@@ -53,7 +53,7 @@ Add or remove health points from players.
 function #bs.health:add_health {points:5.0}
 ```
 
-```{admonition} How to remove?
+```{admonition} How to Remove?
 :class: tip
 
 You can use negative numbers to remove health points from the player.
@@ -86,7 +86,7 @@ Add or remove maximum health points from players.
 function #bs.health:add_max_health {points:5.0}
 ```
 
-```{admonition} How to remove?
+```{admonition} How to Remove?
 :class: tip
 
 You can use negative numbers to remove max health from the player.

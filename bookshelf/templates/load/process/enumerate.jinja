@@ -1,8 +1,8 @@
-#!tag "bs.load:steps/enumerate"
+#!tag "bs.load:process/enumerate"
 
 {% include 'bookshelf/header.jinja' %}
 # Add the version of the module to the list of available modules
-data modify storage bs:data load.modules append value {module:"{{ module }}",version:"{{ major }}.{{ minor }}.{{ patch }}",enabled:0b}
+data modify storage bs:data load.modules append value {module:"{{ module }}",version:"{{ major }}.{{ minor }}.{{ patch }}"{% if module != 'bs.load' %},enabled:0b{% endif %}}
 scoreboard players add ${{ module }}.major load.status 0
 scoreboard players add ${{ module }}.minor load.status 0
 scoreboard players add ${{ module }}.patch load.status 0

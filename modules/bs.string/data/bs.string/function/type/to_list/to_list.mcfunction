@@ -16,7 +16,5 @@
 data modify storage bs:ctx _ set from storage bs:in string.to_list
 
 execute store result score #l bs.ctx run data get storage bs:ctx _.str
-
 function bs.string:type/to_list/loop
-
 data modify storage bs:out string.to_list set from storage bs:ctx _.l

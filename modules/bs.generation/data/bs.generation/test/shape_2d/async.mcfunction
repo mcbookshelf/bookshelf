@@ -17,5 +17,4 @@ function #bs.generation:gen_shape_2d {width:1,height:2,run:"setblock ~ ~ ~ minec
 
 assert block ~ ~ ~ minecraft:stone
 assert not block ~1 ~ ~ minecraft:stone
-await delay 1t
-assert block ~1 ~ ~ minecraft:stone
+await block ~1 ~ ~ minecraft:stone
