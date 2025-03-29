@@ -36,7 +36,7 @@ tellraw @a [{"text":"The merged string is \""},{"storage":"bs:out","nbt":"string
 ```{admonition} Technical Limitation
 :class: warning
 
-Due to the way string are handled, we don't support using `"` you need to use the `\"` instead.
+If you want to use double quotes (") in a string, you need to escape them: "\"".
 
 ```
 
@@ -96,7 +96,7 @@ tellraw @a [{"text":"The lowercase string is \""},{"storage":"bs:out","nbt":"str
 ```{admonition} Support
 :class: hint
 
-this function actually support all UTF-8 characters so you can use it with any language.
+This function actually supports all UTF-8 characters.
 
 ```
 
@@ -262,7 +262,7 @@ To insert text without removing any characters, set both `start` and `end` to th
 ```{admonition} Technical Limitation
 :class: warning
 
-this functions just don't support using `"` you need to use the `\"` instead.
+If you want to use double quotes (") in a string, you need to escape them: "\"".
 
 ```
 
