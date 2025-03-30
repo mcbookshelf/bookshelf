@@ -10,4 +10,4 @@ $execute store result storage bs:data load.bundle._minor int 1 run scoreboard pl
 $execute store result storage bs:data load.bundle._patch int 1 run scoreboard players get $$(module).patch load.status
 function bs.load:v{{ major }}.{{ minor }}.{{ patch }}/bundle/concat with storage bs:data load.bundle
 
-data modify storage bs:data load.bundle.message.click_event.value set string storage bs:data load.bundle.link 0 -1
+data modify storage bs:data load.bundle.message.click_event.url set string storage bs:data load.bundle.link 0 -1
