@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap');
+
 html {
   --pst-sidebar-font-size: .95rem;
   --pst-sidebar-secondary: 18rem;
+  --pst-font-family-base: "Nunito", "Noto Color Emoji", var(--pst-font-family-base-system);
+  --pst-font-family-heading: "Nunito", "Noto Color Emoji", var(--pst-font-family-base-system);
 }
 
 html[data-theme="light"] {
@@ -51,6 +55,10 @@ html[data-theme=dark] .bd-content .sd-tab-set .sd-tab-content, html[data-theme=d
   background-color: #191d25;
 }
 
+.navbar-brand {
+  font-family: "Unbounded";
+  font-size: 1em;
+}
 
 div.highlight pre::before {
   content: "";
