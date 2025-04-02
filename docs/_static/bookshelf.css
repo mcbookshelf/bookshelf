@@ -1,4 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap');
+@font-face {
+  font-family: Nunito;
+  src: url("fonts/nunito.woff2");
+}
+
+@font-face {
+  font-family: Unbounded;
+  src: url("fonts/unbounded.woff2");
+}
+
+@font-face {
+  font-family: "Noto Color Emoji";
+  src: url("fonts/notocoloremoji.woff2");
+}
 
 html {
   --pst-sidebar-font-size: .95rem;
