@@ -11,7 +11,7 @@
 # - Any modifications must be documented and disclosed under the same license
 #
 # For more details, refer to the MPL v2.0.
-# -----------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------
 
 # concatenate a small-sized list
 data modify storage bs:in string.concat.list set value ["a","b","c","d","e","f","g","h","i","j","k","l","m"]
