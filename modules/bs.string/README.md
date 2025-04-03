@@ -1,8 +1,9 @@
 # 🔠 Bookshelf String
 
-This module allows you to easily manage strings in Minecraft.
+This datapack allows you to easily manage and transform strings in Minecraft.
 
 For more details and usage examples, check out the Bookshelf [documentation](https://docs.mcbookshelf.dev/en/latest/modules/string.html).
+
 
 ## 📖 About Bookshelf
 
