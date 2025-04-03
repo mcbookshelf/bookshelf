@@ -39,7 +39,7 @@ jobs:
           MC_VERSIONS=$(python -c "from bookshelf import mc_versions; print(mc_versions())")
 
           echo "release_tag=v$VERSION" >> $GITHUB_OUTPUT
-          echo "release_name=v$VERSION - MC $MC_VERSIONS" >> $GITHUB_OUTPUT
+          echo "release_name=Release v$VERSION (Minecraft $MC_VERSIONS)" >> $GITHUB_OUTPUT
 
           if [ -n "$(git tag -l "v$VERSION")" ]; then
             echo "version_exists=true" >> $GITHUB_OUTPUT
@@ -71,7 +71,8 @@ jobs:
         run: pdm install
       - name: Build Release Files
         run: pdm run modules release
-      - uses: softprops/action-gh-release@v2
+      - name: Create New Stable Release
+        uses: softprops/action-gh-release@v2
         with:
           body_path: docs/changelog/${{ needs.check.outputs.release_tag }}.md
           name: ${{ needs.check.outputs.release_name }}
