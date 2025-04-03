@@ -63,6 +63,8 @@ jobs:
         run: pdm run modules release
       - name: Delete Existing Nightly Release
         continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release delete nightly --yes
           git push --delete origin nightly
