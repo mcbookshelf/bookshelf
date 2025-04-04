@@ -17,7 +17,7 @@ Our paintbrush system will:
 ## 📦 Requirements
 
 Before we start, make sure you have:
-- Minecraft Java Edition 1.21.4 or later
+- Minecraft Java Edition 1.21.5 or later
 - Bookshelf `bs.block` and `bs.view` modules, see [Quickstart](https://docs.mcbookshelf.dev/en/latest/quickstart.html) for installation
   - `@require bookshelf.module.block`
   - `@require bookshelf.module.view`
