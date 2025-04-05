@@ -13,9 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players reset @s bs.hmod
-$attribute @s minecraft:max_health modifier add bs.health:limit $(y) add_value
-effect give @s minecraft:health_boost 1 0 true
-effect clear @s minecraft:health_boost
-effect clear @s minecraft:instant_health
-attribute @s minecraft:max_health modifier remove bs.health:limit
+$function bs.health:ttl/run_callback with storage bs:data health.ttl."$(UUID)"
+$data remove storage bs:data health.ttl."$(UUID)"
+
+scoreboard players reset @s bs.ttl
+execute at @s run tp @s ~ -1000000 ~
+kill @s

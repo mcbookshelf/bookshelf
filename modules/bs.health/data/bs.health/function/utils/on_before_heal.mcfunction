@@ -12,11 +12,7 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
-function #bs.health:set_health {points:10}
-assert entity @s[nbt={Health:10f}]
-
-# TODO: uncomment when https://github.com/misode/packtest/issues/14 is fixed
-#function #bs.health:set_health {points:15}
-#await entity @s[nbt={Health:15f}]
+# This function is run when the instant_damage is removed just before the player is healed
+execute store result score #h bs.ctx run data get entity @s Health 100000
+scoreboard players operation @s bs.hmod += #h bs.ctx

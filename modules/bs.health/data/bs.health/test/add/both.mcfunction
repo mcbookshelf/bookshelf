@@ -12,10 +12,15 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+# @dummy
 
-$function bs.health:time_to_live/run_callback with storage bs:data health.ttl."$(UUID)"
-$data remove storage bs:data health.ttl."$(UUID)"
+gamerule naturalRegeneration false
+function #bs.health:add_health {points:5.0}
+function #bs.health:add_max_health {points:10.0}
+function #bs.health:add_health {points:5.0}
+function #bs.health:add_health {points:-10.0}
+assert entity @s[nbt={Health:15f}]
 
-scoreboard players reset @s bs.ttl
-execute at @s run tp @s ~ -1000000 ~
-kill @s
+# TODO: uncomment when https://github.com/misode/packtest/issues/14 is fixed
+#function #bs.health:add_health {points:20.0}
+#await entity @s[nbt={Health:30f}]

@@ -13,7 +13,13 @@ Efficiently manage the lifecycle and vital aspects of an entity.
 ```{admonition} About NBTs
 :class: warning
 
-When using the module, you cannot rely on NBTs to get health information. Use the `get_health` and `get_max_health` functions instead. This is because NBTs may not consistently reflect actual values. This choice was made to enhance performance, reliability, and to work around some limitations.
+When using the module, you cannot rely on NBTs to get health information. Use the `get_health` function instead. This is because NBTs may not consistently reflect actual values. This choice was made to enhance performance, reliability, and to work around some limitations.
+```
+
+```{admonition} Effects Incompatibility
+:class: warning
+
+This system uses the `health_boost` effect to force an update to the player's `max_health`. As a result, this effect is not compatible with certain commands. Additionally, while effects like `instant_damage` and `instant_health` are supported, some amplifiers may cause issues. Specifically, `instant_damage` with amplifier 255 and `instant_health` with amplifiers greater than 28.
 ```
 
 ---
@@ -64,7 +70,7 @@ You can use negative numbers to remove health points from the player.
 
 ```{function} #bs.health:add_max_health {points:<value>}
 
-Add or remove maximum health points from players.
+Add or remove base maximum health points from players.
 
 :Inputs:
   **Execution `as <players>`**: Players whose max health will be updated.
@@ -133,7 +139,7 @@ function #bs.health:get_health {scale:1000}
 
 ```{function} #bs.health:get_max_health {scale:<scaling>}
 
-Get a player's maximum health points.
+Get a player's base maximum health points.
 
 :Inputs:
   **Execution `as <players>`**: Players from which you want to get max health points.
@@ -196,7 +202,7 @@ function #bs.health:set_health {points:5.0}
 
 ```{function} #bs.health:set_max_health {points:<value>}
 
-Set players' maximum health points.
+Set players' base maximum health points.
 
 :Inputs:
   **Execution `as <players>`**: Players whose max health will be updated.

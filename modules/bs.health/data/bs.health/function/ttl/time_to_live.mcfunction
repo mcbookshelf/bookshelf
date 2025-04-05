@@ -12,11 +12,10 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
-function #bs.health:set_health {points:10}
-assert entity @s[nbt={Health:10f}]
+$data modify storage bs:ctx _ set value $(with)
 
-# TODO: uncomment when https://github.com/misode/packtest/issues/14 is fixed
-#function #bs.health:set_health {points:15}
-#await entity @s[nbt={Health:15f}]
+execute if data storage bs:ctx _.on_death run function bs.health:ttl/register_callback with entity @s
+execute if data storage bs:ctx _.unit run function bs.health:ttl/register_unit with storage bs:ctx _
+execute if data storage bs:ctx _.time store result score @s bs.ttl run data get storage bs:ctx _.time
+schedule function bs.health:ttl/next_tick 1t

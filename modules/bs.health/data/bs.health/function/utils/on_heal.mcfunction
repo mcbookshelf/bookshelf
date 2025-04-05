@@ -12,11 +12,10 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
-function #bs.health:set_health {points:10}
-assert entity @s[nbt={Health:10f}]
-
-# TODO: uncomment when https://github.com/misode/packtest/issues/14 is fixed
-#function #bs.health:set_health {points:15}
-#await entity @s[nbt={Health:15f}]
+# This function is run when the instant_health is removed and the player is healed
+advancement revoke @s only bs.health:on_heal
+advancement revoke @s only bs.health:on_before_heal
+execute store result score #m bs.ctx run attribute @s minecraft:max_health get 100000
+execute store result storage bs:ctx y double 0.00001 run scoreboard players operation @s bs.hmod -= #m bs.ctx
+function bs.health:utils/apply_health with storage bs:ctx

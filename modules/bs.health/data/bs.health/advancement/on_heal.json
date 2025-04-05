@@ -26,12 +26,26 @@
                 }
               }
             }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "effects": {
+                  "minecraft:instant_damage": {
+                    "amplifier": 255
+                  }
+                }
+              }
+            }
           }
         ]
       }
     }
   },
   "rewards": {
-    "function": "bs.health:apply/health_modifier"
+    "function": "bs.health:utils/on_heal"
   }
 }

@@ -12,12 +12,7 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
-function #bs.health:set_health {points:10.0}
-function #bs.health:set_max_health {points:30.0}
-assert entity @s[nbt={Health:10f}]
-
-function #bs.health:set_max_health {points:20.0}
-function #bs.health:set_health {points:30.0}
-await entity @s[nbt={Health:20f}]
+effect clear @s minecraft:instant_health
+execute store result storage bs:ctx y double 0.00001 run scoreboard players operation @s bs.hmod -= #m bs.ctx
+function bs.health:utils/apply_health with storage bs:ctx
