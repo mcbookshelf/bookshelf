@@ -385,7 +385,7 @@ button.btn.version-switcher__button {
   padding-top: 1rem;
 }
 button.btn.version-switcher__button {
-  max-width: 8rem;
+  max-width: 6rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
