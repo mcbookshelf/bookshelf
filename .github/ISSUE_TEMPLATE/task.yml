@@ -1,0 +1,33 @@
+name: 🛠️ Task
+description: Request a specific task or improvement to be done.
+type: 🛠️ Task
+body:
+  - type: dropdown
+    attributes:
+      label: 🧰 Task Category
+      description: |
+        What kind of task is this?
+      options:
+        - 📝 Documentation
+        - 📖 Example
+        - ⚙️ CI/CD
+        - 🏷️ Metadata
+        - 🔄 Migration
+        - 🆔 Identity
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 📝 Description
+      description: |
+        What needs to be done? Be as specific as possible:
+        - What is the goal of the task?
+        - Why is it needed?
+        - Any relevant context?
+      placeholder: |
+        Examples:
+        - Add examples for the new `get_block` feature.
+        - Improve CI by caching dependencies.
+    validations:
+      required: true

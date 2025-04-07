@@ -9,7 +9,7 @@ on:
 
 jobs:
   check:
-    name: 🔍 Modules Check
+    name: 🔍 Check Modules
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -24,7 +24,7 @@ jobs:
         run: pdm run modules check
 
   test:
-    name: 🧪 Modules Test
+    name: 🧪 Test Modules
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -38,6 +38,11 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
+      - name: Cache Beet Content
+        uses: actions/cache@v4
+        with:
+          path: .beet_cache
+          key: ${{ runner.os }}-beet-cache
       - name: Install Dependencies
         run: pdm install
       - name: Test Modules

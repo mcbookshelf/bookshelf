@@ -4,12 +4,6 @@ on:
   push:
     branches:
       - '**'
-  workflow_call:
-    inputs:
-      versions:
-        type: boolean
-        default: false
-        required: false
 
 permissions:
   contents: write
@@ -21,8 +15,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref }}
       - name: Set Up Git User
         uses: fregante/setup-git-user@v2
       - name: Install PDM
@@ -32,12 +24,11 @@ jobs:
       - name: Install Dependencies
         run: pdm install
       - name: Update Metadata
-        run: |
-          if [[ "${{ inputs.versions }}" == "true" ]]; then
-            pdm run modules update --versions
-          else
-            pdm run modules update
-          fi
+        if: ${{ !startsWith(github.ref_name, 'release/v') }}
+        run: pdm run modules update
+      - name: Update Metadata for Release
+        if: ${{ startsWith(github.ref_name, 'release/v') }}
+        run: pdm run modules update --versions
       - name: Commit and Push Changes
         run: |
           git add .

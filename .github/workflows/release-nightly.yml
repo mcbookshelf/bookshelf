@@ -1,0 +1,51 @@
+name: 🏷️ Nightly Release Build
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    uses: ./.github/workflows/release-check.yml
+
+  release:
+    name: 📦 Build Nightly Release
+    needs: check
+    if: ${{ needs.check.outputs.version_exists == 'false' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Set Up Git User
+        uses: fregante/setup-git-user@v2
+      - name: Install PDM
+        uses: pdm-project/setup-pdm@v4
+        with:
+          cache: true
+      - name: Cache Beet Content
+        uses: actions/cache@v4
+        with:
+          path: .beet_cache
+          key: ${{ runner.os }}-beet-cache
+      - name: Install Dependencies
+        run: pdm install
+      - name: Build Release Files
+        run: pdm run modules release
+      - name: Delete Existing Nightly Release
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete nightly --yes
+          git push --delete origin nightly
+      - name: Create New Nightly Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: docs/changelog/${{ needs.check.outputs.release_tag }}.md
+          name: Nightly ${{ needs.check.outputs.release_name }}
+          tag_name: nightly
+          prerelease: true
+          files: release/*.zip
