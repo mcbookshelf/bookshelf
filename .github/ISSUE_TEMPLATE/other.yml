@@ -1,16 +1,16 @@
-name: "📝 Other"
-description: Submit any other suggestions, such as adding related tools to the documentation.
+name: 📝 Other
+description: Share a suggestion, question, or anything else that doesn’t fit other categories.
 body:
   - type: textarea
     attributes:
-      label: Suggestion or Inquiry
+      label: 💬 Suggestion or Question
       description: |
-        Please describe your suggestion, request, or inquiry:
-        - What would you like to see added, improved, or clarified?
-        - Include any relevant tools, examples, or links if applicable.
+        Let us know what you'd like to suggest, ask, or discuss:
+        - What should be added, improved, or clarified?
+        - Include tools, examples, or links if helpful.
       placeholder: |
-        Example:
+        Examples:
         - Suggest adding a related tool to the documentation.
-        - Request an update for clearer documentation on a specific feature.
+        - Ask for clarification on a specific feature.
     validations:
       required: true

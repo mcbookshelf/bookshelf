@@ -1,0 +1,46 @@
+name: 🔍 Release Check
+
+on:
+  workflow_call:
+    outputs:
+      release_tag:
+        value: ${{ jobs.check.outputs.release_tag }}
+      release_name:
+        value: ${{ jobs.check.outputs.release_name }}
+      version_exists:
+        value: ${{ jobs.check.outputs.version_exists }}
+
+jobs:
+  check:
+    name: 🔍 Check Release
+    runs-on: ubuntu-latest
+    outputs:
+      release_tag: ${{ steps.check.outputs.release_tag }}
+      release_name: ${{ steps.check.outputs.release_name }}
+      version_exists: ${{ steps.check.outputs.version_exists }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-tags: true
+      - name: Fetch All Tags
+        run: git fetch --tags
+      - name: Check Versions
+        id: check
+        run: |
+          VERSION=$(python -c "from bookshelf import version; print(version())")
+          MC_VERSIONS=$(python -c "from bookshelf import mc_versions; print(mc_versions())")
+
+          echo "release_tag=v$VERSION" >> $GITHUB_OUTPUT
+          echo "release_name=v$VERSION (Minecraft $MC_VERSIONS)" >> $GITHUB_OUTPUT
+
+          if [ -n "$(git tag -l "v$VERSION")" ]; then
+            echo "version_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "version_exists=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Debug Outputs
+        run: |
+          echo "release_tag=${{ steps.check.outputs.release_tag }}"
+          echo "release_name=${{ steps.check.outputs.release_name }}"
+          echo "version_exists=${{ steps.check.outputs.version_exists }}"
