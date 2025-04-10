@@ -13,6 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store success score #s bs.ctx run scoreboard players remove @e[scores={bs.ttl=1..}] bs.ttl 1
-execute if score #s bs.ctx matches 1 run schedule function bs.health:time_to_live/next_tick 1t
-execute if score #s bs.ctx matches 1 as @e[scores={bs.ttl=0}] run function bs.health:time_to_live/time_out with entity @s
+scoreboard players reset @s bs.hmod
+$attribute @s minecraft:max_health modifier add bs.health:limit $(y) add_value
+effect give @s minecraft:health_boost 1 0 true
+effect clear @s minecraft:health_boost
+attribute @s minecraft:max_health modifier remove bs.health:limit

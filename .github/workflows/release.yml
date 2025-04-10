@@ -61,6 +61,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Set Up Git User
         uses: fregante/setup-git-user@v2
       - name: Install PDM
@@ -71,6 +73,9 @@ jobs:
         run: pdm install
       - name: Build Release Files
         run: pdm run modules release
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
       - name: Create New Stable Release
         uses: softprops/action-gh-release@v2
         with:
@@ -81,6 +86,7 @@ jobs:
           files: release/*.zip
       - name: Update Tag
         run: |
+          git fetch --tags
           git tag -f latest ${{ needs.check.outputs.release_tag }}
           git push -f origin latest
 

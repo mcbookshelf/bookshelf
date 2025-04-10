@@ -1,12 +1,12 @@
 {
   "require": [
     "bookshelf.plugins.setup_templates",
-    "bookshelf.plugins.dependencies",
-    "bookshelf.plugins.edit_tags",
-    "bookshelf.plugins.auto_import",
-    "bookshelf.plugins.auto_log_format"
+    "bookshelf.plugins.dependencies"
   ],
   "pipeline": [
+    "bookshelf.plugins.edit_tags",
+    "bookshelf.plugins.auto_import",
+    "bookshelf.plugins.auto_log_format",
     "bookshelf.plugins.gen_help",
     "bookshelf.plugins.gen_load"
   ]

@@ -12,8 +12,13 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+# @dummy
 
-advancement revoke @s only bs.health:apply_modifier
-execute store result score #m bs.ctx run attribute @s minecraft:max_health get 100000
-execute store result storage bs:ctx y double 0.00001 run scoreboard players operation @s bs.hmod -= #m bs.ctx
-function bs.health:apply/decrease_health with storage bs:ctx
+function #bs.health:set_health {points:10.0}
+function #bs.health:set_max_health {points:30.0}
+assert entity @s[nbt={Health:10f}]
+
+# TODO: uncomment when https://github.com/misode/packtest/issues/14 is fixed
+#function #bs.health:set_max_health {points:20.0}
+#function #bs.health:set_health {points:30.0}
+#await entity @s[nbt={Health:20f}]

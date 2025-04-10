@@ -3,7 +3,7 @@ requires = ["pdm-backend", "pdm-build-locked"]
 build-backend = "pdm.backend"
 
 [project]
-name = "bookshelf"
+name = "mcbookshelf"
 dynamic = ["version"]
 description = "Scripts for Bookshelf and the Github pipeline."
 authors = [{ name = "Bookshelf Contributors", email = "contact@gunivers.net" }]

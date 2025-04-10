@@ -12,13 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
-function #bs.health:add_health {points:5.0}
-function #bs.health:add_max_health {points:10.0}
-function #bs.health:add_health {points:5.0}
-function #bs.health:add_health {points:-10.0}
-assert entity @s[nbt={Health:15f}]
-
-function #bs.health:add_health {points:20.0}
-await entity @s[nbt={Health:30f}]
+effect give @s minecraft:instant_damage 1 255 true
+effect give @s minecraft:instant_health 1 28 true

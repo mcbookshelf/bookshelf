@@ -13,9 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set value $(with)
-
-execute if data storage bs:ctx _.on_death run function bs.health:time_to_live/register_callback with entity @s
-execute if data storage bs:ctx _.unit run function bs.health:time_to_live/register_unit with storage bs:ctx _
-execute if data storage bs:ctx _.time store result score @s bs.ttl run data get storage bs:ctx _.time
-schedule function bs.health:time_to_live/next_tick 1t
+execute store success score #s bs.ctx run scoreboard players remove @e[scores={bs.ttl=1..}] bs.ttl 1
+execute if score #s bs.ctx matches 1 run schedule function bs.health:ttl/next_tick 1t
+execute if score #s bs.ctx matches 1 as @e[scores={bs.ttl=0}] run function bs.health:ttl/time_out with entity @s

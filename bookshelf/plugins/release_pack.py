@@ -1,5 +1,6 @@
 import json
 import re
+import time
 from collections.abc import Generator
 from pathlib import Path
 
@@ -29,6 +30,7 @@ class PublishOptions(PluginOptions):
 
     file: Path
     changelog: str
+    module_id: str
     module_name: str
     module_slug: str
     module_description: str
@@ -49,6 +51,7 @@ def beet_default(ctx: Context) -> Generator:
         ctx.require(publish_pack(
             file=file,
             changelog=create_specialized_changelog(ctx.directory.name),
+            module_id=ctx.data.name,
             module_name=f"Bookshelf {ctx.meta.get('name', '')}".strip(),
             module_slug=module_slug,
             module_description=ctx.meta.get("description", ""),
@@ -68,17 +71,22 @@ def beet_default(ctx: Context) -> Generator:
 @configurable(validator=PublishOptions)
 def publish_pack(_: Context, opts: PublishOptions) -> None:
     """Attempt to publish pack to platforms."""
-    if MODRINTH_TOKEN and (
-        update_modrinth_project(opts)
-        or create_modrinth_project(opts)
-    ):
-        create_modrinth_version(opts)
+    if not MODRINTH_TOKEN:
+        return
 
-    if SMITHED_TOKEN and (
-        update_smithed_project(opts)
-        or create_smithed_project(opts)
-    ):
+    get_step_logger().debug("Uploading module '%s' to Modrinth...", opts.module_name)
+    if not (update_modrinth_project(opts) or create_modrinth_project(opts)):
+        return
+    create_modrinth_version(opts)
+
+    if not SMITHED_TOKEN:
+        return
+
+    get_step_logger().debug("Uploading module '%s' to Smithed...", opts.module_name)
+    if update_smithed_project(opts):
         create_smithed_version(opts)
+    else:
+        create_smithed_project(opts)
 
 
 def create_specialized_changelog(module: str) -> str:
@@ -94,10 +102,14 @@ def create_specialized_changelog(module: str) -> str:
 
 def get_modrinth_project_id(slug: str) -> str | None:
     """Attempt to get the Modrinth project id."""
-    response = requests.get(f"{MODRINTH_API}/project/{slug}/check", timeout=5, headers={
-        "Authorization": MODRINTH_TOKEN,
-        "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
-    })
+    response = requests.get(
+        f"{MODRINTH_API}/project/{slug}/check",
+        timeout=10,
+        headers={
+            "Authorization": MODRINTH_TOKEN,
+            "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
+        },
+    )
 
     return response.json()["id"] if response.status_code == requests.codes.ok else None
 
@@ -106,14 +118,13 @@ def create_modrinth_project(opts: PublishOptions) -> bool:
     """Attempt to create a new Modrinth project."""
     return handle_response_error(requests.post(
         f"{MODRINTH_API}/project",
-        timeout=5,
+        timeout=10,
         headers={
             "Authorization": MODRINTH_TOKEN,
             "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
         },
         files={
-            "icon": opts.module_icon.read_bytes(),
-            "data":json.dumps({
+            "data": (None, json.dumps({
                 "name": opts.module_name,
                 "slug": opts.module_slug,
                 "summary": opts.module_description,
@@ -132,7 +143,8 @@ def create_modrinth_project(opts: PublishOptions) -> bool:
                     "discord": "https://discord.gg/aV5SF3JsAZ",
                     "other": "https://www.helloasso.com/associations/altearn/formulaires/3/en",
                 },
-            }).encode("utf-8"),
+            }).encode("utf-8"), "application/json"),
+            "icon": (opts.module_icon.name, opts.module_icon.read_bytes(), "image/png"),
         },
     ), f"Failed to create project '{opts.module_name}' on Modrinth.")
 
@@ -141,29 +153,48 @@ def update_modrinth_project(opts: PublishOptions) -> bool:
     """Attempt to update a Modrinth project."""
     response = requests.patch(
         f"{MODRINTH_API}/project/{opts.module_slug}",
-        timeout=5,
+        timeout=10,
         headers={
             "Authorization": MODRINTH_TOKEN,
             "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
         },
         json={
+            "name": opts.module_name,
             "summary": opts.module_description,
             "description": opts.module_readme.read_text("utf-8"),
             "link_urls": {"wiki": opts.module_documentation},
         },
     )
 
-    return handle_response_error(
+    if response.status_code == requests.codes.not_found or not handle_response_error(
         response,
         f"Failed to update project '{opts.module_name}' on Modrinth.",
-    ) if response.status_code != requests.codes.not_found else False
+    ):
+        return False
+
+    return handle_response_error(
+        requests.patch(
+            f"{MODRINTH_API}/project/{opts.module_slug}/icon",
+            timeout=10,
+            headers={
+                "Authorization": MODRINTH_TOKEN,
+                "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
+                "Content-Type": "image/png",
+            },
+            params={
+                "ext": "png",
+            },
+            data=opts.module_icon.read_bytes(),
+        ),
+        f"Failed to update project '{opts.module_name}' icon on Modrinth.",
+    )
 
 
 def create_modrinth_version(opts: PublishOptions) -> bool:
     """Attempt to create a new Modrinth version."""
     if requests.get(
         f"{MODRINTH_API}/project/{opts.module_slug}/version/{VERSION}",
-        timeout=5,
+        timeout=10,
         headers={
             "Authorization": MODRINTH_TOKEN,
             "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
@@ -179,7 +210,7 @@ def create_modrinth_version(opts: PublishOptions) -> bool:
 
     return handle_response_error(requests.post(
         f"{MODRINTH_API}/version",
-        timeout=5,
+        timeout=10,
         headers={
             "Authorization": MODRINTH_TOKEN,
             "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
@@ -203,11 +234,13 @@ def create_smithed_project(opts: PublishOptions) -> bool:
     """Attempt to create a new Smithed project."""
     return handle_response_error(requests.post(
         f"{SMITHED_API}/packs",
-        timeout=5,
+        timeout=10,
         headers={"Content-Type": "application/json"},
         params={"token": SMITHED_TOKEN, "id": opts.module_slug},
         json={"data": {
+            "id": opts.module_id,
             "categories": ["Library"],
+            "versions": [create_smithed_pack_version(opts)],
             "display": {
                 "name": opts.module_name,
                 "description": opts.module_description,
@@ -231,7 +264,7 @@ def update_smithed_project(opts: PublishOptions) -> bool:
     """Attempt to update a Smithed project."""
     response = requests.patch(
         f"{SMITHED_API}/packs/{opts.module_slug}",
-        timeout=5,
+        timeout=10,
         headers={"Content-Type": "application/json"},
         params={"token": SMITHED_TOKEN},
         json={"data": {
@@ -252,7 +285,7 @@ def create_smithed_version(opts: PublishOptions) -> bool:
     """Attempt to create a new Smithed version."""
     if not handle_response_error(response := requests.get(
         f"{SMITHED_API}/packs/{opts.module_slug}/versions",
-        timeout=5,
+        timeout=10,
     ), "Failed to get versions on Smithed."):
         return False
 
@@ -265,31 +298,67 @@ def create_smithed_version(opts: PublishOptions) -> bool:
         )
         return False
 
-    if not handle_response_error(response := requests.get(
-        f"{MODRINTH_API}/project/{opts.module_slug}/version/{VERSION}",
-        timeout=5,
-    ), f"Failed to get version '{VERSION}' on Modrinth."):
-        return False
-
-    data = response.json()
     return handle_response_error(requests.post(
         f"{SMITHED_API}/packs/{opts.module_slug}/versions",
-        timeout=5,
+        timeout=10,
         headers={"Content-Type": "application/json"},
         params={"token": SMITHED_TOKEN, "version": VERSION},
-        json={"data": {
-            "name": VERSION,
-            "supports": MC_VERSIONS,
-            "downloads": {
-                data["project_types"][0]: data["files"][0]["url"],
-            },
-        }},
+        json={"data": create_smithed_pack_version(opts)},
     ), f"Failed to create version '{VERSION}' on Smithed.")
+
+
+def create_smithed_pack_version(
+    opts: PublishOptions,
+    retries: int = 5,
+    delay: int = 2,
+) -> dict:
+    """Create a new Smithed pack version."""
+    for _ in range(retries):
+        response = requests.get(
+            f"{MODRINTH_API}/project/{opts.module_slug}/version/{VERSION}",
+            timeout=10,
+            headers={
+                "Authorization": MODRINTH_TOKEN,
+                "User-Agent": "mcbookshelf/bookshelf/release (contact@gunivers.net)",
+            },
+        )
+
+        if handle_response_error(
+            response,
+            f"Failed to get version '{VERSION}' on Modrinth.",
+        ):
+            data = response.json()
+            if data.get("files") and data["files"][0].get("url"):
+                return {
+                    "name": VERSION,
+                    "supports": MC_VERSIONS,
+                    "dependencies": [],
+                    "downloads": {
+                        data["project_types"][0]: data["files"][0]["url"],
+                    },
+                }
+
+        get_step_logger().debug("Modrinth version not ready, retrying in %ds...", delay)
+        time.sleep(delay)
+
+    get_step_logger().warning("Timed out waiting for Modrinth version '%s'.", VERSION)
+    return {}
 
 
 def handle_response_error(response: requests.Response, err_message: str) -> bool:
     """Check for success and log errors."""
-    if response.status_code != requests.codes.ok:
-        get_step_logger().error("%s %s", err_message, response.json())
+    if response.status_code >= requests.codes.bad_request:
+        try:
+            get_step_logger().error(
+                "%s %s", err_message,
+                response.json(),
+            )
+        except json.JSONDecodeError:
+            get_step_logger().error(
+                "%s %s",
+                err_message,
+                response.text,
+            )
+        return False
 
-    return response.status_code == requests.codes.ok
+    return True

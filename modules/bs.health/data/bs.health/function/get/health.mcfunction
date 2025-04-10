@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if score @s bs.hmod matches 1.. store result storage bs:out health.get_health double 0.00001 run scoreboard players get @s bs.hmod
-execute unless score @s bs.hmod matches 1.. run data modify storage bs:out health.get_health set from entity @s Health
+execute store result score #h bs.ctx run data get entity @s Health 100000
+execute store result storage bs:out health.get_health double 0.00001 run scoreboard players operation #h bs.ctx += @s bs.hmod
 $return run data get storage bs:out health.get_health $(scale)
