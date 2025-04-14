@@ -13,9 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# This function is run when the instant_health is removed and the player is healed
-advancement revoke @s only bs.health:on_heal
-advancement revoke @s only bs.health:on_before_heal
+# This function runs when instant_health is applied (just after being removed)
+scoreboard players operation @s bs.hmod += @s bs.hval
 execute store result score #m bs.ctx run attribute @s minecraft:max_health get 100000
 execute store result storage bs:ctx y double 0.00001 run scoreboard players operation @s bs.hmod -= #m bs.ctx
 function bs.health:utils/apply_health with storage bs:ctx

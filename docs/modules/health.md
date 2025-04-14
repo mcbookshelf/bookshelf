@@ -13,13 +13,13 @@ Efficiently manage the lifecycle and vital aspects of an entity.
 ```{admonition} About NBTs
 :class: warning
 
-When using the module, you cannot rely on NBTs to get health information. Use the `get_health` function instead. This is because NBTs may not consistently reflect actual values. This choice was made to enhance performance, reliability, and to work around some limitations.
+When using this module, do not rely on NBTs to retrieve health information. Instead, use `get_health` to get the player's health and `get_max_health_total` for the max health, rather than using `attribute @s minecraft:max_health get`. NBTs may not always reflect the actual values, and this approach was chosen to bypass certain limitations.
 ```
 
 ```{admonition} Effects Incompatibility
 :class: warning
 
-This system uses the `health_boost` effect to force an update to the player's `max_health`. As a result, this effect is not compatible with certain commands. Additionally, while effects like `instant_damage` and `instant_health` are supported, some amplifiers may cause issues. Specifically, `instant_damage` with amplifier 255 and `instant_health` with amplifiers greater than 28.
+This system uses the `instant_health` effect to heal the player and force an update to their health. Using amplifier values higher than 28 may cause issues. Additionally, any pending healing command will take precedence over the effect for the current tick, potentially overriding it.
 ```
 
 ---

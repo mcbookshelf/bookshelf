@@ -17,6 +17,5 @@
 function #bs.health:set_health {points:10}
 assert entity @s[nbt={Health:10f}]
 
-# TODO: uncomment when https://github.com/misode/packtest/issues/14 is fixed
-#function #bs.health:set_health {points:15}
-#await entity @s[nbt={Health:15f}]
+function #bs.health:set_health {points:15}
+await entity @s[nbt={Health:15f}]

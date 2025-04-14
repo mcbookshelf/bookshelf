@@ -14,13 +14,11 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-gamerule naturalRegeneration false
 function #bs.health:add_health {points:5.0}
 function #bs.health:add_max_health {points:10.0}
 function #bs.health:add_health {points:5.0}
 function #bs.health:add_health {points:-10.0}
 assert entity @s[nbt={Health:15f}]
 
-# TODO: uncomment when https://github.com/misode/packtest/issues/14 is fixed
-#function #bs.health:add_health {points:20.0}
-#await entity @s[nbt={Health:30f}]
+function #bs.health:add_health {points:20.0}
+await entity @s[nbt={Health:30f}]

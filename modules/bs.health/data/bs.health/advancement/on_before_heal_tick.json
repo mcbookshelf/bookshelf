@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "function": "bs.health:utils/on_before_heal"
+  }
+}

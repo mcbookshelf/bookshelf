@@ -13,7 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+# Get input points and base max_health
 $execute store result score #p bs.ctx run data get storage bs:const health.point $(points)
-execute store result score #m bs.ctx run attribute @s minecraft:max_health get 100000
+execute store result score #m bs.ctx run attribute @s minecraft:max_health base get 100000
+
+# Add points to base max_health and apply the result
 execute store result storage bs:ctx y double .00001 run scoreboard players operation #m bs.ctx += #p bs.ctx
 function bs.health:utils/set_max_health with storage bs:ctx
