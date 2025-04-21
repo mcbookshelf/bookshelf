@@ -13,6 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# This function is run when the instant_damage is removed just before the player is healed
-execute store result score #h bs.ctx run data get entity @s Health 100000
-scoreboard players operation @s bs.hmod += #h bs.ctx
+# This function runs before effects are ticked
+# Skip execution if the player doesn't need healing, but keep advancements set for optimization
+execute unless score @s bs.hmod matches 1.. run return 0
+execute store result score @s bs.hval run data get entity @s Health 100000
+advancement revoke @s only bs.health:on_before_heal_hurt

@@ -15,6 +15,6 @@
 
 scoreboard players reset @s bs.hmod
 $attribute @s minecraft:max_health modifier add bs.health:limit $(y) add_value
-effect give @s minecraft:health_boost 1 0 true
-effect clear @s minecraft:health_boost
+effect give @s minecraft:instant_health 1 255 true
+effect clear @s minecraft:instant_health
 attribute @s minecraft:max_health modifier remove bs.health:limit
