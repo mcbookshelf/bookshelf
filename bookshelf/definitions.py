@@ -1,6 +1,6 @@
 from pathlib import Path
 
-VERSION = "3.0.0"
+VERSION = "3.0.1"
 MC_VERSIONS = ["1.21.5"]
 
 DOC_URL = "https://docs.mcbookshelf.dev"
