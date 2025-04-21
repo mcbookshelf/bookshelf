@@ -2,7 +2,7 @@
 
 **`#bs.spline:help`**
 
-Manipulate smooth curves created from control points.
+Create and manipulate smooth curves from control points.
 
 ```{image} /_imgs/modules/spline.png
 :align: center
@@ -13,6 +13,18 @@ Manipulate smooth curves created from control points.
 "Do not go where the path may lead, go instead where there is no path and leave a trail."
 
 -- Ralph Waldo Emerson
+```
+
+```{admonition} Supported Dimensions
+:class: warning
+
+These functions support only 1D, 2D, and 3D splines. If you need to handle more dimensions, you can run multiple 1D splines in parallel for each axis or component.
+```
+
+```{admonition} Variable Number of Points
+:class: tip
+
+All spline functions in this module accept a variable number of points. You are not restricted to using just four or any fixed count. Splines are built by combining multiple curve segments, so you can define as many points as needed.
 ```
 
 ---
@@ -30,18 +42,18 @@ You can find below all functions available in this module.
 
 ```{function} #bs.spline:evaluate_bezier
 
-Evaluate a Bézier curve using 4 control points and a time parameter.
+Evaluate a Bézier spline composed of one or more segments. Each segment is defined by four consecutive control points, with the last point of a segment reused as the first of the next.
 
 :Inputs:
   **Storage `bs:in spline.evaluate_bezier`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: The 4 control points, where each point is a coordinates list (e.g., 2D, 3D, ...).
-    - {nbt}`double` **time**: Position along the curve. Values must be between 0 and 1.
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
+    - {nbt}`double` **time**: A normalized position between 0 and the number of segments. Each integer step moves to the next segment, and the fractional part represents interpolation within that segment.
   :::
 
 :Outputs:
-  **Storage `bs:out spline.evaluate_bezier`**: {nbt}`list` Point at the evaluated time.
+  **Storage `bs:out spline.evaluate_bezier`**: {nbt}`list` The interpolated point (1D, 2D, or 3D) on the spline at the given time.
 ```
 
 *Example: Evaluate the point in the middle of a Bézier curve in 2D space ([visualize the curve](#about-splines)):*
@@ -57,18 +69,18 @@ data get storage bs:out spline.evaluate_bezier
 
 ```{function} #bs.spline:evaluate_bspline
 
-Evaluate a B-Spline curve using 4 control points and a time parameter.
+Evaluate a B-spline composed of one or more segments. Each segment is defined by four consecutive control points, with three points of a segment reused in the next to ensure smooth blending.
 
 :Inputs:
   **Storage `bs:in spline.evaluate_bspline`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: The 4 control points, where each point is a coordinates list (e.g., 2D, 3D, ...).
-    - {nbt}`double` **time**: Position along the curve. Values must be between 0 and 1.
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
+    - {nbt}`double` **time**: A normalized position between 0 and the number of segments. Each integer step moves to the next segment, and the fractional part represents interpolation within that segment.
   :::
 
 :Outputs:
-  **Storage `bs:out spline.evaluate_bspline`**: {nbt}`list` Point at the evaluated time.
+  **Storage `bs:out spline.evaluate_bspline`**: {nbt}`list` The interpolated point (1D, 2D, or 3D) on the spline at the given time.
 ```
 
 *Example: Evaluate the point in the middle of a B-Spline curve in 2D space ([visualize the curve](#about-splines)):*
@@ -84,18 +96,18 @@ data get storage bs:out spline.evaluate_bspline
 
 ```{function} #bs.spline:evaluate_catmull_rom
 
-Evaluate a Catmull-Rom curve using 4 control points and a time parameter.
+Evaluate a Catmull-Rom spline composed of one or more segments. Each segment is defined by four consecutive control points, with three points of a segment reused in the next to ensure smooth blending.
 
 :Inputs:
   **Storage `bs:in spline.evaluate_catmull_rom`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: The 4 control points, where each point is a coordinates list (e.g., 2D, 3D, ...).
-    - {nbt}`double` **time**: Position along the curve. Values must be between 0 and 1.
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
+    - {nbt}`double` **time**: A normalized position between 0 and the number of segments. Each integer step moves to the next segment, and the fractional part represents interpolation within that segment.
   :::
 
 :Outputs:
-  **Storage `bs:out spline.evaluate_catmull_rom`**: {nbt}`list` Point at the evaluated time.
+  **Storage `bs:out spline.evaluate_catmull_rom`**: {nbt}`list` The interpolated point (1D, 2D, or 3D) on the spline at the given time.
 ```
 
 *Example: Evaluate the point in the middle of a Catmull-Rom curve in 2D space ([visualize the curve](#about-splines)):*
@@ -111,18 +123,18 @@ data get storage bs:out spline.evaluate_catmull_rom
 
 ```{function} #bs.spline:evaluate_hermite
 
-Evaluate a Hermite curve using 4 control points and a time parameter.
+Evaluate a Hermite spline composed of one or more segments. Each segment is defined by two positions and their associated tangents, with two points (the second position and its tangent) reused as the first of the next segment. All coordinates and tangents are absolute.
 
 :Inputs:
   **Storage `bs:in spline.evaluate_hermite`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: The 4 control points, where each point is a coordinates list (e.g., 2D, 3D, ...).
-    - {nbt}`double` **time**: Position along the curve. Values must be between 0 and 1.
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
+    - {nbt}`double` **time**: A normalized position between 0 and the number of segments. Each integer step moves to the next segment, and the fractional part represents interpolation within that segment.
   :::
 
 :Outputs:
-  **Storage `bs:out spline.evaluate_hermite`**: {nbt}`list` Point at the evaluated time.
+  **Storage `bs:out spline.evaluate_hermite`**: {nbt}`list` The interpolated point (1D, 2D, or 3D) on the spline at the given time.
 ```
 
 *Example: Evaluate the point in the middle of a Hermite curve in 2D space ([visualize the curve](#about-splines)):*
@@ -145,18 +157,18 @@ data get storage bs:out spline.evaluate_hermite
 
 ```{function} #bs.spline:sample_bezier
 
-Sample a Bézier curve using control points and a step parameter. Each segment is defined by 4 consecutive points, with the last point shared between adjacent segments.
+Sample a Bézier spline composed of one or more segments. Each segment is defined by four consecutive control points, with the last point of a segment reused as the first of the next.
 
 :Inputs:
   **Storage `bs:in spline.sample_bezier`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: Control points for the curve, where each segment uses 4 points and shares the last point with the next.
-    - {nbt}`double` **step**: Interval at which the curve is sampled. Smaller values generate more points.
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
+    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
   :::
 
 :Outputs:
-  **Storage `bs:out spline.sample_bezier`**: {nbt}`list` Sampled points along the curve.
+  **Storage `bs:out spline.sample_bezier`**: {nbt}`list` The sampled points along the spline.
 ```
 
 *Example: Sample 10 points along a Bézier curve in 2D space ([visualize the curve](#about-splines)):*
@@ -172,18 +184,18 @@ data get storage bs:out spline.sample_bezier
 
 ```{function} #bs.spline:sample_bspline
 
-Sample a B-Spline curve using control points and a step parameter. Each segment is defined by 4 consecutive points, with 3 points shared between adjacent segments.
+Sample a B-Spline composed of one or more segments. Each segment is defined by four consecutive control points, with three points of a segment reused in the next to ensure smooth blending.
 
 :Inputs:
   **Storage `bs:in spline.sample_bspline`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: Control points for the curve, where each segment uses 4 points and shares 3 points with the next.
-    - {nbt}`double` **step**: Interval at which the curve is sampled. Smaller values generate more points.
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
+    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
   :::
 
 :Outputs:
-  **Storage `bs:out spline.sample_bspline`**: {nbt}`list` Sampled points along the curve.
+  **Storage `bs:out spline.sample_bspline`**: {nbt}`list` The sampled points along the spline.
 ```
 
 *Example: Sample 10 points along a B-Spline curve in 2D space ([visualize the curve](#about-splines)):*
@@ -199,18 +211,18 @@ data get storage bs:out spline.sample_bspline
 
 ```{function} #bs.spline:sample_catmull_rom
 
-Sample a Catmull-Rom curve using control points and a step parameter. Each segment is defined by 4 consecutive points, with 3 points shared between adjacent segments.
+Sample a Catmull-Rom spline composed of one or more segments. Each segment is defined by four consecutive control points, with three points of a segment reused in the next to ensure smooth blending.
 
 :Inputs:
   **Storage `bs:in spline.sample_catmull_rom`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: Control points for the curve, where each segment uses 4 points and shares 3 points with the next.
-    - {nbt}`double` **step**: Interval at which the curve is sampled. Smaller values generate more points.
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
+    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
   :::
 
 :Outputs:
-  **Storage `bs:out spline.sample_catmull_rom`**: {nbt}`list` Sampled points along the curve.
+  **Storage `bs:out spline.sample_catmull_rom`**: {nbt}`list` The sampled points along the spline.
 ```
 
 *Example: Sample 10 points along a Catmull-Rom curve in 2D space ([visualize the curve](#about-splines)):*
@@ -226,19 +238,18 @@ data get storage bs:out spline.sample_catmull_rom
 
 ```{function} #bs.spline:sample_hermite
 
-Sample a Hermite curve using control points and a step parameter. Each segment is defined by 4 consecutive points, with 2 points shared between adjacent segments.
-
+Sample a Hermite spline composed of one or more segments. Each segment is defined by two positions and their associated tangents, with two points (the second position and its tangent) reused as the first of the next segment. All coordinates and tangents are absolute.
 
 :Inputs:
   **Storage `bs:in spline.sample_hermite`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: Control points for the curve, where each segment uses 4 points and shares 2 points with the next.
-    - {nbt}`double` **step**: Interval at which the curve is sampled. Smaller values generate more points.
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
+    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
   :::
 
 :Outputs:
-  **Storage `bs:out spline.sample_hermite`**: {nbt}`list` Sampled points along the curve.
+  **Storage `bs:out spline.sample_hermite`**: {nbt}`list` The sampled points along the spline.
 ```
 
 *Example: Sample 10 points along a Hermite curve in 2D space ([visualize the curve](#about-splines)):*
@@ -261,15 +272,15 @@ data get storage bs:out spline.sample_hermite
 
 ```{function} #bs.spline:stream_bezier
 
-Stream a Bézier curve using control points and a step parameter. Each segment is defined by 4 consecutive points, with the last point shared between adjacent segments. This function processes each step over multiple ticks.
+Stream a Bézier spline composed of one or more segments. Each segment is defined by four consecutive control points, with the last point of a segment reused as the first of the next. This function processes each step over multiple ticks.
 
 :Inputs:
   **Storage `bs:in spline.stream_bezier`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: Control points for the curve, where each segment uses 4 points and shares the last point with the next.
-    - {nbt}`double` **step**: Interval at which the curve is sampled. Smaller values generate more points.
-    - {nbt}`string` **run**: Command executed at each step of the curve sampling process. For each step, the following storage can be used:
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
+    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
+    - {nbt}`string` **run**: The command executed at each step of the curve sampling process. For each step, the following storage can be used:
       - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
@@ -286,15 +297,15 @@ function #bs.spline:stream_bezier
 
 ```{function} #bs.spline:stream_bspline
 
-Stream a B-Spline curve using control points and a step parameter. Each segment is defined by 4 consecutive points, with 3 points shared between adjacent segments. This function processes each step over multiple ticks.
+Stream a B-Spline composed of one or more segments. Each segment is defined by four consecutive control points, with three points of a segment reused in the next to ensure smooth blending. This function processes each step over multiple ticks.
 
 :Inputs:
   **Storage `bs:in spline.stream_bspline`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: Control points for the curve, where each segment uses 4 points and shares 3 points with the next.
-    - {nbt}`double` **step**: Interval at which the curve is sampled. Smaller values generate more points.
-    - {nbt}`string` **run**: Command string executed at each step of the curve sampling process. For each step, the following storage can be used:
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
+    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
+    - {nbt}`string` **run**: The command executed at each step of the curve sampling process. For each step, the following storage can be used:
       - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
@@ -311,15 +322,15 @@ function #bs.spline:stream_bspline
 
 ```{function} #bs.spline:stream_catmull_rom
 
-Stream a Catmull-Rom curve using control points and a step parameter. Each segment is defined by 4 consecutive points, with 3 points shared between adjacent segments. This function processes each step over multiple ticks.
+Stream a Catmull-Rom spline composed of one or more segments. Each segment is defined by four consecutive control points, with three points of a segment reused in the next to ensure smooth blending. This function processes each step over multiple ticks.
 
 :Inputs:
   **Storage `bs:in spline.stream_catmull_rom`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: Control points for the curve, where each segment uses 4 points and shares 3 points with the next.
-    - {nbt}`double` **step**: Interval at which the curve is sampled. Smaller values generate more points.
-    - {nbt}`string` **run**: Command string executed at each step of the curve sampling process. For each step, the following storage can be used:
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
+    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
+    - {nbt}`string` **run**: The command executed at each step of the curve sampling process. For each step, the following storage can be used:
       - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
@@ -336,15 +347,15 @@ function #bs.spline:stream_catmull_rom
 
 ```{function} #bs.spline:stream_hermite
 
-Stream a Hermite curve using control points and a step parameter. Each segment is defined by 4 consecutive points, with 2 points shared between adjacent segments. This function processes each step over multiple ticks.
+Stream a Hermite spline composed of one or more segments. Each segment is defined by two positions and their associated tangents, with two points (the second position and its tangent) reused as the first of the next segment. All coordinates and tangents are absolute. This function processes each step over multiple ticks.
 
 :Inputs:
   **Storage `bs:in spline.stream_hermite`**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **points**: Control points for the curve, where each segment uses 4 points and shares 2 points with the next.
-    - {nbt}`double` **step**: Interval at which the curve is sampled. Smaller values generate more points.
-    - {nbt}`string` **run**: Command string executed at each step of the curve sampling process. For each step, the following storage can be used:
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
+    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
+    - {nbt}`string` **run**: The command executed at each step of the curve sampling process. For each step, the following storage can be used:
       - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
