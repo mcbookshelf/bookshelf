@@ -13,5 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result storage bs:ctx x int 1 run scoreboard players operation #t bs.ctx %= 1000 bs.const
-data remove storage bs:ctx _.points[0]
+execute store result score #x bs.ctx run scoreboard players operation #t bs.ctx += #s bs.ctx
+$execute if score #t bs.ctx matches 1000.. if data storage bs:ctx _.points[3] run function bs.spline:utils/$(type)/next_segment_1d
+function bs.spline:utils/compute_1d
+function bs.spline:stream/run with storage bs:ctx _
+execute if score #t bs.ctx matches ..999 run function bs.spline:stream/process/pause_1d

@@ -13,13 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-setblock -30000000 0 1606 minecraft:air
-forceload remove -30000000 1600
+data remove storage bs:ctx _.points[0]
+data remove storage bs:ctx _.points[0]
 
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.const
-
-data remove storage bs:in spline
-data remove storage bs:out spline
-data remove storage bs:data spline
-data remove storage bs:lambda spline
+scoreboard players remove #s bs.ctx 1
+execute if score #s bs.ctx matches 1.. run function bs.spline:utils/hermite/get_segment

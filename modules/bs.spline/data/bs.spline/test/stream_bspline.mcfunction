@@ -13,49 +13,62 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in spline.stream_bspline set value {points:[[-18.944033265584736], [-68.62221683383798], [-33.80098960900686], [-82.51670354036256], [-53.92233951007617], [-69.27111000708406]],step:.25,run:"execute store result score #packtest.spline.bspline bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
+data modify storage bs:in spline.stream_bspline set value {points:[[19.348], [14.196], [-14.35], [2.473], [39.071], [69.724]],step:.25,run:"execute store result score #packtest.spline.bspline bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
 function #bs.spline:stream_bspline
-await score #packtest.spline.bspline bs.ctx matches -54540..-54538
-await score #packtest.spline.bspline bs.ctx matches -54194..-54192
-await score #packtest.spline.bspline bs.ctx matches -51193..-51191
-await score #packtest.spline.bspline bs.ctx matches -48161..-48159
-await score #packtest.spline.bspline bs.ctx matches -47725..-47723
-await score #packtest.spline.bspline bs.ctx matches -51653..-51651
-await score #packtest.spline.bspline bs.ctx matches -58290..-58288
-await score #packtest.spline.bspline bs.ctx matches -65120..-65118
-await score #packtest.spline.bspline bs.ctx matches -69633..-69631
-await score #packtest.spline.bspline bs.ctx matches -70048..-70046
-await score #packtest.spline.bspline bs.ctx matches -67525..-67523
-await score #packtest.spline.bspline bs.ctx matches -63960..-63958
+await score #packtest.spline.bspline bs.ctx matches 10295..10299
+await score #packtest.spline.bspline bs.ctx matches 5531..5535
+await score #packtest.spline.bspline bs.ctx matches 379..383
+await score #packtest.spline.bspline bs.ctx matches -4085..-4081
+await score #packtest.spline.bspline bs.ctx matches -6790..-6786
+await score #packtest.spline.bspline bs.ctx matches -6905..-6901
+await score #packtest.spline.bspline bs.ctx matches -4583..-4579
+await score #packtest.spline.bspline bs.ctx matches -226..-222
+await score #packtest.spline.bspline bs.ctx matches 5767..5771
+await score #packtest.spline.bspline bs.ctx matches 12995..12999
+await score #packtest.spline.bspline bs.ctx matches 21058..21062
+await score #packtest.spline.bspline bs.ctx matches 29553..29557
 
-data modify storage bs:in spline.stream_bspline set value {points:[[-66.46513145629329], [-55.139443593563996], [90.84855095971949], [-25.82419936969083], [-66.60927617997831], [72.20846297844253]],step:.25,run:"execute store result score #packtest.spline.bspline bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
+data modify storage bs:in spline.stream_bspline set value {points:[[11.216], [1.934], [60.532], [93.628], [-46.042], [71.443]],step:.25,run:"execute store result score #packtest.spline.bspline bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
 function #bs.spline:stream_bspline
-await score #packtest.spline.bspline bs.ctx matches -32696..-32694
-await score #packtest.spline.bspline bs.ctx matches -9859..-9857
-await score #packtest.spline.bspline bs.ctx matches 15187..15189
-await score #packtest.spline.bspline bs.ctx matches 36233..36235
-await score #packtest.spline.bspline bs.ctx matches 47071..47073
-await score #packtest.spline.bspline bs.ctx matches 43409..43411
-await score #packtest.spline.bspline bs.ctx matches 28620..28622
-await score #packtest.spline.bspline bs.ctx matches 7995..7997
-await score #packtest.spline.bspline bs.ctx matches -13177..-13175
-await score #packtest.spline.bspline bs.ctx matches -30218..-30216
-await score #packtest.spline.bspline bs.ctx matches -40895..-40893
-await score #packtest.spline.bspline bs.ctx matches -43588..-43586
+await score #packtest.spline.bspline bs.ctx matches 13245..13249
+await score #packtest.spline.bspline bs.ctx matches 21288..21292
+await score #packtest.spline.bspline bs.ctx matches 32114..32118
+await score #packtest.spline.bspline bs.ctx matches 44264..44268
+await score #packtest.spline.bspline bs.ctx matches 56280..56284
+await score #packtest.spline.bspline bs.ctx matches 66561..66565
+await score #packtest.spline.bspline bs.ctx matches 72947..72951
+await score #packtest.spline.bspline bs.ctx matches 73138..73142
+await score #packtest.spline.bspline bs.ctx matches 64832..64836
+await score #packtest.spline.bspline bs.ctx matches 47231..47235
+await score #packtest.spline.bspline bs.ctx matches 25549..25553
+await score #packtest.spline.bspline bs.ctx matches 6505..6509
 
-data modify storage bs:in spline.stream_bspline set value {points:[[-59.04208795530344], [-50.31167541140831], [-28.30109803806397], [7.557626980101432], [0.33340095441995743], [21.619027510409452]],step:.25,run:"execute store result score #packtest.spline.bspline bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
+data modify storage bs:in spline.stream_bspline set value {points:[[80.311], [27.541], [-48.016], [1.532], [-83.298], [16.973]],step:.25,run:"execute store result score #packtest.spline.bspline bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
 function #bs.spline:stream_bspline
-await score #packtest.spline.bspline bs.ctx matches -48099..-48097
-await score #packtest.spline.bspline bs.ctx matches -43840..-43838
-await score #packtest.spline.bspline bs.ctx matches -38742..-38740
-await score #packtest.spline.bspline bs.ctx matches -32796..-32794
-await score #packtest.spline.bspline bs.ctx matches -25994..-25992
-await score #packtest.spline.bspline bs.ctx matches -18476..-18474
-await score #packtest.spline.bspline bs.ctx matches -10982..-10980
-await score #packtest.spline.bspline bs.ctx matches -4401..-4399
-await score #packtest.spline.bspline bs.ctx matches 376..378
-await score #packtest.spline.bspline bs.ctx matches 2796..2798
-await score #packtest.spline.bspline bs.ctx matches 3641..3643
-await score #packtest.spline.bspline bs.ctx matches 4031..4033
+await score #packtest.spline.bspline bs.ctx matches 23741..23745
+await score #packtest.spline.bspline bs.ctx matches 7373..7377
+await score #packtest.spline.bspline bs.ctx matches -8108..-8104
+await score #packtest.spline.bspline bs.ctx matches -20392..-20388
+await score #packtest.spline.bspline bs.ctx matches -27167..-27163
+await score #packtest.spline.bspline bs.ctx matches -27184..-27180
+await score #packtest.spline.bspline bs.ctx matches -23437..-23433
+await score #packtest.spline.bspline bs.ctx matches -19980..-19976
+await score #packtest.spline.bspline bs.ctx matches -20866..-20862
+await score #packtest.spline.bspline bs.ctx matches -28644..-28640
+await score #packtest.spline.bspline bs.ctx matches -39828..-39824
+await score #packtest.spline.bspline bs.ctx matches -49428..-49424
 
-scoreboard players reset #packtest.spline.bspline bs.ctx
+data modify storage bs:in spline.stream_bspline set value {points:[[54.027], [14.284], [69.827], [52.096], [87.227], [83.562]],step:.25,run:"execute store result score #packtest.spline.bspline bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
+function #bs.spline:stream_bspline
+await score #packtest.spline.bspline bs.ctx matches 30163..30167
+await score #packtest.spline.bspline bs.ctx matches 34677..34681
+await score #packtest.spline.bspline bs.ctx matches 42512..42516
+await score #packtest.spline.bspline bs.ctx matches 51035..51039
+await score #packtest.spline.bspline bs.ctx matches 57613..57617
+await score #packtest.spline.bspline bs.ctx matches 60378..60382
+await score #packtest.spline.bspline bs.ctx matches 60534..60538
+await score #packtest.spline.bspline bs.ctx matches 60053..60057
+await score #packtest.spline.bspline bs.ctx matches 60904..60908
+await score #packtest.spline.bspline bs.ctx matches 64493..64497
+await score #packtest.spline.bspline bs.ctx matches 69953..69957
+await score #packtest.spline.bspline bs.ctx matches 75852..75856

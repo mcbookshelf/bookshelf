@@ -13,4 +13,13 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ merge from storage bs:const spline.bezier[$(x)]
+# Apply negative scaling to round up the result and reduce precision loss from floored coefficients
+scoreboard players operation #x bs.ctx *= #d bs.ctx
+scoreboard players operation #x bs.ctx /= -1000 bs.const
+scoreboard players operation #x bs.ctx -= #c bs.ctx
+scoreboard players operation #x bs.ctx *= #t bs.ctx
+scoreboard players operation #x bs.ctx /= -1000 bs.const
+scoreboard players operation #x bs.ctx += #b bs.ctx
+scoreboard players operation #x bs.ctx *= #t bs.ctx
+scoreboard players operation #x bs.ctx /= -1000 bs.const
+execute store result storage bs:lambda spline.point[0] double -.001 run scoreboard players operation #x bs.ctx -= #a bs.ctx

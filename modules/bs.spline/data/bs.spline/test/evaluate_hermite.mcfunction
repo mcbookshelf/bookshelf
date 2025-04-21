@@ -13,58 +13,74 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in spline.evaluate_hermite set value {points:[[-5.630019996680218, -11.564497946464854], [-61.59257620828023, -63.9812943034068], [-47.008899933615986, 3.8837328075691033], [-53.183384246759616, -68.91896869313084]],time:0.331}
+data modify storage bs:in spline.evaluate_hermite set value {points:[[-43.932, 72.139, -74.982], [-77.617, -33.806, -31.131], [40.541, -10.6, 47.612], [-56.689, 27.846, 63.36]],time:0.335}
 function #bs.spline:evaluate_hermite
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_hermite[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_hermite[1] 1000
-assert score #x bs.ctx matches -21457..-21455
-assert score #y bs.ctx matches -12035..-12033
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_hermite[2] 1000
+assert score #x bs.ctx matches -19580..-19576
+assert score #y bs.ctx matches 31938..31942
+assert score #z bs.ctx matches -37607..-37603
 
-data modify storage bs:in spline.evaluate_hermite set value {points:[[-0.36197044500896425, 82.06963546510528], [21.323558906850494, 43.43772639784859], [31.22066357671008, -71.18071959205272], [-31.13189813865121, -78.26017618894403]],time:0.334}
+data modify storage bs:in spline.evaluate_hermite set value {points:[[-7.08, 39.521, 78.623], [88.289, -71.32, -67.473], [-3.736, -94.827, 63.278], [52.453, 15.963, 42.156]],time:0.541}
 function #bs.spline:evaluate_hermite
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_hermite[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_hermite[1] 1000
-assert score #x bs.ctx matches 13325..13327
-assert score #y bs.ctx matches 54450..54452
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_hermite[2] 1000
+assert score #x bs.ctx matches -1883..-1879
+assert score #y bs.ctx matches -63416..-63412
+assert score #z bs.ctx matches 56193..56197
 
-data modify storage bs:in spline.evaluate_hermite set value {points:[[83.62725180466632, -64.13300657086577], [22.110325408592658, 91.3925681011489], [30.55974780297177, 30.417604648783538], [1.041162805205559, -39.52332781235288]],time:0.556}
+data modify storage bs:in spline.evaluate_hermite set value {points:[[-95.867, 99.343, 50.901], [-65.046, 78.179, 56.082], [60.638, 86.245, -80.605], [53.162, 10.496, 86.664]],time:0.491}
 function #bs.spline:evaluate_hermite
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_hermite[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_hermite[1] 1000
-assert score #x bs.ctx matches 54934..54936
-assert score #y bs.ctx matches 6492..6494
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_hermite[2] 1000
+assert score #x bs.ctx matches -14891..-14887
+assert score #y bs.ctx matches 99572..99576
+assert score #z bs.ctx matches -32945..-32941
 
-data modify storage bs:in spline.evaluate_hermite set value {points:[[91.74361944911084, 35.377802967947844], [-59.95667863833991, 75.18989037403881], [-51.75329191910711, -95.32320183363832], [-4.876545065520048, 21.78707885806108]],time:0.994}
+data modify storage bs:in spline.evaluate_hermite set value {points:[[-77.112, 5.973, 69.236], [-55.824, 51.12, -90.78], [98.377, -43.206, 50.107], [-86.718, 59.277, -22.569]],time:0.347}
 function #bs.spline:evaluate_hermite
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_hermite[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_hermite[1] 1000
-assert score #x bs.ctx matches -51712..-51710
-assert score #y bs.ctx matches -95437..-95435
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_hermite[2] 1000
+assert score #x bs.ctx matches -10684..-10680
+assert score #y bs.ctx matches -9062..-9058
+assert score #z bs.ctx matches 45960..45964
 
-data modify storage bs:in spline.evaluate_hermite set value {points:[[68.60561266256005, -7.739149140147902], [83.79060050212556, 78.0804021363897], [-35.08854416420483, -86.65797142094851], [36.013618899242516, 22.22742536336004]],time:0.556}
+data modify storage bs:in spline.evaluate_hermite set value {points:[[32.673, -46.848, 94.262], [-10.238, -89.424, 28.131], [18.667, -98.166, -72.672], [-86.244, 75.308, 64.244]],time:0.928}
 function #bs.spline:evaluate_hermite
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_hermite[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_hermite[1] 1000
-assert score #x bs.ctx matches 12325..12327
-assert score #y bs.ctx matches -48294..-48292
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_hermite[2] 1000
+assert score #x bs.ctx matches 25171..25175
+assert score #y bs.ctx matches -108369..-108365
+assert score #z bs.ctx matches -79010..-79006
 
-data modify storage bs:in spline.evaluate_hermite set value {points:[[57.55621644184387, 70.32541791225998], [71.56787788434224, 3.773437001702277], [2.1705614417129766, 68.7143013697522], [60.958069891479795, -69.20195333137414]],time:0.894}
+data modify storage bs:in spline.evaluate_hermite set value {points:[[-51.789, 56.13, 8.463], [87.193, -14.746, 84.577], [-61.704, -82.943, -96.216], [-58.203, 9.125, 17.803]],time:0.595}
 function #bs.spline:evaluate_hermite
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_hermite[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_hermite[1] 1000
-assert score #x bs.ctx matches -541..-539
-assert score #y bs.ctx matches 74664..74666
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_hermite[2] 1000
+assert score #x bs.ctx matches -45082..-45078
+assert score #y bs.ctx matches -53106..-53102
+assert score #z bs.ctx matches -67535..-67531
 
-data modify storage bs:in spline.evaluate_hermite set value {points:[[-85.91855268737687, -58.961550763437984], [32.787186797652794, 92.05507837702004], [-29.575619322777527, 67.16535029353145], [69.71986583270206, -47.32783229115238]],time:0.812}
+data modify storage bs:in spline.evaluate_hermite set value {points:[[4.016, -92.132, 89.9], [84.573, -12.81, -82.204], [-87.824, 88.474, -18.293], [80.09, 68.175, 30.907]],time:0.214}
 function #bs.spline:evaluate_hermite
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_hermite[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_hermite[1] 1000
-assert score #x bs.ctx matches -42503..-42501
-assert score #y bs.ctx matches 63976..63978
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_hermite[2] 1000
+assert score #x bs.ctx matches -2197..-2193
+assert score #y bs.ctx matches -59643..-59639
+assert score #z bs.ctx matches 52630..52634
 
-data modify storage bs:in spline.evaluate_hermite set value {points:[[-52.91650742605769, 36.994522038399055], [92.89694743755277, -3.3700589701218604], [-52.498693197891974, -59.374851719766156], [27.443975424895584, -69.82335472231327]],time:0.673}
+data modify storage bs:in spline.evaluate_hermite set value {points:[[67.941, -85.392, 31.145], [-13.543, -98.592, -38.838], [-59.351, 15.245, -95.393], [40.671, 58.543, 66.27]],time:0.292}
 function #bs.spline:evaluate_hermite
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_hermite[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_hermite[1] 1000
-assert score #x bs.ctx matches -49984..-49982
-assert score #y bs.ctx matches -25102..-25100
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_hermite[2] 1000
+assert score #x bs.ctx matches 23752..23756
+assert score #y bs.ctx matches -69209..-69205
+assert score #z bs.ctx matches -14926..-14922

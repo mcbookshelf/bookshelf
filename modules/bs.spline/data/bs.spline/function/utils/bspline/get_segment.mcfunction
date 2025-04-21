@@ -13,13 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _.seg set from storage bs:ctx _.points
-$function bs.spline:utils/$(type)/lookup_coefficients with storage bs:ctx
-function bs.spline:utils/compute with storage bs:ctx _
+data remove storage bs:ctx _.points[0]
 
-data modify storage bs:ctx _.sout append from storage bs:ctx _.out
-data remove storage bs:ctx _.out
-
-execute store result storage bs:ctx x int 1 run scoreboard players operation #t bs.ctx += #s bs.ctx
-$execute if score #t bs.ctx matches 1000.. run function bs.spline:utils/$(type)/next_segment
-$execute if data storage bs:ctx _.points[3] run function bs.spline:sample/sample { type: $(type) }
+scoreboard players remove #s bs.ctx 1
+execute if score #s bs.ctx matches 1.. run function bs.spline:utils/bspline/get_segment

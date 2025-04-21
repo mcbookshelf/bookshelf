@@ -13,58 +13,74 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[-15.846948950139364, 13.382251358348853], [61.16773896530111, -51.23164411008212], [85.41638322555173, 82.1850096478822], [22.354776873009214, -26.173965188209365]],time:0.174}
+data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[40.842, -94.954, 31.255], [12.726, -97.866, -61.634], [-82.453, 69.819, -72.012], [-85.526, -74.261, 76.326]],time:0.981}
 function #bs.spline:evaluate_catmull_rom
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[1] 1000
-assert score #x bs.ctx matches 69610..69612
-assert score #y bs.ctx matches -36750..-36748
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[2] 1000
+assert score #x bs.ctx matches -81477..-81473
+assert score #y bs.ctx matches 69451..69455
+assert score #z bs.ctx matches -73282..-73278
 
-data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[-41.558782626033675, -18.967970804496616], [-66.41686246560417, -58.26650675771656], [-12.022154885840152, 63.887814055061256], [-62.213874236349874, 38.586004079114446]],time:0.389}
+data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[-13.602, 66.539, 87.155], [-28.059, -77.389, 57.82], [36.853, 64.862, 89.982], [98.278, 21.582, -19.276]],time:0.781}
 function #bs.spline:evaluate_catmull_rom
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[1] 1000
-assert score #x bs.ctx matches -46178..-46176
-assert score #y bs.ctx matches -15656..-15654
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[2] 1000
+assert score #x bs.ctx matches 21382..21386
+assert score #y bs.ctx matches 40739..40743
+assert score #z bs.ctx matches 91230..91234
 
-data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[-0.6559967915334539, -12.977873407155329], [-10.116969277987536, -19.59348969361794], [23.217332505277085, 81.26501260314114], [75.87466091594351, -71.77698320104693]],time:0.036}
+data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[67.599, 87.481, -8.718], [20.812, 99.513, -50.047], [46.731, -15.427, -44.752], [93.626, 15.165, 40.286]],time:0.667}
 function #bs.spline:evaluate_catmull_rom
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[1] 1000
-assert score #x bs.ctx matches -9646..-9644
-assert score #y bs.ctx matches -17603..-17601
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[2] 1000
+assert score #x bs.ctx matches 33855..33859
+assert score #y bs.ctx matches 16761..16765
+assert score #z bs.ctx matches -54148..-54144
 
-data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[71.77605713459172, 23.689931764310728], [-90.5361112646694, -63.093715898021976], [-36.58583979629522, 44.71676043815481], [26.44694203303058, 77.84744348283493]],time:0.466}
+data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[-42.493, -62.521, 8.709], [58.813, -98.082, -62.318], [-65.474, -66.501, 3.147], [94.432, -0.708, -18.436]],time:0.764}
 function #bs.spline:evaluate_catmull_rom
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[1] 1000
-assert score #x bs.ctx matches -80292..-80290
-assert score #y bs.ctx matches -21454..-21452
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[2] 1000
+assert score #x bs.ctx matches -50919..-50915
+assert score #y bs.ctx matches -77741..-77737
+assert score #z bs.ctx matches -9213..-9209
 
-data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[51.426767235759655, 76.15762038689175], [-64.50846136070851, 30.526866681619083], [89.39687864554847, -38.72717094169013], [-99.29561775891487, -7.111781188790729]],time:0.701}
+data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[46.746, 33.295, 59.625], [9.332, -47.819, 5.438], [-25.949, 4.387, 88.22], [25.999, 29.882, 38.331]],time:0.898}
 function #bs.spline:evaluate_catmull_rom
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[1] 1000
-assert score #x bs.ctx matches 60091..60093
-assert score #y bs.ctx matches -24691..-24689
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[2] 1000
+assert score #x bs.ctx matches -25950..-25946
+assert score #y bs.ctx matches -464..-460
+assert score #z bs.ctx matches 84591..84595
 
-data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[-69.0322988373254, -66.88177264542966], [-2.7507774815179005, 47.19726146935477], [70.75163527353453, -17.959535221642426], [38.379438938481314, 22.059749213573497]],time:0.57}
+data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[41.619, -9.677, 56.409], [-13.354, 62.929, -84.185], [65.062, 44.567, -84.42], [14.774, 36.593, 22.835]],time:0.841}
 function #bs.spline:evaluate_catmull_rom
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[1] 1000
-assert score #x bs.ctx matches 46160..46162
-assert score #y bs.ctx matches 12155..12157
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[2] 1000
+assert score #x bs.ctx matches 58411..58415
+assert score #y bs.ctx matches 47868..47872
+assert score #z bs.ctx matches -91921..-91917
 
-data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[-18.838219879112003, -65.62671964310651], [9.47736822882024, -94.1434588974842], [66.91486936262308, -97.36736001429564], [-90.19162734745754, 52.59100940978354]],time:0.315}
+data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[-83.728, 65.599, -43.017], [-76.209, 36.15, -70.948], [46.388, 29.511, 29.166], [83.112, -11.276, -8.545]],time:0.356}
 function #bs.spline:evaluate_catmull_rom
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[1] 1000
-assert score #x bs.ctx matches 32708..32710
-assert score #y bs.ctx matches -102235..-102233
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[2] 1000
+assert score #x bs.ctx matches -37557..-37553
+assert score #y bs.ctx matches 33494..33498
+assert score #z bs.ctx matches -39138..-39134
 
-data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[-84.75363732130586, 71.39494492469595], [13.89269013638139, -33.12780365908954], [11.272541435136986, -18.720635649580004], [29.89579209993235, 20.27261923621053]],time:0.05}
+data modify storage bs:in spline.evaluate_catmull_rom set value {points:[[-50.182, -28.152, 13.084], [62.514, 9.414, -79.852], [-15.132, 73.563, 86.547], [-23.419, -1.76, 27.639]],time:0.123}
 function #bs.spline:evaluate_catmull_rom
 execute store result score #x bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[0] 1000
 execute store result score #y bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[1] 1000
-assert score #x bs.ctx matches 16020..16022
-assert score #y bs.ctx matches -35121..-35119
+execute store result score #z bs.ctx run data get storage bs:out spline.evaluate_catmull_rom[2] 1000
+assert score #x bs.ctx matches 61505..61509
+assert score #y bs.ctx matches 16970..16974
+assert score #z bs.ctx matches -70159..-70155

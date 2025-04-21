@@ -13,13 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-setblock -30000000 0 1606 minecraft:air
-forceload remove -30000000 1600
-
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.const
-
-data remove storage bs:in spline
-data remove storage bs:out spline
-data remove storage bs:data spline
-data remove storage bs:lambda spline
+$function bs.spline:utils/$(type)/next_segment_3d
+function bs.spline:utils/compute_3d
+$data modify storage bs:out spline.evaluate_$(type) set from storage bs:lambda spline.point

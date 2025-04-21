@@ -13,5 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data spline.process[]._ set value 1b
-execute if data storage bs:data spline.process[-1]._ run function bs.spline:stream/process/resume
+execute store result score #x bs.ctx run scoreboard players operation #t bs.ctx += #s bs.ctx
+$execute if score #t bs.ctx matches 1000.. if data storage bs:ctx _.points[3] run function bs.spline:utils/$(type)/next_segment_2d
+function bs.spline:utils/compute_2d
+function bs.spline:stream/run with storage bs:ctx _
+execute if score #t bs.ctx matches ..999 run function bs.spline:stream/process/pause_2d

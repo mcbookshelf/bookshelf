@@ -13,9 +13,17 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard objectives add bs.const dummy [{text:"BS ",color:"dark_gray"},{text:"Constants",color:"aqua"}]
-scoreboard objectives add bs.ctx dummy [{text:"BS ",color:"dark_gray"},{text:"Context",color:"aqua"}]
+forceload add -30000000 1600
+setblock -30000000 0 1606 minecraft:decorated_pot
 
+scoreboard objectives add bs.ctx dummy [{text:"BS ",color:"dark_gray"},{text:"Context",color:"aqua"}]
+scoreboard objectives add bs.const dummy [{text:"BS ",color:"dark_gray"},{text:"Constants",color:"aqua"}]
+
+scoreboard players set -1000 bs.const -1000
+scoreboard players set -18 bs.const -18
+scoreboard players set -2 bs.const -2
 scoreboard players set 2 bs.const 2
 scoreboard players set 3 bs.const 3
+scoreboard players set 4 bs.const 4
+scoreboard players set 6 bs.const 6
 scoreboard players set 1000 bs.const 1000

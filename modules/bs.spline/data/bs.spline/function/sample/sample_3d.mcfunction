@@ -13,4 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ merge from storage bs:const spline.hermite[$(x)]
+execute store result score #x bs.ctx store result score #y bs.ctx store result score #z bs.ctx run scoreboard players operation #t bs.ctx += #s bs.ctx
+$execute if score #t bs.ctx matches 1000.. if data storage bs:ctx _.points[3] run function bs.spline:utils/$(type)/next_segment_3d
+execute if score #t bs.ctx matches ..1000 run function bs.spline:utils/compute_3d
+$execute if score #t bs.ctx matches ..1000 run data modify storage bs:out spline.sample_$(type) append from storage bs:lambda spline.point
+$execute if score #t bs.ctx matches ..999 run function bs.spline:sample/sample_3d {type:"$(type)"}

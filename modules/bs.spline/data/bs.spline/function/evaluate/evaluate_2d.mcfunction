@@ -13,4 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ merge from storage bs:const spline.catmull_rom[$(x)]
+$function bs.spline:utils/$(type)/next_segment_2d
+function bs.spline:utils/compute_2d
+$data modify storage bs:out spline.evaluate_$(type) set from storage bs:lambda spline.point

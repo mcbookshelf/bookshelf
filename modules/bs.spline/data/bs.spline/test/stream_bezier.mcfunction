@@ -13,49 +13,62 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in spline.stream_bezier set value {points:[[28.471051753192967], [-15.366544250964026], [29.855992805633775], [90.16968861329482], [84.60747506921632], [-34.01844162893208], [-50.47075460693187], [-56.88077803564793], [19.23100041735313], [39.12143867678296]],step:.25,run:"execute store result score #packtest.spline.bezier bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
+data modify storage bs:in spline.stream_bezier set value {points:[[62.397], [-84.278], [50.278], [29.766], [-54.711], [-52.184], [-67.473], [96.217], [-37.052], [63.341]],step:.25,run:"execute store result score #packtest.spline.bezier bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
 function #bs.spline:stream_bezier
-await score #packtest.spline.bezier bs.ctx matches 28470..28472
-await score #packtest.spline.bezier bs.ctx matches 11135..11137
-await score #packtest.spline.bezier bs.ctx matches 20263..20265
-await score #packtest.spline.bezier bs.ctx matches 48919..48921
-await score #packtest.spline.bezier bs.ctx matches 90169..90171
-await score #packtest.spline.bezier bs.ctx matches 68161..68163
-await score #packtest.spline.bezier bs.ctx matches 23932..23934
-await score #packtest.spline.bezier bs.ctx matches -22338..-22336
-await score #packtest.spline.bezier bs.ctx matches -50472..-50470
-await score #packtest.spline.bezier bs.ctx matches -41974..-41972
-await score #packtest.spline.bezier bs.ctx matches -15538..-15536
-await score #packtest.spline.bezier bs.ctx matches 15829..15831
+await score #packtest.spline.bezier bs.ctx matches 62395..62399
+await score #packtest.spline.bezier bs.ctx matches -1698..-1694
+await score #packtest.spline.bezier bs.ctx matches -1232..-1228
+await score #packtest.spline.bezier bs.ctx matches 22890..22894
+await score #packtest.spline.bezier bs.ctx matches 29764..29768
+await score #packtest.spline.bezier bs.ctx matches -18918..-18914
+await score #packtest.spline.bezier bs.ctx matches -44801..-44797
+await score #packtest.spline.bezier bs.ctx matches -57711..-57707
+await score #packtest.spline.bezier bs.ctx matches -67475..-67471
+await score #packtest.spline.bezier bs.ctx matches 7904..7908
+await score #packtest.spline.bezier bs.ctx matches 21668..21672
+await score #packtest.spline.bezier bs.ctx matches 23565..23569
 
-data modify storage bs:in spline.stream_bezier set value {points:[[-36.70078566227828], [99.82992221913824], [-44.73931807454454], [-88.24674289357772], [-33.56170282789448], [63.601788848735765], [-11.86166425250083], [-5.3622965362641395], [-31.01191944109803], [47.29830364740721]],step:.25,run:"execute store result score #packtest.spline.bezier bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
+data modify storage bs:in spline.stream_bezier set value {points:[[-94.935], [31.396], [-87.226], [29.054], [-56.293], [-10.354], [-98.967], [74.377], [8.899], [-13.542]],step:.25,run:"execute store result score #packtest.spline.bezier bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
 function #bs.spline:stream_bezier
-await score #packtest.spline.bezier bs.ctx matches -36702..-36700
-await score #packtest.spline.bezier bs.ctx matches 18961..18963
-await score #packtest.spline.bezier bs.ctx matches 5040..5042
-await score #packtest.spline.bezier bs.ctx matches -42639..-42637
-await score #packtest.spline.bezier bs.ctx matches -88248..-88246
-await score #packtest.spline.bezier bs.ctx matches -42630..-42628
-await score #packtest.spline.bezier bs.ctx matches -1250..-1248
-await score #packtest.spline.bezier bs.ctx matches 15728..15730
-await score #packtest.spline.bezier bs.ctx matches -11863..-11861
-await score #packtest.spline.bezier bs.ctx matches -10889..-10887
-await score #packtest.spline.bezier bs.ctx matches -9212..-9210
-await score #packtest.spline.bezier bs.ctx matches 5930..5932
+await score #packtest.spline.bezier bs.ctx matches -94937..-94933
+await score #packtest.spline.bezier bs.ctx matches -38620..-38616
+await score #packtest.spline.bezier bs.ctx matches -29173..-29169
+await score #packtest.spline.bezier bs.ctx matches -21612..-21608
+await score #packtest.spline.bezier bs.ctx matches 29052..29056
+await score #packtest.spline.bezier bs.ctx matches -14496..-14492
+await score #packtest.spline.bezier bs.ctx matches -33734..-33730
+await score #packtest.spline.bezier bs.ctx matches -53584..-53580
+await score #packtest.spline.bezier bs.ctx matches -98969..-98965
+await score #packtest.spline.bezier bs.ctx matches -9336..-9332
+await score #packtest.spline.bezier bs.ctx matches 17163..17167
+await score #packtest.spline.bezier bs.ctx matches 6952..6956
 
-data modify storage bs:in spline.stream_bezier set value {points:[[12.516903108933406], [-47.07094952393904], [-78.85087186125928], [-31.99093230533414], [-74.10652440391073], [-58.30803481760209], [26.18896966142256], [-96.87702373033243], [26.92572946003962], [22.214892144591445]],step:.25,run:"execute store result score #packtest.spline.bezier bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
+data modify storage bs:in spline.stream_bezier set value {points:[[4.194], [36.631], [-88.41], [-47.18], [56.132], [-61.103], [-21.453], [46.421], [43.241], [26.313]],step:.25,run:"execute store result score #packtest.spline.bezier bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
 function #bs.spline:stream_bezier
-await score #packtest.spline.bezier bs.ctx matches 12516..12518
-await score #packtest.spline.bezier bs.ctx matches -26167..-26165
-await score #packtest.spline.bezier bs.ctx matches -49656..-49654
-await score #packtest.spline.bezier bs.ctx matches -53186..-53184
-await score #packtest.spline.bezier bs.ctx matches -31992..-31990
-await score #packtest.spline.bezier bs.ctx matches -52551..-52549
-await score #packtest.spline.bezier bs.ctx matches -50382..-50380
-await score #packtest.spline.bezier bs.ctx matches -24472..-24470
-await score #packtest.spline.bezier bs.ctx matches 26188..26190
-await score #packtest.spline.bezier bs.ctx matches -25689..-25687
-await score #packtest.spline.bezier bs.ctx matches -20182..-20180
-await score #packtest.spline.bezier bs.ctx matches 7516..7518
+await score #packtest.spline.bezier bs.ctx matches 4192..4196
+await score #packtest.spline.bezier bs.ctx matches 4051..4055
+await score #packtest.spline.bezier bs.ctx matches -24792..-24788
+await score #packtest.spline.bezier bs.ctx matches -51987..-51983
+await score #packtest.spline.bezier bs.ctx matches -47182..-47178
+await score #packtest.spline.bezier bs.ctx matches -5153..-5149
+await score #packtest.spline.bezier bs.ctx matches -10445..-10441
+await score #packtest.spline.bezier bs.ctx matches -27674..-27670
+await score #packtest.spline.bezier bs.ctx matches -21455..-21451
+await score #packtest.spline.bezier bs.ctx matches 17023..17027
+await score #packtest.spline.bezier bs.ctx matches 34229..34233
+await score #packtest.spline.bezier bs.ctx matches 35534..35538
 
-scoreboard players reset #packtest.spline.bezier bs.ctx
+data modify storage bs:in spline.stream_bezier set value {points:[[-85.013], [-52.82], [37.392], [-40.098], [2.373], [-11.04], [-86.946], [-81.172], [23.242], [-89.771]],step:.25,run:"execute store result score #packtest.spline.bezier bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
+function #bs.spline:stream_bezier
+await score #packtest.spline.bezier bs.ctx matches -85015..-85011
+await score #packtest.spline.bezier bs.ctx matches -53519..-53515
+await score #packtest.spline.bezier bs.ctx matches -21426..-21422
+await score #packtest.spline.bezier bs.ctx matches -9900..-9896
+await score #packtest.spline.bezier bs.ctx matches -40100..-40096
+await score #packtest.spline.bezier bs.ctx matches -18828..-18824
+await score #packtest.spline.bezier bs.ctx matches -19133..-19129
+await score #packtest.spline.bezier bs.ctx matches -41633..-41629
+await score #packtest.spline.bezier bs.ctx matches -86948..-86944
+await score #packtest.spline.bezier bs.ctx matches -69061..-69057
+await score #packtest.spline.bezier bs.ctx matches -43815..-43811
+await score #packtest.spline.bezier bs.ctx matches -40842..-40838

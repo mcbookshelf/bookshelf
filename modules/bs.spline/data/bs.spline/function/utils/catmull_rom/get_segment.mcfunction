@@ -13,6 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result storage bs:ctx x int 1 run scoreboard players operation #t bs.ctx %= 1000 bs.const
 data remove storage bs:ctx _.points[0]
-data remove storage bs:ctx _.points[0]
+
+scoreboard players remove #s bs.ctx 1
+execute if score #s bs.ctx matches 1.. run function bs.spline:utils/catmull_rom/get_segment

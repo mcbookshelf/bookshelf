@@ -13,13 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-setblock -30000000 0 1606 minecraft:air
-forceload remove -30000000 1600
+execute store result score #a bs.ctx run data get storage bs:ctx _.coeffs[0] 1
+execute store result score #b bs.ctx run data get storage bs:ctx _.coeffs[1] 1
+execute store result score #c bs.ctx run data get storage bs:ctx _.coeffs[2] 1
+execute store result score #d bs.ctx run data get storage bs:ctx _.coeffs[3] 1
 
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.const
-
-data remove storage bs:in spline
-data remove storage bs:out spline
-data remove storage bs:data spline
-data remove storage bs:lambda spline
+data modify storage bs:lambda spline.point set value [0d]
+function bs.spline:stream/stream_1d with storage bs:ctx _

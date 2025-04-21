@@ -13,5 +13,16 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-function bs.spline:stream/process/process with storage bs:data spline.process[-1]
-execute if data storage bs:data spline.process[-1]._ run function bs.spline:stream/process/resume
+data remove storage bs:data spline.stream[-1]._
+data modify storage bs:ctx _ set from storage bs:data spline.stream[-1]
+
+execute store result score #s bs.ctx run data get storage bs:ctx _.step 1000
+execute store result score #t bs.ctx run data get storage bs:ctx _.time
+
+execute store result score #i bs.ctx if data storage bs:ctx _.coeffs[]
+execute if score #i bs.ctx matches 4 run function bs.spline:stream/process/resume_1d
+execute if score #i bs.ctx matches 8 run function bs.spline:stream/process/resume_2d
+execute if score #i bs.ctx matches 12 run function bs.spline:stream/process/resume_3d
+
+data remove storage bs:data spline.stream[-1]
+execute if data storage bs:data spline.stream[-1]._ run function bs.spline:stream/process/resume
