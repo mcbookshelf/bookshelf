@@ -18,7 +18,6 @@ function #bs.health:set_health {points:10.0}
 function #bs.health:set_max_health {points:30.0}
 assert entity @s[nbt={Health:10f}]
 
-# TODO: uncomment when https://github.com/misode/packtest/issues/14 is fixed
-#function #bs.health:set_max_health {points:20.0}
-#function #bs.health:set_health {points:30.0}
-#await entity @s[nbt={Health:20f}]
+function #bs.health:set_max_health {points:20.0}
+function #bs.health:set_health {points:30.0}
+await entity @s[nbt={Health:20f}]

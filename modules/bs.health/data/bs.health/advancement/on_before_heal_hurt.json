@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:entity_hurt_player"
+    }
+  },
+  "rewards": {
+    "function": "bs.health:utils/on_before_heal"
+  }
+}
