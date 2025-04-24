@@ -13,8 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data remove storage bs:data spline.process[-1]._
-data modify storage bs:data spline.process[-1].points set from storage bs:ctx _.points
-execute store result storage bs:data spline.process[-1].time double 0.001 run data get storage bs:ctx x
-data modify storage bs:data spline.process prepend from storage bs:data spline.process[-1]
-schedule function bs.spline:stream/process/tick 1t replace
+data modify storage bs:data spline.stream[]._ set value 1b
+execute if data storage bs:data spline.stream[-1]._ run function bs.spline:stream/process/resume

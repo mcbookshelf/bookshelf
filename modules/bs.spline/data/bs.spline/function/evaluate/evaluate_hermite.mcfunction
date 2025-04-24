@@ -14,5 +14,16 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set from storage bs:in spline.evaluate_hermite
-function bs.spline:evaluate/evaluate { type: "hermite" }
-data modify storage bs:out spline.evaluate_hermite set from storage bs:ctx _.out
+data modify storage bs:out spline.evaluate_hermite set value []
+
+execute store result score #s bs.ctx store result score #t bs.ctx run data get storage bs:ctx _.time 1000
+scoreboard players operation #s bs.ctx /= 1000 bs.const
+execute if score #s bs.ctx matches 1.. run function bs.spline:utils/hermite/get_segment
+
+execute store result score #m bs.ctx if data storage bs:ctx _.points[]
+execute store result score #n bs.ctx if data storage bs:ctx _.points[][2]
+execute if score #n bs.ctx = #m bs.ctx run return run function bs.spline:evaluate/evaluate_3d {type:"hermite"}
+execute store result score #n bs.ctx if data storage bs:ctx _.points[][1]
+execute if score #n bs.ctx = #m bs.ctx run return run function bs.spline:evaluate/evaluate_2d {type:"hermite"}
+execute store result score #n bs.ctx if data storage bs:ctx _.points[][0]
+execute if score #n bs.ctx = #m bs.ctx run return run function bs.spline:evaluate/evaluate_1d {type:"hermite"}

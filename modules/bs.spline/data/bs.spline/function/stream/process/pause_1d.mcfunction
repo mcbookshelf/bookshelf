@@ -13,4 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ merge from storage bs:const spline.bspline[$(x)]
+execute store result storage bs:ctx _.time int 1 run scoreboard players get #t bs.ctx
+execute store result storage bs:ctx _.coeffs[0] int 1 run scoreboard players get #a bs.ctx
+execute store result storage bs:ctx _.coeffs[1] int 1 run scoreboard players get #b bs.ctx
+execute store result storage bs:ctx _.coeffs[2] int 1 run scoreboard players get #c bs.ctx
+execute store result storage bs:ctx _.coeffs[3] int 1 run scoreboard players get #d bs.ctx
+
+data modify storage bs:data spline.stream prepend from storage bs:ctx _
+schedule function bs.spline:stream/process/scheduled 1t replace

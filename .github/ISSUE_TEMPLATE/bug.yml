@@ -1,0 +1,61 @@
+name: 🐛 Bug Report
+description: Report a reproducible bug to help us investigate and fix it.
+type: 🐛 Bug
+body:
+  - type: input
+    attributes:
+      label: 🔍 Feature
+      description: |
+        Which feature is the bug related to? (e.g., `#bs.block:get_block`, `#bs.health:set_max_health`).
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: 🔢 Version
+      description: |
+        What version of Bookshelf are you using? (e.g., `v3.0.0`).
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: ✅ Expected Behavior
+      description: |
+        What should happen under normal conditions? Describe the expected behavior.
+      placeholder: |
+        Example: The command returns a message in the chat.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: ❌ Actual Behavior
+      description: |
+        What actually happens instead of the expected behavior? Is there an error or malfunction?
+      placeholder: |
+        Example: The command returns nothing in the chat.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 🔁 Steps to Reproduce
+      description: |
+        Provide a step-by-step guide to help us replicate the issue.
+      placeholder: |
+        Example:
+        1. Call feature A with parameter X.
+        2. Call feature B and observe behavior Y.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: 💡 Possible Fix
+      description: |
+        Do you have a suggestion for a fix, or an idea of what may be causing the issue?
+      placeholder: |
+        Example: The issue may be due to a missing dependency.
+    validations:
+      required: false

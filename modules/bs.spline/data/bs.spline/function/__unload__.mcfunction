@@ -13,11 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard objectives remove bs.const
 scoreboard objectives remove bs.ctx
+scoreboard objectives remove bs.const
 
-data remove storage bs:const spline
-data remove storage bs:data spline
 data remove storage bs:in spline
 data remove storage bs:out spline
+data remove storage bs:data spline
 data remove storage bs:lambda spline

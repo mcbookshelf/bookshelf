@@ -14,7 +14,16 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set from storage bs:in spline.sample_bezier
+data modify storage bs:out spline.sample_bezier set value []
+
+scoreboard players set #t bs.ctx 1000
 execute store result score #s bs.ctx run data get storage bs:ctx _.step 1000
-execute store result storage bs:ctx x int 1 run scoreboard players set #t bs.ctx 0
-function bs.spline:sample/sample { type: "bezier" }
-data modify storage bs:out spline.sample_bezier set from storage bs:ctx _.sout
+scoreboard players operation #t bs.ctx -= #s bs.ctx
+
+execute store result score #m bs.ctx if data storage bs:ctx _.points[]
+execute store result score #n bs.ctx if data storage bs:ctx _.points[][2]
+execute if score #n bs.ctx = #m bs.ctx run return run function bs.spline:sample/sample_3d {type:"bezier"}
+execute store result score #n bs.ctx if data storage bs:ctx _.points[][1]
+execute if score #n bs.ctx = #m bs.ctx run return run function bs.spline:sample/sample_2d {type:"bezier"}
+execute store result score #n bs.ctx if data storage bs:ctx _.points[][0]
+execute if score #n bs.ctx = #m bs.ctx run return run function bs.spline:sample/sample_1d {type:"bezier"}

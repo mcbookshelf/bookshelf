@@ -13,7 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _.seg set from storage bs:ctx _.points
-execute store result storage bs:ctx x int 1 run data get storage bs:ctx _.time 1000
-$function bs.spline:utils/$(type)/lookup_coefficients with storage bs:ctx
-function bs.spline:utils/compute with storage bs:ctx _
+$function bs.spline:utils/$(type)/next_segment_1d
+function bs.spline:utils/compute_1d
+$data modify storage bs:out spline.evaluate_$(type) set from storage bs:lambda spline.point

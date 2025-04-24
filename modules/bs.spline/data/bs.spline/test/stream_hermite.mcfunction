@@ -13,49 +13,62 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in spline.stream_hermite set value {points:[[-71.685410569282], [-75.93257780913036], [-83.91891399214254], [-76.48971396977582], [96.17672199810934], [28.137032640158992], [-36.1677770884977], [-16.550480442365156]],step:.25,run:"execute store result score #packtest.spline.hermite bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
+data modify storage bs:in spline.stream_hermite set value {points:[[40.018], [-84.904], [10.803], [-60.581], [-83.79], [-73.0], [7.079], [29.402]],step:.25,run:"execute store result score #packtest.spline.hermite bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
 function #bs.spline:stream_hermite
-await score #packtest.spline.hermite bs.ctx matches -71686..-71684
-await score #packtest.spline.hermite bs.ctx matches -80690..-80688
-await score #packtest.spline.hermite bs.ctx matches -77734..-77732
-await score #packtest.spline.hermite bs.ctx matches -74811..-74809
-await score #packtest.spline.hermite bs.ctx matches -83920..-83918
-await score #packtest.spline.hermite bs.ctx matches -67855..-67853
-await score #packtest.spline.hermite bs.ctx matches -6950..-6948
-await score #packtest.spline.hermite bs.ctx matches 60494..60496
-await score #packtest.spline.hermite bs.ctx matches 96176..96178
-await score #packtest.spline.hermite bs.ctx matches 80229..80231
-await score #packtest.spline.hermite bs.ctx matches 35589..35591
-await score #packtest.spline.hermite bs.ctx matches -11844..-11842
+await score #packtest.spline.hermite bs.ctx matches 40016..40020
+await score #packtest.spline.hermite bs.ctx matches 21230..21234
+await score #packtest.spline.hermite bs.ctx matches 18716..18720
+await score #packtest.spline.hermite bs.ctx matches 19548..19552
+await score #packtest.spline.hermite bs.ctx matches 10801..10805
+await score #packtest.spline.hermite bs.ctx matches -14523..-14519
+await score #packtest.spline.hermite bs.ctx matches -46767..-46763
+await score #packtest.spline.hermite bs.ctx matches -73875..-73871
+await score #packtest.spline.hermite bs.ctx matches -83792..-83788
+await score #packtest.spline.hermite bs.ctx matches -69123..-69119
+await score #packtest.spline.hermite bs.ctx matches -39799..-39795
+await score #packtest.spline.hermite bs.ctx matches -9755..-9751
 
-data modify storage bs:in spline.stream_hermite set value {points:[[-73.67751296133176], [35.54316472572779], [67.58524495534647], [-98.69940650544922], [-43.47698443835717], [-12.774024877526458], [-24.08149281822132], [72.50278185948119]],step:.25,run:"execute store result score #packtest.spline.hermite bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
+data modify storage bs:in spline.stream_hermite set value {points:[[-51.602], [61.991], [-26.599], [-57.264], [-40.972], [-33.325], [-22.715], [3.046]],step:.25,run:"execute store result score #packtest.spline.hermite bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
 function #bs.spline:stream_hermite
-await score #packtest.spline.hermite bs.ctx matches -73679..-73677
-await score #packtest.spline.hermite bs.ctx matches -41981..-41979
-await score #packtest.spline.hermite bs.ctx matches 13733..13735
-await score #packtest.spline.hermite bs.ctx matches 61058..61060
-await score #packtest.spline.hermite bs.ctx matches 67584..67586
-await score #packtest.spline.hermite bs.ctx matches 36950..36952
-await score #packtest.spline.hermite bs.ctx matches 1312..1314
-await score #packtest.spline.hermite bs.ctx matches -28955..-28953
-await score #packtest.spline.hermite bs.ctx matches -43478..-43476
-await score #packtest.spline.hermite bs.ctx matches -45642..-45640
-await score #packtest.spline.hermite bs.ctx matches -44440..-44438
-await score #packtest.spline.hermite bs.ctx matches -37908..-37906
+await score #packtest.spline.hermite bs.ctx matches -51604..-51600
+await score #packtest.spline.hermite bs.ctx matches -30286..-30282
+await score #packtest.spline.hermite bs.ctx matches -21070..-21066
+await score #packtest.spline.hermite bs.ctx matches -20871..-20867
+await score #packtest.spline.hermite bs.ctx matches -26601..-26597
+await score #packtest.spline.hermite bs.ctx matches -33517..-33513
+await score #packtest.spline.hermite bs.ctx matches -38577..-38573
+await score #packtest.spline.hermite bs.ctx matches -41241..-41237
+await score #packtest.spline.hermite bs.ctx matches -40974..-40970
+await score #packtest.spline.hermite bs.ctx matches -38254..-38250
+await score #packtest.spline.hermite bs.ctx matches -34110..-34106
+await score #packtest.spline.hermite bs.ctx matches -28834..-28830
 
-data modify storage bs:in spline.stream_hermite set value {points:[[27.551357264551783], [44.055149406438176], [31.57306058038651], [-46.88370937027449], [61.107656364816506], [-93.5472174544083], [-4.270790864192421], [-59.23833694512219]],step:.25,run:"execute store result score #packtest.spline.hermite bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
+data modify storage bs:in spline.stream_hermite set value {points:[[77.848], [95.758], [13.808], [-72.773], [-51.329], [33.366], [37.216], [35.557]],step:.25,run:"execute store result score #packtest.spline.hermite bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
 function #bs.spline:stream_hermite
-await score #packtest.spline.hermite bs.ctx matches 27550..27552
-await score #packtest.spline.hermite bs.ctx matches 36572..36574
-await score #packtest.spline.hermite bs.ctx matches 40929..40931
-await score #packtest.spline.hermite bs.ctx matches 39602..39604
-await score #packtest.spline.hermite bs.ctx matches 31572..31574
-await score #packtest.spline.hermite bs.ctx matches 33979..33981
-await score #packtest.spline.hermite bs.ctx matches 52172..52174
-await score #packtest.spline.hermite bs.ctx matches 67449..67451
-await score #packtest.spline.hermite bs.ctx matches 61107..61109
-await score #packtest.spline.hermite bs.ctx matches 40513..40515
-await score #packtest.spline.hermite bs.ctx matches 24129..24131
-await score #packtest.spline.hermite bs.ctx matches 9889..9891
+await score #packtest.spline.hermite bs.ctx matches 77846..77850
+await score #packtest.spline.hermite bs.ctx matches 74417..74421
+await score #packtest.spline.hermite bs.ctx matches 58887..58891
+await score #packtest.spline.hermite bs.ctx matches 36827..36831
+await score #packtest.spline.hermite bs.ctx matches 13806..13810
+await score #packtest.spline.hermite bs.ctx matches -12517..-12513
+await score #packtest.spline.hermite bs.ctx matches -40172..-40168
+await score #packtest.spline.hermite bs.ctx matches -57122..-57118
+await score #packtest.spline.hermite bs.ctx matches -51331..-51327
+await score #packtest.spline.hermite bs.ctx matches -25508..-25504
+await score #packtest.spline.hermite bs.ctx matches 3736..3740
+await score #packtest.spline.hermite bs.ctx matches 27582..27586
 
-scoreboard players reset #packtest.spline.hermite bs.ctx
+data modify storage bs:in spline.stream_hermite set value {points:[[-65.312], [27.645], [-39.899], [82.767], [-62.183], [21.067], [-87.865], [-18.936]],step:.25,run:"execute store result score #packtest.spline.hermite bs.ctx run data get storage bs:lambda spline.point[0] 1000"}
+function #bs.spline:stream_hermite
+await score #packtest.spline.hermite bs.ctx matches -65314..-65310
+await score #packtest.spline.hermite bs.ctx matches -54021..-54017
+await score #packtest.spline.hermite bs.ctx matches -56321..-56317
+await score #packtest.spline.hermite bs.ctx matches -56764..-56760
+await score #packtest.spline.hermite bs.ctx matches -39901..-39897
+await score #packtest.spline.hermite bs.ctx matches -30035..-30031
+await score #packtest.spline.hermite bs.ctx matches -46116..-46112
+await score #packtest.spline.hermite bs.ctx matches -64660..-64656
+await score #packtest.spline.hermite bs.ctx matches -62185..-62181
+await score #packtest.spline.hermite bs.ctx matches -57722..-57718
+await score #packtest.spline.hermite bs.ctx matches -73236..-73232
+await score #packtest.spline.hermite bs.ctx matches -89645..-89641

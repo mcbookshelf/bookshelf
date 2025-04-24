@@ -10,8 +10,5 @@
     "description": "Manipulate smooth curves created from control points.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html",
     "tags": ["default"]
-  },
-  "pipeline": [
-    "gen_tables"
-  ]
+  }
 }
