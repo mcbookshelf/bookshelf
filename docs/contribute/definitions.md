@@ -2,7 +2,7 @@
 html_theme.sidebar_secondary.remove: true
 ---
 
-# 📖 Definitions
+# 📘 Definitions
 
 In order to speak with the same vocabulary, here is some words that have a specific meaning in this project:
 

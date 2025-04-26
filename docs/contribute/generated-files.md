@@ -32,10 +32,10 @@ Bookshelf enhances the contributor and user experience by:
 
 ### 🧪 Test Related
 
-Bookshelf uses PackTest to run tests for its modules. To ensure smooth execution, it:
+Bookshelf uses **PackTest** to run automated tests for its modules. To ensure smooth and isolated execution, it:
 
-- Automatically includes `@batch <module>` instructions in test functions.
-- Generates a `__setup__` test function to isolate and load only the module being tested.
+- Automatically injects `@environment bs.load:<module>` instructions into test functions.
+- Creates a dedicated test environment inside the `bs.load` namespace that isolates and loads only the module under test.
 
 ### 🏷️ Tag Related
 

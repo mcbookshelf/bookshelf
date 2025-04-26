@@ -26,10 +26,8 @@ Si vous souhaitez contribuer mais que votre anglais n'est pas au niveau, vous po
 :hidden:
 :maxdepth: 1
 :caption: Fundamentals
-definitions
 getting-started
-nomenclature
-shared-resources
+conventions
 tree-structure
 file-format
 ````
@@ -52,5 +50,7 @@ good-practices
 :hidden:
 :maxdepth: 1
 :caption: Quick References
+definitions
 cli-reference
+shared-resources
 ````
