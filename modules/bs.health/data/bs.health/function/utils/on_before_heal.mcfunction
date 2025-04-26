@@ -17,4 +17,4 @@
 # Skip execution if the player doesn't need healing, but keep advancements set for optimization
 execute unless score @s bs.hmod matches 1.. run return 0
 execute store result score @s bs.hval run data get entity @s Health 100000
-advancement revoke @s only bs.health:on_before_heal_hurt
+advancement revoke @s only bs.health:on_hurt

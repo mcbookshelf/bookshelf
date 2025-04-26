@@ -1,6 +1,6 @@
 # 🖌️ Paintbrush
 
-This example demonstrates how to create a paintbrush in Minecraft using the Bookshelf library. The paintbrush changes a block's material to match the item in the player's hand, while preserving important properties like orientation, waterlogging, and other block states. For instance, if the player holds oak planks, birch stairs will transform into oak stairs.
+This example demonstrates how to create a **paintbrush** in Minecraft using the Bookshelf library. The paintbrush changes a block's material to match the item in the player's hand, while preserving important properties like orientation, waterlogging, and other block states. For instance, if the player holds oak planks, birch stairs will transform into oak stairs.
 
 ---
 
@@ -17,16 +17,16 @@ Our paintbrush system will:
 ## 📦 Requirements
 
 Before we start, make sure you have:
-- Minecraft Java Edition 1.21.5 or later
-- Bookshelf `bs.block` and `bs.view` modules, see [Quickstart](https://docs.mcbookshelf.dev/en/latest/quickstart.html) for installation
+
+- Minecraft Java Edition
+- A basic understanding of Minecraft datapacks, including functions, tags, and scoreboards
+- Bookshelf `bs.block` and `bs.view` modules installed (see [Quickstart](https://docs.mcbookshelf.dev/en/latest/quickstart.html) for instructions)
   - `@require bookshelf.module.block`
   - `@require bookshelf.module.view`
-- Basic knowledge of datapack development, including functions, tags, and scoreboards
-- A ready-to-use empty datapack
 
 ---
 
-## 🛠️ Step-by-Step Implementation
+## 🛠️ Step-by-Step Guide
 
 ### 1. Prepare the Datapack
 
@@ -41,7 +41,7 @@ First, we need a function to initialize our system when the datapack loads. Crea
 scoreboard objectives add data dummy
 ```
 
-This scoreboard will store data for the paintbrush, primarily the values returned by commands.
+This objective will store data for the paintbrush, primarily the values returned by commands.
 
 **➔ register it in the `load` tag**
 

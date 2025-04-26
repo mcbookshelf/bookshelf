@@ -15,6 +15,6 @@
 
 # Give healing effect and revoke advancements that track when the effect is actually applied
 effect give @s minecraft:instant_health 1 28 true
-advancement revoke @s only bs.health:on_before_heal_hurt
-advancement revoke @s only bs.health:on_before_heal_tick
+scoreboard players operation @s bs.hval = #h bs.ctx
 advancement revoke @s only bs.health:on_heal
+advancement revoke @s only bs.health:on_hurt
