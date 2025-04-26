@@ -72,7 +72,7 @@ execute as <source_players> at <target_player> run function lifestring:create_li
 `@function lifestring:create_link_ata`
 ```mcfunction
 execute as @p \
-  unless score lifestring.link matches 1.. \
+  unless score @s lifestring.link matches 1.. \
   store result score @s lifestring.link \
   run scoreboard players add #counter lifestring.link 1
 
