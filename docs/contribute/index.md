@@ -43,6 +43,7 @@ documentation
 metadata
 generated-files
 contribution-validation
+commit-guidelines
 special-functions
 good-practices
 ````
