@@ -19,25 +19,25 @@ For breaking changes, add a `!` after the type or scope.
 ## 🗂️ Commit Types
 
 :::{list-table}
-*   - ✨ feat
+*   - `✨ feat`
     - Adds a new feature or significant functionality
-*   - 🐛 fix
+*   - `🐛 fix`
     - Corrects a bug or malfunction
-*   - ⚡️ perf
+*   - `⚡️ perf`
     - Optimizes code to improve performance
-*   - ♻️ refactor
-    - IRestructures existing code without changing its behavior
-*   - 🎨 style
+*   - `♻️ refactor`
+    - Restructures existing code without changing its behavior
+*   - `🎨 style`
     - Updates code style without affecting behavior (e.g., formatting, spacing)
-*   - 📝 docs
+*   - `📝 docs`
     - Changes or improves project documentation
-*   - 🧪 test
+*   - `🧪 test`
     - Adds new tests or updates existing ones
-*   - 🔨 build
+*   - `🔨 build`
     - Updates to scripts responsible for building project parts
-*   - ⚙️ ci
+*   - `⚙️ ci`
     - Changes to continuous integration workflows or scripts
-*   - 🛠️ chore
+*   - `🛠️ chore`
     - Routine tasks like version bumps, metadata updates, or asset maintenance
 :::
 
