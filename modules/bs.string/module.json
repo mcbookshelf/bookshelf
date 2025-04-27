@@ -9,7 +9,7 @@
     "slug": "bookshelf-string",
     "description": "Get information about the system string effortlessly.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html",
-    "tags": ["default"],
+    "tags": ["runtime"],
     "weak_dependencies": [
       "bs.log"
     ]
