@@ -1,6 +1,8 @@
 # 🧵 Lifestring
 
-This example showcases a **lifestring** system in Minecraft, built using the `bs.health` module of the Bookshelf library. This system links player health, ensuring that any health modification to one linked player is mirrored across all others.
+This example showcases a **lifestring** system, built using the `bs.health` module of Bookshelf. The system links multiple players' health, so any health change made to one player is automatically applied to all others.
+
+By default, Minecraft lacks a reliable way to heal a player by a specific amount, and workarounds can lead to timing issues. Bookshelf solves this by ensuring health updates are consistent, allowing you to retrieve the current health at any point in the tick, even with pending changes, without worrying about tick safety.
 
 ---
 
@@ -202,6 +204,8 @@ Now we'll apply the health change to all the linked players. We'll do this by us
 
 `@function lifestring:change`
 ```mcfunction
+execute store result storage lifestring:update points double 0.001 run scoreboard players get #this lifestring.health
+
 scoreboard players operation #this lifestring.link >< @s lifestring.link
 execute as @a[predicate=lifestring:is_linked] run function lifestring:update
 scoreboard players operation #this lifestring.link >< @s lifestring.link
@@ -211,7 +215,6 @@ scoreboard players operation #this lifestring.link >< @s lifestring.link
 
 `@function lifestring:update`
 ```mcfunction
-execute store result storage lifestring:update points double 0.001 run scoreboard players get #this lifestring.health
 function #bs.health:add_health with storage lifestring:update
 scoreboard players operation @s lifestring.health += #this lifestring.health
 ```
@@ -222,7 +225,6 @@ However, there’s a potential issue with this approach. The `#bs.health:add_hea
 
 `@function lifestring:update`
 ```mcfunction
-execute store result storage lifestring:update points double 0.001 run scoreboard players get #this lifestring.health
 function #bs.health:add_health with storage lifestring:update
 scoreboard players operation @s lifestring.health += #this lifestring.health
 execute store result score #max lifestring.health run attribute @s minecraft:max_health get 1000
@@ -233,18 +235,12 @@ scoreboard players operation @s lifestring.health < #max lifestring.health
 
 ---
 
-## 🚀 Taking It Further
+## ✔️ Conclusion
 
-This system now makes linked players share the damage and healing they receive. But there are many ways you could make this system even better! Here are some ideas to think about:
+The system is a great example of how Bookshelf simplifies tasks that might otherwise seem complex. It now makes linked players share the damage and healing they receive. But there are many ways you could make this system even better! Here are some ideas to think about:
 
 1. **Different Starting Health:** What if linked players have different amounts of health to begin with? Should they all end up with the same health percentage, or the same exact health points?
 2. **Maximum Health:** Should linked players add up their maximum health together? If one player's max health changes (for example, from an effect or item), how should that affect the others?
 3. **Player Login:** What happens when a linked player leaves the game and comes back? Should their health be saved and synced with the group?
 
 Try experimenting with these ideas to make the lifestring system work the way you want it to!
-
----
-
-## ✔️ Conclusion
-
-The lifestring system is a great example of how Bookshelf simplifies tasks that might otherwise seem complex. In Minecraft, updating player health while ensuring tick safety can be tricky. For instance, some systems void incoming damage if there is pending healing, but Bookshelf avoids this issue by handling both damage and healing effectively. Additionally, retrieving health NBT data doesn't always reflect the current health, which is why Bookshelf provides the `#bs.health:get_health` function that accurately considers ongoing healing, giving a more reliable reading of the player's actual health.
