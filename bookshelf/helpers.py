@@ -82,9 +82,11 @@ def render_snbt(obj: object) -> str:
         bool: lambda o: "1b" if o else "0b",
         list: lambda o: f'[{",".join(render_snbt(v) for v in o)}]',
         dict: lambda o: f'{{{",".join(
-            f"{quote_key(str(k))}:{render_snbt(v)}"
-            for k, v in o.items()
-            if v is not None
+            f"{quote_key(k)}:{render_snbt(v)}"
+            for k, v in sorted(
+                ((str(k), v) for k, v in o.items() if v is not None),
+                key=lambda item: item[0],
+            )
         )}}}',
     }
 

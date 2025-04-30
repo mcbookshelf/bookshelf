@@ -1,19 +1,18 @@
-name: 🛠️ Task
+name: 🛠️ Task or Improvement
 description: Request a specific task or improvement to be done.
 type: 🛠️ Task
 body:
   - type: dropdown
     attributes:
-      label: 🧰 Task Category
+      label: 🗂️ Task Type
       description: |
         What kind of task is this?
       options:
-        - 📝 Documentation
         - 📖 Example
-        - ⚙️ CI/CD
+        - ⚡ Enhancement
+        - 📚 Documentation
+        - ⚙️ Automation
         - 🏷️ Metadata
-        - 🔄 Migration
-        - 🆔 Identity
     validations:
       required: true
 

@@ -4,7 +4,7 @@ type: ✨ Feature
 body:
   - type: dropdown
     attributes:
-      label: 🧰 Request Type
+      label: 🗂️ Request Type
       description: |
         Are you requesting a new feature or a new module?
       options:

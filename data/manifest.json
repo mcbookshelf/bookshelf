@@ -3498,7 +3498,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "features": [
         {
@@ -3693,7 +3693,7 @@
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html",
       "kind": "data_pack",
       "tags": [
-        "default"
+        "runtime"
       ],
       "weak_dependencies": [
         "bs.log"

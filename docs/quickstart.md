@@ -48,11 +48,11 @@ If you're using the [beet](https://github.com/mcbeet/beet) build pipeline, you c
 pip install mcbookshelf
 ```
 
-Once installed, you can reference Bookshelf modules directly in your beet pipeline configuration.
+Once installed, you can reference Bookshelf modules directly in your beet configuration.
 
 To include a complete bundle or a specific module:
 ```yaml
-pipeline:
+require:
   - bookshelf.bundle.dev
   - bookshelf.bundle.<name_of_bundle>
   - bookshelf.module.raycast

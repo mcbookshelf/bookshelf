@@ -4,17 +4,17 @@ type: 🐛 Bug
 body:
   - type: input
     attributes:
-      label: 🔍 Feature
+      label: 🔢 Version
       description: |
-        Which feature is the bug related to? (e.g., `#bs.block:get_block`, `#bs.health:set_max_health`).
+        What version of Bookshelf are you using? (e.g., `v3.0.0`).
     validations:
       required: true
 
   - type: input
     attributes:
-      label: 🔢 Version
+      label: 🔍 Related Feature
       description: |
-        What version of Bookshelf are you using? (e.g., `v3.0.0`).
+        What feature is affected? (e.g., `#bs.block:get_block`, `#bs.health:set_max_health`).
     validations:
       required: true
 

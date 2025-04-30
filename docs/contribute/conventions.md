@@ -2,7 +2,7 @@
 html_theme.sidebar_secondary.remove: true
 ---
 
-# 🏷️ Nomenclature & Conventions
+# 📖 Conventions
 
 Bookshelf respects certain naming conventions in order to reduce the effort needed to read and understand code.
 
@@ -10,7 +10,7 @@ Bookshelf respects certain naming conventions in order to reduce the effort need
 
 :::{list-table}
 *   - **Files**
-    - Use the snake_case convention. A few names are reserved for [special functions](project:../contribute/special-functions.md) at the root of each module: `__help__`, `__load__`, and `__unload__`
+    - Use the snake_case convention. A few names are reserved for [Special Functions](project:../contribute/special-functions.md) at the root of each module: `__help__`, `__load__`, and `__unload__`
 
       *Example: `function/<my_function>.mcfunction`*
 *   - **Entity tags**
