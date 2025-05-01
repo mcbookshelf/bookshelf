@@ -14,6 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 scoreboard players operation #h bs.ctx += @s bs.hmod
-execute if score #h bs.ctx matches ..0 run kill @s
+execute if score #h bs.ctx matches ..0 unless predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","gamemode":["creative","spectator"]}}} run kill @s
 execute store result storage bs:ctx y double 0.00001 run scoreboard players operation @s bs.hmod -= #m bs.ctx
 function bs.health:utils/apply_health with storage bs:ctx
