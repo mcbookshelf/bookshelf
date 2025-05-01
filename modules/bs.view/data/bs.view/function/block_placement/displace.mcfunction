@@ -13,4 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$tp @s ~$(x) ~$(y) ~$(z)
+data modify storage bs:data view.block_placement.x set from storage bs:lambda raycast.hit_normal[0]
+data modify storage bs:data view.block_placement.y set from storage bs:lambda raycast.hit_normal[1]
+data modify storage bs:data view.block_placement.z set from storage bs:lambda raycast.hit_normal[2]
+
+execute as @n[tag=bs.view.this,sort=arbitrary] run function bs.view:block_placement/run with storage bs:data view.block_placement

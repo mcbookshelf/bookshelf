@@ -18,3 +18,9 @@ fill ~-1 ~ ~-1 ~1 ~1 ~1 minecraft:air
 setblock ~ ~1 ~1 minecraft:sponge
 function #bs.view:at_block_placement {run:"setblock ~ ~ ~ minecraft:bookshelf",with:{}}
 assert block ~ ~1 ~ minecraft:bookshelf
+setblock ~ ~1 ~ minecraft:air
+
+tp @s ~ ~ ~ 270 0
+setblock ~1 ~1 ~ minecraft:sponge
+function #bs.view:at_block_placement {run:"setblock ~ ~ ~ minecraft:bookshelf",with:{}}
+assert block ~ ~1 ~ minecraft:bookshelf

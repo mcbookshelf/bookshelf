@@ -13,9 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result storage bs:ctx x int 1 run data get storage bs:out raycast.hit_normal[0]
-execute store result storage bs:ctx y int 1 run data get storage bs:out raycast.hit_normal[1]
-execute store result storage bs:ctx z int 1 run data get storage bs:out raycast.hit_normal[2]
-
-function bs.view:block_placement/displace with storage bs:ctx
-$execute at @s as @n[tag=bs.view.this,sort=arbitrary] run $(run)
+$execute positioned ~$(x) ~$(y) ~$(z) run $(run)

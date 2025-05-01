@@ -20,5 +20,6 @@ data modify storage bs:data raycast set value { \
   hitbox_shape: "interaction", \
   ignored_blocks: "#bs.hitbox:intangible", \
   ignored_entities: "#bs.hitbox:intangible", \
+  on_targeted_block: "function bs.view:block_placement/displace", \
 }
 $data modify storage bs:data raycast merge value $(with)
