@@ -158,7 +158,7 @@ def create_config(
 ) -> ProjectConfig:
     """Create a configuration for the project."""
     pack_config = PackConfig(
-        compression="bzip2",
+        compression="deflate",
         compression_level=9,
         zipped=True,
     ) if zipped else PackConfig()
