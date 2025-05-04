@@ -13,10 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+kill B5-0-0-0-2
+forceload remove -30000000 1600
+
 scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.ttl
+scoreboard objectives remove bs.const
 scoreboard objectives remove bs.hmod
 scoreboard objectives remove bs.hval
+scoreboard objectives remove bs.ttl
 
 data remove storage bs:const health
 data remove storage bs:data health
