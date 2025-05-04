@@ -18,7 +18,7 @@ data modify storage bs:data dump.stack[-1].key set from entity B5-0-0-0-2 text
 data modify storage bs:data dump.char set string storage bs:data dump.stack[-1].key 1 2
 data modify storage bs:data dump.parse set string storage bs:data dump.stack[-1].key 2
 
-scoreboard players set #dump.cursor bs.data 2
+execute store result storage bs:data dump.cursor int 1 run scoreboard players set #dump.cursor bs.data 2
 execute if data storage bs:data dump{char:'"'} run return run function bs.dump:key/parse/quoted/double
 execute if data storage bs:data dump{char:"'"} run return run function bs.dump:key/parse/quoted/single
 function bs.dump:key/parse/unquoted
