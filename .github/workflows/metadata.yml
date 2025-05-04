@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   commit:
     name: 🔖 Commit Metadata
@@ -28,5 +32,5 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git add .
-          git commit -m "⚙️ ci: update generated metadata" || echo "No metadata updates"
+          git commit -m "🛠️ chore: update generated metadata" || echo "No metadata updates"
           git push origin HEAD:${{ github.ref }}

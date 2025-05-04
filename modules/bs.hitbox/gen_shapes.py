@@ -67,7 +67,11 @@ def get_block_shapes(ctx: Context, version: str) -> list[BlockShapes]:
     return [BlockShapes(
         blocks=blocks,
         offset=offset,
-        shapes=[(dict(properties), dict(shape)) for properties, shape in shapes],
+        shapes=[
+            (dict(sorted(properties)), dict(shape))
+            for properties, shape
+            in shapes
+        ],
         group=(group := group + 1) if len(shapes) > 1 else 0,
     ) for (offset, shapes), blocks in grouped_blocks.items()]
 
