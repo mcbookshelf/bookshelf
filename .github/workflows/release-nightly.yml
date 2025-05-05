@@ -3,6 +3,9 @@ name: 🏷️ Nightly Release Build
 on:
   push:
     branches: [master]
+    paths-ignore:
+      - data/versions.json
+      - docs/_static/switcher.json
 
 permissions:
   contents: write
