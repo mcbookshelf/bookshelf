@@ -23,6 +23,10 @@ class Runner:
             r"Running test environment 'bs.load:(?P<name>.*?)' batch 0 "
             r"\((?P<count>\d+) tests\)",
         ),
+        "test_position": re.compile(
+            r"(?P<count>\d+) tests are now running at position "
+            r"(?P<x>-?\d+), (?P<y>-?\d+), (?P<z>-?\d+)!",
+        ),
         "test_error": re.compile(
             r"::error title=Test (?P<name>bs.*?) "
             r"failed on line (?P<line>\d+)!::(?P<message>.*)",
@@ -71,6 +75,15 @@ class Runner:
             int(match["count"]),
         )
 
+    def _handle_test_position(self, match: re.Match, logger: StepLogger) -> None:
+        logger.debug(
+            "Run %s tests at position (%s, %s, %s)",
+            int(match["count"]),
+            int(match["x"]),
+            int(match["y"]),
+            int(match["z"]),
+        )
+
     def _handle_test_error(self, match: re.Match, logger: StepLogger) -> None:
         """Handle individual test error logs."""
         name = match["name"]
@@ -88,6 +101,7 @@ class Runner:
         for line in iter(process.stdout.readline, ""):
             for pattern, callback in (
                 (self.PATTERNS["test_environment"], self._handle_test_environment),
+                (self.PATTERNS["test_position"], self._handle_test_position),
                 (self.PATTERNS["test_error"], self._handle_test_error),
                 (self.PATTERNS["any_error"], self._handle_any_error),
             ):
