@@ -8,7 +8,7 @@ build:
     - python -m pip install pdm
     - pdm install -G docs
     - cat docs/conf.py
-    - pdm run docs build $READTHEDOCS_OUTPUT/html
+    - pdm run docs build $READTHEDOCS_OUTPUT/html --builder dirhtml
 
 sphinx:
   configuration: docs/conf.py

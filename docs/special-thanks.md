@@ -6,17 +6,9 @@ html_theme.sidebar_secondary.remove: true
 
 Bookshelf is a collaborative project, made possible by the dedication and contributions of numerous individuals. We extend special thanks to those who have made significant contributions to this project, without whom it would not be what it is today.
 
-## 🖥️ Direct Contributors
-
-```{button-link} https://github.com/mcbookshelf/Bookshelf/graphs/contributors
-:color: primary
-:align: center
-:shadow:
-
-See all contributors
-```
-
 ---
+
+## 🌟 Direct Contributors
 
 ::::{grid} 2
 
@@ -86,7 +78,7 @@ Contributor of the original Gunivers Libs.
 
 ## ✨ Other Contributors
 
-::::{grid} 2
+::::{grid} 3
 
 :::{grid-item-card} Lukas Scheuerle (aka Plagiatus)
 :link: https://plagiatus.net
@@ -134,3 +126,17 @@ Creator of the Bookshelf logo.
 
 :::
 ::::
+
+```{button-link} https://github.com/mcbookshelf/Bookshelf/graphs/contributors
+:color: primary
+:align: center
+:shadow:
+
+See all contributors
+```
+
+---
+
+## 🫶 Acknowledgements
+
+This website uses the Tossface font, a freely available typeface designed and provided by the [Toss Team](https://toss.im).
