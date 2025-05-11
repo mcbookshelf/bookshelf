@@ -354,6 +354,10 @@ ul.navbar-icon-links {
   text-align: center;
 }
 
+#pst-nav-more-links a.nav-link {
+  text-align: left;
+}
+
 @media (min-width: 960px) {
   .bd-footer .bd-footer__inner {
     flex-direction: row;
