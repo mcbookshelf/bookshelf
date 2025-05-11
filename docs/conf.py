@@ -128,7 +128,7 @@ if version_match == "master":
 
 BODY_PATTERN = re.compile(r"<body.*?>(.*?)</body>", re.DOTALL)
 EMOJI_PATTERN = re.compile(
- r"[\U0001F600-\U0001F64F"
+    r"[\U0001F600-\U0001F64F"
     r"\U0001F300-\U0001F5FF"
     r"\U0001F680-\U0001F6FF"
     r"\U0001F700-\U0001F77F"
