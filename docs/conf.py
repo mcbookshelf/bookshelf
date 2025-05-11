@@ -84,7 +84,8 @@ html_theme_options = {
     "navbar_persistent": ["search-button"],
     "navigation_with_keys": True,
     "use_edit_page_button": True,
-    "footer_center": ["mention-legales-footer.html"],
+    "footer_start": ["copyright"],
+    "footer_center": ["mentions-legales.html"],
     "header_links_before_dropdown": 4,
     "logo": {
         "text": "Bookshelf",

@@ -2,7 +2,7 @@
 html_theme.sidebar_secondary.remove: true
 ---
 
-# 🧩&nbsp;Modules
+# 🧩 Modules
 
 Bookshelf is designed with modularity in mind. Features that serve a common purpose are organized into distinct, standalone, namespaced modules.
 
