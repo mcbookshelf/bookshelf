@@ -19,7 +19,7 @@ sd_hide_title: true
 
 </div>
 
-## 🕵️‍♂️ What is Bookshelf?
+## 🕵️ What is Bookshelf?
 
 Bookshelf (formerly known as Gunivers Libs) is a modular library datapack designed to simplify complex systems in Minecraft maps. It is ideal for mapmakers seeking easy-to-implement tools.
 

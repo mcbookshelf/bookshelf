@@ -2,7 +2,7 @@
 html_theme.sidebar_secondary.remove: true
 ---
 
-# 📖&nbsp;Examples
+# 📖 Examples
 
 In this section, you'll find practical examples showcasing how to use **Bookshelf**. effectively. Each example is designed as a mini-tutorial, demonstrating specific features and their real-world applications. The code provided can be easily converted into fully functional Minecraft datapacks thanks to **Lectern**, ensuring that everything in the documentation is directly applicable in-game.
 
