@@ -18,8 +18,8 @@ tp @s ~ ~ ~
 data remove storage bs:lambda raycast.targeted_entity
 data modify storage bs:lambda raycast.targeted_block set from entity @s Pos
 execute store result storage bs:lambda raycast.distance double .001 run scoreboard players get #raycast.distance bs.data
-execute if data storage bs:data raycast.on_targeted_block at @s run function bs.raycast:react/targeted_block with storage bs:data raycast
 execute summon minecraft:marker run function bs.raycast:compute/hit_point with storage bs:lambda raycast
+execute if data storage bs:data raycast.on_targeted_block at @s run function bs.raycast:react/targeted_block with storage bs:data raycast
 
 # stop the recursion if piercing is 0
 execute unless score $raycast.piercing bs.lambda matches 0 run scoreboard players set #raycast.distance bs.data 2147483647
