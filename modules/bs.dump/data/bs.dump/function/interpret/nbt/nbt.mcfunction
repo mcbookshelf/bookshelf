@@ -16,6 +16,7 @@
 execute store success score #dump.success bs.data run function bs.dump:interpret/nbt/expand/default with storage bs:data dump.stack[-1]
 execute if score #dump.success bs.data matches 0 run function bs.dump:interpret/nbt/expand/parse/init
 function bs.dump:interpret/nbt/populate with storage bs:data dump.stack[-1]
-return run function bs.dump:format/any
+function bs.dump:format/any
+return 1
 
 $data get $(var)
