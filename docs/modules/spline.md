@@ -146,6 +146,33 @@ data get storage bs:out spline.evaluate_hermite
 ```
 
 ::::
+::::{tab-item} Linear
+
+```{function} #bs.spline:evaluate_linear
+
+Evaluate a linear spline, which connects each pair of consecutive points with a straight segment. There is no curvature; the interpolation is piecewise linear.
+
+:Inputs:
+  **Storage `bs:in spline.evaluate_linear`**:
+  :::{treeview}
+  - {nbt}`compound` Arguments
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Each pair of consecutive points defines one linear segment.
+    - {nbt}`double` **time**: A normalized position between 0 and the number of segments. Each integer step moves to the next segment, and the fractional part represents interpolation within that segment.
+  :::
+
+:Outputs:
+  **Storage `bs:out spline.evaluate_linear`**: {nbt}`list` The interpolated point (1D, 2D, or 3D) on the spline at the given time.
+```
+
+*Example: Evaluate the midpoint between two positions in 2D space:*
+
+```mcfunction
+data modify storage bs:in spline.evaluate_linear set value {points:[[0,0],[4,2],[6,5]],time:0.5}
+function #bs.spline:evaluate_linear
+data get storage bs:out spline.evaluate_linear
+```
+
+::::
 :::::
 
 > **Credits**: Aksiome
@@ -164,7 +191,7 @@ Sample a Bézier spline composed of one or more segments. Each segment is define
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
-    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
+    - {nbt}`double` **step**: The interval at which the spline is sampled. Smaller values generate more points.
   :::
 
 :Outputs:
@@ -191,7 +218,7 @@ Sample a B-Spline composed of one or more segments. Each segment is defined by f
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
-    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
+    - {nbt}`double` **step**: The interval at which the spline is sampled. Smaller values generate more points.
   :::
 
 :Outputs:
@@ -218,7 +245,7 @@ Sample a Catmull-Rom spline composed of one or more segments. Each segment is de
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
-    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
+    - {nbt}`double` **step**: The interval at which the spline is sampled. Smaller values generate more points.
   :::
 
 :Outputs:
@@ -245,7 +272,7 @@ Sample a Hermite spline composed of one or more segments. Each segment is define
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
-    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
+    - {nbt}`double` **step**: The interval at which the spline is sampled. Smaller values generate more points.
   :::
 
 :Outputs:
@@ -258,6 +285,33 @@ Sample a Hermite spline composed of one or more segments. Each segment is define
 data modify storage bs:in spline.sample_hermite set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1}
 function #bs.spline:sample_hermite
 data get storage bs:out spline.sample_hermite
+```
+
+::::
+::::{tab-item} Linear
+
+```{function} #bs.spline:sample_linear
+
+Sample a linear spline, which connects each pair of consecutive points with a straight segment.
+
+:Inputs:
+  **Storage `bs:in spline.sample_linear`**:
+  :::{treeview}
+  - {nbt}`compound` Arguments
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Each pair of consecutive points defines one linear segment.
+    - {nbt}`double` **step**: The interval at which the spline is sampled. Smaller values generate more points.
+  :::
+
+:Outputs:
+  **Storage `bs:out spline.sample_linear`**: {nbt}`list` The sampled points along the spline.
+```
+
+*Example: Sample evenly spaced points along a polyline in 2D space:*
+
+```mcfunction
+data modify storage bs:in spline.sample_linear set value {points:[[0,0],[4,2],[6,5]],step:0.25}
+function #bs.spline:sample_linear
+data get storage bs:out spline.sample_linear
 ```
 
 ::::
@@ -279,8 +333,8 @@ Stream a Bézier spline composed of one or more segments. Each segment is define
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
-    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
-    - {nbt}`string` **run**: The command executed at each step of the curve sampling process. For each step, the following storage can be used:
+    - {nbt}`double` **step**: The interval at which the spline is sampled. Smaller values generate more points.
+    - {nbt}`string` **run**: The command executed at each step of the sampling process. For each step, the following storage can be used:
       - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
@@ -304,8 +358,8 @@ Stream a B-Spline composed of one or more segments. Each segment is defined by f
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
-    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
-    - {nbt}`string` **run**: The command executed at each step of the curve sampling process. For each step, the following storage can be used:
+    - {nbt}`double` **step**: The interval at which the spline is sampled. Smaller values generate more points.
+    - {nbt}`string` **run**: The command executed at each step of the sampling process. For each step, the following storage can be used:
       - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
@@ -329,8 +383,8 @@ Stream a Catmull-Rom spline composed of one or more segments. Each segment is de
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
-    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
-    - {nbt}`string` **run**: The command executed at each step of the curve sampling process. For each step, the following storage can be used:
+    - {nbt}`double` **step**: The interval at which the spline is sampled. Smaller values generate more points.
+    - {nbt}`string` **run**: The command executed at each step of the sampling process. For each step, the following storage can be used:
       - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
@@ -354,8 +408,8 @@ Stream a Hermite spline composed of one or more segments. Each segment is define
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every group of 4 consecutive points defines one segment.
-    - {nbt}`double` **step**: The interval at which the curve is sampled. Smaller values generate more points.
-    - {nbt}`string` **run**: The command executed at each step of the curve sampling process. For each step, the following storage can be used:
+    - {nbt}`double` **step**: The interval at which the spline is sampled. Smaller values generate more points.
+    - {nbt}`string` **run**: The command executed at each step of the sampling process. For each step, the following storage can be used:
       - **`bs:lambda spline.point`**: The evaluated point.
   :::
 ```
@@ -365,6 +419,31 @@ Stream a Hermite spline composed of one or more segments. Each segment is define
 ```mcfunction
 data modify storage bs:in spline.stream_hermite set value {points:[[0,0],[1,2],[2,-1],[3,1]],step:0.1,run:'tellraw @a {"storage":"bs:lambda","nbt":"spline.point"}'}
 function #bs.spline:stream_hermite
+```
+
+::::
+::::{tab-item} Linear
+
+```{function} #bs.spline:stream_linear
+
+Stream a linear spline composed of one or more segments. Each segment connects two consecutive control points with a straight line. This function processes each step over multiple ticks.
+
+:Inputs:
+  **Storage `bs:in spline.stream_linear`**:
+  :::{treeview}
+  - {nbt}`compound` Arguments
+    - {nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every pair of consecutive points defines one linear segment.
+    - {nbt}`double` **step**: The interval at which the spline is sampled. Smaller values generate more points.
+    - {nbt}`string` **run**: The command executed at each step of the sampling process. For each step, the following storage can be used:
+      - **`bs:lambda spline.point`**: The evaluated point.
+  :::
+```
+
+*Example: Stream 10 points along a linear path in 2D space and execute a command at each step:*
+
+```mcfunction
+data modify storage bs:in spline.stream_linear set value {points:[[0,0],[1,2],[3,0]],step:0.1,run:'tellraw @a {"storage":"bs:lambda","nbt":"spline.point"}'}
+function #bs.spline:stream_linear
 ```
 
 ::::

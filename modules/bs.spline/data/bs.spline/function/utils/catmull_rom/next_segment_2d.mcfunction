@@ -14,7 +14,9 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:lambda spline.point set value [0d, 0d]
-execute store result score #x bs.ctx store result score #y bs.ctx run scoreboard players operation #t bs.ctx %= 1000 bs.const
+execute store result score #x bs.ctx \
+  store result score #y bs.ctx \
+  run scoreboard players operation #t bs.ctx %= 1000 bs.const
 
 execute store result score #a bs.ctx run data get storage bs:ctx _.points[0][0] 1000
 execute store result score #c bs.ctx run data get storage bs:ctx _.points[1][0] 1000
