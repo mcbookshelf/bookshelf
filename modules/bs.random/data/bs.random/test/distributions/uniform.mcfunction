@@ -13,6 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+# output should vary
 execute store result score #0 bs.ctx run function #bs.random:uniform {min:-10000000,max:10000000}
 execute store result score #1 bs.ctx run function #bs.random:uniform {min:-10000000,max:10000000}
 execute store result score #2 bs.ctx run function #bs.random:uniform {min:-10000000,max:10000000}

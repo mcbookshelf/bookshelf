@@ -31,6 +31,7 @@ scoreboard players set 14 bs.const 14
 scoreboard players set 24 bs.const 24
 scoreboard players set 78 bs.const 78
 scoreboard players set 100 bs.const 100
+scoreboard players set 200 bs.const 200
 scoreboard players set 1000 bs.const 1000
 scoreboard players set 10000 bs.const 10000
 scoreboard players set 65536 bs.const 65536

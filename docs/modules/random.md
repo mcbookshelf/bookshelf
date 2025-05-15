@@ -201,6 +201,41 @@ Measures the number of trials required to achieve the first success in a sequenc
 ```
 
 ::::
+::::{tab-item} Normal
+
+```{function} #bs.random:normal {mean:<mean>,spread:<spread>}
+
+Generate a random number following a normal (Gaussian) distribution with specified `mean` and `spread` (standard deviation).
+
+:Inputs:
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` Arguments
+    - {nbt}`double` **mean**: The average (center) value of the distribution.
+    - {nbt}`double` **spread**: The standard deviation controlling how spread out the values are.
+  :::
+
+:Outputs:
+  **Return | Score `$random.normal bs.out`**: A random integer centered near `mean`.
+```
+
+*Example: Generate a random number with mean 10 and spread 3:*
+
+```mcfunction
+# Generate random number
+function #bs.random:normal {mean:10,spread:3}
+
+# Display the result
+tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.normal", "objective": "bs.out"}, "color": "gold"}]
+```
+
+```{admonition} Normal Distribution... 🥶 What's this?
+:class: dropdown
+
+Also known as the Gaussian distribution, it produces values clustered around the mean with a bell-shaped probability curve. Widely used to model natural variations and measurement errors.
+```
+
+::::
 ::::{tab-item} Poisson
 
 ```{function} #bs.random:poisson {lambda:<lambda>}
