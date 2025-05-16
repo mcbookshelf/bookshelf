@@ -15,7 +15,8 @@
 
 # check block and entity collision (debug: particle minecraft:block_marker{block_state:"barrier"} ~.5 ~.5 ~.5 0 0 0 0 1)
 $execute unless data storage bs:data raycast{blocks:0b} unless block ~ ~ ~ $(ignored_blocks) run function bs.raycast:check/block/any with storage bs:data raycast
-$execute unless data storage bs:data raycast{entities:0b} as @e[type=!$(ignored_entities),tag=$(entities),tag=!bs.raycast.omit,dx=0] run function bs.raycast:check/entity/any
+$execute unless data storage bs:data raycast{entities:0b} as @e[type=!$(ignored_entities),tag=$(entities),tag=!bs.hitbox.custom,predicate=!bs.raycast:checked,dx=0] run function bs.raycast:check/entity/any
+execute if score #raycast.tmin bs.data <= #raycast.lx bs.data if score #raycast.tmin bs.data <= #raycast.ly bs.data if score #raycast.tmin bs.data <= #raycast.lz bs.data run function bs.raycast:collide/any
 
 # advance on the grid by the shortest length
 execute if score #raycast.lx bs.data <= #raycast.ly bs.data if score #raycast.lx bs.data <= #raycast.lz bs.data if score #raycast.lx bs.data <= #raycast.max_distance bs.data run return run function bs.raycast:recurse/x with storage bs:data raycast

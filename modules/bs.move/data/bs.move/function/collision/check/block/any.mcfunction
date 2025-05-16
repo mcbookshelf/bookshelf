@@ -13,13 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+# if the block is a full cube, check collision using a fixed 1×1×1 AABB
 execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return run function bs.move:collision/check/block/cube
 
+# otherwise, check collision against the block shape for the given collision type (e.g., collision, interaction)
 function #bs.hitbox:get_block
-$execute store success score #s bs.ctx run data modify storage bs:ctx _ set from storage bs:out hitbox.$(hitbox_shape)_shape
+$execute store success score #s bs.ctx run data modify storage bs:ctx _ set from storage bs:out hitbox.$(blocks)_shape
 execute if score #s bs.ctx matches 0 run return 0
-execute store result score #move.ox bs.data run data get storage bs:out hitbox.offset.x 10000000
-execute store result score #move.oz bs.data run data get storage bs:out hitbox.offset.z 10000000
-scoreboard players operation #move.ox bs.data += #move.x bs.data
-scoreboard players operation #move.oz bs.data += #move.z bs.data
+execute store result score #p bs.ctx run data get storage bs:out hitbox.offset.x 10000000
+execute store result score #q bs.ctx run data get storage bs:out hitbox.offset.z 10000000
+scoreboard players operation #p bs.ctx += #move.x bs.data
+scoreboard players operation #q bs.ctx += #move.z bs.data
 function bs.move:collision/check/block/shape

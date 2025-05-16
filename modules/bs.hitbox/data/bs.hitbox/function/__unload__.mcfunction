@@ -20,5 +20,9 @@ scoreboard objectives remove bs.const
 scoreboard objectives remove bs.ctx
 scoreboard objectives remove bs.out
 
+scoreboard objectives remove bs.width
+scoreboard objectives remove bs.height
+scoreboard objectives remove bs.depth
+
 data remove storage bs:out hitbox
 data remove storage bs:data hitbox

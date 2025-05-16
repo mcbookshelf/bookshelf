@@ -13,13 +13,13 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return run function bs.raycast:collide/cube
+execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return run function bs.raycast:collide/record/cube
 
 function #bs.hitbox:get_block
-$execute store success score #s bs.ctx run data modify storage bs:ctx _ set from storage bs:out hitbox.$(hitbox_shape)_shape
+$execute store success score #s bs.ctx run data modify storage bs:ctx _ set from storage bs:out hitbox.$(blocks)_shape
 execute if score #s bs.ctx matches 0 run return 0
-execute store result score #raycast.ox bs.data run data get storage bs:out hitbox.offset.x 10000000
-execute store result score #raycast.oz bs.data run data get storage bs:out hitbox.offset.z 10000000
+execute store result score #p bs.ctx run data get storage bs:out hitbox.offset.x 10000000
+execute store result score #q bs.ctx run data get storage bs:out hitbox.offset.z 10000000
 
 execute if score #raycast.ux bs.data matches 0.. run scoreboard players operation #raycast.lx bs.data -= #raycast.dx bs.data
 execute if score #raycast.uy bs.data matches 0.. run scoreboard players operation #raycast.ly bs.data -= #raycast.dy bs.data
@@ -28,5 +28,3 @@ function bs.raycast:check/block/shape
 execute if score #raycast.ux bs.data matches 0.. run scoreboard players operation #raycast.lx bs.data += #raycast.dx bs.data
 execute if score #raycast.uy bs.data matches 0.. run scoreboard players operation #raycast.ly bs.data += #raycast.dy bs.data
 execute if score #raycast.uz bs.data matches 0.. run scoreboard players operation #raycast.lz bs.data += #raycast.dz bs.data
-
-execute unless score #raycast.distance bs.data matches 2147483647 run function bs.raycast:collide/block

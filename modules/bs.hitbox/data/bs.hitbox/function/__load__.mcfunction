@@ -20,6 +20,10 @@ scoreboard objectives add bs.const dummy [{text:"BS ",color:"dark_gray"},{text:"
 scoreboard objectives add bs.ctx dummy [{text:"BS ",color:"dark_gray"},{text:"Context",color:"aqua"}]
 scoreboard objectives add bs.out dummy [{text:"BS ",color:"dark_gray"},{text:"Output",color:"aqua"}]
 
+scoreboard objectives add bs.width dummy [{text:"BS ",color:"dark_gray"},{text:"Width",color:"aqua"}]
+scoreboard objectives add bs.height dummy [{text:"BS ",color:"dark_gray"},{text:"Height",color:"aqua"}]
+scoreboard objectives add bs.depth dummy [{text:"BS ",color:"dark_gray"},{text:"Depth",color:"aqua"}]
+
 scoreboard players set 2 bs.const 2
 scoreboard players set 11 bs.const 11
 scoreboard players set 15 bs.const 15
