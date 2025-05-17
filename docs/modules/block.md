@@ -192,6 +192,12 @@ Get all data related to the block at the current location, including its state a
       - {nbt}`string` **fall**: The sound played when a player falls on the block.
       - {nbt}`string` **place**: The sound played when a player places the block.
       - {nbt}`string` **step**: The sound played when a player steps on the block.
+    - {nbt}`float` **blast_resistance**: The blast resistance of the block.
+    - {nbt}`float` **hardness**: The hardness of the block.
+    - {nbt}`bool` **transparent**: Whether the block is transparent.
+    - {nbt}`bool` **ignited_by_lava**: Whether the block can be ignited by lava.
+    - {nbt}`int` **stack_size**: The stack size of the block.
+    - {nbt}`string` **map_color**: The map color of the block, in hexadecimal format.
   :::
 ```
 
@@ -229,6 +235,12 @@ Get the block type at the current location. Although states, NBTs, and propertie
       - {nbt}`string` **fall**: The sound played when a player falls on the block.
       - {nbt}`string` **place**: The sound played when a player places the block.
       - {nbt}`string` **step**: The sound played when a player steps on the block.
+    - {nbt}`float` **blast_resistance**: The blast resistance of the block.
+    - {nbt}`float` **hardness**: The hardness of the block.
+    - {nbt}`bool` **transparent**: Whether the block is transparent.
+    - {nbt}`bool` **ignited_by_lava**: Whether the block can be ignited by lava.
+    - {nbt}`int` **stack_size**: The stack size of the block.
+    - {nbt}`string` **map_color**: The map color of the block, in hexadecimal format.
   :::
 ```
 

@@ -12,6 +12,7 @@
     "tags": ["runtime"]
   },
   "pipeline": [
-    "gen_blocks"
+    "gen_blocks",
+    "gen_blast_resistance"
   ]
 }
