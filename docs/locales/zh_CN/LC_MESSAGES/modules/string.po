@@ -1,0 +1,470 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/string.md:1 26caf3637a29464da6fae0b8befbc496
+msgid "🔠 String"
+msgstr ""
+
+#: ../../modules/string.md:3 6dfdb341ccd2475c9168a9826f39874d
+msgid "**`#bs.string:help`**"
+msgstr ""
+
+#: ../../modules/string.md:5 8fd0f7ed1e8646a7b2e4ce9a2767341e
+msgid ""
+"Manage and transform strings with a versatile set of manipulation and "
+"search functions."
+msgstr ""
+
+#: ../../modules/string.md:13 a6dcfcf1ad6d4b4783f098b7253fa5ec
+msgid "\"Words are the most powerful drug used by mankind.\""
+msgstr ""
+
+#: ../../modules/string.md:14 6f42c5d3bd3a4ee2a91d7a6dabeaa07e
+msgid "Rudyard Kipling"
+msgstr ""
+
+#: ../../modules/string.md:20 6ac83bf57a594c3c8c9c78e672b758de
+msgid "🔧 Functions"
+msgstr ""
+
+#: ../../modules/string.md:22 1da73bc076954db9958986b18ba0c2ff
+msgid "You can find below all functions available in this module."
+msgstr ""
+
+#: ../../modules/string.md:26 b585fec23597408a8528a753fa5c2389
+msgid "Concat"
+msgstr ""
+
+#: ../../modules/string.md:30 1fb6ceec02ec4d5e879a1db9f25a48b8
+msgid "Merge multiple strings from an array into a single concatenated string."
+msgstr ""
+
+#: ../../modules/string.md:32 ../../modules/string.md:67
+#: ../../modules/string.md:89 ../../modules/string.md:127
+#: ../../modules/string.md:154 ../../modules/string.md:197
+#: ../../modules/string.md:237 ../../modules/string.md:282
+#: ../../modules/string.md:315 ../../modules/string.md:359
+#: ../../modules/string.md:381 ../../modules/string.md:404
+#: 0c55c0da5d94492fa6e62f0eaa2cfbba 24b2ffac82c44936b7b58c4ebbfaeac4
+#: 260ae581eb964675a61fce99ad740f81 417fd78c8d6b4d0fb997803f2a17092e
+#: 4b09666ef50448c286d5aaf66c934dcf 4b9c377e06dd41059c57fa65f4658e6e
+#: 61fce0cd8dcc4247935bb0f10835df17 ad6685eaba0943998e150dba58374879
+#: b809929894944185931d1de54e815bf2 df8fa813e17c4a51bcbf22b4cc8a544f
+#: e2784d34174c4f5881c5df22c437c96a f44c79cae1924c23bed8145f0e4b053a
+msgid "Inputs"
+msgstr ""
+
+#: ../../modules/string.md:33 4d5b9b8e82fc4fb89a6efafe2f44843c
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.concat.list`**: {nbt}`list` List of strings to "
+"concatenate."
+msgstr ""
+
+#: ../../modules/string.md:35 ../../modules/string.md:70
+#: ../../modules/string.md:92 ../../modules/string.md:135
+#: ../../modules/string.md:163 ../../modules/string.md:207
+#: ../../modules/string.md:247 ../../modules/string.md:285
+#: ../../modules/string.md:324 ../../modules/string.md:362
+#: ../../modules/string.md:384 ../../modules/string.md:407
+#: 32688c18e1e64dd2a7abbf1dfed50a5e 4df3775db2f1475c8a0d1c6c10521e65
+#: 582226d2b3a5401692a988b8cec9d6eb 5eb5100c56194a26bcce2cb76db127f9
+#: 6473acb306314b708766ae5683d48b2c 65c9951c72a449ff9b62493a890cfaee
+#: 88153e309c8740e7b14b8326375fe1e9 99c77c035ffa446ab2665091481f406e
+#: a37a2e7710c34a62bab6fc8030dee6ef c6195b42db524a4eaf67d1faf5a87551
+#: cf597c4f16384c38a51085cbe8fef3b6 cfa2b86dcf0d4094acd7b228ad05d87a
+msgid "Outputs"
+msgstr ""
+
+#: ../../modules/string.md:36 3939d28123ac4b63aa3ab4250034b7d7
+#, python-brace-format
+msgid "**Storage `bs:out string.concat`**: {nbt}`string` The concatenated string."
+msgstr ""
+
+#: ../../modules/string.md:39 82708edbb95f418888151d508a59bc66
+msgid "*Example: Concatenate `Hello `, and `World` then display the result:*"
+msgstr ""
+
+#: ../../modules/string.md:47 ../../modules/string.md:106
+#: ../../modules/string.md:180 ../../modules/string.md:220
+#: ../../modules/string.md:266 ../../modules/string.md:298
+#: ../../modules/string.md:338 195ebe14bd3440ce88eaaec8a35a9360
+#: 1e53e76df5054942811b9eb432de10e6 2c046b64b1c44b97b2bd898c60d8bf92
+#: 6b3bcafe3cfc41e8a013c05b305a8765 76e72208e8c5430b83329358f71075ae
+#: 812f18182b35438e928e400d0cab4aa2 8c86589bacb84419b4ee4cc50d988e55
+msgid "Technical Limitation"
+msgstr ""
+
+#: ../../modules/string.md:50 ../../modules/string.md:269
+#: 6d189edfafb94b45abb9845be00a6bf1 a7178c88ebdd4073876045fc7f90ec47
+msgid ""
+"If you want to use double quotes (`\"`) within a string, you must escape "
+"them with a backslash: `\\\"`."
+msgstr ""
+
+#: ../../modules/string.md:53 ../../modules/string.md:113
+#: ../../modules/string.md:187 ../../modules/string.md:227
+#: ../../modules/string.md:272 ../../modules/string.md:305
+#: ../../modules/string.md:345 ../../modules/string.md:421
+#: 76cdc2646ed144b7a98882e5a2e1fce4 912032f5b8344693b9853d4e2f8c4807
+#: a0d7fe5c7a1d435a96a8351beb2775ad bb590a4a58a7473fb1a13b3d72614b93
+#: d040e7e8b46843fdba73f96c364245b7 d48f0fb4f0cc47a092da9d40d9501d42
+#: f43443455d2d494a91e9f4459847a3f3 f8fdaea62ef14657ab1aac0bd1606eaa
+msgid "**Credits**: Aure31"
+msgstr ""
+
+#: ../../modules/string.md:57 be72928d2e6746b2bb96b7e472ec8399
+msgid "Convert Case"
+msgstr ""
+
+#: ../../modules/string.md 0036e4887b3c4532bccfd1aa889566cc
+msgid "Uppercase"
+msgstr ""
+
+#: ../../modules/string.md:65 0e1552a3694b4b9a91f501e62013b88d
+msgid "Convert text to uppercase."
+msgstr ""
+
+#: ../../modules/string.md:68 14b888a66bd7403eaf2344e681fd0dfc
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.upper.str`**: {nbt}`string` The string to convert"
+" to uppercase."
+msgstr ""
+
+#: ../../modules/string.md:71 ef3619b0117c492a9e4d19ee7f655361
+#, python-brace-format
+msgid "**Storage `bs:out string.upper`**: {nbt}`string` The uppercase string."
+msgstr ""
+
+#: ../../modules/string.md:74 6aa2c0ebff8f4efeba776f750bf50efb
+msgid "*Example: Convert `hello world` to `HELLO WORLD` then display the result:*"
+msgstr ""
+
+#: ../../modules/string.md 3187eaf3f0a743cb846b339ab28606d6
+msgid "Lowercase"
+msgstr ""
+
+#: ../../modules/string.md:87 b2032851388341daa29904462d2648d1
+msgid "Convert text to lowercase."
+msgstr ""
+
+#: ../../modules/string.md:90 3caf5546a87e45f3ba43c5b0d3a7f55c
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.lower.str`**: {nbt}`string` The string to convert"
+" to lowercase."
+msgstr ""
+
+#: ../../modules/string.md:93 47e111dffa5b4f6191519e93b98e350d
+#, python-brace-format
+msgid "**Storage `bs:out string.lower`**: {nbt}`string` The lowercase string."
+msgstr ""
+
+#: ../../modules/string.md:96 91e3c619c864466fbf93d912bb9417bc
+msgid "*Example: Convert `HELLO WORLD` to `hello world` then display the result:*"
+msgstr ""
+
+#: ../../modules/string.md:110 a992c4b3b0674bb3a1c9ded854fe967a
+msgid ""
+"These functions support most UTF-8 characters, but they do not support "
+"the double quote character (`\"`). Attempts to use or escape double "
+"quotes will result in errors."
+msgstr ""
+
+#: ../../modules/string.md ../../modules/string.md:117
+#: 2c72129669b240c19443bb4f4df2f477 5867ccae9e074a1d8381d41ff400f7e7
+msgid "Find"
+msgstr ""
+
+#: ../../modules/string.md:125 8ad9bfc9135142baac97f9f1fd798d59
+msgid "Search for a substring within a string. Find the first occurrence."
+msgstr ""
+
+#: ../../modules/string.md:128 6a0f531134464ed8ad1d473227eb39d3
+msgid "**Storage `bs:in string.find`**:"
+msgstr ""
+
+#: ../../modules/string.md:136 c377f7d0c5444fb082b637441a2ab04b
+msgid "**Return**: Integer index of the first occurrence or -1 if not found."
+msgstr ""
+
+#: ../../modules/string.md:139 341ea64094e54e63ba49004d82c06604
+msgid ""
+"*Example: Find the first occurrence of `world` in `hello world` then "
+"display the index:*"
+msgstr ""
+
+#: ../../modules/string.md 907089ae11fa458dba6b4388cfe5d614
+msgid "Find all"
+msgstr ""
+
+#: ../../modules/string.md:152 367e12423e414fbca145e3cd0f4e2b40
+msgid ""
+"Search for a substring within a string. Find all occurrences or a "
+"specific number of matches."
+msgstr ""
+
+#: ../../modules/string.md:155 90e755fe20c54a8dbc196985d381476c
+msgid "**Storage `bs:in string.find_all`**:"
+msgstr ""
+
+#: ../../modules/string.md:164 ee0687a1c4ed4304998d2342a388fb3c
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.find_all`**: {nbt}`list` List of indices where "
+"the substring was found, in order of occurrence."
+msgstr ""
+
+#: ../../modules/string.md:166 12a5f99a7c794abb984dcd3ac1fc8a0c
+msgid "**Return**: Number of occurrences found."
+msgstr ""
+
+#: ../../modules/string.md:169 ab74edee5dff4e018ec752e49cad3aad
+msgid ""
+"*Example: Find all occurrences of `world` in `hello world world` then "
+"display the indices:*"
+msgstr ""
+
+#: ../../modules/string.md:184 6750ae84d7d843f485175aada782dbb6
+msgid ""
+"These functions do not support the double quote character (`\"`). "
+"Attempts to use or escape double quotes will result in errors."
+msgstr ""
+
+#: ../../modules/string.md:191 bae21add2b5c468f9bd10c6666e4da25
+msgid "Replace"
+msgstr ""
+
+#: ../../modules/string.md:195 8768d4d695414726b5c398770b41e53d
+msgid "Replace occurrences of a substring with a new text."
+msgstr ""
+
+#: ../../modules/string.md:198 06044926413740c586ac910b3e07166e
+msgid "**Storage `bs:in string.replace`**:"
+msgstr ""
+
+#: ../../modules/string.md:208 24878ed2b0cf4a05997352f05bf12511
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.replace`**: {nbt}`string` String after "
+"replacements."
+msgstr ""
+
+#: ../../modules/string.md:211 76124673218f407894d59ac5b9f12447
+msgid ""
+"*Example: Replace `world` with `minecraft` in `hello world` then display "
+"the result::*"
+msgstr ""
+
+#: ../../modules/string.md:224 ../../modules/string.md:302
+#: ../../modules/string.md:342 73d74af7b7994a04a5bc1434f5e34878
+#: 7d1c0f359b844e39a668cdf3a6de47b2 c31ea7cfd0cd400f924bcf492157eddf
+msgid ""
+"This function do not support the double quote character (`\"`). Attempts "
+"to use or escape double quotes will result in errors."
+msgstr ""
+
+#: ../../modules/string.md:231 1acb8ca770f94d398393d7ecdd85a74d
+msgid "Replace Range"
+msgstr ""
+
+#: ../../modules/string.md:235 c6b3b23937c94bb1959612968cc6d3e1
+msgid ""
+"Replace characters in a string between specified start and end positions "
+"with a new substring."
+msgstr ""
+
+#: ../../modules/string.md:238 ee81e481745449e19ad1fafd8d3a5b8c
+msgid "**Storage `bs:in string.replace_range`**:"
+msgstr ""
+
+#: ../../modules/string.md:248 7527b651fe094844b4da85c8164d1997
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.replace_range`**: {nbt}`string` The modified "
+"string with the specified range replaced."
+msgstr ""
+
+#: ../../modules/string.md:251 2a6f1984921e48fab354e95abfbe0708
+msgid ""
+"*Example: Replace the space in `hello world` with ` beautiful ` then "
+"display the result:*"
+msgstr ""
+
+#: ../../modules/string.md:260 d3a074a3d0fa4f3bbeabb7572297fbf2
+msgid "How to Insert?"
+msgstr ""
+
+#: ../../modules/string.md:263 70c0cb816f1047f9889c1f7cfd072e09
+msgid ""
+"To insert text without removing any characters, set both `start` and "
+"`end` to the same position. This will insert the new text at that "
+"position while preserving all existing characters."
+msgstr ""
+
+#: ../../modules/string.md:276 9c3afd2c0842499ca57c65bec4f88781
+msgid "Reverse"
+msgstr ""
+
+#: ../../modules/string.md:280 0dc08fb42e024ee09c1afd5ebbb2af1f
+msgid "Reverse the order of all characters in a string."
+msgstr ""
+
+#: ../../modules/string.md:283 6859d23b9c9a479ca658bbfb8df56e0d
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.reverse.str`**: {nbt}`string` The string to "
+"reverse."
+msgstr ""
+
+#: ../../modules/string.md:286 b310c73728564c1baa40865b323f9f96
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.reverse`**: {nbt}`string` The string with all "
+"characters in reverse order."
+msgstr ""
+
+#: ../../modules/string.md:289 c1a713fc6d59442e8b51ff45b87cab5f
+msgid "*Example: Reverse `hello world` then display the result:*"
+msgstr ""
+
+#: ../../modules/string.md:309 1b6e465540b7419bba1d919ebab3cd5e
+msgid "Split"
+msgstr ""
+
+#: ../../modules/string.md:313 f1de7af8b7de45af9db41127cf27835a
+msgid ""
+"Divide a string into smaller parts using a specified separator, creating "
+"a list of substrings."
+msgstr ""
+
+#: ../../modules/string.md:316 c0a0833f0d354a72b870a75d7dd770a7
+msgid "**Storage `bs:in string.split`**:"
+msgstr ""
+
+#: ../../modules/string.md:325 250a3fd4ed564cefb383c9d18a7f536c
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.split`**: {nbt}`list` A list containing the "
+"split parts of the original string, in the order they appear."
+msgstr ""
+
+#: ../../modules/string.md:328 5ac65f16232c47eea21e9ceb52125a68
+msgid "*Example: Split `hello world` by `\" \"` then display the result:*"
+msgstr ""
+
+#: ../../modules/string.md:349 ba5ebb952d554679bf5a947654cf5ccc
+msgid "Transform Type"
+msgstr ""
+
+#: ../../modules/string.md 21b051ac5d22447e877eeee663fda039
+msgid "Parse"
+msgstr ""
+
+#: ../../modules/string.md:357 a416c62eb3ae4b59a9ec98a389975176
+msgid "Attempt to convert the string into its corresponding value."
+msgstr ""
+
+#: ../../modules/string.md:360 0949365677564e619ec315ab82112199
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.parse.str`**: {nbt}`string` The string containing"
+" the value to be extracted."
+msgstr ""
+
+#: ../../modules/string.md:363 5bedeca435324263a6142792caa0dcf7
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.parse`**: {nbt}`any` The extracted value. "
+"Possible types: boolean, integer, double, string."
+msgstr ""
+
+#: ../../modules/string.md:366 e68d69f2f73e432ca1bccf4cb1c361f5
+msgid "*Example: Transform `\"42\"` into an integer then display the result:*"
+msgstr ""
+
+#: ../../modules/string.md fa574ad43fcc4468809fd043c33c0914
+msgid "To List"
+msgstr ""
+
+#: ../../modules/string.md:379 c4bdb1c2efd444a98caef37e34f03794
+msgid ""
+"Convert a string into a list where each character becomes a separate "
+"element."
+msgstr ""
+
+#: ../../modules/string.md:382 83eddf11b3604157b879809ac6181f14
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.to_list.str`**: {nbt}`string` The string to "
+"convert into a character list."
+msgstr ""
+
+#: ../../modules/string.md:385 7b3f362ef1f142279d7fa5f68aa8cb04
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.to_list`**: {nbt}`list` A list containing each "
+"character as a separate element."
+msgstr ""
+
+#: ../../modules/string.md:388 b032bf357e3e45bcaa580dbc1d175124
+msgid ""
+"*Example: Transform `hello world` into a character list then display the "
+"result:*"
+msgstr ""
+
+#: ../../modules/string.md 09dbe1d51a6e4ce3b93028cd1cd3bfe8
+msgid "To String"
+msgstr ""
+
+#: ../../modules/string.md:402 24b89bddfae244f4a1150ee7a30e22cc
+msgid "Convert any value into its string representation."
+msgstr ""
+
+#: ../../modules/string.md:405 1b79b3bcb9a542e5b083da52c64620c0
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.to_string.value`**: {nbt}`any` The value to "
+"convert into a string."
+msgstr ""
+
+#: ../../modules/string.md:408 2d5a2d2769d346c3a194640782106217
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.to_string`**: {nbt}`string` The value converted "
+"to its string representation."
+msgstr ""
+
+#: ../../modules/string.md:411 b2f0155a9f1049f8b5e4caf7da42e8b8
+msgid ""
+"*Example: Transform `42` into its string representation then display the "
+"result:*"
+msgstr ""
+
+#: ../../_templates/comments.md:4 d72e310363e84319acf95d4e03f216ed
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 36445208ed8b4219865a113b86ce9c1b
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+

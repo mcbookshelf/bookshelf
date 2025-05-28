@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../changelog/v3.0.1.md:1 e8262cef88bc4e479a5e810998e42a79
+msgid ""
+"📦 [Bookshelf - "
+"3.0.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.0.1)"
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:3 935578a60f62465894cae58c9b27ae78
+msgid "**🩹 Simple Hotfix!**"
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:5 64176f1a1e35489db9ddee1c28c82b97
+msgid "*This is a hotfix for version 3.0.0.*"
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:8 d4db77fe8f1b404899cbf9d7ce8be25e
+msgid "`❤️ bs.health`"
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:10 6f18fcb767e04765af7be95f4938007f
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#410](https://github.com/mcbookshelf/bookshelf/issues/410)** - Ensure "
+"player health updates consistently."
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:13 cd874260474748d0be294a533db8c8f8
+msgid "`🧣 bs.spline`"
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:15 ../../changelog/v3.0.1.md:22
+#: 497da923083d4dd5bc5e4115f660e713 96fc7200b7b947e1aad00c64d91f1f91
+msgid ""
+"<abbr title=\"Bug Fixes\">🐛</abbr> "
+"**[#423](https://github.com/mcbookshelf/bookshelf/pull/423)** - Fix "
+"module tag incorrectly set to default, now set to runtime to ensure the "
+"module is properly included in bundles."
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:16 f60549178db84c93bb95bece4d8b14af
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#412](https://github.com/mcbookshelf/bookshelf/issues/412)** - Fix "
+"Hermite spline tangents to use absolute space instead of relative."
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:17 5bd4bab46d494b3995c37b80f18d5d00
+msgid ""
+"<abbr title=\"Enhancements\">⚡</abbr> "
+"**[#409](https://github.com/mcbookshelf/bookshelf/issues/409)** - Improve"
+" performance of sampling and streaming functions."
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:20 1745b60738c14946ac530d3ac3df2447
+msgid "`🔠 bs.string`"
+msgstr ""
+

@@ -1,0 +1,258 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../modules/color.md:1 8bef577f23f34170a48b02e199f95beb
+msgid "🎨 Color"
+msgstr "🎨 Color"
+
+#: ../../../modules/color.md:3 783987bb37e54858b35b58c122ba9ec0
+msgid "**`#bs.color:help`**"
+msgstr "**`#bs.color:help`**"
+
+#: ../../../modules/color.md:5 747a7cdd9fc540cc97b72ead827a3a8a
+msgid "Facilitate color conversion between various formats."
+msgstr "实现各种格式之间的颜色转换。"
+
+#: ../../../modules/color.md:13 7c840e27567c40feba80372a2646745a
+msgid ""
+"\"Color helps to express light—not the physical phenomenon, but the only "
+"light that really exists, that in the artist's brain.\""
+msgstr ""
+"“色彩是光的表达——不是物理意义上的光，而是真正存在于艺术家脑海中的光。”"
+
+#: ../../../modules/color.md:14 254fe6379131429dbd9df21c490898ce
+msgid "Henri Matisse"
+msgstr "亨利·马蒂斯（Henri Matisse）"
+
+#: ../../../modules/color.md:18 5dd6e90f29b2452cb465aab519aa31e1
+msgid "Minecraft Color Format"
+msgstr "Minecraft 颜色格式"
+
+#: ../../../modules/color.md:21 2122808d73434e528857c73bf114fb5a
+msgid ""
+"The internal color format for Minecraft is decimal. This module "
+"facilitates the conversion between this integer (decimal) format and "
+"other commonly used formats."
+msgstr ""
+"Minecraft 的内部颜色格式是十进制。此模块实现了这种整数（十进制）格式与其他常用格式之间的转换。"
+
+#: ../../../modules/color.md:26 3a4c3fcf34ed4e90813088e606f3aca9
+msgid "🔧 Functions"
+msgstr "🔧 函数"
+
+#: ../../../modules/color.md:28 24ec1935c6034e5490913b525417032f
+msgid "You can find below all functions available in this module."
+msgstr "您可以在下方找到此模块中的所有可用函数。"
+
+#: ../../../modules/color.md:32 72bcb81c0b48438c923bf393aaa8fde6
+msgid "Convert to Hexadecimal"
+msgstr "转换为十六进制"
+
+#: ../../../modules/color.md 4639adfd77c649508d1a6a9162a1bc91
+msgid "RGB to Hexadecimal"
+msgstr "RGB转十六进制"
+
+#: ../../../modules/color.md:40 50c55b442334421bb8ca9edf7195589b
+msgid "Convert a color from RGB to hexadecimal."
+msgstr "将颜色从RGB转换为十六进制。"
+
+#: ../../../modules/color.md:42 ../../../modules/color.md:70
+#: ../../../modules/color.md:107 ../../../modules/color.md:137
+#: ../../../modules/color.md:176 ../../../modules/color.md:206
+#: 31a338fd0b6f4e3dbfea3de061713a75 4b712cb85aa0479e9a668f3989f8abb8
+#: 700ac262eb92478aae1ca4b4c0bda851 be0ea8393d9a4bd3b33b486695b025d2
+#: dd08b86a1e74430b941e0eaec383ea30 f3ae8224360541fca420f281ae155c44
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../../modules/color.md:43 ../../../modules/color.md:71
+#: ../../../modules/color.md:108 ../../../modules/color.md:138
+#: ../../../modules/color.md:177 ../../../modules/color.md:207
+#: 30b3eb50a6ff4ceab3396b37078ab76d 66f26bcdd201456687aad588560f98d5
+#: 6d5e85af895f4f399c8876fc2f6b9fce 9b96a473ebde412ca04fcd64d5c15250
+#: e1e1ddb768e34918808753f874e4b497 f53d5a43f62446489ff4e80e7b7b744c
+msgid "**Function macro**:"
+msgstr "**函数宏**："
+
+#: ../../../modules/color.md:49 ../../../modules/color.md:77
+#: ../../../modules/color.md:114 ../../../modules/color.md:144
+#: ../../../modules/color.md:183 ../../../modules/color.md:213
+#: 266fe9f565ef496691505219d67bdabc 468cfeba69ca41d49d150f1eac4ef994
+#: 9faa292bd5544e1a8aa33ebbcf2811f1 dd62d68bbc2643ddae5c68421149d0e4
+#: e776a9fd4297401e870df17e99d050b0 ecbf324f09c84ceda88780e20f9dd32c
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../../modules/color.md:50 16ac3e6902ca4d8abe8c4c5c2f8c6e9e
+#, python-brace-format
+msgid ""
+"**Storage `bs:out color.rgb_to_hex`**: {nbt}`string` Color as a "
+"hexadecimal string."
+msgstr ""
+"**命令存储 `bs:out color.rgb_to_hex`**：{nbt}`string` 十六进制字符串形式的颜色。"
+
+#: ../../../modules/color.md:53 ff628957cf964260b50927cae6dc1c35
+msgid "*Example: Convert an RGB color to hexadecimal:*"
+msgstr "*示例：将RGB颜色转换为十六进制：*"
+
+#: ../../../modules/color.md 1969c427068346cba39e84b776ffb2f5
+msgid "Integer to Hexadecimal"
+msgstr "整数转十六进制"
+
+#: ../../../modules/color.md:68 20d8097302c54e4aa2ce168cb063448f
+msgid "Convert a color from integer to hexadecimal."
+msgstr "将颜色从整数转换为十六进制。"
+
+#: ../../../modules/color.md:78 fae624a4b0d34b12a3b555dc5eca7174
+#, python-brace-format
+msgid ""
+"**Storage `bs:out color.int_to_hex`**: {nbt}`string` Color as a "
+"hexadecimal string."
+msgstr ""
+"**命令存储 `bs:out color.int_to_hex`**：{nbt}`string` 十六进制字符串形式的颜色。"
+
+#: ../../../modules/color.md:81 453c0a0daddc436a8c12c5a066d9e9f9
+msgid ""
+"*Example: Get the hexadecimal color of the nearest zombie's leather "
+"helmet:*"
+msgstr "*示例：获取最近的僵尸皮革头盔的十六进制颜色：*"
+
+#: ../../../modules/color.md:93 ../../../modules/color.md:162
+#: ../../../modules/color.md:231 51f1f83316584bf5989481a52ee88427
+#: 80a5fd79292c4e6096694d350e5e7462 c639697111eb42d68bb3d115ee3d2dd0
+msgid "**Credits**: Aksiome, theogiraudet"
+msgstr "**制作人员**：Aksiome、theogiraudet"
+
+#: ../../../modules/color.md:97 1fbac596ff744e16b360b96163e4fcf9
+msgid "Convert to Integer"
+msgstr "转换为整数"
+
+#: ../../../modules/color.md 40811397ea1041f9a79ec3dd6665cb3b
+msgid "Hexadecimal to Integer"
+msgstr "十六进制转整数"
+
+#: ../../../modules/color.md:105 b7da9a93c2174303bc170872c80133a8
+msgid "Convert a color from hexadecimal to integer."
+msgstr "将颜色从十六进制转换为整数。"
+
+#: ../../../modules/color.md:115 a14f4085e26241c6898df9af39485369
+msgid "**Return | Score `$color.hex_to_int bs.out`**: Color as an integer."
+msgstr "**返回值 | 分数 `$color.hex_to_int bs.out`**：整数形式的颜色。"
+
+#: ../../../modules/color.md:117 a5709296e6c64ca8bb24967ce954800d
+#, python-brace-format
+msgid "**Storage `bs:out color.hex_to_int`**: {nbt}`int` Color as an integer."
+msgstr "**命令存储 `bs:out color.hex_to_int`**：{nbt}`int` 整数形式的颜色。"
+
+#: ../../../modules/color.md:120 e22f0660ddb34974a71c19fe3e8153e7
+msgid ""
+"*Example: Change the color of the nearest zombie's leather helmet using "
+"the hexadecimal format:*"
+msgstr "*示例：使用十六进制格式更改最近的僵尸皮革头盔的颜色：*"
+
+#: ../../../modules/color.md 6f21bf73a01240989779cd5aa245ecde
+msgid "RGB to Integer"
+msgstr "RGB转整数"
+
+#: ../../../modules/color.md:135 bc5c6ede169d461ab8d49e3a5e95c96c
+msgid "Convert a color from RGB to integer."
+msgstr "将颜色从RGB转换为整数。"
+
+#: ../../../modules/color.md:145 b5a27880798b4c38b80e0bc60250dec0
+msgid "**Return | Score `$color.rgb_to_int bs.out`**: Color as an integer."
+msgstr "**返回值 | 分数 `$color.rgb_to_int bs.out`**：整数形式的颜色。"
+
+#: ../../../modules/color.md:147 f9e1afcb859c4ed49838d78f59e28cb9
+#, python-brace-format
+msgid "**Storage `bs:out color.rgb_to_int`**: {nbt}`int` Color as an integer."
+msgstr "**命令存储 `bs:out color.rgb_to_int`**：{nbt}`int` 整数形式的颜色。"
+
+#: ../../../modules/color.md:150 4b8d2f39a2dc47b8830a7318cd75c852
+msgid ""
+"*Example: Change the color of the nearest zombie's leather helmet using "
+"the RGB format:*"
+msgstr "*示例：使用RGB格式更改最近的僵尸皮革头盔的颜色：*"
+
+#: ../../../modules/color.md:166 4e95dccfa0f54b01a4b1f876f0147503
+msgid "Convert to RGB"
+msgstr "转换为RGB"
+
+#: ../../../modules/color.md 854123ff3e804d209f1a141d7e71d270
+msgid "Hexadecimal to RGB"
+msgstr "十六进制转RGB"
+
+#: ../../../modules/color.md:174 5aefae100bf746b7ad0b896a2af76269
+msgid "Convert a color from hexadecimal to RGB."
+msgstr "将颜色从十六进制转换为RGB。"
+
+#: ../../../modules/color.md:184 9255ac9e03b24866a675e9cb2f6fb21b
+#, python-brace-format
+msgid ""
+"**Storage `bs:out color.hex_to_rgb`**: {nbt}`list` Vector representing "
+"the RGB color."
+msgstr ""
+"**命令存储 `bs:out color.hex_to_rgb`**：{nbt}`list` 表示RGB颜色的向量。"
+
+#: ../../../modules/color.md:186 e0ee503abc184b8fa1bea41cfb902a33
+msgid ""
+"**Scores `$color.hex_to_rgb.[r,g,b] bs.out`**: Vector components "
+"representing the RGB color."
+msgstr ""
+"**分数 `$color.hex_to_rgb.[r,g,b] bs.out`**：表示RGB颜色的向量分量。"
+
+#: ../../../modules/color.md:189 393656c3f2b843d5aa0d9b37c80e70d5
+msgid "*Example: Convert a hexadecimal color to RGB:*"
+msgstr "*示例：将十六进制颜色转换为RGB：*"
+
+#: ../../../modules/color.md 26c8daa9983e412b8de6820dca8adefc
+msgid "Integer to RGB"
+msgstr "整数转RGB"
+
+#: ../../../modules/color.md:204 267f0d7bf0cc417eb92baa62f4e5b121
+msgid "Convert a color from integer to RGB."
+msgstr "将颜色从整数转换为RGB。"
+
+#: ../../../modules/color.md:214 34aa137da7114fa8abb1b4dedcbe7d60
+#, python-brace-format
+msgid ""
+"**Storage `bs:out color.int_to_rgb`**: {nbt}`list` Vector representing "
+"the RGB color."
+msgstr ""
+"**命令存储 `bs:out color.int_to_rgb`**：{nbt}`list` 表示RGB颜色的向量。"
+
+#: ../../../modules/color.md:216 5c75639655a74d46818988a0bcdbdca1
+msgid ""
+"**Scores `$color.int_to_rgb.[r,g,b] bs.out`**: Vector components "
+"representing the RGB color."
+msgstr ""
+"**分数 `$color.int_to_rgb.[r,g,b] bs.out`**：表示RGB颜色的向量分量。"
+
+#: ../../../modules/color.md:219 eb04f41e27b64ffa9ee5ba2f48354107
+msgid "*Example: Get the RGB color of the nearest zombie's leather helmet:*"
+msgstr "*示例：获取最近的僵尸皮革头盔的RGB颜色：*"
+
+#: ../../../_templates/comments.md:4 9787097d63394a7ab10b792b94f8f9d5
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对您有帮助吗？**"
+
+#: ../../../_templates/comments.md:6 b6a143b51bc34c249af9cb86af8c4681
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下您的问题和反馈！"

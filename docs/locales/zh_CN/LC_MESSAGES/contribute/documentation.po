@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/documentation.md:1 e95e23e747f94debab43a794afab1813
+msgid "📝 Documentation"
+msgstr ""
+
+#: ../../contribute/documentation.md:3 19e79747e4c349369001301ada56ddd0
+msgid ""
+"Bookshelf aims to simplify map making and make it accessible. We've "
+"worked hard to create a comprehensive documentation website and ask that "
+"every new feature be documented properly."
+msgstr ""
+
+#: ../../contribute/documentation.md:7 55715f3c87354bf9b7b629b4ae76e6d2
+msgid "✍️ Write the Documentation"
+msgstr ""
+
+#: ../../contribute/documentation.md:9 0ead5b7ae7f04587af4ba7e04765a46f
+msgid ""
+"The documentation is written in Markdown, extended with Myst Parser. You "
+"can view the [Myst Parser documentation here](https://myst-"
+"parser.readthedocs.io/en/latest/intro.html). To add or update "
+"documentation, simply follow the structure of existing pages and "
+"features. All images are stored in the `/docs/_imgs` folder."
+msgstr ""
+
+#: ../../contribute/documentation.md:13 279049c4316f422d8851f2384645b550
+msgid "🔨 Build the Documentation"
+msgstr ""
+
+#: ../../contribute/documentation.md:15 62c1c0c4bc594e4e98c28f095270e2d0
+msgid ""
+"To verify that your documentation changes work as expected, you can build"
+" and view it locally on your computer:"
+msgstr ""
+
+#: ../../contribute/documentation.md:17 12261dd4222f48889bfaa0ce22b1eb0b
+msgid "Open a terminal (or PowerShell if you are on Windows)"
+msgstr ""
+
+#: ../../contribute/documentation.md:18 6eb4a10a31fe44e28c7a1022d6ca9636
+msgid "Choose one of the following options to build and view the documentation:"
+msgstr ""
+
+#: ../../contribute/documentation.md:20 a9049ad4189d49cd84c7d99c7a5f51f3
+msgid "Option 1: Build Documentation"
+msgstr ""
+
+#: ../../contribute/documentation.md:26 620abfb18b4e46d780f2a7c4dbd956f1
+msgid ""
+"This command will generate the documentation, which you can find in the "
+"`/docs/_build` folder."
+msgstr ""
+
+#: ../../contribute/documentation.md:28 eebb6f2f6cb84033b65c7e83f47957c2
+msgid "Option 2: Build with Hot Reload"
+msgstr ""
+
+#: ../../contribute/documentation.md:34 c6ad64ef90a941f08ff6b5dc5511ad82
+msgid ""
+"This option will also generate the documentation but will allow you to "
+"view it in your browser at `http://127.0.0.1:8000` with hot reloading, so"
+" any changes you make will automatically update in the browser."
+msgstr ""
+

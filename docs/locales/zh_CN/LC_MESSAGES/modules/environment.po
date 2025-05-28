@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/environment.md:1 2453bf2385974e299cb980d7377d85f5
+msgid "⛰️ Environment"
+msgstr ""
+
+#: ../../modules/environment.md:3 247eee653e8d4251b62c29ebf49451d3
+msgid "**`#bs.environment:help`**"
+msgstr ""
+
+#: ../../modules/environment.md:5 24a2bbfa4cd149928201437f55776960
+msgid ""
+"Comprehensive information and tools related to weather and biome "
+"properties."
+msgstr ""
+
+#: ../../modules/environment.md:13 69d50fe256c044f8bd02af7b53ebceeb
+msgid ""
+"\"The most dangerous worldview is the worldview of those who have not "
+"viewed the world.\""
+msgstr ""
+
+#: ../../modules/environment.md:14 1944e0a9565244978b4b00e534319087
+msgid "Alexander von Humboldt"
+msgstr ""
+
+#: ../../modules/environment.md:20 ea377855436d4705aa046647158b47a8
+msgid "🔧 Functions"
+msgstr ""
+
+#: ../../modules/environment.md:22 9582dcbc01534fd7944c3394983945a9
+msgid "You can find below all functions available in this module."
+msgstr ""
+
+#: ../../modules/environment.md:26 c37d61b43fde4936879e54491532583d
+msgid "Get Biome"
+msgstr ""
+
+#: ../../modules/environment.md:30 0ffee720e3b346a588ec579f0b49d244
+msgid "Get biome data at the execution position of the function."
+msgstr ""
+
+#: ../../modules/environment.md:32 ../../modules/environment.md:63
+#: 000ee08856c347069ac266bb1147ac6f 1ea4ac2751d34f338f091e3c9abda741
+msgid "Inputs"
+msgstr ""
+
+#: ../../modules/environment.md:33 a4b28b78dd904c2ba164f92cc1d9cfbb
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from "
+"which you want to get biome data."
+msgstr ""
+
+#: ../../modules/environment.md:35 ../../modules/environment.md:72
+#: 35260f1f9b1a4ffaa06a0623dfb9f19d d107eca67eab40bf827eca448f6ef002
+msgid "Outputs"
+msgstr ""
+
+#: ../../modules/environment.md:36 8733e8f0ad824f8ba1947f3091be638f
+msgid "**Storage `bs:out environment.get_biome`**:"
+msgstr ""
+
+#: ../../modules/environment.md:45 27a4b79ac1044e76b7d4f67ce7792c1f
+msgid "*Example: Get biome data at the current location:*"
+msgstr ""
+
+#: ../../modules/environment.md:53 ../../modules/environment.md:99
+#: ../../modules/environment.md:109 ../../modules/environment.md:119
+#: 079f1edc1d1f424d9b9d734af0c9f827 ce7d9f5efed2436faeb16e0ee27fa9e9
+#: d6b4f83f186746c7b1a11d2d639d25c9 fc7a580ecff146079099859fc6dbc800
+msgid "**Credits**: Aksiome"
+msgstr ""
+
+#: ../../modules/environment.md:57 6c3a8bc750df4f4cb8bd1e98c45296c8
+msgid "Get Temperature"
+msgstr ""
+
+#: ../../modules/environment.md:61 05c363a388ef4f2c8a9ac98dcc7bd62d
+msgid ""
+"Get the temperature at the execution position of the function, taking the"
+" altitude into account."
+msgstr ""
+
+#: ../../modules/environment.md:64 0d0e8203fa9f480fa3f091e55c00e5ce
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from "
+"which you want to get the temperature."
+msgstr ""
+
+#: ../../modules/environment.md:66 7ce4168aad534cbf8d5bda3c6eecdfcf
+msgid "**Function macro**:"
+msgstr ""
+
+#: ../../modules/environment.md:73 3249c4af05104e119db9a02d72213d8e
+msgid ""
+"**Return | Score `$environment.get_temperature bs.out`**: Temperature at "
+"the given position."
+msgstr ""
+
+#: ../../modules/environment.md:76 e150a97444104eb1a70b4e324dc6a40f
+msgid "*Example: Get the temperature at the current altitude:*"
+msgstr ""
+
+#: ../../modules/environment.md:83 ../../modules/environment.md:129
+#: ../../modules/environment.md:139 1e525a3e5dc04e548603cf2122360050
+#: d7c941570b054309ad653d8dc9418790 dadfd7f169974382b66e3e41d65705bc
+msgid "**Credits**: Aksiome, theogiraudet"
+msgstr ""
+
+#: ../../modules/environment.md:87 f1e5b6cd0146409c89dd97253ce1edf7
+msgid "👁️ Predicates"
+msgstr ""
+
+#: ../../modules/environment.md:89 c6624381c5ca4e55936c427871b81b8b
+msgid "You can find below all predicates available in this module."
+msgstr ""
+
+#: ../../modules/environment.md:93 808a38c3d2c44e7e8efb8d740bf4b247
+msgid "Can It Rain?"
+msgstr ""
+
+#: ../../modules/environment.md:95 8c25cf3a69f14c4ea461588397d496d7
+msgid "**`bs.environment:can_rain`**"
+msgstr ""
+
+#: ../../modules/environment.md:97 10691be126e742d290b41a8cee93eb14
+msgid "Determine if it can rain or not."
+msgstr ""
+
+#: ../../modules/environment.md:103 19f2ba0f6cfd4907a26f8b953382003e
+msgid "Can It Snow?"
+msgstr ""
+
+#: ../../modules/environment.md:105 a1aa12e00f3c4af5a2233bb99e860e42
+msgid "**`bs.environment:can_snow`**"
+msgstr ""
+
+#: ../../modules/environment.md:107 571010afd42b445f95080c51e1d70906
+msgid "Determine if it can snow or not."
+msgstr ""
+
+#: ../../modules/environment.md:113 88860acf649d4fd0a12d93712d690164
+msgid "Can It Rain or Snow?"
+msgstr ""
+
+#: ../../modules/environment.md:115 6aa712c7e0db48569acc73e42084063e
+msgid "**`bs.environment:has_precipitation`**"
+msgstr ""
+
+#: ../../modules/environment.md:117 5c02542c526b4fdb8162083705b9d325
+msgid "Determine if the biome has precipitation or not."
+msgstr ""
+
+#: ../../modules/environment.md:123 862eb465a01e4b7cb306cc86635a76c5
+msgid "Is It Raining?"
+msgstr ""
+
+#: ../../modules/environment.md:125 bc18f49ccf024a6b9ad0fde416f39408
+msgid "**`bs.environment:is_raining`**"
+msgstr ""
+
+#: ../../modules/environment.md:127 ededb58d432842529c2e1e9c6ef7a25a
+msgid "Determine if it is currently raining or not."
+msgstr ""
+
+#: ../../modules/environment.md:133 ea50452fec304400a3387f46baca67c3
+msgid "Is It Thundering?"
+msgstr ""
+
+#: ../../modules/environment.md:135 3ef5f34bf4464f40a830b836067530e3
+msgid "**`bs.environment:is_thundering`**"
+msgstr ""
+
+#: ../../modules/environment.md:137 5c4a7f0bcfb945e8aae964ed2fc42110
+msgid "Determine if it is currently thundering or not."
+msgstr ""
+
+#: ../../_templates/comments.md:4 9e6a6d3426ab4973923f5306505d778a
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 2a2a70cc0e7d489a95215ca586d652b9
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+

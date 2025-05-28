@@ -1,0 +1,479 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/log.md:1 3a1493519b0d4baf849791d2e767c47d
+msgid "📄 Log"
+msgstr ""
+
+#: ../../modules/log.md:3 7e8fba1749484eefa01077a6df83ee8b
+msgid "**`#bs.log:help`**"
+msgstr ""
+
+#: ../../modules/log.md:5 34877bab1b104434aa67504ad0c3824a
+msgid "Log messages in the chat with varying levels of severity."
+msgstr ""
+
+#: ../../modules/log.md:7 cc57bcb2d8df4730a7a4405b1e01f0d8
+msgid "Enable Command Blocks"
+msgstr ""
+
+#: ../../modules/log.md:10 a44a105d40f349cc963a48f05662864f
+msgid ""
+"This module uses a command block to get the system time. For the time to "
+"be displayed as intended, be sure that `enable-command-block` is set to "
+"`true` in your `server.properties` file and that the "
+"`sendCommandFeedback` gamerule is enabled."
+msgstr ""
+
+#: ../../modules/log.md:15 d4b41b2c967845abaad7672a6337bf23
+msgid "🔧 Functions"
+msgstr ""
+
+#: ../../modules/log.md:17 b28ff4c388cd46dab58c885b85a24410
+msgid "You can find below all functions available in this module."
+msgstr ""
+
+#: ../../modules/log.md:21 2cf67afd724346bab02e23c148767872
+msgid "Log Messages"
+msgstr ""
+
+#: ../../modules/log.md 7b395f3c3295469eb12268d6af2eb888
+msgid "Error"
+msgstr ""
+
+#: ../../modules/log.md:29 e89ecc5aaaec4a95bf43ea83e8e0ee38
+msgid ""
+"Log an error message. For more information on how it works see the "
+"[usage](#usage) section. By default, it's printed as: [ERROR] <tag> > "
+"<message> and hovering over the left part of the log reveals the "
+"timestamp and log function path."
+msgstr ""
+
+#: ../../modules/log.md:31 ../../modules/log.md:55 ../../modules/log.md:79
+#: ../../modules/log.md:103 ../../modules/log.md:136 ../../modules/log.md:161
+#: 0772f36b8aa8485c95fe308ebff88c9e 4ff6c008a6a242d5b83b35da15c436db
+#: 7bb15776453d431a90dc7053f70e3c3d 88c0b6f6e0d44b2298c0c8c99b385d57
+#: acccd72fc6a24b4594cc912810661648 cdef7b0cfefa4f68b0b640a08eb3e69e
+msgid "Inputs"
+msgstr ""
+
+#: ../../modules/log.md:32 ../../modules/log.md:56 ../../modules/log.md:80
+#: ../../modules/log.md:104 ../../modules/log.md:137 ../../modules/log.md:162
+#: 4adb74dfc02d43e1aec5461ed37ede80 5069bc093cff4e6eb861faeba2fa1d06
+#: 659efd8e534a48be8f0ae961da2554e2 8d1f9d10731e486992b62b148a95d699
+#: c4b0db1c1621481ea8b2b91632f53267 ed4b5affd76142388369a4fc7f693514
+msgid "**Function macro**:"
+msgstr ""
+
+#: ../../modules/log.md:42 f2b0979245dd4ea09771188928f3be13
+msgid ""
+"*Example: Log an error message that originates from the `bs.foo:bar` "
+"function:*"
+msgstr ""
+
+#: ../../modules/log.md e61b030664604a28b41d1cdb011a1c8d
+msgid "Warning"
+msgstr ""
+
+#: ../../modules/log.md:53 5b7c822cf3da40ef898bc85cc801d739
+msgid ""
+"Log a warning message. For more information on how it works see the "
+"[usage](#usage) section. By default, it's printed as: [WARN] <tag> > "
+"<message> and hovering over the left part of the log reveals the "
+"timestamp and log function path."
+msgstr ""
+
+#: ../../modules/log.md:66 c0f029ea16a64b32b12fedfadd13d171
+msgid ""
+"*Example: Log a warning message that originates from the `bs.foo:bar` "
+"function:*"
+msgstr ""
+
+#: ../../modules/log.md fbbea5dc739e48639fed24a514389c4b
+msgid "Information"
+msgstr ""
+
+#: ../../modules/log.md:77 1564e053d25d41508bb63ac5adde0ca7
+msgid ""
+"Log an information message. For more information on how it works see the "
+"[usage](#usage) section. By default, it's printed as: [INFO] <tag> > "
+"<message> and hovering over the left part of the log reveals the "
+"timestamp and log function path."
+msgstr ""
+
+#: ../../modules/log.md:90 6969ff08ed534588a119923f737ef624
+msgid ""
+"*Example: Log an info message that originates from the `bs.foo:bar` "
+"function:*"
+msgstr ""
+
+#: ../../modules/log.md 0156a5129ede4a7daec1e6959288065e
+msgid "Debug"
+msgstr ""
+
+#: ../../modules/log.md:101 d3fc69c346ec436f9ec912e69cc4201e
+msgid ""
+"Log a debug message. For more information on how it works see the "
+"[usage](#usage) section. By default, it's printed as: [DEBUG] <tag> > "
+"<message> and hovering over the left part of the log reveals the "
+"timestamp and log function path."
+msgstr ""
+
+#: ../../modules/log.md:114 1d20407433744e1fa6802e2fb91b61ef
+msgid ""
+"*Example: Log a debug message that originates from the `bs.foo:bar` "
+"function:*"
+msgstr ""
+
+#: ../../modules/log.md:122 ef9ddcf8e68d40fca5d482b0cec810a1
+msgid "**Credits**: theogiraudet"
+msgstr ""
+
+#: ../../modules/log.md:126 b5f98d070ef94784831c65aed93f516b
+msgid "Log History"
+msgstr ""
+
+#: ../../modules/log.md ec966b6678bf4aff853db7367873139c
+msgid "View History"
+msgstr ""
+
+#: ../../modules/log.md:134 fa317aa6b4f64ad2aece48b4ef63f45d
+msgid "Retrieve the log history. It shows all the previously logged messages."
+msgstr ""
+
+#: ../../modules/log.md:147 f802a06c91aa4dd583ec1669f776ae01
+msgid ""
+"*Example: View the log history for a specific namespace, tag, and "
+"severity level:*"
+msgstr ""
+
+#: ../../modules/log.md 64b5b0807710410b97e71b35a4886b14
+msgid "Clear History"
+msgstr ""
+
+#: ../../modules/log.md:159 49c2b0101e174273ac4f218c72d8173a
+msgid "Clear the log history."
+msgstr ""
+
+#: ../../modules/log.md:172 fc5fdd3ef8614c0ca971e2ed06d37eed
+msgid ""
+"*Example: Clear the log history for a specific namespace, tag, and "
+"severity level:*"
+msgstr ""
+
+#: ../../modules/log.md:181 bdd7c60e87f04686bb66438b055c1dd6
+msgid "**Credits**: Aksiome"
+msgstr ""
+
+#: ../../modules/log.md:186 45880100040c49d289803ced982697ce
+msgid "🎓 How to Use?"
+msgstr ""
+
+#: ../../modules/log.md:188 b1f6ef321f304d518ef5035015e263d1
+msgid "Different log levels are available for various types of logs:"
+msgstr ""
+
+#: ../../modules/log.md:189 cac58f0a4a76493e8995df2349f77a0f
+msgid "**Debug**: Detailed debug information."
+msgstr ""
+
+#: ../../modules/log.md:190 0d01bc8147c247e59468ea1011c6c782
+msgid "**Information**: Interesting / significant events."
+msgstr ""
+
+#: ../../modules/log.md:191 8f00e311e7e841f9bce941803820e6b5
+msgid "**Warning**: Exceptional occurrences that are not errors."
+msgstr ""
+
+#: ../../modules/log.md:192 9f26ab22cf924c7d96a204c412ad04c6
+msgid "**Error**: Runtime errors that should be monitored and fixed."
+msgstr ""
+
+#: ../../modules/log.md:196 7db72b6be0fb4e7c89cb81bdbb4464de
+msgid "Manage Granularity"
+msgstr ""
+
+#: ../../modules/log.md:198 c94522dbf0bb4a8ea90331dd1198cfed
+msgid ""
+"A significant number of logs can quickly flood the chat. To prevent this,"
+" Bookshelf's log module can be configured to display specific logs based "
+"on two parameters: the **log level**, the **tag** and the **namespace**."
+msgstr ""
+
+#: ../../modules/log.md:200 ed9a0642597040cd88b190b5af612282
+msgid ""
+"Users need to give themselves tags that follow a strict syntax: "
+"`<namespace>.log.<tag>.<level>`, where the level can be `debug`, `info`, "
+"`warn`, or `error`."
+msgstr ""
+
+#: ../../modules/log.md:202 fd1aaac1a2d04194bb9b9f3584a15029
+msgid "The `_` symbol acts as a wildcard, logging all tags or all levels:"
+msgstr ""
+
+#: ../../modules/log.md:203 8612e3a6f44a4dd4a74c88c1730cc6dc
+msgid "`bs.foo.log._.<level>`: show all logs of `bs.foo` regardless of the tag."
+msgstr ""
+
+#: ../../modules/log.md:204 ab138342337f495da46ead20dcbec596
+msgid "`bs.foo.log.<tag>._`: show all logs of `bs.foo` regardless of the level."
+msgstr ""
+
+#: ../../modules/log.md:205 cf500dfcfc3f4d728ca5684c37e18aca
+msgid "`bs.foo.log._._`: show all logs of `bs.foo`."
+msgstr ""
+
+#: ../../modules/log.md:206 b5bbcb588a164a6b882067ad90a77463
+msgid "`_.log._._`: show all logs."
+msgstr ""
+
+#: ../../modules/log.md:209 6428eece2d6c473a8d235bf64dbf1029
+msgid ""
+"Each level allows the visualization of subsequent levels. For example, if"
+" a user gives themselves a tag ending with warn, they can visualize logs "
+"of warn and error levels. By default, logs are not displayed to any user."
+msgstr ""
+
+#: ../../modules/log.md:214 548ea149e106403ea9dc0daaf6c1e8e0
+msgid "Define the Message"
+msgstr ""
+
+#: ../../modules/log.md:216 0e0ce396f4014267b05539507c8282ce
+msgid ""
+"Log functions take four variables as input. The `path` of the current "
+"function that inform users of the log origin, the `tag`, the `namespace` "
+"and the `message`."
+msgstr ""
+
+#: ../../modules/log.md:219 f660860d8acc4c80a55f894cc3940573
+msgid ""
+"The `message` string must be a valid SNBT text component. Thus, to "
+"specify a plain string text as a message, the message needs to be escaped"
+"  (`\"\\\"message\\\"\"` or `'\"message\"'`)."
+msgstr ""
+
+#: ../../modules/log.md:222 d135216c9d6145288ae2a16b592d1878
+msgid ""
+"*Example: Log a simple warning message. We assume the log originates from"
+" the `bs.foo:bar` function:*"
+msgstr ""
+
+#: ../../modules/log.md:228 e1b824373a594dfcac5293ef08e2ee0c
+msgid ""
+"Will display the following message if the user has one of these tags: "
+"`bs.foo.log.bar.warn`, `bs.foo.log.bar.info`, `bs.foo.log.bar.debug`, "
+"`bs.foo.log._.warn`, `bs.foo.log._.info`, `bs.foo.log._.debug`, "
+"`bs.foo.log._._`, `bs.foo.log.bar._`, `_.log.bar.warn`, `_.log.bar.info`,"
+" `_.log.bar.debug`, `_.log._.warn`, `_.log._.info`, `_.log._.debug`, "
+"`_.log._._`, `_.log.bar._`."
+msgstr ""
+
+#: ../../modules/log.md:230 af90d2a6e3994d8fb725b8d4d5c6cfe7
+msgid "![](/_imgs/modules/log/example-1.png)"
+msgstr ""
+
+#: ../../modules/log.md:232 ae58191006454e3496fac15c49f52915
+msgid ""
+"*Example: Log a complex info message. We assume the log originates from "
+"the `bs.foo:baz` function:*"
+msgstr ""
+
+#: ../../modules/log.md:238 dde40da7359c47819f20ce03900ffa75
+msgid ""
+"Will display the following message if the user has one of these tags: "
+"`bs.foo.log.baz.info`, `bs.foo.log.baz.debug`, `bs.foo.log._.info`, "
+"`bs.foo.log._.debug`, `bs.foo.log.baz._`, `_.log.baz.info`, "
+"`_.log.baz.debug`, `_.log._.info`, `_.log._.debug`, `_.log.baz._`."
+msgstr ""
+
+#: ../../modules/log.md:240 cf2863090dc846a88ff71fa9edfd52a4
+msgid "![](/_imgs/modules/log/example-2.png)"
+msgstr ""
+
+#: ../../modules/log.md:242 67c08b593bad410d87db5ff4a0d54624
+msgid "Customize the Format"
+msgstr ""
+
+#: ../../modules/log.md:244 e02130045c74416494defcfa2917a877
+msgid ""
+"Bookshelf proposes to define different log message formats according to "
+"the namespace. To add new log message formats, you have to write directly"
+" inside the storage array `bs:const log.messages`:"
+msgstr ""
+
+#: ../../modules/log.md:260 869432e8b64f480a9c40ef201fcdf35e
+msgid ""
+"The `namespaces` array stores all the namespaces sharing the same log "
+"message formats. The four formats (`error`, `warn`, `info` and `debug`) "
+"describe the log format for the respecting severity level. The value of "
+"each must be a full SNBT text component."
+msgstr ""
+
+#: ../../modules/log.md:264 6f43a8cd389e4eeca24aa74cf114348a
+msgid ""
+"Bookshelf exposes several values that can be used directly in the log "
+"messages format:"
+msgstr ""
+
+#: ../../modules/log.md:247 3cf4183e776e489a8d3a946d47801313
+msgid "storage"
+msgstr ""
+
+#: ../../modules/log.md:247 cada4a9df93f418aa803b366d75eae10
+msgid "path"
+msgstr ""
+
+#: ../../modules/log.md:247 4d1a7fed83384007832eec81c66f24b8
+msgid "description"
+msgstr ""
+
+#: ../../modules/log.md:247 01de977adec9469f80de67ccf0a0a98f
+#: 0863f1c688cb420f9449f0095583600d 18e029909ab448dfb06cf43d13242175
+#: 3a764f7e6a944aa0b3d2c964127c3222 74dda176a39a4342b9a71cfba1306918
+#: a5cd5335fce449e28cc1faa571b07ccc ac7aaf4d428f43e68daaf15e98ee1602
+#: d0f32ce37c4845ff9c75f40b028fe883 e42bc651bbf043c0bfbdd889d0a72388
+#: fe5513aee0814eb488e3444d6b8b95a1
+#, python-brace-format
+msgid "{nbt}`string`"
+msgstr ""
+
+#: ../../modules/log.md:247 357c86cd639c40f39e2d39cd98e40e04
+#: 5b345e5ea5554223af6d6fc9118124a1 a5c4727ee5b240a484beed87257fdbbb
+#: b402884fef6d47e8b4793dd8966b0080 b5178caa77a147f29aab026b531a2185
+#: e1136e6415944411999d5b42215c94ea eae2cb92334a4092a2def8e5c8da099d
+#: faa9428083e4450888e6a047ca67e8a9 fbcb1c6266584af1bdb9dac36499e622
+msgid "bs:in"
+msgstr ""
+
+#: ../../modules/log.md:247 31bc0ca342aa499e89a6c49ce7509c12
+msgid "log.message"
+msgstr ""
+
+#: ../../modules/log.md:247 f9124352fc34411b8d0e53c97262a5cc
+msgid "The message of the log (must be a valid SNBT text component)"
+msgstr ""
+
+#: ../../modules/log.md:247 65f8440e4bb84279aaf2e66d02ae332a
+msgid "log.namespace"
+msgstr ""
+
+#: ../../modules/log.md:247 e3093dfb157748cc9abed243baf50c42
+msgid "The namespace of the current log message"
+msgstr ""
+
+#: ../../modules/log.md:247 7044187dc1494128af1c331a7978a126
+msgid "log.path"
+msgstr ""
+
+#: ../../modules/log.md:247 9773e2bf4b8148698261bd2ab54b49f5
+msgid "The path of the function that logs the current message"
+msgstr ""
+
+#: ../../modules/log.md:247 3a251dbdb28b42b4ba1358cb271f379c
+msgid "log.tag"
+msgstr ""
+
+#: ../../modules/log.md:247 8d8d3cf275874d5290a91603e90126c6
+msgid "The tag of the log message"
+msgstr ""
+
+#: ../../modules/log.md:247 46b2cbb5ddba40dd8bd8c64aaec7ff76
+msgid "log.hours"
+msgstr ""
+
+#: ../../modules/log.md:247 701c1dcd106643509fb0167c85bc0212
+msgid "The hours of the log message timestamp"
+msgstr ""
+
+#: ../../modules/log.md:247 abe31f47c85d426cb20cecb0f7ce97cc
+msgid "log.minutes"
+msgstr ""
+
+#: ../../modules/log.md:247 050ea5d83bd64faa9e7e39eaa59cc92e
+msgid "The minutes of the log message timestamp"
+msgstr ""
+
+#: ../../modules/log.md:247 67abc4270a644a21b120b47ecf043fe7
+msgid "log.seconds"
+msgstr ""
+
+#: ../../modules/log.md:247 5c5fc77e5e2142a0b9feadfbf5043bd5
+msgid "The seconds of the log message timestamp"
+msgstr ""
+
+#: ../../modules/log.md:247 160afc42ad8c4912a18570923cea6bf5
+msgid "log.ticks"
+msgstr ""
+
+#: ../../modules/log.md:247 fd6849b68c99457792a10e6341b24439
+msgid "The ticks of the log message timestamp"
+msgstr ""
+
+#: ../../modules/log.md:247 0ee4419c751b4ef59a46a255f89be064
+#, python-brace-format
+msgid "{nbt}`int`"
+msgstr ""
+
+#: ../../modules/log.md:247 e567e76d60144da68698ae1f4158be94
+msgid "log.gametime"
+msgstr ""
+
+#: ../../modules/log.md:247 aa22bd8f555d4099ba24a81c69f8416a
+msgid "The gametime where the message was logged"
+msgstr ""
+
+#: ../../modules/log.md:247 514e45b9332d491693509a905850c2a7
+#: 81ff27d80ab54d52a242d07288f4cdbd
+msgid "bs:const"
+msgstr ""
+
+#: ../../modules/log.md:247 ababa03181544238a3732ece765d51aa
+msgid "log.time_hms"
+msgstr ""
+
+#: ../../modules/log.md:247 4e74c2ba6b0c4d22967b1dd80eb18d4b
+msgid "A SNBT text component to display time in the in hh:mm:ss format"
+msgstr ""
+
+#: ../../modules/log.md:247 58717bd6b7f04f91b4f89191d0b62648
+msgid "log.time_hmst"
+msgstr ""
+
+#: ../../modules/log.md:247 b431523edf414c98ab3e0dd737e7d2e9
+msgid "A SNBT text component to display time in the in hh:mm:ss:tt format"
+msgstr ""
+
+#: ../../modules/log.md:280 de0d91e96b1f4ced9f7947900bf12ea3
+msgid "*Example: Define custom log message formats for the namespace `bs.foo`:*"
+msgstr ""
+
+#: ../../modules/log.md:295 15223f3da0e3400598c2663daf7c6b83
+msgid "And to try the new format:"
+msgstr ""
+
+#: ../../_templates/comments.md:4 9fbc1505536b40109f8ecf50fb003174
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 4c276fca267b4b58906080a1f7b2f941
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+

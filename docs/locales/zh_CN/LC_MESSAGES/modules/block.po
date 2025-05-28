@@ -1,0 +1,742 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/block.md:1 8dcf8dfb16bf438b8733dc485dff0e40
+msgid "🧱 Block"
+msgstr ""
+
+#: ../../modules/block.md:3 dc3970fe7d114d7f804fedb8854a5a47
+msgid "**`#bs.block:help`**"
+msgstr ""
+
+#: ../../modules/block.md:5 fe5248367462451ea75f6daed0318e76
+msgid ""
+"Manage blocks, including states and NBTs, while offering advanced tools "
+"for seamless transformations."
+msgstr ""
+
+#: ../../modules/block.md:8 b288a6180be5421898963a2c1c4c3a01
+msgid "\"Architecture is the thoughtful making of space.\""
+msgstr ""
+
+#: ../../modules/block.md:9 058fff98158341f78a361659baf6f05a
+msgid "Louis Kahn"
+msgstr ""
+
+#: ../../modules/block.md:13 74eaeffacfb7403c900b522f6fa4e0bc
+msgid "Virtual Block Format"
+msgstr ""
+
+#: ../../modules/block.md:16 6f430486835e42feacee96d4ee002900
+msgid ""
+"To manipulate blocks and their states, Bookshelf utilizes a [virtual "
+"block format](#get) stored in the block output. It's crucial not to "
+"update the virtual block format manually; instead, utilize the helper "
+"functions provided in the library."
+msgstr ""
+
+#: ../../modules/block.md:21 8759e6e813104a0594bc74993c2c4c06
+msgid "🔧 Functions"
+msgstr ""
+
+#: ../../modules/block.md:23 928a6491096647318e0ed7d5c70ea550
+msgid "You can find below all functions available in this module."
+msgstr ""
+
+#: ../../modules/block.md:27 ddc52ab4aeae4588a3872bfe8aa7d690
+msgid "Fill"
+msgstr ""
+
+#: ../../modules/block.md 93930dbee54a468ca3e6b09414cbe604
+#: f147e9194675492bb28d0ae25c67ee36 f35c734d8d7c437cb26b7c8bffdd20b0
+msgid "Block"
+msgstr ""
+
+#: ../../modules/block.md:35 363559302ea94fd4b85169a287d26f47
+msgid "Fill all or part of a region with a specific block."
+msgstr ""
+
+#: ../../modules/block.md:37 ../../modules/block.md:86
+#: ../../modules/block.md:125 ../../modules/block.md:176
+#: ../../modules/block.md:216 ../../modules/block.md:268
+#: ../../modules/block.md:303 ../../modules/block.md:340
+#: ../../modules/block.md:375 ../../modules/block.md:411
+#: ../../modules/block.md:456 ../../modules/block.md:507
+#: ../../modules/block.md:567 ../../modules/block.md:603
+#: ../../modules/block.md:635 ../../modules/block.md:668
+#: ../../modules/block.md:704 ../../modules/block.md:735
+#: ../../modules/block.md:775 ../../modules/block.md:810
+#: ../../modules/block.md:845 ../../modules/block.md:880
+#: ../../modules/block.md:920 087efe69b9c64f428f8c7086bdbbd395
+#: 109b345b698e483d8fa66b464f617db7 128418a643954b028e3ff1ad77f15de7
+#: 22e44b7b479d4e67acba5b00d661fbf7 2d830f1eb83f4323b04dcc6e1ef025ac
+#: 3f170d61dd934feda3dc7759be7f98ec 51c3536debe44b55a1ecb9940e159b04
+#: 559bb2a64929490fa521b000746e7b84 5eac529f73b74e379fb83a497f10b731
+#: 6410f2105084431489842677daf74c66 6cbed524c4454b028f3094e615fd7769
+#: 7c1f6c58565649c2ad72b940b1ef2005 846078e52aec4b059028a0da59c9d874
+#: 8955ca6898384f77a87d9164b9ae1d81 9703323b763c44ca86fe308f3eda6de7
+#: 9d96e1f3514748ff84d57e0103233c00 a241a11aeb5a46fcaacf5b5bbcd328be
+#: a97a895dbf4945e49a158348e3adccb3 aefd6d1e470741b1862b8c344b83a5d0
+#: c79c25c14b26459ca4f09732f709506d d8f66fc0fea74176a4c48bff5a72edc8
+#: e485cafa160d4b899533438a5651e2b7 fc1e44959b7c417094f8f70776a7ff6f
+msgid "Inputs"
+msgstr ""
+
+#: ../../modules/block.md:38 e7b455a633c74063840810b318fd0bbb
+msgid "**Storage `bs:in block.fill_block`**:"
+msgstr ""
+
+#: ../../modules/block.md:56 ../../modules/block.md:105
+#: ../../modules/block.md:147 ../../modules/block.md:179
+#: ../../modules/block.md:219 ../../modules/block.md:279
+#: ../../modules/block.md:316 ../../modules/block.md:351
+#: ../../modules/block.md:387 ../../modules/block.md:423
+#: ../../modules/block.md:465 ../../modules/block.md:517
+#: ../../modules/block.md:577 ../../modules/block.md:610
+#: ../../modules/block.md:642 ../../modules/block.md:673
+#: ../../modules/block.md:714 ../../modules/block.md:745
+#: ../../modules/block.md:786 ../../modules/block.md:821
+#: ../../modules/block.md:856 ../../modules/block.md:895
+#: ../../modules/block.md:935 045734e1c2834467928365dc7a95b966
+#: 314b2a65d67a46749edca6f57c364735 353bcc8d82fd427bb6f0fa1d21e0f6b0
+#: 4276b39770e74d2a8a4480a7950fd5b4 58de1ce5deb2414fa18ffcfccf9301f9
+#: 5a67341134d34d5eb02d987a549b551f 5ddec1a919794548ba4e8d054121c84a
+#: 668adafc13a84ad2878ed875b66af577 694c4da2d9ae41299a39cbe7cd3d6fd7
+#: 6fdbabf4f62540c99127b6efba686769 70c75ff58c104d8d9478f521f218be77
+#: 72a405577d6747a58dfe0c949aa4def1 7fddb47b41c747d7885e65aa87061d1a
+#: 8e098a475b0a4c90a15f4a1f71572f61 9c584dfd229142a5b96362efa61f84a8
+#: 9e899ea3f81543fbbfd20a983cee0d8f b49b86309ce64a208d35405016462d0b
+#: becdee8bcbb94f2490f585cd918e463d cb4ec848f5404a07891359cfacb30107
+#: d890b781910c45daadb4f33428d90a8f ddf6f9ede4d942e18b80fc9f4118ae4f
+#: e437f1110c4f47589aa0bbbd389b5e13 e9cb8abd0edb4013aa94c70150aa7628
+msgid "Outputs"
+msgstr ""
+
+#: ../../modules/block.md:57 ../../modules/block.md:106
+#: ../../modules/block.md:148 245a6c8f7e89409f806f2de7243f45d6
+#: ad0728945c4d42968dadaa49c015965d fb7873ddd1484292b8132cbc15bb60dd
+msgid "**State**: Blocks are placed in the world."
+msgstr ""
+
+#: ../../modules/block.md:60 9267a7e3c5544bb8aad7f093ab7af927
+msgid ""
+"*Example: Replace the top layer of dirt by grass and use a say command "
+"when finished:*"
+msgstr ""
+
+#: ../../modules/block.md:70 c706898f45594d948636bdd4be04d4d1
+msgid "*Example: Fill an area with stone a few blocks at a time:*"
+msgstr ""
+
+#: ../../modules/block.md 3b7e850181664bdcb6baa296f67d362c
+#: 5ffb866a282f4a54a4742b3eb75c2ed6 eb9680c18cf7434cb3fc5223e58a007a
+msgid "Type"
+msgstr ""
+
+#: ../../modules/block.md:84 c5ce5683f0c64a81b20762e2ab87cb04
+msgid ""
+"Fill all or part of a region with a specific block type, preserving "
+"states and NBTs."
+msgstr ""
+
+#: ../../modules/block.md:87 c2cfacce899149d9bf7e6fc1716a750d
+msgid "**Storage `bs:in block.fill_type`**:"
+msgstr ""
+
+#: ../../modules/block.md:109 0daf628ab3144200a3409db4226b695d
+msgid ""
+"*Example: Replace oak stairs with spruce stairs while preserving states "
+"and use a say command when finished:*"
+msgstr ""
+
+#: ../../modules/block.md c48345366c0044efa53edd89dcbb4dce
+msgid "Random"
+msgstr ""
+
+#: ../../modules/block.md:123 899d9d54a5bf4936ac542457fda2f48f
+msgid "Fill all or part of a region with random blocks or types."
+msgstr ""
+
+#: ../../modules/block.md:126 a3cfb404c16b4b55911d56de511ec2f7
+msgid "**Storage `bs:in block.fill_random`**:"
+msgstr ""
+
+#: ../../modules/block.md:151 59b509722f374629b643ad702b873e26
+msgid ""
+"*Example: Randomly fill an area with stone or air and use a say command "
+"when finished:*"
+msgstr ""
+
+#: ../../modules/block.md:162 ../../modules/block.md:442
+#: ../../modules/block.md:658 2af04ac187654727822db29f207785db
+#: 53052018736742bb8a48f9fb33045a70 6f1ec69e1aa3410697d156085850d241
+msgid "**Credits**: Aksiome"
+msgstr ""
+
+#: ../../modules/block.md:166 6d89e76b4e4e42c994399c618c76139d
+msgid "Get"
+msgstr ""
+
+#: ../../modules/block.md:174 4ec2da4c641645868f0c05f116989b81
+msgid ""
+"Get all data related to the block at the current location, including its "
+"state and NBTs."
+msgstr ""
+
+#: ../../modules/block.md:177 ../../modules/block.md:217
+#: bf9e072a38be4174b3b34f4e5692afeb f4cdf611a3e54b318138928e2f9f8b81
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to get "
+"block data from."
+msgstr ""
+
+#: ../../modules/block.md:180 ../../modules/block.md:220
+#: 858d70f174bc4c6c8f01a0c2d79102e7 ff551b9d22b749448ba2b330f21a3153
+msgid "**Storage `bs:out block`**:"
+msgstr ""
+
+#: ../../modules/block.md:199 ec3b88b8790d48f39037bf219063f4f2
+msgid "*Example: Get all data related to a block:*"
+msgstr ""
+
+#: ../../modules/block.md:214 dd106216bea94c828a0af62636fb8f5e
+msgid ""
+"Get the block type at the current location. Although states, NBTs, and "
+"properties will be empty, state transformation functions are still "
+"available."
+msgstr ""
+
+#: ../../modules/block.md:236 fd72689cef4745719191106472e56f3a
+msgid ""
+"*Example: Get only type data related to a block (no property value is "
+"selected):*"
+msgstr ""
+
+#: ../../modules/block.md:248 e52c60435bf648ca972035ecc524a0ac
+msgid "Read-only Output"
+msgstr ""
+
+#: ../../modules/block.md:251 631cf642ba8e4b84921c68189e6c8a72
+msgid ""
+"The `bs:out block` output is intended to be read-only. Modifying parts "
+"manually could lead to potential bugs. That's why the module provides "
+"numerous functions capable of making modifications to the output while "
+"preserving its integrity."
+msgstr ""
+
+#: ../../modules/block.md:254 ../../modules/block.md:690
+#: ../../modules/block.md:761 ../../modules/block.md:955
+#: 1a2d8a2db9e04b7f910befa8a6407693 8ec85034e3c24017b822cf643a721db8
+#: b897e800e3764a4e8c1074fb1caf9781 ff68237b2df047e8a5687f1eb8a07bdd
+msgid "**Credits**: Aksiome, theogiraudet"
+msgstr ""
+
+#: ../../modules/block.md:258 72a0e2e5ebf343dfa210772ccb0bf6b9
+msgid "Manage State"
+msgstr ""
+
+#: ../../modules/block.md a1acae17bbb24bd3b3efc89a59fe5352
+msgid "Keep"
+msgstr ""
+
+#: ../../modules/block.md:266 398fb4c6f71e4b99aeb0e6a37860cc7b
+msgid ""
+"Filter properties to keep only the desired ones. This function acts on "
+"the [virtual block format](#get) stored in the block output."
+msgstr ""
+
+#: ../../modules/block.md:269 ../../modules/block.md:306
+#: ../../modules/block.md:341 ../../modules/block.md:376
+#: ../../modules/block.md:412 ../../modules/block.md:457
+#: ../../modules/block.md:508 ../../modules/block.md:568
+#: ../../modules/block.md:604 ../../modules/block.md:636
+#: 06a9713b2b12457eab2f166fbd0e7a69 174ecfdd146048f9965ba07810b6ad41
+#: 40cbcf9512d54df19c95c1024133685b 4130d14bd50b4dd2aa3faa45e9faa72f
+#: 7341290eb6324603b9106b0220224b0c 92d111e288904a90b2a534e8d11d1ef4
+#: aa20c50a499a40698e27db374ecddf6f aa6dc4c1bec74130802a7381df43b89d
+#: ae2fbca397da4abeab4424d1c8d79df9 fb05074781eb4722b46e5fe4a04df102
+msgid "**Function macro**:"
+msgstr ""
+
+#: ../../modules/block.md:277 ../../modules/block.md:314
+#: ../../modules/block.md:349 ../../modules/block.md:385
+#: ../../modules/block.md:421 ../../modules/block.md:463
+#: ../../modules/block.md:515 ../../modules/block.md:575
+#: 0550f1efc1c041308ba29a8ddf17bd98 1653e6ad2d774708a0411b713c0137a0
+#: 2d69e7aba61247428901182267ce60f6 307417bfad1e4ca7a877f6b25ab4fbde
+#: 3f57bbaa261a43248bd9a99bc4e5423d 99fd267376974bf9872fe4d9b4853494
+#: cec91a8e3dfd4d71b9917eb793b9163d ea2f816ddd974643a1271c269cf807d5
+#, python-brace-format
+msgid ""
+"**Storage `bs:out block`**: {nbt}`compound` There's no need for manual "
+"specification; rather, employ the relevant functions, such as "
+"[`get_block`](#get)."
+msgstr ""
+
+#: ../../modules/block.md:280 ../../modules/block.md:317
+#: ../../modules/block.md:352 ../../modules/block.md:388
+#: ../../modules/block.md:424 ../../modules/block.md:468
+#: ../../modules/block.md:520 ../../modules/block.md:580
+#: 3f4961f7d634415bb955bba29bc4d718 467233d559fb4f87985df71e7783fc29
+#: 76cf9ecf7f8049c2b1e501ed77024e8b 7a1bc490013e4ae58a1e14e68fbdcae6
+#: af992f17d1db40b49f18bd0523cba350 cc3d38addddf4fcf94a563f44e01d87e
+#: da82ac5b879c41c8b60f627f62371ff1 e3b31ec74c964613b92fb29c24cc2117
+#, python-brace-format
+msgid ""
+"**Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and "
+"`properties` are updated to reflect this change."
+msgstr ""
+
+#: ../../modules/block.md:283 57c0afc92f32411196273d0382aadd6b
+msgid "*Example: Keep only the facing and shape properties:*"
+msgstr ""
+
+#: ../../modules/block.md 64c13702af0a427fa45edd8497faa2e3
+msgid "Merge"
+msgstr ""
+
+#: ../../modules/block.md:301 2af25513fc8440c898a89a08e0090d68
+msgid ""
+"Merge state properties from the current location into the output. The "
+"merge occurs if the syntax is correct, regardless of logical coherence "
+"(e.g., using 'age' for different plants). This function acts on the "
+"[virtual block format](#get) stored in the block output."
+msgstr ""
+
+#: ../../modules/block.md:304 71ed1173430a479cb3cc0c747e3ff11f
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Location of the "
+"block that act as input."
+msgstr ""
+
+#: ../../modules/block.md:320 595776bce63c4b16ab9c5011462106b1
+msgid "*Example: Merge the facing of a block onto stairs:*"
+msgstr ""
+
+#: ../../modules/block.md 5961e30b337841e48873c2c334c0459a
+msgid "Remove"
+msgstr ""
+
+#: ../../modules/block.md:338 aa49de47590445228ddf34bd6c701c80
+msgid ""
+"Filter properties by removing the undesired ones. This function acts on "
+"the [virtual block format](#get) stored in the block output."
+msgstr ""
+
+#: ../../modules/block.md:355 a8999a94648841238c1f7029ddd59005
+msgid "*Example: Remove the facing and shape properties:*"
+msgstr ""
+
+#: ../../modules/block.md 6cd0b33c18714564aa27391f69a212ef
+#: 8fa5e8f5ed174517a9f0d4fc4a5bfe69
+msgid "Replace"
+msgstr ""
+
+#: ../../modules/block.md:373 f3ea6bd068834775aca04710045bd656
+msgid ""
+"Replace property values. Invalid values will not be replaced. This "
+"function acts on the [virtual block format](#get) stored in the block "
+"output."
+msgstr ""
+
+#: ../../modules/block.md:391 f3975c1b7c5a477584b23ef64dd6f9f7
+msgid "*Example: Replace the facing property value:*"
+msgstr ""
+
+#: ../../modules/block.md 07b89f3fc0e84633b7fe050d429998b4
+msgid "Shift"
+msgstr ""
+
+#: ../../modules/block.md:409 771624feaa0b4cc9a2eb2eaa0905dd80
+msgid ""
+"Shift properties by any amount, allowing cycling through their values. "
+"This function acts on the [virtual block format](#get) stored in the "
+"block output."
+msgstr ""
+
+#: ../../modules/block.md:427 9d42c45228574532886d9fe3af733645
+msgid "*Example: Shift the facing property value by 2:*"
+msgstr ""
+
+#: ../../modules/block.md:446 3008c7cde3f249c88f92451f60cb4fd8
+msgid "Manage Type"
+msgstr ""
+
+#: ../../modules/block.md:454 7972f747bda14ee7809d8158db059234
+msgid ""
+"Replace the block type while trying to conserve the state. State is "
+"preserved only if the group of the output matches the input. This "
+"function acts on the [virtual block format](#get) stored in the block "
+"output."
+msgstr ""
+
+#: ../../modules/block.md:466 ../../modules/block.md:518
+#: ../../modules/block.md:578 0181714d83014af1a33cf933f21c9535
+#: 072108869f674d51af4f0416eb3abd9f b91db7e15f5341e681b70ae6bede161b
+msgid "**Return**: Whether a type was found and the replacement occurred."
+msgstr ""
+
+#: ../../modules/block.md:471 8566772d830a481e9d3a8c2721531373
+msgid ""
+"*Example: Replace oak stairs with spruce stairs, preserving the current "
+"state:*"
+msgstr ""
+
+#: ../../modules/block.md a3857d27abd6487b810881fb50526331
+msgid "Map"
+msgstr ""
+
+#: ../../modules/block.md:489 2bde7589dcbe4c7a862a7d84cd60f01a
+msgid ""
+"Swap related block types while ensuring coherent replacements within the "
+"defined mapping registry. A mapping registry is defined as follows:"
+msgstr ""
+
+#: ../../modules/block.md:501 5d4042eedf3343bdb30dadce5c9f9de8
+msgid ""
+"This function operates on the [virtual block format](#get) stored in the "
+"block output. It replaces the type in the output with one that belongs to"
+" the same set and better matches the attributes of the inputted type."
+msgstr ""
+
+#: ../../modules/block.md:503 3391219ec6c2484db630625b9cc2af34
+msgid ""
+"For example, with the above mapping registry: if the input is "
+"`minecraft:red_wool` (attrs:[\"red\"]), and the virtual block type is "
+"`minecraft:green_carpet` (set:\"carpet\"), the resulting block will be "
+"`minecraft:red_carpet` (set:\"carpet\",attrs:[\"red\"])."
+msgstr ""
+
+#: ../../modules/block.md:505 ../../modules/block.md:565
+#: b3c537bc70734275b30c94cd6979f088 b5de1c804a844cad905313b04f4d7e94
+msgid ""
+"Bookshelf includes two predefined mapping registries (`bs.shapes` and "
+"`bs.colors`). If these are insufficient, you can [create your own"
+"](#custom-mapping-registry)."
+msgstr ""
+
+#: ../../modules/block.md:523 24e9ad4d3b5749deba939abd9a8b44a5
+msgid ""
+"*Example: Replace all oak-related blocks with spruce ones (the function "
+"replaces the oak stairs block with a spruce stairs block):*"
+msgstr ""
+
+#: ../../modules/block.md 5a73b1aaac96443a8d5e4d7f05a4aac1
+msgid "Mix"
+msgstr ""
+
+#: ../../modules/block.md:541 4cd1eaaa1c014c12a2e558133b622c4b
+msgid "Experimental"
+msgstr ""
+
+#: ../../modules/block.md:544 88ea3c9acb6445f69540054387891d6f
+msgid ""
+"This function may sometimes behave unpredictably due to the arbitrary "
+"nature of block relationship definitions. Additionally, while the "
+"provided registries aim to cover a wide range of blocks, they are "
+"handcrafted and therefore not exhaustive."
+msgstr ""
+
+#: ../../modules/block.md:547 db93c8c9141b4216baf562ca76e68764
+msgid ""
+"Mix block types while ensuring coherent replacements within the defined "
+"mapping registry. A mapping registry is defined as follows:"
+msgstr ""
+
+#: ../../modules/block.md:561 ca701ccce7ca401e962197b1b2c29505
+msgid ""
+"This function operates on the [virtual block format](#get) stored in the "
+"block output. It replaces the type in the output with one that belongs to"
+" the same set and better matches the attributes of both the output and "
+"input types while prioritizing the input type."
+msgstr ""
+
+#: ../../modules/block.md:563 233dadf55a18487fa696f309c794db58
+msgid ""
+"For example, with the above mapping registry: if the input is "
+"`minecraft:bricks` (attrs:[\"brick\"]), and the virtual block type is "
+"`minecraft:stone_stairs` (set:\"stairs\",attrs:[\"stone\"]), the "
+"resulting block will be `minecraft:stone_brick_stairs` "
+"(set:\"stairs\",attrs:[\"stone\",\"brick\"])."
+msgstr ""
+
+#: ../../modules/block.md:583 c53730b9c4d244318f7deebcb8e41037
+msgid ""
+"*Example: Mix a mossy cobblestone block with bricks resulting in a mossy "
+"stone bricks block:*"
+msgstr ""
+
+#: ../../modules/block.md ff966a36dedc48f995508b8c1cf98f65
+msgid "Lookup Item"
+msgstr ""
+
+#: ../../modules/block.md:601 67bfd175cd56448a9b2b464117033b1a
+msgid "Get block data from the given item string id."
+msgstr ""
+
+#: ../../modules/block.md:611 ../../modules/block.md:643
+#: 575c81e284ff4d88be8f5d1b4059f3dc b9f585744ecb4f9ca8ea96c5524f7e57
+#, python-brace-format
+msgid ""
+"**Storage `bs:out block`**: {nbt}`compound` Equivalent to the "
+"[`#bs.block:get_type`](#get) function."
+msgstr ""
+
+#: ../../modules/block.md:614 d8a2909a4f344c418d4721d9ff81b92b
+msgid "*Example: Get block data for the stone item:*"
+msgstr ""
+
+#: ../../modules/block.md:625 6b5495cdb36e4d358eae19923b6ac8b8
+msgid ""
+"Minecraft does not perfectly map between blocks and items. Some items may"
+" correspond to multiple blocks, and this function will only return one of"
+" them."
+msgstr ""
+
+#: ../../modules/block.md fc7e4968a8fd492282282d90670df054
+msgid "Lookup Type"
+msgstr ""
+
+#: ../../modules/block.md:633 472c6c4616934d64a4533e5aad60cbcf
+msgid "Get block data from the given type string id."
+msgstr ""
+
+#: ../../modules/block.md:646 6ac1d3160939479cad6c8922f2fdd993
+msgid "*Example: Get block data for the stone type:*"
+msgstr ""
+
+#: ../../modules/block.md:662 43ecffcba4e0468090225ddb6243108b
+msgid "Match"
+msgstr ""
+
+#: ../../modules/block.md:666 036236164b9e4ec9bef824a1f6b9a076
+msgid "Determine if the block at the specified location matches the provided one."
+msgstr ""
+
+#: ../../modules/block.md:669 3875b6f4dc0a49b5a283ae5408ad47f3
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Location of the "
+"block to check."
+msgstr ""
+
+#: ../../modules/block.md:671 380cd0ae3f2f474dba1aa5848d5f8e99
+#, python-brace-format
+msgid ""
+"**Storage `bs:in block.match.block`**: {nbt}`string` Full string "
+"representation of the block to check against."
+msgstr ""
+
+#: ../../modules/block.md:674 1aacb956b5c846c7a3666c13d5f69658
+msgid "**Return**: Whether the check is a success or a failure (1 or 0)."
+msgstr ""
+
+#: ../../modules/block.md:677 724b3b1b9e064c4a83fd1736a607ce63
+msgid "*Example: Check that the block at 0 0 0 matches the block at 0 1 0:*"
+msgstr ""
+
+#: ../../modules/block.md:694 00848ba501a54b9cb5d2d68a8d17fd77
+msgid "Set"
+msgstr ""
+
+#: ../../modules/block.md:702 af92537f2b704028aa88e342ac5ae565
+msgid "Place a block at the current location."
+msgstr ""
+
+#: ../../modules/block.md:705 ../../modules/block.md:736
+#: 3c674ae3a54249768f255b1e1c1c200f 8ac7e604eaf2477e9e49dc9bc38cf6f5
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to set "
+"the block to."
+msgstr ""
+
+#: ../../modules/block.md:707 d7a01f896f514f51b32bb878aad5879f
+msgid "**Storage `bs:in block.set_block`**:"
+msgstr ""
+
+#: ../../modules/block.md:715 ../../modules/block.md:746
+#: adefab3f18ff442aa3d7d46927c9e21d c05f16cc7b9240f2a9eb92597cc60dc7
+msgid "**State**: A block is placed in the world."
+msgstr ""
+
+#: ../../modules/block.md:718 f4094b3139be4bc8afd86a6759a79c23
+msgid "*Example: Place a block of stone at 0 0 0 by destroying the existing one:*"
+msgstr ""
+
+#: ../../modules/block.md:733 8964b264f62f4c96bb2c077971ed0f7f
+msgid ""
+"Replace the block type at the current location while trying to conserve "
+"its state and NBTs."
+msgstr ""
+
+#: ../../modules/block.md:738 2a39e0788133484390a0038363f445b9
+msgid "**Storage `bs:in block.set_type`**:"
+msgstr ""
+
+#: ../../modules/block.md:749 f6425d2a743a4b848d106f1e6c175b61
+msgid ""
+"*Example: Replace any stairs with oak stairs, preserving the current "
+"state:*"
+msgstr ""
+
+#: ../../modules/block.md:765 a87df45824ae445da56957974030ff9d
+msgid "Produce"
+msgstr ""
+
+#: ../../modules/block.md 0f94d29fb7cb4b66970d6e9a96a37b02
+msgid "Block Display"
+msgstr ""
+
+#: ../../modules/block.md:773 8a05abf48cca43d49841589d6ae71293
+msgid "Spawn a block display representing the given block."
+msgstr ""
+
+#: ../../modules/block.md:776 ../../modules/block.md:811
+#: ../../modules/block.md:846 4cd6e30258654ca1a9aaac5240f02add
+#: 91f64006014d408d9a840349d7956fbf a6894bb209164a6185f9cc39ab6c0b8e
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where "
+"the entity will be summoned."
+msgstr ""
+
+#: ../../modules/block.md:778 74a7231c8ec44fa4bd222cbba05dbd6c
+msgid "**Storage `bs:in block.spawn_block_display`**:"
+msgstr ""
+
+#: ../../modules/block.md:787 ../../modules/block.md:822
+#: ../../modules/block.md:857 9437413dd9364f08a93dc5e07246c69b
+#: 9c251464e97f439fa55ff47ee6b84386 9d8c44cd180d4796a4ffe03b265045df
+msgid "**State**: The entity is summoned."
+msgstr ""
+
+#: ../../modules/block.md:790 b773633302eb4ff98fd8456b6858b6f2
+msgid "*Example: Summon a block display using the block at 0 0 0:*"
+msgstr ""
+
+#: ../../modules/block.md fbffdd2400564507905f5063884f78b7
+msgid "Falling Block"
+msgstr ""
+
+#: ../../modules/block.md:808 85c7bd2ff8cc406db567bc39f679a00f
+msgid "Spawn a falling block representing the given block."
+msgstr ""
+
+#: ../../modules/block.md:813 72e18bb5d3d0479c885374097dc6faa3
+msgid "**Storage `bs:in block.spawn_falling_block`**:"
+msgstr ""
+
+#: ../../modules/block.md:825 0bae8fa6dcf2476897b112b32eeb783d
+msgid "*Example: Summon a falling block using the block at 0 0 0:*"
+msgstr ""
+
+#: ../../modules/block.md 222fb85e8fcc4104b8bfd6a756e9c768
+msgid "Solid Block Display"
+msgstr ""
+
+#: ../../modules/block.md:843 cb92092f285a4521a59946b2aac972dd
+msgid "Spawn a block display with a hitbox, representing the given block."
+msgstr ""
+
+#: ../../modules/block.md:848 2237b4756d0a4665959d29e550492fbd
+msgid "**Storage `bs:in block.spawn_solid_block_display`**:"
+msgstr ""
+
+#: ../../modules/block.md:860 1832d22f056c42eeaca458b57a39693e
+msgid "*Example: Summon a block display with a hitbox using the block at 0 0 0:*"
+msgstr ""
+
+#: ../../modules/block.md 43c01300882e426ea30de54d486a0d53
+msgid "Block Particle"
+msgstr ""
+
+#: ../../modules/block.md:878 8abf854f0a354f82b5afcbc348df2ced
+msgid "Emit block particle of the given block."
+msgstr ""
+
+#: ../../modules/block.md:881 2bee925fdf9d4057bf1d640e34930f79
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where "
+"the particle will be emitted."
+msgstr ""
+
+#: ../../modules/block.md:883 4fd45e702a104ba7a87873d2d8762c8c
+msgid "**Storage `bs:in block.emit_block_particle`**:"
+msgstr ""
+
+#: ../../modules/block.md:896 83d43427d2cf42668f26697b149a6164
+msgid "**State**: The particle is emitted."
+msgstr ""
+
+#: ../../modules/block.md:899 dfb0e84f2e9443dbb03f6d8eed79c883
+msgid "*Example: Emit the particle of the block at 0 0 0:*"
+msgstr ""
+
+#: ../../modules/block.md 796aea9ba7a0468d8a3190f03ae17818
+msgid "Block Sound"
+msgstr ""
+
+#: ../../modules/block.md:918 6a37a351e90542ba9b0a04744ec05e93
+msgid "Play a block sound of the given block."
+msgstr ""
+
+#: ../../modules/block.md:921 1b02637158ed405d825a6a12ee4f2171
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where "
+"the sound will be played."
+msgstr ""
+
+#: ../../modules/block.md:923 0ae8511e9e244d1fbfccc488de2e8bd2
+msgid "**Storage `bs:in block.play_block_sound`**:"
+msgstr ""
+
+#: ../../modules/block.md:936 cac2ffd735d24e63a03df40f8626eb9b
+msgid "**State**: The sound is played."
+msgstr ""
+
+#: ../../modules/block.md:939 d56644ae59a44a179cdea8c2d6218e89
+msgid "*Example: Play the sound of the block at 0 0 0:*"
+msgstr ""
+
+#: ../../modules/block.md:960 966512a90d6a49399a64f95a56867e8a
+msgid "🎓 Custom Mapping Registry"
+msgstr ""
+
+#: ../../modules/block.md:962 6920e0fe7b1347fc996b682f617b7853
+msgid ""
+"This module allows you to create a personalized mapping registry tailored"
+" to your specific needs."
+msgstr ""
+
+#: ../../modules/block.md:966 471b8264c5904666be4455d124b5c1ad
+msgid ""
+"To create a new registry, you need to define an array within the "
+"`bs:const block.mapping_registry` storage. Each new registry should be "
+"namespaced, and each element must include `set`, `attrs`, and `type`. "
+"Here's how you can define a new mapping registry:"
+msgstr ""
+
+#: ../../_templates/comments.md:4 08a11a52ebfe4660a076c0b031f05f46
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 184cb19de96640c487067ce60b21d141
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+

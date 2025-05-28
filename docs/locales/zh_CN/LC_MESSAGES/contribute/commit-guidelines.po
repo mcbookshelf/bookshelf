@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/commit-guidelines.md:1 433b970facaf419191864014561fe155
+msgid "📋 Commit Guidelines"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:3 f522c8d15f484d98bc8df2d440aa2036
+msgid ""
+"This section is meant for maintainers. Contributors do not need to worry "
+"about commit messages as PRs are squash-merged before being integrated "
+"into the project."
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:7 67bf1fc786274ef0a2d17bc8aab3ed59
+msgid "✍️ Commit Format"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:9 706ff780478643c18754f4a6eefdbf3c
+msgid ""
+"We follow **Conventional Commits** to standardize commit messages, making"
+" it easier to understand the purpose of each change. Commit messages "
+"should include an **emoji** to indicate the type of change and follow the"
+" format below:"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:15 9c52d45e1d254a93a6c3c48a634ac73e
+msgid "For breaking changes, add a `!` after the type or scope."
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:19 5967291807af46cc8d74e05e19f3a884
+msgid "🗂️ Commit Types"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:22 139e31f4bc1b4117bd76d7c9cc8f462a
+msgid "`✨ feat`"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:23 27b571164d704aacaf530b42116b199d
+msgid "Adds a new feature or significant functionality"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:24 d2b463bf831041118f43b7117cd75bcb
+msgid "`🐛 fix`"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:25 22818233a69448718bb5f69db9959944
+msgid "Corrects a bug or malfunction"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:26 9573cefab2244517ace40a2e2696a9bc
+msgid "`⚡️ perf`"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:27 0bb9338b93ad4017a959d90006a4e0bc
+msgid "Optimizes code to improve performance"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:28 a984e227a0d74d82b3d8b0a33ea187e6
+msgid "`♻️ refactor`"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:29 b7706ba770c34fa5b7337cb96f7bf9db
+msgid "Restructures existing code without changing its behavior"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:30 20b3a51ef1ee4eef895292cebf541c18
+msgid "`🎨 style`"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:31 c8ecb27dfbb44dc58c6c6a56d341b164
+msgid "Updates code style without affecting behavior (e.g., formatting, spacing)"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:32 e8a9ad84406341e2b35be294ba8379be
+msgid "`📝 docs`"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:33 571fa62924984a0795c518371527c3f4
+msgid "Changes or improves project documentation"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:34 6b0e85d03d2a42dbb01639c8a575ce36
+msgid "`🧪 test`"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:35 506c12763fc84f3a8425e9abdce93d9f
+msgid "Adds new tests or updates existing ones"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:36 1d6f4bddeb1e4506a5d026445f996513
+msgid "`🔨 build`"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:37 ced0d45b0e3649d0be4ec0e408efaa98
+msgid "Updates to scripts responsible for building project parts"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:38 35363be921f64d0b9da0ea1801c16860
+msgid "`⚙️ ci`"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:39 72ac8017b9bf468f81f6757039dd54c6
+msgid "Changes to continuous integration workflows or scripts"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:40 54c657eeb2654a43b060998ff8d1b3eb
+msgid "`🛠️ chore`"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:41 5ef8c711ef744492bd39dc561652deff
+msgid "Routine tasks like version bumps, metadata updates, or asset maintenance"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:46 3c9e9e87eb7846e284a53226cdea6525
+msgid "🎯 Using Scopes"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:48 67ea9daf5bc1427a9d488890b240c31c
+msgid ""
+"Commit messages can include a **scope** to specify which part of the "
+"project is affected. Example:"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:56 e1abeed0d78342a3ac677e3188ab6392
+msgid "⚠️ Breaking Changes"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:58 cdfa1d135f714c09a0af8cdac184a64e
+msgid ""
+"If a change introduces a **breaking change**, add a `!` after the type or"
+" scope. Example:"
+msgstr ""
+
+#: ../../contribute/commit-guidelines.md:64 0bdd3fa3e46949429a62597ae59e107c
+msgid ""
+"This helps ensure that users are aware of any changes that might affect "
+"compatibility."
+msgstr ""
+

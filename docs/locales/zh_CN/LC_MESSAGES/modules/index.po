@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/index.md:25
+msgid "Runtime"
+msgstr ""
+
+#: ../../modules/index.md:54
+msgid "Development"
+msgstr ""
+
+#: ../../modules/index.md:62
+msgid "Prefabs"
+msgstr ""
+
+#: ../../modules/index.md:5 e4492343d129473ebd5608dbabcb1609
+msgid "🧩&nbsp;Modules"
+msgstr ""
+
+#: ../../modules/index.md:7 7caca6a8346e4a43869658eb6922e699
+msgid ""
+"Bookshelf is designed with modularity in mind. Features that serve a "
+"common purpose are organized into distinct, standalone, namespaced "
+"modules."
+msgstr ""
+
+#: ../../modules/index.md:11 40a0659cc2ef40bf929e1765e379bcd0
+msgid "🌟 Featured Modules"
+msgstr ""
+
+#: ../../_templates/featured-modules.md:5 c601d3495e3b4e409de3057ae6be903e
+msgid "🧱 Block"
+msgstr ""
+
+#: ../../_templates/featured-modules.md:10 5d299135d17946e796331729b490f24d
+msgid "Get and manipulate blocks (supports BlockStates and NBT)."
+msgstr ""
+
+#: ../../_templates/featured-modules.md:13 1d8a81dc22574572a93d45e1be2d900d
+msgid "🔦 Raycast"
+msgstr ""
+
+#: ../../_templates/featured-modules.md:18 710c8c18dfc145fc966f27c3cc74a7a9
+msgid "Cast rays and see if they collide with blocks or entities."
+msgstr ""
+
+#: ../../_templates/featured-modules.md:21 3e61c1293d1a4700b48d27726df5c38c
+msgid "🧮 Math"
+msgstr ""
+
+#: ../../_templates/featured-modules.md:26 a9da185143634a02bac2d209b1deee53
+msgid "Mathematical functions: sin, cos, exp, log, sqrt, and much more!"
+msgstr ""
+
+#: ../../_templates/featured-modules.md:29 a6647ae4b723458ba2b74fb765cdfff0
+msgid "🏗️ Generation"
+msgstr ""
+
+#: ../../_templates/featured-modules.md:34 1c330db9b03a4881a1b2708bcd0f2e93
+msgid "Generate terrains and landscapes, incorporating natural features."
+msgstr ""
+
+#: ../../_templates/featured-modules.md:37 d19aa1690d5342beb99d839b5fef1fde
+msgid "🎲 Random"
+msgstr ""
+
+#: ../../_templates/featured-modules.md:42 dc84d6335914487596882d1657c17f6d
+msgid "Random functions for different distributions and noise patterns."
+msgstr ""
+
+#: ../../_templates/featured-modules.md:45 c433c6f636274c488ed6a85838341df5
+msgid "❤️ Health"
+msgstr ""
+
+#: ../../_templates/featured-modules.md:50 c42c4dd1057e4d99a69264d935fcf6f8
+msgid "Easily manage the health of a player or the lifetime of an entity!"
+msgstr ""
+
+#: ../../modules/index.md:18 77b2f5b242de4a5394c485cfaf589d6a
+msgid "📖 Key Definitions"
+msgstr ""
+
+#: ../../_templates/definitions.md:2 d839ea06940347e0a1dcc2356e594e8d
+msgid "General Concepts"
+msgstr ""
+
+#: ../../_templates/definitions.md:3 bc45083e41b64067861d3225352ac3df
+msgid "**Bundle**"
+msgstr ""
+
+#: ../../_templates/definitions.md:4 48aee064029d4b11a4db4bbf6664a4df
+msgid "A set of modules packaged together for distribution."
+msgstr ""
+
+#: ../../_templates/definitions.md:5 eec2c5c746e54f10bd4a6356d6a24451
+msgid "**Dependency**"
+msgstr ""
+
+#: ../../_templates/definitions.md:6 9c298d72b3984a95b6ceb87b3d6f831e
+msgid ""
+"A module that another module relies on to function properly. It must be "
+"loaded for the dependent module to work."
+msgstr ""
+
+#: ../../_templates/definitions.md:7 5d9e5cd51929412fa33c9b541b2ac7e5
+msgid "**Feature**"
+msgstr ""
+
+#: ../../_templates/definitions.md:8 e8427fc27e4543c5af42ed0ec73817be
+msgid ""
+"A user-facing element designed to accomplish a task. Features are often "
+"represented as function tags, but can also include loot tables, "
+"structures, predicates, and more."
+msgstr ""
+
+#: ../../_templates/definitions.md:9 d0e75d34b0f34dc6927244e7351f3fad
+msgid "**Module**"
+msgstr ""
+
+#: ../../_templates/definitions.md:10 4dfac74e5804400382c2c879c9cc99e4
+msgid ""
+"A collection of related features within a namespace, serving a specific "
+"purpose."
+msgstr ""
+
+#: ../../_templates/definitions.md:11 492e4d156cf2463585163e3e6c043489
+msgid "**Weak Dependency**"
+msgstr ""
+
+#: ../../_templates/definitions.md:12 be06b6a80a62451884001e76af70b0a5
+msgid ""
+"An optional dependency that enhances functionality if present, but is not"
+" essential for the main module to function correctly."
+msgstr ""
+
+#: ../../_templates/definitions.md:15 81b1bd573def471e849c1eeca8913edb
+msgid "Special Arguments"
+msgstr ""
+
+#: ../../_templates/definitions.md:16 d316d25872b3475d9f2588701a439ede
+msgid "**`on_*`**"
+msgstr ""
+
+#: ../../_templates/definitions.md:17 531fa50d08ad4ff79035825b7f2a6a6b
+msgid ""
+"Specifies a command to be executed by a feature when a particular event "
+"occurs."
+msgstr ""
+
+#: ../../_templates/definitions.md:18 a83e20242dac4eb38e79aa04fd4d7cce
+msgid "**`run`**"
+msgstr ""
+
+#: ../../_templates/definitions.md:19 8558346f07d3481a98e2e8162ee3fc9d
+msgid "Specifies a command to be executed by a feature, often immediately."
+msgstr ""
+
+#: ../../_templates/definitions.md:20 99947953a696417fbfe4ecf486a54c8f
+msgid "**`with`**"
+msgstr ""
+
+#: ../../_templates/definitions.md:21 3239f133e25f466c85437e0e7b1a17e0
+msgid "Specifies optional arguments."
+msgstr ""
+
+#: ../../_templates/definitions.md:24 5defa7e4d6c6487890efbcda8dee708c
+msgid "Special Functions"
+msgstr ""
+
+#: ../../_templates/definitions.md:25 7d90dcfe64184b1d8102e1eb99401060
+msgid "**`*_ata`**"
+msgstr ""
+
+#: ../../_templates/definitions.md:26 16ef3b0d4fda4f7882dfdd3c3bf9e2c4
+msgid ""
+"Shortened from \"as to at.\" These functions take two positions: one "
+"given through a positional argument (e.g., `positioned`, `at`), and the "
+"other from the executor's position."
+msgstr ""
+

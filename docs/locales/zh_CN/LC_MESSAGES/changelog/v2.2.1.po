@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../changelog/v2.2.1.md:1 f928c0ad8f4d4172b1b32842fd1de7aa
+msgid ""
+"📦 [Bookshelf - "
+"2.2.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.1)"
+msgstr ""
+
+#: ../../changelog/v2.2.1.md:3 2a6dce7c71484cc0b1d0f81cd976668d
+msgid "**⬆️ A Minecraft Update!**"
+msgstr ""
+
+#: ../../changelog/v2.2.1.md:5 c06e80243a0c4670b18aa8197fdd0a9c
+msgid ""
+"*This release fixes several issues and bumps the Minecraft version to "
+"1.21.4.*"
+msgstr ""
+
+#: ../../changelog/v2.2.1.md:7 1f0c55c614a44cdba98d79275fa913d9
+msgid "Bookshelf is now based on **Minecraft 1.21.4**."
+msgstr ""
+
+#: ../../changelog/v2.2.1.md:10 f8a737bfbaab4ef2b5fa8f287974456b
+msgid "`🧱 bs.block`"
+msgstr ""
+
+#: ../../changelog/v2.2.1.md:12 ef64fc38112045108d256e4fbd5503e1
+msgid ""
+"🐛 **[#290](https://github.com/mcbookshelf/bookshelf/issues/290)** - Added"
+" missing blocks in registries."
+msgstr ""
+
+#: ../../changelog/v2.2.1.md:14 ce01bf258abd4133975e9d1950ba54ce
+msgid "`🏃 bs.move`"
+msgstr ""
+
+#: ../../changelog/v2.2.1.md:16 33dfc99258ba4de582daf977e4e5e4e3
+msgid ""
+"🐛 **[#288](https://github.com/mcbookshelf/bookshelf/issues/288)** - Fixed"
+" collision resolutions."
+msgstr ""
+

@@ -1,0 +1,307 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/id.md:1 02cf16cc71b0485ba106948fa1614308
+msgid "🏷️ ID"
+msgstr ""
+
+#: ../../modules/id.md:3 ecfcaf5f4617492d99788cdd6ed207eb
+msgid "**`#bs.id:help`**"
+msgstr ""
+
+#: ../../modules/id.md:5 e579c073fa32429b8eee2e43eb32660c
+msgid ""
+"Manage entity IDs, essential in scenarios like shooting games where you "
+"need to track who is targeting whom."
+msgstr ""
+
+#: ../../modules/id.md:8 ed3d3b0a6c1d48acb8c6e78fe37a1b3f
+msgid "\"We know what we are, but know not what we may be.\""
+msgstr ""
+
+#: ../../modules/id.md:9 6085545ad7be4978a9cc030350ea80d8
+msgid "William Shakespeare"
+msgstr ""
+
+#: ../../modules/id.md:15 e051e2728c27466ab55a308396d099f1
+msgid "🔧 Functions"
+msgstr ""
+
+#: ../../modules/id.md:17 5b6475f57ec84232aec3af3a907bb218
+msgid "You can find below all functions available in this module."
+msgstr ""
+
+#: ../../modules/id.md:21 9c0bfef626f7473c81c61ad6ea8640c8
+msgid "Give Simple Unique ID"
+msgstr ""
+
+#: ../../modules/id.md:25 4d65c5dc8454483eac8cfbe5446ba36d
+msgid "Give a unique `bs.id` score to each entity."
+msgstr ""
+
+#: ../../modules/id.md:27 ../../modules/id.md:54 ../../modules/id.md:131
+#: ../../modules/id.md:149 ../../modules/id.md:167 ../../modules/id.md:185
+#: ../../modules/id.md:229 ../../modules/id.md:247 ../../modules/id.md:265
+#: ../../modules/id.md:283 0bb331729b1e456e990cfa7dc5d6b079
+#: 2662476ceef74be9bc8ba71fc8958ec3 2d8e8ee90c174249a55258f9a69e0a25
+#: 338a26c435a348a6a5e24d63a0c39870 48f1931f3d0e47ad8521f6947a4eb024
+#: 864d94a11404494da36f3e33f7f3116f 9b1e83d33e7941a28f828a7c0b88302c
+#: a582fa92f8bf41b5b834bee4185a3f76 b34b18f7805e45a0b768fe2f338fb4ef
+#: d437ca6b0a9841d784f4f263946d0858
+msgid "Inputs"
+msgstr ""
+
+#: ../../modules/id.md:28 ../../modules/id.md:55
+#: a7482a795bf24058adf42d5e3b70c4f7 adbd439a0af04a3084c4365bd061cedb
+msgid "**Execution `as <entities>`**: Entities to assign an ID to."
+msgstr ""
+
+#: ../../modules/id.md:30 ../../modules/id.md:57
+#: 22691d8f798341d18598127efce832e6 693d8ea2ab6d4a33bcf7e358cd04bea3
+msgid "Outputs"
+msgstr ""
+
+#: ../../modules/id.md:31 dc599c83fcfb4c8c9755d620e05a9707
+msgid "**Score `@s bs.id`**: Generated simple unique ID."
+msgstr ""
+
+#: ../../modules/id.md:34 ../../modules/id.md:67
+#: 0e9ecfda18ce4a0d8319c799fdd1c2bc 31ab1ee66af048828d2e768a5fc59177
+msgid "*Example: Give an ID to all players:*"
+msgstr ""
+
+#: ../../modules/id.md:44 ../../modules/id.md:77 ../../modules/id.md:97
+#: 08121fce1fa84bae89e115197236bb3d 24e2cb75798047a0bb5f64363b08ea12
+#: a1dc7d92ea484f2ca40d9f300349c97e
+msgid "**Credits**: Aksiome, KubbyDev"
+msgstr ""
+
+#: ../../modules/id.md:48 487934f75397426ab63e8e7dd7d1237d
+msgid "Give Chain Unique ID"
+msgstr ""
+
+#: ../../modules/id.md:52 425a62f1495946af8207cee57b448380
+msgid "Give a unique `bs.cid` score to each entity."
+msgstr ""
+
+#: ../../modules/id.md:58 d8c0f578e85e4cd98740870a95e561ea
+msgid "**Score `@s bs.cid`**: Generated chain unique ID."
+msgstr ""
+
+#: ../../modules/id.md:61 8b539069f5c0458bb6d5cf3db241652f
+msgid "How it works?"
+msgstr ""
+
+#: ../../modules/id.md:64 09297dca883e4a44b176de04eb41f42f
+msgid ""
+"The chain ID is similar to the simple ID. However, with chain IDs, you "
+"can use the function `#bs.id:update_cuids` to make sure there are no gaps"
+" in the ID sequence, thus creating a continuous chain."
+msgstr ""
+
+#: ../../modules/id.md:81 c80324f82963439aaa4a6fa73fa25497
+msgid "Update Chain Unique ID"
+msgstr ""
+
+#: ../../modules/id.md:85 8989ef6afb1a4e9e9931c363d9bf832b
+msgid "Update all entities' CUIDs to ensure the chain is continuous."
+msgstr ""
+
+#: ../../modules/id.md:88 cc4baa0de7c842a091dccd05b978330a
+msgid "*Example: Ensure the chain is free of gaps and duplicates:*"
+msgstr ""
+
+#: ../../modules/id.md:101 494568b7a6d54c14a86deaae512d6703
+msgid "👁️ Predicates"
+msgstr ""
+
+#: ../../modules/id.md:103 d745d47273cd49ea92265cf50104163b
+msgid "You can find below all predicates available in this module."
+msgstr ""
+
+#: ../../modules/id.md:107 d7df84a7b1f34391a736a1a2437b5037
+msgid "Check Simple Unique ID"
+msgstr ""
+
+#: ../../modules/id.md 74eb3da2590e45178f1c436046b6ff7d
+#: ebef7552ab3b4c80bfc443e62a19cd92
+msgid "Has"
+msgstr ""
+
+#: ../../modules/id.md:115 7c55419fc45d477cb5c5610d801e580e
+msgid "Determine if an entity has a `bs.id` score."
+msgstr ""
+
+#: ../../modules/id.md:118 4b261ec105a244a08d88aebe58759342
+msgid ""
+"*Example: Give an SUID to all entities that aren't identified by a "
+"`bs.id` score:*"
+msgstr ""
+
+#: ../../modules/id.md d73142ef7d0a4f25b46e0854715f65eb
+#: dfbf259295e044a3807d05e8907b2774
+msgid "Equal"
+msgstr ""
+
+#: ../../modules/id.md:129 2c0919f8c70a46d2b5e802e912cf22fc
+msgid "Find an entity that has the same `bs.id` as the input value."
+msgstr ""
+
+#: ../../modules/id.md:132 ../../modules/id.md:150 ../../modules/id.md:168
+#: 250f8bdb059d434f8de07aa5d2ae551f 9c326e15732d469ca53676aa12712361
+#: b55a56658a984809a7655a8694b9dcdb
+msgid "**Score `$id.suid bs.in`**: Value to check against."
+msgstr ""
+
+#: ../../modules/id.md:135 cd9fd85cb0b7419bac781b8b05d178f2
+msgid "*Example: Find the entity that has a `bs.id` equal to 1:*"
+msgstr ""
+
+#: ../../modules/id.md 31b45430256e4af8bbf54936e895e890
+#: b0f61a0c9cde49e6a00a264c5ad4d7ba
+msgid "Lower"
+msgstr ""
+
+#: ../../modules/id.md:147 f1f2e8749cd749dcb3a0344a1ae47532
+msgid "Filter entities that have a `bs.id` less than or equal to the input value."
+msgstr ""
+
+#: ../../modules/id.md:153 40e90bb8cd1247ef9e20e1bca61c1517
+msgid "*Example: Filter entities that have a `bs.id` less than or equal to 17:*"
+msgstr ""
+
+#: ../../modules/id.md 41889e1e0aaf4b47985ceef33c8c4ec6
+#: 96d6b125380a4c78b5176ef1e9d0eb0a
+msgid "Upper"
+msgstr ""
+
+#: ../../modules/id.md:165 04e1cd99bdd7434d94e53b16dd603e0b
+msgid ""
+"Filter entities that have a `bs.id` greater than or equal to the input "
+"value."
+msgstr ""
+
+#: ../../modules/id.md:171 97d04142c70b49c999b664228c90f449
+msgid ""
+"*Example: Filter entities that have a `bs.id` greater than or equal to "
+"18:*"
+msgstr ""
+
+#: ../../modules/id.md 293adb3111184a919f85d10167bc83f3
+#: f989b24c23a144a498c41db94e863f07
+msgid "Match"
+msgstr ""
+
+#: ../../modules/id.md:183 2ecde444437145f1b7ef2491c0e6be4e
+msgid "Filter entities that have a `bs.id` between the given values."
+msgstr ""
+
+#: ../../modules/id.md:186 7161b7eeaac542f78ea2600bff15f77e
+msgid "**Score `$id.suid.min bs.in`**: Min value to check against."
+msgstr ""
+
+#: ../../modules/id.md:188 2f1fa64bf5c64e198473d7554a962180
+msgid "**Score `$id.suid.max bs.in`**: Max value to check against."
+msgstr ""
+
+#: ../../modules/id.md:191 2774ab1bbc3042c4af1b1ece2461f09e
+msgid "*Example: Filter entities that have a `bs.id` between 2 and 4:*"
+msgstr ""
+
+#: ../../modules/id.md:201 ../../modules/id.md:299
+#: 209cb8df63cb48ed846557de2581940a 644b283e53d84590a39a7c5053256bc5
+msgid "**Credits**: Aksiome"
+msgstr ""
+
+#: ../../modules/id.md:205 131d0cfa8f3a4eb18d8969037e6df557
+msgid "Check Chain Unique ID"
+msgstr ""
+
+#: ../../modules/id.md:213 45ed610c1efa4d2a95f4f31720c813d2
+msgid "Determine if an entity has a `bs.cid` score."
+msgstr ""
+
+#: ../../modules/id.md:216 84acbe92b052478db392ed2106d55d84
+msgid ""
+"*Example: Give a CUID to all entities that aren't identified by a "
+"`bs.cid` score:*"
+msgstr ""
+
+#: ../../modules/id.md:227 600ddc6f303a4d51b29f2502daa5be95
+msgid "Find an entity that has the same `bs.cid` as the input value."
+msgstr ""
+
+#: ../../modules/id.md:230 ../../modules/id.md:248 ../../modules/id.md:266
+#: 000b03d83b9345f7958bc8ecbfaa8b07 713907327b124f3481c21364cb1310ee
+#: b7741a9a323141ffa503867456ae918e
+msgid "**Score `$id.cuid bs.in`**: Value to check against."
+msgstr ""
+
+#: ../../modules/id.md:233 ff60148aa6f54f8ba282477e830b5c4d
+msgid "*Example: Find the entity that has a `bs.cid` equal to 1:*"
+msgstr ""
+
+#: ../../modules/id.md:245 039b06a83d2c4fc2b0cb1d5330b379a4
+msgid ""
+"Filter entities that have a `bs.cid` less than or equal to the input "
+"value."
+msgstr ""
+
+#: ../../modules/id.md:251 2cbe3cf7b8994dcd960b70fad0f23a2e
+msgid "*Example: Filter entities that have a `bs.cid` less than or equal to 17:*"
+msgstr ""
+
+#: ../../modules/id.md:263 6fe799ff0c1e4314b5271db808df062d
+msgid ""
+"Filter entities that have a `bs.cid` greater than or equal to the input "
+"value."
+msgstr ""
+
+#: ../../modules/id.md:269 ad446556cedb4bcd83ad3895d296cb8d
+msgid ""
+"*Example: Filter entities that have a `bs.cid` greater than or equal to "
+"18:*"
+msgstr ""
+
+#: ../../modules/id.md:281 1e09a769ffef4cdcacca394761d8339b
+msgid "Filter entities that have a `bs.cid` between the given values."
+msgstr ""
+
+#: ../../modules/id.md:284 4fa490c8cd9346d1891753e8b23b0f6e
+msgid "**Score `$id.cuid.min bs.in`**: Min value to check against."
+msgstr ""
+
+#: ../../modules/id.md:286 9e27f0622a6d4409bf1ea3594cb232aa
+msgid "**Score `$id.cuid.max bs.in`**: Max value to check against."
+msgstr ""
+
+#: ../../modules/id.md:289 bc5f55d85fe74305879428182d3ea240
+msgid "*Example: Filter entities that have a `bs.cid` between 2 and 4:*"
+msgstr ""
+
+#: ../../_templates/comments.md:4 ff5ef1c0985343508069321f825caa20
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 e45995d4c92c4268ad1f1d3786da3db7
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+

@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../contribute/getting-started.md:5 016f77ecabf8471a9885c2271f833f3b
+msgid "🚀 Getting Started"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:7 fe15f4d51fa743348b60dd79dad61b7d
+msgid ""
+"This guide will walk you through setting up a local development "
+"environment to build, test, and contribute to our modules."
+msgstr ""
+
+#: ../../../contribute/getting-started.md:11 9460d86936c54c22b44c8321b61ef5e7
+msgid "⚙️ Prerequisites"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:13 e8d5a528173542d8aabe178514fafd9d
+msgid ""
+"Before getting started, ensure your system is prepared by following these"
+" steps:"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:15 8f77cdd2e2f64cb285ddb0b5b6501f26
+msgid ""
+"Install [**PDM**](https://pdm-project.org/en/latest/), the Python "
+"Dependency Manager"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:16 e1492da3d5204945aee674bc019d85fb
+msgid ""
+"Open a terminal at the root of the project and run the following command "
+"to install all required dependencies:"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:21 380f09d98e55473bb458c983d423fe06
+msgid ""
+"Running this command prepares your environment for building and testing "
+"the project."
+msgstr ""
+
+#: ../../../contribute/getting-started.md:25 2ec1767b629443b68400d1f6345b3fc4
+msgid "🔨 Building Modules"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:27 223e1fd39b3f419da4e534728443503a
+msgid ""
+"The `modules` directory contains the source files for all modules. Use "
+"the following commands to manage and build them efficiently:"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:30 11957dac82304fd3be021f70697c210a
+msgid "`pdm run modules build`"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:31 29659bcbf0ca475fa9f4da189c67ad68
+msgid "Build all modules"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:32 5cbafd698d164c07b07135a061dff7e9
+msgid "`pdm run modules watch`"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:33 2a016121aa1f4e32bdce0615ae73f478
+msgid "Monitor changes and rebuild modules automatically"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:34 25b283ebe70f477c92b9894359e2bfbf
+msgid "`pdm run modules <build|watch> <module1> ...`"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:35 d6a902574979418dbfce745479e21842
+msgid "Build or watch only the specified modules"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:36 e158ea5597f5459893e282a09ba44ae2
+msgid "`pdm run modules link [world]`"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:37 58076d7f5d6a43e2b3a461ff823273d3
+msgid "Link the generated resource and data packs to a Minecraft world"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:40 0fa0ab416efa4b57aa087b776f31a69f
+msgid "Watching Modules"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:43 381f343cad9e42219c90c49809211c30
+msgid ""
+"Building modules can take some time. For a smoother experience, it's "
+"recommended to only watch the module you're currently working on: `pdm "
+"run modules watch <module>`."
+msgstr ""
+
+#: ../../../contribute/getting-started.md:46 0d240f244f3a4b2aa857ad34a8c8f18b
+msgid "Linking Modules to Minecraft"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:48 bfecf7e4edbc4964bed4ed687385b5ee
+msgid ""
+"The `link` command allows you to integrate generated packs directly into "
+"a Minecraft world. Below are the options available for this command:"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:51 ce65ab0f825e4db1a4f231c84009a4cf
+msgid "`world (optional)`"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:52 eea2441227ba40979afb5c103c9e0073
+msgid "The name of the Minecraft world to link"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:53 1611553d0c6444a9820c5993c9165c4e
+msgid "`--minecraft <DIRECTORY>`"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:54 5ab6d473f7844eecb9b29a2203c000ea
+msgid "Path to the `.minecraft` directory (location of Minecraft files)"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:55 c1ed5caea2d542f685ec51f806e3f1e9
+msgid "`--data-pack <DIRECTORY>`"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:56 67cbddeea4d64898a2bfcf49fd4301d2
+msgid "Path to the directory where data packs are stored"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:57 95ca904d33f64b4aa8f7d443f3e022bd
+msgid "`--resource-pack <DIRECTORY>`"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:58 9acd02462f1f4acda162bc84291c7bec
+msgid "Path to the directory where resource packs are stored"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:61 0c1c03f24be640228e76baf482d19d06
+msgid ""
+"This workflow demonstrates how to link and continuously test your modules"
+" directly in Minecraft:"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:72 da0afc64422143c8b1cd914786c4b7ea
+msgid "🧪 Testing Modules"
+msgstr ""
+
+#: ../../../contribute/getting-started.md:74 2c1580e489ef404883675b59070fd9f0
+msgid ""
+"Testing is a fundamental aspect of software development. It helps ensure "
+"the correctness of your code and can save you from potential bugs in the "
+"future."
+msgstr ""
+
+#: ../../../contribute/getting-started.md:76 ea3ec44bd3c342ab9a24ae7d9d1f50b4
+msgid ""
+"To learn how to write and run tests for your modules, refer to the [Debug"
+" Section](project:debug-tools.md#-unit-tests)."
+msgstr ""
+

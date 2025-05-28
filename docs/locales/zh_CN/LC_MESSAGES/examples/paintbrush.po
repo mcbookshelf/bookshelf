@@ -1,0 +1,449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../examples/paintbrush.md:2 bb9adc0d2bea49f3850790f6406a447f
+msgid "🖌️ Paintbrush"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:4 ab6d8734afa741538c0b98e57650c21c
+msgid ""
+"This example demonstrates how to create a paintbrush in Minecraft using "
+"the Bookshelf library. The paintbrush changes a block's material to match"
+" the item in the player's hand, while preserving important properties "
+"like orientation, waterlogging, and other block states. For instance, if "
+"the player holds oak planks, birch stairs will transform into oak stairs."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:8 c8e08b03004b456f852a10a63d3477fa
+msgid "🎯 What We'll Build"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:10 1a265fa04eb34447afb98a4e4f542d1f
+msgid "Our paintbrush system will:"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:11 a94d3d3eaa394b748d3388d05ce8621b
+msgid "Detect when a player interacts with a block using the brush"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:12 0d017a97e959476f83a1cdb39aeabc71
+msgid "Determine the block type from the item in the player's hand"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:13 f6471bdbed5e422389a23aa354ca9836
+msgid "Identify the targeted block"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:14 668ec03ad0394fcf9fb45007091bd2ed
+msgid "Replace the targeted block's material with that of the held item"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:18 f15cdb99b13d4b869d44a5f942542b0c
+msgid "📦 Requirements"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:20 c477f68181214c8a90ab0202bb1271f4
+msgid "Before we start, make sure you have:"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:21 fd3f85873c6b483ea37281bb14e29c0b
+msgid "Minecraft Java Edition 1.21.4 or later"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:22 e0d1ff9860b24dd58b0c69cd9b66fda3
+msgid ""
+"Bookshelf `bs.block` and `bs.view` modules, see "
+"[Quickstart](https://docs.mcbookshelf.dev/en/latest/quickstart.html) for "
+"installation"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:23 c8ce7e07da834ca0a0111f65319e33ec
+msgid "`@require bookshelf.module.block`"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:24 672eb8d2ca4040e49c4be311fdeac661
+msgid "`@require bookshelf.module.view`"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:25 26e500630dbf4dcb9e553fd00e519c4a
+msgid ""
+"Basic knowledge of datapack development, including functions, tags, and "
+"scoreboards"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:26 000d1a0e60224af28789d7b5d7052ca1
+msgid "A ready-to-use empty datapack"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:30 6d51f651c5714ebdb204712ace175e69
+msgid "🛠️ Step-by-Step Implementation"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:32 438f59447c0c4b3894b9a39c42d065e4
+msgid "1. Prepare the Datapack"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:34 220e3d1b408746b89d6b7e2ffbdeb75e
+msgid ""
+"First, we need a function to initialize our system when the datapack "
+"loads. Create a function named `paintbrush:load` and register it in the "
+"`minecraft:load` function tag."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:38 9b41828c26b1455a9ca928df89e5f5b3
+msgid "**➔ create the `load` function**"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:40 ../../../examples/paintbrush.md:277
+#: 498dbbfb43294a379b6a679879ab85ca ed5ed86283dd45e180a8c762a499f42f
+msgid "`@function paintbrush:load`"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:45 ca223d4b48e3436e80716fd61fe94f8b
+msgid ""
+"This scoreboard will store data for the paintbrush, primarily the values "
+"returned by commands."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:47 d723d61c2aa64a18acbe4a9dab73dc6b
+msgid "**➔ register it in the `load` tag**"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:49 8ea6ff0bdf2e478f92d6304211840303
+msgid "`@function_tag minecraft:load`"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:58 29d0c0185ed840619c036a40bfe44e60
+msgid ""
+"This ensures that `paintbrush:load` runs automatically when the datapack "
+"is enabled or reloaded."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:62 17c257e885a24a378023f40283a72bac
+msgid "2. Detect Player Interaction"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:64 efe98496a73c44f0b8fe27d9c5a14156
+msgid ""
+"First, we need to create an item that the player can use to paint a "
+"block. For this, we'll use a brush item. Then, to trigger our system when"
+" the player interacts with a block using the brush, we'll use an "
+"advancement."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:68 1aaff6ec0de94a2c86719eb2744c2e3d
+msgid "**➔ create the `use` advancement**"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:70 3e28e342a94548aba4fa1330fe6dac38
+msgid "`@advancement paintbrush:use`"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:95 e2ef30500ce24a569dd18ec87b2c9947
+msgid ""
+"The reward enables us to trigger a specific function when the brush is "
+"used. We'll use the `paintbrush:use` function here."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:97 17b78e0c45be4d8a8de49f7ca5da49fb
+#, python-brace-format
+msgid ""
+"Note that this advancement triggers the function only if the brush has "
+"the custom data `{paintbrush: true}`, ensuring that vanilla brushes "
+"continue to function normally."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:99 73c9c638df0e447d8e29ba88ffa9039c
+msgid "**➔ create the `use` function**"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:101 ../../../examples/paintbrush.md:121
+#: ../../../examples/paintbrush.md:141 ../../../examples/paintbrush.md:294
+#: 39303faebc584735b0ea05879eb012fd 6938af7c483840d9b77f41f2b293d5ad
+#: 7025cfc3c3de4f46a1d2adbd257a6007 8e725fb92f0a450da1717db54ffa029d
+msgid "`@function paintbrush:use`"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:106 331bed75c4da43d69af8be556a26d0ed
+msgid "**➔ create the `give` function**"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:108 34ee7d0387294abcac353199fc79fb52
+msgid "`@function paintbrush:give`"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:117 e1614aa237394689a8c88d3415344354
+msgid ""
+"Next, test it by giving yourself a brush by running `function "
+"paintbrush:give`. Now… right-click, and you'll see \"Paintbrush used!\" "
+"in the chat. However, if you try again, nothing will happen. This is "
+"because the player now has the `painterbrush:use` advancement, which "
+"prevents it from triggering again. Since advancements only trigger once "
+"per player, we need to reset it each time the brush is used."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:119 ../../../examples/paintbrush.md:139
+#: ../../../examples/paintbrush.md:292 9668649d924848458f287daae459b7a9
+#: f2f3188a9da0435ca4af9664fade7f0e ff0147862ccb4b258aa70d662e740f7b
+msgid "**➔ update the `use` function**"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:127 45f9a660d48840de83fe3d96d1e111f3
+msgid ""
+"Try again (remember to manually reset the advancement once before "
+"testing), and you'll see that the message now appears every time you use "
+"the brush."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:131 143bf46e1aa44a19b94d6f9f2fcd727c
+msgid "3. Replace the Targeted Block"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:133 26e5ee9b8cdc42f1b7f08cac4d77e3e8
+msgid ""
+"We've successfully set up the detection for when a player right-clicks "
+"with the brush. However, the issue now is that our function runs at the "
+"player's position. What we actually want to do is transform the block the"
+" player is aiming at. While Minecraft doesn't provide a straightforward "
+"way to get this information, the Bookshelf library does!"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:137 5b5d3be20a0c41dab6f6db7596381818
+msgid ""
+"We can use the `bs.view` module, specifically the `at_aimed_block` "
+"function, which allows us to execute commands directly at the position of"
+" the block the player is targeting."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:147 04cde4b3667d4e60be8e1c2b85354096
+msgid "**➔ create the `replace_block` function**"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:149 ../../../examples/paintbrush.md:180
+#: ../../../examples/paintbrush.md:199 ../../../examples/paintbrush.md:219
+#: ../../../examples/paintbrush.md:245 6acafa5e86e7492e848ca3bee67159e1
+#: 6bbe7ebf4ee741f6b3315d09314f9086 afd5b9a9836d4dfca1575b16452b68bc
+#: c0772a473c0149a19a9fa0b76bb61b21 dc3f4063138e4b239fd8272f6afafa6a
+msgid "`@function paintbrush:replace_block`"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:154 9911d06674a54b2f93a833bd1a4ff840
+msgid ""
+"Now, each time the player uses the paintbrush, the `paintbrush:use` "
+"function will execute `paintbrush:replace_block` at the aimed block's "
+"position, replacing it with a bookshelf block."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:156 c4b666085d034f9cadc7f079e299d29a
+msgid ""
+"You may have noticed an empty `with` macro variable. We can't pass "
+"optional macro variables to a function directly, but using `with` allows "
+"us to set default values for them. In this case, we don't need to pass "
+"any optional variables, so we leave it empty."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:160 84d792caa33d4587913b93b1c477b38a
+msgid "4. Paint the Targeted Block"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:162 ccfbf09827f7444a8ef5d9fca3c6484c
+msgid ""
+"Now, let's move on to painting! We'll use the `bs.block` module to apply "
+"the block type from the item held in the offhand to the targeted block. "
+"This process involves three steps:"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:164 42c023fa8a1f4e998f72ad2b530b7e57
+msgid ""
+"Load the targeted block into storage (`bs:out block`) as a \"virtual "
+"block\""
+msgstr ""
+
+#: ../../../examples/paintbrush.md:165 3b00a848cdfd4c91a7c0a55181a97625
+msgid ""
+"Transform the virtual block using various operations (`mix_type` in this "
+"case)"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:166 d83924947f834b6899b8d22870842c4d
+msgid ""
+"Generate the final result from the virtual block, which can be a block, "
+"item, particle, block display, etc. (here, we'll replace the block with "
+"its transformed version)."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:170 6505015131da4541a6b135947c5fb11b
+msgid "Set Up the Transformation"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:172 551f50d5897b48dbb6a2713d2a042520
+msgid ""
+"The `mix_type` function uses a mapping registry to determine how blocks "
+"are transformed. Bookshelf provides two built-in registries:"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:173 447f3bb11232459a9953a4dd8ecfc5cb
+msgid ""
+"`bs.colors`: This registry is used to transform blocks based on color "
+"properties. For example, if the held item is a colored block, it will "
+"attempt to apply the color transformation to the targeted block."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:174 1ee3e45256a04ad28e1c6f071371a64e
+msgid ""
+"`bs.shapes`: This registry is used to transform blocks based on their "
+"shape. For instance, if the held block is oak planks, and the targeted "
+"block is birch stairs, this registry would map the oak plank to a "
+"corresponding block shape like oak stairs. This is ideal for transforming"
+" between blocks that have a similar structural shape."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:176 6cfcd9a3839d45df97c5a3fbc441ee4d
+msgid ""
+"These registries allow for more specific control over how block "
+"transformations occur. In this example, we'll use `bs.shapes`. To set up "
+"the transformation, we specify the `mapping_registry` and store the block"
+" `type` from the player's offhand into an arbitrary storage."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:178 ../../../examples/paintbrush.md:197
+#: ../../../examples/paintbrush.md:217 ../../../examples/paintbrush.md:243
+#: 270cf6ea52f04d2a82a8053d4f202f53 3fd7b31296754b42aa1eb9970b57bf20
+#: 8cb98c537b904aa4ae79cb97f56a7b5f a8806019899646dda68eda5f14289b2f
+msgid "**➔ update the `replace_block` function**"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:189 e689d5fbc5f94b5285ab8659de081f71
+msgid ""
+"Here, we use a score to check if the command succeeds. If it fails, we "
+"return immediately to prevent unintended behavior."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:193 bd2560b176074e8295801e2f497882b0
+msgid "Load the Targeted Block"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:195 191f069a8d824d1daf5feb8a8f8d26c1
+msgid ""
+"The `#bs.view:at_aimed_block` function ensures that execution is already "
+"at the targeted block position, so we can directly load it using "
+"`get_block`."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:213 5f0200c7d361477b9b989f33e56ad83a
+msgid "Apply the Transformation"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:215 5e6ee26e805c4a30bf4d7c310fad5f5e
+msgid ""
+"Now that the block is loaded and the transformation input is ready, we "
+"can apply `mix_type`."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:235 f238de0b7d414c5d97ed78ae3c5a9d7f
+msgid ""
+"The `mix_type` function directly overwrites the virtual block in `bs:out`"
+" storage with the transformed value. If it returns 0, no transformation "
+"was found, so we return a failure."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:239 6e04792aa8bb4aa082defb69e68a5b71
+msgid "Place the Transformed Block"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:241 3133ccb1ac0b40ad9207d66bd2cdb232
+msgid "Finally, we apply the transformed block to the world using `set_block`."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:265 a29f944be9da45ffa211894bc7e9f8fd
+msgid ""
+"This completes the transformation process. If you try to paint a block "
+"now, you will see that the block is transformed, perfect!"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:269 e8cc1ef303ea4cd6a5a9ddbb93164e77
+msgid "5. Going Further"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:271 1e9e65b73f4447648621acd16447e022
+msgid ""
+"If you try this on a sign, you will see that the block is not transformed"
+" to match the material of the held block. This is because the "
+"`using_item` advancement criterion does not trigger on certain blocks, "
+"like signs. To fix this, we can complement our approach by using a "
+"scoreboard objective to track when a player uses a brush. We need to "
+"trigger the `use` function when the score increments. To do this, we'll "
+"add a new `tick` function that runs on a loop and reset the score in the "
+"`paintbrush:use` function."
+msgstr ""
+
+#: ../../../examples/paintbrush.md:275 b2f1dec7a9204d76a488762ab26d8c54
+msgid "**➔ update the `load` function**"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:284 f47b98b2ffaa49778228041d7c57c966
+msgid "**➔ create the `tick` function**"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:286 4165f768f4734c01b5ac851c5cd194a0
+msgid "`@function paintbrush:tick`"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:301 db4fe0a6e98943c5919fae30a417e8f4
+msgid ""
+"And… That's it! You can now paint blocks with the painter tool, and as "
+"you can see, this is really simple to do!"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:305 fcdd9b698df6463585b4ff5c89d8670f
+msgid "✔️ Conclusion"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:307 ae7f2e554ef54c048eb7a5488e2b9d6a
+msgid ""
+"Congratulations! You've successfully created a functional paintbrush "
+"using Bookshelf! This project demonstrates how to:"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:309 c33ff5dc0ce34b27bd8ddecf4b4eecd1
+msgid "Use Bookshelf's view module to get the aimed block"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:310 84752fb33f164d46b9b60f9917b044d7
+msgid "Use Bookshelf's block module for block manipulation"
+msgstr ""
+
+#: ../../../examples/paintbrush.md:312 12ba70ca9ee64b7c87f98f1297a1dda8
+msgid ""
+"The paintbrush is not only a useful tool but also a great example of how "
+"Bookshelf simplifies complex datapack development. Feel free to "
+"experiment with the code and add your own features to make it even more "
+"powerful!"
+msgstr ""
+
+#: ../../_templates/comments.md:4 da3e583f2edc44079ac59206bf834bfa
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 3fb47fcac3704e329c5f7e780f4f5bcc
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+

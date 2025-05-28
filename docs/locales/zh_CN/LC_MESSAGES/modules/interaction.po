@@ -1,0 +1,394 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/interaction.md:1 e14611df5a0647edb4e7d09a9ec8c6ce
+msgid "🖱️ Interaction"
+msgstr ""
+
+#: ../../modules/interaction.md:3 c9dd256887a047dfa23117910a51c1f4
+msgid "**`#bs.interaction:help`**"
+msgstr ""
+
+#: ../../modules/interaction.md:5 0cd400cf0a464e88bd96acbbff2308fc
+msgid "Create and manage Graphical User Interfaces (GUIs) in Minecraft."
+msgstr ""
+
+#: ../../modules/interaction.md:8 52e96b93e9534cfd989f995ddd18a4d3
+msgid "\"As far as the customer is concerned, the interface is the product.\""
+msgstr ""
+
+#: ../../modules/interaction.md:9 27c8a1de97ac4e7aa8b9915e4dfa1eaa
+msgid "Jef Raskin"
+msgstr ""
+
+#: ../../modules/interaction.md:13 af1fdb03c5ee4d4da2a80533d00460c9
+msgid ""
+"The Interaction API is a low-level API to create GUIs based on the "
+"[Interaction](https://minecraft.wiki/w/Interaction) entity. This API is "
+"low level since the possible events are directly and manually bound to "
+"the interaction."
+msgstr ""
+
+#: ../../modules/interaction.md:18 9907ab4f19aa4f1da960f8fc590552e4
+msgid "🔧 Functions"
+msgstr ""
+
+#: ../../modules/interaction.md:20 4653181bc69f4fbcaf1311252a44ae8b
+msgid "You can find below below all functions available in this API."
+msgstr ""
+
+#: ../../modules/interaction.md:24 f2063394c5e5444a816d2f041fe1de43
+msgid "Clear Events"
+msgstr ""
+
+#: ../../modules/interaction.md:28 2e513066cd7a4409a37b156d4f51c2d5
+msgid "Clear events registered for the specified interaction entity."
+msgstr ""
+
+#: ../../modules/interaction.md:30 ../../modules/interaction.md:74
+#: ../../modules/interaction.md:99 ../../modules/interaction.md:124
+#: ../../modules/interaction.md:149 ../../modules/interaction.md:174
+#: 327301a92f304f11b83bf7ab1dafae5b 72dc1c8b848048719f0c06703bf1dcb6
+#: 870b172eb0b349b5b27ffc08a2badbb2 98fedf3b8e8a42428bf11bbe02c556f1
+#: a1484eb5b8a24d78aca8867698686205 fb3d097175fc47eb922a71613fb9a907
+msgid "Inputs"
+msgstr ""
+
+#: ../../modules/interaction.md:31 eeae8315c73340e09b47a8533ce0bf5d
+msgid ""
+"**Execution `as <entity>`**: Interaction entity for which the events will"
+" be cleared."
+msgstr ""
+
+#: ../../modules/interaction.md:33 ../../modules/interaction.md:77
+#: ../../modules/interaction.md:102 ../../modules/interaction.md:127
+#: ../../modules/interaction.md:152 ../../modules/interaction.md:177
+#: 0c0da1b442d24f7d95be1933b47b73d9 3771222b85504475897ffaed0a8efed7
+#: 7645c2b364e1478798f0c60942947fa6 7bd4e42b81b743bb933e214434108de8
+#: bcde11afb91a4e548887eacc2f979cb3 c8223ec9684e4a30859e753e26c06e7e
+msgid "**Function macro**:"
+msgstr ""
+
+#: ../../modules/interaction.md:41 ../../modules/interaction.md:86
+#: ../../modules/interaction.md:111 ../../modules/interaction.md:136
+#: ../../modules/interaction.md:161 ../../modules/interaction.md:186
+#: 050b0fbe18b744fcad2c4240c47fc7a5 316539d44d514312ac66f3fbce29ae6c
+#: 6b159f16e93d4515a84c167847493dc1 70999a0657ae4e0dbccf47cee9a427a7
+#: aaa1496fe61941aeae3ee3c944542cf3 d3a30ab88f6f4bc98c0270a305102395
+msgid "Outputs"
+msgstr ""
+
+#: ../../modules/interaction.md:42 db728329aa1c4f78825017a7e0c2daf7
+msgid "**Return**: The number of events removed."
+msgstr ""
+
+#: ../../modules/interaction.md:44 d9348ce391ee472fa4b643af3a0402a3
+msgid ""
+"**State**: The specified events for the interaction entity will be "
+"removed."
+msgstr ""
+
+#: ../../modules/interaction.md:47 da9b7acab34649a490ad644a3ddf1dde
+msgid "*Example: Clear hover events for the interaction entity:*"
+msgstr ""
+
+#: ../../modules/interaction.md:59 ../../modules/interaction.md:212
+#: 8dfe49d041e549a982bec3094b1bfcf6 ed3236079f674b718e97d98479fa94f5
+msgid "**Credits**: Aksiome, theogiraudet"
+msgstr ""
+
+#: ../../modules/interaction.md:63 dc9a880b76e347d28990714e37a3e4a2
+msgid "On Event"
+msgstr ""
+
+#: ../../modules/interaction.md 1435fa0a9c5e443aa005d99bfd2d2e03
+#: 568314386205428ea92bb579b3efd3e3
+msgid "Left Click"
+msgstr ""
+
+#: ../../modules/interaction.md:71 e8a35238b10a4d20852a4201fd9dbb6e
+msgid ""
+"Register a command to run when the left click is pressed on the current "
+"interaction. Each interaction can respond to multiple events."
+msgstr ""
+
+#: ../../modules/interaction.md:75 ../../modules/interaction.md:100
+#: ../../modules/interaction.md:125 ../../modules/interaction.md:150
+#: ../../modules/interaction.md:175 559ea5a7599e4a14b2bf45a7f427ab53
+#: 6a6f777c0eec4eb49491c06f68baa884 7ba5d71540014a168c7a425dc5ed8e45
+#: f043d7831b4a404fb5e288dcb0b03995 feb470429c684498a497734125f890f5
+msgid ""
+"**Execution `as <entity>`**: Interaction entity for which the event is "
+"registered."
+msgstr ""
+
+#: ../../modules/interaction.md:87 ../../modules/interaction.md:112
+#: ../../modules/interaction.md:137 ../../modules/interaction.md:162
+#: ../../modules/interaction.md:187 16dd44594537498b91f19f51de07bed5
+#: 1fc35d914b2e44f593b65c50d5af529f 21f4bfce972e4aea95738ad33a037d52
+#: ad5ee2c29d83483197dce17971fb650c c491867a0aa74edea78874a139e4f787
+msgid "**Return**: The ID of the created event."
+msgstr ""
+
+#: ../../modules/interaction.md:89 fdf879b861764bd1ad5909fb71c21d35
+msgid "**State**: The interaction will trigger the event when left clicked."
+msgstr ""
+
+#: ../../modules/interaction.md 8aeb8864b340482f8f3e05c82035aa7b
+#: fdad4f5523474151b2ed5942b29418af
+msgid "Right Click"
+msgstr ""
+
+#: ../../modules/interaction.md:96 ee2d30edd81749928edc90047da08891
+msgid ""
+"Register a command to run when the right click is pressed on the current "
+"interaction. Each interaction can respond to multiple events."
+msgstr ""
+
+#: ../../modules/interaction.md:114 8220d06680704487a77c7418a3cb9e55
+msgid "**State**: The interaction will trigger the event when right clicked."
+msgstr ""
+
+#: ../../modules/interaction.md 543fab6d15cb4194b0d5e355468f4588
+#: f3f19dd6a8f54e95b8b1eebd6d6f6d33
+msgid "Hover"
+msgstr ""
+
+#: ../../modules/interaction.md:121 2359c227452846c2828f6511ad7697b8
+msgid ""
+"Register a command to run continuously while the player is hovering over "
+"the interaction. Each interaction can respond to multiple events."
+msgstr ""
+
+#: ../../modules/interaction.md:139 58502e129d5e4c5bb4546c5f93778cd9
+msgid ""
+"**State**: The interaction will trigger the event continuously while "
+"hovered over."
+msgstr ""
+
+#: ../../modules/interaction.md 7ead65d08980453f95c16719b3a1386e
+#: f43df0629a464770ad84936901d40426
+msgid "Enter Hover"
+msgstr ""
+
+#: ../../modules/interaction.md:146 c835084192e2437c92625e456a907292
+msgid ""
+"Register a command to run once when the player begins hovering over the "
+"interaction. Each interaction can respond to multiple events."
+msgstr ""
+
+#: ../../modules/interaction.md:164 4f49470c75d1495495eec9a6031d8381
+msgid "**State**: The interaction will trigger the event once upon hover entry."
+msgstr ""
+
+#: ../../modules/interaction.md bb90bacb1439468eaa3606e68c540fa5
+#: dafdd36207204b9ab820a0d62b70a868
+msgid "Leave Hover"
+msgstr ""
+
+#: ../../modules/interaction.md:171 d309ba48ca31442b830a32b8487da557
+msgid ""
+"Register a command to run once when the player stops hovering over the "
+"interaction. Each interaction can respond to multiple events."
+msgstr ""
+
+#: ../../modules/interaction.md:189 319bdf90217a4e13982d0d73130c8d8d
+msgid "**State**: The interaction will trigger the event once upon hover exit."
+msgstr ""
+
+#: ../../modules/interaction.md:192 cd2756d5e2614b51bcd7bc88215df02c
+msgid "Edge Case"
+msgstr ""
+
+#: ../../modules/interaction.md:195 8e9fc4be3c13455d88521e90d558f91a
+msgid ""
+"If a player logs out while hovering over the interaction, the hover leave"
+" event will trigger on the executor. If the executor is the player, the "
+"event won't be triggered again when they log back in. Be sure to account "
+"for this edge case and handle it appropriately when the player returns."
+msgstr ""
+
+#: ../../modules/interaction.md:200 155a00d142f7445eaf79c94c69b6e7bf
+msgid ""
+"*Example: Glow the interaction's icon while the interaction is hovered "
+"and unglow it when it is not hovered anymore:*"
+msgstr ""
+
+#: ../../modules/interaction.md:216 f66ef284431b44c18671373dfcc24f76
+msgid "Predefined Callbacks"
+msgstr ""
+
+#: ../../modules/interaction.md cdd31a69ca9347408a6686ee1bb6e899
+msgid "Glow"
+msgstr ""
+
+#: ../../modules/interaction.md:221 b626ef9a1ab7444a80fafebfe3ef1882
+msgid "**`#bs.interaction:callback/glow`**"
+msgstr ""
+
+#: ../../modules/interaction.md:223 ed26a7b132ff415bb8c3fb83776ed3fc
+msgid "Makes the target entity glow."
+msgstr ""
+
+#: ../../modules/interaction.md da4aa2c99a57422c8d1aea144e613a10
+msgid "Unglow"
+msgstr ""
+
+#: ../../modules/interaction.md:227 dff7fab822394e87a182c1487c288013
+msgid "**`#bs.interaction:callback/unglow`**"
+msgstr ""
+
+#: ../../modules/interaction.md:229 1a78100214e3443987c437278819999c
+msgid "Removes the glow effect from the target entity."
+msgstr ""
+
+#: ../../modules/interaction.md e8c30c3d9301408bbe8e6daf487ca9a2
+msgid "None"
+msgstr ""
+
+#: ../../modules/interaction.md:233 aa5445228e9843d4a9b249b71b8450f3
+msgid "**`#bs.interaction:callback/none`**"
+msgstr ""
+
+#: ../../modules/interaction.md:235 051ba535ec69465799ee0c17073827f4
+msgid ""
+"An empty callback that does nothing. May be used as a placeholder or to "
+"explicitly indicate that no action should occur."
+msgstr ""
+
+#: ../../modules/interaction.md:240 dee76144644e420b8ad2523d4c87a9d6
+msgid "🏷️ Entity Tags"
+msgstr ""
+
+#: ../../modules/interaction.md:242 eed4cdc2e1f54fe8897a081416eba35f
+msgid "You can find below below all tags available in this API."
+msgstr ""
+
+#: ../../modules/interaction.md:246 5ffd41e631b843beb7b50545c3190370
+msgid "Is Hovered?"
+msgstr ""
+
+#: ../../modules/interaction.md:248 3631dd96e8e8453098a94af1f87b1d52
+msgid "**`bs.interaction.hovered`**"
+msgstr ""
+
+#: ../../modules/interaction.md:250 0720d3ba1fba46b486dcab289b39e413
+msgid "Determine if an interaction is currently hovered by a player."
+msgstr ""
+
+#: ../../modules/interaction.md:253 154ecaef682c4425ab843cbdb5c29c01
+msgid ""
+"This is useful in `hover_enter` and `hover_leave` events, which are per "
+"player. Since `hover_leave` triggers when a player stops hovering but "
+"doesn't check if all players have stopped, this tag can be used to "
+"determine when every player has left the interaction."
+msgstr ""
+
+#: ../../modules/interaction.md:256 4354b110f7444f76914202907c5889b2
+msgid "**Credits**: Aksiome"
+msgstr ""
+
+#: ../../modules/interaction.md:260 5408d844d92a489a81a27c4564b61e98
+msgid "Is Source?"
+msgstr ""
+
+#: ../../modules/interaction.md:262 7b645198053b43a5aca52f59f29e26ae
+msgid "**`bs.interaction.source`**"
+msgstr ""
+
+#: ../../modules/interaction.md:264 261aa4b869124eacac46ed5d123dbeb2
+msgid ""
+"Usable only in the callback of an event. Determine if the current entity "
+"is the source of the event."
+msgstr ""
+
+#: ../../modules/interaction.md:267 ../../modules/interaction.md:278
+#: ../../modules/interaction.md:322 3ba24a085a1a478c9c9607634831d4b3
+#: 490c0102e6784fc48c45223fd09589b6 cefb2484c2634b23b03fa1dc49d7f44f
+msgid "**Credits**: theogiraudet"
+msgstr ""
+
+#: ../../modules/interaction.md:271 300648567e754f69905a5aabf3eebaf7
+msgid "Is Target?"
+msgstr ""
+
+#: ../../modules/interaction.md:273 1865fa84c7704e9f9ff68afb03a28cc8
+msgid "**`bs.interaction.target`**"
+msgstr ""
+
+#: ../../modules/interaction.md:275 c3a3f8f3cc1a408d81db38a094fb4878
+msgid ""
+"Usable only in the callback of an event. Determine if the current entity "
+"is the target of the event."
+msgstr ""
+
+#: ../../modules/interaction.md:282 8f6f7b66b20f4c4ea7df304d65cb0bca
+msgid "Listen to a Specific Event?"
+msgstr ""
+
+#: ../../modules/interaction.md:288 39ff876380774e08b2e89f214be7ac4e
+msgid "**`bs.interaction.listen_right_click`**"
+msgstr ""
+
+#: ../../modules/interaction.md:290 dec4316c085c4978b0d27f1d571d877d
+msgid "Determine if the current interaction listens to right-click interactions."
+msgstr ""
+
+#: ../../modules/interaction.md:295 687e6b44b87c41c3a9cd94863fcbbc19
+msgid "**`bs.interaction.listen_left_click`**"
+msgstr ""
+
+#: ../../modules/interaction.md:297 dc76425828084c82b5c9667f929f366b
+msgid "Determine if the current interaction listens to left-click interactions."
+msgstr ""
+
+#: ../../modules/interaction.md:302 48b2b4bd0f68413882286d176f631baa
+msgid "**`bs.interaction.listen_hover`**"
+msgstr ""
+
+#: ../../modules/interaction.md:304 c86b9dea1e5d43cdb33f578616fa7771
+msgid "Determine if the current interaction listens to hover interactions."
+msgstr ""
+
+#: ../../modules/interaction.md:309 a947f22cb01541b696f2d4150e594023
+msgid "**`bs.interaction.listen_hover_enter`**"
+msgstr ""
+
+#: ../../modules/interaction.md:311 2ed06535012f439bb744ec602e074766
+msgid "Determine if the current interaction listens to enter hover interactions."
+msgstr ""
+
+#: ../../modules/interaction.md:316 e8077c363cbc42848e1108364c2f3bb4
+msgid "**`bs.interaction.listen_hover_leave`**"
+msgstr ""
+
+#: ../../modules/interaction.md:318 34a061ef5ce44c0893353a1627ccb8a5
+msgid "Determine if the current interaction listens to leave hover interactions."
+msgstr ""
+
+#: ../../_templates/comments.md:4 71994e9d956e4b1dbd89d5cb5cb89f1a
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 ca965d33c13c4ef48b066adc6f6a3eb8
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+

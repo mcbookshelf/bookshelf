@@ -1,0 +1,683 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/link.md:1 d555a1f05ab8483cb85f549a54ef23d2
+msgid "🔗 Link"
+msgstr ""
+
+#: ../../modules/link.md:3 fc36df7638cf47e0831a83ab41de6937
+msgid "**`#bs.link:help`**"
+msgstr ""
+
+#: ../../modules/link.md:5 bba9b6a8b18e4b3fb6bdf8489d886f29
+msgid ""
+"Construct coherent entity structures by linking entities' positions and "
+"rotations."
+msgstr ""
+
+#: ../../modules/link.md:13 edf4a9da61a94cd3bf75df099412dde2
+msgid "\"Invisible threads are the strongest ties.\""
+msgstr ""
+
+#: ../../modules/link.md:14 e63b27fc0d0e4e0abbf50f4968625f2d
+msgid "Friedrich Nietzsche"
+msgstr ""
+
+#: ../../modules/link.md:19 5047b9a4af834107a6aefa8c0f1be593
+msgid ""
+"This module uses scaled integers and can overflow when coordinates are "
+"higher than 2,000,000."
+msgstr ""
+
+#: ../../modules/link.md:24 794700b9ac8843fda9f99c7596c82767
+msgid "🔧 Functions"
+msgstr ""
+
+#: ../../modules/link.md:26 17c6f67ecca44e0ca44eebb818e196b6
+msgid "You can find below all functions available in this module."
+msgstr ""
+
+#: ../../modules/link.md:30 f5afb667d7374627b42cae63207137b9
+msgid "Create Link"
+msgstr ""
+
+#: ../../modules/link.md:34 b2d78c96e2c34a30b889746c007faf48
+msgid ""
+"Create a link between the entity executing the function and the entity "
+"closest to the execution position."
+msgstr ""
+
+#: ../../modules/link.md:36 ../../modules/link.md:74 ../../modules/link.md:102
+#: ../../modules/link.md:128 ../../modules/link.md:154
+#: ../../modules/link.md:184 ../../modules/link.md:221
+#: ../../modules/link.md:256 ../../modules/link.md:289
+#: ../../modules/link.md:322 ../../modules/link.md:344
+#: ../../modules/link.md:366 ../../modules/link.md:388
+#: ../../modules/link.md:415 ../../modules/link.md:444
+#: ../../modules/link.md:472 ../../modules/link.md:498
+#: ../../modules/link.md:524 ../../modules/link.md:554
+#: ../../modules/link.md:591 ../../modules/link.md:637
+#: 000875ad2bcf443d9724f097c2db5971 3c4f01dd6b9046a5ab1172c0f5eda2e3
+#: 3d7aed2339f74fb49108d3d1cfd16750 3f911b57fdf34e9ca2ee18128e4bf5d9
+#: 45861a1e93b5468eac4392c20f7446e8 4c23e20946ac467798ccddef0d160a0f
+#: 50fb9c09c43345abb310952de1d5b3be 5ec022c6344e4eb49f02b0e25a333875
+#: 657ef5aee1db4df88e2819c970c589f4 72dd81777ee44227a821f3512d94253d
+#: 72e7d79693ad49c7b16b0096866c2647 74bb8d3d1a13474fa08f9e6b95a3e158
+#: 7d41ab10bec848cfa9b261d1e95d857d 7e490fed95e94b9abf3ab897a348d537
+#: 91d6b1df3f654abcacf1ad261670d90c a126dc938584420384a5b8e0882303dc
+#: a99f272780c24c219ea403102b480b31 b450e137d3ce45dd91275cf91a493a4f
+#: e728cc835afd4d1a9c4056cf0e6061b0 f21778d5ea2d4b4a90880559cbb6e53c
+#: f64c73a6ae1743f189537a5f3a7a3f77
+msgid "Inputs"
+msgstr ""
+
+#: ../../modules/link.md:37 7a398cdbc226451e93138178dcf43ab2
+msgid ""
+"**Execution `as <entities>`**: Child entities that you wish to link to a "
+"parent."
+msgstr ""
+
+#: ../../modules/link.md:39 356e4bdc8a40460fb4e5d1412301364d
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Use the nearest "
+"entity as the parent."
+msgstr ""
+
+#: ../../modules/link.md:41 ../../modules/link.md:81 ../../modules/link.md:107
+#: ../../modules/link.md:133 ../../modules/link.md:159
+#: ../../modules/link.md:189 ../../modules/link.md:226
+#: ../../modules/link.md:263 ../../modules/link.md:294
+#: ../../modules/link.md:325 ../../modules/link.md:347
+#: ../../modules/link.md:369 ../../modules/link.md:391
+#: ../../modules/link.md:418 ../../modules/link.md:451
+#: ../../modules/link.md:477 ../../modules/link.md:503
+#: ../../modules/link.md:529 ../../modules/link.md:559
+#: ../../modules/link.md:594 12ddb24344e742e896533b5a3ef1ec43
+#: 137630592c3246d895b6baa2580c24f2 31bec96e12684c5185a77253b3af49a9
+#: 41c130b09cc94d1f8bddc8cb1f6185e5 4c44692d6d754dcbb885cae69c14e4a4
+#: 620b1490827e4859b9beaa22b3438910 627cb8266caf4e9fbb08a97ad81c801a
+#: 7160540ef8914632a2b745cf4620dda1 7dbf10b4f47341a8b32fccd2d33ccc1e
+#: 98a6eb0d425c47328ada79aeff3a0523 9c955fa720814f1c987ba94e0ec432af
+#: a90551ae8d9f43b299c78bc53b59f41c b3cc3aa9204c4de8b582c1fb10e59834
+#: bc9605845c754a5ebcbd2ee68870d6b9 c36bf81775f846ecbd58b082ce2519b6
+#: c63583a60b1342bd97abe25d9dae4fd6 c85f31549dcc412ca659fd244e5c5b95
+#: ca87a633c516454f915a629aff3d4fb7 e820ca15499e4bc7bf08d41dfaf4e558
+#: fcaa0bb5e0c649469a8133f95652d3df
+msgid "Outputs"
+msgstr ""
+
+#: ../../modules/link.md:42 ../../modules/link.md:77 ../../modules/link.md:105
+#: ../../modules/link.md:259 ../../modules/link.md:447
+#: ../../modules/link.md:475 ../../modules/link.md:595
+#: 06b990962fb7481b8d128bfd9a5b4a5f 1c35ce96ad0a46c18f59597cdc5f90bf
+#: 71a7644768c2459ea7d50652b8b0efd4 9fddc3b28ac14fb19b01e4158fd6133c
+#: d0c91560ce204caabeaab8da6c5b6677 e9b43afdb89549feb62eb161db7b6ae7
+#: eeb5418f7dac4ccdac9bec3f1c1863b7
+msgid "**Scores `@s bs.link.r[x,y,z]`**: Relative position to the parent entity."
+msgstr ""
+
+#: ../../modules/link.md:44 ../../modules/link.md:597
+#: 23b8ec5400a8417bb5f0871316821f60 72d70fdbf8b74639a6597e07c6dcf8dd
+msgid ""
+"**Scores `@s bs.link.l[x,y,z,h,v]`**: Local position and rotation "
+"relative to the parent entity."
+msgstr ""
+
+#: ../../modules/link.md:46 90d26a1cff1f4a3c996fdcf5acab9b36
+msgid "**Scores `@s bs.link.to`**: ID of the parent entity to which it is linked."
+msgstr ""
+
+#: ../../modules/link.md:49 b3b4abf7d08e4366baf7553ebdfc0a0c
+msgid "*Example: Link armor stands to the nearest sheep:*"
+msgstr ""
+
+#: ../../modules/link.md:57 3934dd8e42ae402b9e0a50092a932e2b
+msgid ""
+"You should generally avoid changing output scores, as they serve as "
+"parameters for other link functions. Therefore, it is recommended to "
+"exclusively let Bookshelf handle them."
+msgstr ""
+
+#: ../../modules/link.md:60 ../../modules/link.md:211 ../../modules/link.md:246
+#: ../../modules/link.md:581 ../../modules/link.md:611
+#: 12fc1842686e4364b43c9d6b5adf6ac2 5d8a4ff0929042bf8972ea0711655e53
+#: 6e34181bd0b74e0294d9e4e1c5160138 9c286ea509394e5db2880f98b62dddd6
+#: d53e2ca71d59442d8afe9efede500ed7
+msgid "**Credits**: Aksiome, Leirof"
+msgstr ""
+
+#: ../../modules/link.md:64 a87e208f326f44df9c0093b19c033380
+msgid "Imitate Behaviors"
+msgstr ""
+
+#: ../../modules/link.md 0a92d0a663ab4918ab95a4fe481f623c
+#: f8f3fc6a9962437a983c5f0436c4df83
+msgid "Pos & Rot"
+msgstr ""
+
+#: ../../modules/link.md:72 c3d15515f791406da08766701ecf5a62
+msgid ""
+"Replace the entity at its relative position and local rotation. This "
+"operation repeated in a loop simulates the movements and rotations of the"
+" parent entity."
+msgstr ""
+
+#: ../../modules/link.md:75 ../../modules/link.md:103 ../../modules/link.md:129
+#: ../../modules/link.md:155 ../../modules/link.md:185
+#: ../../modules/link.md:222 ../../modules/link.md:257
+#: ../../modules/link.md:290 ../../modules/link.md:445
+#: ../../modules/link.md:473 ../../modules/link.md:499
+#: ../../modules/link.md:525 ../../modules/link.md:555
+#: ../../modules/link.md:592 00f987dd6cc244639223d9a4edb84a38
+#: 041eb06fc273453599035f9f05465193 22c76ba45df247459945d56fbf320d9d
+#: 23ffcabeb227468da7132dd19a076fee 245fece55e714739970927de869569e1
+#: 312f6afccd474f7fb0d8b97495b3a593 46c9a2e24dcc4c808747e14d9b509abb
+#: 48c8e284003d413a97eb1dd485c2b7bb 563c98b3d90c4c8a96a7ad3e3e63c6ff
+#: 69242cd5557e4c2f92c9fa3a155a61b4 720a5308641b42db9f89a324ca28598e
+#: 8988e5ff6cfb4762a390034db4a8d80d 9fdd4a1374994a1d8f8cbf3442eec3d7
+#: b7bf25ba64834793a77d58a7e69e8159
+msgid ""
+"**Execution `as <entities>`**: Executing entities that must be linked to "
+"another entity."
+msgstr ""
+
+#: ../../modules/link.md:79 ../../modules/link.md:131 ../../modules/link.md:261
+#: ../../modules/link.md:449 ../../modules/link.md:501
+#: 0e07463e02e64295a6f0b6aedbe00363 16a616a4b1e6476480f3bfd892b50c28
+#: 23084add43954d3cb4ef6d83d153aa5f 52d24fa2540f435b981cacb9daf2252f
+#: f19abb3ec6dd46aeaa53e2862cd7437e
+msgid ""
+"**Scores `@s bs.link.l[h,v]`**: Local rotation relative to the parent "
+"entity."
+msgstr ""
+
+#: ../../modules/link.md:82 185fe4cbcec247a3abf667d3e09e0e32
+msgid ""
+"**State**: The entity is moved to maintain its relative position and "
+"local rotation relative to the parent entity."
+msgstr ""
+
+#: ../../modules/link.md:85 ../../modules/link.md:111 ../../modules/link.md:137
+#: ../../modules/link.md:163 ../../modules/link.md:193
+#: 1a77d55c3d8a441c97413faeb6e50fe6 381ce1612cf54438b63160a83b8da9cf
+#: 5c8cfcc53aa5406ebadd62f98b7b55b6 ba7f69cf90f946879e9cddb32d1ace5e
+#: bf70a9ead2c04033875a31249a4e1c42
+msgid "*Example: Make armor stands mimic your moves:*"
+msgstr ""
+
+#: ../../modules/link.md 07ac647f38da4f7983deb1d1573f5ffb
+#: 0dcde00f28ad4c778af6060316ec461b
+msgid "Position"
+msgstr ""
+
+#: ../../modules/link.md:100 3a548b675c5e41f5bc5c16bd9641e69f
+msgid ""
+"Replace the entity at its relative position. This operation repeated in a"
+" loop simulates the movements of the parent entity."
+msgstr ""
+
+#: ../../modules/link.md:108 97a4d824d8504a0982b916fedca74e5f
+msgid ""
+"**State**: The entity is moved to maintain its relative position with the"
+" parent entity."
+msgstr ""
+
+#: ../../modules/link.md 130cb61de65f42a4b5a3732e7cf4b025
+#: b7ebaa80fa684658bf0fb93cc0c676e1
+msgid "Rotation"
+msgstr ""
+
+#: ../../modules/link.md:126 be2a8fab6fd8496cb0c25c7f7fb432a2
+msgid ""
+"Replace the entity at its local rotation. This operation repeated in a "
+"loop simulates the rotation of the parent entity."
+msgstr ""
+
+#: ../../modules/link.md:134 469be862a06a47279521684d8b846020
+msgid ""
+"**State**: The entity is moved to maintain its local rotation relative to"
+" the parent entity."
+msgstr ""
+
+#: ../../modules/link.md a9e3b521ede54ffdb4dd9813b8e3a999
+#: b8f91ee0ebc2464088bfe9ec566a9185
+msgid "Single Axis"
+msgstr ""
+
+#: ../../modules/link.md:152 bd026ac46fee4de08857af9ef6d3da23
+msgid ""
+"Replace the entity at its relative position along an axis. This operation"
+" repeated in a loop simulates the movements of the parent entity on a "
+"single axis."
+msgstr ""
+
+#: ../../modules/link.md:157 ../../modules/link.md:527
+#: bdd2f4332197414c92ad28b59330f831 c7bf354dddb547ce899334a9c2570583
+msgid "**Score `@s bs.link.r[x|y|z]`**: Relative position to the parent entity."
+msgstr ""
+
+#: ../../modules/link.md:160 11988378f63e4cae9c797135ccd3cfc5
+msgid ""
+"**State**: The entity is moved to maintain its relative position with the"
+" parent entity on a single axis."
+msgstr ""
+
+#: ../../modules/link.md 82d490f06d1a49bc83fc4eca578ce461
+#: d84deee2b2394294b5210aa43b38829d
+msgid "Single Angle"
+msgstr ""
+
+#: ../../modules/link.md:182 e3415ae85b3a432296f8745acdab0418
+msgid ""
+"Replace the entity at its horizontal or vertical local rotation. This "
+"operation repeated in a loop simulates the rotation of the parent entity "
+"on a single rotation axis."
+msgstr ""
+
+#: ../../modules/link.md:187 ../../modules/link.md:557
+#: cfb40cb1ba134281b5995416a948d235 da29d064e11f4ed383d39cc32cd12868
+msgid ""
+"**Score `@s bs.link.l[h|v]`**: Local rotation relative to the parent "
+"entity."
+msgstr ""
+
+#: ../../modules/link.md:190 6365b5af730b4fa6a06905d5f0c81a9d
+msgid ""
+"**State**: The entity is moved to maintain its local rotation relative to"
+" the parent entity on a single rotation axis."
+msgstr ""
+
+#: ../../modules/link.md:208 ../../modules/link.md:578
+#: 380c344fb65f43c7b5d530c16329c768 41050bdf36674950a1cfc80381d985e4
+msgid ""
+"While chaining behavior functions is possible, it's not advisable because"
+" it involves repeatedly fetching coordinates, performing computations, "
+"and applying them. Instead, consider creating [custom behaviors](#custom-"
+"behaviors)."
+msgstr ""
+
+#: ../../modules/link.md:215 0a811f1d814140dd9f5142661482f273
+msgid "Keep Local Position"
+msgstr ""
+
+#: ../../modules/link.md:219 9178adb371ab4c4eaefd2b12d072cd7c
+msgid "Keep the local position relative to the parent entity."
+msgstr ""
+
+#: ../../modules/link.md:224 f7ba690c437c4368a935bab6912ac383
+msgid ""
+"**Scores `@s bs.link.l[x,y,z]`**: Local position relative to the parent "
+"entity."
+msgstr ""
+
+#: ../../modules/link.md:227 89a03bb37e2b4245a0f67421ea6270ac
+msgid ""
+"**State**: The entity is moved to maintain its local position relative to"
+" the parent entity."
+msgstr ""
+
+#: ../../modules/link.md:230 1817a1661533470591bb7cf26b30804d
+msgid "*Example: Make armor stands lock to your rotation:*"
+msgstr ""
+
+#: ../../modules/link.md:240 de85e50e730c4832be35e313064c28a4
+msgid "Local Position... 🥶 What's this?"
+msgstr ""
+
+#: ../../modules/link.md:243 9288b7267bd44684889b0ae553690a75
+msgid ""
+"Unlike relative coordinates, this reference frame considers the entity's "
+"rotation. Therefore, when the parent entity rotates, the child entity "
+"rotates around it. For those familiar with Minecraft commands, local "
+"coordinates are available through the `^` symbol."
+msgstr ""
+
+#: ../../modules/link.md:250 b46354a477cb4c228abd79f7ea94302e
+msgid "Mirror Plane"
+msgstr ""
+
+#: ../../modules/link.md:254 738ff69414914a448fcccf0d48259b8a
+msgid "Mirror the position and rotation of an entity along a plane."
+msgstr ""
+
+#: ../../modules/link.md:264 64d84ea336dd438ca2ac06684b9d03e8
+msgid ""
+"**State**: The entity is moved such as it mirrors the relative position "
+"and rotation of the parent entity."
+msgstr ""
+
+#: ../../modules/link.md:267 ee1cbb7820424ec0b1a7ada579c06651
+msgid ""
+"*Example: Make armor stands mirror your position and rotation along a "
+"plane:*"
+msgstr ""
+
+#: ../../modules/link.md:279 ../../modules/link.md:308
+#: ../../modules/link.md:405 ../../modules/link.md:430
+#: ../../modules/link.md:627 ../../modules/link.md:648
+#: 8f013d176c3a42fb8725e32646e605c6 a0cfca22b5924f18a8f1f24a95744aba
+#: d3f37633189747d99100b1b252a0b57e e047020de4bb4211a77f79e95ed38073
+#: e6c1945ad71e413aaa268944d9ce56f0 eec07291dcc94e978fd2456a56eb1415
+msgid "**Credits**: Aksiome"
+msgstr ""
+
+#: ../../modules/link.md:283 9bb60f28773a43c084b89bf256e6deef
+msgid "Mirror Point"
+msgstr ""
+
+#: ../../modules/link.md:287 8f2c13b0876e4bce90f10fef441f01c5
+msgid "Mirror the position and rotation of an entity around a given point."
+msgstr ""
+
+#: ../../modules/link.md:292 69d61fa784e941ada7151717a8d37842
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position of the "
+"point around which the entity is mirrored."
+msgstr ""
+
+#: ../../modules/link.md:295 641c99751f234cc9a409780f49a7bce4
+msgid ""
+"**State**: The entity is moved such as it mirrors the position and "
+"rotation of the parent entity around the given point."
+msgstr ""
+
+#: ../../modules/link.md:298 3559da2978be459db28b882b0491dd29
+msgid ""
+"*Example: Make armor stands mirror your position and rotation around 0 0 "
+"0:*"
+msgstr ""
+
+#: ../../modules/link.md:312 879e34452eda4c8195f069c55c9c2d6c
+msgid "Relationships"
+msgstr ""
+
+#: ../../modules/link.md d5492fa0e2d3420a8486d30441a74881
+msgid "As Children"
+msgstr ""
+
+#: ../../modules/link.md:320 d662aa23d67e4301b78223030bfea742
+msgid "Execute a command as child entities linked to the executing parent entity."
+msgstr ""
+
+#: ../../modules/link.md:323 ../../modules/link.md:367
+#: 78a71cfcfc1e4fec8c92517ee0963fc7 a9d1a53ce1e44e618d073f672e3be7a7
+msgid ""
+"**Execution `as <entities>`**: Execute as parent entities that must have "
+"valid child entities."
+msgstr ""
+
+#: ../../modules/link.md:326 ../../modules/link.md:370
+#: 4cecb8ddfbe24c3aa4352c7573240550 7914142eb5884f88b15716a4c6940bd1
+msgid "**Return**: Fails if the execution entity has no linked child entities."
+msgstr ""
+
+#: ../../modules/link.md:329 9afca091ec71428da52414b704ec2849
+msgid "*Example: Execute a command as all armor stand children:*"
+msgstr ""
+
+#: ../../modules/link.md 6388d64564f242e591d0830c453766d1
+msgid "As Parent"
+msgstr ""
+
+#: ../../modules/link.md:342 0f118da664fb4d3b99717c8a7f36dd3b
+msgid ""
+"Execute a command as the parent entity linked to the executing child "
+"entity."
+msgstr ""
+
+#: ../../modules/link.md:345 ../../modules/link.md:389
+#: 149e1c1412bf46b0b18c9a640e8fff11 7d8e6877b9fe4e619a7c9f6b955b37e4
+msgid ""
+"**Execution `as <entities>`**: Execute as child entities that must have a"
+" valid parent entity."
+msgstr ""
+
+#: ../../modules/link.md:348 ../../modules/link.md:392
+#: 1102db0a4cbe42d4b4f03671e3a47358 68770bfee29c4c8ba53c4958b4b00865
+msgid "**Return**: Fails if the execution entity has no linked parent entity."
+msgstr ""
+
+#: ../../modules/link.md:351 e3aaad591a994d0a915b65a90bf37c75
+msgid "*Example: Execute a command as the parent of an armor stand:*"
+msgstr ""
+
+#: ../../modules/link.md d611e57de86343e5bfb28276c2fbe4a3
+msgid "At Children"
+msgstr ""
+
+#: ../../modules/link.md:364 b5470b8b962e4edf8855b80ddee5cbd9
+msgid ""
+"Execute a command at the location of child entities linked to the "
+"executing parent entity."
+msgstr ""
+
+#: ../../modules/link.md:373 a55c423e52f741b6b3b388e8c36ff284
+msgid "*Example: Execute a command at the location of all armor stand children:*"
+msgstr ""
+
+#: ../../modules/link.md 097f4f54510e4679af677a943b0b60c0
+msgid "At Parent"
+msgstr ""
+
+#: ../../modules/link.md:386 4c6630168d524b6db29e02dd46a23535
+msgid ""
+"Execute a command at the location of the parent entity linked to the "
+"executing child entity."
+msgstr ""
+
+#: ../../modules/link.md:395 b96c35c316bd4b819047c21d78eae808
+msgid ""
+"*Example: Execute a command at the location of the parent of an armor "
+"stand:*"
+msgstr ""
+
+#: ../../modules/link.md:409 21aaabf5bfe74daba3a1f73e8d48d52f
+msgid "Remove Link"
+msgstr ""
+
+#: ../../modules/link.md:413 e741663954f44c818321aad9c36332db
+msgid ""
+"Removes an existing link between entities. When executed on a parent "
+"entity, it removes all child entities from the link. It does not reset "
+"the `bs.id` of entities."
+msgstr ""
+
+#: ../../modules/link.md:416 d2e7ee43e5d14d29a39397c57886798f
+msgid ""
+"**Execution `as <entities>`**: Child or parent entities that you want to "
+"unlink."
+msgstr ""
+
+#: ../../modules/link.md:419 5698e26e34984d539c1eb2f734a5a216
+msgid "**Scores `<children> bs.link.[...]`**: Resets all link-related scores."
+msgstr ""
+
+#: ../../modules/link.md:422 d3b3b977fd6c44d383534780ab4cdd41
+msgid "*Example: Unlink the nearest armor stand from a sheep:*"
+msgstr ""
+
+#: ../../modules/link.md:434 177cd0fa1fab422181eeabbc5201433a
+msgid "Reverse Behaviors"
+msgstr ""
+
+#: ../../modules/link.md:442 68f4a0fae3054313a73603e6bcca8a3d
+msgid ""
+"Determine the rotation and movement made by the parent entity, and "
+"reproduce them in the opposite direction."
+msgstr ""
+
+#: ../../modules/link.md:452 d493f807821b42698bc2710d7ad412c7
+msgid ""
+"**State**: The entity is moved and rotated opposingly to the movements "
+"and rotations of the parent entity."
+msgstr ""
+
+#: ../../modules/link.md:455 627d3434e2fe4650875524671d5795cd
+msgid "*Example: Make armor stands invert your moves and rotations:*"
+msgstr ""
+
+#: ../../modules/link.md:470 8fc13c26eea540c09fac8b58b5bcd966
+msgid ""
+"Determine the movement made by the parent entity, and reproduce it in the"
+" opposite direction."
+msgstr ""
+
+#: ../../modules/link.md:478 6f74a422ab5d44d2a2a77a2d1c96b4e7
+msgid ""
+"**State**: The entity is moved opposingly to the movements of the parent "
+"entity."
+msgstr ""
+
+#: ../../modules/link.md:481 6fed76b3ab5f440baad91cb7738bb916
+msgid "*Example: Make armor stands do the opposite of your moves:*"
+msgstr ""
+
+#: ../../modules/link.md:496 a886dc27e6364a668889dc3304e12d33
+msgid ""
+"Determine the rotation performed by the parent entity, and reproduce it "
+"in the opposite direction."
+msgstr ""
+
+#: ../../modules/link.md:504 ../../modules/link.md:560
+#: 009c528f2bb54e8faccf4d03cb09c4e1 d283889ed3d446e8ab58e16aee8618ce
+msgid ""
+"**State**: The entity is rotated opposingly to the rotations of the "
+"parent entity."
+msgstr ""
+
+#: ../../modules/link.md:507 50be7967bf9742859d6fce1cc4a69e1b
+msgid "*Example: Make armor stands invert your rotations:*"
+msgstr ""
+
+#: ../../modules/link.md:522 89c749e389864a7fa78e129562fdc27a
+msgid ""
+"Determine the movement made by the parent entity along a single axis, and"
+" reproduce it in the opposite direction."
+msgstr ""
+
+#: ../../modules/link.md:530 f06a5e30fa714b30b173cba5616ecb2c
+msgid ""
+"**State**: The entity is moved opposingly to the movements of the parent "
+"entity along a single axis."
+msgstr ""
+
+#: ../../modules/link.md:533 63e43eef4e7a4aa1b3d281b8b083359a
+msgid "*Example: Make armor stands do the opposite of your moves along an axis:*"
+msgstr ""
+
+#: ../../modules/link.md:552 ffa78a8252014c9493985bb2200f9733
+msgid ""
+"Determine the rotation performed by the parent entity along a rotation "
+"axis, and reproduce it in the opposite direction."
+msgstr ""
+
+#: ../../modules/link.md:563 861b288ad3d8476daef85478008932f1
+msgid "*Example: Make armor stands invert your rotations along a rotation axis:*"
+msgstr ""
+
+#: ../../modules/link.md:585 7d93f00e36f14934906e1e67b16099f3
+msgid "Update Link"
+msgstr ""
+
+#: ../../modules/link.md:589 b9b5a3a6a7aa447fa4dd37327f9a6b35
+msgid "Update scores that represent the link between an entity and its parent."
+msgstr ""
+
+#: ../../modules/link.md:600 0ae98b4ab72b481f9509c2b2e7fe38cc
+msgid "*Example: Update armor stands link:*"
+msgstr ""
+
+#: ../../modules/link.md:608 5c17525d802c4fb99fcd56bd54c8c121
+msgid ""
+"You usually don't need to call this function while using others. However,"
+" if you move a child entity and want to maintain the new connection it "
+"forms with the parent, updating the link is necessary to prevent changes "
+"from being reversed."
+msgstr ""
+
+#: ../../modules/link.md:615 fb065ace65da47a4b8a186a58731db7d
+msgid "👁️ Predicates"
+msgstr ""
+
+#: ../../modules/link.md:617 dea8438f3e01439db2e92e1285f6303a
+msgid "You can find below all predicates available in this module."
+msgstr ""
+
+#: ../../modules/link.md:621 62a5511a1e8d4c5ba1897da538229235
+msgid "Has Link"
+msgstr ""
+
+#: ../../modules/link.md:623 cb49446e34c74fa9bc5663116fe5a8be
+msgid "**`bs.link:has_link`**"
+msgstr ""
+
+#: ../../modules/link.md:625 b310aed6abf44ecdbcbee078cd5e3422
+msgid "Determine if an entity has a `bs.link.to` score."
+msgstr ""
+
+#: ../../modules/link.md:631 51ffadae119741e880d95aea727fd4cd
+msgid "Link Equal"
+msgstr ""
+
+#: ../../modules/link.md:635 617ac80bdf4d44ac9101e0a79729722a
+msgid "Find an entity that has the same `bs.link.to` as the input value."
+msgstr ""
+
+#: ../../modules/link.md:638 1ae7a30c4cf8422cb203a15e3a400534
+msgid "**Score `$link.to bs.in`**: Value to check against."
+msgstr ""
+
+#: ../../modules/link.md:641 988d84318db643a38c469d4762f40cbd
+msgid "*Example: Find the entity that has a `bs.link.to` equal to 1:*"
+msgstr ""
+
+#: ../../modules/link.md:653 c5146838fc1c46bf93cc0e3805ff810e
+msgid "🎓 Custom Behaviors"
+msgstr ""
+
+#: ../../modules/link.md:655 9dfbab9159c34dcbacbe20db36399a7d
+msgid ""
+"This module allows you to combine multiple behaviors to create your very "
+"own optimized custom one."
+msgstr ""
+
+#: ../../modules/link.md:659 53365b4170b1475e83d3e36445612f55
+msgid ""
+"To create a new behavior, you first need to create a new function tag. "
+"The tag must start with `#bs.link:behaviors/setup` and end with "
+"`#bs.link:behaviors/apply`. Between those 2 functions you are free to use"
+" any behaviors that are provided inside the `#bs.link:behaviors` folder."
+msgstr ""
+
+#: ../../modules/link.md:661 709197bf140b4f5f8c2cca545b9c499a
+msgid ""
+"*Example: This is how `#bs.link:mirror_x_plane` is implemented inside "
+"bookshelf:*"
+msgstr ""
+
+#: ../../_templates/comments.md:4 f5a0a81ec10f435aa99fa573445a5f82
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 6266598b7efa4d62ae6139037bf65c56
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+

@@ -1,0 +1,391 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/move.md:1 d59203dd1dc246ea9cd7070a36f1004f
+msgid "🏃 Move"
+msgstr ""
+
+#: ../../modules/move.md:3 971a1e2fabeb4575908cf4742577b685
+msgid "**`#bs.move:help`**"
+msgstr ""
+
+#: ../../modules/move.md:5 bba21ef114fe479bb611fbf7c99053ce
+msgid "Make your entity move exactly the way you want it to!"
+msgstr ""
+
+#: ../../modules/move.md:13 6c46a5a0803a4a5aa678a438035db13c
+msgid "\"There is nothing permanent except change.\""
+msgstr ""
+
+#: ../../modules/move.md:14 e00b1b10b61d43f6a55ed26451443be6
+msgid "Heraclitus"
+msgstr ""
+
+#: ../../modules/move.md:18 b23c005a53cd4be88e60c2d09f9dfd87
+msgid ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
+"sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
+"hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 "
+"10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 "
+"3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 "
+"0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
+" .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
+"2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
+msgstr ""
+
+#: ../../modules/move.md:28 b432612caa534b45b4bdb0e19fcdd35b
+msgid "🔧 Functions"
+msgstr ""
+
+#: ../../modules/move.md:30 dbe23b39ca9543d7a570a43c8b943bd4
+msgid "You can find below all functions available in this module."
+msgstr ""
+
+#: ../../modules/move.md:34 23a9615134734bb69c8a1fdb1cf75c13
+msgid "Apply Velocity"
+msgstr ""
+
+#: ../../modules/move.md 8a3f5bf410b64896aaac8ae42b5bc113
+msgid "Canonical"
+msgstr ""
+
+#: ../../modules/move.md:42 85aba76383eb477298660bd3f2b71c92
+msgid "Teleport an entity by its velocity scores while handling collisions."
+msgstr ""
+
+#: ../../modules/move.md:44 ../../modules/move.md:81 ../../modules/move.md:146
+#: ../../modules/move.md:171 ../../modules/move.md:196
+#: 24b7984ad74e4535a3dff5cac15e7bc8 300c990320ef4f3f91878130de0d7c5b
+#: 4e7b952fd2f44216a28466acb33580ea 868315e2be454644994abd4531a48cbc
+#: c6f19bb1abda49ac954bb21019a7dc18
+msgid "Inputs"
+msgstr ""
+
+#: ../../modules/move.md:45 ../../modules/move.md:82 ../../modules/move.md:197
+#: 4e843680476a483d9d28794fed522564 a730f3d85e8d49cf97e9845468ba5568
+#: eac822feac7140c8a8a3cccf0e13d58b
+msgid "**Execution `as <entities>`**: Entity to move."
+msgstr ""
+
+#: ../../modules/move.md:47 5b9ffffabe9548079fc4041fef6e3dcc
+msgid "**Scores `@s bs.vel.[x,y,z]`**: Canonical velocity vector."
+msgstr ""
+
+#: ../../modules/move.md:49 ../../modules/move.md:86 ../../modules/move.md:201
+#: 4cd8e261d7c04cc6bfa5b42413f994f1 604be84f8c764f76b096d09bc3426897
+#: d76fc39814fe4000836bef0d843e4110
+msgid "**Function macro**:"
+msgstr ""
+
+#: ../../modules/move.md:62 ../../modules/move.md:99 ../../modules/move.md:151
+#: ../../modules/move.md:176 ../../modules/move.md:207
+#: 00e2b90d14cb40bcb4d2b8c4a5c7ca76 36439cf49ba04cef813f90fc283a70e3
+#: 86d75fbcf3f74430922730b52a92e0c3 b7d728d64fe2406ab6bd3c643cd7687a
+#: d5ac80f7fe0d40419bd515c5c7bd34f5
+msgid "Outputs"
+msgstr ""
+
+#: ../../modules/move.md:63 4ae4c5b7e7454d9ea6180fc54f846b62
+msgid "**State**: Entity is teleported according to its velocity scores."
+msgstr ""
+
+#: ../../modules/move.md fd85ac283d0446ffb4597c8c9247e666
+msgid "Local"
+msgstr ""
+
+#: ../../modules/move.md:71 06ad70e1a60845eeb0b2c60036e640aa
+msgid "Experimental"
+msgstr ""
+
+#: ../../modules/move.md:74 1f6407a33fd14e858261db143fcbd46d
+msgid ""
+"Always prefer the canonical version. Constant conversion between bases "
+"can lead to loss of accuracy, sometimes causing unpredictable behavior."
+msgstr ""
+
+#: ../../modules/move.md:76 b38d9f0be8324ff8a57b7cc3de5288fa
+msgid ""
+"If you need to \"shoot\" an entity in a direction, you can still set "
+"velocity as a local vector and run `#bs.move:canonical_to_local` before "
+"using `#bs.move:apply_vel`."
+msgstr ""
+
+#: ../../modules/move.md:79 743dc3c2114148af9682c0d4c194799c
+msgid ""
+"Teleport an entity by its velocity scores, using the local reference "
+"frame, while handling collisions."
+msgstr ""
+
+#: ../../modules/move.md:84 f37ea5fb0a004219a87084ef2b800b08
+msgid "**Scores `@s bs.vel.[x,y,z]`**: Local velocity vector."
+msgstr ""
+
+#: ../../modules/move.md:100 e5a36e4b7e524cc5a4fe372ad6c94dde
+msgid "**State**: Entity is teleported according to its local velocity scores."
+msgstr ""
+
+#: ../../modules/move.md:105 1c300d79bbdd41baad12cc6111aec358
+msgid "Collision / Interaction Shape"
+msgstr ""
+
+#: ../../modules/move.md:107 419b97b45ad44506a5c5715954edadbc
+msgid ""
+"**Collision Shape**: Defines the physical boundaries of a block that "
+"entities cannot pass through. It determines where an entity will stop "
+"when moving towards the block."
+msgstr ""
+
+#: ../../modules/move.md:108 e3eb7c0f015c436cb8471f7b3a032fc8
+msgid ""
+"**Interaction Shape**: Defines the area where the player can interact "
+"with or break the block. This includes actions such as right-clicking to "
+"open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have"
+" an interaction shape but no collision, such as crops or scaffolding."
+msgstr ""
+
+#: ../../modules/move.md:111 cd1a9bae5fa24f63a2be67923aab61f4
+msgid ""
+"*Example: Move a cube (block_display) by its velocity scores (uses an "
+"interaction as the hitbox):*"
+msgstr ""
+
+#: ../../modules/move.md:130 450541f01b9b4bc998a6809985d73cdf
+msgid "Performance Tip"
+msgstr ""
+
+#: ../../modules/move.md:133 1e66e4f0a46147c29af488785eb0c21d
+msgid ""
+"Although this system doesn't set specific limits, it's important to note "
+"that performance is influenced by both the speed and size of the entity."
+msgstr ""
+
+#: ../../modules/move.md:136 ../../modules/move.md:161
+#: ../../modules/move.md:186 ../../modules/move.md:224
+#: ../../modules/move.md:240 6a40940ccd8a4ff4a2e64fcd75bfb350
+#: 7c9459fd12934dfcbdceb2e166c1dec1 80a4248db02e4c60a9ec8f80e76ffca8
+#: 8f37b490bef44d2998d02ad453edc3b1 f098e3ef762744529f2caa979f9a4bab
+msgid "**Credits**: Aksiome"
+msgstr ""
+
+#: ../../modules/move.md:140 2c927becf57f483ab276521608cd5dfe
+msgid "Canonical to Local"
+msgstr ""
+
+#: ../../modules/move.md:144 755bbf1523d3456088e886d05433debb
+msgid ""
+"Convert a canonical velocity (using the relative reference frame) into a "
+"local velocity (using the local reference frame)."
+msgstr ""
+
+#: ../../modules/move.md:147 ../../modules/move.md:172
+#: 1e235cff2ce441f19a90c1d3ed7e6b9e d102b900356e49fb9889b315c78e7f07
+msgid ""
+"**Execution `rotated as <entity>` or `rotated <h> <v>`**: Rotation used "
+"for the conversion."
+msgstr ""
+
+#: ../../modules/move.md:149 ../../modules/move.md:174
+#: 57a7238ed5d44f398adc2bd576eee425 c3decbaf19914beda5d2faf761a0e459
+msgid "**Scores `@s bs.vel.[x,y,z]`**: Velocity to convert."
+msgstr ""
+
+#: ../../modules/move.md:152 ../../modules/move.md:177
+#: 645f32b7883a4ce2b8cd1d067fb1ead2 650abc8ce1584e13ace962c70632aee3
+msgid "**Scores `@s bs.vel.[x,y,z]`**: Converted velocity."
+msgstr ""
+
+#: ../../modules/move.md:155 ../../modules/move.md:180
+#: 1d86216015444481bc601ee32c15cc0b a18b8cde22604619821ca9153a5e42ff
+msgid "Local Velocity... 🥶 What's this?"
+msgstr ""
+
+#: ../../modules/move.md:158 ../../modules/move.md:183
+#: 1500c0ff74cf4112940e89fbc9a623b8 4aa8bff80aab402793fc875ac33567bb
+msgid ""
+"Unlike relative velocity (canonical), this reference frame considers the "
+"entity's rotation. Therefore, when the parent entity rotates, the child "
+"entity rotates around it. For those familiar with Minecraft commands, "
+"local coordinates are available through the `^` symbol."
+msgstr ""
+
+#: ../../modules/move.md:165 2a9d5cb2204b4401981c099be8d2e2d6
+msgid "Local to Canonical"
+msgstr ""
+
+#: ../../modules/move.md:169 0df187ca3dea4546800baa0a4d95cb27
+msgid ""
+"Convert a local velocity (using the local reference frame) into a "
+"canonical velocity (using the relative reference frame)."
+msgstr ""
+
+#: ../../modules/move.md:190 75237108268a4f11a5f838e4f03bbb5d
+msgid "Set Motion"
+msgstr ""
+
+#: ../../modules/move.md:194 78b5f356bd414ad3825cf1d3694d53aa
+msgid "Set the motion NBT of an entity using velocity scores."
+msgstr ""
+
+#: ../../modules/move.md:199 628c415f30214e99af8db6ff6bfcdbf2
+msgid "**Scores `@s bs.vel.[x,y,z]`**: Velocity vector."
+msgstr ""
+
+#: ../../modules/move.md:208 745244bb966c4c24b04501906aa232e1
+msgid "**State**: Motion is applied to the given entity."
+msgstr ""
+
+#: ../../modules/move.md:211 22a3d1ee7bed4fb2ad2779b2465c11e7
+msgid "*Example: Move a pig by its velocity scores:*"
+msgstr ""
+
+#: ../../modules/move.md:228 30137bd8d1c64299a16b1044c0aa4cfc
+msgid "👁️ Predicates"
+msgstr ""
+
+#: ../../modules/move.md:230 7b154b278c7c4e47ae5fcaa0388000bb
+msgid "You can find below all predicates available in this module."
+msgstr ""
+
+#: ../../modules/move.md:234 ce456faff5974306b8f2591df44add3d
+msgid "Has Velocity?"
+msgstr ""
+
+#: ../../modules/move.md:236 a15761708d4740ac8452ebf65c2c89ef
+msgid "**`bs.move:has_vel`**"
+msgstr ""
+
+#: ../../modules/move.md:238 c3b8960bfd62488ab3dfbdbffd4fb924
+msgid "Determine if an entity has a nonzero velocity score."
+msgstr ""
+
+#: ../../modules/move.md:244 ba02554807b8432bbd89653009ce6db3
+msgid "🎓 Custom Collisions"
+msgstr ""
+
+#: ../../modules/move.md:246 597931fa673b4c3187d5fa17b034d699
+msgid ""
+"This module allows you to customize collision behaviors according to your"
+" specific needs."
+msgstr ""
+
+#: ../../modules/move.md:250 1382932015ce47ec8e8555a56da44f4a
+msgid ""
+"By modifying the `on_collision` input key, you have the freedom to "
+"specify the function that triggers upon collision. However, managing the "
+"resolution yourself can be quite challenging. This is why Bookshelf "
+"provides several predefined functions:"
+msgstr ""
+
+#: ../../modules/move.md:253 ec3b660dbae34aa1a9c4b0f716dc9918
+msgid "`#bs.move:callback/bounce`"
+msgstr ""
+
+#: ../../modules/move.md:254 fe21c287aa124625bf10587ee14a98a2
+msgid "The entity will bounce on the collision surface."
+msgstr ""
+
+#: ../../modules/move.md:255 68a354fe6aa3411f80e2993bca2d1484
+msgid "`#bs.move:callback/damped_bounce`"
+msgstr ""
+
+#: ../../modules/move.md:256 0e73489f3eeb4d8492b66e3a1ac1ebbf
+msgid "The entity speed is reduced by 2 on each bounce."
+msgstr ""
+
+#: ../../modules/move.md:257 3c485c7625ee4e7d9f8c7ddb0d5a45da
+msgid "`#bs.move:callback/slide`"
+msgstr ""
+
+#: ../../modules/move.md:258 1c4acfabe0d6402589d0ac18e1451828
+msgid "The entity will stick and slide along the collision surface."
+msgstr ""
+
+#: ../../modules/move.md:259 003fc2f3ee4a499e92ed414647bb4339
+msgid "`#bs.move:callback/stick`"
+msgstr ""
+
+#: ../../modules/move.md:260 5ab6a29325fc4340b46f7f62f6a04f45
+msgid "The entity will stop and stick to the collision surface."
+msgstr ""
+
+#: ../../modules/move.md:263 c1251e8d8d4c4b95a36dbd6d738dda7f
+msgid "How It Works?"
+msgstr ""
+
+#: ../../modules/move.md:265 2bc5c7b1026b4dfc9af6ff4e33aa4b9f
+msgid ""
+"Upon collision, you have the freedom to update both the velocity score "
+"that will be used in the next tick `@s bs.vel.[x,y,z]` and the remaining "
+"velocity `$move.vel.[x,y,z] bs.lambda`. Since the module will attempt to "
+"continue moving based on the remaining velocity, it's crucial to avoid "
+"introducing a race condition."
+msgstr ""
+
+#: ../../modules/move.md:267 6a1198b3f5da4130a91902377c07798d
+msgid "Velocity Scaling"
+msgstr ""
+
+#: ../../modules/move.md:269 f1d972ef9ae3434d872e42ae27c14af9
+msgid ""
+"Remaining velocity scores are stored as scaled integers, but the scaling "
+"factor may change without breaking compatibility."
+msgstr ""
+
+#: ../../modules/move.md:271 739fb3246b244293aa1abeb3837440e5
+msgid ""
+"To ensure stability, always manipulate these values independently of the "
+"scaling factor."
+msgstr ""
+
+#: ../../modules/move.md:274 a1121e65d5a948399953e05dfb233a4b
+msgid "The simplest collision resolution is to stop the movement."
+msgstr ""
+
+#: ../../modules/move.md:276 744c52d64ab14e46a90ca157162b44a4
+msgid "*`#bs.move:callback/stick`*"
+msgstr ""
+
+#: ../../modules/move.md:284 43c77a2ae83e46be8ecf731416783d45
+msgid ""
+"For sliding, we need to cancel the velocity on the axis that was hit and "
+"continue traveling the remaining distance."
+msgstr ""
+
+#: ../../modules/move.md:286 f896857e385542b08bb85c8ff8b6ef62
+msgid "*`#bs.move:callback/slide`*"
+msgstr ""
+
+#: ../../modules/move.md:294 3018c75c167046d2ac10ae4e831fc105
+msgid ""
+"To simplify the creation of these behaviors, there's no need to handle a "
+"local velocity directly. The vector is automatically converted before and"
+" after the collision resolution. If you need help with custom collisions,"
+" you can ask us on our [discord server](https://discord.gg/MkXytNjmBt)!"
+msgstr ""
+
+#: ../../_templates/comments.md:4 8743a61e7a124f45b3c9b52cdfe1ae4b
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 ec156521ef5f47ccabf5847b91353a7c
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+

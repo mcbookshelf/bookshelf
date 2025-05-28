@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/file-format.md:5 eb648feed6b74b8aa7413ffce326e294
+msgid "📄 File Format"
+msgstr ""
+
+#: ../../contribute/file-format.md:7 8891d67b04d04bb1a27eb9681779ef33
+msgid "Each function of Bookshelf should have a header to indicate the license."
+msgstr ""
+
+#: ../../contribute/file-format.md:11 5854524ae8534de0a39d6a90fbd79cb0
+msgid "Header to put at the beginning of each function:"
+msgstr ""
+
+#: ../../contribute/file-format.md:29 ae59f61522cb4eeabe670b90d9aa87ae
+msgid ""
+"If a Bookshelf contributor forgot to put a header at the beginning of a "
+"function, the CI/CD pipeline will reject the merge of the contribution in"
+" Bookshelf. To ensure the code meets the minimal requirements, see the "
+"[contribution validation page](project:contribution-validation.md)."
+msgstr ""
+

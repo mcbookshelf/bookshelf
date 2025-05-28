@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../related/related-libraries.md:5 76b21da8723f4b289697d3d00cb6dc69
+msgid "📚 Related Libraries"
+msgstr ""
+
+#: ../../related/related-libraries.md:7 f7b150abfc754d3f95f007688cd93946
+msgid ""
+"This page lists some interesting datapack libraries you can use instead "
+"of or in addition to Bookshelf."
+msgstr ""
+
+#: ../../related/related-libraries.md:12 7114b4e161d245febd7f2ffb898da5b2
+msgid "🧠 A Neural Network Deployment Library for Minecraft Mapmaking"
+msgstr ""
+
+#: ../../related/related-libraries.md:16 cf994ad84a4043c0a5c86cda597eac7a
+msgid "This datapack allows mapmakers to deploy neural networks in Minecraft."
+msgstr ""
+
+#: ../../related/related-libraries.md:19 672835446c64436b9e4ca03d30ada3f6
+msgid "🟦 BlockState"
+msgstr ""
+
+#: ../../related/related-libraries.md:23 6b1f5f6e3a3d4188939a7ae8e991c70c
+msgid ""
+"This pack provides a giant loot-table that extracts the BlockState data "
+"of the block at the called location."
+msgstr ""
+
+#: ../../related/related-libraries.md:26 24bbaeaa30ba4091bdfe0b5349f87ef4
+msgid "⏱️ Callback Scheduler"
+msgstr ""
+
+#: ../../related/related-libraries.md:30 beae99efd4254c26b1e599e90f9f75fd
+msgid ""
+"This datapack allows you to easily run commands at a later time as one or"
+" more entities!"
+msgstr ""
+
+#: ../../related/related-libraries.md:33 1bc46db1fc154127a3d6a318f86a10c3
+msgid "📙 Data API"
+msgstr ""
+
+#: ../../related/related-libraries.md:37 169ea82da5124e2684d1707879561e16
+msgid "A multi-purpose datapack, more focused on Minecraft object manipulation."
+msgstr ""
+
+#: ../../related/related-libraries.md:40 c97619dd96fe4ff89c19f1f60bb1a0f3
+msgid "🔻 Delta"
+msgstr ""
+
+#: ../../related/related-libraries.md:44 1516fb250cef43d8b842226c01a609ed
+msgid ""
+"Delta is an explosion-based player motion library that uses subtick "
+"timing to ensure that only one player is pushed by the blast."
+msgstr ""
+
+#: ../../related/related-libraries.md:47 ccdb7ee09b9e4100a257e7ff06f6e74b
+msgid "📕 DPlib"
+msgstr ""
+
+#: ../../related/related-libraries.md:51 efd7f46e5cdd4638bd75298011760422
+msgid ""
+"DPlib is a library for datapack developed in mcfunction including math "
+"functions, time computation, threading and benchmarking."
+msgstr ""
+
+#: ../../related/related-libraries.md:54 daa63b2aaad54c099d3b1d2e66d3fae7
+msgid "📕 Duralib"
+msgstr ""
+
+#: ../../related/related-libraries.md:58 7f9a78028bdf4600a92b13044d0f026b
+#, python-format
+msgid ""
+"This library helps you manage durability of your items while being 100% "
+"data based and not requiring any tweaking of functions on your part."
+msgstr ""
+
+#: ../../related/related-libraries.md:61 8522563f3fc040dbb51be93b1d18b4a5
+msgid "🔢 Flop"
+msgstr ""
+
+#: ../../related/related-libraries.md:65 4c1d9623bcca452c8017e7b9eccec559
+msgid ""
+"This datapack is a library for handling floating-point operations using "
+"scoreboards."
+msgstr ""
+
+#: ../../related/related-libraries.md:68 d304d242f0c544219d3e1bd2e5a67031
+msgid "🖥️ GUI Detector"
+msgstr ""
+
+#: ../../related/related-libraries.md:72 f2c8a87ee7c64dc0adb20b0c5e48af2b
+msgid "Detect when a player opens (almost) any GUI!"
+msgstr ""
+
+#: ../../related/related-libraries.md:75 3632d626145840488501b18b4f36920c
+msgid "👁️ Iris"
+msgstr ""
+
+#: ../../related/related-libraries.md:79 4e37e7f6e5424785a2a6d73edcfcb247
+msgid ""
+"Iris is a utility datapack designed to determine what block or entity a "
+"player is looking at, with micrometric precision and taking into account "
+"individual block geometries."
+msgstr ""
+
+#: ../../related/related-libraries.md:82 594cd3b9aa504152ae68534c5331a72f
+msgid "🔢 Large Number"
+msgstr ""
+
+#: ../../related/related-libraries.md:86 36c1803f9289474b907ee9802844d349
+msgid ""
+"Datapack providing functionalities for handling large numbers, "
+"trigonometric functions, and various mathematical operations."
+msgstr ""
+
+#: ../../related/related-libraries.md:89 ab864fd48cf34da7b3f1974a995e1eae
+msgid "➡️ MCF Raycast Raymarch"
+msgstr ""
+
+#: ../../related/related-libraries.md:93 0adaafa5539f4897b619f687cf9d7a4a
+msgid "Usage of raymarching to optimize mcfunction raycasts."
+msgstr ""
+
+#: ../../related/related-libraries.md:96 1690f7aa731648f69e7eddc466d9141f
+msgid "🔨 Moxlib"
+msgstr ""
+
+#: ../../related/related-libraries.md:100 432d990eba014b05852667287e465816
+msgid ""
+"Moxlib aims to make Datapack creation fun and enjoyable. This is a multi-"
+"purpose datapack."
+msgstr ""
+
+#: ../../related/related-libraries.md:103 895ad5591f024bc48c4b1bad83e09de2
+msgid "🔢 Minecraft Floating Point Arithmetic"
+msgstr ""
+
+#: ../../related/related-libraries.md:107 4fa98831e437470080fb24b84337a230
+msgid "A basic utility pack to do math with floats and/or doubles."
+msgstr ""
+
+#: ../../related/related-libraries.md:110 4011c39debb34fe796a7ed3ccd9b5ed9
+msgid "💥 Minecraft Ray Collision Detector"
+msgstr ""
+
+#: ../../related/related-libraries.md:114 a1efc18f4f3b42a7844c5534daa3a658
+msgid ""
+"Minecraft Ray Collision Detector is a super precise raycast system in "
+"vanilla Minecraft!"
+msgstr ""
+
+#: ../../related/related-libraries.md:117 044261cc1e5f43109af68e4f0c29f915
+msgid "❤️ Minecraft-Simple-Custom-Heal"
+msgstr ""
+
+#: ../../related/related-libraries.md:121 7325052a447b4d7d99c3a54c18ae6da7
+msgid "Super simple custom heal library for Minecraft datapacks."
+msgstr ""
+
+#: ../../related/related-libraries.md:124 ce8092c18807428489c5f874c678b7c2
+msgid "🏃 Player Motion"
+msgstr ""
+
+#: ../../related/related-libraries.md:128 cda38e027e8c47bc8a139e0a379447c7
+msgid ""
+"Player Motion is an explosion-based library that uses subtick timing to "
+"ensure that only one player is pushed by the blast without any side "
+"effects. Player Motion is a fork of Delta."
+msgstr ""
+
+#: ../../related/related-libraries.md:132 db2440e364d445beb8126f42f1d57e0b
+msgid "👁️ Retina 2.0"
+msgstr ""
+
+#: ../../related/related-libraries.md:136 cc49fe1c26e2499fb02a43b766554603
+msgid "Retina 2.0 is a raycasting library datapack using voxel traversal."
+msgstr ""
+
+#: ../../related/related-libraries.md:139 bb8a284ee025482dbbd6c1d10236892b
+msgid "🏷️ Taglib"
+msgstr ""
+
+#: ../../related/related-libraries.md:143 6f9e93bedcc14974a04ed29dc27c24a9
+msgid "A tags library for Minecraft data packs."
+msgstr ""
+
+#: ../../related/related-libraries.md:146 b97960d4d8c94de49c41244e98029da7
+msgid "⏲️ TimeLib"
+msgstr ""
+
+#: ../../related/related-libraries.md:150 df1985df73aa48869375ba1500d89077
+msgid ""
+"A Minecraft datapack library that lets you get the real life date & time "
+"ingame, including year, month and day."
+msgstr ""
+
+#: ../../related/related-libraries.md:153 7070cc77974b4636b5cb4a8e5ba6589f
+msgid "🪖 Tungsten"
+msgstr ""
+
+#: ../../related/related-libraries.md:157 b8bab2566bd443c0a9e1e9315a5156a1
+msgid ""
+"This library allows for easy and highly efficient checking for the "
+"swapping of equipment"
+msgstr ""
+
+#: ../../related/related-libraries.md:160 bc650b78b84c4cb4ad2dc4121dbeb70a
+msgid "📝 UniF-Logger"
+msgstr ""
+
+#: ../../related/related-libraries.md:164 9c45b5425cbe442faa65581f481214f8
+msgid "UniF-Logger is a datapack for logging."
+msgstr ""
+

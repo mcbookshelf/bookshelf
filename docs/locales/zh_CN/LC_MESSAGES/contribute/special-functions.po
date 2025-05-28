@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/special-functions.md:1 bbd5d1150c3b4f6dbf93c5401787af8d
+msgid "🌟 Special Functions"
+msgstr ""
+
+#: ../../contribute/special-functions.md:3 11e92ce220734c2680a82313627bea11
+msgid ""
+"Some functions follow specific conventions to streamline functionality "
+"and ensure consistency across modules."
+msgstr ""
+
+#: ../../contribute/special-functions.md:7 8f5ce90d0c3d4150b813f117011c06a0
+msgid "👉 The `ata` Functions"
+msgstr ""
+
+#: ../../contribute/special-functions.md:9 c762e58105a043cd8542601e76713010
+msgid ""
+"This is a reduction of \"as to at\". Several functions require two "
+"positions to work (example: retrieve the distance between 2 points) or an"
+" entity and a position. To simplify the use, no need to pass 3 scores for"
+" each position. You will be able to place an entity on point 1 (if it is "
+"useful), then execute the function at point 2 while executing it as the "
+"entity on point 1."
+msgstr ""
+
+#: ../../contribute/special-functions.md:13 a698fd614c4b4c50a6830781f138249b
+msgid "🔗 The `runner` Functions"
+msgstr ""
+
+#: ../../contribute/special-functions.md:15 07fc524020a24eae84c640820cf878f6
+msgid ""
+"These functions use the `run` callback to specify an action that will "
+"often be executed immediately. It works like a subcommand, defining what "
+"action should take place after the function call."
+msgstr ""
+
+#: ../../contribute/special-functions.md:17
+#: ../../contribute/special-functions.md:28
+#: ../../contribute/special-functions.md:39 8f116d5f45c3453db79dc58e71de6ce4
+#: b4f80a851c574f62917d761552db98b0 c61788e3cb7b424783f18384e8cf61f1
+msgid "For example:"
+msgstr ""
+
+#: ../../contribute/special-functions.md:24 05f8aff62cbe4eba933896436467914e
+msgid "📡 The `listener` Functions"
+msgstr ""
+
+#: ../../contribute/special-functions.md:26 88d0dc04fd5f4e22901462889fba59be
+msgid ""
+"These functions are designed to react to specific events. The naming "
+"convention `on_<event>` is used for the inputs to indicate commands that "
+"will be triggered when a particular event occurs."
+msgstr ""
+
+#: ../../contribute/special-functions.md:35 7bf50e0a1fa84796be8e994673bd2f39
+msgid "⚒️ The `callback` Functions"
+msgstr ""
+
+#: ../../contribute/special-functions.md:37 4439c2b3b2694969a9b60809c63d53b6
+msgid ""
+"These functions are intended to be executed exclusively as part of a "
+"callback, and their function tag must be placed inside a `callback` "
+"directory."
+msgstr ""
+
+#: ../../contribute/special-functions.md:40 735266e431cc44779435d301ba392703
+msgid "`#bs.move:callback/bounce`"
+msgstr ""
+
+#: ../../contribute/special-functions.md:41 0314d9818e6a4945a9cb09110ec674b9
+msgid "`#bs.move:callback/slide`"
+msgstr ""
+
+#: ../../contribute/special-functions.md:42 d10bfb07df884c80b960cc06794f6862
+msgid "`#bs.interaction:callback/glow`"
+msgstr ""
+
+#: ../../contribute/special-functions.md:46 750cdab6c0dd4b5982c59fe36d8c5ae8
+msgid "🔒 The `reserved` Functions"
+msgstr ""
+
+#: ../../contribute/special-functions.md:48 8cbba0bdb92944d6bbfd70483fd7588e
+msgid ""
+"Reserved functions are special functions within each module that serve "
+"predefined purposes. They are located at the root of each module."
+msgstr ""
+
+#: ../../contribute/special-functions.md:51 1ac0d0a3f5374dc78b07b854468260bb
+msgid "`__help__`"
+msgstr ""
+
+#: ../../contribute/special-functions.md:52 9c251cc0afd344859902fde1cd34da7d
+msgid ""
+"This function provides a path to the documentation for the module "
+"**(Automatically generated)**"
+msgstr ""
+
+#: ../../contribute/special-functions.md:53 6583263f215546d1a4249e5d65e8564d
+msgid "`__load__`"
+msgstr ""
+
+#: ../../contribute/special-functions.md:54 48b6e3a494af410788ebfcedb3d12176
+msgid ""
+"This function is executed when the module is loaded **(Must be present in"
+" every module)**"
+msgstr ""
+
+#: ../../contribute/special-functions.md:55 79fe6de1b9aa4832af5baaee3a7a8e05
+msgid "`__unload__`"
+msgstr ""
+
+#: ../../contribute/special-functions.md:56 38b9f761257d47199b1ce42e9934501f
+msgid ""
+"This function is executed when the module is unloaded **(Must be present "
+"in every module)**"
+msgstr ""
+
