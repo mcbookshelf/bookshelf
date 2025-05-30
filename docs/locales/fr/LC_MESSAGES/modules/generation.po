@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/generation.md:1 c2567d3711ef44548af3d6a8c1e8cea4
+msgid "🏗️ Generation"
+msgstr ""
+
+#: ../../modules/generation.md:3 88c1114985d540e5b14231db896a03fc
+msgid "**`#bs.generation:help`**"
+msgstr ""
+
+#: ../../modules/generation.md:5 45fe0f57a6cf4744863f512dcb7e4629
+msgid "Generate diverse terrains and landscapes, incorporating natural features."
+msgstr ""
+
+#: ../../modules/generation.md:18 d80121b0f34f4e73968245f63c2a46f2
+msgid ""
+"\"Nature's beauty is a reflection of the harmony of numbers and "
+"patterns.\""
+msgstr ""
+
+#: ../../modules/generation.md:19 7770af3f26ca452ab79a4a69e6515eac
+msgid "Anonymous"
+msgstr ""
+
+#: ../../modules/generation.md:23 1ea90df72e2d4f589f92152ee1cc3ff7
+msgid ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
+"sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
+"hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 "
+"10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 "
+"3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 "
+"0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
+" .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
+"2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
+msgstr ""
+
+#: ../../modules/generation.md:33 f03e896e434b4cb99d08460ac786378c
+msgid "🔧 Functions"
+msgstr ""
+
+#: ../../modules/generation.md:35 a2f55562f235471b9a27ea3ac3c6544b
+msgid "You can find below all functions available in this module."
+msgstr ""
+
+#: ../../modules/generation.md ../../modules/generation.md:39
+#: 4a39d960a95941ecae6e4daa4bf8e053 d988599907504962a0a06b46e96fa9e6
+msgid "Shape 2D"
+msgstr ""
+
+#: ../../modules/generation.md:47 dbfb987719ad4e47b2234822e9976866
+msgid ""
+"Generate a shape in 2D space at the specified origin, with the callback "
+"executed at each step, allowing the user to handle the X and Y "
+"coordinates directly."
+msgstr ""
+
+#: ../../modules/generation.md:49 ../../modules/generation.md:77
+#: ../../modules/generation.md:108 724da535d14b4d9fb69af4d89b51095d
+#: 96a06edf9c724ae4baacd8656b01b6b6 f9f0859c14984981a944bd3327ffade7
+msgid "Inputs"
+msgstr ""
+
+#: ../../modules/generation.md:50 ../../modules/generation.md:78
+#: ../../modules/generation.md:109 df2072532c6c4257bbbb9e313a50183f
+#: eb08a30a708141afbbe6b527e7d04970 eec28c6051fd4fcf9ebb44351c1db004
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: "
+"Origin of the shape."
+msgstr ""
+
+#: ../../modules/generation.md:52 ../../modules/generation.md:80
+#: ../../modules/generation.md:111 7b2a5853ef454f9a8719a4d565616b71
+#: a84e547ce8404cd4bd0715aa2124be58 fd9024bb74874b6dbe765b3c6a8dec07
+msgid "**Function macro**:"
+msgstr ""
+
+#: ../../modules/generation.md:66 ../../modules/generation.md:97
+#: ../../modules/generation.md:131 185add7f07c24f6dab0e64411d60dec7
+#: b24918dbd2a544ee8bf59e31ad850cf2 f53000cfdc244a409dbf171e80261994
+msgid "Outputs"
+msgstr ""
+
+#: ../../modules/generation.md:67 ../../modules/generation.md:98
+#: ../../modules/generation.md:132 1193508f1f894f489aa8aa7ea331d8e7
+#: 3f214097a0094b939579a244dc81262f ba63a1994f604457ba20ff11d80a30cc
+msgid ""
+"**State**: The callback gets executed at the appropriate coordinates in "
+"the world."
+msgstr ""
+
+#: ../../modules/generation.md 77b7a67d82444cca8cc24f3e1e72bbf1
+msgid "Simplex Shape 2D"
+msgstr ""
+
+#: ../../modules/generation.md:75 d3d29b72a8e34a9bba848eaf44ca71ab
+msgid ""
+"Generate a shape in 2D space using a Simplex noise algorithm. The shape "
+"is generated at the specified origin, with the callback executed at each "
+"step to facilitate custom behavior during the generation process."
+msgstr ""
+
+#: ../../modules/generation.md fd60f909c1074e2c87a2201353b8611e
+msgid "Fractal Shape 2D"
+msgstr ""
+
+#: ../../modules/generation.md:106 791f5cc1d02e4682b51b19885b7bd12c
+msgid ""
+"Generate a shape in 2D space using a Fractal noise algorithm. The shape "
+"is generated at the specified origin, with the callback executed at each "
+"step to facilitate custom behavior during the generation process."
+msgstr ""
+
+#: ../../modules/generation.md:137 d8033982e90b486ab5c8e3e63c86b1b5
+msgid ""
+"*Example: Generate a 3D terrain using a heightmap. This function employs "
+"a linear approach; for more interesting terrain, consider scaling the "
+"noise values differently according to various ranges. Check out [this "
+"video](https://www.youtube.com/watch?v=CSa5O6knuwI) for more insights on "
+"terrain generation:*"
+msgstr ""
+
+#: ../../modules/generation.md:152 8ef49a296041412086af050d06e6cf1a
+msgid "**Credits**: Aksiome"
+msgstr ""
+
+#: ../../_templates/comments.md:4 a7f0f2ff48cd4ac4aaf62876b6896c2c
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 5940979a78f144eb80d4ddea2c716217
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+

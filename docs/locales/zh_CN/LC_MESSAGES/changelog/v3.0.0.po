@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,28 +19,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../changelog/v3.0.0.md:1 592fc544db7b423aaabddb7c868ac81c
+#: ../../changelog/v3.0.0.md:1 2c2eddf577b44146a4534185e1838023
 msgid ""
 "📦 [Bookshelf - "
 "3.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.0.0)"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:3 aeec6a7ee7e848eea5334641cd7c6be9
+#: ../../changelog/v3.0.0.md:3 cd9db3573e2a4a899f7daff3dd50f138
 msgid "**🚂 The Pipeline Update!**"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:5 a6c84276000c4cf28c7be5a63f7bfd3d
+#: ../../changelog/v3.0.0.md:5 a36a7e5941b64dbe93da0469961448b3
 msgid ""
 "*This release overhauls the project structure with Beet, focusing on "
 "modularity and isolation of each module. It also introduces a new version"
 " loader that resolves conflicts between multiple versions.*"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:7 02e152eb02124274a79ae0cfa98692c8
+#: ../../changelog/v3.0.0.md:7 215f2f13b9c24931ab2c2afdf22d250d
 msgid "**⚠️ BREAKING CHANGES**: This new version has a few breaking changes!"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:9 32a9ce3b2f7c419f923db1f4617179ef
+#: ../../changelog/v3.0.0.md:9 1c281ccc69a84ba3b4c54a1b2eaf0492
 msgid ""
 "Bookshelf is now based on **Minecraft 1.21.5**. Each module of Bookshelf "
 "is now shipped as a separate datapack for people wanting to use only a "
@@ -49,7 +49,7 @@ msgid ""
 "**Bookshelf Dev**, **Bookshelf Prefabs**, and **Bookshelf Suite**."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:13 211be230a0924bbc91f46b5dedbcf8ee
+#: ../../changelog/v3.0.0.md:13 6ea121e5b20b4cada648e0548b17eebf
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#281](https://github.com/mcbookshelf/bookshelf/issues/281)** - Merged "
@@ -57,7 +57,7 @@ msgid ""
 "module."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:14 f266c85b3f2042f29691866aa0e0bc98
+#: ../../changelog/v3.0.0.md:14 3b0087b954c949aabe408084308fe540
 msgid ""
 "<abbr title=\"New Bundles\">📦</abbr> "
 "**[#323](https://github.com/mcbookshelf/bookshelf/pull/323)** - "
@@ -66,7 +66,7 @@ msgid ""
 "**Bookshelf Prefabs**, and **Bookshelf Suite**."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:15 0f87ce3e4fbd41d19d796e18501bcd4f
+#: ../../changelog/v3.0.0.md:15 08cda7d8c8ac427f92a651d766e1dd76
 msgid ""
 "<abbr title=\"New Modules\">🎉</abbr> "
 "**[#272](https://github.com/mcbookshelf/bookshelf/issues/272)** - Added "
@@ -74,7 +74,7 @@ msgid ""
 " `load` and `unload` tags. Bookshelf now also uses **LanternLoad**."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:16 cf43dfaf6dc94fd0ad2654d0b4aa7c77
+#: ../../changelog/v3.0.0.md:16 ae0506c1e7034e1fae15c04161c80de3
 msgid ""
 "<abbr title=\"Enhancements\">⚡</abbr> "
 "**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - Removed "
@@ -82,7 +82,7 @@ msgid ""
 "generated."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:17 07a0c035a22f463c88863844fd72814a
+#: ../../changelog/v3.0.0.md:17 2f90f7cd9f384fbfb37c23c2ac1bba9e
 msgid ""
 "<abbr title=\"Documentation\">📝</abbr> "
 "**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - Migrated "
@@ -90,7 +90,7 @@ msgid ""
 "guide to explain the new **Beet** pipeline."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:18 93766feae25b470696ca8b062f00e496
+#: ../../changelog/v3.0.0.md:18 f58e12c600ec4347abb78514d917f3a4
 msgid ""
 "<abbr title=\"GitHub & CI/CD\">⚙️</abbr> "
 "**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - Created a"
@@ -100,7 +100,7 @@ msgid ""
 "**Smithed**. Modules now also require a `README.md` and a `pack.png`."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:19 f81f345731df4fb3a8a94dd5a9f3c5f9
+#: ../../changelog/v3.0.0.md:19 3c6b7fc3c80d471ea9c23801925dffb2
 msgid ""
 "<abbr title=\"Download\">📥</abbr> "
 "**[#333](https://github.com/mcbookshelf/bookshelf/issues/333)** - "
@@ -109,7 +109,7 @@ msgid ""
 " custom bundles."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:20 9b171de6e3414ef8a71ffcd6fbd65f06
+#: ../../changelog/v3.0.0.md:20 723443e0029f4b49ae7b02abf4fd5d66
 msgid ""
 "<abbr title=\"Download\">📥</abbr> "
 "**[#336](https://github.com/mcbookshelf/bookshelf/issues/336)** - "
@@ -117,11 +117,11 @@ msgid ""
 "toolchain."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:23 bcb15315e92e4a049cf0e91cab884292
+#: ../../changelog/v3.0.0.md:23 00ad6d73653347a9b6516ff4e00538ed
 msgid "`🧱 bs.block`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:25 a22b1a37f09d414fb3e6d236b755e560
+#: ../../changelog/v3.0.0.md:25 f6064d8c164c4e9c82191f582303dfc8
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#375](https://github.com/mcbookshelf/bookshelf/pull/375)** - Changed "
@@ -130,7 +130,7 @@ msgid ""
 "instead."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:26 fedca754b6dd4dbdbfb0d7387a272f2d
+#: ../../changelog/v3.0.0.md:26 2b9bf794b843456694eb6424caab40da
 msgid ""
 "<abbr title=\"New Features\">✨</abbr> "
 "**[#279](https://github.com/mcbookshelf/bookshelf/issues/279)** - "
@@ -138,15 +138,15 @@ msgid ""
 msgstr ""
 
 #: ../../changelog/v3.0.0.md:27 ../../changelog/v3.0.0.md:35
-#: ../../changelog/v3.0.0.md:60 578f83eeff874eadab05754d0b987917
-#: c4a33da6c879471899068af4528384f5 e1b52f30869f4719989f10d0bebfe140
+#: ../../changelog/v3.0.0.md:60 70d40494876a42ea88137470dcf7ef0d
+#: 781bc4e8de5048bfbf52c11348084594 d80538b6554742f09078da0edc2033e5
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#320](https://github.com/mcbookshelf/bookshelf/issues/320)** - Fixed "
 "functions that were previously unusable outside the Overworld."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:28 2392a70b8bb54703a9e6011cc63ab197
+#: ../../changelog/v3.0.0.md:28 b0b005a137984c308e9a0dfdb6948c1c
 msgid ""
 "<abbr title=\"Enhancements\">⚡</abbr> "
 "**[#375](https://github.com/mcbookshelf/bookshelf/pull/375)** - Added "
@@ -154,7 +154,7 @@ msgid ""
 "`viewers`)."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:29 850145fde1e94335bcb0a4184806306b
+#: ../../changelog/v3.0.0.md:29 0b950f995cbf4ac78721571321fe8bfb
 msgid ""
 "<abbr title=\"Enhancements\">⚡</abbr> "
 "**[#363](https://github.com/mcbookshelf/bookshelf/issues/363)** - "
@@ -163,7 +163,7 @@ msgid ""
 "over whether the operation triggers block updates."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:30 3de4e6201150488caf4fe456e5b098c3
+#: ../../changelog/v3.0.0.md:30 7a1d4154517f4b94902c20245515b9ff
 msgid ""
 "<abbr title=\"Enhancements\">⚡</abbr> "
 "**[#349](https://github.com/mcbookshelf/bookshelf/issues/349)** - Added "
@@ -171,36 +171,36 @@ msgid ""
 " command runs automatically when the operation completes."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:31 c5977d23a667407b8d875e08285770d5
+#: ../../changelog/v3.0.0.md:31 332604c9a12447daa99cecb6d1a1a7bb
 msgid ""
 "<abbr title=\"Enhancements\">⚡</abbr> "
 "**[#287](https://github.com/mcbookshelf/bookshelf/issues/287)** - Updated"
 " `replace_type` to return whether a type was found and replaced."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:33 7d04bb5675e44e78a630adfb0d62a5c2
-msgid "`🧱 bs.environment`"
+#: ../../changelog/v3.0.0.md:33 a8824de9579b4917b866744ccf7fb4b4
+msgid "`⛰️ bs.environment`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:38 3dbec7ea6b1d40de8d5ca99b1cc5a57d
+#: ../../changelog/v3.0.0.md:38 f05dc2e2e3644c5cba16fcaee6e696cd
 msgid "`🌱 bs.generation`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:40 3e44dae8affc4297abd2083c7bd47361
+#: ../../changelog/v3.0.0.md:40 7bf75f4e9177482ca4c60cbeaf733ead
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#296](https://github.com/mcbookshelf/bookshelf/issues/296)** - Renamed"
 " the `bs.generate` module to `bs.generation`."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:41 40ca4a4435ec4ddcb468f15d26d544f4
+#: ../../changelog/v3.0.0.md:41 4ab45e9b66aa4cddae996d321ecae78e
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#282](https://github.com/mcbookshelf/bookshelf/issues/282)** - Renamed"
 " scores used in callbacks to use the new `bs.lambda` objective."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:42 6a4b38c496fd427881dfd41bbec236c2
+#: ../../changelog/v3.0.0.md:42 e81a5ea4a00e44aa8dbbe3cc535dc7b5
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#296](https://github.com/mcbookshelf/bookshelf/issues/296)** - Renamed"
@@ -208,14 +208,14 @@ msgid ""
 "`bs.generation:gen_fractal_shape_2d`."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:43 c5093b510b6248b4bf18e4254db03a8d
+#: ../../changelog/v3.0.0.md:43 a8343781e28746578ea4975233f7f5fb
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#296](https://github.com/mcbookshelf/bookshelf/issues/296)** - Renamed"
 " the `bs.generate:shape_2d` function to `bs.generation:gen_shape_2d`."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:44 1666872ea1304fc09282155b3b80783e
+#: ../../changelog/v3.0.0.md:44 86e0b8b5a4db45e4b946df48c8165b22
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#296](https://github.com/mcbookshelf/bookshelf/issues/296)** - Renamed"
@@ -223,11 +223,11 @@ msgid ""
 "`bs.generation:gen_simplex_shape_2d`."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:47 43966e1389e94fa8bbd3fb11ff6e6f89
+#: ../../changelog/v3.0.0.md:47 b73e934c8a77481b8c91d40dcbb47bd7
 msgid "`❤️ bs.health`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:49 dd975b6488414bc9b0ec2ab5f3b9d5dd
+#: ../../changelog/v3.0.0.md:49 c8493c26200c4938bcb333895e4856c9
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#396](https://github.com/mcbookshelf/bookshelf/issues/396)** - Updated"
@@ -235,7 +235,7 @@ msgid ""
 "all modifiers."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:50 d9d4fa171eb64dbca6d5698f0b55b62f
+#: ../../changelog/v3.0.0.md:50 309484a43ef640c6aa3487a6d03edd54
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#348](https://github.com/mcbookshelf/bookshelf/pull/348)** - Fixed an "
@@ -243,11 +243,11 @@ msgid ""
 "to visually disappear."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:53 2287eee0432e4cbcba01d52929781bfd
+#: ../../changelog/v3.0.0.md:53 15b713c30f664dc185188d134e00810f
 msgid "`🎯 bs.hitbox`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:55 a975e6ba93774d4186137fb34a41959e
+#: ../../changelog/v3.0.0.md:55 b68e6542127d41a285de0fb7e9c325ce
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - "
@@ -255,7 +255,7 @@ msgid ""
 "`interaction_shape`."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:56 2632e1a808ab4a9192e57d286cbf11a1
+#: ../../changelog/v3.0.0.md:56 e0859fea47264b64a9f397366708f682
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - Removed"
@@ -264,7 +264,7 @@ msgid ""
 "`is_entity_in_block(s)_<collision|interaction>`."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:57 5611b8c3c1314f708c69d21eab1cf896
+#: ../../changelog/v3.0.0.md:57 804a1a6425c8448e902345a1c856d036
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#297](https://github.com/mcbookshelf/bookshelf/issues/297)** - "
@@ -272,7 +272,7 @@ msgid ""
 "clarity."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:58 43e151ce1f404e5aaea18a6383388659
+#: ../../changelog/v3.0.0.md:58 91052010f3214dc6b69691288fe52b67
 msgid ""
 "<abbr title=\"New Features\">✨</abbr> "
 "**[#299](https://github.com/mcbookshelf/bookshelf/pull/299)** - Moved the"
@@ -280,18 +280,18 @@ msgid ""
 "documented it."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:59 609b7b766d364701b3e499aef3826a97
+#: ../../changelog/v3.0.0.md:59 1f5140471fe14442a4f72a8b7c26dd64
 msgid ""
 "<abbr title=\"New Features\">✨</abbr> "
 "**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - "
 "Introduced the `#bs.hitbox:is_sized` tag for better hitbox management."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:63 b0407f43bd0740129e66827ef3dbb89a
+#: ../../changelog/v3.0.0.md:63 ef285eef52c64bad934094319556a79a
 msgid "`🖱️ bs.interaction`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:65 f8d5a764151544a597c86f193503400d
+#: ../../changelog/v3.0.0.md:65 4b6e3a82de4a4977b45b7d3cd89e8328
 msgid ""
 "<abbr title=\"New Features\">✨</abbr> "
 "**[#300](https://github.com/mcbookshelf/bookshelf/issues/300)** - Added "
@@ -299,11 +299,11 @@ msgid ""
 "hovered."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:68 e72957c37ec2461eb0aff5314b572d28
+#: ../../changelog/v3.0.0.md:68 e500da39a48348c18e9fc5875920f0ed
 msgid "`📄 bs.log`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:70 fbd268b9c2594d83aad8e2168ddb4401
+#: ../../changelog/v3.0.0.md:70 8db7e2e506284b7288f00a2be98e8461
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#369](https://github.com/mcbookshelf/bookshelf/issues/369)** - "
@@ -311,11 +311,11 @@ msgid ""
 "messages."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:72 6ba2ee86b7494273bf8ddedf7a3c4d86
+#: ../../changelog/v3.0.0.md:72 d5ac9e881017463b8abfc5c6fba060e8
 msgid "`🏃 bs.move`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:74 a2d6ca19ba7d4b1489f71b2e060eccb1
+#: ../../changelog/v3.0.0.md:74 284466644dbf47b680842c21dc0b1bd6
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#282](https://github.com/mcbookshelf/bookshelf/issues/282)** - Updated"
@@ -325,7 +325,7 @@ msgid ""
 "`callback/*`."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:75 c6c07cd743fb4ea3b7bcd129c8e3f965
+#: ../../changelog/v3.0.0.md:75 117f6b5fa708495c8dcf9c64202dce78
 msgid ""
 "<abbr title=\"New Features\">✨</abbr> "
 "**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - Added "
@@ -333,32 +333,32 @@ msgid ""
 "between `collision` and `interaction` hitboxes."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:76 a2eb100220834ca4a879120ec88cd27f
+#: ../../changelog/v3.0.0.md:76 eb3529d25a804b0ab35ce3fc53a51b36
 msgid ""
 "<abbr title=\"New Features\">✨</abbr> "
 "**[#298](https://github.com/mcbookshelf/bookshelf/issues/298)** - "
 "Predicate `bs.move:has_vel` is now properly documented. hitbox_shape"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:78 21cdcd53c9c84461aa4712d1a681b7b7
+#: ../../changelog/v3.0.0.md:78 ee0564aa9b1f4eb1bf7bf15c22a982e5
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#316](https://github.com/mcbookshelf/bookshelf/issues/316)** - Fixed "
 "entities clipping into blocks during collision resolution."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:81 4073b87f9e4d4231a1584a1490bb87c7
+#: ../../changelog/v3.0.0.md:81 7ce26cce65774298b396f11f5c147618
 msgid "`🔦 bs.raycast`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:83 2cf4ce2ba09b47b883f1808370cae6a1
+#: ../../changelog/v3.0.0.md:83 5e0efa3533df479dbf3dd5a074e7b4dc
 msgid ""
 "<abbr title=\"Enhancements\">⚡</abbr> "
 "**[#358](https://github.com/mcbookshelf/bookshelf/issues/358)** - Added "
 "additional lambda values to callbacks."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:84 12084dde4ec843f093017faedbd9a990
+#: ../../changelog/v3.0.0.md:84 ed1e61dd17534943877b7e48bd0ad0a3
 msgid ""
 "<abbr title=\"Enhancements\">⚡</abbr> "
 "**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - Added "
@@ -366,11 +366,11 @@ msgid ""
 "`collision` and `interaction` shapes."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:87 d817c432a17c47e995f13e3ec3817e2d
+#: ../../changelog/v3.0.0.md:87 2ea9115717f14f068118f94b9d978899
 msgid "`⏲️ bs.schedule`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:89 15e0112de4e840f18cb95fc5d4714ca6
+#: ../../changelog/v3.0.0.md:89 b18e7d0ae6374cd5b6f90683ebf1a35d
 msgid ""
 "<abbr title=\"Breaking Changes\">⚠️</abbr> "
 "**[#282](https://github.com/mcbookshelf/bookshelf/issues/282)** - Changed"
@@ -378,62 +378,62 @@ msgid ""
 "that use callbacks."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:92 b12c81e890c641e5ac1408f73fddf02c
+#: ../../changelog/v3.0.0.md:92 56dfa2aa89014874ae876ac57703e6e7
 msgid "`📰 bs.sidebar`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:94 d765bb8229604df99d722c9d32eac94e
+#: ../../changelog/v3.0.0.md:94 e2d259f44e10475cb8c32acae8a9a4cd
 msgid ""
 "<abbr title=\"Enhancements\">⚡</abbr> "
 "**[#367](https://github.com/mcbookshelf/bookshelf/issues/367)** - "
 "Optimized the module for the 1.21.5 version of Minecraft."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:95 a9d6ba9382474ae08006fb29979636a1
+#: ../../changelog/v3.0.0.md:95 330d125c00c94cbf85bee62f5ce16370
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#301](https://github.com/mcbookshelf/bookshelf/pull/301)** - Fixed the"
 " issue where `bs.sidebar:create` was not functioning correctly."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:98 59e0e512123d409b91764739d123acbd
+#: ../../changelog/v3.0.0.md:98 2f8cfcacc47844cd8342424fe05662de
 msgid "`🔠 bs.string`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:100 b587646021ca4802ba70e87a23d60884
+#: ../../changelog/v3.0.0.md:100 9caa0fdd0c8d49beaf777c6877c2e8f6
 msgid ""
 "<abbr title=\"New Modules\">🎉</abbr> "
 "**[#283](https://github.com/mcbookshelf/bookshelf/pull/283)** - Added a "
 "new `bs.string` module for managing strings."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:103 b3fb73857925401988fde80eba91521d
+#: ../../changelog/v3.0.0.md:103 1531b5822b6141218caa3926901c41a5
 msgid "`🧣 bs.spline`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:105 e326e51843254d32a97758f8e4e0f38e
+#: ../../changelog/v3.0.0.md:105 d071410724ff4d619d1570fa83636eab
 msgid ""
 "<abbr title=\"New Modules\">🎉</abbr> "
 "**[#241](https://github.com/mcbookshelf/bookshelf/issues/241)** - Added a"
 " new `bs.spline` module for working with splines."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:108 9fb70cfa03c54eaf8bd70e179cf5c62c
+#: ../../changelog/v3.0.0.md:108 1432028bb243441188bb53c681b56266
 msgid "`⌚ bs.time`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:110 e670f53903614879837eca4c10bd2649
+#: ../../changelog/v3.0.0.md:110 5e2dd2b42aac48b6bd17e44c8c0562c5
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#379](https://github.com/mcbookshelf/bookshelf/issues/379)** - Fixed "
 "get time for the 1.21.5 version of Minecraft."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:113 7189471c0d594bb1af4dcde49ebaa551
+#: ../../changelog/v3.0.0.md:113 537df31a0b60481c8f47d96b86324df9
 msgid "`👀 bs.view`"
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:115 531fc9c0b2754ac18f9cf4a62b787677
+#: ../../changelog/v3.0.0.md:115 98c3eba8bb9842fe959c7da8d3a98915
 msgid ""
 "<abbr title=\"New Features\">✨</abbr> "
 "**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - Added "
@@ -441,14 +441,14 @@ msgid ""
 "selection between `collision` and `interaction` shapes."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:116 693bea155cfb401ba627834c8bd22b64
+#: ../../changelog/v3.0.0.md:116 8dee0ebb0edb4289a61849f3c6d8b842
 msgid ""
 "<abbr title=\"New Features\">✨</abbr> "
 "**[#299](https://github.com/mcbookshelf/bookshelf/pull/299)** - Block tag"
 " `can_see_through` is now properly documented."
 msgstr ""
 
-#: ../../changelog/v3.0.0.md:117 b8699089fb864fdd8eceb90de3db4def
+#: ../../changelog/v3.0.0.md:117 b9cc25e5d37545fa85eb723d00eec8fa
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#319](https://github.com/mcbookshelf/bookshelf/issues/319)** - Fixed "

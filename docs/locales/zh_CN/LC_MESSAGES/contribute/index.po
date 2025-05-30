@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -31,34 +31,34 @@ msgstr ""
 msgid "Quick References"
 msgstr ""
 
-#: ../../contribute/index.md:5 3d21ba85802b42f3a2e767667ba79d74
-msgid "🤝&nbsp;Contribute"
+#: ../../contribute/index.md:5 b655eebbfe2a45de831ce9fc0e3aded9
+msgid "🤝 Contribute"
 msgstr ""
 
-#: ../../contribute/index.md:7 909b598a7b7449b39ae8bee194fedd0f
+#: ../../contribute/index.md:7 04954df5762746a592d73b6546a36dce
 msgid ""
 "Welcome to the Contribute section of our documentation! Whether you're "
 "fixing bugs, adding features, or writing new modules, this guide will "
 "help you get started and align with our project's standards."
 msgstr ""
 
-#: ../../contribute/index.md:9 9a56f76af7e94c9bacca05c6a38190ef
+#: ../../contribute/index.md:9 32b037e2a045479aa07f6ef3054cc0c4
 msgid "To contribute to this project, you must:"
 msgstr ""
 
-#: ../../contribute/index.md:11 86f28d17d821435a94c1e21f7c7962e7
+#: ../../contribute/index.md:11 39e405d9a44e4c09b3a7604ea5acffea
 msgid "Know the structure of a Minecraft datapack (5-10 min to learn on internet)"
 msgstr ""
 
-#: ../../contribute/index.md:12 71a7a97ac8eb430bb15e665474f679f8
+#: ../../contribute/index.md:12 fc26c137f100484db64b974278e0fb0a
 msgid "Know the basic usage of git projects (20-30 min to learn on internet)"
 msgstr ""
 
-#: ../../contribute/index.md:13 7c7ba0e4eca7463e87a6f24f5fad01f4
+#: ../../contribute/index.md:13 20d8761a48214d17b97ddafd70f314d7
 msgid "Be accessible to answer questions about your work"
 msgstr ""
 
-#: ../../contribute/index.md:15 dce5f6949a5240169b498149a54802a8
+#: ../../contribute/index.md:15 8795d5ff15b04dd4bb9531a6102dd6a8
 msgid ""
 "If you're not familiar with GitHub pull requests or open-source "
 "collaboration, we recommend this guide to help you get started quickly: "
@@ -66,18 +66,18 @@ msgid ""
 "contributions/blob/main/README.md)."
 msgstr ""
 
-#: ../../contribute/index.md:17 3e14572dbbb84c15b5a60442b5f5bb69
+#: ../../contribute/index.md:17 20e35806fef84a8fa2f50ac0852c3955
 msgid "**For French speakers**"
 msgstr ""
 
-#: ../../contribute/index.md:19 8ce905311061467e8fe6a141df9785f3
+#: ../../contribute/index.md:19 f20e6b6f1c574b8991408cd545305e39
 msgid ""
 "Ce projet est réalisé principalement par des membres francophones mais à "
 "destination d'un public international. C'est pourquoi toute la lib ainsi "
 "que la documentation est en anglais."
 msgstr ""
 
-#: ../../contribute/index.md:21 6df33142e671405e83a3082c99edb755
+#: ../../contribute/index.md:21 5880b54bf155414e9631911c30efb1ea
 msgid ""
 "Si vous souhaitez contribuer mais que votre anglais n'est pas au niveau, "
 "vous pouvez utiliser des outils comme [DeepL](https://DeepL.com) puis "

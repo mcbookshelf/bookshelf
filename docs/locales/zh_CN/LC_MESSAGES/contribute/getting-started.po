@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,157 +19,157 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../contribute/getting-started.md:5 0a49e91601d14c8da5e437d501b5fb0d
+#: ../../contribute/getting-started.md:5 1e3dedcff3e64224b92f370026f6b979
 msgid "🚀 Getting Started"
 msgstr ""
 
-#: ../../contribute/getting-started.md:7 01f795fa1fb24892b104ffe0edabf764
+#: ../../contribute/getting-started.md:7 96a014fc4ef345d891e4fe8a04ed2dba
 msgid ""
 "This guide will walk you through setting up a local development "
 "environment to build, test, and contribute to our modules."
 msgstr ""
 
-#: ../../contribute/getting-started.md:11 6b16ada69827477383ead620705be3cb
+#: ../../contribute/getting-started.md:11 d49d7b1161ee4a779974e70e1ba1c326
 msgid "⚙️ Prerequisites"
 msgstr ""
 
-#: ../../contribute/getting-started.md:13 f192e955c36449caa9b153fabb79fe42
+#: ../../contribute/getting-started.md:13 0aea0a74f07f4733a434ea0d646b1c3e
 msgid ""
 "Before getting started, ensure your system is prepared by following these"
 " steps:"
 msgstr ""
 
-#: ../../contribute/getting-started.md:15 1f976ac1f8024ec1a406b70525228cdc
+#: ../../contribute/getting-started.md:15 7a8bfa49195f4e47ae757cf20f9b820f
 msgid ""
 "Install [**PDM**](https://pdm-project.org/en/latest/), the Python "
 "Dependency Manager"
 msgstr ""
 
-#: ../../contribute/getting-started.md:16 ea7993fbf1364339a5f23b8e74c653fe
+#: ../../contribute/getting-started.md:16 3af6214d93f1417f8efaeb6728caedb4
 msgid ""
 "Open a terminal at the root of the project and run the following command "
 "to install all required dependencies:"
 msgstr ""
 
-#: ../../contribute/getting-started.md:21 414a466d75844f3ba4304bb4199f523f
+#: ../../contribute/getting-started.md:21 85c86c67136f40f992313099780049c5
 msgid ""
 "Running this command prepares your environment for building and testing "
 "the project."
 msgstr ""
 
-#: ../../contribute/getting-started.md:25 04c61e320d2846029a4123500f1c2a84
+#: ../../contribute/getting-started.md:25 1c37fb8577ad4d94bc67656f209f3064
 msgid "🔨 Building Modules"
 msgstr ""
 
-#: ../../contribute/getting-started.md:27 a14ae8e66f114791ba4bca7f03eeda4b
+#: ../../contribute/getting-started.md:27 d7264c104ae24573ae5e5a7dedd5cb35
 msgid ""
 "The `modules` directory contains the source files for all modules. Use "
 "the following commands to manage and build them efficiently:"
 msgstr ""
 
-#: ../../contribute/getting-started.md:30 8248d811045f4a79bb1852ebfefa00bb
+#: ../../contribute/getting-started.md:30 1ff7f1c8196a45218513febe51ba13ef
 msgid "`pdm run modules build`"
 msgstr ""
 
-#: ../../contribute/getting-started.md:31 58abe0a9f2aa425394f64f2598eec1ea
+#: ../../contribute/getting-started.md:31 81050c8da58949728147500b97757b16
 msgid "Build all modules"
 msgstr ""
 
-#: ../../contribute/getting-started.md:32 b2ddba4135fb41a780ad8394f46a9777
+#: ../../contribute/getting-started.md:32 ef346563371f4878a38702f26e05e9fb
 msgid "`pdm run modules watch`"
 msgstr ""
 
-#: ../../contribute/getting-started.md:33 2d9ce6485f674aa69cd61274507ae4ca
+#: ../../contribute/getting-started.md:33 c0445a69ff6645d899f4be7e409d4809
 msgid "Monitor changes and rebuild modules automatically"
 msgstr ""
 
-#: ../../contribute/getting-started.md:34 236d2ae1e7e74deb86fb1262d856986c
+#: ../../contribute/getting-started.md:34 ce51cf6466ef439fa138dbca5d8e92ab
 msgid "`pdm run modules <build|watch> <module1> ...`"
 msgstr ""
 
-#: ../../contribute/getting-started.md:35 f186c5bc9d8f4f90b69e7d382639be44
+#: ../../contribute/getting-started.md:35 258e2b0a5974487ca63afc6bf2139fdc
 msgid "Build or watch only the specified modules"
 msgstr ""
 
-#: ../../contribute/getting-started.md:36 c9e56cf1eee846a98b930af2f1eb6e1b
+#: ../../contribute/getting-started.md:36 757746f525f14f9e8fc2191e3289bbb1
 msgid "`pdm run modules link [world]`"
 msgstr ""
 
-#: ../../contribute/getting-started.md:37 8c31e64ecc0c4626a88d0c12686914d4
+#: ../../contribute/getting-started.md:37 3958334844224be08d8d974227d0991d
 msgid "Link the generated resource and data packs to a Minecraft world"
 msgstr ""
 
-#: ../../contribute/getting-started.md:40 0a60fdf9fea249a09d8182285b214797
+#: ../../contribute/getting-started.md:40 73e5ab57069d4507b7ef8cbe9ed6b4ee
 msgid "Watching Modules"
 msgstr ""
 
-#: ../../contribute/getting-started.md:43 56f2de0383b24af5b7f21e5ea7151d88
+#: ../../contribute/getting-started.md:43 306b2ce9fe5842e3a6757b3182f5fb98
 msgid ""
 "Building modules can take some time. For a smoother experience, it's "
 "recommended to only watch the module you're currently working on: `pdm "
 "run modules watch <module>`."
 msgstr ""
 
-#: ../../contribute/getting-started.md:46 cc3006e2a8224e79aef6097d93c4ff43
+#: ../../contribute/getting-started.md:46 2d6acbe15a3b40efbf75db8f0bd9f02d
 msgid "Linking Modules to Minecraft"
 msgstr ""
 
-#: ../../contribute/getting-started.md:48 09bb06140e6a43b3b5f4e735e7635416
+#: ../../contribute/getting-started.md:48 088c656267544c04a60f1c351c06675e
 msgid ""
 "The `link` command allows you to integrate generated packs directly into "
 "a Minecraft world. Below are the options available for this command:"
 msgstr ""
 
-#: ../../contribute/getting-started.md:51 236e57e7d2e2458b924e25d8ef7f532b
+#: ../../contribute/getting-started.md:51 9cc853e03b674dd38cbc700b1bb758ca
 msgid "`world (optional)`"
 msgstr ""
 
-#: ../../contribute/getting-started.md:52 1a4c6f3d2c0b4be0a0dbd0d5018ac48d
+#: ../../contribute/getting-started.md:52 07e2b53b612a46ef9669c609d694bf21
 msgid "The name of the Minecraft world to link"
 msgstr ""
 
-#: ../../contribute/getting-started.md:53 a720ea15a80b4e4aaec61e570c3efa36
+#: ../../contribute/getting-started.md:53 25012e7a2eef447e8f53c4ebe84dbe18
 msgid "`--minecraft <DIRECTORY>`"
 msgstr ""
 
-#: ../../contribute/getting-started.md:54 9f3c05b5b8104ead936cc341eab5f373
+#: ../../contribute/getting-started.md:54 dd364c6e5ce848e4b91748410fed13e0
 msgid "Path to the `.minecraft` directory (location of Minecraft files)"
 msgstr ""
 
-#: ../../contribute/getting-started.md:55 1e7b25825d9c4334820a74f3a242aa8d
+#: ../../contribute/getting-started.md:55 1511acf450b846b684fdd9a7bc056fdf
 msgid "`--data-pack <DIRECTORY>`"
 msgstr ""
 
-#: ../../contribute/getting-started.md:56 62ee8d521508429594e2e7657b39daa7
+#: ../../contribute/getting-started.md:56 17ac50dd2b3a411ba8888392d0691a6f
 msgid "Path to the directory where data packs are stored"
 msgstr ""
 
-#: ../../contribute/getting-started.md:57 6820029945164f94a051b94cc4a6e51c
+#: ../../contribute/getting-started.md:57 e53fcad9a1b34f8cb65e7205cd076e1d
 msgid "`--resource-pack <DIRECTORY>`"
 msgstr ""
 
-#: ../../contribute/getting-started.md:58 8e5af1d935ad4c6592eb7ecb1e33fac9
+#: ../../contribute/getting-started.md:58 5e21ce46131440fc9f1d89ad46b70b60
 msgid "Path to the directory where resource packs are stored"
 msgstr ""
 
-#: ../../contribute/getting-started.md:61 a324605a33ac4369a66c6ac2dd7e3759
+#: ../../contribute/getting-started.md:61 54814d8482df4522b2e358d33aee4e40
 msgid ""
 "This workflow demonstrates how to link and continuously test your modules"
 " directly in Minecraft:"
 msgstr ""
 
-#: ../../contribute/getting-started.md:72 c5d82fe3af7042f1b1927b59b5589096
+#: ../../contribute/getting-started.md:72 aa208334942249d28ecdea93efc0371e
 msgid "🧪 Testing Modules"
 msgstr ""
 
-#: ../../contribute/getting-started.md:74 519cdc6a850743eb94af65588d2243ac
+#: ../../contribute/getting-started.md:74 ddaffd964cf3443a9cc353cc516a42c4
 msgid ""
 "Testing is a fundamental aspect of software development. It helps ensure "
 "the correctness of your code and can save you from potential bugs in the "
 "future."
 msgstr ""
 
-#: ../../contribute/getting-started.md:76 add833772d5c4a3aabd353c6f221ae6f
+#: ../../contribute/getting-started.md:76 b3abd0762d1341749d89aa85b599bc20
 msgid ""
 "To learn how to write and run tests for your modules, refer to the [Debug"
 " Section](project:debug-tools.md#-unit-tests)."

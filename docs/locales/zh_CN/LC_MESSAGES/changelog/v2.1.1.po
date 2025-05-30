@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,69 +19,69 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../changelog/v2.1.1.md:1 fead487ac55e409097d8dcadaf381306
+#: ../../changelog/v2.1.1.md:1 e84150d473634527b55a34081ebcd10a
 msgid ""
 "📦 [Bookshelf - "
 "2.1.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.1.1)"
 msgstr ""
 
-#: ../../changelog/v2.1.1.md:3 dabd5900b0f045ae89013e2ed3a51a76
+#: ../../changelog/v2.1.1.md:3 78a493c2cf6e4d1e84a57ca08cc73c99
 msgid "**⚡ A Performance Update!**"
 msgstr ""
 
-#: ../../changelog/v2.1.1.md:5 428ff5167e2a4372a57bbf2cbc6f36e3
+#: ../../changelog/v2.1.1.md:5 3d0dd7e4034c4e63a4031039c50e1774
 msgid ""
 "*This release improves the performance of the block module, fixes several"
 " bugs, and introduces the new concept of loading modules in isolation.*"
 msgstr ""
 
-#: ../../changelog/v2.1.1.md:8 17cc462ecf9a4894b58586f2abbb9d27
+#: ../../changelog/v2.1.1.md:8 f1d81573e1424507a19d22db1480248e
 msgid ""
 "⚡ **[#238](https://github.com/mcbookshelf/bookshelf/pull/238)** - Load "
 "tags now load modules in isolation."
 msgstr ""
 
-#: ../../changelog/v2.1.1.md:9 18d8cdef4452426db6d057cf492376fb
+#: ../../changelog/v2.1.1.md:9 0f9fe236cc754a4ea26fe39b294d211c
 msgid ""
 "📝 **[#215](https://github.com/mcbookshelf/bookshelf/issues/215)** - Added"
 " documentation about documentation (meta-documentation)."
 msgstr ""
 
-#: ../../changelog/v2.1.1.md:12 54317b1b05af480f96843d9e9300e4a6
+#: ../../changelog/v2.1.1.md:12 9853a70bec71460a9324f488a8d7f28b
 msgid "`🧱 bs.block`"
 msgstr ""
 
-#: ../../changelog/v2.1.1.md:14 ed9905c741264870bbe41e870ad249b0
+#: ../../changelog/v2.1.1.md:14 b08dd53bfbd544a3bb304be9b7caf9bd
 msgid ""
 "⚡ **[#237](https://github.com/mcbookshelf/bookshelf/pull/237)** - "
 "Enhanced the speed of the module."
 msgstr ""
 
-#: ../../changelog/v2.1.1.md:15 bb0b8f62c27b4ece8e77e39b31093e95
+#: ../../changelog/v2.1.1.md:15 7cc4aa413b8447e288f3196132543ec1
 msgid ""
 "⚡ **[#218](https://github.com/mcbookshelf/bookshelf/pull/218)** - "
 "Enhanced the speed of the factorial function."
 msgstr ""
 
-#: ../../changelog/v2.1.1.md:16 897944b4534049d69cb129c51527854e
+#: ../../changelog/v2.1.1.md:16 6e1704a314ef4ac48b0b6f4f535cb2b8
 msgid ""
 "🐛 **[#235](https://github.com/mcbookshelf/bookshelf/issues/235)** - Fixed"
 " inputs that required extra escaping."
 msgstr ""
 
 #: ../../changelog/v2.1.1.md:17 ../../changelog/v2.1.1.md:22
-#: ../../changelog/v2.1.1.md:27 36c7246f07174115a567484ae5c741e1
-#: 53a9114130fe4c338dc49109b90669e9 b6d2993705aa4ed2a1cf9d496172dee8
+#: ../../changelog/v2.1.1.md:27 0b4a8ac6b8934d2f9c19fe313bf22cae
+#: 361b1e227d3544ca982e975e47d58614 980501cfb7664bb9b859704ace0863bd
 msgid ""
 "🐛 **[#236](https://github.com/mcbookshelf/bookshelf/issues/236)** - Fixed"
 " load function."
 msgstr ""
 
-#: ../../changelog/v2.1.1.md:20 012dd1b2a82f47a5ac161ebb9ddf5395
+#: ../../changelog/v2.1.1.md:20 082b2c4edbd0455d8ad547053bd15f5b
 msgid "`🏷️ bs.id`"
 msgstr ""
 
-#: ../../changelog/v2.1.1.md:25 eeac154253b74ff48fcb890e3d3a6d10
+#: ../../changelog/v2.1.1.md:25 6f0a8dad53e44233833e204fa5b1a819
 msgid "`🧮 bs.math`"
 msgstr ""
 

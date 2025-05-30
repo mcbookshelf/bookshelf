@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,44 +19,44 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/spline.md:1 8634b88b6a204cb0bfa548d2a450c654
+#: ../../modules/spline.md:1 a9cc39a0277e4c62b6948541a29feb7f
 msgid "🧣 Spline"
 msgstr ""
 
-#: ../../modules/spline.md:3 a9c588def6fc4f398f9246166a6e07ff
+#: ../../modules/spline.md:3 7c975fe2663f41099a5e7c941f263f30
 msgid "**`#bs.spline:help`**"
 msgstr ""
 
-#: ../../modules/spline.md:5 5101453a84d74d74a4de4f25b1202f61
+#: ../../modules/spline.md:5 32ae33b2da2e4baca46c609fe0dea6bd
 msgid "Create and manipulate smooth curves from control points."
 msgstr ""
 
-#: ../../modules/spline.md:13 13c78b79e64047cb817049cdc261d6b4
+#: ../../modules/spline.md:13 b0e474d239ca4af2a59b35f37751356f
 msgid ""
 "\"Do not go where the path may lead, go instead where there is no path "
 "and leave a trail.\""
 msgstr ""
 
-#: ../../modules/spline.md:14 d85a4894d0a24441b1ab20febf4072d2
+#: ../../modules/spline.md:14 4ea4d9befbfa40168ea74733eaed07cd
 msgid "Ralph Waldo Emerson"
 msgstr ""
 
-#: ../../modules/spline.md:18 94617cd8f6194d539c7515f66f4567fd
+#: ../../modules/spline.md:18 31983f17d8414cd0835b9a5a2820a75c
 msgid "Supported Dimensions"
 msgstr ""
 
-#: ../../modules/spline.md:21 66d84023fab54feaa6511e9175d26c68
+#: ../../modules/spline.md:21 d87995ff6f20475aa9e23f2b252c90d6
 msgid ""
 "These functions support only 1D, 2D, and 3D splines. If you need to "
 "handle more dimensions, you can run multiple 1D splines in parallel for "
 "each axis or component."
 msgstr ""
 
-#: ../../modules/spline.md:24 3c7e90ec76bc44669310298da17be7bc
+#: ../../modules/spline.md:24 4cbb04a6fd6c4ab3989eb0ddc40427ee
 msgid "Variable Number of Points"
 msgstr ""
 
-#: ../../modules/spline.md:27 95d22842f0d64d879385710665a00668
+#: ../../modules/spline.md:27 e3d9d2fd2c19441f9e01a11abc221aa8
 msgid ""
 "All spline functions in this module accept a variable number of points. "
 "You are not restricted to using just four or any fixed count. Splines are"
@@ -64,25 +64,25 @@ msgid ""
 "points as needed."
 msgstr ""
 
-#: ../../modules/spline.md:32 2fcd8a5e065846c2a0380e216b69659a
+#: ../../modules/spline.md:32 fdf394d060de4b478f6c49041c170d39
 msgid "🔧 Functions"
 msgstr ""
 
-#: ../../modules/spline.md:34 5483fa314a01442f8f16dfd48378f7ea
+#: ../../modules/spline.md:34 d79c61e55c3546b891095f6f35167488
 msgid "You can find below all functions available in this module."
 msgstr ""
 
-#: ../../modules/spline.md:38 b8d0ed061fe3423c90c9d5e3f2034d3b
+#: ../../modules/spline.md:38 f7678d01e43c4315bd85191827d41888
 msgid "Evaluate"
 msgstr ""
 
 #: ../../modules/spline.md ../../modules/spline.md:386
-#: 589a24f965b146be8f522e6fe1316074 beb35bcd6f204cc3980bd61d550943d2
-#: c9fe5504a9b0457d9ec401b5b811f71f cad7fc93941f4f9d902e72085c8f39fb
+#: 650ab241c875454887ea258f33496102 900d812b7b0441df9b96da7e5526486b
+#: a3c503f54ace42818532341cd18145e5 bb4c47250f524ae68cca931d5aeebbdc
 msgid "Bézier"
 msgstr ""
 
-#: ../../modules/spline.md:46 f2dca866553c420fb83a1c58d9ae65d5
+#: ../../modules/spline.md:46 e39d8d624ab7486fac2eefbee42d4533
 msgid ""
 "Evaluate a Bézier spline composed of one or more segments. Each segment "
 "is defined by four consecutive control points, with the last point of a "
@@ -95,16 +95,16 @@ msgstr ""
 #: ../../modules/spline.md:217 ../../modules/spline.md:244
 #: ../../modules/spline.md:278 ../../modules/spline.md:303
 #: ../../modules/spline.md:328 ../../modules/spline.md:353
-#: 3082f955d0ef4c968569f8c296cad669 3c20e3cc3393443b85e04c8c581de14b
-#: 3f903d7c6bb1435099e29832dc2c7693 4bcbe4638c7a4cb69eaa2aa9fb2d20e6
-#: 564cd3921ff04155a256556c268e7e3a 688f7ac611bf4f7cbe2d9bfceaedcdd6
-#: 8093a369785142f39256671fb4db1c65 998cded6a4b1459dbe5d76e5e8592f2f
-#: 9bf1e2362ec047d78f60a2ccbe604ed5 a245e16434a8492b968799f1f99e6836
-#: b3e8806102014f74ace0b3a404e4a929 ed5d1ec21d9542569596354dc2dc9e53
+#: 0eb3181f94d14502972bb66821da541f 2a5e0df9ce1844c3a90526886a69bda5
+#: 2d2af86acaed4fcaa545b6a670df1316 578c242404294699a6a6141cf126f103
+#: 5f724d60c26e4461b4fcda1305659e11 7fa5159f737048e2a76658673b213916
+#: a19b193bfbbd48e9b708d3fca37ae54e ac98c9f7ae9e40c8a631963ce99f4a58
+#: b321e001404a4426b55c1c9a8bfd41c9 c7d0443772aa4893a8a39ffdaaf5b0ba
+#: e28f51353f004b3e823446f51e9f207e f084c98a176d41218e7b6522a18049ed
 msgid "Inputs"
 msgstr ""
 
-#: ../../modules/spline.md:49 1ba92875b70b45bf9d70f6ff670dd445
+#: ../../modules/spline.md:49 11dfa25c40044625b45ed4d16d7d37f7
 msgid "**Storage `bs:in spline.evaluate_bezier`**:"
 msgstr ""
 
@@ -112,93 +112,93 @@ msgstr ""
 #: ../../modules/spline.md:110 ../../modules/spline.md:137
 #: ../../modules/spline.md:171 ../../modules/spline.md:198
 #: ../../modules/spline.md:225 ../../modules/spline.md:252
-#: 1857832851824381a8cc9c29bb1a9902 4436c31b0f6743ea99313f2a3a8f8b25
-#: 4f0ec1fa4d10478d858e4d4555c35640 5111c37e0ca8409fa4b8b135a6bf6064
-#: 555aa63984044a0da1f77d3480a7c3fc 8acd619661dd46c6aeed729d77d673c7
-#: b0da50a75c31456d803a8cb4e5baa5c2 fde818a4629e42b393e220957b7088ea
+#: 2a3504ae228b4631979bb3ede94b62b9 b11e04cce3d44683869d34129281149b
+#: c1cc390eede34689ab9775438274aea9 c79ac809b17c4dd8a03d9f705f12d297
+#: c8120878f9d54b768b92f60bd5cf6c68 d2f94e4c6f8f4b549bf3c7327f4ede3a
+#: ea61ea6a403d47d2b6a287b7dc4b43c4 fbb23ada41cb4eabb6274e7a143356b3
 msgid "Outputs"
 msgstr ""
 
-#: ../../modules/spline.md:57 8ccaa3aad0954093a17cfc39893331f0
+#: ../../modules/spline.md:57 f8af0a95fc254747afc019d6409ee74f
 #, python-brace-format
 msgid ""
 "**Storage `bs:out spline.evaluate_bezier`**: {nbt}`list` The interpolated"
 " point (1D, 2D, or 3D) on the spline at the given time."
 msgstr ""
 
-#: ../../modules/spline.md:60 7b221db0541b4fa6b94e75f657056df7
+#: ../../modules/spline.md:60 30648d6eb53c4bc197c5ceec4193032a
 msgid ""
 "*Example: Evaluate the point in the middle of a Bézier curve in 2D space "
 "([visualize the curve](#about-splines)):*"
 msgstr ""
 
 #: ../../modules/spline.md ../../modules/spline.md:394
-#: 4ae075d5f54a4fea833706578c9cf6d3 73c3fc40514648f495d00312759b98ac
-#: a25381cbda4f4d5287b5d81a35c1944e c07cc6ae4ecc43f6ac9215347b335808
+#: 330190e6222e44d4a6121a9986c9ba1d 40d970a93fe14fd89c0b9597241f0a05
+#: 7fbc521a15034a868913b797b1797bac 96439911603a4015903a24ad75788619
 msgid "B-Spline"
 msgstr ""
 
-#: ../../modules/spline.md:73 ece70d8d430b4c3b9626e00039f180b5
+#: ../../modules/spline.md:73 d6edef2e277546e78a17cfde4ad55fca
 msgid ""
 "Evaluate a B-spline composed of one or more segments. Each segment is "
 "defined by four consecutive control points, with three points of a "
 "segment reused in the next to ensure smooth blending."
 msgstr ""
 
-#: ../../modules/spline.md:76 2b9ccff08691405e8e492f926bced077
+#: ../../modules/spline.md:76 b2a86b3100a74a0e93408ba3daf06bde
 msgid "**Storage `bs:in spline.evaluate_bspline`**:"
 msgstr ""
 
-#: ../../modules/spline.md:84 1a200e20327c42d29cc0250e2bd3f624
+#: ../../modules/spline.md:84 ccf151ba8b954e30968529bf4392a8fd
 #, python-brace-format
 msgid ""
 "**Storage `bs:out spline.evaluate_bspline`**: {nbt}`list` The "
 "interpolated point (1D, 2D, or 3D) on the spline at the given time."
 msgstr ""
 
-#: ../../modules/spline.md:87 09aa4d5d1d824045996049fc64a3a0fb
+#: ../../modules/spline.md:87 96cb33e155d343f598b786547dc96c6d
 msgid ""
 "*Example: Evaluate the point in the middle of a B-Spline curve in 2D "
 "space ([visualize the curve](#about-splines)):*"
 msgstr ""
 
 #: ../../modules/spline.md ../../modules/spline.md:401
-#: 25c132f55b0e4129a6339390b1423884 3b83798f5bc945049f214b114de7d4d1
-#: 8ac593b538004e67b0131e9eb5c80d20 9f594f83e71f4735ab4b1bd4eda67304
+#: 1dd50313839147a38ff03e760f32e0cb 7674de3b43eb4918a8e91f0ad75821bf
+#: a18a2c9a665b4c4383e5a9d952409e69 e04e3d9c364c48d38ce1f5a4936fb825
 msgid "Catmull-Rom"
 msgstr ""
 
-#: ../../modules/spline.md:100 7aa066cb913d45b8b78074c7b6bcc769
+#: ../../modules/spline.md:100 9b3c12f83f0d4154b4d3022c39809612
 msgid ""
 "Evaluate a Catmull-Rom spline composed of one or more segments. Each "
 "segment is defined by four consecutive control points, with three points "
 "of a segment reused in the next to ensure smooth blending."
 msgstr ""
 
-#: ../../modules/spline.md:103 6ddc1fa1b2e044aeab100f91859305b6
+#: ../../modules/spline.md:103 8226e83dc36141b28bc93c110a6c3a66
 msgid "**Storage `bs:in spline.evaluate_catmull_rom`**:"
 msgstr ""
 
-#: ../../modules/spline.md:111 ac01fb614a9e48e89cd443a2c6621e5f
+#: ../../modules/spline.md:111 030f7be89535403bb0abfea2f02dee04
 #, python-brace-format
 msgid ""
 "**Storage `bs:out spline.evaluate_catmull_rom`**: {nbt}`list` The "
 "interpolated point (1D, 2D, or 3D) on the spline at the given time."
 msgstr ""
 
-#: ../../modules/spline.md:114 911b5db2afb04e2db0c5de09632c13e9
+#: ../../modules/spline.md:114 fdc1dc7d0c60452abaec6542bc332b00
 msgid ""
 "*Example: Evaluate the point in the middle of a Catmull-Rom curve in 2D "
 "space ([visualize the curve](#about-splines)):*"
 msgstr ""
 
 #: ../../modules/spline.md ../../modules/spline.md:408
-#: 1ef1a912ce6a4277a23574cc1130ccd4 39518910b1f64bbb99835471642f6c1e
-#: 93603b763b7a4686b991dbb8b0a3352b c3d4f7faac4b4d54babf291a3d29a167
+#: 11e98460208544ef80e27bc2b7660dac 5f99ea0b84f3460e8047c856b7acf50d
+#: 73ba5dba862c491e9037940841ca2eea cd00cefe0f16464db34d4eaa5c49ef05
 msgid "Hermite"
 msgstr ""
 
-#: ../../modules/spline.md:127 f66cf88382cd45ce9874485cc2bc7a56
+#: ../../modules/spline.md:127 da57b2f69f9a447295b59c8fecc3c720
 msgid ""
 "Evaluate a Hermite spline composed of one or more segments. Each segment "
 "is defined by two positions and their associated tangents, with two "
@@ -206,106 +206,106 @@ msgid ""
 "next segment. All coordinates and tangents are absolute."
 msgstr ""
 
-#: ../../modules/spline.md:130 15ea4c65281b456480b03017ceffc503
+#: ../../modules/spline.md:130 f0f549e5a2fb4e57b2675fb6f945eb49
 msgid "**Storage `bs:in spline.evaluate_hermite`**:"
 msgstr ""
 
-#: ../../modules/spline.md:138 92afd85b7cc04f0daacfca571a6de623
+#: ../../modules/spline.md:138 baad435467f84591aa5f112d940f02e7
 #, python-brace-format
 msgid ""
 "**Storage `bs:out spline.evaluate_hermite`**: {nbt}`list` The "
 "interpolated point (1D, 2D, or 3D) on the spline at the given time."
 msgstr ""
 
-#: ../../modules/spline.md:141 61a6e79fdac14196826cb2fa4820e517
+#: ../../modules/spline.md:141 fd1a5799c0164fc59e278639191830ec
 msgid ""
 "*Example: Evaluate the point in the middle of a Hermite curve in 2D space"
 " ([visualize the curve](#about-splines)):*"
 msgstr ""
 
 #: ../../modules/spline.md:151 ../../modules/spline.md:266
-#: ../../modules/spline.md:373 901e5a8f46814a85a8dcac7458f03d9d
-#: d0f013e750ca4d67a123579d752c6204 d4f95f03a42c4650a3328b03164f8a52
+#: ../../modules/spline.md:373 3ac5a4c555b541c6a0c0d816e40fadb4
+#: 66ca325a11de430aa989e0e0b23b5038 dfae1ed8e9a847e9ac908076d74fc6db
 msgid "**Credits**: Aksiome"
 msgstr ""
 
-#: ../../modules/spline.md:153 73da0a20fefd451f924c7512e4f7c56c
+#: ../../modules/spline.md:153 8e6e5b924b4f4fb9add3da2de35b2204
 msgid "Sample"
 msgstr ""
 
-#: ../../modules/spline.md:161 bbc315d87548417d8673694278f7f711
+#: ../../modules/spline.md:161 f62d5f15322f400d948d0a9e6fce13d0
 msgid ""
 "Sample a Bézier spline composed of one or more segments. Each segment is "
 "defined by four consecutive control points, with the last point of a "
 "segment reused as the first of the next."
 msgstr ""
 
-#: ../../modules/spline.md:164 9a62d7270bf448ab9c5b9a567c4d3f4a
+#: ../../modules/spline.md:164 10c0fe5482a64565a53d2a72cb5a3a1a
 msgid "**Storage `bs:in spline.sample_bezier`**:"
 msgstr ""
 
-#: ../../modules/spline.md:172 0e66dc263e7c4625b8ceb1c3ede48015
+#: ../../modules/spline.md:172 615857cec4a34f0aa4907457c1530b8d
 #, python-brace-format
 msgid ""
 "**Storage `bs:out spline.sample_bezier`**: {nbt}`list` The sampled points"
 " along the spline."
 msgstr ""
 
-#: ../../modules/spline.md:175 d9ac62a4a1934e7cb201a050e410e8a4
+#: ../../modules/spline.md:175 06bdb2039941440283dcf33efadb53b0
 msgid ""
 "*Example: Sample 10 points along a Bézier curve in 2D space ([visualize "
 "the curve](#about-splines)):*"
 msgstr ""
 
-#: ../../modules/spline.md:188 2ccf9489538447df9eb42a4147d3d54d
+#: ../../modules/spline.md:188 e2e29b15e02d48bb9e256c359bcc5fc6
 msgid ""
 "Sample a B-Spline composed of one or more segments. Each segment is "
 "defined by four consecutive control points, with three points of a "
 "segment reused in the next to ensure smooth blending."
 msgstr ""
 
-#: ../../modules/spline.md:191 eb6643ed63f048a28b95c38831a5eb34
+#: ../../modules/spline.md:191 7209f8f28ea74485954822577e154347
 msgid "**Storage `bs:in spline.sample_bspline`**:"
 msgstr ""
 
-#: ../../modules/spline.md:199 d7a44951796c43f99e55c31258585f27
+#: ../../modules/spline.md:199 60fc4fa4904148be8280f4c750f914b6
 #, python-brace-format
 msgid ""
 "**Storage `bs:out spline.sample_bspline`**: {nbt}`list` The sampled "
 "points along the spline."
 msgstr ""
 
-#: ../../modules/spline.md:202 5aa6a9b787f744dc997187acfc295615
+#: ../../modules/spline.md:202 ef6ed601c8444888a70cd8ba4db3427d
 msgid ""
 "*Example: Sample 10 points along a B-Spline curve in 2D space ([visualize"
 " the curve](#about-splines)):*"
 msgstr ""
 
-#: ../../modules/spline.md:215 b1eaac999aad4654b40927e293c8abef
+#: ../../modules/spline.md:215 6bdda50143164901a5135098dddc8693
 msgid ""
 "Sample a Catmull-Rom spline composed of one or more segments. Each "
 "segment is defined by four consecutive control points, with three points "
 "of a segment reused in the next to ensure smooth blending."
 msgstr ""
 
-#: ../../modules/spline.md:218 ec538ccf61a44057ab0038f4043fa6e7
+#: ../../modules/spline.md:218 4917ea4800ab4e308bfeda991848cf59
 msgid "**Storage `bs:in spline.sample_catmull_rom`**:"
 msgstr ""
 
-#: ../../modules/spline.md:226 5dcbb17f01bf4492bca4c2e41c5bf554
+#: ../../modules/spline.md:226 b6dd50dd0e79496ba3685d3bcae9bff6
 #, python-brace-format
 msgid ""
 "**Storage `bs:out spline.sample_catmull_rom`**: {nbt}`list` The sampled "
 "points along the spline."
 msgstr ""
 
-#: ../../modules/spline.md:229 30190a5b98f448ad90de53c5c80fe61d
+#: ../../modules/spline.md:229 817c02dbb8304e04bbc508e759ebdad0
 msgid ""
 "*Example: Sample 10 points along a Catmull-Rom curve in 2D space "
 "([visualize the curve](#about-splines)):*"
 msgstr ""
 
-#: ../../modules/spline.md:242 7660015b026049a6bf35894e32f64c6c
+#: ../../modules/spline.md:242 f6fb3d6b5ba24c20889bf060720e0619
 msgid ""
 "Sample a Hermite spline composed of one or more segments. Each segment is"
 " defined by two positions and their associated tangents, with two points "
@@ -313,28 +313,28 @@ msgid ""
 "segment. All coordinates and tangents are absolute."
 msgstr ""
 
-#: ../../modules/spline.md:245 c160177ac54d42649e89a1d4f2a8bfb2
+#: ../../modules/spline.md:245 92cb8f9508c84307b2a55877ff01eaf5
 msgid "**Storage `bs:in spline.sample_hermite`**:"
 msgstr ""
 
-#: ../../modules/spline.md:253 9df99ca67b8e480cbd6a3153bb524a28
+#: ../../modules/spline.md:253 a27c9d51ceab43a6a2ec4d529eb070e4
 #, python-brace-format
 msgid ""
 "**Storage `bs:out spline.sample_hermite`**: {nbt}`list` The sampled "
 "points along the spline."
 msgstr ""
 
-#: ../../modules/spline.md:256 b29b322a698c42bf98008d3b69aec072
+#: ../../modules/spline.md:256 7bb2ca8dda52441b8e19c5efe01db339
 msgid ""
 "*Example: Sample 10 points along a Hermite curve in 2D space ([visualize "
 "the curve](#about-splines)):*"
 msgstr ""
 
-#: ../../modules/spline.md:268 0f4b532fcf804b4c9dfdfa1fd07f4b98
+#: ../../modules/spline.md:268 d1a2efb53f774cac9ec88373515fd09c
 msgid "Stream"
 msgstr ""
 
-#: ../../modules/spline.md:276 7c0bfafbc0804394b8c3cf916c34a917
+#: ../../modules/spline.md:276 b1f6e4d15ed74c75baa62dae73a20b41
 msgid ""
 "Stream a Bézier spline composed of one or more segments. Each segment is "
 "defined by four consecutive control points, with the last point of a "
@@ -342,17 +342,17 @@ msgid ""
 "step over multiple ticks."
 msgstr ""
 
-#: ../../modules/spline.md:279 63878d1385e0448795700ad1ea3728d2
+#: ../../modules/spline.md:279 349fdbb0b1714af6ba02d3884c1c1b3c
 msgid "**Storage `bs:in spline.stream_bezier`**:"
 msgstr ""
 
-#: ../../modules/spline.md:289 391cd8c27e8041028938eb8f4b8dbf7e
+#: ../../modules/spline.md:289 a2a455bd3fef46c1892d8adeecd3e717
 msgid ""
 "*Example: Stream 10 points along a Bézier curve in 2D space and execute a"
 " command at each step ([visualize the curve](#about-splines)):*"
 msgstr ""
 
-#: ../../modules/spline.md:301 18b985434b244e28bf504a32ad93ba34
+#: ../../modules/spline.md:301 f559ec9d8df84711adf5e31a7476723d
 msgid ""
 "Stream a B-Spline composed of one or more segments. Each segment is "
 "defined by four consecutive control points, with three points of a "
@@ -360,17 +360,17 @@ msgid ""
 "processes each step over multiple ticks."
 msgstr ""
 
-#: ../../modules/spline.md:304 2767ab12310846a1ae47b25c9e9e8148
+#: ../../modules/spline.md:304 0b412a2510424a95b6eb1c68a9d958dc
 msgid "**Storage `bs:in spline.stream_bspline`**:"
 msgstr ""
 
-#: ../../modules/spline.md:314 35b849ce3d6544db9b48b1875f7a58da
+#: ../../modules/spline.md:314 744256901a3c4a6cb0de0605c10a178c
 msgid ""
 "*Example: Stream 10 points along a B-Spline curve in 2D space and execute"
 " a command at each step ([visualize the curve](#about-splines)):*"
 msgstr ""
 
-#: ../../modules/spline.md:326 0afed16f87984eb99488f33bfd16f072
+#: ../../modules/spline.md:326 999278c802ce4c25a46ea19635a03351
 msgid ""
 "Stream a Catmull-Rom spline composed of one or more segments. Each "
 "segment is defined by four consecutive control points, with three points "
@@ -378,17 +378,17 @@ msgid ""
 "processes each step over multiple ticks."
 msgstr ""
 
-#: ../../modules/spline.md:329 412e0ed7dd71429dbc6da39a17f6e898
+#: ../../modules/spline.md:329 a9f44d0211384be89500560a6fbdbcc2
 msgid "**Storage `bs:in spline.stream_catmull_rom`**:"
 msgstr ""
 
-#: ../../modules/spline.md:339 f03b8bb3806d4363a86b0adf3244ee6b
+#: ../../modules/spline.md:339 3826c17f981f4969ab9e0f6fadf92f6f
 msgid ""
 "*Example: Stream 10 points along a Catmull-Rom curve in 2D space and "
 "execute a command at each step ([visualize the curve](#about-splines)):*"
 msgstr ""
 
-#: ../../modules/spline.md:351 2340814b0c8048578da7fd33613d15a4
+#: ../../modules/spline.md:351 8ee04a47234341e6b99ae73dfce9c785
 msgid ""
 "Stream a Hermite spline composed of one or more segments. Each segment is"
 " defined by two positions and their associated tangents, with two points "
@@ -397,48 +397,48 @@ msgid ""
 "processes each step over multiple ticks."
 msgstr ""
 
-#: ../../modules/spline.md:354 d2331662a95948c1b8ea703068828d04
+#: ../../modules/spline.md:354 b166793ec51840b5866a1e13c92a1590
 msgid "**Storage `bs:in spline.stream_hermite`**:"
 msgstr ""
 
-#: ../../modules/spline.md:364 f3b022d2b3804d79ae814fabe4bed7ed
+#: ../../modules/spline.md:364 8be980130696490ab8a4b18f9e18cc03
 msgid ""
 "*Example: Stream 10 points along a Hermite curve in 2D space and execute "
 "a command at each step ([visualize the curve](#about-splines)):*"
 msgstr ""
 
-#: ../../modules/spline.md:378 82019c94e488460c9ade6643e4267775
+#: ../../modules/spline.md:378 512cd920641b4329b6ef0c0bea1641b3
 msgid "🎓 About Splines"
 msgstr ""
 
-#: ../../modules/spline.md:380 de79166a9d524a1293c6afadc0c7de2c
+#: ../../modules/spline.md:380 756b03b7f4f44d1f9c9b6ab0b6c5fdac
 msgid ""
 "Discover how these curves behave through these visual examples. For more "
 "in-depth insights into splines, watch [this "
 "video](https://www.youtube.com/watch?v=jvPPXbo87ds)."
 msgstr ""
 
-#: ../../modules/spline.md:391 edfa50183e5e4bb099946cbe5da02280
+#: ../../modules/spline.md:391 5f3c8a9484cf4fe783c73ce3efa98e45
 msgid "![](/_imgs/modules/spline/bezier.gif)"
 msgstr ""
 
-#: ../../modules/spline.md:398 38ade7a0e6bd4c5397a505a593f80b20
+#: ../../modules/spline.md:398 12b81cc680b34cfc975745b7f4ba843d
 msgid "![](/_imgs/modules/spline/bspline.gif)"
 msgstr ""
 
-#: ../../modules/spline.md:405 08e23deee18f454d9f3c16f3890c15a3
+#: ../../modules/spline.md:405 5eb4773c89b5444b979db14520e591d7
 msgid "![](/_imgs/modules/spline/catmull_rom.gif)"
 msgstr ""
 
-#: ../../modules/spline.md:412 2cfc646b7ea747358e8552cc1a3e7888
+#: ../../modules/spline.md:412 b1cb4c32e59d46158f6592425cf8ffbe
 msgid "![](/_imgs/modules/spline/hermite.gif)"
 msgstr ""
 
-#: ../../_templates/comments.md:4 8e4c227b66c14066896f9b2d1a61ec78
+#: ../../_templates/comments.md:4 808f9d08e112427eab7a0f35d87ae21d
 msgid "**💬 Did it help you?**"
 msgstr ""
 
-#: ../../_templates/comments.md:6 9f91c755f10540019eb577219c8c99e2
+#: ../../_templates/comments.md:6 8a37120673564549a6aa8bf25c464c64
 msgid "Feel free to leave your questions and feedback below!"
 msgstr ""
 

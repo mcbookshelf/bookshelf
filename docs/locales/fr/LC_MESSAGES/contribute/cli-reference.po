@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/cli-reference.md:5 a8adad2f2e8646c391e25fe0c23ff425
+msgid "📜 CLI Reference"
+msgstr ""
+
+#: ../../contribute/cli-reference.md:7 445d13b49ac24e1790ffffe9804e7baf
+msgid ""
+"This page provides a quick reference to the available commands. Use this "
+"reference to quickly look up commands and their usage without diving into"
+" detailed documentation."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 1afe0789a0c54993a2207aa00e9ba121
+msgid "**Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md f1668195c03a454480d23e00409ba93d
+msgid "**Description**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md 61b0347c489741b88e55de40f61ab274
+msgid "**Arguments/Options**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md 25bfa77ab6ae4929b0186b0e6675cb50
+msgid "**📝 `docs build`**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md b3720ae33f5c4125addcc9ee7431ffad
+msgid "Build static HTML documentation."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 4ef8b1d81c2742408dbd3bbfd790bb20
+#: bfaf8a129d9041dc93058852a710e252
+msgid "`[output]` - Build directory (optional, defaults to `_build`)."
+msgstr ""
+
+#: ../../contribute/cli-reference.md d197c4710ab24823a148f4c5ee830c1f
+msgid "**📝 `docs watch`**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md 83f74084864e492bbaddec8cd9a88afd
+msgid "Build and serve live documentation."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 0b017900397e4575b825715e8bb44757
+msgid "**📖 `examples build`**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md b02ec84f825d460eaaf2f20a76baa7a5
+msgid "Build the specified examples."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 661612dcfc5046d780f954428924f95d
+msgid "`[examples...]` - List of examples to build (optional)."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 4a6b3d2427604ba094a3a30748434368
+msgid "**📖 `examples watch`**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md b8e12c76e97f4b108de6adc0ff1fa7d4
+msgid "Watch and rebuild the specified examples when changes occur."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 32cb2d712a2b4cf0a43eec4256a6d563
+msgid "`[examples...]` - List of examples to watch (optional)."
+msgstr ""
+
+#: ../../contribute/cli-reference.md f66938a2457a4068aae6b1a5f0d5c587
+msgid "**🧩 `modules build`**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md efc81ddb7116491c965564c78b70842c
+msgid "Build the specified modules."
+msgstr ""
+
+#: ../../contribute/cli-reference.md b0a65553bb654228a5e1e31b8049d60b
+msgid "`[modules...]` - List of modules to build (optional)."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 005e975f6e674a49974b510fc3cc2c0b
+msgid "**🧩 `modules check`**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md 6723c391fb8a4f8881ee6489040ce0a1
+msgid "Check modules requirements and metadata."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 0a6afc66d97447b5beacea2699d72530
+#: 3805216a7a804830b4324f8f09be6606 d026577ceda74c4a89ac3f4f45b6c1a6
+msgid "No arguments."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 3d883bc4411545e1a4325c8f81b06c14
+msgid "**🧩 `modules link`**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md ac5ceb046c54411d80cdc9341cfb506f
+msgid ""
+"Link the generated packs to Minecraft. More information [here](project"
+":getting-started.md#linking-modules-to-minecraft)."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 1765796ff3e5461b915ec2d25b23a9a5
+msgid ""
+"`[world]`, `--minecraft`, `--data-pack`, `--resource-pack` - Paths to "
+"their respective directories."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 071e8bc010f441559e8f2e57cfebdbcf
+msgid "**🧩 `modules release`**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md f483a2e4fa514a1cb8dd75b5fe46996c
+msgid "Build zipped modules for release."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 3b32f8a1e263447499384a7ae876a45b
+msgid "**🧩 `modules test`**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md bd3a285a8d544519b1070bfb177e2b1e
+msgid "Build and test the specified modules."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 70073d4f8f0440c4b840ea94849c9d65
+msgid "`[modules...]` - List of modules to test (optional)."
+msgstr ""
+
+#: ../../contribute/cli-reference.md bff3af7126c446ed9464dc5d11425818
+msgid "**🧩 `modules update`**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md fa5361600b064d80b1b71b400dda2e3a
+msgid "Update metadata changes."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 62c9b9f5db554ad19c88008846ba3715
+msgid "**🧩 `modules watch`**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md 3f5454654df346b194141499786fff02
+msgid "Watch and rebuild the specified modules when changes occur."
+msgstr ""
+
+#: ../../contribute/cli-reference.md 266efd3978d64e599c0140b03067a65d
+msgid "`[modules...]` - List of modules to watch (optional)."
+msgstr ""
+
+#: ../../contribute/cli-reference.md:23 dbd13d715dae43e1ac33b596b68e185b
+msgid ""
+"To run any command, type `pdm run` before the command itself. "
+"Alternatively, you can activate the virtual environment (venv) manually "
+"and run the command directly. Some commands also have aliases:"
+msgstr ""
+
+#: ../../contribute/cli-reference.md 64bb79691d284bbb8da32ec5531c0b19
+msgid "**Alias**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md c2f18a1dd7184f1788c7e4ae43856956
+msgid "**Command**"
+msgstr ""
+
+#: ../../contribute/cli-reference.md 2f6b09cf0f014fde8a3fb3e8a315d34d
+msgid "`pdm run build`"
+msgstr ""
+
+#: ../../contribute/cli-reference.md 22f92ab1af354116af5d3f79b81c4432
+msgid "`pdm run modules build`"
+msgstr ""
+
+#: ../../contribute/cli-reference.md 378950efeb66474bad8c33ce31a9f741
+msgid "`pdm run watch`"
+msgstr ""
+
+#: ../../contribute/cli-reference.md 3ca3bba076744a6d9f5b7f591ac896c9
+msgid "`pdm run modules watch`"
+msgstr ""
+

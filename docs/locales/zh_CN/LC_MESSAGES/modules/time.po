@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,23 +19,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/time.md:1 c110f173261e4993a7d9742f47e6e7d8
+#: ../../modules/time.md:1 19947049776d487194a203d1425e0201
 msgid "⌚ Time"
 msgstr ""
 
-#: ../../modules/time.md:3 0d292dc5fce24f00af64e668c285cc39
+#: ../../modules/time.md:3 fcdeec3ff50f4e3c88e1328fad8593e6
 msgid "**`#bs.time:help`**"
 msgstr ""
 
-#: ../../modules/time.md:5 eb575b76d0ba4e31b7619364f84a7403
+#: ../../modules/time.md:5 affe4a1859464cf7bd4eed44a78ccc2c
 msgid "Get system time information effortlessly."
 msgstr ""
 
-#: ../../modules/time.md:7 64f2e8a72f95490fb1b22595e101b7c7
+#: ../../modules/time.md:7 32ecad81f64d49f588d1650089f57a2b
 msgid "Enable Command Blocks"
 msgstr ""
 
-#: ../../modules/time.md:10 636a489ce8044c7e9b496522b3ce2304
+#: ../../modules/time.md:10 30a5f557006c4b53a70102474aff4500
 msgid ""
 "This module uses a command block to get the system time. For the time to "
 "be displayed as intended, ensure that `enable-command-block` is set to "
@@ -43,51 +43,51 @@ msgid ""
 "`sendCommandFeedback` gamerule is enabled."
 msgstr ""
 
-#: ../../modules/time.md:13 84113a2281514361893802de4e19527a
+#: ../../modules/time.md:13 4ccfed94e1e34d57b1f1669ff9285797
 msgid "🔧 Functions"
 msgstr ""
 
-#: ../../modules/time.md:15 6f55cbc7568946b6b1e48efbac614768
+#: ../../modules/time.md:15 14c032c1c0ed4ee298f2d7d75718e674
 msgid "You can find below all functions available in this module."
 msgstr ""
 
-#: ../../modules/time.md:19 e34109350c594e97a8fd3bfc35a50b2c
+#: ../../modules/time.md:19 ed857e11d19d4d94bbd04763e78f9142
 msgid "System Time"
 msgstr ""
 
-#: ../../modules/time.md:23 153c011fcb904c50a34c4221f4a0bc06
+#: ../../modules/time.md:23 0c1d28d6ff674dfeba331512c8e3291a
 msgid "Get the system time corresponding to the real hours, minutes, and seconds."
 msgstr ""
 
-#: ../../modules/time.md:25 4bb6904c31944cf78cf3d6d1d8ef3f87
+#: ../../modules/time.md:25 bdf03694d9ad45928c04c941fe439843
 msgid "Outputs"
 msgstr ""
 
-#: ../../modules/time.md:26 782d91e8107c454182ff1a6a0e994ff0
+#: ../../modules/time.md:26 265dd3e124d9406bb98da894d02afdc8
 msgid "**Score `$time.hours bs.out`**: System time hours."
 msgstr ""
 
-#: ../../modules/time.md:28 8785c34477e14c76bab95022985183c3
+#: ../../modules/time.md:28 e87f791ad4be449da73ba1662988fe2c
 msgid "**Score `$time.minutes bs.out`**: System time minutes."
 msgstr ""
 
-#: ../../modules/time.md:30 fbfea411739a437889f234146deb57fc
+#: ../../modules/time.md:30 3bdcc0f1a0f04fd9bca000937103948d
 msgid "**Score `$time.seconds bs.out`**: System time seconds."
 msgstr ""
 
-#: ../../modules/time.md:33 e54f31f6f3b14e3e884e6a2c2ab8989c
+#: ../../modules/time.md:33 33b51b2ff8ba4a7da3417b33a2e97849
 msgid "*Example: The moment we all dread:*"
 msgstr ""
 
-#: ../../modules/time.md:41 e5dd26ba42c94779802ac770426dee10
+#: ../../modules/time.md:41 bbf10b802ce1448a9c5b197d1b48e6f6
 msgid "**Credits**: Aksiome"
 msgstr ""
 
-#: ../../_templates/comments.md:4 47de41b7882b47a8ac03b8fadec16152
+#: ../../_templates/comments.md:4 e9365bd91b564dc889144fe49b447759
 msgid "**💬 Did it help you?**"
 msgstr ""
 
-#: ../../_templates/comments.md:6 d38daf39a3ae4a5ea1bedd68c62247ed
+#: ../../_templates/comments.md:6 cfcf59a82c534bbc9f23cd4904c84ed4
 msgid "Feel free to leave your questions and feedback below!"
 msgstr ""
 

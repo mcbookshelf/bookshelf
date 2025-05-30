@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,59 +19,87 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../changelog/v3.0.1.md:1 e8262cef88bc4e479a5e810998e42a79
+#: ../../changelog/v3.0.1.md:1 5ecc157e900f48f3843a44e90eff8f6c
 msgid ""
 "📦 [Bookshelf - "
 "3.0.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.0.1)"
 msgstr ""
 
-#: ../../changelog/v3.0.1.md:3 935578a60f62465894cae58c9b27ae78
+#: ../../changelog/v3.0.1.md:3 c5a49de4357a4d5390ff4652dae478a5
 msgid "**🩹 Simple Hotfix!**"
 msgstr ""
 
-#: ../../changelog/v3.0.1.md:5 64176f1a1e35489db9ddee1c28c82b97
+#: ../../changelog/v3.0.1.md:5 95ba617dd39d47c598dfe21bad5dc305
 msgid "*This is a hotfix for version 3.0.0.*"
 msgstr ""
 
-#: ../../changelog/v3.0.1.md:8 d4db77fe8f1b404899cbf9d7ce8be25e
+#: ../../changelog/v3.0.1.md:8 9c15d745c44946ceb4921567e79cf749
+msgid ""
+"<abbr title=\"Documentation\">📝</abbr> "
+"**[#314](https://github.com/mcbookshelf/bookshelf/issues/314)** - Add the"
+" Lifestring example, linking players' health using the `bs.health` "
+"module."
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:11 e1b3dad011ff491caccb67f22532cc73
 msgid "`❤️ bs.health`"
 msgstr ""
 
-#: ../../changelog/v3.0.1.md:10 6f18fcb767e04765af7be95f4938007f
+#: ../../changelog/v3.0.1.md:13 31e8917cc5fe4e61a1b63aae0cb566a6
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#410](https://github.com/mcbookshelf/bookshelf/issues/410)** - Ensure "
 "player health updates consistently."
 msgstr ""
 
-#: ../../changelog/v3.0.1.md:13 cd874260474748d0be294a533db8c8f8
+#: ../../changelog/v3.0.1.md:14 0d5b555e46e245548d5f3e1f3eec7f2a
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#426](https://github.com/mcbookshelf/bookshelf/pull/426)** – Players "
+"are now correctly killed when their health drops below 0, unless they are"
+" in Creative or Spectator mode."
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:17 39115ebcb35e45a0b206a7bdeb667b58
 msgid "`🧣 bs.spline`"
 msgstr ""
 
-#: ../../changelog/v3.0.1.md:15 ../../changelog/v3.0.1.md:22
-#: 497da923083d4dd5bc5e4115f660e713 96fc7200b7b947e1aad00c64d91f1f91
+#: ../../changelog/v3.0.1.md:19 ../../changelog/v3.0.1.md:26
+#: 9b52ee61674642cf90bedb300a9dd870 ec9d0ef0a84e49b0864257a8d87c25fb
 msgid ""
-"<abbr title=\"Bug Fixes\">🐛</abbr> "
+"<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#423](https://github.com/mcbookshelf/bookshelf/pull/423)** - Fix "
 "module tag incorrectly set to default, now set to runtime to ensure the "
 "module is properly included in bundles."
 msgstr ""
 
-#: ../../changelog/v3.0.1.md:16 f60549178db84c93bb95bece4d8b14af
+#: ../../changelog/v3.0.1.md:20 ed6e9a99c83948a7a33b41061711d1bf
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#412](https://github.com/mcbookshelf/bookshelf/issues/412)** - Fix "
 "Hermite spline tangents to use absolute space instead of relative."
 msgstr ""
 
-#: ../../changelog/v3.0.1.md:17 5bd4bab46d494b3995c37b80f18d5d00
+#: ../../changelog/v3.0.1.md:21 8fb204c64c854272943fecbbc37375df
 msgid ""
 "<abbr title=\"Enhancements\">⚡</abbr> "
 "**[#409](https://github.com/mcbookshelf/bookshelf/issues/409)** - Improve"
 " performance of sampling and streaming functions."
 msgstr ""
 
-#: ../../changelog/v3.0.1.md:20 1745b60738c14946ac530d3ac3df2447
+#: ../../changelog/v3.0.1.md:24 926487d47ffd419995e1a469ec76ecd0
 msgid "`🔠 bs.string`"
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:29 92f380a3058d4b41be4d192798b70bc2
+msgid "`👀 bs.view`"
+msgstr ""
+
+#: ../../changelog/v3.0.1.md:31 19ab5c598cc043e0923ca83ed2cf12e8
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#424](https://github.com/mcbookshelf/bookshelf/issues/424)** - Fix "
+"`#bs.view:at_block_placement` that was incorrectly using hit normal data "
+"from the previous call instead of the current one."
 msgstr ""
 

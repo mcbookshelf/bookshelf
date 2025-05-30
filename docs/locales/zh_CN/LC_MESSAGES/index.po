@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,86 +19,86 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../index.md:8 838b7753f45f42139eb94627c46838eb
+#: ../../index.md:8 b4a29e18b24840769564c13b6c92ac04
 msgid "Bookshelf"
 msgstr ""
 
-#: ../../index.md:22 8d1f2802f00e4c16af9dbc4ffc6b9902
-msgid "🕵️‍♂️ What is Bookshelf?"
+#: ../../index.md:22 fc3d06c05e644c9e85efa7d1ab73334b
+msgid "🕵️ What is Bookshelf?"
 msgstr ""
 
-#: ../../index.md:24 f09b27e583dc4f129e16e2075d88f6b5
+#: ../../index.md:24 38fa1b2ae4104d26b6f378e5c44354fe
 msgid ""
 "Bookshelf (formerly known as Gunivers Libs) is a modular library datapack"
 " designed to simplify complex systems in Minecraft maps. It is ideal for "
 "mapmakers seeking easy-to-implement tools."
 msgstr ""
 
-#: ../../index.md:31 4bc4a00235fb4c849e3a0040d879e75f
+#: ../../index.md:31 6b572b5e0c8f4712bf9fcec714eeebb0
 msgid "🚀 Quickstart!"
 msgstr ""
 
-#: ../../index.md:42 568fd351bf9a4157b62befbdb558b93f
+#: ../../index.md:42 f4ecad124af2480ea955d033e0a45158
 msgid "🎬 Watch trailer"
 msgstr ""
 
-#: ../../index.md:55 8ffe40cc071248e4b6a30d94d1a8a105
+#: ../../index.md:55 ac6ed03eb26d45e299a2692e04a3fa58
 msgid "🌟 Featured Modules"
 msgstr ""
 
-#: ../../_templates/featured-modules.md:5 cfc2eab697d74091a4531e91bf5cba05
+#: ../../_templates/featured-modules.md:5 d02718a9cb1e4b1991f63c409ef47973
 msgid "🧱 Block"
 msgstr ""
 
-#: ../../_templates/featured-modules.md:10 1ce8938dcaba4c17bf8712ce94e28d54
+#: ../../_templates/featured-modules.md:10 a6167ecf447c4f17b45e69f95ff12d17
 msgid "Get and manipulate blocks (supports BlockStates and NBT)."
 msgstr ""
 
-#: ../../_templates/featured-modules.md:13 8eb2f02a17e84335bf4c9eb188a14cde
+#: ../../_templates/featured-modules.md:13 3214e76d878b491da80dc60189020a17
 msgid "🔦 Raycast"
 msgstr ""
 
-#: ../../_templates/featured-modules.md:18 8be1eb0f6ea64687805017890cefbea9
+#: ../../_templates/featured-modules.md:18 7b68f2cf0f9846efad96c9cb8629bd5b
 msgid "Cast rays and see if they collide with blocks or entities."
 msgstr ""
 
-#: ../../_templates/featured-modules.md:21 bebaebd46bcd4a208ae459649be1f52d
+#: ../../_templates/featured-modules.md:21 17407d9a3e2d4ca28a6a03e15493a205
 msgid "🧮 Math"
 msgstr ""
 
-#: ../../_templates/featured-modules.md:26 fd73079eda6e446494bd808e8dfd6cf1
+#: ../../_templates/featured-modules.md:26 46bd68f3cc6e4068acd9aa7b7b4f1243
 msgid "Mathematical functions: sin, cos, exp, log, sqrt, and much more!"
 msgstr ""
 
-#: ../../_templates/featured-modules.md:29 6f5a535514ef46f8ab6c84843cf7289d
+#: ../../_templates/featured-modules.md:29 0ae92eb54c404df0ad8154f67a685741
 msgid "🏗️ Generation"
 msgstr ""
 
-#: ../../_templates/featured-modules.md:34 3e4e1e570b184a3b844030715cf36092
+#: ../../_templates/featured-modules.md:34 b29f3dd2353346b28570da83d89d9c40
 msgid "Generate terrains and landscapes, incorporating natural features."
 msgstr ""
 
-#: ../../_templates/featured-modules.md:37 b6b383e609a04824ab6ecba0c6cb3146
+#: ../../_templates/featured-modules.md:37 3c490e54f3bb4a618e0930e8515ff08a
 msgid "🎲 Random"
 msgstr ""
 
-#: ../../_templates/featured-modules.md:42 31502a87409d443285b90783954874a8
+#: ../../_templates/featured-modules.md:42 50b3b781905f4a3eb354bb3bf3a2725d
 msgid "Random functions for different distributions and noise patterns."
 msgstr ""
 
-#: ../../_templates/featured-modules.md:45 0cfc76e2d2ba4736aaa24d9149815539
+#: ../../_templates/featured-modules.md:45 b46ad4d8f35b4238b67bcb49e4bf6f9c
 msgid "❤️ Health"
 msgstr ""
 
-#: ../../_templates/featured-modules.md:50 bb7c206dbdef47ebb6ff63a42d36ebb6
+#: ../../_templates/featured-modules.md:50 f3062be1775d4b77b4aa854d5cc68747
 msgid "Easily manage the health of a player or the lifetime of an entity!"
 msgstr ""
 
-#: ../../index.md:62 8b5683deaea348dd85f69d68d5a71689
+#: ../../index.md:62 bbc800791cc14ca7a709df81baa3ec1f
 msgid "🔥 Motivation"
 msgstr ""
 
-#: ../../index.md:64 5744db0997974a038c2d0eb691b1e8ac
+#: ../../index.md:64 a008b4bcd3c74e70a2db19f079fabe88
 msgid ""
 "As developers, we understand the value of libraries: they save time, "
 "streamline workflows, and eliminate the need to reinvent the wheel. "
@@ -106,40 +106,40 @@ msgid ""
 "are less familiar with this concept."
 msgstr ""
 
-#: ../../index.md:66 bfc444b2013b468bb942041c310ef77d
+#: ../../index.md:66 3c60f7b90f374ca28b57455f80a7c3b4
 msgid ""
 "That is why we started this project: to provide a variety of reusable "
 "tools and encourage mapmakers to embrace the use of libraries."
 msgstr ""
 
-#: ../../index.md:68 143f9071355a4941b8bf761e2e71ad08
+#: ../../index.md:68 65c75eaade4342c995c5f659bd146d9f
 msgid ""
 "While we strive to keep our modules as optimized as possible, our top "
 "priority is accessibility. We focus on creating features that are easy to"
 " use and simple to install, ensuring they are practical for everyone."
 msgstr ""
 
-#: ../../index.md:71 3b3698df409d43f19c461f350af1d3e8
+#: ../../index.md:71 f461e42034df4c88a030a789e9054168
 msgid ""
 "\"I have seen further than others because I have stood on the shoulders "
 "of giants.\""
 msgstr ""
 
-#: ../../index.md:72 1980b850a70446898e850bbd96bc4521
+#: ../../index.md:72 aa5e1a91429d4c278721891b9a14b2cf
 msgid "Isaac Newton"
 msgstr ""
 
-#: ../../index.md:76 1e7545b3eaef41a5b15f86d5e429aec4
+#: ../../index.md:76 0f0612345f7a4afc8fa8603c488f9be6
 msgid "🤝 Contribution"
 msgstr ""
 
-#: ../../index.md:78 e6021761429d49cbb041732e7932e7f9
+#: ../../index.md:78 8cf472de39f543eaaa145b6000d321bb
 msgid ""
 "If you have any questions about the project or want to discuss something,"
 " join [our Discord](https://discord.gg/MkXytNjmBt) server."
 msgstr ""
 
-#: ../../index.md:80 2f0f5070900540f3a52713739bb45a20
+#: ../../index.md:80 2f1549b254e9472bbdfa4591364957d1
 msgid ""
 "If you want to contribute, please refer to the [contribution "
 "docs](https://docs.mcbookshelf.dev/en/latest/contribute/index.html) for "
