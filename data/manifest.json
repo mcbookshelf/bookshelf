@@ -1013,21 +1013,6 @@
         },
         {
           "id": "#bs.hitbox:intangible",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#entities",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.hitbox:intangible",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
           "authors": [
             "Aksiome"
@@ -1039,6 +1024,21 @@
           "updated": {
             "date": "2025/03/10",
             "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.hitbox:intangible",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#entities",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/09/28",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/09/28",
+            "minecraft_version": "1.21"
           }
         },
         {
