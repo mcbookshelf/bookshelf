@@ -952,6 +952,21 @@
       ],
       "features": [
         {
+          "id": "#bs.hitbox:bake_entity",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#bake-entity",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/05/18",
+            "minecraft_version": "1.21.5"
+          },
+          "updated": {
+            "date": "2025/05/18",
+            "minecraft_version": "1.21.5"
+          }
+        },
+        {
           "id": "#bs.hitbox:can_pass_through",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
           "authors": [
@@ -1013,21 +1028,6 @@
         },
         {
           "id": "#bs.hitbox:intangible",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#entities",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.hitbox:intangible",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
           "authors": [
             "Aksiome"
@@ -1039,6 +1039,21 @@
           "updated": {
             "date": "2025/03/10",
             "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.hitbox:intangible",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#entities",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2024/09/28",
+            "minecraft_version": "1.21"
+          },
+          "updated": {
+            "date": "2024/09/28",
+            "minecraft_version": "1.21"
           }
         },
         {
@@ -1189,6 +1204,36 @@
           "updated": {
             "date": "2024/10/28",
             "minecraft_version": "1.21.2"
+          }
+        },
+        {
+          "id": "#bs.hitbox:reset_entity",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#reset-entity",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/05/18",
+            "minecraft_version": "1.21.5"
+          },
+          "updated": {
+            "date": "2025/05/18",
+            "minecraft_version": "1.21.5"
+          }
+        },
+        {
+          "id": "#bs.hitbox:set_entity",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#set-entity",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/05/18",
+            "minecraft_version": "1.21.5"
+          },
+          "updated": {
+            "date": "2025/05/18",
+            "minecraft_version": "1.21.5"
           }
         }
       ]
