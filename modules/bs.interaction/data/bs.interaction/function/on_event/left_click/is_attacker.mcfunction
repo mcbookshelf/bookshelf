@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute on target unless entity @s[tag=bs.interaction.source] run return fail
-return 1
+execute on attacker if entity @s[tag=bs.interaction.source] run return 1
+return fail
