@@ -13,10 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# output should vary
-execute store result score #0 bs.ctx run function #bs.random:poisson {lambda:1}
-execute store result score #1 bs.ctx run function #bs.random:poisson {lambda:3}
-execute store result score #2 bs.ctx run function #bs.random:poisson {lambda:5}
-execute store result score #3 bs.ctx run function #bs.random:poisson {lambda:7}
-execute store result score #4 bs.ctx run function #bs.random:poisson {lambda:9}
-execute if score #0 bs.ctx = #1 bs.ctx if score #1 bs.ctx = #2 bs.ctx if score #2 bs.ctx = #3 bs.ctx if score #3 bs.ctx = #4 bs.ctx run fail "The poisson distribution should not always return the same value"
+data modify storage bs:lambda spline.point set value [0d]
+execute store result score #x bs.ctx run scoreboard players operation #t bs.ctx %= 1000 bs.const
+
+execute store result score #a bs.ctx run data get storage bs:ctx _.points[0][0] 1000
+execute store result score #b bs.ctx run data get storage bs:ctx _.points[1][0] 1000
+
+# Compute Lerp coefficients
+execute store result score #c bs.ctx run scoreboard players set #d bs.ctx 0
+scoreboard players operation #b bs.ctx -= #a bs.ctx
+
+data remove storage bs:ctx _.points[0]

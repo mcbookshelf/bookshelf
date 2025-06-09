@@ -3205,6 +3205,24 @@
           }
         },
         {
+          "id": "#bs.random:normal",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#random-distributions",
+          "authors": [
+            "Aksiome"
+          ],
+          "contributors": [
+            "Leirof"
+          ],
+          "created": {
+            "date": "2025/05/15",
+            "minecraft_version": "1.21.5"
+          },
+          "updated": {
+            "date": "2025/05/15",
+            "minecraft_version": "1.21.5"
+          }
+        },
+        {
           "id": "#bs.random:poisson",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html#random-distributions",
           "authors": [
@@ -3562,6 +3580,21 @@
           }
         },
         {
+          "id": "#bs.spline:evaluate_linear",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#evaluate",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/05/14",
+            "minecraft_version": "1.21.5"
+          },
+          "updated": {
+            "date": "2025/05/14",
+            "minecraft_version": "1.21.5"
+          }
+        },
+        {
           "id": "#bs.spline:sample_bezier",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#sample",
           "authors": [
@@ -3622,6 +3655,21 @@
           }
         },
         {
+          "id": "#bs.spline:sample_linear",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#sample",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/05/14",
+            "minecraft_version": "1.21.5"
+          },
+          "updated": {
+            "date": "2025/05/14",
+            "minecraft_version": "1.21.5"
+          }
+        },
+        {
           "id": "#bs.spline:stream_bezier",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#stream",
           "authors": [
@@ -3678,6 +3726,21 @@
           },
           "updated": {
             "date": "2025/04/21",
+            "minecraft_version": "1.21.5"
+          }
+        },
+        {
+          "id": "#bs.spline:stream_linear",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#stream",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/05/14",
+            "minecraft_version": "1.21.5"
+          },
+          "updated": {
+            "date": "2025/05/14",
             "minecraft_version": "1.21.5"
           }
         }
