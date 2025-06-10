@@ -50,11 +50,10 @@ Teleport an entity by its velocity scores while handling collisions.
   - {nbt}`compound` Arguments
     - {nbt}`number` **scale**: Scalar applied to the output.
     - {nbt}`compound` **with**: Collision settings.
-      - {nbt}`bool` **blocks**: Whether the entity should collide with blocks (default: true).
-      - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false). Can also be a tag that entities must have.
-      - {nbt}`string` **hitbox_shape**: Hitbox type: `interaction` or `collision` (default: `collision`).
+      - {nbt}`bool` {nbt}`string` **blocks**: Whether the entity should collide with blocks (default: true). Can be a block hitbox type (`interaction` or `collision`). `true` defaults to `collision`.
+      - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false). Can be an entity tag. For performance, tagging entities to detect is recommended.
       - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:can_pass_through`).
-      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`).
+      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`). Does not apply to entities with custom hitboxes.
       - {nbt}`string` **on_collision**: Command to run when a collision occurs, used to resolve the collision (default: `function #bs.move:callback/bounce`).
   :::
 
@@ -87,11 +86,10 @@ Teleport an entity by its velocity scores, using the local reference frame, whil
   - {nbt}`compound` Arguments
     - {nbt}`number` **scale**: Scalar applied to the output.
     - {nbt}`compound` **with**: Collision settings.
-      - {nbt}`bool` **blocks**: Whether the entity should collide with blocks (default: true).
-      - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false). Can also be a tag that entities must have.
-      - {nbt}`string` **hitbox_shape**: Hitbox type: `interaction` or `collision` (default: `collision`).
+      - {nbt}`bool` {nbt}`string` **blocks**: Whether the entity should collide with blocks (default: true). Can be a block hitbox type (`interaction` or `collision`). `true` defaults to `collision`.
+      - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false). Can be an entity tag. For performance, tagging entities to detect is recommended.
       - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:can_pass_through`).
-      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`).
+      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`). Does not apply to entities with custom hitboxes.
       - {nbt}`string` **on_collision**: Command to run when a collision occurs, used to resolve the collision (default: `function #bs.move:callback/bounce`).
   :::
 
@@ -102,10 +100,11 @@ Teleport an entity by its velocity scores, using the local reference frame, whil
 ::::
 :::::
 
-```{admonition} Collision / Interaction Shape
+```{admonition} Hitbox Types
 :class: info
-- **Collision Shape**: Defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block.
-- **Interaction Shape**: Defines the area where the player can interact with or break the block. This includes actions such as right-clicking to open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have an interaction shape but no collision, such as crops or scaffolding.
+Bookshelf supports multiple hitbox types for precise control. Blocks can use either `interaction` or `collision` hitboxes. Entities support three types: `dynamic`, `baked`, and `custom`.
+
+See [Hitbox Types](hitbox.md#types) for full details.
 ```
 
 *Example: Move a cube (block_display) by its velocity scores (uses an interaction as the hitbox):*

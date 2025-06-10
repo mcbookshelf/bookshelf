@@ -23,12 +23,12 @@ execute store result score #k bs.ctx run data get storage bs:ctx _[-1][5] 625000
 data remove storage bs:ctx _[-1]
 
 # offset coordinates if needed
-scoreboard players operation #x bs.ctx += #raycast.ox bs.data
-scoreboard players operation #i bs.ctx += #raycast.ox bs.data
-scoreboard players operation #z bs.ctx += #raycast.oz bs.data
-scoreboard players operation #k bs.ctx += #raycast.oz bs.data
+scoreboard players operation #x bs.ctx += #p bs.ctx
+scoreboard players operation #z bs.ctx += #q bs.ctx
+scoreboard players operation #i bs.ctx += #p bs.ctx
+scoreboard players operation #k bs.ctx += #q bs.ctx
 
-# when step is negative, ray is one step further and hitbox coordinates should be negative
+# normalize coordinates (always absolute)
 scoreboard players operation #x bs.ctx /= #raycast.ux bs.data
 scoreboard players operation #i bs.ctx /= #raycast.ux bs.data
 scoreboard players operation #y bs.ctx /= #raycast.uy bs.data
@@ -36,28 +36,28 @@ scoreboard players operation #j bs.ctx /= #raycast.uy bs.data
 scoreboard players operation #z bs.ctx /= #raycast.uz bs.data
 scoreboard players operation #k bs.ctx /= #raycast.uz bs.data
 
-# when step is negative we need to reverse near and far points
+# swap near/far values if ray step is negative
 execute if score #raycast.ux bs.data matches ..-1 run scoreboard players operation #x bs.ctx >< #i bs.ctx
 execute if score #raycast.uy bs.data matches ..-1 run scoreboard players operation #y bs.ctx >< #j bs.ctx
 execute if score #raycast.uz bs.data matches ..-1 run scoreboard players operation #z bs.ctx >< #k bs.ctx
 
-# compute near and far points for AABB collision
-execute store result score #raycast.tmin bs.data run scoreboard players operation #x bs.ctx += #raycast.lx bs.data
-execute store result score #raycast.tmax bs.data run scoreboard players operation #i bs.ctx += #raycast.lx bs.data
+# compute near and far intersection points
+scoreboard players operation #x bs.ctx += #raycast.lx bs.data
+scoreboard players operation #i bs.ctx += #raycast.lx bs.data
 scoreboard players operation #y bs.ctx += #raycast.ly bs.data
 scoreboard players operation #j bs.ctx += #raycast.ly bs.data
 scoreboard players operation #z bs.ctx += #raycast.lz bs.data
 scoreboard players operation #k bs.ctx += #raycast.lz bs.data
-scoreboard players operation #raycast.tmin bs.data > #y bs.ctx
-scoreboard players operation #raycast.tmin bs.data > #z bs.ctx
-scoreboard players operation #raycast.tmax bs.data < #j bs.ctx
-scoreboard players operation #raycast.tmax bs.data < #k bs.ctx
+scoreboard players operation #x bs.ctx > #y bs.ctx
+scoreboard players operation #x bs.ctx > #z bs.ctx
+scoreboard players operation #i bs.ctx < #j bs.ctx
+scoreboard players operation #i bs.ctx < #k bs.ctx
 
-# if tmin <= tmax, ray is intersecting with AABB, if tmax < 0, ray is intersecting AABB, but the whole AABB is behind
-execute if score #raycast.tmax bs.data matches 0.. \
-  if score #raycast.tmin bs.data <= #raycast.tmax bs.data \
-  if score #raycast.tmin bs.data < #raycast.distance bs.data \
-  if score #raycast.tmin bs.data <= #raycast.max_distance bs.data \
-  run function bs.raycast:collide/shape
+# check for valid intersection: near ≤ far and within ray bounds
+execute if score #i bs.ctx matches 0.. \
+  if score #x bs.ctx <= #i bs.ctx \
+  if score #x bs.ctx < #raycast.btmin bs.data \
+  if score #x bs.ctx <= #raycast.max_distance bs.data \
+  run function bs.raycast:collide/record/shape
 
 execute if data storage bs:ctx _[-1] run function bs.raycast:check/block/shape

@@ -13,12 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-tag @s add bs.raycast.omit
-scoreboard players set #raycast.distance bs.data 2147483647
+scoreboard players set @s bs.tmin 2147483647
 execute store result score $raycast.piercing bs.lambda run data get storage bs:data raycast.piercing
 execute store result score #raycast.max_distance bs.data run data get storage bs:data raycast.max_distance 1000
+execute store result score #raycast.btmin bs.data store result score #raycast.etmin bs.data run scoreboard players set #raycast.tmin bs.data 2147483647
 data modify storage bs:lambda raycast set value {distance:0d,hit_normal:[0,0,0]}
-execute summon minecraft:marker run function bs.raycast:recurse/init
-tag @e[tag=bs.raycast.omit] remove bs.raycast.omit
+execute positioned ^ ^ ^ summon minecraft:marker run function bs.raycast:recurse/init
 data modify storage bs:out raycast set from storage bs:lambda raycast
-return run execute unless score #raycast.distance bs.data matches 2147483647
+scoreboard players reset @e[distance=..255,scores={bs.tmin=0..}] bs.tmin
+return run execute unless score #raycast.tmin bs.data matches 2147483647

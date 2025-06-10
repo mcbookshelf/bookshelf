@@ -14,10 +14,12 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:data raycast set value { \
+  sx: 1, \
+  sy: 1, \
+  sz: 1, \
   blocks: true, \
   entities: false, \
   max_distance: 16.0, \
-  hitbox_shape: "interaction", \
   ignored_blocks: "#bs.hitbox:intangible", \
   ignored_entities: "#bs.hitbox:intangible", \
 }

@@ -16,5 +16,5 @@
 # run the raycast at the entity eyes
 tag @s add bs.view.this
 $data modify storage bs:data raycast.on_targeted_entity set value 'execute as @n[tag=bs.view.this,sort=arbitrary] run $(run)'
-execute at @s anchored eyes positioned ^ ^ ^ run function bs.raycast:run
+execute at @s anchored eyes run function bs.raycast:run
 tag @s remove bs.view.this
