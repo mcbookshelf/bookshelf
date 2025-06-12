@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/metadata.md:1 a4cc8f448dfe433ba04ac419a060cb11
+msgid "🔖 Metadata"
+msgstr ""
+
+#: ../../contribute/metadata.md:3 faae33dce99844729e111cb8f969a22c
+msgid ""
+"To support automation by tools like the Bookshelf Manager, modules must "
+"declare specific metadata. All metadata are verified during the CI/CD "
+"process (see the [contribution validation page](project:../contribute"
+"/contribution-validation.md))."
+msgstr ""
+
+#: ../../contribute/metadata.md:7 f0b4641333dc4cc6a262516f56221f46
+msgid "⭐ Feature Metadata"
+msgstr ""
+
+#: ../../contribute/metadata.md:9 06505a3fc6f74e5ea28eeefc1f8d34d5
+msgid ""
+"Feature metadata are defined directly within each `.json` file, as shown "
+"below:"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:51
+#: 462e97b7fece420db6bb41178029f8fa bd245f685934414c92faf1253aaa5489
+msgid "Field"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:51
+#: 52e2ce688e47446d8cc9433cd13b4691 db504f681a1945a8899838c53935ac26
+msgid "Description"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:51
+#: 00cbca8e91b04638860265275144cd80 d7777aa840ef43ab8033f37c2d0f33eb
+msgid "Mandatory"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 24f42665b2fc4161885ba4bd265fb353
+msgid "feature"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 57de34ef0fb541a9a774cdb1d2ce888b
+msgid "Indicates whether the current function tag is the endpoint of a feature"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:51
+#: 04e14d2974484b3c9a20972b32c1bcc4 146baa23bbaf45b8af343b1d9f442a5a
+#: 265d031ac1414fd4b88cde4b0e83b3e2 4397502521eb474cb26f46f4101ef1a6
+#: 8584c65ca6904ec7b6f0dab864a22c93 961ce784953645f18e6c8477f1e24a94
+#: b00382ccf92b47b08b094417d8c48d73 e131e1aee57741b4af6eb27990edbaee
+#: f2272ab7779a4070886543706a7aae49
+msgid "yes"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:51
+#: 1e436875069243c3ade3fa918b740903 8b24a0ac85994040ae36d63281ec47dd
+msgid "documentation"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 d81fd5d13e714b89809abe287a2bbf2c
+msgid "A link to the feature's documentation"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:51
+#: 418923632af14329a2a2bab9a66deff7 ed6e4a077ff64f7a999bfb285b82c0ea
+msgid "authors"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 b6dcbb1160c346beb6467241031f63f9
+msgid "A list of feature authors. Cannot be empty"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:51
+#: ef3fc2a5ef2e4cf9a67e5369eb914ac0 f68acea993034cd88d41f22d02b5fd45
+msgid "contributors"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 932dc56943c54a2e8e0b61a3807bbb21
+msgid ""
+"A list of contributors (e.g., those who provided insights, fixes, or "
+"indirect help)"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:51
+#: 2c7b86cf5251488ba7059a09b7699547 3733b3659fae418bb2e186eac98dbacc
+#: 43b33607f72944ebb5a25484e792dffc bbfb9caa084140c1bc14f5b0ae581950
+#: c53dadb66bcf4859926e10f5ed1ff174
+msgid "no"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 b5408b9ef37b4b37b73391db37c66950
+msgid "created"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 3a1a30ce8fbd4e32a6f50a0ac7e73f7a
+msgid "The creation date and Minecraft version for historical purposes"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 10580481accd4f12bf60d2a48357396a
+msgid "updated"
+msgstr ""
+
+#: ../../contribute/metadata.md:11 95eeeb8bcf804a62a14b11cba405ad4b
+msgid "The date and Minecraft version of the most recent update"
+msgstr ""
+
+#: ../../contribute/metadata.md:47 c21796de5ccd44df804f666666ef1f64
+msgid "🧩 Module Metadata"
+msgstr ""
+
+#: ../../contribute/metadata.md:49 80d488ada53a4a3e8aa2e24ada79f95f
+msgid ""
+"Module metadata are defined in `modules/<module>/module.json`. Below is "
+"an example:"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 48a1b94e5ab54872881e58c3bd28e5d8
+msgid "name"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 cfe3da9db6764deeb8fb19c98b2c105d
+msgid "The module's display name (e.g., `Foo`)"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 16db77ddfd3640cc99858d9e6519c5d7
+msgid "slug"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 c666c0eb7f15414fb43cd61d0f0c5d99
+msgid "The module's slug used to publish to platforms (e.g., `bookshelf-foo`)"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 ab80bc8e12da4eef83649929dc5817c3
+msgid "description"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 33975879ce0d4173a48aead02e9f1981
+msgid "A description of the module's purpose"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 51c725d9d609485fb5c54f1b9b52c5e2
+msgid "A link to the module's documentation"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 599dcd1dcd2044f4b89740509bc8d6f4
+msgid "tags"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 120de5ae58d94046889d98e1eb6a0d08
+msgid ""
+"A list of tags for categorizing or identifying modules. Tags are also "
+"used to generate bundles (e.g., `default` and `dev`)"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 56631e9931b1454c8d84e1e7bef3e208
+msgid "no (but trigger warnings)"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 e825c1a386d74048b3b051fe3c28c41f
+msgid ""
+"A list of module authors (supplements authors from features). Cannot be "
+"empty"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 5a84190426a54461bb6bd59694203794
+msgid "A list of contributors (supplements contributors from features)"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 2007b120ddaa4bc5896f06c947c26146
+msgid "dependencies"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 ef5d881d23e34ba6970ae143be36cfd7
+msgid "Essential modules required for this module to function (e.g., `bs.hitbox`)"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 65a9a9b925874dc9a49e2ab1040cc5b7
+msgid "weak dependencies"
+msgstr ""
+
+#: ../../contribute/metadata.md:51 2efdec2b0a0f4168beac1f812cc35ba6
+msgid ""
+"Optional modules that enhance functionality but are not essential (e.g., "
+"`bs.log`)"
+msgstr ""
+
+#: ../../contribute/metadata.md:93 cb1ac0b9884a4f479ebb0d3424f84cdd
+msgid "📜 Manifest"
+msgstr ""
+
+#: ../../contribute/metadata.md:95 5bdcfab952c445d9930db0e463a97675
+msgid ""
+"The manifest consolidates metadata for all modules and features in "
+"Bookshelf. It is automatically generated and can be updated using the "
+"following command:"
+msgstr ""
+
+#: ../../contribute/metadata.md:99 283ae9d1b4f64358b0cbdd098d10439e
+msgid "The generated file is located at `meta/manifest.json`."
+msgstr ""
+

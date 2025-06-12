@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,30 +19,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/math.md:1 384c423288a344a3bab4dc835c0d11ec
+#: ../../modules/math.md:1 5d978b25a9e64b0c88cd4d3aeecd40c3
 msgid "🧮 Math"
 msgstr ""
 
-#: ../../modules/math.md:3 9bb77599b28f4f519af213a0e87aa028
+#: ../../modules/math.md:3 97e14b1708424cf88e3eba21e8ea9c18
 msgid "**`#bs.math:help`**"
 msgstr ""
 
-#: ../../modules/math.md:5 6cc856b1d25e4b3188ac60aabef15583
+#: ../../modules/math.md:5 3bc517ecbc7e437e82759ed5330613ed
 msgid "The beautiful world of mathematics... **in Minecraft!**"
 msgstr ""
 
-#: ../../modules/math.md:18 4472e00903124c64b3ba890f04b95da8
+#: ../../modules/math.md:18 7fc32b1bce844faaaa68f5dcdb537322
 msgid ""
 "\"Mathematics has very subtle inventions that can be of great service, "
 "both to satisfy the curious and to facilitate all arts and reduce the "
 "labor of men.\""
 msgstr ""
 
-#: ../../modules/math.md:19 16e941584c784fffa072a78b19e7c72e
+#: ../../modules/math.md:19 a7ffc3d295e34e66b0429c80bd1e7122
 msgid "René Descartes"
 msgstr ""
 
-#: ../../modules/math.md:23 62eb94986f3d4a49946f74ff92675a9b
+#: ../../modules/math.md:23 0b81c409f1664453947eed26a1c448cf
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
 "sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
@@ -54,19 +54,19 @@ msgid ""
 "2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
 msgstr ""
 
-#: ../../modules/math.md:33 626c403a346a4bd0806e29d6dc1535f6
+#: ../../modules/math.md:33 10d272d5f225470e84e0d47525e57f33
 msgid "🔧 Functions"
 msgstr ""
 
-#: ../../modules/math.md:35 6c845f93443543febaf1af4cb49af20e
+#: ../../modules/math.md:35 8efe5c59593a47abae811908ac678a5a
 msgid "You can find below all functions available in this module."
 msgstr ""
 
-#: ../../modules/math.md:39 3ef8fa32993a4a9e870452a57458906f
+#: ../../modules/math.md:39 e0c507ade9724c68b6b9521d76635344
 msgid "Combine"
 msgstr ""
 
-#: ../../modules/math.md:43 3d6327dba890465982d5a47eba569dbd
+#: ../../modules/math.md:43 bae250effc834c6391f04c981a98c459
 msgid "Compute the combination of 2 numbers."
 msgstr ""
 
@@ -81,23 +81,23 @@ msgstr ""
 #: ../../modules/math.md:543 ../../modules/math.md:568
 #: ../../modules/math.md:593 ../../modules/math.md:617
 #: ../../modules/math.md:660 ../../modules/math.md:703
-#: ../../modules/math.md:728 0cdb5bd4d1694c32ae7dd03f3c9b67ad
-#: 0fd1caaa5b344f8c8691cab080db82a4 1635c4a7157d4c2197fc5b9ff420b4d2
-#: 202b0b6cb9bc412480267e3ee4064d7b 2d0af1526b214db0990baa1bdcab183f
-#: 30fc44b2ac9f4852a81919350fe517f2 328e8380c8c841059db9bd2a6a479660
-#: 3ae7310ee9e74006b2a683dafafe7bd1 5929ddc72daf4ba4b0ac4b49a56ba1a3
-#: 5a2a7c86812944dfbe3c04050ea51756 7ac391e2687f48fe8dfc04a2849a5f65
-#: 87f1458581dc4c09bc6d6a4e88f1e00c 9aa2510e220f4873bd3a0978154b3413
-#: 9d51b473191e4e0c954213a2c918b64a b3c24b5b2dab4628915f290b127af364
-#: b9f13c2b8ba546e3a8086440c899a578 ba24ab482d3f4e54b4775f85dfbdb521
-#: bb0cc824cc2a41918d517e20a98fd2da cf2a6846f1e742beb8c7c79b4b6edfc6
-#: d30f3e6d5cd04d8c8a277a96b35d31f6 d9d0e94c584b468b9f1f06c1b1cf5c97
-#: daefdfc3a1a546b6bbfbeeb40b51e757 db9db5bd54ca4781a5e1f5e4d1114930
-#: f6f7c72e23c24452aa21296f77f4da28
+#: ../../modules/math.md:728 0240b5ab661b4ab2b5e92f7f9597c3ae
+#: 07f2304e7db14d61aabcc2452d99deff 16836a0066be461eaa0df9c7c767dcbe
+#: 18479378036847d39bb3fdaef169b433 294e2af6df71418aae61569a518e994d
+#: 32879a0459314f47854438581bd21533 37947f802ecc41a2a348aae4dc29d300
+#: 38419b10b478447a9a1018298a942012 3bc908a4a059485396d8e27871fbe3ae
+#: 3ca3d9cb6be944a79e09880d84d47be4 5583178b260148d9b17afce89d29d92b
+#: 59e9b37b07934b3f8008fb5110ebcab4 5a5f5a87abca4e1faea4c77274732fbe
+#: 5b2a91f2390f4e9eb54739864c9a542f 6497dcf57d28494e90096e77c54535d7
+#: 7a997692bb9546bc82caa933bf9fd294 7d08b14ad09140f1bd962b8e0418603d
+#: 8064d45a02594001aab2dff1ed6462a9 89e0ed74878e4cf58bdce52611db58b9
+#: 8d652e14905c4a7f9a9c3a79ba9b032e a172a10339b1404e8a8a4e96d76d628a
+#: d715d5cd7eab4993b919589b604c27a7 defc825d865343d7acbd124f8d33adfc
+#: eb0ac7e96c804faa91da5bf96c22d4e9
 msgid "Inputs"
 msgstr ""
 
-#: ../../modules/math.md:46 c65ff347407e42d69dd87b90aab532b1
+#: ../../modules/math.md:46 393b8cb78f4345e9867b956f345f0e5a
 msgid ""
 "**Scores `$math.combine.[n,k] bs.in`**: Numbers to be combined, the "
 "smaller input will be taken from the greater input."
@@ -114,626 +114,626 @@ msgstr ""
 #: ../../modules/math.md:546 ../../modules/math.md:571
 #: ../../modules/math.md:596 ../../modules/math.md:620
 #: ../../modules/math.md:663 ../../modules/math.md:706
-#: ../../modules/math.md:731 04449cdabd904c51af331ac23097bb3a
-#: 0e00de28af0b401ea1a8e38fe9851b8f 16fbe7b91f954897ac655e792987c29f
-#: 1729e7807fb04cc9a02b9626d63c7c11 254dccda4c2f480eacbb8bf3cff4f758
-#: 28205bcc5b1d4e61b8a53b3ba90b3251 2a935264b1504c1a910d1b6322b177b9
-#: 2ba0721ce1f54f7fb9fdd6553ff3082e 37b4c86d2e194c7f99f3463dbd5d5885
-#: 3d568f148e304efebc83f16380a8faa8 3ea8075e1947478ca84f6b9c2a365ae6
-#: 433df404613f4bfb9d67ff1ab9f54ffa 585267b6c14e4d8885e50a7247a965fe
-#: 58721dfd369446f7b827b8a266b504ef 8051d69e171c4951ba797354456dda26
-#: 9f5097a463d04f0d8454930786b8ad6c a59aeb5d5b0e49d0b54120c9d6f7c00b
-#: b88de63e561642828dbe32a86d811984 bc8d5f4336bb48dbbbf359bfc9bf9fec
-#: c57fde1a0a7b4a44990681bb19fe242f dcc1e982be734ad78a87ec8e11569f5f
-#: defaab850cc746fc92da98ea60b6e611 e02ef220a6b44d67912ad4aec70cf9ac
-#: eae54224b8b24209b53b6b4d72cf5919
+#: ../../modules/math.md:731 0a3abb7daf0e4b57a762f0a487b08c9d
+#: 0b03e3c659d34d3ba5d5137f2a81107c 1041fb3c17a64303948b9bcd2c3f18db
+#: 22bde114c255405094995e59030cf652 2efff4535c364389b44b8784001e8eb2
+#: 5a26b547ed0744889b6f0b1030e8138b 66115f07373d48e1bd5147655c80fb43
+#: 6fe69a737cec489f871984b18439d482 79bec8a570d446829e2f8c5ef47b5f04
+#: 821f0a56d4094458a0cf2c146e500083 976b128d8ed440d2927916e9c9550e1e
+#: 988dd6ecfeb54d8db4039a8c6c667e3b a4b7ad532cc84d609d56ef644c38f4bb
+#: b114ae9d4fb045308ec37905922db4fb ba00e6a9a470404988fdf56ec9475dd1
+#: c6f162b0284a47af9d2076073a1faf56 c73b998044c04fd2ada01f8b4a7cf497
+#: e087441942dc4287950313bfc6d22926 e12077f80c434e3a9f4c25eab78854de
+#: e71a7e37824b4b86afbc381f0d2b6208 e7bcf4b708814e0581f83e91109ad70b
+#: ee66436d810d4763ac368b224c13a92b f6019287e8944ff2a582034ea88d610c
+#: f95f715ae3754a6ea9a3db9050646ba5
 msgid "Outputs"
 msgstr ""
 
-#: ../../modules/math.md:49 d6395771aabf42f4b6a07881e183848f
+#: ../../modules/math.md:49 f583504fcce544828502bdeda6469995
 msgid "**Return | Score `$math.combine bs.out`**: Result of the operation."
 msgstr ""
 
 #: ../../modules/math.md:52 ../../modules/math.md:141
-#: 152ea03de18c40b4b060263998ec3e4d 8293d092f1224a3292af7dd514022017
+#: 1d21820cc04e49dd84034362a2265ca3 c58b92a4eafc428685e4bda9da9e9931
 msgid "Technical Limitation"
 msgstr ""
 
-#: ../../modules/math.md:55 93e84840a1f94a8083d68ecf3f54890b
+#: ../../modules/math.md:55 8abd8809225041fc8c8592978869f50f
 msgid ""
 "The value of `bs.out` is incorrect if the result is greater than "
 "2,147,483,647 or `$math.combine.[n,k] bs.in` are not both positive."
 msgstr ""
 
-#: ../../modules/math.md:58 07dfb0032b0a4534b0e912d39ab60949
+#: ../../modules/math.md:58 1a754bde62d54bfd8f3bb378f60253fb
 msgid "*Example: Compute $combine(4,2)$:*"
 msgstr ""
 
 #: ../../modules/math.md:68 ../../modules/math.md:504
-#: 35417a972896476a8397e8e38f87ce50 b4be014123ca47a7b815e026c3e2e141
+#: 317fb4d08409477bb2c7273b9befbc7c 78ec89788de142a386bffedc31d8f7e5
 msgid "**Credits**: Ethanout"
 msgstr ""
 
-#: ../../modules/math.md:72 89fb41b695f247a49a596c50b1f8c34a
+#: ../../modules/math.md:72 a31235aed2f74253bb2ccd2e7affe3ba
 msgid "Exponential"
 msgstr ""
 
-#: ../../modules/math.md 840d4b22159f4189ae7bf86f97f5f5c2
-#: 97ed90b0756f478f9384c82f2db55d40
+#: ../../modules/math.md 0f99d0ce3fb64f11ae80e46e050bb1d8
+#: 7199b8ad7b03493ebd029c41c8f5bc84
 msgid "Natural"
 msgstr ""
 
-#: ../../modules/math.md:81 ba14f3410d804047947350ac7e67ae24
+#: ../../modules/math.md:81 24699c127c0b41a4a0aadb37a3ea3884
 msgid "Compute the exponential function."
 msgstr ""
 
-#: ../../modules/math.md:84 63b05a8fc34c48008a516d0ee9f29509
+#: ../../modules/math.md:84 7a81cbf460a347f583f7fd7d7adfa899
 #, python-brace-format
 msgid "**Storage `bs:in math.exp.x`**: {nbt}`number` Number to be exponentiated."
 msgstr ""
 
-#: ../../modules/math.md:87 3901125fd75146338035ebfc87bcad5a
+#: ../../modules/math.md:87 f8a6e06de55046079e2503f1495aa41b
 #, python-brace-format
 msgid "**Storage `bs:out math.exp`**: {nbt}`float` Result of the operation."
 msgstr ""
 
-#: ../../modules/math.md:90 4808281270ca436ab76f4b2f571749dd
+#: ../../modules/math.md:90 48849d68e1a249ca9b5525ee0401bcd2
 msgid "*Example: Compute $exp(3)$:*"
 msgstr ""
 
-#: ../../modules/math.md bd02ed686628414285d510b05079c847
-#: ebc225643031471b893920ac37797b1f
+#: ../../modules/math.md aac2a69c442b48dc9d89e05d9608b91b
+#: c066042c4e7346f5832f07eed12bfa5d
 msgid "Base 2"
 msgstr ""
 
-#: ../../modules/math.md:104 04482186f9f740a7a2d648d83d788f95
+#: ../../modules/math.md:104 3b887f54e8084268b264bfe82d234187
 msgid "Compute the exponential function in base 2."
 msgstr ""
 
-#: ../../modules/math.md:107 c1045ec5ee03497badea6121b6c91499
+#: ../../modules/math.md:107 ce3eaca7b21141d38b5bdc9c620fc427
 #, python-brace-format
 msgid "**Storage `bs:in math.exp2.x`**: {nbt}`number` Number to be exponentiated."
 msgstr ""
 
-#: ../../modules/math.md:110 59c746524f374cf59c3ad1b41ae24fe0
+#: ../../modules/math.md:110 7ffc3c2d12ef452cafb6b7cebd462840
 #, python-brace-format
 msgid "**Storage `bs:out math.exp2`**: {nbt}`float` Result of the operation."
 msgstr ""
 
-#: ../../modules/math.md:113 793ddceda7c64568b7ecc9ac4eea1da5
+#: ../../modules/math.md:113 0b4bef4c5e2447789ef709f65050ef82
 msgid "*Example: Compute $exp2(3)$:*"
 msgstr ""
 
-#: ../../modules/math.md:122 79313e154bd34600a1d5a7ad2beacf93
+#: ../../modules/math.md:122 07d6f9535d164a99b7c7a90ad90c9b66
 msgid "![](/_imgs/modules/math/exp.png)"
 msgstr ""
 
 #: ../../modules/math.md:124 ../../modules/math.md:218
-#: ../../modules/math.md:352 0d15ceab3a8a44339a297155bdb47e9b
-#: 628da1581018481395e3dfd78d739dbd 7661a377ef044e15a99ede5f8b2fa50c
+#: ../../modules/math.md:352 2a5538c63d2f4a9286cad00dcba2d733
+#: c73260f72d0746e2bc39aa5b2ffa05f2 c9ed80efff834177a7dc9fc65da40620
 msgid "**Credits**: Aksiome"
 msgstr ""
 
-#: ../../modules/math.md:128 34d2d306d6484e89909d4a4a07e06d91
+#: ../../modules/math.md:128 fd49028491d0487a999f5fbffe26dcb5
 msgid "Factorial"
 msgstr ""
 
-#: ../../modules/math.md:132 e2e52064316f437da9a8e6cfd1d4a100
+#: ../../modules/math.md:132 7af24006f01547afb626d9cf94e8c054
 msgid "Compute the factorial of the number."
 msgstr ""
 
-#: ../../modules/math.md:135 1483a484abd4455a837a8cb86f151488
+#: ../../modules/math.md:135 5618cceec15340f1bce8066e6dc6be1c
 msgid "**Score `$math.factorial.n bs.in`**: Number to be factorialized."
 msgstr ""
 
-#: ../../modules/math.md:138 ca4e1e7ef5ba4560b5177c8587739ed8
+#: ../../modules/math.md:138 fbb44fcfeb4d4bc4a4e504ee908ede98
 msgid "**Return | Score `$math.factorial bs.out`**: Result of the operation."
 msgstr ""
 
-#: ../../modules/math.md:144 3eb8d3ef301040acac6df997dea0460e
+#: ../../modules/math.md:144 8c79785ba40b4edb9a2bc6dec32dc400
 msgid ""
 "Due to the limit of integers that can be stored in a score, the interval "
 "of `$math.factorial.n bs.in` is limited to `[0,12]`."
 msgstr ""
 
-#: ../../modules/math.md:147 9b43cecc304649a79f7bf9382b0af53a
+#: ../../modules/math.md:147 065acba0c4e548db8ddde1206fda6ff9
 msgid "*Example: Compute $3!$:*"
 msgstr ""
 
-#: ../../modules/math.md:156 f8c98dfc341340f88414da70f0214135
+#: ../../modules/math.md:156 7fdad2da02d4490b9176298c90fa0cd2
 msgid "![](/_imgs/modules/math/factorial.png)"
 msgstr ""
 
-#: ../../modules/math.md:158 0b63225121374122beefad3ee20a1ac0
+#: ../../modules/math.md:158 d640c92422e146e484c4cfdaed31e3fb
 msgid "**Credits**: KubbyDev"
 msgstr ""
 
-#: ../../modules/math.md:162 1cd544fee52e43babf2b53067e10f707
+#: ../../modules/math.md:162 c111262f31484fad8b04da7cc3fded19
 msgid "Float Manipulation"
 msgstr ""
 
-#: ../../modules/math.md 6b3518b6ed2c4481bb294e85761b00f3
+#: ../../modules/math.md 871d00703f464d4d85f99ff54fb611d1
 msgid "Frexp"
 msgstr ""
 
-#: ../../modules/math.md:170 d27177aabe2448e193f0b327e82d3f73
+#: ../../modules/math.md:170 cf444d18df0640bbb1a104c0976e9b62
 msgid ""
 "Decompose a floating point number into a normalized fraction and an "
 "integral power of two."
 msgstr ""
 
-#: ../../modules/math.md:173 c2aac3a396bb4edfa084476b5e9f8dbd
+#: ../../modules/math.md:173 78dd34c2d970454b97d8f28d330657be
 #, python-brace-format
 msgid "**Storage `bs:in math.frexp.x`**: {nbt}`number` Number to be decomposed."
 msgstr ""
 
-#: ../../modules/math.md:176 b71c2fa2f4c24b85be2955ea5d63fcee
+#: ../../modules/math.md:176 95af673fe5d14ed0aa395e7aee33b669
 #, python-brace-format
 msgid "**Storage `bs:out math.frexp.e`**: {nbt}`int` Exponent for the power of 2."
 msgstr ""
 
-#: ../../modules/math.md:178 f1758c11758a44479d9fbd546eb5a161
+#: ../../modules/math.md:178 ce641cb8e92f43f69e9ade0ea895f512
 #, python-brace-format
 msgid ""
 "**Storage `bs:out math.frexp.x`**: {nbt}`float` Normalized fraction in "
 "range  `]-1,-0.5]` or `[0.5,1[`."
 msgstr ""
 
-#: ../../modules/math.md:181 c7a76b098037435bb98b33cdcad978d4
+#: ../../modules/math.md:181 83b9c508c8104f3ea6f9950e701e62a0
 msgid "*Example: Decompose 5.8 into its mantissa and exponent:*"
 msgstr ""
 
-#: ../../modules/math.md 7c1178c4ed8345fca9bb4a41300523a2
+#: ../../modules/math.md 02f015bdac18486590acb624cb50ba81
 msgid "Ldexp"
 msgstr ""
 
-#: ../../modules/math.md:195 de0347de285f4fbb843d104bc1447450
+#: ../../modules/math.md:195 528cd4e1d9274e2497a0f9ce3691fbc8
 msgid ""
 "Build a floating point number from a normalized fraction and an integral "
 "power of two."
 msgstr ""
 
-#: ../../modules/math.md:198 952225ff66454bf39e4622dbc9f55110
+#: ../../modules/math.md:198 0c89cf17db704c3cb8eb51fcdff8ce59
 #, python-brace-format
 msgid ""
 "**Storage `bs:in math.ldexp.x`**: {nbt}`number` Normalized fraction in "
 "range  `]-1,-0.5]` or `[0.5,1[`."
 msgstr ""
 
-#: ../../modules/math.md:200 9d6b0580d2b944de810eda05d7e38b0e
+#: ../../modules/math.md:200 177ae926d5044c3cbd5d151a7ef0728b
 #, python-brace-format
 msgid "**Storage `bs:in math.ldexp.e`**: {nbt}`int` Exponent for the power of 2."
 msgstr ""
 
-#: ../../modules/math.md:203 0032f2af2bab4f949c84ea9826d732b5
+#: ../../modules/math.md:203 1adfe64f438b4e2bbf51ba58e9a47e72
 #, python-brace-format
 msgid ""
 "**Storage `bs:out math.ldexp`**: {nbt}`float` Resulting floating-point "
 "number."
 msgstr ""
 
-#: ../../modules/math.md:206 be7594d556fe4017b1b7b8575bdfdeea
+#: ../../modules/math.md:206 616f976530e34312bf1390995ec24afa
 msgid "*Example: Compose a floating-point number:*"
 msgstr ""
 
-#: ../../modules/math.md:222 e8eb9e4fe86e47c2b855d42ae1d8eabf
+#: ../../modules/math.md:222 e881ea66547847f9986525f17e46fb1d
 msgid "Greatest Common Denominator"
 msgstr ""
 
-#: ../../modules/math.md:226 b83cb1773be24c6dabc22487ad97126f
+#: ../../modules/math.md:226 c5281464f8d14011b24a4fc5a447053a
 msgid "Compute the greatest common denominator of two numbers."
 msgstr ""
 
-#: ../../modules/math.md:229 a4fcafeb11e945c58e82824fecea3ee1
+#: ../../modules/math.md:229 2bfb4bd7b10c4e49a612ce176f1430ca
 msgid "**Scores `$math.gcd.[a,b] bs.in`**: The two numbers."
 msgstr ""
 
-#: ../../modules/math.md:232 35cbe978d6f545dd82f6c3c751b50bdc
+#: ../../modules/math.md:232 02c64e72e8964de9b6015f2c10ded7ca
 msgid "**Return | Score `$math.gcd bs.out`**: The greatest common denominator."
 msgstr ""
 
-#: ../../modules/math.md:235 386a4514a9a74fa094dc3e55444aa1ed
+#: ../../modules/math.md:235 85738b3f4af149cebdd22e737c4cfd4f
 msgid "*Example: Calculate the greatest common denominator between 16 and 12:*"
 msgstr ""
 
-#: ../../modules/math.md:245 334905f89ade4fe18d269598c5d246ed
+#: ../../modules/math.md:245 13a7a2b2cd8d4fe7a8ba91dc2ff799fa
 msgid "![](/_imgs/modules/math/gcd.png)"
 msgstr ""
 
 #: ../../modules/math.md:247 ../../modules/math.md:415
-#: b145a64bbaa44a4cbdf354f0fc0439da e12f53ad38d440288df4aa47b0b9209c
+#: 5a68fbb08a3d45798f49f75c923c87fa a3f9946499844293a0ddd33ce19f5ed8
 msgid "**Credits**: Aksiome, Leirof"
 msgstr ""
 
-#: ../../modules/math.md:251 0b13623d43bd4b3ebc37aa2681a3ff61
+#: ../../modules/math.md:251 2930c55c227445b29bbca45a9ed9c708
 msgid "Logarithm"
 msgstr ""
 
-#: ../../modules/math.md:259 44c2d6549eb1408881e1aa7b9d305841
+#: ../../modules/math.md:259 615a9e2680e24a758554a3b7ea53d178
 msgid "Compute the natural logarithm (base e) of a number."
 msgstr ""
 
-#: ../../modules/math.md:262 58ef7c88f07247bc8a8b9854d4cc8e43
+#: ../../modules/math.md:262 2bfa40403db64040babd746c90721a38
 #, python-brace-format
 msgid "**Storage `bs:in math.log.x`**: {nbt}`number` Number to be logarithmized."
 msgstr ""
 
-#: ../../modules/math.md:265 60ee619130ca4baeb2ea6560b2a0a455
+#: ../../modules/math.md:265 b3c5f507da814624b6f234814f38eac4
 #, python-brace-format
 msgid "**Storage `bs:out math.log`**: {nbt}`float` Result of the operation."
 msgstr ""
 
-#: ../../modules/math.md:268 af75ec36689b412f9dc7274442765f45
+#: ../../modules/math.md:268 794eb809c29f42f0a4bd3ed64c96b383
 msgid "*Example: Calculate $ln(28)$:*"
 msgstr ""
 
-#: ../../modules/math.md:282 785f19ed01e94b35bff1e2cad9bb9216
+#: ../../modules/math.md:282 868c8753622947bd8f78285b48378b01
 msgid "Compute the logarithm in base 2 of a number."
 msgstr ""
 
-#: ../../modules/math.md:285 1e878ffb12ad4bcbbc471a483fb424c4
+#: ../../modules/math.md:285 4118d2dc6d15457399d51bfd3156a2df
 #, python-brace-format
 msgid "**Storage `bs:in math.log2.x`**: {nbt}`number` Number to be logarithmized."
 msgstr ""
 
-#: ../../modules/math.md:288 e6f14fc043fd44d0874f6e9264c7f2fd
+#: ../../modules/math.md:288 f8e5a9b901974c26995e14e13bfd8bbc
 #, python-brace-format
 msgid "**Storage `bs:out math.log2`**: {nbt}`float` Result of the operation."
 msgstr ""
 
-#: ../../modules/math.md:291 75b4574f26f54a1eb45186d0251fec11
+#: ../../modules/math.md:291 c21b9cd189904fa3b1c95088bdc654b4
 msgid "*Example: Calculate $log_2(28)$:*"
 msgstr ""
 
-#: ../../modules/math.md 46888a00d2544623aea337bdec29a596
+#: ../../modules/math.md 2593631ff83e4a6b896f92f09fda0e58
 msgid "Base 10"
 msgstr ""
 
-#: ../../modules/math.md:305 c74f34634a2246b99f4769d1c773477a
+#: ../../modules/math.md:305 0d10385e346741bd94d0e5ee69f593ad
 msgid "Compute the logarithm in base 10 of a number."
 msgstr ""
 
-#: ../../modules/math.md:308 fc0273f719824da6b82ae3b3ece10410
+#: ../../modules/math.md:308 bbf188d4d3d149fea05ac8963b198294
 #, python-brace-format
 msgid ""
 "**Storage `bs:in math.log10.x`**: {nbt}`number` Number to be "
 "logarithmized."
 msgstr ""
 
-#: ../../modules/math.md:311 682f6e1dade144129d55072402d23419
+#: ../../modules/math.md:311 95b9a5513f5745b4b3196d4089a64f31
 #, python-brace-format
 msgid "**Storage `bs:out math.log10`**: {nbt}`float` Result of the operation."
 msgstr ""
 
-#: ../../modules/math.md:314 31d050d164b3470eb25021b1aa700c07
+#: ../../modules/math.md:314 53eac4c2a5dc478ab5c87caa340450f2
 #, python-brace-format
 msgid "*Example: Calculate $log_{10}(28)$:*"
 msgstr ""
 
-#: ../../modules/math.md 361d0b376aa64865808037c53b2ac2cf
+#: ../../modules/math.md 090c28d9ae9149bb8c25f2279007e8a5
 msgid "Base a"
 msgstr ""
 
-#: ../../modules/math.md:328 2e802c332ebf400bb2703fcd8c956b01
+#: ../../modules/math.md:328 0478f89062314fa5ba67fcce3fc69e03
 msgid "Compute the logarithm in base a of a number."
 msgstr ""
 
-#: ../../modules/math.md:331 976f385ca0ba4f609978d3b5d0c8cf61
+#: ../../modules/math.md:331 d433fcb0389442c4bb0ab4134890e901
 #, python-brace-format
 msgid "**Storage `bs:in math.loga.x`**: {nbt}`number` Number to be logarithmized."
 msgstr ""
 
-#: ../../modules/math.md:333 a36badf5d0264a5c8dcab7a2be7e4352
+#: ../../modules/math.md:333 5307f2312cfd43faa0379f56fad13d45
 #, python-brace-format
 msgid "**Storage `bs:in math.loga.a`**: {nbt}`number` Base of the logarithm."
 msgstr ""
 
-#: ../../modules/math.md:336 8a640b2d8bab4324bb508a41b7004261
+#: ../../modules/math.md:336 8352fef2f8564985aa5e01486fada423
 #, python-brace-format
 msgid "**Storage `bs:out math.loga`**: {nbt}`float` Result of the operation."
 msgstr ""
 
-#: ../../modules/math.md:339 e4cec79b0df34a6a9f3c654e8ba9867d
+#: ../../modules/math.md:339 610a5aa74bf545bb9135679e1a63c06e
 msgid "*Example: Calculate $log_4(28)$:*"
 msgstr ""
 
-#: ../../modules/math.md:356 9a828826e2274fa2b25c922b2c574569
+#: ../../modules/math.md:356 59f982c1fe364f81bcab729a9b9f3423
 msgid "Power"
 msgstr ""
 
-#: ../../modules/math.md 717668f9a7a944e997ce2356cd609fcf
-#: d8fc3b4da13b42ce8db1652e6c4a90c9
+#: ../../modules/math.md 0fe200d922f348cb9116bdc5b43c4d39
+#: 6c32f0ac430c484e9073cf2ff8c820cf
 msgid "Integer"
 msgstr ""
 
-#: ../../modules/math.md:364 a4c43bc9416d4800a2c7e6247b6f8e1f
+#: ../../modules/math.md:364 7785839444b14df0bf25e45ba03b6802
 msgid "Compute the power of integer numbers."
 msgstr ""
 
-#: ../../modules/math.md:367 caf6e7c5daf44145b54a6191b60d0ce0
+#: ../../modules/math.md:367 461c9a92507e495893b8ae4d360e24ff
 msgid "**Score `$math.ipow.x bs.in`**: The base."
 msgstr ""
 
-#: ../../modules/math.md:369 2fe9f50d6e4b40c4b3e838ea4d0fe754
+#: ../../modules/math.md:369 85439706f3fd43728642b52066a905d2
 msgid "**Score `$math.ipow.y bs.in`**: The exponent."
 msgstr ""
 
-#: ../../modules/math.md:372 b9d983e5a6fe4de1b6738b1dfbb1957e
+#: ../../modules/math.md:372 c62741b40c2445e396328ecfdf642bfd
 msgid "**Return | Score `$math.ipow bs.out`**: Result of the operation."
 msgstr ""
 
-#: ../../modules/math.md:375 b42fddf7bce8464084d61b8672df7bbd
+#: ../../modules/math.md:375 257adfe2cecb46e4a2bf4d1fb6127412
 msgid "*Example: Compute and display $3^6$:*"
 msgstr ""
 
-#: ../../modules/math.md 846a9d8785094fe48ba06713e5b66d36
-#: b6a1e035687f41dcb17625b5ae0ce2e0
+#: ../../modules/math.md 6af34c44037d47608d33ec54f31eaa6c
+#: d8ce1c87ddbf46ffa111f20a52f5348a
 msgid "Decimal"
 msgstr ""
 
-#: ../../modules/math.md:390 8f640a14b5d4454bb0a22c32c38b3f8f
+#: ../../modules/math.md:390 a553a61546da435da21a799e27175282
 msgid "Compute the power of floating numbers."
 msgstr ""
 
-#: ../../modules/math.md:393 967ed59551fc42d2ae52aa63fbfe8272
+#: ../../modules/math.md:393 61aa34dd13024452ab8a3ec9c965d154
 #, python-brace-format
 msgid "**Storage `bs:in math.pow.x`**: {nbt}`number` The base."
 msgstr ""
 
-#: ../../modules/math.md:395 a186c0a94d734f16988ee30f18cec424
+#: ../../modules/math.md:395 8ab17e44c882422a8a9b8e4e97ee52d3
 #, python-brace-format
 msgid "**Storage `bs:in math.pow.y`**: {nbt}`number` The exponent."
 msgstr ""
 
-#: ../../modules/math.md:398 7546c22dc64b468c942f6b4954527d4a
+#: ../../modules/math.md:398 37b4501aa3ae47ea98e45140261b997f
 #, python-brace-format
 msgid "**Storage `bs:out math.pow`**: {nbt}`float` Result of the operation."
 msgstr ""
 
-#: ../../modules/math.md:401 93afbe8ec94549648be89a067cb10ec1
+#: ../../modules/math.md:401 bd3640b8ad1c4c048313dafab40657a2
 msgid "*Example: Compute and display $pow(3.5, 2.25)$:*"
 msgstr ""
 
-#: ../../modules/math.md:413 6470ffe008584cc68e57aa6fd9946b35
+#: ../../modules/math.md:413 5a266c8ed068445e99157a77e09b27c7
 msgid "![](/_imgs/modules/math/power.png)"
 msgstr ""
 
-#: ../../modules/math.md:419 9203279c566c47498561e41a79e85b09
+#: ../../modules/math.md:419 38c242e7ff634fbda135c6a92b1f66a7
 msgid "Rounded Division"
 msgstr ""
 
-#: ../../modules/math.md:423 8fca3b06b3ac4c1ab67059c661ff42fb
+#: ../../modules/math.md:423 16636aceea2840b0b851d35897b305cf
 msgid ""
 "Divide a number by another then round the result to the nearest integer "
 "(Minecraft rounds down to the next integer)."
 msgstr ""
 
-#: ../../modules/math.md:426 a74a93064a0147a39c83880648d4e73a
+#: ../../modules/math.md:426 af41feddc3504d1fb9dafdbdf157e6bd
 msgid "**Score `$math.divide.x bs.in`**: The numerator."
 msgstr ""
 
-#: ../../modules/math.md:428 f423368b05de4ad6ba3c81ce2800ba6e
+#: ../../modules/math.md:428 51dcf7ab7cbd4257bc813ea52de64432
 msgid "**Score `$math.divide.y bs.in`**: The denominator."
 msgstr ""
 
-#: ../../modules/math.md:431 eedfc13923e6479daec2db7440e93697
+#: ../../modules/math.md:431 c3e7f5075d314dc58a70f6f319c29dcd
 msgid "**Return | Score `$math.divide bs.out`**: Result of the division."
 msgstr ""
 
-#: ../../modules/math.md:434 3849bbeba4ba451eaca8a4cab9c1b856
+#: ../../modules/math.md:434 408e2c6939214a39963f076b8420e178
 msgid "*Example: Calculate $9/5$:*"
 msgstr ""
 
-#: ../../modules/math.md:444 204833124bda4d0f8b3802aaf548ad9e
+#: ../../modules/math.md:444 05ae669a9e844145b67eb3c0a93a4e99
 msgid "![](/_imgs/modules/math/divide.png)"
 msgstr ""
 
-#: ../../modules/math.md:446 148f4efed5b946fb9b5a75d6c81e1150
+#: ../../modules/math.md:446 9057e15b9c074e33b010de812c9d1cb6
 msgid "**Credits**: Aksiome, theogiraudet"
 msgstr ""
 
-#: ../../modules/math.md:450 6bf6e4734e2844a2af921f3df56a9d57
+#: ../../modules/math.md:450 354639780d5f4b0483dafef2dda27edc
 msgid "Square Root"
 msgstr ""
 
-#: ../../modules/math.md:458 89ffe94bb26741819149ed239802d8ee
+#: ../../modules/math.md:458 e51f314c775140c8bcf267a51a50b9c1
 msgid "Compute the square root of an integer number."
 msgstr ""
 
-#: ../../modules/math.md:461 c90b948825c94461b660806779f6d6b6
+#: ../../modules/math.md:461 55ea8eaad3c84dd1b86a88473d05c6b2
 msgid ""
 "**Score `$math.isqrt.x bs.in`**: Number you want to calculate the square "
 "root of."
 msgstr ""
 
-#: ../../modules/math.md:464 6f3ab6c5b76f4cd88dc61db680d9448e
+#: ../../modules/math.md:464 b8ec4cd91c794d6bbb8e85e1e8d1ebed
 msgid ""
 "**Return | Score `$math.isqrt bs.out`**: Floored result of the square "
 "root."
 msgstr ""
 
 #: ../../modules/math.md:467 ../../modules/math.md:490
-#: 6b49f7221e264f399e2f20bd29a84a3f fc2da345fd8440c3a23487a217e29992
+#: 312f02f6fbfd45fb9e49e9c4ec49be6d 7fc132dec70f4c4b993ccb39a90112f6
 #, python-brace-format
 msgid "*Example: Calculate and display $\\sqrt{42}$:*"
 msgstr ""
 
-#: ../../modules/math.md:481 cd0624d33ae14dde9aed4b40fa9d961f
+#: ../../modules/math.md:481 ec52805b79074eee8cf93b038837a809
 msgid "Compute the square root of a floating number."
 msgstr ""
 
-#: ../../modules/math.md:484 cdd993d3877647728c38846f987c3133
+#: ../../modules/math.md:484 f1f085ff2f3c4ffeb3d6ce2638d39055
 #, python-brace-format
 msgid ""
 "**Storage `bs:in math.sqrt.x`**: {nbt}`number` Number you want to "
 "calculate the square root of."
 msgstr ""
 
-#: ../../modules/math.md:487 8aa740bd87224c2c895bc45f5ec4e9da
+#: ../../modules/math.md:487 44825c3c80b54b0ab3d5caef16eb8991
 #, python-brace-format
 msgid "**Storage `bs:out math.sqrt`**: {nbt}`float` Result of the operation."
 msgstr ""
 
-#: ../../modules/math.md:502 0a9f936160984f8b9c7aab79ba8404da
+#: ../../modules/math.md:502 4b23b01523d9405ca4635f3873bc0584
 msgid "![](/_imgs/modules/math/sqrt.png)"
 msgstr ""
 
-#: ../../modules/math.md:508 84483f2b5cd449558564cfdfa0394098
+#: ../../modules/math.md:508 520354e6b2cc4e18af095a5e87fc7c96
 msgid "Trigonometry"
 msgstr ""
 
-#: ../../modules/math.md 9cb823ee616243539fb563c9b9701d72
+#: ../../modules/math.md b4085201240242d58ac5749d6b5532ce
 msgid "Acos"
 msgstr ""
 
-#: ../../modules/math.md:516 812ca358834e4c69ba69928b6c6a47ce
+#: ../../modules/math.md:516 2a8b7d4afb0a43568fca8f7c5079d12e
 msgid "Compute the arc cosine of a value between -1 and 1."
 msgstr ""
 
-#: ../../modules/math.md:519 cecc849c9cdb4a51be7c2c049ae08c61
+#: ../../modules/math.md:519 08cec242750f4a1391952f38e1b3a416
 msgid ""
 "**Score `$math.acos.x bs.in`**: Value you want to compute the arccosine "
 "of, shifted by 3 digits (1,2345 → 1234) for better precision in integer "
 "scores."
 msgstr ""
 
-#: ../../modules/math.md:522 72d18ef4a2334cf7bed271feae86aa82
+#: ../../modules/math.md:522 6a89cd796afb403fb2249a770ded8307
 msgid ""
 "**Return | Score `$math.acos bs.out`**: Result of the operation in "
 "degrees, shifted by 2 digits."
 msgstr ""
 
-#: ../../modules/math.md:525 3a7b1a7e299c4a25b827e94f9a6c64f8
+#: ../../modules/math.md:525 4ec9a008855b4688af3c29eb33ef0a0a
 msgid "*Example: Compute and display the arccosine of 0.42:*"
 msgstr ""
 
-#: ../../modules/math.md:534 82a687e500c4402ab8411d735fe46260
+#: ../../modules/math.md:534 c6f2b53acd14432d8575751dea413e34
 msgid "![](/_imgs/modules/math/arccos.png)"
 msgstr ""
 
-#: ../../modules/math.md 12adaf4d7421449096b06ea206e74b2f
+#: ../../modules/math.md 5cb68d6bdbd742909bf66cc5fbb0b179
 msgid "Asin"
 msgstr ""
 
-#: ../../modules/math.md:541 a5ff61c726fd41edaf9c2cb57cde8c3d
+#: ../../modules/math.md:541 a41ee13a15064cd08d5b04d09c050ab2
 msgid "Compute the arc sine of a value between -1 and 1."
 msgstr ""
 
-#: ../../modules/math.md:544 caed883c4cb54a1fb975e248a590b12e
+#: ../../modules/math.md:544 92738702cea544c7bc8f839f8d2fb8d3
 msgid ""
 "**Score `$math.asin.x bs.in`**: Value you want to compute the arcsine of,"
 " shifted by 3 digits (1,2345 → 1234) for better precision in integer "
 "scores."
 msgstr ""
 
-#: ../../modules/math.md:547 58127895c38e433583e737148cb45d47
+#: ../../modules/math.md:547 1128b90c580e44f9a28c91bdc5f96f8b
 msgid ""
 "**Return | Score `$math.asin bs.out`**: Result of the operation in "
 "degrees, shifted by 2 digits."
 msgstr ""
 
-#: ../../modules/math.md:550 bb602ddc43e947598684ece97c34b90d
+#: ../../modules/math.md:550 0a64cff3d1c8485f8bea6dff515609b7
 msgid "*Example: Compute and display the arcsine of 0.42:*"
 msgstr ""
 
-#: ../../modules/math.md:559 b277b0fe89d049af94888f3558ebcffc
+#: ../../modules/math.md:559 1a66d4616fea4f9e8a778fb62a07f513
 msgid "![](/_imgs/modules/math/arcsin.png)"
 msgstr ""
 
-#: ../../modules/math.md 540172253ab94e65bf57b0547956c42f
+#: ../../modules/math.md 98875786eaa144308d83b122bd417b1b
 msgid "Atan"
 msgstr ""
 
-#: ../../modules/math.md:566 7520a18b562a4a98977100db67a7e3b0
+#: ../../modules/math.md:566 32c6c93645cb4962b31c9b528abfa93a
 msgid "Compute the arc tangent of a value between -infinite and +infinite."
 msgstr ""
 
-#: ../../modules/math.md:569 96adf57a797e4c60b8869e2981347e50
+#: ../../modules/math.md:569 05cbf4e3fe93411995fcf554109e39f3
 msgid ""
 "**Score `$math.atan.x bs.in`**: Value you want to compute the arctangent "
 "of, shifted by 3 digits (1,2345 → 1234) for better precision in integer "
 "scores."
 msgstr ""
 
-#: ../../modules/math.md:572 f8c7394b79074e1da306acf8c1b1abf8
+#: ../../modules/math.md:572 9b4efaad72c9489b9563a0d7f6e3f6d2
 msgid ""
 "**Return | Score `$math.atan bs.out`**: Result of the operation in "
 "degrees, shifted by 2 digits."
 msgstr ""
 
-#: ../../modules/math.md:575 e8ba07ef4d3541009ceb4563bb3c35df
+#: ../../modules/math.md:575 e24b47eab6d64351afa219f0eef0a454
 msgid "*Example: Compute and display the arctan of 0.42:*"
 msgstr ""
 
-#: ../../modules/math.md:584 0df2433c8cdf429880301c00af8a3002
+#: ../../modules/math.md:584 2056e7c4b8e14a23a574109815c27d8a
 msgid "![](/_imgs/modules/math/arctan.png)"
 msgstr ""
 
-#: ../../modules/math.md dbd957219fd14a15a8054df7b6df47a3
+#: ../../modules/math.md 5d3c3012bb034ec8b9d991e7547055df
 msgid "Atan2"
 msgstr ""
 
-#: ../../modules/math.md:591 85f5e3b620714921b71b5781fec5b280
+#: ../../modules/math.md:591 91cd2aa614964510b193af0fa1432b77
 msgid "Compute the 2-argument arctangent of y and x."
 msgstr ""
 
-#: ../../modules/math.md:594 714eeb14f6a4430bbea0acb09544713d
+#: ../../modules/math.md:594 8910c69800ed4cd382ccbec9c43558b2
 msgid ""
 "**Scores `$math.atan2.[y,x] bs.in`**: Values you want to compute the "
 "arctangent of, shifted by 3 digits (1,2345 → 1234) for better precision "
 "in integer scores."
 msgstr ""
 
-#: ../../modules/math.md:597 ec49750c0df24e36a7aadd049e5f0f0e
+#: ../../modules/math.md:597 db186e8ec83e4fb89186a097c8a258dd
 msgid ""
 "**Return | Score `$math.atan2 bs.out`**: Result of the operation in "
 "degrees, shifted by 2 digits."
 msgstr ""
 
-#: ../../modules/math.md:600 2e2c57f75eb348d38d308c828e5a2dba
+#: ../../modules/math.md:600 cc22a334273b4cdf893265b58fe09265
 msgid "*Example: Compute and display the atan2 of (0.42, 0.8):*"
 msgstr ""
 
-#: ../../modules/math.md e81d22a5e374416b8553bd811c3c0294
+#: ../../modules/math.md 82044712004341eab83e0807799e833a
 msgid "Cos"
 msgstr ""
 
-#: ../../modules/math.md:615 f1084771fe0348a49a45c3cb8d199817
+#: ../../modules/math.md:615 cc240922bc794cec8594b96d75183aab
 msgid "Compute the cosine of an angle between 0 and 360."
 msgstr ""
 
-#: ../../modules/math.md:618 d4ee28309c114f3ebea1878293795e82
+#: ../../modules/math.md:618 964633db1feb4c5685dd4aa34478887c
 msgid ""
 "**Score `$math.cos.x bs.in`**: Angle in degrees shifted by 2 digits (ex: "
 "90.15 → 9015)."
 msgstr ""
 
-#: ../../modules/math.md:621 deb872861a3144ab84f477df8f471ad7
+#: ../../modules/math.md:621 4e850861eb2a4e1b86305f3e2fedf4c9
 msgid ""
 "**Return | Score `$math.cos bs.out`**: Cosine of the angle shifted by 3 "
 "digits (ex: 0.42 → 420)."
 msgstr ""
 
-#: ../../modules/math.md:624 28c58ece075844fba03271f2b37aee25
+#: ../../modules/math.md:624 6667aa48b018479aabac50b81e4119f3
 msgid "*Example: Compute and display the cosine of 42:*"
 msgstr ""
 
-#: ../../modules/math.md:633 e243365eff78488cba5a2d211295820e
+#: ../../modules/math.md:633 58823f70d6d543bbae19e26fd02a2353
 msgid "![](/_imgs/modules/math/cosine.png)"
 msgstr ""
 
 #: ../../modules/math.md:635 ../../modules/math.md:678
-#: 53ef215ad1bf44579b7ed5fe5af32074 ff65c61ca1d74c15b3899505e2ad835d
+#: 15ae167ebe094ef5883cc7f6a7b3ff5d 3f26995293ed4941a4f9cc247e362736
 msgid "How does it work?"
 msgstr ""
 
 #: ../../modules/math.md:638 ../../modules/math.md:681
-#: 1655233ca7154db0a9e115313eb45f45 c91a720eebb442c1abab0fbf0c6a3221
+#: 2b374f4f04384b888b6f860def034bae 8d4e2aed49f4440a9ec9365c77174f5d
 msgid "This function uses the Bhaskara approximation which tells us that"
 msgstr ""
 
 #: ../../modules/math.md:640 ../../modules/math.md:683
-#: 4c868a6dd9274cafbda4177beecce3df c25d30bd31a3477aa7ebd47f35bcf304
+#: 43c15d12d9ae443caa99aeac435bb1b2 d17abd06f75447ccaa4fc0eb93b0dd23
 #, python-brace-format
 msgid ""
 "\n"
@@ -742,126 +742,126 @@ msgid ""
 msgstr ""
 
 #: ../../modules/math.md:644 ../../modules/math.md:687
-#: 859699e34c1a4c4683aa3e6257d1b5fb e5b960b7f843491ab0cc2b56e2e166a8
+#: 4fefd5274b3942d3909662a048549b70 796b3ff75d2248718f7e08c8b2b34313
 msgid "From this relation, and using the properties"
 msgstr ""
 
 #: ../../modules/math.md:645 ../../modules/math.md:688
-#: 4e0eca253be84213bd8ac5ac6ca57123 eee47ab558cd4cf6bb28b24513e2a18a
+#: 9c2842cd978f4fdaa55b118053345ece b5cea6a30c2848389e2d56e6e90b20cb
 msgid "$\\sin(-x) = -\\sin(x)$ (antisymmetry)"
 msgstr ""
 
 #: ../../modules/math.md:646 ../../modules/math.md:689
-#: 124c9897e7bc498cb20d0c746b819f3c 29fcc0c475a5430aa27a301ae8462fa6
+#: 55a28160fc7446c88150877ef2f7b84c f99e8d838d004c00b02a033493d66188
 msgid "$\\sin(x+360) = \\sin(x)$ (periodicity)"
 msgstr ""
 
-#: ../../modules/math.md:648 768293f6396947bf8fd1f38cb8bcf1bb
+#: ../../modules/math.md:648 6db12db5e203402cbc951ffdc50403d7
 msgid "We can compute the sine of any angle and thus the cosine."
 msgstr ""
 
 #: ../../modules/math.md:650 ../../modules/math.md:693
-#: 459d56e410d84245ab81ccec2ada991c e36dae3316ea419ab1bfe13861dd7a0a
+#: 01184e855cf24c94bf87b91dcdbed966 bc86e5d5446c4e588b1414bc085c5247
 msgid "![](/_imgs/modules/math/bhaskara.png)"
 msgstr ""
 
-#: ../../modules/math.md 96ed0812a60e4d6da211705f99b34a13
+#: ../../modules/math.md a45daf1cfe8045e7867c3db8c594641e
 msgid "Sin"
 msgstr ""
 
-#: ../../modules/math.md:658 cbf9938f71c441e980dcdf4dfb680e69
+#: ../../modules/math.md:658 bf0c77f45fc04656a8dea7c832c82d88
 msgid "Compute the sine of an angle between 0 and 360."
 msgstr ""
 
-#: ../../modules/math.md:661 91694486f5ff4f31a550716ad92f7448
+#: ../../modules/math.md:661 62500ec1e83047479a965dc7e0bcfd4e
 msgid ""
 "**Score `$math.sin.x bs.in`**: Angle in degrees shifted by 2 digits (ex: "
 "90.15 → 9015)."
 msgstr ""
 
-#: ../../modules/math.md:664 5d42915405614a30bf6debdddab17f5c
+#: ../../modules/math.md:664 a119bff0b3ea42c9aa8bea9b29fdd652
 msgid ""
 "**Return | Score `$math.sin bs.out`**: Sine of the angle shifted by 3 "
 "digits (ex: 0.42 → 420)."
 msgstr ""
 
-#: ../../modules/math.md:667 7b8f3653e89448b8bc3f7f945c5dc293
+#: ../../modules/math.md:667 2e03d9e92b3e4840be0c6f46e905b0d6
 msgid "*Example: Compute and display the sine of 42:*"
 msgstr ""
 
-#: ../../modules/math.md:676 aa5dca8dcf2e4a538f12e7ea764f0951
+#: ../../modules/math.md:676 e6a2b88b40d246a780ebaf8c949cf6b6
 msgid "![](/_imgs/modules/math/sine.png)"
 msgstr ""
 
-#: ../../modules/math.md:691 00eb5399f6f54660b0d68adb7b4fd022
+#: ../../modules/math.md:691 70491fc5fdc2417c8a44f6ff17580692
 msgid "We can compute the sine of any angle."
 msgstr ""
 
-#: ../../modules/math.md 29f101b8108241fdad6bbd1051f34b9a
+#: ../../modules/math.md a72fec73e6994e7c96a51fbd2a96b1af
 msgid "Tan"
 msgstr ""
 
-#: ../../modules/math.md:701 dc8b531c35b548efa382fa3d4f5d2bda
+#: ../../modules/math.md:701 10ac80f587054183a4d56f7596062435
 msgid "Compute the tangent of an angle between 0 and 360."
 msgstr ""
 
-#: ../../modules/math.md:704 ed94e2c98f004f0cacff20792d124426
+#: ../../modules/math.md:704 4f2bc511c28f467aa3e2317486170549
 msgid ""
 "**Score `$math.tan.x bs.in`**: Angle in degrees shifted by 2 digits (ex: "
 "90.15 → 9015)."
 msgstr ""
 
-#: ../../modules/math.md:707 3e60e51e0c3c4d4b8c2486567d928e53
+#: ../../modules/math.md:707 ce6b92287d9f4e11b0709b9b715f8b9e
 msgid ""
 "**Return | Score `$math.tan bs.out`**: Tangent of the angle shifted by 3 "
 "digits (ex: 0.42 → 420)."
 msgstr ""
 
-#: ../../modules/math.md:710 f16d831747f64cdf97eb9aea1ecc02d4
+#: ../../modules/math.md:710 3fc2c976757b47c5ae6b69898f70b29b
 msgid "*Example: Compute and display the tangent of 42:*"
 msgstr ""
 
-#: ../../modules/math.md:719 b134a96173534112bed92c1646436ea8
+#: ../../modules/math.md:719 ae8c386e649242bf97130356623c569b
 msgid "![](/_imgs/modules/math/tangent.png)"
 msgstr ""
 
-#: ../../modules/math.md ee156122d2a4409ba1fbe77f98a17864
+#: ../../modules/math.md 2cdbf7482c3a4dd8bcad3559899f2ba3
 msgid "Sincos"
 msgstr ""
 
-#: ../../modules/math.md:726 d8584dbe1dc447009ae57da1724dd32f
+#: ../../modules/math.md:726 a9169502945547d38c1a18bed1f7ba14
 msgid ""
 "Compute both the sine and cosine of an angle between 0 and 360 in a "
 "single operation."
 msgstr ""
 
-#: ../../modules/math.md:729 00b82a41c5ca4e3a9f10ad2b98a95a47
+#: ../../modules/math.md:729 526c0e1b445e441394e7bdaa3c3fdc1d
 msgid ""
 "**Score `$math.sincos.x bs.in`**: Angle in degrees shifted by 2 digits "
 "(ex: 90.15 → 9015)."
 msgstr ""
 
-#: ../../modules/math.md:732 a2af2726895b48e0a15ea7ab9d6dffc8
+#: ../../modules/math.md:732 ebbd5ef3f0ae4c46bc3a0997323f36c2
 msgid ""
 "**Score `$math.sincos.cos bs.out`**: Cosine of the angle shifted by 3 "
 "digits (ex: 0.42 → 420)."
 msgstr ""
 
-#: ../../modules/math.md:734 d82048cd153d49eaadff52e379655828
+#: ../../modules/math.md:734 97c83c5e2d8f4ea18bd201a3e92518e8
 msgid ""
 "**Score `$math.sincos.sin bs.out`**: Sine of the angle shifted by 3 "
 "digits (ex: 0.42 → 420)."
 msgstr ""
 
-#: ../../modules/math.md:737 bb7f25af3386457a8f028b9f264489dc
+#: ../../modules/math.md:737 1440b1c3e3ea4ce5b8ac6d9e04a662e0
 msgid "*Example: Compute and display the sine and cosine of 42:*"
 msgstr ""
 
-#: ../../modules/math.md:747 06fa1a945e044cd7ad786eb1c592393e
+#: ../../modules/math.md:747 08728fa7996f4962bb5f1cfb15188373
 msgid "How does this method differ from cos and sin?"
 msgstr ""
 
-#: ../../modules/math.md:750 55ba2b19cb9f4f8a8a7437d2c8d5a704
+#: ../../modules/math.md:750 0739e7ea0a3a4d85a2201cbf2d9bba12
 msgid ""
 "This function utilizes Minecraft teleportation to calculate both the "
 "cosine and sine values. While it's slightly less efficient than calling "
@@ -869,15 +869,15 @@ msgid ""
 "operation."
 msgstr ""
 
-#: ../../modules/math.md:755 2e6f551980e14518874a77601db88b2c
+#: ../../modules/math.md:755 4b8e2d7235e242bd9d84625173b46dde
 msgid "**Credits**: Aksiome, KubbyDev, Leirof"
 msgstr ""
 
-#: ../../_templates/comments.md:4 7f1691e073474b828bf658cd3fb05084
+#: ../../_templates/comments.md:4 bcfd0ff54d8e4de3b10cfc6b9300202c
 msgid "**💬 Did it help you?**"
 msgstr ""
 
-#: ../../_templates/comments.md:6 d343f5b2d0d0460fa329e7a4f26d2078
+#: ../../_templates/comments.md:6 e61558a0c74d4e84a8ae53aa4505e43c
 msgid "Feel free to leave your questions and feedback below!"
 msgstr ""
 

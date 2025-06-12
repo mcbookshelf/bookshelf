@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,29 +19,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/generation.md:1 8bce32de09fd4ac0bec054aa7b29aade
+#: ../../modules/generation.md:1 c2567d3711ef44548af3d6a8c1e8cea4
 msgid "🏗️ Generation"
 msgstr ""
 
-#: ../../modules/generation.md:3 c918757d7fc444a89ad4f6480557f7a3
+#: ../../modules/generation.md:3 88c1114985d540e5b14231db896a03fc
 msgid "**`#bs.generation:help`**"
 msgstr ""
 
-#: ../../modules/generation.md:5 e360e918c730402eaf361ac58df5fff5
+#: ../../modules/generation.md:5 45fe0f57a6cf4744863f512dcb7e4629
 msgid "Generate diverse terrains and landscapes, incorporating natural features."
 msgstr ""
 
-#: ../../modules/generation.md:18 3215000b4f4f42fc9688194ac3ccf44f
+#: ../../modules/generation.md:18 d80121b0f34f4e73968245f63c2a46f2
 msgid ""
 "\"Nature's beauty is a reflection of the harmony of numbers and "
 "patterns.\""
 msgstr ""
 
-#: ../../modules/generation.md:19 50a57f1b64804e2aa8b24e3495ca15e4
+#: ../../modules/generation.md:19 7770af3f26ca452ab79a4a69e6515eac
 msgid "Anonymous"
 msgstr ""
 
-#: ../../modules/generation.md:23 783d00ae678e4dbb9885c3d0b30850f7
+#: ../../modules/generation.md:23 1ea90df72e2d4f589f92152ee1cc3ff7
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
 "sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
@@ -53,20 +53,20 @@ msgid ""
 "2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
 msgstr ""
 
-#: ../../modules/generation.md:33 8ae1034e7de04c208a1f4fc1da679814
+#: ../../modules/generation.md:33 f03e896e434b4cb99d08460ac786378c
 msgid "🔧 Functions"
 msgstr ""
 
-#: ../../modules/generation.md:35 dbf2e50f85e7462daa31e12621b3184f
+#: ../../modules/generation.md:35 a2f55562f235471b9a27ea3ac3c6544b
 msgid "You can find below all functions available in this module."
 msgstr ""
 
 #: ../../modules/generation.md ../../modules/generation.md:39
-#: b8acb35d2b7a4157aa168e1699a6f8e7 cf356b6907eb4ecb84e61f14a6bf6e33
+#: 4a39d960a95941ecae6e4daa4bf8e053 d988599907504962a0a06b46e96fa9e6
 msgid "Shape 2D"
 msgstr ""
 
-#: ../../modules/generation.md:47 9061c27c0db3489fa50853324995ec09
+#: ../../modules/generation.md:47 dbfb987719ad4e47b2234822e9976866
 msgid ""
 "Generate a shape in 2D space at the specified origin, with the callback "
 "executed at each step, allowing the user to handle the X and Y "
@@ -74,62 +74,62 @@ msgid ""
 msgstr ""
 
 #: ../../modules/generation.md:49 ../../modules/generation.md:77
-#: ../../modules/generation.md:108 1b2069215e124975b21e90c4903ad4ba
-#: b4e2065092284d66bde95c93979932bf e895b1965d62459bb5d628124f2833d0
+#: ../../modules/generation.md:108 724da535d14b4d9fb69af4d89b51095d
+#: 96a06edf9c724ae4baacd8656b01b6b6 f9f0859c14984981a944bd3327ffade7
 msgid "Inputs"
 msgstr ""
 
 #: ../../modules/generation.md:50 ../../modules/generation.md:78
-#: ../../modules/generation.md:109 bbd509e1ef7c4d58a9ad4c0c4c2aadda
-#: c98ddd51ad7242449fd777c7e43de223 fdb0b168972249598e4d2d90c92ae92e
+#: ../../modules/generation.md:109 df2072532c6c4257bbbb9e313a50183f
+#: eb08a30a708141afbbe6b527e7d04970 eec28c6051fd4fcf9ebb44351c1db004
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: "
 "Origin of the shape."
 msgstr ""
 
 #: ../../modules/generation.md:52 ../../modules/generation.md:80
-#: ../../modules/generation.md:111 26c52f6a0589431c853d40d08d2db348
-#: 45d1d617daef4db883f6484ad875514f cf7b692935a5415a8948ad276cc406bc
+#: ../../modules/generation.md:111 7b2a5853ef454f9a8719a4d565616b71
+#: a84e547ce8404cd4bd0715aa2124be58 fd9024bb74874b6dbe765b3c6a8dec07
 msgid "**Function macro**:"
 msgstr ""
 
 #: ../../modules/generation.md:66 ../../modules/generation.md:97
-#: ../../modules/generation.md:131 0c4f21436fa142b4ad7ee35e60a74d3c
-#: 0d6aee3d22fd49ef8f2b5b282b077188 6c7a58d884bd4e2bb2121b47c06c05f7
+#: ../../modules/generation.md:131 185add7f07c24f6dab0e64411d60dec7
+#: b24918dbd2a544ee8bf59e31ad850cf2 f53000cfdc244a409dbf171e80261994
 msgid "Outputs"
 msgstr ""
 
 #: ../../modules/generation.md:67 ../../modules/generation.md:98
-#: ../../modules/generation.md:132 1fbcc91d114a4765953d2a09e1f16f90
-#: 417b092d9cff40448ae0e29acfb13894 e83239cdbeef4badb6736b51c724a296
+#: ../../modules/generation.md:132 1193508f1f894f489aa8aa7ea331d8e7
+#: 3f214097a0094b939579a244dc81262f ba63a1994f604457ba20ff11d80a30cc
 msgid ""
 "**State**: The callback gets executed at the appropriate coordinates in "
 "the world."
 msgstr ""
 
-#: ../../modules/generation.md 7f8d2d7c44b84c588d7c38907f69da57
+#: ../../modules/generation.md 77b7a67d82444cca8cc24f3e1e72bbf1
 msgid "Simplex Shape 2D"
 msgstr ""
 
-#: ../../modules/generation.md:75 a847dfa788984792a9ec2edcb4ebf919
+#: ../../modules/generation.md:75 d3d29b72a8e34a9bba848eaf44ca71ab
 msgid ""
 "Generate a shape in 2D space using a Simplex noise algorithm. The shape "
 "is generated at the specified origin, with the callback executed at each "
 "step to facilitate custom behavior during the generation process."
 msgstr ""
 
-#: ../../modules/generation.md 3b3be0b2a46e420182552abe3106cf3d
+#: ../../modules/generation.md fd60f909c1074e2c87a2201353b8611e
 msgid "Fractal Shape 2D"
 msgstr ""
 
-#: ../../modules/generation.md:106 9930885a4a444da6b3d4238406ae639f
+#: ../../modules/generation.md:106 791f5cc1d02e4682b51b19885b7bd12c
 msgid ""
 "Generate a shape in 2D space using a Fractal noise algorithm. The shape "
 "is generated at the specified origin, with the callback executed at each "
 "step to facilitate custom behavior during the generation process."
 msgstr ""
 
-#: ../../modules/generation.md:137 2860414e6a2341219889c59ad4ddceb4
+#: ../../modules/generation.md:137 d8033982e90b486ab5c8e3e63c86b1b5
 msgid ""
 "*Example: Generate a 3D terrain using a heightmap. This function employs "
 "a linear approach; for more interesting terrain, consider scaling the "
@@ -138,15 +138,15 @@ msgid ""
 "terrain generation:*"
 msgstr ""
 
-#: ../../modules/generation.md:152 be92ea9a668c4f4382359cde7f78efbb
+#: ../../modules/generation.md:152 8ef49a296041412086af050d06e6cf1a
 msgid "**Credits**: Aksiome"
 msgstr ""
 
-#: ../../_templates/comments.md:4 c16f853c02d94540a7197b12c8d640e3
+#: ../../_templates/comments.md:4 a7f0f2ff48cd4ac4aaf62876b6896c2c
 msgid "**💬 Did it help you?**"
 msgstr ""
 
-#: ../../_templates/comments.md:6 06b5fe75dee242abbd1412e0e627e6f7
+#: ../../_templates/comments.md:6 5940979a78f144eb80d4ddea2c716217
 msgid "Feel free to leave your questions and feedback below!"
 msgstr ""
 

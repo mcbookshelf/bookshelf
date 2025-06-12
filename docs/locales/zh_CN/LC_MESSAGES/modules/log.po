@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,23 +19,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/log.md:1 3a1493519b0d4baf849791d2e767c47d
+#: ../../modules/log.md:1 d04fc4fe477c429ba35b020956c51a4d
 msgid "📄 Log"
 msgstr ""
 
-#: ../../modules/log.md:3 7e8fba1749484eefa01077a6df83ee8b
+#: ../../modules/log.md:3 78241d59b2314775a88e78fac507e4f0
 msgid "**`#bs.log:help`**"
 msgstr ""
 
-#: ../../modules/log.md:5 34877bab1b104434aa67504ad0c3824a
+#: ../../modules/log.md:5 87cdef1e031a47329e617820d9ee8dc2
 msgid "Log messages in the chat with varying levels of severity."
 msgstr ""
 
-#: ../../modules/log.md:7 cc57bcb2d8df4730a7a4405b1e01f0d8
+#: ../../modules/log.md:7 35036edb98e94dd4849c0a3792ec32e9
 msgid "Enable Command Blocks"
 msgstr ""
 
-#: ../../modules/log.md:10 a44a105d40f349cc963a48f05662864f
+#: ../../modules/log.md:10 e5a409ab74594b5eac6ce3dc3d5da1bb
 msgid ""
 "This module uses a command block to get the system time. For the time to "
 "be displayed as intended, be sure that `enable-command-block` is set to "
@@ -43,23 +43,23 @@ msgid ""
 "`sendCommandFeedback` gamerule is enabled."
 msgstr ""
 
-#: ../../modules/log.md:15 d4b41b2c967845abaad7672a6337bf23
+#: ../../modules/log.md:15 3244593a93534b03a587face75241c5b
 msgid "🔧 Functions"
 msgstr ""
 
-#: ../../modules/log.md:17 b28ff4c388cd46dab58c885b85a24410
+#: ../../modules/log.md:17 8d33d6892b704e8aa7cb542c3e4eacfe
 msgid "You can find below all functions available in this module."
 msgstr ""
 
-#: ../../modules/log.md:21 2cf67afd724346bab02e23c148767872
+#: ../../modules/log.md:21 19900019b8d94caeaf7fb2b34dfcab03
 msgid "Log Messages"
 msgstr ""
 
-#: ../../modules/log.md 7b395f3c3295469eb12268d6af2eb888
+#: ../../modules/log.md d266aceba3614fe3af000974ec84e0a7
 msgid "Error"
 msgstr ""
 
-#: ../../modules/log.md:29 e89ecc5aaaec4a95bf43ea83e8e0ee38
+#: ../../modules/log.md:29 a1164ba339fc4c5a93dae5ac9d617193
 msgid ""
 "Log an error message. For more information on how it works see the "
 "[usage](#usage) section. By default, it's printed as: [ERROR] <tag> > "
@@ -69,31 +69,31 @@ msgstr ""
 
 #: ../../modules/log.md:31 ../../modules/log.md:55 ../../modules/log.md:79
 #: ../../modules/log.md:103 ../../modules/log.md:136 ../../modules/log.md:161
-#: 0772f36b8aa8485c95fe308ebff88c9e 4ff6c008a6a242d5b83b35da15c436db
-#: 7bb15776453d431a90dc7053f70e3c3d 88c0b6f6e0d44b2298c0c8c99b385d57
-#: acccd72fc6a24b4594cc912810661648 cdef7b0cfefa4f68b0b640a08eb3e69e
+#: 1e2ef24b731b43bc932105f58f4ce9c3 489f5afde7644aef88e1c3b735dad2cf
+#: 66de5082d28f48fbb32b99950bfbeb63 8e237c52e50d4eaba21ac8d7c857aad1
+#: 9fc8f00f1cc74588ac5aac0fb9c7a48b d5c7a40aa3a3435e902a95f6fafe8906
 msgid "Inputs"
 msgstr ""
 
 #: ../../modules/log.md:32 ../../modules/log.md:56 ../../modules/log.md:80
 #: ../../modules/log.md:104 ../../modules/log.md:137 ../../modules/log.md:162
-#: 4adb74dfc02d43e1aec5461ed37ede80 5069bc093cff4e6eb861faeba2fa1d06
-#: 659efd8e534a48be8f0ae961da2554e2 8d1f9d10731e486992b62b148a95d699
-#: c4b0db1c1621481ea8b2b91632f53267 ed4b5affd76142388369a4fc7f693514
+#: 747962a3bfee4a81935360f6218727dd 7e513215c2724e8f81606ec52233257a
+#: 86214e68898c43048f69f4ca06632e62 984df6bd743e42efac8af6975ca50fb0
+#: bf9aed5249654348a6f13b69131e4480 d8c0f74c182c4bb483ea3458badeb925
 msgid "**Function macro**:"
 msgstr ""
 
-#: ../../modules/log.md:42 f2b0979245dd4ea09771188928f3be13
+#: ../../modules/log.md:42 64f83e91b7d34d75b4a568c0f5998d20
 msgid ""
 "*Example: Log an error message that originates from the `bs.foo:bar` "
 "function:*"
 msgstr ""
 
-#: ../../modules/log.md e61b030664604a28b41d1cdb011a1c8d
+#: ../../modules/log.md 10e8295e5a9b4257a2dfd7c7b03a0c85
 msgid "Warning"
 msgstr ""
 
-#: ../../modules/log.md:53 5b7c822cf3da40ef898bc85cc801d739
+#: ../../modules/log.md:53 700e44eef673474f9b69de5332acc462
 msgid ""
 "Log a warning message. For more information on how it works see the "
 "[usage](#usage) section. By default, it's printed as: [WARN] <tag> > "
@@ -101,17 +101,17 @@ msgid ""
 "timestamp and log function path."
 msgstr ""
 
-#: ../../modules/log.md:66 c0f029ea16a64b32b12fedfadd13d171
+#: ../../modules/log.md:66 2fb682371cf248849a60671e1610d5b3
 msgid ""
 "*Example: Log a warning message that originates from the `bs.foo:bar` "
 "function:*"
 msgstr ""
 
-#: ../../modules/log.md fbbea5dc739e48639fed24a514389c4b
+#: ../../modules/log.md 49444c1bc5d44cc5845dabf27e6c489b
 msgid "Information"
 msgstr ""
 
-#: ../../modules/log.md:77 1564e053d25d41508bb63ac5adde0ca7
+#: ../../modules/log.md:77 e767199e3b8b4cee85410983403cc264
 msgid ""
 "Log an information message. For more information on how it works see the "
 "[usage](#usage) section. By default, it's printed as: [INFO] <tag> > "
@@ -119,17 +119,17 @@ msgid ""
 "timestamp and log function path."
 msgstr ""
 
-#: ../../modules/log.md:90 6969ff08ed534588a119923f737ef624
+#: ../../modules/log.md:90 7c3438c8a53947d4a0652dd2f5d72ddd
 msgid ""
 "*Example: Log an info message that originates from the `bs.foo:bar` "
 "function:*"
 msgstr ""
 
-#: ../../modules/log.md 0156a5129ede4a7daec1e6959288065e
+#: ../../modules/log.md f2de7679ce114f05a3e0345cc8e4b052
 msgid "Debug"
 msgstr ""
 
-#: ../../modules/log.md:101 d3fc69c346ec436f9ec912e69cc4201e
+#: ../../modules/log.md:101 45311748ff644146b0378a654889830a
 msgid ""
 "Log a debug message. For more information on how it works see the "
 "[usage](#usage) section. By default, it's printed as: [DEBUG] <tag> > "
@@ -137,146 +137,146 @@ msgid ""
 "timestamp and log function path."
 msgstr ""
 
-#: ../../modules/log.md:114 1d20407433744e1fa6802e2fb91b61ef
+#: ../../modules/log.md:114 641378a941024fac91d0e081887c91c6
 msgid ""
 "*Example: Log a debug message that originates from the `bs.foo:bar` "
 "function:*"
 msgstr ""
 
-#: ../../modules/log.md:122 ef9ddcf8e68d40fca5d482b0cec810a1
+#: ../../modules/log.md:122 448d9029ebcd4542a7e3dd56bd57abc9
 msgid "**Credits**: theogiraudet"
 msgstr ""
 
-#: ../../modules/log.md:126 b5f98d070ef94784831c65aed93f516b
+#: ../../modules/log.md:126 45cfce2ea509472392699fb637876941
 msgid "Log History"
 msgstr ""
 
-#: ../../modules/log.md ec966b6678bf4aff853db7367873139c
+#: ../../modules/log.md 448e74ba50364d919dbce760161d90ad
 msgid "View History"
 msgstr ""
 
-#: ../../modules/log.md:134 fa317aa6b4f64ad2aece48b4ef63f45d
+#: ../../modules/log.md:134 0caa232c04d5451caa817e260f565b95
 msgid "Retrieve the log history. It shows all the previously logged messages."
 msgstr ""
 
-#: ../../modules/log.md:147 f802a06c91aa4dd583ec1669f776ae01
+#: ../../modules/log.md:147 a4e4a02c9bbd42f1a8b70a186d342b46
 msgid ""
 "*Example: View the log history for a specific namespace, tag, and "
 "severity level:*"
 msgstr ""
 
-#: ../../modules/log.md 64b5b0807710410b97e71b35a4886b14
+#: ../../modules/log.md a2541a94b7724090b3d4a5be7bd6ff29
 msgid "Clear History"
 msgstr ""
 
-#: ../../modules/log.md:159 49c2b0101e174273ac4f218c72d8173a
+#: ../../modules/log.md:159 fc9a4099ddc04d04a5c9d78cd0f2ae4b
 msgid "Clear the log history."
 msgstr ""
 
-#: ../../modules/log.md:172 fc5fdd3ef8614c0ca971e2ed06d37eed
+#: ../../modules/log.md:172 bf0994c2bd73413b8a8c85851029a84c
 msgid ""
 "*Example: Clear the log history for a specific namespace, tag, and "
 "severity level:*"
 msgstr ""
 
-#: ../../modules/log.md:181 bdd7c60e87f04686bb66438b055c1dd6
+#: ../../modules/log.md:181 f6eb5809d3554907aac080946122ea67
 msgid "**Credits**: Aksiome"
 msgstr ""
 
-#: ../../modules/log.md:186 45880100040c49d289803ced982697ce
+#: ../../modules/log.md:186 e06bfeba42484435b1a68db2275ddf63
 msgid "🎓 How to Use?"
 msgstr ""
 
-#: ../../modules/log.md:188 b1f6ef321f304d518ef5035015e263d1
+#: ../../modules/log.md:188 5d1e2a3a03014c3ab83503733c0ab53b
 msgid "Different log levels are available for various types of logs:"
 msgstr ""
 
-#: ../../modules/log.md:189 cac58f0a4a76493e8995df2349f77a0f
+#: ../../modules/log.md:189 4711eb58b9ac40e3b7035d15a6480ebb
 msgid "**Debug**: Detailed debug information."
 msgstr ""
 
-#: ../../modules/log.md:190 0d01bc8147c247e59468ea1011c6c782
+#: ../../modules/log.md:190 14b305c797064bee9b1dc5ce032868b9
 msgid "**Information**: Interesting / significant events."
 msgstr ""
 
-#: ../../modules/log.md:191 8f00e311e7e841f9bce941803820e6b5
+#: ../../modules/log.md:191 2665d6d679474f0594032f9afaffc291
 msgid "**Warning**: Exceptional occurrences that are not errors."
 msgstr ""
 
-#: ../../modules/log.md:192 9f26ab22cf924c7d96a204c412ad04c6
+#: ../../modules/log.md:192 3f94d5baa40547d1a06f35d332377d3d
 msgid "**Error**: Runtime errors that should be monitored and fixed."
 msgstr ""
 
-#: ../../modules/log.md:196 7db72b6be0fb4e7c89cb81bdbb4464de
+#: ../../modules/log.md:196 17479e6e0e164f33bbc68c807982be5b
 msgid "Manage Granularity"
 msgstr ""
 
-#: ../../modules/log.md:198 c94522dbf0bb4a8ea90331dd1198cfed
+#: ../../modules/log.md:198 cfb74a27d1444526b73e3b42eba4e664
 msgid ""
 "A significant number of logs can quickly flood the chat. To prevent this,"
 " Bookshelf's log module can be configured to display specific logs based "
 "on two parameters: the **log level**, the **tag** and the **namespace**."
 msgstr ""
 
-#: ../../modules/log.md:200 ed9a0642597040cd88b190b5af612282
+#: ../../modules/log.md:200 13c9dca6d2e9421eb1feeb5d1af73cad
 msgid ""
 "Users need to give themselves tags that follow a strict syntax: "
 "`<namespace>.log.<tag>.<level>`, where the level can be `debug`, `info`, "
 "`warn`, or `error`."
 msgstr ""
 
-#: ../../modules/log.md:202 fd1aaac1a2d04194bb9b9f3584a15029
+#: ../../modules/log.md:202 19321c0b76bb4b07ae000dca3b023e4f
 msgid "The `_` symbol acts as a wildcard, logging all tags or all levels:"
 msgstr ""
 
-#: ../../modules/log.md:203 8612e3a6f44a4dd4a74c88c1730cc6dc
+#: ../../modules/log.md:203 4ba5c9dda83a4ccba26f81561f3bd70e
 msgid "`bs.foo.log._.<level>`: show all logs of `bs.foo` regardless of the tag."
 msgstr ""
 
-#: ../../modules/log.md:204 ab138342337f495da46ead20dcbec596
+#: ../../modules/log.md:204 1e9fb22a449f47a4ae485ba12613dd3d
 msgid "`bs.foo.log.<tag>._`: show all logs of `bs.foo` regardless of the level."
 msgstr ""
 
-#: ../../modules/log.md:205 cf500dfcfc3f4d728ca5684c37e18aca
+#: ../../modules/log.md:205 02302aa21b2446c7b97559dd5a94aeda
 msgid "`bs.foo.log._._`: show all logs of `bs.foo`."
 msgstr ""
 
-#: ../../modules/log.md:206 b5bbcb588a164a6b882067ad90a77463
+#: ../../modules/log.md:206 b3e7fa55ff3c46baaa26a22d74452d35
 msgid "`_.log._._`: show all logs."
 msgstr ""
 
-#: ../../modules/log.md:209 6428eece2d6c473a8d235bf64dbf1029
+#: ../../modules/log.md:209 359755d11d2642c69f53e97a91f8d8fc
 msgid ""
 "Each level allows the visualization of subsequent levels. For example, if"
 " a user gives themselves a tag ending with warn, they can visualize logs "
 "of warn and error levels. By default, logs are not displayed to any user."
 msgstr ""
 
-#: ../../modules/log.md:214 548ea149e106403ea9dc0daaf6c1e8e0
+#: ../../modules/log.md:214 330f4c0e81b745d884317d99d06cb3c3
 msgid "Define the Message"
 msgstr ""
 
-#: ../../modules/log.md:216 0e0ce396f4014267b05539507c8282ce
+#: ../../modules/log.md:216 0c23209495794d20a10e8f8ac6861f16
 msgid ""
 "Log functions take four variables as input. The `path` of the current "
 "function that inform users of the log origin, the `tag`, the `namespace` "
 "and the `message`."
 msgstr ""
 
-#: ../../modules/log.md:219 f660860d8acc4c80a55f894cc3940573
+#: ../../modules/log.md:219 8095afcee6864b5aa41d3d82f0d96114
 msgid ""
 "The `message` string must be a valid SNBT text component. Thus, to "
 "specify a plain string text as a message, the message needs to be escaped"
 "  (`\"\\\"message\\\"\"` or `'\"message\"'`)."
 msgstr ""
 
-#: ../../modules/log.md:222 d135216c9d6145288ae2a16b592d1878
+#: ../../modules/log.md:222 47d428bb134745748e725431b1da6137
 msgid ""
 "*Example: Log a simple warning message. We assume the log originates from"
 " the `bs.foo:bar` function:*"
 msgstr ""
 
-#: ../../modules/log.md:228 e1b824373a594dfcac5293ef08e2ee0c
+#: ../../modules/log.md:228 54fccb418dc64731862652721a0415f0
 msgid ""
 "Will display the following message if the user has one of these tags: "
 "`bs.foo.log.bar.warn`, `bs.foo.log.bar.info`, `bs.foo.log.bar.debug`, "
@@ -286,17 +286,17 @@ msgid ""
 "`_.log._._`, `_.log.bar._`."
 msgstr ""
 
-#: ../../modules/log.md:230 af90d2a6e3994d8fb725b8d4d5c6cfe7
+#: ../../modules/log.md:230 f048455b35294757a9e7fa67de3f9d70
 msgid "![](/_imgs/modules/log/example-1.png)"
 msgstr ""
 
-#: ../../modules/log.md:232 ae58191006454e3496fac15c49f52915
+#: ../../modules/log.md:232 3ccae87b9d5d4dc480765426d41871c0
 msgid ""
 "*Example: Log a complex info message. We assume the log originates from "
 "the `bs.foo:baz` function:*"
 msgstr ""
 
-#: ../../modules/log.md:238 dde40da7359c47819f20ce03900ffa75
+#: ../../modules/log.md:238 e5edeb25052744dabfe80d22b01246f1
 msgid ""
 "Will display the following message if the user has one of these tags: "
 "`bs.foo.log.baz.info`, `bs.foo.log.baz.debug`, `bs.foo.log._.info`, "
@@ -304,22 +304,22 @@ msgid ""
 "`_.log.baz.debug`, `_.log._.info`, `_.log._.debug`, `_.log.baz._`."
 msgstr ""
 
-#: ../../modules/log.md:240 cf2863090dc846a88ff71fa9edfd52a4
+#: ../../modules/log.md:240 4176aad44f004e71b8cbb2b878b5a7f7
 msgid "![](/_imgs/modules/log/example-2.png)"
 msgstr ""
 
-#: ../../modules/log.md:242 67c08b593bad410d87db5ff4a0d54624
+#: ../../modules/log.md:242 ccbf3d4a8b904d8b99feb613794e0c1c
 msgid "Customize the Format"
 msgstr ""
 
-#: ../../modules/log.md:244 e02130045c74416494defcfa2917a877
+#: ../../modules/log.md:244 5c3710862050466f9e74728e8ec7e593
 msgid ""
 "Bookshelf proposes to define different log message formats according to "
 "the namespace. To add new log message formats, you have to write directly"
 " inside the storage array `bs:const log.messages`:"
 msgstr ""
 
-#: ../../modules/log.md:260 869432e8b64f480a9c40ef201fcdf35e
+#: ../../modules/log.md:260 0910ff7ce2ce4dd888e7083cf51aecc7
 msgid ""
 "The `namespaces` array stores all the namespaces sharing the same log "
 "message formats. The four formats (`error`, `warn`, `info` and `debug`) "
@@ -327,153 +327,153 @@ msgid ""
 "each must be a full SNBT text component."
 msgstr ""
 
-#: ../../modules/log.md:264 6f43a8cd389e4eeca24aa74cf114348a
+#: ../../modules/log.md:264 87085d2cac814f8098cb7d5093af1277
 msgid ""
 "Bookshelf exposes several values that can be used directly in the log "
 "messages format:"
 msgstr ""
 
-#: ../../modules/log.md:247 3cf4183e776e489a8d3a946d47801313
+#: ../../modules/log.md:247 d98d3103fdbe49ea8a5927ac227162e5
 msgid "storage"
 msgstr ""
 
-#: ../../modules/log.md:247 cada4a9df93f418aa803b366d75eae10
+#: ../../modules/log.md:247 8d694cb7f39c45908969474095302417
 msgid "path"
 msgstr ""
 
-#: ../../modules/log.md:247 4d1a7fed83384007832eec81c66f24b8
+#: ../../modules/log.md:247 42c0f37aea21408fb6bf8044020e695b
 msgid "description"
 msgstr ""
 
-#: ../../modules/log.md:247 01de977adec9469f80de67ccf0a0a98f
-#: 0863f1c688cb420f9449f0095583600d 18e029909ab448dfb06cf43d13242175
-#: 3a764f7e6a944aa0b3d2c964127c3222 74dda176a39a4342b9a71cfba1306918
-#: a5cd5335fce449e28cc1faa571b07ccc ac7aaf4d428f43e68daaf15e98ee1602
-#: d0f32ce37c4845ff9c75f40b028fe883 e42bc651bbf043c0bfbdd889d0a72388
-#: fe5513aee0814eb488e3444d6b8b95a1
+#: ../../modules/log.md:247 161ab7358a014634aab5b3a76ee09476
+#: 1d580cbaed8b4c9e9614c98bd1f17fd1 1ea378ffd59545f4b0c563a10e5ce61d
+#: 1eb13bf18edb440cba91ef2c3419cc8f 90aa430c9d234be0b1ea3776683805d5
+#: 9325e96062274faaa0795cc9b66f8254 c0703a26ac1740949d3da6d57f397f08
+#: c2999f16bcd84ac2af2a620a49ba7fcf d01d72ebffab47389bc127cafc0714bb
+#: f821a7cac7094a618009de98ccc80365
 #, python-brace-format
 msgid "{nbt}`string`"
 msgstr ""
 
-#: ../../modules/log.md:247 357c86cd639c40f39e2d39cd98e40e04
-#: 5b345e5ea5554223af6d6fc9118124a1 a5c4727ee5b240a484beed87257fdbbb
-#: b402884fef6d47e8b4793dd8966b0080 b5178caa77a147f29aab026b531a2185
-#: e1136e6415944411999d5b42215c94ea eae2cb92334a4092a2def8e5c8da099d
-#: faa9428083e4450888e6a047ca67e8a9 fbcb1c6266584af1bdb9dac36499e622
+#: ../../modules/log.md:247 0c8d1f587f31426984bdf028936f1e80
+#: 2d5534375e3d4f2ba7e52406499c0a56 42ef71c7289243a3a8e03980f26e0599
+#: 4f9f89d6e6e546f1811ad770e19eaff3 708f2bd359934767bc634a58ddccfbf6
+#: a1824dbf05ce47b391dd0b8c6159488d aaa02cd1d50a46439a260ac5f046753b
+#: b33564525e2d42faba2edc2c6c6cf8d9 dedfc2ee56a84febabf313d6f12f7c7c
 msgid "bs:in"
 msgstr ""
 
-#: ../../modules/log.md:247 31bc0ca342aa499e89a6c49ce7509c12
+#: ../../modules/log.md:247 d1b1f375470c43f9994ce06901f2d4e0
 msgid "log.message"
 msgstr ""
 
-#: ../../modules/log.md:247 f9124352fc34411b8d0e53c97262a5cc
+#: ../../modules/log.md:247 3f454b180a924c25bdcb3446bbfe167b
 msgid "The message of the log (must be a valid SNBT text component)"
 msgstr ""
 
-#: ../../modules/log.md:247 65f8440e4bb84279aaf2e66d02ae332a
+#: ../../modules/log.md:247 9e45ed480d4b4de98ef53de742529d23
 msgid "log.namespace"
 msgstr ""
 
-#: ../../modules/log.md:247 e3093dfb157748cc9abed243baf50c42
+#: ../../modules/log.md:247 2037324891a4482cb587578a6c6236a5
 msgid "The namespace of the current log message"
 msgstr ""
 
-#: ../../modules/log.md:247 7044187dc1494128af1c331a7978a126
+#: ../../modules/log.md:247 12784fe5e5e2479486de8d36328a26ab
 msgid "log.path"
 msgstr ""
 
-#: ../../modules/log.md:247 9773e2bf4b8148698261bd2ab54b49f5
+#: ../../modules/log.md:247 d6b7c52fdbbb49ba993d189509089eca
 msgid "The path of the function that logs the current message"
 msgstr ""
 
-#: ../../modules/log.md:247 3a251dbdb28b42b4ba1358cb271f379c
+#: ../../modules/log.md:247 dc78b2441b714485839f6f16a382b87b
 msgid "log.tag"
 msgstr ""
 
-#: ../../modules/log.md:247 8d8d3cf275874d5290a91603e90126c6
+#: ../../modules/log.md:247 cd873314c93d4ffebcd8b73eb09e120b
 msgid "The tag of the log message"
 msgstr ""
 
-#: ../../modules/log.md:247 46b2cbb5ddba40dd8bd8c64aaec7ff76
+#: ../../modules/log.md:247 6a2158bcd2a54c4b9c5b15e06cbcdaf2
 msgid "log.hours"
 msgstr ""
 
-#: ../../modules/log.md:247 701c1dcd106643509fb0167c85bc0212
+#: ../../modules/log.md:247 caea7071f0d24cf1a43788411bf4e150
 msgid "The hours of the log message timestamp"
 msgstr ""
 
-#: ../../modules/log.md:247 abe31f47c85d426cb20cecb0f7ce97cc
+#: ../../modules/log.md:247 c6c24ea722254c6596b4e7f10476d170
 msgid "log.minutes"
 msgstr ""
 
-#: ../../modules/log.md:247 050ea5d83bd64faa9e7e39eaa59cc92e
+#: ../../modules/log.md:247 d0edacbf063d42abac0b5212d8519045
 msgid "The minutes of the log message timestamp"
 msgstr ""
 
-#: ../../modules/log.md:247 67abc4270a644a21b120b47ecf043fe7
+#: ../../modules/log.md:247 33275e1467e14d2d8fc5e2f188cbda8a
 msgid "log.seconds"
 msgstr ""
 
-#: ../../modules/log.md:247 5c5fc77e5e2142a0b9feadfbf5043bd5
+#: ../../modules/log.md:247 2d152353982a428aa20c9eee1f9eb9f8
 msgid "The seconds of the log message timestamp"
 msgstr ""
 
-#: ../../modules/log.md:247 160afc42ad8c4912a18570923cea6bf5
+#: ../../modules/log.md:247 22c3330074594fe8ab64633ace9b4f40
 msgid "log.ticks"
 msgstr ""
 
-#: ../../modules/log.md:247 fd6849b68c99457792a10e6341b24439
+#: ../../modules/log.md:247 5bf6ae866e334d5f88ad607e36af187f
 msgid "The ticks of the log message timestamp"
 msgstr ""
 
-#: ../../modules/log.md:247 0ee4419c751b4ef59a46a255f89be064
+#: ../../modules/log.md:247 a9e64f08ccc545d9bc09ee92f61c8cf7
 #, python-brace-format
 msgid "{nbt}`int`"
 msgstr ""
 
-#: ../../modules/log.md:247 e567e76d60144da68698ae1f4158be94
+#: ../../modules/log.md:247 86ec818a528f481b828f8292804c1499
 msgid "log.gametime"
 msgstr ""
 
-#: ../../modules/log.md:247 aa22bd8f555d4099ba24a81c69f8416a
+#: ../../modules/log.md:247 858c7f033fc642c79b3b0450626f4757
 msgid "The gametime where the message was logged"
 msgstr ""
 
-#: ../../modules/log.md:247 514e45b9332d491693509a905850c2a7
-#: 81ff27d80ab54d52a242d07288f4cdbd
+#: ../../modules/log.md:247 b20fd7ab16984046b3cdd8b5fc8b8d32
+#: cde1748dee864514b6b1250f2ba69594
 msgid "bs:const"
 msgstr ""
 
-#: ../../modules/log.md:247 ababa03181544238a3732ece765d51aa
+#: ../../modules/log.md:247 9f927ef0df2c4361aae485780a4da504
 msgid "log.time_hms"
 msgstr ""
 
-#: ../../modules/log.md:247 4e74c2ba6b0c4d22967b1dd80eb18d4b
+#: ../../modules/log.md:247 96de954d13e64c11a6ad4761e9a01298
 msgid "A SNBT text component to display time in the in hh:mm:ss format"
 msgstr ""
 
-#: ../../modules/log.md:247 58717bd6b7f04f91b4f89191d0b62648
+#: ../../modules/log.md:247 a49ba9f6765c4680aa75dac816c8ec26
 msgid "log.time_hmst"
 msgstr ""
 
-#: ../../modules/log.md:247 b431523edf414c98ab3e0dd737e7d2e9
+#: ../../modules/log.md:247 6b118c390398467987ecbb8fde550190
 msgid "A SNBT text component to display time in the in hh:mm:ss:tt format"
 msgstr ""
 
-#: ../../modules/log.md:280 de0d91e96b1f4ced9f7947900bf12ea3
+#: ../../modules/log.md:280 3127dc664c4a47c2ad23a6a58d95fd6c
 msgid "*Example: Define custom log message formats for the namespace `bs.foo`:*"
 msgstr ""
 
-#: ../../modules/log.md:295 15223f3da0e3400598c2663daf7c6b83
+#: ../../modules/log.md:295 1e81b16ef4cb4a25ae6bb417928d78ba
 msgid "And to try the new format:"
 msgstr ""
 
-#: ../../_templates/comments.md:4 9fbc1505536b40109f8ecf50fb003174
+#: ../../_templates/comments.md:4 6da9903bdd104a158a0871cda2881462
 msgid "**💬 Did it help you?**"
 msgstr ""
 
-#: ../../_templates/comments.md:6 4c276fca267b4b58906080a1f7b2f941
+#: ../../_templates/comments.md:6 7b45539f723141b89f5c3a23addb3fd7
 msgid "Feel free to leave your questions and feedback below!"
 msgstr ""
 

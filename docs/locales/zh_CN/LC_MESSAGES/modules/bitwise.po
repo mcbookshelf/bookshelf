@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,243 +19,243 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/bitwise.md:1 dd181db3b7434265adb437676962ea9b
+#: ../../modules/bitwise.md:1 292ff543e1ef490fa3122c9184fe6142
 msgid "🖥️ Bitwise"
 msgstr ""
 
-#: ../../modules/bitwise.md:3 8884e385ce084b55b95ac521cb6121c0
+#: ../../modules/bitwise.md:3 aaf11adff56f4e38b882554145996447
 msgid "**`#bs.bitwise:help`**"
 msgstr ""
 
-#: ../../modules/bitwise.md:5 b80dd804812242068eebb7ec5a265745
+#: ../../modules/bitwise.md:5 d2c24512c92448c19f0c4666062b5dae
 msgid ""
 "A collection of various bitwise operations, providing versatile tools for"
 " manipulating binary data."
 msgstr ""
 
-#: ../../modules/bitwise.md:18 40e82261ac114ad3b5ac10b6f7baf7cf
+#: ../../modules/bitwise.md:18 aa17ea7252404c31976e2edb6a9db68f
 msgid ""
 "\"Binary is a very simple numbering system, but it is incredibly powerful"
 " when used correctly.\""
 msgstr ""
 
-#: ../../modules/bitwise.md:19 ada7a3a66ce14f5ea502053425977eff
+#: ../../modules/bitwise.md:19 1be1a309a6d243d893cfa2663cdde32d
 msgid "Alan Turing"
 msgstr ""
 
-#: ../../modules/bitwise.md:25 4b084218b3ee4c349c94686201481627
+#: ../../modules/bitwise.md:25 a94764e846c6486fb2ed8c7303bba078
 msgid "🔧 Functions"
 msgstr ""
 
-#: ../../modules/bitwise.md:27 ec0677c8bd1d45dabe9fe744936e6fa8
+#: ../../modules/bitwise.md:27 44551c209f814833834350268850160f
 msgid "You can find below all functions available in this module."
 msgstr ""
 
-#: ../../modules/bitwise.md:31 1befedf889154bffbdf4bf1a984c2b80
+#: ../../modules/bitwise.md:31 bab2d41eef7a4033a8d1d07625ee12bf
 msgid "Bit Count"
 msgstr ""
 
-#: ../../modules/bitwise.md:35 e9540183cab4496682457d623526e015
+#: ../../modules/bitwise.md:35 0bce5bdc556444d895c317782f27da0f
 msgid "Get the number of ones in the binary representation of a number."
 msgstr ""
 
 #: ../../modules/bitwise.md:37 ../../modules/bitwise.md:65
 #: ../../modules/bitwise.md:93 ../../modules/bitwise.md:125
 #: ../../modules/bitwise.md:153 ../../modules/bitwise.md:181
-#: ../../modules/bitwise.md:209 3032415f3213463a9abf2c8fa88aceb7
-#: 6871436fd5ce4b25bf4b98c6d5a0b8bf 7216bea65b8245d98f9e9eb8e48e398f
-#: 793dd011d0904ae09549b9d8919ba821 a60e88bb704249eb91780fc1b8e2b0ea
-#: a9a7a8cd990e47989f9a09a402cb0d4d f672a66a58d44d58a3280e4694822241
+#: ../../modules/bitwise.md:209 0ff36652a5974a4a8ebb315d08dd0d97
+#: 3cb6a19897204903b2986380bc56cdb3 7187f0cf1b384b42934fdd795b68a20c
+#: 7fc44fae0d0349439c94577fa4f0b648 9d3434256fc549d4bdb43457960b3727
+#: a8d030b1d0d74876bc5bb13548751382 f8327bf69fa3434fb2d5874b86497846
 msgid "Inputs"
 msgstr ""
 
-#: ../../modules/bitwise.md:38 94e879bc9a9d4f65b2898fc6fd95fee2
+#: ../../modules/bitwise.md:38 0cb9ec70e8564bd4a2633019273116a7
 msgid "**Score `$bitwise.bit_count.n bs.in`**: Number to get the bit_count of."
 msgstr ""
 
 #: ../../modules/bitwise.md:40 ../../modules/bitwise.md:68
 #: ../../modules/bitwise.md:96 ../../modules/bitwise.md:130
 #: ../../modules/bitwise.md:158 ../../modules/bitwise.md:186
-#: ../../modules/bitwise.md:212 3a3045450814499aa46d5c918d1d5998
-#: 40690119984e41faa40e624de5c4bdcb 6ccc89d408fa430bba374e92cd59c019
-#: b92c046df1a34ff982e7b0327629b18b bc25b76515a9465c8b6b31fc76217d08
-#: c12a4675f1014e18bfb75c459bc05a6c e9fb0dca322b444f8ce137ea3816514a
+#: ../../modules/bitwise.md:212 0e15b414b0304799bb88463ec4db127f
+#: 153883727ec0405a9f04c0d5bd6ff153 17742173e61e4f2a8093312c00440b0f
+#: 23e50de011cf41b3a1c47066e621de27 a460e8bd085e439d9124bba9813c0480
+#: ac4eac1f9b604a2dad25f1fa8f2e59d4 c7ad5022a4fb48d58f90be4c935b1c8f
 msgid "Outputs"
 msgstr ""
 
-#: ../../modules/bitwise.md:41 008469a9e7614b57aa6a4a5075a3d4f8
+#: ../../modules/bitwise.md:41 3e35d3b58c8448df849f106698a1aefa
 msgid ""
 "**Return | Score `$bitwise.bit_count bs.out`**: Number of positive bits "
 "needed to represent the number."
 msgstr ""
 
-#: ../../modules/bitwise.md:44 1679af52826a4123bbb6b4782f7f00fa
+#: ../../modules/bitwise.md:44 cce6d2b8d3b54eceb627018213dc5568
 msgid "*Example: Compute and display the number of positive bits in 12:*"
 msgstr ""
 
-#: ../../modules/bitwise.md:55 fc039da316374f68bfa8ce357cd50701
+#: ../../modules/bitwise.md:55 110a29f669d44fb9981420c560eb83b1
 msgid "**Credits**: Aksiome"
 msgstr ""
 
-#: ../../modules/bitwise.md:59 775c8fcdf33e443b90a93c3cc193af18
+#: ../../modules/bitwise.md:59 0acea4defe264e35b095bb5510ebd12f
 msgid "Bit Length"
 msgstr ""
 
-#: ../../modules/bitwise.md:63 9115f94162b34f31afd08b86336c17b3
+#: ../../modules/bitwise.md:63 634fd51d44324cd7861b7ceaeb3f37cd
 msgid "Get the number of bits necessary to represent a number."
 msgstr ""
 
-#: ../../modules/bitwise.md:66 a747d9315ca649c3b99c2d4d265b9baf
+#: ../../modules/bitwise.md:66 4b487a0b16ac410e9bea43fd43bfbf13
 msgid "**Score `$bitwise.bit_length.n bs.in`**: Number to get the bit_length of."
 msgstr ""
 
-#: ../../modules/bitwise.md:69 1881226495ec4e569ccdc8c3d5dcf394
+#: ../../modules/bitwise.md:69 02920127d413429b993ee1e9a56bf9b2
 msgid ""
 "**Return | Score `$bitwise.bit_length bs.out`**: Number of bits needed to"
 " represent the number."
 msgstr ""
 
-#: ../../modules/bitwise.md:72 5959661a69504beda67be5945b0b0575
+#: ../../modules/bitwise.md:72 dbe27c3a4f4d47f58bd577dfe39197c2
 msgid "*Example: Compute and display the number of bits needed to represent 12:*"
 msgstr ""
 
 #: ../../modules/bitwise.md:83 ../../modules/bitwise.md:111
-#: ../../modules/bitwise.md:229 69fcbabefad140e39a0680edfee3d1fe
-#: b91930aaf4d64a3a947f931add1219f4 eed3cba3dae74b57a108d026584ddc6f
+#: ../../modules/bitwise.md:229 501311436a984ca886eb4647bdc5c7ab
+#: 7a11ac69d3cd470a85cc32936d75c924 9c1ecadeb9fc427f8b59c7786a9d3dae
 msgid "**Credits**: Aksiome, theogiraudet"
 msgstr ""
 
-#: ../../modules/bitwise.md:87 b4cd72e616af448497cf1b0dfc709f14
+#: ../../modules/bitwise.md:87 0930469d6980494086e38707c2408a68
 msgid "Complement to 2"
 msgstr ""
 
-#: ../../modules/bitwise.md:91 b28c74b6fab74a949159aa59e54964ce
+#: ../../modules/bitwise.md:91 dab9e8f10d99481fbebcf00fc3925428
 msgid "Compute the two's complement of a number."
 msgstr ""
 
-#: ../../modules/bitwise.md:94 81abc4b8e04f4fb4853d668cc3f2a603
+#: ../../modules/bitwise.md:94 3e105651562d4d5197c6d3bed0686733
 msgid ""
 "**Score `$bitwise.two_complement.n bs.in`**: Number to compute the two's "
 "complement of."
 msgstr ""
 
-#: ../../modules/bitwise.md:97 ca0388ea82304c0cafe764be02ac30a4
+#: ../../modules/bitwise.md:97 ef4237f2027247869c5691fe872a3de4
 msgid ""
 "**Return | Score `$bitwise.two_complement bs.out`**: The two's complement"
 " of the number."
 msgstr ""
 
-#: ../../modules/bitwise.md:100 75d322035cde4eefb12622b70e7cd652
+#: ../../modules/bitwise.md:100 4dd71cc23ade4ecaa7db9164c7e8ee6f
 msgid "*Example: Compute and display the two's complement of -12:*"
 msgstr ""
 
-#: ../../modules/bitwise.md:115 6585b05393bd48f0b634a030ab676360
+#: ../../modules/bitwise.md:115 5a0528b69a0449bb82e6199f3cb6111d
 msgid "Logical Operators"
 msgstr ""
 
-#: ../../modules/bitwise.md 4ac8296ebb6a4a9b9293a6188dc4db28
+#: ../../modules/bitwise.md deca4accc1c042ab8ab8e5cd8198d717
 msgid "And"
 msgstr ""
 
-#: ../../modules/bitwise.md:123 9e76c186d57a45a2bb04ff7e5440320f
+#: ../../modules/bitwise.md:123 2672a2e7319d48fa9b3fcf0051908a02
 msgid "Compute the bitwise conjunction of two numbers."
 msgstr ""
 
-#: ../../modules/bitwise.md:126 00ac943cbc354e58bdd6dac870a769fd
+#: ../../modules/bitwise.md:126 707a31721f8440f8aac306d65586c992
 msgid "**Score `$bitwise.and.a bs.in`**: First operand $=a$."
 msgstr ""
 
-#: ../../modules/bitwise.md:128 0b66e41395754c13acb46674ddc74463
+#: ../../modules/bitwise.md:128 482ffff722094a1db5e80d8c46085f7c
 msgid "**Score `$bitwise.and.b bs.in`**: Second operand $=b$."
 msgstr ""
 
-#: ../../modules/bitwise.md:131 a861e167bd5042c1944d9f228073fb0c
+#: ../../modules/bitwise.md:131 b99e0581989f4b09b369fdc29dde04fd
 msgid ""
 "**Return | Score `$bitwise.and bs.out`**: Result of the operation $=a "
 "\\land b$."
 msgstr ""
 
-#: ../../modules/bitwise.md:134 2e029ac67a0a4645a35ddca5da712bc3
+#: ../../modules/bitwise.md:134 3b84affcb34a4ffeaf115bca0c923aa8
 msgid "*Example: Compute and display $-9 \\land 57$:*"
 msgstr ""
 
-#: ../../modules/bitwise.md 71260b229e4c4af188edcb321918a4f1
+#: ../../modules/bitwise.md 91a3408807164b3fb349e9d232415e57
 msgid "Or"
 msgstr ""
 
-#: ../../modules/bitwise.md:151 1e00079974ca43c99771718587c73ad9
+#: ../../modules/bitwise.md:151 b73835999d154fab87cde63123f3810d
 msgid "Compute the bitwise disjunction of two numbers."
 msgstr ""
 
-#: ../../modules/bitwise.md:154 bdc680d198ae4231b09113f74a08888d
+#: ../../modules/bitwise.md:154 71871716838d446db6ae3fe9cac81e04
 msgid "**Score `$bitwise.or.a bs.in`**: First operand $=a$."
 msgstr ""
 
-#: ../../modules/bitwise.md:156 ef880c83683c4bb8a5272b6043ebfc2f
+#: ../../modules/bitwise.md:156 1b2e293177a04f25a587eb18b31dbc78
 msgid "**Score `$bitwise.or.b bs.in`**: Second operand $=b$."
 msgstr ""
 
-#: ../../modules/bitwise.md:159 814c424931d646f39e5a90ed4d57cee0
+#: ../../modules/bitwise.md:159 327efb87650e41b78f1a7866fb37b488
 msgid ""
 "**Return | Score `$bitwise.or bs.out`**: Result of the operation $=a "
 "\\lor b$."
 msgstr ""
 
-#: ../../modules/bitwise.md:162 01785d0112d44b3eba04a1575268b079
+#: ../../modules/bitwise.md:162 b7fc3651621542868041acabd900f62c
 msgid "*Example: Compute and display $-9 \\lor 57$:*"
 msgstr ""
 
-#: ../../modules/bitwise.md e7b303a9c3b642dca16ef856a05b0510
+#: ../../modules/bitwise.md 249817f3d5fe4d0bac14b22b67a12ba9
 msgid "Xor"
 msgstr ""
 
-#: ../../modules/bitwise.md:179 e0412941c9734bc9a45bc13f4837816e
+#: ../../modules/bitwise.md:179 1ca4377c4cfc43c88ee73b1623be2a96
 msgid "Compute the exclusive bitwise disjunction of two numbers."
 msgstr ""
 
-#: ../../modules/bitwise.md:182 2e324830f4094c6896b45a2398b7ec37
+#: ../../modules/bitwise.md:182 b41c4a42abfe4101a05a22ce521991cc
 msgid "**Score `$bitwise.xor.a bs.in`**: First operand $=a$."
 msgstr ""
 
-#: ../../modules/bitwise.md:184 392e3abeb0e443608f77ce3ab58cec19
+#: ../../modules/bitwise.md:184 d5f85d16a21e43fa8cda9a6e15025307
 msgid "**Score `$bitwise.xor.b bs.in`**: Second operand $=b$."
 msgstr ""
 
-#: ../../modules/bitwise.md:187 268675508c4a4fa997911115cfa6703a
+#: ../../modules/bitwise.md:187 37d7b560929249b39016107e2529b964
 msgid ""
 "**Return | Score `$bitwise.xor bs.out`**: Result of the operation $=a "
 "\\oplus b$."
 msgstr ""
 
-#: ../../modules/bitwise.md:190 338d1832659342948d90a7fe5242a470
+#: ../../modules/bitwise.md:190 0533fc1a98a94cc8816b3ddc812c72c2
 msgid "*Example: Compute and display $-9 \\oplus 57$:*"
 msgstr ""
 
-#: ../../modules/bitwise.md c8ae2730a76a4f03a099866b9d90f497
+#: ../../modules/bitwise.md cd0b9fd05d844050a4e82df82ffe4bd9
 msgid "Not"
 msgstr ""
 
-#: ../../modules/bitwise.md:207 031cf575f51b4dc1b8d2465fcf063607
+#: ../../modules/bitwise.md:207 8ec4b00c4db949978775dce175970176
 msgid "Compute the bitwise negation of a number."
 msgstr ""
 
-#: ../../modules/bitwise.md:210 f46477ddcd4a4da680c2dfbe57dcd1a5
+#: ../../modules/bitwise.md:210 fd91174a338f4cd889827891c69e9a97
 msgid "**Score `$bitwise.not.n bs.in`**: Number to negate."
 msgstr ""
 
-#: ../../modules/bitwise.md:213 386d5b8882a24474af22c599139d2349
+#: ../../modules/bitwise.md:213 258087d4bccf43508e239f5a2a9cdd85
 msgid "**Return | Score `$bitwise.not bs.out`**: Result of the not operation."
 msgstr ""
 
-#: ../../modules/bitwise.md:216 d0567f39f2b64cc180499646fd13bead
+#: ../../modules/bitwise.md:216 31786984bad242528a22fe5143035adf
 msgid "*Example: Compute and display $\\lnot 452$:*"
 msgstr ""
 
-#: ../../_templates/comments.md:4 9a941a55ce314af6a68de70ecbc950a8
+#: ../../_templates/comments.md:4 5fd085acf33747039328e7a887e88ec4
 msgid "**💬 Did it help you?**"
 msgstr ""
 
-#: ../../_templates/comments.md:6 4da9c74c3ffb482eb645c7e638684a42
+#: ../../_templates/comments.md:6 176e234db14b4e7c95b4d1708706cc9d
 msgid "Feel free to leave your questions and feedback below!"
 msgstr ""
 

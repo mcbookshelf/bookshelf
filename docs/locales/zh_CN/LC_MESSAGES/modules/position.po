@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,44 +19,44 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/position.md:1 9ca1786703be41d59b023fb3f6cd86c8
+#: ../../modules/position.md:1 b2522390494549138814f0d12c2bd7a6
 msgid "🧭 Position"
 msgstr ""
 
-#: ../../modules/position.md:3 e908711ee07249ffb9dca145156368ba
+#: ../../modules/position.md:3 eb20d1e4e49d4ed78388984094b51888
 msgid "**`#bs.position:help`**"
 msgstr ""
 
-#: ../../modules/position.md:5 6a7471d48ed14e23bd828920e3e90771
+#: ../../modules/position.md:5 d90e2c00eca04017b75a38a17bc6a26d
 msgid "Manage entity positions and rotations using scores."
 msgstr ""
 
-#: ../../modules/position.md:13 76768c1b5ad845749493e9e61a268ef6
+#: ../../modules/position.md:13 dee7e826e47c4a9e889836453d64eb6c
 msgid "\"The excitement lies in the exploration of the world around us.\""
 msgstr ""
 
-#: ../../modules/position.md:14 8d3238271d804b97858095b1f3bf7dd7
+#: ../../modules/position.md:14 a825da644b12428d8c1f80bae1323461
 msgid "Jim Peebles"
 msgstr ""
 
-#: ../../modules/position.md:20 b805f0e177ba4586ace7e455ddb4ff03
+#: ../../modules/position.md:20 963bf9afc9864d4c906988c6bdbe70da
 msgid "🔧 Functions"
 msgstr ""
 
-#: ../../modules/position.md:22 bfe484e35fc843569a6590257ac2a6a8
+#: ../../modules/position.md:22 78d4d938dd354d7caab9b6828c33bdcc
 msgid "You can find below all functions available in this module."
 msgstr ""
 
-#: ../../modules/position.md:26 f3acc5c7832c4aab92da37535473edf3
+#: ../../modules/position.md:26 7717e4b673814b999b3d129afd7d0ee0
 msgid "Add Position and Rotation"
 msgstr ""
 
-#: ../../modules/position.md 2b01edd8e593435d9ab172d6d95bcddd
-#: 5d03511209c94d968f1b481399bd1670 ed664b8a976640bba0eb577cb902d633
+#: ../../modules/position.md 5fa0e54be73448f983e3d607ce22a473
+#: 6432caeeb30f497cbc881ac698d0fe52 ac26da5b4c584edb9f0f9accb39c67ed
 msgid "x,y,z"
 msgstr ""
 
-#: ../../modules/position.md:35 31422d24c0154c17b0a09a3c1e985de5
+#: ../../modules/position.md:35 f08d23bacef74d5e810000a91a59be53
 msgid "Add position scores to the entity's coordinates."
 msgstr ""
 
@@ -75,21 +75,21 @@ msgstr ""
 #: ../../modules/position.md:756 ../../modules/position.md:786
 #: ../../modules/position.md:815 ../../modules/position.md:838
 #: ../../modules/position.md:860 ../../modules/position.md:882
-#: 035dcd90c07344ba93221027305c04b8 0a9159e6eb4e4fc79fae7b6a2c90f861
-#: 15eb1f271fd04c02a04ee1a7c5dcba25 2b0e6d0b93ce4ad8866a6eea902f241e
-#: 3d1416fb62eb4aed8033902ba7f69401 3f76f704ccf54e5890315b85c158876a
-#: 4c3192a183e44e88b7565f058fddb30d 4ccd90209aa540dda57406c97e4d3ada
-#: 4e8f5379fa3047748ae6a98b0aa24948 5b6a0db8bb2a4e86a6907224d4cddc2f
-#: 64b6c72b01cd4cfc9daf78280f009dff 6fd2a00d2ff742ee8b53bdafdc16429b
-#: 742b73159bbe4fb58fce1d9f7975505d 747cc1bb53814f2faa2e184606762fe2
-#: 785344338a2a4a3c91d6d0b98a6d70c2 80a33b04d78243ee937ad5fe1d945e0f
-#: 9ac2be4885db4eeeaedb10adf9bd2da7 a4dbdcae7c3a48068a13f34f3518fd31
-#: a948dc3858ed4c84aa08d8f2facd80cf a960d5de52744a3b82664197f07dc108
-#: ab7b653c62744c68af324d9aa82a2b14 b9aa3c8da5294533a5cf45ef24147adb
-#: bbe511af4cc8463d9612717d9773997a bf9c9a2cecbf4184ae24541e36891a6b
-#: c258f94855864741bc6a567f7114e3ea c64aa9dcce7d438a9660c903dd7df8e6
-#: e4f46194c1b14c52b674f12a608471d2 ebd388c98d6749ce966a3d9348215465
-#: f831b50724e647bd83ec5987aee93b6d ff241edc6a2646b98b4bf38222c6b7ee
+#: 0aa77199de3a4ee8af27795377642421 229097a29f414e5da360a5c5c3aa14da
+#: 2c435bf30c3c4ee1b8fc41491c771151 347e1ac9838447599dee5a6b9da20776
+#: 37259770ac7849368993ba848b0d7990 38cbd4a2ede44b45b2d566fc913a2e71
+#: 39bf294b7dd540e7945fe0346b2fa385 43970a90531a45bf8fb6722cfa90e0fb
+#: 4b09f5ff452841bfbcdc05ece7ae839b 5104c2289b254affa95e07298d731b90
+#: 70687fcabf1248d0865ce0d71b07563e 78219f0e32a6409eb78ee1b5f94c7e5c
+#: 7950d2b7dc034700905b7c101bf9054f 860167ba11c141fd96c7c5323dae6706
+#: 87ec7d7301b44a3791eda3390c4d0f35 8b2b4464850a41678aa66e05ee89c8b3
+#: 9f1241eb13dd410da41c73087752f4bd a7aefe44852a4ceca9deaf5a41545144
+#: ad1cf9c7367d406aaf760dbe038d8301 b0e5ff80697c4797a04ba206a409fa40
+#: b197a87f0c484db0895929ef906058a6 bd04d4f840e147b585e4242029554401
+#: bea4ab1564af449995a58cad97534219 d1ed1d26d8594bacb80970dbbb384e88
+#: d219a173c9fb4f3c92340f9c0f11adf3 d438270367ea48d1914734282a41a398
+#: ea29e3f653d44bc986b65b0a9f563054 f3775610af684b859928daa4c2feaa06
+#: f384a879a1674cb38d8bd5c8e409e6e2 f72ea19656dd4be58a9f54a22907cc93
 msgid "Inputs"
 msgstr ""
 
@@ -100,18 +100,18 @@ msgstr ""
 #: ../../modules/position.md:727 ../../modules/position.md:757
 #: ../../modules/position.md:787 ../../modules/position.md:816
 #: ../../modules/position.md:839 ../../modules/position.md:861
-#: 05a16e296c7844bfb6406f4a9f320fee 18f8e10b34c44ac69ced8dfedb159772
-#: 197ab60783564f268cce223022ebdbfb 50e4fe890a9c4373bb0ec0129681565f
-#: 5694557c7cca417a8f11ce41851c6df2 915bbf50d1294326aea1798873ea5835
-#: a0d915975581465f97b850cf48aefe88 b9e4761ce20c41b09e753df30f9e1c91
-#: c1dfed2fd68b44b988ddf513e0dce692 d29648d1c049470e8edc834074cc8435
-#: dda761b94a334a4bb9babca5f9aa2722 e4fa146c94e943f79c4f6d2d94eebdc5
-#: eee7acd9c5f94aca9d147d7086269fa7 fd1e5e167373445dbc075bcaf18fc617
+#: 00c966ed4dc144629b45fdd2fd707d48 0b0fceb6dec6456fba4a9badc8021f8f
+#: 22a25eb2076b4bbd96c447efa546afb1 2661f4ec17fd449896afe422c3de8275
+#: 322d8d741dc4453e9a938b58a3a267fa 3f21d96edefc4fb38837cd71f6fa688e
+#: 5e62a84f26524fdcad02c6422dd6418d 853cd30ad57c4446bd101564b4795cb0
+#: 86cfb92972b94261815fe48580b058aa 8b4d792dca014b5d93766783e18515a9
+#: 9663332b57834e289d2b56df3133920b 9e4d1aade41449b4a76c6cd0bae6c3eb
+#: a54bb84adacc49db88000c52931fdb04 e9cf04f4c62c47f8ad8a3aefd8919259
 msgid "**Execution `as <entities>`**: Entity to teleport."
 msgstr ""
 
 #: ../../modules/position.md:40 ../../modules/position.md:228
-#: 063b9420bf1e44c2ac69174037b3afaf 1afed15a3bce4bdcbc767e55023d7a12
+#: 01896c5f9a2d42e0b1dec1ddd3fc68af b8648f4762d84a658bf884ca68c03eed
 msgid "**Scores `@s bs.pos.[x,y,z]`**: Coordinates to add."
 msgstr ""
 
@@ -129,20 +129,20 @@ msgstr ""
 #: ../../modules/position.md:761 ../../modules/position.md:791
 #: ../../modules/position.md:820 ../../modules/position.md:843
 #: ../../modules/position.md:865 ../../modules/position.md:887
-#: 17233313cc8d443fb7ddd18d8adda07b 176a3505d9784c7397f1ac361e53bdb4
-#: 181789c2cd084cb3b116cc82f1d4fe11 346aa372e32042e783c75a613647ca9f
-#: 41c1d53416bb44ff9b6c522367bb9293 460b296d36a1442293d51d14ff7825e2
-#: 4dff330738aa412f8dd67474e2ac3262 5946e760793b44f4bb4a4b0b34a7f558
-#: 65d6bd7de4fe46b7a8f7eb78db24b58a 6bc6bf44c2f0453c9c47c5c58b93b038
-#: 6ee19611811b4a828ab56eaaed9f4dad 6f36799cfb1c4880805a549bfd4ce00b
-#: 7758349375464b709f4e156ccff796b9 8041ece8bfad413f88c8c4a4908cce1a
-#: 8b3f18efaf384d55bf87b03a3a988606 8da5cc6d1d2e42f888b54d6b1d3cbec0
-#: a5d83fc6fc084b0c89ca83a654e0c422 ab05421b104a44c08ed132b2c965f535
-#: bfdbc882f92949989dd8144e3649ff79 c4dad908872243b2b5da80aa219d4f8c
-#: d7a25735e7864f96a2fee6ea9b151413 db3739551d554b93962954c1c92a17a4
-#: dce3851073d746abbf1487ce929e4786 dea3d6ededa24f59b3d728f4d36cad4f
-#: e27ac388d3ef49049d04c8b4d844752a e3c8caac7a0e4ab7838255160e59e630
-#: ec5eabd73b804da6b019618ae92a7ffd fe470d67aaa54a38a69fefce5598318c
+#: 00e155da8ee64b4cbd9cdc1407008d2c 0b5b697c15414b8f86eba6bfe4306d15
+#: 0c8c31b7fae74a68b6d8b716993abaee 138fa748f9e945acbe4e490d9df9711e
+#: 16ee742634eb4edeb78248bdaa3de4e5 325ddb4d93ee467d9f2897d6058cfa05
+#: 42f719111ee247a0aa1c05669d442e03 515e6fad289d4a22af4db59fe30218f3
+#: 5bab2dd0035940fab0be32ca07bb29f2 615a809cd9ae4a79a819abb6740c0006
+#: 6af01527a0374694961ed75abd7b7d95 8b8a001cf97848d49ae9821b8479a1ea
+#: 970efa40cdd142a18fa25c9c514c3cec 9afda4c4af034cdc9bd1bed0911b43d0
+#: 9bc6b44da986446fa551d12ed7b6c922 9c3cd23afeb94f529490d6e6770593d5
+#: a498a2f77b5a45b094a9622208ef4ccc a4ee297438ba493dbf68678135fe2837
+#: b04e75824636446886ec32911b2f5522 b30d5972c7f64fa7b814b16ac2ce0862
+#: b5bb6a5d2f0f43109afb9a3733bdde59 bc39dd452942448fa00759d52d9abfbd
+#: bd5369ffb31a4ac0bafbf550bd660441 c6562a9b4ddc48b0a9eac9a914650794
+#: c65722e6040d48b4b82a95a2be0290ac e57571bf502f4813b0409aab3ae585ec
+#: e96f86e8dd1943beb05abf4ac1eca564 f173d290a4074c5c95499f8d9808e6ad
 msgid "**Function macro**:"
 msgstr ""
 
@@ -161,215 +161,215 @@ msgstr ""
 #: ../../modules/position.md:767 ../../modules/position.md:797
 #: ../../modules/position.md:826 ../../modules/position.md:849
 #: ../../modules/position.md:871 ../../modules/position.md:893
-#: 0b45e2b10d0942ed95de1b179e1c37c7 0c5c78f576604621bacb929fa80c9a7d
-#: 0cb753953d09497e90bb1ee0427166b8 17c6d34695e649d58e7db5d43b852904
-#: 19e3292436254e21b25aec212e9c6081 2dc415557a4a467a852dee642d1fcd6b
-#: 345c2afd2baf4dcdb7c2a8a0c9a23550 3798a47f907c43f089b2a61afb6b84a3
-#: 3b139452db6e4486a61ab2a835dd19f7 3cee06dff7a64059868c6588b17ece42
-#: 450c76cf4a204e91a95ab016405b72b4 4c3f10729879487d8d4f18945854a98e
-#: 72d12d52152f4aaf9667190baa36f063 865dc45c1e4644b9b3d9ea5e783e7de2
-#: 8d492f6a468d48208ae314c2bd84a4e4 97a2d2a3abdf4e9db586be2fe0555d06
-#: a1f745f690e34e4681a001cb236969e4 a47290430b1e477fa5d1b96db08bf54a
-#: a8559c8ce3704623b19b08994c58da78 c6ab677597024e92a1758785b400c9c5
-#: cd5c7ec98f5240b9a2c93c3355febe7d d670f5b4ec34423493e41de4b141d504
-#: d6ff46a8e6ea4224a4dbfd6d0aac875f db0cb1b5dfc84b56adfd317c3ecbc717
-#: e92dc2eebca349f09f8060dc8756f475 ec11d7297ded424c9952799ab13d7eb4
-#: ef0a81e07cd142358cc3e8c46a7223bf f6c5a606f72549c8bdaf332898e45a31
-#: f9e49fece78045e5917ed62aac718d25 fd6c7ed77a87411083e9a8b8618ad4ad
+#: 06daa7936a094cccaaab791ce0c1638a 07174605c30e475ebfaa1e13c3753b69
+#: 1207b4925a54474d92d236da7c9532b9 239068d1997f41e6bd4c74ca5639878d
+#: 2ffb55b30cfb43a882b808767ade85b8 3afa3da09c884a988c9f0157d2c85381
+#: 42fe1075790d4743b02223374c104017 48ad717bd8c949cfb71b56c7ff4ffd29
+#: 4bae65bed4ba4eeca1f6fbcab08c0149 56062d3ff99d4aa99a017e6c2eae1237
+#: 5966bc0677e5464aba42cadee6d9c85a 79d2e5606e304419b9353f4070bde6b3
+#: 83fcbf4c29e949daa9051401bddd7829 8f0d759d914b473783d1e8ec15cddca9
+#: 8f664fa9681443f684a8976269cae637 9a758b5145ff428d9f38c2dbcb0f3580
+#: a507606d079c48e5bea7aaaeb6f4472e aea17b30fdf748fea88ea9389f8f27c1
+#: afe986b3acc34d3f9921a41798c1364c b4606635f3244d5b9f6527ac3091900a
+#: b6865f51aaff4888a7dc76f6a5b9dfb3 c30c80669baf427780a938fb962dbc8c
+#: c57a18459f214de0a5eaf24b363a2b07 cac4e39aea3844f891a31a4bbdbf332e
+#: cd7c39c67ab449a0aa9fe4d4f5b2a233 d6430d240aae4bcd801d9fd95cc2dfc7
+#: e54f2afa5301454cad333a56c7cfe03c ec6cb69ba4d14eac944bcbfc0a4a3e58
+#: ee96dfc5d6964090a73f42af76492fb5 fac56e319d244d35aaccd26e47340db8
 msgid "Outputs"
 msgstr ""
 
-#: ../../modules/position.md:49 a3f265debc1241ed89e32c18121dc19e
+#: ../../modules/position.md:49 e03260bd0b934aec8c7c85a72577518f
 msgid "**State**: Entity is teleported based on position scores."
 msgstr ""
 
-#: ../../modules/position.md:52 7e5ed4cf0c9a4095b02aab394f745b73
+#: ../../modules/position.md:52 6328424a242c4087ba01ed84cb6c1179
 msgid "*Example: Teleport to ~48.85 ~ ~2.29:*"
 msgstr ""
 
-#: ../../modules/position.md 4419986b058b4ba197ae80c9b51fccd1
-#: 61f26695442e43af8cf5dd4d73217c9e e9538549eb8d4696bf1f93c31a27fcd6
+#: ../../modules/position.md 00706710629e43b88bf9764d9d2d85a2
+#: 914c37285e9d4a26ba265ae4c789489c cec04d0e486347cfa899a91f2b12fd38
 msgid "x only"
 msgstr ""
 
-#: ../../modules/position.md:67 2acbf4064317427cae1152ba1a9c9d02
+#: ../../modules/position.md:67 60c52a5085c84eb2b9224cfdf84095fd
 msgid "Add the x axis position score to the entity's coordinates."
 msgstr ""
 
-#: ../../modules/position.md:72 8dad24af2a764d74a494238987c9b957
+#: ../../modules/position.md:72 3fadd37704d74669962b6183280161de
 msgid "**Score `@s bs.pos.x`**: Coordinate x to add."
 msgstr ""
 
-#: ../../modules/position.md:81 a97802abf16047c18b9f580c29beb817
+#: ../../modules/position.md:81 3d919a08f5df4d07894a0fdd11a335cd
 msgid "**State**: Entity is teleported based on the x axis position score."
 msgstr ""
 
-#: ../../modules/position.md:84 a9024220849e447eb96b7a70e01814e6
+#: ../../modules/position.md:84 d2e5a4f9551241429277c6bbad5cc51d
 msgid "*Example: Teleport to ~70 ~ ~:*"
 msgstr ""
 
-#: ../../modules/position.md 344fe8f9aa784e239082dd9c3ee9b1d2
-#: 45bd78ebaf80400e8e8a2abdc2108366 ea097caf904645468a9b17307ab7eae4
+#: ../../modules/position.md 67e9c56b66dc46d7a1662aae75e71359
+#: b870b57e5e7148cfbb6e92b2d1808641 ca339daca4694f00be6cbd2de593f72d
 msgid "y only"
 msgstr ""
 
-#: ../../modules/position.md:97 8f29b91be1444d1283733c684a400e53
+#: ../../modules/position.md:97 3f95c6e6906147c2af44944dc82328dc
 msgid "Add the y axis position score to the entity's coordinates."
 msgstr ""
 
-#: ../../modules/position.md:102 bc367830812746a1aa343e1155513058
+#: ../../modules/position.md:102 1e89e63c5d4543bd97ec15435444af25
 msgid "**Score `@s bs.pos.y`**: Coordinate y to add."
 msgstr ""
 
-#: ../../modules/position.md:111 a3c97bfe282b4ba38d25f73b72bf73f5
+#: ../../modules/position.md:111 bb6592b456164f18bf3675ae6723ee98
 msgid "**State**: Entity is teleported based on the y axis position score."
 msgstr ""
 
-#: ../../modules/position.md:114 f636ca88bb304b1b990ec32ba531917e
+#: ../../modules/position.md:114 e9ea524f9f9e42639d68108e3d21123f
 msgid "*Example: Teleport to ~ ~82 ~:*"
 msgstr ""
 
-#: ../../modules/position.md 601816d07855431d871fbf85a6b4b292
-#: 8a12564ecff0414b8f7e9a605b16330d c3854b2c23b24e27b4a601d6bea8f6d9
+#: ../../modules/position.md 23ac4f6d857d4bcc97d25e7a5f27034f
+#: 32b09d17c855479ab65c7e2c66009007 b03492c968ac434483b8e12eae89ba3c
 msgid "z only"
 msgstr ""
 
-#: ../../modules/position.md:127 d99d111428d34ced92c4526b309ff1e3
+#: ../../modules/position.md:127 a62973c511a84dfb95be7859e0f99fee
 msgid "Add the z axis position score to the entity's coordinates."
 msgstr ""
 
-#: ../../modules/position.md:132 44b33fc80c204df4ab8bed13954e5301
+#: ../../modules/position.md:132 80803fbc5ccc4737a12e1b1427f4fe00
 msgid "**Score `@s bs.pos.z`**: Coordinate z to add."
 msgstr ""
 
-#: ../../modules/position.md:141 b2b46f285993422a96370ac002b96d13
+#: ../../modules/position.md:141 5665ec3b120e41759c0934d1bc8c8b50
 msgid "**State**: Entity is teleported based on the z axis position score."
 msgstr ""
 
-#: ../../modules/position.md:144 69abf908157949448df84ff28bb5f595
+#: ../../modules/position.md:144 734a9d3b8b4346e7925161031795a61d
 msgid "*Example: Teleport to ~ ~ ~65:*"
 msgstr ""
 
-#: ../../modules/position.md 0cdf2613e2054843ad080c1d52e64d8a
-#: 75e8bfa106df450dbfe2c8b4e42afe28 774db98580da4d9fa569b0326f6e23f1
+#: ../../modules/position.md bcec9cd993ee4055abae5da844281820
+#: e9d2637d5f834cd79f4399ef9e09889b f5b2bae97b74432a8d812d4352a26107
 msgid "h,v"
 msgstr ""
 
 #: ../../modules/position.md:156 ../../modules/position.md:813
-#: 2cc29e85bb1a494296e0c82298d2643c 535233d3b66c47b18578b33ec41eb267
+#: 273aafd8088e4276ac4b0e7a66a83a08 d79029b77c8f4a04b4e8782fc3aa4e87
 msgid "Rotate an entity according to its scores."
 msgstr ""
 
 #: ../../modules/position.md:161 ../../modules/position.md:230
-#: 061b429eb02b4c288da8fcac0ae2fd99 ae70d45d3f3943c98c70f1dd56629319
+#: 3370e2e23e12446e9b1a3336f3b00eb4 dd7609e7ab79483cbccc6b8d95c1305d
 msgid "**Scores `@s bs.rot.[h,v]`**: Rotation to add."
 msgstr ""
 
-#: ../../modules/position.md:170 31fcb8b0aa9d4bfdbfeaadc6e851d519
+#: ../../modules/position.md:170 396e90557e3b460d8705b1ed810e787a
 msgid "**State**: Entity is teleported by the rotation indicated by the scores."
 msgstr ""
 
-#: ../../modules/position.md 1d71c415dbd94333bf3f51725acd36cd
-#: 21e4fc8ef41a4d8781ec089ce842f6cf f33982b3e4174ba9b59c274afc2fc960
+#: ../../modules/position.md 805c78f7604e482b95f8301535fa87c6
+#: afe8580cecbd48bd9d19e7669b83dead bc2bc2a0a09048e59db69826aea0bc43
 msgid "h only"
 msgstr ""
 
 #: ../../modules/position.md:179 ../../modules/position.md:836
-#: 9732f6655148474bbb7a4e149cae0bf3 c60fec0119dc45b58e4e744f42eed983
+#: 9817b540375c4b4c9a4743b137cd25ec fae12d9b292a443caa15d176f560a7c3
 msgid "Rotate an entity according to its horizontal rotation score."
 msgstr ""
 
-#: ../../modules/position.md:184 7d45f770a5a74f309f050dd86b4dac6a
+#: ../../modules/position.md:184 67b1e6f9ee4c4fb5952877db39f078e6
 msgid "**Score `@s bs.rot.h`**: Rotation to add."
 msgstr ""
 
-#: ../../modules/position.md:193 2dd4c4a7f71848be86f0d16e603df242
+#: ../../modules/position.md:193 395612408609409da1ed6d6e42d05f8a
 msgid ""
 "**State**: Entity is teleported by the rotation indicated by the "
 "horizontal score."
 msgstr ""
 
-#: ../../modules/position.md 08d212c642e64f40a23074285bc478a7
-#: 7182bd02cc644c5694ce1ee5432b9c46 aa24de6c2c6b4a4596f6db959008cc61
+#: ../../modules/position.md 4e0614805d4a4d81a8cf5d44320f69e2
+#: c88cf895874746599d14b28e9ac56436 ff3b981983884c3ca20280f6d80a1407
 msgid "v only"
 msgstr ""
 
 #: ../../modules/position.md:201 ../../modules/position.md:858
-#: 0e055364386640649b1201afab8b1745 40cc1db9a44a45a38201119a035778c2
+#: 0088a6f2c6a24bd2b171107504189139 6d2b8b6777f14921a3524a112e075a13
 msgid "Rotate an entity according to its vertical rotation score."
 msgstr ""
 
-#: ../../modules/position.md:206 c9d5438167ec44b491df81cb9f13e224
+#: ../../modules/position.md:206 4a598e14393847a69b6d9872cc895e84
 msgid "**Score `@s bs.rot.v`**: Rotation to add."
 msgstr ""
 
-#: ../../modules/position.md:215 68be3ce21cac4f0789e73202845a4d66
+#: ../../modules/position.md:215 678589c97c9a4969988a0a53fbbf7764
 msgid ""
 "**State**: Entity is teleported by the rotation indicated by the vertical"
 " score."
 msgstr ""
 
-#: ../../modules/position.md 0a5a942fd09449dcba511c7c1e8a0427
-#: 647c609b786c40d4abb3a45ea9cdc183 c8248eff877d4f749ac631a2aff03716
+#: ../../modules/position.md 4e32ccaf724d4c1c9a42d40d747e3365
+#: 6eb41b87b5ae4f4584826c655e8c3a38 9c7dc149c4ae493da10fc47c5182e4e4
 msgid "x,y,z,h,v"
 msgstr ""
 
-#: ../../modules/position.md:223 f946c4c3abe94f25b3e6d9d8ee8c6db3
+#: ../../modules/position.md:223 fa8b035f8241499eb710de318c757678
 msgid ""
 "Add position scores to the entity's coordinates and rotate it according "
 "to its rotation score."
 msgstr ""
 
-#: ../../modules/position.md:226 2be1c033e458475f9cc3981a83e281de
+#: ../../modules/position.md:226 39dfe3b957a94367a9e6baa60e5ce622
 msgid "**Execution `as <entities>`**: Entity to teleport and rotate."
 msgstr ""
 
-#: ../../modules/position.md:239 98b9f9ca341c4eb88d17814d588fd8d6
+#: ../../modules/position.md:239 60b7354ff67d4615ae6659a88bd75f3e
 msgid ""
 "**State**: Entity is teleported at the position indicated by the position"
 " scores, and rotated according to the rotation scores."
 msgstr ""
 
 #: ../../modules/position.md:245 ../../modules/position.md:356
-#: ../../modules/position.md:656 67bd2d0fc4484014a45e147698c94691
-#: 6a19e3331c9446e8b8a586b6ed59c354 ebd8b945487d40d998ce3fdee4300052
+#: ../../modules/position.md:656 327142baa12a4fa68be314ca275d76ab
+#: 79d938182a154bfdb37d75da7ee30617 cd31bda5a18640e58dd6b0996f9fb5f7
 msgid "**Credits**: Aksiome, Leirof"
 msgstr ""
 
-#: ../../modules/position.md:250 49f16018f675480d91d67c7a5c3b7770
+#: ../../modules/position.md:250 3aed8e5080324d4e88aba434ee91e1fd
 msgid "Canonical to Local"
 msgstr ""
 
-#: ../../modules/position.md:254 059d6888c0654888b27b18e37c8def9d
+#: ../../modules/position.md:254 90fa2a0d871543f88b8880be357e104d
 msgid ""
 "Convert a canonical position (using the relative reference frame) into a "
 "local position (using the local reference frame)."
 msgstr ""
 
 #: ../../modules/position.md:257 ../../modules/position.md:667
-#: 6923b8067a4a45b18f79b7d313c2587b dc5b4a7b9e874da880df3205d47f7d52
+#: 26ce04f9898c4f58980edae79502ea16 b07ba773ecf3401e9d4bdeb111c6a334
 msgid ""
 "**Execution `rotated as <entity>` or `rotated <h> <v>`**: Rotation used "
 "for the conversion."
 msgstr ""
 
 #: ../../modules/position.md:259 ../../modules/position.md:669
-#: 0bb28e7bbb234a13bc05845d011cdc9c fb9cd4cea13d4f70b2f4fcf892ac9164
+#: 3bc6a1169c2e42c3b5d0058d5dcf60f3 740b3dd9e7c14b80989ee6bda77c3310
 msgid "**Scores `@s bs.pos.[x,y,z]`**: Position to convert."
 msgstr ""
 
 #: ../../modules/position.md:262 ../../modules/position.md:672
-#: 0aee59e2a3e9489baf74546491fbd5a5 e6886c05f61d4f1185b7155e4020a09a
+#: 5a84ec4277e74dbba59bac87fd439636 7d2b4975f0744a74a7424a7504ffaf56
 msgid "**Scores `@s bs.pos.[x,y,z]`**: Converted position."
 msgstr ""
 
 #: ../../modules/position.md:265 ../../modules/position.md:675
-#: 37c0ea701a1f4817b215e9fabfdf5839 dc64859e249a4ec3ab0e682242e19d43
+#: bc60bf70722542d09b80a9875ca25277 e6d05f6fd01746008f0a9c2bd5a6a6c5
 msgid "Local Position... 🥶 What's this?"
 msgstr ""
 
 #: ../../modules/position.md:268 ../../modules/position.md:678
-#: c7c28eddf89544a18cbaa34a29102f90 f1911a1b4dc643fbb12061970508745b
+#: 4b3da715edaf44be9edb7ea37b176af6 b2ce5c3280bc4059b05d3bb3674b6338
 msgid ""
 "Unlike relative position (canonical), this reference frame considers the "
 "entity's rotation. Therefore, when the parent entity rotates, the child "
@@ -378,85 +378,85 @@ msgid ""
 msgstr ""
 
 #: ../../modules/position.md:271 ../../modules/position.md:681
-#: a1e9ef66eb0b4e63aaefa2c397692169 c8f3ada8817d456cb7f9fc25d553ed6c
+#: 9ee3fc1f4cf64b21a6c4d3fb6a794d05 a2aecd0614604632b0ae9ad7e09f47fc
 msgid "**Credits**: Aksiome"
 msgstr ""
 
-#: ../../modules/position.md:275 9fd7442d9590414995c7298ffaf404ae
+#: ../../modules/position.md:275 66f9372ec3b2426a9fa7164616aacb59
 msgid "Get Distance"
 msgstr ""
 
-#: ../../modules/position.md ba32efd9f2b24ae992faabe5608865c2
+#: ../../modules/position.md e70f87968f4142c99dcf1c164efeda31
 msgid "Normal"
 msgstr ""
 
-#: ../../modules/position.md:283 bb5e0c29b2184fcfaf24f5cc556e7ab3
+#: ../../modules/position.md:283 523059fcde9348e4b49d1b1817f567ca
 msgid ""
 "Compute the distance between the source entity and the execution position"
 " of the function."
 msgstr ""
 
 #: ../../modules/position.md:286 ../../modules/position.md:324
-#: 5304f157aa2b445e818aa3f07c0e5471 ba710583f7684a959088ea3d59d6ec23
+#: a68b1207b2d946019084a984c66bea3f d25749de31f74b5fbda7f3c05552cb06
 msgid "**Execution `as <entities>`**: Entity positioned at the reference point."
 msgstr ""
 
 #: ../../modules/position.md:288 ../../modules/position.md:326
-#: 4561a1ed67a846e1984a59464b15b1c7 e94f7d5d93a6408d90a6bb1badbb2196
+#: 1ec4143c906548bebd7238a0f2fbf8a0 f4464d24fec04a29b5c2050a6191c763
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to get "
 "the distance from."
 msgstr ""
 
-#: ../../modules/position.md:297 cbacb85f66c147e3b96b7b9759c0b705
+#: ../../modules/position.md:297 bf147e30edd7499f8f431a24a0519e36
 msgid ""
 "**Return | Score `$position.get_distance_ata bs.out`**: Distance between "
 "the two positions."
 msgstr ""
 
-#: ../../modules/position.md:300 37946f1b6eac4e92948a3f5147eeb7f4
+#: ../../modules/position.md:300 d921549f896b423c839fdc1e3e5aea85
 msgid ""
 "*Calculate the distance between you and the nearest sheep (in blocks, "
 "without scaling):*"
 msgstr ""
 
-#: ../../modules/position.md:310 45932748fa11428dbfe882ee589511c9
+#: ../../modules/position.md:310 7a6346ea23ec4aedb73ddfe6858436b3
 msgid "Performance Tip"
 msgstr ""
 
-#: ../../modules/position.md:313 f1de0fec36d0416ea9d345d73be6769d
+#: ../../modules/position.md:313 81fd1c0a2b784154a8d0972fc00d87d3
 msgid ""
 "For several applications such as comparing distances, using the squared "
 "distance instead of the \"normal\" distance is more efficient to compute."
 msgstr ""
 
-#: ../../modules/position.md baa22fae67914fa8b02b1d3e28d6ffa6
+#: ../../modules/position.md 92ffb140d5bd44338313dedbc121e972
 msgid "Squared"
 msgstr ""
 
-#: ../../modules/position.md:321 646eb31f353d41f5b5ae4544db87d729
+#: ../../modules/position.md:321 c297dd522b7d4a06a4748f1d6ffab21f
 msgid ""
 "Compute the squared distance between the source entity and the execution "
 "position of the function."
 msgstr ""
 
-#: ../../modules/position.md:335 7a462934a12e4644a699268198055e02
+#: ../../modules/position.md:335 668bded5ae4c4dfb96a05052ec17bfba
 msgid ""
 "**Return | Score `$position.get_distance_squared_ata bs.out`**: Squared "
 "distance between the two positions."
 msgstr ""
 
-#: ../../modules/position.md:338 7c21e6ba056f47998c7578df68c0bdf5
+#: ../../modules/position.md:338 3a11533b723c4daa98170ae112aeddbd
 msgid ""
 "*Example: Calculate the squared distance between you and the nearest "
 "sheep (in blocks, without scaling):*"
 msgstr ""
 
-#: ../../modules/position.md:348 a8a5fd2b7a7946dc822866d0a84317a7
+#: ../../modules/position.md:348 d5de314cecc24ab291c110fb8d601a98
 msgid "Score Limitation"
 msgstr ""
 
-#: ../../modules/position.md:351 c86c5c078a87493f917e36d554e7fb6b
+#: ../../modules/position.md:351 5035e217435c4992a93718b129da7930
 msgid ""
 "Scores in Minecraft have a limited size similar to a signed integer "
 "variable. While this limit is substantial, it is not unlimited and can "
@@ -465,11 +465,11 @@ msgid ""
 "working with large distances."
 msgstr ""
 
-#: ../../modules/position.md:360 573523ded76e4b70b8ed4d848e885046
+#: ../../modules/position.md:360 62b0f7da88b645d0a923705b552c2bd0
 msgid "Get Position and Rotation"
 msgstr ""
 
-#: ../../modules/position.md:368 8a906e1554f04ff2b073e6bc2ac338ae
+#: ../../modules/position.md:368 be224fa6954a4aaaa0bc7a0e6fa68c6b
 msgid ""
 "Get the execution position of the function and store the coordinates in 3"
 " scores."
@@ -479,321 +479,321 @@ msgstr ""
 #: ../../modules/position.md:435 ../../modules/position.md:467
 #: ../../modules/position.md:499 ../../modules/position.md:521
 #: ../../modules/position.md:543 ../../modules/position.md:565
-#: ../../modules/position.md:630 220d1bcab8764e5ba0c280ec30ead04e
-#: 3bb0de6eae8144df97b380e4fb5ffed1 656a0df5311f440e9a12adee55510fa6
-#: 717d99283cd14246a66a4d3f374d2b55 97601b5e3a394e4592548489068942b6
-#: a67e2f6e0dce4882a901c1fa3f297577 aab9e0790ecd4a9abf6ab87e3f6970cb
-#: ac81c827c9c94b81bbe0c9d6c1bb2217 b7eb3d11f38142e7848a382f9795bfc0
+#: ../../modules/position.md:630 1013ee12a1314ed596f1e9acc0a14b63
+#: 28097659ddb84c3b86e4a350abc5cdc1 5aca9b55e6044ca689f12a44b53fd740
+#: 5cf9de28b8eb4477a7d4d87a8ed36a5d 81e7db70f20a4bcaad5e79e5d34e8fd4
+#: 8a8a0056c4c54268be3de1f1fca5d2c4 8f1d8c7f69c9483e8c9a085915cd5c84
+#: da25dbcb69ad40139dd701249a983f2a f28152ac7c3c4fbb8d2d7bca6d077112
 msgid "**Execution `as <entities>`**: Entity to store the score to."
 msgstr ""
 
 #: ../../modules/position.md:373 ../../modules/position.md:405
 #: ../../modules/position.md:437 ../../modules/position.md:469
-#: 25e07b06512f4cc6bf87b70b20f9c123 2b41eb8c648c4e1ab42a6d1f33875a7f
-#: aa7ddf4315a840ad8e4ebdef764c09c8 be468fa91ef14bda83d1c897edcd83da
+#: 0338330dce7d4d9390182459f3e5ba97 1111ac1a71774e9fab78477decc39b39
+#: dbc44239f554400182031944f369d4b2 ea7dfe8231ab44bd9144141daa3cfe09
 msgid "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to get."
 msgstr ""
 
 #: ../../modules/position.md:382 ../../modules/position.md:576
-#: 703f5ee28c2c4793928a6a937426821d 70555f0dfe9a4fd1b538c036141174fa
+#: 2d1f5cf88e564838ad8cb7c082f93676 7b9470948b4846fcbf3075c18e49f1fd
 msgid "**Scores `@s bs.pos.[x,y,z]`**: Coordinates of the position."
 msgstr ""
 
-#: ../../modules/position.md:385 3764926f271246d5a2684085de86bfe9
+#: ../../modules/position.md:385 58f844b06a984678beb3f56c25236f17
 msgid ""
 "*Example: Detect and display the position of the nearest spider (without "
 "scaling):*"
 msgstr ""
 
-#: ../../modules/position.md:400 b1a641751b8543649beb5f28d62c1003
+#: ../../modules/position.md:400 70a1df844f08495f8cb5faf5d4d1aa82
 msgid ""
 "Get the execution x position of the function and store the coordinate in "
 "a score."
 msgstr ""
 
-#: ../../modules/position.md:414 97748c9dcc9e48b18a92a7613567cce5
+#: ../../modules/position.md:414 51242dc913c340258979479943628753
 msgid "**Score `@s bs.pos.x`**: Coordinate of the position."
 msgstr ""
 
-#: ../../modules/position.md:417 c7efb52556a9407eba5398e820a4d4a8
+#: ../../modules/position.md:417 6618f6080ed047c7be6349bc5ddbd5c4
 msgid ""
 "*Example: Detect and display the x position of the nearest spider "
 "(without scaling):*"
 msgstr ""
 
-#: ../../modules/position.md:432 d7424335affd44139bfa2286d34f1c1d
+#: ../../modules/position.md:432 980b4d5e2fa34e16990dc09e8d45342e
 msgid ""
 "Get the execution y position of the function and store the coordinate in "
 "a score."
 msgstr ""
 
-#: ../../modules/position.md:446 f76b7fcc799a46788327ae62a9e030a1
+#: ../../modules/position.md:446 fe1f99f78e824befbcd0562ec456037c
 msgid "**Score `@s bs.pos.y`**: Coordinate of the position."
 msgstr ""
 
-#: ../../modules/position.md:449 ee821b6b72a448c19690e2291affbc3f
+#: ../../modules/position.md:449 bdaef1f28fc0463e9d665d45aff1f2eb
 msgid ""
 "*Example: Detect and display the y position of the nearest spider "
 "(without scaling):*"
 msgstr ""
 
-#: ../../modules/position.md:464 21371d62882d48dda8ed598fcddaeb05
+#: ../../modules/position.md:464 4478aeed20364fb58973df23c91b9f3c
 msgid ""
 "Get the execution z position of the function and store the coordinate in "
 "a score."
 msgstr ""
 
-#: ../../modules/position.md:478 fa71571c63a14df29b7a47a939a7fd66
+#: ../../modules/position.md:478 97a8279628d841c887ca837a5e12949b
 msgid "**Score `@s bs.pos.z`**: Coordinate of the position."
 msgstr ""
 
-#: ../../modules/position.md:481 e2ed54a0d05041dc81c83a069cbddaff
+#: ../../modules/position.md:481 040e80d1d9ee4993a5f950f102376fc6
 msgid ""
 "*Example: Detect and display the z position of the nearest spider "
 "(without scaling):*"
 msgstr ""
 
-#: ../../modules/position.md:496 5045190cb6f64ba8abb2d6c95248e479
+#: ../../modules/position.md:496 3134e9e4a70a4a6b92cbe5d3cc2dfdf0
 msgid "Get the execution rotation of the function and store it in 2 scores."
 msgstr ""
 
 #: ../../modules/position.md:501 ../../modules/position.md:523
-#: ../../modules/position.md:545 83d8f9bf759c4ba5aa400f83f7d88dfa
-#: e105b16291614a76a523e124c28dbaee ef2fed5e11dd46f6b4eaeede714b3dcb
+#: ../../modules/position.md:545 60eb2754168c4d4f9905612230e8c466
+#: 64c0762d41ad4519b19ed520cdd5376f 8fca3416b81845118dea3ec17129a9f7
 msgid "**Execution `at <entity>` or `rotated <h> <v>`**: Rotation to get."
 msgstr ""
 
 #: ../../modules/position.md:510 ../../modules/position.md:578
-#: c8101cecaefc44579ccd0686b7a4a996 d8e502a3454d42f2848eaf939f0c7d56
+#: 2354cb6668fb4a0b91c80906d075ccb1 5423ec8dab1f4e74808c5fd35c71de50
 msgid "**Scores `@s bs.rot.[h,v]`**: Rotation of the position."
 msgstr ""
 
-#: ../../modules/position.md:518 cfb9b1297b0341ec83a93023aa2238bd
+#: ../../modules/position.md:518 4e5cd684ab06418f8dd8d83c07bdee5d
 msgid "Get the execution horizontal rotation of the function."
 msgstr ""
 
-#: ../../modules/position.md:532 4a44f97259f14dfd95c8a0965452c914
+#: ../../modules/position.md:532 84eb9d2c0a134fb2918d4b5dd64e71a5
 msgid "**Score `@s bs.rot.h`**: Horizontal rotation of the position."
 msgstr ""
 
-#: ../../modules/position.md:540 63e2b2cdcd8d4444ad9aeec3e587ebaf
+#: ../../modules/position.md:540 5bda503cf98346259114c3294ceb4ce4
 msgid "Get the execution vertical rotation of the function."
 msgstr ""
 
-#: ../../modules/position.md:554 546c39ceba2e46dfb32f5f01dd58bac7
+#: ../../modules/position.md:554 bfbd1684b5da4378b8ec9744d136a90b
 msgid "**Score `@s bs.rot.v`**: Vertical rotation of the position."
 msgstr ""
 
-#: ../../modules/position.md:562 df8a967b02214a2abd78a0e5758c3ec1
+#: ../../modules/position.md:562 d3440724955d4080b8119fbe5a1dc394
 msgid ""
 "Get the execution position and rotation of the function and store the "
 "coordinates and rotation in 5 scores."
 msgstr ""
 
-#: ../../modules/position.md:567 891b350f527c4882b8702154fde481d9
+#: ../../modules/position.md:567 c21817d2509d4bd19c2f9e63e0849730
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z> rotated <h> <v>`**: "
 "Position and rotation to get."
 msgstr ""
 
 #: ../../modules/position.md:583 ../../modules/position.md:899
-#: aee69ab3c154464b89cda926a0c4e1c0 cb2d18d298d84dedbb00c8a559fe613a
+#: cd61c08c3e784aa8a0fff284227bb9c4 e03f03db4c66401ca23f304d68674f52
 msgid "**Credits**: Aksiome, Leirof, theogiraudet"
 msgstr ""
 
-#: ../../modules/position.md:587 e599d69225404dc59288ce0c98339287
+#: ../../modules/position.md:587 d06ef8e087c2453cb30da9c01cd3ca0a
 msgid "Get Relative"
 msgstr ""
 
-#: ../../modules/position.md 551c84349911466fa1cd84e8ba5767b6
+#: ../../modules/position.md b9418bb09b874a6bb2310c62a13aaa99
 msgid "As to at"
 msgstr ""
 
-#: ../../modules/position.md:595 9e363bcdf79644baa51c932600e735cc
+#: ../../modules/position.md:595 156e2e9b1e8b40bcb881a56f87240c66
 msgid ""
 "Get the execution position of the function relatively to the position of "
 "the executing entity."
 msgstr ""
 
-#: ../../modules/position.md:598 ccb6b373bedb4278b9f7a1713d15338c
+#: ../../modules/position.md:598 0524c0891b544e37b6af08658652df99
 msgid "**Execution `as <entities>`**: Entity considered at the reference point."
 msgstr ""
 
-#: ../../modules/position.md:600 b18a8c49a9684279a79fbe5c50ef3ce7
+#: ../../modules/position.md:600 a8e57c28fabb4fc8b48ab278d6124dd1
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position te get "
 "the relative position from."
 msgstr ""
 
 #: ../../modules/position.md:609 ../../modules/position.md:641
-#: 1debe3ce0425425a9e64bc56413bf373 ced245c7670345618add029568db893e
+#: 7b4f6d5dfbb54053a226271b755aa73a c97f6a00abdb4568916f18e78adab81d
 msgid "**Scores `@s bs.pos.[x,y,z]`**: Relative coordinates."
 msgstr ""
 
-#: ../../modules/position.md:612 4c6fa1f5d09747088b3a137c0f34379b
+#: ../../modules/position.md:612 8a376a8d9032418e973582daa1fa8f4a
 msgid ""
 "*Example: Get your position relative to the nearest Creeper (without "
 "scaling):*"
 msgstr ""
 
-#: ../../modules/position.md 935f59e443ce45eba86ecd964502ee8e
+#: ../../modules/position.md afd23e38b96e42e981527b7c305fa200
 msgid "From Direction"
 msgstr ""
 
-#: ../../modules/position.md:627 05c9e7d0b3b54cfcabd0d083b0b0aa9a
+#: ../../modules/position.md:627 2a9fa6fdf4bd425d8a1de20f5f579f93
 msgid ""
 "Get a direction vector based on the execution position and rotation. "
 "Scale is used as the norm/length."
 msgstr ""
 
-#: ../../modules/position.md:632 ed58cca298b34665ad7c96bfcab6c0ef
+#: ../../modules/position.md:632 411f5b2af88b4a81a9d11b9a4f4c921f
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z> rotated <h> <v>`**: "
 "Position and rotation to get the relative position from."
 msgstr ""
 
-#: ../../modules/position.md:644 17e72a5de8ea4e27bdf1dd68d21b9de9
+#: ../../modules/position.md:644 f54c991cdc214ea3b1047057ab565ddd
 msgid ""
 "*Example: Get your position relative to the position that is 2 blocks in "
 "front of you (scaled by 1000):*"
 msgstr ""
 
-#: ../../modules/position.md:660 48b9fc1d505e44e5b50396c6207d301d
+#: ../../modules/position.md:660 5ffca4649f574a5981a4b78ffc309d1f
 msgid "Local to Canonical"
 msgstr ""
 
-#: ../../modules/position.md:664 e0a2df93b6c6495693f941c48ed36819
+#: ../../modules/position.md:664 0382bef743944a049d5190f39475139a
 msgid ""
 "Convert a local position (using the local reference frame) into a "
 "canonical position (using the relative reference frame)."
 msgstr ""
 
-#: ../../modules/position.md:685 44950b0bc0ae438986bc3f867db0348d
+#: ../../modules/position.md:685 1c5331c2cd704d8ca4ba210ed72b4ac0
 msgid "Set Position and Rotation"
 msgstr ""
 
-#: ../../modules/position.md:693 967391fbeaa447d687867e7b911c71dc
+#: ../../modules/position.md:693 d81bc73116df47c0a4e58d8bc14e70a1
 msgid "Place an entity at coordinates given by scores."
 msgstr ""
 
-#: ../../modules/position.md:698 6d724565fae447148f705b3ec1c5c805
+#: ../../modules/position.md:698 59f190f92f764c9faaca9e2efb36a98f
 msgid "**Scores `@s bs.pos.[x,y,z]`**: Coordinates to teleport to."
 msgstr ""
 
-#: ../../modules/position.md:707 d29c883970944870bda12f605d664125
+#: ../../modules/position.md:707 0aa041f1670a482f8838f4cd877631e5
 msgid ""
 "**State**: Entity is teleported to the coordinates indicated by the "
 "scores."
 msgstr ""
 
-#: ../../modules/position.md:710 a7d08506af7d43af9421e20818635764
+#: ../../modules/position.md:710 6c87df04926e4474aa5aac5ab377c8c2
 msgid "*Example: Teleport to 48.85 0 2.29:*"
 msgstr ""
 
-#: ../../modules/position.md:724 aa086ea82ff140c58f44aa761585573d
+#: ../../modules/position.md:724 e517657c515b4cf2b133b4666b7a735a
 msgid "Place an entity at a precise x coordinate given by scores."
 msgstr ""
 
-#: ../../modules/position.md:729 8358600c5ba84678a58f4b52eaa2a1c1
+#: ../../modules/position.md:729 e47bb48d8608432bb59261e2e0dba505
 msgid "**Score `@s bs.pos.x`**: Coordinate x to teleport to."
 msgstr ""
 
-#: ../../modules/position.md:738 deb127727c6d4fa4a90827ec0e1c93da
+#: ../../modules/position.md:738 b70e2eea500c4af9aa992705e5d9528d
 msgid ""
 "**State**: Entity is teleported to the x coordinate indicated by the "
 "score."
 msgstr ""
 
-#: ../../modules/position.md:741 39369da7ddf744f994fb834ad11a4ee4
+#: ../../modules/position.md:741 4017978a21084f1b906fd63833db3b89
 msgid "*Example: Teleport to 70 ~ ~:*"
 msgstr ""
 
-#: ../../modules/position.md:754 b87599e92f2d42a9a3c116b9547aa630
+#: ../../modules/position.md:754 3315c669489e4114ba00bff15502611a
 msgid "Place an entity at a precise y coordinate given by scores."
 msgstr ""
 
-#: ../../modules/position.md:759 e9c2fb7ff12f4620b483e2f0feafa871
+#: ../../modules/position.md:759 adfd4a4e7b3b426cb286914e69389a39
 msgid "**Score `@s bs.pos.y`**: Coordinate y to teleport to."
 msgstr ""
 
-#: ../../modules/position.md:768 c4f4ddf2374c48968773cefa1faf2275
+#: ../../modules/position.md:768 c256646aefc240b19f6d6c151eeba184
 msgid ""
 "**State**: Entity is teleported to the y coordinate indicated by the "
 "score."
 msgstr ""
 
-#: ../../modules/position.md:771 ca08d4baf9ec4775ae684e5aeb1ccbc9
+#: ../../modules/position.md:771 1ef75d5882e74c9e8088d3639d82d930
 msgid "*Example: Teleport to ~ 82 ~:*"
 msgstr ""
 
-#: ../../modules/position.md:784 535b79d0510d4a2d8fbf35ed6c6f5ece
+#: ../../modules/position.md:784 b1c7f0c5e59a47b18a2a966b745b4b18
 msgid "Place an entity at a precise z coordinate given by scores."
 msgstr ""
 
-#: ../../modules/position.md:789 f27c3242ebcb44459c185d78c0911cca
+#: ../../modules/position.md:789 964cdbcfa48c4c7b977665ebccdcb7c4
 msgid "**Score `@s bs.pos.z`**: Coordinate z to teleport to."
 msgstr ""
 
-#: ../../modules/position.md:798 0abee1be45d149fabad482f285d066f9
+#: ../../modules/position.md:798 2979372969944af1b4a6e2f302455e6b
 msgid ""
 "**State**: Entity is teleported to the z coordinate indicated by the "
 "score."
 msgstr ""
 
-#: ../../modules/position.md:801 df83f7083e844dabab673f9cffbb8d00
+#: ../../modules/position.md:801 432f294c362e43f7b7451c341fca11fa
 msgid "*Example: Teleport to ~ ~ 65:*"
 msgstr ""
 
-#: ../../modules/position.md:818 597d55c857cc453fb9f08e93f73bf4c2
+#: ../../modules/position.md:818 5c9f0fa513be44fe84f37189fdbc2a3e
 msgid "**Scores `@s bs.rot.[h,v]`**: Rotation to teleport to."
 msgstr ""
 
-#: ../../modules/position.md:827 c6d3f48211ce484bb365855faba3e63e
+#: ../../modules/position.md:827 56477ad8b311432d8161290c86ffe9d3
 msgid "**State**: Entity is teleported to the rotation indicated by the scores."
 msgstr ""
 
-#: ../../modules/position.md:841 00931991d31d40b9b98499e7d4ca5d18
+#: ../../modules/position.md:841 13c58a02f3d44aba98d9ac9d778df245
 msgid "**Score `@s bs.rot.h`**: Rotation to teleport to."
 msgstr ""
 
-#: ../../modules/position.md:850 09df6905266a4873bf3c4e90d34d3ad8
+#: ../../modules/position.md:850 7f6328dde22e4dfc991ff56e6712ce09
 msgid ""
 "**State**: Entity is teleported to the rotation indicated by the "
 "horizontal score."
 msgstr ""
 
-#: ../../modules/position.md:863 2a24552e72484dec8fed50d48cb6d4b3
+#: ../../modules/position.md:863 752ee3a7e00249c18496c69152886fd2
 msgid "**Score `@s bs.rot.v`**: Rotation to teleport to."
 msgstr ""
 
-#: ../../modules/position.md:872 06b3b17d42414542b071a9b404d0f425
+#: ../../modules/position.md:872 f28eb361f0574f24895de1e4e148e33e
 msgid ""
 "**State**: Entity is teleported to the rotation indicated by the vertical"
 " score."
 msgstr ""
 
-#: ../../modules/position.md:880 146092e6f63c429e8b62c9a31cd07d08
+#: ../../modules/position.md:880 0201cf4fb0904a11aca4103386b89f7d
 msgid "Place and rotate an entity according to its position and rotation scores."
 msgstr ""
 
-#: ../../modules/position.md:883 bbf94681c8ae498280a7373b4fe638a4
+#: ../../modules/position.md:883 9d196422276b436eb9c932d865c7dcfc
 msgid ""
 "**Execution `as <entities>`**: Entity to teleport. **Scores `@s "
 "bs.pos.[x,y,z]`**: Coordinates to teleport to. **Scores `@s "
 "bs.rot.[h,v]`**: Rotation to teleport to."
 msgstr ""
 
-#: ../../modules/position.md:894 a9b07e5c544c4c9d8aa05ef34b57d69a
+#: ../../modules/position.md:894 55f38f6750814c07a2cb7e2ad2d165f5
 msgid ""
 "**State**: Entity is teleported to the position indicated by the position"
 " scores and rotated according to the rotation scores."
 msgstr ""
 
-#: ../../_templates/comments.md:4 74f322c8981243f2884d4b6369e67781
+#: ../../_templates/comments.md:4 417758275db0408ead8d644f8af2ae82
 msgid "**💬 Did it help you?**"
 msgstr ""
 
-#: ../../_templates/comments.md:6 94e411f64fe843279a132693cbefd10d
+#: ../../_templates/comments.md:6 77f0922550aa4b0084f764c9e29d9d33
 msgid "Feel free to leave your questions and feedback below!"
 msgstr ""
 

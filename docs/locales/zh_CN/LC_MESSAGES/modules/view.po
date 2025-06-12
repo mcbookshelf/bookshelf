@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,39 +19,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/view.md:1 09f04837052e43ffa9a5a71870f22d9a
+#: ../../modules/view.md:1 8695b8ec4ba34fac99610fd0065ea79c
 msgid "👀 View"
 msgstr ""
 
-#: ../../modules/view.md:3 ae0adcfb2777418e858de32f60de19b0
+#: ../../modules/view.md:3 2cccf8d4a88a419ab0b9fb7da342a6f4
 msgid "**`#bs.view:help`**"
 msgstr ""
 
-#: ../../modules/view.md:5 82ed8bfae64146a691bda299d6e1d5dd
+#: ../../modules/view.md:5 d5690427b4ba4009a3b7e5ffbc52e913
 msgid "Execute commands based on what an entity sees."
 msgstr ""
 
-#: ../../modules/view.md:13 ef729abd0bbc4772b3433626191561a3
+#: ../../modules/view.md:13 fd365d79975c4917838b3f9f23abd95e
 msgid "\"Vision is the act of seeing things as they could be, not as they are.\""
 msgstr ""
 
-#: ../../modules/view.md:14 8487faa392344d588e63aea28df97439
+#: ../../modules/view.md:14 cc6d1825a57d42e599123390c67cac26
 msgid "Gretchen Rubin"
 msgstr ""
 
-#: ../../modules/view.md:20 6ab02f8310524799ab48c8efabf58a56
+#: ../../modules/view.md:20 08a91342293843ba807e1dd6fd7605e6
 msgid "🔧 Functions"
 msgstr ""
 
-#: ../../modules/view.md:22 e9e640575c124ffaa4c5ea3bcc7f3a6a
+#: ../../modules/view.md:22 99cf5a0ecfe747ffb9a2463e7dff3dbf
 msgid "You can find below all functions available in this module."
 msgstr ""
 
-#: ../../modules/view.md:26 0d05f6c068624a03875ab96bbe9606b7
+#: ../../modules/view.md:26 4f0065e80f204fb98713a71ace59d026
 msgid "Aimed Block"
 msgstr ""
 
-#: ../../modules/view.md:30 0d093a414ce3473284aa07210a3b3ce3
+#: ../../modules/view.md:30 a15ed95b05c045efa7caf2bf7e41294e
 msgid ""
 "Run a command at the aligned coordinates of the block an entity is aiming"
 " at."
@@ -61,19 +61,19 @@ msgstr ""
 #: ../../modules/view.md:143 ../../modules/view.md:177
 #: ../../modules/view.md:211 ../../modules/view.md:251
 #: ../../modules/view.md:284 ../../modules/view.md:311
-#: 24341a5e59174fc39d4c42f9dfbef77c 3d0cfbe6a9ab4224b58b27049bff6373
-#: 4f67dfb40ef943318cf9c2b1805d3032 506c2762d3344f5db9be616d4521c52f
-#: 54d8b52614a445d89b35c21873da9613 631680873cd848e7943b618214f1e398
-#: cc58dfa968104f438cff23311b30e1df ea25fa862d6c4e62bcf6e1511848351d
-#: edb53a6e16134dfea540a98fdc0fc762
+#: 8ba5905a1ce8490fbe384bfd7e0014a7 8e65e8d73159435399557bd3ab691adf
+#: 9aa46d4b6f2349cf9eec4bcbeb1b02ba c6b208e756d84c4da6b29ac474562a0c
+#: cba3cf89a86a44ad8a22f3c8c56929c6 cc7b682a878146b9b945ca4d7db37420
+#: e01608cace024d9a8e9c206ee2aa4947 e0560edac579444fb42fad329cf81536
+#: e4587422b7d144b7b19006e2b90e37c4
 msgid "Inputs"
 msgstr ""
 
 #: ../../modules/view.md:33 ../../modules/view.md:77 ../../modules/view.md:102
 #: ../../modules/view.md:144 ../../modules/view.md:178
-#: 0891a6fb1d104584b79a0bdf4c294d17 5bce66c63fda4b81961886b925be9189
-#: 74ffe026584c44b1b63b3b0cdb0d6657 9dad3b778ac84417a68da043912ddff3
-#: bcfadbc26eb144de87f9ffa26521e823
+#: 0a72bdc9dad046d3991fe5c6abfcdc36 33a1e99bdcd241f5bffa0b7064a140f9
+#: b1411cb91c814b82849eb25b0bb4dbbb c6f9e63dfa0f4a8d98ead19957f3468c
+#: e6f97aedd1e84ce285c313186b98a261
 msgid ""
 "**Execution `as <entities>`**: Entity whose eyes determine the vision "
 "origin."
@@ -83,31 +83,31 @@ msgstr ""
 #: ../../modules/view.md:146 ../../modules/view.md:180
 #: ../../modules/view.md:216 ../../modules/view.md:256
 #: ../../modules/view.md:287 ../../modules/view.md:314
-#: 2117cfb374a748a386d657c501fc32c2 3164074a5b104174920dcb5c23b62956
-#: 398400b20b69434e8ff07d50e2f43e6b 51eb080a0d024938a00f2b76f930d35b
-#: 7597f3c282ab40d8835d3761ca465566 8f8c7c0fa0b04b429060bff93f03a1d1
-#: b5a27cfadb104f4bb9aac22986a77b7f dc5d4a8d7fc44d21bc7ae628f3312ec4
-#: e3fb07def73c46aa945185ac19c7c55a
+#: 3a34384597ea4c05a47c0b6546bfc223 48b122f2a19f4df6a7298efcf3e75f7f
+#: 737bb24342e14821a758087838e2e57e 86307db0316f4ee494fb69153b653591
+#: 8f804f75c8b24cb89c43a1b39c8780eb b456bc07704f4c7f9ca0a3d481f28145
+#: bb1c19a9aa3f4c538488b82692080d9a df49672d3dcb48f88c4eefea98d224e1
+#: e4ff26ea68bc40fa90ff327e047f2824
 msgid "**Function macro**:"
 msgstr ""
 
-#: ../../modules/view.md:43 0cfad42e46f94268a636a4ab92927a9f
+#: ../../modules/view.md:43 552d27bdb3574144ad64dcb21a592585
 msgid "*Example: Change the block you are looking at:*"
 msgstr ""
 
 #: ../../modules/view.md:50 ../../modules/view.md:121 ../../modules/view.md:161
 #: ../../modules/view.md:195 ../../modules/view.md:235
-#: 3b44228516fa45b6921d0cc3638b9909 4cb9088db50441349441fd6b90437600
-#: 6f177d61a5d247f6900861baa6133e6d 81b7024ec71c4b27b076d20e3f2ff5cc
-#: f547cc0df41e4336a06709b6df056ee2
+#: 0fd0336c284c42879fee06c294db05c6 47f99fa8a18a4780bd03d0cb97ce0708
+#: 87ebee64cd574105aa515b8d81cfd33c df1b636fae7943d5911dab123f20c0bf
+#: ef8848dfda444de2bfe0dc1c4e8faa89
 msgid "Advanced Usage"
 msgstr ""
 
 #: ../../modules/view.md:53 ../../modules/view.md:124 ../../modules/view.md:164
 #: ../../modules/view.md:198 ../../modules/view.md:238
-#: 98de6a562bc54f09b274ef7c7e175b10 992c0a2f69ee4ab38dbcdf721a2a76c0
-#: ca0c3b5bd1dd4a128f4d02ed7bf910e5 e0d59a2c00ab47c4b61d365cb2ec627b
-#: f1e924c3cf4244a5a15c611789f54065
+#: 03ffa3b54b6e4a1297b7ea4cece1106c 1f06225cd29e4397bfb1849e946c83d8
+#: 6b584e6f94d341fba1d658cf348e82b0 e35e347754854de9bc3722f19b154bd6
+#: fa6aea9f366e43579944ba81821dab85
 msgid ""
 "This system is a simplified, specific use case of the `#bs.raycast:run` "
 "function. It internally relies on it, allowing you to read its output and"
@@ -115,11 +115,11 @@ msgid ""
 "[Learn more here](raycast.md)"
 msgstr ""
 
-#: ../../modules/view.md:56 67e79fb1decc4134869d7231013f224d
+#: ../../modules/view.md:56 37e594b40a754eb3b6ceeaf59b0f4455
 msgid "Avoid Advancements"
 msgstr ""
 
-#: ../../modules/view.md:59 bb23a8df177a43f4aafc3d609684b078
+#: ../../modules/view.md:59 69bad785b07e410cad9b7ef37670de0b
 msgid ""
 "This function *can* be used with the `placed_block` advancement to detect"
 " block placement, but this is discouraged due to potential precision "
@@ -130,182 +130,182 @@ msgstr ""
 
 #: ../../modules/view.md:62 ../../modules/view.md:133 ../../modules/view.md:167
 #: ../../modules/view.md:201 ../../modules/view.md:339
-#: ../../modules/view.md:361 22d963a7882c41829e861f472d2a29ff
-#: 4a2f640a358e40cc9ac5d5f75477c5f9 58082fd22c4243938f2df561d418193e
-#: 727efd83449f45ba8c5d46ad33cbf99c 8408ca01527a472dba1571bee84af72c
-#: fca51e96706b4dda90fb064df238c083
+#: ../../modules/view.md:361 02e5baf87068443fb8428be0730474a4
+#: 2fe9778877aa45f5a2e95a6ba87d81ec 4619a2ea4843405883b0cfc55ed311f0
+#: c2ce0d14242f49d9be258e37b9d6f7fe d749f2a7816449d1a6f3d78b32a54df9
+#: ddc224f8a7af4beeaf631df59f197f25
 msgid "**Credits**: Aksiome"
 msgstr ""
 
-#: ../../modules/view.md:66 f60842474ffc4a18832f93d3b07eb31f
+#: ../../modules/view.md:66 3b0949a9f0e442d7b48b9458fb0d8bc5
 msgid "Aimed Entity"
 msgstr ""
 
-#: ../../modules/view.md 31e66316e12c442dae386acb84eccf17
-#: 5bc0eac3e01e499aaaa3253c8142dccf
+#: ../../modules/view.md 2870605f904145d8af0f1b4878ea2e8d
+#: 95cfcd9bbf2942f9af75aa746dfe6eb5
 msgid "As"
 msgstr ""
 
-#: ../../modules/view.md:74 b68ba7581d874f549b45a4387a7991e2
+#: ../../modules/view.md:74 6e3fd48ab2204e8baf06186adf1cf11e
 msgid "Run a command as the entity that is aimed by the current entity."
 msgstr ""
 
-#: ../../modules/view.md:87 da3ecba45a5044708eb87f9a026d7e83
+#: ../../modules/view.md:87 3f7216352189417790d7bdef116bff97
 msgid "*Example: Run a command as the entity that you are looking at:*"
 msgstr ""
 
-#: ../../modules/view.md a142d0741cc84bfd92b589f40ae3cf20
-#: e582a016be4347e18bab4fe8a1a96cba
+#: ../../modules/view.md 0af026785a6b4bf6acf0a378a2724779
+#: c1d86220d6f2477fba2eefea0c4d3e3a
 msgid "At"
 msgstr ""
 
-#: ../../modules/view.md:99 aa14dffe143f45e58f16bdca0bf2dee3
+#: ../../modules/view.md:99 cc81ab57ba384a4399cf834a6d1cffa6
 msgid "Run a command at the entity that is aimed by the current entity."
 msgstr ""
 
-#: ../../modules/view.md:112 243c9de8d0a641e294b9fbef63b6081c
+#: ../../modules/view.md:112 a810c1b5c1d34340bef7baf46fb761e7
 msgid "*Example: Run a command at the entity that you are looking at:*"
 msgstr ""
 
-#: ../../modules/view.md:127 0b22c56bdb174fe985005267b0ecb8e6
+#: ../../modules/view.md:127 8ec4b4fca40b4518a91855f69acedb46
 msgid "Performance Tip"
 msgstr ""
 
-#: ../../modules/view.md:130 e2950cbcdce844f591defe2f845d369d
+#: ../../modules/view.md:130 9cd4f57cd29c4b478092afd78dbd0e8f
 msgid ""
 "In Minecraft, predicates can check if a player is looking at an entity. "
 "If you only need a simple player-specific check, you should consider "
 "using the [Looked entity](#looked-entity) functions."
 msgstr ""
 
-#: ../../modules/view.md:137 6dd75d0d49484c4fbece2c633dc9548d
+#: ../../modules/view.md:137 a34ca0a76c1144288880a75ffb0b2383
 msgid "Aimed Point"
 msgstr ""
 
-#: ../../modules/view.md:141 66369303be3847fe8c342f3d5c3579ef
+#: ../../modules/view.md:141 7228f0879f624fe19d8000c7704837d3
 msgid "Run a command at the point that was hit by a raycast."
 msgstr ""
 
-#: ../../modules/view.md:154 61392c7dc14b4cf5a1fd01ea274a95b1
+#: ../../modules/view.md:154 edecd1052a1e4a49b8447bc445299636
 msgid "*Example: Run a command at the point you are looking at:*"
 msgstr ""
 
-#: ../../modules/view.md:171 b597bae44ac3423fa9b2f8abb140fe0d
+#: ../../modules/view.md:171 85c9920656c948149fe3b43340d8fa11
 msgid "Block Placement"
 msgstr ""
 
-#: ../../modules/view.md:175 a09fcae80df84a618ec2bd00194bfe9c
+#: ../../modules/view.md:175 65ca078f544e4fd28ade424259b8c9a9
 msgid ""
 "Run a command at the precise coordinates where a block would align if "
 "placed, considering the collision block and its normal."
 msgstr ""
 
-#: ../../modules/view.md:188 b74e539666014766be17876cab7cfa5b
+#: ../../modules/view.md:188 02acb3a5d336460fa7eb01bd42a5a120
 msgid "*Example: Set a block as if the player was placing it:*"
 msgstr ""
 
-#: ../../modules/view.md:205 35de1c780d474a3c92ed90648d61afb7
+#: ../../modules/view.md:205 438a20401967486f8cb5ab1c0189764a
 msgid "Can See \"as to at\""
 msgstr ""
 
-#: ../../modules/view.md:209 17bb42a198e44e98b92fa412a07898c8
+#: ../../modules/view.md:209 e17ba6abdaf1411aab15fb430fd17b51
 msgid ""
 "Determine if an entity, from its current position, can have an "
 "unobstructed view to the execution position."
 msgstr ""
 
-#: ../../modules/view.md:212 2e1f3cb3d8864e2da1fc8cfe10e9c042
+#: ../../modules/view.md:212 6d3d6079f79d4fc98468dabb8e15fc55
 msgid "**Execution `as <entities>`**: Entities that are being checked."
 msgstr ""
 
-#: ../../modules/view.md:214 a6f9208c8f994b3e868da387e2c75c10
+#: ../../modules/view.md:214 10b8a5d5cae94c35841f8d95b26a96c7
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position you "
 "want to check for visibility."
 msgstr ""
 
-#: ../../modules/view.md:222 1d563ca68d7644bd8aa866cf2814b5e4
+#: ../../modules/view.md:222 99a75528497d4c63bc4a238e50125c4c
 msgid "Outputs"
 msgstr ""
 
-#: ../../modules/view.md:223 a494960d9ed148f1923c8e778f50e2ab
+#: ../../modules/view.md:223 4a15f84b46dc4ad4a32604fcd571fe71
 msgid "**Return**: Whether the check is a success or a failure (1 or 0)."
 msgstr ""
 
-#: ../../modules/view.md:226 bb2a0fdeada74e399bb722551e62b6bc
+#: ../../modules/view.md:226 11d8406561eb49ac9b705e2b3e92574a
 msgid "*Example: See if the nearest entity is able to see you:*"
 msgstr ""
 
 #: ../../modules/view.md:241 ../../modules/view.md:270
-#: 19aa58a19c554e6a92366f7a86df5d0d 5d6582df4f4e4934be03efd71b18dc45
+#: 18bd2a73a126448086b5e21e40e12c23 812711e0861341b69e81f6d37474c8d0
 msgid "**Credits**: Aksiome, Leirof"
 msgstr ""
 
-#: ../../modules/view.md:245 3178c0c0a02140be91b5c6ba790f75d8
+#: ../../modules/view.md:245 368dc74a5e8141089ee4d082a24b63cb
 msgid "In View \"as to at\""
 msgstr ""
 
-#: ../../modules/view.md:249 23672294ecb14b9c8e814d55713286b8
+#: ../../modules/view.md:249 67b1189f7ee044169aa0c4f9cc60c1ac
 msgid ""
 "Determine if an entity has a specific position within its field of view, "
 "which is represented as a cone originating from the entity's eye."
 msgstr ""
 
-#: ../../modules/view.md:252 2abf94474e234195ba9e60595e75a782
+#: ../../modules/view.md:252 9c03389a36074963b4e577e387c4cec3
 msgid ""
 "**Execution `as <entities>`**: Entities whose field of view is being "
 "checked."
 msgstr ""
 
-#: ../../modules/view.md:254 5917376f2c514535b6e164a5af0dee2b
+#: ../../modules/view.md:254 5a150c7c10114f2ea27c4f7b4f0bc35e
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position you "
 "want to check if it's within the entity's field of view cone."
 msgstr ""
 
-#: ../../modules/view.md:263 c303a07c7dea404581bf4f2c144ddaf9
+#: ../../modules/view.md:263 3d7a47b14ca84f46b38de0994f6a7ac4
 msgid "*Example: Check whether the position 0 5 0 is in your field of view:*"
 msgstr ""
 
-#: ../../modules/view.md:274 8feb3ed28bea4f55a22215e419efbcef
+#: ../../modules/view.md:274 9df8a6e40e444d1c8276d976b320590b
 msgid "Looked Entity"
 msgstr ""
 
-#: ../../modules/view.md:282 25c09a03d6b141d39cdc475783c87162
+#: ../../modules/view.md:282 75153e3b4fa0409eb67c68970b650181
 msgid "Run a command as the entity a player is looking at."
 msgstr ""
 
 #: ../../modules/view.md:285 ../../modules/view.md:312
-#: 1d7e0733cec34691bf618a7baccd06bc e04742e7f1cc4e478fe212b10f6292e3
+#: 98afb1ba4959484cb1ba9bf488af5cff b52716d5fe3a4c2b8a3c6338c3b146c7
 msgid ""
 "**Execution `as <players>`**: Player whose eyes determine the vision "
 "origin."
 msgstr ""
 
 #: ../../modules/view.md:293 ../../modules/view.md:320
-#: 078ad715b2dc403c8d77313165a9adcf 5523566a30d34d53a009d693d292bbdc
+#: 0d6f2d799331401090f91d11349618c1 e08e90132ceb4fd3889844a9ba4d9279
 msgid ""
 "**Tag `bs.view.is_lookable`**: Tag that must be added to entities that "
 "can be looked at."
 msgstr ""
 
-#: ../../modules/view.md:296 5adb55e764644d7dbda4c74ff8360578
+#: ../../modules/view.md:296 e26ace9d87054facb2ae037a7197fe76
 msgid "*Example: Make the armor_stand the player is looking at glow:*"
 msgstr ""
 
-#: ../../modules/view.md:309 33dd23ec8d2b45cd96479ce0e616fa73
+#: ../../modules/view.md:309 b513be37fe284887a5182dd57acb3e69
 msgid "Run a command at the entity a player is looking at."
 msgstr ""
 
-#: ../../modules/view.md:323 f454b2cb74344325b7415e16c44ab4df
+#: ../../modules/view.md:323 549e0c46c1b845ddb325d02f9a62a7a8
 msgid "*Example: Summon particles at the armor_stand the player is looking at:*"
 msgstr ""
 
-#: ../../modules/view.md:333 925d0a07a8c4492d86d184896da7bbae
+#: ../../modules/view.md:333 4676ecef11f1496d934a49a96956d13a
 msgid "Technical Limitations"
 msgstr ""
 
-#: ../../modules/view.md:336 ff43c8ae65b24060993cfb0d005cd8e9
+#: ../../modules/view.md:336 dc43d399591a45a6ab1f038a8c89d016
 msgid ""
 "As this function relies on a player-specific predicate, it is exclusively"
 " designed for players. Additionally, to optimize performance, only a "
@@ -313,35 +313,35 @@ msgid ""
 " simultaneously."
 msgstr ""
 
-#: ../../modules/view.md:343 e977655d8e6841a09e3c3761d5b46a74
+#: ../../modules/view.md:343 d57efaeae1d0477fa7e610bba6073206
 msgid "🏷️ Tags"
 msgstr ""
 
-#: ../../modules/view.md:345 54e20e7fba564feda534e72b612ca153
+#: ../../modules/view.md:345 00f964bf214740d8aabfcee699e48093
 msgid "You can find below below all tags available in this module."
 msgstr ""
 
-#: ../../modules/view.md:349 00397fc491d143c3bc3f6d1c8c0d3055
+#: ../../modules/view.md:349 02203b4046074e109e89737a71e75261
 msgid "Blocks"
 msgstr ""
 
-#: ../../modules/view.md d7ff8e40b2a0425a8a0a9b494ca120b7
+#: ../../modules/view.md 2e239429b4cd40fb8747390e86162d39
 msgid "Can See Through"
 msgstr ""
 
-#: ../../modules/view.md:355 519a83b8b9494650ab98cc8224b74244
+#: ../../modules/view.md:355 8f04b9faba9f41279038fe6f7bcfe70f
 msgid "**`#bs.view:can_see_through`**"
 msgstr ""
 
-#: ../../modules/view.md:357 ef9e44e3d46049fd926137e8589254f9
+#: ../../modules/view.md:357 256385a08a2744a5a3bdc2d9ee090cf7
 msgid "Determine if the block is transparent."
 msgstr ""
 
-#: ../../modules/view.md:367 c07d00549b6a4243b41f82aa5b12bf73
+#: ../../modules/view.md:367 c8c49e1835504c2aaaf172e7bf5170a3
 msgid "**💬 Did it help you?**"
 msgstr ""
 
-#: ../../modules/view.md:369 120b431a76a74f9ba654794ab99661a2
+#: ../../modules/view.md:369 97ab5b12a95149c3a1c45201ed89ce66
 msgid "Feel free to leave your questions and feedbacks below!"
 msgstr ""
 

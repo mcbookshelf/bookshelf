@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,119 +19,119 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/schedule.md:1 555921a0b9724d78ad85b1c4122e1547
+#: ../../modules/schedule.md:1 d1811f344d2f474189e5107386dc387b
 msgid "⏲️ Schedule"
 msgstr ""
 
-#: ../../modules/schedule.md:3 520a23d273fe489391eb2f49c0872b77
+#: ../../modules/schedule.md:3 3ee30889b86f410bbbe94fcfb44e387d
 msgid "**`#bs.schedule:help`**"
 msgstr ""
 
-#: ../../modules/schedule.md:5 8835ce503d7e4020a3f557e338be4316
+#: ../../modules/schedule.md:5 931af8cf767c481cbe7876c3b9a2f4dd
 msgid ""
 "Enhance command scheduling with this module, providing flexibility beyond"
 " vanilla capabilities. Cancel commands and maintain execution context "
 "(entity & location)."
 msgstr ""
 
-#: ../../modules/schedule.md:9 3aa5a2fd365a4f5e995ce84222683297
+#: ../../modules/schedule.md:9 8047e4cebd0d45b7894c9a3dd7270590
 msgid "🔧 Functions"
 msgstr ""
 
-#: ../../modules/schedule.md:11 1a7368a0966649e0acef36ad4fae54b6
+#: ../../modules/schedule.md:11 fe21664d716d4980894e7ac4860cae10
 msgid "You can find below all functions available in this module."
 msgstr ""
 
-#: ../../modules/schedule.md:15 56fe671554cc4039aea183d82a937c95
+#: ../../modules/schedule.md:15 ca30b6919f584bada6821f1c481c6227
 msgid "Cancel"
 msgstr ""
 
-#: ../../modules/schedule.md 2f26994135994613a4aa57af0d5ccf19
+#: ../../modules/schedule.md b84d3bb0620449fca0b6a7b073f9f5da
 msgid "All"
 msgstr ""
 
-#: ../../modules/schedule.md:23 289af5d0e15d4f1f93d4d0c3fd6a3883
+#: ../../modules/schedule.md:23 8c2471fa2d854d67b367c1fc955e0b15
 msgid "Cancel all scheduled commands that match the given ID."
 msgstr ""
 
 #: ../../modules/schedule.md:25 ../../modules/schedule.md:47
-#: ../../modules/schedule.md:91 1d307e4d61b54590b88fb63171f8e1eb
-#: 944c3b0cb58f4a31b95090bbaa6d90c6 d827f315a0c543f396e02b709e933ee8
+#: ../../modules/schedule.md:91 78308c004d7148c28a81a5bf4fd2f024
+#: b21f4968c64043f3a260310d5b18c68e bea0682649184364a85a0785af871d2f
 msgid "Inputs"
 msgstr ""
 
 #: ../../modules/schedule.md:26 ../../modules/schedule.md:48
-#: ../../modules/schedule.md:92 26b9564769d5416d9941db7ca4dc1076
-#: a8d6cee400154a01850e8be990fb5736 b66a8c8857084ec6a745d0835c9bba29
+#: ../../modules/schedule.md:92 1caab675684744b0ba1aa7351e025943
+#: 1d78ba9235e34da8a25c168ac099cf8a 2aad5b71ee874fb89277db3c2284da8b
 msgid "**Function macro**:"
 msgstr ""
 
-#: ../../modules/schedule.md:34 bf585f23016f4480b2566f7604d8163f
+#: ../../modules/schedule.md:34 46aba0be41ca4238b51fd94aa410501e
 msgid "*Example: Cancel all commands with an `id` parameter set to \"foo\":*"
 msgstr ""
 
-#: ../../modules/schedule.md 1dc4adfe5a75437eb0ebbd1833bcc78c
+#: ../../modules/schedule.md 1e16cc72d2e4440dbe23e7371382b8d8
 msgid "Single One"
 msgstr ""
 
-#: ../../modules/schedule.md:45 bf180723f1954ff39e62f5fee6c4657f
+#: ../../modules/schedule.md:45 724c5f6120cd4d338bc099a5b78763b9
 msgid "Cancel the first scheduled command that matches the given ID."
 msgstr ""
 
-#: ../../modules/schedule.md:56 d0f1a4a138764c9d93e703aa3d79b6c7
+#: ../../modules/schedule.md:56 1f36927b6411465185f286f893e48fe6
 msgid "*Example: Cancel the next command with an `id` parameter set to \"foo\":*"
 msgstr ""
 
 #: ../../modules/schedule.md:63 ../../modules/schedule.md:80
-#: ../../modules/schedule.md:120 51572b2a2e8b4869a05b1efbc5fc7d1b
-#: 7e491b8ad73245598f2fc72aedcef888 96ee8286f85c4f2788a3b14430f44cd2
+#: ../../modules/schedule.md:120 04d5b3151c084009a936a8369aef84fb
+#: 7b8906e6d17848b2a52adc7721f01ed0 ce590380aa3841259cb1a7f80c16e95b
 msgid "**Credits**: Aksiome, theogiraudet"
 msgstr ""
 
-#: ../../modules/schedule.md:67 f15ada03bbf341bea73c8344a52758df
+#: ../../modules/schedule.md:67 1c351e99973e44b6bc7ba0dca780b07b
 msgid "Clear"
 msgstr ""
 
-#: ../../modules/schedule.md:71 65e7fe9a2d984d63b10e1043d78b4b59
+#: ../../modules/schedule.md:71 75bef9a527514cba8f765e380334faf6
 msgid "Clear all scheduled commands."
 msgstr ""
 
-#: ../../modules/schedule.md:74 0222ae4aa74a4085a07831d346f7efc3
+#: ../../modules/schedule.md:74 4bd23cb3462a407eb30d414e0af13aa5
 msgid "*Example: Remove all scheduled commands:*"
 msgstr ""
 
-#: ../../modules/schedule.md:84 8d5cab5442b44474b9f06ddd1670dd9c
+#: ../../modules/schedule.md:84 8a73fe1e6ca745ac9e83bf64ca4dd59f
 msgid "Schedule"
 msgstr ""
 
-#: ../../modules/schedule.md:88 c99ade033b564832b75cf8817308d708
+#: ../../modules/schedule.md:88 a8b6ffe299374dedbea651cf2f723389
 msgid ""
 "Schedule a command for execution. If a command is registered during a "
 "tick where other commands are already scheduled, it is added after those "
 "previously registered."
 msgstr ""
 
-#: ../../modules/schedule.md:102 39e961166d2b4c0599d64ee21c261d8e
+#: ../../modules/schedule.md:102 2f9824e5d887493683b4d4367263a012
 msgid "Outputs"
 msgstr ""
 
-#: ../../modules/schedule.md:103 c541ac05281b498cb26e1ed2db225e1d
+#: ../../modules/schedule.md:103 ca34edf13e5f482a8cd26a80c906095f
 msgid "**Return**: A unique identifier for the scheduled command."
 msgstr ""
 
-#: ../../modules/schedule.md:106 579f46b70e2b4bd497c6e49874169151
+#: ../../modules/schedule.md:106 3932e583af514d239adee98f9522ad86
 msgid "*Example: Execute `say foo` in 2 seconds:*"
 msgstr ""
 
-#: ../../modules/schedule.md:112 9ab9a3275780453fbbe281ff098e884e
+#: ../../modules/schedule.md:112 cca4f5552469408e921fc2ed15732faf
 msgid "*Example: Schedule then cancel commands that match a complex ID:*"
 msgstr ""
 
-#: ../../_templates/comments.md:4 81efc8aa29f74a5d96942dc8c006b0bf
+#: ../../_templates/comments.md:4 cf8334cc95f54d58981b53e36250f40b
 msgid "**💬 Did it help you?**"
 msgstr ""
 
-#: ../../_templates/comments.md:6 7d0ef9ec37a34a22a5d8406a498a04bf
+#: ../../_templates/comments.md:6 c6bc433a329149958e7f258c18e6ff60
 msgid "Feel free to leave your questions and feedback below!"
 msgstr ""
 

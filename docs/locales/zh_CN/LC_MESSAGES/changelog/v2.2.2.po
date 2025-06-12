@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,25 +19,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../changelog/v2.2.2.md:1 1e32ba886f2149b4bba726d825a5e191
+#: ../../changelog/v2.2.2.md:1 94653339cb3b4e2a9a06a2d6c6c389c8
 msgid ""
 "📦 [Bookshelf - "
 "2.2.2](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.2)"
 msgstr ""
 
-#: ../../changelog/v2.2.2.md:3 3e3540cde8714d0b939658293218a515
+#: ../../changelog/v2.2.2.md:3 dd7ac92bb376485a83b0ff19998df302
 msgid "**🩹 A Quick Hotfix!**"
 msgstr ""
 
-#: ../../changelog/v2.2.2.md:5 ae4b9eff4ab84090ab30b94394974d2d
+#: ../../changelog/v2.2.2.md:5 5a02a15e82ba4801b2e9e0100a1ca595
 msgid "*This is a hotfix for version 2.2.1.*"
 msgstr ""
 
-#: ../../changelog/v2.2.2.md:8 b6445ee8b6ae436f98aab31881ac4da9
+#: ../../changelog/v2.2.2.md:8 fe1dcb52e9114815b6417b92e3e52e11
 msgid "`🎯 bs.hitbox`"
 msgstr ""
 
-#: ../../changelog/v2.2.2.md:10 5c079615c45541348e64215b0f674095
+#: ../../changelog/v2.2.2.md:10 24b843d002574b14b7af76fa812c62d2
 msgid ""
 "🐛 **[#293](https://github.com/mcbookshelf/bookshelf/issues/293)** - Fixed"
 " module issues caused by the removal of `creaking_transient` in Minecraft"

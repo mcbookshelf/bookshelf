@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,41 +19,41 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../changelog/v2.2.1.md:1 f928c0ad8f4d4172b1b32842fd1de7aa
+#: ../../changelog/v2.2.1.md:1 05c0a17557f14698a0ff8c3cc2e47aeb
 msgid ""
 "📦 [Bookshelf - "
 "2.2.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.1)"
 msgstr ""
 
-#: ../../changelog/v2.2.1.md:3 2a6dce7c71484cc0b1d0f81cd976668d
+#: ../../changelog/v2.2.1.md:3 e6448ac834dd45a0904ca1e994dc96ad
 msgid "**⬆️ A Minecraft Update!**"
 msgstr ""
 
-#: ../../changelog/v2.2.1.md:5 c06e80243a0c4670b18aa8197fdd0a9c
+#: ../../changelog/v2.2.1.md:5 8be9e3aad756423189583e02254faf78
 msgid ""
 "*This release fixes several issues and bumps the Minecraft version to "
 "1.21.4.*"
 msgstr ""
 
-#: ../../changelog/v2.2.1.md:7 1f0c55c614a44cdba98d79275fa913d9
+#: ../../changelog/v2.2.1.md:7 7684d63d3b2743599d6e89ea33335e78
 msgid "Bookshelf is now based on **Minecraft 1.21.4**."
 msgstr ""
 
-#: ../../changelog/v2.2.1.md:10 f8a737bfbaab4ef2b5fa8f287974456b
+#: ../../changelog/v2.2.1.md:10 4643b3070c4740b7b1d24a48dd0233ef
 msgid "`🧱 bs.block`"
 msgstr ""
 
-#: ../../changelog/v2.2.1.md:12 ef64fc38112045108d256e4fbd5503e1
+#: ../../changelog/v2.2.1.md:12 096653cbb79f4164b46bf1ef4d1bcf23
 msgid ""
 "🐛 **[#290](https://github.com/mcbookshelf/bookshelf/issues/290)** - Added"
 " missing blocks in registries."
 msgstr ""
 
-#: ../../changelog/v2.2.1.md:14 ce01bf258abd4133975e9d1950ba54ce
+#: ../../changelog/v2.2.1.md:14 5bdccb279ffb481ebbea20b425a57dff
 msgid "`🏃 bs.move`"
 msgstr ""
 
-#: ../../changelog/v2.2.1.md:16 33dfc99258ba4de582daf977e4e5e4e3
+#: ../../changelog/v2.2.1.md:16 d879741b97fb4cee82787276aaa1cb1d
 msgid ""
 "🐛 **[#288](https://github.com/mcbookshelf/bookshelf/issues/288)** - Fixed"
 " collision resolutions."

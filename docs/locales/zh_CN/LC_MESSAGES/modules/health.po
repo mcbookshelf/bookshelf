@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-24 18:44+0800\n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,31 +19,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/health.md:1 05a693e06ce64e2bb6ae8c5a10fc1cf7
+#: ../../modules/health.md:1 f6c0968ae8874c25bd5ccd8cbae8e334
 msgid "❤️ Health"
 msgstr ""
 
-#: ../../modules/health.md:3 665c993c7d3f41bc8dcb1f6cc36cd82c
+#: ../../modules/health.md:3 794cd69712464c01803c9b6278e5cb4a
 msgid "**`#bs.health:help`**"
 msgstr ""
 
-#: ../../modules/health.md:5 8b6ee2d388124e5a91b64ad34ffd4e52
+#: ../../modules/health.md:5 aceb673b274e4ac4b64874801c865909
 msgid "Efficiently manage the lifecycle and vital aspects of an entity."
 msgstr ""
 
-#: ../../modules/health.md:8 b3c07c30d7b24d26b0ecfab7a6d667aa
+#: ../../modules/health.md:8 aac65fa73ad14f789f1f648e47cc1ebb
 msgid "\"He who has a why to live can bear almost any how.\""
 msgstr ""
 
-#: ../../modules/health.md:9 94d8a1b71ef14ddca53da4e5d6d05b53
+#: ../../modules/health.md:9 0f0ded231ac44913998a6e8887de0751
 msgid "Friedrich Nietzsche"
 msgstr ""
 
-#: ../../modules/health.md:13 6eadb9298b744e9dbe48bae5330a7386
+#: ../../modules/health.md:13 4dba4f7b52ab46d0937d4c1ac0678502
 msgid "About NBTs"
 msgstr ""
 
-#: ../../modules/health.md:16 a195109ad6ac4d9984b82b327cfd1add
+#: ../../modules/health.md:16 1c0702f06b594c13a45606a565bc5949
 msgid ""
 "When using this module, do not rely on NBTs to retrieve health "
 "information. Instead, use `get_health` to get the player's health and "
@@ -52,11 +52,11 @@ msgid ""
 "values, and this approach was chosen to bypass certain limitations."
 msgstr ""
 
-#: ../../modules/health.md:19 4d54347ede944c7f94059b7a7c64fbd0
+#: ../../modules/health.md:19 61d76158bf254f5ea52793888762dd97
 msgid "Effects Incompatibility"
 msgstr ""
 
-#: ../../modules/health.md:22 3538207c6e8c458c9ee5731504c5c475
+#: ../../modules/health.md:22 b8be30c592d94937b776718f3da46d74
 msgid ""
 "This system uses the `instant_health` effect to heal the player and force"
 " an update to their health. Using amplifier values higher than 28 may "
@@ -65,216 +65,216 @@ msgid ""
 "it."
 msgstr ""
 
-#: ../../modules/health.md:27 12f898a2377d411597f38fa6bebef0ed
+#: ../../modules/health.md:27 80130c49e103438e80e180bf20d49d5c
 msgid "🔧 Functions"
 msgstr ""
 
-#: ../../modules/health.md:29 12ed496969a64bb79e35056dea95acd2
+#: ../../modules/health.md:29 2d95848bd88a42bd892e74b086db4a71
 msgid "You can find below all functions available in this module."
 msgstr ""
 
-#: ../../modules/health.md:33 fd3dda7151ed4fa2b5c67d706c7c7158
+#: ../../modules/health.md:33 8f3236e70e964e4699e58b18af2be63c
 msgid "Add / Remove"
 msgstr ""
 
-#: ../../modules/health.md 5e0cef6c408a4d0ab2798e3f09570806
-#: 61339316e64649fea5983f9be076041d fef8b561dcb14cfa88757d0dbd2b009d
+#: ../../modules/health.md 384c017b22134cf8a3077da129976283
+#: 7293222129ca4f549c0d12ebc122f12f 99e55b078d06441d84d278ef4fea6609
 msgid "Health"
 msgstr ""
 
-#: ../../modules/health.md:41 4b3b1a70ed4b4b359dead33554f98430
+#: ../../modules/health.md:41 cfb4a36361c54858b2d8ae358c9b1ee3
 msgid "Add or remove health points from players."
 msgstr ""
 
 #: ../../modules/health.md:43 ../../modules/health.md:76
 #: ../../modules/health.md:118 ../../modules/health.md:145
 #: ../../modules/health.md:181 ../../modules/health.md:208
-#: ../../modules/health.md:240 7856f04249ad4ec0824a63c611e3e721
-#: 7bbb1bc4f14649f0aec4cfb5f2731a99 ab518302b7b049d586993ccd8d8e1509
-#: bdcfd4fb03de4dbf8bba1610ea2c69b1 c240999e259a41cfaf49f8fd5f699fae
-#: d5663a4e9df34d28bbb7f2d05af2ffba ff91ad9e0ecb4025be826e0eb1215e74
+#: ../../modules/health.md:240 07bb4e9eb617405d91fb8c1bd089c8f5
+#: 37094f2fa3824ce0ae4a7fd5ec8ce470 41a14fdb79194872a207f8762c6b2006
+#: 56c63ae78a814f8c8d27a1ec8f567c86 664435c041c149f495ac2d2d0e4aca71
+#: b6145b1541d24804a2d3f19302bfc414 f426032c1e6d426e89af40743e3a954a
 msgid "Inputs"
 msgstr ""
 
 #: ../../modules/health.md:44 ../../modules/health.md:182
-#: b749d5bbeb9041239866d7d87a316f55 bbf02253d3284eaea9287b4601b7c1be
+#: 5b58630e38bd440eaacac4d18962c060 d3ae2d880dfc4c43ac63859694781562
 msgid "**Execution `as <players>`**: Players whose health will be updated."
 msgstr ""
 
 #: ../../modules/health.md:46 ../../modules/health.md:79
 #: ../../modules/health.md:121 ../../modules/health.md:148
 #: ../../modules/health.md:184 ../../modules/health.md:211
-#: ../../modules/health.md:243 1e4ecac4d10440d686ccdc5ca4560a28
-#: 22eba2a741cf4863a1cadc783b288c34 352258f57e8947bf897f56a83101cc5c
-#: 42c057777fa34c659c0db5806ddeabf4 d04f7e7f42bb4e3c9b8f5468894becb2
-#: d677919eae8a46888ceb4c4e8ffe67b5 e0e7e09af6a94902927b493e71a9504e
+#: ../../modules/health.md:243 0c56559dce544bce9479a36a7bafb5fd
+#: 253c0408cd934ebc84091a5e8097347b 2da9f6761cfb40b992353f756503185b
+#: 59874faba2cc40f29e50354b464ecd4a 8bd6351a156a428faf6769ea419d4ae9
+#: d872a3ebc32d40859953d919fee08e70 f362bb8fba8f4e7099aed4193a487960
 msgid "**Function macro**:"
 msgstr ""
 
 #: ../../modules/health.md:52 ../../modules/health.md:85
 #: ../../modules/health.md:127 ../../modules/health.md:154
 #: ../../modules/health.md:190 ../../modules/health.md:217
-#: ../../modules/health.md:252 0b2dcad90fcb4d98ab205eb6f01390eb
-#: 420e3189ffa5407cb383f5759107744a 88198d86d67d4bc3b10b66ec62dd312e
-#: 93acf440596f48158359222a5b1d4446 b5d0094895f041f6b4fc018b3d4324d5
-#: da9a6d0ed203406ca79951c0ce74c985 f191034af03944cda56346391ccee1ae
+#: ../../modules/health.md:252 06ae68e604de4bfc9f330b7b55a326ff
+#: 0c651db4388a40d18ed5124693a9ab44 0c96e804297d4b3a88593c75815ca4f2
+#: 66589081a624491f994cc080aa8630b1 6cbb610cf2fc40a9a5aaba4da319d7aa
+#: 838e6bb32445445a84ac74afff9be3f6 a44ccd20df0c4919803381320f60df05
 msgid "Outputs"
 msgstr ""
 
 #: ../../modules/health.md:53 ../../modules/health.md:191
-#: 9059d09cffd443c393043a6a07128d4f cf574db8b15d4870af81ab6fa0137dbb
+#: 956e76eedcd545be8dac31ccd8dcfaef fd16b224b9c041c8aa0523a8e5f3263f
 msgid "**State**: Health is scheduled for update."
 msgstr ""
 
-#: ../../modules/health.md:56 45efef1bcc084842b5cdda2c700ecaeb
+#: ../../modules/health.md:56 363ea1dc9a904664baabbe42d6bab6d1
 msgid "*Example: Heal yourself by 5 HP:*"
 msgstr ""
 
 #: ../../modules/health.md:63 ../../modules/health.md:96
-#: 45a088e17f554cf3aa6a6ebfec15e390 4ae64917831f40b799c76960fa574958
+#: 0a0d81496d2045d09c9fc45c906d0a3f 8ae2d2eef3d445569b914c513518188b
 msgid "How to Remove?"
 msgstr ""
 
-#: ../../modules/health.md:66 d0be9e91946240a2878db4b9486ffc0c
+#: ../../modules/health.md:66 2c44dd64d3ae4a33bdf12d3c12fb3b23
 msgid "You can use negative numbers to remove health points from the player."
 msgstr ""
 
-#: ../../modules/health.md 01cae18974024d51a8fac9c7d28ef461
-#: 7d204dc14b5a44c6ba909db87f8218b5 c7673f3709f1422ba86d3edecf855f76
+#: ../../modules/health.md 2e739aa1b1704879aeb962187a19d3c1
+#: 5225c67d6db046d29ff592edaee1e32d d14bc6015efe48f49a97f7c1ffd27bc7
 msgid "Max Health"
 msgstr ""
 
-#: ../../modules/health.md:74 1f9eb2fe51194463866d669bc01fe855
+#: ../../modules/health.md:74 839872ba4d65439c9c540af525f06adf
 msgid "Add or remove base maximum health points from players."
 msgstr ""
 
 #: ../../modules/health.md:77 ../../modules/health.md:209
-#: 2f05632785ca4e43a9280903fee83bdc d112dca2b9344da38045936c491472fa
+#: 46a829cb8e71423b84e796319a13fc2d 608c87d07c9545168cd9031124b1b219
 msgid "**Execution `as <players>`**: Players whose max health will be updated."
 msgstr ""
 
 #: ../../modules/health.md:86 ../../modules/health.md:218
-#: 706a46467aed4abf99bd37fc64c06309 def1809a3b154f0ca74a42c230162bf1
+#: 8991af8abdeb4f71bda41c6256336446 f2492012e7a04b048cae5e51317f6ce2
 msgid "**State**: Max health is scheduled for update."
 msgstr ""
 
-#: ../../modules/health.md:89 2cb0f74fe95249a4a65c1b98da3d5749
+#: ../../modules/health.md:89 72edc84603cb423dbd70c2cd2df68f73
 msgid "*Example: Increase your max HP by 5:*"
 msgstr ""
 
-#: ../../modules/health.md:99 33a999efe50d406bad6501178b4db0d5
+#: ../../modules/health.md:99 412e11a8f55d43dc81c6e4f83f182400
 msgid "You can use negative numbers to remove max health from the player."
 msgstr ""
 
 #: ../../modules/health.md:104 ../../modules/health.md:167
-#: ../../modules/health.md:230 36f173065360435083b7ae17c290753f
-#: 759b2639625648319bde3472f682de9e fe3d982fc3dd418491f6541c5a55595e
+#: ../../modules/health.md:230 2e06cc3049e34614a73c1eff194af583
+#: 683fab6511244dda8cb5f162f90afb10 d5f9c9de2c74477b83dd0df6e2dd3c3e
 msgid "**Credits**: Aksiome"
 msgstr ""
 
-#: ../../modules/health.md:108 13e295071a324aceb5ebad0bb88463ee
+#: ../../modules/health.md:108 0d2f6162507b4c63922653807362fa66
 msgid "Get"
 msgstr ""
 
-#: ../../modules/health.md:116 57a5f4ace8f44e9a972cbd7b826d1b51
+#: ../../modules/health.md:116 fa05d088ec3a41b5aab921c94f6821f7
 msgid "Get a player's health points."
 msgstr ""
 
-#: ../../modules/health.md:119 15c55165bfd544bc90bb457c311a1254
+#: ../../modules/health.md:119 b23026c7501b45d0b78e72d4fda3d421
 msgid ""
 "**Execution `as <players>`**: Players from which you want to get health "
 "points."
 msgstr ""
 
-#: ../../modules/health.md:128 299b573aaa244d23b8d50e27475e08da
+#: ../../modules/health.md:128 4488c2de7a5948e9871bf376923c9049
 #, python-brace-format
 msgid ""
 "**Return | Storage `bs:out health.get_health`**: {nbt}`double` Player's "
 "health points."
 msgstr ""
 
-#: ../../modules/health.md:131 8c77316900844958a3ac1fef1d0f92a1
+#: ../../modules/health.md:131 04317f9f08914b768f0a739f6f00dd2f
 msgid "*Example: Get your current HP (scaled by 1000):*"
 msgstr ""
 
-#: ../../modules/health.md:143 1d6e7a83b64b4d2187dfd8ae2ad42c30
+#: ../../modules/health.md:143 97e155ba84a541af9665c9c34fdbf6be
 msgid "Get a player's base maximum health points."
 msgstr ""
 
-#: ../../modules/health.md:146 7e3a9c7726e04e2890cb3902a20edf31
+#: ../../modules/health.md:146 0a324ce28d2c4924a1c0246bffd77e4e
 msgid ""
 "**Execution `as <players>`**: Players from which you want to get max "
 "health points."
 msgstr ""
 
-#: ../../modules/health.md:155 69e6ff14ef6041108ccd97f4eb74492b
+#: ../../modules/health.md:155 9327d65a71c54ed9bd23b78c4d5a5a4e
 #, python-brace-format
 msgid ""
 "**Return | Storage `bs:out health.get_max_health`**: {nbt}`double` "
 "Player's max health points."
 msgstr ""
 
-#: ../../modules/health.md:158 c670d70f77574350b1033c1990f27a8e
+#: ../../modules/health.md:158 9a4a3c83889e4afaa4e54a8db07efb05
 msgid "*Example: Get your maximum HP (scaled by 1000):*"
 msgstr ""
 
-#: ../../modules/health.md:171 c358db9eeca84a1ba7ee217bb17859fc
+#: ../../modules/health.md:171 b21f613ea09f4311941bd170252b8fea
 msgid "Set"
 msgstr ""
 
-#: ../../modules/health.md:179 b331f2b7032941b4a8477d39068d9cb5
+#: ../../modules/health.md:179 82c9ccaa92d4441992cc6ec2bb82428e
 msgid "Set players' health points."
 msgstr ""
 
-#: ../../modules/health.md:194 41c0a3e0962048fc9cc243a6fb20c228
+#: ../../modules/health.md:194 8fc31a4d8f7a4012ab081566e061285d
 msgid "*Example: Set your HP to 10:*"
 msgstr ""
 
-#: ../../modules/health.md:206 e2f53f8325b64795b117c8c4c475259e
+#: ../../modules/health.md:206 198a4e226c3e497c9cb09a63241c21b0
 msgid "Set players' base maximum health points."
 msgstr ""
 
-#: ../../modules/health.md:221 d7af008591974be9a829608fd54c69b2
+#: ../../modules/health.md:221 9d34e86e918548ee9c1ebb5d0b944642
 msgid "*Example: Set your max HP to 10:*"
 msgstr ""
 
-#: ../../modules/health.md:234 2ef022b50ece4cab95affce685c7c2f1
+#: ../../modules/health.md:234 dc472b66a56a4efb8857dcb151e78673
 msgid "Time to Live"
 msgstr ""
 
-#: ../../modules/health.md:238 0201c2487d74406fa76e10c7e71ef163
+#: ../../modules/health.md:238 0bac876b46aa4a7d9855c5b8ecde68e7
 msgid "Set the lifetime of entities."
 msgstr ""
 
-#: ../../modules/health.md:241 51e9b820ed5744c8b19e55963fb4e32a
+#: ../../modules/health.md:241 5b796a5e1a8342cdbc1de380a86b21dc
 msgid "**Execution `as <entities>`**: Entities to add a lifetime to."
 msgstr ""
 
-#: ../../modules/health.md:253 41967a0bad71419f992873c6f0120a4d
+#: ../../modules/health.md:253 c7af386d47d7431a9f1801b4e328a9f9
 msgid "**State**: The entity now has a finite lifetime."
 msgstr ""
 
-#: ../../modules/health.md:256 1844828dd4cc4150b84a4ad44777c6da
+#: ../../modules/health.md:256 f04605a5c88f45b3bb20878733c7d939
 msgid "*Example: Give creepers a 10-second lifetime:*"
 msgstr ""
 
-#: ../../modules/health.md:263 d77d6b2e61b34bd9827370c4aa89857c
+#: ../../modules/health.md:263 8992864af6d547299799aa5b4513479b
 msgid "*Example: Give an explosion effect to creepers at the end of their life:*"
 msgstr ""
 
-#: ../../modules/health.md:270 4076c3fc1ac04f8e80b207b4600babe3
+#: ../../modules/health.md:270 d7469ab782444e63a21c50a51bc40aaf
 msgid "*Example: Update the on_death callback at any given time:*"
 msgstr ""
 
-#: ../../modules/health.md:280 1f87131adb3b490a87c2c204b9c1555e
+#: ../../modules/health.md:280 04bdb75c5b024d67b82e05bdcf1d3aef
 msgid "**Credits**: Aksiome, Leirof"
 msgstr ""
 
-#: ../../_templates/comments.md:4 da04c774203f40ee9c6cbdc367d9edc9
+#: ../../_templates/comments.md:4 df84a04461ca44a191748edbfa53ad9a
 msgid "**💬 Did it help you?**"
 msgstr ""
 
-#: ../../_templates/comments.md:6 090f3a98fa884d72a60e92d29078365f
+#: ../../_templates/comments.md:6 f7a652d1e799480faafb0b0ead359e63
 msgid "Feel free to leave your questions and feedback below!"
 msgstr ""
 

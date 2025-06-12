@@ -1,0 +1,310 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/xp.md:1 b94e15024a54418a866ebbb5bfaade1e
+msgid "🏅 XP"
+msgstr ""
+
+#: ../../modules/xp.md:3 a5c7da15c4734e6db3caee632cbb0ad5
+msgid "**`#bs.xp:help`**"
+msgstr ""
+
+#: ../../modules/xp.md:5 725db6aaf9eb442188771dad4c2a725c
+msgid "Efficiently manage the experience points and levels of players."
+msgstr ""
+
+#: ../../modules/xp.md:13 a726e57d660f47f59f4597b9c8716a90
+msgid "🔧 Functions"
+msgstr ""
+
+#: ../../modules/xp.md:15 d4dd5df7b6ed49acbc4e2bc31e2fd635
+msgid "You can find below all functions available in this module."
+msgstr ""
+
+#: ../../modules/xp.md:19 607ddf51cdb84e66ac61eb7f0c66f42c
+msgid "Add / Remove"
+msgstr ""
+
+#: ../../modules/xp.md 22f3c95fffdd45dba485e9aee2f7943e
+#: 860a44e379fa47bc8a6da30bb3213628
+msgid "Levels"
+msgstr ""
+
+#: ../../modules/xp.md:27 6628a5f9fe194ec3882aef36bb91118b
+msgid "Add levels to the player."
+msgstr ""
+
+#: ../../modules/xp.md:29 ../../modules/xp.md:59 ../../modules/xp.md:89
+#: ../../modules/xp.md:135 ../../modules/xp.md:159 ../../modules/xp.md:183
+#: ../../modules/xp.md:207 ../../modules/xp.md:246 ../../modules/xp.md:276
+#: ../../modules/xp.md:306 ../../modules/xp.md:336
+#: 134ddaca8f6a42a09c31ad16a4eaa105 26c2ff4aa0374fcb8be0f6bd32321f7e
+#: 4450f1bdd7d84057a5d303f0547411da 725726c19121465f933e86af59b681cf
+#: 84423b59a91e4196acf314012f10653c a5fad76613404bac94c1eed5dcdf152f
+#: c141d2f7858e4c3dbbb93554ab345b3f c6d186968cc0407aabb79dd83be8a185
+#: d8d7ddd58d544166bc8b36e39ca09a94 f4183b030c7f4edca1da2ee4e65c9ef2
+#: fa2ff53d3f5449469ea64faa8764550a
+msgid "Inputs"
+msgstr ""
+
+#: ../../modules/xp.md:30 b81862d4664c43779d5b1753a505eeb3
+msgid "**Execution `as <players>`**: Players to add levels to."
+msgstr ""
+
+#: ../../modules/xp.md:32 ../../modules/xp.md:62 ../../modules/xp.md:92
+#: ../../modules/xp.md:210 ../../modules/xp.md:249 ../../modules/xp.md:279
+#: ../../modules/xp.md:309 ../../modules/xp.md:339
+#: 1a2780da6be74426aa39ff20436896dd 67e61cc9fba84334af469c79204f1c6a
+#: 9e1fb98ec80d4a94bf3a14c7867e1b8a b862acad043745fb8e1048c2a70477ba
+#: c8830a47a4824f00957c8c83f65a94be e728a5c9b36f4f37bdb7991014cc331b
+#: f2161c62712e4f47b1db989ca728556e fcb9c810c26b4f2e94d78b2e10395aa2
+msgid "**Function macro**:"
+msgstr ""
+
+#: ../../modules/xp.md:38 ../../modules/xp.md:68 ../../modules/xp.md:98
+#: ../../modules/xp.md:138 ../../modules/xp.md:162 ../../modules/xp.md:186
+#: ../../modules/xp.md:216 ../../modules/xp.md:255 ../../modules/xp.md:285
+#: ../../modules/xp.md:315 ../../modules/xp.md:345
+#: 141be5cf59704413ba7370753b7483a5 19d782d5acf14859a3536995c07bfe3f
+#: 217f3c78ece442248a42ec4a02cc6e5d 3d8b1f6dff494fbfb3aeeb9858c7dbfe
+#: 42cbd38dff84439bbb812845cfe45b71 437706a1915e4e32b983502cb7d0992a
+#: 5edac71cf0014820a52bf17333b6b88d 82e7ff46899e47a992fa628755dafb83
+#: 8913e7131bb4468590a93eb1dc198918 af9f7bdd281e4ae9b767b7b1f395eb95
+#: c8dd59f2aaec40ef82ef7f9dc7db818c
+msgid "Outputs"
+msgstr ""
+
+#: ../../modules/xp.md:39 ../../modules/xp.md:69 ../../modules/xp.md:99
+#: 7b0167fc223342d899fa53b4c4b0adcb edd32dbfa1f149ea9b30ab5ad1ec5711
+#: fad60604cf7f46e69ad825899783a348
+msgid "**State**: Players' XP is updated."
+msgstr ""
+
+#: ../../modules/xp.md:42 18d7e19ab13b4231926ceccf0817ed03
+msgid "*Example: Add 42 levels:*"
+msgstr ""
+
+#: ../../modules/xp.md bcca447c2cce46109c0e9fb5d17f076e
+#: e46df200fcdd46c89b1302cee33cd05f
+msgid "Points"
+msgstr ""
+
+#: ../../modules/xp.md:57 a7ca42ba4c774705b947e4bad67496fd
+msgid "Add experience points to the player."
+msgstr ""
+
+#: ../../modules/xp.md:60 0550972270d24e29a7a6a4e0771d353b
+msgid "**Execution `as <players>`**: Players to add points to."
+msgstr ""
+
+#: ../../modules/xp.md:72 50b97ccac8c049a19bcec94c700d50ef
+msgid "*Example: Add 42 experience points:*"
+msgstr ""
+
+#: ../../modules/xp.md 51d4e93afd484dcd88d2ab79e6399d5f
+#: 8cece41a54464810950b4b42a14784ec f3540f4a39de4ed3b93183465395018d
+msgid "Progress Bar"
+msgstr ""
+
+#: ../../modules/xp.md:87 ../../modules/xp.md:334
+#: 189287d985bf4117a1614059abd39302 2f70d6f088d74c8188f87bc32c398720
+msgid "Fill the XP bar partially."
+msgstr ""
+
+#: ../../modules/xp.md:90 ../../modules/xp.md:337
+#: 97ede1cd669d418ea8a829a42936e1ea f59730bf7d9546a58b44996733373efa
+msgid "**Execution `as <players>`**: Players to fill the XP bar."
+msgstr ""
+
+#: ../../modules/xp.md:102 51290310d815401cb0d4b9f75ec72153
+msgid "*Example: Add 25% to the fill level of your bar:*"
+msgstr ""
+
+#: ../../modules/xp.md:114 4eb7f39b975b4030ab9de8d875721b6e
+msgid "How to Remove?"
+msgstr ""
+
+#: ../../modules/xp.md:118 c25408a281c64dacba35f090f2a2d4d6
+msgid "You can use negative numbers to remove experience from the player."
+msgstr ""
+
+#: ../../modules/xp.md:121 ../../modules/xp.md:232 ../../modules/xp.md:361
+#: 15138081cdcf45549ad14ad53e5c12f5 36c8c4f03c3b4663a8bf7379f8fd5d52
+#: bd5faf5733ce4cc28e13ff9a16a456f0
+msgid "**Credits**: Aksiome, Leirof"
+msgstr ""
+
+#: ../../modules/xp.md:125 1c25593b36cb458aad1ce0c6b52c8ad5
+msgid "Get"
+msgstr ""
+
+#: ../../modules/xp.md 27cec9230c9a4029832f7e70864eb1a6
+msgid "Max Points"
+msgstr ""
+
+#: ../../modules/xp.md:133 52fd95f58f5a491d8d5d9f33529e3531
+msgid "Get the total amount of points required to reach the next level."
+msgstr ""
+
+#: ../../modules/xp.md:136 173f1ad65d9c40a8b85e36245cdc6b16
+msgid ""
+"**Execution `as <players>`**: Players from whom you want to get the max "
+"amount of points."
+msgstr ""
+
+#: ../../modules/xp.md:139 4e66c7c770b14867bfa41bf1cb95ddeb
+msgid ""
+"**Return | Score `$xp.get_max_points bs.out`**: Total amount of points "
+"required for the next level."
+msgstr ""
+
+#: ../../modules/xp.md:142 64a708f744904237a48222123d92b15a
+msgid ""
+"*Example: Get the total amount of points required to pass to the next "
+"level:*"
+msgstr ""
+
+#: ../../modules/xp.md 51990cff0bd34f8892d8d7c23ff89e05
+msgid "Remaining Points"
+msgstr ""
+
+#: ../../modules/xp.md:157 2a0e8b01610d430094f5e71b449d6960
+msgid "Get the remaining amount of points needed to reach the next level."
+msgstr ""
+
+#: ../../modules/xp.md:160 a5a6bf15675249ee9856f953a65a6659
+msgid ""
+"**Execution `as <players>`**: Players from whom you want to get the "
+"remaining points."
+msgstr ""
+
+#: ../../modules/xp.md:163 01bbd21d76c84bbf850c1808a81a032c
+msgid ""
+"**Return | Score `$xp.get_remaining_points bs.out`**: Points needed for "
+"the next level."
+msgstr ""
+
+#: ../../modules/xp.md:166 da83cf3e2b3e4b64a937eace617085c3
+msgid "*Example: Get the amount of points needed to pass to the next level:*"
+msgstr ""
+
+#: ../../modules/xp.md bbadfe3454454020bbd04cae3bdae706
+#: e09c2620b6ba41e28f388b07228f8daf
+msgid "Total Points"
+msgstr ""
+
+#: ../../modules/xp.md:181 f27bd1282a3245029308ac71b1bcd3ca
+msgid "Get the sum of all points a player has gathered."
+msgstr ""
+
+#: ../../modules/xp.md:184 c8288bc8f58c496cbadde357c0ef10d2
+msgid ""
+"**Execution `as <players>`**: Players from whom you want to get the total"
+" amount of points."
+msgstr ""
+
+#: ../../modules/xp.md:187 a61fd022f9044195873154cccf80c12e
+msgid "**Return | Score `$xp.get_total_points bs.out`**: Total amount of points."
+msgstr ""
+
+#: ../../modules/xp.md:190 62261148f710438f9f872e1471bf1808
+msgid "*Example: Get your total amount of points:*"
+msgstr ""
+
+#: ../../modules/xp.md:205 3954ddc75b2e4180a81db233b33481cd
+msgid "Get the fill progress of the XP bar."
+msgstr ""
+
+#: ../../modules/xp.md:208 9bbabb9631cd4bfe88bce242e2400404
+msgid ""
+"**Execution `as <players>`**: Players from whom you want to get the bar "
+"progress."
+msgstr ""
+
+#: ../../modules/xp.md:217 f54a64b6547f4beab7f472afc4e4d147
+msgid ""
+"**Return | Score `$xp.get_progress bs.out`**: Fill level of the XP bar "
+"after scaling."
+msgstr ""
+
+#: ../../modules/xp.md:220 df99542dce6f41338b0c0332f4b57682
+msgid "*Example: Get the fill percentage of the xp bar:*"
+msgstr ""
+
+#: ../../modules/xp.md:236 88d8575544484cacaa34f8c3d4254e35
+msgid "Set"
+msgstr ""
+
+#: ../../modules/xp.md:244 2dca8eeac0c4423a8d9337b31758c1fa
+msgid "Set players levels."
+msgstr ""
+
+#: ../../modules/xp.md:247 7d6f7797779a44c3b9959450de1d97ec
+msgid "**Execution `as <players>`**: Players to set levels to."
+msgstr ""
+
+#: ../../modules/xp.md:256 ../../modules/xp.md:286 ../../modules/xp.md:316
+#: ../../modules/xp.md:346 51d7fa853feb45de8d772195c7890fdc
+#: 7b36bc0839da41dbb3831298e7c05194 8a436938d0574be38fa2ea243ffa5576
+#: b742f581c53241419f354c8ff01ed951
+msgid "**State**: Players XP is updated."
+msgstr ""
+
+#: ../../modules/xp.md:259 98db7a1434c54c8a8bbe031f97b8ae06
+msgid "*Example: Set your level to 42:*"
+msgstr ""
+
+#: ../../modules/xp.md:274 07dc5c76a31d4403968b5ec31a55703d
+msgid "Set players experience points."
+msgstr ""
+
+#: ../../modules/xp.md:277 6df1bfc498414fd7b783c30a9f391130
+msgid "**Execution `as <players>`**: Players to set points to."
+msgstr ""
+
+#: ../../modules/xp.md:289 37cdbec1299840cab3f70fc3bb98bd8e
+msgid "*Example: Set your points to 42:*"
+msgstr ""
+
+#: ../../modules/xp.md:304 1f5697742af24916a6c7480f98487dc4
+msgid "Set players total experience points."
+msgstr ""
+
+#: ../../modules/xp.md:307 3c8312b1117f47ad843688450cbefc1a
+msgid "**Execution `as <players>`**: Players you want to set the total XP."
+msgstr ""
+
+#: ../../modules/xp.md:319 7fbbf57b34cd4f66be5797e7112dd8c3
+msgid "*Example: Set your total XP amount to 42:*"
+msgstr ""
+
+#: ../../modules/xp.md:349 aac8b042f7d9496c9333f8ae24e67e77
+msgid "*Example: Fill your bar at 50%:*"
+msgstr ""
+
+#: ../../_templates/comments.md:4 77bb93c7a74243d295dd0d8c02be7859
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 d154bacc75b6411e924928a45968dd66
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+
