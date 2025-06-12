@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,77 +19,76 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/dump.md:1 890e3b99dd7643d1acafb2b78012095d
+#: ../../../modules/dump.md:1 83a774695e0c4496856a071db64def17
 msgid "🔬 Dump"
-msgstr ""
+msgstr "🔬 转存（Dump）"
 
-#: ../../modules/dump.md:3 99b6cd46a6bc4be4bd5593f4e5cfa53c
+#: ../../../modules/dump.md:3 a4baaf544d9440929533a3470a88f35c
 msgid "**`#bs.dump:help`**"
-msgstr ""
+msgstr "**`#bs.dump:help`**"
 
-#: ../../modules/dump.md:5 16dedabc548f4895999cda110c85881d
+#: ../../../modules/dump.md:5 1209d1c1cfb54f2a87f1df0c3d850b52
 msgid ""
 "The dump module provides mechanisms for printing the state of any "
 "\"variables\"."
-msgstr ""
+msgstr "转存模块提供了打印任意“变量”状态的机制。"
 
-#: ../../modules/dump.md:9 8dd808a1c81c443aa2a1367a8a8541ab
+#: ../../../modules/dump.md:9 cf0604d3dcd74bb99a04be2995d4208c
 msgid "🔧 Functions"
-msgstr ""
+msgstr "🔧 函数"
 
-#: ../../modules/dump.md:11 79e751f93b164dfc9f14d91aacf4383e
+#: ../../../modules/dump.md:11 200cc9e30e1e40ee982e05078d81a655
 msgid "You can find below all functions available in this module."
-msgstr ""
+msgstr "您可以在下方找到此模块中的所有可用函数。"
 
-#: ../../modules/dump.md:15 e3fea8652b3c4219ad1ae5dea50e5a36
+#: ../../../modules/dump.md:15 6e28b74195704a5f9544b98e81de703d
 msgid "Dump Var"
-msgstr ""
+msgstr "打印变量"
 
-#: ../../modules/dump.md:19 0d567c1770384328b6cd4ac93bccdde2
+#: ../../../modules/dump.md:19 c5a771e3488f4af48d31796bd908c3b3
 msgid "Dump the content of given variables to the chat."
-msgstr ""
+msgstr "将给定变量的内容打印到聊天栏。"
 
-#: ../../modules/dump.md:21 9ea4b3f8d06b4e7481a9789c3682bd72
+#: ../../../modules/dump.md:21 3b858291f2f34af1a60fc4cfe65210cc
 msgid "Inputs"
-msgstr ""
+msgstr "输入"
 
-#: ../../modules/dump.md:22 285f6ff325fe46aeb22476e6001ff453
+#: ../../../modules/dump.md:22 00b71da34c3f476690de1ce2e2f192ff
 msgid "**Function macro**:"
-msgstr ""
+msgstr "**函数宏**："
 
-#: ../../modules/dump.md:31 8d22add41d3a45389c137db5541e3161
+#: ../../../modules/dump.md:31 7cf69dc098c04284b54823d43dffec9d
 msgid "*Example: View position scores as an array:*"
-msgstr ""
+msgstr "*示例：把位置分数写成数组并查看：*"
 
-#: ../../modules/dump.md:39 7d272c380fa046168be92630ecf0bcd4
+#: ../../../modules/dump.md:39 7da252cb2ead42fe990ed244488b9010
 msgid "![](/_imgs/modules/dump/example-1.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/dump/example-1.png)"
 
-#: ../../modules/dump.md:41 414eca67be9f4574b7f2cd1ce1650195
+#: ../../../modules/dump.md:41 caf0cb55daa9437291f5053569e24e12
 msgid ""
 "*Example: View an undefined score and the player recipe book (with a "
 "depth of 1):*"
-msgstr ""
+msgstr "*示例：查看一个未定义的分数和玩家配方书（深度为1）：*"
 
-#: ../../modules/dump.md:47 dc3b811ef17247b9a91dc4a91746b4e2
+#: ../../../modules/dump.md:47 f742e99ff8834b36968b66ce0176a3c4
 msgid "![](/_imgs/modules/dump/example-2.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/dump/example-2.png)"
 
-#: ../../modules/dump.md:50 02e590a475884590aaf168b58d205391
+#: ../../../modules/dump.md:50 b94b458689f44a16bb95bccf959c4864
 msgid ""
 "Due to the implementation and its inherent constraints, it is necessary "
 "to escape values at the top level."
-msgstr ""
+msgstr "由于实现方式和其固有限制，在顶层级需要对值进行转义。"
 
-#: ../../modules/dump.md:57 86eb799d30984921a5c3f2bf3e6e861d
+#: ../../../modules/dump.md:57 92f4615da7b540b9b4d3664d76b3cc3c
 msgid "**Credits**: Aksiome"
-msgstr ""
+msgstr "**制作人员**: Aksiome"
 
-#: ../../_templates/comments.md:4 797a69125cf643a6ace4508be68f55d3
+#: ../../../_templates/comments.md:4 a51f517cfb894d8c8762d6f7e3496dba
 msgid "**💬 Did it help you?**"
-msgstr ""
+msgstr "**💬 这对您有帮助吗？**"
 
-#: ../../_templates/comments.md:6 92da2518431048c4818879dae1044199
+#: ../../../_templates/comments.md:6 4d1cec835c22457890c1edee13968e0a
 msgid "Feel free to leave your questions and feedback below!"
-msgstr ""
-
+msgstr "欢迎在下方留下您的问题和反馈！"

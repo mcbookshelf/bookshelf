@@ -1,16 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2025, Gunivers
-# This file is distributed under the same license as the Bookshelf package.
+# Translations template for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: https://github.com/mcbookshelf/bookshelf/issues\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-05-18 22:04+0800\n"
+"Last-Translator: Ethanout <2629761830@qq.com>\n"
 "Language: zh_CN\n"
 "Language-Team: zh_CN <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -19,15 +19,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../changelog/v1.0.0.md:1 8c14ab0a91f3441f920910587d92a5d4
+#: ../../../changelog/v1.0.0.md:1 2ab70dfebcf64abfaae84fc350efdc2a
 msgid "📦 Gunivers Lib - 1.0.0"
-msgstr ""
+msgstr "📦 Gunivers Lib - 1.0.0"
 
-#: ../../changelog/v1.0.0.md:3 ffa0c4efb42947f096d5750029dd9674
+#: ../../../changelog/v1.0.0.md:3 875664289af24b2085126f99a3a84d99
 msgid "Data load error: TooLazyException"
-msgstr ""
+msgstr "数据加载错误: TooLazyException"
 
-#: ../../changelog/v1.0.0.md:5 3ab53bfab28941e9937ab93d5f98dd49
+#: ../../../changelog/v1.0.0.md:5 00a49da3e4d14ad8955198391506e9ac
 msgid "Our devs are too busy coding the future to dig up the past..."
-msgstr ""
-
+msgstr "开发者正忙着面向未来编程，没空挖掘古代遗产……"

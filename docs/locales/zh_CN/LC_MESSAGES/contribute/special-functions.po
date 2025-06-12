@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,21 +19,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../contribute/special-functions.md:1 942b6694855a455ea415c190218cda60
+#: ../../../contribute/special-functions.md:1 d36b3ea1add349a8b2ef050edad46ec9
 msgid "🌟 Special Functions"
 msgstr ""
 
-#: ../../contribute/special-functions.md:3 68735746761b4b9a9ca896783e212d82
+#: ../../../contribute/special-functions.md:3 9b3e53b6559d47a49045d9b66adaffd4
 msgid ""
 "Some functions follow specific conventions to streamline functionality "
 "and ensure consistency across modules."
 msgstr ""
 
-#: ../../contribute/special-functions.md:7 20c07870c8e34cd488cd9a47ba0c68ba
+#: ../../../contribute/special-functions.md:7 7d3e3f6290aa4668a2fc1fca5364ff1c
 msgid "👉 The `ata` Functions"
 msgstr ""
 
-#: ../../contribute/special-functions.md:9 ef85ce8e16264eb292de0c7c76caf6c6
+#: ../../../contribute/special-functions.md:9 10e2d9634b9e49e5b3b0a39127566e93
 msgid ""
 "This is a reduction of \"as to at\". Several functions require two "
 "positions to work (example: retrieve the distance between 2 points) or an"
@@ -43,93 +43,93 @@ msgid ""
 "entity on point 1."
 msgstr ""
 
-#: ../../contribute/special-functions.md:13 0a93eeed6e3b43d58c8afbbb6306a105
+#: ../../../contribute/special-functions.md:13 5f8fe0b0034c42ddb64c308c4be93f2b
 msgid "🔗 The `runner` Functions"
 msgstr ""
 
-#: ../../contribute/special-functions.md:15 dab3703e77c14ec4aef1e2a17da28201
+#: ../../../contribute/special-functions.md:15 81138d3e617a42d2a983eecb53d3ba99
 msgid ""
 "These functions use the `run` callback to specify an action that will "
 "often be executed immediately. It works like a subcommand, defining what "
 "action should take place after the function call."
 msgstr ""
 
-#: ../../contribute/special-functions.md:17
-#: ../../contribute/special-functions.md:28
-#: ../../contribute/special-functions.md:39 a03540558fb7446dbb60461953ded569
-#: d78e203fe077490f8fd6b6c7938b8298 ec34c141c5c04e57a03d6d0c24d5a004
+#: ../../../contribute/special-functions.md:17
+#: ../../../contribute/special-functions.md:28
+#: ../../../contribute/special-functions.md:39 14e656a29e0d4a1ba6c3d1e373e3bd81
+#: 59f7aee6d66247149eb3e332ae38d4d2 e0ee6305903142c6a555c81b92f887ab
 msgid "For example:"
 msgstr ""
 
-#: ../../contribute/special-functions.md:24 bbf9bc26b21a4a72a140feb8d311afe8
+#: ../../../contribute/special-functions.md:24 c5b5624f9b2245bf9d18888e171f8d0b
 msgid "📡 The `listener` Functions"
 msgstr ""
 
-#: ../../contribute/special-functions.md:26 f73ec6019e364f8ba3d6119ae19a08f1
+#: ../../../contribute/special-functions.md:26 8910ac6bccc14d1a970ebaf6220f7158
 msgid ""
 "These functions are designed to react to specific events. The naming "
 "convention `on_<event>` is used for the inputs to indicate commands that "
 "will be triggered when a particular event occurs."
 msgstr ""
 
-#: ../../contribute/special-functions.md:35 150828f626fd463ca63327522a4afdee
+#: ../../../contribute/special-functions.md:35 050fd18efb874157a2d44b7157273d5b
 msgid "⚒️ The `callback` Functions"
 msgstr ""
 
-#: ../../contribute/special-functions.md:37 adba821a7bec4a2d8f4f797ec61005c2
+#: ../../../contribute/special-functions.md:37 47fcd76981134a8491018d2d9e0a49ca
 msgid ""
 "These functions are intended to be executed exclusively as part of a "
 "callback, and their function tag must be placed inside a `callback` "
 "directory."
 msgstr ""
 
-#: ../../contribute/special-functions.md:40 c0089fe861a4493b9461515b8e7b04ce
+#: ../../../contribute/special-functions.md:40 b786dd05d331425caf27acfce63f2605
 msgid "`#bs.move:callback/bounce`"
 msgstr ""
 
-#: ../../contribute/special-functions.md:41 e3a6f4c8940d4ed2ab8205283e46b2b3
+#: ../../../contribute/special-functions.md:41 4174568d2ae84f6aae06a1bf0ed456d9
 msgid "`#bs.move:callback/slide`"
 msgstr ""
 
-#: ../../contribute/special-functions.md:42 793605dc137a41f191ae51737980ad4d
+#: ../../../contribute/special-functions.md:42 fc221f3b0e894cf897e46686059fddb3
 msgid "`#bs.interaction:callback/glow`"
 msgstr ""
 
-#: ../../contribute/special-functions.md:46 7483aae292b24158bcbb881d091544b0
+#: ../../../contribute/special-functions.md:46 193dd0e8339b4c028fa8e43a993d118a
 msgid "🔒 The `reserved` Functions"
 msgstr ""
 
-#: ../../contribute/special-functions.md:48 b2a28791bba449f1838a7baa4fe6b01e
+#: ../../../contribute/special-functions.md:48 0339d45f5d1c49339a041dae0d12c2f1
 msgid ""
 "Reserved functions are special functions within each module that serve "
 "predefined purposes. They are located at the root of each module."
 msgstr ""
 
-#: ../../contribute/special-functions.md:51 4a9c0e11a11047d79492c5730bf73b3a
+#: ../../../contribute/special-functions.md:51 941253de82eb408799bfdea2d3d28c1c
 msgid "`__help__`"
 msgstr ""
 
-#: ../../contribute/special-functions.md:52 b89292d789c74b5bacfe3da874ea2a0b
+#: ../../../contribute/special-functions.md:52 815dbe559d7a453d93a7f8d0d299eb58
 msgid ""
 "This function provides a path to the documentation for the module "
 "**(Automatically generated)**"
 msgstr ""
 
-#: ../../contribute/special-functions.md:53 f63ec963290045ca98cb5c9547d161ab
+#: ../../../contribute/special-functions.md:53 b7cb70db5a11490997c865910cea75b1
 msgid "`__load__`"
 msgstr ""
 
-#: ../../contribute/special-functions.md:54 25496319d5c646f6875a4b4ba75bd7ce
+#: ../../../contribute/special-functions.md:54 0159984a503d46b49343c6926e0c9648
 msgid ""
 "This function is executed when the module is loaded **(Must be present in"
 " every module)**"
 msgstr ""
 
-#: ../../contribute/special-functions.md:55 f21e4ca1fbb240c4b6ca964f3796ad05
+#: ../../../contribute/special-functions.md:55 54b1b369af214d3e9a7e29b44f17e0fb
 msgid "`__unload__`"
 msgstr ""
 
-#: ../../contribute/special-functions.md:56 fc0bc64f633e47afadaf6b32b6328492
+#: ../../../contribute/special-functions.md:56 80e351327a01430b8f2c5f36eb3ae2c1
 msgid ""
 "This function is executed when the module is unloaded **(Must be present "
 "in every module)**"

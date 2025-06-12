@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,264 +19,266 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/log.md:1 d04fc4fe477c429ba35b020956c51a4d
+#: ../../../modules/log.md:1 d953151e4f9c4b17b20c4fd778b2bf22
 msgid "📄 Log"
-msgstr ""
+msgstr "📄 日志（Log）"
 
-#: ../../modules/log.md:3 78241d59b2314775a88e78fac507e4f0
+#: ../../../modules/log.md:3 262e4691ed93419fb3a6683a4a0119b1
 msgid "**`#bs.log:help`**"
-msgstr ""
+msgstr "**`#bs.log:help`**"
 
-#: ../../modules/log.md:5 87cdef1e031a47329e617820d9ee8dc2
+#: ../../../modules/log.md:5 d7db1a1bc14c4c11ab4102c9ac116715
 msgid "Log messages in the chat with varying levels of severity."
-msgstr ""
+msgstr "记录不同级别的日志消息并显示在聊天栏中。"
 
-#: ../../modules/log.md:7 35036edb98e94dd4849c0a3792ec32e9
+#: ../../../modules/log.md:7 2f186554d3384922a4e82a0e7d465157
 msgid "Enable Command Blocks"
-msgstr ""
+msgstr "启用命令方块"
 
-#: ../../modules/log.md:10 e5a409ab74594b5eac6ce3dc3d5da1bb
+#: ../../../modules/log.md:10 4bcfe52469b345adb4f7a4f0f02c0491
 msgid ""
 "This module uses a command block to get the system time. For the time to "
 "be displayed as intended, be sure that `enable-command-block` is set to "
 "`true` in your `server.properties` file and that the "
 "`sendCommandFeedback` gamerule is enabled."
-msgstr ""
+msgstr "此模块使用命令方块获取系统时间。为了正确显示时间，请确保在您的 `server.properties` 文件中将 `enable-command-block` 设置为 `true`，并启用 `sendCommandFeedback` 游戏规则。"
 
-#: ../../modules/log.md:15 3244593a93534b03a587face75241c5b
+#: ../../../modules/log.md:15 8db29da4964c4c8aa558374040a81f63
 msgid "🔧 Functions"
-msgstr ""
+msgstr "🔧 函数"
 
-#: ../../modules/log.md:17 8d33d6892b704e8aa7cb542c3e4eacfe
+#: ../../../modules/log.md:17 fd08a9ad8ab6473fa3217992c56a101e
 msgid "You can find below all functions available in this module."
-msgstr ""
+msgstr "您可以在下方找到此模块中的所有可用函数。"
 
-#: ../../modules/log.md:21 19900019b8d94caeaf7fb2b34dfcab03
+#: ../../../modules/log.md:21 34f5bbcb6db24d7390bf6e833b60c9d4
 msgid "Log Messages"
-msgstr ""
+msgstr "记录消息"
 
-#: ../../modules/log.md d266aceba3614fe3af000974ec84e0a7
+#: ../../../modules/log.md 6013ccc7964449eba6a48789cccd5e02
 msgid "Error"
-msgstr ""
+msgstr "错误"
 
-#: ../../modules/log.md:29 a1164ba339fc4c5a93dae5ac9d617193
+#: ../../../modules/log.md:29 0cd36126105f4fe4be10d95994b90727
 msgid ""
 "Log an error message. For more information on how it works see the "
 "[usage](#usage) section. By default, it's printed as: [ERROR] <tag> > "
 "<message> and hovering over the left part of the log reveals the "
 "timestamp and log function path."
-msgstr ""
+msgstr "记录错误消息。有关其工作原理的更多信息，请参见[使用方法](#usage)部分。默认情况下，它显示为：[ERROR] <标签> > <消息>，将鼠标悬停在日志左侧部分可显示时间戳和日志函数路径。"
 
-#: ../../modules/log.md:31 ../../modules/log.md:55 ../../modules/log.md:79
-#: ../../modules/log.md:103 ../../modules/log.md:136 ../../modules/log.md:161
-#: 1e2ef24b731b43bc932105f58f4ce9c3 489f5afde7644aef88e1c3b735dad2cf
-#: 66de5082d28f48fbb32b99950bfbeb63 8e237c52e50d4eaba21ac8d7c857aad1
-#: 9fc8f00f1cc74588ac5aac0fb9c7a48b d5c7a40aa3a3435e902a95f6fafe8906
+#: ../../../modules/log.md:31 ../../../modules/log.md:55
+#: ../../../modules/log.md:79 ../../../modules/log.md:103
+#: ../../../modules/log.md:136 ../../../modules/log.md:161
+#: 10f9389806b34d08acac65c90ee6546b 1e3411232f9b459caefb752654f7c586
+#: 2764283cd6c748d092e7106bd8f5c8dd 948c2625c7fa45cea5a96b58e2fd9538
+#: 9ec710e853f74e8489ac5d138e6e98d3 d063e88f5d7a4ffdbc2b8dfc0f8463bf
 msgid "Inputs"
-msgstr ""
+msgstr "输入"
 
-#: ../../modules/log.md:32 ../../modules/log.md:56 ../../modules/log.md:80
-#: ../../modules/log.md:104 ../../modules/log.md:137 ../../modules/log.md:162
-#: 747962a3bfee4a81935360f6218727dd 7e513215c2724e8f81606ec52233257a
-#: 86214e68898c43048f69f4ca06632e62 984df6bd743e42efac8af6975ca50fb0
-#: bf9aed5249654348a6f13b69131e4480 d8c0f74c182c4bb483ea3458badeb925
+#: ../../../modules/log.md:32 ../../../modules/log.md:56
+#: ../../../modules/log.md:80 ../../../modules/log.md:104
+#: ../../../modules/log.md:137 ../../../modules/log.md:162
+#: 4653ac959ab14f5bbffcf27dc3b50d74 4a7a90be2ecd4b18b41fa8357a085b83
+#: 5e9569d25b0748008e3378faf55637aa 9f8d220163394003aba729920bb0b926
+#: dd5790a7b9c848d3bb87a0806a49911b eadae2c2b15e44b3ad381e2051b6689a
 msgid "**Function macro**:"
-msgstr ""
+msgstr "**函数宏**："
 
-#: ../../modules/log.md:42 64f83e91b7d34d75b4a568c0f5998d20
+#: ../../../modules/log.md:42 bcd0d532979349f5a41ff003be5c9e9b
 msgid ""
 "*Example: Log an error message that originates from the `bs.foo:bar` "
 "function:*"
-msgstr ""
+msgstr "*示例：记录来自 `bs.foo:bar` 函数的错误消息：*"
 
-#: ../../modules/log.md 10e8295e5a9b4257a2dfd7c7b03a0c85
+#: ../../../modules/log.md 9946d58430614845a921ba3eb009f3ea
 msgid "Warning"
-msgstr ""
+msgstr "警告"
 
-#: ../../modules/log.md:53 700e44eef673474f9b69de5332acc462
+#: ../../../modules/log.md:53 7c846a7202964e499df05c9b5d961bea
 msgid ""
 "Log a warning message. For more information on how it works see the "
 "[usage](#usage) section. By default, it's printed as: [WARN] <tag> > "
 "<message> and hovering over the left part of the log reveals the "
 "timestamp and log function path."
-msgstr ""
+msgstr "记录警告消息。有关其工作原理的更多信息，请参见[使用方法](#usage)部分。默认情况下，它显示为：[WARN] <标签> > <消息>，将鼠标悬停在日志左侧部分可显示时间戳和日志函数路径。"
 
-#: ../../modules/log.md:66 2fb682371cf248849a60671e1610d5b3
+#: ../../../modules/log.md:66 e0e9b06d0ca2454b93f54a69f05e79f8
 msgid ""
 "*Example: Log a warning message that originates from the `bs.foo:bar` "
 "function:*"
-msgstr ""
+msgstr "*示例：记录来自 `bs.foo:bar` 函数的警告消息：*"
 
-#: ../../modules/log.md 49444c1bc5d44cc5845dabf27e6c489b
+#: ../../../modules/log.md 1e01dfdd321c47dfaf4ca79a33035cfa
 msgid "Information"
-msgstr ""
+msgstr "信息"
 
-#: ../../modules/log.md:77 e767199e3b8b4cee85410983403cc264
+#: ../../../modules/log.md:77 421ff492978a41b984bdd205ea1be328
 msgid ""
 "Log an information message. For more information on how it works see the "
 "[usage](#usage) section. By default, it's printed as: [INFO] <tag> > "
 "<message> and hovering over the left part of the log reveals the "
 "timestamp and log function path."
-msgstr ""
+msgstr "记录信息消息。有关其工作原理的更多信息，请参见[使用方法](#usage)部分。默认情况下，它显示为：[INFO] <标签> > <消息>，将鼠标悬停在日志左侧部分可显示时间戳和日志函数路径。"
 
-#: ../../modules/log.md:90 7c3438c8a53947d4a0652dd2f5d72ddd
+#: ../../../modules/log.md:90 8edc401b6e824a92a0247556e2f34d08
 msgid ""
 "*Example: Log an info message that originates from the `bs.foo:bar` "
 "function:*"
-msgstr ""
+msgstr "*示例：记录来自 `bs.foo:bar` 函数的信息消息：*"
 
-#: ../../modules/log.md f2de7679ce114f05a3e0345cc8e4b052
+#: ../../../modules/log.md e4730eecc4bd449abda793f2fd80e69f
 msgid "Debug"
-msgstr ""
+msgstr "调试"
 
-#: ../../modules/log.md:101 45311748ff644146b0378a654889830a
+#: ../../../modules/log.md:101 50a37976d2ba4b45995eec5162a321ee
 msgid ""
 "Log a debug message. For more information on how it works see the "
 "[usage](#usage) section. By default, it's printed as: [DEBUG] <tag> > "
 "<message> and hovering over the left part of the log reveals the "
 "timestamp and log function path."
-msgstr ""
+msgstr "记录调试消息。有关其工作原理的更多信息，请参见[使用方法](#usage)部分。默认情况下，它显示为：[DEBUG] <标签> > <消息>，将鼠标悬停在日志左侧部分可显示时间戳和日志函数路径。"
 
-#: ../../modules/log.md:114 641378a941024fac91d0e081887c91c6
+#: ../../../modules/log.md:114 91ae32df822d4b8c96b2d233f0ed9fea
 msgid ""
 "*Example: Log a debug message that originates from the `bs.foo:bar` "
 "function:*"
-msgstr ""
+msgstr "*示例：记录来自 `bs.foo:bar` 函数的调试消息：*"
 
-#: ../../modules/log.md:122 448d9029ebcd4542a7e3dd56bd57abc9
+#: ../../../modules/log.md:122 d001633a36f34d6aa2614b6b32798505
 msgid "**Credits**: theogiraudet"
-msgstr ""
+msgstr "**制作人员**：theogiraudet"
 
-#: ../../modules/log.md:126 45cfce2ea509472392699fb637876941
+#: ../../../modules/log.md:126 b4ff696a6b3b4271b9e805c2f8571540
 msgid "Log History"
-msgstr ""
+msgstr "日志历史"
 
-#: ../../modules/log.md 448e74ba50364d919dbce760161d90ad
+#: ../../../modules/log.md dd11bd4bed0d4aa79db9a9b48abb977a
 msgid "View History"
-msgstr ""
+msgstr "查看历史"
 
-#: ../../modules/log.md:134 0caa232c04d5451caa817e260f565b95
+#: ../../../modules/log.md:134 548c5da5b8664438842c7494a9203f96
 msgid "Retrieve the log history. It shows all the previously logged messages."
-msgstr ""
+msgstr "检索日志历史。显示所有之前记录的消息。"
 
-#: ../../modules/log.md:147 a4e4a02c9bbd42f1a8b70a186d342b46
+#: ../../../modules/log.md:147 0810c0a72c184674952bb98359649dc4
 msgid ""
 "*Example: View the log history for a specific namespace, tag, and "
 "severity level:*"
-msgstr ""
+msgstr "*示例：查看特定命名空间、标签和严重程度的日志历史：*"
 
-#: ../../modules/log.md a2541a94b7724090b3d4a5be7bd6ff29
+#: ../../../modules/log.md 7d697adcae0a46e8ba053a051d64d860
 msgid "Clear History"
-msgstr ""
+msgstr "清除历史"
 
-#: ../../modules/log.md:159 fc9a4099ddc04d04a5c9d78cd0f2ae4b
+#: ../../../modules/log.md:159 f7940270f7374ab8b4130d59c074cc23
 msgid "Clear the log history."
-msgstr ""
+msgstr "清除日志历史。"
 
-#: ../../modules/log.md:172 bf0994c2bd73413b8a8c85851029a84c
+#: ../../../modules/log.md:172 421ffdceca6b431dbd5ea0f2c261f7ad
 msgid ""
 "*Example: Clear the log history for a specific namespace, tag, and "
 "severity level:*"
-msgstr ""
+msgstr "*示例：清除特定命名空间、标签和严重程度的日志历史：*"
 
-#: ../../modules/log.md:181 f6eb5809d3554907aac080946122ea67
+#: ../../../modules/log.md:181 825cd618687641a79fdcde9cc5d541ca
 msgid "**Credits**: Aksiome"
-msgstr ""
+msgstr "**制作人员**：Aksiome"
 
-#: ../../modules/log.md:186 e06bfeba42484435b1a68db2275ddf63
+#: ../../../modules/log.md:186 ad9717372cfa426d8fff9cf1777606fa
 msgid "🎓 How to Use?"
-msgstr ""
+msgstr "🎓 如何使用？"
 
-#: ../../modules/log.md:188 5d1e2a3a03014c3ab83503733c0ab53b
+#: ../../../modules/log.md:188 136d8ac5b2534212b07c47cac64ba391
 msgid "Different log levels are available for various types of logs:"
-msgstr ""
+msgstr "不同类型的日志有不同的日志级别："
 
-#: ../../modules/log.md:189 4711eb58b9ac40e3b7035d15a6480ebb
+#: ../../../modules/log.md:189 08591e9fc27c41059f02455cdacb32ea
 msgid "**Debug**: Detailed debug information."
-msgstr ""
+msgstr "**调试**：详细的调试信息。"
 
-#: ../../modules/log.md:190 14b305c797064bee9b1dc5ce032868b9
+#: ../../../modules/log.md:190 e19f9f7fe5a34cc9b75d0f72f480589d
 msgid "**Information**: Interesting / significant events."
-msgstr ""
+msgstr "**信息**：兴趣/重要事件。"
 
-#: ../../modules/log.md:191 2665d6d679474f0594032f9afaffc291
+#: ../../../modules/log.md:191 db3f595392ec451c81d4ef4eaf658a0e
 msgid "**Warning**: Exceptional occurrences that are not errors."
-msgstr ""
+msgstr "**警告**：不属于错误的异常情况。"
 
-#: ../../modules/log.md:192 3f94d5baa40547d1a06f35d332377d3d
+#: ../../../modules/log.md:192 a35e1537c590423f921a3cf205684cec
 msgid "**Error**: Runtime errors that should be monitored and fixed."
-msgstr ""
+msgstr "**错误**：应该监控和修复的运行时错误。"
 
-#: ../../modules/log.md:196 17479e6e0e164f33bbc68c807982be5b
+#: ../../../modules/log.md:196 a438f9cde6e24b9ea794bbbc5176a52b
 msgid "Manage Granularity"
-msgstr ""
+msgstr "管理日志粒度"
 
-#: ../../modules/log.md:198 cfb74a27d1444526b73e3b42eba4e664
+#: ../../../modules/log.md:198 f969eb8237a341e289cb5ac14de4f6dc
 msgid ""
 "A significant number of logs can quickly flood the chat. To prevent this,"
 " Bookshelf's log module can be configured to display specific logs based "
 "on two parameters: the **log level**, the **tag** and the **namespace**."
-msgstr ""
+msgstr "大量日志可能会迅速淹没聊天栏。为防止这种情况，Bookshelf 的日志模块可以根据三个参数配置显示特定日志：**日志级别**、**标签**和**命名空间**。"
 
-#: ../../modules/log.md:200 13c9dca6d2e9421eb1feeb5d1af73cad
+#: ../../../modules/log.md:200 cd9ee2a64b0b458da8c407871b8fecb7
 msgid ""
 "Users need to give themselves tags that follow a strict syntax: "
 "`<namespace>.log.<tag>.<level>`, where the level can be `debug`, `info`, "
 "`warn`, or `error`."
-msgstr ""
+msgstr "用户需要给自己添加遵循严格语法的标签：`<命名空间>.log.<标签>.<级别>`，其中级别可以是 `debug`、`info`、`warn` 或 `error`。"
 
-#: ../../modules/log.md:202 19321c0b76bb4b07ae000dca3b023e4f
+#: ../../../modules/log.md:202 dd1c140394394e37b3ac69139954216b
 msgid "The `_` symbol acts as a wildcard, logging all tags or all levels:"
-msgstr ""
+msgstr "`_` 符号作为通配符，记录所有标签或所有级别："
 
-#: ../../modules/log.md:203 4ba5c9dda83a4ccba26f81561f3bd70e
+#: ../../../modules/log.md:203 17e5ae3e251d465dbff0e397cb0d2a78
 msgid "`bs.foo.log._.<level>`: show all logs of `bs.foo` regardless of the tag."
-msgstr ""
+msgstr "`bs.foo.log._.<级别>`：显示 `bs.foo` 的所有日志，无论标签是什么。"
 
-#: ../../modules/log.md:204 1e9fb22a449f47a4ae485ba12613dd3d
+#: ../../../modules/log.md:204 48f4266719934b678f04ba3ab76c9093
 msgid "`bs.foo.log.<tag>._`: show all logs of `bs.foo` regardless of the level."
-msgstr ""
+msgstr "`bs.foo.log.<标签>._`：显示 `bs.foo` 的所有日志，无论级别是什么。"
 
-#: ../../modules/log.md:205 02302aa21b2446c7b97559dd5a94aeda
+#: ../../../modules/log.md:205 ad4e899720e64125a5cb2b980363ffab
 msgid "`bs.foo.log._._`: show all logs of `bs.foo`."
-msgstr ""
+msgstr "`bs.foo.log._._`：显示 `bs.foo` 的所有日志。"
 
-#: ../../modules/log.md:206 b3e7fa55ff3c46baaa26a22d74452d35
+#: ../../../modules/log.md:206 e9e6e6fc5b07475382ae976bd4ba9c5b
 msgid "`_.log._._`: show all logs."
-msgstr ""
+msgstr "`_.log._._`：显示所有日志。"
 
-#: ../../modules/log.md:209 359755d11d2642c69f53e97a91f8d8fc
+#: ../../../modules/log.md:209 ed2e13628a144e2fb68dbcd2f26fe974
 msgid ""
 "Each level allows the visualization of subsequent levels. For example, if"
 " a user gives themselves a tag ending with warn, they can visualize logs "
 "of warn and error levels. By default, logs are not displayed to any user."
-msgstr ""
+msgstr "每个级别允许显示后续级别。例如，如果用户给自己添加了以 warn 结尾的标签，他们就可以看到警告和错误级别的日志。默认情况下，不向任何用户显示日志。"
 
-#: ../../modules/log.md:214 330f4c0e81b745d884317d99d06cb3c3
+#: ../../../modules/log.md:214 cbe67ebf5eb3479984e0fd65f680aff0
 msgid "Define the Message"
-msgstr ""
+msgstr "定义消息"
 
-#: ../../modules/log.md:216 0c23209495794d20a10e8f8ac6861f16
+#: ../../../modules/log.md:216 28ab690081b1420491e761a0c676eb0a
 msgid ""
 "Log functions take four variables as input. The `path` of the current "
 "function that inform users of the log origin, the `tag`, the `namespace` "
 "and the `message`."
-msgstr ""
+msgstr "日志函数接受四个变量作为输入。当前函数的 `path` 告知用户日志的来源，`tag`、`namespace` 和 `message`。"
 
-#: ../../modules/log.md:219 8095afcee6864b5aa41d3d82f0d96114
+#: ../../../modules/log.md:219 548d9d3d05bb4d06bdb2b18224c94a88
 msgid ""
 "The `message` string must be a valid SNBT text component. Thus, to "
 "specify a plain string text as a message, the message needs to be escaped"
 "  (`\"\\\"message\\\"\"` or `'\"message\"'`)."
-msgstr ""
+msgstr "`message` 字符串必须是有效的 SNBT 文本组件。因此，要将纯文本字符串指定为消息，需要转义消息（`\"\\\"message\\\"\"` 或 `'\"message\"'`）。"
 
-#: ../../modules/log.md:222 47d428bb134745748e725431b1da6137
+#: ../../../modules/log.md:222 d1681ba96c4b42d78c5663ed4ba98f6c
 msgid ""
 "*Example: Log a simple warning message. We assume the log originates from"
 " the `bs.foo:bar` function:*"
-msgstr ""
+msgstr "*示例：记录简单的警告消息。我们假设日志来自 `bs.foo:bar` 函数：*"
 
-#: ../../modules/log.md:228 54fccb418dc64731862652721a0415f0
+#: ../../../modules/log.md:228 46f3f566aa1a490ca1cb1514e9f977b7
 msgid ""
 "Will display the following message if the user has one of these tags: "
 "`bs.foo.log.bar.warn`, `bs.foo.log.bar.info`, `bs.foo.log.bar.debug`, "
@@ -284,196 +286,195 @@ msgid ""
 "`bs.foo.log._._`, `bs.foo.log.bar._`, `_.log.bar.warn`, `_.log.bar.info`,"
 " `_.log.bar.debug`, `_.log._.warn`, `_.log._.info`, `_.log._.debug`, "
 "`_.log._._`, `_.log.bar._`."
-msgstr ""
+msgstr "如果用户具有以下标签之一，将显示以下消息：`bs.foo.log.bar.warn`、`bs.foo.log.bar.info`、`bs.foo.log.bar.debug`、`bs.foo.log._.warn`、`bs.foo.log._.info`、`bs.foo.log._.debug`、`bs.foo.log._._`、`bs.foo.log.bar._`、`_.log.bar.warn`、`_.log.bar.info`、`_.log.bar.debug`、`_.log._.warn`、`_.log._.info`、`_.log._.debug`、`_.log._._`、`_.log.bar._`。"
 
-#: ../../modules/log.md:230 f048455b35294757a9e7fa67de3f9d70
+#: ../../../modules/log.md:230 a0fdaa0a1dcc4eb2bcfd2e7ea133c627
 msgid "![](/_imgs/modules/log/example-1.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/log/example-1.png)"
 
-#: ../../modules/log.md:232 3ccae87b9d5d4dc480765426d41871c0
+#: ../../../modules/log.md:232 757c21d6dd80421483701eaa79182170
 msgid ""
 "*Example: Log a complex info message. We assume the log originates from "
 "the `bs.foo:baz` function:*"
-msgstr ""
+msgstr "*示例：记录复杂的信息消息。我们假设日志来自 `bs.foo:baz` 函数：*"
 
-#: ../../modules/log.md:238 e5edeb25052744dabfe80d22b01246f1
+#: ../../../modules/log.md:238 b82bea33de9f4fa09ef572b3cbeca601
 msgid ""
 "Will display the following message if the user has one of these tags: "
 "`bs.foo.log.baz.info`, `bs.foo.log.baz.debug`, `bs.foo.log._.info`, "
 "`bs.foo.log._.debug`, `bs.foo.log.baz._`, `_.log.baz.info`, "
 "`_.log.baz.debug`, `_.log._.info`, `_.log._.debug`, `_.log.baz._`."
-msgstr ""
+msgstr "如果用户具有以下标签之一，将显示以下消息：`bs.foo.log.baz.info`、`bs.foo.log.baz.debug`、`bs.foo.log._.info`、`bs.foo.log._.debug`、`bs.foo.log.baz._`、`_.log.baz.info`、`_.log.baz.debug`、`_.log._.info`、`_.log._.debug`、`_.log.baz._`。"
 
-#: ../../modules/log.md:240 4176aad44f004e71b8cbb2b878b5a7f7
+#: ../../../modules/log.md:240 acdd0b0976a04105ade9c962bdc635b7
 msgid "![](/_imgs/modules/log/example-2.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/log/example-2.png)"
 
-#: ../../modules/log.md:242 ccbf3d4a8b904d8b99feb613794e0c1c
+#: ../../../modules/log.md:242 0e864562e80744b9b0dd771f9b490844
 msgid "Customize the Format"
-msgstr ""
+msgstr "自定义格式"
 
-#: ../../modules/log.md:244 5c3710862050466f9e74728e8ec7e593
+#: ../../../modules/log.md:244 b58bf1dd2d844e0bb549639dd9f8ff85
 msgid ""
 "Bookshelf proposes to define different log message formats according to "
 "the namespace. To add new log message formats, you have to write directly"
 " inside the storage array `bs:const log.messages`:"
-msgstr ""
+msgstr "Bookshelf 建议根据命名空间定义不同的日志消息格式。要添加新的日志消息格式，您必须直接写入命令存储数组 `bs:const log.messages`："
 
-#: ../../modules/log.md:260 0910ff7ce2ce4dd888e7083cf51aecc7
+#: ../../../modules/log.md:260 347a63ef3a0b4046979a9385769f74c2
 msgid ""
 "The `namespaces` array stores all the namespaces sharing the same log "
 "message formats. The four formats (`error`, `warn`, `info` and `debug`) "
 "describe the log format for the respecting severity level. The value of "
 "each must be a full SNBT text component."
-msgstr ""
+msgstr "`namespaces` 数组存储所有共享相同日志消息格式的命名空间。四种格式（`error`、`warn`、`info` 和 `debug`）描述了相应严重程度级别的日志格式。每个值必须是完整的 SNBT 文本组件。"
 
-#: ../../modules/log.md:264 87085d2cac814f8098cb7d5093af1277
+#: ../../../modules/log.md:264 99241dd7c0bc4821bf30e4a5862a4cdd
 msgid ""
 "Bookshelf exposes several values that can be used directly in the log "
 "messages format:"
-msgstr ""
+msgstr "Bookshelf 提供了几个可以直接在日志消息格式中使用的值："
 
-#: ../../modules/log.md:247 d98d3103fdbe49ea8a5927ac227162e5
+#: ../../../modules/log.md:247 c6612802239c4dc3a204848720bc29a0
 msgid "storage"
-msgstr ""
+msgstr "命令存储"
 
-#: ../../modules/log.md:247 8d694cb7f39c45908969474095302417
+#: ../../../modules/log.md:247 0969e9d0f4274fdca02ced3da3cfcde5
 msgid "path"
-msgstr ""
+msgstr "路径"
 
-#: ../../modules/log.md:247 42c0f37aea21408fb6bf8044020e695b
+#: ../../../modules/log.md:247 73fb92ab5f12477f892d5a01f45d8926
 msgid "description"
-msgstr ""
+msgstr "描述"
 
-#: ../../modules/log.md:247 161ab7358a014634aab5b3a76ee09476
-#: 1d580cbaed8b4c9e9614c98bd1f17fd1 1ea378ffd59545f4b0c563a10e5ce61d
-#: 1eb13bf18edb440cba91ef2c3419cc8f 90aa430c9d234be0b1ea3776683805d5
-#: 9325e96062274faaa0795cc9b66f8254 c0703a26ac1740949d3da6d57f397f08
-#: c2999f16bcd84ac2af2a620a49ba7fcf d01d72ebffab47389bc127cafc0714bb
-#: f821a7cac7094a618009de98ccc80365
+#: ../../../modules/log.md:247 03daf7457f704fb99095c3ce57b46e1a
+#: 2675457e57ad4240baa365d1436fc73b 31eecc16843e4c61b828f71f877e2011
+#: 81959f57fd4c43daaee380e702860e67 97ae439b846641989ca7a537e896fa04
+#: 9e09f5be52af41cb9aed50d6f113ed1c a6529bedce5b434a8123d607022addd5
+#: ab5ed402165b40b483651d29f92801ba d6a05e4eb4c545b7a88a58f36c2549a3
+#: fc0fe02c159141a29ea89ef6f6781817
 #, python-brace-format
 msgid "{nbt}`string`"
-msgstr ""
+msgstr "{nbt}`string`"
 
-#: ../../modules/log.md:247 0c8d1f587f31426984bdf028936f1e80
-#: 2d5534375e3d4f2ba7e52406499c0a56 42ef71c7289243a3a8e03980f26e0599
-#: 4f9f89d6e6e546f1811ad770e19eaff3 708f2bd359934767bc634a58ddccfbf6
-#: a1824dbf05ce47b391dd0b8c6159488d aaa02cd1d50a46439a260ac5f046753b
-#: b33564525e2d42faba2edc2c6c6cf8d9 dedfc2ee56a84febabf313d6f12f7c7c
+#: ../../../modules/log.md:247 326ce34ddb41467bb7f29b4973482295
+#: 3c9088bfff454e7cac3e4fed9db425eb 57e7b0574a5248daae31966984574d1e
+#: a84f38c12b364f9dbc607d6882445b72 b33584dcd6d24c60bfab5f148d56364a
+#: c10aaaeb7a23423698ccaaf43f06cc59 c3673a2e79eb4bd8836ac1f385fa71fc
+#: d7cef839f5ac43749fbb512d301a05f1 e82caa54c54c41b4b1e25208213bc400
 msgid "bs:in"
-msgstr ""
+msgstr "bs:in"
 
-#: ../../modules/log.md:247 d1b1f375470c43f9994ce06901f2d4e0
+#: ../../../modules/log.md:247 67e0b5e9993e4b23a6c13827b24cb64a
 msgid "log.message"
-msgstr ""
+msgstr "log.message"
 
-#: ../../modules/log.md:247 3f454b180a924c25bdcb3446bbfe167b
+#: ../../../modules/log.md:247 e3083e3b35614a30b5d7f93d49b2f353
 msgid "The message of the log (must be a valid SNBT text component)"
-msgstr ""
+msgstr "日志的消息（必须是有效的 SNBT 文本组件）"
 
-#: ../../modules/log.md:247 9e45ed480d4b4de98ef53de742529d23
+#: ../../../modules/log.md:247 4408be23bfa44a50aaab1f0e1df176fd
 msgid "log.namespace"
-msgstr ""
+msgstr "log.namespace"
 
-#: ../../modules/log.md:247 2037324891a4482cb587578a6c6236a5
+#: ../../../modules/log.md:247 b6a63857f0e545ecb87c8d850aeb05b7
 msgid "The namespace of the current log message"
-msgstr ""
+msgstr "当前日志消息的命名空间"
 
-#: ../../modules/log.md:247 12784fe5e5e2479486de8d36328a26ab
+#: ../../../modules/log.md:247 af3586ced57d43b4b4485d95e8778c63
 msgid "log.path"
-msgstr ""
+msgstr "log.path"
 
-#: ../../modules/log.md:247 d6b7c52fdbbb49ba993d189509089eca
+#: ../../../modules/log.md:247 43345f9aef014b0fb13e402fe5aa1fa3
 msgid "The path of the function that logs the current message"
-msgstr ""
+msgstr "记录当前消息的函数路径"
 
-#: ../../modules/log.md:247 dc78b2441b714485839f6f16a382b87b
+#: ../../../modules/log.md:247 a1c99c5f0a464274b72264b83f6b27a6
 msgid "log.tag"
-msgstr ""
+msgstr "log.tag"
 
-#: ../../modules/log.md:247 cd873314c93d4ffebcd8b73eb09e120b
+#: ../../../modules/log.md:247 7f8f513d36de49cea8eddb69dc51ffc7
 msgid "The tag of the log message"
-msgstr ""
+msgstr "日志消息的标签"
 
-#: ../../modules/log.md:247 6a2158bcd2a54c4b9c5b15e06cbcdaf2
+#: ../../../modules/log.md:247 43e45bc1c6484770bd870c7bf1bbf27c
 msgid "log.hours"
-msgstr ""
+msgstr "log.hours"
 
-#: ../../modules/log.md:247 caea7071f0d24cf1a43788411bf4e150
+#: ../../../modules/log.md:247 22249bbc61a74025ae2c1508c95d02e7
 msgid "The hours of the log message timestamp"
-msgstr ""
+msgstr "日志消息时间戳的小时"
 
-#: ../../modules/log.md:247 c6c24ea722254c6596b4e7f10476d170
+#: ../../../modules/log.md:247 1c91556c5927440dbbd84a94ecea035c
 msgid "log.minutes"
-msgstr ""
+msgstr "log.minutes"
 
-#: ../../modules/log.md:247 d0edacbf063d42abac0b5212d8519045
+#: ../../../modules/log.md:247 f6a1fcba3db843439b31f21bbbd73cb9
 msgid "The minutes of the log message timestamp"
-msgstr ""
+msgstr "日志消息时间戳的分钟"
 
-#: ../../modules/log.md:247 33275e1467e14d2d8fc5e2f188cbda8a
+#: ../../../modules/log.md:247 d139cbd18a554b37a1a33abea9222543
 msgid "log.seconds"
-msgstr ""
+msgstr "log.seconds"
 
-#: ../../modules/log.md:247 2d152353982a428aa20c9eee1f9eb9f8
+#: ../../../modules/log.md:247 87bc77009305461693bbc896af00ac15
 msgid "The seconds of the log message timestamp"
-msgstr ""
+msgstr "日志消息时间戳的秒"
 
-#: ../../modules/log.md:247 22c3330074594fe8ab64633ace9b4f40
+#: ../../../modules/log.md:247 02a1e4ff74fc4636a9ad59ea3391c351
 msgid "log.ticks"
-msgstr ""
+msgstr "log.ticks"
 
-#: ../../modules/log.md:247 5bf6ae866e334d5f88ad607e36af187f
+#: ../../../modules/log.md:247 9672d49c3ef849879d475366e0d58af5
 msgid "The ticks of the log message timestamp"
-msgstr ""
+msgstr "日志消息时间戳的刻"
 
-#: ../../modules/log.md:247 a9e64f08ccc545d9bc09ee92f61c8cf7
+#: ../../../modules/log.md:247 3b010411523d4802b9df70bf3083746e
 #, python-brace-format
 msgid "{nbt}`int`"
-msgstr ""
+msgstr "{nbt}`int`"
 
-#: ../../modules/log.md:247 86ec818a528f481b828f8292804c1499
+#: ../../../modules/log.md:247 46727c8b36da47918175ccca97a9974b
 msgid "log.gametime"
-msgstr ""
+msgstr "log.gametime"
 
-#: ../../modules/log.md:247 858c7f033fc642c79b3b0450626f4757
+#: ../../../modules/log.md:247 b036f9d90b334ca2a8ef997a247888f5
 msgid "The gametime where the message was logged"
-msgstr ""
+msgstr "记录消息时的游戏时间"
 
-#: ../../modules/log.md:247 b20fd7ab16984046b3cdd8b5fc8b8d32
-#: cde1748dee864514b6b1250f2ba69594
+#: ../../../modules/log.md:247 1a1db0922ca84ab0816a06046a728311
+#: e3fb213eb8814060ba90139e43a76501
 msgid "bs:const"
-msgstr ""
+msgstr "bs:const"
 
-#: ../../modules/log.md:247 9f927ef0df2c4361aae485780a4da504
+#: ../../../modules/log.md:247 cddcb6e0f30d432994bd4ff796a214eb
 msgid "log.time_hms"
-msgstr ""
+msgstr "log.time_hms"
 
-#: ../../modules/log.md:247 96de954d13e64c11a6ad4761e9a01298
+#: ../../../modules/log.md:247 c3e0b95c8a914b8eb9435b87c69f3536
 msgid "A SNBT text component to display time in the in hh:mm:ss format"
-msgstr ""
+msgstr "以 hh:mm:ss 格式显示时间的 SNBT 文本组件"
 
-#: ../../modules/log.md:247 a49ba9f6765c4680aa75dac816c8ec26
+#: ../../../modules/log.md:247 86da15cb3cf3412d88ad1d652f2bec75
 msgid "log.time_hmst"
-msgstr ""
+msgstr "log.time_hmst"
 
-#: ../../modules/log.md:247 6b118c390398467987ecbb8fde550190
+#: ../../../modules/log.md:247 cdc707c5e4e84dbc82f04f5ac1835c34
 msgid "A SNBT text component to display time in the in hh:mm:ss:tt format"
-msgstr ""
+msgstr "以 hh:mm:ss:tt 格式显示时间的 SNBT 文本组件"
 
-#: ../../modules/log.md:280 3127dc664c4a47c2ad23a6a58d95fd6c
+#: ../../../modules/log.md:280 898b76a9788c42cbb72661a5dd815c5b
 msgid "*Example: Define custom log message formats for the namespace `bs.foo`:*"
-msgstr ""
+msgstr "*示例：为命名空间 `bs.foo` 定义自定义日志消息格式：*"
 
-#: ../../modules/log.md:295 1e81b16ef4cb4a25ae6bb417928d78ba
+#: ../../../modules/log.md:295 a9e8c7bcd4ba4bde8a7276c998386c76
 msgid "And to try the new format:"
-msgstr ""
+msgstr "试试新格式："
 
-#: ../../_templates/comments.md:4 6da9903bdd104a158a0871cda2881462
+#: ../../../_templates/comments.md:4 89e0c443a71e41ae9154027ad74a2b55
 msgid "**💬 Did it help you?**"
-msgstr ""
+msgstr "**💬 这对您有帮助吗？**"
 
-#: ../../_templates/comments.md:6 7b45539f723141b89f5c3a23addb3fd7
+#: ../../../_templates/comments.md:6 7ee5e33ba7d84588962ebdbe3310e775
 msgid "Feel free to leave your questions and feedback below!"
-msgstr ""
-
+msgstr "欢迎在下方留下您的问题和反馈！"

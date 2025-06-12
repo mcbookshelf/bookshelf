@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,11 +19,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../changelog/index.md:1 f29e201a08ad42a1baca8a0fab67386b
+#: ../../../changelog/index.md:1 ff89e0f637cb4e07a4ef5fd9934908d2
 msgid "🛠️ Changelog"
-msgstr ""
+msgstr "🛠️ 更新日志"
 
-#: ../../changelog/index.md:3 aee7d1bde7ab4c45a9d442b6f62de4af
+#: ../../../changelog/index.md:3 a8b9aa72c88e4e3cb4532a516819bc2e
 msgid "This changelog includes updates for all versions of the project."
-msgstr ""
-
+msgstr "这个更新日志包含本项目所有版本的更新记录。"

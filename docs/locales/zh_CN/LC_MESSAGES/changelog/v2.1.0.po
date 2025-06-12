@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,41 +19,52 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../changelog/v2.1.0.md:1 9e5ebc24fef2438da784d6be3ad8e72b
+#: ../../../changelog/v2.1.0.md:1 33da4cb8111b4eb3acb3fc50125dfcdb
 msgid ""
 "📦 [Bookshelf - "
 "2.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.1.0)"
 msgstr ""
+"📦 [Bookshelf - "
+"2.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.1.0)"
 
-#: ../../changelog/v2.1.0.md:3 490112e0385142f5a5555dfdc1de1859
+#: ../../../changelog/v2.1.0.md:3 938737e18a944f12b67296732d42713d
 msgid "**⚙️ The MetaData Update!**"
-msgstr ""
+msgstr "**⚙️ 元数据更新!**"
 
-#: ../../changelog/v2.1.0.md:5 487c5c3d9d644e1e959d4458de0dbb76
+#: ../../../changelog/v2.1.0.md:5 c052f3c535354e528dcb212d3f4ea99c
 msgid ""
 "*This release enhances documentation and automated tools, and introduces "
 "new block manipulation features.*"
-msgstr ""
+msgstr "*这个版本增强了文档和自动化工具，并引入了新的方块操作特性。*"
 
-#: ../../changelog/v2.1.0.md:7 0a2ad9314b064f8694c2476f33294481
+#: ../../../changelog/v2.1.0.md:7 8bfac9ddf4c343cf905dcac44dc80bfc
+#, fuzzy
 msgid "Bookshelf is now based on **Minecraft 1.21**."
-msgstr ""
+msgstr "Bookshelf 现在适配 **Minecraft 1.21**。"
 
-#: ../../changelog/v2.1.0.md:10 0fba7a157d35463aae589f3775dca54a
+#: ../../../changelog/v2.1.0.md:10 b283c6653dae40549cb567e387717332
+#, fuzzy
 msgid ""
 "📝 **[#206](https://github.com/mcbookshelf/bookshelf/issues/206)** - Added"
 " new related datapacks and mods."
 msgstr ""
+"📝 **[#206](https://github.com/mcbookshelf/bookshelf/issues/206)** - "
+"新增相关数据包与模组。"
 
-#: ../../changelog/v2.1.0.md:11 8ce5f0516fa441128de60c7511ad6ab4
+#: ../../../changelog/v2.1.0.md:11 4a3e3541c2314446ba9266907ea1ba31
+#, fuzzy
 msgid ""
 "📝 **[#200](https://github.com/mcbookshelf/bookshelf/issues/200)** - "
 "Replaced the old function header with a new license-only header, now "
 "mandatory for all functions. Metadata has been moved to the feature "
 "function tag."
 msgstr ""
+"📝 **[#200](https://github.com/mcbookshelf/bookshelf/issues/200)** - "
+"用新的纯许可证文件头取代旧的函数文件头，现在所有函数都必须使用新的文件头。"
+"元数据已被移动到特性函数标签中。"
 
-#: ../../changelog/v2.1.0.md:12 81de3e8c5551440aacf832a9a171cb85
+#: ../../../changelog/v2.1.0.md:12 ff62725035cb4317b22d3e7efb87618c
+#, fuzzy
 msgid ""
 "📝 **[#52](https://github.com/mcbookshelf/bookshelf/issues/52)** / "
 "**[#175](https://github.com/mcbookshelf/bookshelf/issues/175)** - Each "
@@ -61,56 +72,72 @@ msgid ""
 "management and supporting tools like the upcoming Bookshelf Manager. More"
 " info [here](project:/contribute/metadata.md)."
 msgstr ""
+"📝 **[#52](https://github.com/mcbookshelf/bookshelf/issues/52)** / "
+"**[#175](https://github.com/mcbookshelf/bookshelf/issues/175)** - "
+"各模块现需独立维护元数据文件，此举有助于管理各项依赖，并为 Bookshelf Manager "
+"等新工具提供底层支持。详见[此处](project:/contribute/metadata.md)。"
 
-#: ../../changelog/v2.1.0.md:13 09a3a620a78a4bffbf45b9a41bc80df5
+#: ../../../changelog/v2.1.0.md:13 5cfc7d1cecb741ccae94263b10f0e912
+#, fuzzy
 msgid ""
 "⚙️ **[#199](https://github.com/mcbookshelf/bookshelf/pull/199)** - "
 "Automated metadata verification during pull requests to ensure no data is"
 " missed. More info [here](project:/contribute/contribution-"
 "validation.md)."
 msgstr ""
+"⚙️ **[#199](https://github.com/mcbookshelf/bookshelf/pull/199)** - "
+"在拉取请求中自动验证元数据，确保数据完整性。详见[此处](project:/contribute/contribution-"
+"validation.md)。"
 
-#: ../../changelog/v2.1.0.md:14 4d6adc6b05fa41d9a2224a68e9356102
+#: ../../../changelog/v2.1.0.md:14 d4986d6de6cd448aa328654d21340f7e
 msgid "⚙️ Added templates for pull requests and issues."
-msgstr ""
+msgstr "⚙️ 新增拉取请求模板与议题模板。"
 
-#: ../../changelog/v2.1.0.md:17 ad9009288419494e9faeda10b316f57f
+#: ../../../changelog/v2.1.0.md:17 ac0f152870d94b788e929af8bbf39c97
 msgid "`🧱 bs.block`"
-msgstr ""
+msgstr "`🧱 bs.block`"
 
-#: ../../changelog/v2.1.0.md:19 2366d819af83490fa744e0b61053025a
+#: ../../../changelog/v2.1.0.md:19 07de3c041fe6417a90a71d579e8afc17
+#, fuzzy
 msgid ""
 "✨ **[#187](https://github.com/mcbookshelf/bookshelf/issues/187)** - Added"
 " `#bs.block:map_type` and `#bs.block:mix_type` functions."
 msgstr ""
+"✨ **[#187](https://github.com/mcbookshelf/bookshelf/issues/187)** - "
+"新增 `#bs.block:map_type` 和 `#bs.block:mix_type` 函数。"
 
-#: ../../changelog/v2.1.0.md:22 c1e8d4843dcc4fa2a279db91c54c80e1
+#: ../../../changelog/v2.1.0.md:22 dc71c46de4324b3fae524a1f73b0bc1f
 msgid "`🔗 bs.link`"
-msgstr ""
+msgstr "`🔗 bs.link`"
 
-#: ../../changelog/v2.1.0.md:24 ../../changelog/v2.1.0.md:34
-#: ../../changelog/v2.1.0.md:39 47a225a7ff584f6abcc17608accc94af
-#: 6a927cc562a14026a43764c507f4bec2 cccc295e25b84b0086f048f2ed555620
+#: ../../../changelog/v2.1.0.md:24 ../../../changelog/v2.1.0.md:34
+#: ../../../changelog/v2.1.0.md:39 8ce7b9fcfdd24407b594fd164517d6df
+#: b951641218a44e6e96b4aea38ef4a706 ce036a8c58754c72bcbeaf36dd6148f6
+#, fuzzy
 msgid ""
 "🐛 **[#211](https://github.com/mcbookshelf/bookshelf/pull/211)** - Fixed "
 "missing help function tag."
 msgstr ""
+"🐛 **[#211](https://github.com/mcbookshelf/bookshelf/pull/211)** - "
+"修复缺失的帮助函数标签。"
 
-#: ../../changelog/v2.1.0.md:27 041fd5219fb8451f92f946d351a30775
+#: ../../../changelog/v2.1.0.md:27 16eb5dd3f38c42528958f5d989b33040
 msgid "`🧭 bs.position`"
-msgstr ""
+msgstr "`🧭 bs.position`"
 
-#: ../../changelog/v2.1.0.md:29 49b64589249d4202b4389faaa3f7d4de
+#: ../../../changelog/v2.1.0.md:29 81f9af59baa643a498f427c28f4f41dc
+#, fuzzy
 msgid ""
 "📝 **[#208](https://github.com/mcbookshelf/bookshelf/issues/208)** - "
 "Updated documentation for `#bs.position:<add|get|set>_pos_and_rot`."
 msgstr ""
+"📝 **[#208](https://github.com/mcbookshelf/bookshelf/issues/208)** - "
+"更新 `#bs.position:<add|get|set>_pos_and_rot` 的文档。"
 
-#: ../../changelog/v2.1.0.md:32 ad7725c9d2cf4b1ea935587167804fab
+#: ../../../changelog/v2.1.0.md:32 5679f412bbf441388b557af6c4509674
 msgid "`➡️ bs.vector`"
-msgstr ""
+msgstr "`➡️ bs.vector`"
 
-#: ../../changelog/v2.1.0.md:37 d137f336fe00454480b5aa2179e2fa1e
+#: ../../../changelog/v2.1.0.md:37 26bddacc68134bfb90fe05a4490ba5d1
 msgid "`🏅 bs.xp`"
-msgstr ""
-
+msgstr "`🏅 bs.xp`"

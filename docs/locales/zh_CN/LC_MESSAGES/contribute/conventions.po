@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,131 +19,131 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../contribute/conventions.md:5 8658b47691fb45ae957e259d8acd5f85
+#: ../../../contribute/conventions.md:5 bf3ec27e4f994e0db0b28b79dabbb77f
 msgid "📖 Conventions"
 msgstr ""
 
-#: ../../contribute/conventions.md:7 daccfc97ccdd4fb2b8870cb220eace46
+#: ../../../contribute/conventions.md:7 e7f85daad74a465fac3eba87311548c9
 msgid ""
 "Bookshelf respects certain naming conventions in order to reduce the "
 "effort needed to read and understand code."
 msgstr ""
 
-#: ../../contribute/conventions.md:12 5a46fc16cf534a57bb178dd90a940bb7
+#: ../../../contribute/conventions.md:12 31d9488b0b7a4d70bf046431343691c1
 msgid "**Files**"
 msgstr ""
 
-#: ../../contribute/conventions.md:13 40fb35ebdd25438c86fd6542a7308a70
+#: ../../../contribute/conventions.md:13 12e9f3d0c3e340d5a5315639568033cf
 msgid ""
 "Use the snake_case convention. A few names are reserved for [Special "
 "Functions](project:../contribute/special-functions.md) at the root of "
 "each module: `__help__`, `__load__`, and `__unload__`"
 msgstr ""
 
-#: ../../contribute/conventions.md:15 7ebe4fa34eb1457d958ac00e616a5ae8
+#: ../../../contribute/conventions.md:15 52d01113b087490f809db21e2def7316
 msgid "*Example: `function/<my_function>.mcfunction`*"
 msgstr ""
 
-#: ../../contribute/conventions.md:16 fed21d32e48043e9a309ed7e320d4bb7
+#: ../../../contribute/conventions.md:16 acf0846128aa44529c2434a2f54f16cd
 msgid "**Entity tags**"
 msgstr ""
 
-#: ../../contribute/conventions.md:17 f598185985e54025b06106ea115962e5
+#: ../../../contribute/conventions.md:17 977159f055c3437cb693215dc9363f11
 msgid ""
 "Use the snake_case convention. Must be prefixed with `bs.` and the name "
 "of the module"
 msgstr ""
 
-#: ../../contribute/conventions.md:19 24143c60bd184b27b7ee4750e1081aea
+#: ../../../contribute/conventions.md:19 1cbaa80a266e448296dcc9b3dcc72d2a
 msgid "*Example: `bs.<module>.my_tag`*"
 msgstr ""
 
-#: ../../contribute/conventions.md:20 a8d10f3d29c9446496fd1d6532902452
+#: ../../../contribute/conventions.md:20 22602a43f0534af3990321304331659f
 msgid "**Data storage**"
 msgstr ""
 
-#: ../../contribute/conventions.md:21 26ce398b48cf4f989f23d52c1a964929
+#: ../../../contribute/conventions.md:21 8c83a44ef97d410fa517a2c8cfd5be6d
 msgid ""
 "Use the snake_case convention. Is limited to what is defined in the "
 "[Shared Resources](project:shared-resources.md) section"
 msgstr ""
 
-#: ../../contribute/conventions.md:23 ff44ad6747c1426eae3159cef474cc91
+#: ../../../contribute/conventions.md:23 7f728abdb16a4e8ba921d2e6492ca856
 msgid "*Example: `bs:data <module>.<feature>`*"
 msgstr ""
 
-#: ../../contribute/conventions.md:24 9daf0773fffa44ab970ecef730a98dcd
+#: ../../../contribute/conventions.md:24 44e2dc72920b4ffc8a9b482efc1c6885
 msgid "**Objectives**"
 msgstr ""
 
-#: ../../contribute/conventions.md:25 5a4912c6d08f47ddba9e32097cb04bc2
+#: ../../../contribute/conventions.md:25 5ee570ef232b4b938b6cc33d2c2fb52b
 msgid ""
 "Use the snake_case convention and `bs.` prefix. Only create new "
 "objectives if no existing objective defined in the [Shared "
 "Resources](project:shared-resources.md) section can be used"
 msgstr ""
 
-#: ../../contribute/conventions.md:27 ed6bb576f8784d1e9c1ca1eb4e7a5045
+#: ../../../contribute/conventions.md:27 a0b7b34b0cc04de6ae0db83d81ac4e32
 msgid "*Example: `bs.my_objective`*"
 msgstr ""
 
-#: ../../contribute/conventions.md:28 6ab696282f544b70a3d1bec1b9c34ea8
+#: ../../../contribute/conventions.md:28 e669d6c4aabd44c0aab8a1f9af6a570e
 msgid "**Scoreholders**"
 msgstr ""
 
-#: ../../contribute/conventions.md:29 f28bf6d110e94713be38b78a11d3377f
+#: ../../../contribute/conventions.md:29 1be4f7a46dbe44e3b3fca9efe6006a68
 msgid ""
 "Use the snake_case convention. Must be prefixed with the name of the "
 "module. Each score should also be prefixed by either `#` for private "
 "scores or `$` for public ones"
 msgstr ""
 
-#: ../../contribute/conventions.md:31 fe12feca64584bafb3db2b29580a77d9
+#: ../../../contribute/conventions.md:31 088ea7cc2b094993b95948b1025d8bf6
 msgid "*Example: `$<module>.debug` or `#<module>.any`*"
 msgstr ""
 
-#: ../../contribute/conventions.md:34 3fdc947994b54fc68a96c64bcc8847e2
+#: ../../../contribute/conventions.md:34 5c57439950bd4e75b9149bb98ad61ef1
 msgid ""
 "Moreover, Bookshelf follows Smithed's "
 "[conventions](https://docs.smithed.dev/conventions/), especially for the "
 "entity tags. Here are the entity tags used in Bookshelf:"
 msgstr ""
 
-#: ../../contribute/conventions.md:38 a895ddf0c82745dcafc843783648ed09
+#: ../../../contribute/conventions.md:38 87ea493fe657406992ca97accf80b7e4
 msgid "**smithed.entity**"
 msgstr ""
 
-#: ../../contribute/conventions.md:39 919d0d9281a541c39e8a9d4bb9c2bfe3
+#: ../../../contribute/conventions.md:39 5cbf362327e54444882af3713ee7436c
 msgid ""
 "Used to identify entities that are created by datapacks and that should "
 "not be modified by datapacks targeting vanilla entities"
 msgstr ""
 
-#: ../../contribute/conventions.md:41 eec7102218574fa8814dd9e6c35ff063
+#: ../../../contribute/conventions.md:41 1752c0c287bc462298d4e340bac605f2
 msgid "**smithed.strict**"
 msgstr ""
 
-#: ../../contribute/conventions.md:42 56f0440589c340b8bf88fa69831b4270
+#: ../../../contribute/conventions.md:42 381f624f656544a591df74a351fdec3c
 msgid ""
 "Used to identify entities that are created by datapacks and that should "
 "not be modified by other datapacks"
 msgstr ""
 
-#: ../../contribute/conventions.md:44 8f75a56f2f1f4f84841c21f6be08f026
+#: ../../../contribute/conventions.md:44 fd3bb30789bd43e2a2a27e30f71451b0
 msgid "**bs.persistent**"
 msgstr ""
 
-#: ../../contribute/conventions.md:45 9cf506b0ba33470da42252605836a646
+#: ../../../contribute/conventions.md:45 c2130284c5994b4ba0509d8f2b71da2a
 msgid ""
 "Used to identify Bookshelf entities that are persistent and should not be"
 " despawned/killed"
 msgstr ""
 
-#: ../../contribute/conventions.md:47 ea56a1a9245c49b2a010bdabce1b8eb3
+#: ../../../contribute/conventions.md:47 d2cdb062908a46349109b8488ca209bd
 msgid "**bs.entity**"
 msgstr ""
 
-#: ../../contribute/conventions.md:48 d332b089bbda40cdb281a446f7d19abe
+#: ../../../contribute/conventions.md:48 7bcc5734960a4195a3ab1627969c64e6
 msgid "Used to identify entities that are created by Bookshelf"
 msgstr ""
 

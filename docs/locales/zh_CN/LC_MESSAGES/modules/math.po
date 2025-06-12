@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,30 +19,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/math.md:1 5d978b25a9e64b0c88cd4d3aeecd40c3
+#: ../../../modules/math.md:1 d7dcf5dda7ee4dc7ace115c570f368d4
 msgid "🧮 Math"
-msgstr ""
+msgstr "🧮 数学（Math）"
 
-#: ../../modules/math.md:3 97e14b1708424cf88e3eba21e8ea9c18
+#: ../../../modules/math.md:3 5b5c6a0261304ba58d3c18c4a0dcde63
 msgid "**`#bs.math:help`**"
-msgstr ""
+msgstr "**`#bs.math:help`**"
 
-#: ../../modules/math.md:5 3bc517ecbc7e437e82759ed5330613ed
+#: ../../../modules/math.md:5 2df7c76a51ab4c15a8db5625d65e667a
 msgid "The beautiful world of mathematics... **in Minecraft!**"
-msgstr ""
+msgstr "数学的美妙世界... **尽在 Minecraft 中！**"
 
-#: ../../modules/math.md:18 7fc32b1bce844faaaa68f5dcdb537322
+#: ../../../modules/math.md:18 af9279f3f06b4a6787ece835a59e1841
 msgid ""
 "\"Mathematics has very subtle inventions that can be of great service, "
 "both to satisfy the curious and to facilitate all arts and reduce the "
 "labor of men.\""
-msgstr ""
+msgstr "“数学中那些极精微的发明，既能充分满足好奇之士，又能在一定程度上便利一切工艺、减轻人类劳动，它们理应属于超越凡俗的知识范畴。”"
 
-#: ../../modules/math.md:19 a7ffc3d295e34e66b0429c80bd1e7122
+#: ../../../modules/math.md:19 c4fe23fd6f9b4f5d8134567f3d41ad58
 msgid "René Descartes"
-msgstr ""
+msgstr "勒内·笛卡尔（René Descartes）"
 
-#: ../../modules/math.md:23 0b81c409f1664453947eed26a1c448cf
+#: ../../../modules/math.md:23 a8ef8421aa064ff6926e280254f6f589
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
 "sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
@@ -52,832 +52,831 @@ msgid ""
 "0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
 " .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
 "2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
-msgstr ""
+msgstr "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 2.1v-5.85l-3.5 2.1Z\"></path></svg> 观看演示"
 
-#: ../../modules/math.md:33 10d272d5f225470e84e0d47525e57f33
+#: ../../../modules/math.md:33 742f6634e4344840afc44ab84ef670ef
 msgid "🔧 Functions"
-msgstr ""
+msgstr "🔧 函数"
 
-#: ../../modules/math.md:35 8efe5c59593a47abae811908ac678a5a
+#: ../../../modules/math.md:35 4d59f9d6044c4332a04fe54c400a99ee
 msgid "You can find below all functions available in this module."
-msgstr ""
+msgstr "您可以在下方找到此模块中的所有可用函数。"
 
-#: ../../modules/math.md:39 e0c507ade9724c68b6b9521d76635344
+#: ../../../modules/math.md:39 0202f2010a234e2a9470672dd8067f87
 msgid "Combine"
-msgstr ""
+msgstr "组合"
 
-#: ../../modules/math.md:43 bae250effc834c6391f04c981a98c459
+#: ../../../modules/math.md:43 7375982651b647fa9847b6e76f63aada
 msgid "Compute the combination of 2 numbers."
-msgstr ""
+msgstr "计算 2 个数的组合。"
 
-#: ../../modules/math.md:45 ../../modules/math.md:83 ../../modules/math.md:106
-#: ../../modules/math.md:134 ../../modules/math.md:172
-#: ../../modules/math.md:197 ../../modules/math.md:228
-#: ../../modules/math.md:261 ../../modules/math.md:284
-#: ../../modules/math.md:307 ../../modules/math.md:330
-#: ../../modules/math.md:366 ../../modules/math.md:392
-#: ../../modules/math.md:425 ../../modules/math.md:460
-#: ../../modules/math.md:483 ../../modules/math.md:518
-#: ../../modules/math.md:543 ../../modules/math.md:568
-#: ../../modules/math.md:593 ../../modules/math.md:617
-#: ../../modules/math.md:660 ../../modules/math.md:703
-#: ../../modules/math.md:728 0240b5ab661b4ab2b5e92f7f9597c3ae
-#: 07f2304e7db14d61aabcc2452d99deff 16836a0066be461eaa0df9c7c767dcbe
-#: 18479378036847d39bb3fdaef169b433 294e2af6df71418aae61569a518e994d
-#: 32879a0459314f47854438581bd21533 37947f802ecc41a2a348aae4dc29d300
-#: 38419b10b478447a9a1018298a942012 3bc908a4a059485396d8e27871fbe3ae
-#: 3ca3d9cb6be944a79e09880d84d47be4 5583178b260148d9b17afce89d29d92b
-#: 59e9b37b07934b3f8008fb5110ebcab4 5a5f5a87abca4e1faea4c77274732fbe
-#: 5b2a91f2390f4e9eb54739864c9a542f 6497dcf57d28494e90096e77c54535d7
-#: 7a997692bb9546bc82caa933bf9fd294 7d08b14ad09140f1bd962b8e0418603d
-#: 8064d45a02594001aab2dff1ed6462a9 89e0ed74878e4cf58bdce52611db58b9
-#: 8d652e14905c4a7f9a9c3a79ba9b032e a172a10339b1404e8a8a4e96d76d628a
-#: d715d5cd7eab4993b919589b604c27a7 defc825d865343d7acbd124f8d33adfc
-#: eb0ac7e96c804faa91da5bf96c22d4e9
+#: ../../../modules/math.md:45 ../../../modules/math.md:83
+#: ../../../modules/math.md:106 ../../../modules/math.md:134
+#: ../../../modules/math.md:172 ../../../modules/math.md:197
+#: ../../../modules/math.md:228 ../../../modules/math.md:261
+#: ../../../modules/math.md:284 ../../../modules/math.md:307
+#: ../../../modules/math.md:330 ../../../modules/math.md:366
+#: ../../../modules/math.md:392 ../../../modules/math.md:425
+#: ../../../modules/math.md:460 ../../../modules/math.md:483
+#: ../../../modules/math.md:518 ../../../modules/math.md:543
+#: ../../../modules/math.md:568 ../../../modules/math.md:593
+#: ../../../modules/math.md:617 ../../../modules/math.md:660
+#: ../../../modules/math.md:703 ../../../modules/math.md:728
+#: 01511b7d10c943499ce4c0be224db94c 1335247d13a2499e88cb2d0fb793d312
+#: 25e3014bcbf2434898c961ec8d4d19f4 27343b51a3be40828a76ad67729b6e3f
+#: 364f1de4d6a14e61afe4d07363b6f6f4 3cf017ac7b0747d0be97ece400eccc3a
+#: 3ebf9c9111d44ec188d1cf5db3116850 5d23c8f12ef048aaa1594c5f1e8b6610
+#: 69c06be63e4a4119948991ad2eca4809 700aa15200aa4509b02c5e938a65ebc7
+#: 7014bec430714c0abe2ac74a9f41a30e 76097cb48eb845b88ce1bc0cc0c42d91
+#: 8a986a5c490642d1b353e6cd040ab8c7 8cddf13047c64dc8b532fafc8086b809
+#: 9b7ddb75d6e04888a3bc8329d4f221f4 9c8f366738204401bb83f1a1772d9470
+#: bb45c824e870423e9a6ea61b8d48527d bd7bf5d8d38341ba8d7508ba29ce3c14
+#: ca45efdd7950427d8390a5ed4c232648 e94e326c27a04c0abd6be3935b40cb69
+#: ea757a77ac3645e4b4fff2d983a71bab ec1cf875b218436cb8ac3afc939c7413
+#: f6da50afb1784f9a8b7587d2ac4328cd febeb6970dba48b2ac1f0d5d06703cc5
 msgid "Inputs"
-msgstr ""
+msgstr "输入"
 
-#: ../../modules/math.md:46 393b8cb78f4345e9867b956f345f0e5a
+#: ../../../modules/math.md:46 01f3c33434da4e8296d61f1e486c8795
 msgid ""
 "**Scores `$math.combine.[n,k] bs.in`**: Numbers to be combined, the "
 "smaller input will be taken from the greater input."
-msgstr ""
+msgstr "**分数 `$math.combine.[n,k] bs.in`**：要计算的组合数，会自动从大数中取出小数。"
 
-#: ../../modules/math.md:48 ../../modules/math.md:86 ../../modules/math.md:109
-#: ../../modules/math.md:137 ../../modules/math.md:175
-#: ../../modules/math.md:202 ../../modules/math.md:231
-#: ../../modules/math.md:264 ../../modules/math.md:287
-#: ../../modules/math.md:310 ../../modules/math.md:335
-#: ../../modules/math.md:371 ../../modules/math.md:397
-#: ../../modules/math.md:430 ../../modules/math.md:463
-#: ../../modules/math.md:486 ../../modules/math.md:521
-#: ../../modules/math.md:546 ../../modules/math.md:571
-#: ../../modules/math.md:596 ../../modules/math.md:620
-#: ../../modules/math.md:663 ../../modules/math.md:706
-#: ../../modules/math.md:731 0a3abb7daf0e4b57a762f0a487b08c9d
-#: 0b03e3c659d34d3ba5d5137f2a81107c 1041fb3c17a64303948b9bcd2c3f18db
-#: 22bde114c255405094995e59030cf652 2efff4535c364389b44b8784001e8eb2
-#: 5a26b547ed0744889b6f0b1030e8138b 66115f07373d48e1bd5147655c80fb43
-#: 6fe69a737cec489f871984b18439d482 79bec8a570d446829e2f8c5ef47b5f04
-#: 821f0a56d4094458a0cf2c146e500083 976b128d8ed440d2927916e9c9550e1e
-#: 988dd6ecfeb54d8db4039a8c6c667e3b a4b7ad532cc84d609d56ef644c38f4bb
-#: b114ae9d4fb045308ec37905922db4fb ba00e6a9a470404988fdf56ec9475dd1
-#: c6f162b0284a47af9d2076073a1faf56 c73b998044c04fd2ada01f8b4a7cf497
-#: e087441942dc4287950313bfc6d22926 e12077f80c434e3a9f4c25eab78854de
-#: e71a7e37824b4b86afbc381f0d2b6208 e7bcf4b708814e0581f83e91109ad70b
-#: ee66436d810d4763ac368b224c13a92b f6019287e8944ff2a582034ea88d610c
-#: f95f715ae3754a6ea9a3db9050646ba5
+#: ../../../modules/math.md:48 ../../../modules/math.md:86
+#: ../../../modules/math.md:109 ../../../modules/math.md:137
+#: ../../../modules/math.md:175 ../../../modules/math.md:202
+#: ../../../modules/math.md:231 ../../../modules/math.md:264
+#: ../../../modules/math.md:287 ../../../modules/math.md:310
+#: ../../../modules/math.md:335 ../../../modules/math.md:371
+#: ../../../modules/math.md:397 ../../../modules/math.md:430
+#: ../../../modules/math.md:463 ../../../modules/math.md:486
+#: ../../../modules/math.md:521 ../../../modules/math.md:546
+#: ../../../modules/math.md:571 ../../../modules/math.md:596
+#: ../../../modules/math.md:620 ../../../modules/math.md:663
+#: ../../../modules/math.md:706 ../../../modules/math.md:731
+#: 090a8ce69bbc47ad81e4e796282f538e 0f29e2cb9be34636bab900428bf623e6
+#: 63f228cec63047b7b3c21bfe2af8be8d 649e1944ba384a5686d0effcd6f967ae
+#: 653b60767c5049ccaab438fcf85c6b04 7d79cf323f6a49cdad348dd23b0fcc3c
+#: 83cffd5733854cb08ba53b2012d5fef4 843fedf8b9fa4f558f534a6785e7ef1d
+#: 8f7c93b99e454e1aba543ea0220c5ed2 a2aadcd68c5745c697225c7b917cf199
+#: a34ed2ac092040868403606fb7f9288e a3cdd7f2ed45424ab6e317a14f3e0e5e
+#: bb395a09c03a470891ad54ba808b45f5 c81f5c3fab7f4163a722ace07602fc2d
+#: cf316e0f46274a86828fab24e85e2608 d5c57ee6e27a4fb9baaad9a9c8d4b34e
+#: d886b1f0ca6c40339140ad9f32234852 dc16a47a3db443a4bdfb882ef52b582b
+#: e67093ce36194f50a5ebb6c7dfe69fab e6adb8566d104c13ab9f2b786b385edf
+#: f59c63c3f6d74edc966a17c59c0654ba f74f357faad34829a64c0eb25d19305f
+#: f9ac9e3b27224ab0a20885d28c95e701 fc432548d4ef4cdc90cc0577305767c0
 msgid "Outputs"
-msgstr ""
+msgstr "输出"
 
-#: ../../modules/math.md:49 f583504fcce544828502bdeda6469995
+#: ../../../modules/math.md:49 55e3cdbf96554c59afca117893b28023
 msgid "**Return | Score `$math.combine bs.out`**: Result of the operation."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.combine bs.out`**：运算结果。"
 
-#: ../../modules/math.md:52 ../../modules/math.md:141
-#: 1d21820cc04e49dd84034362a2265ca3 c58b92a4eafc428685e4bda9da9e9931
+#: ../../../modules/math.md:52 ../../../modules/math.md:141
+#: 81fd9f99273046bfa305a680f54e9bc3 9ba4b8fe37c048fb92d8d7d8e0b62880
 msgid "Technical Limitation"
-msgstr ""
+msgstr "技术限制"
 
-#: ../../modules/math.md:55 8abd8809225041fc8c8592978869f50f
+#: ../../../modules/math.md:55 957d63f6d3614de9bd333a9d257c9aef
 msgid ""
 "The value of `bs.out` is incorrect if the result is greater than "
 "2,147,483,647 or `$math.combine.[n,k] bs.in` are not both positive."
-msgstr ""
+msgstr "如果结果大于 2,147,483,647，或 `$math.combine.[n,k] bs.in` 中有负数，则 `bs.out` 的值将不正确。"
 
-#: ../../modules/math.md:58 1a754bde62d54bfd8f3bb378f60253fb
+#: ../../../modules/math.md:58 939129d4928647ed8f79374c79953a7a
 msgid "*Example: Compute $combine(4,2)$:*"
-msgstr ""
+msgstr "*示例：计算 $combine(4,2)$：*"
 
-#: ../../modules/math.md:68 ../../modules/math.md:504
-#: 317fb4d08409477bb2c7273b9befbc7c 78ec89788de142a386bffedc31d8f7e5
+#: ../../../modules/math.md:68 ../../../modules/math.md:504
+#: 5ebeea7749e448e7a2685f56a5fa0433 d7413abe54b24d88babb531825f20eb4
 msgid "**Credits**: Ethanout"
-msgstr ""
+msgstr "**制作人员**：Ethanout"
 
-#: ../../modules/math.md:72 a31235aed2f74253bb2ccd2e7affe3ba
+#: ../../../modules/math.md:72 3950426a75074573a3abed54a6e65237
 msgid "Exponential"
-msgstr ""
+msgstr "指数"
 
-#: ../../modules/math.md 0f99d0ce3fb64f11ae80e46e050bb1d8
-#: 7199b8ad7b03493ebd029c41c8f5bc84
+#: ../../../modules/math.md 1f9e5b73446942dcb84039151498d084
+#: b2ae7478f87b4d8f84e3eb16d20d4d69
 msgid "Natural"
-msgstr ""
+msgstr "自然"
 
-#: ../../modules/math.md:81 24699c127c0b41a4a0aadb37a3ea3884
+#: ../../../modules/math.md:81 b70b75e1a4634f9aa53f239875b43ff8
 msgid "Compute the exponential function."
-msgstr ""
+msgstr "计算指数函数。"
 
-#: ../../modules/math.md:84 7a81cbf460a347f583f7fd7d7adfa899
+#: ../../../modules/math.md:84 43df3691fd2844309fbeb9425b2f7b22
 #, python-brace-format
 msgid "**Storage `bs:in math.exp.x`**: {nbt}`number` Number to be exponentiated."
-msgstr ""
+msgstr "**命令存储 `bs:in math.exp.x`**：{nbt}`number` 要计算指数的数。"
 
-#: ../../modules/math.md:87 f8a6e06de55046079e2503f1495aa41b
+#: ../../../modules/math.md:87 f0759abfbfb04bd7b980bd2cfb0960d6
 #, python-brace-format
 msgid "**Storage `bs:out math.exp`**: {nbt}`float` Result of the operation."
-msgstr ""
+msgstr "**命令存储 `bs:out math.exp`**：{nbt}`float` 运算结果。"
 
-#: ../../modules/math.md:90 48849d68e1a249ca9b5525ee0401bcd2
+#: ../../../modules/math.md:90 e2ab147a1db345bd8827f3d3920de894
 msgid "*Example: Compute $exp(3)$:*"
-msgstr ""
+msgstr "*示例：计算 $exp(3)$：*"
 
-#: ../../modules/math.md aac2a69c442b48dc9d89e05d9608b91b
-#: c066042c4e7346f5832f07eed12bfa5d
+#: ../../../modules/math.md 11150b38f9e3485c927e8f73c64e968d
+#: 22da1cf988d64787b45edeef3517a0bc
 msgid "Base 2"
-msgstr ""
+msgstr "以 2 为底"
 
-#: ../../modules/math.md:104 3b887f54e8084268b264bfe82d234187
+#: ../../../modules/math.md:104 ebf8e3989b944c5fb4d506deb941fc63
 msgid "Compute the exponential function in base 2."
-msgstr ""
+msgstr "计算以 2 为底的指数函数。"
 
-#: ../../modules/math.md:107 ce3eaca7b21141d38b5bdc9c620fc427
+#: ../../../modules/math.md:107 62b880800e37480695126f8d3c8a35bc
 #, python-brace-format
 msgid "**Storage `bs:in math.exp2.x`**: {nbt}`number` Number to be exponentiated."
-msgstr ""
+msgstr "**命令存储 `bs:in math.exp2.x`**：{nbt}`number` 要计算指数的数。"
 
-#: ../../modules/math.md:110 7ffc3c2d12ef452cafb6b7cebd462840
+#: ../../../modules/math.md:110 bbd33e1e45eb4b02874c8d285af006f8
 #, python-brace-format
 msgid "**Storage `bs:out math.exp2`**: {nbt}`float` Result of the operation."
-msgstr ""
+msgstr "**命令存储 `bs:out math.exp2`**：{nbt}`float` 运算结果。"
 
-#: ../../modules/math.md:113 0b4bef4c5e2447789ef709f65050ef82
+#: ../../../modules/math.md:113 925476a49cf84ef886d0b34c83aa518b
 msgid "*Example: Compute $exp2(3)$:*"
-msgstr ""
+msgstr "*示例：计算 $exp2(3)$：*"
 
-#: ../../modules/math.md:122 07d6f9535d164a99b7c7a90ad90c9b66
+#: ../../../modules/math.md:122 62a4d3ecca914158939b6ed1e4707e60
 msgid "![](/_imgs/modules/math/exp.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/exp.png)"
 
-#: ../../modules/math.md:124 ../../modules/math.md:218
-#: ../../modules/math.md:352 2a5538c63d2f4a9286cad00dcba2d733
-#: c73260f72d0746e2bc39aa5b2ffa05f2 c9ed80efff834177a7dc9fc65da40620
+#: ../../../modules/math.md:124 ../../../modules/math.md:218
+#: ../../../modules/math.md:352 04f8349c8c414b0d8cd5a687a1a5dc27
+#: 7db126648cca4825b0987e72e6610a81 b98999bdf1e84d17ad0b6a238607859f
 msgid "**Credits**: Aksiome"
-msgstr ""
+msgstr "**制作人员**：Aksiome"
 
-#: ../../modules/math.md:128 fd49028491d0487a999f5fbffe26dcb5
+#: ../../../modules/math.md:128 9a2a0dbe50344cbda0fc0c129a593bea
 msgid "Factorial"
-msgstr ""
+msgstr "阶乘"
 
-#: ../../modules/math.md:132 7af24006f01547afb626d9cf94e8c054
+#: ../../../modules/math.md:132 66c74f724091484383db0c10cc67f5e2
 msgid "Compute the factorial of the number."
-msgstr ""
+msgstr "计算数的阶乘。"
 
-#: ../../modules/math.md:135 5618cceec15340f1bce8066e6dc6be1c
+#: ../../../modules/math.md:135 415455dcb5a146189421b1d3f5a834bb
 msgid "**Score `$math.factorial.n bs.in`**: Number to be factorialized."
-msgstr ""
+msgstr "**分数 `$math.factorial.n bs.in`**：要计算阶乘的数。"
 
-#: ../../modules/math.md:138 fbb44fcfeb4d4bc4a4e504ee908ede98
+#: ../../../modules/math.md:138 abdea95134264418a715a2bff03e31b6
 msgid "**Return | Score `$math.factorial bs.out`**: Result of the operation."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.factorial bs.out`**：运算结果。"
 
-#: ../../modules/math.md:144 8c79785ba40b4edb9a2bc6dec32dc400
+#: ../../../modules/math.md:144 8fbf28674e9940d6b106a5ecaf2d7566
 msgid ""
 "Due to the limit of integers that can be stored in a score, the interval "
 "of `$math.factorial.n bs.in` is limited to `[0,12]`."
-msgstr ""
+msgstr "由于分数中可以存储的整数限制，`$math.factorial.n bs.in` 的范围限制在 `[0,12]`。"
 
-#: ../../modules/math.md:147 065acba0c4e548db8ddde1206fda6ff9
+#: ../../../modules/math.md:147 c3d9a170a1364fec8d9f0fc69ae85497
 msgid "*Example: Compute $3!$:*"
-msgstr ""
+msgstr "*示例：计算 $3!$：*"
 
-#: ../../modules/math.md:156 7fdad2da02d4490b9176298c90fa0cd2
+#: ../../../modules/math.md:156 d76d30a02ef443e0b03c0d0fb1c3ff3e
 msgid "![](/_imgs/modules/math/factorial.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/factorial.png)"
 
-#: ../../modules/math.md:158 d640c92422e146e484c4cfdaed31e3fb
+#: ../../../modules/math.md:158 542f3d730d0b40cf92f8eacc67df5809
 msgid "**Credits**: KubbyDev"
-msgstr ""
+msgstr "**制作人员**：KubbyDev"
 
-#: ../../modules/math.md:162 c111262f31484fad8b04da7cc3fded19
+#: ../../../modules/math.md:162 b75cde4f9c8541f69a76d55f4901b6be
 msgid "Float Manipulation"
-msgstr ""
+msgstr "浮点数操作"
 
-#: ../../modules/math.md 871d00703f464d4d85f99ff54fb611d1
+#: ../../../modules/math.md 9acca1946e6e4a60962370202d5ac016
 msgid "Frexp"
-msgstr ""
+msgstr "浮点数分解"
 
-#: ../../modules/math.md:170 cf444d18df0640bbb1a104c0976e9b62
+#: ../../../modules/math.md:170 49d90a2db80b499091f44171bd9da9cb
 msgid ""
 "Decompose a floating point number into a normalized fraction and an "
 "integral power of two."
-msgstr ""
+msgstr "将浮点数分解为标准化的分数和 2 的整数次幂。"
 
-#: ../../modules/math.md:173 78dd34c2d970454b97d8f28d330657be
+#: ../../../modules/math.md:173 46ec4d88d2cf4952a51dbc24c860a5b8
 #, python-brace-format
 msgid "**Storage `bs:in math.frexp.x`**: {nbt}`number` Number to be decomposed."
-msgstr ""
+msgstr "**命令存储 `bs:in math.frexp.x`**：{nbt}`number` 要分解的数。"
 
-#: ../../modules/math.md:176 95af673fe5d14ed0aa395e7aee33b669
+#: ../../../modules/math.md:176 1edcf7c9a1794f51aff1670f9b351350
 #, python-brace-format
 msgid "**Storage `bs:out math.frexp.e`**: {nbt}`int` Exponent for the power of 2."
-msgstr ""
+msgstr "**命令存储 `bs:out math.frexp.e`**：{nbt}`int` 2 的指数。"
 
-#: ../../modules/math.md:178 ce641cb8e92f43f69e9ade0ea895f512
+#: ../../../modules/math.md:178 e9390307a34b4bc3b0fa9719339f78a6
 #, python-brace-format
 msgid ""
 "**Storage `bs:out math.frexp.x`**: {nbt}`float` Normalized fraction in "
 "range  `]-1,-0.5]` or `[0.5,1[`."
-msgstr ""
+msgstr "**命令存储 `bs:out math.frexp.x`**：{nbt}`float` 范围在 `(-1,-0.5]` 或 `[0.5,1)` 的标准化分数。"
 
-#: ../../modules/math.md:181 83b9c508c8104f3ea6f9950e701e62a0
+#: ../../../modules/math.md:181 52b7dcde06b048538cc005549149ff05
 msgid "*Example: Decompose 5.8 into its mantissa and exponent:*"
-msgstr ""
+msgstr "*示例：将 5.8 分解为尾数和指数：*"
 
-#: ../../modules/math.md 02f015bdac18486590acb624cb50ba81
+#: ../../../modules/math.md d7d566e0558345e8bc99eeef556bf7c3
 msgid "Ldexp"
-msgstr ""
+msgstr "浮点数组合"
 
-#: ../../modules/math.md:195 528cd4e1d9274e2497a0f9ce3691fbc8
+#: ../../../modules/math.md:195 bde4ed04a04d4e57b6c5801aba6bb85d
 msgid ""
 "Build a floating point number from a normalized fraction and an integral "
 "power of two."
-msgstr ""
+msgstr "从标准化的分数和 2 的整数次幂构建浮点数。"
 
-#: ../../modules/math.md:198 0c89cf17db704c3cb8eb51fcdff8ce59
+#: ../../../modules/math.md:198 060e1726949448e3a126cec07a8f63f7
 #, python-brace-format
 msgid ""
 "**Storage `bs:in math.ldexp.x`**: {nbt}`number` Normalized fraction in "
 "range  `]-1,-0.5]` or `[0.5,1[`."
-msgstr ""
+msgstr "**命令存储 `bs:in math.ldexp.x`**：{nbt}`number` 范围在 `(-1,-0.5]` 或 `[0.5,1)` 的标准化分数。"
 
-#: ../../modules/math.md:200 177ae926d5044c3cbd5d151a7ef0728b
+#: ../../../modules/math.md:200 02b230e78e5d4cf7a4e0d2d32e7ef5e1
 #, python-brace-format
 msgid "**Storage `bs:in math.ldexp.e`**: {nbt}`int` Exponent for the power of 2."
-msgstr ""
+msgstr "**命令存储 `bs:in math.ldexp.e`**：{nbt}`int` 2 的指数。"
 
-#: ../../modules/math.md:203 1adfe64f438b4e2bbf51ba58e9a47e72
+#: ../../../modules/math.md:203 58b69a1a9c4e43089ca296d69d4fb5da
 #, python-brace-format
 msgid ""
 "**Storage `bs:out math.ldexp`**: {nbt}`float` Resulting floating-point "
 "number."
-msgstr ""
+msgstr "**命令存储 `bs:out math.ldexp`**：{nbt}`float` 结果浮点数。"
 
-#: ../../modules/math.md:206 616f976530e34312bf1390995ec24afa
+#: ../../../modules/math.md:206 4f3768623c224125a96908835b3a0d6f
 msgid "*Example: Compose a floating-point number:*"
-msgstr ""
+msgstr "*示例：组合一个浮点数：*"
 
-#: ../../modules/math.md:222 e881ea66547847f9986525f17e46fb1d
+#: ../../../modules/math.md:222 32bd6cfa2b9046e59a8d31ec78cb7359
 msgid "Greatest Common Denominator"
-msgstr ""
+msgstr "最大公约数"
 
-#: ../../modules/math.md:226 c5281464f8d14011b24a4fc5a447053a
+#: ../../../modules/math.md:226 a1d148f86a8d46b1a6ebdfad9030bde2
 msgid "Compute the greatest common denominator of two numbers."
-msgstr ""
+msgstr "计算两个数的最大公约数。"
 
-#: ../../modules/math.md:229 2bfb4bd7b10c4e49a612ce176f1430ca
+#: ../../../modules/math.md:229 3b11041adac64259b654a438b5809945
 msgid "**Scores `$math.gcd.[a,b] bs.in`**: The two numbers."
-msgstr ""
+msgstr "**分数 `$math.gcd.[a,b] bs.in`**：两个数。"
 
-#: ../../modules/math.md:232 02c64e72e8964de9b6015f2c10ded7ca
+#: ../../../modules/math.md:232 c26d673a992140b4be22d5c836f7a58f
 msgid "**Return | Score `$math.gcd bs.out`**: The greatest common denominator."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.gcd bs.out`**：最大公约数。"
 
-#: ../../modules/math.md:235 85738b3f4af149cebdd22e737c4cfd4f
+#: ../../../modules/math.md:235 ac34b01897d147efab99d974baebf990
 msgid "*Example: Calculate the greatest common denominator between 16 and 12:*"
-msgstr ""
+msgstr "*示例：计算 16 和 12 的最大公约数：*"
 
-#: ../../modules/math.md:245 13a7a2b2cd8d4fe7a8ba91dc2ff799fa
+#: ../../../modules/math.md:245 c1d3634189d3417c9ff68d526bdd9a6e
 msgid "![](/_imgs/modules/math/gcd.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/gcd.png)"
 
-#: ../../modules/math.md:247 ../../modules/math.md:415
-#: 5a68fbb08a3d45798f49f75c923c87fa a3f9946499844293a0ddd33ce19f5ed8
+#: ../../../modules/math.md:247 ../../../modules/math.md:415
+#: 761ae7a093d646b4a3ebc17fa04f2a05 b3f59ab42a79485eb23dc29775bf0232
 msgid "**Credits**: Aksiome, Leirof"
-msgstr ""
+msgstr "**制作人员**：Aksiome、Leirof"
 
-#: ../../modules/math.md:251 2930c55c227445b29bbca45a9ed9c708
+#: ../../../modules/math.md:251 c96b01d2d8e54032bea5058797b6e06f
 msgid "Logarithm"
-msgstr ""
+msgstr "对数"
 
-#: ../../modules/math.md:259 615a9e2680e24a758554a3b7ea53d178
+#: ../../../modules/math.md:259 a7a2568dbd994aae8dbe33bab0856d95
 msgid "Compute the natural logarithm (base e) of a number."
-msgstr ""
+msgstr "计算数的自然对数（以 e 为底）。"
 
-#: ../../modules/math.md:262 2bfa40403db64040babd746c90721a38
+#: ../../../modules/math.md:262 fc996623ca354c07b73c08a46f6b7f48
 #, python-brace-format
 msgid "**Storage `bs:in math.log.x`**: {nbt}`number` Number to be logarithmized."
-msgstr ""
+msgstr "**命令存储 `bs:in math.log.x`**：{nbt}`number` 要计算对数的数。"
 
-#: ../../modules/math.md:265 b3c5f507da814624b6f234814f38eac4
+#: ../../../modules/math.md:265 a22cad2af9cf4e3c8968feed77427011
 #, python-brace-format
 msgid "**Storage `bs:out math.log`**: {nbt}`float` Result of the operation."
-msgstr ""
+msgstr "**命令存储 `bs:out math.log`**：{nbt}`float` 运算结果。"
 
-#: ../../modules/math.md:268 794eb809c29f42f0a4bd3ed64c96b383
+#: ../../../modules/math.md:268 fba994e63f314645b899f196aafa4f80
 msgid "*Example: Calculate $ln(28)$:*"
-msgstr ""
+msgstr "*示例：计算 $ln(28)$：*"
 
-#: ../../modules/math.md:282 868c8753622947bd8f78285b48378b01
+#: ../../../modules/math.md:282 b669ef50f8de491e80018d054129a1dd
 msgid "Compute the logarithm in base 2 of a number."
-msgstr ""
+msgstr "计算数的以 2 为底的对数。"
 
-#: ../../modules/math.md:285 4118d2dc6d15457399d51bfd3156a2df
+#: ../../../modules/math.md:285 a47c93d2efb04e1781a729690386e2bb
 #, python-brace-format
 msgid "**Storage `bs:in math.log2.x`**: {nbt}`number` Number to be logarithmized."
-msgstr ""
+msgstr "**命令存储 `bs:in math.log2.x`**：{nbt}`number` 要计算对数的数。"
 
-#: ../../modules/math.md:288 f8e5a9b901974c26995e14e13bfd8bbc
+#: ../../../modules/math.md:288 d0cc1bce8ce64ab98deca3d78c5f0ee4
 #, python-brace-format
 msgid "**Storage `bs:out math.log2`**: {nbt}`float` Result of the operation."
-msgstr ""
+msgstr "**命令存储 `bs:out math.log2`**：{nbt}`float` 运算结果。"
 
-#: ../../modules/math.md:291 c21b9cd189904fa3b1c95088bdc654b4
+#: ../../../modules/math.md:291 9f88501c8d01473dbfb8651838054c63
 msgid "*Example: Calculate $log_2(28)$:*"
-msgstr ""
+msgstr "*示例：计算 $log_2(28)$：*"
 
-#: ../../modules/math.md 2593631ff83e4a6b896f92f09fda0e58
+#: ../../../modules/math.md e0220b346efe4869a13d25458e3afbb4
 msgid "Base 10"
-msgstr ""
+msgstr "以 10 为底"
 
-#: ../../modules/math.md:305 0d10385e346741bd94d0e5ee69f593ad
+#: ../../../modules/math.md:305 5a05bbd3fb7f47acb264f6db2199263c
 msgid "Compute the logarithm in base 10 of a number."
-msgstr ""
+msgstr "计算数的以 10 为底的对数。"
 
-#: ../../modules/math.md:308 bbf188d4d3d149fea05ac8963b198294
+#: ../../../modules/math.md:308 73af8daa2bec4b0d8bbe526a2776decb
 #, python-brace-format
 msgid ""
 "**Storage `bs:in math.log10.x`**: {nbt}`number` Number to be "
 "logarithmized."
-msgstr ""
+msgstr "**命令存储 `bs:in math.log10.x`**：{nbt}`number` 要计算对数的数。"
 
-#: ../../modules/math.md:311 95b9a5513f5745b4b3196d4089a64f31
+#: ../../../modules/math.md:311 135874e8085c488b9fb06c12e62c6f7d
 #, python-brace-format
 msgid "**Storage `bs:out math.log10`**: {nbt}`float` Result of the operation."
-msgstr ""
+msgstr "**命令存储 `bs:out math.log10`**：{nbt}`float` 运算结果。"
 
-#: ../../modules/math.md:314 53eac4c2a5dc478ab5c87caa340450f2
+#: ../../../modules/math.md:314 bc6e9eb9280e44d7bcd27d1e6677b366
 #, python-brace-format
 msgid "*Example: Calculate $log_{10}(28)$:*"
-msgstr ""
+msgstr "*示例：计算 $log_{10}(28)$：*"
 
-#: ../../modules/math.md 090c28d9ae9149bb8c25f2279007e8a5
+#: ../../../modules/math.md c9e7515f744a49619d1d2a7fb954386c
 msgid "Base a"
-msgstr ""
+msgstr "以 a 为底"
 
-#: ../../modules/math.md:328 0478f89062314fa5ba67fcce3fc69e03
+#: ../../../modules/math.md:328 d0d003a89ce14aafaa08c701dbcbdc91
 msgid "Compute the logarithm in base a of a number."
-msgstr ""
+msgstr "计算数的以 a 为底的对数。"
 
-#: ../../modules/math.md:331 d433fcb0389442c4bb0ab4134890e901
+#: ../../../modules/math.md:331 f76c5a0a92c34f1d8c8638eb048a4859
 #, python-brace-format
 msgid "**Storage `bs:in math.loga.x`**: {nbt}`number` Number to be logarithmized."
-msgstr ""
+msgstr "**命令存储 `bs:in math.loga.x`**：{nbt}`number` 要计算对数的数。"
 
-#: ../../modules/math.md:333 5307f2312cfd43faa0379f56fad13d45
+#: ../../../modules/math.md:333 749f96d86b5c437085e03b55a6c10826
 #, python-brace-format
 msgid "**Storage `bs:in math.loga.a`**: {nbt}`number` Base of the logarithm."
-msgstr ""
+msgstr "**命令存储 `bs:in math.loga.a`**：{nbt}`number` 对数的底数。"
 
-#: ../../modules/math.md:336 8352fef2f8564985aa5e01486fada423
+#: ../../../modules/math.md:336 451aeac1883842caa0bde8bb68342932
 #, python-brace-format
 msgid "**Storage `bs:out math.loga`**: {nbt}`float` Result of the operation."
-msgstr ""
+msgstr "**命令存储 `bs:out math.loga`**：{nbt}`float` 运算结果。"
 
-#: ../../modules/math.md:339 610a5aa74bf545bb9135679e1a63c06e
+#: ../../../modules/math.md:339 ba52ea4797cc4cc3ac78619e7cf6a7aa
 msgid "*Example: Calculate $log_4(28)$:*"
-msgstr ""
+msgstr "*示例：计算 $log_4(28)$：*"
 
-#: ../../modules/math.md:356 59f982c1fe364f81bcab729a9b9f3423
+#: ../../../modules/math.md:356 008f6daf4cc84a038f46f5578d2a1a70
 msgid "Power"
-msgstr ""
+msgstr "幂"
 
-#: ../../modules/math.md 0fe200d922f348cb9116bdc5b43c4d39
-#: 6c32f0ac430c484e9073cf2ff8c820cf
+#: ../../../modules/math.md 99c40fd2725742ce90f4bee6fa02bbf0
+#: c5e18552759147e6bbba7bfdf08e7180
 msgid "Integer"
-msgstr ""
+msgstr "整数"
 
-#: ../../modules/math.md:364 7785839444b14df0bf25e45ba03b6802
+#: ../../../modules/math.md:364 0dc9dcb254d94c1ebf7b4bf1858e1910
 msgid "Compute the power of integer numbers."
-msgstr ""
+msgstr "计算整数的幂。"
 
-#: ../../modules/math.md:367 461c9a92507e495893b8ae4d360e24ff
+#: ../../../modules/math.md:367 5b298fcb620946d89b9a15a31b7aeb3e
 msgid "**Score `$math.ipow.x bs.in`**: The base."
-msgstr ""
+msgstr "**分数 `$math.ipow.x bs.in`**：底数。"
 
-#: ../../modules/math.md:369 85439706f3fd43728642b52066a905d2
+#: ../../../modules/math.md:369 7197ab4b0f7d44d6be8316ec7049fe38
 msgid "**Score `$math.ipow.y bs.in`**: The exponent."
-msgstr ""
+msgstr "**分数 `$math.ipow.y bs.in`**：指数。"
 
-#: ../../modules/math.md:372 c62741b40c2445e396328ecfdf642bfd
+#: ../../../modules/math.md:372 8c9757db3f874ddea715d2e0fe676aa2
 msgid "**Return | Score `$math.ipow bs.out`**: Result of the operation."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.ipow bs.out`**：运算结果。"
 
-#: ../../modules/math.md:375 257adfe2cecb46e4a2bf4d1fb6127412
+#: ../../../modules/math.md:375 dba1dafe02c74e119ce169399998b421
 msgid "*Example: Compute and display $3^6$:*"
-msgstr ""
+msgstr "*示例：计算并显示 $3^6$：*"
 
-#: ../../modules/math.md 6af34c44037d47608d33ec54f31eaa6c
-#: d8ce1c87ddbf46ffa111f20a52f5348a
+#: ../../../modules/math.md 216b6fefb2f54b768e3759104912ac04
+#: 9fb899b60f7942a0a9cd1009975ef7ae
 msgid "Decimal"
-msgstr ""
+msgstr "小数"
 
-#: ../../modules/math.md:390 a553a61546da435da21a799e27175282
+#: ../../../modules/math.md:390 b42a057df211424994515ee23d690d08
 msgid "Compute the power of floating numbers."
-msgstr ""
+msgstr "计算浮点数的幂。"
 
-#: ../../modules/math.md:393 61aa34dd13024452ab8a3ec9c965d154
+#: ../../../modules/math.md:393 c9878280415f44efbedb7ffbf7a7f51d
 #, python-brace-format
 msgid "**Storage `bs:in math.pow.x`**: {nbt}`number` The base."
-msgstr ""
+msgstr "**命令存储 `bs:in math.pow.x`**：{nbt}`number` 底数。"
 
-#: ../../modules/math.md:395 8ab17e44c882422a8a9b8e4e97ee52d3
+#: ../../../modules/math.md:395 ed1e7efcd86b4ddb8334098988e97245
 #, python-brace-format
 msgid "**Storage `bs:in math.pow.y`**: {nbt}`number` The exponent."
-msgstr ""
+msgstr "**命令存储 `bs:in math.pow.y`**：{nbt}`number` 指数。"
 
-#: ../../modules/math.md:398 37b4501aa3ae47ea98e45140261b997f
+#: ../../../modules/math.md:398 7f32bd26460f4a06b0caf1b7eb6f17ec
 #, python-brace-format
 msgid "**Storage `bs:out math.pow`**: {nbt}`float` Result of the operation."
-msgstr ""
+msgstr "**命令存储 `bs:out math.pow`**：{nbt}`float` 运算结果。"
 
-#: ../../modules/math.md:401 bd3640b8ad1c4c048313dafab40657a2
+#: ../../../modules/math.md:401 7b7376eabe1d43408ccfe90ea846ab1f
 msgid "*Example: Compute and display $pow(3.5, 2.25)$:*"
-msgstr ""
+msgstr "*示例：计算并显示 $pow(3.5, 2.25)$：*"
 
-#: ../../modules/math.md:413 5a266c8ed068445e99157a77e09b27c7
+#: ../../../modules/math.md:413 d3f260eb15e64d62842ab2bd593a4f04
 msgid "![](/_imgs/modules/math/power.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/power.png)"
 
-#: ../../modules/math.md:419 38c242e7ff634fbda135c6a92b1f66a7
+#: ../../../modules/math.md:419 7261622b14974323a2c6133beac36117
 msgid "Rounded Division"
-msgstr ""
+msgstr "四舍五入除法"
 
-#: ../../modules/math.md:423 16636aceea2840b0b851d35897b305cf
+#: ../../../modules/math.md:423 147b2dbd4b03491bb31a2fcf0da942e7
 msgid ""
 "Divide a number by another then round the result to the nearest integer "
 "(Minecraft rounds down to the next integer)."
-msgstr ""
+msgstr "将一个数除以另一个数，然后将结果四舍五入到最接近的整数（Minecraft 向下取整）。"
 
-#: ../../modules/math.md:426 af41feddc3504d1fb9dafdbdf157e6bd
+#: ../../../modules/math.md:426 818a150ae3d344539ac87734c3b65f2b
 msgid "**Score `$math.divide.x bs.in`**: The numerator."
-msgstr ""
+msgstr "**分数 `$math.divide.x bs.in`**：被除数。"
 
-#: ../../modules/math.md:428 51dcf7ab7cbd4257bc813ea52de64432
+#: ../../../modules/math.md:428 eb6b4c9597724ce3b7a233f326b8345a
 msgid "**Score `$math.divide.y bs.in`**: The denominator."
-msgstr ""
+msgstr "**分数 `$math.divide.y bs.in`**：除数。"
 
-#: ../../modules/math.md:431 c3e7f5075d314dc58a70f6f319c29dcd
+#: ../../../modules/math.md:431 bef2a67aa33f4ec2ab84b8e393f098bc
 msgid "**Return | Score `$math.divide bs.out`**: Result of the division."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.divide bs.out`**：除法结果。"
 
-#: ../../modules/math.md:434 408e2c6939214a39963f076b8420e178
+#: ../../../modules/math.md:434 c15cb176ab2c47a7ac657f851debf1e9
 msgid "*Example: Calculate $9/5$:*"
-msgstr ""
+msgstr "*示例：计算 $9/5$：*"
 
-#: ../../modules/math.md:444 05ae669a9e844145b67eb3c0a93a4e99
+#: ../../../modules/math.md:444 69b614b5e20944f382f05115b874fdd4
 msgid "![](/_imgs/modules/math/divide.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/divide.png)"
 
-#: ../../modules/math.md:446 9057e15b9c074e33b010de812c9d1cb6
+#: ../../../modules/math.md:446 d0935f93c78c46b28e07c219a3e0fb1e
 msgid "**Credits**: Aksiome, theogiraudet"
-msgstr ""
+msgstr "**制作人员**：Aksiome、theogiraudet"
 
-#: ../../modules/math.md:450 354639780d5f4b0483dafef2dda27edc
+#: ../../../modules/math.md:450 220ceee19fc44bbfafe818fcb11588a8
 msgid "Square Root"
-msgstr ""
+msgstr "平方根"
 
-#: ../../modules/math.md:458 e51f314c775140c8bcf267a51a50b9c1
+#: ../../../modules/math.md:458 d743257f245541699725c0e6811e9272
 msgid "Compute the square root of an integer number."
-msgstr ""
+msgstr "计算整数的平方根。"
 
-#: ../../modules/math.md:461 55ea8eaad3c84dd1b86a88473d05c6b2
+#: ../../../modules/math.md:461 6d0ca180e0424bd484dcabb7dc7f6dfc
 msgid ""
 "**Score `$math.isqrt.x bs.in`**: Number you want to calculate the square "
 "root of."
-msgstr ""
+msgstr "**分数 `$math.isqrt.x bs.in`**：要计算平方根的数。"
 
-#: ../../modules/math.md:464 b8ec4cd91c794d6bbb8e85e1e8d1ebed
+#: ../../../modules/math.md:464 5407bb523929428a94ce03e62dbc8826
 msgid ""
 "**Return | Score `$math.isqrt bs.out`**: Floored result of the square "
 "root."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.isqrt bs.out`**：平方根向下取整的结果。"
 
-#: ../../modules/math.md:467 ../../modules/math.md:490
-#: 312f02f6fbfd45fb9e49e9c4ec49be6d 7fc132dec70f4c4b993ccb39a90112f6
+#: ../../../modules/math.md:467 ../../../modules/math.md:490
+#: 26e566772dc04a91861b1e294ac10aa3 9f9a4f30bc174181a91ef172067bb12f
 #, python-brace-format
 msgid "*Example: Calculate and display $\\sqrt{42}$:*"
-msgstr ""
+msgstr "*示例：计算并显示 $\\sqrt{42}$：*"
 
-#: ../../modules/math.md:481 ec52805b79074eee8cf93b038837a809
+#: ../../../modules/math.md:481 41659ebdd127419b99986f985172f3d5
 msgid "Compute the square root of a floating number."
-msgstr ""
+msgstr "计算浮点数的平方根。"
 
-#: ../../modules/math.md:484 f1f085ff2f3c4ffeb3d6ce2638d39055
+#: ../../../modules/math.md:484 c273429b6e5f420a83166b040745ff4f
 #, python-brace-format
 msgid ""
 "**Storage `bs:in math.sqrt.x`**: {nbt}`number` Number you want to "
 "calculate the square root of."
-msgstr ""
+msgstr "**命令存储 `bs:in math.sqrt.x`**：{nbt}`number` 要计算平方根的数。"
 
-#: ../../modules/math.md:487 44825c3c80b54b0ab3d5caef16eb8991
+#: ../../../modules/math.md:487 8453d2cf47584f9c9569b60bda97f415
 #, python-brace-format
 msgid "**Storage `bs:out math.sqrt`**: {nbt}`float` Result of the operation."
-msgstr ""
+msgstr "**命令存储 `bs:out math.sqrt`**：{nbt}`float` 运算结果。"
 
-#: ../../modules/math.md:502 4b23b01523d9405ca4635f3873bc0584
+#: ../../../modules/math.md:502 b0b4a7c6a3104a938175c8a67a25570b
 msgid "![](/_imgs/modules/math/sqrt.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/sqrt.png)"
 
-#: ../../modules/math.md:508 520354e6b2cc4e18af095a5e87fc7c96
+#: ../../../modules/math.md:508 1243fcbabfe347b98b35d7c38455afa8
 msgid "Trigonometry"
-msgstr ""
+msgstr "三角函数"
 
-#: ../../modules/math.md b4085201240242d58ac5749d6b5532ce
+#: ../../../modules/math.md cdf09037741544f9b3ec23f04338d9f3
 msgid "Acos"
-msgstr ""
+msgstr "Acos"
 
-#: ../../modules/math.md:516 2a8b7d4afb0a43568fca8f7c5079d12e
+#: ../../../modules/math.md:516 b59c25f26cfb45fb9b7ffe9ee18dd7bd
 msgid "Compute the arc cosine of a value between -1 and 1."
-msgstr ""
+msgstr "计算 -1 到 1 之间的值的反余弦。"
 
-#: ../../modules/math.md:519 08cec242750f4a1391952f38e1b3a416
+#: ../../../modules/math.md:519 b5aff280899d482caabaa1d458b81858
 msgid ""
 "**Score `$math.acos.x bs.in`**: Value you want to compute the arccosine "
 "of, shifted by 3 digits (1,2345 → 1234) for better precision in integer "
 "scores."
-msgstr ""
+msgstr "**分数 `$math.acos.x bs.in`**：要计算反余弦的值，为了在整数分数中获得更好的精度而偏移 3 位小数（1.2345 → 1234）。"
 
-#: ../../modules/math.md:522 6a89cd796afb403fb2249a770ded8307
+#: ../../../modules/math.md:522 d3e1a708636049578c14512ca90827c8
 msgid ""
 "**Return | Score `$math.acos bs.out`**: Result of the operation in "
 "degrees, shifted by 2 digits."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.acos bs.out`**：运算结果（角度），偏移 2 位小数。"
 
-#: ../../modules/math.md:525 4ec9a008855b4688af3c29eb33ef0a0a
+#: ../../../modules/math.md:525 4d43691294164e84b55beb6b2b17265d
 msgid "*Example: Compute and display the arccosine of 0.42:*"
-msgstr ""
+msgstr "*示例：计算并显示 0.42 的反余弦：*"
 
-#: ../../modules/math.md:534 c6f2b53acd14432d8575751dea413e34
+#: ../../../modules/math.md:534 10c9fa7d461e4c90a4e75a00195605f2
 msgid "![](/_imgs/modules/math/arccos.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/arccos.png)"
 
-#: ../../modules/math.md 5cb68d6bdbd742909bf66cc5fbb0b179
+#: ../../../modules/math.md 9637b87d83c0465cb0ede177c3887c63
 msgid "Asin"
-msgstr ""
+msgstr "Asin"
 
-#: ../../modules/math.md:541 a41ee13a15064cd08d5b04d09c050ab2
+#: ../../../modules/math.md:541 3769a198516f40e78e59d58e8bb3c98d
 msgid "Compute the arc sine of a value between -1 and 1."
-msgstr ""
+msgstr "计算 -1 到 1 之间的值的反正弦。"
 
-#: ../../modules/math.md:544 92738702cea544c7bc8f839f8d2fb8d3
+#: ../../../modules/math.md:544 497a4d7e806749518d623786ae06530f
 msgid ""
 "**Score `$math.asin.x bs.in`**: Value you want to compute the arcsine of,"
 " shifted by 3 digits (1,2345 → 1234) for better precision in integer "
 "scores."
-msgstr ""
+msgstr "**分数 `$math.asin.x bs.in`**：要计算反正弦的值，为了在整数分数中获得更好的精度而偏移 3 位小数（1.2345 → 1234）。"
 
-#: ../../modules/math.md:547 1128b90c580e44f9a28c91bdc5f96f8b
+#: ../../../modules/math.md:547 f0526b98a28b469db50025d28622273b
 msgid ""
 "**Return | Score `$math.asin bs.out`**: Result of the operation in "
 "degrees, shifted by 2 digits."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.asin bs.out`**：运算结果（角度），偏移 2 位小数。"
 
-#: ../../modules/math.md:550 0a64cff3d1c8485f8bea6dff515609b7
+#: ../../../modules/math.md:550 f4d30c504b514b4fa62f9437eee1c5a6
 msgid "*Example: Compute and display the arcsine of 0.42:*"
-msgstr ""
+msgstr "*示例：计算并显示 0.42 的反正弦：*"
 
-#: ../../modules/math.md:559 1a66d4616fea4f9e8a778fb62a07f513
+#: ../../../modules/math.md:559 142bee9852374ce0b94bbedc618f1a3e
 msgid "![](/_imgs/modules/math/arcsin.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/arcsin.png)"
 
-#: ../../modules/math.md 98875786eaa144308d83b122bd417b1b
+#: ../../../modules/math.md f7207392fc944150b6b20aef194c159c
 msgid "Atan"
-msgstr ""
+msgstr "Atan"
 
-#: ../../modules/math.md:566 32c6c93645cb4962b31c9b528abfa93a
+#: ../../../modules/math.md:566 477050162bae4d71836a342994ed6ea1
 msgid "Compute the arc tangent of a value between -infinite and +infinite."
-msgstr ""
+msgstr "计算负无穷到正无穷之间的值的反正切。"
 
-#: ../../modules/math.md:569 05cbf4e3fe93411995fcf554109e39f3
+#: ../../../modules/math.md:569 4a56bc4c24034dacab6d0cd7f4ebafa6
 msgid ""
 "**Score `$math.atan.x bs.in`**: Value you want to compute the arctangent "
 "of, shifted by 3 digits (1,2345 → 1234) for better precision in integer "
 "scores."
-msgstr ""
+msgstr "**分数 `$math.atan.x bs.in`**：要计算反正切的值，为了在整数分数中获得更好的精度而偏移 3 位小数（1.2345 → 1234）。"
 
-#: ../../modules/math.md:572 9b4efaad72c9489b9563a0d7f6e3f6d2
+#: ../../../modules/math.md:572 fe30e789b897421ab9e4a382f8c82d85
 msgid ""
 "**Return | Score `$math.atan bs.out`**: Result of the operation in "
 "degrees, shifted by 2 digits."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.atan bs.out`**：运算结果（角度），偏移 2 位小数。"
 
-#: ../../modules/math.md:575 e24b47eab6d64351afa219f0eef0a454
+#: ../../../modules/math.md:575 2d4c95a7b009449e91585735c9701d1d
 msgid "*Example: Compute and display the arctan of 0.42:*"
-msgstr ""
+msgstr "*示例：计算并显示 0.42 的反正切：*"
 
-#: ../../modules/math.md:584 2056e7c4b8e14a23a574109815c27d8a
+#: ../../../modules/math.md:584 2f0a23fb3f854a17b8c97b31958ee3fd
 msgid "![](/_imgs/modules/math/arctan.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/arctan.png)"
 
-#: ../../modules/math.md 5d3c3012bb034ec8b9d991e7547055df
+#: ../../../modules/math.md a1d129ee701a41ea89f39fa40d261086
 msgid "Atan2"
-msgstr ""
+msgstr "Atan2"
 
-#: ../../modules/math.md:591 91cd2aa614964510b193af0fa1432b77
+#: ../../../modules/math.md:591 3a46919a78cd4999b87314af3f4f6a3d
 msgid "Compute the 2-argument arctangent of y and x."
-msgstr ""
+msgstr "计算 y 和 x 的二参数反正切。"
 
-#: ../../modules/math.md:594 8910c69800ed4cd382ccbec9c43558b2
+#: ../../../modules/math.md:594 5b7b32d390e14ad9a60b39a6fe514888
 msgid ""
 "**Scores `$math.atan2.[y,x] bs.in`**: Values you want to compute the "
 "arctangent of, shifted by 3 digits (1,2345 → 1234) for better precision "
 "in integer scores."
-msgstr ""
+msgstr "**分数 `$math.atan2.[y,x] bs.in`**：要计算反正切的值，为了在整数分数中获得更好的精度而偏移 3 位小数（1.2345 → 1234）。"
 
-#: ../../modules/math.md:597 db186e8ec83e4fb89186a097c8a258dd
+#: ../../../modules/math.md:597 c7034abed10b45f0bd08f675e3801692
 msgid ""
 "**Return | Score `$math.atan2 bs.out`**: Result of the operation in "
 "degrees, shifted by 2 digits."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.atan2 bs.out`**：运算结果（角度），偏移 2 位小数。"
 
-#: ../../modules/math.md:600 cc22a334273b4cdf893265b58fe09265
+#: ../../../modules/math.md:600 2f1317034dda41debe93fad894916a81
 msgid "*Example: Compute and display the atan2 of (0.42, 0.8):*"
-msgstr ""
+msgstr "*示例：计算并显示 (0.42, 0.8) 的 atan2：*"
 
-#: ../../modules/math.md 82044712004341eab83e0807799e833a
+#: ../../../modules/math.md b46c2a23cc58463b81abff7333ccd742
 msgid "Cos"
-msgstr ""
+msgstr "Cos"
 
-#: ../../modules/math.md:615 cc240922bc794cec8594b96d75183aab
+#: ../../../modules/math.md:615 349e49cf94f04a69a240f2b76b00ce58
 msgid "Compute the cosine of an angle between 0 and 360."
-msgstr ""
+msgstr "计算 0 到 360 度之间的角的余弦。"
 
-#: ../../modules/math.md:618 964633db1feb4c5685dd4aa34478887c
+#: ../../../modules/math.md:618 8c1b735269c148b6984f634a6de377be
 msgid ""
 "**Score `$math.cos.x bs.in`**: Angle in degrees shifted by 2 digits (ex: "
 "90.15 → 9015)."
-msgstr ""
+msgstr "**分数 `$math.cos.x bs.in`**：角度（度），偏移 2 位小数（例如：90.15 → 9015）。"
 
-#: ../../modules/math.md:621 4e850861eb2a4e1b86305f3e2fedf4c9
+#: ../../../modules/math.md:621 57938d6c4d144e23b0b4edc0c94fabd8
 msgid ""
 "**Return | Score `$math.cos bs.out`**: Cosine of the angle shifted by 3 "
 "digits (ex: 0.42 → 420)."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.cos bs.out`**：角度的余弦，偏移 3 位小数（例如：0.42 → 420）。"
 
-#: ../../modules/math.md:624 6667aa48b018479aabac50b81e4119f3
+#: ../../../modules/math.md:624 6346dd83a9384f2db9b17d6ec609c7aa
 msgid "*Example: Compute and display the cosine of 42:*"
-msgstr ""
+msgstr "*示例：计算并显示 42 的余弦：*"
 
-#: ../../modules/math.md:633 58823f70d6d543bbae19e26fd02a2353
+#: ../../../modules/math.md:633 848e046a89c3480793fd1ef2ac93801d
 msgid "![](/_imgs/modules/math/cosine.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/cosine.png)"
 
-#: ../../modules/math.md:635 ../../modules/math.md:678
-#: 15ae167ebe094ef5883cc7f6a7b3ff5d 3f26995293ed4941a4f9cc247e362736
+#: ../../../modules/math.md:635 ../../../modules/math.md:678
+#: 443e41da47d742c79b7543a74cb7bc73 f1a928d33e834e8c8e128fa538bbfade
 msgid "How does it work?"
-msgstr ""
+msgstr "工作原理？"
 
-#: ../../modules/math.md:638 ../../modules/math.md:681
-#: 2b374f4f04384b888b6f860def034bae 8d4e2aed49f4440a9ec9365c77174f5d
+#: ../../../modules/math.md:638 ../../../modules/math.md:681
+#: 60cf0bb0234b4bf9baeadeae29a8beee aa61aaeadb864a90af34ca982a5390cd
 msgid "This function uses the Bhaskara approximation which tells us that"
-msgstr ""
+msgstr "这个函数使用 Bhaskara 近似法，它告诉我们"
 
-#: ../../modules/math.md:640 ../../modules/math.md:683
-#: 43c15d12d9ae443caa99aeac435bb1b2 d17abd06f75447ccaa4fc0eb93b0dd23
+#: ../../../modules/math.md:640 ../../../modules/math.md:683
+#: 135055493e4d4cf1b041f95cc22bc82c 2d8092a7ca7148e0aa0f8fc919f46580
 #, python-brace-format
 msgid ""
 "\n"
 "\\sin(x) \\approx \\frac{4x(180-x)}{40500-x(180-x)} \\quad \\forall x "
 "\\in [0, 180]\n"
-msgstr ""
+msgstr "\n\\sin(x) \\approx \\frac{4x(180-x)}{40500-x(180-x)} \\quad \\forall x \\in [0, 180]\n"
 
-#: ../../modules/math.md:644 ../../modules/math.md:687
-#: 4fefd5274b3942d3909662a048549b70 796b3ff75d2248718f7e08c8b2b34313
+#: ../../../modules/math.md:644 ../../../modules/math.md:687
+#: 38f8fbeadbb54644adbb5aeb485c3350 ed40207ba3e84dfc90c27df463cc1d64
 msgid "From this relation, and using the properties"
-msgstr ""
+msgstr "从这个关系，并使用以下性质"
 
-#: ../../modules/math.md:645 ../../modules/math.md:688
-#: 9c2842cd978f4fdaa55b118053345ece b5cea6a30c2848389e2d56e6e90b20cb
+#: ../../../modules/math.md:645 ../../../modules/math.md:688
+#: 0da37cf6fb664bf3a9ff51a92691e053 1d98a93b0fa04e578009342a19c4728b
 msgid "$\\sin(-x) = -\\sin(x)$ (antisymmetry)"
-msgstr ""
+msgstr "$\\sin(-x) = -\\sin(x)$ （反对称性）"
 
-#: ../../modules/math.md:646 ../../modules/math.md:689
-#: 55a28160fc7446c88150877ef2f7b84c f99e8d838d004c00b02a033493d66188
+#: ../../../modules/math.md:646 ../../../modules/math.md:689
+#: 016bd34ac29543e6a8745c3f6bbf1fb4 9c5c6942b8fb44d29e3eb5683e076c9d
 msgid "$\\sin(x+360) = \\sin(x)$ (periodicity)"
-msgstr ""
+msgstr "$\\sin(x+360) = \\sin(x)$ （周期性）"
 
-#: ../../modules/math.md:648 6db12db5e203402cbc951ffdc50403d7
+#: ../../../modules/math.md:648 aa6dd5c32fb446098a7812dd22fb035b
 msgid "We can compute the sine of any angle and thus the cosine."
-msgstr ""
+msgstr "我们可以计算任意角度的正弦，进而计算余弦。"
 
-#: ../../modules/math.md:650 ../../modules/math.md:693
-#: 01184e855cf24c94bf87b91dcdbed966 bc86e5d5446c4e588b1414bc085c5247
+#: ../../../modules/math.md:650 ../../../modules/math.md:693
+#: a405bbe01e1b44b1bf1e52f74a6220cf af9ba125ace84128ad47baf329ff3f0b
 msgid "![](/_imgs/modules/math/bhaskara.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/bhaskara.png)"
 
-#: ../../modules/math.md a45daf1cfe8045e7867c3db8c594641e
+#: ../../../modules/math.md 069f060ebcb0427b923bebf65486f823
 msgid "Sin"
-msgstr ""
+msgstr "Sin"
 
-#: ../../modules/math.md:658 bf0c77f45fc04656a8dea7c832c82d88
+#: ../../../modules/math.md:658 a3477706375b4ab88994457185afbd74
 msgid "Compute the sine of an angle between 0 and 360."
-msgstr ""
+msgstr "计算 0 到 360 度之间的角的正弦。"
 
-#: ../../modules/math.md:661 62500ec1e83047479a965dc7e0bcfd4e
+#: ../../../modules/math.md:661 97cddd4580f84a51a6089e2f6c7fea67
 msgid ""
 "**Score `$math.sin.x bs.in`**: Angle in degrees shifted by 2 digits (ex: "
 "90.15 → 9015)."
-msgstr ""
+msgstr "**分数 `$math.sin.x bs.in`**：角度（度），偏移 2 位小数（例如：90.15 → 9015）。"
 
-#: ../../modules/math.md:664 a119bff0b3ea42c9aa8bea9b29fdd652
+#: ../../../modules/math.md:664 9822c26ad949411a91e43d85bb0ada6f
 msgid ""
 "**Return | Score `$math.sin bs.out`**: Sine of the angle shifted by 3 "
 "digits (ex: 0.42 → 420)."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.sin bs.out`**：角度的正弦，偏移 3 位小数（例如：0.42 → 420）。"
 
-#: ../../modules/math.md:667 2e03d9e92b3e4840be0c6f46e905b0d6
+#: ../../../modules/math.md:667 1ed681773506436f89733804b813e055
 msgid "*Example: Compute and display the sine of 42:*"
-msgstr ""
+msgstr "*示例：计算并显示 42 的正弦：*"
 
-#: ../../modules/math.md:676 e6a2b88b40d246a780ebaf8c949cf6b6
+#: ../../../modules/math.md:676 d8215264c1f24e5db2fb1e383d824926
 msgid "![](/_imgs/modules/math/sine.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/sine.png)"
 
-#: ../../modules/math.md:691 70491fc5fdc2417c8a44f6ff17580692
+#: ../../../modules/math.md:691 04b9e6a5e5394d94b4c90171986a53fc
 msgid "We can compute the sine of any angle."
-msgstr ""
+msgstr "我们可以计算任意角度的正弦。"
 
-#: ../../modules/math.md a72fec73e6994e7c96a51fbd2a96b1af
+#: ../../../modules/math.md 987b08ffd8f04ac7ba35357514ebc8c4
 msgid "Tan"
-msgstr ""
+msgstr "Tan"
 
-#: ../../modules/math.md:701 10ac80f587054183a4d56f7596062435
+#: ../../../modules/math.md:701 9d7d33be2761498abc8c03c19a41bb56
 msgid "Compute the tangent of an angle between 0 and 360."
-msgstr ""
+msgstr "计算 0 到 360 度之间的角的正切。"
 
-#: ../../modules/math.md:704 4f2bc511c28f467aa3e2317486170549
+#: ../../../modules/math.md:704 475edb5708594dda82dac9edfa62febf
 msgid ""
 "**Score `$math.tan.x bs.in`**: Angle in degrees shifted by 2 digits (ex: "
 "90.15 → 9015)."
-msgstr ""
+msgstr "**分数 `$math.tan.x bs.in`**：角度（度），偏移 2 位小数（例如：90.15 → 9015）。"
 
-#: ../../modules/math.md:707 ce6b92287d9f4e11b0709b9b715f8b9e
+#: ../../../modules/math.md:707 8de80943c89a460f96fd7e493d7ebfab
 msgid ""
 "**Return | Score `$math.tan bs.out`**: Tangent of the angle shifted by 3 "
 "digits (ex: 0.42 → 420)."
-msgstr ""
+msgstr "**返回值 | 分数 `$math.tan bs.out`**：角度的正切，偏移 3 位小数（例如：0.42 → 420）。"
 
-#: ../../modules/math.md:710 3fc2c976757b47c5ae6b69898f70b29b
+#: ../../../modules/math.md:710 127198f7b6a041d7a899b9e476efecc7
 msgid "*Example: Compute and display the tangent of 42:*"
-msgstr ""
+msgstr "*示例：计算并显示 42 的正切：*"
 
-#: ../../modules/math.md:719 ae8c386e649242bf97130356623c569b
+#: ../../../modules/math.md:719 76b422c190904004b30d5707f0c59f22
 msgid "![](/_imgs/modules/math/tangent.png)"
-msgstr ""
+msgstr "![](/_imgs/modules/math/tangent.png)"
 
-#: ../../modules/math.md 2cdbf7482c3a4dd8bcad3559899f2ba3
+#: ../../../modules/math.md 98437320fc27433f9f531da1bb799948
 msgid "Sincos"
-msgstr ""
+msgstr "Sincos"
 
-#: ../../modules/math.md:726 a9169502945547d38c1a18bed1f7ba14
+#: ../../../modules/math.md:726 7fd97b58c2bf438b88ae3741e4474730
 msgid ""
 "Compute both the sine and cosine of an angle between 0 and 360 in a "
 "single operation."
-msgstr ""
+msgstr "在单个操作中计算 0 到 360 度之间的角的正弦和余弦。"
 
-#: ../../modules/math.md:729 526c0e1b445e441394e7bdaa3c3fdc1d
+#: ../../../modules/math.md:729 918174930a374426ac245d3ac166d064
 msgid ""
 "**Score `$math.sincos.x bs.in`**: Angle in degrees shifted by 2 digits "
 "(ex: 90.15 → 9015)."
-msgstr ""
+msgstr "**分数 `$math.sincos.x bs.in`**：角度（度），偏移 2 位小数（例如：90.15 → 9015）。"
 
-#: ../../modules/math.md:732 ebbd5ef3f0ae4c46bc3a0997323f36c2
+#: ../../../modules/math.md:732 c9ff431b7a4a4dc792952265d6dfaaa8
 msgid ""
 "**Score `$math.sincos.cos bs.out`**: Cosine of the angle shifted by 3 "
 "digits (ex: 0.42 → 420)."
-msgstr ""
+msgstr "**分数 `$math.sincos.cos bs.out`**：角度的余弦，偏移 3 位小数（例如：0.42 → 420）。"
 
-#: ../../modules/math.md:734 97c83c5e2d8f4ea18bd201a3e92518e8
+#: ../../../modules/math.md:734 e92b91b087524652b7f1c2e6cf18b437
 msgid ""
 "**Score `$math.sincos.sin bs.out`**: Sine of the angle shifted by 3 "
 "digits (ex: 0.42 → 420)."
-msgstr ""
+msgstr "**分数 `$math.sincos.sin bs.out`**：角度的正弦，偏移 3 位小数（例如：0.42 → 420）。"
 
-#: ../../modules/math.md:737 1440b1c3e3ea4ce5b8ac6d9e04a662e0
+#: ../../../modules/math.md:737 c541f0d7ca9944949bd9f02f165a5f51
 msgid "*Example: Compute and display the sine and cosine of 42:*"
-msgstr ""
+msgstr "*示例：计算并显示 42 的正弦和余弦：*"
 
-#: ../../modules/math.md:747 08728fa7996f4962bb5f1cfb15188373
+#: ../../../modules/math.md:747 f270a1000ff14e538f2c9fabe361aae2
 msgid "How does this method differ from cos and sin?"
-msgstr ""
+msgstr "这个方法与 cos 和 sin 有什么不同？"
 
-#: ../../modules/math.md:750 0739e7ea0a3a4d85a2201cbf2d9bba12
+#: ../../../modules/math.md:750 b89dd8acff934cd6a7df692ee1bae128
 msgid ""
 "This function utilizes Minecraft teleportation to calculate both the "
 "cosine and sine values. While it's slightly less efficient than calling "
 "either cos or sin individually, it allows for computing both in a single "
 "operation."
-msgstr ""
+msgstr "此函数使用 Minecraft 传送计算余弦和正弦值。虽然它比单独调用 cos 或 sin 略低效，但它允许在单个操作中同时计算两者。"
 
-#: ../../modules/math.md:755 4b8e2d7235e242bd9d84625173b46dde
+#: ../../../modules/math.md:755 186f7dc9c8cf434694ebb1bf70897ad4
 msgid "**Credits**: Aksiome, KubbyDev, Leirof"
-msgstr ""
+msgstr "**制作人员**：Aksiome、KubbyDev、Leirof"
 
-#: ../../_templates/comments.md:4 bcfd0ff54d8e4de3b10cfc6b9300202c
+#: ../../../_templates/comments.md:4 d1377ba8db594d69bec613f921fc8bf8
 msgid "**💬 Did it help you?**"
-msgstr ""
+msgstr "**💬 这对您有帮助吗？**"
 
-#: ../../_templates/comments.md:6 e61558a0c74d4e84a8ae53aa4505e43c
+#: ../../../_templates/comments.md:6 cd3cb36796f74faa9fd460eda7f8530a
 msgid "Feel free to leave your questions and feedback below!"
-msgstr ""
-
+msgstr "欢迎在下方留下您的问题和反馈！"
