@@ -1,0 +1,370 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-19 14:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../modules/hitbox.md:1
+msgid "🎯 Hitbox"
+msgstr "🎯 碰撞箱（Hitbox）"
+
+#: ../../../modules/hitbox.md:3
+msgid "**`#bs.hitbox:help`**"
+msgstr "**`#bs.hitbox:help`**"
+
+#: ../../../modules/hitbox.md:5
+msgid "Get and check the hitboxes of blocks or entities."
+msgstr "获取并检查方块或实体的碰撞箱。"
+
+#: ../../../modules/hitbox.md:8
+msgid ""
+"\"Talent hits a target no one else can hit; Genius hits a target no one "
+"else can see.\""
+msgstr "“能者达人所不达，智者达人所未见。”"
+
+#: ../../../modules/hitbox.md:9
+msgid "Arthur Schopenhauer"
+msgstr "亚瑟·叔本华（Arthur Schopenhauer）"
+
+#: ../../../modules/hitbox.md:15
+msgid "🔧 Functions"
+msgstr "🔧 函数"
+
+#: ../../../modules/hitbox.md:17
+msgid "You can find below all functions available in this module."
+msgstr "您可以在下方找到此模块中的所有可用函数。"
+
+#: ../../../modules/hitbox.md:21
+msgid "Get"
+msgstr "获取"
+
+#: ../../../modules/hitbox.md
+msgid "Block"
+msgstr "方块"
+
+#: ../../../modules/hitbox.md:29
+msgid ""
+"Get the hitbox of a block as a shape, represented by a list of boxes "
+"coordinates. Dimensions range from 0 to 16 as for models."
+msgstr "获取方块碰撞箱形状，由一组盒状坐标表示。一个模型的尺寸范围为 0 到 16。"
+
+#: ../../../modules/hitbox.md:31 ../../../modules/hitbox.md:67
+#: ../../../modules/hitbox.md:107 ../../../modules/hitbox.md:133
+#: ../../../modules/hitbox.md:159 ../../../modules/hitbox.md:188
+#: ../../../modules/hitbox.md:226 ../../../modules/hitbox.md:246
+#: ../../../modules/hitbox.md:266
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../../modules/hitbox.md:32
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from "
+"which to get the block hitbox."
+msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：要获取方块碰撞箱的位置。"
+
+#: ../../../modules/hitbox.md:34 ../../../modules/hitbox.md:70
+#: ../../../modules/hitbox.md:110 ../../../modules/hitbox.md:136
+#: ../../../modules/hitbox.md:164 ../../../modules/hitbox.md:193
+#: ../../../modules/hitbox.md:229 ../../../modules/hitbox.md:249
+#: ../../../modules/hitbox.md:271
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../../modules/hitbox.md:35 ../../../modules/hitbox.md:71
+msgid "**Storage `bs:out hitbox`**:"
+msgstr "**命令存储 `bs:out hitbox`**："
+
+#: ../../../modules/hitbox.md:46
+msgid "Collision / Interaction Shape"
+msgstr "碰撞/交互形状"
+
+#: ../../../modules/hitbox.md:48
+msgid ""
+"**Collision Shape**: Defines the physical boundaries of a block that "
+"entities cannot pass through. It determines where an entity will stop "
+"when moving towards the block."
+msgstr "**碰撞形状（collision_shape）**：实体无法穿过的方块的物理边界，决定实体在靠近方块时会被阻挡在什么位置。"
+
+#: ../../../modules/hitbox.md:49
+msgid ""
+"**Interaction Shape**: Defines the area where the player can interact "
+"with or break the block. This includes actions such as right-clicking to "
+"open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have"
+" an interaction shape but no collision, such as crops or scaffolding."
+msgstr "**交互形状（interaction_shape）**：玩家可以与方块交互或破坏的区域。这包括右键打开 GUI（如箱子、熔炉）或采掘方块等操作。有些方块有交互形状但没有碰撞，比如农作物或脚手架。"
+
+#: ../../../modules/hitbox.md:52
+msgid "*Example: Get the hitbox of stairs:*"
+msgstr "*示例：获取楼梯的碰撞箱：*"
+
+#: ../../../modules/hitbox.md
+msgid "Entity"
+msgstr "实体"
+
+#: ../../../modules/hitbox.md:65
+msgid "Get the width and height of an entity."
+msgstr "获取实体的宽度和高度。"
+
+#: ../../../modules/hitbox.md:68
+msgid "**Execution `as <entities>`**: Entity to get the hitbox from."
+msgstr "**执行 `as <实体>`**：要获取碰撞箱的实体。"
+
+#: ../../../modules/hitbox.md:81
+msgid ""
+"Static entities, such as paintings and item frames, do not provide height"
+" and width information. Instead, they return a shape similar to blocks in"
+" `bs:out hitbox.shape`."
+msgstr "静态实体，如画和物品展示框，不提供高度和宽度信息。而是在 `bs:out hitbox.shape` 中返回一个类似方块的形状。"
+
+#: ../../../modules/hitbox.md:84
+msgid "*Example: Get the hitbox of an armor stand:*"
+msgstr "*示例：获取盔甲架的碰撞箱：*"
+
+#: ../../../modules/hitbox.md:93 ../../../modules/hitbox.md:212
+#: ../../../modules/hitbox.md:283 ../../../modules/hitbox.md:326
+#: ../../../modules/hitbox.md:356
+msgid "**Credits**: Aksiome"
+msgstr "**制作人员**：Aksiome"
+
+#: ../../../modules/hitbox.md:97
+msgid "Is Entity Inside"
+msgstr "实体是否在内部"
+
+#: ../../../modules/hitbox.md
+msgid "Block Collision Boxes"
+msgstr "方块碰撞箱"
+
+#: ../../../modules/hitbox.md:105
+msgid ""
+"Check if the specified entity is within the `collision` hitbox of any "
+"block."
+msgstr "检查指定实体是否在方块的 `collision` 碰撞箱内。"
+
+#: ../../../modules/hitbox.md:108 ../../../modules/hitbox.md:134
+#: ../../../modules/hitbox.md:160 ../../../modules/hitbox.md:189
+msgid "**Execution `as <entity>`**: Entity to check."
+msgstr "**执行 `as <实体>`**：要检查的实体。"
+
+#: ../../../modules/hitbox.md:111 ../../../modules/hitbox.md:137
+#: ../../../modules/hitbox.md:165 ../../../modules/hitbox.md:194
+#: ../../../modules/hitbox.md:230 ../../../modules/hitbox.md:250
+#: ../../../modules/hitbox.md:272
+msgid "**Return**: Success or failure."
+msgstr "**返回值**：成功或失败。"
+
+#: ../../../modules/hitbox.md:115 ../../../modules/hitbox.md:141
+msgid ""
+"Since an entity's bounding box can extend across multiple blocks, this "
+"function checks all blocks the entity might be in contact with."
+msgstr "由于实体的包围盒可能跨越多个方块，此函数将检查实体可能接触的所有方块。"
+
+#: ../../../modules/hitbox.md:118 ../../../modules/hitbox.md:144
+msgid "*Example: Check if a summoned cow is inside a block:*"
+msgstr "*示例：检查召唤的牛是否在方块内部：*"
+
+#: ../../../modules/hitbox.md
+msgid "Block Interaction Boxes"
+msgstr "方块交互箱"
+
+#: ../../../modules/hitbox.md:131
+msgid ""
+"Check if the specified entity is within the `interaction` hitbox of any "
+"block."
+msgstr "检查指定实体是否在任意方块的 `interaction` 交互箱内。"
+
+#: ../../../modules/hitbox.md
+msgid "Block Collision Box"
+msgstr "方块碰撞箱"
+
+#: ../../../modules/hitbox.md:157
+msgid ""
+"Check if the specified entity is within the `collision` hitbox of the "
+"block at the execution position."
+msgstr "检查指定实体是否在执行位置所在方块的 `collision` 碰撞箱内。"
+
+#: ../../../modules/hitbox.md:162 ../../../modules/hitbox.md:191
+#: ../../../modules/hitbox.md:227 ../../../modules/hitbox.md:247
+#: ../../../modules/hitbox.md:269
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to "
+"check."
+msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：要检查的位置。"
+
+#: ../../../modules/hitbox.md:169 ../../../modules/hitbox.md:198
+msgid ""
+"This function checks whether the entity's bounding box intersects with "
+"the block at the execution position. It does *not* consider other blocks "
+"the entity might be touching."
+msgstr "此函数检查实体的边界框是否与执行位置所在的方块相交。它*不*考虑实体可能接触的其他方块。"
+
+#: ../../../modules/hitbox.md:172 ../../../modules/hitbox.md:201
+msgid "*Example: Check if a summoned cow is inside the fence at your position:*"
+msgstr "*示例：检查召唤的牛是否在您所在位置的栅栏内部：*"
+
+#: ../../../modules/hitbox.md
+msgid "Block Interaction Box"
+msgstr "方块交互箱"
+
+#: ../../../modules/hitbox.md:186
+msgid ""
+"Check if the specified entity is within the `interaction` hitbox of the "
+"block at the execution position."
+msgstr "检查指定实体是否在执行位置方块的 `interaction` 交互箱内。"
+
+#: ../../../modules/hitbox.md:216
+msgid "Is Inside"
+msgstr "是否在内部"
+
+#: ../../../modules/hitbox.md:224
+msgid ""
+"Check if the execution position is within the `collision` hitbox of a "
+"block."
+msgstr "检查执行位置是否在方块的 `collision` 碰撞箱内。"
+
+#: ../../../modules/hitbox.md:233 ../../../modules/hitbox.md:253
+msgid "*Example: Say \"My name is Pavel\" if you are inside a block:*"
+msgstr "*示例：如果您在方块内部，说\"My name is Pavel\"：*"
+
+#: ../../../modules/hitbox.md:244
+msgid ""
+"Check if the execution position is within the `interaction` hitbox of a "
+"block."
+msgstr "检查执行位置是否在方块的 `interaction` 交互箱内。"
+
+#: ../../../modules/hitbox.md:264
+msgid ""
+"Check if the execution position is inside the entity executing the "
+"command."
+msgstr "检查执行位置是否在执行命令的实体内部。"
+
+#: ../../../modules/hitbox.md:267
+msgid "**Execution `as <entities>`**: Entity to check."
+msgstr "**执行 `as <实体>`**：要检查的实体。"
+
+#: ../../../modules/hitbox.md:275
+msgid "*Example: Check if you are inside an entity:*"
+msgstr "*示例：检查您是否在实体内部：*"
+
+#: ../../../modules/hitbox.md:287
+msgid "🏷️ Tags"
+msgstr "🏷️ 标签"
+
+#: ../../../modules/hitbox.md:289
+msgid "You can find below below all tags available in this module."
+msgstr "您可以在下方找到此模块中的所有可用标签。"
+
+#: ../../../modules/hitbox.md:293
+msgid "Blocks"
+msgstr "方块"
+
+#: ../../../modules/hitbox.md
+msgid "Can Pass Through"
+msgstr "可穿过"
+
+#: ../../../modules/hitbox.md:299
+msgid "**`#bs.hitbox:can_pass_through`**"
+msgstr "**`#bs.hitbox:can_pass_through`**"
+
+#: ../../../modules/hitbox.md:301
+msgid "Determine if the block has a collision box."
+msgstr "判断方块是否有碰撞箱。"
+
+#: ../../../modules/hitbox.md
+msgid "Has Offset"
+msgstr "有偏移"
+
+#: ../../../modules/hitbox.md:306
+msgid "**`#bs.hitbox:has_offset`**"
+msgstr "**`#bs.hitbox:has_offset`**"
+
+#: ../../../modules/hitbox.md:308
+msgid ""
+"Determine if the block's hitbox has an intentional random offset. This is"
+" commonly used in blocks that have slightly shifted hitboxes to give a "
+"more dynamic visual effect."
+msgstr "判断方块的碰撞箱是否有随机偏移。这一般用于那些为了提升观感，会随机偏移位置的方块。"
+
+#: ../../../modules/hitbox.md
+msgid "Intangible"
+msgstr "无形的"
+
+#: ../../../modules/hitbox.md:313 ../../../modules/hitbox.md:336
+msgid "**`#bs.hitbox:intangible`**"
+msgstr "**`#bs.hitbox:intangible`**"
+
+#: ../../../modules/hitbox.md:315
+msgid ""
+"Indicate whether the block is intangible, meaning it is typically "
+"invisible and lacks interaction collision."
+msgstr "判断方块是否是无形的，这意味着它通常是不可见的且没有交互碰撞。"
+
+#: ../../../modules/hitbox.md
+msgid "Is Full Cube"
+msgstr "是完整方块"
+
+#: ../../../modules/hitbox.md:320
+msgid "**`#bs.hitbox:is_full_cube`**"
+msgstr "**`#bs.hitbox:is_full_cube`**"
+
+#: ../../../modules/hitbox.md:322
+msgid "Check if the block is a full cube of 16×16×16."
+msgstr "检查方块是否是 16×16×16 的完整方块。"
+
+#: ../../../modules/hitbox.md:330
+msgid "Entities"
+msgstr "实体"
+
+#: ../../../modules/hitbox.md:338
+msgid ""
+"Determines if the entity's hitbox is intangible, meaning it won't "
+"interact physically with other blocks or entities."
+msgstr "判断实体的碰撞箱是否是无形的，也就是它能否与其他方块或实体产生物理交互。"
+
+#: ../../../modules/hitbox.md
+msgid "Is Shaped"
+msgstr "有形状"
+
+#: ../../../modules/hitbox.md:343
+msgid "**`#bs.hitbox:is_shaped`**"
+msgstr "**`#bs.hitbox:is_shaped`**"
+
+#: ../../../modules/hitbox.md:345
+msgid ""
+"Identifies if the entity has a non-standard hitbox shape, differing from "
+"the typical cubic or rectangular hitbox."
+msgstr "识别实体是否具有非标准碰撞箱形状，也就是不同于常规的正方体或长方体的碰撞箱。"
+
+#: ../../../modules/hitbox.md
+msgid "Is Sized"
+msgstr "有尺寸"
+
+#: ../../../modules/hitbox.md:350
+msgid "**`#bs.hitbox:is_sized`**"
+msgstr "**`#bs.hitbox:is_sized`**"
+
+#: ../../../modules/hitbox.md:352
+msgid "Identifies if the entity has a rectangular hitbox size."
+msgstr "识别实体是否具有长方体碰撞箱尺寸。"
+
+#: ../../../_templates/comments.md:4
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对您有帮助吗？**"
+
+#: ../../../_templates/comments.md:6
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下您的问题和反馈！"
