@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,19 +19,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/raycast.md:1 e913349b90714b35bd18b8f6b026f0d8
+#: ../../../modules/raycast.md:1 9bdff5e547c64c198205f141d6d6674e
 msgid "🔦 Raycast"
-msgstr ""
+msgstr "🔦 Raycast"
 
-#: ../../modules/raycast.md:3 32f4b016c8d94b35bceb89275593bc1d
+#: ../../../modules/raycast.md:3 c7402624f291448ba594492d0eaf06a3
 msgid "**`#bs.raycast:help`**"
-msgstr ""
+msgstr "**`#bs.raycast:help`**"
 
-#: ../../modules/raycast.md:5 9e0be95a23024aca852047974c4c09dc
+#: ../../../modules/raycast.md:5 a418e67a3db34186a81b1e45ee402d08
 msgid "Cast rays and detect collisions with blocks or entities."
-msgstr ""
+msgstr "检测射线与方块或实体的碰撞。"
 
-#: ../../modules/raycast.md:8 c52ba5600f1b448ba49bebf6176716b3
+#: ../../../modules/raycast.md:8 b3a40d42d1fe4d548f57ee9ec96c0cdb
 msgid ""
 "Unlike traditional raycasts, this module uses a [voxel traversal "
 "algorithm](http://www.cse.yorku.ca/~amana/research/grid.pdf) which "
@@ -39,104 +39,109 @@ msgid ""
 "module, it supports all different hitbox types, including both blocks and"
 " entities."
 msgstr ""
+"与传统的射线检测不同，此模块使用[体素遍历算法](http://www.cse.yorku.ca/~amana/research/grid.pdf)，提供更高的精度。此外，得益于 `bs.hitbox` 模块，它支持所有不同的碰撞箱类型，包括方块和实体。"
 
-#: ../../modules/raycast.md:12 ac957d48d2e54dadb0dee575fd746857
+#: ../../../modules/raycast.md:12 8a4b47f3c1f34e8ba99ed62a34a102c7
 msgid "\"Reality only reveals itself when it is illuminated by a ray of poetry.\""
-msgstr ""
+msgstr "“现实只有在诗歌之光的照耀下才会展现自己。”"
 
-#: ../../modules/raycast.md:13 6ca3d0587fd14827ae193f4016a04261
+#: ../../../modules/raycast.md:13 a7ae11581b1e41b5aaf52fa938ba058a
 msgid "Georges Braque"
-msgstr ""
+msgstr "乔治·布拉克（Georges Braque）"
 
-#: ../../modules/raycast.md:19 210202ad3b8541aa9135516ca0d2c726
+#: ../../../modules/raycast.md:19 82da99575fe9446fa34ca3702fe587cb
 msgid "🔧 Functions"
-msgstr ""
+msgstr "🔧 函数"
 
-#: ../../modules/raycast.md:21 7c92e47308104aaf8c262a235aca8853
+#: ../../../modules/raycast.md:21 6d05b1e30c7d4c178618a442fa6834f5
 msgid "You can find below all functions available in this module."
-msgstr ""
+msgstr "您可以在下方找到此模块中的所有可用函数。"
 
-#: ../../modules/raycast.md:25 e23d9b3810d346339583a245412f0e8b
+#: ../../../modules/raycast.md:25 be4f324d4cec4db49264f2b908d4c5c7
 msgid "Run the Raycast"
-msgstr ""
+msgstr "运行射线检测"
 
-#: ../../modules/raycast.md:29 c373a0106ff94456a278a9b72a650b48
+#: ../../../modules/raycast.md:29 e3a366afd7c8446eb9ced9e67681a743
 msgid "Cast a ray from the execution position and check if it hits something."
-msgstr ""
+msgstr "在执行位置发射一条射线并检查它的碰撞情况。"
 
-#: ../../modules/raycast.md:31 063c11c48f2544a89be2384020a74807
+#: ../../../modules/raycast.md:31 eb947e65f52542eaad5743d49e46915e
 msgid "Inputs"
-msgstr ""
+msgstr "输入"
 
-#: ../../modules/raycast.md:32 1bb942c65bb24b449a92687b337549eb
+#: ../../../modules/raycast.md:32 e6a2b8af88524443beccf773ef1e1521
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: "
 "Origin of the ray."
 msgstr ""
+"**执行 `at <实体>` 或 `positioned <x> <y> <z> rotated <rot>`**: "
+"射线的起点和方向."
 
-#: ../../modules/raycast.md:34 40b140e01e194126ac6abacc5f3d2814
+#: ../../../modules/raycast.md:34 3311c9117a444cbc8caef54048514504
 msgid "**Function macro**:"
-msgstr ""
+msgstr "**函数宏**"
 
-#: ../../modules/raycast.md:50 2ceec84cf13247c2891006b8f81af15e
+#: ../../../modules/raycast.md:50 0e6155ad19804eb98248448f14c92f05
 msgid "Lambdas"
-msgstr ""
+msgstr "Lambda 函数"
 
-#: ../../modules/raycast.md:51 e0ecb2e8a0634938a3095036c53c73fd
+#: ../../../modules/raycast.md:51 979185acc64e45acae16c42b8e82dfc0
 msgid ""
 "**Score `$raycast.piercing bs.lambda`**: The remaining number of blocks "
 "or entities the ray can pass through before stopping. This score can be "
 "dynamically updated inside callbacks (`on_*`) to modify ray behavior."
 msgstr ""
+"**分数 `$raycast.piercing bs.lambda`**：射线在停止之前可以穿过的剩余方块或实体数量。此分数可以在回调（`on_*`）内动态更新以修改射线行为。"
 
-#: ../../modules/raycast.md:53 30b7781bb9de474e8d7d9eafbdbe419a
+#: ../../../modules/raycast.md:53 f3c81aa1ae9744d1914a8a9b3e17cd2b
 msgid "**Storage `bs:lambda raycast`**:"
-msgstr ""
+msgstr "**命令存储 `bs:lambda raycast`**："
 
-#: ../../modules/raycast.md:63 c02698438b4c4e9aa526bad2f04748c6
+#: ../../../modules/raycast.md:63 13579dd3d58a4cfeb771d70c0da4f4b9
 msgid "Outputs"
-msgstr ""
+msgstr "输出"
 
-#: ../../modules/raycast.md:64 3383694ae2df428ebdde91abd38f3c9b
+#: ../../../modules/raycast.md:64 15a29a1a899e4152b52fa3dfeecf74c8
 msgid "**Return**: Whether the ray collides with a hitbox or not (1 or 0)."
-msgstr ""
+msgstr "**返回值**：射线是否与碰撞箱相撞（1或0）。"
 
-#: ../../modules/raycast.md:66 ef16202741904c1fbc1d792cb498a718
+#: ../../../modules/raycast.md:66 5fdac7f34bb44b37b93ccd3033cbe157
 msgid "**Storage `bs:out raycast`**:"
-msgstr ""
+msgstr "**命令存储 `bs:out raycast`**："
 
-#: ../../modules/raycast.md:77 322f349b8bb24b07bde94ac71a9fba31
+#: ../../../modules/raycast.md:77 75746517d2ab4030ac53cabae1185e97
 msgid "Collision / Interaction Shape"
-msgstr ""
+msgstr "碰撞/交互形状"
 
-#: ../../modules/raycast.md:79 206e7eba7b2e447a8376a4228279fe46
+#: ../../../modules/raycast.md:79 419da582387a42a684897faf98c97dd8
 msgid ""
 "**Collision Shape**: Defines the physical boundaries of a block that "
 "entities cannot pass through. It determines where an entity will stop "
 "when moving towards the block."
 msgstr ""
+msgstr "**碰撞形状（collision_shape）**：实体无法穿过的方块的物理边界，决定实体在靠近方块时会被阻挡在什么位置。"
 
-#: ../../modules/raycast.md:80 099d731e2c7d463a92fe3445e2e15a2a
+#: ../../../modules/raycast.md:80 a2b2e131b633492f9f00792232449125
 msgid ""
 "**Interaction Shape**: Defines the area where the player can interact "
 "with or break the block. This includes actions such as right-clicking to "
 "open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have"
 " an interaction shape but no collision, such as crops or scaffolding."
 msgstr ""
+msgstr "**交互形状（interaction_shape）**：玩家可以与方块交互或破坏的区域。这包括右键打开 GUI（如箱子、熔炉）或采掘方块等操作。有些方块有交互形状但没有碰撞，比如农作物或脚手架。"
 
-#: ../../modules/raycast.md:83 9eba3572fb034cb98705ef54ec4a544f
+#: ../../../modules/raycast.md:83 98d4671460d84855aa03a794d24845b4
 msgid "*Example: Cast a ray from your eyes and detect any collisions:*"
-msgstr ""
+msgstr "*示例：从你的视线发射射线并检测任何碰撞：*"
 
-#: ../../modules/raycast.md:93 919aa42fd6614665b0fe4f8b6e3e2266
+#: ../../../modules/raycast.md:93 e9decf1d6e814f22bb1e37d8493b73bb
 msgid "**Credits**: Aksiome"
-msgstr ""
+msgstr "**制作人员**：Aksiome"
 
-#: ../../_templates/comments.md:4 69a8f140ddb4404699ef579306d98ff5
+#: ../../../_templates/comments.md:4 0f74e4126aa24b2caf7a1ba4213c1a97
 msgid "**💬 Did it help you?**"
-msgstr ""
+msgstr "**💬 这对您有帮助吗？**"
 
-#: ../../_templates/comments.md:6 f97bbe9318af42c08500b4aba3398eeb
+#: ../../../_templates/comments.md:6 4ffe12ef9e8c4d0396a1ac2e0bc629a5
 msgid "Feel free to leave your questions and feedback below!"
-msgstr ""
-
+msgstr "欢迎在下方留下您的问题和反馈！"

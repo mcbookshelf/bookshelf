@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-28 11:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,21 +19,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../changelog/v3.0.2.md:1 7894da0778704074ad1b5751c2b60f12
+#: ../../../changelog/v3.0.2.md:1 de9fe0970019424fad0589af0fac4895
 msgid ""
 "📦 [Bookshelf - "
 "3.0.2](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.0.2)"
 msgstr ""
 
-#: ../../changelog/v3.0.2.md:3 fb29bed572e8475d8a0ea502a69b0a4c
+#: ../../../changelog/v3.0.2.md:3 879fead48a444db388856490650000ab
 msgid "**🩹 A Quick Hotfix!**"
 msgstr ""
 
-#: ../../changelog/v3.0.2.md:5 5adc207a37ba4be7980a545e3458787a
+#: ../../../changelog/v3.0.2.md:5 8faef96ad32b4270926b53af5ccbb5aa
 msgid "*This is a hotfix for version 3.0.1.*"
 msgstr ""
 
-#: ../../changelog/v3.0.2.md:7 17549256c8e84750803f93966f9b3308
+#: ../../../changelog/v3.0.2.md:7 0e8e3498b76c47589cf39127609130b2
 msgid ""
 "<abbr title=\"Bug "
 "Fix\">🐛</abbr>**[#431](https://github.com/mcbookshelf/bookshelf/pull/431)**"
@@ -41,11 +41,11 @@ msgid ""
 "compression."
 msgstr ""
 
-#: ../../changelog/v3.0.2.md:10 402c218dafeb48f084f1e1340e171a5e
+#: ../../../changelog/v3.0.2.md:10 2e9eb8d631084905bec835a68358de34
 msgid "`❤️ bs.health`"
 msgstr ""
 
-#: ../../changelog/v3.0.2.md:12 580dbe50701c4e8ca3e953af4fdab5ea
+#: ../../../changelog/v3.0.2.md:12 d2145acf909a46c5b56d5120b57872d6
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#428](https://github.com/mcbookshelf/bookshelf/pull/428)** - Ensure "
@@ -53,11 +53,11 @@ msgid ""
 "attributes."
 msgstr ""
 
-#: ../../changelog/v3.0.2.md:15 9d9e9086c9574551a499f39499f86d55
+#: ../../../changelog/v3.0.2.md:15 2912ac08d6a54aac93a75480f35924c4
 msgid "`🔬 bs.dump`"
 msgstr ""
 
-#: ../../changelog/v3.0.2.md:17 f6cc7320516346b4b77a0c2ac66916ee
+#: ../../../changelog/v3.0.2.md:17 320030c532e94b8ea47122d923c303b0
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#432](https://github.com/mcbookshelf/bookshelf/issues/432)** - Fix "

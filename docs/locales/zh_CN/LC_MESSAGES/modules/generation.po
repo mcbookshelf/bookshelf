@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,29 +19,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/generation.md:1 c2567d3711ef44548af3d6a8c1e8cea4
+#: ../../../modules/generation.md:1 a960c0910b8748f29acd822d6001f117
 msgid "🏗️ Generation"
-msgstr ""
+msgstr "🏗️ 生成（Generation）"
 
-#: ../../modules/generation.md:3 88c1114985d540e5b14231db896a03fc
+#: ../../../modules/generation.md:3 d39a2f77957d43fd99888bc099e57157
 msgid "**`#bs.generation:help`**"
-msgstr ""
+msgstr "**`#bs.generation:help`**"
 
-#: ../../modules/generation.md:5 45fe0f57a6cf4744863f512dcb7e4629
+#: ../../../modules/generation.md:5 db65d9d215d942248e4b60f23e9e8d32
 msgid "Generate diverse terrains and landscapes, incorporating natural features."
-msgstr ""
+msgstr "生成包含自然地貌的多样化地形和景观。"
 
-#: ../../modules/generation.md:18 d80121b0f34f4e73968245f63c2a46f2
+#: ../../../modules/generation.md:18 ec08f90deb5b482eb95b2aeb29b6f253
 msgid ""
 "\"Nature's beauty is a reflection of the harmony of numbers and "
 "patterns.\""
-msgstr ""
+msgstr "“美是数的和谐。”"
 
-#: ../../modules/generation.md:19 7770af3f26ca452ab79a4a69e6515eac
+#: ../../../modules/generation.md:19 850841aefda341ee8d068d1edb8229d6
 msgid "Anonymous"
-msgstr ""
+msgstr "佚名"
 
-#: ../../modules/generation.md:23 1ea90df72e2d4f589f92152ee1cc3ff7
+#: ../../../modules/generation.md:23 1c43700764ef43ee94a19bb16c130f3a
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
 "sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
@@ -51,102 +51,101 @@ msgid ""
 "0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
 " .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
 "2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
-msgstr ""
+msgstr "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 2.1v-5.85l-3.5 2.1Z\"></path></svg> 观看演示"
 
-#: ../../modules/generation.md:33 f03e896e434b4cb99d08460ac786378c
+#: ../../../modules/generation.md:33 defe00e314a34c50ad12ecc2fe2df328
 msgid "🔧 Functions"
-msgstr ""
+msgstr "🔧 函数"
 
-#: ../../modules/generation.md:35 a2f55562f235471b9a27ea3ac3c6544b
+#: ../../../modules/generation.md:35 d611d32a17954f7aa97786b2dae631b0
 msgid "You can find below all functions available in this module."
-msgstr ""
+msgstr "您可以在下方找到此模块中的所有可用函数。"
 
-#: ../../modules/generation.md ../../modules/generation.md:39
-#: 4a39d960a95941ecae6e4daa4bf8e053 d988599907504962a0a06b46e96fa9e6
+#: ../../../modules/generation.md ../../../modules/generation.md:39
+#: 43a0ba07df2e4c68811f48a7c59da672 a7dfa30efdbd445fa9523bf5ed15f177
 msgid "Shape 2D"
-msgstr ""
+msgstr "二维平面形状"
 
-#: ../../modules/generation.md:47 dbfb987719ad4e47b2234822e9976866
+#: ../../../modules/generation.md:47 ceaa3c0cd6f7404e86c860920438a4dc
 msgid ""
 "Generate a shape in 2D space at the specified origin, with the callback "
 "executed at each step, allowing the user to handle the X and Y "
 "coordinates directly."
-msgstr ""
+msgstr "以指定位置为原点遍历二维平面。每一步运行都有回调，用户可以直接在回调中操作 X 和 Y 坐标。"
 
-#: ../../modules/generation.md:49 ../../modules/generation.md:77
-#: ../../modules/generation.md:108 724da535d14b4d9fb69af4d89b51095d
-#: 96a06edf9c724ae4baacd8656b01b6b6 f9f0859c14984981a944bd3327ffade7
+#: ../../../modules/generation.md:49 ../../../modules/generation.md:77
+#: ../../../modules/generation.md:108 7e04e54062f449048e120318c0288050
+#: 8c7ffe08e9e24fc4b5a6b79bc97bf05e 8ede6208826b436a9f1b13df4f51776b
 msgid "Inputs"
-msgstr ""
+msgstr "输入"
 
-#: ../../modules/generation.md:50 ../../modules/generation.md:78
-#: ../../modules/generation.md:109 df2072532c6c4257bbbb9e313a50183f
-#: eb08a30a708141afbbe6b527e7d04970 eec28c6051fd4fcf9ebb44351c1db004
+#: ../../../modules/generation.md:50 ../../../modules/generation.md:78
+#: ../../../modules/generation.md:109 0567256556c143189c5c8598dc0a0d2f
+#: 86eb3bc848ea444f9a1150704d59ab04 a4b0fdd8a9eb4ada99c1a707db303c19
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: "
 "Origin of the shape."
-msgstr ""
+msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z> rotated <rot>`**：形状的原点。"
 
-#: ../../modules/generation.md:52 ../../modules/generation.md:80
-#: ../../modules/generation.md:111 7b2a5853ef454f9a8719a4d565616b71
-#: a84e547ce8404cd4bd0715aa2124be58 fd9024bb74874b6dbe765b3c6a8dec07
+#: ../../../modules/generation.md:52 ../../../modules/generation.md:80
+#: ../../../modules/generation.md:111 25af17bbc0264eb28fdb7de61d72e4f1
+#: 500a3a8b20a346b6a8799218037b6c31 f2697c487c4a4291bb4fa0d2d7c5c7ab
 msgid "**Function macro**:"
-msgstr ""
+msgstr "**函数宏**："
 
-#: ../../modules/generation.md:66 ../../modules/generation.md:97
-#: ../../modules/generation.md:131 185add7f07c24f6dab0e64411d60dec7
-#: b24918dbd2a544ee8bf59e31ad850cf2 f53000cfdc244a409dbf171e80261994
+#: ../../../modules/generation.md:66 ../../../modules/generation.md:97
+#: ../../../modules/generation.md:131 6105fd49c12542318816f2c9d7d5fa3a
+#: 7a3e9da6e24b467e86b3c41a51937d7f d8629db1d1724872bc869e55b0d3a569
 msgid "Outputs"
-msgstr ""
+msgstr "输出"
 
-#: ../../modules/generation.md:67 ../../modules/generation.md:98
-#: ../../modules/generation.md:132 1193508f1f894f489aa8aa7ea331d8e7
-#: 3f214097a0094b939579a244dc81262f ba63a1994f604457ba20ff11d80a30cc
+#: ../../../modules/generation.md:67 ../../../modules/generation.md:98
+#: ../../../modules/generation.md:132 2a4fbc7678ca4d4f96304e434e72b0eb
+#: b27bbccd26ee4b52acbd573608276e9d bc87d74f4b1244e88b9d0349d2d93a80
 msgid ""
 "**State**: The callback gets executed at the appropriate coordinates in "
 "the world."
-msgstr ""
+msgstr "**状态**：回调在世界中的适当坐标处执行。"
 
-#: ../../modules/generation.md 77b7a67d82444cca8cc24f3e1e72bbf1
+#: ../../../modules/generation.md 4eb90e54c5644e8a9b85e5286494f26f
 msgid "Simplex Shape 2D"
-msgstr ""
+msgstr "单纯二维形状"
 
-#: ../../modules/generation.md:75 d3d29b72a8e34a9bba848eaf44ca71ab
+#: ../../../modules/generation.md:75 dd061f902afe414ba16f55f6aebfb9a5
 msgid ""
 "Generate a shape in 2D space using a Simplex noise algorithm. The shape "
 "is generated at the specified origin, with the callback executed at each "
 "step to facilitate custom behavior during the generation process."
-msgstr ""
+msgstr "以指定位置为原点，使用单纯形噪声算法，在二维平面上生成形状。每一步生成都有回调，可以在这个过程中自定义行为。"
 
-#: ../../modules/generation.md fd60f909c1074e2c87a2201353b8611e
+#: ../../../modules/generation.md fbe362ad8c694d81ab1bab46556ee5c3
 msgid "Fractal Shape 2D"
-msgstr ""
+msgstr "分形二维形状"
 
-#: ../../modules/generation.md:106 791f5cc1d02e4682b51b19885b7bd12c
+#: ../../../modules/generation.md:106 7de976b791114b71936848c2a12b6377
 msgid ""
 "Generate a shape in 2D space using a Fractal noise algorithm. The shape "
 "is generated at the specified origin, with the callback executed at each "
 "step to facilitate custom behavior during the generation process."
-msgstr ""
+msgstr "以指定位置为原点，使用分形噪声算法，在二维平面上生成形状。每一步生成都有回调，可以在这个过程中自定义行为。"
 
-#: ../../modules/generation.md:137 d8033982e90b486ab5c8e3e63c86b1b5
+#: ../../../modules/generation.md:137 606af03568fc4170b8556b19ba9b8868
 msgid ""
 "*Example: Generate a 3D terrain using a heightmap. This function employs "
 "a linear approach; for more interesting terrain, consider scaling the "
 "noise values differently according to various ranges. Check out [this "
 "video](https://www.youtube.com/watch?v=CSa5O6knuwI) for more insights on "
 "terrain generation:*"
-msgstr ""
+msgstr "*示例：使用高度图生成3D地形。此函数采用线性方法；为了生成更有趣的地形，考虑根据不同范围对噪声值进行缩放。查看[此视频](https://www.youtube.com/watch?v=CSa5O6knuwI)以获取有关地形生成的更多见解：*"
 
-#: ../../modules/generation.md:152 8ef49a296041412086af050d06e6cf1a
+#: ../../../modules/generation.md:152 3e2e27384c744805952fed49e809d233
 msgid "**Credits**: Aksiome"
-msgstr ""
+msgstr "**制作人员**：Aksiome"
 
-#: ../../_templates/comments.md:4 a7f0f2ff48cd4ac4aaf62876b6896c2c
+#: ../../../_templates/comments.md:4 857626e6cbc748cbb936036bcc129dca
 msgid "**💬 Did it help you?**"
-msgstr ""
+msgstr "**💬 这对您有帮助吗？**"
 
-#: ../../_templates/comments.md:6 5940979a78f144eb80d4ddea2c716217
+#: ../../../_templates/comments.md:6 4af405d27f6f49bfb7be3f94622b266e
 msgid "Feel free to leave your questions and feedback below!"
-msgstr ""
-
+msgstr "欢迎在下方留下您的问题和反馈！"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-28 11:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,36 +19,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../changelog/v3.1.0.md:1 8e3caa1c0a4c4624a7c2cc23a16b7586
+#: ../../../changelog/v3.1.0.md:1 323fd209cd4d4cddb59988d09d9a5aa6
 msgid ""
 "📦 [Bookshelf - "
 "3.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.1.0)"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:3 9e17b98846ec4389ac10fe483eadb485
+#: ../../../changelog/v3.1.0.md:3 123038dd0b374b5cb2c210f89ea0b757
 msgid "**[Update Name]**"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:5 6e7f00ade7ce4141afef595d2acf5fe6
+#: ../../../changelog/v3.1.0.md:5 43e30652cc8444c99493170858dfa75b
 msgid "*[Update Description]*"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:8 07b00224e9ab4ab0b78d58db6b435eae
+#: ../../../changelog/v3.1.0.md:8 fb3764c07d9a422b91fd401d4ae9a092
 msgid "`🔦 bs.raycast`"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:10 f17792549393450b9c6d29f8de455f8f
+#: ../../../changelog/v3.1.0.md:10 5eb32b3d78bc4279b9738174d007488c
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#445](https://github.com/mcbookshelf/bookshelf/issues/445)** - "
 "`#bs.raycast:run` now computes all lambda data before invoking callbacks."
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:12 4ba9b54abb02437aa35b5ad53a7f5ab8
+#: ../../../changelog/v3.1.0.md:12 56c6f9ddc59c494a9a58c9c7ae0990f6
 msgid "`🔬 bs.dump`"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:14 c36431cf7e5f4762a1588bfee21d8db6
+#: ../../../changelog/v3.1.0.md:14 1c36aaa4cdf4466fa835b877a85ac7d4
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#441](https://github.com/mcbookshelf/bookshelf/issues/441)** - Fixed "

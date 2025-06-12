@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,27 +19,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/move.md:1 4151511f089440078216d7842b01b1df
+#: ../../../modules/move.md:1 d0f677e67e1142aeb73f8be75fd6074a
 msgid "🏃 Move"
-msgstr ""
+msgstr "🏃 Move"
 
-#: ../../modules/move.md:3 4091622b22e74957a238e470a9a9cb71
+#: ../../../modules/move.md:3 5cc24710e9104d729f91c7a71a2bb52d
 msgid "**`#bs.move:help`**"
-msgstr ""
+msgstr "**`#bs.move:help`**"
 
-#: ../../modules/move.md:5 ac0f812ff7fc45318cecc309799af0b3
+#: ../../../modules/move.md:5 24fb80519de04a86830c69f53c3bd738
 msgid "Make your entity move exactly the way you want it to!"
-msgstr ""
+msgstr "让你的实体按照你想要的方式移动！"
 
-#: ../../modules/move.md:13 a8d407c83d094a8dba56924987079cee
+#: ../../../modules/move.md:13 e0db219132de4de4993eadf60acfa6c9
 msgid "\"There is nothing permanent except change.\""
-msgstr ""
+msgstr "唯有变化才是永恒。"
 
-#: ../../modules/move.md:14 64038fd63d5d4e10b1b10fcb47566e98
+#: ../../../modules/move.md:14 7858143fd40b4178983af5720b55e53a
 msgid "Heraclitus"
-msgstr ""
+msgstr "赫拉克利特（Heraclitus）"
 
-#: ../../modules/move.md:18 dc30a0a0cf6244e383679b5243c722ab
+#: ../../../modules/move.md:18 8f501a9893ce4fe290467b1d410872cd
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
 "sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
@@ -49,343 +49,342 @@ msgid ""
 "0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
 " .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
 "2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
-msgstr ""
+msgstr "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 2.1v-5.85l-3.5 2.1Z\"></path></svg> 观看演示"
 
-#: ../../modules/move.md:28 40a5c4378c4b42278e7963844e055659
+#: ../../../modules/move.md:28 e3b6d4f1919b42a4abddd19bac0dfc3d
 msgid "🔧 Functions"
-msgstr ""
+msgstr "🔧 函数"
 
-#: ../../modules/move.md:30 a8a6358d4422457ca3eb17c6ddcdd60a
+#: ../../../modules/move.md:30 2699bc2a8c1e4d1e8a68f8468cf77220
 msgid "You can find below all functions available in this module."
-msgstr ""
+msgstr "您可以在下方找到此模块中的所有可用函数。"
 
-#: ../../modules/move.md:34 2a91b718dc2944b19eac1f5cec648717
+#: ../../../modules/move.md:34 79c7992214234146bec3c6e9dde5dd01
 msgid "Apply Velocity"
-msgstr ""
+msgstr "应用速度"
 
-#: ../../modules/move.md 8e400f7671d947af9a86dd08c1632f85
+#: ../../../modules/move.md 1621cd927df84f3ebd29ad985c242c12
 msgid "Canonical"
-msgstr ""
+msgstr "标准"
 
-#: ../../modules/move.md:42 1c134b3c46d74f828f1e3524bb7a1c0c
+#: ../../../modules/move.md:42 07fb22bbe6c8427b928e62c73a800742
 msgid "Teleport an entity by its velocity scores while handling collisions."
-msgstr ""
+msgstr "根据实体的速度分数进行传送，同时处理碰撞。"
 
-#: ../../modules/move.md:44 ../../modules/move.md:81 ../../modules/move.md:146
-#: ../../modules/move.md:171 ../../modules/move.md:196
-#: 8e36473b9a714e66b86a6594c69fdb61 9c3ed747cf63455bab5e1b93b70f5b31
-#: b65be7a70200492182eb1c18419241f7 d3706d497101494c95391b2de1a632b9
-#: d9aeccf4b73546b781688856ef976dbf
+#: ../../../modules/move.md:44 ../../../modules/move.md:81
+#: ../../../modules/move.md:146 ../../../modules/move.md:171
+#: ../../../modules/move.md:196 0d3d0d8b4e1b4646acb796e61302c99e
+#: 8aa7efd02cec42ba974b175f36a24e45 982a01ca4e064146935b3ba0cbef927b
+#: a34b230be131437192ad62078429f1c2 b1603579ec7b441e8754e4e40c60f936
 msgid "Inputs"
-msgstr ""
+msgstr "输入"
 
-#: ../../modules/move.md:45 ../../modules/move.md:82 ../../modules/move.md:197
-#: 0b20b6663f784f2f8966beceee7e89e3 2bbec1e7565349ca97a9765cd35f33f8
-#: e814a7ba2c38494f8020cbfc83dbc5b9
+#: ../../../modules/move.md:45 ../../../modules/move.md:82
+#: ../../../modules/move.md:197 41e552072ef04542907caf14002dbc3f
+#: 90d04c9d8854405e9e0a7394be616856 941957975cee4b2fb78fc9c863ff024f
 msgid "**Execution `as <entities>`**: Entity to move."
-msgstr ""
+msgstr "**执行 `as <实体>`**：要移动的实体。"
 
-#: ../../modules/move.md:47 5ca75268f9aa4955b86396d72d5323ae
+#: ../../../modules/move.md:47 1a5e4d684d224245be42fbacaadf9017
 msgid "**Scores `@s bs.vel.[x,y,z]`**: Canonical velocity vector."
-msgstr ""
+msgstr "**分数 `@s bs.vel.[x,y,z]`**：标准速度向量。"
 
-#: ../../modules/move.md:49 ../../modules/move.md:86 ../../modules/move.md:201
-#: 540265f8e04e49249ac79276bfe79545 7b497b67429c4ad885d682e4652db83c
-#: e38f1e21ed344c1289d9a38fa6c10bb9
+#: ../../../modules/move.md:49 ../../../modules/move.md:86
+#: ../../../modules/move.md:201 6158f0a4b6f84237abf4a39b14cd52e9
+#: 750cd9d386b0495ab61d6f05c9d0c240 76fefd0e1fa34bc49fc4e874276f0323
 msgid "**Function macro**:"
-msgstr ""
+msgstr "**函数宏**："
 
-#: ../../modules/move.md:62 ../../modules/move.md:99 ../../modules/move.md:151
-#: ../../modules/move.md:176 ../../modules/move.md:207
-#: 0cf0ee5d7d1b4937aabbe4219f5033a8 e3ba38a8e5f44f019d093da672db1ea9
-#: ee2bb1cde5ba486eb8aac39d1dd57143 f28b2ad575df4d93a8ba3286c47c72fe
-#: fa4fb71716184a9586a5d598c6a43d87
+#: ../../../modules/move.md:62 ../../../modules/move.md:99
+#: ../../../modules/move.md:151 ../../../modules/move.md:176
+#: ../../../modules/move.md:207 350b70c3c3894e46adeefb14c1511997
+#: 7e0eae04ef594f12b41a00f946318848 acbb68ae52dc4251b6615140d1d026bd
+#: d3e22cdf54614ef188edd9ced79c1e04 d5a69b3ac8404be2b66dacfbe84dcb7b
 msgid "Outputs"
-msgstr ""
+msgstr "输出"
 
-#: ../../modules/move.md:63 6a6b9df0d8154330ab2f643ac95dbdc6
+#: ../../../modules/move.md:63 5fd04bd8436f4043aacf2abe3bdf11ce
 msgid "**State**: Entity is teleported according to its velocity scores."
-msgstr ""
+msgstr "**状态**：实体根据其速度分数被传送。"
 
-#: ../../modules/move.md d6a65a0ee4a948f49a1d45aef61e720e
+#: ../../../modules/move.md 16e5bdc7732a495a8839f4c5609b4d04
 msgid "Local"
-msgstr ""
+msgstr "局部"
 
-#: ../../modules/move.md:71 1115af64aa0e4ecdacfa1d3381d447c2
+#: ../../../modules/move.md:71 2a44155e39d742838c0cc9a29e80b93f
 msgid "Experimental"
-msgstr ""
+msgstr "实验性"
 
-#: ../../modules/move.md:74 76add0e30d1942e6965ec30ef268da9d
+#: ../../../modules/move.md:74 6d4707d4973542a9ac80f6dff18018b2
 msgid ""
 "Always prefer the canonical version. Constant conversion between bases "
 "can lead to loss of accuracy, sometimes causing unpredictable behavior."
-msgstr ""
+msgstr "始终优先使用标准版本。基数之间的持续转换可能导致精度损失，有时会造成不可预测的行为。"
 
-#: ../../modules/move.md:76 950b2caa516344cbab232b31ab8ae956
+#: ../../../modules/move.md:76 2fcf9b1c43904a3ea4bb949742b58c84
 msgid ""
 "If you need to \"shoot\" an entity in a direction, you can still set "
 "velocity as a local vector and run `#bs.move:canonical_to_local` before "
 "using `#bs.move:apply_vel`."
-msgstr ""
+msgstr "如果你需要向某个方向\"发射\"实体，你仍可以将速度设置为局部向量，并在使用 `#bs.move:apply_vel` 之前运行 `#bs.move:canonical_to_local`。"
 
-#: ../../modules/move.md:79 6fffee82cfd34ec1afc2ade3f19248e9
+#: ../../../modules/move.md:79 323d74f93e5540c9af42cb25c5c5a02d
 msgid ""
 "Teleport an entity by its velocity scores, using the local reference "
 "frame, while handling collisions."
-msgstr ""
+msgstr "使用局部参考系根据实体的速度分数进行传送，同时处理碰撞。"
 
-#: ../../modules/move.md:84 d2997d9509124cb08d8ffa462c6ceb4a
+#: ../../../modules/move.md:84 93d70ac219fe44e0a0aacbbe0898b181
 msgid "**Scores `@s bs.vel.[x,y,z]`**: Local velocity vector."
-msgstr ""
+msgstr "**分数 `@s bs.vel.[x,y,z]`**：局部速度向量。"
 
-#: ../../modules/move.md:100 0961cf491df140e9b48c3e584d387542
+#: ../../../modules/move.md:100 8b48b5050585442ebfe66af451e5ff4c
 msgid "**State**: Entity is teleported according to its local velocity scores."
-msgstr ""
+msgstr "**状态**：实体根据其局部速度分数被传送。"
 
-#: ../../modules/move.md:105 edf272ce3db2495f843a2ef8429e6f63
+#: ../../../modules/move.md:105 4488afd803f44ef1a0c53042fe98e65f
 msgid "Collision / Interaction Shape"
-msgstr ""
+msgstr "碰撞/交互形状"
 
-#: ../../modules/move.md:107 d11750f5f8cb48acb48ea29a0637b667
+#: ../../../modules/move.md:107 6cb2f5966e08409ebec0be94b43df91f
 msgid ""
 "**Collision Shape**: Defines the physical boundaries of a block that "
 "entities cannot pass through. It determines where an entity will stop "
 "when moving towards the block."
-msgstr ""
+msgstr "**碰撞形状（collision_shape）**：实体无法穿过的方块的物理边界，决定实体在靠近方块时会被阻挡在什么位置。"
 
-#: ../../modules/move.md:108 12382f5f56fe4d94b4975350ff452f51
+#: ../../../modules/move.md:108 987518fddf02427ea6b012d423e5bb34
 msgid ""
 "**Interaction Shape**: Defines the area where the player can interact "
 "with or break the block. This includes actions such as right-clicking to "
 "open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have"
 " an interaction shape but no collision, such as crops or scaffolding."
-msgstr ""
+msgstr "**交互形状（interaction_shape）**：玩家可以与方块交互或破坏的区域。这包括右键打开 GUI（如箱子、熔炉）或采掘方块等操作。有些方块有交互形状但没有碰撞，比如农作物或脚手架。"
 
-#: ../../modules/move.md:111 fd9fdfd059f4484bb25460e31c591f37
+#: ../../../modules/move.md:111 3a7462cb97dd401fa611129ee1d35858
 msgid ""
 "*Example: Move a cube (block_display) by its velocity scores (uses an "
 "interaction as the hitbox):*"
-msgstr ""
+msgstr "*示例：根据速度分数移动立方体（block_display）（使用交互实体作为碰撞箱）：*"
 
-#: ../../modules/move.md:130 4153aa9570bd4df6ab38054d32b82465
+#: ../../../modules/move.md:130 ca24a30d538c4fb193024ac27c7b44cc
 msgid "Performance Tip"
-msgstr ""
+msgstr "性能提示"
 
-#: ../../modules/move.md:133 925ad7d7ef9641ce845a20c87e555d8f
+#: ../../../modules/move.md:133 efe739652d2845b58c28488e32d5a7ec
 msgid ""
 "Although this system doesn't set specific limits, it's important to note "
 "that performance is influenced by both the speed and size of the entity."
-msgstr ""
+msgstr "虽然此系统没有设置具体限制，但需要注意性能受实体的速度和大小的影响。"
 
-#: ../../modules/move.md:136 ../../modules/move.md:161
-#: ../../modules/move.md:186 ../../modules/move.md:224
-#: ../../modules/move.md:240 5772d3f606ee4651ab38fbed23eee493
-#: 8b3f0f3cf8d547b7ba167910771179e6 9179c3cd3e21481988191695e776be25
-#: d8ae51779b274eeaab9217a1c2f21f8a e46d999452794538acb51ab2dd167a84
+#: ../../../modules/move.md:136 ../../../modules/move.md:161
+#: ../../../modules/move.md:186 ../../../modules/move.md:224
+#: ../../../modules/move.md:240 2e808a70f9984b3185b9e3b95df3d914
+#: 31fbf2d4faee4aa5a922d4f20b12722b 39b7f4f0fa034115b847740a2b71daa2
+#: aa672645c171415eb8bb1af9d3660605 e67c584d53324330995874636b5269b8
 msgid "**Credits**: Aksiome"
-msgstr ""
+msgstr "**制作人员**：Aksiome"
 
-#: ../../modules/move.md:140 ac165ea2cb5d45b6ae26534754047655
+#: ../../../modules/move.md:140 f3a7b439e7e64b6ab96a11218d29aacf
 msgid "Canonical to Local"
-msgstr ""
+msgstr "标准转局部"
 
-#: ../../modules/move.md:144 f211ff47897c49a79dcf4353c4385deb
+#: ../../../modules/move.md:144 36ed0f1fef7d4d74952acddc8143b6d4
 msgid ""
 "Convert a canonical velocity (using the relative reference frame) into a "
 "local velocity (using the local reference frame)."
-msgstr ""
+msgstr "将标准速度（使用相对参考系）转换为局部速度（使用局部参考系）。"
 
-#: ../../modules/move.md:147 ../../modules/move.md:172
-#: 7a1f27b865a143a7998379f85fa22b0a 8d16ab23dd8c481f868edf7a03205cf7
+#: ../../../modules/move.md:147 ../../../modules/move.md:172
+#: 0f4579c847ed495885332a40a1224ce9 1c589d8fd7114c849f9e2b2922afe107
 msgid ""
 "**Execution `rotated as <entity>` or `rotated <h> <v>`**: Rotation used "
 "for the conversion."
-msgstr ""
+msgstr "**执行 `rotated as <entity>` 或 `rotated <h> <v>`**：用于转换的旋转。"
 
-#: ../../modules/move.md:149 ../../modules/move.md:174
-#: edfb32c92a02481d9c37029235763fb7 f1d737d7ccbb4df1b6c65dcfd480cd4f
+#: ../../../modules/move.md:149 ../../../modules/move.md:174
+#: 64fbe2032fb44bea9edb05a497dd0dec 6850ce7eef264497be5bad2c9ab4a252
 msgid "**Scores `@s bs.vel.[x,y,z]`**: Velocity to convert."
-msgstr ""
+msgstr "**分数 `@s bs.vel.[x,y,z]`**：要转换的速度。"
 
-#: ../../modules/move.md:152 ../../modules/move.md:177
-#: 55d1bf4f538c48b3b099bdc890297121 aa3c6916400246b4bb4cca138a113eb5
+#: ../../../modules/move.md:152 ../../../modules/move.md:177
+#: 8f5246ef05a94f9d9b5e66b78697794c f0519e000c5441c3aff0b63c0c7dbf45
 msgid "**Scores `@s bs.vel.[x,y,z]`**: Converted velocity."
-msgstr ""
+msgstr "**分数 `@s bs.vel.[x,y,z]`**：转换后的速度。"
 
-#: ../../modules/move.md:155 ../../modules/move.md:180
-#: 24c7e96baa7e4c79b1797172a722bbb3 70d6fb5c8a2345429563be00d12c8e4e
+#: ../../../modules/move.md:155 ../../../modules/move.md:180
+#: 015b5ae648c94c3eb58c819d14cbe838 6db2778031db4607a9c9de0ce9e16bfd
 msgid "Local Velocity... 🥶 What's this?"
-msgstr ""
+msgstr "局部速度... 🥶 这是什么？"
 
-#: ../../modules/move.md:158 ../../modules/move.md:183
-#: 0d811e9b96a646869d954c2fd3818de4 43a718ebe638491a84018bbbc9ee91ba
+#: ../../../modules/move.md:158 ../../../modules/move.md:183
+#: 0b1c154052bf476cbb49c91b33381ad0 303c93dd1eb24aea8ddc817d30c5a985
 msgid ""
 "Unlike relative velocity (canonical), this reference frame considers the "
 "entity's rotation. Therefore, when the parent entity rotates, the child "
 "entity rotates around it. For those familiar with Minecraft commands, "
 "local coordinates are available through the `^` symbol."
-msgstr ""
+msgstr "与相对速度（标准）不同，此参考系考虑实体的旋转。因此，当父实体旋转时，子实体围绕它旋转。对熟悉 Minecraft 命令的人来说，局部坐标可通过 `^` 符号使用。"
 
-#: ../../modules/move.md:165 e670eef487e84ccbabf444fa917e831a
+#: ../../../modules/move.md:165 a335568b87904977894861d25673fb8f
 msgid "Local to Canonical"
-msgstr ""
+msgstr "局部转标准"
 
-#: ../../modules/move.md:169 1e2aae6417ad4bd4a8e994963b956801
+#: ../../../modules/move.md:169 e8f195cb1c884a14915288891e1b3281
 msgid ""
 "Convert a local velocity (using the local reference frame) into a "
 "canonical velocity (using the relative reference frame)."
-msgstr ""
+msgstr "将局部速度（使用局部参考系）转换为标准速度（使用相对参考系）。"
 
-#: ../../modules/move.md:190 c20a16a0bfdb4e5ea293655dbe521232
+#: ../../../modules/move.md:190 d0a85d6350ae4afe8170438aaa7b028c
 msgid "Set Motion"
-msgstr ""
+msgstr "设置运动"
 
-#: ../../modules/move.md:194 bc4b2c7d23c34caab0164c6413d5c59f
+#: ../../../modules/move.md:194 325338bd4a584821becc4b0a17875794
 msgid "Set the motion NBT of an entity using velocity scores."
-msgstr ""
+msgstr "使用速度分数设置实体的运动（Motion）NBT。"
 
-#: ../../modules/move.md:199 fdeffd9f6a774e2bbd77d2cfca9f9b7c
+#: ../../../modules/move.md:199 3ab7af8df85040c3b32210b10d89e01f
 msgid "**Scores `@s bs.vel.[x,y,z]`**: Velocity vector."
-msgstr ""
+msgstr "**分数 `@s bs.vel.[x,y,z]`**：速度向量。"
 
-#: ../../modules/move.md:208 57fe29c0d93f4b4ba6c513e66d40b61c
+#: ../../../modules/move.md:208 bef2bc5680b947e2a528d2ad58b5cdba
 msgid "**State**: Motion is applied to the given entity."
-msgstr ""
+msgstr "**状态**：运动被应用到给定实体。"
 
-#: ../../modules/move.md:211 7162e0da48ca4f84bcd2e932dcf6c7bb
+#: ../../../modules/move.md:211 f1696a1b853047d4bf07b957f665eaba
 msgid "*Example: Move a pig by its velocity scores:*"
-msgstr ""
+msgstr "*示例：根据速度分数移动猪：*"
 
-#: ../../modules/move.md:228 ee083d3d9fda4ecdbac88cffbe0f25b0
+#: ../../../modules/move.md:228 fcc09581fc9d469eafecc02e6fd1c98b
 msgid "👁️ Predicates"
-msgstr ""
+msgstr "👁️ 谓词"
 
-#: ../../modules/move.md:230 60efc9d10cec4a3cac4599a5d9f754aa
+#: ../../../modules/move.md:230 f180c7d1053c497c826460b19ceacc74
 msgid "You can find below all predicates available in this module."
-msgstr ""
+msgstr "您可以在下方找到此模块中的所有可用谓词。"
 
-#: ../../modules/move.md:234 bd285af843714a0bbe489dc89e831b06
+#: ../../../modules/move.md:234 01810e196e7a4fcba09b61f85421a43b
 msgid "Has Velocity?"
-msgstr ""
+msgstr "有速度？"
 
-#: ../../modules/move.md:236 487be849d61f47c3a6ab053656eb63b4
+#: ../../../modules/move.md:236 0832e3509a3c485bb004dd0d6cfb1982
 msgid "**`bs.move:has_vel`**"
-msgstr ""
+msgstr "**`bs.move:has_vel`**"
 
-#: ../../modules/move.md:238 7067b4c404c641248a379bc397919c5b
+#: ../../../modules/move.md:238 84bc1264d58c443e8b6a3e12e977b223
 msgid "Determine if an entity has a nonzero velocity score."
-msgstr ""
+msgstr "确定实体是否有非零速度分数。"
 
-#: ../../modules/move.md:244 af5576cea525469ba6a2b93687c569d3
+#: ../../../modules/move.md:244 b910030f43cb4d25b19f3da4aba37c2e
 msgid "🎓 Custom Collisions"
-msgstr ""
+msgstr "🎓 自定义碰撞"
 
-#: ../../modules/move.md:246 80c6938fde794a4889f11f6130b6c09f
+#: ../../../modules/move.md:246 2c8ae19293914c3984b5f13f43cc42bc
 msgid ""
 "This module allows you to customize collision behaviors according to your"
 " specific needs."
-msgstr ""
+msgstr "此模块允许你根据特定需求自定义碰撞行为。"
 
-#: ../../modules/move.md:250 f41f171693f04f1c8438554fae67a5ec
+#: ../../../modules/move.md:250 5e77d02a5f0c4feab390377005704910
 msgid ""
 "By modifying the `on_collision` input key, you have the freedom to "
 "specify the function that triggers upon collision. However, managing the "
 "resolution yourself can be quite challenging. This is why Bookshelf "
 "provides several predefined functions:"
-msgstr ""
+msgstr "通过修改 `on_collision` 输入键，你可以自由指定碰撞时触发的函数。然而，自行管理解决方案可能相当具有挑战性。这就是为什么 Bookshelf 提供了几个预定义函数："
 
-#: ../../modules/move.md:253 74c10a8eb1bb4822a96ea272ad12deee
+#: ../../../modules/move.md:253 6d495476e18d445285a863714f30b862
 msgid "`#bs.move:callback/bounce`"
-msgstr ""
+msgstr "`#bs.move:callback/bounce`"
 
-#: ../../modules/move.md:254 858c74deacfc44e0a3943e50255d9693
+#: ../../../modules/move.md:254 7bd66cfce1564fb290c5ec6d5c5e0923
 msgid "The entity will bounce on the collision surface."
-msgstr ""
+msgstr "实体将在碰撞表面反弹。"
 
-#: ../../modules/move.md:255 62d415f2a9c44bfa9a498086c77875e8
+#: ../../../modules/move.md:255 1607023c1dc1498a912299774ce20db2
 msgid "`#bs.move:callback/damped_bounce`"
-msgstr ""
+msgstr "`#bs.move:callback/damped_bounce`"
 
-#: ../../modules/move.md:256 d545573abfef4e7da3b824d75b2753f1
+#: ../../../modules/move.md:256 7dfd6a021efe4449818d0e7754c0f549
 msgid "The entity speed is reduced by 2 on each bounce."
-msgstr ""
+msgstr "实体速度在每次反弹时减少2。"
 
-#: ../../modules/move.md:257 93f64db7bdc64ca4a4b7b1c181e35532
+#: ../../../modules/move.md:257 8ece0874397f4f4aab21faeedf6c0122
 msgid "`#bs.move:callback/slide`"
-msgstr ""
+msgstr "`#bs.move:callback/slide`"
 
-#: ../../modules/move.md:258 a32ae90660aa479384c43d3f98f38a6a
+#: ../../../modules/move.md:258 827aefb6bccc4e3f83255fa499a35c8f
 msgid "The entity will stick and slide along the collision surface."
-msgstr ""
+msgstr "实体将粘附并沿碰撞表面滑动。"
 
-#: ../../modules/move.md:259 c6c489f73e424690a1735d288d4b8276
+#: ../../../modules/move.md:259 b05e853834734953978f690def4a1834
 msgid "`#bs.move:callback/stick`"
-msgstr ""
+msgstr "`#bs.move:callback/stick`"
 
-#: ../../modules/move.md:260 dad7df9090fd44a48f22aa7b85892073
+#: ../../../modules/move.md:260 02419531b3e64ed69d4581fb223ab1bd
 msgid "The entity will stop and stick to the collision surface."
-msgstr ""
+msgstr "实体将停止并粘附在碰撞表面上。"
 
-#: ../../modules/move.md:263 222ccf5567f341e88e024a923869f443
+#: ../../../modules/move.md:263 afdbce928e504cdaa169c3d8e6b17077
 msgid "How It Works?"
-msgstr ""
+msgstr "工作原理？"
 
-#: ../../modules/move.md:265 0b45937c5cd9432e89f30f68e0e9f764
+#: ../../../modules/move.md:265 052efa7fd9814c0099dc6a6752c9639c
 msgid ""
 "Upon collision, you have the freedom to update both the velocity score "
 "that will be used in the next tick `@s bs.vel.[x,y,z]` and the remaining "
 "velocity `$move.vel.[x,y,z] bs.lambda`. Since the module will attempt to "
 "continue moving based on the remaining velocity, it's crucial to avoid "
 "introducing a race condition."
-msgstr ""
+msgstr "发生碰撞时，你可以自由更新下一刻将使用的速度分数 `@s bs.vel.[x,y,z]` 和剩余速度 `$move.vel.[x,y,z] bs.lambda`。因为模块将尝试以剩余速度继续移动，所以这个过程中必须避免引发竞态条件。"
 
-#: ../../modules/move.md:267 fc6a0feb4b614f8e9a719216a4e4c252
+#: ../../../modules/move.md:267 aefd2a62767042949ad3595cba27fa50
 msgid "Velocity Scaling"
-msgstr ""
+msgstr "速度缩放"
 
-#: ../../modules/move.md:269 f0c5e950b0e24e08b4760bd24c1d832c
+#: ../../../modules/move.md:269 11e9503de3404c0898290f90436cb5ed
 msgid ""
 "Remaining velocity scores are stored as scaled integers, but the scaling "
 "factor may change without breaking compatibility."
-msgstr ""
+msgstr "剩余速度值以缩放整数的形式存储，但缩放系数可随时变更，并且这不破坏兼容性。"
 
-#: ../../modules/move.md:271 f8f88633cd2e40d6b9ae99ad3da58e20
+#: ../../../modules/move.md:271 e3ebf1f0f48a4a128f4f4b00a2014868
 msgid ""
 "To ensure stability, always manipulate these values independently of the "
 "scaling factor."
-msgstr ""
+msgstr "为了确保稳定性，请保持计算操作和缩放系数无关。"
 
-#: ../../modules/move.md:274 8429a704af3341f9bf27ef82bb040653
+#: ../../../modules/move.md:274 8d9399f3ec8648839f604926a1b03a17
 msgid "The simplest collision resolution is to stop the movement."
-msgstr ""
+msgstr "最简单的碰撞处理是停止移动。"
 
-#: ../../modules/move.md:276 947e9b4294cb4c93b590d60bd22684ef
+#: ../../../modules/move.md:276 03b55712b84a4f28ac197406dadb3e86
 msgid "*`#bs.move:callback/stick`*"
-msgstr ""
+msgstr "*`#bs.move:callback/stick`*"
 
-#: ../../modules/move.md:284 a7978a4954164cb5b77368cdbf3996e2
+#: ../../../modules/move.md:284 11d042d1b9664ac6b35e9cb1a0dd72a9
 msgid ""
 "For sliding, we need to cancel the velocity on the axis that was hit and "
 "continue traveling the remaining distance."
-msgstr ""
+msgstr "对于滑动，我们需要取消被击中轴上的速度，并继续行进剩余距离。"
 
-#: ../../modules/move.md:286 49cbb89e9b3d4dcda6f08f9b95741800
+#: ../../../modules/move.md:286 ec9c4341c92f454e8b2b822025fef101
 msgid "*`#bs.move:callback/slide`*"
-msgstr ""
+msgstr "*`#bs.move:callback/slide`*"
 
-#: ../../modules/move.md:294 f908da25ccd94e568969853bdedde6b0
+#: ../../../modules/move.md:294 9d617d098ed44d18aa50c63b44b858f8
 msgid ""
 "To simplify the creation of these behaviors, there's no need to handle a "
 "local velocity directly. The vector is automatically converted before and"
 " after the collision resolution. If you need help with custom collisions,"
 " you can ask us on our [discord server](https://discord.gg/MkXytNjmBt)!"
-msgstr ""
+msgstr "为了简化这些行为的创建，无需直接处理局部速度。向量在碰撞处理前后会自动转换。如果你需要有关自定义碰撞的帮助，可以在我们的 [Discord 服务器](https://discord.gg/MkXytNjmBt)上询问！"
 
-#: ../../_templates/comments.md:4 31f3446b41ab4340aa30d406323115c7
+#: ../../../_templates/comments.md:4 2d4d14fa25b945ea98718336799d3b13
 msgid "**💬 Did it help you?**"
-msgstr ""
+msgstr "**💬 这对您有帮助吗？**"
 
-#: ../../_templates/comments.md:6 b2b8b9a8a2184788b8dfb3eeef912115
+#: ../../../_templates/comments.md:6 6eb989621d6144839f21047969b679de
 msgid "Feel free to leave your questions and feedback below!"
-msgstr ""
-
+msgstr "欢迎在下方留下您的问题和反馈！"

@@ -1,29 +1,27 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2025, Gunivers
-# This file is distributed under the same license as the Bookshelf package.
+# Translations template for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Bookshelf \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-05-28 11:19+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: zh_CN\n"
-"Language-Team: zh_CN <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../special-thanks.md:5 f18af91375124b6f85d2b00876d7d967
+#: ../../../special-thanks.md:5 e5045ed699624578a8ca34989037d005
 msgid "❤️ Special Thanks"
 msgstr ""
 
-#: ../../special-thanks.md:7 13f73439ab02458c81b481694b307671
+#: ../../../special-thanks.md:7 5026dbdffcc849f3aeaee7df35c490d1
 msgid ""
 "Bookshelf is a collaborative project, made possible by the dedication and"
 " contributions of numerous individuals. We extend special thanks to those"
@@ -31,81 +29,84 @@ msgid ""
 " would not be what it is today."
 msgstr ""
 
-#: ../../special-thanks.md:11 4905293bb83f413a9ed4a555d1f960d9
+#: ../../../special-thanks.md:11 71c860e2251546e09b35d1b480b76c0a
 msgid "🌟 Direct Contributors"
 msgstr ""
 
-#: ../../special-thanks.md:16 33576eecbd874f57a8a438c7bab6a8e8
+#: ../../../special-thanks.md:16 ff137e2f2563483eaf2d6dad638e180e
 msgid "Vincent Foriel (aka Leirof)"
 msgstr ""
 
-#: ../../special-thanks.md:29 42a58b1654284c839bd172791a032774
+#: ../../../special-thanks.md:29 e6c8a335cae04ab3b8cbeaa54a1dc663
 msgid "Creator of the original Gunivers Libs, and contributor of Bookshelf."
 msgstr ""
 
-#: ../../special-thanks.md:32 86f37f91bce64450adc327ba5e62b793
+#: ../../../special-thanks.md:32 0a51ca927130445fb375ec7712276cb4
 msgid "Aksiome"
 msgstr ""
 
-#: ../../special-thanks.md:45 63515984b46744fbb8b111a1e3d696ee
+#: ../../../special-thanks.md:45 c00b5d2bcb854d0fbcaa26b29d62277f
 msgid "Contributor of the last version of Bookshelf, and current maintainer."
 msgstr ""
 
-#: ../../special-thanks.md:48 7e3eddb55a274c669897c2e5d2967839
+#: ../../../special-thanks.md:48 c031559416ef4040b7720af4df078062
 msgid "Théo Giraudet (aka Oromis)"
 msgstr ""
 
-#: ../../special-thanks.md:61 919e02052a604d65a2a62e80d9302bd3
+#: ../../../special-thanks.md:61 b6a8e7238cf8461d992c88432c8bdc48
 msgid "Contributor of the original Gunivers Libs and Bookshelf."
 msgstr ""
 
-#: ../../special-thanks.md:64 4018d1f01d314da09c9d9333b910e3b7
+#: ../../../special-thanks.md:64 7d9c149a180646a4876f6fcfd9c72d32
 msgid "KubbyDev"
 msgstr ""
 
-#: ../../special-thanks.md:76 96edc0d97fc84d52a1e960767b0fd775
+#: ../../../special-thanks.md:76 3ddc98f7428044229bb48b229f5bd692
 msgid "Contributor of the original Gunivers Libs."
 msgstr ""
 
-#: ../../special-thanks.md:79 702c353b9ba7411da3bdebd2f8fcd06f
+#: ../../../special-thanks.md:79 5111661f3ffd4df3845b1941fb264927
 msgid "✨ Other Contributors"
 msgstr ""
 
-#: ../../special-thanks.md:83 d3189caeb4ff4f05b8c904e6476691d8
+#: ../../../special-thanks.md:83 a2b4d83c0c574a7b959f2793c1c38cf4
 msgid "Lukas Scheuerle (aka Plagiatus)"
 msgstr ""
 
-#: ../../special-thanks.md:96 ae64effad42c499bb518e445a05b1892
+#: ../../../special-thanks.md:96 c01b619ade42472e927a91c4928f9f90
 msgid "Main developer of the Bookshelf Manager."
 msgstr ""
 
-#: ../../special-thanks.md:98 59ef1738c0a64cee942bb50b7dee9501
+#: ../../../special-thanks.md:98 e43f27c256fb4fe48ad740775076d879
 msgid "Charles P. (aka Aeris)"
 msgstr ""
 
-#: ../../special-thanks.md:111 56d7ad5f33c443569969cc34ecb098a7
+#: ../../../special-thanks.md:111 38e67869f35e4db68abc4a605138c0b8
 msgid "Sysadmin and legal referent."
 msgstr ""
 
-#: ../../special-thanks.md:113 d093e35f067846ef94387b9e6243a132
+#: ../../../special-thanks.md:113 d09d50b6c8574347bbb34ac62015cac6
 msgid "Ultimatech"
 msgstr ""
 
-#: ../../special-thanks.md:126 41b4fcc24d924a15ae702b096cae0b59
+#: ../../../special-thanks.md:126 1db24ee028e54784aac5b45c68af4c57
 msgid "Creator of the Bookshelf logo."
 msgstr ""
 
-#: ../../special-thanks.md:130 a5f0c51e06c746ba9b186ff041373281
+#: ../../../special-thanks.md:130 faf6844704b74987a30a1c70dd0c48e1
 msgid "See all contributors"
 msgstr ""
 
-#: ../../special-thanks.md:140 8363d6f0a12145c883ea27eb2342f923
+#: ../../../special-thanks.md:140 5af8c3d8441248f0b58aa2dde5f3fdd1
 msgid "🫶 Acknowledgements"
 msgstr ""
 
-#: ../../special-thanks.md:142 db0a9089318a401898694ca17961b66b
+#: ../../../special-thanks.md:142 845e14d8958647ecb7b592f64f87381d
 msgid ""
 "This website uses the Tossface font, a freely available typeface designed"
 " and provided by the [Toss Team](https://toss.im)."
 msgstr ""
+
+#~ msgid "🖥️ Direct Contributors"
+#~ msgstr ""
 

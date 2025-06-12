@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,63 +19,63 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../contribute/debug-tools.md:1 edf50ae3f8dc467f96f8f6fc50ec43e8
+#: ../../../contribute/debug-tools.md:1 65a6ddbc2ef149ce956cf793e12dccd4
 msgid "🕵️ Debug Tools"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:3 71903a02286b4fe381181d2f71960841
+#: ../../../contribute/debug-tools.md:3 70bc13ad18334558a4eedb99aec59b99
 msgid ""
 "Debugging is a fundamental aspect of software development. Bookshelf "
 "provides tools to help identify and resolve issues effectively."
 msgstr ""
 
-#: ../../contribute/debug-tools.md:7 49bcdb43d7da472f85083f0b59e554a7
+#: ../../../contribute/debug-tools.md:7 3868ad1552094f459339ffda4d06198c
 msgid "🧪 Unit Tests"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:9 37d67873e40e40e59f955ee44ee8cd73
+#: ../../../contribute/debug-tools.md:9 7d86d67f2b8c40b9b79aa168a1ec2986
 msgid ""
 "Tests are essential for ensuring code correctness and preventing future "
 "bugs. This project uses Misode's Minecraft Fabric mod, "
 "[PackTest](https://github.com/misode/packtest), for testing."
 msgstr ""
 
-#: ../../contribute/debug-tools.md:11 dd477e58b65e4d0d9a9102291aaff2a0
+#: ../../../contribute/debug-tools.md:11 723dd9c2f5174a9bbd4c0385b9ef874b
 msgid "⚙️ Running Tests"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:13 87f4fb1d7ed64df6984fba9fd8c72649
+#: ../../../contribute/debug-tools.md:13 d9b9d9d430d64fe0bbcdb8d2a0963980
 msgid "To run the tests, you have two options:"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:15 888c055fcc9e4f5f96a24ce6f4a254db
+#: ../../../contribute/debug-tools.md:15 d6b8877219914a2e95c2e7da03357301
 msgid ""
 "**Headless Mode**: We provide a simple command `pdm run modules test` "
 "that allows you to run the tests headlessly, without having to open the "
 "game"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:16 b30c5484318948e18aa6e61bcbad8eac
+#: ../../../contribute/debug-tools.md:16 c418d8cabdf045179e8f057b1cba6562
 msgid ""
 "**In-Game**: Download and install the Minecraft Fabric mod. Once that's "
 "done, you can run the tests using the test command in Minecraft"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:18 8a41c9f67806486ab4c072a881521013
+#: ../../../contribute/debug-tools.md:18 83ac146eaabf493192085ad1fcb6fade
 msgid "Java Required"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:20 f29d1ed2d3674127b2b35800a281c412
+#: ../../../contribute/debug-tools.md:20 cd691634a55442dd975478017bb12cd0
 msgid ""
 "Ensure that Java is installed on your system, as it is required for the "
 "command to work."
 msgstr ""
 
-#: ../../contribute/debug-tools.md:23 2880a86476b045de839838504a834390
+#: ../../../contribute/debug-tools.md:23 1df56f307b374458b7e7ab0ed2d17a04
 msgid "✍️ Writing Tests"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:25 7767abca1af04fbc94261202f4aae943
+#: ../../../contribute/debug-tools.md:25 7436d11538504272b842f17ac4628098
 msgid ""
 "Each test is a `.mcfunction` file inside the `test` folder. When writing "
 "tests, make sure to clearly define what you are testing and what the "
@@ -83,239 +83,239 @@ msgid ""
 "ensure your code can handle all possible inputs."
 msgstr ""
 
-#: ../../contribute/debug-tools.md:28 30d714bdea8d45458122767b68581980
+#: ../../../contribute/debug-tools.md:28 73a398a1fcd74f1fbfdfb521d3bc828e
 msgid "🛠️ Custom Commands"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:30 440e377a9646425cbb788e47f3280376
+#: ../../../contribute/debug-tools.md:30 75df65b32fae46408ce831e7101213d1
 msgid ""
 "PackTest offers a variety of commands to control test flow, validate "
 "conditions, and interact with Minecraft's environment:"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:32 da79d871338f4ddda6ca935389a0b469
+#: ../../../contribute/debug-tools.md:32 eed34df1147e4609b4cabf9710de8e1c
 msgid "**Test Flow Commands**:"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:33 af4a53c18ff447bd9577964f13ef0b74
+#: ../../../contribute/debug-tools.md:33 cc805062ef59460d80e4ef9ba1c86799
 msgid ""
 "`fail [<text>]`: Immediately fails the current test and logs an optional "
 "message"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:34 b359fe99f3a24a7cbc2daa0e2550c9e6
+#: ../../../contribute/debug-tools.md:34 2a613463e47a464eacc8ad75f7a741ae
 msgid "`succeed`: Immediately passes the current test"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:35 5bd2b2a95df84352ab187ec20d1cc15f
+#: ../../../contribute/debug-tools.md:35 e72662e93ed8455488f72d3ba2a5482f
 msgid "`assert <condition>`: Fails the test if the condition is false"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:36 01a0fb90fb094cba8b6f43dd9ed8046a
+#: ../../../contribute/debug-tools.md:36 caac4a12f08143ff929cd930abbe3332
 msgid "`assert not <condition>`: Fails the test if the condition is true"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:37 2975f13f541d4307a5f030f53d2792a7
+#: ../../../contribute/debug-tools.md:37 c922496945bb4ac68af0cb12471470cd
 msgid ""
 "`await <condition>`: Continuously checks a condition until it succeeds or"
 " times out"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:38 428c32129ef94747885d083007c62102
+#: ../../../contribute/debug-tools.md:38 177cb52c19ad40d280ec5759d5b8b3b9
 msgid "`await not <condition>`: Waits until the condition becomes false"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:39 f1d2247f212448699b1d4288a6c054e6
+#: ../../../contribute/debug-tools.md:39 b5160f9480ad43078bb125e376897bdc
 msgid "`await delay <time>`: Pauses the test for a specified duration"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:41 4e2c3b291e344064a7a3ab28fba8f367
+#: ../../../contribute/debug-tools.md:41 cbb523e2299d45609b2d098b256d9411
 msgid "**Condition Types**:"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:42 f240f991562c44b6970bf3e6e621fcfd
+#: ../../../contribute/debug-tools.md:42 b34135ed67c146f5b5d380fd147521f3
 msgid ""
 "`block <pos> <block>`: Checks if a block at the specified position "
 "matches the given block"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:43 fdecdb17a81341c899de5e89d59c0dc6
+#: ../../../contribute/debug-tools.md:43 8c0c3ee6df2e434fb4ca3d8ff50d8612
 msgid "`data <path>`: Verifies NBT data using standard Minecraft data syntax"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:44 aebbb03c14f5463e9a20863da10f447f
+#: ../../../contribute/debug-tools.md:44 1cac26455a284d8abcb5446c7387762f
 msgid ""
 "`entity <selector>`: Validates if entities match a selector (works beyond"
 " test boundaries)"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:45 1228a09ecddc4a8bab0e87b77d0affdb
+#: ../../../contribute/debug-tools.md:45 0a279ba5d3cc4e6eac7aa4edf5e0f22a
 msgid "`predicate <predicate>`: Executes a predicate in the data pack"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:46 96b3999b470e4c9c96b4582206695121
+#: ../../../contribute/debug-tools.md:46 2e8924ed85e94981b8c964f26d909761
 msgid "`score <target>`: Compares scores using Minecraft's score-based conditions"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:47 87d28d02abac491a8c9ab3720a97555e
+#: ../../../contribute/debug-tools.md:47 ee7660842879410bb96ee57a6bb97326
 msgid ""
 "`chat <pattern> [<receivers>]`: Matches chat messages against a regex "
 "pattern"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:49 6c453b0289b04acfb17ff3ca311cfe81
+#: ../../../contribute/debug-tools.md:49 41a240565cf848f4a690e0870e98b6a4
 msgid "🧍 Player Dummies"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:51 add40f21e4ca4cfabdc480115be9147f
+#: ../../../contribute/debug-tools.md:51 2a3bb6e91d7f4b46a4b33bee8f688f3f
 msgid ""
 "PackTest allows you to spawn and control \"dummies,\" simulated players "
 "for testing:"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:53 76bfbe417caf434da1de4dc06fa98f2f
+#: ../../../contribute/debug-tools.md:53 eb2907b63b3348f8a10c938ec11e2e90
 msgid "`dummy <name> spawn`: Spawns a new dummy"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:54 74cec5ab4e984363a57948620afb5a18
+#: ../../../contribute/debug-tools.md:54 6fbfe958277146ca847214d5e4ea55be
 msgid "`dummy <name> respawn`: Respawns the dummy after it has been killed"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:55 dd42cc1c9ba64deeab2ace1b2f57e59d
+#: ../../../contribute/debug-tools.md:55 8b829dd787754b9685c8d76f0f9053d9
 msgid "`dummy <name> leave`: Makes the dummy leave the server"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:56 2650eceed49f4ea5b31bff9f5270d8d8
+#: ../../../contribute/debug-tools.md:56 39526bad585e4439a28fd7db5b6e5f21
 msgid "`dummy <name> jump`: Makes the dummy jump"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:57 a35d9196d2fe437e9ec0468c1f7f2f50
+#: ../../../contribute/debug-tools.md:57 6313245d24604c0595c90a93bf689f7a
 msgid ""
 "`dummy <name> sneak [true|false]`: Makes the dummy hold shift or un-shift"
 " (not the same as currently crouching)"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:58 cb3ffee4a6794c87b442ce825b4d5cf5
+#: ../../../contribute/debug-tools.md:58 929bc52143994c60854a3c5c5154918f
 msgid "`dummy <name> sprint [true|false]`: Makes the dummy sprint or un-sprint"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:59 db72ca5d99f3410cb59450ccf1002138
+#: ../../../contribute/debug-tools.md:59 30d760ca2cb9457b95d377601c1adb49
 msgid ""
 "`dummy <name> drop [all]`: Makes the dummy drop the current mainhand, "
 "either one item or the entire stack"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:60 4b0fdf7071264092a50f565b20d455db
+#: ../../../contribute/debug-tools.md:60 1c8e564bb7494c1cac22a580c93eb7c1
 msgid "`dummy <name> swap`: Makes the dummy swap its mainhand and offhand"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:61 ddc8954b03704a4599167d77aaee2de7
+#: ../../../contribute/debug-tools.md:61 ea3de16a9add4cfbb3c1fd943d8b7c1b
 msgid "`dummy <name> selectslot`: Makes the dummy select a different hotbar slot"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:62 bc26694ef03f44b9aa2386f248353a8e
+#: ../../../contribute/debug-tools.md:62 8df98ec330c8467db3e6ae22b31258be
 msgid ""
 "`dummy <name> use item`: Makes the dummy use its hand item, either "
 "mainhand or offhand"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:63 bd854e1dda664a38904e37277e69bb84
+#: ../../../contribute/debug-tools.md:63 a75189d42683460aadc8d82f052a708b
 msgid ""
 "`dummy <name> use block <pos> [<direction>]`: Makes the dummy use its "
 "hand item on a block position"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:64 99f9ad7ab8c44cd29e2d360678293a90
+#: ../../../contribute/debug-tools.md:64 af85a69c8ef94897bcafc3991222fba4
 msgid ""
 "`dummy <name> use entity <entity>`: Makes the dummy use its hand item on "
 "an entity"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:65 fbb39bffa3b84521a8b309662a71a27c
+#: ../../../contribute/debug-tools.md:65 d7f3c1e2a5f64fd086c42430a5f2b226
 msgid ""
 "`dummy <name> attack <entity>`: Makes the dummy attack an entity with its"
 " mainhand"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:66 0a46e73c2d7341cea58ae3e2ee989963
+#: ../../../contribute/debug-tools.md:66 63d8856bf7954e18852724e3e2f35bcd
 msgid "`dummy <name> mine <pos>`: Makes the dummy mine a block"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:68 3078d5632d5142e1bbb085210c73cd55
+#: ../../../contribute/debug-tools.md:68 af4192c9da78468eb753b45d68f13a30
 msgid "📋 Test Directives"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:70 94955476a9e74ff2a01a731a5da84220
+#: ../../../contribute/debug-tools.md:70 d189bd3b1c264a199b5663a53a33a7d6
 msgid ""
 "You can customize tests using directives (special comments at the "
 "beginning of the test):"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:72 8b3a047de2c74f10bf81ba678dc8d6de
+#: ../../../contribute/debug-tools.md:72 683eb22dd8f04d87b6947c0465c9d173
 msgid ""
 "`@template`: The resource location of a structure template to use for the"
 " test, defaults to `minecraft:empty`, which is an empty 1×1×1 structure"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:73 db4651f105ad416f8392c205dcb58d31
+#: ../../../contribute/debug-tools.md:73 0567ae0319794c858d783bcf4fd0edbf
 msgid "`@timeout`: An integer specifying the timeout, defaults to `100`"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:74 b7e08b1483c04504b999eaebdd372d9a
+#: ../../../contribute/debug-tools.md:74 a6e2756e3ff3407da8a22f6c689d2107
 msgid ""
 "`@optional`: Whether this test is allowed to fail, defaults to `false`, "
 "if there is no value after the directive it is considered as `true`"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:75 30a8276e38324756a4f8ca130eb36f50
+#: ../../../contribute/debug-tools.md:75 a1ff680ce2bb4808a1cfcd68ed5cf427
 msgid ""
 "`@skyaccess`: Whether this test needs sky access, defaults to `false`, "
 "which will place barrier blocks above the test"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:76 9927e355290f4f518f3c1949eba019c1
+#: ../../../contribute/debug-tools.md:76 3f1cd9b84dcb49bab4c60ca66bb9a833
 msgid ""
 "`@dummy`: Whether to spawn a dummy at the start of the test and set `@s` "
 "to this dummy, taking a position which defaults to `~0.5 ~ ~0.5`"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:78 0e6d38de90a4461e8d50ce251183bb38
+#: ../../../contribute/debug-tools.md:78 e242fb5889c147c9bb1f26b3663feda2
 msgid "Learn more..."
 msgstr ""
 
-#: ../../contribute/debug-tools.md:81 987e9eaf316c4e2685178f0427976998
+#: ../../../contribute/debug-tools.md:81 5a9b6883918c409bbe787f4954c9ba5e
 msgid ""
 "If you need more information than this page provides, visit Misode's "
 "[repository](https://github.com/misode/packtest) for detailed guidance on"
 " writing tests."
 msgstr ""
 
-#: ../../contribute/debug-tools.md:86 252d031d6ae3465e9ddc23bcde7cf543
+#: ../../../contribute/debug-tools.md:86 0d390b3319c94366ab0075de36c2991c
 msgid "📦 Modules"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:88 d8acf18d3640493b87c65e1a1f9421af
+#: ../../../contribute/debug-tools.md:88 8ac7c1cbd16f4d76856ab93f1ceb505b
 msgid ""
 "Bookshelf includes a variety of modules designed to enhance your "
 "development experience."
 msgstr ""
 
-#: ../../contribute/debug-tools.md:90 9aafbb29388f4ce787efea971ee255a1
+#: ../../../contribute/debug-tools.md:90 ff27a4866cf043a7b97b0349c02004d2
 msgid "📄 Logging"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:92 de560b6de30843d1888691c4ccb7f12a
+#: ../../../contribute/debug-tools.md:92 2978331f8c5b421294561bd061dd8a3e
 msgid ""
 "Centralizes and streamlines log management, making it easier to monitor "
 "and troubleshoot your project. For more details, refer to the [log module"
 " documentation](project:../modules/log.md)."
 msgstr ""
 
-#: ../../contribute/debug-tools.md:94 cc3339661c3147f5b4fef7f610183718
+#: ../../../contribute/debug-tools.md:94 d504ab8472d34061ad15757a889abac8
 msgid "🔬 Var Dumping"
 msgstr ""
 
-#: ../../contribute/debug-tools.md:96 4b45d72bda4f483587566baa0208972a
+#: ../../../contribute/debug-tools.md:96 c5ff29b27b5b4f7c97f4f01d248080df
 msgid ""
 "Provides an easy way to display scores or storage values at any given "
 "time, helping with debugging and tracking. For more details, refer to the"

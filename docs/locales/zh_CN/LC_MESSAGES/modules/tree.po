@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,271 +19,270 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/tree.md:1 44c38408af184322a79ab20b08566934
+#: ../../../modules/tree.md:1 e4b1173f8f7c45c7b278a86271354603
 msgid "🌳 Tree"
-msgstr ""
+msgstr "🌳 Tree"
 
-#: ../../modules/tree.md:3 f0feec366d1a423785b75181c4bc3179
+#: ../../../modules/tree.md:3 fe1cb5933185455fbf77990fb41f887d
 msgid "**`#bs.tree:help`**"
-msgstr ""
+msgstr "**`#bs.tree:help`**"
 
-#: ../../modules/tree.md:5 b1fa367ec3fb4726b9ba4042a56041b8
+#: ../../../modules/tree.md:5 fe539b401b2d489d9c864285032edce9
 msgid "Simplicity meets utility in this bank of trees."
-msgstr ""
+msgstr "在这个树库中，简约与实用完美结合。"
 
-#: ../../modules/tree.md:9 1235e20579fd452e85af85af66780b09
+#: ../../../modules/tree.md:9 3dfa0284da3942af9f3dbfc821ccdd3a
 msgid "🗿 Structures"
-msgstr ""
+msgstr "🗿 结构"
 
-#: ../../modules/tree.md:11 ef6aced21f5c4477b460f8a7bf4a4bdb
+#: ../../../modules/tree.md:11 472105626b484eaa8324b49591267ba7
 msgid "You can find below below all structures available in this module."
-msgstr ""
+msgstr "您可以在下方找到此模块中的所有可用结构。"
 
-#: ../../modules/tree.md:15 77fda47fc6d4433b86268a730fbec9fa
+#: ../../../modules/tree.md:15 82e2dad63d634b1e82c75af945b1cdd1
 msgid "Birch"
-msgstr ""
+msgstr "白桦"
 
-#: ../../modules/tree.md:28 69a67296f277466bb430d28fc49bb513
+#: ../../../modules/tree.md:28 7b6027d7a57a4daa864e19acd1af629f
 msgid "`bs.tree:birch_1`"
-msgstr ""
+msgstr "`bs.tree:birch_1`"
 
-#: ../../modules/tree.md:42 ffec7d1246b145e6aeb58734208b7608
+#: ../../../modules/tree.md:42 6768cc8d2433445f8c4468e715e76a2c
 msgid "`bs.tree:birch_2`"
-msgstr ""
+msgstr "`bs.tree:birch_2`"
 
-#: ../../modules/tree.md:56 1db965a05b0a4dcf9d10466d83b25025
+#: ../../../modules/tree.md:56 50712c879d99481fa2d30baf04447fd2
 msgid "`bs.tree:birch_3`"
-msgstr ""
+msgstr "`bs.tree:birch_3`"
 
-#: ../../modules/tree.md:70 aef00961e26c42fcb901cd983861b6b5
+#: ../../../modules/tree.md:70 216228ab6ddf410a81de60655f8fffa4
 msgid "`bs.tree:birch_4`"
-msgstr ""
+msgstr "`bs.tree:birch_4`"
 
-#: ../../modules/tree.md:84 6bbd676003f940aea9f1fe6674db3eef
+#: ../../../modules/tree.md:84 3c1af2f20a8346d8ad1459b1af9fe96a
 msgid "`bs.tree:birch_5`"
-msgstr ""
+msgstr "`bs.tree:birch_5`"
 
-#: ../../modules/tree.md:93 fa23753e028a4c9fa2f6c9416045ea90
+#: ../../../modules/tree.md:93 03657beb238a47dca818ba084d677718
 msgid "Cypress"
-msgstr ""
+msgstr "柏树"
 
-#: ../../modules/tree.md:107 1673d9dedcfc4348a0f85328d7239eab
+#: ../../../modules/tree.md:107 64f68c7474a84c4a9267b3ba4a76dcf1
 msgid "`bs.tree:cypress_1`"
-msgstr ""
+msgstr "`bs.tree:cypress_1`"
 
-#: ../../modules/tree.md:121 1c1535a887b84c18bdaacba0eb633fbb
+#: ../../../modules/tree.md:121 68099cd4413346a2b473f047c5011bc2
 msgid "`bs.tree:cypress_2`"
-msgstr ""
+msgstr "`bs.tree:cypress_2`"
 
-#: ../../modules/tree.md:135 3b72af96e5cf41779073556e9b1b2159
+#: ../../../modules/tree.md:135 477fb676474f4f3d9440c42cd9f898fb
 msgid "`bs.tree:cypress_3`"
-msgstr ""
+msgstr "`bs.tree:cypress_3`"
 
-#: ../../modules/tree.md:149 105a77b962464848afe4a0276257db7f
+#: ../../../modules/tree.md:149 911a88bf3f894d19a0e430b0fe53e0ed
 msgid "`bs.tree:cypress_4`"
-msgstr ""
+msgstr "`bs.tree:cypress_4`"
 
-#: ../../modules/tree.md:163 5858191469c1464cb6363c842094b4f0
+#: ../../../modules/tree.md:163 c914362cd7c44ab0b95248a15446151c
 msgid "`bs.tree:cypress_5`"
-msgstr ""
+msgstr "`bs.tree:cypress_5`"
 
-#: ../../modules/tree.md:172 b59cbdf8ab20401b942ed990cb90f30f
+#: ../../../modules/tree.md:172 87719c92821f44f3b121b84d3e4c3a25
 msgid "Dark Oak"
-msgstr ""
+msgstr "深色橡木"
 
-#: ../../modules/tree.md:186 670e4e12c2a14bfdafb7f7ab00dbb475
+#: ../../../modules/tree.md:186 8d0fab242a434b6c951568368a67e729
 msgid "`bs.tree:dark_oak_1`"
-msgstr ""
+msgstr "`bs.tree:dark_oak_1`"
 
-#: ../../modules/tree.md:200 a4e0dd2b7ac243158609d0a388147909
+#: ../../../modules/tree.md:200 6b8a129ec1f84739bfec576e05300518
 msgid "`bs.tree:dark_oak_2`"
-msgstr ""
+msgstr "`bs.tree:dark_oak_2`"
 
-#: ../../modules/tree.md:214 b8a61368f5ca46ff94b8c3f3d8a4c6d1
+#: ../../../modules/tree.md:214 a291ba31d4ac42cc8ff77201855ba91e
 msgid "`bs.tree:dark_oak_3`"
-msgstr ""
+msgstr "`bs.tree:dark_oak_3`"
 
-#: ../../modules/tree.md:228 3c29db0bbe6443daaaa31d47e063e2a0
+#: ../../../modules/tree.md:228 70fbb5f197e44766b2be0d83b6edf51b
 msgid "`bs.tree:dark_oak_4`"
-msgstr ""
+msgstr "`bs.tree:dark_oak_4`"
 
-#: ../../modules/tree.md:242 fc3a5037ab1640e6a995e109d652bc06
+#: ../../../modules/tree.md:242 0baea01b44d74c939b3d733c7f2ea2f7
 msgid "`bs.tree:dark_oak_5`"
-msgstr ""
+msgstr "`bs.tree:dark_oak_5`"
 
-#: ../../modules/tree.md:251 b0bd57c1fe4c4049bd839462d94300c2
+#: ../../../modules/tree.md:251 d980186818594d409a0756d3f3278223
 msgid "Dead Spruce"
-msgstr ""
+msgstr "枯萎的云杉"
 
-#: ../../modules/tree.md:265 9cfe91cdf3cc49e8a35e076eaab80802
+#: ../../../modules/tree.md:265 9a19523a56d5495585ef8ef8deeeca85
 msgid "`bs.tree:dead_spruce_1`"
-msgstr ""
+msgstr "`bs.tree:dead_spruce_1`"
 
-#: ../../modules/tree.md:279 3f541fde1f9a4243bbc12f579662ffa3
+#: ../../../modules/tree.md:279 f369984db7e0414d9b897824960a695e
 msgid "`bs.tree:dead_spruce_2`"
-msgstr ""
+msgstr "`bs.tree:dead_spruce_2`"
 
-#: ../../modules/tree.md:293 7c643ab4b10044d296ec510ddc92f504
+#: ../../../modules/tree.md:293 cb60415537c94f899a9a13fcc64c373b
 msgid "`bs.tree:dead_spruce_3`"
-msgstr ""
+msgstr "`bs.tree:dead_spruce_3`"
 
-#: ../../modules/tree.md:307 84be596b7ba64592aa51709d1e1d131c
+#: ../../../modules/tree.md:307 84bcae00fe6f4a61b6469dc9a90df2e0
 msgid "`bs.tree:dead_spruce_4`"
-msgstr ""
+msgstr "`bs.tree:dead_spruce_4`"
 
-#: ../../modules/tree.md:321 481554ac377844029bdc499b7c696302
+#: ../../../modules/tree.md:321 77f0468827af44d597613d9c42d9de23
 msgid "`bs.tree:dead_spruce_5`"
-msgstr ""
+msgstr "`bs.tree:dead_spruce_5`"
 
-#: ../../modules/tree.md:330 3bd9f1527ca842c8960f051fa64164b6
+#: ../../../modules/tree.md:330 cc8b7524fa8f497d9ee72fa05d73cff2
 msgid "Exotic"
-msgstr ""
+msgstr "异域"
 
-#: ../../modules/tree.md:344 38649801859848d0866e4e63f7148124
+#: ../../../modules/tree.md:344 32bdf7401ba34929a0f4e059a809bac0
 msgid "`bs.tree:exotic_1`"
-msgstr ""
+msgstr "`bs.tree:exotic_1`"
 
-#: ../../modules/tree.md:358 0037a234ba3145eb9b308c4c7abe8df6
+#: ../../../modules/tree.md:358 91d8fbbb06114d4ca84eb19f8c774ece
 msgid "`bs.tree:exotic_2`"
-msgstr ""
+msgstr "`bs.tree:exotic_2`"
 
-#: ../../modules/tree.md:372 e46ad1bc381a44ec957901a2da7b13a5
+#: ../../../modules/tree.md:372 2741e3a5f3b5461a98a2626130d42ff4
 msgid "`bs.tree:exotic_3`"
-msgstr ""
+msgstr "`bs.tree:exotic_3`"
 
-#: ../../modules/tree.md:386 5d80145df6064b848c56e923a4bcedde
+#: ../../../modules/tree.md:386 8ff28260e3e54499aabdbbbc00b9d425
 msgid "`bs.tree:exotic_4`"
-msgstr ""
+msgstr "`bs.tree:exotic_4`"
 
-#: ../../modules/tree.md:400 511d00e0d874491aa33bedd15181e62b
+#: ../../../modules/tree.md:400 9c4f02e003ae4463bfe6490893d166e9
 msgid "`bs.tree:exotic_5`"
-msgstr ""
+msgstr "`bs.tree:exotic_5`"
 
-#: ../../modules/tree.md:409 0bd85addf47047468431f7a5e63bbcdc
+#: ../../../modules/tree.md:409 45e98fc16ed1421193849915b84f6619
 msgid "Fir"
-msgstr ""
+msgstr "冷杉"
 
-#: ../../modules/tree.md:423 65f3898bd34a4c5bac11e08144fef446
+#: ../../../modules/tree.md:423 ac3f4d578fb14954829fcdd92e60a437
 msgid "`bs.tree:fir_1`"
-msgstr ""
+msgstr "`bs.tree:fir_1`"
 
-#: ../../modules/tree.md:437 a7ca50b3d0ef48e6ab9fe83f3e84743c
+#: ../../../modules/tree.md:437 4bbb6457ee984f9fad726f79052c8be2
 msgid "`bs.tree:fir_2`"
-msgstr ""
+msgstr "`bs.tree:fir_2`"
 
-#: ../../modules/tree.md:451 8ad1c6402dc044cbb89a922cd10fb554
+#: ../../../modules/tree.md:451 a41b6f4188a042edbd97ab8fda28ddcf
 msgid "`bs.tree:fir_3`"
-msgstr ""
+msgstr "`bs.tree:fir_3`"
 
-#: ../../modules/tree.md:465 58795ff334174b0aad9ca418dbc779b6
+#: ../../../modules/tree.md:465 3f73e4b9e6f7411baf834e8318047235
 msgid "`bs.tree:fir_4`"
-msgstr ""
+msgstr "`bs.tree:fir_4`"
 
-#: ../../modules/tree.md:479 d2f0b71f1e4d4c408c6f36daab48c266
+#: ../../../modules/tree.md:479 37a5b058574a4eec9762c2256491f089
 msgid "`bs.tree:fir_5`"
-msgstr ""
+msgstr "`bs.tree:fir_5`"
 
-#: ../../modules/tree.md:488 c43954734b5c41489cc4f8d9d1121996
+#: ../../../modules/tree.md:488 fb6f2bc7ad5c4d68a9f0e66d7f46b79f
 msgid "Jungle"
-msgstr ""
+msgstr "丛林"
 
-#: ../../modules/tree.md:502 34251782b44a49d2a4f7e6bc8b6052e8
+#: ../../../modules/tree.md:502 b45c9f3a1d2e4a5fb085951475185255
 msgid "`bs.tree:jungle_1`"
-msgstr ""
+msgstr "`bs.tree:jungle_1`"
 
-#: ../../modules/tree.md:516 9bca6ecbe2bf48228b36f34d1471b808
+#: ../../../modules/tree.md:516 32350f8a825a4711bbe143bf9db49a6c
 msgid "`bs.tree:jungle_2`"
-msgstr ""
+msgstr "`bs.tree:jungle_2`"
 
-#: ../../modules/tree.md:530 580b9059bf4545d7927872a9c869ed14
+#: ../../../modules/tree.md:530 df3da6d097f34a18aeab682472ea61ce
 msgid "`bs.tree:jungle_3`"
-msgstr ""
+msgstr "`bs.tree:jungle_3`"
 
-#: ../../modules/tree.md:544 d85d00658534419e82af6f8fdf969776
+#: ../../../modules/tree.md:544 f0c0cdbe66df4ec4b356a26e6beb2320
 msgid "`bs.tree:jungle_4`"
-msgstr ""
+msgstr "`bs.tree:jungle_4`"
 
-#: ../../modules/tree.md:558 2647805f07a840208823df57bfe5bf9c
+#: ../../../modules/tree.md:558 c34de743da3549c299c33bc9f9b9cab8
 msgid "`bs.tree:jungle_5`"
-msgstr ""
+msgstr "`bs.tree:jungle_5`"
 
-#: ../../modules/tree.md:567 7716fdaada054d00af1f7bf3001301ff
+#: ../../../modules/tree.md:567 a7e53a315ded4f52a45f39202ad132e4
 msgid "Mushroom"
-msgstr ""
+msgstr "蘑菇"
 
-#: ../../modules/tree.md:581 ece2bce796754ff4a6d57ffd0c6bea02
+#: ../../../modules/tree.md:581 2476b6a0ee0b41d59226baa033324e2b
 msgid "`bs.tree:mushroom_1`"
-msgstr ""
+msgstr "`bs.tree:mushroom_1`"
 
-#: ../../modules/tree.md:595 7ad05e07ea46445c9dc268f9cb8dc862
+#: ../../../modules/tree.md:595 f954d389ce0a4b6eae98a1df82c2624e
 msgid "`bs.tree:mushroom_2`"
-msgstr ""
+msgstr "`bs.tree:mushroom_2`"
 
-#: ../../modules/tree.md:609 76bfc77e057a44f1bd5d5e85089eedd0
+#: ../../../modules/tree.md:609 4ea0d779058343f98783a7a623c6297b
 msgid "`bs.tree:mushroom_3`"
-msgstr ""
+msgstr "`bs.tree:mushroom_3`"
 
-#: ../../modules/tree.md:623 e340c2f57d114e4cbf5ac915e6855af5
+#: ../../../modules/tree.md:623 5dc36ff84a1b4a65beb6e6c36f124e5d
 msgid "`bs.tree:mushroom_4`"
-msgstr ""
+msgstr "`bs.tree:mushroom_4`"
 
-#: ../../modules/tree.md:637 8247da19c36c44d2bf9e2e6f0c010ae5
+#: ../../../modules/tree.md:637 4dd5d9691a28496e94ccc3470ceb4805
 msgid "`bs.tree:mushroom_5`"
-msgstr ""
+msgstr "`bs.tree:mushroom_5`"
 
-#: ../../modules/tree.md:646 9d11cda98e934bf0a142eb89e73e5940
+#: ../../../modules/tree.md:646 a8865036c1694e7f8bf5848053846676
 msgid "Oak"
-msgstr ""
+msgstr "橡木"
 
-#: ../../modules/tree.md:660 3866c4ba9bda4423b173c9640ab0e734
+#: ../../../modules/tree.md:660 3564739e20864cd0943b77e744f6de14
 msgid "`bs.tree:oak_1`"
-msgstr ""
+msgstr "`bs.tree:oak_1`"
 
-#: ../../modules/tree.md:674 fc50f76c741640fe99b5a09062697d2c
+#: ../../../modules/tree.md:674 3a7326f8168548c68163220d82eacd0b
 msgid "`bs.tree:oak_2`"
-msgstr ""
+msgstr "`bs.tree:oak_2`"
 
-#: ../../modules/tree.md:688 2f476d159c2b4825b671614e1d3c9cc0
+#: ../../../modules/tree.md:688 95249185dbd44b22a256c650efa40e7d
 msgid "`bs.tree:oak_3`"
-msgstr ""
+msgstr "`bs.tree:oak_3`"
 
-#: ../../modules/tree.md:702 9334839248334778ba36ac01a052fdca
+#: ../../../modules/tree.md:702 191ce9ede0a7439f9d04f847bb498617
 msgid "`bs.tree:oak_4`"
-msgstr ""
+msgstr "`bs.tree:oak_4`"
 
-#: ../../modules/tree.md:716 d129e64d854746a3b46ac3c215546b1b
+#: ../../../modules/tree.md:716 42a088499dbd43a4b9d26ffca9733bdc
 msgid "`bs.tree:oak_5`"
-msgstr ""
+msgstr "`bs.tree:oak_5`"
 
-#: ../../modules/tree.md:725 30cc8852fb464cfea84cffa4b73fc7c7
+#: ../../../modules/tree.md:725 72c85db1275d4dca9d8d24684d9203fe
 msgid "Palm"
-msgstr ""
+msgstr "棕榈"
 
-#: ../../modules/tree.md:738 d258390d6f6549778274e00d1f223b2c
+#: ../../../modules/tree.md:738 efb8fdbdd4b847ea91d555fe2fee023c
 msgid "`bs.tree:palm_1`"
-msgstr ""
+msgstr "`bs.tree:palm_1`"
 
-#: ../../modules/tree.md:752 e0757349a19841078b67885cbba5a397
+#: ../../../modules/tree.md:752 353c64827f6e40e797dc58cd3dbc57ff
 msgid "`bs.tree:palm_2`"
-msgstr ""
+msgstr "`bs.tree:palm_2`"
 
-#: ../../modules/tree.md:766 e30497ad3ffa48648b9b5ec5f4e42102
+#: ../../../modules/tree.md:766 60858c92500d498d86f03ad0483cefaf
 msgid "`bs.tree:palm_3`"
-msgstr ""
+msgstr "`bs.tree:palm_3`"
 
-#: ../../modules/tree.md:780 df7343e8a66c4e2b8a546db826a65be1
+#: ../../../modules/tree.md:780 0171132d8ba34d97902b5727357c09c7
 msgid "`bs.tree:palm_4`"
-msgstr ""
+msgstr "`bs.tree:palm_4`"
 
-#: ../../modules/tree.md:794 315c5b004a51439bb20a0c77ff1a3326
+#: ../../../modules/tree.md:794 ae1bb98a3aa34c12a1f2789c1d4f1f48
 msgid "`bs.tree:palm_5`"
-msgstr ""
+msgstr "`bs.tree:palm_5`"
 
-#: ../../_templates/comments.md:4 af2e55a86f0f49febf6c5e46cfa823c3
+#: ../../../_templates/comments.md:4 b972a3b084e54acd83b6704e2bf2deff
 msgid "**💬 Did it help you?**"
-msgstr ""
+msgstr "**💬 这对您有帮助吗？**"
 
-#: ../../_templates/comments.md:6 a5721b848cdf4a8ba9cbcd6d64130046
+#: ../../../_templates/comments.md:6 f4dce5859c47480e94539410d634f286
 msgid "Feel free to leave your questions and feedback below!"
-msgstr ""
-
+msgstr "欢迎在下方留下您的问题和反馈！"

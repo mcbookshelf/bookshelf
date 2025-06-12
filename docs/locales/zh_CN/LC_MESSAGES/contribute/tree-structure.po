@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,11 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../contribute/tree-structure.md:5 164ff2f0de5a4512b4f7e5aeb8a8885a
+#: ../../../contribute/tree-structure.md:5 3c37a947435341c8b6bba4182089d515
 msgid "🌳 Tree Structure"
 msgstr ""
 
-#: ../../contribute/tree-structure.md:7 a0e1b672df094c289ece523ba137ac25
+#: ../../../contribute/tree-structure.md:7 1cab4ac3743c491dac9d25c27f858015
 msgid ""
 "Bookshelf respects a certain tree structure which can be similar to Java "
 "packages, called \"modules\" in this project. The added features must "
@@ -31,51 +31,51 @@ msgid ""
 "usefulness."
 msgstr ""
 
-#: ../../contribute/tree-structure.md:16 2d47b5815044452083529d035d367864
+#: ../../../contribute/tree-structure.md:16 9db1f8c135e2455e81eb16b07ea102f2
 msgid "**Module Requirements:**"
 msgstr ""
 
-#: ../../contribute/tree-structure.md:18 df7e46b165db4673a9193af7e3617c90
+#: ../../../contribute/tree-structure.md:18 50d68742a1c143eab29190e18934e435
 msgid ""
 "Each module must include a `module.json`, as described in the [metadata "
 "page](project:metadata.md)"
 msgstr ""
 
-#: ../../contribute/tree-structure.md:20 33b9a3ac287841d79b3226099cc246b5
+#: ../../../contribute/tree-structure.md:20 58302562ce724e0e948dddd9fb795923
 msgid "Each module must also include a `pack.png` and a `README.md`"
 msgstr ""
 
-#: ../../contribute/tree-structure.md:22 75ef5881dfa94161b2f30f8e2afb5a5d
+#: ../../../contribute/tree-structure.md:22 529e71fa9bec449d9b0f244e1942fabe
 msgid ""
 "The `__load__` and `__unload__` functions are required to manage the "
 "module's loading and unloading. This includes resetting objectives, "
 "storages, and any other necessary elements"
 msgstr ""
 
-#: ../../contribute/tree-structure.md:25 6ac64bd5d1b542ff8121fc9e342de2b8
+#: ../../../contribute/tree-structure.md:25 d3a19974fa9946c5846e0ca013520486
 msgid "**Feature Requirements:**"
 msgstr ""
 
-#: ../../contribute/tree-structure.md:27 a07530f820034a2cbff640dfa84c1937
+#: ../../../contribute/tree-structure.md:27 b8c52f70fb744299b952c877f324cff0
 msgid ""
 "Each feature function should have a dedicated function tag that declares "
 "metadata, as detailed in the [metadata page](project:metadata.md)"
 msgstr ""
 
-#: ../../contribute/tree-structure.md:29 7c494df7fcd241cca9572bc6d6113721
+#: ../../../contribute/tree-structure.md:29 b563b22ea6914a4daa785171371c9c20
 msgid ""
 "Each feature should declare metadata, as detailed in the [metadata "
 "page](project:metadata.md)"
 msgstr ""
 
-#: ../../contribute/tree-structure.md:31 1565abf915ff4e0a9262167eca464eba
+#: ../../../contribute/tree-structure.md:31 7e1c966610314072bc196916ac1779e0
 msgid ""
 "A feature is equal to a unique utility, so we should not hesitate to "
 "decompose its features in order to make it more readable and to promote "
 "reusability"
 msgstr ""
 
-#: ../../contribute/tree-structure.md:33 97c582614c2744d2a556b93327b568b2
+#: ../../../contribute/tree-structure.md:33 462add9037404869af045bf1e48f2c34
 msgid ""
 "In addition to these few constraints, contributors are free to organize "
 "their files as they wish as long as it remains coherent and respects the "

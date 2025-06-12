@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,111 +19,110 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../contribute/definitions.md:5 35b049f3df194dce96b6fd1eef3260bb
+#: ../../../contribute/definitions.md:5 6ade4ae4bde041efb2a554a34eff54aa
 msgid "📘 Definitions"
-msgstr ""
+msgstr "📘 定义"
 
-#: ../../contribute/definitions.md:7 49cfb4305ab04275b16d0519137013c1
+#: ../../../contribute/definitions.md:7 851b1684b1a4436e9e7c5eab2de5c77a
 msgid ""
 "In order to speak with the same vocabulary, here is some words that have "
 "a specific meaning in this project:"
 msgstr ""
 
-#: ../../_templates/definitions.md:2 c6351b7bc50346b78c062f826ddc14e3
+#: ../../../_templates/definitions.md:2 917d79961c014c50b3be8ca4e369eba2
 msgid "General Concepts"
 msgstr ""
 
-#: ../../_templates/definitions.md:3 0188c28f5f1d472da13261d3fe21e1a5
+#: ../../../_templates/definitions.md:3 94e0a890a5464835b78011afe296bdaa
 msgid "**Bundle**"
 msgstr ""
 
-#: ../../_templates/definitions.md:4 7b367d395eaa45c3b306edf2970c8da1
+#: ../../../_templates/definitions.md:4 f46144dda578471a9be43ab66f71e43b
 msgid "A set of modules packaged together for distribution."
 msgstr ""
 
-#: ../../_templates/definitions.md:5 2fc21b5f0be14ed6a8a6505edcf0c35b
+#: ../../../_templates/definitions.md:5 863bd82ae3414e1aa78186b1531d3d9f
 msgid "**Dependency**"
 msgstr ""
 
-#: ../../_templates/definitions.md:6 d82f7b07d19d4f6ea75965a095d8c9e3
+#: ../../../_templates/definitions.md:6 4b61b5218528444c8a1a04ccd80083e4
 msgid ""
 "A module that another module relies on to function properly. It must be "
 "loaded for the dependent module to work."
 msgstr ""
 
-#: ../../_templates/definitions.md:7 452060a22dae417c854001ae644f92c9
+#: ../../../_templates/definitions.md:7 86bdefd8367d4a85a8abc29d4bd78724
 msgid "**Feature**"
 msgstr ""
 
-#: ../../_templates/definitions.md:8 0cc466c1b17a4ceebc6b67095e90d303
+#: ../../../_templates/definitions.md:8 ec63f030678a44b691736045493c6402
 msgid ""
 "A user-facing element designed to accomplish a task. Features are often "
 "represented as function tags, but can also include loot tables, "
 "structures, predicates, and more."
 msgstr ""
 
-#: ../../_templates/definitions.md:9 dfe110a7658c438fa5be9b8574121173
+#: ../../../_templates/definitions.md:9 9b8d1af8b6e740f980ea37dca9dc9642
 msgid "**Module**"
 msgstr ""
 
-#: ../../_templates/definitions.md:10 d7bd18d238f14c7fa767942dc23713e0
+#: ../../../_templates/definitions.md:10 dab9fdc43184488abcdf3e58aa671511
 msgid ""
 "A collection of related features within a namespace, serving a specific "
 "purpose."
 msgstr ""
 
-#: ../../_templates/definitions.md:11 f995eb5996eb41c08ddfbd576bb4497d
+#: ../../../_templates/definitions.md:11 31353501b6884c3283d0ce4e3cdfa29a
 msgid "**Weak Dependency**"
 msgstr ""
 
-#: ../../_templates/definitions.md:12 6f6fa13dd1364a50aeec21be492ce9ba
+#: ../../../_templates/definitions.md:12 cdff1222dbd44e3e9d230cdcd7b0145a
 msgid ""
 "An optional dependency that enhances functionality if present, but is not"
 " essential for the main module to function correctly."
 msgstr ""
 
-#: ../../_templates/definitions.md:15 af25e9cd13954d5986786eefb2c749fd
+#: ../../../_templates/definitions.md:15 a694d480d83e4a7d9689d2f993d60770
 msgid "Special Arguments"
 msgstr ""
 
-#: ../../_templates/definitions.md:16 83605ad777844d1789b475d2f45ccd80
+#: ../../../_templates/definitions.md:16 b4c4a144ed4d49edbbdf89ba861b20b2
 msgid "**`on_*`**"
 msgstr ""
 
-#: ../../_templates/definitions.md:17 fe276a7a469743cf9bfc8dbc67c6c573
+#: ../../../_templates/definitions.md:17 e01aaf22cdae44c7a8baf55583cefd35
 msgid ""
 "Specifies a command to be executed by a feature when a particular event "
 "occurs."
 msgstr ""
 
-#: ../../_templates/definitions.md:18 2f1f711e1fac4bbc8ffd80783c44b37e
+#: ../../../_templates/definitions.md:18 379ff2ac62e348ea9e279895964a2dec
 msgid "**`run`**"
 msgstr ""
 
-#: ../../_templates/definitions.md:19 de862acb088e48d283f5faf7a85f8002
+#: ../../../_templates/definitions.md:19 b4c4692dbce5442dac64ca6134d59ace
 msgid "Specifies a command to be executed by a feature, often immediately."
 msgstr ""
 
-#: ../../_templates/definitions.md:20 c4db9b9c368c42b881ff32b8d4aeb0f8
+#: ../../../_templates/definitions.md:20 a6b8511e408c493cacb03136536f8095
 msgid "**`with`**"
 msgstr ""
 
-#: ../../_templates/definitions.md:21 4f5f093a9705400484a1a4add87be6ae
+#: ../../../_templates/definitions.md:21 024ea751aa0248baa0a81b5a2e517ffb
 msgid "Specifies optional arguments."
 msgstr ""
 
-#: ../../_templates/definitions.md:24 ffe0a8a9d19d4b0d95a670f1eec95902
+#: ../../../_templates/definitions.md:24 55fec203477748f18131bd10e8e84b1b
 msgid "Special Functions"
 msgstr ""
 
-#: ../../_templates/definitions.md:25 b00c2fa053b0420cab92514ed52c184d
+#: ../../../_templates/definitions.md:25 223db7140acf4f1bac64fdde81a3969f
 msgid "**`*_ata`**"
 msgstr ""
 
-#: ../../_templates/definitions.md:26 0e299f7e2b0f4773b55c3fbac9d0cb50
+#: ../../../_templates/definitions.md:26 396c1a70551946eb90551aba4ba44727
 msgid ""
 "Shortened from \"as to at.\" These functions take two positions: one "
 "given through a positional argument (e.g., `positioned`, `at`), and the "
 "other from the executor's position."
 msgstr ""
-
