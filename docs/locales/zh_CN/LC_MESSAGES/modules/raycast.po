@@ -118,7 +118,6 @@ msgid ""
 "**Collision Shape**: Defines the physical boundaries of a block that "
 "entities cannot pass through. It determines where an entity will stop "
 "when moving towards the block."
-msgstr ""
 msgstr "**碰撞形状（collision_shape）**：实体无法穿过的方块的物理边界，决定实体在靠近方块时会被阻挡在什么位置。"
 
 #: ../../../modules/raycast.md:80 a2b2e131b633492f9f00792232449125
@@ -127,12 +126,11 @@ msgid ""
 "with or break the block. This includes actions such as right-clicking to "
 "open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have"
 " an interaction shape but no collision, such as crops or scaffolding."
-msgstr ""
 msgstr "**交互形状（interaction_shape）**：玩家可以与方块交互或破坏的区域。这包括右键打开 GUI（如箱子、熔炉）或采掘方块等操作。有些方块有交互形状但没有碰撞，比如农作物或脚手架。"
 
 #: ../../../modules/raycast.md:83 98d4671460d84855aa03a794d24845b4
 msgid "*Example: Cast a ray from your eyes and detect any collisions:*"
-msgstr "*示例：从你的视线发射射线并检测任何碰撞：*"
+msgstr "*示例：从你的视线发射射线并检测是否有碰撞：*"
 
 #: ../../../modules/raycast.md:93 e9decf1d6e814f22bb1e37d8493b73bb
 msgid "**Credits**: Aksiome"
