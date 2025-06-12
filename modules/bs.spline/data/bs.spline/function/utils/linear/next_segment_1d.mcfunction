@@ -13,5 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute on target unless entity @s[tag=bs.interaction.source] run return fail
-return 1
+data modify storage bs:lambda spline.point set value [0d]
+execute store result score #x bs.ctx run scoreboard players operation #t bs.ctx %= 1000 bs.const
+
+execute store result score #a bs.ctx run data get storage bs:ctx _.points[0][0] 1000
+execute store result score #b bs.ctx run data get storage bs:ctx _.points[1][0] 1000
+
+# Compute Lerp coefficients
+execute store result score #c bs.ctx run scoreboard players set #d bs.ctx 0
+scoreboard players operation #b bs.ctx -= #a bs.ctx
+
+data remove storage bs:ctx _.points[0]

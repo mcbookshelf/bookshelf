@@ -13,11 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# function called when a left click is done on a left click listener.
-tag @s add bs.interaction.source
-execute as @e[type=minecraft:interaction,tag=bs.interaction.listen_left_click,distance=..24] \
-  if function bs.interaction:on_event/left_click/is_attacker \
-  run function bs.interaction:on_event/left_click/as_target
-tag @s remove bs.interaction.source
+# if spread is 0, should output the mean
+function #bs.random:normal {mean:10,spread:0}
+assert score $random.normal bs.out matches 10
 
-advancement revoke @s only bs.interaction:left_click
+# output should vary
+execute store result score #0 bs.ctx run function #bs.random:normal {mean:0,spread:1}
+execute store result score #1 bs.ctx run function #bs.random:normal {mean:10,spread:2}
+execute store result score #2 bs.ctx run function #bs.random:normal {mean:50,spread:5}
+execute if score #0 bs.ctx = #1 bs.ctx if score #1 bs.ctx = #2 bs.ctx run fail "The normal distribution should not always return the same value"

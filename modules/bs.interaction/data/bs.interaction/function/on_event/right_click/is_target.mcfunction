@@ -13,11 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# function called when a left click is done on a left click listener.
-tag @s add bs.interaction.source
-execute as @e[type=minecraft:interaction,tag=bs.interaction.listen_left_click,distance=..24] \
-  if function bs.interaction:on_event/left_click/is_attacker \
-  run function bs.interaction:on_event/left_click/as_target
-tag @s remove bs.interaction.source
-
-advancement revoke @s only bs.interaction:left_click
+execute on target if entity @s[tag=bs.interaction.source] run return 1
+return fail
