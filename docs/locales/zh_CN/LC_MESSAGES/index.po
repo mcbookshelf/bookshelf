@@ -24,7 +24,6 @@ msgid "Bookshelf"
 msgstr "Bookshelf"
 
 #: ../../../index.md:22 acc0ac9ccd564b52abbe155071da4df9
-#, fuzzy
 msgid "🕵️ What is Bookshelf?"
 msgstr "🕵️‍♂️ Bookshelf是什么？"
 
@@ -39,7 +38,7 @@ msgstr ""
 
 #: ../../../index.md:31 a8ae77db886e46aeaed588276700f444
 msgid "🚀 Quickstart!"
-msgstr "🚀 快速入门！"
+msgstr "🚀 快速开始！"
 
 #: ../../../index.md:42 2fc05b0273ea4469a37f7f1caed8c4ad
 msgid "🎬 Watch trailer"
@@ -47,7 +46,7 @@ msgstr "🎬 观看预告片"
 
 #: ../../../index.md:55 9f60dfff8bf84438873d07a0a52707fa
 msgid "🌟 Featured Modules"
-msgstr "🌟 主要模块"
+msgstr "🌟 功能模块"
 
 #: ../../../_templates/featured-modules.md:5 196d342b03a04d5484163cb5f66f8000
 msgid "🧱 Block"
@@ -151,19 +150,18 @@ msgid ""
 "more information."
 msgstr "如果您想贡献，请参考[贡献文档](https://docs.mcbookshelf.dev/en/latest/contribute/index.html)以获取更多信息。"
 
-#~ msgid ""
-#~ "priority is accessibility and simplicity "
-#~ "so that anyone can understand and "
-#~ "adapt the code."
-#~ msgstr "首要目标是提高可访问性和简单性,使任何人都能理解并改编代码。"
+msgid ""
+"priority is accessibility and simplicity "
+"so that anyone can understand and "
+"adapt the code."
+msgstr "首要目标是提高可访问性和简单性，使任何人都能理解并改编代码。"
 
-#~ msgid ""
-#~ "\"Libraries make code reusable and save"
-#~ " you and others the work of "
-#~ "having to code everything from "
-#~ "scratch.\" "
-#~ msgstr "库能复用代码，帮助你和其他人避免从头开始编写所有代码。"
+msgid ""
+"\"Libraries make code reusable and save"
+" you and others the work of "
+"having to code everything from "
+"scratch.\" "
+msgstr "库能复用代码，帮助你和其他人避免从头开始编写所有代码。"
 
-#~ msgid "Keep Java Dev"
-#~ msgstr "保持 Java 开发"
-
+msgid "Keep Java Dev"
+msgstr "保持 Java 开发"

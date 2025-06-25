@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../../faq.md:1 2b9f5149b7014e549a0d5b61e5a43b96
 msgid "📋 FAQ"
-msgstr ""
+msgstr "📋 FAQ"
 
 #: ../../../faq.md:3 fe4de6833d2c460eb77dca24854572fc
 msgid "Can I use Bookshelf in my project?"
-msgstr ""
+msgstr "我可以在我的项目中使用Bookshelf吗？"
 
 #: ../../../faq.md:5 5ea1d07bca1c4c3bb7a93c3dcaee86ec
 msgid ""
@@ -35,10 +35,12 @@ msgid ""
 " free to share your creations with us to let us know how you use the "
 "library (and allow us to provide additional visibility to your project)."
 msgstr ""
+"当然可以！Bookshelf 库被设计用于各种项目。如果您能在致谢中提到 Bookshelf 和/或 Gunivers，我们将非常感激 🤗！"
+"让我们共同维护开源世界的友好氛围！此外，欢迎随时向我们分享您的作品，让我们了解您是如何使用该库的（这样我们也能为您的项目提供更多曝光机会）。"
 
 #: ../../../faq.md:7 561a12500d394e7ca66484999ab42149
 msgid "Is it compatible with other datapacks?"
-msgstr ""
+msgstr "是否兼容其他数据包？"
 
 #: ../../../faq.md:9 ce35260fb60b48eea24b6cc2d200b5f7
 msgid ""
@@ -46,14 +48,16 @@ msgid ""
 " datapacks. All Bookshelf scores, tags, and namespaces start with `bs.` "
 "and use fake players whenever possible to avoid conflicts."
 msgstr ""
+"是的！Bookshelf遵循多项约束规则，确保与大多数数据包兼容。"
+"所有Bookshelf的分数、标签和命名空间均以`bs.`开头，并在可能情况下使用伪玩家(或模拟玩家)以规避冲突。"
 
 #: ../../../faq.md:11 99d3d14fe87d49199123b01549cca88e
 msgid "Is it resource-heavy?"
-msgstr ""
+msgstr "资源占用高吗？"
 
 #: ../../../faq.md:13 5ce6939ec68c4aea8f6307de0fb79a92
 msgid "🧠 CPU Usage"
-msgstr ""
+msgstr "🧠 CPU占用"
 
 #: ../../../faq.md:15 6707c9c1e92d4f00bbfb6072cfb3aadf
 msgid ""
@@ -63,10 +67,12 @@ msgid ""
 "warnings and performance tips for functions that may be resource-"
 "intensive."
 msgstr ""
+"作为一个函数库，它本质上是一套可供调用的工具集，除非主动使用，否则不会影响CPU性能。"
+"CPU占用取决于您调用的函数及其频率。文档会对可能资源密集型的函数提供警告和性能优化建议。"
 
 #: ../../../faq.md:17 3c3b05163c18416083e4828d8bed4345
 msgid "💾 Memory Usage"
-msgstr ""
+msgstr "💾 内存占用"
 
 #: ../../../faq.md:19 2f43d5f434264e3b8751ff77ca7e0f81
 msgid ""
@@ -76,10 +82,13 @@ msgid ""
 "Furthermore, Bookshelf's modular nature enables you to select only the "
 "modules you require."
 msgstr ""
+"Minecraft在加载时会解析整个数据包，因此文件数量并不重要。"
+"指令在内存中非常轻量，即使包含大量函数也不会显著增加RAM占用。"
+"此外，Bookshelf的模块化设计使您可以仅选择所需的模块。"
 
 #: ../../../faq.md:21 b7745c3a8e5748f99e94195fe0ae3ec6
 msgid "💽 Disk Usage"
-msgstr ""
+msgstr "💽 磁盘占用"
 
 #: ../../../faq.md:23 f552873d46db4126a42c7935404723be
 msgid ""
@@ -89,10 +98,12 @@ msgid ""
 "from GitHub releases, which provide only essential files, rather than "
 "directly from the repository."
 msgstr ""
+"Bookshelf压缩为zip文件后仅有几MB大小。如果仍然关心体积，您可以选择性提取所需模块。"
+"建议从GitHub发布页下载（仅包含必需文件），而非直接从代码库下载。"
 
 #: ../../../faq.md:25 b2918b69a1f74d25a75a86475179f08b
 msgid "Are the functions optimized?"
-msgstr ""
+msgstr "函数优化如何？"
 
 #: ../../../faq.md:27 6faf2c9cab354ce995486064bcdfcdd3
 msgid ""
@@ -104,10 +115,12 @@ msgid ""
 "improvement (optimization, accessibility, or otherwise), please share "
 "them with us!"
 msgstr ""
+"Bookshelf优先考虑易用性和多功能性。虽然这可能导致某些设计在特定场景下并非最优，但符合函数库的核心目标。"
+"我们持续进行优化改进，欢迎提出优化建议和提交PR。无论是对性能、易用性或其他方面的改进想法，都请与我们分享！"
 
 #: ../../../faq.md:29 06ba5611e5824c859e5784ab5c863e07
 msgid "What about copyrights?"
-msgstr ""
+msgstr "版权问题如何处理？"
 
 #: ../../../faq.md:31 7b7356895182496c91ce51c23fc84be6
 msgid ""
@@ -118,15 +131,18 @@ msgid ""
 "2.0](https://github.com/mcbookshelf/bookshelf/blob/master/LICENSE) "
 "(Mozilla Public License 2.0)."
 msgstr ""
+"Bookshelf采用[MPL 2.0](https://github.com/mcbookshelf/bookshelf/blob/master/LICENSE)"
+"(Mozilla公共许可证2.0)授权。您可自由使用和修改它制作个人项目，并分发包含Bookshelf的地图或数据包，"
+"唯一要求是共享对源代码的任何修改。"
 
 #: ../../../faq.md:33 30dbcbf8d67c4dfab999abfc7f0e3c68
 msgid "More questions? Join us on Discord!"
-msgstr ""
+msgstr "还有疑问？加入我们的Discord社区！"
 
 #: ../../../_templates/comments.md:4 1cb32fa8978549f7921ee17e31cca842
 msgid "**💬 Did it help you?**"
-msgstr ""
+msgstr "**💬 这对您有帮助吗？**"
 
 #: ../../../_templates/comments.md:6 1a3b2663e1174f97a5bf350fb0443a6b
 msgid "Feel free to leave your questions and feedback below!"
-msgstr ""
+msgstr "欢迎在下方留下您的问题和反馈！"
