@@ -14,6 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 tag @s add bs.interaction.target
+data remove entity @s interaction
 data modify storage bs:data interaction set value []
 data modify storage bs:data interaction append from entity @s data."bs.interaction".events[{type:"right_click"}]
 execute if data storage bs:data interaction[-1] run function bs.interaction:on_event/run with storage bs:data interaction[-1]
