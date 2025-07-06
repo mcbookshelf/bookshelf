@@ -29,11 +29,11 @@ scoreboard players operation #q bs.ctx += #v bs.ctx
 # check aabb vs aabb collision
 execute \
   if score #x bs.ctx < #o bs.ctx \
-  if score #i bs.ctx >= #l bs.ctx \
+  if score #i bs.ctx > #l bs.ctx \
   if score #y bs.ctx < #p bs.ctx \
-  if score #j bs.ctx >= #m bs.ctx \
+  if score #j bs.ctx > #m bs.ctx \
   if score #z bs.ctx < #q bs.ctx \
-  if score #k bs.ctx >= #n bs.ctx \
+  if score #k bs.ctx > #n bs.ctx \
 run return 1
 
 data remove storage bs:ctx _[-1]

@@ -153,7 +153,7 @@ Since an entity's bounding box can extend across multiple blocks, this function 
 *Example: Check if a summoned cow is inside a block:*
 
 ```mcfunction
-# move to the edge of a block, then run
+# Move to the edge of a block, then run
 execute summon minecraft:cow if function #bs.hitbox:is_entity_in_blocks_collision run say I'm in the fence
 # Since the cow is bigger than the player, you should get a success
 ```
@@ -180,7 +180,7 @@ Since an entity's bounding box can extend across multiple blocks, this function 
 
 ```mcfunction
 # Move to the edge of a block, then run
-execute summon minecraft:cow if function #bs.hitbox:is_entity_in_blocks_collision run say I'm in the fence
+execute summon minecraft:cow if function #bs.hitbox:is_entity_in_blocks_interaction run say I'm in the fence
 # Since the cow is bigger than the player, you should get a success
 ```
 

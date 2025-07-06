@@ -25,7 +25,7 @@ scoreboard players operation #h bs.ctx *= #s bs.ctx
 scoreboard players operation #d bs.ctx *= #s bs.ctx
 
 execute summon minecraft:marker run function bs.hitbox:utils/get_negative_pos
-execute in minecraft:overworld positioned as @s as B5-0-0-0-1 run function bs.move:collision/utils/get_entity_pos with storage bs:ctx
+execute in minecraft:overworld positioned as @s as B5-0-0-0-1 run function bs.hitbox:utils/get_entity_pos with storage bs:ctx
 execute store result score #x bs.ctx store result score #i bs.ctx run data get storage bs:ctx _[0] 10000000
 execute store result score #y bs.ctx store result score #j bs.ctx run data get storage bs:ctx _[1] 10000000
 execute store result score #z bs.ctx store result score #k bs.ctx run data get storage bs:ctx _[2] 10000000
