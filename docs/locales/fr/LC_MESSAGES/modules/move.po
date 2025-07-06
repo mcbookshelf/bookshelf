@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-07-04 17:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -73,15 +73,12 @@ msgstr ""
 
 #: ../../modules/move.md:44 ../../modules/move.md:81 ../../modules/move.md:146
 #: ../../modules/move.md:171 ../../modules/move.md:196
-#: 8e36473b9a714e66b86a6594c69fdb61 9c3ed747cf63455bab5e1b93b70f5b31
-#: b65be7a70200492182eb1c18419241f7 d3706d497101494c95391b2de1a632b9
-#: d9aeccf4b73546b781688856ef976dbf
+#: 8e36473b9a714e66b86a6594c69fdb61 b65be7a70200492182eb1c18419241f7
 msgid "Inputs"
 msgstr ""
 
 #: ../../modules/move.md:45 ../../modules/move.md:82 ../../modules/move.md:197
-#: 0b20b6663f784f2f8966beceee7e89e3 2bbec1e7565349ca97a9765cd35f33f8
-#: e814a7ba2c38494f8020cbfc83dbc5b9
+#: 2bbec1e7565349ca97a9765cd35f33f8 e814a7ba2c38494f8020cbfc83dbc5b9
 msgid "**Execution `as <entities>`**: Entity to move."
 msgstr ""
 
@@ -91,15 +88,82 @@ msgstr ""
 
 #: ../../modules/move.md:49 ../../modules/move.md:86 ../../modules/move.md:201
 #: 540265f8e04e49249ac79276bfe79545 7b497b67429c4ad885d682e4652db83c
-#: e38f1e21ed344c1289d9a38fa6c10bb9
 msgid "**Function macro**:"
+msgstr ""
+
+#: ../../modules/move.md:51 ../../modules/move.md:88 ../../modules/move.md:203
+#: 2b24d8f96e914274a6ad01d779363ab7 9c3aa26f9b75477394c32109f8cced73
+#: fdd4e93f4a1c43eb994adda0e826a19d
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr ""
+
+#: ../../modules/move.md:52 ../../modules/move.md:89 ../../modules/move.md:204
+#: 22fa3e467a4b455da7ec9dc81ef120bd 254f8dd418944e0899bdfc64758508dc
+#: 2d3fa782093a4cec92f59fe1b1e66016
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar applied to the output."
+msgstr ""
+
+#: ../../modules/move.md:53 ../../modules/move.md:90
+#: 8125469d59614c01a99ef3ca702c3fd9 f6f5e7111ea944a585d3aa78506e1a86
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Collision settings."
+msgstr ""
+
+#: ../../modules/move.md:54 ../../modules/move.md:91
+#: 24c5c5323b3e43348e52628fb274aaa2 5ad5bfac95df46078b1a2a3a5029a258
+#, python-brace-format
+msgid ""
+"{nbt}`bool` **blocks**: Whether the entity should collide with blocks "
+"(default: true)."
+msgstr ""
+
+#: ../../modules/move.md:55 ../../modules/move.md:92
+#: 8241d87a43ae48e19491349ba2f0db04 fa87bb4ecc5944c89de3a6685261c14a
+#, python-brace-format
+msgid ""
+"{nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide"
+" with entities (default: false). Can also be a tag that entities must "
+"have."
+msgstr ""
+
+#: ../../modules/move.md:56 ../../modules/move.md:93
+#: 3b1664b68baf44d6a2d0d404863f3495 8f87cd1faf314fbbbe2fe85c1b327fcd
+#, python-brace-format
+msgid ""
+"{nbt}`string` **hitbox_shape**: Hitbox type: `interaction` or `collision`"
+" (default: `collision`)."
+msgstr ""
+
+#: ../../modules/move.md:57 ../../modules/move.md:94
+#: 977cab7d181d485892efa36341f17ff5 cc00495329eb4f2aa02b643c89595dcc
+#, python-brace-format
+msgid ""
+"{nbt}`string` **ignored_blocks**: Blocks to ignore (default: "
+"`#bs.hitbox:can_pass_through`)."
+msgstr ""
+
+#: ../../modules/move.md:58 ../../modules/move.md:95
+#: 7cba54d24f6e46719ba98cf2074fba99 e8abacd2e9c943f0a51d6bfa85cb4687
+#, python-brace-format
+msgid ""
+"{nbt}`string` **ignored_entities**: Entities to ignore (default: "
+"`#bs.hitbox:intangible`)."
+msgstr ""
+
+#: ../../modules/move.md:59 ../../modules/move.md:96
+#: 0d6ed7b803124264bfc4da5f2aec6c6f f6125810a01e4271af404ba76bd3bbbd
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_collision**: Command to run when a collision occurs, "
+"used to resolve the collision (default: `function "
+"#bs.move:callback/bounce`)."
 msgstr ""
 
 #: ../../modules/move.md:62 ../../modules/move.md:99 ../../modules/move.md:151
 #: ../../modules/move.md:176 ../../modules/move.md:207
-#: 0cf0ee5d7d1b4937aabbe4219f5033a8 e3ba38a8e5f44f019d093da672db1ea9
-#: ee2bb1cde5ba486eb8aac39d1dd57143 f28b2ad575df4d93a8ba3286c47c72fe
-#: fa4fb71716184a9586a5d598c6a43d87
+#: f28b2ad575df4d93a8ba3286c47c72fe
 msgid "Outputs"
 msgstr ""
 
@@ -179,9 +243,7 @@ msgstr ""
 
 #: ../../modules/move.md:136 ../../modules/move.md:161
 #: ../../modules/move.md:186 ../../modules/move.md:224
-#: ../../modules/move.md:240 5772d3f606ee4651ab38fbed23eee493
-#: 8b3f0f3cf8d547b7ba167910771179e6 9179c3cd3e21481988191695e776be25
-#: d8ae51779b274eeaab9217a1c2f21f8a e46d999452794538acb51ab2dd167a84
+#: ../../modules/move.md:240 9179c3cd3e21481988191695e776be25
 msgid "**Credits**: Aksiome"
 msgstr ""
 
@@ -196,29 +258,29 @@ msgid ""
 msgstr ""
 
 #: ../../modules/move.md:147 ../../modules/move.md:172
-#: 7a1f27b865a143a7998379f85fa22b0a 8d16ab23dd8c481f868edf7a03205cf7
+#: 8d16ab23dd8c481f868edf7a03205cf7
 msgid ""
 "**Execution `rotated as <entity>` or `rotated <h> <v>`**: Rotation used "
 "for the conversion."
 msgstr ""
 
 #: ../../modules/move.md:149 ../../modules/move.md:174
-#: edfb32c92a02481d9c37029235763fb7 f1d737d7ccbb4df1b6c65dcfd480cd4f
+#: f1d737d7ccbb4df1b6c65dcfd480cd4f
 msgid "**Scores `@s bs.vel.[x,y,z]`**: Velocity to convert."
 msgstr ""
 
 #: ../../modules/move.md:152 ../../modules/move.md:177
-#: 55d1bf4f538c48b3b099bdc890297121 aa3c6916400246b4bb4cca138a113eb5
+#: aa3c6916400246b4bb4cca138a113eb5
 msgid "**Scores `@s bs.vel.[x,y,z]`**: Converted velocity."
 msgstr ""
 
 #: ../../modules/move.md:155 ../../modules/move.md:180
-#: 24c7e96baa7e4c79b1797172a722bbb3 70d6fb5c8a2345429563be00d12c8e4e
+#: 70d6fb5c8a2345429563be00d12c8e4e
 msgid "Local Velocity... 🥶 What's this?"
 msgstr ""
 
 #: ../../modules/move.md:158 ../../modules/move.md:183
-#: 0d811e9b96a646869d954c2fd3818de4 43a718ebe638491a84018bbbc9ee91ba
+#: 0d811e9b96a646869d954c2fd3818de4
 msgid ""
 "Unlike relative velocity (canonical), this reference frame considers the "
 "entity's rotation. Therefore, when the parent entity rotates, the child "

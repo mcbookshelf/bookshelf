@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"POT-Creation-Date: 2025-07-04 17:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,19 +19,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../modules/raycast.md:1 9bdff5e547c64c198205f141d6d6674e
+#: ../../modules/raycast.md:1 e913349b90714b35bd18b8f6b026f0d8
 msgid "🔦 Raycast"
 msgstr "🔦 射线追踪（Raycast）"
 
-#: ../../../modules/raycast.md:3 c7402624f291448ba594492d0eaf06a3
+#: ../../modules/raycast.md:3 32f4b016c8d94b35bceb89275593bc1d
 msgid "**`#bs.raycast:help`**"
 msgstr "**`#bs.raycast:help`**"
 
-#: ../../../modules/raycast.md:5 a418e67a3db34186a81b1e45ee402d08
+#: ../../modules/raycast.md:5 9e0be95a23024aca852047974c4c09dc
 msgid "Cast rays and detect collisions with blocks or entities."
 msgstr "检测射线与方块或实体的碰撞。"
 
-#: ../../../modules/raycast.md:8 b3a40d42d1fe4d548f57ee9ec96c0cdb
+#: ../../modules/raycast.md:8 c52ba5600f1b448ba49bebf6176716b3
 msgid ""
 "Unlike traditional raycasts, this module uses a [voxel traversal "
 "algorithm](http://www.cse.yorku.ca/~amana/research/grid.pdf) which "
@@ -39,107 +39,238 @@ msgid ""
 "module, it supports all different hitbox types, including both blocks and"
 " entities."
 msgstr ""
-"与传统的射线检测不同，此模块使用[体素遍历算法](http://www.cse.yorku.ca/~amana/research/grid.pdf)，提供更高的精度。此外，得益于 `bs.hitbox` 模块，它支持所有不同的碰撞箱类型，包括方块和实体。"
+"与传统的射线检测不同，此模块使用[体素遍历算法](http://www.cse.yorku.ca/~amana/research/grid.pdf)，提供更高的精度。此外，得益于"
+" `bs.hitbox` 模块，它支持所有不同的碰撞箱类型，包括方块和实体。"
 
-#: ../../../modules/raycast.md:12 8a4b47f3c1f34e8ba99ed62a34a102c7
+#: ../../modules/raycast.md:12 ac957d48d2e54dadb0dee575fd746857
 msgid "\"Reality only reveals itself when it is illuminated by a ray of poetry.\""
 msgstr "“现实只有在诗歌之光的照耀下才会展现自己。”"
 
-#: ../../../modules/raycast.md:13 a7ae11581b1e41b5aaf52fa938ba058a
+#: ../../modules/raycast.md:13 6ca3d0587fd14827ae193f4016a04261
 msgid "Georges Braque"
 msgstr "乔治·布拉克（Georges Braque）"
 
-#: ../../../modules/raycast.md:19 82da99575fe9446fa34ca3702fe587cb
+#: ../../modules/raycast.md:19 210202ad3b8541aa9135516ca0d2c726
 msgid "🔧 Functions"
 msgstr "🔧 函数"
 
-#: ../../../modules/raycast.md:21 6d05b1e30c7d4c178618a442fa6834f5
+#: ../../modules/raycast.md:21 7c92e47308104aaf8c262a235aca8853
 msgid "You can find below all functions available in this module."
 msgstr "您可以在下方找到此模块中的所有可用函数。"
 
-#: ../../../modules/raycast.md:25 be4f324d4cec4db49264f2b908d4c5c7
+#: ../../modules/raycast.md:25 e23d9b3810d346339583a245412f0e8b
 msgid "Run the Raycast"
 msgstr "运行射线检测"
 
-#: ../../../modules/raycast.md:29 e3a366afd7c8446eb9ced9e67681a743
+#: ../../modules/raycast.md:29 c373a0106ff94456a278a9b72a650b48
 msgid "Cast a ray from the execution position and check if it hits something."
 msgstr "在执行位置发射一条射线并检查它的碰撞情况。"
 
-#: ../../../modules/raycast.md:31 eb947e65f52542eaad5743d49e46915e
+#: ../../modules/raycast.md:31 063c11c48f2544a89be2384020a74807
 msgid "Inputs"
 msgstr "输入"
 
-#: ../../../modules/raycast.md:32 e6a2b8af88524443beccf773ef1e1521
+#: ../../modules/raycast.md:32 1bb942c65bb24b449a92687b337549eb
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: "
 "Origin of the ray."
-msgstr ""
-"**执行 `at <实体>` 或 `positioned <x> <y> <z> rotated <rot>`**: "
-"射线的起点和方向."
+msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z> rotated <rot>`**: 射线的起点和方向."
 
-#: ../../../modules/raycast.md:34 3311c9117a444cbc8caef54048514504
+#: ../../modules/raycast.md:34 40b140e01e194126ac6abacc5f3d2814
 msgid "**Function macro**:"
 msgstr "**函数宏**"
 
-#: ../../../modules/raycast.md:50 0e6155ad19804eb98248448f14c92f05
+#: ../../modules/raycast.md:36 df71df3ce6e34515ab12e63f7b06fbc6
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr ""
+
+#: ../../modules/raycast.md:37 4c8e0eb2a57047e1be1d8163ce04c6df
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Ray input data."
+msgstr ""
+
+#: ../../modules/raycast.md:38 b4d3f0d6cbd040e196e08681a89c5a3e
+#, python-brace-format
+msgid ""
+"{nbt}`bool` **blocks**: Whether the ray should stop on blocks (default: "
+"true)."
+msgstr ""
+
+#: ../../modules/raycast.md:39 bf10d0a57bdf4a54b654307f7f3aee9f
+#, python-brace-format
+msgid ""
+"{nbt}`bool` {nbt}`string` **entities**: Whether the ray should stop on "
+"entities (default: false). Can also be a required entity tag."
+msgstr ""
+
+#: ../../modules/raycast.md:40 ff654fee0896412ead36cd75ff596c37
+#, python-brace-format
+msgid ""
+"{nbt}`int` **piercing**: Number of blocks or entities the ray can pass "
+"through (default: 0)."
+msgstr ""
+
+#: ../../modules/raycast.md:41 d76ef0372f7f43d0b38ce1f32a23b84f
+#, python-brace-format
+msgid ""
+"{nbt}`number` **max_distance**: Maximum ray travel distance (default: "
+"16.0)."
+msgstr ""
+
+#: ../../modules/raycast.md:42 435f772a2d4d4e08979a7008411f47a6
+#, python-brace-format
+msgid ""
+"{nbt}`string` **hitbox_shape**: Hitbox type: `interaction` or `collision`"
+" (default: `interaction`)."
+msgstr ""
+
+#: ../../modules/raycast.md:43 07517bec871743d5ba4112a27636b3fe
+#, python-brace-format
+msgid ""
+"{nbt}`string` **ignored_blocks**: Blocks to ignore (default: "
+"`#bs.hitbox:intangible`)."
+msgstr ""
+
+#: ../../modules/raycast.md:44 4b1db8cf4b24448bb51564840a1f1408
+#, python-brace-format
+msgid ""
+"{nbt}`string` **ignored_entities**: Entities to ignore (default: "
+"`#bs.hitbox:intangible`)."
+msgstr ""
+
+#: ../../modules/raycast.md:45 c91c3bb87986470f9660f28f1eafff82
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_hit_point**: Command to run at the exact point where "
+"the ray makes contact."
+msgstr ""
+
+#: ../../modules/raycast.md:46 3acdb31bb97b40b0b43378dd06a740f8
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_targeted_block**: Command to run at the block hit by "
+"the ray."
+msgstr ""
+
+#: ../../modules/raycast.md:47 5bbf59b187db43018a43b991f16efbf4
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_targeted_entity**: Command to run as and at the entity"
+" hit by the ray."
+msgstr ""
+
+#: ../../modules/raycast.md:50 2ceec84cf13247c2891006b8f81af15e
 msgid "Lambdas"
 msgstr "Lambda 函数"
 
-#: ../../../modules/raycast.md:51 979185acc64e45acae16c42b8e82dfc0
+#: ../../modules/raycast.md:51 e0ecb2e8a0634938a3095036c53c73fd
 msgid ""
 "**Score `$raycast.piercing bs.lambda`**: The remaining number of blocks "
 "or entities the ray can pass through before stopping. This score can be "
 "dynamically updated inside callbacks (`on_*`) to modify ray behavior."
 msgstr ""
-"**分数 `$raycast.piercing bs.lambda`**：射线在停止之前可以穿过的剩余方块或实体数量。此分数可以在回调（`on_*`）内动态更新以修改射线行为。"
+"**分数 `$raycast.piercing "
+"bs.lambda`**：射线在停止之前可以穿过的剩余方块或实体数量。此分数可以在回调（`on_*`）内动态更新以修改射线行为。"
 
-#: ../../../modules/raycast.md:53 f3c81aa1ae9744d1914a8a9b3e17cd2b
+#: ../../modules/raycast.md:53 30b7781bb9de474e8d7d9eafbdbe419a
 msgid "**Storage `bs:lambda raycast`**:"
 msgstr "**命令存储 `bs:lambda raycast`**："
 
-#: ../../../modules/raycast.md:63 13579dd3d58a4cfeb771d70c0da4f4b9
+#: ../../modules/raycast.md:55 977bdafb3ce34803a9b5042802e5cac8
+#, python-brace-format
+msgid "{nbt}`compound` Ray lambda data, accessible only in callbacks (`on_*`)"
+msgstr ""
+
+#: ../../modules/raycast.md:56 ../../modules/raycast.md:69
+#: 6b05ae545636475697f7a7c8ea455412 ab5827f1b83c4770b308576b68850e46
+#, python-brace-format
+msgid ""
+"{nbt}`double` **distance**: The distance from the ray's origin to the "
+"impact point."
+msgstr ""
+
+#: ../../modules/raycast.md:57 ../../modules/raycast.md:70
+#: 380943faedaf4289994bd01dd09b90f4 5e330d7acde943ae8e7576abb0a4579a
+#, python-brace-format
+msgid "{nbt}`list` **hit_point**: The coordinates of the impact point."
+msgstr ""
+
+#: ../../modules/raycast.md:58 a07bab32d45e4b5a885b46479aac1fda
+#, python-brace-format
+msgid "{nbt}`list` **hit_normal**: The normal of the surface the ray hits."
+msgstr ""
+
+#: ../../modules/raycast.md:59 ../../modules/raycast.md:72
+#: 2be789220b964098ab48ff617cd6ba33 63c86abf9d734e8bb49167a7047166f0
+#, python-brace-format
+msgid "{nbt}`list` **targeted_block**: The coordinates of the block that was hit."
+msgstr ""
+
+#: ../../modules/raycast.md:60 ../../modules/raycast.md:73
+#: 085636f606ed4caaa76120adecb44e5e 97e3ec1e531f48da9e2bef610add73f0
+#, python-brace-format
+msgid ""
+"{nbt}`list` **targeted_entity**: The UUID array of the entity that was "
+"hit."
+msgstr ""
+
+#: ../../modules/raycast.md:63 c02698438b4c4e9aa526bad2f04748c6
 msgid "Outputs"
 msgstr "输出"
 
-#: ../../../modules/raycast.md:64 15a29a1a899e4152b52fa3dfeecf74c8
+#: ../../modules/raycast.md:64 3383694ae2df428ebdde91abd38f3c9b
 msgid "**Return**: Whether the ray collides with a hitbox or not (1 or 0)."
 msgstr "**返回值**：射线是否与碰撞箱相撞（1或0）。"
 
-#: ../../../modules/raycast.md:66 5fdac7f34bb44b37b93ccd3033cbe157
+#: ../../modules/raycast.md:66 ef16202741904c1fbc1d792cb498a718
 msgid "**Storage `bs:out raycast`**:"
 msgstr "**命令存储 `bs:out raycast`**："
 
-#: ../../../modules/raycast.md:77 75746517d2ab4030ac53cabae1185e97
+#: ../../modules/raycast.md:68 1d28ec343b2f42febed91feefc873477
+#, python-brace-format
+msgid "{nbt}`compound` Ray output data"
+msgstr ""
+
+#: ../../modules/raycast.md:71 bfa72b3e98ca4451b9e81abd82009b30
+#, python-brace-format
+msgid "{nbt}`list` **hit_normal**: The normal of the surface the ray hit."
+msgstr ""
+
+#: ../../modules/raycast.md:77 322f349b8bb24b07bde94ac71a9fba31
 msgid "Collision / Interaction Shape"
 msgstr "碰撞/交互形状"
 
-#: ../../../modules/raycast.md:79 419da582387a42a684897faf98c97dd8
+#: ../../modules/raycast.md:79 206e7eba7b2e447a8376a4228279fe46
 msgid ""
 "**Collision Shape**: Defines the physical boundaries of a block that "
 "entities cannot pass through. It determines where an entity will stop "
 "when moving towards the block."
 msgstr "**碰撞形状（collision_shape）**：实体无法穿过的方块的物理边界，决定实体在靠近方块时会被阻挡在什么位置。"
 
-#: ../../../modules/raycast.md:80 a2b2e131b633492f9f00792232449125
+#: ../../modules/raycast.md:80 099d731e2c7d463a92fe3445e2e15a2a
 msgid ""
 "**Interaction Shape**: Defines the area where the player can interact "
 "with or break the block. This includes actions such as right-clicking to "
 "open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have"
 " an interaction shape but no collision, such as crops or scaffolding."
-msgstr "**交互形状（interaction_shape）**：玩家可以与方块交互或破坏的区域。这包括右键打开 GUI（如箱子、熔炉）或采掘方块等操作。有些方块有交互形状但没有碰撞，比如农作物或脚手架。"
+msgstr ""
+"**交互形状（interaction_shape）**：玩家可以与方块交互或破坏的区域。这包括右键打开 "
+"GUI（如箱子、熔炉）或采掘方块等操作。有些方块有交互形状但没有碰撞，比如农作物或脚手架。"
 
-#: ../../../modules/raycast.md:83 98d4671460d84855aa03a794d24845b4
+#: ../../modules/raycast.md:83 9eba3572fb034cb98705ef54ec4a544f
 msgid "*Example: Cast a ray from your eyes and detect any collisions:*"
 msgstr "*示例：从你的视线发射射线并检测是否有碰撞：*"
 
-#: ../../../modules/raycast.md:93 e9decf1d6e814f22bb1e37d8493b73bb
+#: ../../modules/raycast.md:93 919aa42fd6614665b0fe4f8b6e3e2266
 msgid "**Credits**: Aksiome"
 msgstr "**制作人员**：Aksiome"
 
-#: ../../../_templates/comments.md:4 0f74e4126aa24b2caf7a1ba4213c1a97
+#: ../../_templates/comments.md:4 69a8f140ddb4404699ef579306d98ff5
 msgid "**💬 Did it help you?**"
 msgstr "**💬 这对您有帮助吗？**"
 
-#: ../../../_templates/comments.md:6 4ffe12ef9e8c4d0396a1ac2e0bc629a5
+#: ../../_templates/comments.md:6 f97bbe9318af42c08500b4aba3398eeb
 msgid "Feel free to leave your questions and feedback below!"
 msgstr "欢迎在下方留下您的问题和反馈！"
+

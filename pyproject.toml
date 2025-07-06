@@ -8,11 +8,11 @@ dynamic = ["version"]
 description = "Scripts for Bookshelf and the Github pipeline."
 authors = [{ name = "Bookshelf Contributors", email = "contact@gunivers.net" }]
 dependencies = [
-  "beet>=0.110.1",
+  "beet>=0.111.0",
   "click>=8.2.1",
   "colorama>=0.4.6",
-  "pydantic>=2.11.5",
-  "requests>=2.32.3",
+  "pydantic>=2.11.7",
+  "requests>=2.32.4",
   "lectern>=0.34.0"
 ]
 requires-python = ">=3.12"
@@ -20,11 +20,11 @@ license = { text = "MPL-2.0" }
 
 [dependency-groups]
 dev = [
-  "mypy>=1.16.0",
-  "ruff>=0.11.12",
+  "mypy>=1.16.1",
+  "ruff>=0.12.2",
   "types-colorama>=0.4.15",
-  "types-docutils>=0.21.0.20250526",
-  "types-requests>=2.32.0.20250515",
+  "types-docutils>=0.21.0.20250604",
+  "types-requests>=2.32.4.20250611",
 ]
 docs = [
   "linkify-it-py>=2.0.3",
@@ -34,7 +34,7 @@ docs = [
   "sphinx-copybutton>=0.5.2",
   "sphinx-design>=0.6.1",
   "sphinx-intl>=2.3.1",
-  "sphinx-minecraft>=1.0.2",
+  "sphinx-minecraft>=1.0.5",
   "sphinx-togglebutton>=0.3.2",
   "sphinx>=8.2.3",
 ]

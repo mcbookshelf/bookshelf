@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"POT-Creation-Date: 2025-07-04 17:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,214 +19,241 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../modules/random.md:1 fb004b2d86174f3abc6983e80ca4f498
+#: ../../modules/random.md:1 9b80427571c441cc912f684be13894c8
 msgid "🎲 Random"
 msgstr "🎲 随机（Random）"
 
-#: ../../../modules/random.md:3 dafdf98536ae47f68d938dcb82cf3848
+#: ../../modules/random.md:3 9f1bb5c8c6e14212b0ef0f7a6bdad644
 msgid "**`#bs.random:help`**"
 msgstr "**`#bs.random:help`**"
 
-#: ../../../modules/random.md:5 8c41c151dd8141c6b5408551fd859f51
+#: ../../modules/random.md:5 5fdd4b55154d42f5acf37d237922290c
 msgid ""
 "Contains many random functions for different distributions and noise "
 "patterns."
 msgstr "包含许多用于不同分布和噪声模式的随机函数。"
 
-#: ../../../modules/random.md:13 f5b540094fd5426ba8e701a70eb73a6a
+#: ../../modules/random.md:13 36fa87a676994b79844678c87adf476e
 msgid ""
 "\"Creativity is the ability to introduce order into the randomness of "
 "nature.\""
 msgstr "创造力是将秩序引入自然的随机性中的能力。"
 
-#: ../../../modules/random.md:14 dedd24e1ec4840ccb883acb23612f839
+#: ../../modules/random.md:14 d042d1772e3a40f28dd94215c40f27e5
 msgid "Eric Hoffer"
 msgstr "埃里克·霍弗（Eric Hoffer）"
 
-#: ../../../modules/random.md:20 085eaf85cf84479ab926da39d5fbe24e
+#: ../../modules/random.md:20 a8705e098ee64a548d7bf15e8eb45e93
 msgid "🔧 Functions"
 msgstr "🔧 函数"
 
-#: ../../../modules/random.md:22 e30d6c50dc74408292c1e5b5b8578305
+#: ../../modules/random.md:22 f8589e5ccfdb410895d0a0185b879fc9
 msgid "You can find below all functions available in this module."
 msgstr "您可以在下方找到此模块中的所有可用函数。"
 
-#: ../../../modules/random.md:26 555aab1af3274858ad97fb13472f477b
+#: ../../modules/random.md:26 7c1be437561645a8a44d027cf3054952
 msgid "Random Choice"
 msgstr "随机选择"
 
-#: ../../../modules/random.md d81e9c192f454530a6aac16e64a46861
+#: ../../modules/random.md 9bda0df4954b46ac8534b1e222201abe
 msgid "Choice"
 msgstr "选择"
 
-#: ../../../modules/random.md:35 6e706345b29d41fa9627d7701bdb20ae
+#: ../../modules/random.md:35 62e6e38b707c4c3f9412cfd780bc2127
 msgid "Select a random value from a list."
 msgstr "从列表中随机选择一个值。"
 
-#: ../../../modules/random.md:37 ../../../modules/random.md:66
-#: ../../../modules/random.md:107 ../../../modules/random.md:142
-#: ../../../modules/random.md:177 ../../../modules/random.md:211
-#: ../../../modules/random.md:264 ../../../modules/random.md:290
-#: ../../../modules/random.md:334 ../../../modules/random.md:364
-#: ../../../modules/random.md:394 ../../../modules/random.md:427
-#: 318a9b51ed7b458f9ea93cc10f04ab88 56d65a5761d04d3daf8b5103a2fdc72b
-#: 6c6cbca321024e40bf77ac03f77f6a30 70b75c3a248f4257b892ac35cd1e9f62
-#: 83388a129f6d45c4a7945171c780c645 86e6f596f63a44a193424cc62b418481
-#: ba53bce750ac44948db7858d27950e8a bb328c2c936b472eb51df303454d7e3d
-#: c16acba6e51b4bfa8bcd656030401fcc c64275913db54c83acf4ad9ca29844e8
-#: eca0fbf6b06a4db1a660514d8a828ea7 f5e29fd4064d4005ba265b05cbb00385
+#: ../../modules/random.md:37 ../../modules/random.md:66
+#: ../../modules/random.md:107 ../../modules/random.md:142
+#: ../../modules/random.md:177 ../../modules/random.md:211
+#: ../../modules/random.md:246 ../../modules/random.md:299
+#: ../../modules/random.md:325 ../../modules/random.md:369
+#: ../../modules/random.md:399 ../../modules/random.md:429
+#: ../../modules/random.md:462 0ffc32204c1b4a10b123f73ebfb49ce2
+#: a3df971e8c6543a88094df4b1b2bb6e9 d20481c9a7964d8b958e648ea7cc2084
+#: d83af4cc972d4e88b1dfacd3d2432c2f
 msgid "Inputs"
 msgstr "输入"
 
-#: ../../../modules/random.md:38 1dae8218326c4c23b2863fbc289ed460
+#: ../../modules/random.md:38 41cc86b4fd774202ab9374045a1e837c
 #, python-brace-format
 msgid ""
 "**Storage `bs:in random.choice.options`**: {nbt}`list` The list of values"
 " to choose from."
 msgstr "**命令存储 `bs:in random.choice.options`**：{nbt}`list` 要从中选择的值列表。"
 
-#: ../../../modules/random.md:40 ../../../modules/random.md:71
-#: ../../../modules/random.md:115 ../../../modules/random.md:150
-#: ../../../modules/random.md:184 ../../../modules/random.md:218
-#: ../../../modules/random.md:269 ../../../modules/random.md:301
-#: ../../../modules/random.md:343 ../../../modules/random.md:374
-#: ../../../modules/random.md:406 ../../../modules/random.md:442
-#: 0024c47b9dd0467c8acdd09a6eeec90b 03065ef361c04266ae42a2fd37e5aa29
-#: 10cc2975a8704aefa9c4a9ab86e6608e 36cd188c1041451ba279be3ce2dfc902
-#: 637ffe281fb147cd86343f5106dbc164 d36ae4a6835a48389cf362f9d514794d
-#: dce570cfb5e640988c570a225076a4ce dd07a3f48b2349a89b1405b4664a7a92
-#: e9094d5b1143475fb70648c15a5d4afc eaab8a847a47474b8ec31224db9378b6
-#: ee0ae46265c844a297c363175726becb f5ebfd995474434b804b7783eb0732b8
+#: ../../modules/random.md:40 ../../modules/random.md:71
+#: ../../modules/random.md:115 ../../modules/random.md:150
+#: ../../modules/random.md:184 ../../modules/random.md:219
+#: ../../modules/random.md:253 ../../modules/random.md:304
+#: ../../modules/random.md:336 ../../modules/random.md:378
+#: ../../modules/random.md:409 ../../modules/random.md:441
+#: ../../modules/random.md:477 2deecb6732904a6cb9d88dfd984b089b
+#: 94a5d05742494421a3c7b3cc8505193b be6c53c4b24748d595be0759c5fe5273
 msgid "Outputs"
 msgstr "输出"
 
-#: ../../../modules/random.md:41 241f7e1b1a8b468fbf397b513e0b0ecd
+#: ../../modules/random.md:41 2bb7ed5eaa624121997e0631d968db3a
 #, python-brace-format
 msgid ""
 "**Storage `bs:out random.choice`**: {nbt}`any` The randomly selected "
 "value."
 msgstr "**命令存储 `bs:out random.choice`**：{nbt}`any` 随机选择的值。"
 
-#: ../../../modules/random.md:43 ../../../modules/random.md:74
-#: 52a9c90adcbc4c8f9550c96ee0e22bdc 7cf92191402a4f28941fcfeba0f5daa1
+#: ../../modules/random.md:43 ../../modules/random.md:74
+#: 3a071fa0e33c4b7a8dac66f9d47d60ff c51e5b5650c249a2adb36b146d0a3543
 msgid "**Return**: The index of the chosen value."
 msgstr "**返回值**：所选值的索引。"
 
-#: ../../../modules/random.md:46 624963937fa04a82a210108a8431d9ff
+#: ../../modules/random.md:46 24de4d7c0d1940ab9cc8f6032b93641c
 msgid "*Example: Pick a random fruit from the list:*"
 msgstr "*示例：从列表中随机选择一个水果：*"
 
-#: ../../../modules/random.md be5786d4f86342dbaa2f130af2e7657a
+#: ../../modules/random.md 77602f9ef8fa4cb898f25087980ce787
 msgid "Weighted Choice"
 msgstr "加权选择"
 
-#: ../../../modules/random.md:64 ad4885ce13c641b487dff79bc87b478e
+#: ../../modules/random.md:64 d63a3c4138eb4983b41a1633956ba103
 msgid "Select a random value from a list based on specified weights."
 msgstr "基于指定权重从列表中随机选择一个值。"
 
-#: ../../../modules/random.md:67 a796fbd1deab4ea3b5d0748124ef0d1b
+#: ../../modules/random.md:67 49d5ec111103499b8a20015d3a457581
 #, python-brace-format
 msgid ""
 "**Storage `bs:in random.weighted_choice.options`**: {nbt}`list` The list "
 "of values to choose from."
 msgstr "**命令存储 `bs:in random.weighted_choice.options`**：{nbt}`list` 要从中选择的值列表。"
 
-#: ../../../modules/random.md:69 c442651acba5435c8c763488959e5ec9
+#: ../../modules/random.md:69 df8d4f23dedc4f8e9e5df886c9424278
 #, python-brace-format
 msgid ""
 "**Storage `bs:in random.weighted_choice.weights`**: {nbt}`list` The "
 "corresponding weights for each value."
 msgstr "**命令存储 `bs:in random.weighted_choice.weights`**：{nbt}`list` 每个值对应的权重。"
 
-#: ../../../modules/random.md:72 961a09cda9a7485792280bcff499db66
+#: ../../modules/random.md:72 e0f7f007b6d34427b83c621b23745622
 #, python-brace-format
 msgid ""
 "**Storage `bs:out random.weighted_choice`**: {nbt}`any` The randomly "
 "selected value based on the weights."
 msgstr "**命令存储 `bs:out random.weighted_choice`**：{nbt}`any` 基于权重随机选择的值。"
 
-#: ../../../modules/random.md:77 ee928dd038554bee86e53a469a3d775c
+#: ../../modules/random.md:77 0c689664491a4fafaa32b331e114e38b
 msgid "*Example: Pick a random fruit from the list based on weights:*"
 msgstr "*示例：基于权重从列表中随机选择一个水果：*"
 
-#: ../../../modules/random.md:93 ../../../modules/random.md:250
-#: ../../../modules/random.md:320 ../../../modules/random.md:482
-#: 680e98d457f64ae4a821cd4b4e173668 e3dd5e39655d4902b3cb7783c2d4e86d
-#: e696fad518e04020b1c40dd6f94c8a3b e9458f233c084cff87486c1dc68496f1
+#: ../../modules/random.md:93 ../../modules/random.md:285
+#: ../../modules/random.md:355 ../../modules/random.md:517
+#: ae181313c46946c8ba73484c488c66e7 be154388621c4f4bb73ee0975ef44f00
 msgid "**Credits**: Aksiome, SBtree"
 msgstr "**制作人员**：Aksiome、SBtree"
 
-#: ../../../modules/random.md:97 39a1677bd47c4180bc32ae364a262efc
+#: ../../modules/random.md:97 a001b682d8de47c1858799c493f79612
 msgid "Random Distributions"
 msgstr "随机分布"
 
-#: ../../../modules/random.md dca32e0efa81442a8d21d9d0c23c3b51
+#: ../../modules/random.md 9cf5095b633846ef9fffb9951b86b5dc
 msgid "Uniform"
 msgstr "均匀"
 
-#: ../../../modules/random.md:105 dc2b151f839e4e0aa7570dcf598c037b
+#: ../../modules/random.md:105 ea99bc8320c04f98b8962acbf9e912a7
 msgid "Generate a random number uniformly distributed between `min` and `max`."
 msgstr "生成一个在 `min` 和 `max` 之间均匀分布的随机数。"
 
-#: ../../../modules/random.md:108 ../../../modules/random.md:143
-#: ../../../modules/random.md:178 ../../../modules/random.md:212
-#: ../../../modules/random.md:335 ../../../modules/random.md:365
-#: ../../../modules/random.md:395 ../../../modules/random.md:428
-#: 43fb7e21699d4e4cbb6768161aebaf66 58c3f5a08c70423c802e33b332cfaa08
-#: 6a613fa3f6f5448a8e9f65148d1bf901 799f7d6489c04141957074feee0d5c4a
-#: 9c4c6353cf184716a1bbff5bb6a0c80d e6ed0ca3163545308552f9df55594e17
-#: eeb298c5871c4cc7b71e97eea6120c33 ff14f89604fd42dea4fed5c183afaed4
+#: ../../modules/random.md:108 ../../modules/random.md:143
+#: ../../modules/random.md:178 ../../modules/random.md:212
+#: ../../modules/random.md:247 ../../modules/random.md:370
+#: ../../modules/random.md:400 ../../modules/random.md:430
+#: ../../modules/random.md:463 77d7b4e6368c42f199b55e195357b7bd
+#: 85647fc2f92344859633895326537786
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
-#: ../../../modules/random.md:116 5aef0eaa4b974725aee9bf68cbe9ad54
+#: ../../modules/random.md:110 ../../modules/random.md:145
+#: ../../modules/random.md:180 ../../modules/random.md:214
+#: ../../modules/random.md:249 ../../modules/random.md:372
+#: ../../modules/random.md:402 ../../modules/random.md:432
+#: ../../modules/random.md:465 19247dade29b4b7dadeedb64dfd701cc
+#: 3a68a3c0f3d645fe83beddc349cabcd2 4708e442fa654242ba9594318be59135
+#: 569faf4826e74fad9b918404ac0385c0 58d30309d5794270b3662ce0d4ae80e7
+#: 7073d905ac304fcc8cc507b6c5bc7eae 7f4793b835b34d3ba171b0463b9cf070
+#: ca681f9a9e2f483dae2e1623d3090528 f5fe84702c4c4eb89e56f237b88933c0
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr ""
+
+#: ../../modules/random.md:111 77313823b25547fc9f25711fa257fa7a
+#, python-brace-format
+msgid "{nbt}`int` **min**: The lower bound."
+msgstr ""
+
+#: ../../modules/random.md:112 7e905a00bd2041fc81a03c01a2769961
+#, python-brace-format
+msgid "{nbt}`int` **max**: The upper bound."
+msgstr ""
+
+#: ../../modules/random.md:116 12783521182f482c98903cb86c5fca0f
 msgid ""
 "**Return | Score `$random.uniform bs.out`**: A random integer in range "
 "[`min`, `max`]."
 msgstr "**返回值 | 分数 `$random.uniform bs.out`**：[`min`, `max`] 范围内的随机整数。"
 
-#: ../../../modules/random.md:119 4a11f82cfc7d4fd49ce3f8eb27892ebe
+#: ../../modules/random.md:119 5e531843ddc54c08b55914c1abb6ab2a
 msgid "*Example: Generate a random number between 1 and 100:*"
 msgstr "*示例：生成1到100之间的随机数：*"
 
-#: ../../../modules/random.md:129 d8252469c6844b889227246a3dde9d25
+#: ../../modules/random.md:129 5866556a63784ceaa870cc88be0700ee
 msgid "Uniform Distribution... 🥶 What's this?"
 msgstr "均匀分布... 🥶 这是什么？"
 
-#: ../../../modules/random.md:132 a9f928337174496386dbeee02ce2cb7d
+#: ../../modules/random.md:132 048bf42dc1814648b04a3feb8abcb2f1
 msgid ""
 "Every outcome has an equal probability of occurring. It's like rolling a "
 "fair die where each number (1 through 6) has the same probability."
 msgstr "每个结果都有相同的发生概率。就像掷一个公平的骰子，每个数字（1到6）的概率相同。"
 
-#: ../../../modules/random.md 7c6b9894e2524afd86faf58b7ad20fd6
+#: ../../modules/random.md 36d6a46253164f3caa23847330da13bc
 msgid "Binomial"
 msgstr "二项式"
 
-#: ../../../modules/random.md:140 681d5c486bd1468eac0bb59b8a34f998
+#: ../../modules/random.md:140 fb24eda5519e4b9b858f6fea5a8cc0b8
 msgid ""
 "Generate a random number with a binomial distribution using the specified"
 " `trials` and `probability`."
 msgstr "使用指定的 `trials`（试验次数）和 `probability`（概率）生成具有二项分布的随机数。"
 
-#: ../../../modules/random.md:151 73b96122f93a4598856f59f30802ff70
+#: ../../modules/random.md:146 78e52780879e4f7c8499fd6520e3d6df
+#, python-brace-format
+msgid ""
+"{nbt}`int` **trials**: The number of Bernoulli trials. Maximum accepted "
+"value is 1000."
+msgstr ""
+
+#: ../../modules/random.md:147 bcc1733261bc4534b5aafd881207c66a
+#, python-brace-format
+msgid ""
+"{nbt}`double` **probability**: The probability of success of each "
+"Bernoulli trial, in range [0,1]."
+msgstr ""
+
+#: ../../modules/random.md:151 e703885a3ec74b19afddcf4eb3d427eb
 msgid ""
 "**Return | Score `$random.binomial bs.out`**: A random integer in range "
 "[0, `trials`]."
 msgstr "**返回值 | 分数 `$random.binomial bs.out`**：[0, `trials`] 范围内的随机整数。"
 
-#: ../../../modules/random.md:154 0f3a0519a8c14fba9a634b43d7871506
+#: ../../modules/random.md:154 804b2b493d9f419e85ff2d90fd33e7c6
 #, python-format
 msgid ""
 "*Example: Generate a random number with 10 trials and a 20% success "
 "chance:*"
 msgstr "*示例：生成一个有10次试验和20%成功几率的随机数：*"
 
-#: ../../../modules/random.md:164 081e36b2872b4a33a83b3329e738fbe6
+#: ../../modules/random.md:164 df0dcffd93664a3ab0eaf9b9e348a29d
 msgid "Binomial Distribution... 🥶 What's this?"
 msgstr "二项分布... 🥶 这是什么？"
 
-#: ../../../modules/random.md:167 ba281f12259e417c97141ee542a1edd5
+#: ../../modules/random.md:167 e17df2f5b6014990bfd866120c98bc28
 msgid ""
 "Used when you have a fixed number of trials, each with two possible "
 "outcomes (success or failure). It calculates the probability of obtaining"
@@ -234,63 +261,123 @@ msgid ""
 "and counting the number of heads."
 msgstr "用于有固定次数的试验，每次试验有两种可能的结果（成功或失败）。它计算获得特定成功次数的概率。例如，抛硬币10次并计算正面的次数。"
 
-#: ../../../modules/random.md 1c1fc516c7de49389e3a5f317fa8e6df
+#: ../../modules/random.md 1429867eb1744148b8a5a30444b72914
 msgid "Geometric"
 msgstr "几何"
 
-#: ../../../modules/random.md:175 580b2f0bdde74a248dada9e124ccf510
+#: ../../modules/random.md:175 49b8a05bafba40708725954c96206321
 msgid ""
 "Generate a random number following a geometric distribution with the "
 "given `probability`."
 msgstr "使用给定的 `probability`（概率）生成具有几何分布的随机数。"
 
-#: ../../../modules/random.md:185 660c880db76a4f648adf69ab4e48c588
+#: ../../modules/random.md:181 7153e4be6dca49b98a96cf6722894a4b
+#, python-brace-format
+msgid ""
+"{nbt}`double` **probability**: The probability of stopping at each trial,"
+" in range [0,1]."
+msgstr ""
+
+#: ../../modules/random.md:185 bd1d5488cbd74577a1599b12bbfcee29
 msgid ""
 "**Return | Score `$random.geometric bs.out`**: A random integer in range "
 "[0, 1000]."
 msgstr "**返回值 | 分数 `$random.geometric bs.out`**：[0, 1000] 范围内的随机整数。"
 
-#: ../../../modules/random.md:188 1aa4cceddec544e2986a8920bfcec2ee
+#: ../../modules/random.md:188 1801fc05ee8845058f2187b6bfa7d83f
 #, python-format
 msgid "*Example: Generate a random number with a 2% chance of stopping:*"
 msgstr "*示例：生成一个有2%停止几率的随机数：*"
 
-#: ../../../modules/random.md:198 8a334c38a0834f06b4cba64eebdab720
+#: ../../modules/random.md:198 03cd0cf9587b48ab8e24cbfeea88242a
 msgid "Geometric Distribution... 🥶 What's this?"
 msgstr "几何分布... 🥶 这是什么？"
 
-#: ../../../modules/random.md:201 413b5bb272354ff5b47fa058be5a082c
+#: ../../modules/random.md:201 d7820de4061b4faebd6f173c68400d73
 msgid ""
 "Measures the number of trials required to achieve the first success in a "
 "sequence of independent and identical trials. For example, the number of "
 "dice rolls needed to obtain a six."
 msgstr "衡量在一系列独立且相同的试验中首次成功所需的试验次数。例如，掷骰子获得6点所需的次数。"
 
-#: ../../../modules/random.md 7975cdd1def742e48579b8d04f2fe1cf
+#: ../../modules/random.md 36d6a46253164f3caa23847330da13bc
+#, fuzzy
+msgid "Normal"
+msgstr "二项式"
+
+#: ../../modules/random.md:209 fb24eda5519e4b9b858f6fea5a8cc0b8
+#, fuzzy
+msgid ""
+"Generate a random number following a normal (Gaussian) distribution with "
+"specified `mean` and `spread` (standard deviation)."
+msgstr "使用期望值 `lambda` 生成具有泊松分布的随机数。"
+
+#: ../../modules/random.md:215 a1e0a6f619ae4e27a40896de56d3eba6
+#, python-brace-format
+msgid "{nbt}`double` **mean**: The average (center) value of the distribution."
+msgstr ""
+
+#: ../../modules/random.md:216 fc2aa2ebeeb043048a220f1b9b239ecb
+#, python-brace-format
+msgid ""
+"{nbt}`double` **spread**: The standard deviation controlling how spread "
+"out the values are."
+msgstr ""
+
+#: ../../modules/random.md:220 12783521182f482c98903cb86c5fca0f
+#, fuzzy
+msgid ""
+"**Return | Score `$random.normal bs.out`**: A random integer centered "
+"near `mean`."
+msgstr "**返回值 | 分数 `$random.uniform bs.out`**：[`min`, `max`] 范围内的随机整数。"
+
+#: ../../modules/random.md:223 5e531843ddc54c08b55914c1abb6ab2a
+#, fuzzy
+msgid "*Example: Generate a random number with mean 10 and spread 3:*"
+msgstr "*示例：生成1到100之间的随机数：*"
+
+#: ../../modules/random.md:233 df0dcffd93664a3ab0eaf9b9e348a29d
+#, fuzzy
+msgid "Normal Distribution... 🥶 What's this?"
+msgstr "二项分布... 🥶 这是什么？"
+
+#: ../../modules/random.md:236 97192c3e834a420598d447581e66365d
+msgid ""
+"Also known as the Gaussian distribution, it produces values clustered "
+"around the mean with a bell-shaped probability curve. Widely used to "
+"model natural variations and measurement errors."
+msgstr ""
+
+#: ../../modules/random.md 15d07165786441a59fc2403662ef621d
 msgid "Poisson"
 msgstr "泊松"
 
-#: ../../../modules/random.md:209 82194baa9f0e44f7973f4bd0251d1bf0
+#: ../../modules/random.md:244 eb7ee619293747c592b4241f99bc7097
 msgid ""
 "Generate a random number following a Poisson distribution with the "
 "expected value `lambda`."
 msgstr "使用期望值 `lambda` 生成具有泊松分布的随机数。"
 
-#: ../../../modules/random.md:219 f9954a6cf82745c59ac7f0462b8e904d
+#: ../../modules/random.md:250 17bbb1a252024d7ba60f6458e1eb1975
+#, python-brace-format
+msgid "{nbt}`double` **lambda**: The expected value in range [0,10]."
+msgstr ""
+
+#: ../../modules/random.md:254 cb04a773352b4977ba6e4843acd992ff
 msgid ""
 "**Return | Score `$random.poisson bs.out`**: A random integer, biased "
 "towards the `lambda` value."
 msgstr "**返回值 | 分数 `$random.poisson bs.out`**：偏向 `lambda` 值的随机整数。"
 
-#: ../../../modules/random.md:222 2ce87974657c47ef8fe7dfb530c31d43
+#: ../../modules/random.md:257 c41422160bad4d8488e2cf4798a75aba
 msgid "*Example: Generate a random number biased towards 5:*"
 msgstr "*示例：生成一个偏向5的随机数：*"
 
-#: ../../../modules/random.md:232 6411caf4ee774b1a84c84a9debab44dd
+#: ../../modules/random.md:267 6e3a77b9597e4879bc01932d110b452c
 msgid "Poisson Distribution... 🥶 What's this?"
 msgstr "泊松分布... 🥶 这是什么？"
 
-#: ../../../modules/random.md:235 936e98a2f4aa4cf3a9e207ec5446e827
+#: ../../modules/random.md:270 8e7ce9369ecf446f9c8d2ffbe61e6b91
 msgid ""
 "A Poisson distribution generates values that cluster around an average "
 "value, **λ (lambda)**. Results tend to concentrate near this average, "
@@ -298,196 +385,281 @@ msgid ""
 "rate."
 msgstr "泊松分布生成围绕平均值 **λ (lambda)** 聚集的值。结果倾向于集中在这个平均值附近，这使它非常适合模拟以固定速率发生的随机事件。"
 
-#: ../../../modules/random.md:254 978a257b7a2849ff82f42735d732dc41
+#: ../../modules/random.md:289 5404d70468cf410f99f5331ea212fb4a
 msgid "Noise Algorithms"
 msgstr "噪声算法"
 
-#: ../../../modules/random.md ../../../modules/random.md:468
-#: 27c059790ecd4812aeb1100f7eff97b6 86372b6a38974b4aad53e96b18c1fec4
+#: ../../modules/random.md ../../modules/random.md:503
+#: 0170eecccb014113bb69902f8e902f2d
 msgid "Simplex Noise"
 msgstr "单纯形噪声"
 
-#: ../../../modules/random.md:262 c5d23b8b5f39414ebf2a16f4dae7e42c
+#: ../../modules/random.md:297 aecb7b8072464018a30122f2429bae3a
 msgid ""
 "Compute the simplex noise value at given coordinates. Simplex noise is a "
 "type of gradient noise, similar to Perlin noise, used for textures or "
 "procedural generation."
 msgstr "计算给定坐标处的单纯形噪声值。单纯形噪声是一种梯度噪声，类似于柏林噪声，用于程序生成技术或者纹理。"
 
-#: ../../../modules/random.md:265 22ce8327f71e4b3ebded535be477f514
+#: ../../modules/random.md:300 ccd4680ce0954c8c99b1a6fff55db215
 msgid ""
 "**Score `$random.simplex_noise_2d.seed bs.in`**: The seed used for "
 "generation."
 msgstr "**分数 `$random.simplex_noise_2d.seed bs.in`**：用于生成的种子。"
 
-#: ../../../modules/random.md:267 ab0107dca3e545118ecda4d439096e93
+#: ../../modules/random.md:302 f7da3bd84fd54020a2328aaefd03cb55
 msgid ""
 "**Scores `$random.simplex_noise_2d.[x,y] bs.in`**: Coordinates, scaled by"
 " 1000 (e.g., for a cell size of 16, multiply by 1000/16)."
-msgstr "**分数 `$random.simplex_noise_2d.[x,y] bs.in`**：坐标，缩放1000倍（例如，对于单元格大小为16，乘以1000/16）。"
+msgstr ""
+"**分数 `$random.simplex_noise_2d.[x,y] "
+"bs.in`**：坐标，缩放1000倍（例如，对于单元格大小为16，乘以1000/16）。"
 
-#: ../../../modules/random.md:270 3c5313441b904ea792d353392f58277d
+#: ../../modules/random.md:305 17bbb1a252024d7ba60f6458e1eb1975
 msgid ""
 "**Return | Score `$random.simplex_noise_2d bs.out`**: The noise value in "
 "range [-1000,1000]"
 msgstr "**返回值 | 分数 `$random.simplex_noise_2d bs.out`**：范围在 [-1000,1000] 的噪声值"
 
-#: ../../../modules/random.md:273 ../../../modules/random.md:305
-#: 471abb04c0e94e82b38c4f05590d5cd0 5aec5e0dcd784a6a80d5893a874c49eb
+#: ../../modules/random.md:308 ../../modules/random.md:340
+#: dd2345e9d71a466e88328c1a9e044b04
 msgid "*Example: Generate a random noise value:*"
 msgstr "*示例：生成一个随机噪声值：*"
 
-#: ../../../modules/random.md ../../../modules/random.md:475
-#: 27500926a3584886bb77b82f9c14c42f 8bcdc2a37b0347848f4920ca81ff9e6e
+#: ../../modules/random.md ../../modules/random.md:510
+#: b29f671fa50649b7863ef9cb21487444
 msgid "Fractal Noise"
 msgstr "分形噪声"
 
-#: ../../../modules/random.md:288 824320abef7d4ecc8ac2aa5eed0129ab
+#: ../../modules/random.md:323 474dd1245bce45c69b6c38d7b1bc5081
 msgid ""
 "Generate fractal noise by combining multiple noise layers at different "
 "scales, often used for terrain generation."
 msgstr "通过在不同尺度上组合多个噪声层来生成分形噪声，常用于地形生成。"
 
-#: ../../../modules/random.md:291 efd7e53358874e1bb0fcd775f92e4d02
+#: ../../modules/random.md:326 90fae87cc4bc4db0a035a3d643e8320d
 msgid ""
 "**Score `$random.fractal_noise_2d.seed bs.in`**: The seed used for "
 "generation."
 msgstr "**分数 `$random.fractal_noise_2d.seed bs.in`**：用于生成的种子。"
 
-#: ../../../modules/random.md:293 49f7166ad5854a65b97b2bc169e2a82c
+#: ../../modules/random.md:328 6cdbb2168028433f84386b9efdd12f7d
 msgid ""
 "**Scores `$random.fractal_noise_2d.[x,y] bs.in`**: Coordinates, scaled by"
 " 1000 (e.g., for a cell size of 16, multiply by 1000/16)."
-msgstr "**分数 `$random.fractal_noise_2d.[x,y] bs.in`**：坐标，缩放1000倍（例如，对于单元格大小为16，乘以1000/16）。"
+msgstr ""
+"**分数 `$random.fractal_noise_2d.[x,y] "
+"bs.in`**：坐标，缩放1000倍（例如，对于单元格大小为16，乘以1000/16）。"
 
-#: ../../../modules/random.md:295 d2337f4f5ba84ce29b7f6c7a117086cb
+#: ../../modules/random.md:330 344d3da01f034226a291ba9ec7606a2a
 msgid ""
 "**Score `$random.fractal_noise_2d.octaves bs.in`**: Number of noise "
 "layers to combine (more octaves = more detail)."
 msgstr "**分数 `$random.fractal_noise_2d.octaves bs.in`**：要组合的噪声层数（更多倍频程 = 更多细节）。"
 
-#: ../../../modules/random.md:297 bb726bea29af44bb8c3639ccba54ea90
+#: ../../modules/random.md:332 61f4ae1ccd764859bf5aa04760e74a76
 msgid ""
 "**Score `$random.fractal_noise_2d.persistence bs.in`**: Contribution of "
 "each octave to the total noise, scaled by 1000."
 msgstr "**分数 `$random.fractal_noise_2d.persistence bs.in`**：每个倍频程对总噪声的贡献，缩放1000倍。"
 
-#: ../../../modules/random.md:299 66a3012c1f3242f09d39f863c1e7adba
+#: ../../modules/random.md:334 4d0e435d9d334c898fa5af28e8af6f88
 msgid ""
 "**Score `$random.fractal_noise_2d.lacunarity bs.in`**: Increase in "
 "frequency for each octave, scaled by 1000."
 msgstr "**分数 `$random.fractal_noise_2d.lacunarity bs.in`**：每个倍频程的频率增加，缩放1000倍。"
 
-#: ../../../modules/random.md:302 f9ffffa2e96445e2a745adeb3107dab0
+#: ../../modules/random.md:337 bc00cdf707f74a7989bc2b3519dd96e4
 msgid ""
 "**Return | Score `$random.fractal_noise_2d bs.out`**: The noise value in "
 "range [-1000,1000]"
 msgstr "**返回值 | 分数 `$random.fractal_noise_2d bs.out`**：范围在 [-1000,1000] 的噪声值"
 
-#: ../../../modules/random.md:324 2b8bebf7a4d1413591c723b28fd88a7d
+#: ../../modules/random.md:359 722528f2188c4e4eb83de8edf36323fd
 msgid "Noise Matrices"
 msgstr "噪声矩阵"
 
-#: ../../../modules/random.md 8673a3fde275488fac79151ed98c3308
+#: ../../modules/random.md a577cca9fdd24b8ca26e2a476c5e04aa
 msgid "White Noise 1D"
 msgstr "一维白噪声"
 
-#: ../../../modules/random.md:332 3f9abd497bb44159a23bdffbd79d6019
+#: ../../modules/random.md:367 d09de196542149e09d3926af23685522
 msgid "Generate a 1-dimensional array of white noise values."
 msgstr "生成一维白噪声值数组。"
 
-#: ../../../modules/random.md:344 3ebb64b2f9314b268637decc273b55db
+#: ../../modules/random.md:373 090e61cad1f64fe2828fff672e7b52ec
+#, python-brace-format
+msgid "{nbt}`int` **length**: Length of the array to generate."
+msgstr ""
+
+#: ../../modules/random.md:374 ../../modules/random.md:405
+#: ../../modules/random.md:435 ../../modules/random.md:468
+#: 39077b454b224882810c9e6788bcf1ae 51addb58e04f451bbef5788a7f6b869f
+#: 603f6a20d01e4d609b7c420dfcf2e763 d67695453ab142abbd847cae69a65bd0
+#, python-brace-format
+msgid "{nbt}`compound` **with**:"
+msgstr ""
+
+#: ../../modules/random.md:375 ../../modules/random.md:406
+#: ../../modules/random.md:438 ../../modules/random.md:474
+#: 3208b910e669499eb936afb974547140 6196edf2f51f4c0fb2c3eeed34e796d5
+#: 96087f0ccd3a4e86a6f200ffd15c3c0e b635637ce1a14e6d85cfdaea91c8d935
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's output (default: 1)."
+msgstr ""
+
+#: ../../modules/random.md:379 c32808e60db54f449ff7728e8ced6a71
 #, python-brace-format
 msgid ""
 "**Storage `bs:out random.white_noise_mat_1d`**: {nbt}`list` Array of "
 "values between 0 and {scale}."
-msgstr "**命令存储 `bs:out random.white_noise_mat_1d`**：{nbt}`list` 0 到 {scale} 之间的值数组。"
+msgstr ""
+"**命令存储 `bs:out random.white_noise_mat_1d`**：{nbt}`list` 0 到 {scale} "
+"之间的值数组。"
 
-#: ../../../modules/random.md:347 522108349a604a2088032ba5b556d255
+#: ../../modules/random.md:382 786e1a6bbc174a35ab412c5bb313432f
 msgid "*Example: Generate 4 random values:*"
 msgstr "*示例：生成4个随机值：*"
 
-#: ../../../modules/random.md 46c091f743c145faa6c9bbfdda94add4
+#: ../../modules/random.md ce6d8c9ecc844483b1f203377c71a580
 msgid "White Noise 2D"
 msgstr "二维白噪声"
 
-#: ../../../modules/random.md:362 8dccd8c0d9694fb1aace444a9b482b34
+#: ../../modules/random.md:397 453ed426a7c1444ab4c261966dd478ac
 msgid "Generate a 2-dimensional array of white noise values."
 msgstr "生成二维白噪声值数组。"
 
-#: ../../../modules/random.md:375 eb02ef41a6164bfcb8f1cb8817fa6805
+#: ../../modules/random.md:403 ../../modules/random.md:433
+#: ../../modules/random.md:466 bd83dc9705d54ec9a80a9e6e94eae309
+#: c212b9be21784cb997dcc098bbdad9e8 ce0348e9cfc44158b20eaea4cccc9a4b
+#, python-brace-format
+msgid "{nbt}`int` **width**: Width of the array to generate."
+msgstr ""
+
+#: ../../modules/random.md:404 ../../modules/random.md:434
+#: ../../modules/random.md:467 1812d1d4228f4278822dd869d5ce13de
+#: 4009cb0202984f7ba4a84b56bf0b670a b2c43678b7fc44d0be5b6bdd226388b8
+#, python-brace-format
+msgid "{nbt}`int` **height**: Height of the array to generate."
+msgstr ""
+
+#: ../../modules/random.md:410 eb987f4f3da544b19efab84718311bd2
 #, python-brace-format
 msgid ""
 "**Storage `bs:out random.white_noise_mat_2d`**: {nbt}`list` 2D array of "
 "values between 0 and {scale}."
-msgstr "**命令存储 `bs:out random.white_noise_mat_2d`**：{nbt}`list` 0到{scale}之间的值的二维数组。"
+msgstr ""
+"**命令存储 `bs:out random.white_noise_mat_2d`**：{nbt}`list` "
+"0到{scale}之间的值的二维数组。"
 
-#: ../../../modules/random.md:378 3d163b95113d4b1bad611433c68ba24d
+#: ../../modules/random.md:413 6f5c071b2dba421c8598e6b11aa1fb28
 msgid "*Example: Generate a 4x4 random noise pattern:*"
 msgstr "*示例：生成4x4随机噪声图案：*"
 
-#: ../../../modules/random.md e5cdf97a286141788a423da789dde068
+#: ../../modules/random.md e0cfd9f55fd5493d9f9dd743fd16c96e
 msgid "Simplex Noise 2D"
 msgstr "二维单纯形噪声"
 
-#: ../../../modules/random.md:392 f5ace9d44271431ab9795ce01f7f6184
+#: ../../modules/random.md:427 64ad1582c0744f3d8e6ffb4608b9fcfb
 msgid ""
 "Generate a 2D simplex noise texture of size `width` by `height`. Simplex "
 "noise is a gradient noise often used for textures."
 msgstr "生成大小为 `width` x `height` 的二维单纯形噪声纹理。单纯形噪声是一种常用于纹理的梯度噪声。"
 
-#: ../../../modules/random.md:407 634c2fba9daf4ac49cc8d97d8b69c05d
+#: ../../modules/random.md:436 ../../modules/random.md:469
+#: 3c2e2cdc68664e8f887b76b1c45e9cc2 5e0e278c373749f0b1264b6b662773ae
+#, python-brace-format
+msgid ""
+"{nbt}`int` **size**: Size of the noise \"cell\" (default: 16). Lower size"
+" means more detail."
+msgstr ""
+
+#: ../../modules/random.md:437 ../../modules/random.md:470
+#: 92ed6e9737d4404697365cd49b5c4a5c f813d77a0dfd424f9ecea4e424855d36
+#, python-brace-format
+msgid ""
+"{nbt}`int` **seed**: Seed for the noise generation, allowing for "
+"reproducibility (default: random)."
+msgstr ""
+
+#: ../../modules/random.md:442 00d0102075d84d3a8e36cec07c987a71
 #, python-brace-format
 msgid ""
 "**Storage `bs:out random.simplex_noise_mat_2d`**: 2D array of values "
 "between {-scale} and {scale}."
-msgstr "**命令存储 `bs:out random.simplex_noise_mat_2d`**：{-scale} 到 {scale} 之间的值的二维数组。"
+msgstr ""
+"**命令存储 `bs:out random.simplex_noise_mat_2d`**：{-scale} 到 {scale} "
+"之间的值的二维数组。"
 
-#: ../../../modules/random.md:410 dec83f383fd14659be9593181123128d
+#: ../../modules/random.md:445 e0caf60810324cada284bcf3af73da19
 msgid "*Example: Generate a 16×16 simplex noise pattern:*"
 msgstr "*示例：生成16×16单纯形噪声图案：*"
 
-#: ../../../modules/random.md eb5545da7538496d930f3e5488a2f354
+#: ../../modules/random.md 90d1f2515f744c2d978be28defe0e141
 msgid "Fractal Noise 2D"
 msgstr "二维分形噪声"
 
-#: ../../../modules/random.md:425 bf5095ec964c4f97b2502609f3baed70
+#: ../../modules/random.md:460 efefdce7f8de4a9c9733ec75a92e2c71
 msgid ""
 "Generate a 2D fractal noise texture of size `width` by `height`. Fractal "
 "noise combines multiple layers of noise for detailed textures."
 msgstr "生成大小为 `width` x `height` 的二维分形噪声纹理。分形噪声将多层噪声组合以创建详细的纹理。"
 
-#: ../../../modules/random.md:443 fe8f6823d74b41ee84b941ea44674791
+#: ../../modules/random.md:471 344d3da01f034226a291ba9ec7606a2a
+#, fuzzy, python-brace-format
+msgid ""
+"{nbt}`int` **octaves**: Number of noise layers (default: 4). More octaves"
+" = more detail."
+msgstr "**分数 `$random.fractal_noise_2d.octaves bs.in`**：要组合的噪声层数（更多倍频程 = 更多细节）。"
+
+#: ../../modules/random.md:472 61f4ae1ccd764859bf5aa04760e74a76
+#, python-brace-format
+msgid ""
+"{nbt}`double` **persistence**: Contribution of each octave (default: "
+"0.5). Higher means more detail."
+msgstr ""
+
+#: ../../modules/random.md:473 8cd6680cf8854670ae661c1eecdb1caf
+#, python-brace-format
+msgid ""
+"{nbt}`double` **lacunarity**: Increase in frequency for each octave "
+"(default: 2.0). Higher means more rapid frequency increase."
+msgstr ""
+
+#: ../../modules/random.md:478 ebcd5d514eed455d8082b1ab9a1596d1
 #, python-brace-format
 msgid ""
 "**Storage `bs:out random.fractal_noise_mat_2d`**: 2D array of values "
 "between {-scale} and {scale}."
-msgstr "**命令存储 `bs:out random.fractal_noise_mat_2d`**：{-scale} 到 {scale} 之间的值的二维数组。"
+msgstr ""
+"**命令存储 `bs:out random.fractal_noise_mat_2d`**：{-scale} 到 {scale} "
+"之间的值的二维数组。"
 
-#: ../../../modules/random.md:446 ab8291d0c66844eebf0fa95607f70146
+#: ../../modules/random.md:481 ae62872d00d548f1bf6c75c33fa5346a
 msgid "*Example: Generate a 16×16 fractal noise pattern:*"
 msgstr "*示例：生成16×16分形噪声图案：*"
 
-#: ../../../modules/random.md:460 6d5360d223884693958379e1497b7dc8
+#: ../../modules/random.md:495 133d32f820b647f6bc76a4a8c0e4784b
 msgid "White Noise"
 msgstr "白噪声"
 
-#: ../../../modules/random.md:465 6ad5dc6f41d4414d897cac038f8a63d5
+#: ../../modules/random.md:500 f3a82b723d10465cab56edcae3408dfd
 msgid "![](/_imgs/modules/random/white_noise.png)"
 msgstr "![](/_imgs/modules/random/white_noise.png)"
 
-#: ../../../modules/random.md:472 204d4877e5334648b32996680c250e89
+#: ../../modules/random.md:507 c49ca11d89d44dc2b79debbcdfc0aa19
 msgid "![](/_imgs/modules/random/simplex_noise.png)"
 msgstr "![](/_imgs/modules/random/simplex_noise.png)"
 
-#: ../../../modules/random.md:479 baf18a3c0cc54579a3ad8c86109ed715
+#: ../../modules/random.md:514 3db8e668a6954d5e884588c10af825a4
 msgid "![](/_imgs/modules/random/fractal_noise.png)"
 msgstr "![](/_imgs/modules/random/fractal_noise.png)"
 
-#: ../../../_templates/comments.md:4 06259a2293a64d61b12ba2787b5aa88e
+#: ../../_templates/comments.md:4 0371e637cb4b4364a1a9295c15f9b6a4
 msgid "**💬 Did it help you?**"
 msgstr "**💬 这对您有帮助吗？**"
 
-#: ../../../_templates/comments.md:6 0f4b482e74e54b65a00c6da072f8c9de
+#: ../../_templates/comments.md:6 78a5bc9cbb404a5ea2031fb328cfd4b7
 msgid "Feel free to leave your questions and feedback below!"
 msgstr "欢迎在下方留下您的问题和反馈！"
+

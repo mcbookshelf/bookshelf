@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-07-04 17:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -66,15 +66,12 @@ msgstr ""
 #: ../../modules/random.md:37 ../../modules/random.md:66
 #: ../../modules/random.md:107 ../../modules/random.md:142
 #: ../../modules/random.md:177 ../../modules/random.md:211
-#: ../../modules/random.md:264 ../../modules/random.md:290
-#: ../../modules/random.md:334 ../../modules/random.md:364
-#: ../../modules/random.md:394 ../../modules/random.md:427
-#: 012f46a9c4ff4d18b49ea27533110dce 0ffc32204c1b4a10b123f73ebfb49ce2
-#: 1c18bb524c5748d7b8afd1e29cc458c9 1f4f8d43d63243298072d795044eacc1
-#: 91aa3ea9fe5340afa5ab8437b21efd2b a3df971e8c6543a88094df4b1b2bb6e9
-#: abef80ee9d07402ca18f7579904e678d c9f7cd89f7274d82bb2ddf0471a99dca
-#: d20481c9a7964d8b958e648ea7cc2084 d83af4cc972d4e88b1dfacd3d2432c2f
-#: de29e7194a30473fb502040c2ae312d1 e0c5530ba92944278e3633ead9589c65
+#: ../../modules/random.md:246 ../../modules/random.md:299
+#: ../../modules/random.md:325 ../../modules/random.md:369
+#: ../../modules/random.md:399 ../../modules/random.md:429
+#: ../../modules/random.md:462 0ffc32204c1b4a10b123f73ebfb49ce2
+#: a3df971e8c6543a88094df4b1b2bb6e9 d20481c9a7964d8b958e648ea7cc2084
+#: d83af4cc972d4e88b1dfacd3d2432c2f
 msgid "Inputs"
 msgstr ""
 
@@ -87,16 +84,12 @@ msgstr ""
 
 #: ../../modules/random.md:40 ../../modules/random.md:71
 #: ../../modules/random.md:115 ../../modules/random.md:150
-#: ../../modules/random.md:184 ../../modules/random.md:218
-#: ../../modules/random.md:269 ../../modules/random.md:301
-#: ../../modules/random.md:343 ../../modules/random.md:374
-#: ../../modules/random.md:406 ../../modules/random.md:442
-#: 0bd077cc61b5420a8b1499c554085e9a 0cc05c0beb724b68bf2efaf396da4360
-#: 2b968e415c51491eb1361a6c66f50506 2deecb6732904a6cb9d88dfd984b089b
-#: 77419bbd8f5f4f92bd4c60e1169dbed4 86d2c308adbd43e2ba312bb5d1a2e910
-#: 8d5b45f1d3424b24a1db0443fa2531ae 94a5d05742494421a3c7b3cc8505193b
-#: be6c53c4b24748d595be0759c5fe5273 ccc1b29733164b768b1cee52f86cca2d
-#: d0d31cf4084b4d8988d1bc0f95611dd7 d71c63acbedb4ce29dca77a37f7ac0d2
+#: ../../modules/random.md:184 ../../modules/random.md:219
+#: ../../modules/random.md:253 ../../modules/random.md:304
+#: ../../modules/random.md:336 ../../modules/random.md:378
+#: ../../modules/random.md:409 ../../modules/random.md:441
+#: ../../modules/random.md:477 2deecb6732904a6cb9d88dfd984b089b
+#: 94a5d05742494421a3c7b3cc8505193b be6c53c4b24748d595be0759c5fe5273
 msgid "Outputs"
 msgstr ""
 
@@ -149,10 +142,9 @@ msgstr ""
 msgid "*Example: Pick a random fruit from the list based on weights:*"
 msgstr ""
 
-#: ../../modules/random.md:93 ../../modules/random.md:250
-#: ../../modules/random.md:320 ../../modules/random.md:482
-#: 9e1c18c623214278921c84860e46c069 ae181313c46946c8ba73484c488c66e7
-#: be154388621c4f4bb73ee0975ef44f00 d5e10e81f7a245ed858aa04ba2157cf1
+#: ../../modules/random.md:93 ../../modules/random.md:285
+#: ../../modules/random.md:355 ../../modules/random.md:517
+#: ae181313c46946c8ba73484c488c66e7 be154388621c4f4bb73ee0975ef44f00
 msgid "**Credits**: Aksiome, SBtree"
 msgstr ""
 
@@ -170,13 +162,34 @@ msgstr ""
 
 #: ../../modules/random.md:108 ../../modules/random.md:143
 #: ../../modules/random.md:178 ../../modules/random.md:212
-#: ../../modules/random.md:335 ../../modules/random.md:365
-#: ../../modules/random.md:395 ../../modules/random.md:428
-#: 0b4df4f5b67c4ec7b7f18c9f5da548c1 0d5f6f0e88a843a585f2037c15c99a08
-#: 1fa84d4a1da24f47b3030daf4215c740 77d7b4e6368c42f199b55e195357b7bd
-#: 85647fc2f92344859633895326537786 947325581b43426bbbd9833e888cc30e
-#: a6a457d3a9604edeb51ca0b0a6638d14 b7bae91b10d84ec786c9f2d37af588bd
+#: ../../modules/random.md:247 ../../modules/random.md:370
+#: ../../modules/random.md:400 ../../modules/random.md:430
+#: ../../modules/random.md:463 77d7b4e6368c42f199b55e195357b7bd
+#: 85647fc2f92344859633895326537786
 msgid "**Function macro**:"
+msgstr ""
+
+#: ../../modules/random.md:110 ../../modules/random.md:145
+#: ../../modules/random.md:180 ../../modules/random.md:214
+#: ../../modules/random.md:249 ../../modules/random.md:372
+#: ../../modules/random.md:402 ../../modules/random.md:432
+#: ../../modules/random.md:465 19247dade29b4b7dadeedb64dfd701cc
+#: 3a68a3c0f3d645fe83beddc349cabcd2 4708e442fa654242ba9594318be59135
+#: 569faf4826e74fad9b918404ac0385c0 58d30309d5794270b3662ce0d4ae80e7
+#: 7073d905ac304fcc8cc507b6c5bc7eae 7f4793b835b34d3ba171b0463b9cf070
+#: ca681f9a9e2f483dae2e1623d3090528 f5fe84702c4c4eb89e56f237b88933c0
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr ""
+
+#: ../../modules/random.md:111 77313823b25547fc9f25711fa257fa7a
+#, python-brace-format
+msgid "{nbt}`int` **min**: The lower bound."
+msgstr ""
+
+#: ../../modules/random.md:112 7e905a00bd2041fc81a03c01a2769961
+#, python-brace-format
+msgid "{nbt}`int` **max**: The upper bound."
 msgstr ""
 
 #: ../../modules/random.md:116 12783521182f482c98903cb86c5fca0f
@@ -207,6 +220,20 @@ msgstr ""
 msgid ""
 "Generate a random number with a binomial distribution using the specified"
 " `trials` and `probability`."
+msgstr ""
+
+#: ../../modules/random.md:146 78e52780879e4f7c8499fd6520e3d6df
+#, python-brace-format
+msgid ""
+"{nbt}`int` **trials**: The number of Bernoulli trials. Maximum accepted "
+"value is 1000."
+msgstr ""
+
+#: ../../modules/random.md:147 bcc1733261bc4534b5aafd881207c66a
+#, python-brace-format
+msgid ""
+"{nbt}`double` **probability**: The probability of success of each "
+"Bernoulli trial, in range [0,1]."
 msgstr ""
 
 #: ../../modules/random.md:151 e703885a3ec74b19afddcf4eb3d427eb
@@ -244,6 +271,13 @@ msgid ""
 "given `probability`."
 msgstr ""
 
+#: ../../modules/random.md:181 7153e4be6dca49b98a96cf6722894a4b
+#, python-brace-format
+msgid ""
+"{nbt}`double` **probability**: The probability of stopping at each trial,"
+" in range [0,1]."
+msgstr ""
+
 #: ../../modules/random.md:185 bd1d5488cbd74577a1599b12bbfcee29
 msgid ""
 "**Return | Score `$random.geometric bs.out`**: A random integer in range "
@@ -266,31 +300,79 @@ msgid ""
 "dice rolls needed to obtain a six."
 msgstr ""
 
+#: ../../modules/random.md 36d6a46253164f3caa23847330da13bc
+msgid "Normal"
+msgstr ""
+
+#: ../../modules/random.md:209 fb24eda5519e4b9b858f6fea5a8cc0b8
+msgid ""
+"Generate a random number following a normal (Gaussian) distribution with "
+"specified `mean` and `spread` (standard deviation)."
+msgstr ""
+
+#: ../../modules/random.md:215 a1e0a6f619ae4e27a40896de56d3eba6
+#, python-brace-format
+msgid "{nbt}`double` **mean**: The average (center) value of the distribution."
+msgstr ""
+
+#: ../../modules/random.md:216 fc2aa2ebeeb043048a220f1b9b239ecb
+#, python-brace-format
+msgid ""
+"{nbt}`double` **spread**: The standard deviation controlling how spread "
+"out the values are."
+msgstr ""
+
+#: ../../modules/random.md:220 12783521182f482c98903cb86c5fca0f
+msgid ""
+"**Return | Score `$random.normal bs.out`**: A random integer centered "
+"near `mean`."
+msgstr ""
+
+#: ../../modules/random.md:223 5e531843ddc54c08b55914c1abb6ab2a
+msgid "*Example: Generate a random number with mean 10 and spread 3:*"
+msgstr ""
+
+#: ../../modules/random.md:233 df0dcffd93664a3ab0eaf9b9e348a29d
+msgid "Normal Distribution... 🥶 What's this?"
+msgstr ""
+
+#: ../../modules/random.md:236 97192c3e834a420598d447581e66365d
+msgid ""
+"Also known as the Gaussian distribution, it produces values clustered "
+"around the mean with a bell-shaped probability curve. Widely used to "
+"model natural variations and measurement errors."
+msgstr ""
+
 #: ../../modules/random.md 15d07165786441a59fc2403662ef621d
 msgid "Poisson"
 msgstr ""
 
-#: ../../modules/random.md:209 eb7ee619293747c592b4241f99bc7097
+#: ../../modules/random.md:244 eb7ee619293747c592b4241f99bc7097
 msgid ""
 "Generate a random number following a Poisson distribution with the "
 "expected value `lambda`."
 msgstr ""
 
-#: ../../modules/random.md:219 cb04a773352b4977ba6e4843acd992ff
+#: ../../modules/random.md:250 17bbb1a252024d7ba60f6458e1eb1975
+#, python-brace-format
+msgid "{nbt}`double` **lambda**: The expected value in range [0,10]."
+msgstr ""
+
+#: ../../modules/random.md:254 cb04a773352b4977ba6e4843acd992ff
 msgid ""
 "**Return | Score `$random.poisson bs.out`**: A random integer, biased "
 "towards the `lambda` value."
 msgstr ""
 
-#: ../../modules/random.md:222 c41422160bad4d8488e2cf4798a75aba
+#: ../../modules/random.md:257 c41422160bad4d8488e2cf4798a75aba
 msgid "*Example: Generate a random number biased towards 5:*"
 msgstr ""
 
-#: ../../modules/random.md:232 6e3a77b9597e4879bc01932d110b452c
+#: ../../modules/random.md:267 6e3a77b9597e4879bc01932d110b452c
 msgid "Poisson Distribution... 🥶 What's this?"
 msgstr ""
 
-#: ../../modules/random.md:235 8e7ce9369ecf446f9c8d2ffbe61e6b91
+#: ../../modules/random.md:270 8e7ce9369ecf446f9c8d2ffbe61e6b91
 msgid ""
 "A Poisson distribution generates values that cluster around an average "
 "value, **λ (lambda)**. Results tend to concentrate near this average, "
@@ -298,93 +380,93 @@ msgid ""
 "rate."
 msgstr ""
 
-#: ../../modules/random.md:254 5404d70468cf410f99f5331ea212fb4a
+#: ../../modules/random.md:289 5404d70468cf410f99f5331ea212fb4a
 msgid "Noise Algorithms"
 msgstr ""
 
-#: ../../modules/random.md ../../modules/random.md:468
-#: 0170eecccb014113bb69902f8e902f2d 2ccadefed66842c7ab67cd2941af305e
+#: ../../modules/random.md ../../modules/random.md:503
+#: 0170eecccb014113bb69902f8e902f2d
 msgid "Simplex Noise"
 msgstr ""
 
-#: ../../modules/random.md:262 aecb7b8072464018a30122f2429bae3a
+#: ../../modules/random.md:297 aecb7b8072464018a30122f2429bae3a
 msgid ""
 "Compute the simplex noise value at given coordinates. Simplex noise is a "
 "type of gradient noise, similar to Perlin noise, used for textures or "
 "procedural generation."
 msgstr ""
 
-#: ../../modules/random.md:265 ccd4680ce0954c8c99b1a6fff55db215
+#: ../../modules/random.md:300 ccd4680ce0954c8c99b1a6fff55db215
 msgid ""
 "**Score `$random.simplex_noise_2d.seed bs.in`**: The seed used for "
 "generation."
 msgstr ""
 
-#: ../../modules/random.md:267 f7da3bd84fd54020a2328aaefd03cb55
+#: ../../modules/random.md:302 f7da3bd84fd54020a2328aaefd03cb55
 msgid ""
 "**Scores `$random.simplex_noise_2d.[x,y] bs.in`**: Coordinates, scaled by"
 " 1000 (e.g., for a cell size of 16, multiply by 1000/16)."
 msgstr ""
 
-#: ../../modules/random.md:270 17bbb1a252024d7ba60f6458e1eb1975
+#: ../../modules/random.md:305 17bbb1a252024d7ba60f6458e1eb1975
 msgid ""
 "**Return | Score `$random.simplex_noise_2d bs.out`**: The noise value in "
 "range [-1000,1000]"
 msgstr ""
 
-#: ../../modules/random.md:273 ../../modules/random.md:305
-#: dd2345e9d71a466e88328c1a9e044b04 fd42363f6e5f4d55a0e7312a6c758151
+#: ../../modules/random.md:308 ../../modules/random.md:340
+#: dd2345e9d71a466e88328c1a9e044b04
 msgid "*Example: Generate a random noise value:*"
 msgstr ""
 
-#: ../../modules/random.md ../../modules/random.md:475
-#: b29f671fa50649b7863ef9cb21487444 e8632628ca764d42bdfc0bdbd4901af5
+#: ../../modules/random.md ../../modules/random.md:510
+#: b29f671fa50649b7863ef9cb21487444
 msgid "Fractal Noise"
 msgstr ""
 
-#: ../../modules/random.md:288 474dd1245bce45c69b6c38d7b1bc5081
+#: ../../modules/random.md:323 474dd1245bce45c69b6c38d7b1bc5081
 msgid ""
 "Generate fractal noise by combining multiple noise layers at different "
 "scales, often used for terrain generation."
 msgstr ""
 
-#: ../../modules/random.md:291 90fae87cc4bc4db0a035a3d643e8320d
+#: ../../modules/random.md:326 90fae87cc4bc4db0a035a3d643e8320d
 msgid ""
 "**Score `$random.fractal_noise_2d.seed bs.in`**: The seed used for "
 "generation."
 msgstr ""
 
-#: ../../modules/random.md:293 6cdbb2168028433f84386b9efdd12f7d
+#: ../../modules/random.md:328 6cdbb2168028433f84386b9efdd12f7d
 msgid ""
 "**Scores `$random.fractal_noise_2d.[x,y] bs.in`**: Coordinates, scaled by"
 " 1000 (e.g., for a cell size of 16, multiply by 1000/16)."
 msgstr ""
 
-#: ../../modules/random.md:295 344d3da01f034226a291ba9ec7606a2a
+#: ../../modules/random.md:330 344d3da01f034226a291ba9ec7606a2a
 msgid ""
 "**Score `$random.fractal_noise_2d.octaves bs.in`**: Number of noise "
 "layers to combine (more octaves = more detail)."
 msgstr ""
 
-#: ../../modules/random.md:297 61f4ae1ccd764859bf5aa04760e74a76
+#: ../../modules/random.md:332 61f4ae1ccd764859bf5aa04760e74a76
 msgid ""
 "**Score `$random.fractal_noise_2d.persistence bs.in`**: Contribution of "
 "each octave to the total noise, scaled by 1000."
 msgstr ""
 
-#: ../../modules/random.md:299 4d0e435d9d334c898fa5af28e8af6f88
+#: ../../modules/random.md:334 4d0e435d9d334c898fa5af28e8af6f88
 msgid ""
 "**Score `$random.fractal_noise_2d.lacunarity bs.in`**: Increase in "
 "frequency for each octave, scaled by 1000."
 msgstr ""
 
-#: ../../modules/random.md:302 bc00cdf707f74a7989bc2b3519dd96e4
+#: ../../modules/random.md:337 bc00cdf707f74a7989bc2b3519dd96e4
 msgid ""
 "**Return | Score `$random.fractal_noise_2d bs.out`**: The noise value in "
 "range [-1000,1000]"
 msgstr ""
 
-#: ../../modules/random.md:324 722528f2188c4e4eb83de8edf36323fd
+#: ../../modules/random.md:359 722528f2188c4e4eb83de8edf36323fd
 msgid "Noise Matrices"
 msgstr ""
 
@@ -392,18 +474,39 @@ msgstr ""
 msgid "White Noise 1D"
 msgstr ""
 
-#: ../../modules/random.md:332 d09de196542149e09d3926af23685522
+#: ../../modules/random.md:367 d09de196542149e09d3926af23685522
 msgid "Generate a 1-dimensional array of white noise values."
 msgstr ""
 
-#: ../../modules/random.md:344 c32808e60db54f449ff7728e8ced6a71
+#: ../../modules/random.md:373 090e61cad1f64fe2828fff672e7b52ec
+#, python-brace-format
+msgid "{nbt}`int` **length**: Length of the array to generate."
+msgstr ""
+
+#: ../../modules/random.md:374 ../../modules/random.md:405
+#: ../../modules/random.md:435 ../../modules/random.md:468
+#: 39077b454b224882810c9e6788bcf1ae 51addb58e04f451bbef5788a7f6b869f
+#: 603f6a20d01e4d609b7c420dfcf2e763 d67695453ab142abbd847cae69a65bd0
+#, python-brace-format
+msgid "{nbt}`compound` **with**:"
+msgstr ""
+
+#: ../../modules/random.md:375 ../../modules/random.md:406
+#: ../../modules/random.md:438 ../../modules/random.md:474
+#: 3208b910e669499eb936afb974547140 6196edf2f51f4c0fb2c3eeed34e796d5
+#: 96087f0ccd3a4e86a6f200ffd15c3c0e b635637ce1a14e6d85cfdaea91c8d935
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's output (default: 1)."
+msgstr ""
+
+#: ../../modules/random.md:379 c32808e60db54f449ff7728e8ced6a71
 #, python-brace-format
 msgid ""
 "**Storage `bs:out random.white_noise_mat_1d`**: {nbt}`list` Array of "
 "values between 0 and {scale}."
 msgstr ""
 
-#: ../../modules/random.md:347 786e1a6bbc174a35ab412c5bb313432f
+#: ../../modules/random.md:382 786e1a6bbc174a35ab412c5bb313432f
 msgid "*Example: Generate 4 random values:*"
 msgstr ""
 
@@ -411,18 +514,32 @@ msgstr ""
 msgid "White Noise 2D"
 msgstr ""
 
-#: ../../modules/random.md:362 453ed426a7c1444ab4c261966dd478ac
+#: ../../modules/random.md:397 453ed426a7c1444ab4c261966dd478ac
 msgid "Generate a 2-dimensional array of white noise values."
 msgstr ""
 
-#: ../../modules/random.md:375 eb987f4f3da544b19efab84718311bd2
+#: ../../modules/random.md:403 ../../modules/random.md:433
+#: ../../modules/random.md:466 bd83dc9705d54ec9a80a9e6e94eae309
+#: c212b9be21784cb997dcc098bbdad9e8 ce0348e9cfc44158b20eaea4cccc9a4b
+#, python-brace-format
+msgid "{nbt}`int` **width**: Width of the array to generate."
+msgstr ""
+
+#: ../../modules/random.md:404 ../../modules/random.md:434
+#: ../../modules/random.md:467 1812d1d4228f4278822dd869d5ce13de
+#: 4009cb0202984f7ba4a84b56bf0b670a b2c43678b7fc44d0be5b6bdd226388b8
+#, python-brace-format
+msgid "{nbt}`int` **height**: Height of the array to generate."
+msgstr ""
+
+#: ../../modules/random.md:410 eb987f4f3da544b19efab84718311bd2
 #, python-brace-format
 msgid ""
 "**Storage `bs:out random.white_noise_mat_2d`**: {nbt}`list` 2D array of "
 "values between 0 and {scale}."
 msgstr ""
 
-#: ../../modules/random.md:378 6f5c071b2dba421c8598e6b11aa1fb28
+#: ../../modules/random.md:413 6f5c071b2dba421c8598e6b11aa1fb28
 msgid "*Example: Generate a 4x4 random noise pattern:*"
 msgstr ""
 
@@ -430,20 +547,36 @@ msgstr ""
 msgid "Simplex Noise 2D"
 msgstr ""
 
-#: ../../modules/random.md:392 64ad1582c0744f3d8e6ffb4608b9fcfb
+#: ../../modules/random.md:427 64ad1582c0744f3d8e6ffb4608b9fcfb
 msgid ""
 "Generate a 2D simplex noise texture of size `width` by `height`. Simplex "
 "noise is a gradient noise often used for textures."
 msgstr ""
 
-#: ../../modules/random.md:407 00d0102075d84d3a8e36cec07c987a71
+#: ../../modules/random.md:436 ../../modules/random.md:469
+#: 3c2e2cdc68664e8f887b76b1c45e9cc2 5e0e278c373749f0b1264b6b662773ae
+#, python-brace-format
+msgid ""
+"{nbt}`int` **size**: Size of the noise \"cell\" (default: 16). Lower size"
+" means more detail."
+msgstr ""
+
+#: ../../modules/random.md:437 ../../modules/random.md:470
+#: 92ed6e9737d4404697365cd49b5c4a5c f813d77a0dfd424f9ecea4e424855d36
+#, python-brace-format
+msgid ""
+"{nbt}`int` **seed**: Seed for the noise generation, allowing for "
+"reproducibility (default: random)."
+msgstr ""
+
+#: ../../modules/random.md:442 00d0102075d84d3a8e36cec07c987a71
 #, python-brace-format
 msgid ""
 "**Storage `bs:out random.simplex_noise_mat_2d`**: 2D array of values "
 "between {-scale} and {scale}."
 msgstr ""
 
-#: ../../modules/random.md:410 e0caf60810324cada284bcf3af73da19
+#: ../../modules/random.md:445 e0caf60810324cada284bcf3af73da19
 msgid "*Example: Generate a 16×16 simplex noise pattern:*"
 msgstr ""
 
@@ -451,36 +584,57 @@ msgstr ""
 msgid "Fractal Noise 2D"
 msgstr ""
 
-#: ../../modules/random.md:425 efefdce7f8de4a9c9733ec75a92e2c71
+#: ../../modules/random.md:460 efefdce7f8de4a9c9733ec75a92e2c71
 msgid ""
 "Generate a 2D fractal noise texture of size `width` by `height`. Fractal "
 "noise combines multiple layers of noise for detailed textures."
 msgstr ""
 
-#: ../../modules/random.md:443 ebcd5d514eed455d8082b1ab9a1596d1
+#: ../../modules/random.md:471 344d3da01f034226a291ba9ec7606a2a
+#, python-brace-format
+msgid ""
+"{nbt}`int` **octaves**: Number of noise layers (default: 4). More octaves"
+" = more detail."
+msgstr ""
+
+#: ../../modules/random.md:472 61f4ae1ccd764859bf5aa04760e74a76
+#, python-brace-format
+msgid ""
+"{nbt}`double` **persistence**: Contribution of each octave (default: "
+"0.5). Higher means more detail."
+msgstr ""
+
+#: ../../modules/random.md:473 8cd6680cf8854670ae661c1eecdb1caf
+#, python-brace-format
+msgid ""
+"{nbt}`double` **lacunarity**: Increase in frequency for each octave "
+"(default: 2.0). Higher means more rapid frequency increase."
+msgstr ""
+
+#: ../../modules/random.md:478 ebcd5d514eed455d8082b1ab9a1596d1
 #, python-brace-format
 msgid ""
 "**Storage `bs:out random.fractal_noise_mat_2d`**: 2D array of values "
 "between {-scale} and {scale}."
 msgstr ""
 
-#: ../../modules/random.md:446 ae62872d00d548f1bf6c75c33fa5346a
+#: ../../modules/random.md:481 ae62872d00d548f1bf6c75c33fa5346a
 msgid "*Example: Generate a 16×16 fractal noise pattern:*"
 msgstr ""
 
-#: ../../modules/random.md:460 133d32f820b647f6bc76a4a8c0e4784b
+#: ../../modules/random.md:495 133d32f820b647f6bc76a4a8c0e4784b
 msgid "White Noise"
 msgstr ""
 
-#: ../../modules/random.md:465 f3a82b723d10465cab56edcae3408dfd
+#: ../../modules/random.md:500 f3a82b723d10465cab56edcae3408dfd
 msgid "![](/_imgs/modules/random/white_noise.png)"
 msgstr ""
 
-#: ../../modules/random.md:472 c49ca11d89d44dc2b79debbcdfc0aa19
+#: ../../modules/random.md:507 c49ca11d89d44dc2b79debbcdfc0aa19
 msgid "![](/_imgs/modules/random/simplex_noise.png)"
 msgstr ""
 
-#: ../../modules/random.md:479 3db8e668a6954d5e884588c10af825a4
+#: ../../modules/random.md:514 3db8e668a6954d5e884588c10af825a4
 msgid "![](/_imgs/modules/random/fractal_noise.png)"
 msgstr ""
 
