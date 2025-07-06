@@ -6,6 +6,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 import click
+import watchfiles
 from beet import PackConfig, Project, ProjectConfig
 from beet.toolchain.commands import error_handler
 
@@ -89,30 +90,36 @@ def watch(modules: tuple[str, ...]) -> None:
             output=BUILD_DIR,
             require=["bookshelf.plugins.load_tests"],
         )
-        project = Project(config.copy().resolve(ROOT_DIR))
 
-        for changes in project.watch(0.5):
-            filename, action = next(iter(changes.items()))
-
-            logger.info("%s %s", click.style(
-                time.strftime("%H:%M:%S"),
-                fg="green",
-                bold=True,
-            ), (
-                f"{action.capitalize()}: {filename}"
-                if changes == {filename: action} else
-                f"{len(changes)} changes detected…"
-            ))
-
+        def build_once() -> None:
             with error_handler(format_padding=1):
-                project.resolved_config = config.resolve(ROOT_DIR)
+                project = Project(config.resolve(ROOT_DIR))
                 project.build()
+                del project
 
             logger.info("%s Finished build!", click.style(
                 time.strftime("%H:%M:%S"),
                 fg="green",
                 bold=True,
             ))
+
+        build_once()
+
+        for changes in watchfiles.watch(MODULES_DIR):
+            count = len(changes)
+            change, filename = next(iter(changes))
+
+            logger.info("%s %s", click.style(
+                time.strftime("%H:%M:%S"),
+                fg="green",
+                bold=True,
+            ), (
+                f"{change.name.capitalize()}: {filename}"
+                if count == 1 else
+                f"Detected {count} changes…"
+            ))
+
+            build_once()
 
 
 @modules.command()
