@@ -13,12 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #i bs.ctx run data get storage bs:ctx _[-1][0] 62500
-execute store result score #j bs.ctx run data get storage bs:ctx _[-1][1] 62500
-execute store result score #k bs.ctx run data get storage bs:ctx _[-1][2] 62500
-execute store result score #o bs.ctx run data get storage bs:ctx _[-1][3] 62500
-execute store result score #p bs.ctx run data get storage bs:ctx _[-1][4] 62500
-execute store result score #q bs.ctx run data get storage bs:ctx _[-1][5] 62500
+execute store result score #i bs.ctx run data get storage bs:ctx _[-1][0] 625000
+execute store result score #j bs.ctx run data get storage bs:ctx _[-1][1] 625000
+execute store result score #k bs.ctx run data get storage bs:ctx _[-1][2] 625000
+execute store result score #o bs.ctx run data get storage bs:ctx _[-1][3] 625000
+execute store result score #p bs.ctx run data get storage bs:ctx _[-1][4] 625000
+execute store result score #q bs.ctx run data get storage bs:ctx _[-1][5] 625000
 
 # offset coordinates if needed
 scoreboard players operation #i bs.ctx += #u bs.ctx

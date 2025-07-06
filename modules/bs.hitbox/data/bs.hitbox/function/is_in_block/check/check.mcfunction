@@ -14,13 +14,13 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute summon minecraft:marker run function bs.hitbox:utils/get_fract_pos
-execute store result score #x bs.ctx run data get storage bs:ctx _[0] 1000000
-execute store result score #y bs.ctx run data get storage bs:ctx _[1] 1000000
-execute store result score #z bs.ctx run data get storage bs:ctx _[2] 1000000
+execute store result score #x bs.ctx run data get storage bs:ctx _[0] 10000000
+execute store result score #y bs.ctx run data get storage bs:ctx _[1] 10000000
+execute store result score #z bs.ctx run data get storage bs:ctx _[2] 10000000
 
 function #bs.hitbox:get_block
 $execute store success score #s bs.ctx run data modify storage bs:ctx _ set from storage bs:out hitbox.$(kind)_shape
 execute if score #s bs.ctx matches 0 run return 0
-execute store result score #u bs.ctx run data get storage bs:out hitbox.offset.x 1000000
-execute store result score #v bs.ctx run data get storage bs:out hitbox.offset.z 1000000
+execute store result score #u bs.ctx run data get storage bs:out hitbox.offset.x 10000000
+execute store result score #v bs.ctx run data get storage bs:out hitbox.offset.z 10000000
 return run function bs.hitbox:is_in_block/check/shape

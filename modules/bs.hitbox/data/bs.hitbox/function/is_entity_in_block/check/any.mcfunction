@@ -13,13 +13,18 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return run execute \
+  if score #x bs.ctx matches ..9999999 \
+  if score #i bs.ctx matches 0.. \
+  if score #y bs.ctx matches ..9999999 \
+  if score #j bs.ctx matches 0.. \
+  if score #z bs.ctx matches ..9999999 \
+  if score #k bs.ctx matches 0..
+
+function #bs.hitbox:get_block
+$execute store success score #s bs.ctx run data modify storage bs:ctx _ set from storage bs:out hitbox.$(kind)_shape
+execute if score #s bs.ctx matches 0 run return 0
 execute store result score #u bs.ctx run data get storage bs:out hitbox.offset.x 10000000
 execute store result score #v bs.ctx run data get storage bs:out hitbox.offset.z 10000000
 
-$execute if score #u bs.ctx matches ..$(min) run scoreboard players set #u bs.ctx $(min)
-$execute if score #v bs.ctx matches ..$(min) run scoreboard players set #v bs.ctx $(min)
-$execute if score #u bs.ctx matches $(max).. run scoreboard players set #u bs.ctx $(max)
-$execute if score #v bs.ctx matches $(max).. run scoreboard players set #v bs.ctx $(max)
-
-execute store result storage bs:out hitbox.offset.x double .0000001 run scoreboard players get #u bs.ctx
-execute store result storage bs:out hitbox.offset.z double .0000001 run scoreboard players get #v bs.ctx
+return run function bs.hitbox:is_entity_in_block/check/shape

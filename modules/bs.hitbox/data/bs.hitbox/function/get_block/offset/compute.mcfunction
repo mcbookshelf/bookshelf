@@ -54,15 +54,15 @@ execute at @s \
   positioned ~ ~9007199254740991 ~9007199254740991 facing ~ ~-2 ~-2 positioned ^ ^ ^-1 \
   positioned ~ ~18014398509481982 ~18014398509481982 facing ~ ~-4 ~-4 positioned ^ ^ ^2 \
   run tp @s ~ 0 0.
-execute store result score #i bs.ctx run data get entity @s Pos[0] 1073741824
-scoreboard players operation #i bs.ctx -= #u bs.ctx
-execute store result score #j bs.ctx run scoreboard players operation #i bs.ctx -= #v bs.ctx
+execute store result score #a bs.ctx run data get entity @s Pos[0] 1073741824
+scoreboard players operation #a bs.ctx -= #u bs.ctx
+execute store result score #b bs.ctx run scoreboard players operation #a bs.ctx -= #v bs.ctx
 
 # compute i = (i * i * 42317861) + (i * 11)
-scoreboard players operation #j bs.ctx *= #j bs.ctx
-scoreboard players operation #j bs.ctx *= 42317861 bs.const
-scoreboard players operation #i bs.ctx *= 11 bs.const
-execute store result score #u bs.ctx store result score #v bs.ctx run scoreboard players operation #i bs.ctx += #j bs.ctx
+scoreboard players operation #b bs.ctx *= #b bs.ctx
+scoreboard players operation #b bs.ctx *= 42317861 bs.const
+scoreboard players operation #a bs.ctx *= 11 bs.const
+execute store result score #u bs.ctx store result score #v bs.ctx run scoreboard players operation #a bs.ctx += #b bs.ctx
 
 # compute offset x = (((i >> 16 & 15) / 15.0) - 0.5) * 0.5
 scoreboard players operation #u bs.ctx /= 65536 bs.const
