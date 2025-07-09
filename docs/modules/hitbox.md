@@ -22,10 +22,10 @@ You can find below all functions available in this module.
 
 ```{function} #bs.hitbox:bake_entity
 
-Bake an entity’s hitbox to improve performance when its size never changes. If the entity has passengers, they are also baked, and the base entity's hitbox is expanded to include the full bounding box of the entire stack.
+Bake an [entity’s hitbox](#entity-types) to improve performance when its size never changes. If the entity has passengers, they are also baked, and the base entity's hitbox is expanded to include the full bounding box of the entire stack.
 
 :Inputs:
-  **Execution `as <entities>`**: The entity or entities whose hitboxes should be baked.
+  **Execution `as <entities>`**: The entity or entities whose hitbox should be baked.
 
 :Outputs:
   **State**: The entity's hitbox is saved in a baked state for later use.
@@ -324,10 +324,10 @@ execute summon minecraft:cow if function #bs.hitbox:is_in_entity run say Oh no..
 
 ```{function} #bs.hitbox:reset_entity
 
-Reset an entity's hitbox to its default **dynamic** form, removing any previously applied **baked** or **custom** hitbox.
+Reset an [entity's hitbox](#entity-types) to its default **dynamic** form, removing any previously applied **baked** or **custom** hitbox.
 
 :Inputs:
-  **Execution `as <entities>`**: The entity or entities whose hitboxes should be reset.
+  **Execution `as <entities>`**: The entity or entities whose hitbox should be reset.
 
 :Outputs:
   **State**: The entity’s hitbox is now dynamic again and will automatically update with scaling, growth, or other changes.
@@ -341,10 +341,10 @@ Reset an entity's hitbox to its default **dynamic** form, removing any previousl
 
 ```{function} #bs.hitbox:set_entity
 
-Define a custom hitbox for an entity with full control over its dimensions. This allows setting a hitbox not constrained by Minecraft’s built-in width/height system and can be used on entities that normally have no hitbox.
+Define a [custom hitbox](#entity-types) for an entity with full control over its dimensions. This allows setting a hitbox not constrained by Minecraft’s built-in width/height system and can be used on entities that normally have no hitbox.
 
 :Inputs:
-  **Execution `as <entities>`**: The entity or entities whose hitboxes should be set with custom dimensions.
+  **Execution `as <entities>`**: The entity or entities whose hitbox should be set with custom dimensions.
 
   **Function macro**:
   :::{treeview}
@@ -459,6 +459,7 @@ Bookshelf provides two block and three entity hitbox types, each suited to diffe
 
 ---
 
+(block-types)=
 ### Blocks
 
 ::::{tab-set}
@@ -486,6 +487,7 @@ The `interaction` shape defines the area where players can interact with or brea
 
 ---
 
+(entity-types)=
 ### Entities
 
 ::::{tab-set}
@@ -505,7 +507,7 @@ This is the native Minecraft hitbox, which updates automatically:
 A snapshot of the entity’s hitbox at a specific moment:
 
 - Improves performance when the entity’s size will never change.
-- Includes the base entity and all passengers in one combined box.
+- Includes the base entity and all passengers in one combined box. When baking a pile of passengers, the base entity bakes all passengers and sets its hitbox to encompass the entire stack.
 - Does not update dynamically, collisions may break if the entity changes later.
 
 ➔ Set using [#bs.hitbox:bake_entity](#bake-entity)
@@ -518,6 +520,7 @@ A fully user-defined hitbox:
 - Set exact `width`, `height`, and optional `depth`.
 - Works on entities with no native hitbox (e.g. display entities).
 - Independent from Minecraft’s internal hitbox system.
+- Only applies to the base entity. When used with modules that process entity stacks, only the base entity’s hitbox is considered, passengers are ignored.
 - Slight performance cost, avoid overuse in the same area.
 
 ➔ Set using [#bs.hitbox:set_entity](#set-entity)
