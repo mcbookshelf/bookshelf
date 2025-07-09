@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/tree-structure.md:5 164ff2f0de5a4512b4f7e5aeb8a8885a
+msgid "🌳 Tree Structure"
+msgstr ""
+
+#: ../../contribute/tree-structure.md:7 a0e1b672df094c289ece523ba137ac25
+msgid ""
+"Bookshelf respects a certain tree structure which can be similar to Java "
+"packages, called \"modules\" in this project. The added features must "
+"therefore be positioned in these various modules according to their "
+"usefulness."
+msgstr ""
+
+#: ../../contribute/tree-structure.md:16 2d47b5815044452083529d035d367864
+msgid "**Module Requirements:**"
+msgstr ""
+
+#: ../../contribute/tree-structure.md:18 df7e46b165db4673a9193af7e3617c90
+msgid ""
+"Each module must include a `module.json`, as described in the [metadata "
+"page](project:metadata.md)"
+msgstr ""
+
+#: ../../contribute/tree-structure.md:20 33b9a3ac287841d79b3226099cc246b5
+msgid "Each module must also include a `pack.png` and a `README.md`"
+msgstr ""
+
+#: ../../contribute/tree-structure.md:22 75ef5881dfa94161b2f30f8e2afb5a5d
+msgid ""
+"The `__load__` and `__unload__` functions are required to manage the "
+"module's loading and unloading. This includes resetting objectives, "
+"storages, and any other necessary elements"
+msgstr ""
+
+#: ../../contribute/tree-structure.md:25 6ac64bd5d1b542ff8121fc9e342de2b8
+msgid "**Feature Requirements:**"
+msgstr ""
+
+#: ../../contribute/tree-structure.md:27 a07530f820034a2cbff640dfa84c1937
+msgid ""
+"Each feature function should have a dedicated function tag that declares "
+"metadata, as detailed in the [metadata page](project:metadata.md)"
+msgstr ""
+
+#: ../../contribute/tree-structure.md:29 7c494df7fcd241cca9572bc6d6113721
+msgid ""
+"Each feature should declare metadata, as detailed in the [metadata "
+"page](project:metadata.md)"
+msgstr ""
+
+#: ../../contribute/tree-structure.md:31 1565abf915ff4e0a9262167eca464eba
+msgid ""
+"A feature is equal to a unique utility, so we should not hesitate to "
+"decompose its features in order to make it more readable and to promote "
+"reusability"
+msgstr ""
+
+#: ../../contribute/tree-structure.md:33 97c582614c2744d2a556b93327b568b2
+msgid ""
+"In addition to these few constraints, contributors are free to organize "
+"their files as they wish as long as it remains coherent and respects the "
+"global structure."
+msgstr ""
+

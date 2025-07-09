@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../faq.md:1 bf00382b4a92453ba8fcf85b8f1dc17e
+msgid "📋 FAQ"
+msgstr ""
+
+#: ../../faq.md:3 88444006d57b45c08ef67593e3cb780a
+msgid "Can I use Bookshelf in my project?"
+msgstr ""
+
+#: ../../faq.md:5 b4d7fb13e1aa4ccc9aa940551f73b993
+msgid ""
+"Absolutely! Bookshelf is designed to be used in any project. A mention of"
+" Bookshelf and/or Gunivers in a message of thanks is always appreciated. "
+"Let's keep the open-source world a respectful place 🤗! Additionally, feel"
+" free to share your creations with us to let us know how you use the "
+"library (and allow us to provide additional visibility to your project)."
+msgstr ""
+
+#: ../../faq.md:7 ca911b1236784cb2807023afd18d9015
+msgid "Is it compatible with other datapacks?"
+msgstr ""
+
+#: ../../faq.md:9 3502ac56f73f439fb9e336b8871929ae
+msgid ""
+"Yes! Bookshelf adheres to constraints that ensure compatibility with most"
+" datapacks. All Bookshelf scores, tags, and namespaces start with `bs.` "
+"and use fake players whenever possible to avoid conflicts."
+msgstr ""
+
+#: ../../faq.md:11 17f90a3540604522b80e98d9382b0a5c
+msgid "Is it resource-heavy?"
+msgstr ""
+
+#: ../../faq.md:13 d38d3d2b213046c6ae580a15496318c9
+msgid "🧠 CPU Usage"
+msgstr ""
+
+#: ../../faq.md:15 0a7b54c1b8d14726814a8bdae4ddcb60
+msgid ""
+"As a library is simply a set of tools that you can call upon, it will not"
+" impact CPU performance unless actively used. The CPU impact depends on "
+"the functions you invoke and their frequency. The documentation provides "
+"warnings and performance tips for functions that may be resource-"
+"intensive."
+msgstr ""
+
+#: ../../faq.md:17 29386ff94848402ab844f2ea261385aa
+msgid "💾 Memory Usage"
+msgstr ""
+
+#: ../../faq.md:19 961c71903af04ddda7b00fadc8c69e67
+msgid ""
+"Minecraft parses the entire datapack upon loading, so the number of files"
+" is inconsequential. Instructions are lightweight in memory, allowing for"
+" numerous functions without a significant increase in RAM usage. "
+"Furthermore, Bookshelf's modular nature enables you to select only the "
+"modules you require."
+msgstr ""
+
+#: ../../faq.md:21 0ab7df102e3043d6adc38758b236d567
+msgid "💽 Disk Usage"
+msgstr ""
+
+#: ../../faq.md:23 3af7130592114ae28e72f1b97efb5d0a
+msgid ""
+"Bookshelf is compressed into a zip file, making it only a few megabytes "
+"in size. If size remains a concern, you can selectively choose the "
+"modules you need. Additionally, it's recommended to download Bookshelf "
+"from GitHub releases, which provide only essential files, rather than "
+"directly from the repository."
+msgstr ""
+
+#: ../../faq.md:25 232543cd6116479893d971f021c011e8
+msgid "Are the functions optimized?"
+msgstr ""
+
+#: ../../faq.md:27 1d5a6707c09f48deb0ae1ab8b723aa5e
+msgid ""
+"Bookshelf prioritizes accessibility and versatility. While this may "
+"occasionally result in choices that are not the most optimized for a "
+"specific context, they align with the library's objectives. Nevertheless,"
+" optimization is continually considered, and suggestions and pull "
+"requests to enhance Bookshelf are welcomed. If you have ideas for "
+"improvement (optimization, accessibility, or otherwise), please share "
+"them with us!"
+msgstr ""
+
+#: ../../faq.md:29 def1c6e7cae14498aa865e4bc39079e1
+msgid "What about copyrights?"
+msgstr ""
+
+#: ../../faq.md:31 0cc0f959e9a8435d8e2b6fb68a6a0066
+msgid ""
+"Bookshelf is licensed to allow you to use and modify it for personal use "
+"and distribute maps or datapacks that use Bookshelf without any issues, "
+"as long as you share any modification made to the original source code. "
+"For that, we chose the [MPL "
+"2.0](https://github.com/mcbookshelf/bookshelf/blob/master/LICENSE) "
+"(Mozilla Public License 2.0)."
+msgstr ""
+
+#: ../../faq.md:33 9046a5bc39514914b5ce966398fd26f7
+msgid "More questions? Join us on Discord!"
+msgstr ""
+
+#: ../../_templates/comments.md:4 3e6275df31a3499a88b39bd541709f4a
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 84ccada917a946f687599a09ae2afe52
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+

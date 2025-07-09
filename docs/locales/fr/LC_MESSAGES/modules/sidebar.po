@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/sidebar.md:1 2ec50e394680404d80b5bc0712c618b3
+msgid "📰 Sidebar"
+msgstr ""
+
+#: ../../modules/sidebar.md:3 7e6e3a65fa824af49a04e24b8b8e93c9
+msgid "**`#bs.sidebar:help`**"
+msgstr ""
+
+#: ../../modules/sidebar.md:5 0fea304c6b654bc19c4a9b9e660f3a53
+msgid ""
+"Create visually appealing and dynamic sidebars using the scoreboard "
+"system."
+msgstr ""
+
+#: ../../modules/sidebar.md:9 c791ffb0494c483fbfe1390ca7a8f04f
+msgid "🔧 Functions"
+msgstr ""
+
+#: ../../modules/sidebar.md:11 0856c9e1b30d4331a08ff2046d03164c
+msgid "You can find below all functions available in this module."
+msgstr ""
+
+#: ../../modules/sidebar.md:15 302d4b6b4a9f448384c3bea81501f217
+msgid "Create"
+msgstr ""
+
+#: ../../modules/sidebar.md:19 7360bf38a1c544fe91f7fd14b7f3af67
+msgid "Create and register a new sidebar."
+msgstr ""
+
+#: ../../modules/sidebar.md:21 ../../modules/sidebar.md:80
+#: df97d5b849074d04bb57ccc5cbf7fef0 eb230b83ad8e4231a3bb9a1902ef5cb3
+msgid "Inputs"
+msgstr ""
+
+#: ../../modules/sidebar.md:22 ../../modules/sidebar.md:81
+#: 6284d09d28934086a6e7514e8e57a12f 932298c3438943d380fd4749c3142412
+msgid "**Function macro**:"
+msgstr ""
+
+#: ../../modules/sidebar.md:32 da06c26b56394e9da65df8424f94f4c4
+msgid "*Example: Create and display a new sidebar with left-aligned text:*"
+msgstr ""
+
+#: ../../modules/sidebar.md:51 311507d76fe6426c92d2f44acb49ad56
+msgid "*Example: Create and display a new sidebar with right-aligned text:*"
+msgstr ""
+
+#: ../../modules/sidebar.md:70 ../../modules/sidebar.md:94
+#: 13a91017528f4f56b2fe129d54ab589f cc091f348ecc467bbd44bb41e22929b0
+msgid "**Credits**: Aksiome"
+msgstr ""
+
+#: ../../modules/sidebar.md:74 fe720736bce9417aad866784af18d9bf
+msgid "Refresh"
+msgstr ""
+
+#: ../../modules/sidebar.md:78 1e2e224e20d942e7b54ffaa881f58902
+msgid "Update dynamic parts of the sidebar."
+msgstr ""
+
+#: ../../modules/sidebar.md:88 e9739739f6fe49759778221599fe849e
+msgid "*Example: Refresh a sidebar:*"
+msgstr ""
+
+#: ../../_templates/comments.md:4 7b02641950954a2b92ebfc89a43fc4bf
+msgid "**💬 Did it help you?**"
+msgstr ""
+
+#: ../../_templates/comments.md:6 53513fb0d1f64aba8278a0dfd1f3f257
+msgid "Feel free to leave your questions and feedback below!"
+msgstr ""
+
