@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "_": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "effects": {
+                  "minecraft:instant_health": {
+                    "amplifier": 255
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "bs.health:utils/on_after_heal"
+  }
+}
