@@ -71,6 +71,8 @@ SPECIAL_ITEMS = {
   "minecraft:oak_wall_hanging_sign": "minecraft:oak_hanging_sign",
   "minecraft:oak_wall_sign": "minecraft:oak_sign",
   "minecraft:orange_wall_banner": "minecraft:orange_banner",
+  "minecraft:pale_oak_wall_hanging_sign": "minecraft:pale_oak_hanging_sign",
+  "minecraft:pale_oak_wall_sign": "minecraft:pale_oak_sign",
   "minecraft:piglin_wall_head": "minecraft:piglin_head",
   "minecraft:pink_wall_banner": "minecraft:pink_banner",
   "minecraft:pitcher_crop": "minecraft:pitcher_pod",
