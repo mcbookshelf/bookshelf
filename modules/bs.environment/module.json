@@ -11,6 +11,9 @@
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html",
     "tags": ["runtime"]
   },
+  "dependencies": [
+    "bs.math"
+  ],
   "pipeline": [
     "gen_biomes"
   ]

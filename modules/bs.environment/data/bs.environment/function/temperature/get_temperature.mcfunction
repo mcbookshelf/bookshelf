@@ -15,5 +15,5 @@
 
 loot replace entity B5-0-0-0-3 container.0 loot bs.environment:get/get_biome
 execute store result score #t bs.ctx run data get entity B5-0-0-0-3 item.components."minecraft:custom_data".temperature
-execute store result storage bs:ctx y double .00000001 summon minecraft:marker run function bs.environment:get/temperature/variation
+execute store result storage bs:ctx y double .00000001 summon minecraft:marker run function bs.environment:temperature/variation
 $execute store result score $environment.get_temperature bs.out run return run data get storage bs:ctx y $(scale)

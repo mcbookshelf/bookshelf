@@ -84,6 +84,135 @@ function #bs.environment:get_temperature {scale:1000}
 
 ---
 
+### Celestial Movement
+
+:::::{tab-set}
+::::{tab-item} Get Sun Angle
+
+```{function} #bs.environment:get_sun_angle
+
+Get the sun's angle on the Y axis relative to the horizon, in degrees.
+Also works when the doDaylightCycle is set to false.
+
+:Outputs:
+  **Return | Score `$environment.get_sun_angle bs.out`**: Sun's angle in degrees (scaled by 1000).
+```
+
+*Example: Get the sun's current angle:*
+
+```mcfunction
+# Once
+function #bs.environment:get_sun_angle
+tellraw @a [{"text":"Sun angle: "},{"score":{"name":"$environment.get_sun_angle","objective":"bs.out"}},{"text":"°"}]
+```
+
+::::
+::::{tab-item} Get Moon Angle
+
+```{function} #bs.environment:get_moon_angle
+
+Get the moon's angle on the Y axis relative to the horizon, in degrees.
+Also works when the doDaylightCycle is set to false.
+
+:Outputs:
+  **Return | Score `$environment.get_moon_angle bs.out`**: Moon's angle in degrees (scaled by 1000).
+```
+
+*Example: Get the moon's current angle:*
+
+```mcfunction
+# Once
+function #bs.environment:get_moon_angle
+tellraw @a [{"text":"Moon angle: "},{"score":{"name":"$environment.get_moon_angle","objective":"bs.out"}},{"text":"°"}]
+```
+
+::::
+::::{tab-item} Look at Sun
+
+```{function} #bs.environment:look_at_sun
+
+Orient the executing entity to look at the sun.
+
+:Inputs:
+  **Execution `as <entity>`**: The entity to orient.
+
+:Outputs:
+  **State**: The entity's rotation is modified to face the sun.
+```
+
+*Example: Make the current entity look at the sun:*
+
+```mcfunction
+# Once
+function #bs.environment:look_at_sun
+```
+
+::::
+::::{tab-item} Look at Moon
+
+```{function} #bs.environment:look_at_moon
+
+Orient the executing entity to look at the moon.
+
+:Inputs:
+  **Execution `as <entity>`**: The entity to orient.
+
+:Outputs:
+  **State**: The entity's rotation is modified to face the moon.
+```
+
+*Example: Make the current entity look at the moon:*
+
+```mcfunction
+# Once
+function #bs.environment:look_at_moon
+```
+
+::::
+:::::
+
+> **Credits**: theogiraudet
+
+---
+
+### Get Moon Phase
+
+```{function} #bs.environment:get_moon_phase
+
+Get the current moon phase as a string identifier.
+
+:Outputs:
+  **Storage `bs:out environment.get_moon_phase`**: {nbt}`string` Moon phase identifier.
+```
+
+*Example: Get the current moon phase:*
+
+```mcfunction
+# Once
+function #bs.environment:get_moon_phase
+data get storage bs:out environment.get_moon_phase
+```
+
+```{admonition} Moon Phase Values
+:class: note
+
+The function returns one of the following string values:
+- `"full_moon"`
+- `"waning_gibbous"`
+- `"third_quarter"`
+- `"waning_crescent"`
+- `"new_moon"`
+- `"waxing_crescent"`
+- `"first_quarter"`
+- `"waxing_gibbous"`
+
+The moon phase cycle follows Minecraft's 8-day lunar cycle.
+```
+
+> **Credits**: theogiraudet
+
+---
+
 ## 👁️ Predicates
 
 You can find below all predicates available in this module.

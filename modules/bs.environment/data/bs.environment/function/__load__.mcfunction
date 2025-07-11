@@ -20,4 +20,18 @@ scoreboard objectives add bs.const dummy [{text:"BS ",color:"dark_gray"},{text:"
 scoreboard objectives add bs.ctx dummy [{text:"BS ",color:"dark_gray"},{text:"Context",color:"aqua"}]
 scoreboard objectives add bs.out dummy [{text:"BS ",color:"dark_gray"},{text:"Output",color:"aqua"}]
 
+scoreboard players set 180000 bs.const 180000
 scoreboard players set 125000 bs.const 125000
+scoreboard players set 90000 bs.const 90000
+scoreboard players set 24000 bs.const 24000
+scoreboard players set 1000 bs.const 1000
+scoreboard players set 500 bs.const 500
+scoreboard players set 360 bs.const 360
+scoreboard players set 250 bs.const 250
+scoreboard players set 180 bs.const 180
+scoreboard players set 10 bs.const 10
+scoreboard players set 8 bs.const 8
+scoreboard players set 2 bs.const 2
+scoreboard players set -1 bs.const -1
+
+data modify storage bs:data environment.moon_phases set value ["full_moon", "waning_gibbous", "third_quarter", "waning_crescent", "new_moon", "waxing_crescent", "first_quarter", "waxing_gibbous"]

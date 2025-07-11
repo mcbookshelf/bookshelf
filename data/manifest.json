@@ -689,6 +689,51 @@
           }
         },
         {
+          "id": "#bs.environment:get_moon_angle",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#get-moon-angle",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "#bs.environment:get_moon_phase",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#get-moon",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/05/13",
+            "minecraft_version": "1.20.5"
+          },
+          "updated": {
+            "date": "2025/05/13",
+            "minecraft_version": "1.20.5"
+          }
+        },
+        {
+          "id": "#bs.environment:get_sun_angle",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#get-sun-angle",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
           "id": "#bs.environment:get_temperature",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#get-temperature",
           "authors": [
@@ -702,6 +747,36 @@
           "updated": {
             "date": "2024/04/22",
             "minecraft_version": "1.20.5"
+          }
+        },
+        {
+          "id": "#bs.environment:look_at_moon",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#look-at-moon",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "#bs.environment:look_at_sun",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#look-at-sun",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
           }
         },
         {
