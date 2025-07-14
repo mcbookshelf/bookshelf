@@ -13,6 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+await entity B5-0-0-0-1
+await entity B5-0-0-0-3
+
 # Full cube, position is inside both boxes
 setblock ~ ~ ~ minecraft:bookshelf
 execute positioned ~.5 ~.5 ~.5 unless function #bs.hitbox:is_in_block_collision run fail "Should be inside the block"

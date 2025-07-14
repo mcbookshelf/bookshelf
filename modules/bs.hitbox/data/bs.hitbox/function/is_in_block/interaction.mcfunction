@@ -13,6 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return 1
 execute if block ~ ~ ~ #bs.hitbox:intangible run return 0
+execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return 1
+
 return run function bs.hitbox:is_in_block/check/check {kind:"interaction"}

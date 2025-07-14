@@ -35,13 +35,12 @@ Cast a ray from the execution position and check if it hits something.
   :::{treeview}
   - {nbt}`compound` Arguments
     - {nbt}`compound` **with**: Ray input data.
-      - {nbt}`bool` **blocks**: Whether the ray should stop on blocks (default: true).
-      - {nbt}`bool` {nbt}`string` **entities**: Whether the ray should stop on entities (default: false). Can also be a required entity tag.
+      - {nbt}`bool` {nbt}`string` **blocks**: Whether the ray stops on blocks (default: true). Can be a block hitbox type (`interaction` or `collision`). `true` defaults to `interaction`.
+      - {nbt}`bool` {nbt}`string` **entities**: Whether the ray stops on entities (default: false). Can be an entity tag. For performance, tagging entities to detect is recommended.
       - {nbt}`int` **piercing**: Number of blocks or entities the ray can pass through (default: 0).
       - {nbt}`number` **max_distance**: Maximum ray travel distance (default: 16.0).
-      - {nbt}`string` **hitbox_shape**: Hitbox type: `interaction` or `collision` (default: `interaction`).
       - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:intangible`).
-      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`).
+      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`). Does not apply to entities with custom hitboxes.
       - {nbt}`string` **on_hit_point**: Command to run at the exact point where the ray makes contact.
       - {nbt}`string` **on_targeted_block**: Command to run at the block hit by the ray.
       - {nbt}`string` **on_targeted_entity**: Command to run as and at the entity hit by the ray.
@@ -74,10 +73,11 @@ Cast a ray from the execution position and check if it hits something.
   :::
 ```
 
-```{admonition} Collision / Interaction Shape
+```{admonition} Hitbox Types
 :class: info
-- **Collision Shape**: Defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block.
-- **Interaction Shape**: Defines the area where the player can interact with or break the block. This includes actions such as right-clicking to open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have an interaction shape but no collision, such as crops or scaffolding.
+Bookshelf supports multiple hitbox types for precise control. Blocks can use either `interaction` or `collision` hitboxes. Entities support three types: `dynamic`, `baked`, and `custom`.
+
+See [Hitbox Types](hitbox.md#types) for full details.
 ```
 
 *Example: Cast a ray from your eyes and detect any collisions:*

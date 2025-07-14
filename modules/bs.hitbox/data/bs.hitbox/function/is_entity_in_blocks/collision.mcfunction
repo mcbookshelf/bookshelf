@@ -13,11 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if entity @s[type=#bs.hitbox:intangible] run return 0
-
-function #bs.hitbox:get_entity
-execute if entity @s[type=#bs.hitbox:is_shaped] run function bs.hitbox:is_entity_in_blocks/entity/shaped
-execute unless entity @s[type=#bs.hitbox:is_shaped] run function bs.hitbox:is_entity_in_blocks/entity/sized
+execute at @s run function bs.hitbox:utils/get_entity_size
+execute store result storage bs:ctx x double .0000001 run scoreboard players operation #l bs.ctx = #x bs.ctx
+execute store result storage bs:ctx y double .0000001 run scoreboard players operation #m bs.ctx = #y bs.ctx
+execute store result storage bs:ctx z double .0000001 run scoreboard players operation #n bs.ctx = #z bs.ctx
 
 data modify storage bs:ctx _ set value {ignored:"#bs.hitbox:can_pass_through",kind:"collision"}
 return run function bs.hitbox:is_entity_in_blocks/recurse/init with storage bs:ctx

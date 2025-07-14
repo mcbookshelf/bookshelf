@@ -14,6 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute if block ~ ~ ~ #bs.hitbox:intangible run return 0
-execute if entity @s[type=#bs.hitbox:intangible] run return 0
+function bs.hitbox:utils/get_entity_size
 
-return run function bs.hitbox:is_entity_in_block/check/check {kind:"interaction"}
+return run function bs.hitbox:is_entity_in_block/check/any {kind:"interaction"}

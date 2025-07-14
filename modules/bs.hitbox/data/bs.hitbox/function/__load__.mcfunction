@@ -14,11 +14,16 @@
 # ------------------------------------------------------------------------------------------------------------
 
 forceload add -30000000 1600
+execute unless entity B5-0-0-0-1 run summon minecraft:marker -30000000 0 1600 {UUID:[I;181,0,0,1],Tags:["bs.entity","bs.persistent","smithed.entity","smithed.strict"]}
 execute unless entity B5-0-0-0-3 run summon minecraft:item_display -30000000 0 1600 {UUID:[I;181,0,0,3],Tags:["bs.entity","bs.persistent","smithed.entity","smithed.strict"],view_range:0f}
 
 scoreboard objectives add bs.const dummy [{text:"BS ",color:"dark_gray"},{text:"Constants",color:"aqua"}]
 scoreboard objectives add bs.ctx dummy [{text:"BS ",color:"dark_gray"},{text:"Context",color:"aqua"}]
 scoreboard objectives add bs.out dummy [{text:"BS ",color:"dark_gray"},{text:"Output",color:"aqua"}]
+
+scoreboard objectives add bs.width dummy [{text:"BS ",color:"dark_gray"},{text:"Width",color:"aqua"}]
+scoreboard objectives add bs.height dummy [{text:"BS ",color:"dark_gray"},{text:"Height",color:"aqua"}]
+scoreboard objectives add bs.depth dummy [{text:"BS ",color:"dark_gray"},{text:"Depth",color:"aqua"}]
 
 scoreboard players set 2 bs.const 2
 scoreboard players set 11 bs.const 11

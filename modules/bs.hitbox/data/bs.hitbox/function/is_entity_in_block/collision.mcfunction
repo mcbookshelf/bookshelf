@@ -14,6 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute if block ~ ~ ~ #bs.hitbox:can_pass_through run return 0
-execute if entity @s[type=#bs.hitbox:intangible] run return 0
+function bs.hitbox:utils/get_entity_size
 
-return run function bs.hitbox:is_entity_in_block/check/check {kind:"collision"}
+return run function bs.hitbox:is_entity_in_block/check/any {kind:"collision"}

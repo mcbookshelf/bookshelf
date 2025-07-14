@@ -218,5 +218,11 @@ def gen_is_full_cube_block_tag(shapes: list[BlockShapes]) -> BlockTag:
                 "collision_shape": [[0.0, 0.0, 0.0, 16.0, 16.0, 16.0]],
                 "interaction_shape": [[0.0, 0.0, 0.0, 16.0, 16.0, 16.0]],
             } for shape in group.shapes)
+        ] + [
+            # TODO: Remove in future versions.
+            # Temporary hack for https://github.com/mcbookshelf/bookshelf/issues/462
+            "minecraft:bubble_column",
+            "minecraft:lava",
+            "minecraft:water",
         ]),
     })

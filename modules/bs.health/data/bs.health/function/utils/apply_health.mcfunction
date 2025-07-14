@@ -14,7 +14,9 @@
 # ------------------------------------------------------------------------------------------------------------
 
 scoreboard players reset @s bs.hmod
-$attribute @s minecraft:max_health modifier add bs.health:limit $(y) add_multiplied_total
+# Evil hack to force the attribute to instantly apply
 effect give @s minecraft:instant_health 1 255 true
+$attribute @s minecraft:max_health modifier add bs.health:limit $(y) add_multiplied_total
+# What the fuck? Remove the attribute only after the effect is cleared, to work around Paper bug
+advancement revoke @s only bs.health:on_after_heal
 effect clear @s minecraft:instant_health
-attribute @s minecraft:max_health modifier remove bs.health:limit

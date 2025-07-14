@@ -18,6 +18,37 @@ You can find below all functions available in this module.
 
 ---
 
+### Bake Entity
+
+```{function} #bs.hitbox:bake_entity
+
+Bake an [entity’s hitbox](#entity-types) to improve performance when its size never changes. If the entity has passengers, they are also baked, and the base entity's hitbox is expanded to include the full bounding box of the entire stack.
+
+:Inputs:
+  **Execution `as <entities>`**: The entity or entities whose hitbox should be baked.
+
+:Outputs:
+  **State**: The entity's hitbox is saved in a baked state for later use.
+```
+
+```{warning}
+Only use baked hitboxes when you are sure the entity’s size will not change, for example: no growth (babies), no scaling, no new passengers, and no equipment that could affect size.
+
+If the hitbox changes after baking, **it may lead to incorrect collisions or broken logic**.
+```
+
+```{admonition} What is a Baked Hitbox?
+:class: dropdown
+
+Baking captures a snapshot of the entity's hitbox at a specific moment. It does not update after that. If the entity has passengers, the baked result includes a bounding box that encapsulates both the base entity and all passengers.
+
+See [Hitbox Types](#types) for full details on block and entity hitboxes.
+```
+
+> **Credits**: Aksiome
+
+---
+
 ### Get
 
 :::::{tab-set}
@@ -42,10 +73,12 @@ Get the hitbox of a block as a shape, represented by a list of boxes coordinates
   :::
 ```
 
-```{admonition} Collision / Interaction Shape
-:class: info
+```{admonition} Collision or Interaction Shape?
+:class: dropdown
 - **Collision Shape**: Defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block.
 - **Interaction Shape**: Defines the area where the player can interact with or break the block. This includes actions such as right-clicking to open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have an interaction shape but no collision, such as crops or scaffolding.
+
+See [Hitbox Types](#types) for full details on block and entity hitboxes.
 ```
 
 *Example: Get the hitbox of stairs:*
@@ -70,14 +103,17 @@ Get the width and height of an entity.
   **Storage `bs:out hitbox`**:
   :::{treeview}
   - {nbt}`compound` Entity hitbox data
-    - {nbt}`double` **height**: Height of the entity.
-    - {nbt}`double` **width**: Width of the entity.
+    - {nbt}`double` **width**: Width of the entity (X axis).
+    - {nbt}`double` **height**: Height of the entity (Y axis).
+    - {nbt}`double` **depth**: Depth of the entity (Z axis).
     - {nbt}`double` **scale**: Scaling of the hitbox.
   :::
 ```
 
-```{important}
-Static entities, such as paintings and item frames, do not provide height and width information. Instead, they return a shape similar to blocks in `bs:out hitbox.shape`.
+```{note}
+For most entities without a custom hitbox, `depth` is equal to `width`.
+However, static entities like paintings and item frames use shaped hitboxes and may return different dimensions.
+Their full shape is also available in `bs:out hitbox.shape`, in a format similar to block shapes.
 ```
 
 *Example: Get the hitbox of an armor stand:*
@@ -117,7 +153,7 @@ Since an entity's bounding box can extend across multiple blocks, this function 
 *Example: Check if a summoned cow is inside a block:*
 
 ```mcfunction
-# move to the edge of a block, then run
+# Move to the edge of a block, then run
 execute summon minecraft:cow if function #bs.hitbox:is_entity_in_blocks_collision run say I'm in the fence
 # Since the cow is bigger than the player, you should get a success
 ```
@@ -144,7 +180,7 @@ Since an entity's bounding box can extend across multiple blocks, this function 
 
 ```mcfunction
 # Move to the edge of a block, then run
-execute summon minecraft:cow if function #bs.hitbox:is_entity_in_blocks_collision run say I'm in the fence
+execute summon minecraft:cow if function #bs.hitbox:is_entity_in_blocks_interaction run say I'm in the fence
 # Since the cow is bigger than the player, you should get a success
 ```
 
@@ -284,6 +320,65 @@ execute summon minecraft:cow if function #bs.hitbox:is_in_entity run say Oh no..
 
 ---
 
+### Reset Entity
+
+```{function} #bs.hitbox:reset_entity
+
+Reset an [entity's hitbox](#entity-types) to its default **dynamic** form, removing any previously applied **baked** or **custom** hitbox.
+
+:Inputs:
+  **Execution `as <entities>`**: The entity or entities whose hitbox should be reset.
+
+:Outputs:
+  **State**: The entity’s hitbox is now dynamic again and will automatically update with scaling, growth, or other changes.
+```
+
+> **Credits**: Aksiome
+
+---
+
+### Set Entity
+
+```{function} #bs.hitbox:set_entity
+
+Define a [custom hitbox](#entity-types) for an entity with full control over its dimensions. This allows setting a hitbox not constrained by Minecraft’s built-in width/height system and can be used on entities that normally have no hitbox.
+
+:Inputs:
+  **Execution `as <entities>`**: The entity or entities whose hitbox should be set with custom dimensions.
+
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` Arguments
+    - {nbt}`compound` **with**: Hitbox data.
+      - {nbt}`double` **width**: The total horizontal size along the X axis.
+      - {nbt}`double` **height**: The total vertical size along the Y axis.
+      - {nbt}`double` **depth**: The total size along the Z axis. Defaults to the same value as **width** if not provided.
+      - {nbt}`bool` **centered**: Whether the hitbox should be vertically centered on the Y axis. Defaults to `false`, meaning the hitbox starts at the entity's feet (like in vanilla).
+  :::
+:Outputs:
+  **State**: The entity now has a custom axis-aligned bounding box (AABB) hitbox.
+```
+
+```{warning}
+Custom hitboxes come with a **small performance cost**. Use them when you need precise control over shape and position, but avoid using too many of them in the same area.
+```
+
+```{admonition} What is a Custom Hitbox?
+:class: dropdown
+
+A custom hitbox lets you override Minecraft's default hitbox system and define your own shape using width, height, and depth. Unlike dynamic or baked hitboxes, custom hitboxes:
+
+- Can be **freely shaped**, including along the Z axis (depth).
+- Are not tied to Minecraft's internal collision model.
+- Work on entities **without a native hitbox**, such as display entities.
+
+See [Hitbox Types](#types) for full details on block and entity hitboxes.
+```
+
+> **Credits**: Aksiome
+
+---
+
 ## 🏷️ Tags
 
 You can find below below all tags available in this module.
@@ -354,6 +449,84 @@ Identifies if the entity has a rectangular hitbox size.
 ::::
 
 > **Credits**: Aksiome
+
+---
+
+(types)=
+## 🎓 Hitbox Types
+
+Bookshelf provides two block and three entity hitbox types, each suited to different use cases. Understanding the differences helps you choose the right one.
+
+---
+
+(block-types)=
+### Blocks
+
+::::{tab-set}
+:::{tab-item} 🧊 collision
+
+The `collision` shape defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block:
+
+- Matches the block’s solid parts and prevents entities from moving through.
+- Can change dynamically depending on block state (e.g., a fence gate’s collision shape differs when open vs closed).
+
+➔ Returned by [#bs.hitbox:get_block](#get)
+
+:::
+:::{tab-item} 🖱 interaction
+
+The `interaction` shape defines the area where players can interact with or break the block:
+
+- Specifies the zone where right-clicks, mining, or other interactions register.
+- Can differ from the collision shape, for example, fence gates keep the same interaction zone whether open or closed.
+
+➔ Returned by [#bs.hitbox:get_block](#get)
+
+:::
+::::
+
+---
+
+(entity-types)=
+### Entities
+
+::::{tab-set}
+:::{tab-item} 🔄 dynamic
+
+This is the native Minecraft hitbox, which updates automatically:
+
+- Adjusts in real time with entity changes like scaling, baby growth, equipment, or new passengers.
+- No setup required, this is the default behavior.
+- Use when the entity’s shape is expected to change.
+
+➔ Restored using [#bs.hitbox:reset_entity](#reset-entity)
+
+:::
+:::{tab-item} ❄️ baked
+
+A snapshot of the entity’s hitbox at a specific moment:
+
+- Improves performance when the entity’s size will never change.
+- Includes the base entity and all passengers in one combined box. When baking a pile of passengers, the base entity bakes all passengers and sets its hitbox to encompass the entire stack.
+- Does not update dynamically, collisions may break if the entity changes later.
+
+➔ Set using [#bs.hitbox:bake_entity](#bake-entity)
+
+:::
+:::{tab-item} 🛠️ custom
+
+A fully user-defined hitbox:
+
+- Set exact `width`, `height`, and optional `depth`.
+- Works on entities with no native hitbox (e.g. display entities).
+- Independent from Minecraft’s internal hitbox system.
+- Only applies to the base entity. When used with modules that process entity stacks, only the base entity’s hitbox is considered, passengers are ignored.
+- Slight performance cost, avoid overuse in the same area.
+
+➔ Set using [#bs.hitbox:set_entity](#set-entity)
+
+:::
+::::
 
 ---
 

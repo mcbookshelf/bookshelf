@@ -13,6 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+await entity B5-0-0-0-1
+await entity B5-0-0-0-3
+
 # Block offset at random position
 setblock ~ ~ ~ minecraft:poppy
 function #bs.hitbox:get_block

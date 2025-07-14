@@ -14,6 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 $execute in minecraft:overworld run loot replace block -30000000 0 1606 container.0 loot $(_)
-data modify storage bs:ctx _ set from block -30000000 0 1606 item.components."minecraft:custom_data"
+execute in minecraft:overworld run data modify storage bs:ctx _ set from block -30000000 0 1606 item.components."minecraft:custom_data"
 data modify storage bs:out random.weighted_choice set from storage bs:ctx _.v
 return run data get storage bs:ctx _.i

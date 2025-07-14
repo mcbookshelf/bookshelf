@@ -13,22 +13,21 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-tag @s add bs.move.omit
-execute unless entity @s[type=#bs.hitbox:is_sized] on passengers run return run function bs.move:collision/utils/get_bounding_box
+execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run return run function bs.move:collision/utils/get_custom_size
 
-function #bs.hitbox:get_entity
+execute store result score #move.hw bs.data store result score #move.hh bs.data run scoreboard players set #move.hd bs.data 0
+execute if entity @s[type=#bs.hitbox:is_sized] run function bs.move:collision/utils/get_default_size
+scoreboard players operation #y bs.ctx = #move.vy bs.data
+scoreboard players operation #y bs.ctx /= 1000 bs.const
+scoreboard players operation #move.y bs.data += #y bs.ctx
+execute on passengers run function bs.move:collision/utils/add_passengers_size
 
-execute store result score #h bs.ctx run data get storage bs:out hitbox.height 10000
-execute store result score #w bs.ctx run data get storage bs:out hitbox.width 5000
-execute store result score #s bs.ctx run data get storage bs:out hitbox.scale 1000
-execute store result score #y bs.ctx run data get entity @s Pos[1] 10000
+scoreboard players operation #move.w bs.data = #move.hw bs.data
+scoreboard players operation #move.h bs.data = #move.hh bs.data
+scoreboard players operation #move.d bs.data = #move.hd bs.data
+scoreboard players operation #move.w bs.data *= 2 bs.const
+scoreboard players operation #move.h bs.data *= 2 bs.const
+scoreboard players operation #move.d bs.data *= 2 bs.const
 
-scoreboard players operation #h bs.ctx *= #s bs.ctx
-scoreboard players operation #w bs.ctx *= #s bs.ctx
-scoreboard players operation #y bs.ctx -= #move.y bs.data
-scoreboard players operation #y bs.ctx *= 1000 bs.const
-scoreboard players operation #h bs.ctx += #y bs.ctx
-scoreboard players operation #move.h bs.data > #h bs.ctx
-scoreboard players operation #move.w bs.data > #w bs.ctx
-
-execute on passengers run function bs.move:collision/utils/get_bounding_box
+scoreboard players operation #move.ry bs.data += #move.hh bs.data
+scoreboard players operation #move.ny bs.data += #move.hh bs.data

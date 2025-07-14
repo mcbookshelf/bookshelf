@@ -14,4 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # ghast group
-data modify storage bs:out hitbox set value {width:4.0,height:4.0}
+execute unless predicate bs.hitbox:is_baby run return run data modify storage bs:out hitbox set value {width:4.0,height:4.0}
+data modify storage bs:out hitbox set value {width:0.95,height:0.95}

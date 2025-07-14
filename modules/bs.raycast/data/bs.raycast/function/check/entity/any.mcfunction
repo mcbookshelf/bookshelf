@@ -13,15 +13,21 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run return run function bs.raycast:check/entity/custom
+
+# get hitbox dimensions (width, depth, height)
 function #bs.hitbox:get_entity
-execute if entity @s[type=!#bs.hitbox:is_shaped] run return run function bs.raycast:check/entity/size
+execute store result score #w bs.ctx run data get storage bs:out hitbox.width 5000
+execute store result score #h bs.ctx run data get storage bs:out hitbox.height 5000
+execute store result score #d bs.ctx run data get storage bs:out hitbox.depth 5000
+execute unless score #w bs.ctx matches 1.. unless score #h bs.ctx matches 1.. unless score #d bs.ctx matches 1.. run return 0
+execute store result score #s bs.ctx run data get storage bs:out hitbox.scale 1000
+scoreboard players operation #w bs.ctx *= #s bs.ctx
+scoreboard players operation #h bs.ctx *= #s bs.ctx
+scoreboard players operation #d bs.ctx *= #s bs.ctx
 
-execute if score #raycast.ux bs.data matches 0.. run scoreboard players operation #raycast.lx bs.data -= #raycast.dx bs.data
-execute if score #raycast.uy bs.data matches 0.. run scoreboard players operation #raycast.ly bs.data -= #raycast.dy bs.data
-execute if score #raycast.uz bs.data matches 0.. run scoreboard players operation #raycast.lz bs.data -= #raycast.dz bs.data
-function bs.raycast:check/entity/shape
-execute if score #raycast.ux bs.data matches 0.. run scoreboard players operation #raycast.lx bs.data += #raycast.dx bs.data
-execute if score #raycast.uy bs.data matches 0.. run scoreboard players operation #raycast.ly bs.data += #raycast.dy bs.data
-execute if score #raycast.uz bs.data matches 0.. run scoreboard players operation #raycast.lz bs.data += #raycast.dz bs.data
-
-execute unless score #raycast.distance bs.data matches 2147483647 run function bs.raycast:collide/entity
+# run size-based collision check
+execute if entity @s[type=#bs.hitbox:is_shaped] run return run function bs.raycast:check/entity/size
+scoreboard players operation #raycast.ry bs.data += #h bs.ctx
+function bs.raycast:check/entity/size
+scoreboard players operation #raycast.ry bs.data -= #h bs.ctx
