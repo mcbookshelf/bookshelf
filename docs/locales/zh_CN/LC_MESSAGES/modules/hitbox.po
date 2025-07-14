@@ -95,7 +95,7 @@ msgstr "**命令存储 `bs:out hitbox`**："
 #: ../../modules/hitbox.md:37 946a52f0cc7f48078f9eb69a79479dff
 #, fuzzy, python-brace-format
 msgid "{nbt}`compound` Block collision box"
-msgstr "方块碰撞箱"
+msgstr "{nbt}`compound` 方块碰撞箱"
 
 #: ../../modules/hitbox.md:38 c504ab7d0fa244078976f1d291bf3861
 #, python-brace-format
@@ -103,6 +103,8 @@ msgid ""
 "{nbt}`list` **collision_shape**: A list of cube coordinates (`[[min_x, "
 "min_y, min_z, max_x, max_y, max_z]]`)."
 msgstr ""
+"{nbt}`list` **collision_shape**: 一个立方体坐标列表 (`[[min_x, "
+"min_y, min_z, max_x, max_y, max_z]]`)。"
 
 #: ../../modules/hitbox.md:39 3d39883278234072a710238685f1b105
 #, python-brace-format
@@ -110,21 +112,23 @@ msgid ""
 "{nbt}`list` **interaction_shape**: A list of cube coordinates (`[[min_x, "
 "min_y, min_z, max_x, max_y, max_z]]`)."
 msgstr ""
+"{nbt}`list` **interaction_shape**: 一个立方体坐标列表 (`[[min_x, "
+"min_y, min_z, max_x, max_y, max_z]]`)。"
 
 #: ../../modules/hitbox.md:40 5f7644567660445f8cfa440d75691ff7
 #, python-brace-format
 msgid "{nbt}`compound` **offset**: Hitbox offset (used for example by flowers)."
-msgstr ""
+msgstr "{nbt}`compound` **offset**: 碰撞箱偏移 (用于花草等方块的偏移)。"
 
 #: ../../modules/hitbox.md:41 02a0f9fcd9104021ae61c17bda33c337
 #, python-brace-format
 msgid "{nbt}`double` **x**: Number describing the X coordinate offset."
-msgstr ""
+msgstr "{nbt}`double` **x**: x轴坐标的偏移量。"
 
 #: ../../modules/hitbox.md:42 3b005f1f86684f38956532949e88bd2f
 #, python-brace-format
 msgid "{nbt}`double` **z**: Number describing the Z coordinate offset."
-msgstr ""
+msgstr "{nbt}`double` **z**: z轴坐标的偏移量。"
 
 #: ../../modules/hitbox.md:46 371ab09c2fc04b95a8d3dbefa2eb41cb
 msgid "Collision / Interaction Shape"
@@ -166,22 +170,22 @@ msgstr "**执行 `as <实体>`**：要获取碰撞箱的实体。"
 #: ../../modules/hitbox.md:73 3a09f28bb85f48e8a756340d9c530b92
 #, python-brace-format
 msgid "{nbt}`compound` Entity hitbox data"
-msgstr ""
+msgstr "{nbt}`compound` 实体碰撞箱数据"
 
 #: ../../modules/hitbox.md:74 172ab6f62e2944a29d35c4503b3b1d30
 #, python-brace-format
 msgid "{nbt}`double` **height**: Height of the entity."
-msgstr ""
+msgstr "{nbt}`double` **height**：实体的高度。"
 
 #: ../../modules/hitbox.md:75 36281279dea54b1c82a4edc5e923bc28
 #, python-brace-format
 msgid "{nbt}`double` **width**: Width of the entity."
-msgstr ""
+msgstr "{nbt}`double` **width**: 实体的宽度。"
 
 #: ../../modules/hitbox.md:76 980258aea9c0498f8a68a2d784b9aea8
 #, python-brace-format
 msgid "{nbt}`double` **scale**: Scaling of the hitbox."
-msgstr ""
+msgstr "{nbt}`double` **scale**: 实体碰撞箱的缩放。"
 
 #: ../../modules/hitbox.md:81 a02a85edef6c4050be2622efbcf92c3e
 msgid ""
@@ -436,4 +440,3 @@ msgstr "**💬 这对您有帮助吗？**"
 #: ../../_templates/comments.md:6 50316c062aa04015b92261f3d51a9723
 msgid "Feel free to leave your questions and feedback below!"
 msgstr "欢迎在下方留下您的问题和反馈！"
-

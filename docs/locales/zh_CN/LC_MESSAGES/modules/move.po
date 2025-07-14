@@ -104,20 +104,20 @@ msgstr "**函数宏**："
 #: fdd4e93f4a1c43eb994adda0e826a19d
 #, python-brace-format
 msgid "{nbt}`compound` Arguments"
-msgstr ""
+msgstr "{nbt}`compound` 参数"
 
 #: ../../modules/move.md:52 ../../modules/move.md:89 ../../modules/move.md:204
 #: 22fa3e467a4b455da7ec9dc81ef120bd 254f8dd418944e0899bdfc64758508dc
 #: 2d3fa782093a4cec92f59fe1b1e66016
 #, python-brace-format
 msgid "{nbt}`number` **scale**: Scalar applied to the output."
-msgstr ""
+msgstr "{nbt}`number` **scale**: 输出的缩放系数。"
 
 #: ../../modules/move.md:53 ../../modules/move.md:90
 #: 8125469d59614c01a99ef3ca702c3fd9 f6f5e7111ea944a585d3aa78506e1a86
 #, python-brace-format
 msgid "{nbt}`compound` **with**: Collision settings."
-msgstr ""
+msgstr "{nbt}`compound` **with**: 碰撞设置。"
 
 #: ../../modules/move.md:54 ../../modules/move.md:91
 #: 24c5c5323b3e43348e52628fb274aaa2 5ad5bfac95df46078b1a2a3a5029a258
@@ -126,6 +126,8 @@ msgid ""
 "{nbt}`bool` **blocks**: Whether the entity should collide with blocks "
 "(default: true)."
 msgstr ""
+"{nbt}`bool` **blocks**: 方块能否阻挡移动"
+"（默认: true）。"
 
 #: ../../modules/move.md:55 ../../modules/move.md:92
 #: 8241d87a43ae48e19491349ba2f0db04 fa87bb4ecc5944c89de3a6685261c14a
@@ -135,6 +137,8 @@ msgid ""
 " with entities (default: false). Can also be a tag that entities must "
 "have."
 msgstr ""
+"{nbt}`bool` {nbt}`string` **entities**: 其他实体能否阻挡移动（默认：false），"
+"也可以用标签（Tags）来指定哪些实体可以阻挡移动。"
 
 #: ../../modules/move.md:56 ../../modules/move.md:93
 #: 3b1664b68baf44d6a2d0d404863f3495 8f87cd1faf314fbbbe2fe85c1b327fcd
@@ -143,6 +147,8 @@ msgid ""
 "{nbt}`string` **hitbox_shape**: Hitbox type: `interaction` or `collision`"
 " (default: `collision`)."
 msgstr ""
+"{nbt}`string` **hitbox_shape**: 碰撞箱类型: `interaction` 或 `collision`"
+"（默认: `collision`）。"
 
 #: ../../modules/move.md:57 ../../modules/move.md:94
 #: 977cab7d181d485892efa36341f17ff5 cc00495329eb4f2aa02b643c89595dcc
@@ -151,6 +157,8 @@ msgid ""
 "{nbt}`string` **ignored_blocks**: Blocks to ignore (default: "
 "`#bs.hitbox:can_pass_through`)."
 msgstr ""
+"{nbt}`string` **ignored_blocks**: 要忽略的方块（默认："
+"`#bs.hitbox:can_pass_through`）。"
 
 #: ../../modules/move.md:58 ../../modules/move.md:95
 #: 7cba54d24f6e46719ba98cf2074fba99 e8abacd2e9c943f0a51d6bfa85cb4687
@@ -159,6 +167,8 @@ msgid ""
 "{nbt}`string` **ignored_entities**: Entities to ignore (default: "
 "`#bs.hitbox:intangible`)."
 msgstr ""
+"{nbt}`string` **ignored_entities**: 要忽略的实体类型（默认："
+"`#bs.hitbox:intangible`）。"
 
 #: ../../modules/move.md:59 ../../modules/move.md:96
 #: 0d6ed7b803124264bfc4da5f2aec6c6f f6125810a01e4271af404ba76bd3bbbd
@@ -168,6 +178,8 @@ msgid ""
 "used to resolve the collision (default: `function "
 "#bs.move:callback/bounce`)."
 msgstr ""
+"{nbt}`string` **on_collision**: 当碰撞时运行的命令，用来解决碰撞问题"
+"（默认: `function #bs.move:callback/bounce`）。"
 
 #: ../../modules/move.md:62 ../../modules/move.md:99 ../../modules/move.md:151
 #: ../../modules/move.md:176 ../../modules/move.md:207
@@ -470,4 +482,3 @@ msgstr "**💬 这对您有帮助吗？**"
 #: ../../_templates/comments.md:6 b2b8b9a8a2184788b8dfb3eeef912115
 msgid "Feel free to leave your questions and feedback below!"
 msgstr "欢迎在下方留下您的问题和反馈！"
-

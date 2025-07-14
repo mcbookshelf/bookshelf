@@ -92,6 +92,15 @@ msgstr "输入"
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`list` **color**: Vector representing the RGB color (example: [0,255,128])."
+msgstr "{nbt}`list` **color**: 用来表示RGB颜色的向量（比如：[0,255,128]）。"
+
+
 #: ../../../modules/color.md:49 ../../../modules/color.md:77
 #: ../../../modules/color.md:114 ../../../modules/color.md:144
 #: ../../../modules/color.md:183 ../../../modules/color.md:213
@@ -117,6 +126,10 @@ msgstr "*示例：将RGB颜色转换为十六进制：*"
 msgid "Integer to Hexadecimal"
 msgstr "整数转十六进制"
 
+#, python-brace-format
+msgid "{nbt}`int` **color**: Color as an integer."
+msgstr "{nbt}`int` **color**: 用整数表示的颜色。"
+
 #: ../../../modules/color.md:68 20d8097302c54e4aa2ce168cb063448f
 msgid "Convert a color from integer to hexadecimal."
 msgstr "将颜色从整数转换为十六进制。"
@@ -128,6 +141,10 @@ msgid ""
 "hexadecimal string."
 msgstr ""
 "**命令存储 `bs:out color.int_to_hex`**：{nbt}`string` 十六进制字符串形式的颜色。"
+
+#, python-brace-format
+msgid "{nbt}`string` **color**: Color as a hexadecimal string (example: #ffffff)."
+msgstr "{nbt}`string` **color**: 用16进制字符串表示的颜色（比如：#ffffff）。"
 
 #: ../../../modules/color.md:81 453c0a0daddc436a8c12c5a066d9e9f9
 msgid ""

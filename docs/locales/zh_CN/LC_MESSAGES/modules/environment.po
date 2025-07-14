@@ -59,6 +59,22 @@ msgstr "获取生物群系"
 msgid "Get biome data at the execution position of the function."
 msgstr "获取函数执行位置的生物群系数据。"
 
+#, python-brace-format
+msgid "{nbt}`compound` Biome data"
+msgstr "{nbt}`compound` 群系数据"
+
+#, python-brace-format
+msgid "{nbt}`string` **type**: String representation of the biome ID (e.g., `minecraft:plains`)."
+msgstr "{nbt}`string` **type**: 群系id的完整字符串表示（比如：`minecraft:plains`）。"
+
+#, python-brace-format
+msgid "{nbt}`double` **temperature**: The base temperature of the biome."
+msgstr "{nbt}`double` **temperature**: 群系的基础温度。"
+
+#, python-brace-format
+msgid "{nbt}`bool` **has_precipitation**: Whether the biome has precipitation or not."
+msgstr "{nbt}`bool` **has_precipitation**: 群系能否降水。"
+
 #: ../../../modules/environment.md:32 ../../../modules/environment.md:63
 #: 1a37a87a9a2341fd9ffef60ec097c8b7 5422b5beab284ddd99c8b94fbfa87b42
 msgid "Inputs"

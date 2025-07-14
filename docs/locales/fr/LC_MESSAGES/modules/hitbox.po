@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-04 17:32+0200\n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -19,45 +19,45 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/hitbox.md:1 07cc064e774b4178b7ad4a02277d4c97
+#: ../../modules/hitbox.md:1 1553b4ed4176469089e8472a59a18cb6
 msgid "🎯 Hitbox"
 msgstr ""
 
-#: ../../modules/hitbox.md:3 52d9df61f7044598ac1c87d8630ad65a
+#: ../../modules/hitbox.md:3 7ff23fc853bb4e87895afde71a76c551
 msgid "**`#bs.hitbox:help`**"
 msgstr ""
 
-#: ../../modules/hitbox.md:5 56987fadc4f44f778d787b94fd443540
+#: ../../modules/hitbox.md:5 0495adf638c24d0888d515a3ab018dc3
 msgid "Get and check the hitboxes of blocks or entities."
 msgstr ""
 
-#: ../../modules/hitbox.md:8 b624fc4a026e4105aa088afb3d5890d9
+#: ../../modules/hitbox.md:8 2e6239197baa40c9aee7d4fce86c3e08
 msgid ""
 "\"Talent hits a target no one else can hit; Genius hits a target no one "
 "else can see.\""
 msgstr ""
 
-#: ../../modules/hitbox.md:9 9343525b1c6d42559b2038e377f80d04
+#: ../../modules/hitbox.md:9 0ba6fe8994784f46b69c6908ac10be39
 msgid "Arthur Schopenhauer"
 msgstr ""
 
-#: ../../modules/hitbox.md:15 3eadcfb64ab14d45a6c7219f45fb790f
+#: ../../modules/hitbox.md:15 4e0b843a78fe48f5a8da8a021e7547f0
 msgid "🔧 Functions"
 msgstr ""
 
-#: ../../modules/hitbox.md:17 123bedacea5343bf8171ffbb2618c373
+#: ../../modules/hitbox.md:17 a618a519e7b1415bb514491f877bca47
 msgid "You can find below all functions available in this module."
 msgstr ""
 
-#: ../../modules/hitbox.md:21 3116dad20da047e4b824fb02785eea9c
+#: ../../modules/hitbox.md:21 177474b89d754c57a03b05e329facf31
 msgid "Get"
 msgstr ""
 
-#: ../../modules/hitbox.md 5efc935ab3a7496e8fe763651cca14d5
+#: ../../modules/hitbox.md a3d2159dc6414e6381a87d38c071fae1
 msgid "Block"
 msgstr ""
 
-#: ../../modules/hitbox.md:29 5418a7b078a24cebb06ca3210724fa1a
+#: ../../modules/hitbox.md:29 1665489d1b584f73adb1a4fd3e68395d
 msgid ""
 "Get the hitbox of a block as a shape, represented by a list of boxes "
 "coordinates. Dimensions range from 0 to 16 as for models."
@@ -67,12 +67,15 @@ msgstr ""
 #: ../../modules/hitbox.md:107 ../../modules/hitbox.md:133
 #: ../../modules/hitbox.md:159 ../../modules/hitbox.md:188
 #: ../../modules/hitbox.md:226 ../../modules/hitbox.md:246
-#: ../../modules/hitbox.md:266 289f677451934c72863bf96afdb4f9ac
-#: e098cb29ade843febdb35d80a030d13b
+#: ../../modules/hitbox.md:266 166357d9d6fa404897a15253de0e7041
+#: 5ff1a6f44ccb4114aacd1c3a51635551 87b9205ffddd45518079eeea62fe6ac3
+#: 9527927b5d384312b1556ac120a463e7 b735da84a02e4d70a8a5b689aaa76b50
+#: b8b05652cd644d708df7f6ea80cf4472 f06a49c4284e47b4990822e3facbcbc5
+#: f64618845e5a4554b2ea2ad8f9ec3ca5 fe9378005beb48eba4749a9997e32303
 msgid "Inputs"
 msgstr ""
 
-#: ../../modules/hitbox.md:32 745da64347b04a4e860bbad68b8aab82
+#: ../../modules/hitbox.md:32 cffc9c5a278e43ed93e505b511453875
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from "
 "which to get the block hitbox."
@@ -82,62 +85,31 @@ msgstr ""
 #: ../../modules/hitbox.md:110 ../../modules/hitbox.md:136
 #: ../../modules/hitbox.md:164 ../../modules/hitbox.md:193
 #: ../../modules/hitbox.md:229 ../../modules/hitbox.md:249
-#: ../../modules/hitbox.md:271 5708ca7318ee4e59b06ad3c96e25e8f6
-#: 89795e4da98a4587b5e61a76bc97ea51 d69a23ea46ce4172a5af87ad35f57074
+#: ../../modules/hitbox.md:271 285ffe5b70f7428896baa8947b60e153
+#: 41b2710e2e9643428578bb4e75b6e5d6 4ee3bbdf157e4a3382f6541bd3aeb778
+#: 62a1d33e1f554e84a6f872e024fc7aff 7f79bbfef4c54a9480c11ce0df02bdde
+#: a8050a657a614394b35bd230b2dd70f5 cd9c5e1349bd4b0aae4937148b23c60c
+#: cfa8da6fcd424c56bedb3ff4fac2bda9 efd3d6b9280f45bc8ed129a47c4440e6
 msgid "Outputs"
 msgstr ""
 
 #: ../../modules/hitbox.md:35 ../../modules/hitbox.md:71
-#: 053c2ee3869c4d088193e3a4cb9091a6 581d80ab1dce495e99fe22ce3b451280
+#: 44ef4c64ea8740449f825ecb5d4344e9 c4e440560b8a4b789f053af7fd85925e
 msgid "**Storage `bs:out hitbox`**:"
 msgstr ""
 
-#: ../../modules/hitbox.md:37 946a52f0cc7f48078f9eb69a79479dff
-#, python-brace-format
-msgid "{nbt}`compound` Block collision box"
-msgstr ""
-
-#: ../../modules/hitbox.md:38 c504ab7d0fa244078976f1d291bf3861
-#, python-brace-format
-msgid ""
-"{nbt}`list` **collision_shape**: A list of cube coordinates (`[[min_x, "
-"min_y, min_z, max_x, max_y, max_z]]`)."
-msgstr ""
-
-#: ../../modules/hitbox.md:39 3d39883278234072a710238685f1b105
-#, python-brace-format
-msgid ""
-"{nbt}`list` **interaction_shape**: A list of cube coordinates (`[[min_x, "
-"min_y, min_z, max_x, max_y, max_z]]`)."
-msgstr ""
-
-#: ../../modules/hitbox.md:40 5f7644567660445f8cfa440d75691ff7
-#, python-brace-format
-msgid "{nbt}`compound` **offset**: Hitbox offset (used for example by flowers)."
-msgstr ""
-
-#: ../../modules/hitbox.md:41 02a0f9fcd9104021ae61c17bda33c337
-#, python-brace-format
-msgid "{nbt}`double` **x**: Number describing the X coordinate offset."
-msgstr ""
-
-#: ../../modules/hitbox.md:42 3b005f1f86684f38956532949e88bd2f
-#, python-brace-format
-msgid "{nbt}`double` **z**: Number describing the Z coordinate offset."
-msgstr ""
-
-#: ../../modules/hitbox.md:46 371ab09c2fc04b95a8d3dbefa2eb41cb
+#: ../../modules/hitbox.md:46 5cda6b2017a34e4e93ccacd825559bd5
 msgid "Collision / Interaction Shape"
 msgstr ""
 
-#: ../../modules/hitbox.md:48 a48ffbe3ea2c4f7da0a36c1c4846bdf8
+#: ../../modules/hitbox.md:48 57a3243c2d9e45a28815c8942b3bc5a0
 msgid ""
 "**Collision Shape**: Defines the physical boundaries of a block that "
 "entities cannot pass through. It determines where an entity will stop "
 "when moving towards the block."
 msgstr ""
 
-#: ../../modules/hitbox.md:49 f02ecbb2c3a640fc8a7884f1c6d3e05c
+#: ../../modules/hitbox.md:49 650df6fd28e74f69aa26f1bbcb3a6906
 msgid ""
 "**Interaction Shape**: Defines the area where the player can interact "
 "with or break the block. This includes actions such as right-clicking to "
@@ -145,68 +117,51 @@ msgid ""
 " an interaction shape but no collision, such as crops or scaffolding."
 msgstr ""
 
-#: ../../modules/hitbox.md:52 dc72a10e528b4da38e939c58ad31b3aa
+#: ../../modules/hitbox.md:52 ce6e5ceff14e4e70aa2c825c01395d44
 msgid "*Example: Get the hitbox of stairs:*"
 msgstr ""
 
-#: ../../modules/hitbox.md a90bc0aa4517425f9b456286f85bd29f
+#: ../../modules/hitbox.md 76b66ddecbce4971902c1bbbd502e5e7
+#: ef46300f922a489c9842c8dd96d95d8a
 msgid "Entity"
 msgstr ""
 
-#: ../../modules/hitbox.md:65 9b9ac4729f2444619f45e83a077459a7
+#: ../../modules/hitbox.md:65 95c0a323760746cd8a99475ff0d57ed7
 msgid "Get the width and height of an entity."
 msgstr ""
 
-#: ../../modules/hitbox.md:68 6dca3c6345734e538026e27e841a464e
+#: ../../modules/hitbox.md:68 b99c2b6d238d44dcb9d911c73d0d5cc3
 msgid "**Execution `as <entities>`**: Entity to get the hitbox from."
 msgstr ""
 
-#: ../../modules/hitbox.md:73 3a09f28bb85f48e8a756340d9c530b92
-#, python-brace-format
-msgid "{nbt}`compound` Entity hitbox data"
-msgstr ""
-
-#: ../../modules/hitbox.md:74 172ab6f62e2944a29d35c4503b3b1d30
-#, python-brace-format
-msgid "{nbt}`double` **height**: Height of the entity."
-msgstr ""
-
-#: ../../modules/hitbox.md:75 36281279dea54b1c82a4edc5e923bc28
-#, python-brace-format
-msgid "{nbt}`double` **width**: Width of the entity."
-msgstr ""
-
-#: ../../modules/hitbox.md:76 980258aea9c0498f8a68a2d784b9aea8
-#, python-brace-format
-msgid "{nbt}`double` **scale**: Scaling of the hitbox."
-msgstr ""
-
-#: ../../modules/hitbox.md:81 a02a85edef6c4050be2622efbcf92c3e
+#: ../../modules/hitbox.md:81 8e5c7cee6ff546fc8de2b27bcc821fb1
 msgid ""
 "Static entities, such as paintings and item frames, do not provide height"
 " and width information. Instead, they return a shape similar to blocks in"
 " `bs:out hitbox.shape`."
 msgstr ""
 
-#: ../../modules/hitbox.md:84 65c3f83fc6944d4fa2fbf4a5d0919891
+#: ../../modules/hitbox.md:84 ad5906460d81462c95cade0b79fd5e59
 msgid "*Example: Get the hitbox of an armor stand:*"
 msgstr ""
 
 #: ../../modules/hitbox.md:93 ../../modules/hitbox.md:212
 #: ../../modules/hitbox.md:283 ../../modules/hitbox.md:326
-#: ../../modules/hitbox.md:356 371a290cfb944d7e8f0e28af0671bcd8
+#: ../../modules/hitbox.md:356 29f1a111b50342aeac33289adbe6d1da
+#: a022c98b8f2c41ceae377eecf439c3fd a50947088ee14941ad419963704d1703
+#: b373f5ef686145c08243d0a46023445d d796be425ade43b88fe8b61a59d5da6f
 msgid "**Credits**: Aksiome"
 msgstr ""
 
-#: ../../modules/hitbox.md:97 8fd44b0c4d6a44f99606bb451a34fae9
+#: ../../modules/hitbox.md:97 853e822d28ac4680b5f1b88b2e15493f
 msgid "Is Entity Inside"
 msgstr ""
 
-#: ../../modules/hitbox.md a378aff8787548fc9b1e39924f29d555
+#: ../../modules/hitbox.md 62cf5ab370674e90b8a584e3727afa0e
 msgid "Block Collision Boxes"
 msgstr ""
 
-#: ../../modules/hitbox.md:105 d3a0cbb1f4364f608d6fa238ef525697
+#: ../../modules/hitbox.md:105 3f32bcbe662140fd9308c3ffd99e0845
 msgid ""
 "Check if the specified entity is within the `collision` hitbox of any "
 "block."
@@ -214,45 +169,49 @@ msgstr ""
 
 #: ../../modules/hitbox.md:108 ../../modules/hitbox.md:134
 #: ../../modules/hitbox.md:160 ../../modules/hitbox.md:189
-#: 8796acabbab741e7bb2c395ee0315b0d
+#: 28208683314b488e8e9e8b5555d582a2 287e3d7c1c1646788b1eb0c3dc3887f8
+#: bf9ad08b14174c5e9518d49326ab4c5b e9bccbf0881a482b8982f31fb249f9ee
 msgid "**Execution `as <entity>`**: Entity to check."
 msgstr ""
 
 #: ../../modules/hitbox.md:111 ../../modules/hitbox.md:137
 #: ../../modules/hitbox.md:165 ../../modules/hitbox.md:194
 #: ../../modules/hitbox.md:230 ../../modules/hitbox.md:250
-#: ../../modules/hitbox.md:272 17c3d3f26bb048bf8e6c896767ae1ed1
-#: e7872f40766a479db506b0785a03338e
+#: ../../modules/hitbox.md:272 2b4a26fac8714454b152fe81215075e5
+#: 5cc93437d71a4b9ca32151fdfcfd67cf 949d3ce948f14a76bf3e16372d67a499
+#: 9a781f8a6428466aa493b9cbbc5730a8 bafc856a33d74b75a7d973c6c89ad911
+#: c36fedde6fa7478d96e7295ca1c98245 f96baad7765d4bfb8a3227b0fff46302
 msgid "**Return**: Success or failure."
 msgstr ""
 
 #: ../../modules/hitbox.md:115 ../../modules/hitbox.md:141
-#: ecfc3ebcdf974a9ca3df1c4f0a4bd3b3
+#: 84ecb9273ab24419a0249993fe47e148 a573b402d4dd455d856a2897c9bae9f5
 msgid ""
 "Since an entity's bounding box can extend across multiple blocks, this "
 "function checks all blocks the entity might be in contact with."
 msgstr ""
 
 #: ../../modules/hitbox.md:118 ../../modules/hitbox.md:144
-#: 46f8e827a76d4d9fbd2ad4fdb5c1b787
+#: 0b17710b8fa246efb61be20f4e4e3ac9 66ae28a81cb24686a27a51458fc7c0ad
 msgid "*Example: Check if a summoned cow is inside a block:*"
 msgstr ""
 
-#: ../../modules/hitbox.md 3a422bf4f63443d6bf445affd48dce94
+#: ../../modules/hitbox.md a3aead101a6e4bd0895cbc2c628ee386
 msgid "Block Interaction Boxes"
 msgstr ""
 
-#: ../../modules/hitbox.md:131 9142ec6cf97c45d4a3ffa264f83f8237
+#: ../../modules/hitbox.md:131 badea72e764740d5bb03c70fb8663c95
 msgid ""
 "Check if the specified entity is within the `interaction` hitbox of any "
 "block."
 msgstr ""
 
-#: ../../modules/hitbox.md 078d3e49d5894e8199e98135647c1bc1
+#: ../../modules/hitbox.md de15ba923d6d44f6aeb9ff3e6ce24066
+#: ef6193c0870f454383543b161d97e05a
 msgid "Block Collision Box"
 msgstr ""
 
-#: ../../modules/hitbox.md:157 19445277151a4c25a6324f07a52596f7
+#: ../../modules/hitbox.md:157 127950d2c9a24b93943102a18d66099c
 msgid ""
 "Check if the specified entity is within the `collision` hitbox of the "
 "block at the execution position."
@@ -260,15 +219,16 @@ msgstr ""
 
 #: ../../modules/hitbox.md:162 ../../modules/hitbox.md:191
 #: ../../modules/hitbox.md:227 ../../modules/hitbox.md:247
-#: ../../modules/hitbox.md:269 081f70511701416982e89b06f2c37073
-#: d736c209b9fd486d836577c17438b51f
+#: ../../modules/hitbox.md:269 3302c4204df1478eb520f31bc34ec578
+#: af412857599243c59b25c45f194d2d6f b544bb6e97e4462e9fae3910c13ac4c2
+#: c9c904ecfb094531aa5c533515d9b7c7 d1094de9d0504326b0750a60f649a371
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to "
 "check."
 msgstr ""
 
 #: ../../modules/hitbox.md:169 ../../modules/hitbox.md:198
-#: fd2245a4aeda4a56955c9bce181c196c
+#: 0b4a8e4d766a4bfbb646800697bcc9d8 5b2c6ed0ee8e4f1a99f73759c61cfa3b
 msgid ""
 "This function checks whether the entity's bounding box intersects with "
 "the block at the execution position. It does *not* consider other blocks "
@@ -276,162 +236,202 @@ msgid ""
 msgstr ""
 
 #: ../../modules/hitbox.md:172 ../../modules/hitbox.md:201
-#: 85e4ecacccd047c092d991f434541150
+#: 1c1d7943a81546c7af11706452ef244c a3deeb73b94c49cead7aa847907f5703
 msgid "*Example: Check if a summoned cow is inside the fence at your position:*"
 msgstr ""
 
-#: ../../modules/hitbox.md a8e49057b0e248988fab94d632d0b386
+#: ../../modules/hitbox.md 327692a61e074f1cb6dac851eb911d87
+#: ff796f612a304ba7b98740a836a4a1cd
 msgid "Block Interaction Box"
 msgstr ""
 
-#: ../../modules/hitbox.md:186 9cf51bc53f074c12848f606c8ab25671
+#: ../../modules/hitbox.md:186 172214e4b27f4dc4846fe4e17280d7d0
 msgid ""
 "Check if the specified entity is within the `interaction` hitbox of the "
 "block at the execution position."
 msgstr ""
 
-#: ../../modules/hitbox.md:216 bb5b791de7b54efcb371907cd59ff33f
+#: ../../modules/hitbox.md:216 845882c81b964bfdb5b1eb083fa1e9b0
 msgid "Is Inside"
 msgstr ""
 
-#: ../../modules/hitbox.md:224 f6e0264eddc9421a8f8ab74114060a97
+#: ../../modules/hitbox.md:224 e63b8543a49f48e086e4fa045cf02631
 msgid ""
 "Check if the execution position is within the `collision` hitbox of a "
 "block."
 msgstr ""
 
 #: ../../modules/hitbox.md:233 ../../modules/hitbox.md:253
-#: 58059857efa44fe49b2aab90925b9c44
+#: 0abeb19fa4ac4f3d9e3329afde515806 be711f18facc48dcadca9e00e7a18b6f
 msgid "*Example: Say \"My name is Pavel\" if you are inside a block:*"
 msgstr ""
 
-#: ../../modules/hitbox.md:244 6e123ba8331f4adbbb85bf65ba820ecc
+#: ../../modules/hitbox.md:244 58df68e92c3e4d0da221d2163c674614
 msgid ""
 "Check if the execution position is within the `interaction` hitbox of a "
 "block."
 msgstr ""
 
-#: ../../modules/hitbox.md:264 4583b5ea2aa04df18dc42a6945ad9c44
+#: ../../modules/hitbox.md:264 954d2629be914a6a9bdb0f0c70492c3a
 msgid ""
 "Check if the execution position is inside the entity executing the "
 "command."
 msgstr ""
 
-#: ../../modules/hitbox.md:267 9db026a318a0424e8ccbb8a476005bd1
+#: ../../modules/hitbox.md:267 93af69428ebc4672be342ab0f1af3794
 msgid "**Execution `as <entities>`**: Entity to check."
 msgstr ""
 
-#: ../../modules/hitbox.md:275 4eb90a03ee15469085d9325f6bc3b744
+#: ../../modules/hitbox.md:275 6830f777dd404e41b6dc18f4ce6672f7
 msgid "*Example: Check if you are inside an entity:*"
 msgstr ""
 
-#: ../../modules/hitbox.md:287 0c2a65b9471041478dd2bd9f52697b6b
+#: ../../modules/hitbox.md:287 1b6fd373d6454728abff9a92538ed479
 msgid "🏷️ Tags"
 msgstr ""
 
-#: ../../modules/hitbox.md:289 b74b90253dcc4c848059399ec6a5c978
+#: ../../modules/hitbox.md:289 5720b0a3e6f94bf897e97318fbff6ca6
 msgid "You can find below below all tags available in this module."
 msgstr ""
 
-#: ../../modules/hitbox.md:293 0b9cf8195a344499ae728f093383db6d
+#: ../../modules/hitbox.md:293 d104b66510e04f1f956dbb545a3d0972
 msgid "Blocks"
 msgstr ""
 
-#: ../../modules/hitbox.md 97a978074b914235b5effc12980d7590
+#: ../../modules/hitbox.md e353b05741c941ff8ed9745e5c645dd2
 msgid "Can Pass Through"
 msgstr ""
 
-#: ../../modules/hitbox.md:299 c605ae31929943b6a68c5261df33b51f
+#: ../../modules/hitbox.md:299 7c82aa7803b946868f9f256c1bf3ac40
 msgid "**`#bs.hitbox:can_pass_through`**"
 msgstr ""
 
-#: ../../modules/hitbox.md:301 946a52f0cc7f48078f9eb69a79479dff
+#: ../../modules/hitbox.md:301 da4f9b0d8399460ab12ec7e36677503f
 msgid "Determine if the block has a collision box."
 msgstr ""
 
-#: ../../modules/hitbox.md b36aeebfb2354423888924a531a6f0c5
+#: ../../modules/hitbox.md 080f0bf3a6fc4aa1a259af6d3c16165a
 msgid "Has Offset"
 msgstr ""
 
-#: ../../modules/hitbox.md:306 26fa20cd68b145e18117df9d0bc69055
+#: ../../modules/hitbox.md:306 bb7a572750d7456db146d83ac603d4c3
 msgid "**`#bs.hitbox:has_offset`**"
 msgstr ""
 
-#: ../../modules/hitbox.md:308 b19dba2b145649f0a7c841e047095f16
+#: ../../modules/hitbox.md:308 07e86fff414b402e8ea599634d87f629
 msgid ""
 "Determine if the block's hitbox has an intentional random offset. This is"
 " commonly used in blocks that have slightly shifted hitboxes to give a "
 "more dynamic visual effect."
 msgstr ""
 
-#: ../../modules/hitbox.md 023be741a6014a048a6b78bb64a2c65f
+#: ../../modules/hitbox.md 29e4d36867d64fbf886046c26d9ab8a4
+#: f4fa90838f264e29bc37ee3393499f30
 msgid "Intangible"
 msgstr ""
 
 #: ../../modules/hitbox.md:313 ../../modules/hitbox.md:336
-#: d0b242c1d6ea498da9ac489bfb7682a5
+#: 7b48e961856c4c4ea5a0a074d7db2766 9c2c8aab846942688cb7d6e77e3b3612
 msgid "**`#bs.hitbox:intangible`**"
 msgstr ""
 
-#: ../../modules/hitbox.md:315 8e062ae73d554feb9c077bc3beab48a3
+#: ../../modules/hitbox.md:315 91c60151cfb74bd4a62cc61933a436b7
 msgid ""
 "Indicate whether the block is intangible, meaning it is typically "
 "invisible and lacks interaction collision."
 msgstr ""
 
-#: ../../modules/hitbox.md f363d8e402e3462c82957537e1110cf4
+#: ../../modules/hitbox.md be3896dea6364f6da5e9d5c045909552
 msgid "Is Full Cube"
 msgstr ""
 
-#: ../../modules/hitbox.md:320 183776a70f2a424096cdd6e43157f14c
+#: ../../modules/hitbox.md:320 7474332c4235458fbc4ccf619d4aa1e2
 msgid "**`#bs.hitbox:is_full_cube`**"
 msgstr ""
 
-#: ../../modules/hitbox.md:322 01fd8342ae5f4cdfa83e41af8c9c6bd3
+#: ../../modules/hitbox.md:322 f2178d524ae549efb2b63f17ec33e0ec
 msgid "Check if the block is a full cube of 16×16×16."
 msgstr ""
 
-#: ../../modules/hitbox.md:330 f5f9b711d5c54b81a9d0ba61844073df
+#: ../../modules/hitbox.md:330 61c3957f566747398a45c87f1d01c06f
 msgid "Entities"
 msgstr ""
 
-#: ../../modules/hitbox.md:338 cc65fa56a60f4ae9bd02ee97b6aa008a
+#: ../../modules/hitbox.md:338 4a12469b90fb4a6aaf9568bba484980c
 msgid ""
 "Determines if the entity's hitbox is intangible, meaning it won't "
 "interact physically with other blocks or entities."
 msgstr ""
 
-#: ../../modules/hitbox.md fd117c610ec14e94b1a0ee6c396a6a51
+#: ../../modules/hitbox.md 1f7488c672af4077aa371a7b84db63c7
 msgid "Is Shaped"
 msgstr ""
 
-#: ../../modules/hitbox.md:343 9d16e5bcc72947b7bfd8527a4da7b064
+#: ../../modules/hitbox.md:343 973afb1aad844a96a38c1eedb2553227
 msgid "**`#bs.hitbox:is_shaped`**"
 msgstr ""
 
-#: ../../modules/hitbox.md:345 d74dd2b700784d68877e8642907d7c44
+#: ../../modules/hitbox.md:345 c1c93485e4c1441a9e45df200bb079d2
 msgid ""
 "Identifies if the entity has a non-standard hitbox shape, differing from "
 "the typical cubic or rectangular hitbox."
 msgstr ""
 
-#: ../../modules/hitbox.md c73e3fd3b0994f6184209c1ba281d2e7
+#: ../../modules/hitbox.md d8282bec6b4048259bd55fe2f1500aa8
 msgid "Is Sized"
 msgstr ""
 
-#: ../../modules/hitbox.md:350 8a0af873664547acbfdc72782c9b96fb
+#: ../../modules/hitbox.md:350 260308bca3224442bd9c9243556a666c
 msgid "**`#bs.hitbox:is_sized`**"
 msgstr ""
 
-#: ../../modules/hitbox.md:352 9f734af385b940d694d24fa7fee60a5f
+#: ../../modules/hitbox.md:352 b93a3547e5fa4bb3b34183c6ecf660fe
 msgid "Identifies if the entity has a rectangular hitbox size."
 msgstr ""
 
-#: ../../_templates/comments.md:4 1efe886c12594460ad3f696faf1d0619
+#: ../../_templates/comments.md:4 72269b1d8ed741edb965c59d57d8d239
 msgid "**💬 Did it help you?**"
 msgstr ""
 
-#: ../../_templates/comments.md:6 50316c062aa04015b92261f3d51a9723
+#: ../../_templates/comments.md:6 47f70cfae252416f935f576cfa0f2e61
 msgid "Feel free to leave your questions and feedback below!"
 msgstr ""
+
+#~ msgid "{nbt}`compound` Block collision box"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{nbt}`list` **collision_shape**: A list of "
+#~ "cube coordinates (`[[min_x, min_y, min_z, "
+#~ "max_x, max_y, max_z]]`)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{nbt}`list` **interaction_shape**: A list of"
+#~ " cube coordinates (`[[min_x, min_y, min_z,"
+#~ " max_x, max_y, max_z]]`)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{nbt}`compound` **offset**: Hitbox offset "
+#~ "(used for example by flowers)."
+#~ msgstr ""
+
+#~ msgid "{nbt}`double` **x**: Number describing the X coordinate offset."
+#~ msgstr ""
+
+#~ msgid "{nbt}`double` **z**: Number describing the Z coordinate offset."
+#~ msgstr ""
+
+#~ msgid "{nbt}`compound` Entity hitbox data"
+#~ msgstr ""
+
+#~ msgid "{nbt}`double` **height**: Height of the entity."
+#~ msgstr ""
+
+#~ msgid "{nbt}`double` **width**: Width of the entity."
+#~ msgstr ""
+
+#~ msgid "{nbt}`double` **scale**: Scaling of the hitbox."
+#~ msgstr ""
 

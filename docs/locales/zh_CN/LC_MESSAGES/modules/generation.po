@@ -53,6 +53,46 @@ msgid ""
 "2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
 msgstr "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 2.1v-5.85l-3.5 2.1Z\"></path></svg> 观看演示"
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`string` **run**: Callback to run at each step. For each step, the following scores can be used:"
+msgstr "{nbt}`string` **run**: 每一步运行的回调命令，每一步调用中可以读取这些分数："
+
+#, python-brace-format
+msgid "**`$generation.x bs.lambda`**: The X coordinate of the current step."
+msgstr "**`$generation.x bs.lambda`**: 这一步的x坐标。"
+
+#, python-brace-format
+msgid "**`$generation.y bs.lambda`**: The Y coordinate of the current step."
+msgstr "**`$generation.y bs.lambda`**: 这一步的y坐标。"
+
+#, python-brace-format
+msgid "{nbt}`int` **width**: Width of the shape to generate."
+msgstr "{nbt}`int` **width**: 生成形状的宽度。"
+
+#, python-brace-format
+msgid "{nbt}`int` **height**: Height of the shape to generate."
+msgstr "{nbt}`int` **height**: 生成形状的高度。"
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Shape settings."
+msgstr "{nbt}`compound` **with**: 形状设置"
+
+#, python-brace-format
+msgid "{nbt}`string` **direction**: Plane used to generate the shape (`xz`, `xy`, or `zy`, default: `xz`)."
+msgstr "{nbt}`string` **direction**: 形状的生成平面（`xz`，`xy`，或`zy`，默认：`xz`）。"
+
+#, python-brace-format
+msgid "{nbt}`int` **spacing**: Distance between blocks in the generated shape (default: 1)."
+msgstr ""
+
+#, python-brace-format
+msgid "{nbt}`int` **limit**: Limit how many steps are executed in a single tick (default: 256)."
+msgstr ""
+
 #: ../../../modules/generation.md:33 defe00e314a34c50ad12ecc2fe2df328
 msgid "🔧 Functions"
 msgstr "🔧 函数"
