@@ -21,10 +21,9 @@ msgstr ""
 
 #: ../../../../examples/paintbrush.md:2 a7cae4378d184916a12d7b23bc54d6a4
 msgid "🖌️ Paintbrush"
-msgstr "🖌️ Paintbrush"
+msgstr "🖌️ 画笔"
 
 #: ../../../../examples/paintbrush.md:4 9c737df2b2aa4b538db9f37207f51eda
-#, fuzzy
 msgid ""
 "This example demonstrates how to create a **paintbrush** in Minecraft "
 "using the Bookshelf library. The paintbrush changes a block's material to"
@@ -69,19 +68,16 @@ msgid "Before we start, make sure you have:"
 msgstr "在开始之前，请确保您有："
 
 #: ../../../../examples/paintbrush.md:22 0db49ea206e14d31a4836dbe079877ae
-#, fuzzy
 msgid "Minecraft Java Edition"
-msgstr "Minecraft Java 版 1.21.4 或更高版本"
+msgstr "Minecraft Java版"
 
 #: ../../../../examples/paintbrush.md:23 01a229f0c0f143d9ae0f2289822b72d7
-#, fuzzy
 msgid ""
 "A basic understanding of Minecraft datapacks, including functions, tags, "
 "and scoreboards"
 msgstr "数据包开发的基础知识，包括函数、标签和记分项"
 
 #: ../../../../examples/paintbrush.md:24 e835a96ddeb24f69a27f941a5585eaf7
-#, fuzzy
 msgid ""
 "Bookshelf `bs.block` and `bs.view` modules installed (see "
 "[Quickstart](https://docs.mcbookshelf.dev/en/latest/quickstart.html) for "
@@ -99,7 +95,6 @@ msgid "`@require bookshelf.module.view`"
 msgstr "`@require bookshelf.module.view`"
 
 #: ../../../../examples/paintbrush.md:30 a2da838920c24e38b3b903570f9c8755
-#, fuzzy
 msgid "🛠️ Step-by-Step Guide"
 msgstr "🛠️ 逐步实现"
 
@@ -126,7 +121,6 @@ msgid "`@function paintbrush:load`"
 msgstr "`@function paintbrush:load`"
 
 #: ../../../../examples/paintbrush.md:45 8bb651933d7f499089e7ceacf15032fc
-#, fuzzy
 msgid ""
 "This objective will store data for the paintbrush, primarily the values "
 "returned by commands."
@@ -477,7 +471,3 @@ msgstr "**💬 这对您有帮助吗？**"
 #: ../../../_templates/comments.md:6 5c4ffa6db47344658a7d0dd975557b6b
 msgid "Feel free to leave your questions and feedback below!"
 msgstr "欢迎在下方留下您的问题和反馈！"
-
-#~ msgid "A ready-to-use empty datapack"
-#~ msgstr "一个可用的空数据包"
-
