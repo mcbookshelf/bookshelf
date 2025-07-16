@@ -57,6 +57,27 @@ msgstr "输入"
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid ""
+"{nbt}`compound` {nbt}`list` {nbt}`string` **var**: Can be any structured"
+" data. The only requirement is that all values must be valid string paths"
+" to data or scores:"
+msgstr ""
+"{nbt}`compound` {nbt}`list` {nbt}`string` **var**: 可接受任意结构化数据。"
+"唯一要求是所有值必须是有效的数据路径字符串或分数的路径字符串："
+
+#, python-brace-format
+msgid "[data]: `<entity|block|storage> <target> [<path>] [<depth>]`"
+msgstr "[数据]: `<entity|block|storage> <目标> [<路径>] [<深度>]`"
+
+#, python-brace-format
+msgid "[score]: `<target> <objective>`"
+msgstr "[分数]: `<目标> <记分板项>`"
+
 #: ../../../modules/dump.md:31 7cf69dc098c04284b54823d43dffec9d
 msgid "*Example: View position scores as an array:*"
 msgstr "*示例：把位置分数写成数组并查看：*"

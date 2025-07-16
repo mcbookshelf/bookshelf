@@ -126,6 +126,14 @@ msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：您想要获取�
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's output."
+msgstr "{nbt}`number` **scale**: 应用于函数输出的比例因子。"
+
 #: ../../../modules/environment.md:73 d3f2f4ed44f2460580bca5ab2483f6f4
 msgid ""
 "**Return | Score `$environment.get_temperature bs.out`**: Temperature at "

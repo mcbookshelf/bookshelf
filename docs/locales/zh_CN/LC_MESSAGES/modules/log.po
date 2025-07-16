@@ -85,6 +85,26 @@ msgstr "输入"
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`string` **message**: Logged message. Must be a valid SNBT text component."
+msgstr "{nbt}`string` **message**: 记录的日志消息。必须是有效的 SNBT 文本组件。"
+
+#, python-brace-format
+msgid "{nbt}`string` **namespace**: Namespace of the function."
+msgstr "{nbt}`string` **namespace**: 函数的命名空间。"
+
+#, python-brace-format
+msgid "{nbt}`string` **path**: Origin path for the log (current Minecraft function)."
+msgstr "{nbt}`string` **path**: 日志来源路径（当前 Minecraft 函数）。"
+
+#, python-brace-format
+msgid "{nbt}`string` **tag**: A tag to identify the function. This tag is displayed in the log message and is used as group to manage the granularity."
+msgstr "{nbt}`string` **tag**: 函数标识标签。显示在日志消息中，并作为分组管理粒度的依据。"
+
 #: ../../../modules/log.md:42 bcd0d532979349f5a41ff003be5c9e9b
 msgid ""
 "*Example: Log an error message that originates from the `bs.foo:bar` "
@@ -166,6 +186,26 @@ msgid ""
 "*Example: View the log history for a specific namespace, tag, and "
 "severity level:*"
 msgstr "*示例：查看特定命名空间、标签和严重程度的日志历史：*"
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Optional filters."
+msgstr "{nbt}`compound` **with**: 可选过滤条件。"
+
+#, python-brace-format
+msgid "{nbt}`string` **severity**: Severity level to filter logs (`error`, `warn`, `info`, or `debug`)."
+msgstr "{nbt}`string` **severity**: 过滤日志的严重级别（`error`、`warn`、`info` 或 `debug`）。"
+
+#, python-brace-format
+msgid "{nbt}`string` **namespace**: Namespace to filter the logs."
+msgstr "{nbt}`string` **namespace**: 过滤日志的命名空间。"
+
+#, python-brace-format
+msgid "{nbt}`string` **tag**: Tag to filter logs."
+msgstr "{nbt}`string` **tag**: 过滤日志的标签。"
 
 #: ../../../modules/log.md 7d697adcae0a46e8ba053a051d64d860
 msgid "Clear History"

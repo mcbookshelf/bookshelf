@@ -302,7 +302,7 @@ msgstr "{nbt}`string` **block | type**: 用来填充区域的方块或方块类�
 msgid ""
 "{nbt}`int` **weight**: Determine the likelihood of selecting the entry "
 "(default: 1)."
-msgstr "{nbt}`int` **weight**: 指定该项目在随机选择中的权重=（默认：1）。"
+msgstr "{nbt}`int` **weight**: 指定该项目在随机选择中的权重（默认：1）。"
 
 #: ../../modules/block.md:151 93ebd8fee0934aa4989148dea5e7c8a5
 msgid ""
@@ -529,7 +529,7 @@ msgstr "{nbt}`compound` 方块属性数据"
 #: ../../modules/block.md:346 ../../modules/block.md:417
 #: 2d30bae388ec4ec4af9b5b219fe76c87 91eb1a172ed549d1869cb96f127f5e16
 #: d30563fdae9d4db8a4f98222dd445553 f9265d8bf99c49e98162ed8b6a92a90f
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{nbt}`string` **name**: Name of the property (e.g., `shape`)."
 msgstr "{nbt}`string` **name**: 方块属性名称（比如：`shape`）。"
 
@@ -632,9 +632,9 @@ msgid "{nbt}`string` **name**: Name of the property (e.g., `facing`)."
 msgstr "{nbt}`string` **name**: 方块属性名称（比如：`shape`）。"
 
 #: ../../modules/block.md:382 6ab8d5080313457e8c2bdb7110a8aa3d
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{nbt}`string` **value**: Value of the property (e.g., `east`)."
-msgstr "{nbt}`string` **name**: 方块属性值（比如：`east`）。"
+msgstr "{nbt}`string` **value**: 方块属性值（比如：`east`）。"
 
 #: ../../modules/block.md:391 9c8c3bcadf514e5a81b664cdf92c1262
 msgid "*Example: Replace the facing property value:*"
@@ -659,7 +659,7 @@ msgstr "{nbt}`list` **properties**: 要偏移的方块状态列表。"
 #: ../../modules/block.md:418 105c9db73dda4206b1013f7c158762d8
 #, python-brace-format
 msgid "{nbt}`string` **by**: Shift amount (defaults to 1)."
-msgstr "{nbt}`string` **by**: 偏移数量（默认为1）."
+msgstr "{nbt}`string` **by**: 偏移数量（默认为1）。"
 
 #: ../../modules/block.md:427 195436c740ec4e7e8024cc914b213604
 msgid "*Example: Shift the facing property value by 2:*"
@@ -894,7 +894,7 @@ msgstr "{nbt}`compound` 放置方块数据"
 
 #: ../../modules/block.md:710 b1863d440b0342bfad1e0c18025c9dbf
 #, python-brace-format
-msgid "{nbt}`string` **block**: Full string representation of the block to set."
+msgid "{nbt}`string` **block**: String representation of the block id to set."
 msgstr "{nbt}`string` **block**: 要放置的方块的完整字符串表示。"
 
 #: ../../modules/block.md:711 ../../modules/block.md:742
@@ -932,7 +932,7 @@ msgid "{nbt}`compound` Set type data"
 msgstr "{nbt}`compound` 放置方块数据"
 
 #: ../../modules/block.md:741 b1863d440b0342bfad1e0c18025c9dbf
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{nbt}`string` **type**: String representation of the block id to set."
 msgstr "{nbt}`string` **block**: 要放置的方块id的字符串表示。"
 

@@ -445,7 +445,7 @@ msgstr "*`#bs.move:callback/stick`*"
 msgid ""
 "For sliding, we need to cancel the velocity on the axis that was hit and "
 "continue traveling the remaining distance."
-msgstr "对于滑动，我们需要取消被击中轴上的速度，并继续行进剩余距离。"
+msgstr "对于滑动，我们需要取消被阻挡的轴上的速度，并继续行进剩余距离。"
 
 #: ../../modules/move.md:285 154809601ea041c1b8dbea4c7c6f6e4a
 msgid "*`#bs.move:callback/slide`*"
