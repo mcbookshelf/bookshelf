@@ -193,6 +193,18 @@ msgstr "**分数 `$vector.basis_rot_3d.rot.[0,1] bs.in`**：相对于起始基�
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`number` **scaling**: Scalar for the function's input and output."
+msgstr "{nbt}`number` **scaling**: 应用于函数输入和输出的缩放系数。"
+
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's output."
+msgstr "{nbt}`number` **scale**: 应用于函数输出的缩放系数。"
+
 #: ../../../modules/vector.md:123 cb99a1443c984cceb640a0f0426ab541
 msgid ""
 "**Scores `$vector.basis_rot_3d.[0,1,2] bs.out`**: Vector coordinates "

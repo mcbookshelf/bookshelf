@@ -87,11 +87,19 @@ msgstr "{nbt}`string` **direction**: 形状的生成平面（`xz`，`xy`，或`z
 
 #, python-brace-format
 msgid "{nbt}`int` **spacing**: Distance between blocks in the generated shape (default: 1)."
-msgstr ""
+msgstr "{nbt}`int` **spacing**: 生成形状中方块的间隔（默认：1）。"
 
 #, python-brace-format
 msgid "{nbt}`int` **limit**: Limit how many steps are executed in a single tick (default: 256)."
-msgstr ""
+msgstr "{nbt}`int` **limit**: 限制每tick最多运行多少步（默认：256）。"
+
+#, python-brace-format
+msgid "{nbt}`int` **size**: Granularity of the noise. Lower values increase detail (default: 32)."
+msgstr "{nbt}`int` **size**: 噪声的粒度，数字越低细节越多（默认：32）。"
+
+#, python-brace-format
+msgid "{nbt}`int` **seed**: Seed for the noise generation, allowing for reproducibility (default: random)."
+msgstr "{nbt}`int` **seed**: 噪声的种子，方便重现结果（默认：随机）。"
 
 #: ../../../modules/generation.md:33 defe00e314a34c50ad12ecc2fe2df328
 msgid "🔧 Functions"
@@ -157,6 +165,22 @@ msgid ""
 "is generated at the specified origin, with the callback executed at each "
 "step to facilitate custom behavior during the generation process."
 msgstr "以指定位置为原点，使用单纯形噪声算法，在二维平面上生成形状。每一步生成都有回调，可以在这个过程中自定义行为。"
+
+#, python-brace-format
+msgid "{nbt}`int` **octaves**: Number of noise layers; more octaves enhance detail (default: 2)."
+msgstr "**分数 `$random.fractal_noise_2d.octaves bs.in`**：要组合的噪声层数（默认：2）。频程越多细节越多。"
+
+#, python-brace-format
+msgid "{nbt}`double` **persistence**: Contribution of each octave. Higher means more detail (default: 0.5)."
+msgstr "{nbt}`double` **persistence**: 每个倍频程的贡献，更高的值细节更多（默认：0.5）。"
+
+#, python-brace-format
+msgid "{nbt}`double` **lacunarity**: Frequency increase for each octave. Higher means more rapid frequency increase (default: 2.0)."
+msgstr "{nbt}`double` **lacunarity**: 每个倍频程的频率增长，值越高频率增长越快（默认：2.0）。"
+
+#, python-brace-format
+msgid "**`$generation.noise bs.lambda`**: The noise value in the range [-1000, 1000]."
+msgstr "**`$generation.noise bs.lambda`**: 噪声值，范围在[-1000, 1000]。"
 
 #: ../../../modules/generation.md fbe362ad8c694d81ab1bab46556ee5c3
 msgid "Fractal Shape 2D"

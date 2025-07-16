@@ -86,6 +86,18 @@ msgstr "生命值"
 msgid "Add or remove health points from players."
 msgstr "增加或移除玩家的生命值点数。"
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`number` **points**: Health points to add to players."
+msgstr "{nbt}`number` **points**: 要给玩家增加的生命值。"
+
+#, python-brace-format
+msgid "{nbt}`number` **points**: Max health points to add to players."
+msgstr "{nbt}`number` **points**: 要给玩家增加的最大生命值。"
+
 #: ../../../modules/health.md:43 ../../../modules/health.md:76
 #: ../../../modules/health.md:118 ../../../modules/health.md:145
 #: ../../../modules/health.md:181 ../../../modules/health.md:208
@@ -186,6 +198,10 @@ msgid ""
 "points."
 msgstr "**执行 `as <玩家>`**：您想要获取生命值点数的玩家。"
 
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's returned value."
+msgstr "{nbt}`number` **scale**: 函数返回值的缩放值。"
+
 #: ../../../modules/health.md:128 0658fe1224924053b2f26ec41221ba26
 #, python-brace-format
 msgid ""
@@ -226,6 +242,14 @@ msgstr "设置"
 msgid "Set players' health points."
 msgstr "设置玩家的生命值点数。"
 
+#, python-brace-format
+msgid "{nbt}`number` **points**: Health points."
+msgstr "{nbt}`number` **points**: 生命值。"
+
+#, python-brace-format
+msgid "{nbt}`number` **points**: Max health points."
+msgstr "{nbt}`number` **points**: 最大生命值。"
+
 #: ../../../modules/health.md:194 03fb16671bbc45a48ba2292edcfccaee
 msgid "*Example: Set your HP to 10:*"
 msgstr "*示例：将自己的生命值设置为 10：*"
@@ -249,6 +273,22 @@ msgstr "设置实体的存活时间。"
 #: ../../../modules/health.md:241 c894d80e9c7a4895944dc756326885d4
 msgid "**Execution `as <entities>`**: Entities to add a lifetime to."
 msgstr "**执行 `as <实体>`**：要添加存活时间的实体。"
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Lifetime data."
+msgstr "{nbt}`compound` **with**: 存活时间数据。"
+
+#, python-brace-format
+msgid "{nbt}`int` **time**: Time to live. In ticks by default if unit is not defined."
+msgstr "{nbt}`int` **time**: 存活时间，如果没有指定单位（unit）则单位默认为游戏刻时间。"
+
+#, python-brace-format
+msgid "{nbt}`string` **unit**: Unit of the specified time (tick, second, minute, hour, t, s, m, h)."
+msgstr "{nbt}`string` **unit**: 时间单位（tick, second, minute, hour, t, s, m, h）。"
+
+#, python-brace-format
+msgid "{nbt}`string` **on_death**: Command that will be run as the entity on its death."
+msgstr "{nbt}`string` **on_death**: 实体死亡时对其运行的函数。"
 
 #: ../../../modules/health.md:253 174eec219f3f48b2914487f988882ca4
 msgid "**State**: The entity now has a finite lifetime."

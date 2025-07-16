@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2025-07-14 21:41+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -19,33 +19,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/block.md:1 82a680d5a33a48ab88c3bbf54cca8275
+#: ../../modules/block.md:1 e7ac173952fa43628c10d7737d1fca69
 msgid "🧱 Block"
 msgstr ""
 
-#: ../../modules/block.md:3 91bf2371ae5e4a69853d17fc62b51f4e
+#: ../../modules/block.md:3 d1dab0b2031246009aab6bcf8e62fa57
 msgid "**`#bs.block:help`**"
 msgstr ""
 
-#: ../../modules/block.md:5 48195825f9bb49f3a9425bbf313ae632
+#: ../../modules/block.md:5 9541c98c986649478dbd6b53cbb044fe
 msgid ""
 "Manage blocks, including states and NBTs, while offering advanced tools "
 "for seamless transformations."
 msgstr ""
 
-#: ../../modules/block.md:8 d58677316ef344e186d9e96073af927d
+#: ../../modules/block.md:8 f09221910fcc49859597cbac46f9068a
 msgid "\"Architecture is the thoughtful making of space.\""
 msgstr ""
 
-#: ../../modules/block.md:9 53bf6a5f04d64268a7e34faa545e8029
+#: ../../modules/block.md:9 351cc22963904f4f95dc1654ef8c5c62
 msgid "Louis Kahn"
 msgstr ""
 
-#: ../../modules/block.md:13 bb9b1eea203b4e729f2636f2dffa0177
+#: ../../modules/block.md:13 5137a889186b45dc9bda08bfe0f1bec6
 msgid "Virtual Block Format"
 msgstr ""
 
-#: ../../modules/block.md:16 62c6746dcb4c4f8d80b9c88f6c10643e
+#: ../../modules/block.md:16 3d1a35efff6849668e98073b89931ca2
 msgid ""
 "To manipulate blocks and their states, Bookshelf utilizes a [virtual "
 "block format](#get) stored in the block output. It's crucial not to "
@@ -53,24 +53,24 @@ msgid ""
 "functions provided in the library."
 msgstr ""
 
-#: ../../modules/block.md:21 b23d7dade18f4b78bcfb50933a32d17e
+#: ../../modules/block.md:21 0518934d077544d697618789cf409611
 msgid "🔧 Functions"
 msgstr ""
 
-#: ../../modules/block.md:23 a5388d0216244f3c96407641bbbad6c4
+#: ../../modules/block.md:23 715f06dfae0c4b4892711856f8339740
 msgid "You can find below all functions available in this module."
 msgstr ""
 
-#: ../../modules/block.md:27 685a08a615564a5d9b44ecb1d6ec9193
+#: ../../modules/block.md:27 f496990eb6574d878e01605d938b3846
 msgid "Fill"
 msgstr ""
 
-#: ../../modules/block.md 8d5b746f7ba74e719a5fdc2379553164
-#: d9229964194c4aa597a5f3c7b6ff60a2 ed9a27b1d1ec443fb93ccc504bcc1fc9
+#: ../../modules/block.md e94f1d122eae4664a87a8e56a6887d04
+#: f5bce10a323045cd881be60af1a8c2ec
 msgid "Block"
 msgstr ""
 
-#: ../../modules/block.md:35 61cd9cb7792d4b4e94cd6a5201991e7f
+#: ../../modules/block.md:35 4b6a69c4e4984c79aa168c03b5d24ae0
 msgid "Fill all or part of a region with a specific block."
 msgstr ""
 
@@ -85,23 +85,117 @@ msgstr ""
 #: ../../modules/block.md:704 ../../modules/block.md:735
 #: ../../modules/block.md:775 ../../modules/block.md:810
 #: ../../modules/block.md:845 ../../modules/block.md:880
-#: ../../modules/block.md:920 44fa863b6de6448890b9bda24bf0944c
-#: 56915f98720348ac9d01ce491835d83d 5cb55e0aa546435db86a524a89d655a4
-#: 630267f20ed44d69a6adc7f726fdf3d8 7d8b084952684e0e9a15be5c62a62af9
-#: 81add528891d4f7295d6d9b127dfb4ae 861c05b5d978477789c5ec83a1e7504d
-#: 88101a8b5d9d4257ad315c8d4af0d98f 9265d6e27532490baec0d3ca4818dc47
-#: a8ca659a9303468d9d692907b465e1fa acc0fefb7c034246bc6d5ed66772ba1e
-#: b976f5d118234e5e9c1accd1a955e5df be8d1bebfb2f4a6abd19539fbb4a30f9
-#: c37d5ba8bdf54963a9cdcbe26cd6b640 c6d1c0c98ead427491ce4906d909c235
-#: cc2de6fa501b4a2ebeac3dafb8ad01a9 ce60f9ae2eae4ebda8ded5045192574c
-#: d1295df91d5e451cb5c02192fc1f3bd9 d4c3526a72f144869e53467b67463813
-#: e9dc250079ca4c47899319e5c0b0a7b9 f02b835ca551421c9d971a747206f706
-#: f9f5b91a2cbd4a7dbe92b91aa777d7a3 fb2e47c5179a48049b25343a129aa08e
+#: ../../modules/block.md:920 08aed5d1e98249f0b127ec2628c7800b
+#: 87763830c4b74deca05a2f78683ea0e2
 msgid "Inputs"
 msgstr ""
 
-#: ../../modules/block.md:38 d93a9810514142c6ab5ec0815c3edf2d
+#: ../../modules/block.md:38 7373e10584904994b9367559ee7f1f76
 msgid "**Storage `bs:in block.fill_block`**:"
+msgstr ""
+
+#: ../../modules/block.md:40 337e6aff07414e79a5ac122cb48768de
+#, python-brace-format
+msgid "{nbt}`compound` Fill block data"
+msgstr ""
+
+#: ../../modules/block.md:41 6cf7501057d14d15802ca7c218b9a252
+#, python-brace-format
+msgid "{nbt}`string` **block**: Block to fill the region with."
+msgstr ""
+
+#: ../../modules/block.md:42 ../../modules/block.md:91
+#: ../../modules/block.md:133 382dee2022484846afb0c4d1693ab29c
+#: 4c94f432939c49b8906f81db4363a45b 6b4c8765d00c43aa8e92c50be1840626
+#, python-brace-format
+msgid ""
+"{nbt}`string` {nbt}`list` **from**: Starting position as a valid position"
+" string or a list of 3 elements (x, y, z)."
+msgstr ""
+
+#: ../../modules/block.md:43 ../../modules/block.md:92
+#: ../../modules/block.md:134 6756128180f6477489760c8b5c27baa7
+#: b13b98e65da744cf93df696ebf5a9ea1 d498beeee72c4b96bc36efb0998d5d82
+#, python-brace-format
+msgid ""
+"{nbt}`string` {nbt}`list` **to**: Ending position as a valid position "
+"string or a list of 3 elements (x, y, z)."
+msgstr ""
+
+#: ../../modules/block.md:44 ../../modules/block.md:93
+#: ../../modules/block.md:135 161e9cd454fa4492a633043556fab724
+#: 6988108340c3495b8bff665d3c4e3094 976e10261ab14008a7e1e2cef1a332ed
+#, python-brace-format
+msgid ""
+"{nbt}`int` **limit**: Limit how many blocks can be set in a single tick "
+"(default: 4096)."
+msgstr ""
+
+#: ../../modules/block.md:45 ../../modules/block.md:94
+#: ../../modules/block.md:136 1abd0e15cb96435392db624d86bcd868
+#: 86c2e0f255464c63b70de13eb1d6bd6f f922043df5bb4a5593f170d4b6605fe8
+#, python-brace-format
+msgid ""
+"{nbt}`string` **mode**: Mode used to set blocks "
+"[destroy|keep|replace|strict] (default: replace)."
+msgstr ""
+
+#: ../../modules/block.md:46 ../../modules/block.md:95
+#: ../../modules/block.md:137 2663bb13015047cbadae3b6d0797a40e
+#: 4d7ea083490e4300a1ed334d03f530e7 c5d1cf76b48d4fcb917ff14aa97407c9
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_finished**: Command executed at the end of the "
+"operation (at the location of the final block)."
+msgstr ""
+
+#: ../../modules/block.md:47 79632aca314e430995383617fec62317
+#, python-brace-format
+msgid ""
+"{nbt}`list` **masks**: Determine which blocks will be replaced by the "
+"fill operation."
+msgstr ""
+
+#: ../../modules/block.md:48 ../../modules/block.md:97
+#: ../../modules/block.md:139 2f4e2a4a1e904541a3b8d3aca6d889b9
+#: 2f6d4ac3debd4614878f31e69fc62064 a72546951f734300bf4ef312af29c877
+#, python-brace-format
+msgid "{nbt}`compound` Block mask"
+msgstr ""
+
+#: ../../modules/block.md:49 ../../modules/block.md:98
+#: ../../modules/block.md:140 43fe27abdbfd4df789466c20a5fca487
+#: 4b9c3c63234849bba8a84c4c6a227fb8 619478168b7340aa83d7e5d11ec192af
+#, python-brace-format
+msgid "{nbt}`string` **block**: Block acting as a filter."
+msgstr ""
+
+#: ../../modules/block.md:50 ../../modules/block.md:99
+#: ../../modules/block.md:141 08bc2a013a254e93aedb78b6d17cd92b
+#: 4b69f9a97f5b44dea48e5e806eccd6a7 ae4f2f1996914d1585293ed32591cc98
+#, python-brace-format
+msgid "{nbt}`bool` **negate**: Reverse the mask (default: false)."
+msgstr ""
+
+#: ../../modules/block.md:51 ../../modules/block.md:100
+#: ../../modules/block.md:142 7bb2b69d9d9f4d778aaef242aa0a0b4f
+#: a04230d09df34c6781c6f60c88f322f1 c986ad274078447f8cb134d5a874e7a0
+#, python-brace-format
+msgid "{nbt}`int` **x**: Mask filter x offset (default: 0)."
+msgstr ""
+
+#: ../../modules/block.md:52 ../../modules/block.md:101
+#: ../../modules/block.md:143 2937b93cbc3e4ad0a8e53591c1ac2fa5
+#: 699dcabd4b4b4cfc8bd0829da95d9901 91b22fce84454068990ae6e56c645aee
+#, python-brace-format
+msgid "{nbt}`int` **y**: Mask filter y offset (default: 0)."
+msgstr ""
+
+#: ../../modules/block.md:53 ../../modules/block.md:102
+#: ../../modules/block.md:144 6ecc1d1eb2c241f093229b6d76c66250
+#: 867bd9df0ca040e68674c88b51e7ab6f fae7366f9ab743edb6f5578b78c50841
+#, python-brace-format
+msgid "{nbt}`int` **z**: Mask filter z offset (default: 0)."
 msgstr ""
 
 #: ../../modules/block.md:56 ../../modules/block.md:105
@@ -115,126 +209,258 @@ msgstr ""
 #: ../../modules/block.md:714 ../../modules/block.md:745
 #: ../../modules/block.md:786 ../../modules/block.md:821
 #: ../../modules/block.md:856 ../../modules/block.md:895
-#: ../../modules/block.md:935 12e546b4c5084a75bf5dea00ac0aa226
-#: 29433f7e76fa4619af27a7d45e03a024 2be547fbc12a43e2ac43d50e59d9a4a2
-#: 442de898b91b4c4887600da9b845e21a 4729520ca84c47fd89992325982ed6db
-#: 66821b638a0140b8a2f246f35bf8b5cb 68dd7a1c64304f01b654fd4e1947a899
-#: 6e6ead71750d4d048872ea595347c431 78a2a367dc4c4a4d93c9c199c30167f3
-#: 8028b03bccc2421aabfba781670dd4c6 8d0bf2f9c45e4036b684136cb4287b7c
-#: 966f151c495a46e8aa44ad40f87f119e 96fe76e5c45c43ecab7d08763d59ba19
-#: a42aac3f5bc94af0ba56e8967fa55500 a93e096be9494b1185aaa88dfa0e572b
-#: a96cb81fac634c65b12a6e1be5a51743 aeb492dd755749038a413ad356024e90
-#: cb7bdc52f02d4add926366ee83504019 db9adaa8eb794c1cba19986f09524d0a
-#: dd6527db438a4b19bd3e6fd166c59b2c e0893dc575654867bc717f5823c70d6e
-#: e3d5b9349ff04d6cb08f9182ee6772a0 eeed726fdcba4a4e9c68acca3cddd19a
+#: ../../modules/block.md:935 0a5dab3e11764aeda49e99de83242018
+#: 569516759276445fb904ad20a70d558b 64765f63216f4344a65afe95ff6a1480
 msgid "Outputs"
 msgstr ""
 
 #: ../../modules/block.md:57 ../../modules/block.md:106
-#: ../../modules/block.md:148 8b7350f7bd8f42728a94def97f85e376
-#: a6aea6178757496f81206b54f3afab5e e4397ea70be24842801ea3a912aba303
+#: ../../modules/block.md:148 82e4f0e81aab4c1f93510381661d9a6b
 msgid "**State**: Blocks are placed in the world."
 msgstr ""
 
-#: ../../modules/block.md:60 4b5a68957c3646f784163940982f4fc7
+#: ../../modules/block.md:60 1a7ca34b68db41358c4a8b8403ffcd2f
 msgid ""
 "*Example: Replace the top layer of dirt by grass and use a say command "
 "when finished:*"
 msgstr ""
 
-#: ../../modules/block.md:70 62ecd187d7e84200bde58cad1ea7b01f
+#: ../../modules/block.md:70 0af3ad0ac2764b529b74cce321aa6f38
 msgid "*Example: Fill an area with stone a few blocks at a time:*"
 msgstr ""
 
-#: ../../modules/block.md 17973c0686104adbb775919c4c7f33eb
-#: a2562ac229814ead9161babf37794df0 b50ca991fd6b4a5ea1b2eb24c4ae248b
+#: ../../modules/block.md fcd1cf531e304a05b347fe370043b95f
 msgid "Type"
 msgstr ""
 
-#: ../../modules/block.md:84 36e7f22723f0460caf2c21e2122d7c79
+#: ../../modules/block.md:84 58247f82b0364077a5faa502722b1fbf
 msgid ""
 "Fill all or part of a region with a specific block type, preserving "
 "states and NBTs."
 msgstr ""
 
-#: ../../modules/block.md:87 533455f240e04b3082d2523fa769b281
+#: ../../modules/block.md:87 a14150a14b2d4fd9978977dc3232731a
 msgid "**Storage `bs:in block.fill_type`**:"
 msgstr ""
 
-#: ../../modules/block.md:109 2c4928c35a2f473c89ae9ab08d2ea328
+#: ../../modules/block.md:89 d682c2a950434bb9aa4c47b996241297
+#, python-brace-format
+msgid "{nbt}`compound` Fill type data"
+msgstr ""
+
+#: ../../modules/block.md:90 821c8835f6224a07ad31dfba4ae9d065
+#, python-brace-format
+msgid "{nbt}`string` **type**: Block id to fill the region with."
+msgstr ""
+
+#: ../../modules/block.md:96 ../../modules/block.md:138
+#: 4687bebdb15844129ab4252c2d68becf c121bbfd05e14e4889e29288a08cb463
+#, python-brace-format
+msgid "{nbt}`list` **masks**: Determine which blocks will be replaced."
+msgstr ""
+
+#: ../../modules/block.md:109 d77adc16a6a146b78c532b1efd41d742
 msgid ""
 "*Example: Replace oak stairs with spruce stairs while preserving states "
 "and use a say command when finished:*"
 msgstr ""
 
-#: ../../modules/block.md 7fe7193806564bc8b230dc5fa49d90f8
+#: ../../modules/block.md 863f7945017845b08ddf5e6ab3d76a89
 msgid "Random"
 msgstr ""
 
-#: ../../modules/block.md:123 f4383694215f4dc5a9d8a51c97da4744
+#: ../../modules/block.md:123 9814c5da3ff8492bae9b20e66e5c7bc3
 msgid "Fill all or part of a region with random blocks or types."
 msgstr ""
 
-#: ../../modules/block.md:126 385999f492f74ee4ac374a73b9b841e5
+#: ../../modules/block.md:126 ffa584e668f44626ab03598a2235e03f
 msgid "**Storage `bs:in block.fill_random`**:"
 msgstr ""
 
-#: ../../modules/block.md:151 c2bbbd544ce4489cbc74e466e33de887
+#: ../../modules/block.md:128 ceda414bf9964f73bcdc8486a5aede87
+#, python-brace-format
+msgid "{nbt}`compound` Fill random data"
+msgstr ""
+
+#: ../../modules/block.md:129 d250e368f0cc4be7aa0698f5bdc35ae0
+#, python-brace-format
+msgid "{nbt}`list` **entries**: List of entries to pick from randomly."
+msgstr ""
+
+#: ../../modules/block.md:130 73b3e9897fb941049068f7708664b009
+#, python-brace-format
+msgid "{nbt}`compound` Block or type entry"
+msgstr ""
+
+#: ../../modules/block.md:131 a88dce4d6c1142c5bfe486ad0a65d959
+#, python-brace-format
+msgid "{nbt}`string` **block | type**: Block or type to fill the region with."
+msgstr ""
+
+#: ../../modules/block.md:132 895cce5b2b0f43e29be566640c280438
+#, python-brace-format
+msgid ""
+"{nbt}`int` **weight**: Determine the likelihood of selecting the entry "
+"(default: 1)."
+msgstr ""
+
+#: ../../modules/block.md:151 93ebd8fee0934aa4989148dea5e7c8a5
 msgid ""
 "*Example: Randomly fill an area with stone or air and use a say command "
 "when finished:*"
 msgstr ""
 
 #: ../../modules/block.md:162 ../../modules/block.md:442
-#: ../../modules/block.md:658 20a003c3c8a44c63919cf1d34f0e8a62
-#: 2548b3f7d8384767a37e8bc03bdec758 27978eba28874446adca6a67afd24f00
+#: ../../modules/block.md:658 d946139d1f6b4e37a11bada569e25b04
 msgid "**Credits**: Aksiome"
 msgstr ""
 
-#: ../../modules/block.md:166 8c7be22c857a4550ad0fe8b2f2358f4f
+#: ../../modules/block.md:166 dc3050f9217d475e8eba85ec377d60f6
 msgid "Get"
 msgstr ""
 
-#: ../../modules/block.md:174 4911ca56336f4330a67cfdf597018dab
+#: ../../modules/block.md:174 0a2f78895d554737b2dd2a41faa8995a
 msgid ""
 "Get all data related to the block at the current location, including its "
 "state and NBTs."
 msgstr ""
 
 #: ../../modules/block.md:177 ../../modules/block.md:217
-#: 25cdfa37c6494889aaa9729cd4db5eff 8df34a6bfaea4b35a542828ffd16b155
+#: 8959f1cc0c494b11856bbd28e338a758
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to get "
 "block data from."
 msgstr ""
 
 #: ../../modules/block.md:180 ../../modules/block.md:220
-#: 21332fa6bd8b45f9a2144f1e95054fb8 b543b6961fd144fda2b1dc88427a6eb1
+#: d2e875ac3b9a48fb962228fc102001ab
 msgid "**Storage `bs:out block`**:"
 msgstr ""
 
-#: ../../modules/block.md:199 e8e053013f2c4459bca4c33a85cb1830
+#: ../../modules/block.md:182 ../../modules/block.md:222
+#: 72e259fc5f314727b6e2ab0515f91356 8539a6a56a564be4939015d10a57b560
+#, python-brace-format
+msgid "{nbt}`compound` **[readonly]** Block data"
+msgstr ""
+
+#: ../../modules/block.md:183 ../../modules/block.md:223
+#: 399586881ccb4f25bda83475788d00ce 5f9fc97188714dd881e0f2b035179fbf
+#, python-brace-format
+msgid ""
+"{nbt}`int` **group**: Blocks within the same group share the same "
+"possible state (e.g., stairs)."
+msgstr ""
+
+#: ../../modules/block.md:184 b1863d440b0342bfad1e0c18025c9dbf
+#, python-brace-format
+msgid ""
+"{nbt}`string` **block**: Full string representation of the block "
+"`type[state]{nbt}`."
+msgstr ""
+
+#: ../../modules/block.md:185 ../../modules/block.md:225
+#: a9d241a5c7364503b8ab30294790f6d2 e0a7f30471b346a5abaeabe227d037a8
+#, python-brace-format
+msgid ""
+"{nbt}`string` **item**: Item string id associated with the block, if it "
+"exists."
+msgstr ""
+
+#: ../../modules/block.md:186 ../../modules/block.md:226
+#: ../../modules/block.md:460 ../../modules/block.md:511
+#: ../../modules/block.md:571 008bad6a3046418d811619f67710548f
+#: 12fc70158a8a46bba58b3bc9cc61dc80 3720c0a9b72a454dbb6f47751812dddf
+#: 7d35ad6d5b8e4647917969622f233bc1 d81777ddbbf84728b2fa3320e37c6e01
+#, python-brace-format
+msgid ""
+"{nbt}`string` **type**: String representation of the id (e.g., "
+"`minecraft:stone`)."
+msgstr ""
+
+#: ../../modules/block.md:187 baeccde73f234024b78f48cdeaf653d0
+#, python-brace-format
+msgid ""
+"{nbt}`string` **state**: Represent the state of a block (e.g., "
+"`[shape=straight]`), if it exists."
+msgstr ""
+
+#: ../../modules/block.md:188 78f72e7513024dcebca5b6c090de9868
+#, python-brace-format
+msgid "{nbt}`compound` **nbt**: Data tags used by block entities, if it exists."
+msgstr ""
+
+#: ../../modules/block.md:189 3858954fac1646468dc5698e21b653f5
+#, python-brace-format
+msgid ""
+"{nbt}`compound` **properties**: Block state as properties (used by "
+"entities like falling blocks), if it exists."
+msgstr ""
+
+#: ../../modules/block.md:190 ../../modules/block.md:227
+#: 073c7f85c73c4de28da78173ef289bda 935616bef6364441aa603177614bfbe8
+#, python-brace-format
+msgid "{nbt}`compound` **sounds**: The sound list of a block."
+msgstr ""
+
+#: ../../modules/block.md:191 ../../modules/block.md:228
+#: e41fe14d1981485c876b925384bea289 f6bf30f09da340e6a223553035545981
+#, python-brace-format
+msgid "{nbt}`string` **break**: The sound played when a player breaks the block."
+msgstr ""
+
+#: ../../modules/block.md:192 ../../modules/block.md:229
+#: 45731cd378d1477284f945c46c736c34 d5f18d372fd341e883baa7aedfa66306
+#, python-brace-format
+msgid "{nbt}`string` **hit**: The sound played when a player hits the block."
+msgstr ""
+
+#: ../../modules/block.md:193 ../../modules/block.md:230
+#: 8c0fa5ed718446ea811bc35393345d84 ca4ba85625bb4693bdb48b1731776963
+#, python-brace-format
+msgid "{nbt}`string` **fall**: The sound played when a player falls on the block."
+msgstr ""
+
+#: ../../modules/block.md:194 ../../modules/block.md:231
+#: 445e70a8a95a421b920fe68123811c78 a7030860477e4b3893994d86416fda1e
+#, python-brace-format
+msgid "{nbt}`string` **place**: The sound played when a player places the block."
+msgstr ""
+
+#: ../../modules/block.md:195 ../../modules/block.md:232
+#: 67ba9a5b46db4fbca275332ddc5ec81f d66afe6b28e64d17af1768e19503433f
+#, python-brace-format
+msgid "{nbt}`string` **step**: The sound played when a player steps on the block."
+msgstr ""
+
+#: ../../modules/block.md:199 ab9c53301570416c95aa313609e92c1a
 msgid "*Example: Get all data related to a block:*"
 msgstr ""
 
-#: ../../modules/block.md:214 185db7ace28a47babe42035627bddf57
+#: ../../modules/block.md:214 405647c6a2544c2fb21d64ba6dacb4e8
 msgid ""
 "Get the block type at the current location. Although states, NBTs, and "
 "properties will be empty, state transformation functions are still "
 "available."
 msgstr ""
 
-#: ../../modules/block.md:236 89044af47df54b18a3e214f63d08c804
+#: ../../modules/block.md:224 b1863d440b0342bfad1e0c18025c9dbf
+#, python-brace-format
+msgid ""
+"{nbt}`string` **block**: Full string representation of the block (only "
+"the type)."
+msgstr ""
+
+#: ../../modules/block.md:236 1c78d1a51e4d4b4e8df77df19e1f7da5
 msgid ""
 "*Example: Get only type data related to a block (no property value is "
 "selected):*"
 msgstr ""
 
-#: ../../modules/block.md:248 15f5c191b40940309b29ac1530236dc7
+#: ../../modules/block.md:248 d942ea1b15a741bd88e2e84cf61a4306
 msgid "Read-only Output"
 msgstr ""
 
-#: ../../modules/block.md:251 00404f8556954c6c80656218490ef832
+#: ../../modules/block.md:251 a1d5e39af66e41d9bf5fcc42953a294f
 msgid ""
 "The `bs:out block` output is intended to be read-only. Modifying parts "
 "manually could lead to potential bugs. That's why the module provides "
@@ -244,20 +470,19 @@ msgstr ""
 
 #: ../../modules/block.md:254 ../../modules/block.md:690
 #: ../../modules/block.md:761 ../../modules/block.md:955
-#: b1a374fe290d4b73ae991189f9a0dfc7 b496aceb1d614e84928b3e482ab3347e
-#: c8a28500576a410691d122ab94ca37f0 ec20a376697b40a6b1367bbb2ae1aaaf
+#: c7fa15835ef244429b45f5a2fb4a7765
 msgid "**Credits**: Aksiome, theogiraudet"
 msgstr ""
 
-#: ../../modules/block.md:258 6c4278115dab40898ec7b21944cba280
+#: ../../modules/block.md:258 794fcb4096fa4bcba35af643d48da1b2
 msgid "Manage State"
 msgstr ""
 
-#: ../../modules/block.md 32081fb9be8049219cb528e82a050858
+#: ../../modules/block.md bb803200b1964fa2915693290dd0aaf4
 msgid "Keep"
 msgstr ""
 
-#: ../../modules/block.md:266 791077015df8415b9b5b8d6d6c7758dd
+#: ../../modules/block.md:266 ae744cb655c14967b0f575e9f4b3345c
 msgid ""
 "Filter properties to keep only the desired ones. This function acts on "
 "the [virtual block format](#get) stored in the block output."
@@ -268,22 +493,51 @@ msgstr ""
 #: ../../modules/block.md:412 ../../modules/block.md:457
 #: ../../modules/block.md:508 ../../modules/block.md:568
 #: ../../modules/block.md:604 ../../modules/block.md:636
-#: 120cf7c1b6f243bf941cef1c185f1bef 3b93291c0a5443c5bd6e77dea7a72258
-#: 523727965a2844d99e72e48dc35eb569 88cc0dc00a8945279d63266fa09af52a
-#: 916d812a90e1466494c7201b162445ef b8094df8c1ce45f29ca70d2738b4d445
-#: c12ff10fe16b48ae9c4ebacc6c9ba8e2 d9d38f8524484ef1890bbcf07357b0e5
-#: f7fc3c89643b41639441b87eca6039be fb6d55f77d654f1c9a64d19240d11d9b
+#: 13817c72f4a94d7c8e9416468609e171
 msgid "**Function macro**:"
+msgstr ""
+
+#: ../../modules/block.md:271 ../../modules/block.md:308
+#: ../../modules/block.md:343 ../../modules/block.md:378
+#: ../../modules/block.md:414 ../../modules/block.md:459
+#: ../../modules/block.md:510 ../../modules/block.md:570
+#: ../../modules/block.md:606 ../../modules/block.md:638
+#: 1c296680e2314c549a34b04b6edab83a 2701b6cfd43c436b9c70c377671ea740
+#: 40395a2cf728411c956efb20f9262cad 4362fd2bff0c4600b31dcc32efd44cab
+#: 443de95f77f74bfdb26b766ed01e3078 55f31b6ff9964e79b927853227a428c7
+#: c291cf55d5654c198cd64fdabc32f6a1 d5aaaac59e24499f9c575215d85d7e3c
+#: e1f45d761e464aaea1ad447ac235a052 f0165720d7ed4f2b8e25faaef7c33fd6
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr ""
+
+#: ../../modules/block.md:272 d81cb332493442df83400e66d2afcd90
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to keep."
+msgstr ""
+
+#: ../../modules/block.md:273 ../../modules/block.md:310
+#: ../../modules/block.md:345 ../../modules/block.md:380
+#: ../../modules/block.md:416 305a4776eca1418b8a2493ae477913b3
+#: a2d47df5aa3a42a3bdc698d7ed89fd73 a7f3e2da9bab42a89faed56ed1908627
+#: d892fff9416b456baac58325b75ca2b3 eeb2147fb67b404dabe636ab3e72b15a
+#, python-brace-format
+msgid "{nbt}`compound` Property data"
+msgstr ""
+
+#: ../../modules/block.md:274 ../../modules/block.md:311
+#: ../../modules/block.md:346 ../../modules/block.md:417
+#: 2d30bae388ec4ec4af9b5b219fe76c87 91eb1a172ed549d1869cb96f127f5e16
+#: d30563fdae9d4db8a4f98222dd445553 f9265d8bf99c49e98162ed8b6a92a90f
+#, python-brace-format
+msgid "{nbt}`string` **name**: Name of the property (e.g., `shape`)."
 msgstr ""
 
 #: ../../modules/block.md:277 ../../modules/block.md:314
 #: ../../modules/block.md:349 ../../modules/block.md:385
 #: ../../modules/block.md:421 ../../modules/block.md:463
 #: ../../modules/block.md:515 ../../modules/block.md:575
-#: 1dc07ff4eb914079b6a71e1f6ca7e00d 6765a9fbf6854560a61643166b6a5e3b
-#: 9785011447644f829f0bdb9e237125fe 9cfca5fb8b1542a7b9bc663e11b42c2a
-#: aa6c8c1272084912bb9dedb2b24eeabe bbc414e5751c4f6ba7ed61d817fa1d94
-#: bf179f102e8f488ebee180f9c2cd500d fe9521ecf367434891d27dbb800bca07
+#: 4b5af300aa944c7b94f147525773edeb
 #, python-brace-format
 msgid ""
 "**Storage `bs:out block`**: {nbt}`compound` There's no need for manual "
@@ -295,25 +549,22 @@ msgstr ""
 #: ../../modules/block.md:352 ../../modules/block.md:388
 #: ../../modules/block.md:424 ../../modules/block.md:468
 #: ../../modules/block.md:520 ../../modules/block.md:580
-#: 2a92c5c99f14436880732377e245e03e 414876f6e3bb4f849750a59ff00b4acc
-#: 94a4163f446446b580c5cb546fc8ec60 ccc9c41d1c29407fb4930a1d2ee22298
-#: eb5a3466baa44357be76cf3c4f8388a4 ef6afda93bf34ac4a2f5277c3bf22704
-#: fdec0306d670424794e54da8befc2093 fe9064c978704dbd98d65e2e5213d37f
+#: 6507cb50fba94848b7478c0f18425eb3
 #, python-brace-format
 msgid ""
 "**Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and "
 "`properties` are updated to reflect this change."
 msgstr ""
 
-#: ../../modules/block.md:283 9da9537c24554cfe853d0897da1508a0
+#: ../../modules/block.md:283 a52c1df48afe49fbbdfbf082ed2eb038
 msgid "*Example: Keep only the facing and shape properties:*"
 msgstr ""
 
-#: ../../modules/block.md 1b7b387d10bc4873b1d65eb03e4f65f7
+#: ../../modules/block.md cb825d6893844afe8530bc2d758483bc
 msgid "Merge"
 msgstr ""
 
-#: ../../modules/block.md:301 c7324b7913eb4a31a11a03e5010402ee
+#: ../../modules/block.md:301 cd6258b1ffef4fbebca055a09a8d2abf
 msgid ""
 "Merge state properties from the current location into the output. The "
 "merge occurs if the syntax is correct, regardless of logical coherence "
@@ -321,66 +572,100 @@ msgid ""
 "[virtual block format](#get) stored in the block output."
 msgstr ""
 
-#: ../../modules/block.md:304 53b3a840203443ebaccab35265dac617
+#: ../../modules/block.md:304 20ab934cc60f447a9ca37a90b27a85e8
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Location of the "
 "block that act as input."
 msgstr ""
 
-#: ../../modules/block.md:320 983710351d23470f9f3c9c53450f2dd9
+#: ../../modules/block.md:309 aa7c14f01b684570946b8d2523783142
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to merge."
+msgstr ""
+
+#: ../../modules/block.md:320 15710541e39a4423b67c757d4fb6ee75
 msgid "*Example: Merge the facing of a block onto stairs:*"
 msgstr ""
 
-#: ../../modules/block.md c5d51c80a753435ea5fd6d892386ef01
+#: ../../modules/block.md 381420fd2f4746ee89f749f00b35e85d
 msgid "Remove"
 msgstr ""
 
-#: ../../modules/block.md:338 f91e17192c2a4bcebb2f571ee6cab36f
+#: ../../modules/block.md:338 bbe89a68ab2a4cff8700e0a233313beb
 msgid ""
 "Filter properties by removing the undesired ones. This function acts on "
 "the [virtual block format](#get) stored in the block output."
 msgstr ""
 
-#: ../../modules/block.md:355 e310ab489e15454d9b7d066492a75876
+#: ../../modules/block.md:344 9bcbc5a6eb63424382c6f2e0f69871cc
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to remove."
+msgstr ""
+
+#: ../../modules/block.md:355 96adf4c908f045eb994a9640b5969b38
 msgid "*Example: Remove the facing and shape properties:*"
 msgstr ""
 
-#: ../../modules/block.md c18c7da81d35458faf00c454a6c49556
-#: c7b35dd23b62467da6d5e28041a96587
+#: ../../modules/block.md 2700a1c5029848c49af07b9e3a77f6f4
 msgid "Replace"
 msgstr ""
 
-#: ../../modules/block.md:373 f05cc4283f9740fab47cb9db771c2da2
+#: ../../modules/block.md:373 978068006a834a458990840bb54a01ac
 msgid ""
 "Replace property values. Invalid values will not be replaced. This "
 "function acts on the [virtual block format](#get) stored in the block "
 "output."
 msgstr ""
 
-#: ../../modules/block.md:391 60b24722cddd40209f52031072a1bbbe
+#: ../../modules/block.md:379 e8048461e8e344c29698da10f18ca465
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to replace."
+msgstr ""
+
+#: ../../modules/block.md:381 7296ead9a64b47ccbf5983ed9597c1ae
+#, python-brace-format
+msgid "{nbt}`string` **name**: Name of the property (e.g., `facing`)."
+msgstr ""
+
+#: ../../modules/block.md:382 6ab8d5080313457e8c2bdb7110a8aa3d
+#, python-brace-format
+msgid "{nbt}`string` **value**: Value of the property (e.g., `east`)."
+msgstr ""
+
+#: ../../modules/block.md:391 9c8c3bcadf514e5a81b664cdf92c1262
 msgid "*Example: Replace the facing property value:*"
 msgstr ""
 
-#: ../../modules/block.md 53b481fe302b49dc9ff17ed193b9406d
+#: ../../modules/block.md 4ceb6e34acc34260be12ce5c9fd267a3
 msgid "Shift"
 msgstr ""
 
-#: ../../modules/block.md:409 aeaabb52113241de99b0210dd2ae7ac0
+#: ../../modules/block.md:409 4a18829a6b33499f88b0abd5b8524a32
 msgid ""
 "Shift properties by any amount, allowing cycling through their values. "
 "This function acts on the [virtual block format](#get) stored in the "
 "block output."
 msgstr ""
 
-#: ../../modules/block.md:427 5e40265027354221818398c58e177f53
+#: ../../modules/block.md:415 e060ac36f79c405a8d51981105cbef45
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to shift."
+msgstr ""
+
+#: ../../modules/block.md:418 105c9db73dda4206b1013f7c158762d8
+#, python-brace-format
+msgid "{nbt}`string` **by**: Shift amount (defaults to 1)."
+msgstr ""
+
+#: ../../modules/block.md:427 195436c740ec4e7e8024cc914b213604
 msgid "*Example: Shift the facing property value by 2:*"
 msgstr ""
 
-#: ../../modules/block.md:446 aa20f66d870e4dbaae30980fa7123aef
+#: ../../modules/block.md:446 7b142e4403ea4d7f98f12eefc8b59643
 msgid "Manage Type"
 msgstr ""
 
-#: ../../modules/block.md:454 796c05ac8e504f1e98ec312c2084056f
+#: ../../modules/block.md:454 932a690123db4fc5bf238e9e71861d4a
 msgid ""
 "Replace the block type while trying to conserve the state. State is "
 "preserved only if the group of the output matches the input. This "
@@ -389,35 +674,34 @@ msgid ""
 msgstr ""
 
 #: ../../modules/block.md:466 ../../modules/block.md:518
-#: ../../modules/block.md:578 5a1833d4ca02481d980c68e2bea321ed
-#: 72ecfb2be5f74048b0e6abe6c9b97cfc aec3fcdf349b4345b31d10fb39010bc8
+#: ../../modules/block.md:578 a0de5aa3004f461eb2fbfb338642cecf
 msgid "**Return**: Whether a type was found and the replacement occurred."
 msgstr ""
 
-#: ../../modules/block.md:471 8c5b4f33d0824a4e8794c9c8163c5370
+#: ../../modules/block.md:471 c8fe0f5a4b69432e915fd297f0533c37
 msgid ""
 "*Example: Replace oak stairs with spruce stairs, preserving the current "
 "state:*"
 msgstr ""
 
-#: ../../modules/block.md 3fd14df5c7284fa48b63630ebd55146c
+#: ../../modules/block.md 4cf9a1d616594d34821ea38ca6d38981
 msgid "Map"
 msgstr ""
 
-#: ../../modules/block.md:489 5831abe1c332443899f253da8ea5efd8
+#: ../../modules/block.md:489 ace468b8e4d244ae98781edf389094ea
 msgid ""
 "Swap related block types while ensuring coherent replacements within the "
 "defined mapping registry. A mapping registry is defined as follows:"
 msgstr ""
 
-#: ../../modules/block.md:501 14123dddb8704602a8e9c3ab1a3c952d
+#: ../../modules/block.md:501 dd95b81b7c424585b614d38d257ff7c2
 msgid ""
 "This function operates on the [virtual block format](#get) stored in the "
 "block output. It replaces the type in the output with one that belongs to"
 " the same set and better matches the attributes of the inputted type."
 msgstr ""
 
-#: ../../modules/block.md:503 bbfc5c47b84a4250af024f714597bbc0
+#: ../../modules/block.md:503 60443593d60d4c329cc9fa2de742dc81
 msgid ""
 "For example, with the above mapping registry: if the input is "
 "`minecraft:red_wool` (attrs:[\"red\"]), and the virtual block type is "
@@ -426,28 +710,36 @@ msgid ""
 msgstr ""
 
 #: ../../modules/block.md:505 ../../modules/block.md:565
-#: 7d11b97e6bed47d4b22ace999981eddc d50b5f5c652e4c8482202c7192d882ea
+#: e8505deba07a400396c564d9c8da8bdb
 msgid ""
 "Bookshelf includes two predefined mapping registries (`bs.shapes` and "
 "`bs.colors`). If these are insufficient, you can [create your own"
 "](#custom-mapping-registry)."
 msgstr ""
 
-#: ../../modules/block.md:523 2d380101974c440eb8b4fc327a6664e8
+#: ../../modules/block.md:512 ../../modules/block.md:572
+#: 0a4e8b6f6f3843f59f892b06a4e8689c 9408ae7d2c654a73b35a0f69ce3cdcb4
+#, python-brace-format
+msgid ""
+"{nbt}`string` **mapping_registry**: A path to the mapping registry used "
+"for the replacement (e.g., `bs.shapes`)."
+msgstr ""
+
+#: ../../modules/block.md:523 7d5c8c0c8c42418eb84de886da80e163
 msgid ""
 "*Example: Replace all oak-related blocks with spruce ones (the function "
 "replaces the oak stairs block with a spruce stairs block):*"
 msgstr ""
 
-#: ../../modules/block.md e5eed19dc4f048849b3dbd1c7cbb457c
+#: ../../modules/block.md 0a22c438d69e42cf8603c033c686ae3a
 msgid "Mix"
 msgstr ""
 
-#: ../../modules/block.md:541 5eedbe3b29ed46179925a95005fea09c
+#: ../../modules/block.md:541 3b0c70d731dd45c0b40fbec08ebcc011
 msgid "Experimental"
 msgstr ""
 
-#: ../../modules/block.md:544 de029f3128b645cb8eb74bcb1988b210
+#: ../../modules/block.md:544 ba26ad26244046b49059e4635d13d69c
 msgid ""
 "This function may sometimes behave unpredictably due to the arbitrary "
 "nature of block relationship definitions. Additionally, while the "
@@ -455,13 +747,13 @@ msgid ""
 "handcrafted and therefore not exhaustive."
 msgstr ""
 
-#: ../../modules/block.md:547 c1310fa3a07f443fbca02e2cef06d65d
+#: ../../modules/block.md:547 58da85047a2f4552bb8cd2b656b1ecf5
 msgid ""
 "Mix block types while ensuring coherent replacements within the defined "
 "mapping registry. A mapping registry is defined as follows:"
 msgstr ""
 
-#: ../../modules/block.md:561 c0d67054b75f459c9bc882a084dd1ab7
+#: ../../modules/block.md:561 63289653be8e4d1aa351d713d3a658c3
 msgid ""
 "This function operates on the [virtual block format](#get) stored in the "
 "block output. It replaces the type in the output with one that belongs to"
@@ -469,7 +761,7 @@ msgid ""
 "input types while prioritizing the input type."
 msgstr ""
 
-#: ../../modules/block.md:563 32e55569596043779466450f6a4cbf57
+#: ../../modules/block.md:563 44cb55d87f6643e6900f19c6865aab19
 msgid ""
 "For example, with the above mapping registry: if the input is "
 "`minecraft:bricks` (attrs:[\"brick\"]), and the virtual block type is "
@@ -478,253 +770,408 @@ msgid ""
 "(set:\"stairs\",attrs:[\"stone\",\"brick\"])."
 msgstr ""
 
-#: ../../modules/block.md:583 a94231703dc146ccb74df86d34d90eac
+#: ../../modules/block.md:583 297a1dc9b23a48e699a6259dbc0a2258
 msgid ""
 "*Example: Mix a mossy cobblestone block with bricks resulting in a mossy "
 "stone bricks block:*"
 msgstr ""
 
-#: ../../modules/block.md 9cf14d022506401093b57389e335f732
+#: ../../modules/block.md 16430781d135495d85d551f121305ecf
 msgid "Lookup Item"
 msgstr ""
 
-#: ../../modules/block.md:601 1297aef6db4847f2847ad766ee1ce5e4
+#: ../../modules/block.md:601 f7a4e44ed1d64ea0adca2d997e29a907
 msgid "Get block data from the given item string id."
 msgstr ""
 
+#: ../../modules/block.md:607 6681f1854120407a9980603e2a65cafd
+#, python-brace-format
+msgid "{nbt}`string` **item**: Item string id associated to a block."
+msgstr ""
+
 #: ../../modules/block.md:611 ../../modules/block.md:643
-#: 4636b13e64ea4c90af85d5f328730cfc d2b1d1e767bf4a6e9c0938069b19b1ae
+#: c3d43acf45f24676a2ee8aabc264e391
 #, python-brace-format
 msgid ""
 "**Storage `bs:out block`**: {nbt}`compound` Equivalent to the "
 "[`#bs.block:get_type`](#get) function."
 msgstr ""
 
-#: ../../modules/block.md:614 9a645ed135a3482eab268f7634957ff0
+#: ../../modules/block.md:614 dd567ad4bc0b4cc6b6ff553b91ba8c57
 msgid "*Example: Get block data for the stone item:*"
 msgstr ""
 
-#: ../../modules/block.md:625 68d4d213ce6b49bf9342fd0dadfbfb59
+#: ../../modules/block.md:625 46a31d30b22c48b7a5df9d337d83e1c6
 msgid ""
 "Minecraft does not perfectly map between blocks and items. Some items may"
 " correspond to multiple blocks, and this function will only return one of"
 " them."
 msgstr ""
 
-#: ../../modules/block.md 2dce8b95f2194558bbac3c85979bc319
+#: ../../modules/block.md 0caf0688a3d148edb6fc4f85328b45dd
 msgid "Lookup Type"
 msgstr ""
 
-#: ../../modules/block.md:633 f5ebfa97d3484e8ba3943a03a3026def
+#: ../../modules/block.md:633 b6c034150d5f4e4caa0b69d3adce9f11
 msgid "Get block data from the given type string id."
 msgstr ""
 
-#: ../../modules/block.md:646 d78bd5fb98854b67a0b6e5c0a9102090
+#: ../../modules/block.md:639 e69aff94c6cb4b5387fe7232756e9c65
+#, python-brace-format
+msgid "{nbt}`string` **type**: Type string id associated to a block."
+msgstr ""
+
+#: ../../modules/block.md:646 d217dfb297214718b58dfad3a6905242
 msgid "*Example: Get block data for the stone type:*"
 msgstr ""
 
-#: ../../modules/block.md:662 0a36e97ae21b4c6d98daee0e6307875a
+#: ../../modules/block.md:662 95a56a00fdae416bbe1d5d3aaa48940c
 msgid "Match"
 msgstr ""
 
-#: ../../modules/block.md:666 9b651ed424fe4067ab0504629ec1eaee
+#: ../../modules/block.md:666 f80c46ab050c430dac5798f8294fa843
 msgid "Determine if the block at the specified location matches the provided one."
 msgstr ""
 
-#: ../../modules/block.md:669 cb6e10570f794eaa8afecdbbe9c5d77e
+#: ../../modules/block.md:669 f5ece4dc22fa424298d33a9bc1725133
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Location of the "
 "block to check."
 msgstr ""
 
-#: ../../modules/block.md:671 2c1461ac8ad84624b5cf287ebdae17b8
+#: ../../modules/block.md:671 b1863d440b0342bfad1e0c18025c9dbf
 #, python-brace-format
 msgid ""
 "**Storage `bs:in block.match.block`**: {nbt}`string` Full string "
 "representation of the block to check against."
 msgstr ""
 
-#: ../../modules/block.md:674 3b3b26b1896b4d3e8b45156848923359
+#: ../../modules/block.md:674 6815110857e14d7b91e9cb5a764da44c
 msgid "**Return**: Whether the check is a success or a failure (1 or 0)."
 msgstr ""
 
-#: ../../modules/block.md:677 8db224fe93a446e1ae914ec136322fcb
+#: ../../modules/block.md:677 a653552376be42a9834a34b5095aa9d7
 msgid "*Example: Check that the block at 0 0 0 matches the block at 0 1 0:*"
 msgstr ""
 
-#: ../../modules/block.md:694 bced11f73b9d48758eddca3900ffae41
+#: ../../modules/block.md:694 a3dd6887e9d84e15b6370e40ca857de9
 msgid "Set"
 msgstr ""
 
-#: ../../modules/block.md:702 ac3fdf76b9a64733bad7ec5fde1f9ed9
+#: ../../modules/block.md:702 543a902cfb444509bfa0817fc8fa4a59
 msgid "Place a block at the current location."
 msgstr ""
 
 #: ../../modules/block.md:705 ../../modules/block.md:736
-#: 87b9d8da71c7483c99070241982b487e d6151bf7142f41138deb3491e5a8f7c0
+#: 190df7c285a74fa68d271b5f2c8ef3f7
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to set "
 "the block to."
 msgstr ""
 
-#: ../../modules/block.md:707 ac369efe76b04cdb9337d2fc8b7eb85d
+#: ../../modules/block.md:707 29ca914d5f5a443a96538d85b13b5dcd
 msgid "**Storage `bs:in block.set_block`**:"
 msgstr ""
 
+#: ../../modules/block.md:709 f8669f4789fd4adb86c819d61b5eb743
+#, python-brace-format
+msgid "{nbt}`compound` Set block data"
+msgstr ""
+
+#: ../../modules/block.md:710 b1863d440b0342bfad1e0c18025c9dbf
+#, python-brace-format
+msgid "{nbt}`string` **block**: Full string representation of the block to set."
+msgstr ""
+
+#: ../../modules/block.md:711 ../../modules/block.md:742
+#: 8a5af1ad1f8140afb8d76f6ff7f97ce4 b181103505564bf48fdfbe1690f05fe9
+#, python-brace-format
+msgid ""
+"{nbt}`string` **mode**: Mode used to set the block "
+"[destroy|keep|replace|strict] (default: replace)."
+msgstr ""
+
 #: ../../modules/block.md:715 ../../modules/block.md:746
-#: 5707fea63b654ec48039c3505532f837 d32ac6f13a04416785cd1ed69d161372
+#: 2c15384642ac4428a8c42e723a9ea705
 msgid "**State**: A block is placed in the world."
 msgstr ""
 
-#: ../../modules/block.md:718 03b0a54ddba54e7eb36f5d07efc2aab8
+#: ../../modules/block.md:718 fb7de4a08bd3486f936d7a5fcc88e0ec
 msgid "*Example: Place a block of stone at 0 0 0 by destroying the existing one:*"
 msgstr ""
 
-#: ../../modules/block.md:733 c35c5996bd6f4268b0fbed5653236432
+#: ../../modules/block.md:733 7cf0bf723f954579b6f2cf8225295d2e
 msgid ""
 "Replace the block type at the current location while trying to conserve "
 "its state and NBTs."
 msgstr ""
 
-#: ../../modules/block.md:738 3b2008f62015494fb147dc93d62a0a2f
+#: ../../modules/block.md:738 0695edbc01e948d5bf416bdb0787ba5a
 msgid "**Storage `bs:in block.set_type`**:"
 msgstr ""
 
-#: ../../modules/block.md:749 feddf567aa7a4078be957f319bd493d2
+#: ../../modules/block.md:740 a90da3b4cd674bf492d482412e55965b
+#, python-brace-format
+msgid "{nbt}`compound` Set type data"
+msgstr ""
+
+#: ../../modules/block.md:741 b1863d440b0342bfad1e0c18025c9dbf
+#, python-brace-format
+msgid "{nbt}`string` **type**: String representation of the block id to set."
+msgstr ""
+
+#: ../../modules/block.md:749 cbe6cf91ee824a489f932d10ac65f289
 msgid ""
 "*Example: Replace any stairs with oak stairs, preserving the current "
 "state:*"
 msgstr ""
 
-#: ../../modules/block.md:765 53e015c6e87e41278bb04cc85a8247a6
+#: ../../modules/block.md:765 c4ce4ed4783a4a78b526c836adeba6e1
 msgid "Produce"
 msgstr ""
 
-#: ../../modules/block.md 4f233458774d477e806226688b537143
+#: ../../modules/block.md 2aba5082ba184fd1866929b9445648af
 msgid "Block Display"
 msgstr ""
 
-#: ../../modules/block.md:773 12367bd0d15b47c6905788cd8bd54322
+#: ../../modules/block.md:773 4f119b89253f42cb83ce0afbd24ea5b3
 msgid "Spawn a block display representing the given block."
 msgstr ""
 
 #: ../../modules/block.md:776 ../../modules/block.md:811
-#: ../../modules/block.md:846 4582e14d99ab428b8d00b18bb8b1f5aa
-#: 777036ad7c004fc8837e6fd0572c99b9 77e8df086bb04badb97ede6db195b0e7
+#: ../../modules/block.md:846 0c8fb87703ac42be97d969208c4b6597
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where "
 "the entity will be summoned."
 msgstr ""
 
-#: ../../modules/block.md:778 ff6a5d043e86478992bce12dae2ceb6a
+#: ../../modules/block.md:778 fbcd089bd91d40a0999e663bad4f93bd
 msgid "**Storage `bs:in block.spawn_block_display`**:"
 msgstr ""
 
+#: ../../modules/block.md:780 ../../modules/block.md:850
+#: a089a834284647a4b8a7bf0a3d8697cb f7c3429138d3488389e219d458ffeb1a
+#, python-brace-format
+msgid "{nbt}`compound` Block display data"
+msgstr ""
+
+#: ../../modules/block.md:781 ../../modules/block.md:816
+#: ../../modules/block.md:851 ../../modules/block.md:886
+#: 9827c1e9dc24401e8caaee2640d746dd a31e69626b7f48579f6b229e329590aa
+#: a50bec28f7aa45ecbea8d4b0c95d7454 e642b27b3fa5473784b8cac89740db93
+#, python-brace-format
+msgid "{nbt}`string` **type**: Block type (similar to block output)."
+msgstr ""
+
+#: ../../modules/block.md:782 ../../modules/block.md:817
+#: ../../modules/block.md:852 ../../modules/block.md:887
+#: 1d7530440a554815974eacd83fe805e9 79536a1674d34fc791c08e582398a638
+#: d2539ee3731241f68b989007cfa56a56 e69b98d13fa245b3bc3131f7c26466c6
+#, python-brace-format
+msgid ""
+"{nbt}`compound` **properties**: Block properties (similar to block "
+"output)."
+msgstr ""
+
+#: ../../modules/block.md:783 ../../modules/block.md:818
+#: ../../modules/block.md:853 0eee8f85d6654e0c90f30a59fafb6e21
+#: 5aa213891bc5415c983bbd59d54fd762 bc27a916104d4cf09696deeaf53cbd31
+#, python-brace-format
+msgid "{nbt}`compound` **extra_nbt**: Additional NBTs to summon the entity with."
+msgstr ""
+
 #: ../../modules/block.md:787 ../../modules/block.md:822
-#: ../../modules/block.md:857 383d2fd69a3349c38dda82c427e1dbcb
-#: 8c93c935b61c462b9def742592d8b7c0 9379999e0f9749039cc56da2ee209603
+#: ../../modules/block.md:857 735b10a790394846852fca483a1637fc
 msgid "**State**: The entity is summoned."
 msgstr ""
 
-#: ../../modules/block.md:790 f8f3b618bee44687a44228b455afc445
+#: ../../modules/block.md:790 90a583e2121948fb91b0fbd22a4268d0
 msgid "*Example: Summon a block display using the block at 0 0 0:*"
 msgstr ""
 
-#: ../../modules/block.md 2286e5bac4864be99d249171dfbec488
+#: ../../modules/block.md 92937ca6cd494388a6826f348327a3b5
 msgid "Falling Block"
 msgstr ""
 
-#: ../../modules/block.md:808 e6f389512e55459d9919b66d1b085388
+#: ../../modules/block.md:808 7c4e1e675c794b4bbddb8cedb08fe070
 msgid "Spawn a falling block representing the given block."
 msgstr ""
 
-#: ../../modules/block.md:813 c7cda22a0af743af8705273087ddd03a
+#: ../../modules/block.md:813 a78cac981a144421ab5e86b6a036d514
 msgid "**Storage `bs:in block.spawn_falling_block`**:"
 msgstr ""
 
-#: ../../modules/block.md:825 5b85bd7da97a4e83b97f0974d9f47581
+#: ../../modules/block.md:815 b6c007cc13b94d949a08c64e55165f6e
+#, python-brace-format
+msgid "{nbt}`compound` Falling block data"
+msgstr ""
+
+#: ../../modules/block.md:825 2041115ec0904e41a3b96f1dd3ef38e3
 msgid "*Example: Summon a falling block using the block at 0 0 0:*"
 msgstr ""
 
-#: ../../modules/block.md 48ac79672da24920becfda4526fd4900
+#: ../../modules/block.md f93c370aea264d80b86c64147986af21
 msgid "Solid Block Display"
 msgstr ""
 
-#: ../../modules/block.md:843 a29cd53f7957496c88c8cf77502b74d7
+#: ../../modules/block.md:843 ebfc3ea3a29f4a3d984d9a019d8234b7
 msgid "Spawn a block display with a hitbox, representing the given block."
 msgstr ""
 
-#: ../../modules/block.md:848 a0331ef8cb144211b45833a05626dda3
+#: ../../modules/block.md:848 c6701d920d784e28aa0398580fd3bc90
 msgid "**Storage `bs:in block.spawn_solid_block_display`**:"
 msgstr ""
 
-#: ../../modules/block.md:860 cbd432920d9d4535aa7a2f08084e1f53
+#: ../../modules/block.md:860 5a435381c4664b95acce0f8e4fa971ed
 msgid "*Example: Summon a block display with a hitbox using the block at 0 0 0:*"
 msgstr ""
 
-#: ../../modules/block.md 3b1c3db6a6fc457eb60cb09ed3ac2532
+#: ../../modules/block.md 9887a4f0310041268bcfee1c2b06d6b5
 msgid "Block Particle"
 msgstr ""
 
-#: ../../modules/block.md:878 f67256ef581843ab9d99047a789bc465
+#: ../../modules/block.md:878 61423a25c5e84829b6f37981ce36b769
 msgid "Emit block particle of the given block."
 msgstr ""
 
-#: ../../modules/block.md:881 a50519bc9e2f4a798a88c8da635b47a5
+#: ../../modules/block.md:881 756292bcd2b8409aa3082310c70a6bc0
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where "
 "the particle will be emitted."
 msgstr ""
 
-#: ../../modules/block.md:883 97e0033df9c740c1b2b0a10b0d9a6354
+#: ../../modules/block.md:883 cde461b188154181abc1664a5632d71f
 msgid "**Storage `bs:in block.emit_block_particle`**:"
 msgstr ""
 
-#: ../../modules/block.md:896 a211e873dd77441780c4165b23586344
+#: ../../modules/block.md:885 9c7aabea04a04f5d9a6d9bf5fe9f3eae
+#, python-brace-format
+msgid "{nbt}`compound` Block particle data"
+msgstr ""
+
+#: ../../modules/block.md:888 d9296ac51eb645039b35607917e902aa
+#, python-brace-format
+msgid ""
+"{nbt}`string` **delta**: X Y Z coordinates, the motion value of the "
+"particle (default: `0 0 0`)."
+msgstr ""
+
+#: ../../modules/block.md:889 fc5cb0f60e414fafa91f9b75ebabadb8
+#, python-brace-format
+msgid "{nbt}`int` **speed**: Speed of the particle (default: `1`)."
+msgstr ""
+
+#: ../../modules/block.md:890 b8fdf82b477947dd93d4da8c69377378
+#, python-brace-format
+msgid "{nbt}`int` **count**: Number of particle (default: `1`)."
+msgstr ""
+
+#: ../../modules/block.md:891 7f803d7ac7634c718888b09756b629d7
+#, python-brace-format
+msgid ""
+"{nbt}`string` **mode**: Display mode: `normal` or `force` (default: "
+"`normal`)."
+msgstr ""
+
+#: ../../modules/block.md:892 5949adcbe02340bd9326e32b5bf6b7a8
+#, python-brace-format
+msgid ""
+"{nbt}`string` **viewers**: Control which player should view this particle"
+" (default: `@a`)."
+msgstr ""
+
+#: ../../modules/block.md:896 1e91ef6e261c49f381e58461c7214692
 msgid "**State**: The particle is emitted."
 msgstr ""
 
-#: ../../modules/block.md:899 d102bc468a324d29a34d398e2a2fcb7a
+#: ../../modules/block.md:899 937b816afce444158f8d6cc762d06a5b
 msgid "*Example: Emit the particle of the block at 0 0 0:*"
 msgstr ""
 
-#: ../../modules/block.md 7464ec5eb9a846cf80a5c45f99bc2c26
+#: ../../modules/block.md c44bf4bce9394e4d83a33f90317164e2
 msgid "Block Sound"
 msgstr ""
 
-#: ../../modules/block.md:918 c8fa1f0525394c00b1c15f6fb5db356e
+#: ../../modules/block.md:918 b1bda779c4bb4983b13c3dac02db8044
 msgid "Play a block sound of the given block."
 msgstr ""
 
-#: ../../modules/block.md:921 768cdea4787e4793a7a35e3ae3d5f479
+#: ../../modules/block.md:921 9c34afbcf0d447c384d7c4979e694ac0
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where "
 "the sound will be played."
 msgstr ""
 
-#: ../../modules/block.md:923 56aa677d9d0e480d903ec6003c09fe16
+#: ../../modules/block.md:923 a6f238f79105454da32913c74370c504
 msgid "**Storage `bs:in block.play_block_sound`**:"
 msgstr ""
 
-#: ../../modules/block.md:936 63e6d623ec9b47beb7c63e61604f9816
+#: ../../modules/block.md:925 a5add43a01e4449f99b6d932e25ffecb
+#, python-brace-format
+msgid "{nbt}`compound` Block sound data"
+msgstr ""
+
+#: ../../modules/block.md:926 dcb61eaeae7544529cd0b07136b2e0ff
+#, python-brace-format
+msgid ""
+"{nbt}`string` **sound**: Sound to play. Found in the `sounds` property of"
+" the virtual block (cf get functions)."
+msgstr ""
+
+#: ../../modules/block.md:927 6ca63efc7c5c4fad85989a11f334ffc5
+#, python-brace-format
+msgid ""
+"{nbt}`string` **source**: Source of the sound: `master`, `music`, "
+"`record`, `weather`, `block`, `hostile`, `neutral`, `player`, `ambient`, "
+"or `voice` (default: `master`)."
+msgstr ""
+
+#: ../../modules/block.md:928 e32641a485bc4ff0bc0ce23ec5f2dd3b
+#, python-brace-format
+msgid "{nbt}`string` **targets**: The targets of the sound (default: `@s`)."
+msgstr ""
+
+#: ../../modules/block.md:929 eb3b92053994400ea8560061ca8bed36
+#, python-brace-format
+msgid ""
+"{nbt}`string` **pos**: X Y Z coordinates, the position of the sound "
+"(default: `~ ~ ~`)."
+msgstr ""
+
+#: ../../modules/block.md:930 cd65e6e0d78d4b1ea7b77b2c66c3a4b9
+#, python-brace-format
+msgid "{nbt}`int` **pitch**: Pitch of the sound (default: `1`)."
+msgstr ""
+
+#: ../../modules/block.md:931 98bb4d90bd134f08916334d81cb497e1
+#, python-brace-format
+msgid "{nbt}`int` **volume**: Volume of the sound (default: `1`)."
+msgstr ""
+
+#: ../../modules/block.md:932 2c2047880eb4418893b3f409bf4747f6
+#, python-brace-format
+msgid "{nbt}`int` **min_volume**: Minimum volume of the sound (default: `0`)."
+msgstr ""
+
+#: ../../modules/block.md:936 68c205acc9a947f8886a2170949c4e75
 msgid "**State**: The sound is played."
 msgstr ""
 
-#: ../../modules/block.md:939 5489f4d6100d4376a979fae4fbc27821
+#: ../../modules/block.md:939 8172238262f44204b44527d8356d36a7
 msgid "*Example: Play the sound of the block at 0 0 0:*"
 msgstr ""
 
-#: ../../modules/block.md:960 0de18d0e15864e6c8535db6d097d0862
+#: ../../modules/block.md:960 09f438d9d87246b9a065d6f6b741ec60
 msgid "🎓 Custom Mapping Registry"
 msgstr ""
 
-#: ../../modules/block.md:962 9c0a6ccc5aef43efbd4e17744388ca71
+#: ../../modules/block.md:962 6847cb01f1b8438298b4176a8ee84424
 msgid ""
 "This module allows you to create a personalized mapping registry tailored"
 " to your specific needs."
 msgstr ""
 
-#: ../../modules/block.md:966 7e3e95bc93df469a9f4fc3420f41f7a6
+#: ../../modules/block.md:966 247830d3f2944e39b2693cb7b9e0aa3d
 msgid ""
 "To create a new registry, you need to define an array within the "
 "`bs:const block.mapping_registry` storage. Each new registry should be "
@@ -732,11 +1179,11 @@ msgid ""
 "Here's how you can define a new mapping registry:"
 msgstr ""
 
-#: ../../_templates/comments.md:4 1639ca9cd36541ff9bf1dcbc0c3e9e38
+#: ../../_templates/comments.md:4 ae5eee0e3f8748afaef2bcb8c4f0ea97
 msgid "**💬 Did it help you?**"
 msgstr ""
 
-#: ../../_templates/comments.md:6 72c2a9c4efc944abba9e037395ccdd22
+#: ../../_templates/comments.md:6 0784510be1ae4ab48678569dae74abc0
 msgid "Feel free to leave your questions and feedback below!"
 msgstr ""
 

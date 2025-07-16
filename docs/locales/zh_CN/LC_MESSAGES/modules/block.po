@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"POT-Creation-Date: 2025-07-14 21:41+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,33 +19,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../modules/block.md:1 7d4770bafd184084908807d0e88a11ed
+#: ../../modules/block.md:1 e7ac173952fa43628c10d7737d1fca69
 msgid "🧱 Block"
 msgstr "🧱 方块（Block）"
 
-#: ../../../modules/block.md:3 f49b9f23a5b4451dae0799f60e8b8040
+#: ../../modules/block.md:3 d1dab0b2031246009aab6bcf8e62fa57
 msgid "**`#bs.block:help`**"
 msgstr "**`#bs.block:help`**"
 
-#: ../../../modules/block.md:5 b8f3cc8e765648b2a5a3a8e3f6f45e98
+#: ../../modules/block.md:5 9541c98c986649478dbd6b53cbb044fe
 msgid ""
 "Manage blocks, including states and NBTs, while offering advanced tools "
 "for seamless transformations."
 msgstr "管理方块，包括状态和NBT，同时提供无缝转换的高级工具。"
 
-#: ../../../modules/block.md:8 2fc29ea45cac41889b44a7dddf00c2d1
+#: ../../modules/block.md:8 f09221910fcc49859597cbac46f9068a
 msgid "\"Architecture is the thoughtful making of space.\""
 msgstr "“建筑是深思熟虑的空间创造。”"
 
-#: ../../../modules/block.md:9 3bf7bbde63ed4ff69259df002327c567
+#: ../../modules/block.md:9 351cc22963904f4f95dc1654ef8c5c62
 msgid "Louis Kahn"
 msgstr "路易斯·康（Louis Kahn）"
 
-#: ../../../modules/block.md:13 722a8112c9d24cdf81344ba35f11c4f7
+#: ../../modules/block.md:13 5137a889186b45dc9bda08bfe0f1bec6
 msgid "Virtual Block Format"
 msgstr "虚拟方块格式"
 
-#: ../../../modules/block.md:16 0ec4ab7230dd481780e71f1f29b36d13
+#: ../../modules/block.md:16 3d1a35efff6849668e98073b89931ca2
 msgid ""
 "To manipulate blocks and their states, Bookshelf utilizes a [virtual "
 "block format](#get) stored in the block output. It's crucial not to "
@@ -53,317 +53,414 @@ msgid ""
 "functions provided in the library."
 msgstr "为了操作方块及其状态，Bookshelf 需要使用方块输出中的[虚拟方块格式](#get)。请使用库中提供的辅助函数，不要手动修改虚拟方块格式。"
 
-#: ../../../modules/block.md:21 c2e8d2cb5bd04c2f937181435c1ad045
+#: ../../modules/block.md:21 0518934d077544d697618789cf409611
 msgid "🔧 Functions"
 msgstr "🔧 函数"
 
-#: ../../../modules/block.md:23 5813a7b933954bf2a6641db3b502ad61
+#: ../../modules/block.md:23 715f06dfae0c4b4892711856f8339740
 msgid "You can find below all functions available in this module."
 msgstr "您可以在下方找到此模块中的所有可用函数。"
 
-#: ../../../modules/block.md:27 6205e43ee92b4682851df5befad89a31
+#: ../../modules/block.md:27 f496990eb6574d878e01605d938b3846
 msgid "Fill"
 msgstr "填充"
 
-#: ../../../modules/block.md 094f313473064e5cb132f0fe3dbc48f3
-#: e682cc51eeae471db75919ebd227402e f9c704d2b41e44d386cea3d442a3d7ce
+#: ../../modules/block.md e94f1d122eae4664a87a8e56a6887d04
+#: f5bce10a323045cd881be60af1a8c2ec
 msgid "Block"
 msgstr "方块"
 
-#: ../../../modules/block.md:35 86a72fc37faf48dfad07aba6759cc9c9
+#: ../../modules/block.md:35 4b6a69c4e4984c79aa168c03b5d24ae0
 msgid "Fill all or part of a region with a specific block."
 msgstr "用指定方块填充部分或全部区域。"
 
-#: ../../../modules/block.md:37 ../../../modules/block.md:86
+#: ../../modules/block.md:37 ../../modules/block.md:86
+#: ../../modules/block.md:125 ../../modules/block.md:176
+#: ../../modules/block.md:216 ../../modules/block.md:268
+#: ../../modules/block.md:303 ../../modules/block.md:340
+#: ../../modules/block.md:375 ../../modules/block.md:411
+#: ../../modules/block.md:456 ../../modules/block.md:507
+#: ../../modules/block.md:567 ../../modules/block.md:603
+#: ../../modules/block.md:635 ../../modules/block.md:668
+#: ../../modules/block.md:704 ../../modules/block.md:735
+#: ../../modules/block.md:775 ../../modules/block.md:810
+#: ../../modules/block.md:845 ../../modules/block.md:880
+#: ../../modules/block.md:920 08aed5d1e98249f0b127ec2628c7800b
+#: 87763830c4b74deca05a2f78683ea0e2
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../modules/block.md:38 7373e10584904994b9367559ee7f1f76
+msgid "**Storage `bs:in block.fill_block`**:"
+msgstr "**命令存储 `bs:in block.fill_block`**："
+
+#: ../../modules/block.md:40 337e6aff07414e79a5ac122cb48768de
+#, python-brace-format
 msgid "{nbt}`compound` Fill block data"
 msgstr "{nbt}`compound` 填充方块数据"
 
+#: ../../modules/block.md:41 6cf7501057d14d15802ca7c218b9a252
 #, python-brace-format
 msgid "{nbt}`string` **block**: Block to fill the region with."
 msgstr "{nbt}`string` **block**: 要填充的方块。"
 
+#: ../../modules/block.md:42 ../../modules/block.md:91
+#: ../../modules/block.md:133 382dee2022484846afb0c4d1693ab29c
+#: 4c94f432939c49b8906f81db4363a45b 6b4c8765d00c43aa8e92c50be1840626
 #, python-brace-format
-msgid "{nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z)."
+msgid ""
+"{nbt}`string` {nbt}`list` **from**: Starting position as a valid position"
+" string or a list of 3 elements (x, y, z)."
 msgstr "{nbt}`string` {nbt}`list` **from**: 起始点坐标，可以为合法坐标字符串或者长度为3的坐标列表（x，y，z）。"
 
+#: ../../modules/block.md:43 ../../modules/block.md:92
+#: ../../modules/block.md:134 6756128180f6477489760c8b5c27baa7
+#: b13b98e65da744cf93df696ebf5a9ea1 d498beeee72c4b96bc36efb0998d5d82
 #, python-brace-format
-msgid "{nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z)."
+msgid ""
+"{nbt}`string` {nbt}`list` **to**: Ending position as a valid position "
+"string or a list of 3 elements (x, y, z)."
 msgstr "{nbt}`string` {nbt}`list` **to**: 结束点坐标，可以为合法坐标字符串或者长度为3的坐标列表（x，y，z）。"
 
+#: ../../modules/block.md:44 ../../modules/block.md:93
+#: ../../modules/block.md:135 161e9cd454fa4492a633043556fab724
+#: 6988108340c3495b8bff665d3c4e3094 976e10261ab14008a7e1e2cef1a332ed
 #, python-brace-format
-msgid "{nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096)."
+msgid ""
+"{nbt}`int` **limit**: Limit how many blocks can be set in a single tick "
+"(default: 4096)."
 msgstr "{nbt}`int` **limit**: 一游戏刻内最多可以生成的方块数量（默认：4096）。"
 
+#: ../../modules/block.md:45 ../../modules/block.md:94
+#: ../../modules/block.md:136 1abd0e15cb96435392db624d86bcd868
+#: 86c2e0f255464c63b70de13eb1d6bd6f f922043df5bb4a5593f170d4b6605fe8
 #, python-brace-format
-msgid "{nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace|strict] (default: replace)."
+msgid ""
+"{nbt}`string` **mode**: Mode used to set blocks "
+"[destroy|keep|replace|strict] (default: replace)."
 msgstr "{nbt}`string` **mode**: 生成方块的模式 [destroy|keep|replace|strict]（默认：replace）。"
 
+#: ../../modules/block.md:46 ../../modules/block.md:95
+#: ../../modules/block.md:137 2663bb13015047cbadae3b6d0797a40e
+#: 4d7ea083490e4300a1ed334d03f530e7 c5d1cf76b48d4fcb917ff14aa97407c9
 #, python-brace-format
-msgid "{nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block)."
+msgid ""
+"{nbt}`string` **on_finished**: Command executed at the end of the "
+"operation (at the location of the final block)."
 msgstr "{nbt}`string` **on_finished**: 在本操作的结束位置运行的命令（最后一个方块的位置）。"
 
+#: ../../modules/block.md:47 79632aca314e430995383617fec62317
 #, python-brace-format
-msgid "{nbt}`list` **masks**: Determine which blocks will be replaced by the fill operation."
+msgid ""
+"{nbt}`list` **masks**: Determine which blocks will be replaced by the "
+"fill operation."
 msgstr "{nbt}`list` **masks**: 决定在填充操作时会替换哪些方块。"
 
+#: ../../modules/block.md:48 ../../modules/block.md:97
+#: ../../modules/block.md:139 2f4e2a4a1e904541a3b8d3aca6d889b9
+#: 2f6d4ac3debd4614878f31e69fc62064 a72546951f734300bf4ef312af29c877
 #, python-brace-format
 msgid "{nbt}`compound` Block mask"
 msgstr "{nbt}`compound` 方块蒙版"
 
+#: ../../modules/block.md:49 ../../modules/block.md:98
+#: ../../modules/block.md:140 43fe27abdbfd4df789466c20a5fca487
+#: 4b9c3c63234849bba8a84c4c6a227fb8 619478168b7340aa83d7e5d11ec192af
 #, python-brace-format
 msgid "{nbt}`string` **block**: Block acting as a filter."
 msgstr "{nbt}`string` **block**: 要判断的方块。"
 
+#: ../../modules/block.md:50 ../../modules/block.md:99
+#: ../../modules/block.md:141 08bc2a013a254e93aedb78b6d17cd92b
+#: 4b69f9a97f5b44dea48e5e806eccd6a7 ae4f2f1996914d1585293ed32591cc98
 #, python-brace-format
 msgid "{nbt}`bool` **negate**: Reverse the mask (default: false)."
 msgstr "{nbt}`bool` **negate**: 反转蒙版（默认：false）。"
 
+#: ../../modules/block.md:51 ../../modules/block.md:100
+#: ../../modules/block.md:142 7bb2b69d9d9f4d778aaef242aa0a0b4f
+#: a04230d09df34c6781c6f60c88f322f1 c986ad274078447f8cb134d5a874e7a0
 #, python-brace-format
 msgid "{nbt}`int` **x**: Mask filter x offset (default: 0)."
 msgstr "{nbt}`int` **x**: 蒙版x轴偏移（默认：0）。"
 
+#: ../../modules/block.md:52 ../../modules/block.md:101
+#: ../../modules/block.md:143 2937b93cbc3e4ad0a8e53591c1ac2fa5
+#: 699dcabd4b4b4cfc8bd0829da95d9901 91b22fce84454068990ae6e56c645aee
 #, python-brace-format
 msgid "{nbt}`int` **y**: Mask filter y offset (default: 0)."
 msgstr "{nbt}`int` **y**: 蒙版y轴偏移（默认：0）。"
 
+#: ../../modules/block.md:53 ../../modules/block.md:102
+#: ../../modules/block.md:144 6ecc1d1eb2c241f093229b6d76c66250
+#: 867bd9df0ca040e68674c88b51e7ab6f fae7366f9ab743edb6f5578b78c50841
 #, python-brace-format
 msgid "{nbt}`int` **z**: Mask filter z offset (default: 0)."
 msgstr "{nbt}`int` **z**: 蒙版z轴偏移（默认：0）。"
 
-msgid "Inputs"
-msgstr "输入"
-
-#: ../../../modules/block.md:38 7e4648ed0b6a49a385806518e38db251
-msgid "**Storage `bs:in block.fill_block`**:"
-msgstr "**命令存储 `bs:in block.fill_block`**："
-
-#, python-brace-format
-msgid "{nbt}`string` **type**: Block id to fill the region with."
-msgstr "{nbt}`string` **type**: 要填充的方块的id。"
-
-#, python-brace-format
-msgid "{nbt}`list` **masks**: Determine which blocks will be replaced."
-msgstr "{nbt}`list` **masks**: 决定要替换的方块。"
-
-#, python-brace-format
-msgid "{nbt}`compound` Fill random data"
-msgstr "{nbt}`compound` 随机填充数据"
-
-#, python-brace-format
-msgid "{nbt}`compound` Fill type data"
-msgstr "{nbt}`compound` 填充方块类型数据"
-
-#, python-brace-format
-msgid "{nbt}`list` **entries**: List of entries to pick from randomly."
-msgstr "{nbt}`list` **entries**: 随机填充的方块条目。"
-
-#, python-brace-format
-msgid "{nbt}`compound` Block or type entry"
-msgstr "{nbt}`compound` 方块或方块类型条目"
-
-#, python-brace-format
-msgid "{nbt}`string` **block | type**: Block or type to fill the region with."
-msgstr "{nbt}`string` **block | type**: 用来填充区域的方块或方块类型。"
-
-#, python-brace-format
-msgid "{nbt}`int` **weight**: Determine the likelihood of selecting the entry (default: 1)."
-msgstr "{nbt}`int` **weight**: 指定该项目在随机选择中的权重=（默认：1）。"
-
-#, python-brace-format
-msgid "{nbt}`list` **masks**: Determine which blocks will be replaced."
-msgstr "{nbt}`list` **masks**: 决定要替换哪些方块。"
-
-#: ../../../modules/block.md:56 ../../../modules/block.md:105
-#: ../../../modules/block.md:147 ../../../modules/block.md:179
-#: ../../../modules/block.md:219 ../../../modules/block.md:279
-#: ../../../modules/block.md:316 ../../../modules/block.md:351
-#: ../../../modules/block.md:387 ../../../modules/block.md:423
-#: ../../../modules/block.md:465 ../../../modules/block.md:517
-#: ../../../modules/block.md:577 ../../../modules/block.md:610
-#: ../../../modules/block.md:642 ../../../modules/block.md:673
-#: ../../../modules/block.md:714 ../../../modules/block.md:745
-#: ../../../modules/block.md:786 ../../../modules/block.md:821
-#: ../../../modules/block.md:856 ../../../modules/block.md:895
-#: ../../../modules/block.md:935 039365f6d8844059863733ed39ca84af
-#: 03c4741914a243b08af6cfaae987898e 09256d630ab7486283fbdc5110e50415
-#: 1eb91bb968104ef39d3ea6ad37137c99 2cbf563c052c49169365d424574e097f
-#: 37245a4febb945dabfa3837fb6c32550 49220d30a89446b380f89af733168f6a
-#: 4e89d5c33b534b0aa60649435e7be3b6 613ef5242a95426e9a2c01e0727efb24
-#: 631be9c2eb1e46c68161b1c2e9c50fb9 6764981cc1ed4daba9dbc3fd701c3694
-#: 7321aaeac3bf4a398dd0d7cee958e3d7 79b93216cd3f45f79fa470cde0b3dee9
-#: 825e44ad259a496f81ab758b8b7a7818 89e25456eac94fcb9adb1d53d5c2a015
-#: 8de856b1b0ca4bc9a32857466b96527b 94f443222f314ba48d5e3675f43192be
-#: c25acfe1f35f47ecb2130f35ed9d0cd6 c8878b0f983a4941850dbe04de89df2f
-#: d625d2d5befd45439f89ea06265e3260 f1421ba417414a45a6b006657150c0ac
-#: f9060d3893364ef692622c4ecc0f8d61 fcd91767a6a1417ba43bc3b21080a330
+#: ../../modules/block.md:56 ../../modules/block.md:105
+#: ../../modules/block.md:147 ../../modules/block.md:179
+#: ../../modules/block.md:219 ../../modules/block.md:279
+#: ../../modules/block.md:316 ../../modules/block.md:351
+#: ../../modules/block.md:387 ../../modules/block.md:423
+#: ../../modules/block.md:465 ../../modules/block.md:517
+#: ../../modules/block.md:577 ../../modules/block.md:610
+#: ../../modules/block.md:642 ../../modules/block.md:673
+#: ../../modules/block.md:714 ../../modules/block.md:745
+#: ../../modules/block.md:786 ../../modules/block.md:821
+#: ../../modules/block.md:856 ../../modules/block.md:895
+#: ../../modules/block.md:935 0a5dab3e11764aeda49e99de83242018
+#: 569516759276445fb904ad20a70d558b 64765f63216f4344a65afe95ff6a1480
 msgid "Outputs"
 msgstr "输出"
 
-#: ../../../modules/block.md:57 ../../../modules/block.md:106
-#: ../../../modules/block.md:148 835ead777fcb4f9c92ccb3389ede3158
-#: b78531ceecdc4cca9fd657e58ee40e12 e37a0bd1e1704993a7845b117f2dfcbf
+#: ../../modules/block.md:57 ../../modules/block.md:106
+#: ../../modules/block.md:148 82e4f0e81aab4c1f93510381661d9a6b
 msgid "**State**: Blocks are placed in the world."
 msgstr "**状态**：方块被放置在世界中。"
 
-#: ../../../modules/block.md:60 3209e14675c140b58cc33d02297452f9
+#: ../../modules/block.md:60 1a7ca34b68db41358c4a8b8403ffcd2f
 msgid ""
 "*Example: Replace the top layer of dirt by grass and use a say command "
 "when finished:*"
 msgstr "*示例：将顶层泥土替换为草方块，并在完成时使用say命令：*"
 
-#: ../../../modules/block.md:70 78e7440d850e40e7a7e3a853f15c251a
+#: ../../modules/block.md:70 0af3ad0ac2764b529b74cce321aa6f38
 msgid "*Example: Fill an area with stone a few blocks at a time:*"
 msgstr "*示例：每次在固定区域内填充几个石头方块：*"
 
-#: ../../../modules/block.md 84c9259ee37a4ecc84d68e5fa8880313
-#: 943b96e78690456e95fd308f8d589f4f b5312642868448ffb16ce65f6df797f8
+#: ../../modules/block.md fcd1cf531e304a05b347fe370043b95f
 msgid "Type"
 msgstr "类型"
 
-#: ../../../modules/block.md:84 bf263f653fc44719a127ee47a10e50ac
+#: ../../modules/block.md:84 58247f82b0364077a5faa502722b1fbf
 msgid ""
 "Fill all or part of a region with a specific block type, preserving "
 "states and NBTs."
 msgstr "对部分或全部区域更改方块类型，同时保留方块状态和NBT。"
 
-#: ../../../modules/block.md:87 eeabb891f21840e194e599155982ce97
+#: ../../modules/block.md:87 a14150a14b2d4fd9978977dc3232731a
 msgid "**Storage `bs:in block.fill_type`**:"
 msgstr "**命令存储 `bs:in block.fill_type`**："
 
-#: ../../../modules/block.md:109 94feee30dfa8439fa156ad8bcf0b9f6d
+#: ../../modules/block.md:89 d682c2a950434bb9aa4c47b996241297
+#, python-brace-format
+msgid "{nbt}`compound` Fill type data"
+msgstr "{nbt}`compound` 填充方块类型数据"
+
+#: ../../modules/block.md:90 821c8835f6224a07ad31dfba4ae9d065
+#, python-brace-format
+msgid "{nbt}`string` **type**: Block id to fill the region with."
+msgstr "{nbt}`string` **type**: 要填充的方块的id。"
+
+#: ../../modules/block.md:96 ../../modules/block.md:138
+#: 4687bebdb15844129ab4252c2d68becf c121bbfd05e14e4889e29288a08cb463
+#, python-brace-format
+msgid "{nbt}`list` **masks**: Determine which blocks will be replaced."
+msgstr "{nbt}`list` **masks**: 决定要替换的方块。"
+
+#: ../../modules/block.md:109 d77adc16a6a146b78c532b1efd41d742
 msgid ""
 "*Example: Replace oak stairs with spruce stairs while preserving states "
 "and use a say command when finished:*"
 msgstr "*示例：将橡木楼梯替换为云杉木楼梯并保留方块状态，完成时使用say命令：*"
 
-#: ../../../modules/block.md 5cb26d2e166c40d386b5faca1d8f6723
+#: ../../modules/block.md 863f7945017845b08ddf5e6ab3d76a89
 msgid "Random"
 msgstr "随机"
 
-#: ../../../modules/block.md:123 4d29173de7d34564badb53834f1b6f1d
+#: ../../modules/block.md:123 9814c5da3ff8492bae9b20e66e5c7bc3
 msgid "Fill all or part of a region with random blocks or types."
 msgstr "对部分或全部区域填充随机方块或更改方块类型。"
 
-#: ../../../modules/block.md:126 def75e624b714ddfb599584f993768a1
+#: ../../modules/block.md:126 ffa584e668f44626ab03598a2235e03f
 msgid "**Storage `bs:in block.fill_random`**:"
 msgstr "**命令存储 `bs:in block.fill_random`**："
 
-#: ../../../modules/block.md:151 01d4ca7314cf40e39a1cacbd3bee0670
+#: ../../modules/block.md:128 ceda414bf9964f73bcdc8486a5aede87
+#, python-brace-format
+msgid "{nbt}`compound` Fill random data"
+msgstr "{nbt}`compound` 随机填充数据"
+
+#: ../../modules/block.md:129 d250e368f0cc4be7aa0698f5bdc35ae0
+#, python-brace-format
+msgid "{nbt}`list` **entries**: List of entries to pick from randomly."
+msgstr "{nbt}`list` **entries**: 随机填充的方块条目。"
+
+#: ../../modules/block.md:130 73b3e9897fb941049068f7708664b009
+#, python-brace-format
+msgid "{nbt}`compound` Block or type entry"
+msgstr "{nbt}`compound` 方块或方块类型条目"
+
+#: ../../modules/block.md:131 a88dce4d6c1142c5bfe486ad0a65d959
+#, python-brace-format
+msgid "{nbt}`string` **block | type**: Block or type to fill the region with."
+msgstr "{nbt}`string` **block | type**: 用来填充区域的方块或方块类型。"
+
+#: ../../modules/block.md:132 895cce5b2b0f43e29be566640c280438
+#, python-brace-format
+msgid ""
+"{nbt}`int` **weight**: Determine the likelihood of selecting the entry "
+"(default: 1)."
+msgstr "{nbt}`int` **weight**: 指定该项目在随机选择中的权重=（默认：1）。"
+
+#: ../../modules/block.md:151 93ebd8fee0934aa4989148dea5e7c8a5
 msgid ""
 "*Example: Randomly fill an area with stone or air and use a say command "
 "when finished:*"
 msgstr "*示例：用石头或空气随机填充区域，完成时使用say命令：*"
 
-#: ../../../modules/block.md:162 ../../../modules/block.md:442
-#: ../../../modules/block.md:658 0a3315b4364b4ffdb761ae4a282f93c1
-#: 2c0120fc93b244f98ed38d80e8b26b30 7841b1b8bd5a4c38a87e076708f28a0e
+#: ../../modules/block.md:162 ../../modules/block.md:442
+#: ../../modules/block.md:658 d946139d1f6b4e37a11bada569e25b04
 msgid "**Credits**: Aksiome"
 msgstr "**制作人员**：Aksiome"
 
-#: ../../../modules/block.md:166 a7bec292b5f24eac84163e0711c5def3
+#: ../../modules/block.md:166 dc3050f9217d475e8eba85ec377d60f6
 msgid "Get"
 msgstr "获取"
 
-#, python-brace-format
-msgid "{nbt}`compound` **[readonly]** Block data"
-msgstr "{nbt}`compound` **[只读]** 方块数据"
-
-#, python-brace-format
-msgid "{nbt}`int` **group**: Blocks within the same group share the same possible state (e.g., stairs)."
-msgstr "{nbt}`int` **group**: 在同一个组的方块共享相同的可能的方块状态（比如：所有的楼梯）。"
-
-#, python-brace-format
-msgid "{nbt}`string` **block**: Full string representation of the block `type[state]{nbt}`."
-msgstr "{nbt}`string` **block**: 方块的完整字符串表示`方块id[方块状态]{nbt}`。"
-
-#, python-brace-format
-msgid "{nbt}`string` **item**: Item string id associated with the block, if it exists."
-msgstr "{nbt}`string` **item**: 方块对应的物品名字符串，可能不存在。"
-
-#, python-brace-format
-msgid "{nbt}`string` **type**: String representation of the id (e.g., `minecraft:stone`)."
-msgstr "{nbt}`string` **type**: 方块id的字符串表示（比如：`minecraft:stone`）。"
-
-#, python-brace-format
-msgid "{nbt}`string` **state**: Represent the state of a block (e.g., `[shape=straight]`), if it exists."
-msgstr "{nbt}`string` **state**: 方块状态的完整字符串表示（比如：`[shape=straight]`），可能不存在。"
-
-#, python-brace-format
-msgid "{nbt}`compound` **nbt**: Data tags used by block entities, if it exists."
-msgstr "{nbt}`compound` **nbt**: 方块数据的完整字符串表示，可能不存在。"
-
-#, python-brace-format
-msgid "{nbt}`compound` **properties**: Block state as properties (used by entities like falling blocks), if it exists."
-msgstr "{nbt}`compound` **properties**: 方块状态的数据表示（用于下落的方块之类的实体），可能不存在。"
-
-#, python-brace-format
-msgid "{nbt}`compound` **sounds**: The sound list of a block."
-msgstr "{nbt}`compound` **sounds**: 方块的声音列表。"
-
-#, python-brace-format
-msgid "{nbt}`string` **break**: The sound played when a player breaks the block."
-msgstr "{nbt}`string` **break**: 玩家破坏方块时的声音。"
-
-#, python-brace-format
-msgid "{nbt}`string` **hit**: The sound played when a player hits the block."
-msgstr "{nbt}`string` **hit**: 玩家敲击方块时的声音。"
-
-#, python-brace-format
-msgid "{nbt}`string` **fall**: The sound played when a player falls on the block."
-msgstr "{nbt}`string` **fall**: 玩家掉在方块上时的声音。"
-
-#, python-brace-format
-msgid "{nbt}`string` **place**: The sound played when a player places the block."
-msgstr "{nbt}`string` **place**: 玩家放置方块时的声音。"
-
-#, python-brace-format
-msgid "{nbt}`string` **step**: The sound played when a player steps on the block."
-msgstr "{nbt}`string` **step**: 玩家在方块上走路时的声音。"
-
-#, python-brace-format
-msgid "{nbt}`string` **block**: Full string representation of the block (only the type)."
-msgstr "{nbt}`string` **block**: 方块的完整字符串表示（仅方块类型）。"
-
-#: ../../../modules/block.md:174 0d0fc89c9d334a8c8a40e190dc44284d
+#: ../../modules/block.md:174 0a2f78895d554737b2dd2a41faa8995a
 msgid ""
 "Get all data related to the block at the current location, including its "
 "state and NBTs."
 msgstr "获取当前位置方块的所有相关数据，包括其状态和NBT。"
 
-#: ../../../modules/block.md:177 ../../../modules/block.md:217
-#: 23ebc626a2e14f70b851baa3d7c4820a 274c6578720c4a0db2b756548654617a
+#: ../../modules/block.md:177 ../../modules/block.md:217
+#: 8959f1cc0c494b11856bbd28e338a758
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to get "
 "block data from."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：获取方块数据的位置。"
 
-#: ../../../modules/block.md:180 ../../../modules/block.md:220
-#: 4d70b6e4c37b4e0d8dc118d10f73505c dd5c822a0b474e5ca587d1a2f6bbf802
+#: ../../modules/block.md:180 ../../modules/block.md:220
+#: d2e875ac3b9a48fb962228fc102001ab
 msgid "**Storage `bs:out block`**:"
 msgstr "**命令存储 `bs:out block`**："
 
-#: ../../../modules/block.md:199 58d5c32c8b6e4d9cbb6070d5cccd2e96
+#: ../../modules/block.md:182 ../../modules/block.md:222
+#: 72e259fc5f314727b6e2ab0515f91356 8539a6a56a564be4939015d10a57b560
+#, python-brace-format
+msgid "{nbt}`compound` **[readonly]** Block data"
+msgstr "{nbt}`compound` **[只读]** 方块数据"
+
+#: ../../modules/block.md:183 ../../modules/block.md:223
+#: 399586881ccb4f25bda83475788d00ce 5f9fc97188714dd881e0f2b035179fbf
+#, python-brace-format
+msgid ""
+"{nbt}`int` **group**: Blocks within the same group share the same "
+"possible state (e.g., stairs)."
+msgstr "{nbt}`int` **group**: 在同一个组的方块共享相同的可能的方块状态（比如：所有的楼梯）。"
+
+#: ../../modules/block.md:184 b1863d440b0342bfad1e0c18025c9dbf
+#, python-brace-format
+msgid ""
+"{nbt}`string` **block**: Full string representation of the block "
+"`type[state]{nbt}`."
+msgstr "{nbt}`string` **block**: 方块的完整字符串表示`方块id[方块状态]{nbt}`。"
+
+#: ../../modules/block.md:185 ../../modules/block.md:225
+#: a9d241a5c7364503b8ab30294790f6d2 e0a7f30471b346a5abaeabe227d037a8
+#, python-brace-format
+msgid ""
+"{nbt}`string` **item**: Item string id associated with the block, if it "
+"exists."
+msgstr "{nbt}`string` **item**: 方块对应的物品名字符串，可能不存在。"
+
+#: ../../modules/block.md:186 ../../modules/block.md:226
+#: ../../modules/block.md:460 ../../modules/block.md:511
+#: ../../modules/block.md:571 008bad6a3046418d811619f67710548f
+#: 12fc70158a8a46bba58b3bc9cc61dc80 3720c0a9b72a454dbb6f47751812dddf
+#: 7d35ad6d5b8e4647917969622f233bc1 d81777ddbbf84728b2fa3320e37c6e01
+#, python-brace-format
+msgid ""
+"{nbt}`string` **type**: String representation of the id (e.g., "
+"`minecraft:stone`)."
+msgstr "{nbt}`string` **type**: 方块id的字符串表示（比如：`minecraft:stone`）。"
+
+#: ../../modules/block.md:187 baeccde73f234024b78f48cdeaf653d0
+#, python-brace-format
+msgid ""
+"{nbt}`string` **state**: Represent the state of a block (e.g., "
+"`[shape=straight]`), if it exists."
+msgstr "{nbt}`string` **state**: 方块状态的完整字符串表示（比如：`[shape=straight]`），可能不存在。"
+
+#: ../../modules/block.md:188 78f72e7513024dcebca5b6c090de9868
+#, python-brace-format
+msgid "{nbt}`compound` **nbt**: Data tags used by block entities, if it exists."
+msgstr "{nbt}`compound` **nbt**: 方块数据的完整字符串表示，可能不存在。"
+
+#: ../../modules/block.md:189 3858954fac1646468dc5698e21b653f5
+#, python-brace-format
+msgid ""
+"{nbt}`compound` **properties**: Block state as properties (used by "
+"entities like falling blocks), if it exists."
+msgstr "{nbt}`compound` **properties**: 方块状态的数据表示（用于下落的方块之类的实体），可能不存在。"
+
+#: ../../modules/block.md:190 ../../modules/block.md:227
+#: 073c7f85c73c4de28da78173ef289bda 935616bef6364441aa603177614bfbe8
+#, python-brace-format
+msgid "{nbt}`compound` **sounds**: The sound list of a block."
+msgstr "{nbt}`compound` **sounds**: 方块的声音列表。"
+
+#: ../../modules/block.md:191 ../../modules/block.md:228
+#: e41fe14d1981485c876b925384bea289 f6bf30f09da340e6a223553035545981
+#, python-brace-format
+msgid "{nbt}`string` **break**: The sound played when a player breaks the block."
+msgstr "{nbt}`string` **break**: 玩家破坏方块时的声音。"
+
+#: ../../modules/block.md:192 ../../modules/block.md:229
+#: 45731cd378d1477284f945c46c736c34 d5f18d372fd341e883baa7aedfa66306
+#, python-brace-format
+msgid "{nbt}`string` **hit**: The sound played when a player hits the block."
+msgstr "{nbt}`string` **hit**: 玩家敲击方块时的声音。"
+
+#: ../../modules/block.md:193 ../../modules/block.md:230
+#: 8c0fa5ed718446ea811bc35393345d84 ca4ba85625bb4693bdb48b1731776963
+#, python-brace-format
+msgid "{nbt}`string` **fall**: The sound played when a player falls on the block."
+msgstr "{nbt}`string` **fall**: 玩家掉在方块上时的声音。"
+
+#: ../../modules/block.md:194 ../../modules/block.md:231
+#: 445e70a8a95a421b920fe68123811c78 a7030860477e4b3893994d86416fda1e
+#, python-brace-format
+msgid "{nbt}`string` **place**: The sound played when a player places the block."
+msgstr "{nbt}`string` **place**: 玩家放置方块时的声音。"
+
+#: ../../modules/block.md:195 ../../modules/block.md:232
+#: 67ba9a5b46db4fbca275332ddc5ec81f d66afe6b28e64d17af1768e19503433f
+#, python-brace-format
+msgid "{nbt}`string` **step**: The sound played when a player steps on the block."
+msgstr "{nbt}`string` **step**: 玩家在方块上走路时的声音。"
+
+#: ../../modules/block.md:199 ab9c53301570416c95aa313609e92c1a
 msgid "*Example: Get all data related to a block:*"
 msgstr "*示例：获取方块的所有相关数据：*"
 
-#: ../../../modules/block.md:214 129dfbf62ebd49baa1fb538c6c9012a9
+#: ../../modules/block.md:214 405647c6a2544c2fb21d64ba6dacb4e8
 msgid ""
 "Get the block type at the current location. Although states, NBTs, and "
 "properties will be empty, state transformation functions are still "
 "available."
 msgstr "获取当前位置的方块类型。虽然此函数输出的状态、NBT和属性为空，但这不影响管理方块状态的函数的运行。"
 
-#: ../../../modules/block.md:236 8d75fe2a4e2e42c58fb8f158b52f26a9
+#: ../../modules/block.md:224 b1863d440b0342bfad1e0c18025c9dbf
+#, python-brace-format
+msgid ""
+"{nbt}`string` **block**: Full string representation of the block (only "
+"the type)."
+msgstr "{nbt}`string` **block**: 方块的完整字符串表示（仅方块类型）。"
+
+#: ../../modules/block.md:236 1c78d1a51e4d4b4e8df77df19e1f7da5
 msgid ""
 "*Example: Get only type data related to a block (no property value is "
 "selected):*"
 msgstr "*示例：仅获取方块相关的类型数据（未选择属性值）：*"
 
-#: ../../../modules/block.md:248 94c7fdb170ff4971b6d29bb7a27b36a9
+#: ../../modules/block.md:248 d942ea1b15a741bd88e2e84cf61a4306
 msgid "Read-only Output"
 msgstr "只读输出"
 
-#: ../../../modules/block.md:251 ea231c9094d14e11bf34925e20a3261b
+#: ../../modules/block.md:251 a1d5e39af66e41d9bf5fcc42953a294f
 msgid ""
 "The `bs:out block` output is intended to be read-only. Modifying parts "
 "manually could lead to potential bugs. That's why the module provides "
@@ -371,103 +468,107 @@ msgid ""
 "preserving its integrity."
 msgstr "`bs:out block` 输出是只读的。手动修改部分内容可能导致潜在漏洞。因此，模块提供了许多可以修改输出的函数来保证它的完整性。"
 
-#: ../../../modules/block.md:254 ../../../modules/block.md:690
-#: ../../../modules/block.md:761 ../../../modules/block.md:955
-#: 25a1c9f9a5824011989efb1735ba967d 4f753c46ae6248c4afe16875e21678e5
-#: 719373523b3a4c5699f0e864a75192f7 a18f0c22aaa74726b16f76808c0d7608
+#: ../../modules/block.md:254 ../../modules/block.md:690
+#: ../../modules/block.md:761 ../../modules/block.md:955
+#: c7fa15835ef244429b45f5a2fb4a7765
 msgid "**Credits**: Aksiome, theogiraudet"
 msgstr "**制作人员**：Aksiome、theogiraudet"
 
-#: ../../../modules/block.md:258 15bd54b24de4476fa424e76a842cf793
+#: ../../modules/block.md:258 794fcb4096fa4bcba35af643d48da1b2
 msgid "Manage State"
 msgstr "管理方块状态"
 
-#, python-brace-format
-msgid "{nbt}`compound` Arguments"
-msgstr "{nbt}`compound` 参数"
-
-#, python-brace-format
-msgid "{nbt}`list` **properties**: List of properties to keep."
-msgstr "{nbt}`list` **properties**: 要保留的方块状态列表。"
-
-#, python-brace-format
-msgid "{nbt}`list` **properties**: List of properties to merge."
-msgstr "{nbt}`list` **properties**: 要合并的方块状态列表。"
-
-#, python-brace-format
-msgid "{nbt}`list` **properties**: List of properties to remove."
-msgstr "{nbt}`list` **properties**: 要移除的方块状态列表。"
-
-#, python-brace-format
-msgid "{nbt}`list` **properties**: List of properties to replace."
-msgstr "{nbt}`list` **properties**: 要替换的方块状态列表。"
-
-#, python-brace-format
-msgid "{nbt}`list` **properties**: List of properties to shift."
-msgstr "{nbt}`list` **properties**: 要偏移的方块状态列表。"
-
-
-#: ../../../modules/block.md 178ef6f7e152419c9837d3034963e02d
+#: ../../modules/block.md bb803200b1964fa2915693290dd0aaf4
 msgid "Keep"
 msgstr "保留"
 
-#: ../../../modules/block.md:266 24edc5a8f5434ba99bf1ff8193a3459f
+#: ../../modules/block.md:266 ae744cb655c14967b0f575e9f4b3345c
 msgid ""
 "Filter properties to keep only the desired ones. This function acts on "
 "the [virtual block format](#get) stored in the block output."
 msgstr "过滤方块状态，只保留需要的部分。此函数作用于方块输出中的[虚拟方块格式](#get)。"
 
-#: ../../../modules/block.md:269 ../../../modules/block.md:306
-#: ../../../modules/block.md:341 ../../../modules/block.md:376
-#: ../../../modules/block.md:412 ../../../modules/block.md:457
-#: ../../../modules/block.md:508 ../../../modules/block.md:568
-#: ../../../modules/block.md:604 ../../../modules/block.md:636
-#: 1765f89b5b6d4df0a968bd67a5c80db0 3a45b0c6c8f8440b888137e4044e3114
-#: 4c1b8351392543b2a5e784a69c31f37f 61f8a3e778bf4c058cfb0edac47930de
-#: 78187b43e2974c54af2f29baffc5e21d 90b0670f38b248318810c1b737d3f49e
-#: e70eb3c8c5094d97a84daf90a7598f7a f1e90e30a3c54ac5a9ee0e1c361b48ba
-#: f76055cf35be451981664900ab7a455e fc4ad4fa14774d9985e52f9779a7102e
+#: ../../modules/block.md:269 ../../modules/block.md:306
+#: ../../modules/block.md:341 ../../modules/block.md:376
+#: ../../modules/block.md:412 ../../modules/block.md:457
+#: ../../modules/block.md:508 ../../modules/block.md:568
+#: ../../modules/block.md:604 ../../modules/block.md:636
+#: 13817c72f4a94d7c8e9416468609e171
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
-#: ../../../modules/block.md:277 ../../../modules/block.md:314
-#: ../../../modules/block.md:349 ../../../modules/block.md:385
-#: ../../../modules/block.md:421 ../../../modules/block.md:463
-#: ../../../modules/block.md:515 ../../../modules/block.md:575
-#: 02fbd547100244e3bc6a71c5692775d9 057bd45689534fbe8c8697155dc4409c
-#: 0d3102b46e3948278fe8ce45920b3039 15a5ad481e8d4872bdceeb86c0f99f7f
-#: 430764464ee6431da76a36831226d6e5 8cfdebafbb0e47ddaea94cc743fac35f
-#: b05eb1e82ae94f6a83c462f07d61cc55 e4580b4d0c7b4e5585027b3498f30c3f
+#: ../../modules/block.md:271 ../../modules/block.md:308
+#: ../../modules/block.md:343 ../../modules/block.md:378
+#: ../../modules/block.md:414 ../../modules/block.md:459
+#: ../../modules/block.md:510 ../../modules/block.md:570
+#: ../../modules/block.md:606 ../../modules/block.md:638
+#: 1c296680e2314c549a34b04b6edab83a 2701b6cfd43c436b9c70c377671ea740
+#: 40395a2cf728411c956efb20f9262cad 4362fd2bff0c4600b31dcc32efd44cab
+#: 443de95f77f74bfdb26b766ed01e3078 55f31b6ff9964e79b927853227a428c7
+#: c291cf55d5654c198cd64fdabc32f6a1 d5aaaac59e24499f9c575215d85d7e3c
+#: e1f45d761e464aaea1ad447ac235a052 f0165720d7ed4f2b8e25faaef7c33fd6
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#: ../../modules/block.md:272 d81cb332493442df83400e66d2afcd90
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to keep."
+msgstr "{nbt}`list` **properties**: 要保留的方块状态列表。"
+
+#: ../../modules/block.md:273 ../../modules/block.md:310
+#: ../../modules/block.md:345 ../../modules/block.md:380
+#: ../../modules/block.md:416 305a4776eca1418b8a2493ae477913b3
+#: a2d47df5aa3a42a3bdc698d7ed89fd73 a7f3e2da9bab42a89faed56ed1908627
+#: d892fff9416b456baac58325b75ca2b3 eeb2147fb67b404dabe636ab3e72b15a
+#, python-brace-format
+msgid "{nbt}`compound` Property data"
+msgstr "{nbt}`compound` 方块属性数据"
+
+#: ../../modules/block.md:274 ../../modules/block.md:311
+#: ../../modules/block.md:346 ../../modules/block.md:417
+#: 2d30bae388ec4ec4af9b5b219fe76c87 91eb1a172ed549d1869cb96f127f5e16
+#: d30563fdae9d4db8a4f98222dd445553 f9265d8bf99c49e98162ed8b6a92a90f
+#, fuzzy, python-brace-format
+msgid "{nbt}`string` **name**: Name of the property (e.g., `shape`)."
+msgstr "{nbt}`string` **name**: 方块属性名称（比如：`shape`）。"
+
+#: ../../modules/block.md:277 ../../modules/block.md:314
+#: ../../modules/block.md:349 ../../modules/block.md:385
+#: ../../modules/block.md:421 ../../modules/block.md:463
+#: ../../modules/block.md:515 ../../modules/block.md:575
+#: 4b5af300aa944c7b94f147525773edeb
 #, python-brace-format
 msgid ""
 "**Storage `bs:out block`**: {nbt}`compound` There's no need for manual "
 "specification; rather, employ the relevant functions, such as "
 "[`get_block`](#get)."
-msgstr "**命令存储 `bs:out block`**：{nbt}`compound` 无需手动指定；而是使用相关函数，如 [`get_block`](#get)。"
+msgstr ""
+"**命令存储 `bs:out block`**：{nbt}`compound` 无需手动指定；而是使用相关函数，如 "
+"[`get_block`](#get)。"
 
-#: ../../../modules/block.md:280 ../../../modules/block.md:317
-#: ../../../modules/block.md:352 ../../../modules/block.md:388
-#: ../../../modules/block.md:424 ../../../modules/block.md:468
-#: ../../../modules/block.md:520 ../../../modules/block.md:580
-#: 4dc03c39180d4407b158d21fb852877b 63a9e0e7e7c04fd883c990c4dac9d44a
-#: 72e2126720ef44289c7d63989d96be93 83f1a74e62d74313a922171ef7dcdde7
-#: 9efaa23cddba4d2d80f97e903a163d61 aa82b399092248c2a4c59f1127adc2c3
-#: b7f4aa728ff3407aa70200437ca5d39e d699fafc72a8454da89cc69807716f89
+#: ../../modules/block.md:280 ../../modules/block.md:317
+#: ../../modules/block.md:352 ../../modules/block.md:388
+#: ../../modules/block.md:424 ../../modules/block.md:468
+#: ../../modules/block.md:520 ../../modules/block.md:580
+#: 6507cb50fba94848b7478c0f18425eb3
 #, python-brace-format
 msgid ""
 "**Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and "
 "`properties` are updated to reflect this change."
-msgstr "**命令存储 `bs:out block`**：{nbt}`compound` `block`、`state` 和 `properties` 会在运行后同步更新。"
+msgstr ""
+"**命令存储 `bs:out block`**：{nbt}`compound` `block`、`state` 和 `properties` "
+"会在运行后同步更新。"
 
-#: ../../../modules/block.md:283 d38e0d588340467e843cde7e95d7df40
+#: ../../modules/block.md:283 a52c1df48afe49fbbdfbf082ed2eb038
 msgid "*Example: Keep only the facing and shape properties:*"
 msgstr "*示例：仅保留朝向和形状的方块状态：*"
 
-#: ../../../modules/block.md b6448feea75f446aa1ff9cb6151954e1
+#: ../../modules/block.md cb825d6893844afe8530bc2d758483bc
 msgid "Merge"
 msgstr "合并"
 
-#: ../../../modules/block.md:301 77c64c2ea09d4f22998bbe8c6cf49a9e
+#: ../../modules/block.md:301 cd6258b1ffef4fbebca055a09a8d2abf
 msgid ""
 "Merge state properties from the current location into the output. The "
 "merge occurs if the syntax is correct, regardless of logical coherence "
@@ -475,82 +576,100 @@ msgid ""
 "[virtual block format](#get) stored in the block output."
 msgstr "将执行位置的方块状态合并更新到方块输出中。只要格式正确就进行合并更新，不考虑值是否合理（例如，对不同的植物使用“age”）。此函数作用于方块输出中的[虚拟方块格式](#get)。"
 
-#: ../../../modules/block.md:304 437bae19efaf488986a0d6b122142196
+#: ../../modules/block.md:304 20ab934cc60f447a9ca37a90b27a85e8
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Location of the "
 "block that act as input."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：作为输入的方块位置。"
 
-#: ../../../modules/block.md:320 45574262051a478caf2367f7a1b1ecd5
+#: ../../modules/block.md:309 aa7c14f01b684570946b8d2523783142
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to merge."
+msgstr "{nbt}`list` **properties**: 要合并的方块状态列表。"
+
+#: ../../modules/block.md:320 15710541e39a4423b67c757d4fb6ee75
 msgid "*Example: Merge the facing of a block onto stairs:*"
 msgstr "*示例：将某个方块的朝向合并更新到楼梯上：*"
 
-#: ../../../modules/block.md cb0bf608453f458dabcc52a12cbb0a19
+#: ../../modules/block.md 381420fd2f4746ee89f749f00b35e85d
 msgid "Remove"
 msgstr "移除"
 
-#: ../../../modules/block.md:338 87d8cc00cb664134b81676ac93fe1b4f
+#: ../../modules/block.md:338 bbe89a68ab2a4cff8700e0a233313beb
 msgid ""
 "Filter properties by removing the undesired ones. This function acts on "
 "the [virtual block format](#get) stored in the block output."
 msgstr "过滤方块状态，移除不需要的部分。此函数作用于方块输出中的[虚拟方块格式](#get)。"
 
-#: ../../../modules/block.md:355 4d541ec759a4479eb942d559fccd88d5
+#: ../../modules/block.md:344 9bcbc5a6eb63424382c6f2e0f69871cc
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to remove."
+msgstr "{nbt}`list` **properties**: 要移除的方块状态列表。"
+
+#: ../../modules/block.md:355 96adf4c908f045eb994a9640b5969b38
 msgid "*Example: Remove the facing and shape properties:*"
 msgstr "*示例：移除朝向和形状属性：*"
 
-#: ../../../modules/block.md 521f036201ee4ffd81fb60a1a4444397
-#: 8067906037d8463f8a8b012c67e1b505
+#: ../../modules/block.md 2700a1c5029848c49af07b9e3a77f6f4
 msgid "Replace"
 msgstr "替换"
 
-#: ../../../modules/block.md:373 9c16888dbecb425093acde1199bf41a8
+#: ../../modules/block.md:373 978068006a834a458990840bb54a01ac
 msgid ""
 "Replace property values. Invalid values will not be replaced. This "
 "function acts on the [virtual block format](#get) stored in the block "
 "output."
 msgstr "替换方块状态。无效的方块状态不会被替换。此函数作用于方块输出中的[虚拟方块格式](#get)。"
 
+#: ../../modules/block.md:379 e8048461e8e344c29698da10f18ca465
 #, python-brace-format
-msgid "{nbt}`compound` Property data"
-msgstr "{nbt}`compound` 方块属性数据"
+msgid "{nbt}`list` **properties**: List of properties to replace."
+msgstr "{nbt}`list` **properties**: 要替换的方块状态列表。"
 
+#: ../../modules/block.md:381 7296ead9a64b47ccbf5983ed9597c1ae
 #, python-brace-format
 msgid "{nbt}`string` **name**: Name of the property (e.g., `facing`)."
 msgstr "{nbt}`string` **name**: 方块属性名称（比如：`shape`）。"
 
-#, python-brace-format
-msgid "{nbt}`string` **name**: Value of the property (e.g., `east`)."
+#: ../../modules/block.md:382 6ab8d5080313457e8c2bdb7110a8aa3d
+#, fuzzy, python-brace-format
+msgid "{nbt}`string` **value**: Value of the property (e.g., `east`)."
 msgstr "{nbt}`string` **name**: 方块属性值（比如：`east`）。"
 
-#: ../../../modules/block.md:391 924a749f26eb4626b2264a1817b619b6
+#: ../../modules/block.md:391 9c8c3bcadf514e5a81b664cdf92c1262
 msgid "*Example: Replace the facing property value:*"
 msgstr "*示例：替换朝向方块状态：*"
 
-#: ../../../modules/block.md 1d3370583e454cc5a122146f2eb10ea4
+#: ../../modules/block.md 4ceb6e34acc34260be12ce5c9fd267a3
 msgid "Shift"
 msgstr "偏移"
 
-#: ../../../modules/block.md:409 21aceaf4c8e84ac28751d6d11d8c49b7
+#: ../../modules/block.md:409 4a18829a6b33499f88b0abd5b8524a32
 msgid ""
 "Shift properties by any amount, allowing cycling through their values. "
 "This function acts on the [virtual block format](#get) stored in the "
 "block output."
 msgstr "按任意步长循环轮换方块状态。此函数作用于方块输出中的[虚拟方块格式](#get)。"
 
+#: ../../modules/block.md:415 e060ac36f79c405a8d51981105cbef45
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to shift."
+msgstr "{nbt}`list` **properties**: 要偏移的方块状态列表。"
+
+#: ../../modules/block.md:418 105c9db73dda4206b1013f7c158762d8
 #, python-brace-format
 msgid "{nbt}`string` **by**: Shift amount (defaults to 1)."
 msgstr "{nbt}`string` **by**: 偏移数量（默认为1）."
 
-#: ../../../modules/block.md:427 08868446c947417985f71e6e22e3350a
+#: ../../modules/block.md:427 195436c740ec4e7e8024cc914b213604
 msgid "*Example: Shift the facing property value by 2:*"
 msgstr "*示例：将朝向属性值偏移2：*"
 
-#: ../../../modules/block.md:446 b2acb15a84e04579bb30415e74912a86
+#: ../../modules/block.md:446 7b142e4403ea4d7f98f12eefc8b59643
 msgid "Manage Type"
 msgstr "管理方块类型"
 
-#: ../../../modules/block.md:454 e5aeb84e454d4dcc95fc558f2456d64e
+#: ../../modules/block.md:454 932a690123db4fc5bf238e9e71861d4a
 msgid ""
 "Replace the block type while trying to conserve the state. State is "
 "preserved only if the group of the output matches the input. This "
@@ -558,66 +677,78 @@ msgid ""
 "output."
 msgstr "替换方块类型。仅当方块输出的方块类型和宏输入的方块类型属于同一个组别（group）时，保留方块状态。此函数作用于方块输出中的[虚拟方块格式](#get)。"
 
-#: ../../../modules/block.md:466 ../../../modules/block.md:518
-#: ../../../modules/block.md:578 1f20f1555afd4ce78aa79063725d9e39
-#: 3e91a6d61070462894bb172bc387859c c6a14e077bee446d980fe39887c1a6af
+#: ../../modules/block.md:466 ../../modules/block.md:518
+#: ../../modules/block.md:578 a0de5aa3004f461eb2fbfb338642cecf
 msgid "**Return**: Whether a type was found and the replacement occurred."
 msgstr "**返回值**：是否找到了方块类型并进行了替换。"
 
-#: ../../../modules/block.md:471 954573604dcb4bb3aeb0833fd055a557
+#: ../../modules/block.md:471 c8fe0f5a4b69432e915fd297f0533c37
 msgid ""
 "*Example: Replace oak stairs with spruce stairs, preserving the current "
 "state:*"
 msgstr "*示例：将橡木楼梯替换为云杉木楼梯，并保留当前状态：*"
 
-#: ../../../modules/block.md 55539014a4304a2a83c70f651a9e4c5d
+#: ../../modules/block.md 4cf9a1d616594d34821ea38ca6d38981
 msgid "Map"
 msgstr "映射"
 
-#: ../../../modules/block.md:489 a3cab3dc258e4323a22a172ffa4d01fc
+#: ../../modules/block.md:489 ace468b8e4d244ae98781edf389094ea
 msgid ""
 "Swap related block types while ensuring coherent replacements within the "
 "defined mapping registry. A mapping registry is defined as follows:"
 msgstr "根据预定义的映射规则，将方块输出的属性（attr）替换为输入方块的属性（attr），生成新的方块类型。注册表定义如下："
 
-#: ../../../modules/block.md:501 9d9ceca432894ea1a974e8a33434a62a
+#: ../../modules/block.md:501 dd95b81b7c424585b614d38d257ff7c2
 msgid ""
 "This function operates on the [virtual block format](#get) stored in the "
 "block output. It replaces the type in the output with one that belongs to"
 " the same set and better matches the attributes of the inputted type."
 msgstr "此函数作用于方块输出中的[虚拟方块格式](#get)。它会根据注册表，在方块输出类型（type）所在的集合（set）内选择更匹配输入方块属性（attrs）的方块并输出。"
 
-#: ../../../modules/block.md:503 e7feaa24bd794e5ab87376ea2e4493b1
+#: ../../modules/block.md:503 60443593d60d4c329cc9fa2de742dc81
 msgid ""
 "For example, with the above mapping registry: if the input is "
 "`minecraft:red_wool` (attrs:[\"red\"]), and the virtual block type is "
 "`minecraft:green_carpet` (set:\"carpet\"), the resulting block will be "
 "`minecraft:red_carpet` (set:\"carpet\",attrs:[\"red\"])."
-msgstr "例如，使用上述映射注册表：如果输入是 `minecraft:red_wool`（attrs:[\"red\"]），且虚拟方块类型是 `minecraft:green_carpet`（set:\"carpet\"），则结果方块将是 `minecraft:red_carpet`（set:\"carpet\",attrs:[\"red\"]）。"
+msgstr ""
+"例如，使用上述映射注册表：如果输入是 `minecraft:red_wool`（attrs:[\"red\"]），且虚拟方块类型是 "
+"`minecraft:green_carpet`（set:\"carpet\"），则结果方块将是 "
+"`minecraft:red_carpet`（set:\"carpet\",attrs:[\"red\"]）。"
 
-#: ../../../modules/block.md:505 ../../../modules/block.md:565
-#: 005c20a4ea434b94affa30311940ecb5 c58c61ae94134162a1b0d3b09f757bcf
+#: ../../modules/block.md:505 ../../modules/block.md:565
+#: e8505deba07a400396c564d9c8da8bdb
 msgid ""
 "Bookshelf includes two predefined mapping registries (`bs.shapes` and "
 "`bs.colors`). If these are insufficient, you can [create your own"
 "](#custom-mapping-registry)."
-msgstr "Bookshelf 包含两个预定义的映射注册表（`bs.shapes` 和 `bs.colors`）。如果这些不够用，您可以[创建自己的](#custom-mapping-registry)。"
+msgstr ""
+"Bookshelf 包含两个预定义的映射注册表（`bs.shapes` 和 `bs.colors`）。如果这些不够用，您可以[创建自己的"
+"](#custom-mapping-registry)。"
 
-#: ../../../modules/block.md:523 464f7c60b21a4518ade8ea24a87e4b16
+#: ../../modules/block.md:512 ../../modules/block.md:572
+#: 0a4e8b6f6f3843f59f892b06a4e8689c 9408ae7d2c654a73b35a0f69ce3cdcb4
+#, python-brace-format
+msgid ""
+"{nbt}`string` **mapping_registry**: A path to the mapping registry used "
+"for the replacement (e.g., `bs.shapes`)."
+msgstr "{nbt}`string` **mapping_registry**: 一个映射表的nbt路径（比如：`bs.shapes`），用于替换。"
+
+#: ../../modules/block.md:523 7d5c8c0c8c42418eb84de886da80e163
 msgid ""
 "*Example: Replace all oak-related blocks with spruce ones (the function "
 "replaces the oak stairs block with a spruce stairs block):*"
 msgstr "*示例：将所有橡木相关方块替换为云杉木（该函数将橡木楼梯方块替换为云杉木楼梯方块）：*"
 
-#: ../../../modules/block.md 5d3235df1d534286879185770713d094
+#: ../../modules/block.md 0a22c438d69e42cf8603c033c686ae3a
 msgid "Mix"
 msgstr "混合"
 
-#: ../../../modules/block.md:541 ef70ab9cde6a4b0ebe753023a11ef17b
+#: ../../modules/block.md:541 3b0c70d731dd45c0b40fbec08ebcc011
 msgid "Experimental"
 msgstr "实验性"
 
-#: ../../../modules/block.md:544 2a0e36942ed744ed8a3a29f6313bb311
+#: ../../modules/block.md:544 ba26ad26244046b49059e4635d13d69c
 msgid ""
 "This function may sometimes behave unpredictably due to the arbitrary "
 "nature of block relationship definitions. Additionally, while the "
@@ -625,13 +756,13 @@ msgid ""
 "handcrafted and therefore not exhaustive."
 msgstr "由于方块关系定义存在主观性，此函数的运行结果可能不尽人意。同时，其注册表虽涵盖大量常见方块，但基于人工整理收集，无法保证全面性。"
 
-#: ../../../modules/block.md:547 156c50d5991c4424a82c2c40ec0fdb94
+#: ../../modules/block.md:547 58da85047a2f4552bb8cd2b656b1ecf5
 msgid ""
 "Mix block types while ensuring coherent replacements within the defined "
 "mapping registry. A mapping registry is defined as follows:"
 msgstr "根据预定义的映射规则，将方块输出的属性和输入方块的属性混合，生成新的方块类型。注册表定义如下："
 
-#: ../../../modules/block.md:561 429d56f8e16a4973aaa0c10dc319c82f
+#: ../../modules/block.md:561 63289653be8e4d1aa351d713d3a658c3
 msgid ""
 "This function operates on the [virtual block format](#get) stored in the "
 "block output. It replaces the type in the output with one that belongs to"
@@ -639,380 +770,441 @@ msgid ""
 "input types while prioritizing the input type."
 msgstr "此函数会读取并更改输出的block中的[虚拟方块格式](#get)。它会根据注册表，先混合方块输出的类型（type）属性（attr）和输入方块的属性（attr），再根据混合后的属性，在方块输出所在的集合（set）内选择更匹配的方块并输出。"
 
-#: ../../../modules/block.md:563 62424e7e975f4c24a8e69a223a73eb1a
+#: ../../modules/block.md:563 44cb55d87f6643e6900f19c6865aab19
 msgid ""
 "For example, with the above mapping registry: if the input is "
 "`minecraft:bricks` (attrs:[\"brick\"]), and the virtual block type is "
 "`minecraft:stone_stairs` (set:\"stairs\",attrs:[\"stone\"]), the "
 "resulting block will be `minecraft:stone_brick_stairs` "
 "(set:\"stairs\",attrs:[\"stone\",\"brick\"])."
-msgstr "例如，使用上述映射注册表：如果输入是 `minecraft:bricks`（attrs:[\"brick\"]），且虚拟方块类型是 `minecraft:stone_stairs`（set:\"stairs\",attrs:[\"stone\"]），则结果方块将是 `minecraft:stone_brick_stairs`（set:\"stairs\",attrs:[\"stone\",\"brick\"]）。"
+msgstr ""
+"例如，使用上述映射注册表：如果输入是 `minecraft:bricks`（attrs:[\"brick\"]），且虚拟方块类型是 "
+"`minecraft:stone_stairs`（set:\"stairs\",attrs:[\"stone\"]），则结果方块将是 "
+"`minecraft:stone_brick_stairs`（set:\"stairs\",attrs:[\"stone\",\"brick\"]）。"
 
-#, python-brace-format
-msgid "{nbt}`string` **mapping_registry**: A path to the mapping registry used for the replacement (e.g., `bs.shapes`)."
-msgstr "{nbt}`string` **mapping_registry**: 一个映射表的nbt路径（比如：`bs.shapes`），用于替换。"
-
-#: ../../../modules/block.md:583 e4bd28058c4b49d69e28e45364888786
+#: ../../modules/block.md:583 297a1dc9b23a48e699a6259dbc0a2258
 msgid ""
 "*Example: Mix a mossy cobblestone block with bricks resulting in a mossy "
 "stone bricks block:*"
 msgstr "*示例：将苔石方块与砖块混合，得到苔石砖：*"
 
-#: ../../../modules/block.md 399330e749aa4bfd9b72c428689640ca
+#: ../../modules/block.md 16430781d135495d85d551f121305ecf
 msgid "Lookup Item"
 msgstr "查找物品"
 
-#: ../../../modules/block.md:601 136dab1fae844fb69c1d8ec08310a855
+#: ../../modules/block.md:601 f7a4e44ed1d64ea0adca2d997e29a907
 msgid "Get block data from the given item string id."
 msgstr "从给定的物品字符串ID获取方块数据。"
 
-#: ../../../modules/block.md:611 ../../../modules/block.md:643
-#: 184c0b571b184efe943ae712626aa8c0 acd81cf5ea344ae497cda3d76ce5a487
-#, python-brace-format
-msgid ""
-"**Storage `bs:out block`**: {nbt}`compound` Equivalent to the "
-"[`#bs.block:get_type`](#get) function."
-msgstr "**命令存储 `bs:out block`**：{nbt}`compound` 等同于 [`#bs.block:get_type`](#get) 函数。"
-
+#: ../../modules/block.md:607 6681f1854120407a9980603e2a65cafd
 #, python-brace-format
 msgid "{nbt}`string` **item**: Item string id associated to a block."
 msgstr "{nbt}`string` **item**: 方块对应的物品的字符串id。"
 
-#: ../../../modules/block.md:614 8026b6844c8a41a9b0a42f3953c1b218
+#: ../../modules/block.md:611 ../../modules/block.md:643
+#: c3d43acf45f24676a2ee8aabc264e391
+#, python-brace-format
+msgid ""
+"**Storage `bs:out block`**: {nbt}`compound` Equivalent to the "
+"[`#bs.block:get_type`](#get) function."
+msgstr ""
+"**命令存储 `bs:out block`**：{nbt}`compound` 等同于 [`#bs.block:get_type`](#get) "
+"函数。"
+
+#: ../../modules/block.md:614 dd567ad4bc0b4cc6b6ff553b91ba8c57
 msgid "*Example: Get block data for the stone item:*"
 msgstr "*示例：获取石头物品的方块数据：*"
 
-#: ../../../modules/block.md:625 99e8df48af5c46cbac1a7f559c050870
+#: ../../modules/block.md:625 46a31d30b22c48b7a5df9d337d83e1c6
 msgid ""
 "Minecraft does not perfectly map between blocks and items. Some items may"
 " correspond to multiple blocks, and this function will only return one of"
 " them."
 msgstr "Minecraft在方块和物品之间的映射并不完美。某些物品可能对应多个方块，此函数只会返回其中之一。"
 
-#: ../../../modules/block.md a99988f0d38842d3bf0c2b6c805d9b25
+#: ../../modules/block.md 0caf0688a3d148edb6fc4f85328b45dd
 msgid "Lookup Type"
 msgstr "查找类型"
 
-#: ../../../modules/block.md:633 aeb41b973f78416ca420d46a2fb155d0
+#: ../../modules/block.md:633 b6c034150d5f4e4caa0b69d3adce9f11
 msgid "Get block data from the given type string id."
 msgstr "从给定的类型字符串ID获取方块数据。"
 
+#: ../../modules/block.md:639 e69aff94c6cb4b5387fe7232756e9c65
 #, python-brace-format
 msgid "{nbt}`string` **type**: Type string id associated to a block."
 msgstr "{nbt}`string` **type**: 方块对应的方块类型的字符串id。"
 
-#: ../../../modules/block.md:646 95a99f8f11a344c9aaabd9313ea8c86d
+#: ../../modules/block.md:646 d217dfb297214718b58dfad3a6905242
 msgid "*Example: Get block data for the stone type:*"
 msgstr "*示例：获取石头类型的方块数据：*"
 
-#: ../../../modules/block.md:662 5eb1b89a87c44d14a8bdc1fd37a913cb
+#: ../../modules/block.md:662 95a56a00fdae416bbe1d5d3aaa48940c
 msgid "Match"
 msgstr "匹配"
 
-#: ../../../modules/block.md:666 24a5a1e54b034ca490744441e389a2c8
+#: ../../modules/block.md:666 f80c46ab050c430dac5798f8294fa843
 msgid "Determine if the block at the specified location matches the provided one."
 msgstr "检查当前位置是否和给定方块匹配。"
 
-#: ../../../modules/block.md:669 dbecd8d2a9f84d2b9234ac67cf9f5c3c
+#: ../../modules/block.md:669 f5ece4dc22fa424298d33a9bc1725133
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Location of the "
 "block to check."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：要检查的方块位置。"
 
-#: ../../../modules/block.md:671 8916dbb7f9e6465fb1c9beb35074166f
+#: ../../modules/block.md:671 b1863d440b0342bfad1e0c18025c9dbf
 #, python-brace-format
 msgid ""
 "**Storage `bs:in block.match.block`**: {nbt}`string` Full string "
 "representation of the block to check against."
 msgstr "**命令存储 `bs:in block.match.block`**：{nbt}`string` 要检查的方块的完整字符串表示。"
 
-#: ../../../modules/block.md:674 fb95185de0294d5094a225be51d54906
+#: ../../modules/block.md:674 6815110857e14d7b91e9cb5a764da44c
 msgid "**Return**: Whether the check is a success or a failure (1 or 0)."
 msgstr "**返回值**：检查是否成功或失败（1或0）。"
 
-#: ../../../modules/block.md:677 39f7fad925f84c93b615ce504eec5454
+#: ../../modules/block.md:677 a653552376be42a9834a34b5095aa9d7
 msgid "*Example: Check that the block at 0 0 0 matches the block at 0 1 0:*"
 msgstr "*示例：检查0 0 0处的方块是否匹配0 1 0处的方块：*"
 
-#: ../../../modules/block.md:694 295cd27002784688b5795e69b484a838
+#: ../../modules/block.md:694 a3dd6887e9d84e15b6370e40ca857de9
 msgid "Set"
 msgstr "放置"
 
-#, python-brace-format
-msgid "{nbt}`compound` Set block data"
-msgstr "{nbt}`compound` 放置方块数据"
-
-#, python-brace-format
-msgid "{nbt}`string` **block**: Full string representation of the block to set."
-msgstr "{nbt}`string` **block**: 要放置的方块的完整字符串表示。"
-
-#, python-brace-format
-msgid "{nbt}`string` **mode**: Mode used to set the block [destroy|keep|replace|strict] (default: replace)."
-msgstr "{nbt}`string` **mode**: 放置方块的模式 [destroy|keep|replace|strict] （默认: replace）。"
-
-#: ../../../modules/block.md:702 95bd4ab3533b45ef9aacb954eb762162
+#: ../../modules/block.md:702 543a902cfb444509bfa0817fc8fa4a59
 msgid "Place a block at the current location."
 msgstr "在当前位置放置方块。"
 
-#: ../../../modules/block.md:705 ../../../modules/block.md:736
-#: cbcfafd37f934caba4da0aab13db4d72 eec59111014f4629975262b3e1d5b0b7
+#: ../../modules/block.md:705 ../../modules/block.md:736
+#: 190df7c285a74fa68d271b5f2c8ef3f7
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to set "
 "the block to."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：要放置方块的位置。"
 
-#: ../../../modules/block.md:707 101b3303265b4640abe542d2160eb954
+#: ../../modules/block.md:707 29ca914d5f5a443a96538d85b13b5dcd
 msgid "**Storage `bs:in block.set_block`**:"
 msgstr "**命令存储 `bs:in block.set_block`**："
 
-#: ../../../modules/block.md:715 ../../../modules/block.md:746
-#: 509fb0ffce1b44b59d765d3a6cd73bcf e26c74969b5e431d96ae8397a6e602c5
+#: ../../modules/block.md:709 f8669f4789fd4adb86c819d61b5eb743
+#, python-brace-format
+msgid "{nbt}`compound` Set block data"
+msgstr "{nbt}`compound` 放置方块数据"
+
+#: ../../modules/block.md:710 b1863d440b0342bfad1e0c18025c9dbf
+#, python-brace-format
+msgid "{nbt}`string` **block**: Full string representation of the block to set."
+msgstr "{nbt}`string` **block**: 要放置的方块的完整字符串表示。"
+
+#: ../../modules/block.md:711 ../../modules/block.md:742
+#: 8a5af1ad1f8140afb8d76f6ff7f97ce4 b181103505564bf48fdfbe1690f05fe9
+#, python-brace-format
+msgid ""
+"{nbt}`string` **mode**: Mode used to set the block "
+"[destroy|keep|replace|strict] (default: replace)."
+msgstr ""
+"{nbt}`string` **mode**: 放置方块的模式 [destroy|keep|replace|strict] （默认: "
+"replace）。"
+
+#: ../../modules/block.md:715 ../../modules/block.md:746
+#: 2c15384642ac4428a8c42e723a9ea705
 msgid "**State**: A block is placed in the world."
 msgstr "**状态**：方块被放置在世界中。"
 
-#: ../../../modules/block.md:718 0ca5eac7cc284f0e977ca2de621d400e
+#: ../../modules/block.md:718 fb7de4a08bd3486f936d7a5fcc88e0ec
 msgid "*Example: Place a block of stone at 0 0 0 by destroying the existing one:*"
 msgstr "*示例：在0 0 0处放置石头方块并破坏已有方块：*"
 
-#: ../../../modules/block.md:733 2de61b589f02461a974f390d10f486c5
+#: ../../modules/block.md:733 7cf0bf723f954579b6f2cf8225295d2e
 msgid ""
 "Replace the block type at the current location while trying to conserve "
 "its state and NBTs."
 msgstr "在尝试保留方块状态和NBT的同时替换当前位置的方块类型。"
 
-#: ../../../modules/block.md:738 c7efcc6203514d0ea7f04681cdc91bc6
+#: ../../modules/block.md:738 0695edbc01e948d5bf416bdb0787ba5a
 msgid "**Storage `bs:in block.set_type`**:"
 msgstr "**命令存储 `bs:in block.set_type`**："
 
+#: ../../modules/block.md:740 a90da3b4cd674bf492d482412e55965b
 #, python-brace-format
 msgid "{nbt}`compound` Set type data"
 msgstr "{nbt}`compound` 放置方块数据"
 
-#, python-brace-format
-msgid "{nbt}`string` **block**: String representation of the block id to set."
+#: ../../modules/block.md:741 b1863d440b0342bfad1e0c18025c9dbf
+#, fuzzy, python-brace-format
+msgid "{nbt}`string` **type**: String representation of the block id to set."
 msgstr "{nbt}`string` **block**: 要放置的方块id的字符串表示。"
 
-#: ../../../modules/block.md:749 cd7f3772d8c94d27ac1621598396d919
+#: ../../modules/block.md:749 cbe6cf91ee824a489f932d10ac65f289
 msgid ""
 "*Example: Replace any stairs with oak stairs, preserving the current "
 "state:*"
 msgstr "*示例：将所有楼梯替换为橡木楼梯，并保留方块状态：*"
 
-#: ../../../modules/block.md:765 f7c32edc15574032b7cc4f8af765ba44
+#: ../../modules/block.md:765 c4ce4ed4783a4a78b526c836adeba6e1
 msgid "Produce"
 msgstr "生成"
 
-#, python-brace-format
-msgid "{nbt}`compound` Block display data"
-msgstr "{nbt}`compound` 方块展示实体数据"
-
-#, python-brace-format
-msgid "{nbt}`string` **type**: Block type (similar to block output)."
-msgstr "{nbt}`string` **type**: 方块类型（和方块输出（bs:out block）类似）。"
-
-#, python-brace-format
-msgid "{nbt}`compound` **properties**: Block properties (similar to block output)."
-msgstr "{nbt}`compound` **properties**: 方块属性（和方块输出（bs:out block）类似）。"
-
-#, python-brace-format
-msgid "{nbt}`compound` **extra_nbt**: Additional NBTs to summon the entity with."
-msgstr "{nbt}`compound` **extra_nbt**: 生成实体附加的NBT数据。"
-
-#, python-brace-format
-msgid "{nbt}`compound` Falling block data"
-msgstr "{nbt}`compound` 下落的方块数据"
-
-#: ../../../modules/block.md adf385ea17dd4717959baf564148535e
+#: ../../modules/block.md 2aba5082ba184fd1866929b9445648af
 msgid "Block Display"
 msgstr "方块展示实体"
 
-#: ../../../modules/block.md:773 5d6d57b0bb1a49cb979d21624e8492e7
+#: ../../modules/block.md:773 4f119b89253f42cb83ce0afbd24ea5b3
 msgid "Spawn a block display representing the given block."
 msgstr "生成给定方块对应的方块展示实体。"
 
-#: ../../../modules/block.md:776 ../../../modules/block.md:811
-#: ../../../modules/block.md:846 76ba3570dc94415d8218da39a8b25a09
-#: a8f20da95cb6494f84a1dcb0440d7281 c60a0fdec3ce4138b039af0b19a38de6
+#: ../../modules/block.md:776 ../../modules/block.md:811
+#: ../../modules/block.md:846 0c8fb87703ac42be97d969208c4b6597
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where "
 "the entity will be summoned."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：实体生成的位置。"
 
-#: ../../../modules/block.md:778 11d0ba90b82b494295aae9dd3635fd51
+#: ../../modules/block.md:778 fbcd089bd91d40a0999e663bad4f93bd
 msgid "**Storage `bs:in block.spawn_block_display`**:"
 msgstr "**命令存储 `bs:in block.spawn_block_display`**："
 
-#: ../../../modules/block.md:787 ../../../modules/block.md:822
-#: ../../../modules/block.md:857 29044e6c1cac47fa8d129ee78c579e84
-#: 4e4c8095631f40f6bc1451220f423d22 9352f42f8ad24b4d99e1e232aabdb426
+#: ../../modules/block.md:780 ../../modules/block.md:850
+#: a089a834284647a4b8a7bf0a3d8697cb f7c3429138d3488389e219d458ffeb1a
+#, python-brace-format
+msgid "{nbt}`compound` Block display data"
+msgstr "{nbt}`compound` 方块展示实体数据"
+
+#: ../../modules/block.md:781 ../../modules/block.md:816
+#: ../../modules/block.md:851 ../../modules/block.md:886
+#: 9827c1e9dc24401e8caaee2640d746dd a31e69626b7f48579f6b229e329590aa
+#: a50bec28f7aa45ecbea8d4b0c95d7454 e642b27b3fa5473784b8cac89740db93
+#, python-brace-format
+msgid "{nbt}`string` **type**: Block type (similar to block output)."
+msgstr "{nbt}`string` **type**: 方块类型（和方块输出（bs:out block）类似）。"
+
+#: ../../modules/block.md:782 ../../modules/block.md:817
+#: ../../modules/block.md:852 ../../modules/block.md:887
+#: 1d7530440a554815974eacd83fe805e9 79536a1674d34fc791c08e582398a638
+#: d2539ee3731241f68b989007cfa56a56 e69b98d13fa245b3bc3131f7c26466c6
+#, python-brace-format
+msgid ""
+"{nbt}`compound` **properties**: Block properties (similar to block "
+"output)."
+msgstr "{nbt}`compound` **properties**: 方块属性（和方块输出（bs:out block）类似）。"
+
+#: ../../modules/block.md:783 ../../modules/block.md:818
+#: ../../modules/block.md:853 0eee8f85d6654e0c90f30a59fafb6e21
+#: 5aa213891bc5415c983bbd59d54fd762 bc27a916104d4cf09696deeaf53cbd31
+#, python-brace-format
+msgid "{nbt}`compound` **extra_nbt**: Additional NBTs to summon the entity with."
+msgstr "{nbt}`compound` **extra_nbt**: 生成实体附加的NBT数据。"
+
+#: ../../modules/block.md:787 ../../modules/block.md:822
+#: ../../modules/block.md:857 735b10a790394846852fca483a1637fc
 msgid "**State**: The entity is summoned."
 msgstr "**状态**：生成的实体。"
 
-#: ../../../modules/block.md:790 4a5c27b41d304792ac6ae80fae128983
+#: ../../modules/block.md:790 90a583e2121948fb91b0fbd22a4268d0
 msgid "*Example: Summon a block display using the block at 0 0 0:*"
 msgstr "*示例：使用0 0 0处的方块生成方块展示实体：*"
 
-#: ../../../modules/block.md c6e607708a044890802c31791e1fae48
+#: ../../modules/block.md 92937ca6cd494388a6826f348327a3b5
 msgid "Falling Block"
 msgstr "下落的方块"
 
-#: ../../../modules/block.md:808 b131995e58fe41c3939a4f421d5ce256
+#: ../../modules/block.md:808 7c4e1e675c794b4bbddb8cedb08fe070
 msgid "Spawn a falling block representing the given block."
 msgstr "生成给定方块对应的下落的方块。"
 
-#: ../../../modules/block.md:813 4a16307e193943ee8a36e93d84028513
+#: ../../modules/block.md:813 a78cac981a144421ab5e86b6a036d514
 msgid "**Storage `bs:in block.spawn_falling_block`**:"
 msgstr "**命令存储 `bs:in block.spawn_falling_block`**："
 
-#: ../../../modules/block.md:825 fbd4ebb8118e415882c943514f23c313
+#: ../../modules/block.md:815 b6c007cc13b94d949a08c64e55165f6e
+#, python-brace-format
+msgid "{nbt}`compound` Falling block data"
+msgstr "{nbt}`compound` 下落的方块数据"
+
+#: ../../modules/block.md:825 2041115ec0904e41a3b96f1dd3ef38e3
 msgid "*Example: Summon a falling block using the block at 0 0 0:*"
 msgstr "*示例：使用0 0 0处的方块生成下落的方块：*"
 
-#: ../../../modules/block.md 40b61d18dd64438db195e20d11528f15
+#: ../../modules/block.md f93c370aea264d80b86c64147986af21
 msgid "Solid Block Display"
 msgstr "带碰撞的方块展示实体"
 
-#: ../../../modules/block.md:843 50f6b4c7812646d89a99c814b0e5eca2
+#: ../../modules/block.md:843 ebfc3ea3a29f4a3d984d9a019d8234b7
 msgid "Spawn a block display with a hitbox, representing the given block."
 msgstr "生成给定方块对应的方块展示实体，并且有和方块一样的碰撞逻辑。"
 
-#: ../../../modules/block.md:848 e4f9b69ed1d14353bbda75f3bbd2983e
+#: ../../modules/block.md:848 c6701d920d784e28aa0398580fd3bc90
 msgid "**Storage `bs:in block.spawn_solid_block_display`**:"
 msgstr "**命令存储 `bs:in block.spawn_solid_block_display`**："
 
-#: ../../../modules/block.md:860 94c5fe7951754513b2873e776a8421df
+#: ../../modules/block.md:860 5a435381c4664b95acce0f8e4fa971ed
 msgid "*Example: Summon a block display with a hitbox using the block at 0 0 0:*"
 msgstr "*示例：使用0 0 0处的方块生成带碰撞箱的方块展示实体：*"
 
-#: ../../../modules/block.md f02ce746206a4067a7b56b9e98a9adb0
+#: ../../modules/block.md 9887a4f0310041268bcfee1c2b06d6b5
 msgid "Block Particle"
 msgstr "方块粒子"
 
-#: ../../../modules/block.md:878 98eced9d7bf548b7b8889a51fcfb28ab
+#: ../../modules/block.md:878 61423a25c5e84829b6f37981ce36b769
 msgid "Emit block particle of the given block."
 msgstr "发射给定方块对应的方块粒子。"
 
-#: ../../../modules/block.md:881 8ecd228d8c6f477ab9ab3945344fd640
+#: ../../modules/block.md:881 756292bcd2b8409aa3082310c70a6bc0
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where "
 "the particle will be emitted."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：粒子被发射的位置。"
 
-#: ../../../modules/block.md:883 6d9d973481394a978806800047752ca2
+#: ../../modules/block.md:883 cde461b188154181abc1664a5632d71f
 msgid "**Storage `bs:in block.emit_block_particle`**:"
 msgstr "**命令存储 `bs:in block.emit_block_particle`**："
 
+#: ../../modules/block.md:885 9c7aabea04a04f5d9a6d9bf5fe9f3eae
 #, python-brace-format
 msgid "{nbt}`compound` Block particle data"
 msgstr "{nbt}`compound` 方块粒子数据"
 
+#: ../../modules/block.md:888 d9296ac51eb645039b35607917e902aa
 #, python-brace-format
-msgid "{nbt}`string` **delta**: X Y Z coordinates, the motion value of the particle (default: `0 0 0`)."
+msgid ""
+"{nbt}`string` **delta**: X Y Z coordinates, the motion value of the "
+"particle (default: `0 0 0`)."
 msgstr "{nbt}`string` **delta**: X Y Z 坐标, 粒子的motion值（默认：`0 0 0`）。"
 
+#: ../../modules/block.md:889 fc5cb0f60e414fafa91f9b75ebabadb8
 #, python-brace-format
 msgid "{nbt}`int` **speed**: Speed of the particle (default: `1`)."
 msgstr "{nbt}`int` **speed**: 粒子的速度（默认：`1`）。"
 
+#: ../../modules/block.md:890 b8fdf82b477947dd93d4da8c69377378
 #, python-brace-format
 msgid "{nbt}`int` **count**: Number of particle (default: `1`)."
 msgstr "{nbt}`int` **count**: 粒子的数量（默认：`1`）。"
 
+#: ../../modules/block.md:891 7f803d7ac7634c718888b09756b629d7
 #, python-brace-format
-msgid "{nbt}`string` **mode**: Display mode: `normal` or `force` (default: `normal`)."
+msgid ""
+"{nbt}`string` **mode**: Display mode: `normal` or `force` (default: "
+"`normal`)."
 msgstr "{nbt}`string` **mode**: 显示模式：`normal`或`force`（默认：`normal`）。"
 
+#: ../../modules/block.md:892 5949adcbe02340bd9326e32b5bf6b7a8
 #, python-brace-format
-msgid "{nbt}`string` **viewers**: Control which player should view this particle (default: `@a`)."
+msgid ""
+"{nbt}`string` **viewers**: Control which player should view this particle"
+" (default: `@a`)."
 msgstr "{nbt}`string` **viewers**: 控制哪些玩家能看到这些粒子（默认：`@a`）"
 
-#: ../../../modules/block.md:896 cbc1f6aae87f48e99bb85d343ed37997
+#: ../../modules/block.md:896 1e91ef6e261c49f381e58461c7214692
 msgid "**State**: The particle is emitted."
 msgstr "**状态**：粒子被发射。"
 
-#: ../../../modules/block.md:899 c70c9188a98a402ba78ab5d3b0ade96b
+#: ../../modules/block.md:899 937b816afce444158f8d6cc762d06a5b
 msgid "*Example: Emit the particle of the block at 0 0 0:*"
 msgstr "*示例：发射0 0 0处方块的粒子：*"
 
-#: ../../../modules/block.md d5922bd8618941d9930c688a4f54d04e
+#: ../../modules/block.md c44bf4bce9394e4d83a33f90317164e2
 msgid "Block Sound"
 msgstr "方块音效"
 
-#: ../../../modules/block.md:918 9f0ad1a97540408882297baf8b160e21
+#: ../../modules/block.md:918 b1bda779c4bb4983b13c3dac02db8044
 msgid "Play a block sound of the given block."
 msgstr "播放给定方块对应的方块音效。"
 
-#, python-brace-format
-msgid "{nbt}`compound` Block sound data"
-msgstr "{nbt}`compound` 方块声音数据"
-
-#, python-brace-format
-msgid "{nbt}`string` **sound**: Sound to play. Found in the `sounds` property of the virtual block (cf get functions)."
-msgstr "{nbt}`string` **sound**: 要播放的声音。在虚拟方块的`sounds`属性中查找（参见 get 函数）。"
-
-msgid "{nbt}`string` **source**: Source of the sound: `master`, `music`, `record`, `weather`, `block`, `hostile`, `neutral`, `player`, `ambient`, or `voice` (default: `master`)."
-msgstr "{nbt}`string` **source**: 声音来源：`master`、`music`、`record`、`weather`、`block`、`hostile`、`neutral`、`player`、`ambient` 或 `voice`（默认：`master`）。"
-
-#, python-brace-format
-msgid "{nbt}`string` **targets**: The targets of the sound (default: `@s`)."
-msgstr "{nbt}`string` **targets**: 声音的目标（默认：`@s`）。"
-
-#, python-brace-format
-msgid "{nbt}`string` **pos**: X Y Z coordinates, the position of the sound (default: `~ ~ ~`)."
-msgstr "{nbt}`string` **pos**: X Y Z 坐标，声音播放的位置（默认：`~ ~ ~`）。"
-
-#, python-brace-format
-msgid "{nbt}`int` **pitch**: Pitch of the sound (default: `1`)."
-msgstr "{nbt}`int` **pitch**: 声音的音调（默认：`1`）。"
-
-#, python-brace-format
-msgid "{nbt}`int` **volume**: Volume of the sound (default: `1`)."
-msgstr "{nbt}`int` **volume**: 声音的音量（默认：`1`）。"
-
-#, python-brace-format
-msgid "{nbt}`int` **min_volume**: Minimum volume of the sound (default: `0`)."
-msgstr "{nbt}`int` **min_volume**: 声音的最小音量（默认：`0`）。"
-
-#: ../../../modules/block.md:921 7e050879508e4532a8a80e0565bbf2f1
+#: ../../modules/block.md:921 9c34afbcf0d447c384d7c4979e694ac0
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where "
 "the sound will be played."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：音效将被播放的位置。"
 
-#: ../../../modules/block.md:923 58f9bc6ce9304b178efa9c9144f471c1
+#: ../../modules/block.md:923 a6f238f79105454da32913c74370c504
 msgid "**Storage `bs:in block.play_block_sound`**:"
 msgstr "**命令存储 `bs:in block.play_block_sound`**："
 
-#: ../../../modules/block.md:936 f07d1523b0204b29a4e49d361432c769
+#: ../../modules/block.md:925 a5add43a01e4449f99b6d932e25ffecb
+#, python-brace-format
+msgid "{nbt}`compound` Block sound data"
+msgstr "{nbt}`compound` 方块声音数据"
+
+#: ../../modules/block.md:926 dcb61eaeae7544529cd0b07136b2e0ff
+#, python-brace-format
+msgid ""
+"{nbt}`string` **sound**: Sound to play. Found in the `sounds` property of"
+" the virtual block (cf get functions)."
+msgstr "{nbt}`string` **sound**: 要播放的声音。在虚拟方块的`sounds`属性中查找（参见 get 函数）。"
+
+#: ../../modules/block.md:927 6ca63efc7c5c4fad85989a11f334ffc5
+#, python-brace-format
+msgid ""
+"{nbt}`string` **source**: Source of the sound: `master`, `music`, "
+"`record`, `weather`, `block`, `hostile`, `neutral`, `player`, `ambient`, "
+"or `voice` (default: `master`)."
+msgstr ""
+"{nbt}`string` **source**: "
+"声音来源：`master`、`music`、`record`、`weather`、`block`、`hostile`、`neutral`、`player`、`ambient`"
+" 或 `voice`（默认：`master`）。"
+
+#: ../../modules/block.md:928 e32641a485bc4ff0bc0ce23ec5f2dd3b
+#, python-brace-format
+msgid "{nbt}`string` **targets**: The targets of the sound (default: `@s`)."
+msgstr "{nbt}`string` **targets**: 声音的目标（默认：`@s`）。"
+
+#: ../../modules/block.md:929 eb3b92053994400ea8560061ca8bed36
+#, python-brace-format
+msgid ""
+"{nbt}`string` **pos**: X Y Z coordinates, the position of the sound "
+"(default: `~ ~ ~`)."
+msgstr "{nbt}`string` **pos**: X Y Z 坐标，声音播放的位置（默认：`~ ~ ~`）。"
+
+#: ../../modules/block.md:930 cd65e6e0d78d4b1ea7b77b2c66c3a4b9
+#, python-brace-format
+msgid "{nbt}`int` **pitch**: Pitch of the sound (default: `1`)."
+msgstr "{nbt}`int` **pitch**: 声音的音调（默认：`1`）。"
+
+#: ../../modules/block.md:931 98bb4d90bd134f08916334d81cb497e1
+#, python-brace-format
+msgid "{nbt}`int` **volume**: Volume of the sound (default: `1`)."
+msgstr "{nbt}`int` **volume**: 声音的音量（默认：`1`）。"
+
+#: ../../modules/block.md:932 2c2047880eb4418893b3f409bf4747f6
+#, python-brace-format
+msgid "{nbt}`int` **min_volume**: Minimum volume of the sound (default: `0`)."
+msgstr "{nbt}`int` **min_volume**: 声音的最小音量（默认：`0`）。"
+
+#: ../../modules/block.md:936 68c205acc9a947f8886a2170949c4e75
 msgid "**State**: The sound is played."
 msgstr "**状态**：音效被播放。"
 
-#: ../../../modules/block.md:939 18f65f95e475450aa79dbdb9be52c92b
+#: ../../modules/block.md:939 8172238262f44204b44527d8356d36a7
 msgid "*Example: Play the sound of the block at 0 0 0:*"
 msgstr "*示例：播放0 0 0处方块的音效：*"
 
-#: ../../../modules/block.md:960 83d7cc6244fe45ea9654fd9f8570b564
+#: ../../modules/block.md:960 09f438d9d87246b9a065d6f6b741ec60
 msgid "🎓 Custom Mapping Registry"
 msgstr "🎓 自定义映射注册表"
 
-#: ../../../modules/block.md:962 b9e3fd95fd474e28ad8f5a556a64bd2e
+#: ../../modules/block.md:962 6847cb01f1b8438298b4176a8ee84424
 msgid ""
 "This module allows you to create a personalized mapping registry tailored"
 " to your specific needs."
 msgstr "此模块允许您创建根据特定需求定制的个性化映射注册表。"
 
-#: ../../../modules/block.md:966 1d77b1255f0248babd2264a700305123
+#: ../../modules/block.md:966 247830d3f2944e39b2693cb7b9e0aa3d
 msgid ""
 "To create a new registry, you need to define an array within the "
 "`bs:const block.mapping_registry` storage. Each new registry should be "
 "namespaced, and each element must include `set`, `attrs`, and `type`. "
 "Here's how you can define a new mapping registry:"
-msgstr "要创建新的注册表，您需要在 `bs:const block.mapping_registry` 命令存储中定义一个数组。每个新注册表都应该有命名空间，且每个元素必须包含 `set`、`attrs` 和 `type`。以下是定义新映射注册表的方法："
+msgstr ""
+"要创建新的注册表，您需要在 `bs:const block.mapping_registry` "
+"命令存储中定义一个数组。每个新注册表都应该有命名空间，且每个元素必须包含 `set`、`attrs` 和 "
+"`type`。以下是定义新映射注册表的方法："
 
-#: ../../../_templates/comments.md:4 d72dcb8b99f74990a12084edac5261a7
+#: ../../_templates/comments.md:4 ae5eee0e3f8748afaef2bcb8c4f0ea97
 msgid "**💬 Did it help you?**"
 msgstr "**💬 这对您有帮助吗？**"
 
-#: ../../../_templates/comments.md:6 0f9b1165b6d04136969033c8cc310b15
+#: ../../_templates/comments.md:6 0784510be1ae4ab48678569dae74abc0
 msgid "Feel free to leave your questions and feedback below!"
 msgstr "欢迎在下方留下您的问题和反馈！"

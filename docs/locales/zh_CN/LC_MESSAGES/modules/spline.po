@@ -79,14 +79,14 @@ msgstr "求值"
 #: ../../modules/spline.md ../../modules/spline.md:465
 #: 650ab241c875454887ea258f33496102 900d812b7b0441df9b96da7e5526486b
 msgid "Bézier"
-msgstr "贝塞尔"
+msgstr "贝塞尔曲线"
 
 #: ../../modules/spline.md:46 e39d8d624ab7486fac2eefbee42d4533
 msgid ""
 "Evaluate a Bézier spline composed of one or more segments. Each segment "
 "is defined by four consecutive control points, with the last point of a "
 "segment reused as the first of the next."
-msgstr "计算由单个或多个片段组成的贝塞尔样条曲线。每个片段由四个连续的控制点定义，且相邻片段共享端点​，即前片段的终点作为后片段的起点。"
+msgstr "计算由单个或多个片段组成的贝塞尔样条曲线。每个片段由四个连续的控制点定义，且相邻片段共享端点，即前片段的终点作为后片段的起点。"
 
 #: ../../modules/spline.md:48 ../../modules/spline.md:75
 #: ../../modules/spline.md:102 ../../modules/spline.md:129
@@ -97,7 +97,6 @@ msgstr "计算由单个或多个片段组成的贝塞尔样条曲线。每个片
 #: ../../modules/spline.md:382 ../../modules/spline.md:407
 #: ../../modules/spline.md:432 5f724d60c26e4461b4fcda1305659e11
 #: 7fa5159f737048e2a76658673b213916 e28f51353f004b3e823446f51e9f207e
-#, fuzzy
 msgid "Inputs"
 msgstr "输入"
 
@@ -122,7 +121,7 @@ msgstr "**命令存储 `bs:in spline.evaluate_bezier`**："
 #: c60496e2c1d3470c8798cb6adf05d8d8 d108394f44694b0395e12f3b8df2ea89
 #, python-brace-format
 msgid "{nbt}`compound` Arguments"
-msgstr ""
+msgstr "{nbt}`compound` 参数"
 
 #: ../../modules/spline.md:52 ../../modules/spline.md:79
 #: ../../modules/spline.md:106 ../../modules/spline.md:133
@@ -141,6 +140,8 @@ msgid ""
 "{nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every "
 "group of 4 consecutive points defines one segment."
 msgstr ""
+"{nbt}`list` **points**: 坐标点列表（1维、2维或3维）。"
+"每4个连续的点定义一个曲线段。"
 
 #: ../../modules/spline.md:53 ../../modules/spline.md:80
 #: ../../modules/spline.md:107 ../../modules/spline.md:134
@@ -153,6 +154,8 @@ msgid ""
 " segments. Each integer step moves to the next segment, and the "
 "fractional part represents interpolation within that segment."
 msgstr ""
+"{nbt}`double` **time**: 在0到曲线段数量间的归一化位置。"
+"整数部分决定曲线段的序号，小数部分代表当前分段内的插值位置。"
 
 #: ../../modules/spline.md:56 ../../modules/spline.md:83
 #: ../../modules/spline.md:110 ../../modules/spline.md:137
@@ -176,7 +179,7 @@ msgstr ""
 msgid ""
 "*Example: Evaluate the point in the middle of a Bézier curve in 2D space "
 "([visualize the curve](#about-splines)):*"
-msgstr "*示例：在二维空间中求值贝塞尔曲线中间的点（[可视化曲线](#About Splines)）：*"
+msgstr "*示例：在二维空间中求值贝塞尔曲线中间的点（[可视化曲线](#about-splines)）：*"
 
 #: ../../modules/spline.md ../../modules/spline.md:473
 #: 40d970a93fe14fd89c0b9597241f0a05
@@ -207,7 +210,7 @@ msgstr ""
 msgid ""
 "*Example: Evaluate the point in the middle of a B-Spline curve in 2D "
 "space ([visualize the curve](#about-splines)):*"
-msgstr "*示例：在二维空间中求值B样条曲线中间的点（[可视化曲线](#About Splines)）：*"
+msgstr "*示例：在二维空间中求值B样条曲线中间的点（[可视化曲线](#about-splines)）：*"
 
 #: ../../modules/spline.md ../../modules/spline.md:480
 #: a18a2c9a665b4c4383e5a9d952409e69
@@ -240,7 +243,7 @@ msgstr ""
 msgid ""
 "*Example: Evaluate the point in the middle of a Catmull-Rom curve in 2D "
 "space ([visualize the curve](#about-splines)):*"
-msgstr "*示例：在二维空间中求值Catmull-Rom曲线中间的点（[可视化曲线](#About Splines)）：*"
+msgstr "*示例：在二维空间中求值Catmull-Rom曲线中间的点（[可视化曲线](#about-splines)）：*"
 
 #: ../../modules/spline.md ../../modules/spline.md:487
 #: 5f99ea0b84f3460e8047c856b7acf50d
@@ -255,7 +258,7 @@ msgid ""
 "next segment. All coordinates and tangents are absolute."
 msgstr ""
 "计算由单个或多个片段构成的 Hermite "
-"样条曲线。每个片段需定义起始点位置及其切向量（一阶导数）​，且当前片段的终点位置与切向量将自动复用为下一个片段的起点位置与切向量。所有坐标与切向量均基于绝对坐标系​（非相对值）。"
+"样条曲线。每个片段需定义起始点位置及其切向量（一阶导数），且当前片段的终点位置与切向量将自动复用为下一个片段的起点位置与切向量。所有坐标与切向量均基于绝对坐标系（非相对值）。"
 
 #: ../../modules/spline.md:130 f0f549e5a2fb4e57b2675fb6f945eb49
 msgid "**Storage `bs:in spline.evaluate_hermite`**:"
@@ -274,12 +277,12 @@ msgstr ""
 msgid ""
 "*Example: Evaluate the point in the middle of a Hermite curve in 2D space"
 " ([visualize the curve](#about-splines)):*"
-msgstr "*示例：在二维空间中求值Hermite曲线中间的点（[可视化曲线](#About Splines)）：*"
+msgstr "*示例：在二维空间中求值Hermite曲线中间的点（[可视化曲线](#about-splines)）：*"
 
 #: ../../modules/spline.md 3919a6b670504bb09ffae8843128ff39
 #: 6a0127b996b7447fac155e8537626098 8ad7e5259422452aa579eeb8eeb57b9f
 msgid "Linear"
-msgstr ""
+msgstr "直线"
 
 #: ../../modules/spline.md:154 b1f6e4d15ed74c75baa62dae73a20b41
 msgid ""
@@ -287,11 +290,12 @@ msgid ""
 "with a straight segment. There is no curvature; the interpolation is "
 "piecewise linear."
 msgstr ""
+"计算线性样条曲线，该曲线将每对连续点以直线段连接。"
+"无曲率调节，插值处理为分段线性。"
 
 #: ../../modules/spline.md:157 b2a86b3100a74a0e93408ba3daf06bde
-#, fuzzy
 msgid "**Storage `bs:in spline.evaluate_linear`**:"
-msgstr "**命令存储 `bs:in spline.evaluate_bspline`**："
+msgstr "**命令存储 `bs:in spline.evaluate_linear`**："
 
 #: ../../modules/spline.md:160 ../../modules/spline.md:302
 #: e32427394bdb4395bf2b598e9e85307f f852d0977b3544f9963ae9b14cc5d38d
@@ -300,19 +304,21 @@ msgid ""
 "{nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Each pair "
 "of consecutive points defines one linear segment."
 msgstr ""
+"{nbt}`list` **points**: 坐标点列表（1维、2维或3维）。"
+"每对连续点定义一个直线段。"
 
 #: ../../modules/spline.md:165 ccf151ba8b954e30968529bf4392a8fd
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "**Storage `bs:out spline.evaluate_linear`**: {nbt}`list` The interpolated"
 " point (1D, 2D, or 3D) on the spline at the given time."
 msgstr ""
-"**命令存储 `bs:out spline.evaluate_bspline`**: {nbt}`list` "
-"样条曲线在给定时间点的插值点（一维、二维或三维）。"
+"**命令存储 `bs:out spline.evaluate_linear`**: {nbt}`list` "
+"样条曲线在给定时间点的插值点（1维、2维或3维）。"
 
 #: ../../modules/spline.md:168 fd1a5799c0164fc59e278639191830ec
 msgid "*Example: Evaluate the midpoint between two positions in 2D space:*"
-msgstr ""
+msgstr "*示例：计算二维空间中两点之间的中点：*"
 
 #: ../../modules/spline.md:178 ../../modules/spline.md:320
 #: ../../modules/spline.md:452 3ac5a4c555b541c6a0c0d816e40fadb4
@@ -328,7 +334,7 @@ msgid ""
 "Sample a Bézier spline composed of one or more segments. Each segment is "
 "defined by four consecutive control points, with the last point of a "
 "segment reused as the first of the next."
-msgstr "采样由单个或多个片段组成的贝塞尔样条曲线。每个片段由四个连续的控制点定义，且相邻片段共享端点​，即前片段的终点作为后片段的起点。"
+msgstr "采样由单个或多个片段组成的贝塞尔样条曲线。每个片段由四个连续的控制点定义，且相邻片段共享端点，即前片段的终点作为后片段的起点。"
 
 #: ../../modules/spline.md:191 10c0fe5482a64565a53d2a72cb5a3a1a
 msgid "**Storage `bs:in spline.sample_bezier`**:"
@@ -349,6 +355,8 @@ msgid ""
 "{nbt}`double` **step**: The interval at which the spline is sampled. "
 "Smaller values generate more points."
 msgstr ""
+"{nbt}`double` **step**: 样条曲线采样点的生成间隔。"
+"值越小，生成的点越密集。"
 
 #: ../../modules/spline.md:199 615857cec4a34f0aa4907457c1530b8d
 #, python-brace-format
@@ -361,7 +369,7 @@ msgstr "**命令存储 `bs:out spline.sample_bezier`**: {nbt}`list` 样条曲线
 msgid ""
 "*Example: Sample 10 points along a Bézier curve in 2D space ([visualize "
 "the curve](#about-splines)):*"
-msgstr "*示例：在二维空间中采样贝塞尔曲线上的10个点（[可视化曲线](#About Splines)）：*"
+msgstr "*示例：在二维空间中采样贝塞尔曲线上的10个点（[可视化曲线](#about-splines)）：*"
 
 #: ../../modules/spline.md:215 e2e29b15e02d48bb9e256c359bcc5fc6
 msgid ""
@@ -385,7 +393,7 @@ msgstr "**命令存储 `bs:out spline.sample_bspline`**: {nbt}`list` 样条曲�
 msgid ""
 "*Example: Sample 10 points along a B-Spline curve in 2D space ([visualize"
 " the curve](#about-splines)):*"
-msgstr "*示例：在二维空间中采样B样条曲线上的10个点（[可视化曲线](#About Splines)）：*"
+msgstr "*示例：在二维空间中采样B样条曲线上的10个点（[可视化曲线](#about-splines)）：*"
 
 #: ../../modules/spline.md:242 6bdda50143164901a5135098dddc8693
 msgid ""
@@ -409,7 +417,7 @@ msgstr "**命令存储 `bs:out spline.sample_catmull_rom`**: {nbt}`list` 样条�
 msgid ""
 "*Example: Sample 10 points along a Catmull-Rom curve in 2D space "
 "([visualize the curve](#about-splines)):*"
-msgstr "*示例：在二维空间中采样Catmull-Rom曲线上的10个点（[可视化曲线](#About Splines)）：*"
+msgstr "*示例：在二维空间中采样Catmull-Rom曲线上的10个点（[可视化曲线](#about-splines)）：*"
 
 #: ../../modules/spline.md:269 f6fb3d6b5ba24c20889bf060720e0619
 msgid ""
@@ -434,30 +442,22 @@ msgstr "**命令存储 `bs:out spline.sample_hermite`**: {nbt}`list` 样条曲�
 msgid ""
 "*Example: Sample 10 points along a Hermite curve in 2D space ([visualize "
 "the curve](#about-splines)):*"
-msgstr "*示例：在二维空间中采样Hermite曲线上的10个点（[可视化曲线](#About Splines)）：*"
-
-#: ../../modules/spline.md:296 f62d5f15322f400d948d0a9e6fce13d0
-msgid ""
-"Sample a linear spline, which connects each pair of consecutive points "
-"with a straight segment."
-msgstr ""
+msgstr "*示例：在二维空间中采样Hermite曲线上的10个点（[可视化曲线](#about-splines)）：*"
 
 #: ../../modules/spline.md:299 7209f8f28ea74485954822577e154347
-#, fuzzy
 msgid "**Storage `bs:in spline.sample_linear`**:"
-msgstr "**命令存储 `bs:in spline.sample_bspline`**："
+msgstr "**命令存储 `bs:in spline.sample_linear`**："
 
 #: ../../modules/spline.md:307 60fc4fa4904148be8280f4c750f914b6
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "**Storage `bs:out spline.sample_linear`**: {nbt}`list` The sampled points"
 " along the spline."
-msgstr "**命令存储 `bs:out spline.sample_bspline`**: {nbt}`list` 样条曲线上的采样点。"
+msgstr "**命令存储 `bs:out spline.sample_linear`**: {nbt}`list` 样条曲线上的采样点。"
 
 #: ../../modules/spline.md:310 ef6ed601c8444888a70cd8ba4db3427d
-#, fuzzy
 msgid "*Example: Sample evenly spaced points along a polyline in 2D space:*"
-msgstr "*示例：在二维空间中采样B样条曲线上的10个点（[可视化曲线](#About Splines)）：*"
+msgstr "*示例：在二维空间中的折线上均匀采样点：*"
 
 #: ../../modules/spline.md:322 d1a2efb53f774cac9ec88373515fd09c
 msgid "Stream"
@@ -485,6 +485,8 @@ msgid ""
 "{nbt}`string` **run**: The command executed at each step of the sampling "
 "process. For each step, the following storage can be used:"
 msgstr ""
+"{nbt}`string` **run**: 在采样过程每个步骤执行的命令。"
+"每个步骤可使用以下命令存储："
 
 #: ../../modules/spline.md:339 ../../modules/spline.md:364
 #: ../../modules/spline.md:389 ../../modules/spline.md:414
@@ -492,13 +494,13 @@ msgstr ""
 #: 7b188ed917114744b08dfdd2accae8d1 aa3f5831e8544eaf8db15ac347390f34
 #: c25ed0b273a148f99163fa612154b76f fdd7c6cd7b7f417a915422eff6913c1b
 msgid "**`bs:lambda spline.point`**: The evaluated point."
-msgstr ""
+msgstr "**`bs:lambda spline.point`**: 当前的点坐标。"
 
 #: ../../modules/spline.md:343 a2a455bd3fef46c1892d8adeecd3e717
 msgid ""
 "*Example: Stream 10 points along a Bézier curve in 2D space and execute a"
 " command at each step ([visualize the curve](#about-splines)):*"
-msgstr "*示例：在二维空间中流式处理贝塞尔曲线上的10个点，并在每一步执行一个命令（[可视化曲线](#About Splines)）：*"
+msgstr "*示例：在二维空间中流式处理贝塞尔曲线上的10个点，并在每一步执行一个命令（[可视化曲线](#about-splines)）：*"
 
 #: ../../modules/spline.md:355 f559ec9d8df84711adf5e31a7476723d
 msgid ""
@@ -516,7 +518,7 @@ msgstr "**命令存储 `bs:in spline.stream_bspline`**："
 msgid ""
 "*Example: Stream 10 points along a B-Spline curve in 2D space and execute"
 " a command at each step ([visualize the curve](#about-splines)):*"
-msgstr "*示例：在二维空间中流式处理B样条曲线上的10个点，并在每一步执行一个命令（[可视化曲线](#About Splines)）：*"
+msgstr "*示例：在二维空间中流式处理B样条曲线上的10个点，并在每一步执行一个命令（[可视化曲线](#about-splines)）：*"
 
 #: ../../modules/spline.md:380 999278c802ce4c25a46ea19635a03351
 msgid ""
@@ -536,7 +538,7 @@ msgstr "**命令存储 `bs:in spline.stream_catmull_rom`**："
 msgid ""
 "*Example: Stream 10 points along a Catmull-Rom curve in 2D space and "
 "execute a command at each step ([visualize the curve](#about-splines)):*"
-msgstr "*示例：在二维空间中流式处理Catmull-Rom曲线上的10个点，并在每一步执行一个命令（[可视化曲线](#About Splines)）：*"
+msgstr "*示例：在二维空间中流式处理Catmull-Rom曲线上的10个点，并在每一步执行一个命令（[可视化曲线](#about-splines)）：*"
 
 #: ../../modules/spline.md:405 8ee04a47234341e6b99ae73dfce9c785
 msgid ""
@@ -558,17 +560,18 @@ msgid ""
 msgstr "*示例：在二维空间中流式处理Hermite曲线上的10个点，并在每一步执行一个命令（[可视化曲线](#about-splines)）：*"
 
 #: ../../modules/spline.md:430 b1f6e4d15ed74c75baa62dae73a20b41
-#, fuzzy
 msgid ""
 "Stream a linear spline composed of one or more segments. Each segment "
 "connects two consecutive control points with a straight line. This "
 "function processes each step over multiple ticks."
-msgstr "流式处理由一个或多个片段组成的贝塞尔样条曲线。每个片段由四个连续的控制点定义，其中一个片段的最后一个点被重用作下一个片段的第一个点。此函数在多个时间步内处理每一步。"
+msgstr ""
+"流式处理由多个线段组成的线性样条曲线。"
+"每个分段通过直线连接两个连续控制点。"
+"此函数会在多个游戏刻内分步处理每个点。"
 
 #: ../../modules/spline.md:433 0b412a2510424a95b6eb1c68a9d958dc
-#, fuzzy
 msgid "**Storage `bs:in spline.stream_linear`**:"
-msgstr "**命令存储 `bs:in spline.stream_bspline`**："
+msgstr "**命令存储 `bs:in spline.stream_linear`**："
 
 #: ../../modules/spline.md:436 1ea2477e5d2846fe8d5022dec16d2f92
 #, python-brace-format
@@ -576,13 +579,15 @@ msgid ""
 "{nbt}`list` **points**: A list of coordinates (1D, 2D, or 3D). Every pair"
 " of consecutive points defines one linear segment."
 msgstr ""
+"{nbt}`list` **points**: 坐标点列表（1维、2维或3维）。"
+"每两个连续点表示一个线段的两端。"
 
 #: ../../modules/spline.md:443 a2a455bd3fef46c1892d8adeecd3e717
-#, fuzzy
 msgid ""
 "*Example: Stream 10 points along a linear path in 2D space and execute a "
 "command at each step:*"
-msgstr "*示例：在二维空间中流式处理B样条曲线上的10个点，并在每一步执行一个命令（[可视化曲线](#About Splines)）：*"
+msgstr ""
+"*示例：在二维空间的线性路径上流式处理10个点，并在每一步执行命令：*"
 
 #: ../../modules/spline.md:457 512cd920641b4329b6ef0c0bea1641b3
 msgid "🎓 About Splines"
@@ -618,4 +623,3 @@ msgstr "**💬 这对您有帮助吗？**"
 #: ../../_templates/comments.md:6 8a37120673564549a6aa8bf25c464c64
 msgid "Feel free to leave your questions and feedback below!"
 msgstr "欢迎在下方留下您的问题和反馈！"
-

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"POT-Creation-Date: 2025-07-14 21:41+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -78,50 +78,170 @@ msgstr ""
 msgid "**Function macro**:"
 msgstr ""
 
-#: ../../modules/raycast.md:50 45842a6ed4f34baa9d3224a2a2d91f5e
+#: ../../modules/raycast.md:36 97a70254ceda4a56b1897b44a36cc3b8
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr ""
+
+#: ../../modules/raycast.md:37 3bf109878ae046a6a71452bd6d133845
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Ray input data."
+msgstr ""
+
+#: ../../modules/raycast.md:38 673089a82bc3414c8ec295485b54fe6f
+#, python-brace-format
+msgid ""
+"{nbt}`bool` {nbt}`string` **blocks**: Whether the ray stops on blocks "
+"(default: true). Can be a block hitbox type (`interaction` or "
+"`collision`). `true` defaults to `interaction`."
+msgstr ""
+
+#: ../../modules/raycast.md:39 63d19d0e8cb4411d8fb9db12c8b0166a
+#, python-brace-format
+msgid ""
+"{nbt}`bool` {nbt}`string` **entities**: Whether the ray stops on entities"
+" (default: false). Can be an entity tag. For performance, tagging "
+"entities to detect is recommended."
+msgstr ""
+
+#: ../../modules/raycast.md:40 fa520a9cd9f344ef8700a759fd2c499e
+#, python-brace-format
+msgid ""
+"{nbt}`int` **piercing**: Number of blocks or entities the ray can pass "
+"through (default: 0)."
+msgstr ""
+
+#: ../../modules/raycast.md:41 9f4b6dfd18644257ab1168514acdeccd
+#, python-brace-format
+msgid ""
+"{nbt}`number` **max_distance**: Maximum ray travel distance (default: "
+"16.0)."
+msgstr ""
+
+#: ../../modules/raycast.md:42 b74e9257bcda481fb614c4c858103dfb
+#, python-brace-format
+msgid ""
+"{nbt}`string` **ignored_blocks**: Blocks to ignore (default: "
+"`#bs.hitbox:intangible`)."
+msgstr ""
+
+#: ../../modules/raycast.md:43 e1e9dc288fdf4038b71344e8bc4e9803
+#, python-brace-format
+msgid ""
+"{nbt}`string` **ignored_entities**: Entities to ignore (default: "
+"`#bs.hitbox:intangible`). Does not apply to entities with custom "
+"hitboxes."
+msgstr ""
+
+#: ../../modules/raycast.md:44 e078b87ea5e74e28a1ccf5030ffd6eee
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_hit_point**: Command to run at the exact point where "
+"the ray makes contact."
+msgstr ""
+
+#: ../../modules/raycast.md:45 2c9e7b10b0e4440f942e782323c187b7
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_targeted_block**: Command to run at the block hit by "
+"the ray."
+msgstr ""
+
+#: ../../modules/raycast.md:46 c902aeaefb1f4dd1a2f80d5d2a77b30c
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_targeted_entity**: Command to run as and at the entity"
+" hit by the ray."
+msgstr ""
+
+#: ../../modules/raycast.md:49 45842a6ed4f34baa9d3224a2a2d91f5e
 msgid "Lambdas"
 msgstr ""
 
-#: ../../modules/raycast.md:51 43354cd029fd40afa0265f35dc12c8ba
+#: ../../modules/raycast.md:50 43354cd029fd40afa0265f35dc12c8ba
 msgid ""
 "**Score `$raycast.piercing bs.lambda`**: The remaining number of blocks "
 "or entities the ray can pass through before stopping. This score can be "
 "dynamically updated inside callbacks (`on_*`) to modify ray behavior."
 msgstr ""
 
-#: ../../modules/raycast.md:53 05794b82a3fd4251a729f98f19c47e9e
+#: ../../modules/raycast.md:52 05794b82a3fd4251a729f98f19c47e9e
 msgid "**Storage `bs:lambda raycast`**:"
 msgstr ""
 
-#: ../../modules/raycast.md:63 e1bc820d2f7b48d5b80ad2108e33b570
+#: ../../modules/raycast.md:54 c5f1ae793d084ec087c6a32c4047ce0e
+#, python-brace-format
+msgid "{nbt}`compound` Ray lambda data, accessible only in callbacks (`on_*`)"
+msgstr ""
+
+#: ../../modules/raycast.md:55 ../../modules/raycast.md:68
+#: ab0a273730af4a69be46183b343a5771 f31a124a97324703a8a0fc414808fcd1
+#, python-brace-format
+msgid ""
+"{nbt}`double` **distance**: The distance from the ray's origin to the "
+"impact point."
+msgstr ""
+
+#: ../../modules/raycast.md:56 ../../modules/raycast.md:69
+#: a01214c84d614d1b9fc211293836c91a c74d333cb2594d19adb08da61f32ca06
+#, python-brace-format
+msgid "{nbt}`list` **hit_point**: The coordinates of the impact point."
+msgstr ""
+
+#: ../../modules/raycast.md:57 bba6734cfac74be98da5d147b220f136
+#, python-brace-format
+msgid "{nbt}`list` **hit_normal**: The normal of the surface the ray hits."
+msgstr ""
+
+#: ../../modules/raycast.md:58 ../../modules/raycast.md:71
+#: 54c4652e95c34876a80d1b5432c30d0f 5c255e10bb154926919b74232088b3f6
+#, python-brace-format
+msgid "{nbt}`list` **targeted_block**: The coordinates of the block that was hit."
+msgstr ""
+
+#: ../../modules/raycast.md:59 ../../modules/raycast.md:72
+#: 61d789b947cc4d979933e5643ff48de7 750770d7de7c45bd82644c611a5bed36
+#, python-brace-format
+msgid ""
+"{nbt}`list` **targeted_entity**: The UUID array of the entity that was "
+"hit."
+msgstr ""
+
+#: ../../modules/raycast.md:62 e1bc820d2f7b48d5b80ad2108e33b570
 msgid "Outputs"
 msgstr ""
 
-#: ../../modules/raycast.md:64 669210ff955043a2872f4654e0e9451c
+#: ../../modules/raycast.md:63 669210ff955043a2872f4654e0e9451c
 msgid "**Return**: Whether the ray collides with a hitbox or not (1 or 0)."
 msgstr ""
 
-#: ../../modules/raycast.md:66 1f1a673f5b454d8e9239288010db47d5
+#: ../../modules/raycast.md:65 1f1a673f5b454d8e9239288010db47d5
 msgid "**Storage `bs:out raycast`**:"
 msgstr ""
 
-#: ../../modules/raycast.md:77 82e7afa0dc3d489d9c8f098c087ec061
-msgid "Collision / Interaction Shape"
+#: ../../modules/raycast.md:67 20a153afe8a24e9bbe262fce480e398a
+#, python-brace-format
+msgid "{nbt}`compound` Ray output data"
 msgstr ""
 
-#: ../../modules/raycast.md:79 f92442d3a9f041fda6a718f5c2014761
-msgid ""
-"**Collision Shape**: Defines the physical boundaries of a block that "
-"entities cannot pass through. It determines where an entity will stop "
-"when moving towards the block."
+#: ../../modules/raycast.md:70 2789b62abef94fd69e400b50dff723e2
+#, python-brace-format
+msgid "{nbt}`list` **hit_normal**: The normal of the surface the ray hit."
 msgstr ""
 
-#: ../../modules/raycast.md:80 f97c197d039f4b5dbe8df03f407e849f
+#: ../../modules/raycast.md:76 8e254484ce8a418a997f1c787af908a8
+msgid "Hitbox Types"
+msgstr ""
+
+#: ../../modules/raycast.md:78 8245181c8fe3467bb78751091e7c1408
 msgid ""
-"**Interaction Shape**: Defines the area where the player can interact "
-"with or break the block. This includes actions such as right-clicking to "
-"open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have"
-" an interaction shape but no collision, such as crops or scaffolding."
+"Bookshelf supports multiple hitbox types for precise control. Blocks can "
+"use either `interaction` or `collision` hitboxes. Entities support three "
+"types: `dynamic`, `baked`, and `custom`."
+msgstr ""
+
+#: ../../modules/raycast.md:80 5834ad78c5dc43c888f4b87b4f2160b1
+msgid "See [Hitbox Types](hitbox.md#types) for full details."
 msgstr ""
 
 #: ../../modules/raycast.md:83 58c2815d05a2498088776d1b557346a9
@@ -232,5 +352,27 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "{nbt}`list` **hit_normal**: The normal of the surface the ray hit."
+#~ msgstr ""
+
+#~ msgid "Collision / Interaction Shape"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Collision Shape**: Defines the physical "
+#~ "boundaries of a block that entities "
+#~ "cannot pass through. It determines where"
+#~ " an entity will stop when moving "
+#~ "towards the block."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Interaction Shape**: Defines the area "
+#~ "where the player can interact with "
+#~ "or break the block. This includes "
+#~ "actions such as right-clicking to "
+#~ "open a GUI (e.g., chests, furnaces) "
+#~ "or mining the block. Some blocks "
+#~ "have an interaction shape but no "
+#~ "collision, such as crops or scaffolding."
 #~ msgstr ""
 

@@ -176,6 +176,15 @@ msgstr "**函数宏**："
 #: c06721697d084ea885d4ae17486445a2 c2c1a7b9b689440b88ebb88b64af1221
 #: ccadcb36ab564e6bb4f00eb197d3152e e5b63064f3c14beea9c6996f2d8b25cd
 #: f51c248ba73c4b538d8584b33e274113 f881fb418e814a64978d11d61ea952e8
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar applied to the output."
+msgstr "{nbt}`number` **scale**: 输出的缩放值。"
+
 msgid "Outputs"
 msgstr "输出"
 
@@ -387,6 +396,10 @@ msgstr "**执行 `as <实体>`**：位于参考点的实体。"
 #: 1b33f6a2492042d298967f901edf0fc8 86aea088a2f646e3a43f85e5c2acc740
 msgid "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to get the distance from."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：要获取距离的位置。"
+
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's output."
+msgstr "{nbt}`number` **scale**: 函数输出的缩放值。"
 
 #: ../../../modules/position.md:297 119cca1a45814f6aadc68e2252d49ec7
 msgid "**Return | Score `$position.get_distance_ata bs.out`**: Distance between the two positions."

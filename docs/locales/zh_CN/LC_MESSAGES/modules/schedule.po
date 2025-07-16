@@ -66,6 +66,18 @@ msgstr "输入"
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Cancel filters."
+msgstr "{nbt}`compound` **with**: 取消事件的过滤条件。"
+
+#, python-brace-format
+msgid "{nbt}`any` **id**: Scheduled command parameter to match against."
+msgstr "{nbt}`any` **id**: 用于匹配的预定命令参数。"
+
 #: ../../../modules/schedule.md:34 73192520a6c5431ba632f43c9b26cb1d
 msgid "*Example: Cancel all commands with an `id` parameter set to \"foo\":*"
 msgstr "*示例：取消所有 `id` 参数为\"foo\"的命令：*"
@@ -110,6 +122,26 @@ msgid ""
 "tick where other commands are already scheduled, it is added after those "
 "previously registered."
 msgstr "计划命令以供执行。如果在其他计划命令的刻（tick）期间注册命令，它将被添加到之前注册的命令之后。"
+
+#, python-brace-format
+msgid "{nbt}`string` **run**: The command to schedule."
+msgstr "{nbt}`string` **run**: 待调度的命令。"
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Optional scheduling parameters."
+msgstr "{nbt}`compound` **with**: 可选的调度参数。"
+
+#, python-brace-format
+msgid "{nbt}`any` **id**: Optional identifier for the scheduled command."
+msgstr "{nbt}`any` **id**: 预定命令的可选标识符。"
+
+#, python-brace-format
+msgid "{nbt}`int` **time**: Delay before execution. Defaults to `1` if not specified."
+msgstr "{nbt}`int` **time**: 执行前的延迟时间。未指定时默认为`1`。"
+
+#, python-brace-format
+msgid "{nbt}`string` **unit**: Time unit (`tick`, `second`, `minute`, `hour`, `t`, `s`, `m`, `h`). Defaults to `tick`."
+msgstr "{nbt}`string` **unit**: 时间单位（`tick`、`second`、`minute`、`hour`、`t`、`s`、`m`、`h`）。默认为`tick`。"
 
 #: ../../../modules/schedule.md:102 f35c62861286499c9e1234e79644b9eb
 msgid "Outputs"

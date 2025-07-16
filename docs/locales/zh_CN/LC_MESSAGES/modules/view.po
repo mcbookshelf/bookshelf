@@ -89,6 +89,18 @@ msgstr "**执行 `as <实体>`**：视线起点实体。"
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to run at the targeted block position."
+msgstr "{nbt}`string` **run**: 在目标方块位置执行的命令。"
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Optional settings (see advanced usage below)."
+msgstr "{nbt}`compound` **with**: 可选设置（详见下方高级用法）。"
+
 #: ../../../modules/view.md:43 349252d683c1420f80a3604ae16d732b
 msgid "*Example: Change the block you are looking at:*"
 msgstr "*示例：改变你正在看着的方块：*"
@@ -148,6 +160,10 @@ msgstr "执行者"
 msgid "Run a command as the entity that is aimed by the current entity."
 msgstr "以当前实体瞄准的实体为执行者执行指令。"
 
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to run as the targeted entity."
+msgstr "{nbt}`string` **run**: 以瞄准的实体为执行者执行的命令。"
+
 #: ../../../modules/view.md:87 c8f050b212b740b88d97f3d43d998d0d
 msgid "*Example: Run a command as the entity that you are looking at:*"
 msgstr "*示例：让你正在看着的实体执行命令：*"
@@ -160,6 +176,10 @@ msgstr "执行位置"
 #: ../../../modules/view.md:99 6e10927445804cb5b7e29d6d02b3c188
 msgid "Run a command at the entity that is aimed by the current entity."
 msgstr "以当前实体瞄准的实体为执行位置执行指令。"
+
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to run at the targeted entity."
+msgstr "{nbt}`string` **run**: 以瞄准的实体为执行位置执行的命令。"
 
 #: ../../../modules/view.md:112 9470ac339c7c4c86926af24d400035f6
 msgid "*Example: Run a command at the entity that you are looking at:*"
@@ -184,6 +204,10 @@ msgstr "瞄准点"
 msgid "Run a command at the point that was hit by a raycast."
 msgstr "在射线命中的终点处执行命令。"
 
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to run at the hit point."
+msgstr "{nbt}`string` **run**: 在射线命中的终点处执行的命令。"
+
 #: ../../../modules/view.md:154 35f9da2bf8f145da92f1f538d7bbc16e
 msgid "*Example: Run a command at the point you are looking at:*"
 msgstr "*示例：在你正在看着的点处执行命令：*"
@@ -197,6 +221,10 @@ msgid ""
 "Run a command at the precise coordinates where a block would align if "
 "placed, considering the collision block and its normal."
 msgstr "根据方块的碰撞箱和其法线方向，精确地得到放置方块的位置，并对齐坐标（align xyz），执行命令。"
+
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to run before the targeted block position."
+msgstr "{nbt}`string` **run**: 在方块放置位置执行的命令。"
 
 #: ../../../modules/view.md:188 4e69f64e4a6a4e9189da961b7105a85b
 msgid "*Example: Set a block as if the player was placing it:*"
@@ -261,6 +289,10 @@ msgid ""
 "want to check if it's within the entity's field of view cone."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：被检查是否在视野锥体内的位置。"
 
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to run before the targeted block position."
+msgstr "{nbt}`string` **run**: 在方块放置位置执行的命令。"
+
 #: ../../../modules/view.md:263 636ffadb319d4f95b76d19334992706c
 msgid "*Example: Check whether the position 0 5 0 is in your field of view:*"
 msgstr "*示例：检查位置0 5 0是否在你的视野内：*"
@@ -286,6 +318,14 @@ msgid ""
 "**Tag `bs.view.is_lookable`**: Tag that must be added to entities that "
 "can be looked at."
 msgstr "**标签 `bs.view.is_lookable`**：要检测的实体必须加上此标签。"
+
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to run as the looked at entity."
+msgstr "{nbt}`string` **run**: 对被看着的实体执行的命令。"
+
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to run as the looked at entity."
+msgstr "{nbt}`string` **run**: 在被看着的实体处执行的命令。"
 
 #: ../../../modules/view.md:296 58333e9325374674b82291115e55eead
 msgid "*Example: Make the armor_stand the player is looking at glow:*"

@@ -63,12 +63,6 @@ msgstr "清除事件"
 msgid "Clear events registered for the specified interaction entity."
 msgstr "清除为指定交互实体注册的事件。"
 
-#: ../../../modules/interaction.md:30 ../../../modules/interaction.md:74
-#: ../../../modules/interaction.md:99 ../../../modules/interaction.md:124
-#: ../../../modules/interaction.md:149 ../../../modules/interaction.md:174
-#: 0a2be6272cc74e528ee96fc542c6dd7d 1abd468586b64e6db4f8c661647bb77d
-#: 55842067ec36416c9b05153d994167fc 59d20482b41f41e5b8d31e56d55b3b2e
-#: 7ef52a09f7ae40388a20ae559ae250ec c6ca2217452941429386c692daee1743
 msgid "Inputs"
 msgstr "输入"
 
@@ -78,21 +72,25 @@ msgid ""
 " be cleared."
 msgstr "**执行 `as <实体>`**：将要清除事件的交互实体。"
 
-#: ../../../modules/interaction.md:33 ../../../modules/interaction.md:77
-#: ../../../modules/interaction.md:102 ../../../modules/interaction.md:127
-#: ../../../modules/interaction.md:152 ../../../modules/interaction.md:177
-#: 5a628fc16c9b4de59515bacc0c590457 6c04f7f46b6a406ea5880d4c53f293ed
-#: b532499cac26473499ca9dcdd2ada0f8 b8eeaafc3bb746f9b3ff60a0bfb9e098
-#: bd5bd1a443744d0fb1ed90b5e08b52fe d2b937303192450ea05a07f5fa0ac4b8
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
-#: ../../../modules/interaction.md:41 ../../../modules/interaction.md:86
-#: ../../../modules/interaction.md:111 ../../../modules/interaction.md:136
-#: ../../../modules/interaction.md:161 ../../../modules/interaction.md:186
-#: 1185382013904d19abf3aac5b576ee3f 2f3bfbdaa7c840d2a41d204ecba8f828
-#: 50643f715aca4b1482cd7f7bbe344664 625908cb9d434a199fa71f819f9bd425
-#: ccb1e2385f974c8fb948dfd762c99c44 dde9b1ec20db4103a24bf9b20ab71774
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Parameters to filter which events to clear. Clear all events if empty."
+msgstr "{nbt}`compound` **with**: 过滤待清除事件的参数，留空则清除所有事件。"
+
+#, python-brace-format
+msgid "{nbt}`string` **type**: Specify the type of events to clear."
+msgstr "{nbt}`string` **type**: 指定待清除的事件类型。"
+
+#, python-brace-format
+msgid "{nbt}`int` **id**: Specify the ID of events to clear."
+msgstr "{nbt}`int` **id**: 指定待清除事件的ID。"
+
 msgid "Outputs"
 msgstr "输出"
 
@@ -140,6 +138,22 @@ msgid ""
 "registered."
 msgstr "**执行 `as <实体>`**：要注册事件的交互实体。"
 
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to execute upon left-click."
+msgstr "{nbt}`string` **run**: 左键点击时执行的命令。"
+
+#, python-brace-format
+msgid "{nbt}`string` {nbt}`compound` **executor**: Defines the entity on which the command will be executed. Can be either **"source"** for the player who performed the action or **"target"** for the interaction entity itself. A compound can also be used to target other entities:"
+msgstr "{nbt}`string` {nbt}`compound` **executor**: 定义命令执行的目标实体。可选 **"source"**（执行动作的玩家）或 **"target"**（交互实体本身），也可用复合结构指定其他实体："
+
+#, python-brace-format
+msgid "{nbt}`string` **selector**: Specifies entities for the command execution (`execute as <entity>`)."
+msgstr "{nbt}`string` **selector**: 指定命令执行的实体选择器（`execute as <entity>`）。"
+
+#, python-brace-format
+msgid "{nbt}`bool` **lazy**: Determines whether to resolve the selector immediately (`false`) or at runtime (`true`, default). If `false`, the selector must target only one entity, replacing the selector with that entity's UUID. Useful for optimizing execution, especially when targeting graphical representations. If multiple entities are targeted, the first one is selected."
+msgstr "{nbt}`bool` **lazy**: 决定选择器是立即解析（`false`）还是运行时解析（`true`，默认值）。若为`false`，选择器必须精确指向单个实体（将被替换为该实体UUID），这对优化图形实体的执行效率特别有效。若选中多个实体，则选取首个匹配项。"
+
 #: ../../../modules/interaction.md:87 ../../../modules/interaction.md:112
 #: ../../../modules/interaction.md:137 ../../../modules/interaction.md:162
 #: ../../../modules/interaction.md:187 4922d23159824984aa3f8f0d48bb3ec9
@@ -163,6 +177,10 @@ msgid ""
 "interaction. Each interaction can respond to multiple events."
 msgstr "注册当前交互实体被右键点击时运行的命令。每个交互实体可以响应多个事件。"
 
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to execute upon right-click."
+msgstr "{nbt}`string` **run**: 右键点击时执行的命令。"
+
 #: ../../../modules/interaction.md:114 35f2d361f0904bafa630ee35a5ce1f7e
 msgid "**State**: The interaction will trigger the event when right clicked."
 msgstr "**状态**：交互实体将在被右键点击时触发事件。"
@@ -177,6 +195,10 @@ msgid ""
 "Register a command to run continuously while the player is hovering over "
 "the interaction. Each interaction can respond to multiple events."
 msgstr "注册当玩家鼠标悬停在交互实体上时持续运行的命令。每个交互实体可以响应多个事件。"
+
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to execute while hovering over the interaction."
+msgstr "{nbt}`string` **run**: 准星悬停在交互实体上时持续执行的命令。"
 
 #: ../../../modules/interaction.md:139 b7d568065dda4a889aa554c6b1527c2a
 msgid ""
@@ -195,6 +217,10 @@ msgid ""
 "interaction. Each interaction can respond to multiple events."
 msgstr "注册当玩家开始鼠标悬停在交互实体上时运行一次的命令。每个交互实体可以响应多个事件。"
 
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to execute when hovering begins."
+msgstr "{nbt}`string` **run**: 准星开始悬停时执行的命令。"
+
 #: ../../../modules/interaction.md:164 1f0ff563032648b289e0451e983e7616
 msgid "**State**: The interaction will trigger the event once upon hover entry."
 msgstr "**状态**：交互实体将在进入悬停时触发一次事件。"
@@ -209,6 +235,10 @@ msgid ""
 "Register a command to run once when the player stops hovering over the "
 "interaction. Each interaction can respond to multiple events."
 msgstr "注册当玩家停止鼠标悬停在交互实体上时运行一次的命令。每个交互实体可以响应多个事件。"
+
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to execute when hovering ends."
+msgstr "{nbt}`string` **run**: 准星结束悬停时执行的命令。"
 
 #: ../../../modules/interaction.md:189 44c8c82fdede4c1883fcab86bd6f8022
 msgid "**State**: The interaction will trigger the event once upon hover exit."

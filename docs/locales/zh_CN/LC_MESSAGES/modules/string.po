@@ -193,6 +193,18 @@ msgstr "在字符串中搜索子字符串。查找第一次出现的位置。"
 msgid "**Storage `bs:in string.find`**:"
 msgstr "**命令存储 `bs:in string.find`**："
 
+#, python-brace-format
+msgid "{nbt}`compound` Find data"
+msgstr "{nbt}`compound` 查找数据"
+
+#, python-brace-format
+msgid "{nbt}`string` **str**: String to search in."
+msgstr "{nbt}`string` **str**: 被搜索的目标字符串。"
+
+#, python-brace-format
+msgid "{nbt}`string` **substr**: Substring to search for."
+msgstr "{nbt}`string` **substr**: 要查找的子字符串。"
+
 #: ../../../modules/string.md:136 f6c40c89f18145e0b02aa9f65b00d603
 msgid "**Return**: Integer index of the first occurrence or -1 if not found."
 msgstr "**返回值**：第一次出现的位置的整数索引，如果未找到则返回-1。"
@@ -224,6 +236,10 @@ msgid ""
 "the substring was found, in order of occurrence."
 msgstr "**命令存储 `bs:out string.find_all`**：{nbt}`list` 按出现顺序列出的子字符串位置索引列表。"
 
+#, python-brace-format
+msgid "{nbt}`int` **occurrence**: Number of occurrences to find (-1 for all occurrences)."
+msgstr "{nbt}`int` **occurrence**: 要查找的匹配项数量（-1 表示全部匹配项）。"
+
 #: ../../../modules/string.md:166 0debac2cff62410f8d7625a07c37efb2
 msgid "**Return**: Number of occurrences found."
 msgstr "**返回值**：找到的出现次数。"
@@ -251,6 +267,26 @@ msgstr "将子字符串出现的位置替换为新文本。"
 #: ../../../modules/string.md:198 a04b4ac5c05e49c7a8dc1cfd79995e8f
 msgid "**Storage `bs:in string.replace`**:"
 msgstr "**命令存储 `bs:in string.replace`**："
+
+#, python-brace-format
+msgid "{nbt}`compound` Replace data"
+msgstr "{nbt}`compound` 替换数据"
+
+#, python-brace-format
+msgid "{nbt}`string` **str**: Base string for replacements."
+msgstr "{nbt}`string` **str**: 执行替换操作的基础字符串。"
+
+#, python-brace-format
+msgid "{nbt}`string` **old**: Substring to replace."
+msgstr "{nbt}`string` **old**: 待替换的子字符串。"
+
+#, python-brace-format
+msgid "{nbt}`string` **new**: Replacement string."
+msgstr "{nbt}`string` **new**: 替换的字符串。"
+
+#, python-brace-format
+msgid "{nbt}`int` **maxreplace**: Maximum replacements. (-1 for unlimited)"
+msgstr "{nbt}`int` **maxreplace**: 最大替换次数（-1 表示无限制）。"
 
 #: ../../../modules/string.md:208 9001ea54926544ca8117a5744f892012
 #, python-brace-format
@@ -286,6 +322,26 @@ msgstr "将字符串中指定起始和结束位置之间的字符替换为新的
 #: ../../../modules/string.md:238 a8fcc276a0f04388ac944bdd57df2cbb
 msgid "**Storage `bs:in string.replace_range`**:"
 msgstr "**命令存储 `bs:in string.replace_range`**："
+
+#, python-brace-format
+msgid "{nbt}`compound` Replace range data"
+msgstr "{nbt}`compound` 范围替换数据"
+
+#, python-brace-format
+msgid "{nbt}`string` **str**: The original string to modify."
+msgstr "{nbt}`string` **str**: 待修改的原始字符串。"
+
+#, python-brace-format
+msgid "{nbt}`string` **substr**: The new string to insert between start and end positions."
+msgstr "{nbt}`string` **substr**: 插入起始与结束位置之间的新字符串。"
+
+#, python-brace-format
+msgid "{nbt}`int` **start**: Starting position in the original string (inclusive)."
+msgstr "{nbt}`int` **start**: 原始字符串中的起始位置（包含此位置）。"
+
+#, python-brace-format
+msgid "{nbt}`int` **end**: Ending position in the original string (exclusive)."
+msgstr "{nbt}`int` **end**: 原始字符串中的结束位置（不包含此位置）。"
 
 #: ../../../modules/string.md:248 a75ec1d722e2444a92ddd69824b0b699
 #, python-brace-format
@@ -350,6 +406,22 @@ msgstr "使用指定的分隔符将字符串分割成更小的部分，创建子
 #: ../../../modules/string.md:316 110cfd367b82402199f2c34af338f050
 msgid "**Storage `bs:in string.split`**:"
 msgstr "**命令存储 `bs:in string.split`**："
+
+#, python-brace-format
+msgid "{nbt}`compound` Split data"
+msgstr "{nbt}`compound` 分割数据"
+
+#, python-brace-format
+msgid "{nbt}`string` **str**: The string to be split into parts."
+msgstr "{nbt}`string` **str**: 待分割为目标片段的字符串。"
+
+#, python-brace-format
+msgid "{nbt}`string` **separator**: The character or string that marks where to split."
+msgstr "{nbt}`string` **separator**: 标识分割位置的分隔字符或字符串。"
+
+#, python-brace-format
+msgid "{nbt}`int` **maxsplit**: Maximum number of splits to perform (-1 for unlimited)."
+msgstr "{nbt}`int` **maxsplit**: 最大分割次数（-1 表示无限制）。"
 
 #: ../../../modules/string.md:325 5b44933cc1e444cb857e9558dec6e6be
 #, python-brace-format

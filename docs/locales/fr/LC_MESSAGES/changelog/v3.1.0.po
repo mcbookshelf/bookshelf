@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-04 17:32+0200\n"
+"POT-Creation-Date: 2025-07-14 21:41+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -19,36 +19,81 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../changelog/v3.1.0.md:1 8e3caa1c0a4c4624a7c2cc23a16b7586
+#: ../../changelog/v3.1.0.md:1 62e70995533044ea9256d5cb6ac11635
 msgid ""
 "📦 [Bookshelf - "
 "3.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.1.0)"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:3 9e17b98846ec4389ac10fe483eadb485
-msgid "**[Update Name]**"
+#: ../../changelog/v3.1.0.md:3 5c6e60f732a24e8b9c9a8859212d2b33
+msgid "**🧱 The Bounding Update!**"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:5 6e7f00ade7ce4141afef595d2acf5fe6
-msgid "*[Update Description]*"
+#: ../../changelog/v3.1.0.md:5 a961a5a6a2ff4c96a5bee7febbdf660a
+msgid ""
+"*Introduces fully customizable hitboxes that integrate across the entire "
+"Bookshelf ecosystem.*"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:8 4ba9b54abb02437aa35b5ad53a7f5ab8
+#: ../../changelog/v3.1.0.md:7 df2d20d509604a0fb9a6efe167ab915c
+msgid "Bookshelf is now based on **Minecraft 1.21.7**."
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:10 bfcb4f3f0fc54cd0876f2ec3474cba0d
+msgid "`🧱 bs.block`"
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:12 ../../changelog/v3.1.0.md:48
+#: e317e74ee8dd494bbab8447c255d3a5e
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#469](https://github.com/mcbookshelf/bookshelf/issues/469)** - Fixed "
+"missing `execute in minecraft:overworld` when running location-based loot"
+" tables."
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:15 15595aaad78a463a94d4ae2c2d695a47
 msgid "`🔬 bs.dump`"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:10 c36431cf7e5f4762a1588bfee21d8db6
+#: ../../changelog/v3.1.0.md:17 e317e74ee8dd494bbab8447c255d3a5e
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#441](https://github.com/mcbookshelf/bookshelf/issues/441)** - Fixed "
 "`#bs.dump:var` incorrectly appending `undefined` to output."
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:13 22a468aeffba415690196cde9cee3ac2
+#: ../../changelog/v3.1.0.md:20 58250826cd7a4636b7f857b165563bdd
+msgid "`❤️ bs.health`"
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:22 e317e74ee8dd494bbab8447c255d3a5e
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#466](https://github.com/mcbookshelf/bookshelf/issues/466)** - Fixed a"
+" bug where healing on Paper servers always set players' health to "
+"maximum."
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:25 bfcb4f3f0fc54cd0876f2ec3474cba0d
+msgid "`🎯 bs.hitbox`"
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:27 34387b9626724f1ab868d6a6eae45dd3
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - Added "
+"support for custom hitboxes. `#bs.hitbox:get_entity` now also returns "
+"`depth` in addition to `width`. For most dynamic entities `depth` equals "
+"`width`, except for static entities (e.g. item frames, paintings) and "
+"custom hitboxes."
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:30 58250826cd7a4636b7f857b165563bdd
 msgid "`🖱️ bs.interaction`"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:15 c36431cf7e5f4762a1588bfee21d8db6
+#: ../../changelog/v3.1.0.md:32 e317e74ee8dd494bbab8447c255d3a5e
 msgid ""
 "<abbr title=\"Bug Fix\">🐛</abbr> "
 "**[#463](https://github.com/mcbookshelf/bookshelf/issues/463)** - Fixed "
@@ -56,36 +101,81 @@ msgid ""
 "previously clicked entities instead of the current one."
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:18 07b00224e9ab4ab0b78d58db6b435eae
-msgid "`🔦 bs.raycast`"
+#: ../../changelog/v3.1.0.md:35 15595aaad78a463a94d4ae2c2d695a47
+msgid "`🏃 bs.move`"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:20 f17792549393450b9c6d29f8de455f8f
+#: ../../changelog/v3.1.0.md:37 fed9a95e032740419777bf8c8a3890d2
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#445](https://github.com/mcbookshelf/bookshelf/issues/445)** - "
-"`#bs.raycast:run` now computes all lambda data before invoking callbacks."
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - Optimized"
+" bounding box computation for moving entities and added support for baked"
+" and custom hitboxes."
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:23 07b00224e9ab4ab0b78d58db6b435eae
+#: ../../changelog/v3.1.0.md:40 58250826cd7a4636b7f857b165563bdd
+msgid "`🧭 bs.position`"
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:42 e317e74ee8dd494bbab8447c255d3a5e
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#455](https://github.com/mcbookshelf/bookshelf/issues/455)** – "
+"Replaced `/rotate` with `/tp` in `bs.position` to fix jitter and momentum"
+" issues."
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:45 bfcb4f3f0fc54cd0876f2ec3474cba0d
 msgid "`🎲 bs.random`"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:25 f17792549393450b9c6d29f8de455f8f
+#: ../../changelog/v3.1.0.md:47 fed9a95e032740419777bf8c8a3890d2
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr>  "
 "**[#286](https://github.com/mcbookshelf/bookshelf/issues/286)** - Added "
 "support for **normal distribution** generation to `bs.random` module."
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:28 07b00224e9ab4ab0b78d58db6b435eae
+#: ../../changelog/v3.1.0.md:51 bfcb4f3f0fc54cd0876f2ec3474cba0d
+msgid "`🔦 bs.raycast`"
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:53 fed9a95e032740419777bf8c8a3890d2
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - Added "
+"support for baked and custom entity hitboxes."
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:54 fed9a95e032740419777bf8c8a3890d2
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#445](https://github.com/mcbookshelf/bookshelf/issues/445)** - "
+"`#bs.raycast:run` now computes all lambda data before invoking callbacks."
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:55 e317e74ee8dd494bbab8447c255d3a5e
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#457](https://github.com/mcbookshelf/bookshelf/issues/457)** - Fixed "
+"raycasts not stopping at the nearest hit when detecting both blocks and "
+"entities."
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:58 bfcb4f3f0fc54cd0876f2ec3474cba0d
 msgid "`🧣 bs.spline`"
 msgstr ""
 
-#: ../../changelog/v3.1.0.md:30 f17792549393450b9c6d29f8de455f8f
+#: ../../changelog/v3.1.0.md:60 fed9a95e032740419777bf8c8a3890d2
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - Added "
 "full support for **linear splines**."
 msgstr ""
+
+#~ msgid "**[Update Name]**"
+#~ msgstr ""
+
+#~ msgid "*[Update Description]*"
+#~ msgstr ""
 

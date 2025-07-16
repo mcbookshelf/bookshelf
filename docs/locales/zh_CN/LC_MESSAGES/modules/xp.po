@@ -81,6 +81,22 @@ msgstr "**执行 `as <玩家>`**：要添加等级的玩家。"
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`int` **levels**: Amount of levels to add."
+msgstr "{nbt}`int` **levels**: 要增加的等级数量。"
+
+#, python-brace-format
+msgid "{nbt}`int` **points**: Amount of points to add."
+msgstr "{nbt}`int` **points**: 要增加的点数。"
+
+#, python-brace-format
+msgid "{nbt}`double` **progress**: Progress to add to the bar (in range [-1,1])."
+msgstr "{nbt}`double` **progress**: 要添加到经验条的进度值（取值范围[-1,1]）。"
+
 #: ../../../modules/xp.md:38 ../../../modules/xp.md:68
 #: ../../../modules/xp.md:98 ../../../modules/xp.md:138
 #: ../../../modules/xp.md:162 ../../../modules/xp.md:186
@@ -242,6 +258,10 @@ msgid ""
 "progress."
 msgstr "**执行 `as <玩家>`**：要获取经验条进度的玩家。"
 
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's output."
+msgstr "{nbt}`number` **scale**: 应用于函数输出的缩放系数。"
+
 #: ../../../modules/xp.md:217 d01e60b747a4485ca998610d4083aa74
 msgid ""
 "**Return | Score `$xp.get_progress bs.out`**: Fill level of the XP bar "
@@ -283,6 +303,23 @@ msgstr "设置玩家经验点数。"
 msgid "**Execution `as <players>`**: Players to set points to."
 msgstr "**执行 `as <玩家>`**：要设置点数的玩家。"
 
+
+#, python-brace-format
+msgid "{nbt}`int` **levels**: Amount of levels to set."
+msgstr "{nbt}`int` **levels**: 要设置的等级数量。"
+
+#, python-brace-format
+msgid "{nbt}`int` **points**: Amount of experience points to set."
+msgstr "{nbt}`int` **points**: 要设置的经验点数。"
+
+#, python-brace-format
+msgid "{nbt}`int` **points**: Amount of total experience points to set."
+msgstr "{nbt}`int` **points**: 要设置的总经验点数。"
+
+#, python-brace-format
+msgid "{nbt}`double` **progress**: Progress to set on the bar (in range [-1,1])."
+msgstr "{nbt}`double` **progress**: 要设置的经验条的进度值（取值范围[-1,1]）。"
+
 #: ../../../modules/xp.md:289 c2bff82e0a254a39addd9da8d097a0dd
 msgid "*Example: Set your points to 42:*"
 msgstr "*示例：将您的点数设置为42：*"
@@ -293,7 +330,7 @@ msgstr "设置玩家总经验点数。"
 
 #: ../../../modules/xp.md:307 0d6862a9a0f74898ab216324e9aa6e80
 msgid "**Execution `as <players>`**: Players you want to set the total XP."
-msgstr "**执行 `as <玩家>`**：要设置总经验值的玩家。"
+msgstr "**执行 `as <玩家>`**：要设置总经验点数的玩家。"
 
 #: ../../../modules/xp.md:319 0d261cc5d16a4d84a717cdaed5286d02
 msgid "*Example: Set your total XP amount to 42:*"

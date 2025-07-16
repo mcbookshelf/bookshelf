@@ -59,6 +59,26 @@ msgstr "输入"
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`string` **objective**: An objective used for the sidebar."
+msgstr "{nbt}`string` **objective**: 用于侧边栏的计分项。"
+
+#, python-brace-format
+msgid "{nbt}`string` **display_name**: Displayed objective name. Must be a valid SNBT text component."
+msgstr "{nbt}`string` **display_name**: 显示的计分项名称。必须是有效的 SNBT 文本组件。"
+
+#, python-brace-format
+msgid "{nbt}`list` **contents**: Lines displayed on the sidebar."
+msgstr "{nbt}`list` **contents**: 侧边栏上显示的行内容。"
+
+#, python-brace-format
+msgid "{nbt}`list` {nbt}`string`: Must either be a valid SNBT text component or an array with two SNBT text components for the left and right sides."
+msgstr "{nbt}`list` {nbt}`string`: 必须是有效的 SNBT 文本组件，或是包含左右两侧 SNBT 文本组件的数组。"
+
 #: ../../../modules/sidebar.md:32 7b15e213417142f4b3c7e811e09489b9
 msgid "*Example: Create and display a new sidebar with left-aligned text:*"
 msgstr "*示例：创建并显示一个左对齐文本的新侧边栏：*"
@@ -75,6 +95,10 @@ msgstr "**制作人员**：Aksiome"
 #: ../../../modules/sidebar.md:74 e6ee2d4dd5d84fc0b2a1a88ac712e0be
 msgid "Refresh"
 msgstr "刷新"
+
+#, python-brace-format
+msgid "{nbt}`string` **objective**: The objective for the sidebar to refresh."
+msgstr "{nbt}`string` **objective**: 要刷新侧边栏的记分项（objective）。"
 
 #: ../../../modules/sidebar.md:78 d5f100c93bf241ffa5a0678389a470ac
 msgid "Update dynamic parts of the sidebar."

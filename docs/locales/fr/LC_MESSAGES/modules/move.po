@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"POT-Creation-Date: 2025-07-14 21:41+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -71,17 +71,14 @@ msgstr ""
 msgid "Teleport an entity by its velocity scores while handling collisions."
 msgstr ""
 
-#: ../../modules/move.md:44 ../../modules/move.md:81 ../../modules/move.md:146
-#: ../../modules/move.md:171 ../../modules/move.md:196
-#: 0dfa2bc9b66d458b91277f959c628751 26eaf3582120445f90a5e8db7ddac12d
-#: 482b52e987f445f5a2652703d1e48bd0 bc352d227ec94a549249e0164afb1379
-#: f052560fbab543b392b147b008fab8a2
+#: ../../modules/move.md:44 ../../modules/move.md:80 ../../modules/move.md:145
+#: ../../modules/move.md:170 ../../modules/move.md:195
+#: 26eaf3582120445f90a5e8db7ddac12d 482b52e987f445f5a2652703d1e48bd0
 msgid "Inputs"
 msgstr ""
 
-#: ../../modules/move.md:45 ../../modules/move.md:82 ../../modules/move.md:197
-#: 21716084794e4947a07580eb480ccf10 84b138d4c2774f84b59f2c046919d9fe
-#: e40661688cfd40a28dbbdfe55ce9f4ae
+#: ../../modules/move.md:45 ../../modules/move.md:81 ../../modules/move.md:196
+#: 84b138d4c2774f84b59f2c046919d9fe e40661688cfd40a28dbbdfe55ce9f4ae
 msgid "**Execution `as <entities>`**: Entity to move."
 msgstr ""
 
@@ -89,21 +86,82 @@ msgstr ""
 msgid "**Scores `@s bs.vel.[x,y,z]`**: Canonical velocity vector."
 msgstr ""
 
-#: ../../modules/move.md:49 ../../modules/move.md:86 ../../modules/move.md:201
-#: 8271952e277c45b894b8c9d8979f78e8 c3b80491cdcb4532bcf55dcee92a87e8
-#: e50dcccf265a4e20bfe5c452a2a6c4f7
+#: ../../modules/move.md:49 ../../modules/move.md:85 ../../modules/move.md:200
+#: 8271952e277c45b894b8c9d8979f78e8 e50dcccf265a4e20bfe5c452a2a6c4f7
 msgid "**Function macro**:"
 msgstr ""
 
-#: ../../modules/move.md:62 ../../modules/move.md:99 ../../modules/move.md:151
-#: ../../modules/move.md:176 ../../modules/move.md:207
-#: 2548a29acc7d430781b87a67002125c9 84d411f2094c4e25957c1556259f4155
-#: acf08ce04eb54229b71e69c6309cb4d8 b336ffdea1d143e5a2041eef52b2a984
-#: e77da5b60bf74bb9b05ed3ea0fd3f82f
+#: ../../modules/move.md:51 ../../modules/move.md:87 ../../modules/move.md:202
+#: d7d2d110684b473998c008f607668fe2 f2dcaa0ab0ec4c21b7c1d35d0e389f6e
+#: f3df3301aaa6449c97a4887359e42158
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr ""
+
+#: ../../modules/move.md:52 ../../modules/move.md:88 ../../modules/move.md:203
+#: 86f620336b0644fa891df2cdbee4b2fa a02689efe8914c35ad04032d2a016788
+#: e2f2d03511c544cf84fb15ade0978e04
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar applied to the output."
+msgstr ""
+
+#: ../../modules/move.md:53 ../../modules/move.md:89
+#: 3856a9bc6a114490ba75e7175502789c d3dc8abd451e4ff58d80b3eade3b15ed
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Collision settings."
+msgstr ""
+
+#: ../../modules/move.md:54 ../../modules/move.md:90
+#: 3c61aa0bd9974d3d8f3737fdf16f5516 d1c6459281ec4bfd9a6e0c50a3697d60
+#, python-brace-format
+msgid ""
+"{nbt}`bool` {nbt}`string` **blocks**: Whether the entity should collide "
+"with blocks (default: true). Can be a block hitbox type (`interaction` or"
+" `collision`). `true` defaults to `collision`."
+msgstr ""
+
+#: ../../modules/move.md:55 ../../modules/move.md:91
+#: 6fb2bb02edf64ccf9f2af728c698e126 d284c630e1cf4ba0b1e7c1bfdcd4f79a
+#, python-brace-format
+msgid ""
+"{nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide"
+" with entities (default: false). Can be an entity tag. For performance, "
+"tagging entities to detect is recommended."
+msgstr ""
+
+#: ../../modules/move.md:56 ../../modules/move.md:92
+#: bef960b11f0b497aa838012235d0123f f7a4971c7763484a8a51e42f02490b09
+#, python-brace-format
+msgid ""
+"{nbt}`string` **ignored_blocks**: Blocks to ignore (default: "
+"`#bs.hitbox:can_pass_through`)."
+msgstr ""
+
+#: ../../modules/move.md:57 ../../modules/move.md:93
+#: 12ec003e23a24e458b2f97876296a79c 37a869b09dae4c09bb6bd4c5a363744d
+#, python-brace-format
+msgid ""
+"{nbt}`string` **ignored_entities**: Entities to ignore (default: "
+"`#bs.hitbox:intangible`). Does not apply to entities with custom "
+"hitboxes."
+msgstr ""
+
+#: ../../modules/move.md:58 ../../modules/move.md:94
+#: 8ec0cbac5be9431cb5cc8c9b03566498 f2a6ba5a07084a98ba42b7fd0f9c9eb7
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_collision**: Command to run when a collision occurs, "
+"used to resolve the collision (default: `function "
+"#bs.move:callback/bounce`)."
+msgstr ""
+
+#: ../../modules/move.md:61 ../../modules/move.md:97 ../../modules/move.md:150
+#: ../../modules/move.md:175 ../../modules/move.md:206
+#: b336ffdea1d143e5a2041eef52b2a984
 msgid "Outputs"
 msgstr ""
 
-#: ../../modules/move.md:63 221bfc9a398f4743abce12b880b74a40
+#: ../../modules/move.md:62 221bfc9a398f4743abce12b880b74a40
 msgid "**State**: Entity is teleported according to its velocity scores."
 msgstr ""
 
@@ -111,114 +169,109 @@ msgstr ""
 msgid "Local"
 msgstr ""
 
-#: ../../modules/move.md:71 8ae91fe3d19c4a5181082cc9efd39e74
+#: ../../modules/move.md:70 8ae91fe3d19c4a5181082cc9efd39e74
 msgid "Experimental"
 msgstr ""
 
-#: ../../modules/move.md:74 abf0394ea10244c785dc6dae6515ade9
+#: ../../modules/move.md:73 abf0394ea10244c785dc6dae6515ade9
 msgid ""
 "Always prefer the canonical version. Constant conversion between bases "
 "can lead to loss of accuracy, sometimes causing unpredictable behavior."
 msgstr ""
 
-#: ../../modules/move.md:76 65f13a2954544891b4545f704e960bab
+#: ../../modules/move.md:75 65f13a2954544891b4545f704e960bab
 msgid ""
 "If you need to \"shoot\" an entity in a direction, you can still set "
 "velocity as a local vector and run `#bs.move:canonical_to_local` before "
 "using `#bs.move:apply_vel`."
 msgstr ""
 
-#: ../../modules/move.md:79 8b1948c032934f21bda5c30dd21cfa2b
+#: ../../modules/move.md:78 8b1948c032934f21bda5c30dd21cfa2b
 msgid ""
 "Teleport an entity by its velocity scores, using the local reference "
 "frame, while handling collisions."
 msgstr ""
 
-#: ../../modules/move.md:84 41a405ee0f09411690eb0c02002b4658
+#: ../../modules/move.md:83 41a405ee0f09411690eb0c02002b4658
 msgid "**Scores `@s bs.vel.[x,y,z]`**: Local velocity vector."
 msgstr ""
 
-#: ../../modules/move.md:100 29544e8bccd9423f9168c74c2b346944
+#: ../../modules/move.md:98 29544e8bccd9423f9168c74c2b346944
 msgid "**State**: Entity is teleported according to its local velocity scores."
 msgstr ""
 
-#: ../../modules/move.md:105 faee676d606c4e558d1d7ff2258ed12b
-msgid "Collision / Interaction Shape"
+#: ../../modules/move.md:103 c60308c2e66147de814be893075a91fe
+msgid "Hitbox Types"
 msgstr ""
 
-#: ../../modules/move.md:107 131df3c0c795415290cea8cbd7a7e998
+#: ../../modules/move.md:105 d0e9800000fa4935b0bcc92ae0a0a8d8
 msgid ""
-"**Collision Shape**: Defines the physical boundaries of a block that "
-"entities cannot pass through. It determines where an entity will stop "
-"when moving towards the block."
+"Bookshelf supports multiple hitbox types for precise control. Blocks can "
+"use either `interaction` or `collision` hitboxes. Entities support three "
+"types: `dynamic`, `baked`, and `custom`."
 msgstr ""
 
-#: ../../modules/move.md:108 b57aa6f9f9e34d3f8a3a1888e0ed9740
-msgid ""
-"**Interaction Shape**: Defines the area where the player can interact "
-"with or break the block. This includes actions such as right-clicking to "
-"open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have"
-" an interaction shape but no collision, such as crops or scaffolding."
+#: ../../modules/move.md:107 c7a2849b7f0948c78a3dc2e3db7835cc
+msgid "See [Hitbox Types](hitbox.md#types) for full details."
 msgstr ""
 
-#: ../../modules/move.md:111 d1a0309beb51496c858fde242df30359
+#: ../../modules/move.md:110 d1a0309beb51496c858fde242df30359
 msgid ""
 "*Example: Move a cube (block_display) by its velocity scores (uses an "
 "interaction as the hitbox):*"
 msgstr ""
 
-#: ../../modules/move.md:130 c0ffac4dbbf54458a284ddc888b4bcbb
+#: ../../modules/move.md:129 c0ffac4dbbf54458a284ddc888b4bcbb
 msgid "Performance Tip"
 msgstr ""
 
-#: ../../modules/move.md:133 6e3800e2bb8148a98f53fe4fd6fcba1f
+#: ../../modules/move.md:132 6e3800e2bb8148a98f53fe4fd6fcba1f
 msgid ""
 "Although this system doesn't set specific limits, it's important to note "
 "that performance is influenced by both the speed and size of the entity."
 msgstr ""
 
-#: ../../modules/move.md:136 ../../modules/move.md:161
-#: ../../modules/move.md:186 ../../modules/move.md:224
-#: ../../modules/move.md:240 1845dc2a55ad4ff699b7fce378bd7874
-#: 54594c720afc473a88581512a4bdc12f 71f7a62cda7f4219aafbea4af2dbc3c1
-#: 92843631e1c7404cb8b0089f56eb7218 f4ffbc9fb42d49c59d9ad02bdfbe1fa0
+#: ../../modules/move.md:135 ../../modules/move.md:160
+#: ../../modules/move.md:185 ../../modules/move.md:223
+#: ../../modules/move.md:239 1845dc2a55ad4ff699b7fce378bd7874
+#: 71f7a62cda7f4219aafbea4af2dbc3c1
 msgid "**Credits**: Aksiome"
 msgstr ""
 
-#: ../../modules/move.md:140 d96eb8d33af946c2af36d383b013c3a8
+#: ../../modules/move.md:139 d96eb8d33af946c2af36d383b013c3a8
 msgid "Canonical to Local"
 msgstr ""
 
-#: ../../modules/move.md:144 9515c8628d0c467fbc766cab3c1e98e5
+#: ../../modules/move.md:143 9515c8628d0c467fbc766cab3c1e98e5
 msgid ""
 "Convert a canonical velocity (using the relative reference frame) into a "
 "local velocity (using the local reference frame)."
 msgstr ""
 
-#: ../../modules/move.md:147 ../../modules/move.md:172
-#: 9cdfb8c66d854572900b124d439d29ce bfe1b971bc7c49b388c4479f95ec6a16
+#: ../../modules/move.md:146 ../../modules/move.md:171
+#: bfe1b971bc7c49b388c4479f95ec6a16
 msgid ""
 "**Execution `rotated as <entity>` or `rotated <h> <v>`**: Rotation used "
 "for the conversion."
 msgstr ""
 
-#: ../../modules/move.md:149 ../../modules/move.md:174
-#: 0f3e7ea45e1e477f8c779c7a10673222 6a0a1894ba974c8f8f0c52b26588fd4f
+#: ../../modules/move.md:148 ../../modules/move.md:173
+#: 6a0a1894ba974c8f8f0c52b26588fd4f
 msgid "**Scores `@s bs.vel.[x,y,z]`**: Velocity to convert."
 msgstr ""
 
-#: ../../modules/move.md:152 ../../modules/move.md:177
-#: 4bcc180b3e8a40eda0936f85fde9f797 5418060512454f1790dd401913e3a11d
+#: ../../modules/move.md:151 ../../modules/move.md:176
+#: 5418060512454f1790dd401913e3a11d
 msgid "**Scores `@s bs.vel.[x,y,z]`**: Converted velocity."
 msgstr ""
 
-#: ../../modules/move.md:155 ../../modules/move.md:180
-#: 45a7178d543d46f8b6651f32208faa84 cc4861cd71134479b2314b9a859dd83d
+#: ../../modules/move.md:154 ../../modules/move.md:179
+#: cc4861cd71134479b2314b9a859dd83d
 msgid "Local Velocity... 🥶 What's this?"
 msgstr ""
 
-#: ../../modules/move.md:158 ../../modules/move.md:183
-#: 0e8357e6dfa64441b5c743fe23d5b74d c74f622de4b6491f8d7cf53ab4e60261
+#: ../../modules/move.md:157 ../../modules/move.md:182
+#: 0e8357e6dfa64441b5c743fe23d5b74d
 msgid ""
 "Unlike relative velocity (canonical), this reference frame considers the "
 "entity's rotation. Therefore, when the parent entity rotates, the child "
@@ -226,67 +279,67 @@ msgid ""
 "local coordinates are available through the `^` symbol."
 msgstr ""
 
-#: ../../modules/move.md:165 56dd805849de4126a4008ed14bfe7d8b
+#: ../../modules/move.md:164 56dd805849de4126a4008ed14bfe7d8b
 msgid "Local to Canonical"
 msgstr ""
 
-#: ../../modules/move.md:169 4f930d131fa24813b4b3d6f9b378bea9
+#: ../../modules/move.md:168 4f930d131fa24813b4b3d6f9b378bea9
 msgid ""
 "Convert a local velocity (using the local reference frame) into a "
 "canonical velocity (using the relative reference frame)."
 msgstr ""
 
-#: ../../modules/move.md:190 0cee95efb0df4c81aaf07cf1a6144329
+#: ../../modules/move.md:189 0cee95efb0df4c81aaf07cf1a6144329
 msgid "Set Motion"
 msgstr ""
 
-#: ../../modules/move.md:194 ea8b5ec983574df0aba541814aa92b05
+#: ../../modules/move.md:193 ea8b5ec983574df0aba541814aa92b05
 msgid "Set the motion NBT of an entity using velocity scores."
 msgstr ""
 
-#: ../../modules/move.md:199 d5c136817f5048fcb561d30f5dd75199
+#: ../../modules/move.md:198 d5c136817f5048fcb561d30f5dd75199
 msgid "**Scores `@s bs.vel.[x,y,z]`**: Velocity vector."
 msgstr ""
 
-#: ../../modules/move.md:208 a79b5f4a046c45fe920a4db8b85d1e36
+#: ../../modules/move.md:207 a79b5f4a046c45fe920a4db8b85d1e36
 msgid "**State**: Motion is applied to the given entity."
 msgstr ""
 
-#: ../../modules/move.md:211 f7e5b9f3f7d94669bfb2b7f6319e10a2
+#: ../../modules/move.md:210 f7e5b9f3f7d94669bfb2b7f6319e10a2
 msgid "*Example: Move a pig by its velocity scores:*"
 msgstr ""
 
-#: ../../modules/move.md:228 8626ba121add407985cf2cdbd78be828
+#: ../../modules/move.md:227 8626ba121add407985cf2cdbd78be828
 msgid "👁️ Predicates"
 msgstr ""
 
-#: ../../modules/move.md:230 09649c652465410a8e8fb8ec01743384
+#: ../../modules/move.md:229 09649c652465410a8e8fb8ec01743384
 msgid "You can find below all predicates available in this module."
 msgstr ""
 
-#: ../../modules/move.md:234 ddd13c406a34432fa9be90af6b7daeb9
+#: ../../modules/move.md:233 ddd13c406a34432fa9be90af6b7daeb9
 msgid "Has Velocity?"
 msgstr ""
 
-#: ../../modules/move.md:236 c8fde3df940147b8ab556b0f093aab15
+#: ../../modules/move.md:235 c8fde3df940147b8ab556b0f093aab15
 msgid "**`bs.move:has_vel`**"
 msgstr ""
 
-#: ../../modules/move.md:238 84a09d593e614e7aafa7d9446ff44967
+#: ../../modules/move.md:237 84a09d593e614e7aafa7d9446ff44967
 msgid "Determine if an entity has a nonzero velocity score."
 msgstr ""
 
-#: ../../modules/move.md:244 418f0bae02fc49dea24c161ef9a2f9c7
+#: ../../modules/move.md:243 418f0bae02fc49dea24c161ef9a2f9c7
 msgid "🎓 Custom Collisions"
 msgstr ""
 
-#: ../../modules/move.md:246 f29d3abd5f8c4b36a97cae533dca62cc
+#: ../../modules/move.md:245 f29d3abd5f8c4b36a97cae533dca62cc
 msgid ""
 "This module allows you to customize collision behaviors according to your"
 " specific needs."
 msgstr ""
 
-#: ../../modules/move.md:250 c29c317a95214eecaef41a6ff70a198a
+#: ../../modules/move.md:249 c29c317a95214eecaef41a6ff70a198a
 msgid ""
 "By modifying the `on_collision` input key, you have the freedom to "
 "specify the function that triggers upon collision. However, managing the "
@@ -294,43 +347,43 @@ msgid ""
 "provides several predefined functions:"
 msgstr ""
 
-#: ../../modules/move.md:253 201b60ebfe3e4a80a722a28c378102e6
+#: ../../modules/move.md:252 201b60ebfe3e4a80a722a28c378102e6
 msgid "`#bs.move:callback/bounce`"
 msgstr ""
 
-#: ../../modules/move.md:254 d47facacdc6f4a5681b4542a01f3d788
+#: ../../modules/move.md:253 d47facacdc6f4a5681b4542a01f3d788
 msgid "The entity will bounce on the collision surface."
 msgstr ""
 
-#: ../../modules/move.md:255 e99293538a374a8ea809b9f299685193
+#: ../../modules/move.md:254 e99293538a374a8ea809b9f299685193
 msgid "`#bs.move:callback/damped_bounce`"
 msgstr ""
 
-#: ../../modules/move.md:256 1b64d90f0d45442b97e97ee6b7ae7af2
+#: ../../modules/move.md:255 1b64d90f0d45442b97e97ee6b7ae7af2
 msgid "The entity speed is reduced by 2 on each bounce."
 msgstr ""
 
-#: ../../modules/move.md:257 8773549f248e424fba124c7d69113436
+#: ../../modules/move.md:256 8773549f248e424fba124c7d69113436
 msgid "`#bs.move:callback/slide`"
 msgstr ""
 
-#: ../../modules/move.md:258 c05eb6489d2e4ffe941717a1fece360f
+#: ../../modules/move.md:257 c05eb6489d2e4ffe941717a1fece360f
 msgid "The entity will stick and slide along the collision surface."
 msgstr ""
 
-#: ../../modules/move.md:259 da51295cc18445469095e2428cdadcc4
+#: ../../modules/move.md:258 da51295cc18445469095e2428cdadcc4
 msgid "`#bs.move:callback/stick`"
 msgstr ""
 
-#: ../../modules/move.md:260 196faf31bd8242b6868871eab2f925f8
+#: ../../modules/move.md:259 196faf31bd8242b6868871eab2f925f8
 msgid "The entity will stop and stick to the collision surface."
 msgstr ""
 
-#: ../../modules/move.md:263 5fd218f368f74575bb29200cf934c833
+#: ../../modules/move.md:262 5fd218f368f74575bb29200cf934c833
 msgid "How It Works?"
 msgstr ""
 
-#: ../../modules/move.md:265 92a64a60aee74c0289f5a4fd17aa0525
+#: ../../modules/move.md:264 92a64a60aee74c0289f5a4fd17aa0525
 msgid ""
 "Upon collision, you have the freedom to update both the velocity score "
 "that will be used in the next tick `@s bs.vel.[x,y,z]` and the remaining "
@@ -339,41 +392,41 @@ msgid ""
 "introducing a race condition."
 msgstr ""
 
-#: ../../modules/move.md:267 162dfccf08c44782b9e53acdf59f3752
+#: ../../modules/move.md:266 162dfccf08c44782b9e53acdf59f3752
 msgid "Velocity Scaling"
 msgstr ""
 
-#: ../../modules/move.md:269 b9ad5fbac74949c5843376d0f8d3fbf6
+#: ../../modules/move.md:268 b9ad5fbac74949c5843376d0f8d3fbf6
 msgid ""
 "Remaining velocity scores are stored as scaled integers, but the scaling "
 "factor may change without breaking compatibility."
 msgstr ""
 
-#: ../../modules/move.md:271 16643117ec8149878e5d07b1794c457a
+#: ../../modules/move.md:270 16643117ec8149878e5d07b1794c457a
 msgid ""
 "To ensure stability, always manipulate these values independently of the "
 "scaling factor."
 msgstr ""
 
-#: ../../modules/move.md:274 59bad7957b5b4a62abf9b95c213cdba6
+#: ../../modules/move.md:273 59bad7957b5b4a62abf9b95c213cdba6
 msgid "The simplest collision resolution is to stop the movement."
 msgstr ""
 
-#: ../../modules/move.md:276 c633005c58d84ade86de942c94ce8480
+#: ../../modules/move.md:275 c633005c58d84ade86de942c94ce8480
 msgid "*`#bs.move:callback/stick`*"
 msgstr ""
 
-#: ../../modules/move.md:284 7393bf3a98ca4b53a2dc6b266dcedd72
+#: ../../modules/move.md:283 7393bf3a98ca4b53a2dc6b266dcedd72
 msgid ""
 "For sliding, we need to cancel the velocity on the axis that was hit and "
 "continue traveling the remaining distance."
 msgstr ""
 
-#: ../../modules/move.md:286 154809601ea041c1b8dbea4c7c6f6e4a
+#: ../../modules/move.md:285 154809601ea041c1b8dbea4c7c6f6e4a
 msgid "*`#bs.move:callback/slide`*"
 msgstr ""
 
-#: ../../modules/move.md:294 5c3f7a10cb044467aa15b73097ffadc7
+#: ../../modules/move.md:293 5c3f7a10cb044467aa15b73097ffadc7
 msgid ""
 "To simplify the creation of these behaviors, there's no need to handle a "
 "local velocity directly. The vector is automatically converted before and"
@@ -432,5 +485,27 @@ msgstr ""
 #~ " when a collision occurs, used to "
 #~ "resolve the collision (default: `function "
 #~ "#bs.move:callback/bounce`)."
+#~ msgstr ""
+
+#~ msgid "Collision / Interaction Shape"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Collision Shape**: Defines the physical "
+#~ "boundaries of a block that entities "
+#~ "cannot pass through. It determines where"
+#~ " an entity will stop when moving "
+#~ "towards the block."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Interaction Shape**: Defines the area "
+#~ "where the player can interact with "
+#~ "or break the block. This includes "
+#~ "actions such as right-clicking to "
+#~ "open a GUI (e.g., chests, furnaces) "
+#~ "or mining the block. Some blocks "
+#~ "have an interaction shape but no "
+#~ "collision, such as crops or scaffolding."
 #~ msgstr ""
 
