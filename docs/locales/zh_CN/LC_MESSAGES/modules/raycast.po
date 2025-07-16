@@ -74,7 +74,7 @@ msgstr "输入"
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: "
 "Origin of the ray."
-msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z> rotated <rot>`**: 射线的起点和方向."
+msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z> rotated <rot>`**: 射线的起点和方向。"
 
 #: ../../modules/raycast.md:34 fe3b4af335cb47b282a0f556ad26e35c
 msgid "**Function macro**:"
@@ -93,21 +93,21 @@ msgstr "{nbt}`compound` **with**: 射线输入数据。"
 #: ../../modules/raycast.md:38 673089a82bc3414c8ec295485b54fe6f
 #, python-brace-format
 msgid ""
-"{nbt}`bool` {nbt}`string` ​**blocks**: Whether the ray stops on blocks "
+"{nbt}`bool` {nbt}`string` **blocks**: Whether the ray stops on blocks "
 "(default: true). Can be a block hitbox type (`interaction` or "
 "`collision`). `true` defaults to `interaction`."
 msgstr ""
-"{nbt}`bool` {nbt}`string` ​**blocks**: 射线是否被方块阻挡（默认：true）。"
+"{nbt}`bool` {nbt}`string` **blocks**: 射线是否被方块阻挡（默认：true）。"
 "可为方块碰撞箱类型（`interaction` 或 `collision`），`true` 默认等价于 `interaction`。"
 
 #: ../../modules/raycast.md:39 63d19d0e8cb4411d8fb9db12c8b0166a
 #, python-brace-format
 msgid ""
-"{nbt}`bool` {nbt}`string` ​**entities**: Whether the ray stops on entities"
+"{nbt}`bool` {nbt}`string` **entities**: Whether the ray stops on entities"
 " (default: false). Can be an entity tag. For performance, tagging "
 "entities to detect is recommended."
 msgstr ""
-"{nbt}`bool` {nbt}`string` ​**entities**: 射线是否被实体阻挡（默认：false）。"
+"{nbt}`bool` {nbt}`string` **entities**: 射线是否被实体阻挡（默认：false）。"
 "可为实体标签。为优化性能，建议通过实体标签（/tag）标记需检测的实体。"
 
 #: ../../modules/raycast.md:40 fa520a9cd9f344ef8700a759fd2c499e
@@ -129,15 +129,15 @@ msgstr "{nbt}`number` **max_distance**: 射线最大前进距离（默认：16.0
 msgid ""
 "{nbt}`string` **ignored_blocks**: Blocks to ignore (default: "
 "`#bs.hitbox:intangible`)."
-msgstr "{nbt}`string` **ignored_blocks**: 要忽略的方块（默认：`#bs.hitbox:intangible`）"
+msgstr "{nbt}`string` **ignored_blocks**: 要忽略的方块（默认：`#bs.hitbox:intangible`）。"
 
 #: ../../modules/raycast.md:43 e1e9dc288fdf4038b71344e8bc4e9803
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "{nbt}`string` **ignored_entities**: Entities to ignore (default: "
 "`#bs.hitbox:intangible`). Does not apply to entities with custom "
 "hitboxes."
-msgstr "{nbt}`string` **ignored_entities**: 要忽略的实体（默认：`#bs.hitbox:intangible`）"
+msgstr "{nbt}`string` **ignored_entities**: 要忽略的实体（默认：`#bs.hitbox:intangible`）。这不会忽略那些有自定义（custom）碰撞箱的实体。"
 
 #: ../../modules/raycast.md:44 e078b87ea5e74e28a1ccf5030ffd6eee
 #, python-brace-format

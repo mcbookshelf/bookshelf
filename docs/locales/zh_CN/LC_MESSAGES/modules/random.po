@@ -419,7 +419,7 @@ msgstr ""
 msgid ""
 "**Return | Score `$random.simplex_noise_2d bs.out`**: The noise value in "
 "range [-1000,1000]"
-msgstr "**返回值 | 分数 `$random.simplex_noise_2d bs.out`**：范围在 [-1000,1000] 的噪声值"
+msgstr "**返回值 | 分数 `$random.simplex_noise_2d bs.out`**：范围在 [-1000,1000] 的噪声值。"
 
 #: ../../modules/random.md:308 ../../modules/random.md:340
 #: dd2345e9d71a466e88328c1a9e044b04
@@ -473,7 +473,7 @@ msgstr "**分数 `$random.fractal_noise_2d.lacunarity bs.in`**：每个倍频程
 msgid ""
 "**Return | Score `$random.fractal_noise_2d bs.out`**: The noise value in "
 "range [-1000,1000]"
-msgstr "**返回值 | 分数 `$random.fractal_noise_2d bs.out`**：范围在 [-1000,1000] 的噪声值"
+msgstr "**返回值 | 分数 `$random.fractal_noise_2d bs.out`**：范围在 [-1000,1000] 的噪声值。"
 
 #: ../../modules/random.md:359 722528f2188c4e4eb83de8edf36323fd
 msgid "Noise Matrices"
@@ -506,7 +506,7 @@ msgstr "{nbt}`compound` **with**:"
 #: 96087f0ccd3a4e86a6f200ffd15c3c0e b635637ce1a14e6d85cfdaea91c8d935
 #, python-brace-format
 msgid "{nbt}`number` **scale**: Scalar for the function's output (default: 1)."
-msgstr "{nbt}`number` **scale**: 函数输出的缩放系数（默认：1）"
+msgstr "{nbt}`number` **scale**: 函数输出的缩放系数（默认：1）。"
 
 #: ../../modules/random.md:379 c32808e60db54f449ff7728e8ced6a71
 #, python-brace-format

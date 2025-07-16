@@ -895,6 +895,10 @@ msgstr "{nbt}`compound` 放置方块数据"
 #: ../../modules/block.md:710 b1863d440b0342bfad1e0c18025c9dbf
 #, python-brace-format
 msgid "{nbt}`string` **block**: String representation of the block id to set."
+msgstr "{nbt}`string` **block**: 要放置的方块的id的字符串表示。"
+
+#, python-brace-format
+msgid "{nbt}`string` **block**: Full string representation of the block to set."
 msgstr "{nbt}`string` **block**: 要放置的方块的完整字符串表示。"
 
 #: ../../modules/block.md:711 ../../modules/block.md:742
@@ -1094,7 +1098,7 @@ msgstr "{nbt}`string` **mode**: 显示模式：`normal`或`force`（默认：`no
 msgid ""
 "{nbt}`string` **viewers**: Control which player should view this particle"
 " (default: `@a`)."
-msgstr "{nbt}`string` **viewers**: 控制哪些玩家能看到这些粒子（默认：`@a`）"
+msgstr "{nbt}`string` **viewers**: 控制哪些玩家能看到这些粒子（默认：`@a`）。"
 
 #: ../../modules/block.md:896 1e91ef6e261c49f381e58461c7214692
 msgid "**State**: The particle is emitted."

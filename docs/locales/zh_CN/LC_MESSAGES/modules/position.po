@@ -398,8 +398,12 @@ msgid "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to get 
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：要获取距离的位置。"
 
 #, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's outputs."
+msgstr "{nbt}`number` **scale**: 函数输出的缩放系数。"
+
+#, python-brace-format
 msgid "{nbt}`number` **scale**: Scalar for the function's output."
-msgstr "{nbt}`number` **scale**: 函数输出的缩放值。"
+msgstr "{nbt}`number` **scale**: 函数输出的缩放系数。"
 
 #: ../../../modules/position.md:297 119cca1a45814f6aadc68e2252d49ec7
 msgid "**Return | Score `$position.get_distance_ata bs.out`**: Distance between the two positions."
@@ -415,7 +419,7 @@ msgstr "性能提示"
 
 #: ../../../modules/position.md:313 b3893d793a404def9f2c13463bd00541
 msgid "For several applications such as comparing distances, using the squared distance instead of the \"normal\" distance is more efficient to compute."
-msgstr "对于某些应用（如比较距离），使用平方距离而不是\"正常\"距离计算更有效率。"
+msgstr "对于某些应用（如比较距离），使用平方距离而不是“正常”距离计算更有效率。"
 
 #: ../../../modules/position.md 8d5aed833a244d99a704d4d93efb3b78
 msgid "Squared"
