@@ -689,6 +689,81 @@
           }
         },
         {
+          "id": "#bs.environment:get_current_moon_angle",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "#bs.environment:get_current_sun_angle",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "#bs.environment:get_moon_angle",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/14",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/14",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "#bs.environment:get_moon_phase",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#get-moon-phase",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/05/13",
+            "minecraft_version": "1.20.5"
+          },
+          "updated": {
+            "date": "2025/05/13",
+            "minecraft_version": "1.20.5"
+          }
+        },
+        {
+          "id": "#bs.environment:get_sun_angle",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/14",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/14",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
           "id": "#bs.environment:get_temperature",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#get-temperature",
           "authors": [
@@ -702,6 +777,36 @@
           "updated": {
             "date": "2024/04/22",
             "minecraft_version": "1.20.5"
+          }
+        },
+        {
+          "id": "#bs.environment:look_at_moon",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "#bs.environment:look_at_sun",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/11",
+            "minecraft_version": "1.21.7"
           }
         },
         {
@@ -720,6 +825,96 @@
           }
         },
         {
+          "id": "bs.environment:is_bed_time",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#is-it-bed-time",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "bs.environment:is_bee_sleeping_time",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#is-it-bee-sleeping-time",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "bs.environment:is_creaking_spawning_time",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#is-it-creaking-spawning-time",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "bs.environment:is_day_time",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#time-predicates",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "bs.environment:is_monster_spawning_time",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#is-it-monster-spawning-time",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "bs.environment:is_night_time",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#time-predicates",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
           "id": "bs.environment:is_raining",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#is-it-raining",
           "authors": [
@@ -735,6 +930,36 @@
           }
         },
         {
+          "id": "bs.environment:is_sunrise_time",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#time-predicates",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "bs.environment:is_sunset_time",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#time-predicates",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
           "id": "bs.environment:is_thundering",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#is-it-thundering",
           "authors": [
@@ -747,6 +972,66 @@
           "updated": {
             "date": "2024/11/24",
             "minecraft_version": "1.21.3"
+          }
+        },
+        {
+          "id": "bs.environment:is_undead_burning_time",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#is-it-undead-burning-time",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "bs.environment:is_villager_sleeping_time",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#villager-behavior",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "bs.environment:is_villager_socializing_time",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#villager-behavior",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "bs.environment:is_villager_working_time",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#villager-behavior",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
           }
         }
       ]

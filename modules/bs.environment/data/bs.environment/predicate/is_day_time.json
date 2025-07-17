@@ -1,0 +1,23 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#time-predicates",
+    "authors": [
+      "theogiraudet"
+    ],
+    "created": {
+      "date": "2025/07/16",
+      "minecraft_version": "1.21.7"
+    },
+    "updated": {
+      "date": "2025/07/16",
+      "minecraft_version": "1.21.7"
+    }
+  },
+  "condition": "minecraft:time_check",
+  "value": {
+    "min": 0,
+    "max": 11999
+  },
+  "period": 24000
+}

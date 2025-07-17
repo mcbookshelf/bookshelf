@@ -13,10 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #v bs.ctx run data get entity @s Pos[1]
-kill @s
-
-execute if score #v bs.ctx matches ..80 run return run scoreboard players get #t bs.ctx
-scoreboard players remove #v bs.ctx 80
-scoreboard players operation #v bs.ctx *= 125000 bs.const
-return run scoreboard players operation #t bs.ctx -= #v bs.ctx
+execute store result score #r bs.ctx run time query day
+scoreboard players operation #r bs.ctx %= 8 bs.const
+execute store result storage bs:ctx x int 1 run scoreboard players get #r bs.ctx
+function bs.environment:celestial/get_phase with storage bs:ctx
+return run scoreboard players get #r bs.ctx

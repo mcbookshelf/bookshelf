@@ -1,0 +1,20 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+    "authors": [
+      "theogiraudet"
+    ],
+    "created": {
+      "date": "2025/07/14",
+      "minecraft_version": "1.21.7"
+    },
+    "updated": {
+      "date": "2025/07/14",
+      "minecraft_version": "1.21.7"
+    }
+  },
+  "values": [
+    "bs.environment:celestial/get_moon_angle"
+  ]
+}
