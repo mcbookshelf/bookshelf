@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-14 21:41+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../changelog/v3.1.0.md:1 62e70995533044ea9256d5cb6ac11635
+msgid ""
+"📦 [Bookshelf - "
+"3.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.1.0)"
+msgstr ""
+"📦 [Bookshelf - "
+"3.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.1.0)"
+
+#: ../../changelog/v3.1.0.md:3 5c6e60f732a24e8b9c9a8859212d2b33
+msgid "**🧱 The Bounding Update!**"
+msgstr "**🧱 边界更新！**"
+
+#: ../../changelog/v3.1.0.md:5 a961a5a6a2ff4c96a5bee7febbdf660a
+msgid ""
+"*Introduces fully customizable hitboxes that integrate across the entire "
+"Bookshelf ecosystem.*"
+msgstr ""
+"*引入全自定义碰撞箱系统，深度整合至Bookshelf生态各模块。*"
+
+#: ../../changelog/v3.1.0.md:7 df2d20d509604a0fb9a6efe167ab915c
+msgid "Bookshelf is now based on **Minecraft 1.21.7**."
+msgstr "Bookshelf 现基于 **Minecraft 1.21.7** 构建。"
+
+#: ../../changelog/v3.1.0.md:10 bfcb4f3f0fc54cd0876f2ec3474cba0d
+msgid "`🧱 bs.block`"
+msgstr "`🧱 bs.block`"
+
+#: ../../changelog/v3.1.0.md:12 ../../changelog/v3.1.0.md:48
+#: e317e74ee8dd494bbab8447c255d3a5e
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#469](https://github.com/mcbookshelf/bookshelf/issues/469)** - Fixed "
+"missing `execute in minecraft:overworld` when running location-based loot"
+" tables."
+msgstr ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#469](https://github.com/mcbookshelf/bookshelf/issues/469)** - "
+"修复基于位置的战利品表运行时缺失`execute in minecraft:overworld`的问题。"
+
+#: ../../changelog/v3.1.0.md:15 15595aaad78a463a94d4ae2c2d695a47
+msgid "`🔬 bs.dump`"
+msgstr "`🔬 bs.dump`"
+
+#: ../../changelog/v3.1.0.md:17 e317e74ee8dd494bbab8447c255d3a5e
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#441](https://github.com/mcbookshelf/bookshelf/issues/441)** - Fixed "
+"`#bs.dump:var` incorrectly appending `undefined` to output."
+msgstr ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#441](https://github.com/mcbookshelf/bookshelf/issues/441)** - "
+"修复`#bs.dump:var`错误添加`undefined`到输出的问题。"
+
+#: ../../changelog/v3.1.0.md:20 58250826cd7a4636b7f857b165563bdd
+msgid "`❤️ bs.health`"
+msgstr "`❤️ bs.health`"
+
+#: ../../changelog/v3.1.0.md:22 e317e74ee8dd494bbab8447c255d3a5e
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#466](https://github.com/mcbookshelf/bookshelf/issues/466)** - Fixed a"
+" bug where healing on Paper servers always set players' health to "
+"maximum."
+msgstr ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#466](https://github.com/mcbookshelf/bookshelf/issues/466)** - "
+"修复Paper服务器上治疗总将玩家生命值设为最大值的问题。"
+
+#: ../../changelog/v3.1.0.md:25 bfcb4f3f0fc54cd0876f2ec3474cba0d
+msgid "`🎯 bs.hitbox`"
+msgstr "`🎯 bs.hitbox`"
+
+#: ../../changelog/v3.1.0.md:27 34387b9626724f1ab868d6a6eae45dd3
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - Added "
+"support for custom hitboxes. `#bs.hitbox:get_entity` now also returns "
+"`depth` in addition to `width`. For most dynamic entities `depth` equals "
+"`width`, except for static entities (e.g. item frames, paintings) and "
+"custom hitboxes."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - "
+"新增自定义碰撞箱支持。`#bs.hitbox:get_entity` 现在额外返回`depth`值。"
+"对于大多数动态实体`depth`等于`width`，但静态实体（如物品展示框、画）及自定义碰撞箱除外。"
+
+#: ../../changelog/v3.1.0.md:30 58250826cd7a4636b7f857b165563bdd
+msgid "`🖱️ bs.interaction`"
+msgstr "`🖱️ bs.interaction`"
+
+#: ../../changelog/v3.1.0.md:32 e317e74ee8dd494bbab8447c255d3a5e
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#463](https://github.com/mcbookshelf/bookshelf/issues/463)** - Fixed "
+"an issue where left/right click events could incorrectly target "
+"previously clicked entities instead of the current one."
+msgstr ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#463](https://github.com/mcbookshelf/bookshelf/issues/463)** - "
+"修复左/右键点击事件可能错误定位至先前点击实体的问题。"
+
+#: ../../changelog/v3.1.0.md:35 15595aaad78a463a94d4ae2c2d695a47
+msgid "`🏃 bs.move`"
+msgstr "`🏃 bs.move`"
+
+#: ../../changelog/v3.1.0.md:37 fed9a95e032740419777bf8c8a3890d2
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - Optimized"
+" bounding box computation for moving entities and added support for baked"
+" and custom hitboxes."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - "
+"优化移动实体的边界框计算，增加烘焙和自定义碰撞箱支持。"
+
+#: ../../changelog/v3.1.0.md:40 58250826cd7a4636b7f857b165563bdd
+msgid "`🧭 bs.position`"
+msgstr "`🧭 bs.position`"
+
+#: ../../changelog/v3.1.0.md:42 e317e74ee8dd494bbab8447c255d3a5e
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#455](https://github.com/mcbookshelf/bookshelf/issues/455)** – "
+"Replaced `/rotate` with `/tp` in `bs.position` to fix jitter and momentum"
+" issues."
+msgstr ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#455](https://github.com/mcbookshelf/bookshelf/issues/455)** – "
+"在`bs.position`中用`/tp`替换`/rotate`，解决抖动和动量问题。"
+
+#: ../../changelog/v3.1.0.md:45 bfcb4f3f0fc54cd0876f2ec3474cba0d
+msgid "`🎲 bs.random`"
+msgstr "`🎲 bs.random`"
+
+#: ../../changelog/v3.1.0.md:47 fed9a95e032740419777bf8c8a3890d2
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr>  "
+"**[#286](https://github.com/mcbookshelf/bookshelf/issues/286)** - Added "
+"support for **normal distribution** generation to `bs.random` module."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#286](https://github.com/mcbookshelf/bookshelf/issues/286)** - "
+"`bs.random`模块新增**正态分布**生成支持。"
+
+#: ../../changelog/v3.1.0.md:51 bfcb4f3f0fc54cd0876f2ec3474cba0d
+msgid "`🔦 bs.raycast`"
+msgstr "`🔦 bs.raycast`"
+
+#: ../../changelog/v3.1.0.md:53 fed9a95e032740419777bf8c8a3890d2
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - Added "
+"support for baked and custom entity hitboxes."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - "
+"新增烘焙和自定义实体碰撞箱支持。"
+
+#: ../../changelog/v3.1.0.md:54 fed9a95e032740419777bf8c8a3890d2
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#445](https://github.com/mcbookshelf/bookshelf/issues/445)** - "
+"`#bs.raycast:run` now computes all lambda data before invoking callbacks."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#445](https://github.com/mcbookshelf/bookshelf/issues/445)** - "
+"`#bs.raycast:run` 现在调用回调前计算所有lambda数据。"
+
+#: ../../changelog/v3.1.0.md:55 e317e74ee8dd494bbab8447c255d3a5e
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#457](https://github.com/mcbookshelf/bookshelf/issues/457)** - Fixed "
+"raycasts not stopping at the nearest hit when detecting both blocks and "
+"entities."
+msgstr ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#457](https://github.com/mcbookshelf/bookshelf/issues/457)** - "
+"修复同时检测方块和实体时射线未停止在最近碰撞点的问题。"
+
+#: ../../changelog/v3.1.0.md:58 bfcb4f3f0fc54cd0876f2ec3474cba0d
+msgid "`🧣 bs.spline`"
+msgstr "`🧣 bs.spline`"
+
+#: ../../changelog/v3.1.0.md:60 fed9a95e032740419777bf8c8a3890d2
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - Added "
+"full support for **linear splines**."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
+"新增完整**线性样条曲线**支持。"
+
+msgid "**[Update Name]**"
+msgstr ""
+
+msgid "*[Update Description]*"
+msgstr ""

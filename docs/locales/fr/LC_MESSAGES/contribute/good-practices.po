@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/good-practices.md:1 63cbb6ffd2824c9e8028c90425430ef6
+msgid "🛡️ Good Practices"
+msgstr ""
+
+#: ../../contribute/good-practices.md:3 747f039305e749ba8e68d8b4429b9d8e
+msgid ""
+"Bookshelf's development emphasizes collaboration, clarity, and "
+"efficiency. By following these guidelines, you can help maintain a high "
+"standard of code that is accessible, understandable, and non-intrusive."
+msgstr ""
+
+#: ../../contribute/good-practices.md:7 fdbb0dd0eb4149bea2c19c5aaa31d432
+msgid "💬 Commenting Code"
+msgstr ""
+
+#: ../../contribute/good-practices.md:9 08326765ec7346c6a325775729dab37e
+msgid ""
+"Bookshelf is a collaborative project designed to be both pedagogical and "
+"accessible. This means the code is not only functional but also "
+"understandable by developers and curious users alike."
+msgstr ""
+
+#: ../../contribute/good-practices.md:11 adf7fc0a80b94a39be25a8242734c49e
+msgid ""
+"To achieve this, **commenting your code regularly and cleanly** is "
+"essential:"
+msgstr ""
+
+#: ../../contribute/good-practices.md:13 fb76f740293c4ee7a9cbe92e85528605
+msgid "Explain the purpose of each function and its key components"
+msgstr ""
+
+#: ../../contribute/good-practices.md:14 a2f982702b67402595b3042912ba8fe6
+msgid "Ensure comments are concise but provide enough context for others"
+msgstr ""
+
+#: ../../contribute/good-practices.md:15 798c6aac9d764846a0dba780f83a0023
+msgid "Update comments when the functionality changes to avoid confusion"
+msgstr ""
+
+#: ../../contribute/good-practices.md:17 822d81d8990b4d00a0ca35306b40f977
+msgid ""
+"Clear comments contribute to a smoother collaboration and make Bookshelf "
+"easier to learn from."
+msgstr ""
+
+#: ../../contribute/good-practices.md:21 6d9c1f8a71c1454f8eb587078b75a65a
+msgid "♻️ Conservation Principle"
+msgstr ""
+
+#: ../../contribute/good-practices.md:23 04c51bf495784d96a63e6e3588101d79
+msgid ""
+"Bookshelf follows a conservation principle inspired by Antoine "
+"Lavoisier's maxim:"
+msgstr ""
+
+#: ../../contribute/good-practices.md:26 0a329e89e62d42b1a70481435e000e8c
+msgid "\"Nothing is lost, nothing is created, everything is transformed\""
+msgstr ""
+
+#: ../../contribute/good-practices.md:27 258a0989418645cfad99ef12b32ec9d8
+msgid "Antoine Lavoisier"
+msgstr ""
+
+#: ../../contribute/good-practices.md:31 79d9898791314fffbe04c1d2c398f850
+msgid ""
+"This principle minimizes interference with scores and other data, aiming "
+"to prevent accidental overwrites or unnecessary operations."
+msgstr ""
+
+#: ../../contribute/good-practices.md:33 7eab56808f0548b6b26829f8905d3501
+msgid "Key Guidelines:"
+msgstr ""
+
+#: ../../contribute/good-practices.md:35 1d3fda4ed17b47c5a2bc2b85dfe33d2c
+msgid ""
+"**Minimize the creation of new scores**: Use existing ones whenever "
+"possible"
+msgstr ""
+
+#: ../../contribute/good-practices.md:36 bf2062fcee2f454f8727136b95f923cd
+msgid ""
+"**Strictly avoid score deletion**: Instead, repurpose scores or reset "
+"their values if necessary"
+msgstr ""
+
+#: ../../contribute/good-practices.md:37 7c872be36f364dcd8a94fc7b7bf0cdac
+msgid ""
+"**Reduce unnecessary score rewrites**: Only update scores when absolutely"
+" required"
+msgstr ""
+
+#: ../../contribute/good-practices.md:39 0b67fec612224b92b3c017fea42f968e
+msgid ""
+"Each function should handle inputs responsibly, ensuring that only "
+"outputs are altered."
+msgstr ""
+

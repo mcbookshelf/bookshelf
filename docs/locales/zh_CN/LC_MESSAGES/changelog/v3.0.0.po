@@ -1,0 +1,605 @@
+# Chinese (Simplified, China) translations for Bookshelf.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the Bookshelf project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: https://github.com/mcbookshelf/bookshelf/issues\n"
+"POT-Creation-Date: 2025-05-28 11:19+0800\n"
+"PO-Revision-Date: 2025-05-18 22:04+0800\n"
+"Last-Translator: Ethanout <2629761830@qq.com>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v3.0.0.md:1 1b193ece1fb94b238e844757f6ccc1d6
+msgid ""
+"📦 [Bookshelf - "
+"3.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.0.0)"
+msgstr ""
+"📦 [Bookshelf - "
+"3.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.0.0)"
+
+#: ../../../changelog/v3.0.0.md:3 d1caf4b95e164b71bc324f262ad57137
+msgid "**🚂 The Pipeline Update!**"
+msgstr "**🚂 管线更新!**"
+
+#: ../../../changelog/v3.0.0.md:5 94d34cbf1e734b959c677db95a80fff0
+msgid ""
+"*This release overhauls the project structure with Beet, focusing on "
+"modularity and isolation of each module. It also introduces a new version"
+" loader that resolves conflicts between multiple versions.*"
+msgstr "*本次更新使用 Beet 彻底重构了项目结构，着重于各模块的模块化与隔离性。同时引入了新的版本加载器，可解决多版本间的冲突问题。*"
+
+#: ../../../changelog/v3.0.0.md:7 0a4d346b062d430888adff6717b7f8f1
+msgid "**⚠️ BREAKING CHANGES**: This new version has a few breaking changes!"
+msgstr "**⚠️ 破坏性变更**：这个新版本包含一些破坏性变更！"
+
+#: ../../../changelog/v3.0.0.md:9 762dbb834f184e3a8514dee301a6b5a9
+msgid ""
+"Bookshelf is now based on **Minecraft 1.21.5**. Each module of Bookshelf "
+"is now shipped as a separate datapack for people wanting to use only a "
+"single module. Introduced bundles to better group modules, replacing "
+"**Bookshelf** and **Bookshelf Dev** datapacks: **Bookshelf Runtime**, "
+"**Bookshelf Dev**, **Bookshelf Prefabs**, and **Bookshelf Suite**."
+msgstr ""
+"Bookshelf 现已适配 **Minecraft "
+"1.21.5**。每个模块现以独立数据包形式分发，方便用户按需使用。引入捆绑包机制替代原有的**Bookshelf**和**Bookshelf "
+"Dev**数据包，新捆绑包包括：**Bookshelf Runtime**、**Bookshelf Dev**、**Bookshelf "
+"Prefabs**和**Bookshelf Suite**。"
+
+#: ../../../changelog/v3.0.0.md:13 33ad99306af74426b5259182bee18ed1
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#281](https://github.com/mcbookshelf/bookshelf/issues/281)** - Merged "
+"the `bs.biome` and `bs.weather` modules into a single `bs.environment` "
+"module."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#281](https://github.com/mcbookshelf/bookshelf/issues/281)** - 将 "
+"`bs.biome` 和 `bs.weather` 模块合并为 `bs.environment` 模块。"
+
+#: ../../../changelog/v3.0.0.md:14 493e7cf45bf64fc0aee4b2e90ed3b9f9
+msgid ""
+"<abbr title=\"New Bundles\">📦</abbr> "
+"**[#323](https://github.com/mcbookshelf/bookshelf/pull/323)** - "
+"Introduced bundles to better group modules, replacing **Bookshelf** and "
+"**Bookshelf Dev** datapacks: **Bookshelf Runtime**, **Bookshelf Dev**, "
+"**Bookshelf Prefabs**, and **Bookshelf Suite**."
+msgstr ""
+"<abbr title=\"新增捆绑包\">📦</abbr> "
+"**[#323](https://github.com/mcbookshelf/bookshelf/pull/323)** - "
+"引入捆绑包机制，替代原有的 **Bookshelf** 和 **Bookshelf Dev** 数据包，新捆绑包包括：**Bookshelf "
+"Runtime**、**Bookshelf Dev**、**Bookshelf Prefabs** 和 **Bookshelf Suite**。"
+
+#: ../../../changelog/v3.0.0.md:15 18ca4baa5e544a2190eedf42d9b1b3af
+msgid ""
+"<abbr title=\"New Modules\">🎉</abbr> "
+"**[#272](https://github.com/mcbookshelf/bookshelf/issues/272)** - Added "
+"an automatically generated `bs.load` module, removing the need for manual"
+" `load` and `unload` tags. Bookshelf now also uses **LanternLoad**."
+msgstr ""
+"<abbr title=\"新增模块\">🎉</abbr> "
+"**[#272](https://github.com/mcbookshelf/bookshelf/issues/272)** - 新增自动生成的"
+" `bs.load` 模块，无需手动管理 `load` 和 `unload` 标签。现采用 **LanternLoad** 加载系统。"
+
+#: ../../../changelog/v3.0.0.md:16 d50d48f002184dba9e9efa2f9bbde776
+msgid ""
+"<abbr title=\"Enhancements\">⚡</abbr> "
+"**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - Removed "
+"the need for `__help__` functions and `help` tags. These are now "
+"generated."
+msgstr ""
+"<abbr title=\"优化改进\">⚡</abbr> "
+"**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - 移除对手动编写 "
+"`__help__` 函数和 `help` 标签的需求，现改为自动生成。"
+
+#: ../../../changelog/v3.0.0.md:17 b81ec9e8694149fd8ec2665149071577
+msgid ""
+"<abbr title=\"Documentation\">📝</abbr> "
+"**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - Migrated "
+"the documentation to **mcbookshelf.dev** and reworked the contribution "
+"guide to explain the new **Beet** pipeline."
+msgstr ""
+"<abbr title=\"文档更新\">📝</abbr> "
+"**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - 文档已迁移至 "
+"**mcbookshelf.dev**，并重写贡献指南以说明新的 **Beet** 工作流程。"
+
+#: ../../../changelog/v3.0.0.md:18 ce0e7d03bed84bf7ae796f9fe93f5ae6
+msgid ""
+"<abbr title=\"GitHub & CI/CD\">⚙️</abbr> "
+"**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - Created a"
+" GitHub organization and transitioned from the **Jupyter Notebook** to "
+"**Beet**. Updated the metadata format, added new issue templates, and "
+"introduced workflows for automatic deployment to **Modrinth** and "
+"**Smithed**. Modules now also require a `README.md` and a `pack.png`."
+msgstr ""
+"<abbr title=\"GitHub 与 CI/CD\">⚙️</abbr> "
+"**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - 创建 GitHub"
+" 组织，从 **Jupyter Notebook** 迁移至 **Beet**。更新元数据格式，新增议题模板，并引入自动部署至 "
+"**Modrinth** 和 **Smithed** 的工作流。模块现需包含 `README.md` 和 `pack.png`。"
+
+#: ../../../changelog/v3.0.0.md:19 79df5a5730a1451fb21d866420216f38
+msgid ""
+"<abbr title=\"Download\">📥</abbr> "
+"**[#333](https://github.com/mcbookshelf/bookshelf/issues/333)** - "
+"Bookshelf now has its own [download manager](https://mcbookshelf.dev), "
+"allowing users to select modules along with their dependencies and create"
+" custom bundles."
+msgstr ""
+"<abbr title=\"下载\">📥</abbr> "
+"**[#333](https://github.com/mcbookshelf/bookshelf/issues/333)** - "
+"Bookshelf 现推出专属[下载管理器](https://mcbookshelf.dev)，支持用户选择模块及其依赖项并创建自定义捆绑包。"
+
+#: ../../../changelog/v3.0.0.md:20 af2b43850a954c7ca7c0c86c169c4adc
+msgid ""
+"<abbr title=\"Download\">📥</abbr> "
+"**[#336](https://github.com/mcbookshelf/bookshelf/issues/336)** - "
+"Bookshelf is now available on **PyPI** for use with the **Beet** "
+"toolchain."
+msgstr ""
+"<abbr title=\"下载\">📥</abbr> "
+"**[#336](https://github.com/mcbookshelf/bookshelf/issues/336)** - "
+"Bookshelf 现已发布至 **PyPI**，可通过 **Beet** 工具链进行安装。"
+
+#: ../../../changelog/v3.0.0.md:23 23e0e8ab5b724732a47e2dfab60b4a98
+msgid "`🧱 bs.block`"
+msgstr "`🧱 bs.block`"
+
+#: ../../../changelog/v3.0.0.md:25 5222ef0d03e5400da4ecc05291c8e572
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#375](https://github.com/mcbookshelf/bookshelf/pull/375)** - Changed "
+"`get_block` and `get_type` to only return existing data. Empty strings "
+"for state or NBT are no longer possible; if absent, the field is omitted "
+"instead."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#375](https://github.com/mcbookshelf/bookshelf/pull/375)** - "
+"`get_block` 和 `get_type` 现在只返回现有数据，状态或 NBT 为空时将直接省略对应字段。"
+
+#: ../../../changelog/v3.0.0.md:26 b8008e2cca7b420789f2a3a0747b92e8
+msgid ""
+"<abbr title=\"New Features\">✨</abbr> "
+"**[#279](https://github.com/mcbookshelf/bookshelf/issues/279)** - "
+"Introduced `play_block_sound`, a function for playing block sounds."
+msgstr ""
+"<abbr title=\"新增功能\">✨</abbr> "
+"**[#279](https://github.com/mcbookshelf/bookshelf/issues/279)** - "
+"引入播放方块音效的函数 `play_block_sound`。"
+
+#: ../../../changelog/v3.0.0.md:27 ../../../changelog/v3.0.0.md:35
+#: ../../../changelog/v3.0.0.md:60 28d0564ebf0e460b8f1f3488b8cab623
+#: 8d55e0cdc0a540bc992cb74a136e2db7 9e57352d5a70441e8877e8be5082e719
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#320](https://github.com/mcbookshelf/bookshelf/issues/320)** - Fixed "
+"functions that were previously unusable outside the Overworld."
+msgstr ""
+"<abbr title=\"漏洞修复\">🐛</abbr> "
+"**[#320](https://github.com/mcbookshelf/bookshelf/issues/320)** - "
+"修复了在主世界外无法使用部分函数的漏洞。"
+
+#: ../../../changelog/v3.0.0.md:28 37f7063964ff405fa925b5d61277b18b
+msgid ""
+"<abbr title=\"Enhancements\">⚡</abbr> "
+"**[#375](https://github.com/mcbookshelf/bookshelf/pull/375)** - Added "
+"default values to `emit_block_particle` and new parameters (`mode`, "
+"`viewers`)."
+msgstr ""
+"<abbr title=\"优化改进\">⚡</abbr> "
+"**[#375](https://github.com/mcbookshelf/bookshelf/pull/375)** - 为 "
+"`emit_block_particle` 添加默认值及新参数 `mode`、`viewers`。"
+
+#: ../../../changelog/v3.0.0.md:29 ce2a118229d94bbab163800e3a5fe899
+msgid ""
+"<abbr title=\"Enhancements\">⚡</abbr> "
+"**[#363](https://github.com/mcbookshelf/bookshelf/issues/363)** - "
+"Enhanced `fill_block`, `fill_type`, `fill_random`, `set_block`, and "
+"`set_type` to accept `strict` as a `mode` parameter, allowing control "
+"over whether the operation triggers block updates."
+msgstr ""
+"<abbr title=\"优化改进\">⚡</abbr> "
+"**[#363](https://github.com/mcbookshelf/bookshelf/issues/363)** - 增强 "
+"`fill_block`、`fill_type`、`fill_random`、`set_block` 及 `set_type` 函数，新增 "
+"`strict` 模式参数以控制是否触发方块更新。"
+
+#: ../../../changelog/v3.0.0.md:30 b5425a6d5ea84405a8ed87b96f3ccbb8
+msgid ""
+"<abbr title=\"Enhancements\">⚡</abbr> "
+"**[#349](https://github.com/mcbookshelf/bookshelf/issues/349)** - Added "
+"the `on_finished` argument to fill operations. If specified, the provided"
+" command runs automatically when the operation completes."
+msgstr ""
+"<abbr title=\"优化改进\">⚡</abbr> "
+"**[#349](https://github.com/mcbookshelf/bookshelf/issues/349)** - 为填充操作新增"
+" `on_finished` 参数，当操作完成时将自动执行指定命令。"
+
+#: ../../../changelog/v3.0.0.md:31 427fa87ac1dd4fc0825a78436977883b
+msgid ""
+"<abbr title=\"Enhancements\">⚡</abbr> "
+"**[#287](https://github.com/mcbookshelf/bookshelf/issues/287)** - Updated"
+" `replace_type` to return whether a type was found and replaced."
+msgstr ""
+"<abbr title=\"优化改进\">⚡</abbr> "
+"**[#287](https://github.com/mcbookshelf/bookshelf/issues/287)** - "
+"`replace_type` 现在会返回类型是否被找到并替换。"
+
+#: ../../../changelog/v3.0.0.md:33 7fd306191713484187e265628d908b03
+#, fuzzy
+msgid "`⛰️ bs.environment`"
+msgstr "`🧱 bs.environment`"
+
+#: ../../../changelog/v3.0.0.md:38 722d99f54af049f6b9c6e13d8ff16193
+msgid "`🌱 bs.generation`"
+msgstr "`🌱 bs.generation`"
+
+#: ../../../changelog/v3.0.0.md:40 b42c37de6e584e77bf3b09127b2a85c5
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#296](https://github.com/mcbookshelf/bookshelf/issues/296)** - Renamed"
+" the `bs.generate` module to `bs.generation`."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#296](https://github.com/mcbookshelf/bookshelf/issues/296)** - 将 "
+"`bs.generate` 模块重命名为 `bs.generation`。"
+
+#: ../../../changelog/v3.0.0.md:41 94cda4575cc149de8e8c76fd3ee0caf1
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#282](https://github.com/mcbookshelf/bookshelf/issues/282)** - Renamed"
+" scores used in callbacks to use the new `bs.lambda` objective."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#282](https://github.com/mcbookshelf/bookshelf/issues/282)** - "
+"回调中使用的分数现改用新的 `bs.lambda` 记分项。"
+
+#: ../../../changelog/v3.0.0.md:42 2f15ad13fc8e4e2e9e4715abd16a2925
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#296](https://github.com/mcbookshelf/bookshelf/issues/296)** - Renamed"
+" the `bs.generate:fractal_shape_2d` function to "
+"`bs.generation:gen_fractal_shape_2d`."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#296](https://github.com/mcbookshelf/bookshelf/issues/296)** - 将 "
+"`bs.generate:fractal_shape_2d` 函数重命名为 "
+"`bs.generation:gen_fractal_shape_2d`。"
+
+#: ../../../changelog/v3.0.0.md:43 bd1e0b77d2274c4981e0ad837a9c423f
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#296](https://github.com/mcbookshelf/bookshelf/issues/296)** - Renamed"
+" the `bs.generate:shape_2d` function to `bs.generation:gen_shape_2d`."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#296](https://github.com/mcbookshelf/bookshelf/issues/296)** - 将 "
+"`bs.generate:shape_2d` 函数重命名为 `bs.generation:gen_shape_2d`。"
+
+#: ../../../changelog/v3.0.0.md:44 45c4d7a8615e473899227eb020285390
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#296](https://github.com/mcbookshelf/bookshelf/issues/296)** - Renamed"
+" the `bs.generate:simplex_shape_2d` function to "
+"`bs.generation:gen_simplex_shape_2d`."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#296](https://github.com/mcbookshelf/bookshelf/issues/296)** - 将 "
+"`bs.generate:simplex_shape_2d` 函数重命名为 "
+"`bs.generation:gen_simplex_shape_2d`。"
+
+#: ../../../changelog/v3.0.0.md:47 6b1811853e3c44e4ae4c37d32332f51b
+msgid "`❤️ bs.health`"
+msgstr "`❤️ bs.health`"
+
+#: ../../../changelog/v3.0.0.md:49 d011809ad47244c59ae09bd37baca3a9
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#396](https://github.com/mcbookshelf/bookshelf/issues/396)** - Updated"
+" the `get_max_health` function to only return the base value, excluding "
+"all modifiers."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#396](https://github.com/mcbookshelf/bookshelf/issues/396)** - 更新 "
+"`get_max_health` 函数，现仅返回基础值并排除所有修饰符的影响。"
+
+#: ../../../changelog/v3.0.0.md:50 67580227c2184457ae0cbcb1845203c4
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#348](https://github.com/mcbookshelf/bookshelf/pull/348)** - Fixed an "
+"issue where running the heal command in a tick loop caused empty hearts "
+"to visually disappear."
+msgstr ""
+"<abbr title=\"漏洞修复\">🐛</abbr> "
+"**[#348](https://github.com/mcbookshelf/bookshelf/pull/348)** - "
+"修复在游戏刻循环中执行治疗命令导致空心血槽显示异常的漏洞。"
+
+#: ../../../changelog/v3.0.0.md:53 d1a0dced3c0345c3a4119148d0f52ce3
+msgid "`🎯 bs.hitbox`"
+msgstr "`🎯 bs.hitbox`"
+
+#: ../../../changelog/v3.0.0.md:55 5cd6aaa452774128bec50b7f7090c2bd
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - "
+"Introduced `collision_shape` for block hitboxes and renamed `shape` to "
+"`interaction_shape`."
+msgstr ""
+"<abbr title=\"新增功能\">✨</abbr> "
+"**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - 新增 "
+"`#bs.hitbox:is_sized` 标签以优化碰撞箱管理。"
+
+#: ../../../changelog/v3.0.0.md:56 d14d5df7dbdf4d9a9610246533e1f5fc
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - Removed"
+" `is_in_block` and `is_entity_in_block(s)` functions in favor of "
+"`is_in_block_<collision|interaction>` and "
+"`is_entity_in_block(s)_<collision|interaction>`."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - 移除 "
+"`is_in_block` 和 `is_entity_in_block(s)` 函数，改用 "
+"`is_in_block_<collision|interaction>` 及 "
+"`is_entity_in_block(s)_<collision|interaction>` 替代。"
+
+#: ../../../changelog/v3.0.0.md:57 4084ba52809141a7956a5e9177027f85
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#297](https://github.com/mcbookshelf/bookshelf/issues/297)** - "
+"Replaced the `is_composite` block tag with `is_full_cube` for better "
+"clarity."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#297](https://github.com/mcbookshelf/bookshelf/issues/297)** - 将 "
+"`is_composite` 方块标签替换为 `is_full_cube` 以提高表述清晰度。"
+
+#: ../../../changelog/v3.0.0.md:58 8eb7bbeac06d4010b0d2b6f1177cbc09
+msgid ""
+"<abbr title=\"New Features\">✨</abbr> "
+"**[#299](https://github.com/mcbookshelf/bookshelf/pull/299)** - Moved the"
+" `#bs.hitbox:can_pass_through` block tag from the move module and "
+"documented it."
+msgstr ""
+"<abbr title=\"新增功能\">✨</abbr> "
+"**[#299](https://github.com/mcbookshelf/bookshelf/pull/299)** - 将 "
+"`#bs.hitbox:can_pass_through` 方块标签从移动模块迁移至此并进行文档化。"
+
+#: ../../../changelog/v3.0.0.md:59 984e36afac1c499389ba55b21e7799cd
+msgid ""
+"<abbr title=\"New Features\">✨</abbr> "
+"**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - "
+"Introduced the `#bs.hitbox:is_sized` tag for better hitbox management."
+msgstr ""
+"<abbr title=\"新增功能\">✨</abbr> "
+"**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - 引入 "
+"`#bs.hitbox:is_sized` 标签以优化碰撞箱管理。"
+
+#: ../../../changelog/v3.0.0.md:63 5ea35c52be4b4a06ba9bd5042000a4c1
+msgid "`🖱️ bs.interaction`"
+msgstr "`🖱️ bs.interaction`"
+
+#: ../../../changelog/v3.0.0.md:65 9bf4ade67c9c42a08240b717882e613d
+msgid ""
+"<abbr title=\"New Features\">✨</abbr> "
+"**[#300](https://github.com/mcbookshelf/bookshelf/issues/300)** - Added "
+"`bs.interaction.hovered` tag to check if an interaction is currently "
+"hovered."
+msgstr ""
+"<abbr title=\"新增内容\">✨</abbr> "
+"**[#300](https://github.com/mcbookshelf/bookshelf/issues/300)** - 新增 "
+"`bs.interaction.hovered` 标签用于检测交互是否处于悬停状态。"
+
+#: ../../../changelog/v3.0.0.md:68 5a357144396e44d3964dca801d950302
+msgid "`📄 bs.log`"
+msgstr "`📄 bs.log`"
+
+#: ../../../changelog/v3.0.0.md:70 d1f8e38569f64a46b4897641c8338190
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#369](https://github.com/mcbookshelf/bookshelf/issues/369)** - "
+"Migrated the `bs.log` module to use SNBT instead of JSON for log "
+"messages."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#369](https://github.com/mcbookshelf/bookshelf/issues/369)** - 将 "
+"`bs.log` 模块的日志消息格式从 JSON 改为 SNBT。"
+
+#: ../../../changelog/v3.0.0.md:72 378b0bad58e5450bb8df82da0e045e75
+msgid "`🏃 bs.move`"
+msgstr "`🏃 bs.move`"
+
+#: ../../../changelog/v3.0.0.md:74 8d3db797c29e45e5a0157026e92d1808
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#282](https://github.com/mcbookshelf/bookshelf/issues/282)** - Updated"
+" `on_collison` callback: scores now use the `bs.lambda` objective, and "
+"the input requires a full command instead of a function path. "
+"Additionally, `on_collision/*` functions have been renamed to "
+"`callback/*`."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#282](https://github.com/mcbookshelf/bookshelf/issues/282)** - 更新 "
+"`on_collison` 回调：分数现使用 `bs.lambda` 记分项，输入需要完整命令而非函数路径。此外，`on_collision/*`"
+" 函数已重命名为 `callback/*`。"
+
+#: ../../../changelog/v3.0.0.md:75 2c193646961240838d44e8e58d847eda
+msgid ""
+"<abbr title=\"New Features\">✨</abbr> "
+"**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - Added "
+"optional `hitbox_shape` parameter to `apply_vel` functions, selecting "
+"between `collision` and `interaction` hitboxes."
+msgstr ""
+"<abbr title=\"新增内容\">✨</abbr> "
+"**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - 为 "
+"`apply_vel` 函数新增可选 `hitbox_shape` 参数，可选值为 `collision`（碰撞）或 "
+"`interaction`（交互）碰撞箱类型。"
+
+#: ../../../changelog/v3.0.0.md:76 036f6f3b970f4d87859ddee44b45f14e
+msgid ""
+"<abbr title=\"New Features\">✨</abbr> "
+"**[#298](https://github.com/mcbookshelf/bookshelf/issues/298)** - "
+"Predicate `bs.move:has_vel` is now properly documented. hitbox_shape"
+msgstr ""
+"<abbr title=\"新增内容\">✨</abbr> "
+"**[#298](https://github.com/mcbookshelf/bookshelf/issues/298)** - 完善谓词 "
+"`bs.move:has_vel` 的文档说明。"
+
+#: ../../../changelog/v3.0.0.md:78 789afa5e4ec44c72b17d64f0ab7a2792
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#316](https://github.com/mcbookshelf/bookshelf/issues/316)** - Fixed "
+"entities clipping into blocks during collision resolution."
+msgstr ""
+"<abbr title=\"漏洞修复\">🐛</abbr> "
+"**[#316](https://github.com/mcbookshelf/bookshelf/issues/316)** - "
+"修复碰撞解析过程中实体卡入方块的漏洞。"
+
+#: ../../../changelog/v3.0.0.md:81 8fd119b0ef29402293a40505529df8b9
+msgid "`🔦 bs.raycast`"
+msgstr "`🔦 bs.raycast`"
+
+#: ../../../changelog/v3.0.0.md:83 f4e99365339d430ab2995484b89448e5
+msgid ""
+"<abbr title=\"Enhancements\">⚡</abbr> "
+"**[#358](https://github.com/mcbookshelf/bookshelf/issues/358)** - Added "
+"additional lambda values to callbacks."
+msgstr ""
+"<abbr title=\"优化改进\">⚡</abbr> "
+"**[#358](https://github.com/mcbookshelf/bookshelf/issues/358)** - 为回调新增额外"
+" lambda 值参数。"
+
+#: ../../../changelog/v3.0.0.md:84 72d25ec7eff1468398c7f2c0e6c22cd0
+msgid ""
+"<abbr title=\"Enhancements\">⚡</abbr> "
+"**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - Added "
+"the `hitbox_shape` argument to `run`, allowing selection between "
+"`collision` and `interaction` shapes."
+msgstr ""
+"<abbr title=\"优化改进\">⚡</abbr> "
+"**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - 为 `run`"
+" 方法添加 `hitbox_shape` 参数，支持在 `collision`（碰撞）和 `interaction`（交互）形状间选择。"
+
+#: ../../../changelog/v3.0.0.md:87 93283004946543049c420de468096b67
+msgid "`⏲️ bs.schedule`"
+msgstr "`⏲️ bs.schedule`"
+
+#: ../../../changelog/v3.0.0.md:89 676bbd9aaa0c4e72bfec9f4a97cb0571
+msgid ""
+"<abbr title=\"Breaking Changes\">⚠️</abbr> "
+"**[#282](https://github.com/mcbookshelf/bookshelf/issues/282)** - Changed"
+" the `schedule` function signature for better consistency with others "
+"that use callbacks."
+msgstr ""
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#282](https://github.com/mcbookshelf/bookshelf/issues/282)** - 修改 "
+"`schedule` 函数签名以保持与其他回调函数的一致性。"
+
+#: ../../../changelog/v3.0.0.md:92 b9b3d1bfd4df4c8e9de762b4d6dcdafc
+msgid "`📰 bs.sidebar`"
+msgstr "`📰 bs.sidebar`"
+
+#: ../../../changelog/v3.0.0.md:94 7a093b50182c464aacbae8b00ac717c8
+msgid ""
+"<abbr title=\"Enhancements\">⚡</abbr> "
+"**[#367](https://github.com/mcbookshelf/bookshelf/issues/367)** - "
+"Optimized the module for the 1.21.5 version of Minecraft."
+msgstr ""
+"<abbr title=\"优化改进\">⚡</abbr> "
+"**[#367](https://github.com/mcbookshelf/bookshelf/issues/367)** - "
+"对模块进行优化以适配 Minecraft 1.21.5 版本。"
+
+#: ../../../changelog/v3.0.0.md:95 0eae0954c3e1428baed8f81dcb205180
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#301](https://github.com/mcbookshelf/bookshelf/pull/301)** - Fixed the"
+" issue where `bs.sidebar:create` was not functioning correctly."
+msgstr ""
+"<abbr title=\"漏洞修复\">🐛</abbr> "
+"**[#301](https://github.com/mcbookshelf/bookshelf/pull/301)** - 修复 "
+"`bs.sidebar:create` 功能异常的漏洞。"
+
+#: ../../../changelog/v3.0.0.md:98 c20c6881112a4210b28ba07dbba1776f
+msgid "`🔠 bs.string`"
+msgstr "`🔠 bs.string`"
+
+#: ../../../changelog/v3.0.0.md:100 5e1374b4bb9a43548ebf7524822bf621
+msgid ""
+"<abbr title=\"New Modules\">🎉</abbr> "
+"**[#283](https://github.com/mcbookshelf/bookshelf/pull/283)** - Added a "
+"new `bs.string` module for managing strings."
+msgstr ""
+"<abbr title=\"新增模块\">🎉</abbr> "
+"**[#283](https://github.com/mcbookshelf/bookshelf/pull/283)** - "
+"新增用于管理字符串的 `bs.string` 模块。"
+
+#: ../../../changelog/v3.0.0.md:103 247834ac7a5d49cc9f0611a94e84405d
+msgid "`🧣 bs.spline`"
+msgstr "`🧣 bs.spline`"
+
+#: ../../../changelog/v3.0.0.md:105 0c6190425fdc4099816b7d8942915069
+msgid ""
+"<abbr title=\"New Modules\">🎉</abbr> "
+"**[#241](https://github.com/mcbookshelf/bookshelf/issues/241)** - Added a"
+" new `bs.spline` module for working with splines."
+msgstr ""
+"<abbr title=\"新增模块\">🎉</abbr> "
+"**[#241](https://github.com/mcbookshelf/bookshelf/issues/241)** - "
+"新增用于处理样条曲线的 `bs.spline` 模块。"
+
+#: ../../../changelog/v3.0.0.md:108 bb4912e048fe41a9a5ea7f1d005808a3
+msgid "`⌚ bs.time`"
+msgstr "`⌚ bs.time`"
+
+#: ../../../changelog/v3.0.0.md:110 8a04647439e84547af709e448941bdd3
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#379](https://github.com/mcbookshelf/bookshelf/issues/379)** - Fixed "
+"get time for the 1.21.5 version of Minecraft."
+msgstr ""
+"<abbr title=\"漏洞修复\">🐛</abbr> "
+"**[#379](https://github.com/mcbookshelf/bookshelf/issues/379)** - 修复 "
+"Minecraft 1.21.5 版本中获取时间的漏洞。"
+
+#: ../../../changelog/v3.0.0.md:113 380d7db298924d4a9e9a596edc4b6c0e
+msgid "`👀 bs.view`"
+msgstr "`👀 bs.view`"
+
+#: ../../../changelog/v3.0.0.md:115 72686d2f88b84deb80d8446ca1a376ee
+msgid ""
+"<abbr title=\"New Features\">✨</abbr> "
+"**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - Added "
+"the `hitbox_shape` argument to raycast related functions, allowing "
+"selection between `collision` and `interaction` shapes."
+msgstr ""
+"<abbr title=\"新增功能\">✨</abbr> "
+"**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - "
+"为射线投射相关函数新增 `hitbox_shape` 参数，允许在 `collision`（碰撞）和 "
+"`interaction`（交互）形状间选择。"
+
+#: ../../../changelog/v3.0.0.md:116 d3c67193ff0341b3be6e83e356a8e324
+msgid ""
+"<abbr title=\"New Features\">✨</abbr> "
+"**[#299](https://github.com/mcbookshelf/bookshelf/pull/299)** - Block tag"
+" `can_see_through` is now properly documented."
+msgstr ""
+"<abbr title=\"新增功能\">✨</abbr> "
+"**[#299](https://github.com/mcbookshelf/bookshelf/pull/299)** - 完善方块标签 "
+"`can_see_through` 的文档说明。"
+
+#: ../../../changelog/v3.0.0.md:117 caf72d74cdab4286bb02775353889594
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#319](https://github.com/mcbookshelf/bookshelf/issues/319)** - Fixed "
+"`can_see_ata` max distance computation."
+msgstr ""
+"<abbr title=\"漏洞修复\">🐛</abbr> "
+"**[#319](https://github.com/mcbookshelf/bookshelf/issues/319)** - 修复 "
+"`can_see_ata` 最大距离计算错误的漏洞。"

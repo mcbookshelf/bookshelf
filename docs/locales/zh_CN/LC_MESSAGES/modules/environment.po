@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/environment.md:1 bd2a91ea36d748e5b77187eec06e6dba
+msgid "⛰️ Environment"
+msgstr "⛰️ 环境（Environment）"
+
+#: ../../modules/environment.md:3 58ec66da1d8e4898af0e23733c348dd1
+msgid "**`#bs.environment:help`**"
+msgstr "**`#bs.environment:help`**"
+
+#: ../../modules/environment.md:5 f981a2ed6813463da1643a2b8bf32df7
+msgid ""
+"Comprehensive information and tools related to weather and biome "
+"properties."
+msgstr "与天气和生物群系属性相关的综合信息和工具。"
+
+#: ../../modules/environment.md:13 41d2a9fd2bef4cbebbe1b6cfc54d09df
+msgid ""
+"\"The most dangerous worldview is the worldview of those who have not "
+"viewed the world.\""
+msgstr "“最危险的世界观是那些从未观察过世界的人的世界观。”"
+
+#: ../../modules/environment.md:14 0d5f8fd7743b4f0ab02229cbdc0067ef
+msgid "Alexander von Humboldt"
+msgstr "亚历山大·冯·洪堡（Alexander von Humboldt）"
+
+#: ../../modules/environment.md:20 4493ff89602f448caab2cd540f820508
+msgid "🔧 Functions"
+msgstr "🔧 函数"
+
+#: ../../modules/environment.md:22 4edde86747a74fbc8f5a22daae6e096f
+msgid "You can find below all functions available in this module."
+msgstr "你可以在下方找到此模块中的所有可用函数。"
+
+#: ../../modules/environment.md:26 1c8118e9157c47988269e38badcdd27f
+msgid "Get Biome"
+msgstr "获取生物群系"
+
+#: ../../modules/environment.md:30 44ebb0dca58646a4a6c67eaab69cbb5b
+msgid "Get biome data at the execution position of the function."
+msgstr "获取函数执行位置的生物群系数据。"
+
+#: ../../modules/environment.md:32 ../../modules/environment.md:63
+#: 70b9ad30dfed499ca66a83fe52d82d01 b33448e53ac44d86af7835c61e1a9dfa
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../modules/environment.md:33 2f9303999e6f47d08ae501f3979c8043
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from "
+"which you want to get biome data."
+msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：你想要获取生物群系数据的位置。"
+
+#: ../../modules/environment.md:35 ../../modules/environment.md:72
+#: b89906655c9e44529af74926622195a2 dc55fbce12bd4e5fab7b6db8c4b84da7
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../modules/environment.md:36 be8b531b614d455d8d19eaf5cbafd219
+msgid "**Storage `bs:out environment.get_biome`**:"
+msgstr "**命令存储 `bs:out environment.get_biome`**："
+
+#: ../../modules/environment.md:45 ecb699d4183646ba8290fc1386fb7eee
+msgid "*Example: Get biome data at the current location:*"
+msgstr "*示例：获取当前位置的生物群系数据：*"
+
+#: ../../modules/environment.md:53 ../../modules/environment.md:99
+#: ../../modules/environment.md:109 ../../modules/environment.md:119
+#: 24ac2600b1a04ca688004f7c4ff3941b e4af6ba4cc744e8b91cbd1f4266e3bb6
+#: e70861724e604625a08eadbfc2137e82 f33ec61de05d4514b36899f52efa8a41
+msgid "**Credits**: Aksiome"
+msgstr "**制作人员**：Aksiome"
+
+#: ../../modules/environment.md:57 966c9a113c3147088694c7ee36b149e9
+msgid "Get Temperature"
+msgstr "获取温度"
+
+#: ../../modules/environment.md:61 53ee13d73cb742b2aedd0c3c7f20817b
+msgid ""
+"Get the temperature at the execution position of the function, taking the"
+" altitude into account."
+msgstr "获取函数执行位置的温度，考虑海拔高度对温度的影响。"
+
+#: ../../modules/environment.md:64 bf1e47a129154111a407efccc42d1f18
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from "
+"which you want to get the temperature."
+msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：你想要获取温度的位置。"
+
+#: ../../modules/environment.md:66 e0ed7f7e502d4f8f8099ef4fe6ce94b4
+msgid "**Function macro**:"
+msgstr "**函数宏**："
+
+#: ../../modules/environment.md:73 b6a4c784233141f6ba2200ebd56bfb91
+msgid ""
+"**Return | Score `$environment.get_temperature bs.out`**: Temperature at "
+"the given position."
+msgstr "**返回值 | 分数 `$environment.get_temperature bs.out`**：给定位置的温度。"
+
+#: ../../modules/environment.md:76 a7ceff2f5f9e470fb905ac3be765b1bd
+msgid "*Example: Get the temperature at the current altitude:*"
+msgstr "*示例：获取当前海拔高度的温度：*"
+
+#: ../../modules/environment.md:83 ../../modules/environment.md:129
+#: ../../modules/environment.md:139 5aeff72c87b2478a9b95ea332951e599
+#: b96f5ec816b248b3b0b1637c2239783d f1ad035da38d44f7b35bf13a4ef10e67
+msgid "**Credits**: Aksiome, theogiraudet"
+msgstr "**制作人员**：Aksiome、theogiraudet"
+
+#: ../../modules/environment.md:87 0e89e1271bf84bf4bf803dfaea6ab065
+msgid "👁️ Predicates"
+msgstr "👁️ 谓词"
+
+#: ../../modules/environment.md:89 9d390399381f4afbbff31e2adefbb709
+msgid "You can find below all predicates available in this module."
+msgstr "你可以在下方找到此模块中的所有可用判据。"
+
+#: ../../modules/environment.md:93 6c191e1e84464ff0b9603d1225f191b0
+msgid "Can It Rain?"
+msgstr "能否下雨？"
+
+#: ../../modules/environment.md:95 ebec4c5d5be74194a82a65f9c3f9c3fe
+msgid "**`bs.environment:can_rain`**"
+msgstr "**`bs.environment:can_rain`**"
+
+#: ../../modules/environment.md:97 91bdb1e008d64ae68d7984ef35b7e38d
+msgid "Determine if it can rain or not."
+msgstr "判断能否下雨。"
+
+#: ../../modules/environment.md:103 1b144319a19b4b4181c813267b91e981
+msgid "Can It Snow?"
+msgstr "能否下雪？"
+
+#: ../../modules/environment.md:105 6733844f6a2a4664ac956ee42ed558b4
+msgid "**`bs.environment:can_snow`**"
+msgstr "**`bs.environment:can_snow`**"
+
+#: ../../modules/environment.md:107 a142e87fd8c147a09e1f3343e6f1b973
+msgid "Determine if it can snow or not."
+msgstr "判断能否下雪。"
+
+#: ../../modules/environment.md:113 5701302d464f4f24b387aed19b235a88
+msgid "Can It Rain or Snow?"
+msgstr "能否降水？"
+
+#: ../../modules/environment.md:115 ae2fd6edf6624890aa2c736f9a1d535a
+msgid "**`bs.environment:has_precipitation`**"
+msgstr "**`bs.environment:has_precipitation`**"
+
+#: ../../modules/environment.md:117 3293752602c240158db63e8c52cccfd8
+msgid "Determine if the biome has precipitation or not."
+msgstr "判断生物群系能否降水。"
+
+#: ../../modules/environment.md:123 8df2de706d344d6b922da9dd6e3d0b4f
+msgid "Is It Raining?"
+msgstr "是否正在下雨？"
+
+#: ../../modules/environment.md:125 e2f809af5e854fd0a6d775c930f13a00
+msgid "**`bs.environment:is_raining`**"
+msgstr "**`bs.environment:is_raining`**"
+
+#: ../../modules/environment.md:127 3e491023a82d4504a411407c6cf463e6
+msgid "Determine if it is currently raining or not."
+msgstr "判断现在是否正在下雨。"
+
+#: ../../modules/environment.md:133 aeec01aa8a184de5ac5652ee8eb51b09
+msgid "Is It Thundering?"
+msgstr "是否正在打雷？"
+
+#: ../../modules/environment.md:135 261634e237724cf7b4bce47520a1b96e
+msgid "**`bs.environment:is_thundering`**"
+msgstr "**`bs.environment:is_thundering`**"
+
+#: ../../modules/environment.md:137 13019a76475c440aa0d3df8b4187b539
+msgid "Determine if it is currently thundering or not."
+msgstr "判断现在是否正在打雷。"
+
+#: ../../_templates/comments.md:4 d794e650b0674ac9b03889557e053e0f
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对你有帮助吗？**"
+
+#: ../../_templates/comments.md:6 6a5aa409b0054ef4955851f4bc929326
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下你的问题和反馈！"
+
+#, python-brace-format
+msgid "{nbt}`compound` Biome data"
+msgstr "{nbt}`compound` 群系数据"
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **type**: String representation "
+"of the biome ID (e.g., "
+"`minecraft:plains`)."
+msgstr "{nbt}`string` **type**: 群系id的完整字符串表示（比如：`minecraft:plains`）。"
+
+#, python-brace-format
+msgid "{nbt}`double` **temperature**: The base temperature of the biome."
+msgstr "{nbt}`double` **temperature**: 群系的基础温度。"
+
+#, python-brace-format
+msgid ""
+"{nbt}`bool` **has_precipitation**: Whether the "
+"biome has precipitation or not."
+msgstr "{nbt}`bool` **has_precipitation**: 群系能否降水。"
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's output."
+msgstr "{nbt}`number` **scale**: 应用于函数输出的比例因子。"

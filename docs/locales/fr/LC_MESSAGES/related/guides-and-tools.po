@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../related/guides-and-tools.md:5 20f68bba920941219f5ee2e2781eefb6
+msgid "🔧 Guides & Tools"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:7 5b66208f7cec4583be145eddcbfe2eb3
+msgid ""
+"Map making is an aspect of Minecraft that becomes increasingly difficult "
+"with each new version of the game. To help beginner (and even advanced) "
+"map makers, the community provides numerous guides and tools. This page "
+"lists some of them."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:11 ba521c9d09114b4da6b6430a3e3467b5
+msgid "📚 Guides & Documentation"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:16 3fba57c2072443d8a91e209f7659d253
+msgid "📘 Convention"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:20 35e0d4ac41e543da9e6ac9d1252aa75b
+msgid "Smithed's convention to keep datapacks compatible together."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:23 41de886ff8f346238cef0bbe79b5d552
+msgid "📗 Le guide du Map Making"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:27 27a17052a47a4612b5586f22f056934d
+msgid ""
+"This French guide presents the MCFunction part of Minecraft as well as "
+"good development practices."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:30 ad3fdea1b9724b9eb16398e2a86cd454
+msgid "📕 Minecraft Wiki"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:34 974db376701b4738b84851c378d05e89
+msgid ""
+"Minecraft Wiki is the most updated and used documentation for Minecraft "
+"map making. The Wiki also proposes some tutorials about creating "
+"different aspects of a datapack such as adding a new dimension or a new "
+"armor trim."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:38 0006861e5d1245a9bfb6c88c2e267f4a
+msgid "📹 slicedlime"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:42 7faca0827b13479da8fb509a53992321
+msgid ""
+"A YouTuber and developer of Mojang who presents the technical features in"
+" video at each new snapshot."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:46 b61782593dea43f18f897c5eefdb5864
+msgid "🛠️ External Tools"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:51 dd757b841b044f1fa3f74786784369bc
+msgid "🎬 Animated java"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:55 c758c03aa6804ab6b699bc92ba04ccfb
+msgid ""
+"Animated Java is a plugin for Blockbench that allows you to create custom"
+" animations and models for Vanilla Minecraft. It uses the power of Java "
+"Edition's Data Pack and Resource Pack systems to bring your creations to "
+"life!"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:58 a8c8ce54745149ceb1e02d42b2310601
+msgid "🔨 Data-pack Helper Plus"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:62 9aa07d5bfbc748c7b9c35d82115fb1fe
+msgid ""
+"Data-pack Helper Plus is a VSCode plugin that can provide many heavy "
+"language features for documents in your datapack, including advancements,"
+" dimensions, dimension types, functions, loot tables, predicates, "
+"recipes, all kinds of tags, and worldgen settings."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:65 a7aa75576cd549df9d7938ef2f47d871
+msgid "🔨 MCStacker"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:69 c576b376cb984308830835621a1b25ae
+msgid ""
+"MCStacker is a classic generator for many commands of the game such as: "
+"give, summon, data, fill…"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:72 77203388443d4d0abf2da02d455bdce2
+msgid "⛏️ Minecraft JSON"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:76 c9762a6d944c4322a72dbf72b1b794ae
+msgid ""
+"Minecraft JSON is a website to generate JSON text component for all "
+"targets supporting this format (sign, tellraw, item name…)."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:79 3970b4b39e4045bf8365131b47b6d554
+msgid "🪛 Misode"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:83 0866c73079f14986a0584fe491de3805
+msgid ""
+"The Misode's website proposes many tools to generate aspects of the map "
+"making such as: loot tables, predicates, recipes, block display "
+"transformation…"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:86 e00fed3249264e28a3ad06704444e009
+msgid "🔧 NBT Viewer"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:90 55726893dcb540a39e8038d75021832a
+msgid ""
+"VSCode extension to view Minecraft NBT files. For structure files, this "
+"shows a 3D block view."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:95 f268be5804af40548eb90a3e4d77a027
+msgid "📦 Mods and Datapacks"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:100 bb6e6105a4b4475a9e986276306c53bc
+msgid "💡 Better Suggestion"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:104 97526ce5edd8428b80a8a2c244b9040a
+msgid "Makes Minecraft command suggestions more useful."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:107 f454f60521a9436a806384107f88e86c
+msgid "🟥 Carpet"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:111 0347be99a41b4bc981e437fa9e4053cc
+msgid ""
+"Carpet is a mod for vanilla Minecraft that allows you to take full "
+"control of what matters from a technical perspective of the game."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:114 337c275851d14a1f86f87262842d9767
+msgid "🌍 Language Reload"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:118 d7326ab7ae8149449481ecb2404e73a5
+msgid ""
+"Language Reload is a Fabric mod that adds quality of life changes related"
+" to languages. Useful for resource pack makers."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:121 f4a6c50d8d7544a8a19871a3efcd921f
+msgid "💬 More Chat History"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:125 d620ded4a0ce40efb8300c3697f6a0fa
+msgid "Increases the maximum length of chat history."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:128 c799a83d99b14aa882bdb6a3d9973e8f
+msgid "🔎 NBT Autocomplete"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:132 7d4ea6bc2edd4411bbf93039c11e91c1
+msgid ""
+"NBT Autocomplete is a client-side mod adding suggestions for NBT tags in "
+"commands."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:135 35d0ad9157a646b3997ce9817219e98a
+msgid "📈 Performance Tool"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:139 9e55118f7a9b492f82229018ba5a6cca
+msgid ""
+"This is a datapack to measure performance of other datapacks or commands "
+"directly in game."
+msgstr ""
+
+#: ../../related/guides-and-tools.md:142 8422edeb7ad34f70b0eceac65463aac4
+msgid "🔧 Suggestion Tweaker"
+msgstr ""
+
+#: ../../related/guides-and-tools.md:146 5701ed6c415c4d6cabb02ec31272748a
+msgid ""
+"A mod that improves the way suggestions are filtered and sorted when "
+"writing a command."
+msgstr ""
+

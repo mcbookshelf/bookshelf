@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/schedule.md:1 f98171f82e9643f09c982903d734ed13
+msgid "⏲️ Schedule"
+msgstr "⏲️ 计划（Schedule）"
+
+#: ../../modules/schedule.md:3 bf9776d0aa2d4446a6bb79834e329556
+msgid "**`#bs.schedule:help`**"
+msgstr "**`#bs.schedule:help`**"
+
+#: ../../modules/schedule.md:5 6b2fa55cd061482198bd76533ce6a15a
+msgid ""
+"Enhance command scheduling with this module, providing flexibility beyond"
+" vanilla capabilities. Cancel commands and maintain execution context "
+"(entity & location)."
+msgstr "使用此模块增强计划（schedule）命令，提供超越原版功能的灵活性。支持取消命令和保留执行上下文（实体和位置）。"
+
+#: ../../modules/schedule.md:9 51f8241c9ee34f6783b3b744042e86ee
+msgid "🔧 Functions"
+msgstr "🔧 函数"
+
+#: ../../modules/schedule.md:11 ec39eb9fcbdf4ef4aed40cf2ddda9613
+msgid "You can find below all functions available in this module."
+msgstr "你可以在下方找到此模块中的所有可用函数。"
+
+#: ../../modules/schedule.md:15 117cbd018c574317a1d5c95dff1236eb
+msgid "Cancel"
+msgstr "取消"
+
+#: ../../modules/schedule.md c034164212354609a9908199fc22f3fa
+msgid "All"
+msgstr "全部"
+
+#: ../../modules/schedule.md:23 fe21ba6437b741fb960f0ecf983c5b32
+msgid "Cancel all scheduled commands that match the given ID."
+msgstr "取消所有和给定ID匹配的计划命令。"
+
+#: ../../modules/schedule.md:25 ../../modules/schedule.md:47
+#: ../../modules/schedule.md:91 45ec2984dfa94aa9b46e706e63ef931e
+#: c6b875800e574831aa7eef8dddf5fd59 f353b5406f9b47ad9c8939a7fa12fc00
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../modules/schedule.md:26 ../../modules/schedule.md:48
+#: ../../modules/schedule.md:92 21dc6db910434dcca6e34e56773163b4
+#: 4631e14457fe4785b1f56dd6391ba40e 4d5891c541c0480083bd58872ea5c955
+msgid "**Function macro**:"
+msgstr "**函数宏**："
+
+#: ../../modules/schedule.md:34 dc7daaa302024434af1df8c558e75ba7
+msgid "*Example: Cancel all commands with an `id` parameter set to \"foo\":*"
+msgstr "*示例：取消所有 `id` 参数为\"foo\"的命令：*"
+
+#: ../../modules/schedule.md fe4b9de4479c49a0aae0b0f4145d89f1
+msgid "Single One"
+msgstr "单个"
+
+#: ../../modules/schedule.md:45 b0eb29c744704e75a34c1ae136dc3b2b
+msgid "Cancel the first scheduled command that matches the given ID."
+msgstr "取消和给定ID匹配的第一个计划命令。"
+
+#: ../../modules/schedule.md:56 0207194258584a9a85a1eef774a50a27
+msgid "*Example: Cancel the next command with an `id` parameter set to \"foo\":*"
+msgstr "*示例：取消下一个 `id` 参数为\"foo\"的命令：*"
+
+#: ../../modules/schedule.md:63 ../../modules/schedule.md:80
+#: ../../modules/schedule.md:120 09c7394580c741bc9e38f8b976387986
+#: 6db6005884ee4228b68c92efe4d041e9 b2756c97f5414113ac560e796f9e7149
+msgid "**Credits**: Aksiome, theogiraudet"
+msgstr "**制作人员**：Aksiome、theogiraudet"
+
+#: ../../modules/schedule.md:67 006405bb25574d7f91c0e1f8ba039bc1
+msgid "Clear"
+msgstr "清除"
+
+#: ../../modules/schedule.md:71 62cd3d3050084594907c5b656d4ca49e
+msgid "Clear all scheduled commands."
+msgstr "清除所有计划命令。"
+
+#: ../../modules/schedule.md:74 e640389d0a2646ae8d2321a04a47db8c
+msgid "*Example: Remove all scheduled commands:*"
+msgstr "*示例：移除所有计划命令：*"
+
+#: ../../modules/schedule.md:84 947a6a527f834a2e98d2eb28a34968db
+msgid "Schedule"
+msgstr "计划"
+
+#: ../../modules/schedule.md:88 1fce22cf64c84333b613d3e1e677cab5
+msgid ""
+"Schedule a command for execution. If a command is registered during a "
+"tick where other commands are already scheduled, it is added after those "
+"previously registered."
+msgstr "计划命令以供执行。如果在其他计划命令的刻（tick）期间注册命令，它将被添加到之前注册的命令之后。"
+
+#: ../../modules/schedule.md:102 d314bf0ef9f644a2b239a7e1433f9691
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../modules/schedule.md:103 30f52a8b752f40459043273e2e0b0782
+msgid "**Return**: A unique identifier for the scheduled command."
+msgstr "**返回值**：计划命令的唯一标识符。"
+
+#: ../../modules/schedule.md:106 9c4c24ae4b3b49a99d67e39ab09cd9b1
+msgid "*Example: Execute `say foo` in 2 seconds:*"
+msgstr "*示例：在2秒后执行 `say foo`：*"
+
+#: ../../modules/schedule.md:112 a3e2524cce314789970b05582d32393e
+msgid "*Example: Schedule then cancel commands that match a complex ID:*"
+msgstr "*示例：计划之后再取消一个有复杂ID的命令：*"
+
+#: ../../_templates/comments.md:4 200e6146b94642c8bd2174013209d94f
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对你有帮助吗？**"
+
+#: ../../_templates/comments.md:6 76fead5501f44eb1bbb33aea573469aa
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下你的问题和反馈！"
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Cancel filters."
+msgstr "{nbt}`compound` **with**: 取消事件的过滤条件。"
+
+#, python-brace-format
+msgid "{nbt}`any` **id**: Scheduled command parameter to match against."
+msgstr "{nbt}`any` **id**: 用于匹配的预定命令参数。"
+
+#, python-brace-format
+msgid "{nbt}`string` **run**: The command to schedule."
+msgstr "{nbt}`string` **run**: 待调度的命令。"
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Optional scheduling parameters."
+msgstr "{nbt}`compound` **with**: 可选的调度参数。"
+
+#, python-brace-format
+msgid "{nbt}`any` **id**: Optional identifier for the scheduled command."
+msgstr "{nbt}`any` **id**: 预定命令的可选标识符。"
+
+#, python-brace-format
+msgid ""
+"{nbt}`int` **time**: Delay before execution."
+" Defaults to `1` if not specified."
+msgstr "{nbt}`int` **time**: 执行前的延迟时间。未指定时默认为`1`。"
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **unit**: Time unit (`tick`, "
+"`second`, `minute`, `hour`, `t`, `s`, "
+"`m`, `h`). Defaults to `tick`."
+msgstr ""
+"{nbt}`string` **unit**: "
+"时间单位（`tick`、`second`、`minute`、`hour`、`t`、`s`、`m`、`h`）。默认为`tick`。"

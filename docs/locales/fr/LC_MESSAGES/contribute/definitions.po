@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/definitions.md:5 35b049f3df194dce96b6fd1eef3260bb
+msgid "📘 Definitions"
+msgstr ""
+
+#: ../../contribute/definitions.md:7 49cfb4305ab04275b16d0519137013c1
+msgid ""
+"In order to speak with the same vocabulary, here is some words that have "
+"a specific meaning in this project:"
+msgstr ""
+
+#: ../../_templates/definitions.md:2 c6351b7bc50346b78c062f826ddc14e3
+msgid "General Concepts"
+msgstr ""
+
+#: ../../_templates/definitions.md:3 0188c28f5f1d472da13261d3fe21e1a5
+msgid "**Bundle**"
+msgstr ""
+
+#: ../../_templates/definitions.md:4 7b367d395eaa45c3b306edf2970c8da1
+msgid "A set of modules packaged together for distribution."
+msgstr ""
+
+#: ../../_templates/definitions.md:5 2fc21b5f0be14ed6a8a6505edcf0c35b
+msgid "**Dependency**"
+msgstr ""
+
+#: ../../_templates/definitions.md:6 d82f7b07d19d4f6ea75965a095d8c9e3
+msgid ""
+"A module that another module relies on to function properly. It must be "
+"loaded for the dependent module to work."
+msgstr ""
+
+#: ../../_templates/definitions.md:7 452060a22dae417c854001ae644f92c9
+msgid "**Feature**"
+msgstr ""
+
+#: ../../_templates/definitions.md:8 0cc466c1b17a4ceebc6b67095e90d303
+msgid ""
+"A user-facing element designed to accomplish a task. Features are often "
+"represented as function tags, but can also include loot tables, "
+"structures, predicates, and more."
+msgstr ""
+
+#: ../../_templates/definitions.md:9 dfe110a7658c438fa5be9b8574121173
+msgid "**Module**"
+msgstr ""
+
+#: ../../_templates/definitions.md:10 d7bd18d238f14c7fa767942dc23713e0
+msgid ""
+"A collection of related features within a namespace, serving a specific "
+"purpose."
+msgstr ""
+
+#: ../../_templates/definitions.md:11 f995eb5996eb41c08ddfbd576bb4497d
+msgid "**Weak Dependency**"
+msgstr ""
+
+#: ../../_templates/definitions.md:12 6f6fa13dd1364a50aeec21be492ce9ba
+msgid ""
+"An optional dependency that enhances functionality if present, but is not"
+" essential for the main module to function correctly."
+msgstr ""
+
+#: ../../_templates/definitions.md:15 af25e9cd13954d5986786eefb2c749fd
+msgid "Special Arguments"
+msgstr ""
+
+#: ../../_templates/definitions.md:16 83605ad777844d1789b475d2f45ccd80
+msgid "**`on_*`**"
+msgstr ""
+
+#: ../../_templates/definitions.md:17 fe276a7a469743cf9bfc8dbc67c6c573
+msgid ""
+"Specifies a command to be executed by a feature when a particular event "
+"occurs."
+msgstr ""
+
+#: ../../_templates/definitions.md:18 2f1f711e1fac4bbc8ffd80783c44b37e
+msgid "**`run`**"
+msgstr ""
+
+#: ../../_templates/definitions.md:19 de862acb088e48d283f5faf7a85f8002
+msgid "Specifies a command to be executed by a feature, often immediately."
+msgstr ""
+
+#: ../../_templates/definitions.md:20 c4db9b9c368c42b881ff32b8d4aeb0f8
+msgid "**`with`**"
+msgstr ""
+
+#: ../../_templates/definitions.md:21 4f5f093a9705400484a1a4add87be6ae
+msgid "Specifies optional arguments."
+msgstr ""
+
+#: ../../_templates/definitions.md:24 ffe0a8a9d19d4b0d95a670f1eec95902
+msgid "Special Functions"
+msgstr ""
+
+#: ../../_templates/definitions.md:25 b00c2fa053b0420cab92514ed52c184d
+msgid "**`*_ata`**"
+msgstr ""
+
+#: ../../_templates/definitions.md:26 0e299f7e2b0f4773b55c3fbac9d0cb50
+msgid ""
+"Shortened from \"as to at.\" These functions take two positions: one "
+"given through a positional argument (e.g., `positioned`, `at`), and the "
+"other from the executor's position."
+msgstr ""
+

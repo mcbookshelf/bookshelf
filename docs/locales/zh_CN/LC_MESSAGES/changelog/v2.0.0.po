@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: https://github.com/mcbookshelf/bookshelf/issues\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-05-18 22:04+0800\n"
+"Last-Translator: Ethanout <2629761830@qq.com>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v2.0.0.md:1 10d9879269b44822877d8b8ab8867369
+msgid ""
+"📦 [Bookshelf - "
+"2.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.0.0)"
+msgstr ""
+"📦 [Bookshelf - "
+"2.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.0.0)"
+
+#: ../../../changelog/v2.0.0.md:3 6a733f26a13d45d0b66e12958c453fc9
+msgid "**🌱 The Flourishing Update!**"
+msgstr "**🌱 繁盛更新！**"
+
+#: ../../../changelog/v2.0.0.md:5 9df0c97f30574bfe899c4eeb2a9f328a
+msgid ""
+"*This release replants the foundation of the Gunivers Library, growing "
+"into something entirely new.*"
+msgstr ""
+"*这个版本重构了Gunivers库的基础架构，使其焕然新生。*"
+
+#: ../../../changelog/v2.0.0.md:7 e60c837a1d414849959fa3b07ec97f30
+msgid ""
+"**⚠️ BREAKING CHANGES**: This new version is filled with breaking "
+"changes. Since maintaining a list of those became unrealistic, the "
+"following changelog only highlights a selection of tweaks and new "
+"functionalities."
+msgstr ""
+"**⚠️ 破坏性变更**：这次新版本包含大量破坏性变更。因为完整列举所有变更不"
+"太现实，以下更新日志仅挑选部分优化与新功能进行说明。"
+
+#: ../../../changelog/v2.0.0.md:10 32b840f8884042ba942b5ead6846241b
+msgid "🎉 Addition"
+msgstr "🎉 新增内容"
+
+#: ../../../changelog/v2.0.0.md:12 e05b45445d5a4504bcf2c646ca2e5859
+msgid "There is now a changelog!"
+msgstr "新增更新日志功能！"
+
+#: ../../../changelog/v2.0.0.md:13 165951a08b4c475f8756e66a3b699206
+msgid "Added player health manipulation."
+msgstr "新增玩家生命值操控功能。"
+
+#: ../../../changelog/v2.0.0.md:14 7eda5c54420b48b4a8956fa175bc684a
+msgid "Added precise collisions (move, raycast and view)."
+msgstr "新增精确碰撞检测（move、raycast和view）。"
+
+#: ../../../changelog/v2.0.0.md:15 22e70c2226d94631b4c1ae5c822d22f4
+msgid "Added float manipulation (frexp and ldexp)."
+msgstr "新增浮点数操作（frexp和ldexp）。"
+
+#: ../../../changelog/v2.0.0.md:16 e7ee929c032347649138061ea8e20e39
+msgid "Added a new hitbox module."
+msgstr "新增hitbox模块。"
+
+#: ../../../changelog/v2.0.0.md:17 b0ce0bda68514cc8838780d677c51c04
+msgid "Added a new raycast module."
+msgstr "新增raycast模块。"
+
+#: ../../../changelog/v2.0.0.md:18 8b874329e1724620a4a1bae7f30df6b7
+msgid "Added a new sidebar module."
+msgstr "新增sidebar模块。"
+
+#: ../../../changelog/v2.0.0.md:20 e96b07847ed7434986dde1d9e296bda3
+msgid "⚡ Enhancements"
+msgstr "⚡ 优化改进"
+
+#: ../../../changelog/v2.0.0.md:22 90e03d0749104e38b43ccc0a7256f820
+msgid "The project has a new fresh identity: Bookshelf."
+msgstr "本项目现已全新升级为：Bookshelf。"
+
+#: ../../../changelog/v2.0.0.md:23 cebd53a9fb7743e598ef5a0489f38967
+msgid ""
+"Every module has been reworked for improved accuracy, performance, and/or"
+" simplicity."
+msgstr "所有模块均已完成重构，在精确性、性能和/或简洁性方面均有提升。"
+
+#: ../../../changelog/v2.0.0.md:24 3471dff010694e91ad2ac9d085f7db5f
+msgid "Renamed almost everything (scores, objectives, functions, ...)."
+msgstr "全面更新命名（分数、记分项、函数……）。"
+
+#: ../../../changelog/v2.0.0.md:25 24ab5e3beedc4e609f24f0c6bf33ab67
+msgid ""
+"Many functions now utilize macros, storage, or fake scores instead of "
+"objectives."
+msgstr "许多函数现在改用宏、命令存储或虚拟分数，而不再使用记分项。"
+
+#: ../../../changelog/v2.0.0.md:26 05d91c2bc2294217bc896903cf0ca0da
+msgid "Removed the core module. The library no longer requires a base module."
+msgstr "移除了core模块。该库不再需要依赖base模块。"
+
+#: ../../../changelog/v2.0.0.md:27 b0ecc37518e64092aabcf15e40794575
+msgid "Removed outdated modules (cache, item, mapedit, and memory)."
+msgstr "移除过时模块（cache、item、mapedit和memory）。"
+
+#: ../../../changelog/v2.0.0.md:28 a046fece1c11403c88806246b80f868a
+msgid "Merged the location and orientation modules into a new position module."
+msgstr "合并location和orientation模块为新的position模块。"
+
+#: ../../../changelog/v2.0.0.md:29 ef672a52a5884ab9b9a4baa76de59767
+msgid ""
+"Bitwise operations have been moved out of the math module into a separate"
+" module."
+msgstr "位运算被从math模块独立出来，成为单独的模块。"
+
+#: ../../../changelog/v2.0.0.md:30 f17ad3d041b341428d32a1729a3062ec
+msgid ""
+"Enhanced the accuracy of the move and view modules due to their rework "
+"and the addition of the new hitbox module."
+msgstr "得益于重构工作与新增的hitbox模块，move和view模块的精确性显著提升。"
+
+#: ../../../changelog/v2.0.0.md:31 026939a38b0245acb0caeadc5dc7c7be
+msgid "The schedule module now maintains the current execution context."
+msgstr "schedule模块现在会保持当前的执行上下文。"
+
+#: ../../../changelog/v2.0.0.md:33 486f67c558b44bbea0f884c1f8b8ad60
+msgid "🐛 Bug Fixes"
+msgstr "🐛 漏洞修复"
+
+#: ../../../changelog/v2.0.0.md:35 d649451337f641aa9555dd57439c61d4
+msgid "Who knows at this point 🤷‍♂️, almost no legacy code remains..."
+msgstr "到现在谁还说得准呢 🤷‍♂️，祖传代码没剩多少了..."
