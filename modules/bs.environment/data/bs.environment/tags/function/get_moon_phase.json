@@ -1,0 +1,20 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#get-moon-phase",
+    "authors": [
+      "theogiraudet"
+    ],
+    "created": {
+      "date": "2025/05/13",
+      "minecraft_version": "1.20.5"
+    },
+    "updated": {
+      "date": "2025/05/13",
+      "minecraft_version": "1.20.5"
+    }
+  },
+  "values": [
+    "bs.environment:celestial/get_moon_phase"
+  ]
+}
