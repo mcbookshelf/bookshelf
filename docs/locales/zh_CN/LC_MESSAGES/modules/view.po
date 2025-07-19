@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,75 +19,339 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../modules/view.md:1 26d1249fb6d846f0b364552a494ba0c0
+#: ../../modules/view.md:1 dcb4b93f39f3443aa3f52df4dd62295f
 msgid "👀 View"
 msgstr "👀 视线（View）"
 
-#: ../../../modules/view.md:3 5f15a6993a5345b6b969988e3d69075b
+#: ../../modules/view.md:3 a126a437dca64fec945c507357b51268
 msgid "**`#bs.view:help`**"
 msgstr "**`#bs.view:help`**"
 
-#: ../../../modules/view.md:5 348bf4ccc0024cb59ce62bdd256b9c4b
+#: ../../modules/view.md:5 54405a83701141c0a85b073e4b877c3d
 msgid "Execute commands based on what an entity sees."
 msgstr "根据实体看到的内容执行命令。"
 
-#: ../../../modules/view.md:13 f29bdb2be54345e9a1ac0e77f3c3fa95
+#: ../../modules/view.md:13 5c512ce69e2141ea91c7b5f7ce514404
 msgid "\"Vision is the act of seeing things as they could be, not as they are.\""
 msgstr "“愿景是看到事物可能的样子，而不是现在的样子。”"
 
-#: ../../../modules/view.md:14 8242bee11acf40bb93a6e5dfe025e41b
+#: ../../modules/view.md:14 0d3e641ef5654c0d8cdfa7a5919fa4a3
 msgid "Gretchen Rubin"
 msgstr "格雷琴·鲁宾（Gretchen Rubin）"
 
-#: ../../../modules/view.md:20 5ab856cdd3f54a6e8f17da8af3f2bd3c
+#: ../../modules/view.md:20 cdffd81e5d88422b88fd3a08361c66a5
 msgid "🔧 Functions"
 msgstr "🔧 函数"
 
-#: ../../../modules/view.md:22 2ced78d1eb8443c8be4678609342a6ba
+#: ../../modules/view.md:22 0acbf463ad98439396a21b9d3d3c4085
 msgid "You can find below all functions available in this module."
-msgstr "您可以在下方找到此模块中的所有可用函数。"
+msgstr "你可以在下方找到此模块中的所有可用函数。"
 
-#: ../../../modules/view.md:26 636e43d4cd0d49629dcf2781622e1c03
+#: ../../modules/view.md:26 4fd71263e0234fd2ae5a184056ce2312
 msgid "Aimed Block"
 msgstr "瞄准的方块"
 
-#: ../../../modules/view.md:30 2fe3877af3d54c8baae6e01f75b5adf8
-msgid "Run a command at the aligned coordinates of the block an entity is aiming at."
+#: ../../modules/view.md:30 cef09af2ac734d0180a5a90545bb6217
+msgid ""
+"Run a command at the aligned coordinates of the block an entity is aiming"
+" at."
 msgstr "在实体瞄准的方块处执行命令，并自动对齐坐标（align xyz）。"
 
-#: ../../../modules/view.md:32 ../../../modules/view.md:76
-#: ../../../modules/view.md:101 ../../../modules/view.md:143
-#: ../../../modules/view.md:177 ../../../modules/view.md:211
-#: ../../../modules/view.md:251 ../../../modules/view.md:284
-#: ../../../modules/view.md:311 0c5fa180323e4462bb1a4bef784b5f14
-#: 1174793cd2a24f6fb803f11531e6b730 286c21bef9004d7b9d093d45feeac1cf
-#: 32d0e77d9c2b4fee8f0a2192d0cccd9a 4f2ae82cb81e4e2e8f9d8f9d5bb2f848
-#: 561bd03475374f17b70db6b5d15545b9 5f2d9ebd50db43c2b77967d02e309896
-#: 7d2f413338e24716b9cc2b5dca84cf39 e653cf5b9a7c4542a4b0432d7e3bc3d6
+#: ../../modules/view.md:32 ../../modules/view.md:76 ../../modules/view.md:101
+#: ../../modules/view.md:143 ../../modules/view.md:177
+#: ../../modules/view.md:211 ../../modules/view.md:251
+#: ../../modules/view.md:284 ../../modules/view.md:311
+#: 25db8a0a74134360b513d8c89fb24ae8 33d18de0d7544716bf85b2d971a8c29c
+#: 39c6ea440b2b41c5ae52ba78f6768006 53f6e6db94a646fc9d6d6a98d3cd603e
+#: bd1065abcb164dfe88da4a726e1ce043 c1c8208750854c78b7df50f2025c72bf
+#: c3a7beec24964203a219695cc37c0b78 c4b331444f804f909805cb5d9211a537
+#: d3d2694b565f43c48293c6ebd26a2799
 msgid "Inputs"
 msgstr "输入"
 
-#: ../../../modules/view.md:33 ../../../modules/view.md:77
-#: ../../../modules/view.md:102 ../../../modules/view.md:144
-#: ../../../modules/view.md:178 316fc8df0e6c45ca9a62fb46213cec44
-#: 3a0e7537e2964e678119f6f29e8ecaa4 90e476627d544d608c26697473cf3dd7
-#: eb66e9dbc1ad4a58a317feb0f08cd65c ed7567839b274fb0b121478713f03889
+#: ../../modules/view.md:33 ../../modules/view.md:77 ../../modules/view.md:102
+#: ../../modules/view.md:144 ../../modules/view.md:178
+#: 09a8b0aeb3d84df4830fd746d20b0b45 2705ad966bac4f51b8f0fefd4dd6b525
+#: 4aa37e5a63b64411b6a0bff7c681ebf8 ea111339c25349f0a17f328d84adfb01
+#: feb9e1222a9f415d87075e6b4599d611
 msgid ""
 "**Execution `as <entities>`**: Entity whose eyes determine the vision "
 "origin."
 msgstr "**执行 `as <实体>`**：视线起点实体。"
 
-#: ../../../modules/view.md:35 ../../../modules/view.md:79
-#: ../../../modules/view.md:104 ../../../modules/view.md:146
-#: ../../../modules/view.md:180 ../../../modules/view.md:216
-#: ../../../modules/view.md:256 ../../../modules/view.md:287
-#: ../../../modules/view.md:314 01b844ace4c14ffeb98ab127fbfc40a1
-#: 0ad401b7a0034c8da8d7623153501148 50522b6a399247be8152c1d57a276619
-#: 591688756b534c1ca4facde9437bd31a 6164bd95ed4e42d39199a9ef06c92e98
-#: 9dca44b5da7b488298ce125fb834a734 afc493f5243a43a6b1a9eb9570f48b9b
-#: c3687df99e7747b0981a48d3e7864247 fe014d1972b14a63ba7952c321997ed2
+#: ../../modules/view.md:35 ../../modules/view.md:79 ../../modules/view.md:104
+#: ../../modules/view.md:146 ../../modules/view.md:180
+#: ../../modules/view.md:216 ../../modules/view.md:256
+#: ../../modules/view.md:287 ../../modules/view.md:314
+#: 1dc079fe486247329adec878b92b3554 597da2c007d642aba1368ba7f764ef1b
+#: 600caaa4842e45a683a8a8765987d47b 6af136eb5c7d40499e1eb795e79964a6
+#: 7107490dbdc14ea88c48ac6b545ad9c1 9c840b54cc0241aa91e741aca0b6ef65
+#: a75f1bb5b57b418f81abb6a30ead2fc3 e76b661fb8b74c00a4237f4a7fa13a00
+#: eb69ff6f4de145bbb750d13682e50ffd
 msgid "**Function macro**:"
 msgstr "**函数宏**："
+
+#: ../../modules/view.md:43 19560a7d35684681accff8bae18c8754
+msgid "*Example: Change the block you are looking at:*"
+msgstr "*示例：改变你正在看着的方块：*"
+
+#: ../../modules/view.md:50 ../../modules/view.md:121 ../../modules/view.md:161
+#: ../../modules/view.md:195 ../../modules/view.md:235
+#: 66e79964c8574dda8b6ca4cfff76fdec 7cdd096b524f461cbf5bbb875327f52a
+#: 8117dac6c72e4257b7f058e1b1770db0 ba5d913d1e6a414fb6e47f8c6d2f54c5
+#: f852e83e07814dd6b947dd21b1c0ce71
+msgid "Advanced Usage"
+msgstr "高级用法"
+
+#: ../../modules/view.md:53 ../../modules/view.md:124 ../../modules/view.md:164
+#: ../../modules/view.md:198 ../../modules/view.md:238
+#: 3a9b86f805ec43d7b2726b6dd918cc89 5db627ee24044ea8808c157d1a231e04
+#: 5e2e65a68f214b56b06d7b0098e199eb 75d17aef91ae4b3094e88c445e45d195
+#: f2d61540a1514b8e8c02cb1c9d66fdd8
+msgid ""
+"This system is a simplified, specific use case of the `#bs.raycast:run` "
+"function. It internally relies on it, allowing you to read its output and"
+" providing the flexibility to alter its behavior by modifying its input. "
+"[Learn more here](raycast.md)"
+msgstr ""
+"该系统是 `#bs.raycast:run` "
+"函数的简化特定用例。它内部依赖于该函数，允许你读取其输出，并通过修改其输入来灵活地改变其行为。[详见此处](raycast.md)"
+
+#: ../../modules/view.md:56 eb4c23b870e2498c80c94104d2429e23
+msgid "Avoid Advancements"
+msgstr "避免使用进度"
+
+#: ../../modules/view.md:59 3bdfcefbf79245ddb6bd6a3959d4684c
+msgid ""
+"This function *can* be used with the `placed_block` advancement to detect"
+" block placement, but this is discouraged due to potential precision "
+"differences compared to Minecraft's native detection. Additionally, rapid"
+" mouse movements within the same tick may cause the wrong block to be "
+"targeted."
+msgstr ""
+"此函数*可以*与 `placed_block` 进度一起使用来检测方块放置，但由于与 Minecraft "
+"原生检测相比可能存在精度差异，不推荐这样做。此外，同一游戏刻内快速移动鼠标可能导致瞄准错误的方块。"
+
+#: ../../modules/view.md:62 ../../modules/view.md:133 ../../modules/view.md:167
+#: ../../modules/view.md:201 ../../modules/view.md:339
+#: ../../modules/view.md:361 2d8d0c88056e421995cbb9d67c180f34
+#: 4d1cb61556024702b899904f8ba60c50 512458188c9f45a29c6c00a4ffeaff66
+#: 52d9860c6b78405ca5044f401ae7b65e 541463073c694d76b8a4533fbc26beef
+#: d854f2b34a614b798baf8e6d1220b4f0
+msgid "**Credits**: Aksiome"
+msgstr "**制作人员**：Aksiome"
+
+#: ../../modules/view.md:66 8e677914dac24c17835c16342916140c
+msgid "Aimed Entity"
+msgstr "瞄准的实体"
+
+#: ../../modules/view.md c2b3a4eb8a364f2e810d4354759a878a
+#: fbe63063f5df446f9fda5d58713d44cf
+msgid "As"
+msgstr "执行者"
+
+#: ../../modules/view.md:74 a42c5d0483ec4f7eb29fb9e30375dcb8
+msgid "Run a command as the entity that is aimed by the current entity."
+msgstr "以当前实体瞄准的实体为执行者执行指令。"
+
+#: ../../modules/view.md:87 ae61746a5e05455391af51bd4472154d
+msgid "*Example: Run a command as the entity that you are looking at:*"
+msgstr "*示例：让你正在看着的实体执行命令：*"
+
+#: ../../modules/view.md 32de1e19575540aa962076933bc3bf82
+#: 6093e91a54724465b2fae3d933d68012
+msgid "At"
+msgstr "执行位置"
+
+#: ../../modules/view.md:99 22fd3cb3950f4571866ba0a5f5435db7
+msgid "Run a command at the entity that is aimed by the current entity."
+msgstr "以当前实体瞄准的实体为执行位置执行指令。"
+
+#: ../../modules/view.md:112 563aff320ca249f8a649428364f4b45b
+msgid "*Example: Run a command at the entity that you are looking at:*"
+msgstr "*示例：在你正在看着的实体处执行命令：*"
+
+#: ../../modules/view.md:127 221435ecc406488290747e9c43a57f72
+msgid "Performance Tip"
+msgstr "性能提示"
+
+#: ../../modules/view.md:130 d720ca30a84a42c6937370843db83e40
+msgid ""
+"In Minecraft, predicates can check if a player is looking at an entity. "
+"If you only need a simple player-specific check, you should consider "
+"using the [Looked entity](#looked-entity) functions."
+msgstr ""
+"在 Minecraft 中，谓词可以检查玩家是否在看着一个实体。如果你只需要简单的特定玩家检查，应该考虑使用[被看着的实体](#looked-"
+"entity)函数。"
+
+#: ../../modules/view.md:137 72e7d7dcb21348ed8d7b9dd45b618839
+msgid "Aimed Point"
+msgstr "瞄准点"
+
+#: ../../modules/view.md:141 417cf25c45764edf8044c53a9d09c791
+msgid "Run a command at the point that was hit by a raycast."
+msgstr "在射线命中的终点处执行命令。"
+
+#: ../../modules/view.md:154 07518d4688a9482abe7e8807e79bb7c6
+msgid "*Example: Run a command at the point you are looking at:*"
+msgstr "*示例：在你正在看着的点处执行命令：*"
+
+#: ../../modules/view.md:171 0c62b51f55ce419099f2af2094b53e10
+msgid "Block Placement"
+msgstr "方块放置"
+
+#: ../../modules/view.md:175 c968a40c592e47efa722bdfd047ba3ae
+msgid ""
+"Run a command at the precise coordinates where a block would align if "
+"placed, considering the collision block and its normal."
+msgstr "根据方块的碰撞箱和其法线方向，精确地得到放置方块的位置，并对齐坐标（align xyz），执行命令。"
+
+#: ../../modules/view.md:188 5ecbe204a82d4eb990357004d7dcd085
+msgid "*Example: Set a block as if the player was placing it:*"
+msgstr "*示例：像玩家放置方块一样设置方块：*"
+
+#: ../../modules/view.md:205 efafc6c3f5844a718cbb3a294aeba74e
+msgid "Can See \"as to at\""
+msgstr "视线能否穿过“从执行者到执行位置”"
+
+#: ../../modules/view.md:209 9f7b3a3e30b84868b54bd175bd3f20f9
+msgid ""
+"Determine if an entity, from its current position, can have an "
+"unobstructed view to the execution position."
+msgstr "验证从实体当前位置到执行位置之间能否被视线穿过。"
+
+#: ../../modules/view.md:212 df2be40d03f64ba08f3f24319fd16d39
+msgid "**Execution `as <entities>`**: Entities that are being checked."
+msgstr "**执行 `as <实体>`**：被检查的实体。"
+
+#: ../../modules/view.md:214 d46c43335c474a1b872a9dfaa386c313
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position you "
+"want to check for visibility."
+msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：你想检查的位置。"
+
+#: ../../modules/view.md:222 a515aa1fbc7c44e58014728cecc647d3
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../modules/view.md:223 dfb1bbd16a1f458aa8f1a922107f4510
+msgid "**Return**: Whether the check is a success or a failure (1 or 0)."
+msgstr "**返回值**：检查是否成功或失败（1或0）。"
+
+#: ../../modules/view.md:226 bad59359d1b4432ba7e80376ea89c46f
+msgid "*Example: See if the nearest entity is able to see you:*"
+msgstr "*示例：检查最近的实体是否能看到你：*"
+
+#: ../../modules/view.md:241 ../../modules/view.md:270
+#: cf68f901efe747249e399693eb28932a f9eba7e5fbe947abaaae9c57cdc383d2
+msgid "**Credits**: Aksiome, Leirof"
+msgstr "**制作人员**：Aksiome、Leirof"
+
+#: ../../modules/view.md:245 835fd56fd3fe4b088a15c9230d8c76d3
+msgid "In View \"as to at\""
+msgstr "在视野内“从执行者到执行位置”"
+
+#: ../../modules/view.md:249 2f2bfeb1804b496da367c8638ba7f348
+msgid ""
+"Determine if an entity has a specific position within its field of view, "
+"which is represented as a cone originating from the entity's eye."
+msgstr "判断某个位置是否在实体的视野范围（从实体眼睛发出的锥体）内。"
+
+#: ../../modules/view.md:252 6d11859fb2aa4c4380a6109b20a4618a
+msgid ""
+"**Execution `as <entities>`**: Entities whose field of view is being "
+"checked."
+msgstr "**执行 `as <实体>`**：将该实体作为视野锥体。"
+
+#: ../../modules/view.md:254 98143b62f9bf4ba291c486dd634ae5a8
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position you "
+"want to check if it's within the entity's field of view cone."
+msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：被检查是否在视野锥体内的位置。"
+
+#: ../../modules/view.md:263 7fdaeee992e447faa6a8e89daa9ad3e7
+msgid "*Example: Check whether the position 0 5 0 is in your field of view:*"
+msgstr "*示例：检查位置0 5 0是否在你的视野内：*"
+
+#: ../../modules/view.md:274 97a257b6b6c84045928265c74ffc86cb
+msgid "Looked Entity"
+msgstr "被看着的实体"
+
+#: ../../modules/view.md:282 18a17a7bba6c4e028778dd3104ab3082
+msgid "Run a command as the entity a player is looking at."
+msgstr "以玩家正在看着的实体为执行者执行命令。"
+
+#: ../../modules/view.md:285 ../../modules/view.md:312
+#: 1f374a67515744949ff464bdee11b1a1 e2169603a7384affa2ed592ad404c50b
+msgid ""
+"**Execution `as <players>`**: Player whose eyes determine the vision "
+"origin."
+msgstr "**执行 `as <玩家>`**：将该玩家的眼部位置作为视线起点。"
+
+#: ../../modules/view.md:293 ../../modules/view.md:320
+#: 36cb20b3d1414d03ba2ab6505557ecf4 f040d2771c0d495abdc6d26a97c320c4
+msgid ""
+"**Tag `bs.view.is_lookable`**: Tag that must be added to entities that "
+"can be looked at."
+msgstr "**标签 `bs.view.is_lookable`**：要检测的实体必须加上此标签。"
+
+#: ../../modules/view.md:296 2893a1fa2e9a4bb6a86cf4e3e0ba11a7
+msgid "*Example: Make the armor_stand the player is looking at glow:*"
+msgstr "*示例：让玩家正在看着的盔甲架发光：*"
+
+#: ../../modules/view.md:309 363872abe2dd457d9f0bde7c11885900
+msgid "Run a command at the entity a player is looking at."
+msgstr "在玩家正在看着的实体处执行命令。"
+
+#: ../../modules/view.md:323 3ac45de01f3e4f558b27942655aa76de
+msgid "*Example: Summon particles at the armor_stand the player is looking at:*"
+msgstr "*示例：在玩家正在看着的盔甲架处召唤粒子：*"
+
+#: ../../modules/view.md:333 c7f0d4d3ac904cbfa482baabae707433
+msgid "Technical Limitations"
+msgstr "技术限制"
+
+#: ../../modules/view.md:336 ca0406d73fbd4ffd8f80e132f80747f6
+msgid ""
+"As this function relies on a player-specific predicate, it is exclusively"
+" designed for players. Additionally, to optimize performance, only a "
+"maximum of 255 entities are allowed to have the `bs.view.is_lookable` tag"
+" simultaneously."
+msgstr ""
+"由于此函数依赖于特定于玩家的谓词，它专门为玩家设计。此外，为了优化性能，同时只允许最多255个实体拥有 `bs.view.is_lookable`"
+" 标签。"
+
+#: ../../modules/view.md:343 a08bf03a94324d139ec184ed11b5bd8c
+msgid "🏷️ Tags"
+msgstr "🏷️ 标签"
+
+#: ../../modules/view.md:345 ced90d8fc7e44ca3a546c0a386258959
+msgid "You can find below below all tags available in this module."
+msgstr "你可以在下方找到此模块中的所有可用标签。"
+
+#: ../../modules/view.md:349 f3f7f68a8a024c93bc4487b1ade8ba3b
+msgid "Blocks"
+msgstr "方块"
+
+#: ../../modules/view.md e07f135a501642169c6449125b9a74b9
+msgid "Can See Through"
+msgstr "可穿透"
+
+#: ../../modules/view.md:355 46ae5785d8db4b849ff3eaf6a3a64b9e
+msgid "**`#bs.view:can_see_through`**"
+msgstr "**`#bs.view:can_see_through`**"
+
+#: ../../modules/view.md:357 20ad9a7ccd5c401eb7a529fd17746c36
+msgid "Determine if the block is transparent."
+msgstr "确定方块能否被视线穿透。"
+
+#: ../../modules/view.md:367 d54e142ddefc496396cc6bd2d9d155db
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对你有帮助吗？**"
+
+#: ../../modules/view.md:369 c6c7f683af99414ea8103520e9257ea8
+msgid "Feel free to leave your questions and feedbacks below!"
+msgstr "欢迎在下方留下你的问题和反馈！"
 
 #, python-brace-format
 msgid "{nbt}`compound` Arguments"
@@ -101,284 +365,24 @@ msgstr "{nbt}`string` **run**: 在目标方块位置执行的命令。"
 msgid "{nbt}`compound` **with**: Optional settings (see advanced usage below)."
 msgstr "{nbt}`compound` **with**: 可选设置（详见下方高级用法）。"
 
-#: ../../../modules/view.md:43 349252d683c1420f80a3604ae16d732b
-msgid "*Example: Change the block you are looking at:*"
-msgstr "*示例：改变你正在看着的方块：*"
-
-#: ../../../modules/view.md:50 ../../../modules/view.md:121
-#: ../../../modules/view.md:161 ../../../modules/view.md:195
-#: ../../../modules/view.md:235 0ee5204bc65b4c5b8bfa5f9b79f3d37e
-#: 25765ae3caf946c39be4ae6e85c139b7 2ab4bce194f74d48841032475af57182
-#: 5f06067e625b4a949d53d863869f86d6 e06b3dfafbde49a781e443fa5819b8ce
-msgid "Advanced Usage"
-msgstr "高级用法"
-
-#: ../../../modules/view.md:53 ../../../modules/view.md:124
-#: ../../../modules/view.md:164 ../../../modules/view.md:198
-#: ../../../modules/view.md:238 11397445f255409380fd25f4200cdd0c
-#: 299ff6043f3f48cd84fc16df6b13001a 3621ce6b249c4061a485210fb6c858e5
-#: 7fa73cef263a4c0f8db26ccb2270b0ce f138d49c9a5042adb75a6e47c926d590
-msgid ""
-"This system is a simplified, specific use case of the `#bs.raycast:run` "
-"function. It internally relies on it, allowing you to read its output and"
-" providing the flexibility to alter its behavior by modifying its input. "
-"[Learn more here](raycast.md)"
-msgstr "该系统是 `#bs.raycast:run` 函数的简化特定用例。它内部依赖于该函数，允许您读取其输出，并通过修改其输入来灵活地改变其行为。[详见此处](raycast.md)"
-
-#: ../../../modules/view.md:56 93e8ba13ae214af48494e25d76ea8cce
-msgid "Avoid Advancements"
-msgstr "避免使用进度"
-
-#: ../../../modules/view.md:59 0b0521a92f13440c824adf6a8ea14dc3
-msgid ""
-"This function *can* be used with the `placed_block` advancement to detect"
-" block placement, but this is discouraged due to potential precision "
-"differences compared to Minecraft's native detection. Additionally, rapid"
-" mouse movements within the same tick may cause the wrong block to be "
-"targeted."
-msgstr "此函数*可以*与 `placed_block` 进度一起使用来检测方块放置，但由于与 Minecraft 原生检测相比可能存在精度差异，不推荐这样做。此外，同一游戏刻内快速移动鼠标可能导致瞄准错误的方块。"
-
-#: ../../../modules/view.md:62 ../../../modules/view.md:133
-#: ../../../modules/view.md:167 ../../../modules/view.md:201
-#: ../../../modules/view.md:339 ../../../modules/view.md:361
-#: 0a0e3f567ef54bf48d56edf42c47fd9a 23d6c40686624960807284e227573f25
-#: 40a30edd82cf4b89b44de553b9eb8981 ab3ced69868849fd963cc40ceb2a7786
-#: caf49a318fa14f83b6a70ff4e2d8ad9c d849ac23927847ad90e34a9fc75069e0
-msgid "**Credits**: Aksiome"
-msgstr "**制作人员**：Aksiome"
-
-#: ../../../modules/view.md:66 bb46f399961f41bebd42a5df7f3ee137
-msgid "Aimed Entity"
-msgstr "瞄准的实体"
-
-#: ../../../modules/view.md 7199c9553ae9428a85019d9e1361661e
-#: edabe95e9a6a43c5b277d454c9dfa924
-msgid "As"
-msgstr "执行者"
-
-#: ../../../modules/view.md:74 75d7300ac81f4e7ab6feee6626016566
-msgid "Run a command as the entity that is aimed by the current entity."
-msgstr "以当前实体瞄准的实体为执行者执行指令。"
-
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to run as the targeted entity."
 msgstr "{nbt}`string` **run**: 以瞄准的实体为执行者执行的命令。"
-
-#: ../../../modules/view.md:87 c8f050b212b740b88d97f3d43d998d0d
-msgid "*Example: Run a command as the entity that you are looking at:*"
-msgstr "*示例：让你正在看着的实体执行命令：*"
-
-#: ../../../modules/view.md 0ec533cc86cb4218ba0d43835a317575
-#: 62057356b7c448d0aa43a8aee6047bdd
-msgid "At"
-msgstr "执行位置"
-
-#: ../../../modules/view.md:99 6e10927445804cb5b7e29d6d02b3c188
-msgid "Run a command at the entity that is aimed by the current entity."
-msgstr "以当前实体瞄准的实体为执行位置执行指令。"
 
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to run at the targeted entity."
 msgstr "{nbt}`string` **run**: 以瞄准的实体为执行位置执行的命令。"
 
-#: ../../../modules/view.md:112 9470ac339c7c4c86926af24d400035f6
-msgid "*Example: Run a command at the entity that you are looking at:*"
-msgstr "*示例：在你正在看着的实体处执行命令：*"
-
-#: ../../../modules/view.md:127 056983ad971344a9b2e1408576da0897
-msgid "Performance Tip"
-msgstr "性能提示"
-
-#: ../../../modules/view.md:130 476ad1bc1fa34febb958d2e7f48940eb
-msgid ""
-"In Minecraft, predicates can check if a player is looking at an entity. "
-"If you only need a simple player-specific check, you should consider "
-"using the [Looked entity](#looked-entity) functions."
-msgstr "在 Minecraft 中，谓词可以检查玩家是否在看着一个实体。如果你只需要简单的特定玩家检查，应该考虑使用[被看着的实体](#looked-entity)函数。"
-
-#: ../../../modules/view.md:137 71afee898ec74de89337fad477a86a6f
-msgid "Aimed Point"
-msgstr "瞄准点"
-
-#: ../../../modules/view.md:141 51f2e4cce3dd44a493de1713a9445546
-msgid "Run a command at the point that was hit by a raycast."
-msgstr "在射线命中的终点处执行命令。"
-
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to run at the hit point."
 msgstr "{nbt}`string` **run**: 在射线命中的终点处执行的命令。"
 
-#: ../../../modules/view.md:154 35f9da2bf8f145da92f1f538d7bbc16e
-msgid "*Example: Run a command at the point you are looking at:*"
-msgstr "*示例：在你正在看着的点处执行命令：*"
-
-#: ../../../modules/view.md:171 0f2f927c80a44f9f946da2e5747fe093
-msgid "Block Placement"
-msgstr "方块放置"
-
-#: ../../../modules/view.md:175 023d643710774108baa985e56d6910f6
-msgid ""
-"Run a command at the precise coordinates where a block would align if "
-"placed, considering the collision block and its normal."
-msgstr "根据方块的碰撞箱和其法线方向，精确地得到放置方块的位置，并对齐坐标（align xyz），执行命令。"
-
 #, python-brace-format
-msgid "{nbt}`string` **run**: Command to run before the targeted block position."
+msgid ""
+"{nbt}`string` **run**: Command to run "
+"before the targeted block position."
 msgstr "{nbt}`string` **run**: 在方块放置位置执行的命令。"
-
-#: ../../../modules/view.md:188 4e69f64e4a6a4e9189da961b7105a85b
-msgid "*Example: Set a block as if the player was placing it:*"
-msgstr "*示例：像玩家放置方块一样设置方块：*"
-
-#: ../../../modules/view.md:205 dcdc4992c5e44d9bb1ef05e9ce83279d
-msgid "Can See \"as to at\""
-msgstr "视线能否穿过“从执行者到执行位置”"
-
-#: ../../../modules/view.md:209 3da0e049971f4e519bdf4992433387d5
-msgid ""
-"Determine if an entity, from its current position, can have an "
-"unobstructed view to the execution position."
-msgstr "验证从实体当前位置到执行位置之间能否被视线穿过。"
-
-#: ../../../modules/view.md:212 b4ce789991cb4feab7513e1a47951852
-msgid "**Execution `as <entities>`**: Entities that are being checked."
-msgstr "**执行 `as <实体>`**：被检查的实体。"
-
-#: ../../../modules/view.md:214 e5414c413112474e8cf8c6707647b6a7
-msgid ""
-"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position you "
-"want to check for visibility."
-msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：你想检查的位置。"
-
-#: ../../../modules/view.md:222 4c6fa2bca285467eb8692d9eee5c2ae6
-msgid "Outputs"
-msgstr "输出"
-
-#: ../../../modules/view.md:223 977965e22d56424f8f5bb09ff106be72
-msgid "**Return**: Whether the check is a success or a failure (1 or 0)."
-msgstr "**返回值**：检查是否成功或失败（1或0）。"
-
-#: ../../../modules/view.md:226 afd80fbe2a784b2bb9e0185f0543106f
-msgid "*Example: See if the nearest entity is able to see you:*"
-msgstr "*示例：检查最近的实体是否能看到你：*"
-
-#: ../../../modules/view.md:241 ../../../modules/view.md:270
-#: 2ec15f7063c54d008c3517cd4877280a 441d2c336614463995e5365433a47b69
-msgid "**Credits**: Aksiome, Leirof"
-msgstr "**制作人员**：Aksiome、Leirof"
-
-#: ../../../modules/view.md:245 7032552652d345cdab0c26fb60ee5a9c
-msgid "In View \"as to at\""
-msgstr "在视野内“从执行者到执行位置”"
-
-#: ../../../modules/view.md:249 f371bd6a1d0d46d78ca4c3db7a01d829
-msgid ""
-"Determine if an entity has a specific position within its field of view, "
-"which is represented as a cone originating from the entity's eye."
-msgstr "判断某个位置是否在实体的视野范围（从实体眼睛发出的锥体）内。"
-
-#: ../../../modules/view.md:252 5708be2a3dea4bcb8e8d79263ea02b50
-msgid ""
-"**Execution `as <entities>`**: Entities whose field of view is being "
-"checked."
-msgstr "**执行 `as <实体>`**：将该实体作为视野锥体。"
-
-#: ../../../modules/view.md:254 38f4f631189d47669d4f89d158fda27e
-msgid ""
-"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position you "
-"want to check if it's within the entity's field of view cone."
-msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：被检查是否在视野锥体内的位置。"
-
-#, python-brace-format
-msgid "{nbt}`string` **run**: Command to run before the targeted block position."
-msgstr "{nbt}`string` **run**: 在方块放置位置执行的命令。"
-
-#: ../../../modules/view.md:263 636ffadb319d4f95b76d19334992706c
-msgid "*Example: Check whether the position 0 5 0 is in your field of view:*"
-msgstr "*示例：检查位置0 5 0是否在你的视野内：*"
-
-#: ../../../modules/view.md:274 ad1ea0c5adbf40e596eb4c452c854e86
-msgid "Looked Entity"
-msgstr "被看着的实体"
-
-#: ../../../modules/view.md:282 321947582bc544bd8d5a6b3734558544
-msgid "Run a command as the entity a player is looking at."
-msgstr "以玩家正在看着的实体为执行者执行命令。"
-
-#: ../../../modules/view.md:285 ../../../modules/view.md:312
-#: 74e22cd03a0c44ceb43c22df854b83e0 af3e5d8af6dd43d79e0859cf20596b27
-msgid ""
-"**Execution `as <players>`**: Player whose eyes determine the vision "
-"origin."
-msgstr "**执行 `as <玩家>`**：将该玩家的眼部位置作为视线起点。"
-
-#: ../../../modules/view.md:293 ../../../modules/view.md:320
-#: 2d45f1955ee54ee2b7ad3a15489a3930 862625a5e19f4fe097270b959530001f
-msgid ""
-"**Tag `bs.view.is_lookable`**: Tag that must be added to entities that "
-"can be looked at."
-msgstr "**标签 `bs.view.is_lookable`**：要检测的实体必须加上此标签。"
 
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to run as the looked at entity."
 msgstr "{nbt}`string` **run**: 对被看着的实体执行的命令。"
-
-#, python-brace-format
-msgid "{nbt}`string` **run**: Command to run as the looked at entity."
-msgstr "{nbt}`string` **run**: 在被看着的实体处执行的命令。"
-
-#: ../../../modules/view.md:296 58333e9325374674b82291115e55eead
-msgid "*Example: Make the armor_stand the player is looking at glow:*"
-msgstr "*示例：让玩家正在看着的盔甲架发光：*"
-
-#: ../../../modules/view.md:309 898c509100c34888bce704c48196905d
-msgid "Run a command at the entity a player is looking at."
-msgstr "在玩家正在看着的实体处执行命令。"
-
-#: ../../../modules/view.md:323 222b38e137534e9796adf15fea3a7c2b
-msgid "*Example: Summon particles at the armor_stand the player is looking at:*"
-msgstr "*示例：在玩家正在看着的盔甲架处召唤粒子：*"
-
-#: ../../../modules/view.md:333 2af536aa67c549bf9c9d1027629e4ba1
-msgid "Technical Limitations"
-msgstr "技术限制"
-
-#: ../../../modules/view.md:336 cc5add5dfcb5423682325c8ab7f54d1b
-msgid ""
-"As this function relies on a player-specific predicate, it is exclusively"
-" designed for players. Additionally, to optimize performance, only a "
-"maximum of 255 entities are allowed to have the `bs.view.is_lookable` tag"
-" simultaneously."
-msgstr "由于此函数依赖于特定于玩家的谓词，它专门为玩家设计。此外，为了优化性能，同时只允许最多255个实体拥有 `bs.view.is_lookable` 标签。"
-
-#: ../../../modules/view.md:343 eaf5591e18e940c6aa7b08ce74fa19a6
-msgid "🏷️ Tags"
-msgstr "🏷️ 标签"
-
-#: ../../../modules/view.md:345 109b4a1182de45e1ae1f5b34148d1d37
-msgid "You can find below below all tags available in this module."
-msgstr "您可以在下方找到此模块中的所有可用标签。"
-
-#: ../../../modules/view.md:349 25127cd54cda495f9b4c9df3ca448782
-msgid "Blocks"
-msgstr "方块"
-
-#: ../../../modules/view.md af90c7b2c84145c1a39a89d2c8268bdf
-msgid "Can See Through"
-msgstr "可穿透"
-
-#: ../../../modules/view.md:355 f4310f8beefb4f30954e544f43309a44
-msgid "**`#bs.view:can_see_through`**"
-msgstr "**`#bs.view:can_see_through`**"
-
-#: ../../../modules/view.md:357 85989cd1eae8442d81972ce78039ce13
-msgid "Determine if the block is transparent."
-msgstr "确定方块能否被视线穿透。"
-
-#: ../../../modules/view.md:367 4acfceb9d0864c8984b35c384babd324
-msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
-
-#: ../../../modules/view.md:369 51b33ab216d641c3a74e2643c3479419
-msgid "Feel free to leave your questions and feedbacks below!"
-msgstr "欢迎在下方留下您的问题和反馈！"

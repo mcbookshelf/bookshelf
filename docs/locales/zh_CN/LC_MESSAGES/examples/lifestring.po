@@ -42,7 +42,7 @@ msgid ""
 "without worrying about tick safety."
 msgstr ""
 "原生Minecraft缺乏精确治疗玩家的可靠方法，替代方案常导致时序问题。"
-"Bookshelf通过确保生命值更新的一致性解决此问题，允许您在游戏刻的任何时刻获取当前生命值"
+"Bookshelf通过确保生命值更新的一致性解决此问题，允许你在游戏刻的任何时刻获取当前生命值"
 "（即使存在待处理变更），无需担心刻安全性问题。"
 
 #: ../../../examples/lifestring.md:10 46eed23d7d714794af54eccafa5da374
@@ -390,7 +390,7 @@ msgid ""
 "this system even better! Here are some ideas to think about:"
 msgstr ""
 "本系统是Bookshelf简化复杂任务的典范，实现了关联玩家共享伤害与治疗。"
-"您可通过以下方向进一步优化："
+"你可通过以下方向进一步优化："
 
 #: ../../../examples/lifestring.md:243 4a8a77e395e14cd39fbbfd257f1480f7
 msgid ""
@@ -419,12 +419,12 @@ msgstr ""
 msgid ""
 "Try experimenting with these ideas to make the lifestring system work the"
 " way you want it to!"
-msgstr "尝试实现这些构想，定制属于您的生命链接系统！"
+msgstr "尝试实现这些构想，定制属于你的生命链接系统！"
 
 #: ../../_templates/comments.md:4 a536234011e44314a55ecb5ccd8f5dd1
 msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
+msgstr "**💬 这对你有帮助吗？**"
 
 #: ../../_templates/comments.md:6 8149308788fb457fa5c5c37ba92789d9
 msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下您的问题与反馈！"
+msgstr "欢迎在下方留下你的问题与反馈！"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-18 22:04+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2025-07-19 22:05+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
 "Language-Team: zh_CN <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../../contribute/tree-structure.md:5 3c37a947435341c8b6bba4182089d515
 msgid "🌳 Tree Structure"
-msgstr ""
+msgstr "🌳 树状结构"
 
 #: ../../../contribute/tree-structure.md:7 1cab4ac3743c491dac9d25c27f858015
 msgid ""
@@ -30,20 +30,23 @@ msgid ""
 "therefore be positioned in these various modules according to their "
 "usefulness."
 msgstr ""
+"Bookshelf 遵循特定的树状结构，类似于 Java 包，在本项目中称为\"模块\"。因此，"
+"添加的功能必须根据其用途放置在这些不同的模块中。"
 
 #: ../../../contribute/tree-structure.md:16 9db1f8c135e2455e81eb16b07ea102f2
 msgid "**Module Requirements:**"
-msgstr ""
+msgstr "**模块要求：**"
 
 #: ../../../contribute/tree-structure.md:18 50d68742a1c143eab29190e18934e435
 msgid ""
 "Each module must include a `module.json`, as described in the [metadata "
 "page](project:metadata.md)"
 msgstr ""
+"每个模块必须包含一个 `module.json`，如[元数据页面](project:metadata.md)所述"
 
 #: ../../../contribute/tree-structure.md:20 58302562ce724e0e948dddd9fb795923
 msgid "Each module must also include a `pack.png` and a `README.md`"
-msgstr ""
+msgstr "每个模块还必须包含一个 `pack.png` 和一个 `README.md`"
 
 #: ../../../contribute/tree-structure.md:22 529e71fa9bec449d9b0f244e1942fabe
 msgid ""
@@ -51,22 +54,26 @@ msgid ""
 "module's loading and unloading. This includes resetting objectives, "
 "storages, and any other necessary elements"
 msgstr ""
+"需要 `__load__` 和 `__unload__` 函数来管理模块的加载和卸载。这包括重置记分项、"
+"命令存储和任何其他必要元素"
 
 #: ../../../contribute/tree-structure.md:25 d3a19974fa9946c5846e0ca013520486
 msgid "**Feature Requirements:**"
-msgstr ""
+msgstr "**功能要求：**"
 
 #: ../../../contribute/tree-structure.md:27 b8c52f70fb744299b952c877f324cff0
 msgid ""
 "Each feature function should have a dedicated function tag that declares "
 "metadata, as detailed in the [metadata page](project:metadata.md)"
 msgstr ""
+"每个功能函数应有一个专用的函数标签来声明元数据，如[元数据页面](project:metadata.md)详细描述"
 
 #: ../../../contribute/tree-structure.md:29 b563b22ea6914a4daa785171371c9c20
 msgid ""
 "Each feature should declare metadata, as detailed in the [metadata "
 "page](project:metadata.md)"
 msgstr ""
+"每个功能应声明元数据，如[元数据页面](project:metadata.md)详细描述"
 
 #: ../../../contribute/tree-structure.md:31 7e1c966610314072bc196916ac1779e0
 msgid ""
@@ -74,6 +81,8 @@ msgid ""
 "decompose its features in order to make it more readable and to promote "
 "reusability"
 msgstr ""
+"一个功能等同于一个独特的实用工具，因此我们不应犹豫将其功能分解，以使其更易读并"
+"提高可重用性"
 
 #: ../../../contribute/tree-structure.md:33 462add9037404869af045bf1e48f2c34
 msgid ""
@@ -81,4 +90,4 @@ msgid ""
 "their files as they wish as long as it remains coherent and respects the "
 "global structure."
 msgstr ""
-
+"除了这些少量约束外，贡献者可以自由组织他们的文件，只要保持连贯并尊重全局结构。"

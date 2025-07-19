@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-28 11:19+0800\n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,71 +19,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../contribute/index.md:25
+#: ../../contribute/index.md:25
 msgid "Fundamentals"
-msgstr ""
+msgstr "基础知识"
 
-#: ../../../contribute/index.md:35
+#: ../../contribute/index.md:35
 msgid "Key Concepts"
-msgstr ""
+msgstr "核心概念"
 
-#: ../../../contribute/index.md:49
+#: ../../contribute/index.md:49
 msgid "Quick References"
-msgstr ""
+msgstr "快速参考"
 
-#: ../../../contribute/index.md:5 e7098a1afa2c47eca02cde4645366d8b
+#: ../../contribute/index.md:5 0a8bd8c5fc5241ea9dd378ae3e31ca99
 msgid "🤝 Contribute"
-msgstr ""
+msgstr "🤝 参与贡献"
 
-#: ../../../contribute/index.md:7 afd14d8a1e2c4a1c8496e3edc9b8bfb4
+#: ../../contribute/index.md:7 0c1259c969b146e09c28156bf64b8f4d
 msgid ""
 "Welcome to the Contribute section of our documentation! Whether you're "
 "fixing bugs, adding features, or writing new modules, this guide will "
 "help you get started and align with our project's standards."
-msgstr ""
+msgstr "欢迎来到文档的贡献指南！无论你是要修复问题、添加功能还是编写新模块，本指南都将帮助你快速入门并符合项目规范。"
 
-#: ../../../contribute/index.md:9 3c85d00f808f47f8870e8e3e4eb5c94a
+#: ../../contribute/index.md:9 7f87b16d42f8476894640a262c0840b9
 msgid "To contribute to this project, you must:"
-msgstr ""
+msgstr "参与本项目贡献需满足以下条件："
 
-#: ../../../contribute/index.md:11 27668661ea4e464187f29ffbb69eaf7f
+#: ../../contribute/index.md:11 e3ca68ac80bb48aa9402337f7e605f1b
 msgid "Know the structure of a Minecraft datapack (5-10 min to learn on internet)"
-msgstr ""
+msgstr "了解Minecraft数据包结构（可通过网络学习，约5-10分钟）"
 
-#: ../../../contribute/index.md:12 d6ae346ed412433e8bfc4f83ac9dc0b4
+#: ../../contribute/index.md:12 40243969d97a4238a93e3c75d0a458ad
 msgid "Know the basic usage of git projects (20-30 min to learn on internet)"
-msgstr ""
+msgstr "掌握Git基础操作（可通过网络学习，约20-30分钟）"
 
-#: ../../../contribute/index.md:13 c4d0c4b068314dc189635e396113b438
+#: ../../contribute/index.md:13 5fba64fce371491aabc8a3383f55f4d8
 msgid "Be accessible to answer questions about your work"
-msgstr ""
+msgstr "能及时回应关于你工作的询问"
 
-#: ../../../contribute/index.md:15 edc184c037df4def92c1b34b5d20d89c
+#: ../../contribute/index.md:15 110d4d774d464ce9921645e951ced39f
 msgid ""
 "If you're not familiar with GitHub pull requests or open-source "
 "collaboration, we recommend this guide to help you get started quickly: "
 "[First Contributions Guide](https://github.com/firstcontributions/first-"
 "contributions/blob/main/README.md)."
 msgstr ""
+"若不熟悉GitHub拉取请求或开源协作，推荐学习指南：[首次贡献指南](https://github.com/firstcontributions"
+"/first-contributions/blob/main/README.md)"
 
-#: ../../../contribute/index.md:17 ef429d264cd64140b0372425dfb15155
+#: ../../contribute/index.md:17 aeb8b0b7747b42649b13a40590712ec5
 msgid "**For French speakers**"
 msgstr ""
 
-#: ../../../contribute/index.md:19 97b28c3f5fc04d769d42713356e2a462
+#: ../../contribute/index.md:19 3127c427fb5048259fcf95459b791dec
 msgid ""
 "Ce projet est réalisé principalement par des membres francophones mais à "
 "destination d'un public international. C'est pourquoi toute la lib ainsi "
 "que la documentation est en anglais."
 msgstr ""
 
-#: ../../../contribute/index.md:21 8ee6e5a2376c49fcb519bb16c17cd21f
+#: ../../contribute/index.md:21 4765deb4780f4f79834377d9d4899a2d
 msgid ""
 "Si vous souhaitez contribuer mais que votre anglais n'est pas au niveau, "
 "vous pouvez utiliser des outils comme [DeepL](https://DeepL.com) puis "
 "demander une vérification."
 msgstr ""
-
-#~ msgid "🤝&nbsp;Contribute"
-#~ msgstr ""
 

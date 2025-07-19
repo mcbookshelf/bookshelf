@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,45 +19,78 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../modules/sidebar.md:1 40ec111cf97445bb9668c4544e5f975c
+#: ../../modules/sidebar.md:1 b381322123b44e4b9b8f80217d4392d2
 msgid "📰 Sidebar"
 msgstr "📰 侧边栏（Sidebar）"
 
-#: ../../../modules/sidebar.md:3 e48e4b3dade14db78614ad034fba9d3c
+#: ../../modules/sidebar.md:3 28041dc47b424bedb2e0d483d4c410c2
 msgid "**`#bs.sidebar:help`**"
 msgstr "**`#bs.sidebar:help`**"
 
-#: ../../../modules/sidebar.md:5 3dd35b27e87d4e7b963c41516a45ac90
+#: ../../modules/sidebar.md:5 03bb652b2e80442089cd5d4072390eaf
 msgid ""
 "Create visually appealing and dynamic sidebars using the scoreboard "
 "system."
 msgstr "使用记分板系统创建视觉吸引力和动态的侧边栏。"
 
-#: ../../../modules/sidebar.md:9 e65c00de9cee4a6c8f9957f9ebe8c4ec
+#: ../../modules/sidebar.md:9 207885c48ef848d0880d3805707d4392
 msgid "🔧 Functions"
 msgstr "🔧 函数"
 
-#: ../../../modules/sidebar.md:11 29f86c02de944f12a283d5e0d6e5a0fd
+#: ../../modules/sidebar.md:11 987c0a3ca9524b5eb6324b0f60a1e5c1
 msgid "You can find below all functions available in this module."
-msgstr "您可以在下方找到此模块中的所有可用函数。"
+msgstr "你可以在下方找到此模块中的所有可用函数。"
 
-#: ../../../modules/sidebar.md:15 d31e95af59b845efb5035462bd15f6bb
+#: ../../modules/sidebar.md:15 36ce40c208474cc9a81d9074fd5464e2
 msgid "Create"
 msgstr "创建"
 
-#: ../../../modules/sidebar.md:19 9ea1d9b670af4bb9a3d3a6410adedfbe
+#: ../../modules/sidebar.md:19 26d96442a5904cecb608a33a373f0239
 msgid "Create and register a new sidebar."
 msgstr "创建并注册新的侧边栏。"
 
-#: ../../../modules/sidebar.md:21 ../../../modules/sidebar.md:80
-#: 087ef276f43b46c1acd804b0a694878d 3bf48c362cbe4caeb36399cfaa8523d9
+#: ../../modules/sidebar.md:21 ../../modules/sidebar.md:80
+#: 8aafa8a262df45a3a0064e686d8ae7b9 b0d6a70df36247378196f5b347ee592a
 msgid "Inputs"
 msgstr "输入"
 
-#: ../../../modules/sidebar.md:22 ../../../modules/sidebar.md:81
-#: 79bdfe1825eb4b34b8a31293a919980a d41b64ec77b94bc0b7ffaf887ac60dfb
+#: ../../modules/sidebar.md:22 ../../modules/sidebar.md:81
+#: beb3f472c235495a81d2cc45c314fd88 cf7048daaa1944db8d023d57207d7867
 msgid "**Function macro**:"
 msgstr "**函数宏**："
+
+#: ../../modules/sidebar.md:32 869faebf579542eb95fc921f587039b0
+msgid "*Example: Create and display a new sidebar with left-aligned text:*"
+msgstr "*示例：创建并显示一个左对齐文本的新侧边栏：*"
+
+#: ../../modules/sidebar.md:51 f4255e949aad43e1869e9592a0c36d14
+msgid "*Example: Create and display a new sidebar with right-aligned text:*"
+msgstr "*示例：创建并显示一个右对齐文本的新侧边栏：*"
+
+#: ../../modules/sidebar.md:70 ../../modules/sidebar.md:94
+#: 97d55fa624f1493fb2ccc585ec3ad35a f6bbf1f94fa2472199bee8cdcb627a0e
+msgid "**Credits**: Aksiome"
+msgstr "**制作人员**：Aksiome"
+
+#: ../../modules/sidebar.md:74 2caf9866b68d435d86fe005c27cf3b2a
+msgid "Refresh"
+msgstr "刷新"
+
+#: ../../modules/sidebar.md:78 bc0ed3275f8c4aa9b4d8afafeaa11bff
+msgid "Update dynamic parts of the sidebar."
+msgstr "更新侧边栏的动态部分。"
+
+#: ../../modules/sidebar.md:88 c3af2829e1544b3e93331c00d92680a7
+msgid "*Example: Refresh a sidebar:*"
+msgstr "*示例：刷新侧边栏：*"
+
+#: ../../_templates/comments.md:4 7511724ab46f4d7c8a3e25948a1814b2
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对你有帮助吗？**"
+
+#: ../../_templates/comments.md:6 290688abf5ca4644bb61c13ca08525b0
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下你的问题和反馈！"
 
 #, python-brace-format
 msgid "{nbt}`compound` Arguments"
@@ -68,7 +101,10 @@ msgid "{nbt}`string` **objective**: An objective used for the sidebar."
 msgstr "{nbt}`string` **objective**: 用于侧边栏的计分项。"
 
 #, python-brace-format
-msgid "{nbt}`string` **display_name**: Displayed objective name. Must be a valid SNBT text component."
+msgid ""
+"{nbt}`string` **display_name**: Displayed objective"
+" name. Must be a valid SNBT "
+"text component."
 msgstr "{nbt}`string` **display_name**: 显示的计分项名称。必须是有效的 SNBT 文本组件。"
 
 #, python-brace-format
@@ -76,42 +112,13 @@ msgid "{nbt}`list` **contents**: Lines displayed on the sidebar."
 msgstr "{nbt}`list` **contents**: 侧边栏上显示的行内容。"
 
 #, python-brace-format
-msgid "{nbt}`list` {nbt}`string`: Must either be a valid SNBT text component or an array with two SNBT text components for the left and right sides."
+msgid ""
+"{nbt}`list` {nbt}`string`: Must either be "
+"a valid SNBT text component or an"
+" array with two SNBT text components"
+" for the left and right sides."
 msgstr "{nbt}`list` {nbt}`string`: 必须是有效的 SNBT 文本组件，或是包含左右两侧 SNBT 文本组件的数组。"
-
-#: ../../../modules/sidebar.md:32 7b15e213417142f4b3c7e811e09489b9
-msgid "*Example: Create and display a new sidebar with left-aligned text:*"
-msgstr "*示例：创建并显示一个左对齐文本的新侧边栏：*"
-
-#: ../../../modules/sidebar.md:51 a2490815172b4ef793e4c2ea5bf82bf1
-msgid "*Example: Create and display a new sidebar with right-aligned text:*"
-msgstr "*示例：创建并显示一个右对齐文本的新侧边栏：*"
-
-#: ../../../modules/sidebar.md:70 ../../../modules/sidebar.md:94
-#: 70c4890e577540408c4b0df7d8b41162 91d52eb890c543f4a3a3bc722b54ce5a
-msgid "**Credits**: Aksiome"
-msgstr "**制作人员**：Aksiome"
-
-#: ../../../modules/sidebar.md:74 e6ee2d4dd5d84fc0b2a1a88ac712e0be
-msgid "Refresh"
-msgstr "刷新"
 
 #, python-brace-format
 msgid "{nbt}`string` **objective**: The objective for the sidebar to refresh."
 msgstr "{nbt}`string` **objective**: 要刷新侧边栏的记分项（objective）。"
-
-#: ../../../modules/sidebar.md:78 d5f100c93bf241ffa5a0678389a470ac
-msgid "Update dynamic parts of the sidebar."
-msgstr "更新侧边栏的动态部分。"
-
-#: ../../../modules/sidebar.md:88 4f804d6786044e3095e2dec5b3cd5b1a
-msgid "*Example: Refresh a sidebar:*"
-msgstr "*示例：刷新侧边栏：*"
-
-#: ../../../_templates/comments.md:4 a14c89c012b84686801defb485b7d368
-msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
-
-#: ../../../_templates/comments.md:6 e6b70d5d0eb74a7aa0a1d4df378f64f3
-msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下您的问题和反馈！"

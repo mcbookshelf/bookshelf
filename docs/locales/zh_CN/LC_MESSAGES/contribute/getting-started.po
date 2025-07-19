@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-18 22:04+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2025-07-19 19:05+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
 "Language-Team: zh_CN <LL@li.org>\n"
@@ -21,157 +21,156 @@ msgstr ""
 
 #: ../../../contribute/getting-started.md:5 016f77ecabf8471a9885c2271f833f3b
 msgid "🚀 Getting Started"
-msgstr ""
+msgstr "🚀 入门指南"
 
 #: ../../../contribute/getting-started.md:7 fe15f4d51fa743348b60dd79dad61b7d
 msgid ""
 "This guide will walk you through setting up a local development "
 "environment to build, test, and contribute to our modules."
-msgstr ""
+msgstr "本指南将引导你设置本地开发环境，用于构建、测试并为我们的模块做出贡献。"
 
 #: ../../../contribute/getting-started.md:11 9460d86936c54c22b44c8321b61ef5e7
 msgid "⚙️ Prerequisites"
-msgstr ""
+msgstr "⚙️ 准备工作"
 
 #: ../../../contribute/getting-started.md:13 e8d5a528173542d8aabe178514fafd9d
 msgid ""
 "Before getting started, ensure your system is prepared by following these"
 " steps:"
-msgstr ""
+msgstr "开始前，请按以下步骤准备系统环境："
 
 #: ../../../contribute/getting-started.md:15 8f77cdd2e2f64cb285ddb0b5b6501f26
 msgid ""
 "Install [**PDM**](https://pdm-project.org/en/latest/), the Python "
 "Dependency Manager"
-msgstr ""
+msgstr "安装 [**PDM**](https://pdm-project.org/en/latest/)（Python 依赖管理器）"
 
 #: ../../../contribute/getting-started.md:16 e1492da3d5204945aee674bc019d85fb
 msgid ""
 "Open a terminal at the root of the project and run the following command "
 "to install all required dependencies:"
-msgstr ""
+msgstr "在项目根目录打开终端，运行以下命令安装所有必需依赖："
 
 #: ../../../contribute/getting-started.md:21 380f09d98e55473bb458c983d423fe06
 msgid ""
 "Running this command prepares your environment for building and testing "
 "the project."
-msgstr ""
+msgstr "运行此命令将为项目构建和测试准备环境。"
 
 #: ../../../contribute/getting-started.md:25 2ec1767b629443b68400d1f6345b3fc4
 msgid "🔨 Building Modules"
-msgstr ""
+msgstr "🔨 构建模块"
 
 #: ../../../contribute/getting-started.md:27 223e1fd39b3f419da4e534728443503a
 msgid ""
 "The `modules` directory contains the source files for all modules. Use "
 "the following commands to manage and build them efficiently:"
-msgstr ""
+msgstr "`modules` 目录包含所有模块的源文件。使用以下命令高效管理和构建："
 
 #: ../../../contribute/getting-started.md:30 11957dac82304fd3be021f70697c210a
 msgid "`pdm run modules build`"
-msgstr ""
+msgstr "`pdm run modules build`"
 
 #: ../../../contribute/getting-started.md:31 29659bcbf0ca475fa9f4da189c67ad68
 msgid "Build all modules"
-msgstr ""
+msgstr "构建所有模块"
 
 #: ../../../contribute/getting-started.md:32 5cbafd698d164c07b07135a061dff7e9
 msgid "`pdm run modules watch`"
-msgstr ""
+msgstr "`pdm run modules watch`"
 
 #: ../../../contribute/getting-started.md:33 2a016121aa1f4e32bdce0615ae73f478
 msgid "Monitor changes and rebuild modules automatically"
-msgstr ""
+msgstr "监控变更并自动重建模块"
 
 #: ../../../contribute/getting-started.md:34 25b283ebe70f477c92b9894359e2bfbf
 msgid "`pdm run modules <build|watch> <module1> ...`"
-msgstr ""
+msgstr "`pdm run modules <build|watch> <模块1> ...`"
 
 #: ../../../contribute/getting-started.md:35 d6a902574979418dbfce745479e21842
 msgid "Build or watch only the specified modules"
-msgstr ""
+msgstr "仅构建或监控指定模块"
 
 #: ../../../contribute/getting-started.md:36 e158ea5597f5459893e282a09ba44ae2
 msgid "`pdm run modules link [world]`"
-msgstr ""
+msgstr "`pdm run modules link [世界名称]`"
 
 #: ../../../contribute/getting-started.md:37 58076d7f5d6a43e2b3a461ff823273d3
 msgid "Link the generated resource and data packs to a Minecraft world"
-msgstr ""
+msgstr "将生成的资源包和数据包链接到 Minecraft 世界"
 
 #: ../../../contribute/getting-started.md:40 0fa0ab416efa4b57aa087b776f31a69f
 msgid "Watching Modules"
-msgstr ""
+msgstr "监控模块"
 
 #: ../../../contribute/getting-started.md:43 381f343cad9e42219c90c49809211c30
 msgid ""
 "Building modules can take some time. For a smoother experience, it's "
 "recommended to only watch the module you're currently working on: `pdm "
 "run modules watch <module>`."
-msgstr ""
+msgstr "构建模块可能耗时较长。为获得更流畅体验，建议仅监控当前工作模块：`pdm run modules watch <模块>`。"
 
 #: ../../../contribute/getting-started.md:46 0d240f244f3a4b2aa857ad34a8c8f18b
 msgid "Linking Modules to Minecraft"
-msgstr ""
+msgstr "链接模块到 Minecraft"
 
 #: ../../../contribute/getting-started.md:48 bfecf7e4edbc4964bed4ed687385b5ee
 msgid ""
 "The `link` command allows you to integrate generated packs directly into "
 "a Minecraft world. Below are the options available for this command:"
-msgstr ""
+msgstr "`link` 命令可将生成的包直接集成到 Minecraft 世界。该命令可用选项如下："
 
 #: ../../../contribute/getting-started.md:51 ce65ab0f825e4db1a4f231c84009a4cf
 msgid "`world (optional)`"
-msgstr ""
+msgstr "`world（可选）`"
 
 #: ../../../contribute/getting-started.md:52 eea2441227ba40979afb5c103c9e0073
 msgid "The name of the Minecraft world to link"
-msgstr ""
+msgstr "要链接的 Minecraft 世界名称"
 
 #: ../../../contribute/getting-started.md:53 1611553d0c6444a9820c5993c9165c4e
 msgid "`--minecraft <DIRECTORY>`"
-msgstr ""
+msgstr "`--minecraft <目录>`"
 
 #: ../../../contribute/getting-started.md:54 5ab6d473f7844eecb9b29a2203c000ea
 msgid "Path to the `.minecraft` directory (location of Minecraft files)"
-msgstr ""
+msgstr "`.minecraft` 目录路径（Minecraft 文件位置）"
 
 #: ../../../contribute/getting-started.md:55 c1ed5caea2d542f685ec51f806e3f1e9
 msgid "`--data-pack <DIRECTORY>`"
-msgstr ""
+msgstr "`--data-pack <目录>`"
 
 #: ../../../contribute/getting-started.md:56 67cbddeea4d64898a2bfcf49fd4301d2
 msgid "Path to the directory where data packs are stored"
-msgstr ""
+msgstr "数据包存储目录路径"
 
 #: ../../../contribute/getting-started.md:57 95ca904d33f64b4aa8f7d443f3e022bd
 msgid "`--resource-pack <DIRECTORY>`"
-msgstr ""
+msgstr "`--resource-pack <目录>`"
 
 #: ../../../contribute/getting-started.md:58 9acd02462f1f4acda162bc84291c7bec
 msgid "Path to the directory where resource packs are stored"
-msgstr ""
+msgstr "资源包存储目录路径"
 
 #: ../../../contribute/getting-started.md:61 0c1c03f24be640228e76baf482d19d06
 msgid ""
 "This workflow demonstrates how to link and continuously test your modules"
 " directly in Minecraft:"
-msgstr ""
+msgstr "以下工作流展示如何在 Minecraft 中直接链接并持续测试模块："
 
 #: ../../../contribute/getting-started.md:72 da0afc64422143c8b1cd914786c4b7ea
 msgid "🧪 Testing Modules"
-msgstr ""
+msgstr "🧪 测试模块"
 
 #: ../../../contribute/getting-started.md:74 2c1580e489ef404883675b59070fd9f0
 msgid ""
 "Testing is a fundamental aspect of software development. It helps ensure "
 "the correctness of your code and can save you from potential bugs in the "
 "future."
-msgstr ""
+msgstr "测试是软件开发的基本环节，有助于确保代码正确性并避免未来潜在错误。"
 
 #: ../../../contribute/getting-started.md:76 ea3ec44bd3c342ab9a24ae7d9d1f50b4
 msgid ""
 "To learn how to write and run tests for your modules, refer to the [Debug"
 " Section](project:debug-tools.md#-unit-tests)."
-msgstr ""
-
+msgstr "学习如何为模块编写和运行测试，请参阅[调试章节](project:debug-tools.md#-unit-tests)。"

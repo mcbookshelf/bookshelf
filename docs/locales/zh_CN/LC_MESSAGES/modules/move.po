@@ -65,7 +65,7 @@ msgstr "🔧 函数"
 
 #: ../../modules/move.md:30 d3053fc228e544b7b1ca41616e89bb5c
 msgid "You can find below all functions available in this module."
-msgstr "您可以在下方找到此模块中的所有可用函数。"
+msgstr "你可以在下方找到此模块中的所有可用函数。"
 
 #: ../../modules/move.md:34 9329f8414c6146e9b88ae971f247a79d
 msgid "Apply Velocity"
@@ -127,8 +127,9 @@ msgid ""
 "with blocks (default: true). Can be a block hitbox type (`interaction` or"
 " `collision`). `true` defaults to `collision`."
 msgstr ""
-"{nbt}`bool` {nbt}`string` **blocks**: 此实体是否和方块碰撞（默认：true）。"
-"可为方块碰撞箱类型（`interaction` 或 `collision`），`true` 默认等价于 `collision`。"
+"{nbt}`bool` {nbt}`string` **blocks**: "
+"此实体是否和方块碰撞（默认：true）。可为方块碰撞箱类型（`interaction` 或 `collision`），`true` 默认等价于 "
+"`collision`。"
 
 #: ../../modules/move.md:55 ../../modules/move.md:91
 #: 6fb2bb02edf64ccf9f2af728c698e126 d284c630e1cf4ba0b1e7c1bfdcd4f79a
@@ -158,7 +159,9 @@ msgid ""
 "{nbt}`string` **ignored_entities**: Entities to ignore (default: "
 "`#bs.hitbox:intangible`). Does not apply to entities with custom "
 "hitboxes."
-msgstr "{nbt}`string` **ignored_entities**: 要忽略的实体类型（默认：`#bs.hitbox:intangible`）。不要在有自定义碰撞箱的实体上使用。"
+msgstr ""
+"{nbt}`string` **ignored_entities**: "
+"要忽略的实体类型（默认：`#bs.hitbox:intangible`）。不要在有自定义碰撞箱的实体上使用。"
 
 #: ../../modules/move.md:58 ../../modules/move.md:94
 #: 8ec0cbac5be9431cb5cc8c9b03566498 f2a6ba5a07084a98ba42b7fd0f9c9eb7
@@ -228,7 +231,8 @@ msgid ""
 "use either `interaction` or `collision` hitboxes. Entities support three "
 "types: `dynamic`, `baked`, and `custom`."
 msgstr ""
-"Bookshelf 支持多种碰撞箱类型以实现精确控制。方块可使用 `interaction` 或 `collision` 碰撞箱，实体支持三种类型：`dynamic`、`baked` 和 `custom`。"
+"Bookshelf 支持多种碰撞箱类型以实现精确控制。方块可使用 `interaction` 或 `collision` "
+"碰撞箱，实体支持三种类型：`dynamic`、`baked` 和 `custom`。"
 
 #: ../../modules/move.md:107 c7a2849b7f0948c78a3dc2e3db7835cc
 msgid "See [Hitbox Types](hitbox.md#types) for full details."
@@ -336,7 +340,7 @@ msgstr "👁️ 谓词"
 
 #: ../../modules/move.md:229 09649c652465410a8e8fb8ec01743384
 msgid "You can find below all predicates available in this module."
-msgstr "您可以在下方找到此模块中的所有可用谓词。"
+msgstr "你可以在下方找到此模块中的所有可用谓词。"
 
 #: ../../modules/move.md:233 ddd13c406a34432fa9be90af6b7daeb9
 msgid "Has Velocity?"
@@ -463,11 +467,11 @@ msgstr ""
 
 #: ../../_templates/comments.md:4 5a1b768e8eff4725a281550f32f25cc8
 msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
+msgstr "**💬 这对你有帮助吗？**"
 
 #: ../../_templates/comments.md:6 ee3501abe649483ebcf18fecb2605d82
 msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下您的问题和反馈！"
+msgstr "欢迎在下方留下你的问题和反馈！"
 
 #, python-brace-format
 msgid ""
@@ -485,11 +489,9 @@ msgstr ""
 "{nbt}`string` **hitbox_shape**: 碰撞箱类型: `interaction`"
 " 或 `collision`（默认: `collision`）。"
 
-
 msgid "Collision / Interaction Shape"
 msgstr "碰撞/交互形状"
 
-#, python-brace-format
 msgid ""
 "**Collision Shape**: Defines the physical "
 "boundaries of a block that entities "
@@ -498,7 +500,6 @@ msgid ""
 "towards the block."
 msgstr "**碰撞形状（collision_shape）**：实体无法穿过的方块的物理边界，决定实体在靠近方块时会被阻挡在什么位置。"
 
-#, python-brace-format
 msgid ""
 "**Interaction Shape**: Defines the area "
 "where the player can interact with "

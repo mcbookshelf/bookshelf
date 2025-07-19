@@ -56,7 +56,7 @@ msgstr "🔧 函数"
 
 #: ../../modules/raycast.md:21 a70f344739984104933d09052622f01b
 msgid "You can find below all functions available in this module."
-msgstr "您可以在下方找到此模块中的所有可用函数。"
+msgstr "你可以在下方找到此模块中的所有可用函数。"
 
 #: ../../modules/raycast.md:25 923143b9e8e646b38e9165759c0bf301
 msgid "Run the Raycast"
@@ -97,8 +97,9 @@ msgid ""
 "(default: true). Can be a block hitbox type (`interaction` or "
 "`collision`). `true` defaults to `interaction`."
 msgstr ""
-"{nbt}`bool` {nbt}`string` **blocks**: 射线是否被方块阻挡（默认：true）。"
-"可为方块碰撞箱类型（`interaction` 或 `collision`），`true` 默认等价于 `interaction`。"
+"{nbt}`bool` {nbt}`string` **blocks**: "
+"控制射线是否被方块阻挡（默认：true），可指定阻挡类型为方块碰撞箱（`interaction`或`collision`），`true` "
+"默认等价于 `interaction`。"
 
 #: ../../modules/raycast.md:39 63d19d0e8cb4411d8fb9db12c8b0166a
 #, python-brace-format
@@ -107,8 +108,8 @@ msgid ""
 " (default: false). Can be an entity tag. For performance, tagging "
 "entities to detect is recommended."
 msgstr ""
-"{nbt}`bool` {nbt}`string` **entities**: 射线是否被实体阻挡（默认：false）。"
-"可为实体标签。为优化性能，建议通过实体标签（/tag）标记需检测的实体。"
+"{nbt}`bool` {nbt}`string` **entities**: "
+"控制射线是否被实体阻挡（默认：false），可指定实体标签（使用/tag添加的标签）作为筛选条件。为优化性能，建议通过标签标记需检测的实体。"
 
 #: ../../modules/raycast.md:40 fa520a9cd9f344ef8700a759fd2c499e
 #, python-brace-format
@@ -137,7 +138,9 @@ msgid ""
 "{nbt}`string` **ignored_entities**: Entities to ignore (default: "
 "`#bs.hitbox:intangible`). Does not apply to entities with custom "
 "hitboxes."
-msgstr "{nbt}`string` **ignored_entities**: 要忽略的实体（默认：`#bs.hitbox:intangible`）。这不会忽略那些有自定义（custom）碰撞箱的实体。"
+msgstr ""
+"{nbt}`string` **ignored_entities**: "
+"要忽略的实体（默认：`#bs.hitbox:intangible`）。这不会忽略那些有自定义（custom）碰撞箱的实体。"
 
 #: ../../modules/raycast.md:44 e078b87ea5e74e28a1ccf5030ffd6eee
 #, python-brace-format
@@ -247,7 +250,8 @@ msgid ""
 "use either `interaction` or `collision` hitboxes. Entities support three "
 "types: `dynamic`, `baked`, and `custom`."
 msgstr ""
-"Bookshelf 支持多种碰撞箱类型以实现精确控制。方块可使用 `interaction` 或 `collision` 碰撞箱，实体支持三种类型：`dynamic`、`baked` 和 `custom`。"
+"Bookshelf 支持多种碰撞箱类型以实现精确控制。方块可使用 `interaction` 或 `collision` "
+"碰撞箱，实体支持三种类型：`dynamic`、`baked` 和 `custom`。"
 
 #: ../../modules/raycast.md:80 5834ad78c5dc43c888f4b87b4f2160b1
 msgid "See [Hitbox Types](hitbox.md#types) for full details."
@@ -263,11 +267,11 @@ msgstr "**制作人员**：Aksiome"
 
 #: ../../_templates/comments.md:4 6c0498f1e1e848a396e6ec568d93ffaa
 msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
+msgstr "**💬 这对你有帮助吗？**"
 
 #: ../../_templates/comments.md:6 55051bc64d87416fb2241e8f78963598
 msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下您的问题和反馈！"
+msgstr "欢迎在下方留下你的问题和反馈！"
 
 #, python-brace-format
 msgid ""
@@ -275,11 +279,9 @@ msgid ""
 "should stop on blocks (default: true)."
 msgstr "{nbt}`bool` **blocks**: 射线能否被方块阻挡（默认: true）。"
 
-#, python-brace-format
 msgid "Collision / Interaction Shape"
 msgstr "碰撞/交互形状"
 
-#, python-brace-format
 msgid ""
 "**Collision Shape**: Defines the physical "
 "boundaries of a block that entities "
@@ -288,7 +290,6 @@ msgid ""
 "towards the block."
 msgstr "**碰撞形状（collision_shape）**：实体无法穿过的方块的物理边界，决定实体在靠近方块时会被阻挡在什么位置。"
 
-#, python-brace-format
 msgid ""
 "**Interaction Shape**: Defines the area "
 "where the player can interact with "

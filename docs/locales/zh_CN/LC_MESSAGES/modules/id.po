@@ -47,7 +47,7 @@ msgstr "🔧 函数"
 
 #: ../../../modules/id.md:17 27db4608c24d4465b66151577f550475
 msgid "You can find below all functions available in this module."
-msgstr "您可以在下方找到此模块中的所有可用函数。"
+msgstr "你可以在下方找到此模块中的所有可用函数。"
 
 #: ../../../modules/id.md:21 f0b21848438d46678d06f5bb7ed0f7e9
 msgid "Give Simple Unique ID"
@@ -116,7 +116,7 @@ msgid ""
 "The chain ID is similar to the simple ID. However, with chain IDs, you "
 "can use the function `#bs.id:update_cuids` to make sure there are no gaps"
 " in the ID sequence, thus creating a continuous chain."
-msgstr "链式ID类似于简单ID。但是，使用链式ID时，您可以使用 `#bs.id:update_cuids` 函数来确保ID序列中没有空隙，从而创建一个连续的链。"
+msgstr "链式ID类似于简单ID。但是，使用链式ID时，你可以使用 `#bs.id:update_cuids` 函数来确保ID序列中没有空隙，从而创建一个连续的链。"
 
 #: ../../../modules/id.md:81 06e7819be5c14787b5e29a8aa005abe0
 msgid "Update Chain Unique ID"
@@ -136,7 +136,7 @@ msgstr "👁️ 谓词"
 
 #: ../../../modules/id.md:103 34b7cba1971f46f899373ededab5d7a7
 msgid "You can find below all predicates available in this module."
-msgstr "您可以在下方找到此模块中的所有可用谓词。"
+msgstr "你可以在下方找到此模块中的所有可用谓词。"
 
 #: ../../../modules/id.md:107 bf624731199a4b74b3bb0a64aff16996
 msgid "Check Simple Unique ID"
@@ -300,8 +300,8 @@ msgstr "*示例：过滤出 `bs.cid` 在 2 到 4 之间的实体：*"
 
 #: ../../../_templates/comments.md:4 0e04f94f65744b08a5e76db1f20a669e
 msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
+msgstr "**💬 这对你有帮助吗？**"
 
 #: ../../../_templates/comments.md:6 fc42e309b4034dcd840f1204d7b649d6
 msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下您的问题和反馈！"
+msgstr "欢迎在下方留下你的问题和反馈！"

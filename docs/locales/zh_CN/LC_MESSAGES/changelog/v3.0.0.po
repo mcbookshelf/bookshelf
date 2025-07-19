@@ -51,8 +51,8 @@ msgid ""
 "**Bookshelf Dev**, **Bookshelf Prefabs**, and **Bookshelf Suite**."
 msgstr ""
 "Bookshelf 现已适配 **Minecraft "
-"1.21.5**。每个模块现以独立数据包形式分发，方便用户按需使用。引入整合包机制替代原有的**Bookshelf**和**Bookshelf "
-"Dev**数据包，新整合包包括：**Bookshelf Runtime**、**Bookshelf Dev**、**Bookshelf "
+"1.21.5**。每个模块现以独立数据包形式分发，方便用户按需使用。引入捆绑包机制替代原有的**Bookshelf**和**Bookshelf "
+"Dev**数据包，新捆绑包包括：**Bookshelf Runtime**、**Bookshelf Dev**、**Bookshelf "
 "Prefabs**和**Bookshelf Suite**。"
 
 #: ../../../changelog/v3.0.0.md:13 33ad99306af74426b5259182bee18ed1
@@ -74,9 +74,9 @@ msgid ""
 "**Bookshelf Dev** datapacks: **Bookshelf Runtime**, **Bookshelf Dev**, "
 "**Bookshelf Prefabs**, and **Bookshelf Suite**."
 msgstr ""
-"<abbr title=\"新增整合包\">📦</abbr> "
+"<abbr title=\"新增捆绑包\">📦</abbr> "
 "**[#323](https://github.com/mcbookshelf/bookshelf/pull/323)** - "
-"引入整合包机制，替代原有的 **Bookshelf** 和 **Bookshelf Dev** 数据包，新整合包包括：**Bookshelf "
+"引入捆绑包机制，替代原有的 **Bookshelf** 和 **Bookshelf Dev** 数据包，新捆绑包包括：**Bookshelf "
 "Runtime**、**Bookshelf Dev**、**Bookshelf Prefabs** 和 **Bookshelf Suite**。"
 
 #: ../../../changelog/v3.0.0.md:15 18ca4baa5e544a2190eedf42d9b1b3af
@@ -136,7 +136,7 @@ msgid ""
 msgstr ""
 "<abbr title=\"下载\">📥</abbr> "
 "**[#333](https://github.com/mcbookshelf/bookshelf/issues/333)** - "
-"Bookshelf 现推出专属[下载管理器](https://mcbookshelf.dev)，支持用户选择模块及其依赖项并创建自定义整合包。"
+"Bookshelf 现推出专属[下载管理器](https://mcbookshelf.dev)，支持用户选择模块及其依赖项并创建自定义捆绑包。"
 
 #: ../../../changelog/v3.0.0.md:20 af2b43850a954c7ca7c0c86c169c4adc
 msgid ""

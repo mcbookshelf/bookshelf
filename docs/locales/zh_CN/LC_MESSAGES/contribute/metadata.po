@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-18 22:04+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2025-07-19 19:55+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
 "Language-Team: zh_CN <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../../contribute/metadata.md:1 3dcfe77dbc21476b904205f53103c691
 msgid "🔖 Metadata"
-msgstr ""
+msgstr "🔖 元数据"
 
 #: ../../../contribute/metadata.md:3 9978d081de964efdb4c78d823ea01aaa
 msgid ""
@@ -29,40 +29,40 @@ msgid ""
 "declare specific metadata. All metadata are verified during the CI/CD "
 "process (see the [contribution validation page](project:../contribute"
 "/contribution-validation.md))."
-msgstr ""
+msgstr "为支持 Bookshelf Manager 等工具的自动化操作，模块必须声明特定元数据。所有元数据均在 CI/CD 流程中验证（参见[贡献验证页面](project:../contribute/contribution-validation.md)）。"
 
 #: ../../../contribute/metadata.md:7 fa38d7dbbb294bd292cf9013236d6f0c
 msgid "⭐ Feature Metadata"
-msgstr ""
+msgstr "⭐ 功能元数据"
 
 #: ../../../contribute/metadata.md:9 e83fbd3586a94d648c66156055cf4ba1
 msgid ""
 "Feature metadata are defined directly within each `.json` file, as shown "
 "below:"
-msgstr ""
+msgstr "功能元数据直接定义在每个 `.json` 文件中，如下所示："
 
 #: ../../../contribute/metadata.md:11 ../../../contribute/metadata.md:51
 #: 0fca0c51841a4c5392140e9b1305e0d9 873a561defcc40b6843560a7d423a46c
 msgid "Field"
-msgstr ""
+msgstr "字段"
 
 #: ../../../contribute/metadata.md:11 ../../../contribute/metadata.md:51
 #: 8be17d72d8a3453bb853826063c0b483 9482eedd4017401293ae56a92b6606a6
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../../contribute/metadata.md:11 ../../../contribute/metadata.md:51
 #: 03085f86871d4ab5b898791178bb3553 6f4b6f604eb14f0cb7955fd30b6d299f
 msgid "Mandatory"
-msgstr ""
+msgstr "必需"
 
 #: ../../../contribute/metadata.md:11 146405496391442583f0d986636d83ec
 msgid "feature"
-msgstr ""
+msgstr "feature"
 
 #: ../../../contribute/metadata.md:11 fe36f796a4dc46079f158e1246520a69
 msgid "Indicates whether the current function tag is the endpoint of a feature"
-msgstr ""
+msgstr "指示当前函数标签是否为功能的端点"
 
 #: ../../../contribute/metadata.md:11 ../../../contribute/metadata.md:51
 #: 130c95ab06eb4f3ca8de6b71c1fcfe19 17d6dd64e6b342c787353efb451571b6
@@ -71,152 +71,151 @@ msgstr ""
 #: 7c818329fa5b4d38b921c66582c0661c b78db27533a0402abb51cb228659cd25
 #: c105fae6c14e4bb2af511f7c8aa7d69a
 msgid "yes"
-msgstr ""
+msgstr "是"
 
 #: ../../../contribute/metadata.md:11 ../../../contribute/metadata.md:51
 #: e654d4a5610148758ec1c3b11e15f841 f4a0fdbfc81d49ea98b19546ffadff73
 msgid "documentation"
-msgstr ""
+msgstr "documentation"
 
 #: ../../../contribute/metadata.md:11 6d8f6a3cb02b4b2c8bb592e953bcd78e
 msgid "A link to the feature's documentation"
-msgstr ""
+msgstr "功能文档的链接"
 
 #: ../../../contribute/metadata.md:11 ../../../contribute/metadata.md:51
 #: 6580caf821c24771a2dcf9dd71992054 67087212f7814d5eb2bf334b94c4d85d
 msgid "authors"
-msgstr ""
+msgstr "authors"
 
 #: ../../../contribute/metadata.md:11 75d64955b67e4c9bba23ca3e6c7a1389
 msgid "A list of feature authors. Cannot be empty"
-msgstr ""
+msgstr "功能作者列表（不可为空）"
 
 #: ../../../contribute/metadata.md:11 ../../../contribute/metadata.md:51
 #: 062743a5e72d406d91305c7c00fb4968 ba79e53d4a3344ff80cbeaec557e6f8a
 msgid "contributors"
-msgstr ""
+msgstr "contributors"
 
 #: ../../../contribute/metadata.md:11 1e8f48f137234655a084afb8bf673100
 msgid ""
 "A list of contributors (e.g., those who provided insights, fixes, or "
 "indirect help)"
-msgstr ""
+msgstr "贡献者列表（如提供见解、修复或间接帮助的人员）"
 
 #: ../../../contribute/metadata.md:11 ../../../contribute/metadata.md:51
 #: 046446ac849c46d7ad747c765d6e05da 12a173ad353a4e35b83c19c76e11609f
 #: a451dc8dffeb4682b439d95d62faaf9c cb90cdb53bbe4fa08ebca6fd22006adf
 #: d33b3e195fe8405bafe198128613eb1f
 msgid "no"
-msgstr ""
+msgstr "否"
 
 #: ../../../contribute/metadata.md:11 0013531c28f74a0db7f3a1c51f330994
 msgid "created"
-msgstr ""
+msgstr "created"
 
 #: ../../../contribute/metadata.md:11 f3d79459e041403a855fe637e8d30f6d
 msgid "The creation date and Minecraft version for historical purposes"
-msgstr ""
+msgstr "创建日期和 Minecraft 版本（用于历史记录）"
 
 #: ../../../contribute/metadata.md:11 d9aab99619cd463eb7630dcdebdc54f3
 msgid "updated"
-msgstr ""
+msgstr "updated"
 
 #: ../../../contribute/metadata.md:11 a4566a44ba8749139e8737aaaa50b555
 msgid "The date and Minecraft version of the most recent update"
-msgstr ""
+msgstr "最近更新的日期和 Minecraft 版本"
 
 #: ../../../contribute/metadata.md:47 7b4c462fe98b446f8735948182c491d2
 msgid "🧩 Module Metadata"
-msgstr ""
+msgstr "🧩 模块元数据"
 
 #: ../../../contribute/metadata.md:49 f6276f36cbc54318992b1eea3de5462e
 msgid ""
 "Module metadata are defined in `modules/<module>/module.json`. Below is "
 "an example:"
-msgstr ""
+msgstr "模块元数据定义在 `modules/<module>/module.json` 中。示例如下："
 
 #: ../../../contribute/metadata.md:51 cd44302dd90c4f909cc0fb629bd2a9fa
 msgid "name"
-msgstr ""
+msgstr "name"
 
 #: ../../../contribute/metadata.md:51 7ca8c219262e44afb67632800c827589
 msgid "The module's display name (e.g., `Foo`)"
-msgstr ""
+msgstr "模块显示名称（如 `Foo`）"
 
 #: ../../../contribute/metadata.md:51 bb691f41b63e43bc9858bb953dd59159
 msgid "slug"
-msgstr ""
+msgstr "slug"
 
 #: ../../../contribute/metadata.md:51 543b68bf16d3458aa6712b260661f70d
 msgid "The module's slug used to publish to platforms (e.g., `bookshelf-foo`)"
-msgstr ""
+msgstr "模块的 slug（用于发布到平台，如 `bookshelf-foo`）"
 
 #: ../../../contribute/metadata.md:51 27325fb2002c4f198f742624587ef7ce
 msgid "description"
-msgstr ""
+msgstr "description"
 
 #: ../../../contribute/metadata.md:51 8e06c41cd5f94010b3fa0cb781b167bc
 msgid "A description of the module's purpose"
-msgstr ""
+msgstr "模块用途的描述"
 
 #: ../../../contribute/metadata.md:51 5cad11328a7c4cb1832b52acd67166de
 msgid "A link to the module's documentation"
-msgstr ""
+msgstr "模块文档的链接"
 
 #: ../../../contribute/metadata.md:51 943ee1df8e6c4a87b462d4f4f7fdabf6
 msgid "tags"
-msgstr ""
+msgstr "tags"
 
 #: ../../../contribute/metadata.md:51 cf105915f32546f8a6ab909481e57091
 msgid ""
 "A list of tags for categorizing or identifying modules. Tags are also "
 "used to generate bundles (e.g., `default` and `dev`)"
-msgstr ""
+msgstr "用于分类或标识模块的标签列表，也用于生成捆绑包（如 `default` 和 `dev`）"
 
 #: ../../../contribute/metadata.md:51 75e0bd3ffccc455b985a47ac97f59e90
 msgid "no (but trigger warnings)"
-msgstr ""
+msgstr "否（但会触发警告）"
 
 #: ../../../contribute/metadata.md:51 fd3ae15b675b4326b73025bd866e14f6
 msgid ""
 "A list of module authors (supplements authors from features). Cannot be "
 "empty"
-msgstr ""
+msgstr "模块作者列表（补充功能中的作者），不可为空"
 
 #: ../../../contribute/metadata.md:51 0ab15aad30a9422d98e04238d50c63a6
 msgid "A list of contributors (supplements contributors from features)"
-msgstr ""
+msgstr "贡献者列表（补充功能中的贡献者）"
 
 #: ../../../contribute/metadata.md:51 6984d5e796744bc6a5b1f04d676e7230
 msgid "dependencies"
-msgstr ""
+msgstr "dependencies"
 
 #: ../../../contribute/metadata.md:51 bc4f8322153e4c948fd395d4fe4e1863
 msgid "Essential modules required for this module to function (e.g., `bs.hitbox`)"
-msgstr ""
+msgstr "模块运行必需的依赖模块（如 `bs.hitbox`）"
 
 #: ../../../contribute/metadata.md:51 058301a6282847a0beffcaf54ae12ecd
 msgid "weak dependencies"
-msgstr ""
+msgstr "weak dependencies"
 
 #: ../../../contribute/metadata.md:51 750accee290a450a849dc9031cc33eb4
 msgid ""
 "Optional modules that enhance functionality but are not essential (e.g., "
 "`bs.log`)"
-msgstr ""
+msgstr "增强功能但非必需的模块（如 `bs.log`）"
 
 #: ../../../contribute/metadata.md:93 18ced6f92ff549cab5cec01d601c385f
 msgid "📜 Manifest"
-msgstr ""
+msgstr "📜 清单"
 
 #: ../../../contribute/metadata.md:95 cff0a368febb4d75b36e49f845485c2e
 msgid ""
 "The manifest consolidates metadata for all modules and features in "
 "Bookshelf. It is automatically generated and can be updated using the "
 "following command:"
-msgstr ""
+msgstr "清单整合了 Bookshelf 所有模块和功能的元数据，自动生成并可通过以下命令更新："
 
 #: ../../../contribute/metadata.md:99 2905b619adfc4c0e84690b6ee5261c2f
 msgid "The generated file is located at `meta/manifest.json`."
-msgstr ""
-
+msgstr "生成的文件位于 `meta/manifest.json`。"

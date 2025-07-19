@@ -59,7 +59,7 @@ msgstr "🔧 函数"
 
 #: ../../modules/block.md:23 715f06dfae0c4b4892711856f8339740
 msgid "You can find below all functions available in this module."
-msgstr "您可以在下方找到此模块中的所有可用函数。"
+msgstr "你可以在下方找到此模块中的所有可用函数。"
 
 #: ../../modules/block.md:27 f496990eb6574d878e01605d938b3846
 msgid "Fill"
@@ -723,7 +723,7 @@ msgid ""
 "`bs.colors`). If these are insufficient, you can [create your own"
 "](#custom-mapping-registry)."
 msgstr ""
-"Bookshelf 包含两个预定义的映射注册表（`bs.shapes` 和 `bs.colors`）。如果这些不够用，您可以[创建自己的"
+"Bookshelf 包含两个预定义的映射注册表（`bs.shapes` 和 `bs.colors`）。如果这些不够用，你可以[创建自己的"
 "](#custom-mapping-registry)。"
 
 #: ../../modules/block.md:512 ../../modules/block.md:572
@@ -893,10 +893,6 @@ msgid "{nbt}`compound` Set block data"
 msgstr "{nbt}`compound` 放置方块数据"
 
 #: ../../modules/block.md:710 b1863d440b0342bfad1e0c18025c9dbf
-#, python-brace-format
-msgid "{nbt}`string` **block**: String representation of the block id to set."
-msgstr "{nbt}`string` **block**: 要放置的方块的id的字符串表示。"
-
 #, python-brace-format
 msgid "{nbt}`string` **block**: Full string representation of the block to set."
 msgstr "{nbt}`string` **block**: 要放置的方块的完整字符串表示。"
@@ -1192,7 +1188,7 @@ msgstr "🎓 自定义映射注册表"
 msgid ""
 "This module allows you to create a personalized mapping registry tailored"
 " to your specific needs."
-msgstr "此模块允许您创建根据特定需求定制的个性化映射注册表。"
+msgstr "此模块允许你创建根据特定需求定制的个性化映射注册表。"
 
 #: ../../modules/block.md:966 247830d3f2944e39b2693cb7b9e0aa3d
 msgid ""
@@ -1201,14 +1197,18 @@ msgid ""
 "namespaced, and each element must include `set`, `attrs`, and `type`. "
 "Here's how you can define a new mapping registry:"
 msgstr ""
-"要创建新的注册表，您需要在 `bs:const block.mapping_registry` "
+"要创建新的注册表，你需要在 `bs:const block.mapping_registry` "
 "命令存储中定义一个数组。每个新注册表都应该有命名空间，且每个元素必须包含 `set`、`attrs` 和 "
 "`type`。以下是定义新映射注册表的方法："
 
 #: ../../_templates/comments.md:4 ae5eee0e3f8748afaef2bcb8c4f0ea97
 msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
+msgstr "**💬 这对你有帮助吗？**"
 
 #: ../../_templates/comments.md:6 0784510be1ae4ab48678569dae74abc0
 msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下您的问题和反馈！"
+msgstr "欢迎在下方留下你的问题和反馈！"
+
+#, python-brace-format
+msgid "{nbt}`string` **block**: String representation of the block id to set."
+msgstr "{nbt}`string` **block**: 要放置的方块的id的字符串表示。"

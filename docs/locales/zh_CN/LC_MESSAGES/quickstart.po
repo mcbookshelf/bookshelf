@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-31 16:15+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2025-07-20 01:05+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
 "Language-Team: zh_CN <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgstr "🚀 快速开始"
 msgid ""
 "This page gives a quick overview of how to get started with the Bookshelf"
 " library, and how to use it."
-msgstr "本页面简要介绍了如何上手和使用 Bookshelf。"
+msgstr "本页面简要介绍如何开始使用 Bookshelf 库及其使用方法。"
 
 #: ../../quickstart.md:7 2c0a73f5ffea49f899dfcfad6ecfa130
 msgid "📥 Installation"
@@ -35,33 +35,33 @@ msgstr "📥 安装"
 
 #: ../../quickstart.md df022a68029c48ca8d5573532ebee696
 msgid "🔌 from manager"
-msgstr "🔌 从管理器安装"
+msgstr "🔌 通过管理器安装"
 
 #: ../../quickstart.md:13 6f28e0f5cb2745d2b35ca1715aa079da
 msgid ""
 "The [Bookshelf Manager](https://mcbookshelf.dev) is the official tool for"
 " creating your own custom Bookshelf bundle."
-msgstr "[Bookshelf 管理器](https://mcbookshelf.dev) 是一个官方工具，可以用它创建一个你自己的整合包。"
+msgstr "[Bookshelf 管理器](https://mcbookshelf.dev) 是创建自定义 Bookshelf 捆绑包的官方工具。"
 
 #: ../../quickstart.md:15 37dd8d84863d4ad8918dc15a0e382034
 msgid "✨ Key Benefits"
-msgstr "✨ 主要优点"
+msgstr "✨ 主要优势"
 
 #: ../../quickstart.md:17 608474d147494fceb62d6510a0c13c98
 msgid "🎯 **Precise Selection**: Choose exactly the modules you need"
-msgstr "🎯 **精简选择**：只安装你需要的库"
+msgstr "🎯 **精准选择**：仅选择所需模块"
 
 #: ../../quickstart.md:18 f7ddadc27861409f851cfa3219cad6b9
 msgid ""
 "📊 **Dependency Visualization**: Intuitive interface showing relationships"
 " between modules"
-msgstr "📊 **​可视化的依赖关系​**：直观展示模块间的关联"
+msgstr "📊 **依赖可视化**：直观展示模块间关系的界面"
 
 #: ../../quickstart.md:19 abe01088bfe34727a27e6effb52ab2c3
 msgid ""
 "🏷️ **Tag System**: Easily identify modules with tags, grouping them by "
 "purpose"
-msgstr "🏷️ **标签系统**：通过标签轻松选择模块，实现分类管理"
+msgstr "🏷️ **标签系统**：通过标签轻松识别并按用途分组模块"
 
 #: ../../quickstart.md:21 1488e4329c2a479d9920299ce1eae928
 msgid "📥 Installation Steps"
@@ -73,7 +73,7 @@ msgstr "访问 [mcbookshelf.dev](https://mcbookshelf.dev)"
 
 #: ../../quickstart.md:24 2827abc246c947a7b9e58bb20b721e28
 msgid "Select your desired modules"
-msgstr "选择你需要的模块"
+msgstr "选择所需模块"
 
 #: ../../quickstart.md:25 ae08801ef83e4ff3bde74c094765d48b
 msgid "Review automatically added dependencies"
@@ -81,11 +81,11 @@ msgstr "检查自动添加的依赖项"
 
 #: ../../quickstart.md:26 2ac24efd76354bfb9b4fda4359eb0bf6
 msgid "Download your custom bundle"
-msgstr "下载你自己选好的整合包"
+msgstr "下载自定义捆绑包"
 
 #: ../../quickstart.md 64b1695e8c074607b82235856c84f10c
 msgid "🏷️ from release"
-msgstr "🏷️ 从源代码（release）下载"
+msgstr "🏷️ 通过发布版本安装"
 
 #: ../../quickstart.md:31 216c78ac332a4c54befae3e5e0e3cd6b
 msgid ""
@@ -93,18 +93,18 @@ msgid ""
 "[Github](https://github.com/mcbookshelf/bookshelf/releases) and "
 "[Modrinth](https://modrinth.com/organization/mcbookshelf). In each "
 "release, you will find zipped datapacks."
-msgstr ""
+msgstr "Bookshelf 发布版本可在 [Github](https://github.com/mcbookshelf/bookshelf/releases) 和 [Modrinth](https://modrinth.com/organization/mcbookshelf) 获取，每个版本都包含压缩的数据包。"
 
 #: ../../quickstart.md:34 1610870ef53f488db03182c56df6caa5
 msgid "📥 Installation Options"
-msgstr ""
+msgstr "📥 安装选项"
 
 #: ../../quickstart.md:36 69a4d027b614434d8b8dc6bb27fdfda3
 msgid ""
 "📚 **Bundles:** You can download entire bundles which includes all modules"
 " and dependencies of a certain type in a single datapack. This is a good "
 "option if you want to explore everything Bookshelf has to offer."
-msgstr ""
+msgstr "📚 **捆绑包：** 可下载包含特定类型所有模块和依赖项的完整捆绑包（单个数据包）。适合需要全面探索 Bookshelf 功能的用户。"
 
 #: ../../quickstart.md:38 cede599617a742ec8fc2e4496b12457d
 msgid ""
@@ -112,45 +112,42 @@ msgid ""
 "modules as datapacks. Each module zip file contains all the dependencies "
 "needed for that module to work. This is a great option if you only need "
 "specific functionalities and want to keep your installation lightweight."
-msgstr ""
+msgstr "🧩 **按模块安装：** 也可下载单个模块的数据包。每个模块压缩包包含其运行所需的所有依赖项。适合只需特定功能并希望保持安装轻量的用户。"
 
 #: ../../quickstart.md:40 265b3a07357b42eaa0d42f481426d646
 msgid ""
 "After downloading, move the zip file to the datapacks directory of your "
 "Minecraft world."
-msgstr ""
+msgstr "下载后，将 zip 文件移至 Minecraft 世界的 datapacks 目录。"
 
 #: ../../quickstart.md 0518d15d18b14f76a844425e27669c23
 msgid "🐍 from PyPI"
-msgstr ""
+msgstr "🐍 通过 PyPI 安装"
 
 #: ../../quickstart.md:44 e336e2cab04745aaa6cb1b1b2f35820a
 msgid ""
 "If you're using the [beet](https://github.com/mcbeet/beet) build "
 "pipeline, you can install the Bookshelf package (`mcbookshelf`) from PyPI"
 " to include Bookshelf modules in your build."
-msgstr ""
+msgstr "若使用 [beet](https://github.com/mcbeet/beet) 构建流程，可通过 PyPI 安装 Bookshelf 包 (`mcbookshelf`) 以在构建中包含 Bookshelf 模块。"
 
 #: ../../quickstart.md:46 0d9cb4d80b754343a978976da701589e
-msgid ""
-"📥 Installation "
-"StepsD:\\重要的资料\\项目\\Ethanout\\Bookshelf\\docs\\quickstart.md:46: (INFO/1)"
-" Duplicate implicit target name: \"📥 installation steps\"."
-msgstr ""
+msgid "📥 Installation Steps"
+msgstr "📥 安装步骤"
 
 #: ../../quickstart.md:52 98761890706c4006b1cfd17e6bbb29c7
 msgid ""
 "Once installed, you can reference Bookshelf modules directly in your beet"
 " configuration."
-msgstr ""
+msgstr "安装完成后，可在 beet 配置中直接引用 Bookshelf 模块。"
 
 #: ../../quickstart.md:54 7c533ee6f5b6464382ef6cb5d9240579
 msgid "To include a complete bundle or a specific module:"
-msgstr ""
+msgstr "要包含完整捆绑包或特定模块："
 
 #: ../../quickstart.md 86aed98a7e244101ac342f690746d9a1
 msgid "🗃️ from source"
-msgstr ""
+msgstr "🗃️ 通过源代码安装"
 
 #: ../../quickstart.md:65 d74508aa6e80468d94b4fd62ae0d3cfc
 msgid ""
@@ -158,56 +155,53 @@ msgid ""
 "you'll need to build Bookshelf before using it. This build process is "
 "necessary because some features require computed data that can't be "
 "directly included in the source code. Here's how to get started:"
-msgstr ""
+msgstr "开发者若需直接使用源代码，需先构建 Bookshelf。此构建过程是必要的，因为某些功能需要无法直接包含在源代码中的计算数据。开始步骤如下："
 
 #: ../../quickstart.md:67 4d31f4d31a9342df8308af35dd95ade6
 msgid "🛠️ Prerequisites"
-msgstr ""
+msgstr "🛠️ 先决条件"
 
 #: ../../quickstart.md:69 1d655558fdce4f2d8be5470b293eaf74
 msgid "Basic understanding of datapacks"
-msgstr ""
+msgstr "基本了解数据包"
 
 #: ../../quickstart.md:70 b190d30a4e0c4fc89720e10d411e6824
 msgid ""
 "[Python](https://www.python.org/downloads/) and "
 "[PDM](https://pdm.fming.dev/latest/) (Python Dependency Manager) "
 "installed"
-msgstr ""
+msgstr "已安装 [Python](https://www.python.org/downloads/) 和 [PDM](https://pdm.fming.dev/latest/)（Python 依赖管理器）"
 
 #: ../../quickstart.md:71 26c1fdda49c34a40bce0b187b4dea5c7
 msgid "Git (for cloning the repository)"
-msgstr ""
+msgstr "Git（用于克隆仓库）"
 
 #: ../../quickstart.md:73 6fe4a5ec7cbf45b0a89c8eba116590a1
-msgid ""
-"📥 Installation "
-"StepsD:\\重要的资料\\项目\\Ethanout\\Bookshelf\\docs\\quickstart.md:73: (INFO/1)"
-" Duplicate implicit target name: \"📥 installation steps\"."
-msgstr ""
+msgid "📥 Installation Steps"
+msgstr "📥 安装步骤"
 
 #: ../../quickstart.md:75 2252559e245f4f52a78bbe0f4c96763a
 msgid "Clone the repository:"
-msgstr ""
+msgstr "克隆仓库："
 
 #: ../../quickstart.md:81 04a95097fdc847d5a6ee7a66fcf2f35e
 msgid "Install dependencies:"
-msgstr ""
+msgstr "安装依赖："
 
 #: ../../quickstart.md:86 52f7a0c8c13b422589f778689f504401
 msgid "Build the library:"
-msgstr ""
+msgstr "构建库："
 
 #: ../../quickstart.md:91 df95bf3847e9458fafa51872d630d321
 msgid ""
 "After building, you'll find all modules as datapacks in the `build` "
 "folder. Each module includes its own dependencies as well as some utility"
 " namespaces."
-msgstr ""
+msgstr "构建完成后，所有模块将作为数据包存放在 `build` 文件夹中。每个模块包含其依赖项及实用命名空间。"
 
 #: ../../quickstart.md:95 db9b1f6039644cfd82c433beb8b6772f
 msgid "Note"
-msgstr ""
+msgstr "注意"
 
 #: ../../quickstart.md:97 f5d12dde9dc14e5c928bad7010858449
 msgid ""
@@ -215,18 +209,18 @@ msgid ""
 " not include the very latest features or fixes that are available in the "
 "source code. If you want the most up-to-date version of Bookshelf, "
 "consider installing from source or downloading a pre-release from Github."
-msgstr ""
+msgstr "请注意，发布版本的数据包虽稳定，但可能不包含源代码中的最新功能或修复。如需最新版 Bookshelf，建议通过源代码安装或从 Github 下载预发布版本。"
 
 #: ../../quickstart.md:100 f6b18c010ece4b47b13851416c732335
 msgid ""
 "If you like the project, don't hesitate to star it on "
 "[Github](https://github.com/mcbookshelf/bookshelf) and/or follow it on "
 "[Modrinth](https://modrinth.com/organization/mcbookshelf) 😉."
-msgstr ""
+msgstr "若喜欢本项目，欢迎在 [Github](https://github.com/mcbookshelf/bookshelf) 上点赞和/或在 [Modrinth](https://modrinth.com/organization/mcbookshelf) 上关注 😉。"
 
 #: ../../quickstart.md:104 c0987e28e0634f0ca94a644473b6bf10
 msgid "👶 First Steps"
-msgstr ""
+msgstr "👶 初始步骤"
 
 #: ../../quickstart.md:108 45f90d246c2045eaad9d5a0eaabe8a86
 msgid ""
@@ -234,11 +228,11 @@ msgid ""
 "Therefore, it's important not to kill all entities. Instead, you can use "
 "the command `kill @e[tag=!bs.persistent]`. [Learn more here](contribute"
 "/shared-resources.md#entities)"
-msgstr ""
+msgstr "Bookshelf 依赖常态实体提升性能。请勿清除所有实体，而应使用命令 `kill @e[tag=!bs.persistent]`。[了解更多](contribute/shared-resources.md#entities)"
 
 #: ../../quickstart.md:111 505e29f2c6584da6bfee2f67ff9533f9
 msgid "📖 Good Practices"
-msgstr ""
+msgstr "📖 最佳实践"
 
 #: ../../quickstart.md:113 3269283252b54e09b0f73f64a36a27fb
 msgid ""
@@ -249,64 +243,21 @@ msgid ""
 "strict policy of preserving inputs. By following this practice, you can "
 "ensure smoother operation and prevent unexpected behaviors."
 msgstr ""
+"Bookshelf 的设计目标是最大程度减少非预期影响。但当多个数据包使用相同功能时，仍可能引发冲突。"
+"为预防潜在问题，建议始终在执行函数前设置输入值。即使 Bookshelf 遵循严格的输入保留策略，"
+"这一实践依然适用。遵循此操作规范可确保运行更顺畅，并避免意外行为。"
 
 #: ../../quickstart.md:116 897df1d9c3d24857aed27b71693983e3
 msgid ""
 "This section is in progress. If you have some ideas about how to improve "
 "the first steps with Bookshelf, please share it on our [Discord "
 "server](https://discord.gg/MkXytNjmBt)."
-msgstr ""
+msgstr "本节内容正在完善中。若有改进 Bookshelf 初始步骤的建议，欢迎在 [Discord 服务器](https://discord.gg/MkXytNjmBt) 分享。"
 
 #: ../../_templates/comments.md:4 3cf5213ae3ac48c3baa145839999cfb6
 msgid "**💬 Did it help you?**"
-msgstr ""
+msgstr "**💬 这对您有帮助吗？**"
 
 #: ../../_templates/comments.md:6 b6e12a07568848f48c261d5c45c84bec
 msgid "Feel free to leave your questions and feedback below!"
-msgstr ""
-
-#~ msgid "🚀&nbsp;Quickstart"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "📥 Installation "
-#~ "StepsD:\\重要的资料\\项目\\bookshelf\\docs\\quickstart.md:46: (INFO/1)"
-#~ " Duplicate implicit target name: \"📥 "
-#~ "installation steps\"."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "📥 Installation "
-#~ "StepsD:\\重要的资料\\项目\\bookshelf\\docs\\quickstart.md:73: (INFO/1)"
-#~ " Duplicate implicit target name: \"📥 "
-#~ "installation steps\"."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "📥 Installation "
-#~ "StepsD:\\重要的资料\\项目\\Ethanout\\Bookshelf\\docs\\quickstart.md:46: "
-#~ "(INFO/1) Duplicate implicit target name: "
-#~ "\"📥 installation steps\"."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "📥 Installation "
-#~ "StepsD:\\重要的资料\\项目\\Ethanout\\Bookshelf\\docs\\quickstart.md:73: "
-#~ "(INFO/1) Duplicate implicit target name: "
-#~ "\"📥 installation steps\"."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "📥 Installation "
-#~ "StepsC:\\Users\\Maxime\\Documents\\GitHub\\aksiome\\bookshelf\\docs\\quickstart.md:46:"
-#~ " (INFO/1) Duplicate implicit target name:"
-#~ " \"📥 installation steps\"."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "📥 Installation "
-#~ "StepsC:\\Users\\Maxime\\Documents\\GitHub\\aksiome\\bookshelf\\docs\\quickstart.md:73:"
-#~ " (INFO/1) Duplicate implicit target name:"
-#~ " \"📥 installation steps\"."
-#~ msgstr ""
-
+msgstr "欢迎在下方留下您的问题和反馈！"

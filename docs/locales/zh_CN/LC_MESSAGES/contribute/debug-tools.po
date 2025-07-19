@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-18 22:04+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2025-07-19 17:05+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
 "Language-Team: zh_CN <LL@li.org>\n"
@@ -21,59 +21,59 @@ msgstr ""
 
 #: ../../../contribute/debug-tools.md:1 65a6ddbc2ef149ce956cf793e12dccd4
 msgid "🕵️ Debug Tools"
-msgstr ""
+msgstr "🕵️ 调试工具"
 
 #: ../../../contribute/debug-tools.md:3 70bc13ad18334558a4eedb99aec59b99
 msgid ""
 "Debugging is a fundamental aspect of software development. Bookshelf "
 "provides tools to help identify and resolve issues effectively."
-msgstr ""
+msgstr "调试是软件开发的基本环节。Bookshelf 提供多种工具帮助有效识别和解决问题。"
 
 #: ../../../contribute/debug-tools.md:7 3868ad1552094f459339ffda4d06198c
 msgid "🧪 Unit Tests"
-msgstr ""
+msgstr "🧪 单元测试"
 
 #: ../../../contribute/debug-tools.md:9 7d86d67f2b8c40b9b79aa168a1ec2986
 msgid ""
 "Tests are essential for ensuring code correctness and preventing future "
 "bugs. This project uses Misode's Minecraft Fabric mod, "
 "[PackTest](https://github.com/misode/packtest), for testing."
-msgstr ""
+msgstr "测试对确保代码正确性和预防未来错误至关重要。本项目使用 Misode 的 Minecraft Fabric 模组 [PackTest](https://github.com/misode/packtest) 进行测试。"
 
 #: ../../../contribute/debug-tools.md:11 723dd9c2f5174a9bbd4c0385b9ef874b
 msgid "⚙️ Running Tests"
-msgstr ""
+msgstr "⚙️ 运行测试"
 
 #: ../../../contribute/debug-tools.md:13 d9b9d9d430d64fe0bbcdb8d2a0963980
 msgid "To run the tests, you have two options:"
-msgstr ""
+msgstr "运行测试有两种方式："
 
 #: ../../../contribute/debug-tools.md:15 d6b8877219914a2e95c2e7da03357301
 msgid ""
 "**Headless Mode**: We provide a simple command `pdm run modules test` "
 "that allows you to run the tests headlessly, without having to open the "
 "game"
-msgstr ""
+msgstr "**无界面模式**：提供简单命令 `pdm run modules test`，无需打开游戏即可无界面运行测试"
 
 #: ../../../contribute/debug-tools.md:16 c418d8cabdf045179e8f057b1cba6562
 msgid ""
 "**In-Game**: Download and install the Minecraft Fabric mod. Once that's "
 "done, you can run the tests using the test command in Minecraft"
-msgstr ""
+msgstr "**游戏内运行**：下载并安装 Minecraft Fabric 模组，完成后可在游戏内使用测试命令运行测试"
 
 #: ../../../contribute/debug-tools.md:18 83ac146eaabf493192085ad1fcb6fade
 msgid "Java Required"
-msgstr ""
+msgstr "需要 Java"
 
 #: ../../../contribute/debug-tools.md:20 cd691634a55442dd975478017bb12cd0
 msgid ""
 "Ensure that Java is installed on your system, as it is required for the "
 "command to work."
-msgstr ""
+msgstr "请确保系统已安装 Java，这是命令运行的必要条件。"
 
 #: ../../../contribute/debug-tools.md:23 1df56f307b374458b7e7ab0ed2d17a04
 msgid "✍️ Writing Tests"
-msgstr ""
+msgstr "✍️ 编写测试"
 
 #: ../../../contribute/debug-tools.md:25 7436d11538504272b842f17ac4628098
 msgid ""
@@ -81,244 +81,243 @@ msgid ""
 "tests, make sure to clearly define what you are testing and what the "
 "expected outcome is. It's also a good idea to include edge cases to "
 "ensure your code can handle all possible inputs."
-msgstr ""
+msgstr "每个测试都是 `test` 文件夹内的 `.mcfunction` 文件。编写测试时，请清晰定义测试内容及预期结果。还应包含边界案例，确保代码能处理所有可能的输入情况。"
 
 #: ../../../contribute/debug-tools.md:28 73a398a1fcd74f1fbfdfb521d3bc828e
 msgid "🛠️ Custom Commands"
-msgstr ""
+msgstr "🛠️ 自定义命令"
 
 #: ../../../contribute/debug-tools.md:30 75df65b32fae46408ce831e7101213d1
 msgid ""
 "PackTest offers a variety of commands to control test flow, validate "
 "conditions, and interact with Minecraft's environment:"
-msgstr ""
+msgstr "PackTest 提供多种命令控制测试流程、验证条件并与 Minecraft 环境交互："
 
 #: ../../../contribute/debug-tools.md:32 eed34df1147e4609b4cabf9710de8e1c
 msgid "**Test Flow Commands**:"
-msgstr ""
+msgstr "**测试流程命令**："
 
 #: ../../../contribute/debug-tools.md:33 cc805062ef59460d80e4ef9ba1c86799
 msgid ""
 "`fail [<text>]`: Immediately fails the current test and logs an optional "
 "message"
-msgstr ""
+msgstr "`fail [<文本>]`：立即终止当前测试并记录可选信息"
 
 #: ../../../contribute/debug-tools.md:34 2a613463e47a464eacc8ad75f7a741ae
 msgid "`succeed`: Immediately passes the current test"
-msgstr ""
+msgstr "`succeed`：立即通过当前测试"
 
 #: ../../../contribute/debug-tools.md:35 e72662e93ed8455488f72d3ba2a5482f
 msgid "`assert <condition>`: Fails the test if the condition is false"
-msgstr ""
+msgstr "`assert <条件>`：若条件为假则测试失败"
 
 #: ../../../contribute/debug-tools.md:36 caac4a12f08143ff929cd930abbe3332
 msgid "`assert not <condition>`: Fails the test if the condition is true"
-msgstr ""
+msgstr "`assert not <条件>`：若条件为真则测试失败"
 
 #: ../../../contribute/debug-tools.md:37 c922496945bb4ac68af0cb12471470cd
 msgid ""
 "`await <condition>`: Continuously checks a condition until it succeeds or"
 " times out"
-msgstr ""
+msgstr "`await <条件>`：持续检查条件直至成功或超时"
 
 #: ../../../contribute/debug-tools.md:38 177cb52c19ad40d280ec5759d5b8b3b9
 msgid "`await not <condition>`: Waits until the condition becomes false"
-msgstr ""
+msgstr "`await not <条件>`：等待条件变为假"
 
 #: ../../../contribute/debug-tools.md:39 b5160f9480ad43078bb125e376897bdc
 msgid "`await delay <time>`: Pauses the test for a specified duration"
-msgstr ""
+msgstr "`await delay <时间>`：暂停测试指定时长"
 
 #: ../../../contribute/debug-tools.md:41 cbb523e2299d45609b2d098b256d9411
 msgid "**Condition Types**:"
-msgstr ""
+msgstr "**条件类型**："
 
 #: ../../../contribute/debug-tools.md:42 b34135ed67c146f5b5d380fd147521f3
 msgid ""
 "`block <pos> <block>`: Checks if a block at the specified position "
 "matches the given block"
-msgstr ""
+msgstr "`block <位置> <方块>`：检查指定位置的方块是否匹配给定方块"
 
 #: ../../../contribute/debug-tools.md:43 8c0c3ee6df2e434fb4ca3d8ff50d8612
 msgid "`data <path>`: Verifies NBT data using standard Minecraft data syntax"
-msgstr ""
+msgstr "`data <路径>`：使用标准 Minecraft 数据语法验证 NBT 数据"
 
 #: ../../../contribute/debug-tools.md:44 1cac26455a284d8abcb5446c7387762f
 msgid ""
 "`entity <selector>`: Validates if entities match a selector (works beyond"
 " test boundaries)"
-msgstr ""
+msgstr "`entity <选择器>`：验证实体是否匹配选择器（突破测试边界有效）"
 
 #: ../../../contribute/debug-tools.md:45 0a279ba5d3cc4e6eac7aa4edf5e0f22a
 msgid "`predicate <predicate>`: Executes a predicate in the data pack"
-msgstr ""
+msgstr "`predicate <谓词>`：执行数据包中的谓词"
 
 #: ../../../contribute/debug-tools.md:46 2e8924ed85e94981b8c964f26d909761
 msgid "`score <target>`: Compares scores using Minecraft's score-based conditions"
-msgstr ""
+msgstr "`score <目标>`：使用 Minecraft 基于分数的条件比较分数"
 
 #: ../../../contribute/debug-tools.md:47 ee7660842879410bb96ee57a6bb97326
 msgid ""
 "`chat <pattern> [<receivers>]`: Matches chat messages against a regex "
 "pattern"
-msgstr ""
+msgstr "`chat <模式> [<接收者>]`：使用正则表达式匹配聊天消息"
 
 #: ../../../contribute/debug-tools.md:49 41a240565cf848f4a690e0870e98b6a4
 msgid "🧍 Player Dummies"
-msgstr ""
+msgstr "🧍 玩家模拟器"
 
 #: ../../../contribute/debug-tools.md:51 2a3bb6e91d7f4b46a4b33bee8f688f3f
 msgid ""
 "PackTest allows you to spawn and control \"dummies,\" simulated players "
 "for testing:"
-msgstr ""
+msgstr "PackTest 允许生成和控制“模拟器”（dummies），即用于测试的模拟玩家："
 
 #: ../../../contribute/debug-tools.md:53 eb2907b63b3348f8a10c938ec11e2e90
 msgid "`dummy <name> spawn`: Spawns a new dummy"
-msgstr ""
+msgstr "`dummy <名称> spawn`：生成新模拟器"
 
 #: ../../../contribute/debug-tools.md:54 6fbfe958277146ca847214d5e4ea55be
 msgid "`dummy <name> respawn`: Respawns the dummy after it has been killed"
-msgstr ""
+msgstr "`dummy <名称> respawn`：被杀死后重生模拟器"
 
 #: ../../../contribute/debug-tools.md:55 8b829dd787754b9685c8d76f0f9053d9
 msgid "`dummy <name> leave`: Makes the dummy leave the server"
-msgstr ""
+msgstr "`dummy <名称> leave`：让模拟器离开服务器"
 
 #: ../../../contribute/debug-tools.md:56 39526bad585e4439a28fd7db5b6e5f21
 msgid "`dummy <name> jump`: Makes the dummy jump"
-msgstr ""
+msgstr "`dummy <名称> jump`：让模拟器跳跃"
 
 #: ../../../contribute/debug-tools.md:57 6313245d24604c0595c90a93bf689f7a
 msgid ""
 "`dummy <name> sneak [true|false]`: Makes the dummy hold shift or un-shift"
 " (not the same as currently crouching)"
-msgstr ""
+msgstr "`dummy <名称> sneak [true|false]`：让模拟器持续按住或松开 Shift（不同于当前蹲伏状态）"
 
 #: ../../../contribute/debug-tools.md:58 929bc52143994c60854a3c5c5154918f
 msgid "`dummy <name> sprint [true|false]`: Makes the dummy sprint or un-sprint"
-msgstr ""
+msgstr "`dummy <名称> sprint [true|false]`：让模拟器持续冲刺或停止冲刺"
 
 #: ../../../contribute/debug-tools.md:59 30d760ca2cb9457b95d377601c1adb49
 msgid ""
 "`dummy <name> drop [all]`: Makes the dummy drop the current mainhand, "
 "either one item or the entire stack"
-msgstr ""
+msgstr "`dummy <名称> drop [all]`：让模拟器丢弃当前主手物品（单件或整组）"
 
 #: ../../../contribute/debug-tools.md:60 1c8e564bb7494c1cac22a580c93eb7c1
 msgid "`dummy <name> swap`: Makes the dummy swap its mainhand and offhand"
-msgstr ""
+msgstr "`dummy <名称> swap`：让模拟器交换主副手物品"
 
 #: ../../../contribute/debug-tools.md:61 ea3de16a9add4cfbb3c1fd943d8b7c1b
 msgid "`dummy <name> selectslot`: Makes the dummy select a different hotbar slot"
-msgstr ""
+msgstr "`dummy <名称> selectslot`：让模拟器选择不同快捷栏位置"
 
 #: ../../../contribute/debug-tools.md:62 8df98ec330c8467db3e6ae22b31258be
 msgid ""
 "`dummy <name> use item`: Makes the dummy use its hand item, either "
 "mainhand or offhand"
-msgstr ""
+msgstr "`dummy <名称> use item`：让模拟器使用手持物品（主副手皆可）"
 
 #: ../../../contribute/debug-tools.md:63 a75189d42683460aadc8d82f052a708b
 msgid ""
 "`dummy <name> use block <pos> [<direction>]`: Makes the dummy use its "
 "hand item on a block position"
-msgstr ""
+msgstr "`dummy <名称> use block <位置> [<方向>]`：让模拟器在方块位置使用手持物品"
 
 #: ../../../contribute/debug-tools.md:64 af85a69c8ef94897bcafc3991222fba4
 msgid ""
 "`dummy <name> use entity <entity>`: Makes the dummy use its hand item on "
 "an entity"
-msgstr ""
+msgstr "`dummy <名称> use entity <实体>`：让模拟器在实体上使用手持物品"
 
 #: ../../../contribute/debug-tools.md:65 d7f3c1e2a5f64fd086c42430a5f2b226
 msgid ""
-"`dummy <name> attack <entity>`: Makes the dummy attack an entity with its"
-" mainhand"
-msgstr ""
+"`dummy <name> attack <entity>`: Makes the dummy attack an entity with its "
+"mainhand"
+msgstr "`dummy <名称> attack <实体>`：让模拟器用主手攻击实体"
 
 #: ../../../contribute/debug-tools.md:66 63d8856bf7954e18852724e3e2f35bcd
 msgid "`dummy <name> mine <pos>`: Makes the dummy mine a block"
-msgstr ""
+msgstr "`dummy <名称> mine <位置>`：让模拟器挖掘方块"
 
 #: ../../../contribute/debug-tools.md:68 af4192c9da78468eb753b45d68f13a30
 msgid "📋 Test Directives"
-msgstr ""
+msgstr "📋 测试指令"
 
 #: ../../../contribute/debug-tools.md:70 d189bd3b1c264a199b5663a53a33a7d6
 msgid ""
 "You can customize tests using directives (special comments at the "
 "beginning of the test):"
-msgstr ""
+msgstr "可通过指令（测试文件开头的特殊注释）自定义测试："
 
 #: ../../../contribute/debug-tools.md:72 683eb22dd8f04d87b6947c0465c9d173
 msgid ""
 "`@template`: The resource location of a structure template to use for the"
 " test, defaults to `minecraft:empty`, which is an empty 1×1×1 structure"
-msgstr ""
+msgstr "`@template`：测试使用的结构模板资源位置，默认为 `minecraft:empty`（1×1×1空结构）"
 
 #: ../../../contribute/debug-tools.md:73 0567ae0319794c858d783bcf4fd0edbf
 msgid "`@timeout`: An integer specifying the timeout, defaults to `100`"
-msgstr ""
+msgstr "`@timeout`：指定超时的整数，默认 `100`"
 
 #: ../../../contribute/debug-tools.md:74 a6e2756e3ff3407da8a22f6c689d2107
 msgid ""
 "`@optional`: Whether this test is allowed to fail, defaults to `false`, "
 "if there is no value after the directive it is considered as `true`"
-msgstr ""
+msgstr "`@optional`：是否允许测试失败，默认 `false`（无值时视为 `true`）"
 
 #: ../../../contribute/debug-tools.md:75 a1ff680ce2bb4808a1cfcd68ed5cf427
 msgid ""
 "`@skyaccess`: Whether this test needs sky access, defaults to `false`, "
 "which will place barrier blocks above the test"
-msgstr ""
+msgstr "`@skyaccess`：测试是否需要天空视野，默认 `false`（将在测试区域上方放置屏障方块）"
 
 #: ../../../contribute/debug-tools.md:76 3f1cd9b84dcb49bab4c60ca66bb9a833
 msgid ""
 "`@dummy`: Whether to spawn a dummy at the start of the test and set `@s` "
 "to this dummy, taking a position which defaults to `~0.5 ~ ~0.5`"
-msgstr ""
+msgstr "`@dummy`：是否在测试开始时生成模拟器并将 `@s` 设为该模拟器，位置默认 `~0.5 ~ ~0.5`"
 
 #: ../../../contribute/debug-tools.md:78 e242fb5889c147c9bb1f26b3663feda2
 msgid "Learn more..."
-msgstr ""
+msgstr "了解更多..."
 
 #: ../../../contribute/debug-tools.md:81 5a9b6883918c409bbe787f4954c9ba5e
 msgid ""
 "If you need more information than this page provides, visit Misode's "
 "[repository](https://github.com/misode/packtest) for detailed guidance on"
 " writing tests."
-msgstr ""
+msgstr "如需更多信息，请访问 Misode 的[仓库](https://github.com/misode/packtest)获取编写测试的详细指南。"
 
 #: ../../../contribute/debug-tools.md:86 0d390b3319c94366ab0075de36c2991c
 msgid "📦 Modules"
-msgstr ""
+msgstr "📦 模块"
 
 #: ../../../contribute/debug-tools.md:88 8ac7c1cbd16f4d76856ab93f1ceb505b
 msgid ""
 "Bookshelf includes a variety of modules designed to enhance your "
 "development experience."
-msgstr ""
+msgstr "Bookshelf 包含多种模块，旨在提升开发体验。"
 
 #: ../../../contribute/debug-tools.md:90 ff27a4866cf043a7b97b0349c02004d2
 msgid "📄 Logging"
-msgstr ""
+msgstr "📄 日志记录"
 
 #: ../../../contribute/debug-tools.md:92 2978331f8c5b421294561bd061dd8a3e
 msgid ""
 "Centralizes and streamlines log management, making it easier to monitor "
 "and troubleshoot your project. For more details, refer to the [log module"
 " documentation](project:../modules/log.md)."
-msgstr ""
+msgstr "集中化并简化日志管理，便于项目监控和故障排查。详情参见[日志模块文档](project:../modules/log.md)。"
 
 #: ../../../contribute/debug-tools.md:94 d504ab8472d34061ad15757a889abac8
 msgid "🔬 Var Dumping"
-msgstr ""
+msgstr "🔬 变量输出"
 
 #: ../../../contribute/debug-tools.md:96 c5ff29b27b5b4f7c97f4f01d248080df
 msgid ""
 "Provides an easy way to display scores or storage values at any given "
 "time, helping with debugging and tracking. For more details, refer to the"
 " [dump module documentation](project:../modules/dump.md)."
-msgstr ""
-
+msgstr "提供随时显示分数或存储值的便捷方式，辅助调试和追踪。详情参见[输出模块文档](project:../modules/dump.md)。"
