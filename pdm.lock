@@ -5,7 +5,7 @@
 groups = ["default", "dev", "docs"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:4987885735af3eab09577d99066db9d152c136903d311221a97fa0cacea6fe98"
+content_hash = "sha256:85b4f8c6c53c930bdbccb7943e0ff75a9c0368664466274e155774042b1f20f4"
 
 [[metadata.targets]]
 requires_python = ">=3.12"
@@ -892,6 +892,21 @@ groups = ["docs"]
 files = [
     {file = "sphinxcontrib-jsmath-1.0.1.tar.gz", hash = "sha256:a9925e4a4587247ed2191a22df5f6970656cb8ca2bd6284309578f2153e0c4b8"},
     {file = "sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl", hash = "sha256:2ec2eaebfb78f3f2078e73666b1415417a116cc848b72e5172e596c871103178"},
+]
+
+[[package]]
+name = "sphinxcontrib-mermaid"
+version = "1.0.0"
+requires_python = ">=3.8"
+summary = "Mermaid diagrams in yours Sphinx powered docs"
+groups = ["docs"]
+dependencies = [
+    "pyyaml",
+    "sphinx",
+]
+files = [
+    {file = "sphinxcontrib_mermaid-1.0.0-py3-none-any.whl", hash = "sha256:60b72710ea02087f212028feb09711225fbc2e343a10d34822fe787510e1caa3"},
+    {file = "sphinxcontrib_mermaid-1.0.0.tar.gz", hash = "sha256:2e8ab67d3e1e2816663f9347d026a8dee4a858acdd4ad32dd1c808893db88146"},
 ]
 
 [[package]]

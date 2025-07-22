@@ -397,3 +397,8 @@ ul.navbar-icon-links {
 footer, #pst-secondary-sidebar {
   --pst-color-link: var(--pst-color-text-base)
 }
+
+.mermaid {
+  background-color: var(--pst-color-background);
+  border: none;
+}
