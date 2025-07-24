@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-tags: true
-      - name: Fetch All Tags
+      - name: Fetch Tags from origin
         run: git fetch --tags
       - name: Check Versions
         id: check
@@ -44,3 +44,4 @@ jobs:
           echo "release_tag=${{ steps.check.outputs.release_tag }}"
           echo "release_name=${{ steps.check.outputs.release_name }}"
           echo "version_exists=${{ steps.check.outputs.version_exists }}"
+          echo "version=${{ steps.check.outputs.version }}"

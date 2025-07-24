@@ -6,6 +6,6 @@ data modify storage bs:ctx _.{{ i + 2 }} set from storage bs:ctx _.list[-1]
 data remove storage bs:ctx _.list[-1]
 {% endfor -%}
 function bs.string:concat/join/{{size}} with storage bs:ctx _
-{% if size == max -%}
-execute if score #n bs.ctx matches {{max}}.. run function bs.string:concat/pair/{{max}}
+{% if is_max -%}
+execute if score #n bs.ctx matches {{size}}.. run function bs.string:concat/pair/{{size}}
 {% endif -%}

@@ -12,6 +12,6 @@
     "tags": ["runtime"]
   },
   "pipeline": [
-    "gen_shapes"
+    "gen_hitbox"
   ]
 }

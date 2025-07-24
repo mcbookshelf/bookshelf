@@ -22,9 +22,9 @@ setblock ~-1 ~ ~-1 minecraft:bookshelf
 
 # Entity is outside a block
 execute if function #bs.hitbox:is_entity_in_blocks_collision run fail "Entity should be outside blocks"
-execute if function #bs.hitbox:is_entity_in_blocks_interaction run fail "Entity should be outside blocks"
+execute if function #bs.hitbox:is_entity_in_blocks_shape run fail "Entity should be outside blocks"
 
 # Entity is inside a block
 tp @s ~ ~ ~
 execute unless function #bs.hitbox:is_entity_in_blocks_collision run fail "Entity should be inside a block"
-execute unless function #bs.hitbox:is_entity_in_blocks_interaction run fail "Entity should be inside a block"
+execute unless function #bs.hitbox:is_entity_in_blocks_shape run fail "Entity should be inside a block"

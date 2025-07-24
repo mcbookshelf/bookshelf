@@ -37,9 +37,11 @@ execute if score #move.vz bs.data matches ..-1 run function bs.move:collision/se
 
 # run collision detection and run resolver function if needed
 scoreboard players set #move.toi bs.data 10000
-# @deprecated hitbox_shape (remove the next line in in 4.0.0)
+# @deprecated hitbox_shape (update following lines in in 4.0.0)
 execute if data storage bs:data move{blocks:1b} run data modify storage bs:data move.blocks set from storage bs:data move.hitbox_shape
 execute if data storage bs:data move{blocks:1b} run data modify storage bs:data move.blocks set value "collision"
+execute if data storage bs:data move{blocks:"collision"} run data modify storage bs:data move.blocks set value "function #bs.hitbox:get_block_collision"
+execute if data storage bs:data move{blocks:"interaction"} run data modify storage bs:data move.blocks set value "function #bs.hitbox:get_block_shape"
 execute if data storage bs:data move{entities:1b} run data modify storage bs:data move.entities set value "!bs.move.omit"
 function bs.move:collision/utils/setup_tags
 function bs.move:collision/check/run with storage bs:data move

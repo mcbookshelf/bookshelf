@@ -5,10 +5,8 @@ build:
   tools:
     python: "3.12"
   commands:
-    - python -m pip install pdm
-    - pdm install -G docs
-    - cat docs/conf.py
-    - pdm run docs build $READTHEDOCS_OUTPUT/html --builder dirhtml
+    - python -m pip install uv
+    - uv run --only-group docs docs build $READTHEDOCS_OUTPUT/html --builder dirhtml
 
 sphinx:
   configuration: docs/conf.py

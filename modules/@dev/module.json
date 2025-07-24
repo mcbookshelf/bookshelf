@@ -9,6 +9,6 @@
     "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
   },
   "pipeline": [
-    "bookshelf.plugins.bundle_packs.dev"
+    "bookshelf.plugins.make_bundle.dev"
   ]
 }

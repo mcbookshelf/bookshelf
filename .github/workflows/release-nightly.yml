@@ -26,21 +26,17 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: Set Up Git User
+      - name: Setup Git User
         uses: fregante/setup-git-user@v2
-      - name: Install PDM
-        uses: pdm-project/setup-pdm@v4
-        with:
-          cache: true
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
       - name: Cache Beet Content
         uses: actions/cache@v4
         with:
           path: .beet_cache
           key: ${{ runner.os }}-beet-cache
-      - name: Install Dependencies
-        run: pdm install
       - name: Build Release Files
-        run: pdm run modules release
+        run: uv run modules release
       - name: Delete Existing Nightly Release
         continue-on-error: true
         env:

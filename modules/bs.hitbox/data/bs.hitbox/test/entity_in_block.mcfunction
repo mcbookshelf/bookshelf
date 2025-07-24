@@ -23,15 +23,15 @@ setblock ~ ~ ~ minecraft:stone_slab[type=bottom]
 # Entity is outside the slab
 tp @s ~.5 ~.75 ~.5
 execute if function #bs.hitbox:is_entity_in_block_collision run fail "Entity should not be inside the slab"
-execute if function #bs.hitbox:is_entity_in_block_interaction run fail "Entity should not be inside the slab"
+execute if function #bs.hitbox:is_entity_in_block_shape run fail "Entity should not be inside the slab"
 tp @s ~-.31 ~ ~-.31
 execute if function #bs.hitbox:is_entity_in_block_collision run fail "Entity should not be inside the slab"
-execute if function #bs.hitbox:is_entity_in_block_interaction run fail "Entity should not be inside the slab"
+execute if function #bs.hitbox:is_entity_in_block_shape run fail "Entity should not be inside the slab"
 
 # Entity is inside the slab
 tp @s ~.5 ~-1 ~.5
 execute unless function #bs.hitbox:is_entity_in_block_collision run fail "Entity should be inside the slab"
-execute unless function #bs.hitbox:is_entity_in_block_interaction run fail "Entity should be inside the slab"
+execute unless function #bs.hitbox:is_entity_in_block_shape run fail "Entity should be inside the slab"
 tp @s ~-.29 ~ ~-.29
 execute unless function #bs.hitbox:is_entity_in_block_collision run fail "Entity should be inside the slab"
-execute unless function #bs.hitbox:is_entity_in_block_interaction run fail "Entity should be inside the slab"
+execute unless function #bs.hitbox:is_entity_in_block_shape run fail "Entity should be inside the slab"
