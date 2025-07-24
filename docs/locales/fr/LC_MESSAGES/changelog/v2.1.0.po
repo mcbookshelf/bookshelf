@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../changelog/v2.1.0.md:1 9e5ebc24fef2438da784d6be3ad8e72b
+msgid ""
+"📦 [Bookshelf - "
+"2.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.1.0)"
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:3 490112e0385142f5a5555dfdc1de1859
+msgid "**⚙️ The MetaData Update!**"
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:5 487c5c3d9d644e1e959d4458de0dbb76
+msgid ""
+"*This release enhances documentation and automated tools, and introduces "
+"new block manipulation features.*"
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:7 0a2ad9314b064f8694c2476f33294481
+msgid "Bookshelf is now based on **Minecraft 1.21**."
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:10 0fba7a157d35463aae589f3775dca54a
+msgid ""
+"📝 **[#206](https://github.com/mcbookshelf/bookshelf/issues/206)** - Added"
+" new related datapacks and mods."
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:11 8ce5f0516fa441128de60c7511ad6ab4
+msgid ""
+"📝 **[#200](https://github.com/mcbookshelf/bookshelf/issues/200)** - "
+"Replaced the old function header with a new license-only header, now "
+"mandatory for all functions. Metadata has been moved to the feature "
+"function tag."
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:12 81de3e8c5551440aacf832a9a171cb85
+msgid ""
+"📝 **[#52](https://github.com/mcbookshelf/bookshelf/issues/52)** / "
+"**[#175](https://github.com/mcbookshelf/bookshelf/issues/175)** - Each "
+"module now includes its own manual metadata, aiding in dependency "
+"management and supporting tools like the upcoming Bookshelf Manager. More"
+" info [here](project:/contribute/metadata.md)."
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:13 09a3a620a78a4bffbf45b9a41bc80df5
+msgid ""
+"⚙️ **[#199](https://github.com/mcbookshelf/bookshelf/pull/199)** - "
+"Automated metadata verification during pull requests to ensure no data is"
+" missed. More info [here](project:/contribute/contribution-"
+"validation.md)."
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:14 4d6adc6b05fa41d9a2224a68e9356102
+msgid "⚙️ Added templates for pull requests and issues."
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:17 ad9009288419494e9faeda10b316f57f
+msgid "`🧱 bs.block`"
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:19 2366d819af83490fa744e0b61053025a
+msgid ""
+"✨ **[#187](https://github.com/mcbookshelf/bookshelf/issues/187)** - Added"
+" `#bs.block:map_type` and `#bs.block:mix_type` functions."
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:22 c1e8d4843dcc4fa2a279db91c54c80e1
+msgid "`🔗 bs.link`"
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:24 ../../changelog/v2.1.0.md:34
+#: ../../changelog/v2.1.0.md:39 47a225a7ff584f6abcc17608accc94af
+#: 6a927cc562a14026a43764c507f4bec2 cccc295e25b84b0086f048f2ed555620
+msgid ""
+"🐛 **[#211](https://github.com/mcbookshelf/bookshelf/pull/211)** - Fixed "
+"missing help function tag."
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:27 041fd5219fb8451f92f946d351a30775
+msgid "`🧭 bs.position`"
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:29 49b64589249d4202b4389faaa3f7d4de
+msgid ""
+"📝 **[#208](https://github.com/mcbookshelf/bookshelf/issues/208)** - "
+"Updated documentation for `#bs.position:<add|get|set>_pos_and_rot`."
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:32 ad7725c9d2cf4b1ea935587167804fab
+msgid "`➡️ bs.vector`"
+msgstr ""
+
+#: ../../changelog/v2.1.0.md:37 d137f336fe00454480b5aa2179e2fa1e
+msgid "`🏅 bs.xp`"
+msgstr ""
+

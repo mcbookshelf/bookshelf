@@ -1,0 +1,514 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-14 21:41+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/move.md:1 ca4afc6694c74b06954beb157caeb09c
+msgid "🏃 Move"
+msgstr "🏃 移动（Move）"
+
+#: ../../modules/move.md:3 be353cb14c44400bb6bf4ad80b8b050f
+msgid "**`#bs.move:help`**"
+msgstr "**`#bs.move:help`**"
+
+#: ../../modules/move.md:5 4df1972f1a554aac9b77c304ef68fdcd
+msgid "Make your entity move exactly the way you want it to!"
+msgstr "让你的实体按照你想要的方式移动！"
+
+#: ../../modules/move.md:13 24ed1af445024f34ada6cbd93fdb7c54
+msgid "\"There is nothing permanent except change.\""
+msgstr "唯有变化才是永恒。"
+
+#: ../../modules/move.md:14 6d89aef143de4071ae0b74e5bb1c1ddb
+msgid "Heraclitus"
+msgstr "赫拉克利特（Heraclitus）"
+
+#: ../../modules/move.md:18 e22c9899774b497ea0ad82a1b62c5bf6
+msgid ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
+"sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
+"hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 "
+"10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 "
+"3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 "
+"0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
+" .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
+"2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
+msgstr ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
+"sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
+"hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 "
+"10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 "
+"3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 "
+"0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
+" .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
+"2.1v-5.85l-3.5 2.1Z\"></path></svg> 观看演示"
+
+#: ../../modules/move.md:28 c8c2dafca0ad4287ac3fab1bfeddd483
+msgid "🔧 Functions"
+msgstr "🔧 函数"
+
+#: ../../modules/move.md:30 d3053fc228e544b7b1ca41616e89bb5c
+msgid "You can find below all functions available in this module."
+msgstr "你可以在下方找到此模块中的所有可用函数。"
+
+#: ../../modules/move.md:34 9329f8414c6146e9b88ae971f247a79d
+msgid "Apply Velocity"
+msgstr "应用速度"
+
+#: ../../modules/move.md 4443d5f1fad042b3b32a2f01cffeac86
+msgid "Canonical"
+msgstr "标准"
+
+#: ../../modules/move.md:42 2b3b5b93cf3b4ff6858a2811a839f3bb
+msgid "Teleport an entity by its velocity scores while handling collisions."
+msgstr "根据实体的速度分数进行传送，同时处理碰撞。"
+
+#: ../../modules/move.md:44 ../../modules/move.md:80 ../../modules/move.md:145
+#: ../../modules/move.md:170 ../../modules/move.md:195
+#: 26eaf3582120445f90a5e8db7ddac12d 482b52e987f445f5a2652703d1e48bd0
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../modules/move.md:45 ../../modules/move.md:81 ../../modules/move.md:196
+#: 84b138d4c2774f84b59f2c046919d9fe e40661688cfd40a28dbbdfe55ce9f4ae
+msgid "**Execution `as <entities>`**: Entity to move."
+msgstr "**执行 `as <实体>`**：要移动的实体。"
+
+#: ../../modules/move.md:47 17bbf855801540f0bc641506cc975926
+msgid "**Scores `@s bs.vel.[x,y,z]`**: Canonical velocity vector."
+msgstr "**分数 `@s bs.vel.[x,y,z]`**：标准速度向量。"
+
+#: ../../modules/move.md:49 ../../modules/move.md:85 ../../modules/move.md:200
+#: 8271952e277c45b894b8c9d8979f78e8 e50dcccf265a4e20bfe5c452a2a6c4f7
+msgid "**Function macro**:"
+msgstr "**函数宏**："
+
+#: ../../modules/move.md:51 ../../modules/move.md:87 ../../modules/move.md:202
+#: d7d2d110684b473998c008f607668fe2 f2dcaa0ab0ec4c21b7c1d35d0e389f6e
+#: f3df3301aaa6449c97a4887359e42158
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#: ../../modules/move.md:52 ../../modules/move.md:88 ../../modules/move.md:203
+#: 86f620336b0644fa891df2cdbee4b2fa a02689efe8914c35ad04032d2a016788
+#: e2f2d03511c544cf84fb15ade0978e04
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar applied to the output."
+msgstr "{nbt}`number` **scale**: 输出的缩放系数。"
+
+#: ../../modules/move.md:53 ../../modules/move.md:89
+#: 3856a9bc6a114490ba75e7175502789c d3dc8abd451e4ff58d80b3eade3b15ed
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Collision settings."
+msgstr "{nbt}`compound` **with**: 碰撞设置。"
+
+#: ../../modules/move.md:54 ../../modules/move.md:90
+#: 3c61aa0bd9974d3d8f3737fdf16f5516 d1c6459281ec4bfd9a6e0c50a3697d60
+#, python-brace-format
+msgid ""
+"{nbt}`bool` {nbt}`string` **blocks**: Whether the entity should collide "
+"with blocks (default: true). Can be a block hitbox type (`interaction` or"
+" `collision`). `true` defaults to `collision`."
+msgstr ""
+"{nbt}`bool` {nbt}`string` **blocks**: "
+"此实体是否和方块碰撞（默认：true）。可为方块碰撞箱类型（`interaction` 或 `collision`），`true` 默认等价于 "
+"`collision`。"
+
+#: ../../modules/move.md:55 ../../modules/move.md:91
+#: 6fb2bb02edf64ccf9f2af728c698e126 d284c630e1cf4ba0b1e7c1bfdcd4f79a
+#, python-brace-format
+msgid ""
+"{nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide"
+" with entities (default: false). Can be an entity tag. For performance, "
+"tagging entities to detect is recommended."
+msgstr ""
+"{nbt}`bool` {nbt}`string` **entities**: "
+"其他实体能否阻挡移动（默认：false），建议用标签（Tags）来指定哪些实体可以阻挡移动，这样性能更好。"
+
+#: ../../modules/move.md:56 ../../modules/move.md:92
+#: bef960b11f0b497aa838012235d0123f f7a4971c7763484a8a51e42f02490b09
+#, python-brace-format
+msgid ""
+"{nbt}`string` **ignored_blocks**: Blocks to ignore (default: "
+"`#bs.hitbox:can_pass_through`)."
+msgstr ""
+"{nbt}`string` **ignored_blocks**: "
+"要忽略的方块（默认：`#bs.hitbox:can_pass_through`）。"
+
+#: ../../modules/move.md:57 ../../modules/move.md:93
+#: 12ec003e23a24e458b2f97876296a79c 37a869b09dae4c09bb6bd4c5a363744d
+#, python-brace-format
+msgid ""
+"{nbt}`string` **ignored_entities**: Entities to ignore (default: "
+"`#bs.hitbox:intangible`). Does not apply to entities with custom "
+"hitboxes."
+msgstr ""
+"{nbt}`string` **ignored_entities**: "
+"要忽略的实体类型（默认：`#bs.hitbox:intangible`）。不要在有自定义碰撞箱的实体上使用。"
+
+#: ../../modules/move.md:58 ../../modules/move.md:94
+#: 8ec0cbac5be9431cb5cc8c9b03566498 f2a6ba5a07084a98ba42b7fd0f9c9eb7
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_collision**: Command to run when a collision occurs, "
+"used to resolve the collision (default: `function "
+"#bs.move:callback/bounce`)."
+msgstr ""
+"{nbt}`string` **on_collision**: 当碰撞时运行的命令，用来解决碰撞问题（默认: `function "
+"#bs.move:callback/bounce`）。"
+
+#: ../../modules/move.md:61 ../../modules/move.md:97 ../../modules/move.md:150
+#: ../../modules/move.md:175 ../../modules/move.md:206
+#: b336ffdea1d143e5a2041eef52b2a984
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../modules/move.md:62 221bfc9a398f4743abce12b880b74a40
+msgid "**State**: Entity is teleported according to its velocity scores."
+msgstr "**状态**：实体根据其速度分数被传送。"
+
+#: ../../modules/move.md 441267ae0dd34f21acb8b6addbf1d3c5
+msgid "Local"
+msgstr "局部"
+
+#: ../../modules/move.md:70 8ae91fe3d19c4a5181082cc9efd39e74
+msgid "Experimental"
+msgstr "实验性"
+
+#: ../../modules/move.md:73 abf0394ea10244c785dc6dae6515ade9
+msgid ""
+"Always prefer the canonical version. Constant conversion between bases "
+"can lead to loss of accuracy, sometimes causing unpredictable behavior."
+msgstr "始终优先使用标准版本。基数之间的持续转换可能导致精度损失，有时会造成不可预测的行为。"
+
+#: ../../modules/move.md:75 65f13a2954544891b4545f704e960bab
+msgid ""
+"If you need to \"shoot\" an entity in a direction, you can still set "
+"velocity as a local vector and run `#bs.move:canonical_to_local` before "
+"using `#bs.move:apply_vel`."
+msgstr ""
+"如果你需要向某个方向\"发射\"实体，你仍可以将速度设置为局部向量，并在使用 `#bs.move:apply_vel` 之前运行 "
+"`#bs.move:canonical_to_local`。"
+
+#: ../../modules/move.md:78 8b1948c032934f21bda5c30dd21cfa2b
+msgid ""
+"Teleport an entity by its velocity scores, using the local reference "
+"frame, while handling collisions."
+msgstr "使用局部参考系根据实体的速度分数进行传送，同时处理碰撞。"
+
+#: ../../modules/move.md:83 41a405ee0f09411690eb0c02002b4658
+msgid "**Scores `@s bs.vel.[x,y,z]`**: Local velocity vector."
+msgstr "**分数 `@s bs.vel.[x,y,z]`**：局部速度向量。"
+
+#: ../../modules/move.md:98 29544e8bccd9423f9168c74c2b346944
+msgid "**State**: Entity is teleported according to its local velocity scores."
+msgstr "**状态**：实体根据其局部速度分数被传送。"
+
+#: ../../modules/move.md:103 c60308c2e66147de814be893075a91fe
+msgid "Hitbox Types"
+msgstr "碰撞箱类型"
+
+#: ../../modules/move.md:105 d0e9800000fa4935b0bcc92ae0a0a8d8
+msgid ""
+"Bookshelf supports multiple hitbox types for precise control. Blocks can "
+"use either `interaction` or `collision` hitboxes. Entities support three "
+"types: `dynamic`, `baked`, and `custom`."
+msgstr ""
+"Bookshelf 支持多种碰撞箱类型以实现精确控制。方块可使用 `interaction` 或 `collision` "
+"碰撞箱，实体支持三种类型：`dynamic`、`baked` 和 `custom`。"
+
+#: ../../modules/move.md:107 c7a2849b7f0948c78a3dc2e3db7835cc
+msgid "See [Hitbox Types](hitbox.md#types) for full details."
+msgstr "完整说明请参见[碰撞箱类型](hitbox.md#types)。"
+
+#: ../../modules/move.md:110 d1a0309beb51496c858fde242df30359
+msgid ""
+"*Example: Move a cube (block_display) by its velocity scores (uses an "
+"interaction as the hitbox):*"
+msgstr "*示例：根据速度分数移动立方体（block_display）（使用交互实体作为碰撞箱）：*"
+
+#: ../../modules/move.md:129 c0ffac4dbbf54458a284ddc888b4bcbb
+msgid "Performance Tip"
+msgstr "性能提示"
+
+#: ../../modules/move.md:132 6e3800e2bb8148a98f53fe4fd6fcba1f
+msgid ""
+"Although this system doesn't set specific limits, it's important to note "
+"that performance is influenced by both the speed and size of the entity."
+msgstr "虽然此系统没有设置具体限制，但需要注意性能受实体的速度和大小的影响。"
+
+#: ../../modules/move.md:135 ../../modules/move.md:160
+#: ../../modules/move.md:185 ../../modules/move.md:223
+#: ../../modules/move.md:239 1845dc2a55ad4ff699b7fce378bd7874
+#: 71f7a62cda7f4219aafbea4af2dbc3c1
+msgid "**Credits**: Aksiome"
+msgstr "**制作人员**：Aksiome"
+
+#: ../../modules/move.md:139 d96eb8d33af946c2af36d383b013c3a8
+msgid "Canonical to Local"
+msgstr "标准转局部"
+
+#: ../../modules/move.md:143 9515c8628d0c467fbc766cab3c1e98e5
+msgid ""
+"Convert a canonical velocity (using the relative reference frame) into a "
+"local velocity (using the local reference frame)."
+msgstr "将标准速度（使用相对参考系）转换为局部速度（使用局部参考系）。"
+
+#: ../../modules/move.md:146 ../../modules/move.md:171
+#: bfe1b971bc7c49b388c4479f95ec6a16
+msgid ""
+"**Execution `rotated as <entity>` or `rotated <h> <v>`**: Rotation used "
+"for the conversion."
+msgstr "**执行 `rotated as <entity>` 或 `rotated <h> <v>`**：用于转换的旋转。"
+
+#: ../../modules/move.md:148 ../../modules/move.md:173
+#: 6a0a1894ba974c8f8f0c52b26588fd4f
+msgid "**Scores `@s bs.vel.[x,y,z]`**: Velocity to convert."
+msgstr "**分数 `@s bs.vel.[x,y,z]`**：要转换的速度。"
+
+#: ../../modules/move.md:151 ../../modules/move.md:176
+#: 5418060512454f1790dd401913e3a11d
+msgid "**Scores `@s bs.vel.[x,y,z]`**: Converted velocity."
+msgstr "**分数 `@s bs.vel.[x,y,z]`**：转换后的速度。"
+
+#: ../../modules/move.md:154 ../../modules/move.md:179
+#: cc4861cd71134479b2314b9a859dd83d
+msgid "Local Velocity... 🥶 What's this?"
+msgstr "局部速度... 🥶 这是什么？"
+
+#: ../../modules/move.md:157 ../../modules/move.md:182
+#: 0e8357e6dfa64441b5c743fe23d5b74d
+msgid ""
+"Unlike relative velocity (canonical), this reference frame considers the "
+"entity's rotation. Therefore, when the parent entity rotates, the child "
+"entity rotates around it. For those familiar with Minecraft commands, "
+"local coordinates are available through the `^` symbol."
+msgstr ""
+"与相对速度（标准）不同，此参考系考虑实体的旋转。因此，当父实体旋转时，子实体围绕它旋转。对熟悉 Minecraft 命令的人来说，局部坐标可通过 "
+"`^` 符号使用。"
+
+#: ../../modules/move.md:164 56dd805849de4126a4008ed14bfe7d8b
+msgid "Local to Canonical"
+msgstr "局部转标准"
+
+#: ../../modules/move.md:168 4f930d131fa24813b4b3d6f9b378bea9
+msgid ""
+"Convert a local velocity (using the local reference frame) into a "
+"canonical velocity (using the relative reference frame)."
+msgstr "将局部速度（使用局部参考系）转换为标准速度（使用相对参考系）。"
+
+#: ../../modules/move.md:189 0cee95efb0df4c81aaf07cf1a6144329
+msgid "Set Motion"
+msgstr "设置运动"
+
+#: ../../modules/move.md:193 ea8b5ec983574df0aba541814aa92b05
+msgid "Set the motion NBT of an entity using velocity scores."
+msgstr "使用速度分数设置实体的运动（Motion）NBT。"
+
+#: ../../modules/move.md:198 d5c136817f5048fcb561d30f5dd75199
+msgid "**Scores `@s bs.vel.[x,y,z]`**: Velocity vector."
+msgstr "**分数 `@s bs.vel.[x,y,z]`**：速度向量。"
+
+#: ../../modules/move.md:207 a79b5f4a046c45fe920a4db8b85d1e36
+msgid "**State**: Motion is applied to the given entity."
+msgstr "**状态**：运动被应用到给定实体。"
+
+#: ../../modules/move.md:210 f7e5b9f3f7d94669bfb2b7f6319e10a2
+msgid "*Example: Move a pig by its velocity scores:*"
+msgstr "*示例：根据速度分数移动猪：*"
+
+#: ../../modules/move.md:227 8626ba121add407985cf2cdbd78be828
+msgid "👁️ Predicates"
+msgstr "👁️ 谓词"
+
+#: ../../modules/move.md:229 09649c652465410a8e8fb8ec01743384
+msgid "You can find below all predicates available in this module."
+msgstr "你可以在下方找到此模块中的所有可用谓词。"
+
+#: ../../modules/move.md:233 ddd13c406a34432fa9be90af6b7daeb9
+msgid "Has Velocity?"
+msgstr "有速度？"
+
+#: ../../modules/move.md:235 c8fde3df940147b8ab556b0f093aab15
+msgid "**`bs.move:has_vel`**"
+msgstr "**`bs.move:has_vel`**"
+
+#: ../../modules/move.md:237 84a09d593e614e7aafa7d9446ff44967
+msgid "Determine if an entity has a nonzero velocity score."
+msgstr "确定实体是否有非零速度分数。"
+
+#: ../../modules/move.md:243 418f0bae02fc49dea24c161ef9a2f9c7
+msgid "🎓 Custom Collisions"
+msgstr "🎓 自定义碰撞"
+
+#: ../../modules/move.md:245 f29d3abd5f8c4b36a97cae533dca62cc
+msgid ""
+"This module allows you to customize collision behaviors according to your"
+" specific needs."
+msgstr "此模块允许你根据特定需求自定义碰撞行为。"
+
+#: ../../modules/move.md:249 c29c317a95214eecaef41a6ff70a198a
+msgid ""
+"By modifying the `on_collision` input key, you have the freedom to "
+"specify the function that triggers upon collision. However, managing the "
+"resolution yourself can be quite challenging. This is why Bookshelf "
+"provides several predefined functions:"
+msgstr ""
+"通过修改 `on_collision` 输入键，你可以自由指定碰撞时触发的函数。然而，自行管理解决方案可能相当具有挑战性。这就是为什么 "
+"Bookshelf 提供了几个预定义函数："
+
+#: ../../modules/move.md:252 201b60ebfe3e4a80a722a28c378102e6
+msgid "`#bs.move:callback/bounce`"
+msgstr "`#bs.move:callback/bounce`"
+
+#: ../../modules/move.md:253 d47facacdc6f4a5681b4542a01f3d788
+msgid "The entity will bounce on the collision surface."
+msgstr "实体将在碰撞表面反弹。"
+
+#: ../../modules/move.md:254 e99293538a374a8ea809b9f299685193
+msgid "`#bs.move:callback/damped_bounce`"
+msgstr "`#bs.move:callback/damped_bounce`"
+
+#: ../../modules/move.md:255 1b64d90f0d45442b97e97ee6b7ae7af2
+msgid "The entity speed is reduced by 2 on each bounce."
+msgstr "实体速度在每次反弹时减少2。"
+
+#: ../../modules/move.md:256 8773549f248e424fba124c7d69113436
+msgid "`#bs.move:callback/slide`"
+msgstr "`#bs.move:callback/slide`"
+
+#: ../../modules/move.md:257 c05eb6489d2e4ffe941717a1fece360f
+msgid "The entity will stick and slide along the collision surface."
+msgstr "实体将粘附并沿碰撞表面滑动。"
+
+#: ../../modules/move.md:258 da51295cc18445469095e2428cdadcc4
+msgid "`#bs.move:callback/stick`"
+msgstr "`#bs.move:callback/stick`"
+
+#: ../../modules/move.md:259 196faf31bd8242b6868871eab2f925f8
+msgid "The entity will stop and stick to the collision surface."
+msgstr "实体将停止并粘附在碰撞表面上。"
+
+#: ../../modules/move.md:262 5fd218f368f74575bb29200cf934c833
+msgid "How It Works?"
+msgstr "工作原理？"
+
+#: ../../modules/move.md:264 92a64a60aee74c0289f5a4fd17aa0525
+msgid ""
+"Upon collision, you have the freedom to update both the velocity score "
+"that will be used in the next tick `@s bs.vel.[x,y,z]` and the remaining "
+"velocity `$move.vel.[x,y,z] bs.lambda`. Since the module will attempt to "
+"continue moving based on the remaining velocity, it's crucial to avoid "
+"introducing a race condition."
+msgstr ""
+"发生碰撞时，你可以自由更新下一刻将使用的速度分数 `@s bs.vel.[x,y,z]` 和剩余速度 `$move.vel.[x,y,z] "
+"bs.lambda`。因为模块将尝试以剩余速度继续移动，所以这个过程中必须避免引发竞态条件。"
+
+#: ../../modules/move.md:266 162dfccf08c44782b9e53acdf59f3752
+msgid "Velocity Scaling"
+msgstr "速度缩放"
+
+#: ../../modules/move.md:268 b9ad5fbac74949c5843376d0f8d3fbf6
+msgid ""
+"Remaining velocity scores are stored as scaled integers, but the scaling "
+"factor may change without breaking compatibility."
+msgstr "剩余速度值以缩放整数的形式存储，但缩放系数可随时变更，并且这不破坏兼容性。"
+
+#: ../../modules/move.md:270 16643117ec8149878e5d07b1794c457a
+msgid ""
+"To ensure stability, always manipulate these values independently of the "
+"scaling factor."
+msgstr "为了确保稳定性，请保持计算操作和缩放系数无关。"
+
+#: ../../modules/move.md:273 59bad7957b5b4a62abf9b95c213cdba6
+msgid "The simplest collision resolution is to stop the movement."
+msgstr "最简单的碰撞处理是停止移动。"
+
+#: ../../modules/move.md:275 c633005c58d84ade86de942c94ce8480
+msgid "*`#bs.move:callback/stick`*"
+msgstr "*`#bs.move:callback/stick`*"
+
+#: ../../modules/move.md:283 7393bf3a98ca4b53a2dc6b266dcedd72
+msgid ""
+"For sliding, we need to cancel the velocity on the axis that was hit and "
+"continue traveling the remaining distance."
+msgstr "对于滑动，我们需要取消被阻挡的轴上的速度，并继续行进剩余距离。"
+
+#: ../../modules/move.md:285 154809601ea041c1b8dbea4c7c6f6e4a
+msgid "*`#bs.move:callback/slide`*"
+msgstr "*`#bs.move:callback/slide`*"
+
+#: ../../modules/move.md:293 5c3f7a10cb044467aa15b73097ffadc7
+msgid ""
+"To simplify the creation of these behaviors, there's no need to handle a "
+"local velocity directly. The vector is automatically converted before and"
+" after the collision resolution. If you need help with custom collisions,"
+" you can ask us on our [discord server](https://discord.gg/MkXytNjmBt)!"
+msgstr ""
+"为了简化这些行为的创建，无需直接处理局部速度。向量在碰撞处理前后会自动转换。如果你需要有关自定义碰撞的帮助，可以在我们的 [Discord "
+"服务器](https://discord.gg/MkXytNjmBt)上询问！"
+
+#: ../../_templates/comments.md:4 5a1b768e8eff4725a281550f32f25cc8
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对你有帮助吗？**"
+
+#: ../../_templates/comments.md:6 ee3501abe649483ebcf18fecb2605d82
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下你的问题和反馈！"
+
+#, python-brace-format
+msgid ""
+"{nbt}`bool` **blocks**: Whether the entity "
+"should collide with blocks (default: "
+"true)."
+msgstr "{nbt}`bool` **blocks**: 方块能否阻挡移动（默认: true）。"
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **hitbox_shape**: Hitbox type: "
+"`interaction` or `collision` (default: "
+"`collision`)."
+msgstr ""
+"{nbt}`string` **hitbox_shape**: 碰撞箱类型: `interaction`"
+" 或 `collision`（默认: `collision`）。"
+
+msgid "Collision / Interaction Shape"
+msgstr "碰撞/交互形状"
+
+msgid ""
+"**Collision Shape**: Defines the physical "
+"boundaries of a block that entities "
+"cannot pass through. It determines where"
+" an entity will stop when moving "
+"towards the block."
+msgstr "**碰撞形状（collision_shape）**：实体无法穿过的方块的物理边界，决定实体在靠近方块时会被阻挡在什么位置。"
+
+msgid ""
+"**Interaction Shape**: Defines the area "
+"where the player can interact with "
+"or break the block. This includes "
+"actions such as right-clicking to "
+"open a GUI (e.g., chests, furnaces) "
+"or mining the block. Some blocks "
+"have an interaction shape but no "
+"collision, such as crops or scaffolding."
+msgstr ""
+"**交互形状（interaction_shape）**：玩家可以与方块交互或破坏的区域。这包括右键打开 "
+"GUI（如箱子、熔炉）或采掘方块等操作。有些方块有交互形状但没有碰撞，比如农作物或脚手架。"

@@ -1,0 +1,307 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../modules/id.md:1 94c390f4eabb48389cec216e4384c0af
+msgid "🏷️ ID"
+msgstr "🏷️ 编号（ID）"
+
+#: ../../../modules/id.md:3 9d78ec375c1c4bc98bdc96785260eb76
+msgid "**`#bs.id:help`**"
+msgstr "**`#bs.id:help`**"
+
+#: ../../../modules/id.md:5 fd2e8b2e63424bd4a7995adbed7e25c7
+msgid ""
+"Manage entity IDs, essential in scenarios like shooting games where you "
+"need to track who is targeting whom."
+msgstr "管理实体ID，在需要追踪谁在瞄准谁等场景（如射击游戏）中至关重要。"
+
+#: ../../../modules/id.md:8 c98002e5d71942ffa4334521cebf683e
+msgid "\"We know what we are, but know not what we may be.\""
+msgstr "“我们知道自己是谁，却不知道自己能成为谁。”"
+
+#: ../../../modules/id.md:9 1c8140d1d24a45e497dba841bdd7ff5e
+msgid "William Shakespeare"
+msgstr "威廉·莎士比亚（William Shakespeare）"
+
+#: ../../../modules/id.md:15 e2d7db13ae844d38b5bedb8f380fdf25
+msgid "🔧 Functions"
+msgstr "🔧 函数"
+
+#: ../../../modules/id.md:17 27db4608c24d4465b66151577f550475
+msgid "You can find below all functions available in this module."
+msgstr "你可以在下方找到此模块中的所有可用函数。"
+
+#: ../../../modules/id.md:21 f0b21848438d46678d06f5bb7ed0f7e9
+msgid "Give Simple Unique ID"
+msgstr "给予简单唯一ID"
+
+#: ../../../modules/id.md:25 d7b24227787f49b68732214ff9b3ace4
+msgid "Give a unique `bs.id` score to each entity."
+msgstr "给每个实体一个唯一的 `bs.id` 分数。"
+
+#: ../../../modules/id.md:27 ../../../modules/id.md:54
+#: ../../../modules/id.md:131 ../../../modules/id.md:149
+#: ../../../modules/id.md:167 ../../../modules/id.md:185
+#: ../../../modules/id.md:229 ../../../modules/id.md:247
+#: ../../../modules/id.md:265 ../../../modules/id.md:283
+#: 0d9f13d3ee7d439f8473115b9348a618 40bfb18f6b0145bc86137ebb64fb6340
+#: 53c8a537e6e84eafafb6cf17fc5acc0b 5608b2be5e7940d0bfdf79356b29cbdc
+#: 8a4df41a228b45c8bb7ce61aac7c7382 97c6c6bc5c4d46a1810e184f91063092
+#: bafd8ff0bde94d25b4ea35f06c700d9b bd3efca66416474b9313102747afe3be
+#: dd5868e522be4530b57439fcc2ca936d ec351feaf2c04166ace348adc3b45316
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../../modules/id.md:28 ../../../modules/id.md:55
+#: 13328d58225e49f0b12f8093a185420a e510a3da2bb343a0abacbb229881822c
+msgid "**Execution `as <entities>`**: Entities to assign an ID to."
+msgstr "**执行 `as <实体>`**：要分配ID的实体。"
+
+#: ../../../modules/id.md:30 ../../../modules/id.md:57
+#: 5f6e04d6aaba461cb1eb9cd1092306fc e6c019feaae34bed988c2340aa9d4b31
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../../modules/id.md:31 e31d7c70d0b94768a70cddced3d48561
+msgid "**Score `@s bs.id`**: Generated simple unique ID."
+msgstr "**分数 `@s bs.id`**：生成的简单唯一ID。"
+
+#: ../../../modules/id.md:34 ../../../modules/id.md:67
+#: 06e150513a744fe58254974a23c342e7 de43aa7dbf3f4eda959a679922fde117
+msgid "*Example: Give an ID to all players:*"
+msgstr "*示例：给所有玩家一个ID：*"
+
+#: ../../../modules/id.md:44 ../../../modules/id.md:77
+#: ../../../modules/id.md:97 8efa70e497a14137be7ecb8279152be8
+#: 9eaed41c8d0e4bca9a952a14a9a92140 deeffb6321df4d158d71bf549186fa97
+msgid "**Credits**: Aksiome, KubbyDev"
+msgstr "**制作人员**：Aksiome、KubbyDev"
+
+#: ../../../modules/id.md:48 b895a68ad15b4c19baf93665e2aaa499
+msgid "Give Chain Unique ID"
+msgstr "给予链式唯一ID"
+
+#: ../../../modules/id.md:52 454ccf5b67e54bcb91d12d7fe28e18ee
+msgid "Give a unique `bs.cid` score to each entity."
+msgstr "给每个实体一个唯一的 `bs.cid` 分数。"
+
+#: ../../../modules/id.md:58 f570c8e9228b4334947daacf2ebf9bca
+msgid "**Score `@s bs.cid`**: Generated chain unique ID."
+msgstr "**分数 `@s bs.cid`**：生成的链式唯一ID。"
+
+#: ../../../modules/id.md:61 1683a65b58814199b5823dead018f041
+msgid "How it works?"
+msgstr "工作原理？"
+
+#: ../../../modules/id.md:64 a873e6399a554c98a7c9e9949f2c7f0f
+msgid ""
+"The chain ID is similar to the simple ID. However, with chain IDs, you "
+"can use the function `#bs.id:update_cuids` to make sure there are no gaps"
+" in the ID sequence, thus creating a continuous chain."
+msgstr "链式ID类似于简单ID。但是，使用链式ID时，你可以使用 `#bs.id:update_cuids` 函数来确保ID序列中没有空隙，从而创建一个连续的链。"
+
+#: ../../../modules/id.md:81 06e7819be5c14787b5e29a8aa005abe0
+msgid "Update Chain Unique ID"
+msgstr "更新链式唯一ID"
+
+#: ../../../modules/id.md:85 f248462c67a040dcafcf18e7df7da6f6
+msgid "Update all entities' CUIDs to ensure the chain is continuous."
+msgstr "更新所有实体的链式唯一ID以确保链的连续性。"
+
+#: ../../../modules/id.md:88 fe1004f24b6047cb86b7ae60663b9f10
+msgid "*Example: Ensure the chain is free of gaps and duplicates:*"
+msgstr "*示例：确保链中没有空隙和重复：*"
+
+#: ../../../modules/id.md:101 a2d469f3b7254dc296573ee37b7270a3
+msgid "👁️ Predicates"
+msgstr "👁️ 谓词"
+
+#: ../../../modules/id.md:103 34b7cba1971f46f899373ededab5d7a7
+msgid "You can find below all predicates available in this module."
+msgstr "你可以在下方找到此模块中的所有可用谓词。"
+
+#: ../../../modules/id.md:107 bf624731199a4b74b3bb0a64aff16996
+msgid "Check Simple Unique ID"
+msgstr "检查简单唯一ID"
+
+#: ../../../modules/id.md 10d244913cae4537b4456c6f4cefe63e
+#: d317ee470447464faa462a6a9beb4290
+msgid "Has"
+msgstr "拥有"
+
+#: ../../../modules/id.md:115 9df7050cdd0e45c8a9ac58107dd93e64
+msgid "Determine if an entity has a `bs.id` score."
+msgstr "判断实体是否有 `bs.id` 分数。"
+
+#: ../../../modules/id.md:118 e828543fb1d04f25b283f32b94498095
+msgid ""
+"*Example: Give an SUID to all entities that aren't identified by a "
+"`bs.id` score:*"
+msgstr "*示例：给所有没有 `bs.id` 分数标识的实体一个简单唯一ID：*"
+
+#: ../../../modules/id.md b87292201a3b48c3927295df7dc0ceb6
+#: d63b05211ed643eda04e0a4568815da6
+msgid "Equal"
+msgstr "相等"
+
+#: ../../../modules/id.md:129 59fec93ab00d484f8871bdc07194b0f2
+msgid "Find an entity that has the same `bs.id` as the input value."
+msgstr "查找具有与输入值相同 `bs.id` 的实体。"
+
+#: ../../../modules/id.md:132 ../../../modules/id.md:150
+#: ../../../modules/id.md:168 377d7474f98f4f8ebf65ac499c989523
+#: 8a067df1659943ce8640e4e65f2ebd74 de11ff09f50c462a906e5d7c8c8bb4ab
+msgid "**Score `$id.suid bs.in`**: Value to check against."
+msgstr "**分数 `$id.suid bs.in`**：要检查的值。"
+
+#: ../../../modules/id.md:135 be2fe2a6269647f299c482f1bd95a40b
+msgid "*Example: Find the entity that has a `bs.id` equal to 1:*"
+msgstr "*示例：查找具有 `bs.id` 等于 1 的实体：*"
+
+#: ../../../modules/id.md 02374188f9494a5c9033fc70a927fa7a
+#: 19ca62561aad4336a02c4802f9774b0d
+msgid "Lower"
+msgstr "小于"
+
+#: ../../../modules/id.md:147 541794d9a869480aad26084730df7ea8
+msgid "Filter entities that have a `bs.id` less than or equal to the input value."
+msgstr "过滤出 `bs.id` 小于或等于输入值的实体。"
+
+#: ../../../modules/id.md:153 66ef4a4295da4dfd8121e3d18d7bcec9
+msgid "*Example: Filter entities that have a `bs.id` less than or equal to 17:*"
+msgstr "*示例：过滤出 `bs.id` 小于或等于 17 的实体：*"
+
+#: ../../../modules/id.md 65f939e1a9dd4588b882d81cc3a77026
+#: e917a28533914cbd9509275efc5dea58
+msgid "Upper"
+msgstr "大于"
+
+#: ../../../modules/id.md:165 04deab2e6e01461aaac0b7316246f12b
+msgid ""
+"Filter entities that have a `bs.id` greater than or equal to the input "
+"value."
+msgstr "过滤出 `bs.id` 大于或等于输入值的实体。"
+
+#: ../../../modules/id.md:171 8662415baa324ff7986751666361df8e
+msgid ""
+"*Example: Filter entities that have a `bs.id` greater than or equal to "
+"18:*"
+msgstr "*示例：过滤出 `bs.id` 大于或等于 18 的实体：*"
+
+#: ../../../modules/id.md 8e03e40760ee4dd2897b586b68c6f55b
+#: e3ff49869d5b40ff9452b60b45e81eb3
+msgid "Match"
+msgstr "匹配"
+
+#: ../../../modules/id.md:183 aed9cb7593bb437b8bed77b95f29300c
+msgid "Filter entities that have a `bs.id` between the given values."
+msgstr "过滤出 `bs.id` 在给定值之间的实体。"
+
+#: ../../../modules/id.md:186 43b4edcebb16485a97b0772aa6feabfb
+msgid "**Score `$id.suid.min bs.in`**: Min value to check against."
+msgstr "**分数 `$id.suid.min bs.in`**：要检查的最小值。"
+
+#: ../../../modules/id.md:188 87a6a603d218414fa514c9ea878f1c08
+msgid "**Score `$id.suid.max bs.in`**: Max value to check against."
+msgstr "**分数 `$id.suid.max bs.in`**：要检查的最大值。"
+
+#: ../../../modules/id.md:191 efae45622f2a4e18bf3ee6b59da292bd
+msgid "*Example: Filter entities that have a `bs.id` between 2 and 4:*"
+msgstr "*示例：过滤出 `bs.id` 在 2 到 4 之间的实体：*"
+
+#: ../../../modules/id.md:201 ../../../modules/id.md:299
+#: 16c48cce92f344719b838cda377f47dd 84e997af49e24a8ab0904ec9add21230
+msgid "**Credits**: Aksiome"
+msgstr "**制作人员**：Aksiome"
+
+#: ../../../modules/id.md:205 f41a2bed8846483aa41417c533943b24
+msgid "Check Chain Unique ID"
+msgstr "检查链式唯一ID"
+
+#: ../../../modules/id.md:213 539d740e138e47408eca0d8decc63784
+msgid "Determine if an entity has a `bs.cid` score."
+msgstr "判断实体是否有 `bs.cid` 分数。"
+
+#: ../../../modules/id.md:216 4273284f0170403fbd851e4ad03b106e
+msgid ""
+"*Example: Give a CUID to all entities that aren't identified by a "
+"`bs.cid` score:*"
+msgstr "*示例：给所有没有 `bs.cid` 分数标识的实体一个链式唯一ID：*"
+
+#: ../../../modules/id.md:227 58b7e4574a9140659633b20a956cf5d7
+msgid "Find an entity that has the same `bs.cid` as the input value."
+msgstr "查找具有与输入值相同 `bs.cid` 的实体。"
+
+#: ../../../modules/id.md:230 ../../../modules/id.md:248
+#: ../../../modules/id.md:266 1d1b453bb1004a9883ebdd93b7a8b8ac
+#: 57cebcc381804c9bbc0aa04d865bbbac a45d71900bb04b9fa7d55c3e0b03d6f
+msgid "**Score `$id.cuid bs.in`**: Value to check against."
+msgstr "**分数 `$id.cuid bs.in`**：要检查的值。"
+
+#: ../../../modules/id.md:233 68efbae7088243bca7f507d358db81d0
+msgid "*Example: Find the entity that has a `bs.cid` equal to 1:*"
+msgstr "*示例：查找具有 `bs.cid` 等于 1 的实体：*"
+
+#: ../../../modules/id.md:245 b70b27403761420e9b57547c28678538
+msgid ""
+"Filter entities that have a `bs.cid` less than or equal to the input "
+"value."
+msgstr "过滤出 `bs.cid` 小于或等于输入值的实体。"
+
+#: ../../../modules/id.md:251 2fd94ae13bdc4d4fb62e843ea0afe589
+msgid "*Example: Filter entities that have a `bs.cid` less than or equal to 17:*"
+msgstr "*示例：过滤出 `bs.cid` 小于或等于 17 的实体：*"
+
+#: ../../../modules/id.md:263 b3abe44c5405490bb749ee01588ca6fd
+msgid ""
+"Filter entities that have a `bs.cid` greater than or equal to the input "
+"value."
+msgstr "过滤出 `bs.cid` 大于或等于输入值的实体。"
+
+#: ../../../modules/id.md:269 937db987d45d4126afd42b7fef215e7a
+msgid ""
+"*Example: Filter entities that have a `bs.cid` greater than or equal to "
+"18:*"
+msgstr "*示例：过滤出 `bs.cid` 大于或等于 18 的实体：*"
+
+#: ../../../modules/id.md:281 7c40128b2e744f538afe82f414852c31
+msgid "Filter entities that have a `bs.cid` between the given values."
+msgstr "过滤出 `bs.cid` 在给定值之间的实体。"
+
+#: ../../../modules/id.md:284 a2a204d18ead4782b118f2a9092ade2f
+msgid "**Score `$id.cuid.min bs.in`**: Min value to check against."
+msgstr "**分数 `$id.cuid.min bs.in`**：要检查的最小值。"
+
+#: ../../../modules/id.md:286 195eaf66cfec477ab3e7cb2c5ebf6d13
+msgid "**Score `$id.cuid.max bs.in`**: Max value to check against."
+msgstr "**分数 `$id.cuid.max bs.in`**：要检查的最大值。"
+
+#: ../../../modules/id.md:289 d89d96240344496cad27cc2c9767542a
+msgid "*Example: Filter entities that have a `bs.cid` between 2 and 4:*"
+msgstr "*示例：过滤出 `bs.cid` 在 2 到 4 之间的实体：*"
+
+#: ../../../_templates/comments.md:4 0e04f94f65744b08a5e76db1f20a669e
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对你有帮助吗？**"
+
+#: ../../../_templates/comments.md:6 fc42e309b4034dcd840f1204d7b649d6
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下你的问题和反馈！"
