@@ -41,7 +41,11 @@ class LogRule:
         """Attempt to match the pattern and return a LogEvent if matched."""
         if match := self.pattern.search(line):
             extra = self.formatter(match)
-            return LogEvent(self.message.format(**extra), self.severity, extra)
+            return LogEvent(
+                self.message.format(**extra),
+                self.severity,
+                {k: v for k, v in extra.items() if k in ("title", "file", "line")},
+            )
         return None
 
 

@@ -77,23 +77,22 @@ def release() -> None:
 @click.option("--versions", is_flag=True)
 def test(*, versions: bool) -> None:
     """Build and test modules."""
-    with (
-        summarize_logs("🔬 TESTING MODULES…", exit_on_errors=True),
-        TemporaryDirectory() as directory,
-    ):
-        build_modules(["@suite"], builder.BuildOptions(
-            require=["bookshelf.plugins.include_tests"],
-            meta={"autosave": {"link": False}},
-            output=(output := Path(directory)),
-            zipped=True,
-        ))
+    with TemporaryDirectory() as directory:
+        with summarize_logs("🔨 BUILDING MODULES…", exit_on_errors=True):
+            build_modules(MODULES, builder.BuildOptions(
+                require=["bookshelf.plugins.include_tests"],
+                meta={"autosave": {"link": False}},
+                output=(output := Path(directory)),
+                zipped=True,
+            ))
 
-        for worker in track([(
-            f"Test version [green]{v}[/green]",
-            packtest.run(output, v),
-        ) for v in (reversed(MC_VERSIONS) if versions else MC_VERSIONS[-1:])]):
-            for event in worker:
-                event.log()
+        with summarize_logs("🔬 TESTING MODULES…", exit_on_errors=True):
+            for worker in track([(
+                f"Test version [green]{v}[/green]",
+                packtest.run(output, v),
+            ) for v in (reversed(MC_VERSIONS) if versions else MC_VERSIONS[-1:])]):
+                for event in worker:
+                    event.log()
 
 
 def build_modules(modules: Sequence[str], options: builder.BuildOptions) -> None:

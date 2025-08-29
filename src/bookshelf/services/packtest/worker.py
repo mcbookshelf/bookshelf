@@ -25,6 +25,7 @@ async def run(datapacks: Path, mc_version: str) -> AsyncIterable[server.LogEvent
     world_dir = work_dir / "world"
 
     shutil.rmtree(world_dir, ignore_errors=True)
+    world_dir.mkdir(parents=True, exist_ok=True)
     shutil.copytree(datapacks, world_dir / "datapacks")
 
     try:
