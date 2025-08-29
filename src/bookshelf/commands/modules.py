@@ -74,17 +74,21 @@ def release() -> None:
 
 
 @modules.command()
+@click.argument("modules", nargs=-1)
 @click.option("--versions", is_flag=True)
-def test(*, versions: bool) -> None:
+def test(modules: tuple[str, ...], *, versions: bool) -> None:
     """Build and test modules."""
     with TemporaryDirectory() as directory:
         with summarize_logs("🔨 BUILDING MODULES…", exit_on_errors=True):
-            build_modules(MODULES, builder.BuildOptions(
-                require=["bookshelf.plugins.include_tests"],
-                meta={"autosave": {"link": False}},
-                output=(output := Path(directory)),
-                zipped=True,
-            ))
+            build_modules(
+                modules or MODULES,
+                builder.BuildOptions(
+                    require=["bookshelf.plugins.include_tests"],
+                    meta={"autosave": {"link": False}},
+                    output=(output := Path(directory)),
+                    zipped=True,
+                ),
+            )
 
         with summarize_logs("🔬 TESTING MODULES…", exit_on_errors=True):
             for worker in track([(
