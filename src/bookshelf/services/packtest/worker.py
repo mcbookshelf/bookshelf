@@ -3,7 +3,7 @@ from __future__ import annotations
 import asyncio
 import logging
 import shutil
-from queue import Empty, Queue
+from queue import Queue
 from threading import Thread
 from typing import TYPE_CHECKING
 
@@ -55,24 +55,13 @@ class WorkerStream[T]:
             self._queue.put(None)
         asyncio.run(runner())
 
-    async def __anext__(self) -> T:
-        """Get the next item from the queue or raise StopAsyncIteration."""
-        item = self._queue.get()
-        if item is None:
-            raise StopAsyncIteration
-        return item
-
     def __iter__(self) -> WorkerStream[T]:
         """Return an iterator for synchronous iteration."""
         return self
 
     def __next__(self) -> T:
         """Get the next item from the queue or raise StopIteration."""
-        while True:
-            try:
-                item = self._queue.get(timeout=0.1)
-                if item is not None:
-                    return item
-                raise StopIteration
-            except Empty:
-                continue
+        item = self._queue.get()
+        if item is None:
+            raise StopIteration
+        return item

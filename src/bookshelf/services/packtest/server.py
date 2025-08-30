@@ -51,13 +51,13 @@ class LogRule:
 
 def _format_test_error(match: re.Match) -> dict:
     name = match["name"]
-    i = name.rfind(".", 0, name.find("/"))
+    i = name.rfind(":", 0, name.find("/"))
     # Infer the module path and test file from the test name
     return {
         **match.groupdict(),
         "title": f"Test '{name}' failed",
         "file": f"modules/{name[:i]}/data/{name[:i]}/test/{name[i+1:]}.mcfunction",
-        "line": int(match["line"]),
+        "line": int(match["line"]) - 1,
     }
 
 
@@ -92,9 +92,9 @@ async def run(cwd: Path, server: str = "server.jar") -> AsyncIterable[LogEvent]:
     )
 
     # Stream output line-by-line and attempt to match with log rules
-    if process.stdout is not None:
-        async for raw_line in process.stdout:
-            line = raw_line.decode("utf-8", errors="replace").rstrip()
+    if stdout := process.stdout:
+        while (raw := await stdout.readline()):
+            line = raw.decode("utf-8", errors="replace").rstrip()
             for rule in LOG_RULES:
                 if event := rule.match(line):
                     yield event
