@@ -48,9 +48,11 @@ scoreboard players operation #raycast.lz bs.data /= #raycast.uz bs.data
 
 # run the recursion loop
 scoreboard players set @s bs.tmin 2147483647
-# @deprecated hitbox_shape (remove the next line in in 4.0.0)
+# @deprecated hitbox_shape (update following lines in in 4.0.0)
 execute if data storage bs:data raycast{blocks:1b} run data modify storage bs:data raycast.blocks set from storage bs:data raycast.hitbox_shape
 execute if data storage bs:data raycast{blocks:1b} run data modify storage bs:data raycast.blocks set value "interaction"
+execute if data storage bs:data raycast{blocks:"collision"} run data modify storage bs:data raycast.blocks set value "function #bs.hitbox:get_block_collision"
+execute if data storage bs:data raycast{blocks:"interaction"} run data modify storage bs:data raycast.blocks set value "function #bs.hitbox:get_block_shape"
 execute if data storage bs:data raycast{entities:1b} run data modify storage bs:data raycast.entities set value "!bs.raycast.omit"
 execute unless data storage bs:data raycast{entities:0b} run function bs.raycast:check/entities with storage bs:data raycast
 execute align xyz run function bs.raycast:recurse/next with storage bs:data raycast

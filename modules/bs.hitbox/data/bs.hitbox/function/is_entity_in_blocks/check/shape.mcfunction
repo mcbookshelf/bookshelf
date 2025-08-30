@@ -13,12 +13,13 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #l bs.ctx run data get storage bs:ctx _.shape[-1][0] 625000
-execute store result score #m bs.ctx run data get storage bs:ctx _.shape[-1][1] 625000
-execute store result score #n bs.ctx run data get storage bs:ctx _.shape[-1][2] 625000
-execute store result score #o bs.ctx run data get storage bs:ctx _.shape[-1][3] 625000
-execute store result score #p bs.ctx run data get storage bs:ctx _.shape[-1][4] 625000
-execute store result score #q bs.ctx run data get storage bs:ctx _.shape[-1][5] 625000
+execute store result score #l bs.ctx run data get storage bs:ctx _[-1][0] 625000
+execute store result score #m bs.ctx run data get storage bs:ctx _[-1][1] 625000
+execute store result score #n bs.ctx run data get storage bs:ctx _[-1][2] 625000
+execute store result score #o bs.ctx run data get storage bs:ctx _[-1][3] 625000
+execute store result score #p bs.ctx run data get storage bs:ctx _[-1][4] 625000
+execute store result score #q bs.ctx run data get storage bs:ctx _[-1][5] 625000
+data remove storage bs:ctx _[-1]
 
 # offset coordinates if needed
 scoreboard players operation #l bs.ctx += #u bs.ctx
@@ -36,5 +37,4 @@ execute \
   if score #k bs.ctx > #n bs.ctx \
 run return 1
 
-data remove storage bs:ctx _.shape[-1]
-execute if data storage bs:ctx _.shape[0] run return run function bs.hitbox:is_entity_in_blocks/check/shape
+execute if data storage bs:ctx _[0] run return run function bs.hitbox:is_entity_in_blocks/check/shape

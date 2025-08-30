@@ -1,64 +1,76 @@
 [build-system]
-requires = ["pdm-backend", "pdm-build-locked"]
-build-backend = "pdm.backend"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "mcbookshelf"
 dynamic = ["version"]
-description = "Scripts for Bookshelf and the Github pipeline."
+description = "Scripts for Bookshelf and the GitHub pipeline."
 authors = [{ name = "Bookshelf Contributors", email = "contact@gunivers.net" }]
-dependencies = [
-  "beet>=0.110.0",
-  "click>=8.1.8",
-  "colorama>=0.4.6",
-  "pydantic>=2.11.3",
-  "requests>=2.32.3",
-  "lectern>=0.34.0",
-  "watchfiles>=1.1.0",
-]
-requires-python = ">=3.12"
 license = { text = "MPL-2.0" }
+requires-python = ">=3.12"
+dependencies = [
+  "beet>=0.111.0",
+  "frozendict>=2.4.6",
+  "orjson>=3.11.3",
+  "pydantic>=2.11.7",
+  "semver>=3.0.4",
+]
+
+[project.scripts]
+check = "bookshelf.commands.project:check"
+update = "bookshelf.commands.project:update"
+link = "bookshelf.commands.project:link"
+docs = "bookshelf.commands.docs:docs"
+build = "bookshelf.commands.modules:build"
+watch = "bookshelf.commands.modules:watch"
+modules = "bookshelf.commands.modules:modules"
+examples = "bookshelf.commands.examples:examples"
 
 [dependency-groups]
 dev = [
-  "mypy>=1.15.0",
-  "ruff>=0.11.6",
-  "types-colorama>=0.4.15.20240311",
-  "types-docutils>=0.21.0.20241128",
-  "types-requests>=2.32.0.20250328",
+  "click>=8.2.1",
+  "httpx>=0.28.1",
+  "lectern>=0.34.0",
+  "platformdirs>=4.4.0",
+  "rich>=14.1.0",
+  "watchfiles>=1.1.0",
 ]
 docs = [
   "linkify-it-py>=2.0.3",
   "myst-parser>=4.0.1",
   "pydata-sphinx-theme>=0.16.0",
-  "sphinx-autobuild>=2024.10.3",
+  "sphinx-autobuild>=2025.8.25",
   "sphinx-copybutton>=0.5.2",
   "sphinx-design>=0.6.1",
-  "sphinx-minecraft>=1.0.2",
+  "sphinx-minecraft>=1.0.5",
   "sphinx-togglebutton>=0.3.2",
   "sphinx>=8.2.3",
 ]
 
-[project.scripts]
-build = "bookshelf.commands.modules:build"
-docs = "bookshelf.commands.docs:docs"
-examples = "bookshelf.commands.examples:examples"
-modules = "bookshelf.commands.modules:modules"
-watch = "bookshelf.commands.modules:watch"
+[tool.hatch]
+build.packages = ["src/bookshelf", "modules", "examples"]
+version.path = "src/bookshelf/definitions.py"
 
-[tool.pdm]
-distribution = true
-build.custom-hook = "build.py"
-build.source-includes = ["modules"]
-version.getter = "bookshelf:version"
-version.source = "call"
+[tool.hatch.build.force-include]
+modules = "bookshelf/data/modules"
+examples = "bookshelf/data/examples"
+
+[tool.uv]
+package = true
+default-groups = "all"
 
 [tool.mypy]
-files = ["bookshelf", "modules"]
-explicit_package_bases = true
-namespace_packages = true
+files = ["src", "modules"]
 
 [tool.ruff]
-namespace-packages = ["bookshelf"]
 lint.select = ["ALL"]
-lint.ignore = ["D100", "D203", "D213", "INP001", "S603", "UP017"]
+lint.ignore = [
+  "D100",
+  "D203",
+  "D213",
+  "INP001",
+  "S603",
+  "TRY400",
+  "UP017",
+]

@@ -18,10 +18,10 @@ await entity B5-0-0-0-3
 
 # Bottom stone slab shape
 setblock ~ ~ ~ minecraft:stone_slab[type=bottom]
-function #bs.hitbox:get_block
-assert data storage bs:out hitbox{ collision_shape: [[0.0, 0.0, 0.0, 16.0, 8.0, 16.0]], interaction_shape: [[0.0, 0.0, 0.0, 16.0, 8.0, 16.0]] }
+function #bs.hitbox:get_block_shape
+assert data storage bs:out hitbox{ shape: [[0.0, 0.0, 0.0, 16.0, 8.0, 16.0]] }
 
 # Top stone slab shape
 setblock ~ ~ ~ minecraft:stone_slab[type=top]
-function #bs.hitbox:get_block
-assert data storage bs:out hitbox{ collision_shape: [[0.0, 0.0, 0.0, 16.0, 8.0, 16.0]], interaction_shape: [[0.0, 0.0, 0.0, 16.0, 8.0, 16.0]] }
+function #bs.hitbox:get_block_shape
+assert data storage bs:out hitbox{ shape: [[0.0, 0.0, 0.0, 16.0, 8.0, 16.0]] }

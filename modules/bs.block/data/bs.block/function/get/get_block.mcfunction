@@ -14,6 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data remove storage bs:out block
-loot replace entity B5-0-0-0-3 container.0 loot bs.block:get/get_block
+loot replace entity B5-0-0-0-3 contents loot bs.block:get/get_block
 data modify storage bs:out block set from entity B5-0-0-0-3 item.components."minecraft:custom_data"
 data modify storage bs:out block.nbt set from block ~ ~ ~ {}

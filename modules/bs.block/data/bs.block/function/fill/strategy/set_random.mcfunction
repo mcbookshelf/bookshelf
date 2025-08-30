@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data remove storage bs:data block._.block
-$execute in minecraft:overworld run loot replace block -30000000 0 1606 container.0 loot $(entries)
+$execute in minecraft:overworld run loot replace block -30000000 0 1606 contents loot $(entries)
 execute in minecraft:overworld run data modify storage bs:data block._ merge from block -30000000 0 1606 item.components."minecraft:custom_data"
 
 execute unless data storage bs:data block._.block run return run function bs.block:fill/strategy/set_type
