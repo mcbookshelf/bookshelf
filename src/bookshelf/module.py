@@ -10,7 +10,7 @@ from bookshelf.definitions import MODULES_DIR
 if TYPE_CHECKING:
     from collections.abc import Callable
 
-__path__ = []
+__path__ = ()
 
 
 @cache

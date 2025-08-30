@@ -36,4 +36,4 @@ execute \
   if score #z bs.ctx < #q bs.ctx \
 run return 1
 
-execute if data storage bs:ctx _[0] run return run function bs.hitbox:is_in_block/check/shape
+execute if data storage bs:ctx _[0] run return run function bs.hitbox:is_in_block/check
