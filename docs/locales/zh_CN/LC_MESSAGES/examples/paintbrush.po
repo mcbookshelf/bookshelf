@@ -1,0 +1,473 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-28 11:19+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../../examples/paintbrush.md:2 a7cae4378d184916a12d7b23bc54d6a4
+msgid "🖌️ Paintbrush"
+msgstr "🖌️ 画笔"
+
+#: ../../../../examples/paintbrush.md:4 9c737df2b2aa4b538db9f37207f51eda
+msgid ""
+"This example demonstrates how to create a **paintbrush** in Minecraft "
+"using the Bookshelf library. The paintbrush changes a block's material to"
+" match the item in the player's hand, while preserving important "
+"properties like orientation, waterlogging, and other block states. For "
+"instance, if the player holds oak planks, birch stairs will transform "
+"into oak stairs."
+msgstr ""
+"此示例演示了如何使用 Bookshelf 库在 Minecraft "
+"中创建画笔。画笔会将方块的材质更改为匹配玩家手中的物品，同时保留朝向、浸水和其他方块状态等重要属性。例如，如果玩家手持橡木木板，白桦木楼梯将转变为橡木楼梯。"
+
+#: ../../../../examples/paintbrush.md:8 ea5df08182be4963ae1578132b3251ae
+msgid "🎯 What We'll Build"
+msgstr "🎯 我们要构建什么"
+
+#: ../../../../examples/paintbrush.md:10 de14708ff90644f58659bbfe82ece082
+msgid "Our paintbrush system will:"
+msgstr "我们的画笔系统将："
+
+#: ../../../../examples/paintbrush.md:11 6ebda89188a64403bb402883d07a99fe
+msgid "Detect when a player interacts with a block using the brush"
+msgstr "检测玩家何时使用画笔与方块交互"
+
+#: ../../../../examples/paintbrush.md:12 75015fadcad64631a0ad48e5e0d7e7f7
+msgid "Determine the block type from the item in the player's hand"
+msgstr "从玩家手中的物品确定方块类型"
+
+#: ../../../../examples/paintbrush.md:13 7a47cda707e346869547a91b5c2aead4
+msgid "Identify the targeted block"
+msgstr "识别目标方块"
+
+#: ../../../../examples/paintbrush.md:14 66ff2d046eb34892bfebd2aaa62ce25f
+msgid "Replace the targeted block's material with that of the held item"
+msgstr "将目标方块的材质替换为手持物品的材质"
+
+#: ../../../../examples/paintbrush.md:18 c7b8bba2e80e468dbb220b81d9f7efd0
+msgid "📦 Requirements"
+msgstr "📦 要求"
+
+#: ../../../../examples/paintbrush.md:20 45a35a8433e74ef583405a847d7e371c
+msgid "Before we start, make sure you have:"
+msgstr "在开始之前，请确保你有："
+
+#: ../../../../examples/paintbrush.md:22 0db49ea206e14d31a4836dbe079877ae
+msgid "Minecraft Java Edition"
+msgstr "Minecraft Java版"
+
+#: ../../../../examples/paintbrush.md:23 01a229f0c0f143d9ae0f2289822b72d7
+msgid ""
+"A basic understanding of Minecraft datapacks, including functions, tags, "
+"and scoreboards"
+msgstr "数据包开发的基础知识，包括函数、标签和记分项"
+
+#: ../../../../examples/paintbrush.md:24 e835a96ddeb24f69a27f941a5585eaf7
+msgid ""
+"Bookshelf `bs.block` and `bs.view` modules installed (see "
+"[Quickstart](https://docs.mcbookshelf.dev/en/latest/quickstart.html) for "
+"instructions)"
+msgstr ""
+"Bookshelf `bs.block` 和 `bs.view` "
+"模块，安装方法参见[快速开始](https://docs.mcbookshelf.dev/en/latest/quickstart.html)"
+
+#: ../../../../examples/paintbrush.md:25 d02a13bc488240f3ac7db7f459c7a4c1
+msgid "`@require bookshelf.module.block`"
+msgstr "`@require bookshelf.module.block`"
+
+#: ../../../../examples/paintbrush.md:26 5999c73ed05c4b638e3323cf01872826
+msgid "`@require bookshelf.module.view`"
+msgstr "`@require bookshelf.module.view`"
+
+#: ../../../../examples/paintbrush.md:30 a2da838920c24e38b3b903570f9c8755
+msgid "🛠️ Step-by-Step Guide"
+msgstr "🛠️ 逐步实现"
+
+#: ../../../../examples/paintbrush.md:32 d29020d32c5a4c26a8c2f3fdab29388b
+msgid "1. Prepare the Datapack"
+msgstr "1. 准备数据包"
+
+#: ../../../../examples/paintbrush.md:34 9f0b6f70cc5c45839ff35f091e3506bf
+msgid ""
+"First, we need a function to initialize our system when the datapack "
+"loads. Create a function named `paintbrush:load` and register it in the "
+"`minecraft:load` function tag."
+msgstr ""
+"首先，我们需要一个函数在数据包加载时初始化我们的系统。创建一个名为 `paintbrush:load` 的函数并将其注册到 "
+"`minecraft:load` 函数标签中。"
+
+#: ../../../../examples/paintbrush.md:38 f57998288b1d415ba9db4f395fef8ac7
+msgid "**➔ create the `load` function**"
+msgstr "**➔ 创建 `load` 函数**"
+
+#: ../../../../examples/paintbrush.md:40 ../../../../examples/paintbrush.md:277
+#: 4dbdb7e2da65479aa60006cf58b92c9b a461e6d62f954d75a2081e48fdff2c01
+msgid "`@function paintbrush:load`"
+msgstr "`@function paintbrush:load`"
+
+#: ../../../../examples/paintbrush.md:45 8bb651933d7f499089e7ceacf15032fc
+msgid ""
+"This objective will store data for the paintbrush, primarily the values "
+"returned by commands."
+msgstr "此记分项将存储画笔的数据，主要是命令返回的值。"
+
+#: ../../../../examples/paintbrush.md:47 52c35d11c0e249db84a5c60d00c1ff58
+msgid "**➔ register it in the `load` tag**"
+msgstr "**➔ 在 `load` 标签中注册它**"
+
+#: ../../../../examples/paintbrush.md:49 feb9d033636d43c1b12776287ad532d0
+msgid "`@function_tag minecraft:load`"
+msgstr "`@function_tag minecraft:load`"
+
+#: ../../../../examples/paintbrush.md:58 3cd7635562cc422a9299d96cd30d2972
+msgid ""
+"This ensures that `paintbrush:load` runs automatically when the datapack "
+"is enabled or reloaded."
+msgstr "这确保了在数据包启用或重新加载时 `paintbrush:load` 会自动运行。"
+
+#: ../../../../examples/paintbrush.md:62 d3fccc2a2a574d639a4c76ca07d84872
+msgid "2. Detect Player Interaction"
+msgstr "2. 检测玩家交互"
+
+#: ../../../../examples/paintbrush.md:64 a85eb137643a4bfa9461e2274898684b
+msgid ""
+"First, we need to create an item that the player can use to paint a "
+"block. For this, we'll use a brush item. Then, to trigger our system when"
+" the player interacts with a block using the brush, we'll use an "
+"advancement."
+msgstr "首先，我们需要创建一个玩家可以用来绘制方块的物品。为此，我们将使用刷子物品。然后，当玩家使用刷子与方块交互时，我们将使用进度来触发我们的系统。"
+
+#: ../../../../examples/paintbrush.md:68 45dd0a69ca8b4871828672ffa30f5bfd
+msgid "**➔ create the `use` advancement**"
+msgstr "**➔ 创建 `use` 进度**"
+
+#: ../../../../examples/paintbrush.md:70 f23a892e772b4d8ca180d068375f2451
+msgid "`@advancement paintbrush:use`"
+msgstr "`@advancement paintbrush:use`"
+
+#: ../../../../examples/paintbrush.md:95 56a600f81a304d07ba3267601d046d44
+msgid ""
+"The reward enables us to trigger a specific function when the brush is "
+"used. We'll use the `paintbrush:use` function here."
+msgstr "当使用刷子时，奖励函数使我们能够触发特定的函数。我们将在此处使用 `paintbrush:use` 函数。"
+
+#: ../../../../examples/paintbrush.md:97 4f79c0deda12498b9e8b8d29e6699fa3
+#, python-brace-format
+msgid ""
+"Note that this advancement triggers the function only if the brush has "
+"the custom data `{paintbrush: true}`, ensuring that vanilla brushes "
+"continue to function normally."
+msgstr "请注意，此进度仅在刷子具有自定义数据 `{paintbrush: true}` 时才会触发函数，确保原版刷子继续正常运作。"
+
+#: ../../../../examples/paintbrush.md:99 87ef342e8b37432bbbcbe353e9588842
+msgid "**➔ create the `use` function**"
+msgstr "**➔ 创建 `use` 函数**"
+
+#: ../../../../examples/paintbrush.md:101
+#: ../../../../examples/paintbrush.md:121
+#: ../../../../examples/paintbrush.md:141
+#: ../../../../examples/paintbrush.md:294 511a13538ef74c0eb4969583c26ee38c
+#: 8fa2a222ab2c44049fc4705336e636ed 9117f764fcee44dab46220ac506910d7
+#: d33594e89cf6470285aec4ebf49c7908
+msgid "`@function paintbrush:use`"
+msgstr "`@function paintbrush:use`"
+
+#: ../../../../examples/paintbrush.md:106 2766bd78bad443179423ba2d502044f0
+msgid "**➔ create the `give` function**"
+msgstr "**➔ 创建 `give` 函数**"
+
+#: ../../../../examples/paintbrush.md:108 814fb28b61cb47b797b1fa63370e9985
+msgid "`@function paintbrush:give`"
+msgstr "`@function paintbrush:give`"
+
+#: ../../../../examples/paintbrush.md:117 7ba9a9d3867d447d8db54ce1d98d1106
+msgid ""
+"Next, test it by giving yourself a brush by running `function "
+"paintbrush:give`. Now… right-click, and you'll see \"Paintbrush used!\" "
+"in the chat. However, if you try again, nothing will happen. This is "
+"because the player now has the `painterbrush:use` advancement, which "
+"prevents it from triggering again. Since advancements only trigger once "
+"per player, we need to reset it each time the brush is used."
+msgstr ""
+"接下来，通过运行 `function paintbrush:give` "
+"给自己一个画笔来测试。现在……右键点击，你会在聊天栏中看到“Paintbrush "
+"used!”。但是，如果你再次尝试，什么也不会发生。这是因为玩家现在已经获得了 `painterbrush:use` "
+"进度，这会阻止它再次触发。由于进度每个玩家只能触发一次，我们需要在每次使用画笔时重置它。"
+
+#: ../../../../examples/paintbrush.md:119
+#: ../../../../examples/paintbrush.md:139
+#: ../../../../examples/paintbrush.md:292 c9d5fe03741945e7baae0a55edf6f535
+#: cc858b6e142f4b71acf3ce292a55894e dae97ee6e8ec4f2fa7f21e3af71abb7e
+msgid "**➔ update the `use` function**"
+msgstr "**➔ 更新 `use` 函数**"
+
+#: ../../../../examples/paintbrush.md:127 d6f9c4cbd80c47f381e6403606a806a9
+msgid ""
+"Try again (remember to manually reset the advancement once before "
+"testing), and you'll see that the message now appears every time you use "
+"the brush."
+msgstr "再次尝试（记得在测试前手动重置一次进度），你会看到每次使用画笔时消息都会显示。"
+
+#: ../../../../examples/paintbrush.md:131 0f71668e03c244a6b35ef4112096095e
+msgid "3. Replace the Targeted Block"
+msgstr "3. 替换目标方块"
+
+#: ../../../../examples/paintbrush.md:133 163a89f15be64710bc2947a8636604fb
+msgid ""
+"We've successfully set up the detection for when a player right-clicks "
+"with the brush. However, the issue now is that our function runs at the "
+"player's position. What we actually want to do is transform the block the"
+" player is aiming at. While Minecraft doesn't provide a straightforward "
+"way to get this information, the Bookshelf library does!"
+msgstr ""
+"我们已成功设置了检测玩家使用画笔右键点击的功能。然而，现在的问题是我们的函数在玩家位置执行。我们实际想要做的是转换玩家瞄准的方块。虽然 "
+"Minecraft 没有提供获取此信息的直接方法，但 Bookshelf 库提供了！"
+
+#: ../../../../examples/paintbrush.md:137 86e5e547b9e34d82b19eb11f6b5ffc9d
+msgid ""
+"We can use the `bs.view` module, specifically the `at_aimed_block` "
+"function, which allows us to execute commands directly at the position of"
+" the block the player is targeting."
+msgstr "我们可以使用 `bs.view` 模块，特别是 `at_aimed_block` 函数，它允许我们直接在玩家瞄准的方块位置执行命令。"
+
+#: ../../../../examples/paintbrush.md:147 aea18c1cb01c4f5f846737b8f9621c68
+msgid "**➔ create the `replace_block` function**"
+msgstr "**➔ 创建 `replace_block` 函数**"
+
+#: ../../../../examples/paintbrush.md:149
+#: ../../../../examples/paintbrush.md:180
+#: ../../../../examples/paintbrush.md:199
+#: ../../../../examples/paintbrush.md:219
+#: ../../../../examples/paintbrush.md:245 0dfb564c177f465896e7358799106709
+#: 1bf3906339b242ce947c17ef5de9774c 786ad928fea54a99b13965dc0b59e963
+#: c4883f9bb44c443a8b098f7d401582ff d8d71105ffce4e4eb4e4d0eb79945073
+msgid "`@function paintbrush:replace_block`"
+msgstr "`@function paintbrush:replace_block`"
+
+#: ../../../../examples/paintbrush.md:154 2d435b7a1f3c4632b013c1843bb13e5a
+msgid ""
+"Now, each time the player uses the paintbrush, the `paintbrush:use` "
+"function will execute `paintbrush:replace_block` at the aimed block's "
+"position, replacing it with a bookshelf block."
+msgstr ""
+"现在，每次玩家使用画笔时，`paintbrush:use` 函数都会在瞄准的方块位置执行 "
+"`paintbrush:replace_block`，将其替换为书架方块。"
+
+#: ../../../../examples/paintbrush.md:156 c9b244cae0f34dc7bcb66eee075239f0
+msgid ""
+"You may have noticed an empty `with` macro variable. We can't pass "
+"optional macro variables to a function directly, but using `with` allows "
+"us to set default values for them. In this case, we don't need to pass "
+"any optional variables, so we leave it empty."
+msgstr ""
+"你可能已经注意到一个空的 `with` 宏变量。我们不能直接将可选的宏变量传递给函数，但使用 `with` "
+"允许我们为它们设置默认值。在这种情况下，我们不需要传递任何可选变量，所以将其留空。"
+
+#: ../../../../examples/paintbrush.md:160 346e521e21eb4ac2b43daca60b2c66b3
+msgid "4. Paint the Targeted Block"
+msgstr "4. 绘制目标方块"
+
+#: ../../../../examples/paintbrush.md:162 dd3ef0c0e63e4a8f8e42e85cf1a3c9cd
+msgid ""
+"Now, let's move on to painting! We'll use the `bs.block` module to apply "
+"the block type from the item held in the offhand to the targeted block. "
+"This process involves three steps:"
+msgstr "现在，让我们开始绘制！我们将使用 `bs.block` 模块将副手中物品的方块应用到目标方块。此过程包括三个步骤："
+
+#: ../../../../examples/paintbrush.md:164 7602b0176dd742a2a1a7caadbded17d1
+msgid ""
+"Load the targeted block into storage (`bs:out block`) as a \"virtual "
+"block\""
+msgstr "将目标方块加载到存储（`bs:out block`）中作为“虚拟方块”"
+
+#: ../../../../examples/paintbrush.md:165 bf0939f90d1c4a07acc03770e7ad209e
+msgid ""
+"Transform the virtual block using various operations (`mix_type` in this "
+"case)"
+msgstr "使用各种操作转换虚拟方块（本例中为 `mix_type`）"
+
+#: ../../../../examples/paintbrush.md:166 9a44627aa545489a8dd3598ab78a7d57
+msgid ""
+"Generate the final result from the virtual block, which can be a block, "
+"item, particle, block display, etc. (here, we'll replace the block with "
+"its transformed version)."
+msgstr "从虚拟方块生成最终结果，可以是方块、物品、粒子、方块展示实体等（这里我们将它转换后再替换方块）。"
+
+#: ../../../../examples/paintbrush.md:170 6121042773184c1b835a22824c5923e8
+msgid "Set Up the Transformation"
+msgstr "设置转换"
+
+#: ../../../../examples/paintbrush.md:172 c43a985f9c60400cb978618ab6bfd5a4
+msgid ""
+"The `mix_type` function uses a mapping registry to determine how blocks "
+"are transformed. Bookshelf provides two built-in registries:"
+msgstr "`mix_type` 函数使用映射注册表来确定如何转换方块。Bookshelf 提供了两个内置注册表："
+
+#: ../../../../examples/paintbrush.md:173 4efad4353f674f1293501874ce74e719
+msgid ""
+"`bs.colors`: This registry is used to transform blocks based on color "
+"properties. For example, if the held item is a colored block, it will "
+"attempt to apply the color transformation to the targeted block."
+msgstr "`bs.colors`：该注册表通过颜色属性实现方块转换功能。例如，当手持染色方块时，会尝试将颜色转换应用于目标方块。"
+
+#: ../../../../examples/paintbrush.md:174 b3b53a2960be404bbc1317436d307c00
+msgid ""
+"`bs.shapes`: This registry is used to transform blocks based on their "
+"shape. For instance, if the held block is oak planks, and the targeted "
+"block is birch stairs, this registry would map the oak plank to a "
+"corresponding block shape like oak stairs. This is ideal for transforming"
+" between blocks that have a similar structural shape."
+msgstr "`bs.shapes`：此注册表用于形状转换方块。例如，如果手持方块是橡木木板，目标方块是白桦木楼梯，此注册表会将橡木木板映射到相应的方块形状，即橡木楼梯。这非常适合在具有相似结构形状的方块之间进行转换。"
+
+#: ../../../../examples/paintbrush.md:176 a82b2d36912b4d5a83fe4b5cf8909df7
+msgid ""
+"These registries allow for more specific control over how block "
+"transformations occur. In this example, we'll use `bs.shapes`. To set up "
+"the transformation, we specify the `mapping_registry` and store the block"
+" `type` from the player's offhand into an arbitrary storage."
+msgstr ""
+"可以通过这些注册表更精确地控制方块转换。在此示例中，我们将使用 `bs.shapes`。要实现转换，我们需要指定 "
+"`mapping_registry` 并将玩家副手方块的 `type` 存储到某个命令存储中。"
+
+#: ../../../../examples/paintbrush.md:178
+#: ../../../../examples/paintbrush.md:197
+#: ../../../../examples/paintbrush.md:217
+#: ../../../../examples/paintbrush.md:243 0170c98868b84da6bd96dea12f4cb41d
+#: 2e89fe141ad941798a86b317b63758cf 57a0405d42c34c14a89e6bd330f1f7b7
+#: d6e51657786440618040c9b8c85d2dea
+msgid "**➔ update the `replace_block` function**"
+msgstr "**➔ 更新 `replace_block` 函数**"
+
+#: ../../../../examples/paintbrush.md:189 f3d5d297bf97421fad2c1f5b0dc63b23
+msgid ""
+"Here, we use a score to check if the command succeeds. If it fails, we "
+"return immediately to prevent unintended behavior."
+msgstr "在这里，我们使用分数来检查命令是否成功。如果失败，我们立即返回以防止意外行为。"
+
+#: ../../../../examples/paintbrush.md:193 67b07504587a4fbe92556b26f4cb25d7
+msgid "Load the Targeted Block"
+msgstr "加载目标方块"
+
+#: ../../../../examples/paintbrush.md:195 19c4f23634034a1e8f5e5cee0fb5eda6
+msgid ""
+"The `#bs.view:at_aimed_block` function ensures that execution is already "
+"at the targeted block position, so we can directly load it using "
+"`get_block`."
+msgstr "`#bs.view:at_aimed_block` 函数确保执行已经在目标方块位置，因此我们可以直接使用 `get_block` 加载它。"
+
+#: ../../../../examples/paintbrush.md:213 59704fc1c71a4d8e81b608a04f7275e4
+msgid "Apply the Transformation"
+msgstr "应用转换"
+
+#: ../../../../examples/paintbrush.md:215 f97a180603134a7cb19e1fa73b43bf7b
+msgid ""
+"Now that the block is loaded and the transformation input is ready, we "
+"can apply `mix_type`."
+msgstr "现在方块已加载且转换输入已就绪，我们可以应用 `mix_type`。"
+
+#: ../../../../examples/paintbrush.md:235 f5416b75ed3645b7b27fae8bb6af3d67
+msgid ""
+"The `mix_type` function directly overwrites the virtual block in `bs:out`"
+" storage with the transformed value. If it returns 0, no transformation "
+"was found, so we return a failure."
+msgstr "`mix_type` 函数直接用转换后的值覆盖 `bs:out` 存储中的虚拟方块。如果返回0，则表示未找到转换，因此我们返回失败。"
+
+#: ../../../../examples/paintbrush.md:239 a650eebce7a34e489d80a504197d0cd8
+msgid "Place the Transformed Block"
+msgstr "放置转换后的方块"
+
+#: ../../../../examples/paintbrush.md:241 f6b5e3d20fd74f859720d5d431d9b89a
+msgid "Finally, we apply the transformed block to the world using `set_block`."
+msgstr "最后，我们使用 `set_block` 将转换后的方块应用到世界中。"
+
+#: ../../../../examples/paintbrush.md:265 83519c4fd8864e5d9484432c25198214
+msgid ""
+"This completes the transformation process. If you try to paint a block "
+"now, you will see that the block is transformed, perfect!"
+msgstr "这就完成了转换过程。如果你现在尝试绘制方块，你会看到方块被转换了，完美！"
+
+#: ../../../../examples/paintbrush.md:269 332daf0b925e4994b3389b246b21a4a2
+msgid "5. Going Further"
+msgstr "5. 更进一步"
+
+#: ../../../../examples/paintbrush.md:271 2f82a76fca31475c8c59143661a8e323
+msgid ""
+"If you try this on a sign, you will see that the block is not transformed"
+" to match the material of the held block. This is because the "
+"`using_item` advancement criterion does not trigger on certain blocks, "
+"like signs. To fix this, we can complement our approach by using a "
+"scoreboard objective to track when a player uses a brush. We need to "
+"trigger the `use` function when the score increments. To do this, we'll "
+"add a new `tick` function that runs on a loop and reset the score in the "
+"`paintbrush:use` function."
+msgstr ""
+"如果你在告示牌上尝试此操作，你会发现方块并没有转换为匹配手持方块的材质。这是因为 `using_item` "
+"进度条件不会在某些方块（如告示牌）上触发。要解决此问题，我们可以使用记分板记分项来补充我们的方法，以跟踪玩家何时使用画笔。我们需要在分数增加时触发"
+" `use` 函数。为此，我们将添加一个循环运行的新 `tick` 函数，并在 `paintbrush:use` 函数中重置分数。"
+
+#: ../../../../examples/paintbrush.md:275 80ec9be2762045afb0c81e39526488c3
+msgid "**➔ update the `load` function**"
+msgstr "**➔ 更新 `load` 函数**"
+
+#: ../../../../examples/paintbrush.md:284 486d659217564e0ab8024ecd837a1117
+msgid "**➔ create the `tick` function**"
+msgstr "**➔ 创建 `tick` 函数**"
+
+#: ../../../../examples/paintbrush.md:286 d66339e841dd47e3a9127ea6107dfd10
+msgid "`@function paintbrush:tick`"
+msgstr "`@function paintbrush:tick`"
+
+#: ../../../../examples/paintbrush.md:301 a2c2300828294d2795297a09751b3b76
+msgid ""
+"And… That's it! You can now paint blocks with the painter tool, and as "
+"you can see, this is really simple to do!"
+msgstr "就是这样！你现在可以使用绘画工具绘制方块了，如你所见，这真的很简单！"
+
+#: ../../../../examples/paintbrush.md:305 9669a1cf0aa948f1bec30d6510fcfcfd
+msgid "✔️ Conclusion"
+msgstr "✔️ 结语"
+
+#: ../../../../examples/paintbrush.md:307 dce10deb33f84df7803ed7dc05ab65e5
+msgid ""
+"Congratulations! You've successfully created a functional paintbrush "
+"using Bookshelf! This project demonstrates how to:"
+msgstr "恭喜！你已成功使用 Bookshelf 创建了一个功能性画笔！此项目演示了如何："
+
+#: ../../../../examples/paintbrush.md:309 0ece61425ef04fddb1174c79a02ece5a
+msgid "Use Bookshelf's view module to get the aimed block"
+msgstr "使用 Bookshelf 的 view 模块来获取瞄准的方块"
+
+#: ../../../../examples/paintbrush.md:310 0b80950e4f564fff9a9525c7d4cc2aea
+msgid "Use Bookshelf's block module for block manipulation"
+msgstr "使用 Bookshelf 的 block 模块来操作方块"
+
+#: ../../../../examples/paintbrush.md:312 3dccf849c4db49c3bc4fe17fc5d318f9
+msgid ""
+"The paintbrush is not only a useful tool but also a great example of how "
+"Bookshelf simplifies complex datapack development. Feel free to "
+"experiment with the code and add your own features to make it even more "
+"powerful!"
+msgstr "画笔不仅是一个有用的工具，也是展示 Bookshelf 如何简化复杂数据包开发的绝佳示例。请随意尝试代码并添加你自己的功能，使其变得更强大！"
+
+#: ../../../_templates/comments.md:4 7974efcd0aeb4d5fb2f1fa2e242a733a
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对你有帮助吗？**"
+
+#: ../../../_templates/comments.md:6 5c4ffa6db47344658a7d0dd975557b6b
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下你的问题和反馈！"

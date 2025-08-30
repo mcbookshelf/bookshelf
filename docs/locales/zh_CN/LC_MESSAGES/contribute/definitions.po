@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-07-19 17:35+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../contribute/definitions.md:5 6ade4ae4bde041efb2a554a34eff54aa
+msgid "📘 Definitions"
+msgstr "📘 定义"
+
+#: ../../../contribute/definitions.md:7 851b1684b1a4436e9e7c5eab2de5c77a
+msgid ""
+"In order to speak with the same vocabulary, here is some words that have "
+"a specific meaning in this project:"
+msgstr "为确保术语统一，以下是本项目中有特定含义的词汇："
+
+#: ../../../_templates/definitions.md:2 917d79961c014c50b3be8ca4e369eba2
+msgid "General Concepts"
+msgstr "通用概念"
+
+#: ../../../_templates/definitions.md:3 94e0a890a5464835b78011afe296bdaa
+msgid "**Bundle**"
+msgstr "**捆绑包**"
+
+#: ../../../_templates/definitions.md:4 f46144dda578471a9be43ab66f71e43b
+msgid "A set of modules packaged together for distribution."
+msgstr "一组打包在一起用于分发的模块集合。"
+
+#: ../../../_templates/definitions.md:5 863bd82ae3414e1aa78186b1531d3d9f
+msgid "**Dependency**"
+msgstr "**依赖项**"
+
+#: ../../../_templates/definitions.md:6 4b61b5218528444c8a1a04ccd80083e4
+msgid ""
+"A module that another module relies on to function properly. It must be "
+"loaded for the dependent module to work."
+msgstr "其他模块正常运行所依赖的模块。必须加载依赖项才能使相关模块工作。"
+
+#: ../../../_templates/definitions.md:7 86bdefd8367d4a85a8abc29d4bd78724
+msgid "**Feature**"
+msgstr "**功能**"
+
+#: ../../../_templates/definitions.md:8 ec63f030678a44b691736045493c6402
+msgid ""
+"A user-facing element designed to accomplish a task. Features are often "
+"represented as function tags, but can also include loot tables, "
+"structures, predicates, and more."
+msgstr "面向用户的任务执行元素。通常表现为函数标签，但也包含战利品表、结构、谓词等。"
+
+#: ../../../_templates/definitions.md:9 9b8d1af8b6e740f980ea37dca9dc9642
+msgid "**Module**"
+msgstr "**模块**"
+
+#: ../../../_templates/definitions.md:10 dab9fdc43184488abcdf3e58aa671511
+msgid ""
+"A collection of related features within a namespace, serving a specific "
+"purpose."
+msgstr "命名空间内服务于特定目的的关联功能集合。"
+
+#: ../../../_templates/definitions.md:11 31353501b6884c3283d0ce4e3cdfa29a
+msgid "**Weak Dependency**"
+msgstr "**弱依赖项**"
+
+#: ../../../_templates/definitions.md:12 cdff1222dbd44e3e9d230cdcd7b0145a
+msgid ""
+"An optional dependency that enhances functionality if present, but is not"
+" essential for the main module to function correctly."
+msgstr "可选依赖项，存在时可增强功能，但非主模块正常运行所必需。"
+
+#: ../../../_templates/definitions.md:15 a694d480d83e4a7d9689d2f993d60770
+msgid "Special Arguments"
+msgstr "特殊参数"
+
+#: ../../../_templates/definitions.md:16 b4c4a144ed4d49edbbdf89ba861b20b2
+msgid "**`on_*`**"
+msgstr "**`on_*`**"
+
+#: ../../../_templates/definitions.md:17 e01aaf22cdae44c7a8baf55583cefd35
+msgid ""
+"Specifies a command to be executed by a feature when a particular event "
+"occurs."
+msgstr "指定功能在特定事件发生时执行的命令。"
+
+#: ../../../_templates/definitions.md:18 379ff2ac62e348ea9e279895964a2dec
+msgid "**`run`**"
+msgstr "**`run`**"
+
+#: ../../../_templates/definitions.md:19 b4c4692dbce5442dac64ca6134d59ace
+msgid "Specifies a command to be executed by a feature, often immediately."
+msgstr "指定功能执行的命令（通常立即执行）。"
+
+#: ../../../_templates/definitions.md:20 a6b8511e408c493cacb03136536f8095
+msgid "**`with`**"
+msgstr "**`with`**"
+
+#: ../../../_templates/definitions.md:21 024ea751aa0248baa0a81b5a2e517ffb
+msgid "Specifies optional arguments."
+msgstr "指定可选参数。"
+
+#: ../../../_templates/definitions.md:24 55fec203477748f18131bd10e8e84b1b
+msgid "Special Functions"
+msgstr "特殊函数"
+
+#: ../../../_templates/definitions.md:25 223db7140acf4f1bac64fdde81a3969f
+msgid "**`*_ata`**"
+msgstr "**`*_ata`**"
+
+#: ../../../_templates/definitions.md:26 396c1a70551946eb90551aba4ba44727
+msgid ""
+"Shortened from \"as to at.\" These functions take two positions: one "
+"given through a positional argument (e.g., `positioned`, `at`), and the "
+"other from the executor's position."
+msgstr "源自 \"as to at\" 的缩写。这些函数接收两个位置参数：一个通过位置参数（如 `positioned`, `at`）提供，另一个来自执行者位置。"

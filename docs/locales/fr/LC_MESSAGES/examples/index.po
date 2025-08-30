@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../examples/index.md:5 f167e5e036e64220972ac5d8518dc4ec
+msgid "📖 Examples"
+msgstr ""
+
+#: ../../examples/index.md:7 5fcc356782b54577b23219f46dab1b5c
+msgid ""
+"In this section, you'll find practical examples showcasing how to use "
+"**Bookshelf**. effectively. Each example is designed as a mini-tutorial, "
+"demonstrating specific features and their real-world applications. The "
+"code provided can be easily converted into fully functional Minecraft "
+"datapacks thanks to **Lectern**, ensuring that everything in the "
+"documentation is directly applicable in-game."
+msgstr ""
+
+#: ../../examples/index.md:11 0708de6283b842359cd1547f00dad017
+msgid "🌟 Featured Examples"
+msgstr ""
+
+#: ../../examples/index.md:15 4c56f016aeaf45cab654f5715f37b203
+msgid "🧵 Lifestring"
+msgstr ""
+
+#: ../../examples/index.md:20 10d05d5041214c72b478c9ae98abdfde
+msgid "Link players' health so that damage and healing are shared between them."
+msgstr ""
+
+#: ../../examples/index.md:22 b2652aee5cf34ecab456604e53b1917b
+msgid "🖌️ Paintbrush"
+msgstr ""
+
+#: ../../examples/index.md:27 7dceed7b358849149a48ae065447f5b6
+msgid "Change a block's material to match the item in the player’s hand."
+msgstr ""
+

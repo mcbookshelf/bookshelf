@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-07-19 21:05+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../contribute/special-functions.md:1 d36b3ea1add349a8b2ef050edad46ec9
+msgid "🌟 Special Functions"
+msgstr "🌟 特殊函数"
+
+#: ../../../contribute/special-functions.md:3 9b3e53b6559d47a49045d9b66adaffd4
+msgid ""
+"Some functions follow specific conventions to streamline functionality "
+"and ensure consistency across modules."
+msgstr "某些函数遵循特定约定以精简功能并确保跨模块一致性。"
+
+#: ../../../contribute/special-functions.md:7 7d3e3f6290aa4668a2fc1fca5364ff1c
+msgid "👉 The `ata` Functions"
+msgstr "👉 `ata` 函数"
+
+#: ../../../contribute/special-functions.md:9 10e2d9634b9e49e5b3b0a39127566e93
+msgid ""
+"This is a reduction of \"as to at\". Several functions require two "
+"positions to work (example: retrieve the distance between 2 points) or an"
+" entity and a position. To simplify the use, no need to pass 3 scores for"
+" each position. You will be able to place an entity on point 1 (if it is "
+"useful), then execute the function at point 2 while executing it as the "
+"entity on point 1."
+msgstr "这是“从执行者到执行位置（as to at）”的简写。某些函数需要两个位置才能工作（例如：获取两点间距离）或一个实体和一个位置。为简化使用，无需为每个位置传递3个分数值。你可将实体放置在点1（如有需要），然后以点1的实体为执行者，在点2位置执行函数。"
+
+#: ../../../contribute/special-functions.md:13 5f8fe0b0034c42ddb64c308c4be93f2b
+msgid "🔗 The `runner` Functions"
+msgstr "🔗 `runner` 函数"
+
+#: ../../../contribute/special-functions.md:15 81138d3e617a42d2a983eecb53d3ba99
+msgid ""
+"These functions use the `run` callback to specify an action that will "
+"often be executed immediately. It works like a subcommand, defining what "
+"action should take place after the function call."
+msgstr "这些函数使用 `run` 回调指定通常立即执行的动作。它像子命令一样工作，定义函数调用后应执行的操作。"
+
+#: ../../../contribute/special-functions.md:17
+#: ../../../contribute/special-functions.md:28
+#: ../../../contribute/special-functions.md:39 14e656a29e0d4a1ba6c3d1e373e3bd81
+#: 59f7aee6d66247149eb3e332ae38d4d2 e0ee6305903142c6a555c81b92f887ab
+msgid "For example:"
+msgstr "例如："
+
+#: ../../../contribute/special-functions.md:24 c5b5624f9b2245bf9d18888e171f8d0b
+msgid "📡 The `listener` Functions"
+msgstr "📡 `listener` 函数"
+
+#: ../../../contribute/special-functions.md:26 8910ac6bccc14d1a970ebaf6220f7158
+msgid ""
+"These functions are designed to react to specific events. The naming "
+"convention `on_<event>` is used for the inputs to indicate commands that "
+"will be triggered when a particular event occurs."
+msgstr "这些函数设计用于响应特定事件。命名约定 `on_<事件>` 用于输入，指示特定事件发生时将触发的命令。"
+
+#: ../../../contribute/special-functions.md:35 050fd18efb874157a2d44b7157273d5b
+msgid "⚒️ The `callback` Functions"
+msgstr "⚒️ `callback` 函数"
+
+#: ../../../contribute/special-functions.md:37 47fcd76981134a8491018d2d9e0a49ca
+msgid ""
+"These functions are intended to be executed exclusively as part of a "
+"callback, and their function tag must be placed inside a `callback` "
+"directory."
+msgstr "这些函数专门作为回调的一部分执行，其函数标签必须放在 `callback` 目录内。"
+
+#: ../../../contribute/special-functions.md:40 b786dd05d331425caf27acfce63f2605
+msgid "`#bs.move:callback/bounce`"
+msgstr "`#bs.move:callback/bounce`"
+
+#: ../../../contribute/special-functions.md:41 4174568d2ae84f6aae06a1bf0ed456d9
+msgid "`#bs.move:callback/slide`"
+msgstr "`#bs.move:callback/slide`"
+
+#: ../../../contribute/special-functions.md:42 fc221f3b0e894cf897e46686059fddb3
+msgid "`#bs.interaction:callback/glow`"
+msgstr "`#bs.interaction:callback/glow`"
+
+#: ../../../contribute/special-functions.md:46 193dd0e8339b4c028fa8e43a993d118a
+msgid "🔒 The `reserved` Functions"
+msgstr "🔒 保留函数"
+
+#: ../../../contribute/special-functions.md:48 0339d45f5d1c49339a041dae0d12c2f1
+msgid ""
+"Reserved functions are special functions within each module that serve "
+"predefined purposes. They are located at the root of each module."
+msgstr "保留函数是每个模块中具有预定用途的特殊函数，位于模块根目录。"
+
+#: ../../../contribute/special-functions.md:51 941253de82eb408799bfdea2d3d28c1c
+msgid "`__help__`"
+msgstr "`__help__`"
+
+#: ../../../contribute/special-functions.md:52 815dbe559d7a453d93a7f8d0d299eb58
+msgid ""
+"This function provides a path to the documentation for the module "
+"**(Automatically generated)**"
+msgstr "该函数提供指向模块文档的路径（自动生成）"
+
+#: ../../../contribute/special-functions.md:53 b7cb70db5a11490997c865910cea75b1
+msgid "`__load__`"
+msgstr "`__load__`"
+
+#: ../../../contribute/special-functions.md:54 0159984a503d46b49343c6926e0c9648
+msgid ""
+"This function is executed when the module is loaded **(Must be present in"
+" every module)**"
+msgstr "该函数在模块加载时执行（必须存在于每个模块中）"
+
+#: ../../../contribute/special-functions.md:55 54b1b369af214d3e9a7e29b44f17e0fb
+msgid "`__unload__`"
+msgstr "`__unload__`"
+
+#: ../../../contribute/special-functions.md:56 80e351327a01430b8f2c5f36eb3ae2c1
+msgid ""
+"This function is executed when the module is unloaded **(Must be present "
+"in every module)**"
+msgstr "该函数在模块卸载时执行（必须存在于每个模块中）"
