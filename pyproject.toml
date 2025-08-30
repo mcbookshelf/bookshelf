@@ -36,6 +36,7 @@ docs = [
   "sphinx-design>=0.6.1",
   "sphinx-minecraft>=1.0.2",
   "sphinx-togglebutton>=0.3.2",
+  "sphinxcontrib.mermaid>=1.0.0",
   "sphinx>=8.2.3",
 ]
 

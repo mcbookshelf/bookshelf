@@ -1,0 +1,17 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.fsm",
+    "load": "."
+  },
+  "meta": {
+    "name": "Final State Machine",
+    "slug": "bookshelf-fsm",
+    "description": "Bookshelf final state machine module.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/fsm.html",
+    "tags": ["runtime"],
+    "dependencies": [
+      "bs.random"
+    ]
+  }
+}
