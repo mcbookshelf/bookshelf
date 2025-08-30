@@ -23,8 +23,6 @@
 > "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it."
 > — Brian Kernighan
 
----
-
 ## ✨ Features
 
 - **🔍 Variable Inspection**: Dump and inspect scoreboard values, NBT data, and storage contents.
@@ -34,16 +32,12 @@
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/index.html)
 
----
-
 ## 📖 About Bookshelf
 
 This bundle is part of the [Bookshelf Library](https://docs.mcbookshelf.dev/en/latest/index.html), a modular collection of Minecraft datapacks built to simplify complex systems and empower mapmakers.
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf). \
 📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite).
-
----
 
 ## 🤝 Get Involved
 

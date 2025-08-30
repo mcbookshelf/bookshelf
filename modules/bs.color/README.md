@@ -23,8 +23,6 @@
 > "Color helps to express light—not the physical phenomenon, but the only light that really exists, that in the artist's brain."
 > — Henri Matisse
 
----
-
 ## ✨ Features
 
 - **#️⃣ To Hexadecimal**: Convert a color to its hexadecimal representation.
@@ -33,16 +31,12 @@
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/color.html)
 
----
-
 ## 📖 About Bookshelf
 
 This module is part of the [Bookshelf Library](https://docs.mcbookshelf.dev/en/latest/index.html), a modular collection of Minecraft datapacks built to simplify complex systems and empower mapmakers.
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf). \
 📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite).
-
----
 
 ## 🤝 Get Involved
 

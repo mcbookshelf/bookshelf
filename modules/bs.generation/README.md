@@ -23,8 +23,6 @@
 > "Nature's beauty is a reflection of the harmony of numbers and patterns."
 > — Anonymous
 
----
-
 ## ✨ Features
 
 - **🌄 Terrain Generation**: Create complex 2D shapes and terrains using various algorithms.
@@ -33,16 +31,12 @@
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/generation.html)
 
----
-
 ## 📖 About Bookshelf
 
 This module is part of the [Bookshelf Library](https://docs.mcbookshelf.dev/en/latest/index.html), a modular collection of Minecraft datapacks built to simplify complex systems and empower mapmakers.
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf). \
 📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite).
-
----
 
 ## 🤝 Get Involved
 

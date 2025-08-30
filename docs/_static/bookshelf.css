@@ -302,6 +302,9 @@ abbr[title] {
 .function dl.field-list > dd p {
   text-indent: -1rem;
 }
+.function dl.field-list .treeview p {
+  text-indent: 0!important;
+}
 
 .function dl.field-list p {
   margin: 6px 0;

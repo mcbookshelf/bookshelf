@@ -24,7 +24,7 @@ Bookshelf is a collaborative project, made possible by the dedication and contri
 
 ---
 
-Creator of the original Gunivers Libs, and contributor of Bookshelf.
+Creator of the original Gunivers Libs.
 
 :::
 

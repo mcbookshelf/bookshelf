@@ -23,22 +23,17 @@
 > "The mother art is architecture. Without an architecture of our own we have no soul of our own civilization."
 > — Frank Lloyd Wright
 
-> [!NOTE]
 > We are searching for builders to contribute to this bundle. If you are interested, please contact us on [Discord](https://discord.gg/MkXytNjmBt) or check the dedicated [GitHub issue](https://github.com/mcbookshelf/bookshelf/issues/303).
 
----
 
 ## ✨ Features
 
 - **🌳 Tree Collection**: Various tree types including Birch, Cypress, and Dark Oak with multiple variations.
 - **🎨 Tree Variations**: Each tree type comes in 5 different styles for variety.
 - **🌲 Natural Look**: Trees designed to blend naturally with Minecraft's environment.
-- **📦 Easy Integration**: Simple structure placement system.
 - **🔄 Future Expansion**: More structure types planned for future updates.
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/index.html)
-
----
 
 ## 📖 About Bookshelf
 
@@ -46,8 +41,6 @@ This bundle is part of the [Bookshelf Library](https://docs.mcbookshelf.dev/en/l
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf). \
 📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite).
-
----
 
 ## 🤝 Get Involved
 
