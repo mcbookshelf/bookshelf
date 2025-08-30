@@ -26,6 +26,7 @@ execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return run execute \
 
 function #bs.hitbox:get_block_shape
 execute unless data storage bs:out hitbox.shape run return 0
+data modify storage bs:ctx _ set from storage bs:out hitbox.shape
 execute store result score #u bs.ctx run data get storage bs:out hitbox.offset.x 10000000
 execute store result score #v bs.ctx run data get storage bs:out hitbox.offset.z 10000000
 return run function bs.hitbox:is_entity_in_block/check
