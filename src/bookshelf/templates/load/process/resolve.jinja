@@ -1,0 +1,16 @@
+#!tag "bs.load:process/resolve"
+
+{% include 'bookshelf/header.jinja' %}
+# Identify the enabled version (the last one in the datapack list) and mark it as active
+data modify storage bs:data load.modules[{module:"{{ module }}",version:"{{ version.major }}.{{ version.minor }}.{{ version.patch }}"}].enabled set value 1b
+
+# Return early if all versions have the same major version and the most recent one is enabled
+execute unless score #{{ module }}.major_versions load.status matches 2.. \
+  if score ${{ module }}.major load.status matches {{ version.major }} \
+  if score ${{ module }}.minor load.status matches {{ version.minor }} \
+  if score ${{ module }}.patch load.status matches {{ version.patch }} \
+  run return 1
+
+# Format module specific errors
+function #bs.load:process/errors/{{ module[3:] }}
+return fail

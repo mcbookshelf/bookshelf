@@ -27,7 +27,7 @@ The [Bookshelf Manager](https://mcbookshelf.dev) is the official tool for creati
 ::::
 ::::{tab-item} 🏷️ from release
 
-Bookshelf releases are available on both [Github](https://github.com/mcbookshelf/bookshelf/releases) and [Modrinth](https://modrinth.com/organization/mcbookshelf).
+Bookshelf releases are available on both [GitHub](https://github.com/mcbookshelf/bookshelf/releases) and [Modrinth](https://modrinth.com/organization/mcbookshelf).
 In each release, you will find zipped datapacks.
 
 ### 📥 Installation Options
@@ -66,7 +66,7 @@ If you're a developer who wants to work directly with the source code, you'll ne
 ### 🛠️ Prerequisites
 
 - Basic understanding of datapacks
-- [Python](https://www.python.org/downloads/) and [PDM](https://pdm.fming.dev/latest/) (Python Dependency Manager) installed
+- [UV](https://docs.astral.sh/uv/getting-started/installation/) installed
 - Git (for cloning the repository)
 
 ### 📥 Installation Steps
@@ -77,14 +77,9 @@ git clone https://github.com/mcbookshelf/bookshelf.git
 cd bookshelf
 ```
 
-2. Install dependencies:
+2. Build the library:
 ```shell
-pdm install
-```
-
-3. Build the library:
-```shell
-pdm run modules build
+uv run modules build
 ```
 
 After building, you'll find all modules as datapacks in the `build` folder. Each module includes its own dependencies as well as some utility namespaces.
@@ -94,10 +89,10 @@ After building, you'll find all modules as datapacks in the `build` folder. Each
 
 ```{admonition} Note
 :class: note
-Please note that while the datapacks from releases are stable, they might not include the very latest features or fixes that are available in the source code. If you want the most up-to-date version of Bookshelf, consider installing from source or downloading a pre-release from Github.
+Please note that while the datapacks from releases are stable, they might not include the very latest features or fixes that are available in the source code. If you want the most up-to-date version of Bookshelf, consider installing from source or downloading a pre-release from GitHub.
 ```
 
-If you like the project, don't hesitate to star it on [Github](https://github.com/mcbookshelf/bookshelf) and/or follow it on [Modrinth](https://modrinth.com/organization/mcbookshelf) 😉.
+If you like the project, don't hesitate to star it on [GitHub](https://github.com/mcbookshelf/bookshelf) and/or follow it on [Modrinth](https://modrinth.com/organization/mcbookshelf) 😉.
 
 ---
 

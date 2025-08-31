@@ -1,0 +1,4 @@
+#!tag module + ":help"
+
+{% include 'bookshelf/header.jinja' %}
+tellraw @s [{text: "[{{ module_name }} documentation]", color: "dark_aqua", click_event: {action: "open_url", url: "{{ documentation }}"}, hover_event: {action: "show_text", value: "Click to open URL"}}]

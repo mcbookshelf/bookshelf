@@ -12,8 +12,8 @@ We use automated scripts to validate contributions whenever a pull request is op
 
 Bookshelf contributors can also manually run these checks locally using the following commands:
 ```sh
-pdm run modules check
-pdm run modules test
+uv run check
+uv run modules test
 ```
 
 ---

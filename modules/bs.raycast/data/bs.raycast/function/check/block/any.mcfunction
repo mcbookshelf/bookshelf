@@ -15,9 +15,9 @@
 
 execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return run function bs.raycast:collide/record/cube
 
-function #bs.hitbox:get_block
-$execute store success score #s bs.ctx run data modify storage bs:ctx _ set from storage bs:out hitbox.$(blocks)_shape
-execute if score #s bs.ctx matches 0 run return 0
+$$(blocks)
+execute unless data storage bs:out hitbox.shape run return 0
+data modify storage bs:ctx _ set from storage bs:out hitbox.shape
 execute store result score #p bs.ctx run data get storage bs:out hitbox.offset.x 10000000
 execute store result score #q bs.ctx run data get storage bs:out hitbox.offset.z 10000000
 

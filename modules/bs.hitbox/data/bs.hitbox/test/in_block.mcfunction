@@ -19,24 +19,24 @@ await entity B5-0-0-0-3
 # Full cube, position is inside both boxes
 setblock ~ ~ ~ minecraft:bookshelf
 execute positioned ~.5 ~.5 ~.5 unless function #bs.hitbox:is_in_block_collision run fail "Should be inside the block"
-execute positioned ~.5 ~.5 ~.5 unless function #bs.hitbox:is_in_block_interaction run fail "Should be inside the block"
+execute positioned ~.5 ~.5 ~.5 unless function #bs.hitbox:is_in_block_shape run fail "Should be inside the block"
 
 # Bottom slab, position is outside both boxes
 setblock ~ ~ ~ minecraft:stone_slab
 execute positioned ~.5 ~.5 ~.5 if function #bs.hitbox:is_in_block_collision run fail "Should not be inside the slab"
-execute positioned ~.5 ~.5 ~.5 if function #bs.hitbox:is_in_block_interaction run fail "Should not be inside the slab"
+execute positioned ~.5 ~.5 ~.5 if function #bs.hitbox:is_in_block_shape run fail "Should not be inside the slab"
 
 # Top slab, position is inside both boxes
 setblock ~ ~ ~ minecraft:stone_slab[type=top]
 execute positioned ~.5 ~.5 ~.5 unless function #bs.hitbox:is_in_block_collision run fail "Should be inside the slab"
-execute positioned ~.5 ~.5 ~.5 unless function #bs.hitbox:is_in_block_interaction run fail "Should be inside the slab"
+execute positioned ~.5 ~.5 ~.5 unless function #bs.hitbox:is_in_block_shape run fail "Should be inside the slab"
 
 # Closed fence gate, position is inside both boxes
 setblock ~ ~ ~ minecraft:oak_fence_gate
 execute positioned ~.5 ~.5 ~.5 unless function #bs.hitbox:is_in_block_collision run fail "Should be inside the fence gate"
-execute positioned ~.5 ~.5 ~.5 unless function #bs.hitbox:is_in_block_interaction run fail "Should be inside the fence gate"
+execute positioned ~.5 ~.5 ~.5 unless function #bs.hitbox:is_in_block_shape run fail "Should be inside the fence gate"
 
-# Open fence gate, position is inside the interaction box only
+# Open fence gate, position is inside the shape box only
 setblock ~ ~ ~ minecraft:oak_fence_gate[open=true]
-execute positioned ~.5 ~.5 ~.5 unless function #bs.hitbox:is_in_block_interaction run fail "Should be inside the fence gate"
+execute positioned ~.5 ~.5 ~.5 unless function #bs.hitbox:is_in_block_shape run fail "Should be inside the fence gate"
 execute positioned ~.5 ~.5 ~.5 if function #bs.hitbox:is_in_block_collision run fail "Should not be inside the fence gate"

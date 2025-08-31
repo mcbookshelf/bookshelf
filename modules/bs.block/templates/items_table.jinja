@@ -1,3 +1,3 @@
 {% include 'bookshelf/header.jinja' %}
 # This file was automatically generated, do not edit it
-data modify storage bs:const block.items set value {{ items }}
+data modify storage bs:const block.items set value {{ render_snbt(data) }}
