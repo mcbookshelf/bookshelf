@@ -14,6 +14,21 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # @deprecated (remove this file in in 4.0.0)
+function #bs.log:warn { \
+  namespace: "bs.hitbox", \
+  path: "#bs.hitbox:get_block", \
+  tag: "get_block", \
+  message: [ \
+    "The ", \
+    {text:"#bs.hitbox:get_block",color:"#8d7fdd"}, \
+    " has been deprecated. Please use either ", \
+    {text:"#bs.hitbox:get_block_shape",color:"#8d7fdd"}, \
+    " or ", \
+    {text:"#bs.hitbox:get_block_collision",color:"#8d7fdd"}, \
+    " instead." \
+  ], \
+}
+
 data modify storage bs:out hitbox set value {}
 loot replace entity B5-0-0-0-3 contents loot bs.hitbox:block/default
 data modify storage bs:out hitbox.interaction_shape set from entity B5-0-0-0-3 item.components."minecraft:custom_data".shape
