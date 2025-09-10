@@ -20,15 +20,11 @@
 
   Get system time information effortlessly.
 
----
-
 ## ✨ Features
 
 - **⏰ System Time**: Get real-world hours, minutes, and seconds.
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/time.html)
-
----
 
 ## 📖 About Bookshelf
 
@@ -36,8 +32,6 @@ This module is part of the [Bookshelf Library](https://docs.mcbookshelf.dev/en/l
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf). \
 📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite).
-
----
 
 ## 🤝 Get Involved
 
