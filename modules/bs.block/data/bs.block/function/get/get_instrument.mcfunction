@@ -13,10 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if data storage bs:out block{group:0} run return 0
-
-$data modify storage bs:ctx _ set value {i:$(properties)}
-function bs.block:transform/lookup_group with storage bs:out block
-loot replace entity B5-0-0-0-3 contents loot bs.block:block/get_block
-data modify storage bs:ctx _.p set from entity B5-0-0-0-3 item.components."minecraft:custom_data".properties
-function bs.block:transform/merge_properties/recurse/next with storage bs:ctx _.i[-1]
+loot replace entity B5-0-0-0-3 contents loot bs.block:instrument/get
+data modify storage bs:out block merge from entity B5-0-0-0-3 item.components."minecraft:custom_data"
