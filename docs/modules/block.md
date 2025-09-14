@@ -678,7 +678,7 @@ Get block data from the given type string id. The output is equivalent to [`#bs.
     - {nbt}`string` **item**: Item string id associated with the block, if it exists.
     - {nbt}`string` **type**: String representation of the id (e.g., `minecraft:stone`).
     - {nbt}`bool` **can_occlude**: Whether the block occludes neighboring faces.
-    - {nbt}`bool` **ignited_by_lava**: Whether the block can catch fire from lava.
+    - {nbt}`bool` **ignited_by_lava**: Whether the block can catch fire when exposed to lava.
     - {nbt}`double` **blast_resistance**: The blast resistance of the block at the position.
     - {nbt}`double` **friction**: The friction of the block at the position.
     - {nbt}`double` **hardness**: The hardness of the block at the position.
@@ -731,7 +731,7 @@ Get block data from the given item string id. The output is equivalent to [`#bs.
     - {nbt}`string` **item**: Item string id associated with the block, if it exists.
     - {nbt}`string` **type**: String representation of the id (e.g., `minecraft:stone`).
     - {nbt}`bool` **can_occlude**: Whether the block occludes neighboring faces.
-    - {nbt}`bool` **ignited_by_lava**: Whether the block can catch fire from lava.
+    - {nbt}`bool` **ignited_by_lava**: Whether the block can catch fire when exposed to lava.
     - {nbt}`double` **blast_resistance**: The blast resistance of the block at the position.
     - {nbt}`double` **friction**: The friction of the block at the position.
     - {nbt}`double` **hardness**: The hardness of the block at the position.
@@ -759,7 +759,6 @@ data get storage bs:out block.block
 
 ::::
 :::::
-
 
 ```{admonition} Read-only Output
 :class: warning
@@ -1523,6 +1522,42 @@ function #bs.block:spawn_solid_block_display
 :::::
 
 > **Credits**: Aksiome, theogiraudet
+
+---
+
+## 🏷️ Tags
+
+You can find below below all tags available in this module.
+
+---
+
+### Can Occlude
+
+**`#bs.block:can_occlude`**
+
+Determine if the block occludes neighboring faces (i.e., whether it’s solid enough to hide adjacent block faces).
+
+> **Credits**: Aksiome
+
+---
+
+### Has State
+
+**`#bs.hitbox:has_state`**
+
+Determine if the block can have state properties (e.g., facing, waterlogged).
+
+> **Credits**: Aksiome
+
+---
+
+### Ignited by Lava
+
+**`#bs.hitbox:ignited_by_lava`**
+
+Determine if the block can catch fire when exposed to lava.
+
+> **Credits**: Aksiome
 
 ---
 
