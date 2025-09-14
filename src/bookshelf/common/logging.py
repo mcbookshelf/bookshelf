@@ -58,7 +58,6 @@ class GitHubFormatter(logging.Formatter):
 
     ANNOTATIONS = MappingProxyType({
         logging.DEBUG: "debug",
-        logging.INFO: "notice",
         logging.WARNING: "warning",
         logging.ERROR: "error",
         logging.CRITICAL: "error",
