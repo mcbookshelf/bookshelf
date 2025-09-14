@@ -20,8 +20,6 @@
 
   Simplicity meets utility in this bank of trees.
 
----
-
 ## ✨ Features
 
 - **🌲 Tree Varieties**: Multiple types of trees including Birch, Cypress, and Dark Oak.
@@ -29,16 +27,12 @@
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/tree.html)
 
----
-
 ## 📖 About Bookshelf
 
 This module is part of the [Bookshelf Library](https://docs.mcbookshelf.dev/en/latest/index.html), a modular collection of Minecraft datapacks built to simplify complex systems and empower mapmakers.
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf). \
 📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite).
-
----
 
 ## 🤝 Get Involved
 

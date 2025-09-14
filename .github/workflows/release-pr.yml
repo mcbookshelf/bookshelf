@@ -19,16 +19,12 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: Set Up Git User
+      - name: Setup Git User
         uses: fregante/setup-git-user@v2
-      - name: Install PDM
-        uses: pdm-project/setup-pdm@v4
-        with:
-          cache: true
-      - name: Install Dependencies
-        run: pdm install
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
       - name: Update Metadata for Release
-        run: pdm run modules update --versions
+        run: uv run update --versions
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:

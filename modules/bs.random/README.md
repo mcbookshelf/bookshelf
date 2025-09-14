@@ -23,8 +23,6 @@ Contains many random functions for different distributions and noise patterns.
 > "Creativity is the ability to introduce order into the randomness of nature."
 > — Eric Hoffer
 
----
-
 ## ✨ Features
 
 - **🎯 Random Choice**: Select random values from lists with optional weights.
@@ -33,16 +31,12 @@ Contains many random functions for different distributions and noise patterns.
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/random.html)
 
----
-
 ## 📖 About Bookshelf
 
 This module is part of the [Bookshelf Library](https://docs.mcbookshelf.dev/en/latest/index.html), a modular collection of Minecraft datapacks built to simplify complex systems and empower mapmakers.
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf). \
 📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite).
-
----
 
 ## 🤝 Get Involved
 

@@ -18,12 +18,10 @@
 
 # 🖥️ Bookshelf Bitwise
 
-  Efficiently manage blocks, including states and NBTs, while offering advanced tools for transformations.
+  A collection of various bitwise operations, providing versatile tools for manipulating binary data.
 
 > “Binary is a very simple numbering system, but it is incredibly powerful when used correctly.”
 > — Alan Turing
-
----
 
 ## ✨ Features
 
@@ -33,16 +31,12 @@
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html)
 
----
-
 ## 📖 About Bookshelf
 
 This module is part of the [Bookshelf Library](https://docs.mcbookshelf.dev/en/latest/index.html), a modular collection of Minecraft datapacks built to simplify complex systems and empower mapmakers.
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf). \
 📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite).
-
----
 
 ## 🤝 Get Involved
 

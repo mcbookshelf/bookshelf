@@ -12,7 +12,7 @@ Tests are essential for ensuring code correctness and preventing future bugs. Th
 
 To run the tests, you have two options:
 
-1. **Headless Mode**: We provide a simple command `pdm run modules test` that allows you to run the tests headlessly, without having to open the game
+1. **Headless Mode**: We provide a simple command `uv run modules test` that allows you to run the tests headlessly, without having to open the game
 2. **In-Game**: Download and install the Minecraft Fabric mod. Once that's done, you can run the tests using the test command in Minecraft
 
 ```{admonition} Java Required

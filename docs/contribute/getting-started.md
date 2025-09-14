@@ -10,15 +10,10 @@ This guide will walk you through setting up a local development environment to b
 
 ## ⚙️ Prerequisites
 
-Before getting started, ensure your system is prepared by following these steps:
+Before you start, make sure your system is ready by completing the following steps:
 
-1. Install [**PDM**](https://pdm-project.org/en/latest/), the Python Dependency Manager
-2. Open a terminal at the root of the project and run the following command to install all required dependencies:
-  ```sh
-  pdm install
-  ```
-
-Running this command prepares your environment for building and testing the project.
+1. **Install [UV](https://docs.astral.sh/uv/getting-started/installation/)**, a Python package and project manager.
+2. **Clone the repository**, if you haven’t done this before, follow this step-by-step tutorial: [First Contributions Guide](https://github.com/firstcontributions/first-contributions/blob/main/README.md). Once cloned, open the project folder in your preferred code editor.
 
 ---
 
@@ -27,20 +22,20 @@ Running this command prepares your environment for building and testing the proj
 The `modules` directory contains the source files for all modules. Use the following commands to manage and build them efficiently:
 
 :::{list-table}
-*   - `pdm run modules build`
+*   - `uv run modules build`
     - Build all modules
-*   - `pdm run modules watch`
+*   - `uv run modules watch`
     - Monitor changes and rebuild modules automatically
-*   - `pdm run modules <build|watch> <module1> ...`
+*   - `uv run modules <build|watch> <module1> ...`
     - Build or watch only the specified modules
-*   - `pdm run modules link [world]`
+*   - `uv run link [world]`
     - Link the generated resource and data packs to a Minecraft world
 :::
 
 ```{admonition} Watching Modules
 :class: tip
 
-Building modules can take some time. For a smoother experience, it's recommended to only watch the module you're currently working on: `pdm run modules watch <module>`.
+Building modules can take some time. For a smoother experience, it's recommended to only watch the module you're currently working on: `uv run modules watch <module>`.
 ```
 
 ### Linking Modules to Minecraft
@@ -61,10 +56,10 @@ The `link` command allows you to integrate generated packs directly into a Minec
 This workflow demonstrates how to link and continuously test your modules directly in Minecraft:
 ```sh
 # Link modules to a specific world
-pdm run modules link <world> --minecraft </path/to/.minecraft>
+uv run link <world> --minecraft </path/to/.minecraft>
 
 # Monitor changes and rebuild a module for the linked world
-pdm run modules watch <module>
+uv run modules watch <module>
 ```
 
 ---

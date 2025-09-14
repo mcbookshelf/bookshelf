@@ -16,7 +16,6 @@
 data modify storage bs:data move set value { \
   blocks: true, \
   entities: false, \
-  hitbox_shape: "collision", \
   on_collision: "function #bs.move:callback/bounce", \
   ignored_blocks: "#bs.hitbox:can_pass_through", \
   ignored_entities: "#bs.hitbox:intangible", \

@@ -1,0 +1,34 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#is-it-undead-burning-time",
+    "authors": [
+      "theogiraudet"
+    ],
+    "created": {
+      "date": "2025/07/16",
+      "minecraft_version": "1.21.7"
+    },
+    "updated": {
+      "date": "2025/07/16",
+      "minecraft_version": "1.21.7"
+    }
+  },
+  "condition": "minecraft:all_of",
+  "terms": [
+    {
+      "condition": "minecraft:weather_check",
+      "raining": false
+    },
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:time_check",
+        "value": {
+          "min": 12542,
+          "max": 23459
+        }
+      }
+    }
+  ]
+}

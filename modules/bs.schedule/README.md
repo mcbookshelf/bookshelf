@@ -20,8 +20,6 @@
 
   Enhance command scheduling with this module, providing flexibility beyond vanilla capabilities.
 
----
-
 ## ✨ Features
 
 - **⏰ Flexible Scheduling**: Schedule commands with various time units (ticks, seconds, minutes, hours).
@@ -30,16 +28,12 @@
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/schedule.html)
 
----
-
 ## 📖 About Bookshelf
 
 This module is part of the [Bookshelf Library](https://docs.mcbookshelf.dev/en/latest/index.html), a modular collection of Minecraft datapacks built to simplify complex systems and empower mapmakers.
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf). \
 📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite).
-
----
 
 ## 🤝 Get Involved
 

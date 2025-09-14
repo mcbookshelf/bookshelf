@@ -23,8 +23,6 @@
 > "Words are the most powerful drug used by mankind."
 > — Rudyard Kipling
 
----
-
 ## ✨ Features
 
 - **🔄 String Operations**: Concatenate strings and convert case (uppercase/lowercase).
@@ -33,16 +31,12 @@
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/string.html)
 
----
-
 ## 📖 About Bookshelf
 
 This module is part of the [Bookshelf Library](https://docs.mcbookshelf.dev/en/latest/index.html), a modular collection of Minecraft datapacks built to simplify complex systems and empower mapmakers.
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf). \
 📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite).
-
----
 
 ## 🤝 Get Involved
 

@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute store result score #u bs.ctx run data get storage bs:out hitbox.offset.x 10000000
-execute store result score #v bs.const run data get storage bs:out hitbox.offset.z 10000000
+execute store result score #v bs.ctx run data get storage bs:out hitbox.offset.z 10000000
 
 $execute if score #u bs.ctx matches ..$(min) run scoreboard players set #u bs.ctx $(min)
 $execute if score #v bs.ctx matches ..$(min) run scoreboard players set #v bs.ctx $(min)

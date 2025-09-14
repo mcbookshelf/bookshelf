@@ -18,14 +18,10 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: Install PDM
-        uses: pdm-project/setup-pdm@v4
-        with:
-          cache: true
-      - name: Install Dependencies
-        run: pdm install
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
       - name: Check Modules
-        run: pdm run modules check
+        run: uv run check
 
   test:
     name: 🧪 Test Modules
@@ -33,10 +29,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: Install PDM
-        uses: pdm-project/setup-pdm@v4
-        with:
-          cache: true
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
       - name: Install Java
         uses: actions/setup-java@v4
         with:
@@ -47,7 +41,5 @@ jobs:
         with:
           path: .beet_cache
           key: ${{ runner.os }}-beet-cache
-      - name: Install Dependencies
-        run: pdm install
       - name: Test Modules
-        run: pdm run modules test
+        run: uv run modules test --versions

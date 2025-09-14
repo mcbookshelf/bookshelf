@@ -20,5 +20,4 @@ execute unless score @s bs.hmod matches 1.. run return 0
 execute store result score @s bs.hval run data get entity @s Health 1000000
 scoreboard players add @s bs.hval 5
 scoreboard players operation @s bs.hval /= 10 bs.const
-
-advancement revoke @s only bs.health:on_hurt
+advancement revoke @s only bs.health:on_before_heal

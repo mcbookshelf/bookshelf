@@ -13,6 +13,7 @@ Feature metadata are defined directly within each `.json` file, as shown below:
 {
   "__bookshelf__": {
     "feature": true,
+    "deprecated": false,
     "documentation": "<DOCUMENTATION>",
     "authors": [
       "<AUTHOR1>"
@@ -35,7 +36,8 @@ Feature metadata are defined directly within each `.json` file, as shown below:
 
 | Field | Description | Mandatory |
 |-------|-------------|---------- |
-| feature | Indicates whether the current function tag is the endpoint of a feature | yes |
+| feature | Indicates whether the file is the endpoint of a feature | yes |
+| deprecated | Indicates whether the feature has been deprecated | no |
 | documentation | A link to the feature's documentation | yes |
 | authors | A list of feature authors. Cannot be empty | yes |
 | contributors | A list of contributors (e.g., those who provided insights, fixes, or indirect help) | no |
@@ -94,6 +96,6 @@ Module metadata are defined in `modules/<module>/module.json`. Below is an examp
 
 The manifest consolidates metadata for all modules and features in Bookshelf. It is automatically generated and can be updated using the following command:
 ```sh
-pdm run modules update
+uv run update
 ```
 The generated file is located at `meta/manifest.json`.

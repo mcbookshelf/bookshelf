@@ -14,9 +14,11 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:data raycast set value { \
+  sx: 1, \
+  sy: 1, \
+  sz: 1, \
   blocks: true, \
   entities: false, \
-  hitbox_shape: "interaction", \
   ignored_blocks: "#bs.view:can_see_through", \
   ignored_entities: "#bs.hitbox:intangible", \
 }

@@ -20,7 +20,7 @@ To verify that your documentation changes work as expected, you can build and vi
 ### Option 1: Build Documentation
 
 ```shell
-pdm run docs build
+uv run docs build
 ```
 
 This command will generate the documentation, which you can find in the `/docs/_build` folder.
@@ -28,7 +28,7 @@ This command will generate the documentation, which you can find in the `/docs/_
 ### Option 2: Build with Hot Reload
 
 ```shell
-pdm run docs watch
+uv run docs watch
 ```
 
 This option will also generate the documentation but will allow you to view it in your browser at `http://127.0.0.1:8000` with hot reloading, so any changes you make will automatically update in the browser.

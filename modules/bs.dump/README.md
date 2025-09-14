@@ -20,15 +20,11 @@
 
   The dump module provides mechanisms for printing the state of any "variables".
 
----
-
 ## ✨ Features
 
 - **🖨️ Print**: Print the state of various "variables" (such as scores or NBT data) with a unified syntax.
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/dump.html)
-
----
 
 ## 📖 About Bookshelf
 
@@ -36,8 +32,6 @@ This module is part of the [Bookshelf Library](https://docs.mcbookshelf.dev/en/l
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf). \
 📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite).
-
----
 
 ## 🤝 Get Involved
 

@@ -23,8 +23,6 @@
 > "With vectors, physics has found a magnificent language."
 > — Richard Feynman
 
----
-
 ## ✨ Features
 
 - **📐 Vector Operations**: Find absolute max/min components and perform basis rotations in 3D space.
@@ -32,16 +30,12 @@
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/vector.html)
 
----
-
 ## 📖 About Bookshelf
 
 This module is part of the [Bookshelf Library](https://docs.mcbookshelf.dev/en/latest/index.html), a modular collection of Minecraft datapacks built to simplify complex systems and empower mapmakers.
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf). \
 📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite).
-
----
 
 ## 🤝 Get Involved
 
