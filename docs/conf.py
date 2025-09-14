@@ -23,7 +23,7 @@ extensions = [
 ]
 
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
-locale_dirs = ["locales"]
+locale_dirs = ["_locales"]
 gettext_compact = False
 gettext_uuid = True
 suppress_warnings = ["misc.highlighting_failure"]

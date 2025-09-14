@@ -1,0 +1,573 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/string.md:1 289fbc06a3144649863fede9a7ac86a9
+msgid "🔠 String"
+msgstr "🔠 字符串（String）"
+
+#: ../../modules/string.md:3 40aeafe8da8f444e87e42e17d4b9795e
+msgid "**`#bs.string:help`**"
+msgstr "**`#bs.string:help`**"
+
+#: ../../modules/string.md:5 94ec194ec394415585e4de3c1c745ca1
+msgid ""
+"Manage and transform strings with a versatile set of manipulation and "
+"search functions."
+msgstr "使用多功能的操作和搜索函数来管理和转换字符串。"
+
+#: ../../modules/string.md:13 5c4c118eafc1434a87ab8a857fbfe0a6
+msgid "\"Words are the most powerful drug used by mankind.\""
+msgstr "\"文字是人类使用的最强大的药物。\""
+
+#: ../../modules/string.md:14 84daddadd8834d4d80d1d294d7a74f88
+msgid "Rudyard Kipling"
+msgstr "鲁德亚德·吉卜林"
+
+#: ../../modules/string.md:20 611ae3c6cf6e43cd827dadf249e60d35
+msgid "🔧 Functions"
+msgstr "🔧 函数"
+
+#: ../../modules/string.md:22 020f57c283e441479c48218a3bf5a2f6
+msgid "You can find below all functions available in this module."
+msgstr "您可以在下方找到此模块中的所有可用函数。"
+
+#: ../../modules/string.md:26 5e7a24a18bc648de915133e159f30113
+msgid "Concat"
+msgstr "拼接"
+
+#: ../../modules/string.md:30 09b91539e69a43a09f61eee4dabc0362
+msgid "Merge multiple strings from an array into a single concatenated string."
+msgstr "将数组中的多个字符串合并为一个连接后的字符串。"
+
+#: ../../modules/string.md:32 ../../modules/string.md:67
+#: ../../modules/string.md:89 ../../modules/string.md:127
+#: ../../modules/string.md:154 ../../modules/string.md:197
+#: ../../modules/string.md:237 ../../modules/string.md:282
+#: ../../modules/string.md:315 ../../modules/string.md:359
+#: ../../modules/string.md:381 ../../modules/string.md:404
+#: 106a8c98a5544d6bb5629f7aed88c1c2 147e197bf9c646198dd34f26362edbcc
+#: 2178fe4e143341448ca3ad803bfadb9f 35b349c874d640f99cea3e4db1df6626
+#: 4819fec0d25e447094c933e71c18d2ee 87f415cc654c4479915633bfdd315822
+#: 893bb01637cb415aa8ab8d771ec4c98a 8a06e33d023d44babfceabb442fe5ffd
+#: 94529b655b954a6b9ebc4ca423984863 9702a9d7ec554cb79954c6d3aa26d4d9
+#: cd5634f8929b4da881b2d0ab41daf28f d634e4d5e10a45b1a1bc37fd91e3e89a
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../modules/string.md:33 35fa8b7565a94602bd3a4a0d40096e31
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.concat.list`**: {nbt}`list` List of strings to "
+"concatenate."
+msgstr "**命令存储 `bs:in string.concat.list`**: {nbt}`list` 要拼接的字符串列表。"
+
+#: ../../modules/string.md:35 ../../modules/string.md:70
+#: ../../modules/string.md:92 ../../modules/string.md:135
+#: ../../modules/string.md:163 ../../modules/string.md:207
+#: ../../modules/string.md:247 ../../modules/string.md:285
+#: ../../modules/string.md:324 ../../modules/string.md:362
+#: ../../modules/string.md:384 ../../modules/string.md:407
+#: 1621d34ce1bc4172b81f51ee580f76d3 19956b649a1e40009b0e2d904d1cab9e
+#: 20209740421647cea77906c37f700534 3e0f673764294768b76f5a7a64383e5c
+#: 5c64a734524a4c1f9cae98e8b1ca86e8 7df718f440604659b01f229d44547dee
+#: 89b5c9645fed4eb8abd36bb6126f225a 953c4fae4b9b4f72bb615f600bd0ed73
+#: 9ad59a69ee7a43029770cbe3f984d8db ac3d0e73dee146af933c539a587beb4a
+#: d0b2d3f350e446cab7b19273da13ea58 e28249bd8a5544fca25475dfbbc66c30
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../modules/string.md:36 7350383124134fe5ab1bde35f4f48aa7
+#, python-brace-format
+msgid "**Storage `bs:out string.concat`**: {nbt}`string` The concatenated string."
+msgstr "**命令存储 `bs:out string.concat`**: {nbt}`string` 拼接后的字符串。"
+
+#: ../../modules/string.md:39 bf7271e433fb427997a9bf901327b07b
+msgid "*Example: Concatenate `Hello `, and `World` then display the result:*"
+msgstr "*示例：拼接 `Hello ` 和 `World` 并显示结果：*"
+
+#: ../../modules/string.md:47 ../../modules/string.md:106
+#: ../../modules/string.md:180 ../../modules/string.md:220
+#: ../../modules/string.md:266 ../../modules/string.md:298
+#: ../../modules/string.md:338 4bcfaa380d7746a180a371ceae45d05d
+#: 516147613ce2444c926396a40394f434 570f3cfb5d06403dbffba9d90df492ea
+#: 6f02d61a7beb491b9ba46eecb5cde386 8eb3b64bbb0649f1af50f44ef2ff79eb
+#: 9b55ab9d3fd1456faa9ca95ed69a278b e350ecc7e8ad4a6899f5a1f8a7da246f
+msgid "Technical Limitation"
+msgstr "技术限制"
+
+#: ../../modules/string.md:50 ../../modules/string.md:269
+#: 87e4fe9082944cab8da5f68af4b8039d acc5bedfd5094275b2d6a33bfee2e25a
+msgid ""
+"If you want to use double quotes (`\"`) within a string, you must escape "
+"them with a backslash: `\\\"`."
+msgstr "如果要在字符串中使用双引号（`\"`），必须使用反斜杠转义：`\\\"`。"
+
+#: ../../modules/string.md:53 ../../modules/string.md:113
+#: ../../modules/string.md:187 ../../modules/string.md:227
+#: ../../modules/string.md:272 ../../modules/string.md:305
+#: ../../modules/string.md:345 ../../modules/string.md:421
+#: 1692e4b59f254897989b4eb4cf2886b2 31972b5ea42f4aa4aaf79db48f3ac454
+#: 531fb1bca86f40dfaf98c72e6e78191a 6c7da8c7ced146b881f3d11457695791
+#: 7e359c54ec744b2cbe17dc10a8955ae0 9b8afd11223b46f28223201d62ee2a9a
+#: ac9da2480fbf494ca4473386e898a20d df306795722c49048db96b167663dcc6
+msgid "**Credits**: Aure31"
+msgstr "**制作人员**：Aure31"
+
+#: ../../modules/string.md:57 a4b20f922d7d4a5cac60b69c7a7b38d1
+msgid "Convert Case"
+msgstr "转换大小写"
+
+#: ../../modules/string.md a91c5f0ba4d84329a4cf48d4bc4d81c8
+msgid "Uppercase"
+msgstr "大写"
+
+#: ../../modules/string.md:65 e9540a8ffac94a9696bcb65f350b977c
+msgid "Convert text to uppercase."
+msgstr "将文本转换为大写。"
+
+#: ../../modules/string.md:68 bde3ee2142bf4f7f9bfb5a1b360a3746
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.upper.str`**: {nbt}`string` The string to convert"
+" to uppercase."
+msgstr "**命令存储 `bs:in string.upper.str`**：{nbt}`string` 要转换为大写的字符串。"
+
+#: ../../modules/string.md:71 2315c7575677430b81b89c0e83917861
+#, python-brace-format
+msgid "**Storage `bs:out string.upper`**: {nbt}`string` The uppercase string."
+msgstr "**命令存储 `bs:out string.upper`**：{nbt}`string` 转换后的大写字符串。"
+
+#: ../../modules/string.md:74 44b842a94df54ba2b16285b5db7d4791
+msgid "*Example: Convert `hello world` to `HELLO WORLD` then display the result:*"
+msgstr "*示例：将 `hello world` 转换为 `HELLO WORLD` 并显示结果：*"
+
+#: ../../modules/string.md b80ce43e0cb44a899d22df4bc45ea6e7
+msgid "Lowercase"
+msgstr "小写"
+
+#: ../../modules/string.md:87 6154a574b95046bb926de31e79e70ee8
+msgid "Convert text to lowercase."
+msgstr "将文本转换为小写。"
+
+#: ../../modules/string.md:90 90067cfbf6074c9db2cda2e40049d555
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.lower.str`**: {nbt}`string` The string to convert"
+" to lowercase."
+msgstr "**命令存储 `bs:in string.lower.str`**：{nbt}`string` 要转换为小写的字符串。"
+
+#: ../../modules/string.md:93 bcd1b4ad61624ad1bd43ca09faff390f
+#, python-brace-format
+msgid "**Storage `bs:out string.lower`**: {nbt}`string` The lowercase string."
+msgstr "**命令存储 `bs:out string.lower`**：{nbt}`string` 转换后的小写字符串。"
+
+#: ../../modules/string.md:96 300de77640ef42d992f9852901019a60
+msgid "*Example: Convert `HELLO WORLD` to `hello world` then display the result:*"
+msgstr "*示例：将 `HELLO WORLD` 转换为 `hello world` 并显示结果：*"
+
+#: ../../modules/string.md:110 ffc830fa069943e5ae4de69e0b98fa52
+msgid ""
+"These functions support most UTF-8 characters, but they do not support "
+"the double quote character (`\"`). Attempts to use or escape double "
+"quotes will result in errors."
+msgstr "这些函数支持大多数 UTF-8 字符，但不支持双引号字符（`\"`）。尝试使用或转义双引号将导致错误。"
+
+#: ../../modules/string.md ../../modules/string.md:117
+#: 373650a90efa4b4db5b117ec279d2e04 65bcdcab09634db1b2ed80c889dfd423
+msgid "Find"
+msgstr "查找"
+
+#: ../../modules/string.md:125 eb67e4bad8704aee999e7e690a9110a1
+msgid "Search for a substring within a string. Find the first occurrence."
+msgstr "在字符串中搜索子字符串。查找第一次出现的位置。"
+
+#: ../../modules/string.md:128 9565cc960bff401e8b1e92a7978e3270
+msgid "**Storage `bs:in string.find`**:"
+msgstr "**命令存储 `bs:in string.find`**："
+
+#: ../../modules/string.md:130 ../../modules/string.md:157
+#: a538d164ec21482587dd59f08a3942f0 df6e90b5958941e2bed286131a9b1bae
+#, python-brace-format
+msgid "{nbt}`compound` Find data"
+msgstr ""
+
+#: ../../modules/string.md:131 ../../modules/string.md:158
+#: 4162a3b5be334e8fb474053724d6391e 8fe6a988f06840469d59f429e6214931
+#, python-brace-format
+msgid "{nbt}`string` **str**: String to search in."
+msgstr ""
+
+#: ../../modules/string.md:132 ../../modules/string.md:159
+#: 5353cb9caf4441a0b6529c1a997410c7 dd6fef8e7f50460a98d2bdd221ca435d
+#, python-brace-format
+msgid "{nbt}`string` **substr**: Substring to search for."
+msgstr ""
+
+#: ../../modules/string.md:136 f6afa2b2c7df460fbf5e8bd3e826c8fe
+msgid "**Return**: Integer index of the first occurrence or -1 if not found."
+msgstr "**返回值**：第一次出现的位置的整数索引，如果未找到则返回-1。"
+
+#: ../../modules/string.md:139 739263cfa5234c4fb6e50b846f5b2674
+msgid ""
+"*Example: Find the first occurrence of `world` in `hello world` then "
+"display the index:*"
+msgstr "*示例：在 `hello world` 中查找 `world` 第一次出现的位置并显示索引：*"
+
+#: ../../modules/string.md d11b973775c541faaa44cc51129737dc
+msgid "Find all"
+msgstr "查找全部"
+
+#: ../../modules/string.md:152 400a24c0571b427f997fa7772c885a37
+msgid ""
+"Search for a substring within a string. Find all occurrences or a "
+"specific number of matches."
+msgstr "在字符串中搜索子字符串。查找所有出现的位置或指定数量的匹配项。"
+
+#: ../../modules/string.md:155 ddabf71ebf2f45ce8bc6ab4beb342da1
+msgid "**Storage `bs:in string.find_all`**:"
+msgstr "**命令存储 `bs:in string.find_all`**："
+
+#: ../../modules/string.md:160 5b7ea46c362d4d74b3d91132b714fbf3
+#, python-brace-format
+msgid ""
+"{nbt}`int` **occurrence**: Number of occurrences to find (-1 for all "
+"occurrences)."
+msgstr ""
+
+#: ../../modules/string.md:164 3b9a08a8e9104d18877acbb6b5727ec9
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.find_all`**: {nbt}`list` List of indices where "
+"the substring was found, in order of occurrence."
+msgstr "**命令存储 `bs:out string.find_all`**：{nbt}`list` 按出现顺序列出的子字符串位置索引列表。"
+
+#: ../../modules/string.md:166 b984c2d5b2e74c1b8c0e9a51e3fea1be
+msgid "**Return**: Number of occurrences found."
+msgstr "**返回值**：找到的出现次数。"
+
+#: ../../modules/string.md:169 6ce4c3f51c4b4427954cd935f18cd240
+msgid ""
+"*Example: Find all occurrences of `world` in `hello world world` then "
+"display the indices:*"
+msgstr "*示例：在 `hello world world` 中查找所有 `world` 出现的位置并显示索引：*"
+
+#: ../../modules/string.md:184 499233697ce74a3883acf73ba984851d
+msgid ""
+"These functions do not support the double quote character (`\"`). "
+"Attempts to use or escape double quotes will result in errors."
+msgstr "这些函数不支持双引号字符（`\"`）。尝试使用或转义双引号将导致错误。"
+
+#: ../../modules/string.md:191 c558dbf41fe74882a27aca02df2c8451
+msgid "Replace"
+msgstr "替换"
+
+#: ../../modules/string.md:195 2b0ff2f66e114201ac89c57313308e51
+msgid "Replace occurrences of a substring with a new text."
+msgstr "将子字符串出现的位置替换为新文本。"
+
+#: ../../modules/string.md:198 70e5fc885b3643288bdd78780a57ae21
+msgid "**Storage `bs:in string.replace`**:"
+msgstr "**命令存储 `bs:in string.replace`**："
+
+#: ../../modules/string.md:200 d12ffc2204334b3ba22e83515c2dfd92
+#, python-brace-format
+msgid "{nbt}`compound` Replace data"
+msgstr ""
+
+#: ../../modules/string.md:201 3a9f1abd749e4d49a567ecf9a4334859
+#, python-brace-format
+msgid "{nbt}`string` **str**: Base string for replacements."
+msgstr ""
+
+#: ../../modules/string.md:202 2020a1b69e054b8792236a865dd4f6f1
+#, python-brace-format
+msgid "{nbt}`string` **old**: Substring to replace."
+msgstr ""
+
+#: ../../modules/string.md:203 af7a9b801f5f450bb34a20ab68b50ef0
+#, python-brace-format
+msgid "{nbt}`string` **new**: Replacement string."
+msgstr ""
+
+#: ../../modules/string.md:204 b6fde8708cf1453e8ef6d2fe14d4c9c7
+#, python-brace-format
+msgid "{nbt}`int` **maxreplace**: Maximum replacements. (-1 for unlimited)"
+msgstr ""
+
+#: ../../modules/string.md:208 e1abf1e6e7ed4e1e8021f0386d560f2d
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.replace`**: {nbt}`string` String after "
+"replacements."
+msgstr "**命令存储 `bs:out string.replace`**：{nbt}`string` 替换后的字符串。"
+
+#: ../../modules/string.md:211 f3439b29a50f45c9a78ed1841b510a0c
+msgid ""
+"*Example: Replace `world` with `minecraft` in `hello world` then display "
+"the result::*"
+msgstr "*示例：在 `hello world` 中将 `world` 替换为 `minecraft` 并显示结果：*"
+
+#: ../../modules/string.md:224 ../../modules/string.md:302
+#: ../../modules/string.md:342 3d0bb3bb0ccd47cf84ab2b406ba5ad32
+#: 54ed625e3fa0440dbfd27fd29ab0be6c c78e4529307f4feba0019344c27b1a73
+msgid ""
+"This function do not support the double quote character (`\"`). Attempts "
+"to use or escape double quotes will result in errors."
+msgstr "此函数不支持双引号字符（`\"`）。尝试使用或转义双引号将导致错误。"
+
+#: ../../modules/string.md:231 dcddf0e2cec94c4e9ed8481129259b75
+msgid "Replace Range"
+msgstr "替换范围"
+
+#: ../../modules/string.md:235 d95e9f925f214ff3a2be75f5f8b54282
+msgid ""
+"Replace characters in a string between specified start and end positions "
+"with a new substring."
+msgstr "将字符串中指定起始和结束位置之间的字符替换为新的子字符串。"
+
+#: ../../modules/string.md:238 666a979b9e694e568a15b55b4cdbfc10
+msgid "**Storage `bs:in string.replace_range`**:"
+msgstr "**命令存储 `bs:in string.replace_range`**："
+
+#: ../../modules/string.md:240 ac488fcfef2a4a3f85a45b3ed459a230
+#, python-brace-format
+msgid "{nbt}`compound` Replace range data"
+msgstr ""
+
+#: ../../modules/string.md:241 c44d339f2728462499f73d03a7b0ef52
+#, python-brace-format
+msgid "{nbt}`string` **str**: The original string to modify."
+msgstr ""
+
+#: ../../modules/string.md:242 933f1584f01c497391a431c983b078d5
+#, python-brace-format
+msgid ""
+"{nbt}`string` **substr**: The new string to insert between start and end "
+"positions."
+msgstr ""
+
+#: ../../modules/string.md:243 095143a6ab204fd6a8c42e240c86054e
+#, python-brace-format
+msgid ""
+"{nbt}`int` **start**: Starting position in the original string "
+"(inclusive)."
+msgstr ""
+
+#: ../../modules/string.md:244 e1d09293a17d4f7aa6e972b6028eb0f3
+#, python-brace-format
+msgid "{nbt}`int` **end**: Ending position in the original string (exclusive)."
+msgstr ""
+
+#: ../../modules/string.md:248 853d3e66d6164af38626727c8d0d3f53
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.replace_range`**: {nbt}`string` The modified "
+"string with the specified range replaced."
+msgstr "**命令存储 `bs:out string.replace_range`**：{nbt}`string` 指定范围被替换后的修改后字符串。"
+
+#: ../../modules/string.md:251 8a40ac5f67c6468bab2756645a231601
+msgid ""
+"*Example: Replace the space in `hello world` with ` beautiful ` then "
+"display the result:*"
+msgstr "*示例：在 `hello world` 中将空格替换为 ` beautiful ` 并显示结果：*"
+
+#: ../../modules/string.md:260 639f93648e91460a8180103a8aeb8e10
+msgid "How to Insert?"
+msgstr "如何插入？"
+
+#: ../../modules/string.md:263 c8ca947a95c44d5a95d937b5038938df
+msgid ""
+"To insert text without removing any characters, set both `start` and "
+"`end` to the same position. This will insert the new text at that "
+"position while preserving all existing characters."
+msgstr "要在不删除任何字符的情况下插入文本，请将 `start` 和 `end` 设置为相同的位置。这将在保留所有现有字符的同时在该位置插入新文本。"
+
+#: ../../modules/string.md:276 e8333ae42a7649f082052b1566ea72ee
+msgid "Reverse"
+msgstr "反转"
+
+#: ../../modules/string.md:280 e45b9577feb441f1995eb178be44605a
+msgid "Reverse the order of all characters in a string."
+msgstr "反转字符串中所有字符的顺序。"
+
+#: ../../modules/string.md:283 03ae87ae38ff417fbf704528380358fd
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.reverse.str`**: {nbt}`string` The string to "
+"reverse."
+msgstr "**命令存储 `bs:in string.reverse.str`**：{nbt}`string` 要反转的字符串。"
+
+#: ../../modules/string.md:286 88855948023c4ba69594c08b0b501aa4
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.reverse`**: {nbt}`string` The string with all "
+"characters in reverse order."
+msgstr "**命令存储 `bs:out string.reverse`**：{nbt}`string` 所有字符顺序反转后的字符串。"
+
+#: ../../modules/string.md:289 94734a9fd85742ce9fa6f9e3c595ff01
+msgid "*Example: Reverse `hello world` then display the result:*"
+msgstr "*示例：反转 `hello world` 并显示结果：*"
+
+#: ../../modules/string.md:309 ea633fbf9e7a401099a80725108375da
+msgid "Split"
+msgstr "分割"
+
+#: ../../modules/string.md:313 4a1428651e83487d89a0d36001ae7ae2
+msgid ""
+"Divide a string into smaller parts using a specified separator, creating "
+"a list of substrings."
+msgstr "使用指定的分隔符将字符串分割成更小的部分，创建子字符串列表。"
+
+#: ../../modules/string.md:316 1d34496384874179ae6a05ce11ff886f
+msgid "**Storage `bs:in string.split`**:"
+msgstr "**命令存储 `bs:in string.split`**："
+
+#: ../../modules/string.md:318 e7342a5917d948f6a112f85591b68381
+#, python-brace-format
+msgid "{nbt}`compound` Split data"
+msgstr ""
+
+#: ../../modules/string.md:319 e2f9cc42607143999e8c14631168877e
+#, python-brace-format
+msgid "{nbt}`string` **str**: The string to be split into parts."
+msgstr ""
+
+#: ../../modules/string.md:320 4a8e5964fd804527a1bc272148694c67
+#, python-brace-format
+msgid ""
+"{nbt}`string` **separator**: The character or string that marks where to "
+"split."
+msgstr ""
+
+#: ../../modules/string.md:321 e8425f8e5b404f388a796b14557151b1
+#, python-brace-format
+msgid ""
+"{nbt}`int` **maxsplit**: Maximum number of splits to perform (-1 for "
+"unlimited)."
+msgstr ""
+
+#: ../../modules/string.md:325 d7c4992fbb964d9895b65faa66336331
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.split`**: {nbt}`list` A list containing the "
+"split parts of the original string, in the order they appear."
+msgstr "**命令存储 `bs:out string.split`**：{nbt}`list` 包含原始字符串分割部分的列表，按其出现顺序排列。"
+
+#: ../../modules/string.md:328 b19a99217d214ecbbbdc9d1e84b3e276
+msgid "*Example: Split `hello world` by `\" \"` then display the result:*"
+msgstr "*示例：用 `\" \"` 分割 `hello world` 并显示结果：*"
+
+#: ../../modules/string.md:349 b485ad5780f54c6b9f43629cb5060d2b
+msgid "Transform Type"
+msgstr "转换类型"
+
+#: ../../modules/string.md 62372b78fbc14c7793ddac632d4b56e3
+msgid "Parse"
+msgstr "解析"
+
+#: ../../modules/string.md:357 b5f65fb3fd4742848069e2f21fe77525
+msgid "Attempt to convert the string into its corresponding value."
+msgstr "尝试将字符串转换为其对应的值。"
+
+#: ../../modules/string.md:360 49f889f27b284bd78651a2c5fc18e533
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.parse.str`**: {nbt}`string` The string containing"
+" the value to be extracted."
+msgstr "**命令存储 `bs:in string.parse.str`**：{nbt}`string` 包含要提取值的字符串。"
+
+#: ../../modules/string.md:363 e2cb23d6fb354a60b16dacdae7137b76
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.parse`**: {nbt}`any` The extracted value. "
+"Possible types: boolean, integer, double, string."
+msgstr "**命令存储 `bs:out string.parse`**：{nbt}`any` 提取的值。可能的类型：布尔值、整数、双精度浮点数、字符串。"
+
+#: ../../modules/string.md:366 a066b8bee00c4cd1896ff0da1614e4e9
+msgid "*Example: Transform `\"42\"` into an integer then display the result:*"
+msgstr "*示例：将 `\"42\"` 转换为整数并显示结果：*"
+
+#: ../../modules/string.md 3ccb002e765a424f8853ad504e7cfd12
+msgid "To List"
+msgstr "转换为列表"
+
+#: ../../modules/string.md:379 3cba8b87c72342af8029b56ce7161369
+msgid ""
+"Convert a string into a list where each character becomes a separate "
+"element."
+msgstr "将字符串转换为列表，每个字符成为单独的元素。"
+
+#: ../../modules/string.md:382 d2de799aa6fd4db7b7b96f2b7c7f749e
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.to_list.str`**: {nbt}`string` The string to "
+"convert into a character list."
+msgstr "**命令存储 `bs:in string.to_list.str`**：{nbt}`string` 要转换为字符列表的字符串。"
+
+#: ../../modules/string.md:385 f830144893554738b3526334676e9ba3
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.to_list`**: {nbt}`list` A list containing each "
+"character as a separate element."
+msgstr "**命令存储 `bs:out string.to_list`**：{nbt}`list` 包含每个字符作为单独元素的列表。"
+
+#: ../../modules/string.md:388 ae94f587d6ed4950ab2889aff26c6f9e
+msgid ""
+"*Example: Transform `hello world` into a character list then display the "
+"result:*"
+msgstr "*示例：将 `hello world` 转换为字符列表并显示结果：*"
+
+#: ../../modules/string.md dedf6b3f58ff4cb3a314cf6e0e4816fa
+msgid "To String"
+msgstr "转换为字符串"
+
+#: ../../modules/string.md:402 7df3b735af9e43afa76da471673f8e8c
+msgid "Convert any value into its string representation."
+msgstr "将任何值转换为其字符串表示。"
+
+#: ../../modules/string.md:405 17d84a871afe4ec7a61c990564ecbc4b
+#, python-brace-format
+msgid ""
+"**Storage `bs:in string.to_string.value`**: {nbt}`any` The value to "
+"convert into a string."
+msgstr "**命令存储 `bs:in string.to_string.value`**：{nbt}`any` 要转换为字符串的值。"
+
+#: ../../modules/string.md:408 5235fdd1377c4013b34099e94ccc36c7
+#, python-brace-format
+msgid ""
+"**Storage `bs:out string.to_string`**: {nbt}`string` The value converted "
+"to its string representation."
+msgstr "**命令存储 `bs:out string.to_string`**：{nbt}`string` 转换为字符串表示的值。"
+
+#: ../../modules/string.md:411 62d7189c182f4b7980c6739f8b87c03c
+msgid ""
+"*Example: Transform `42` into its string representation then display the "
+"result:*"
+msgstr "*示例：将 `42` 转换为其字符串表示并显示结果：*"
+
+#: ../../_templates/comments.md:4 7064a5c358e44f75b51ce6c4e02fadda
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对您有帮助吗？**"
+
+#: ../../_templates/comments.md:6 20198448415b465d969b6a191ad75e8f
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下您的问题和反馈！"
+

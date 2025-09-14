@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/dump.md:1 76d5f6c37c3247a4a46f899932c589e4
+msgid "🔬 Dump"
+msgstr "🔬 转存（Dump）"
+
+#: ../../modules/dump.md:3 06f058d8481c43b5a01516a914455d12
+msgid "**`#bs.dump:help`**"
+msgstr "**`#bs.dump:help`**"
+
+#: ../../modules/dump.md:5 e772bd98998b43b59e885104eed64269
+msgid ""
+"The dump module provides mechanisms for printing the state of any "
+"\"variables\"."
+msgstr "转存模块提供了打印任意“变量”状态的机制。"
+
+#: ../../modules/dump.md:9 d2a87a8d5727418b9144f6992b04b25a
+msgid "🔧 Functions"
+msgstr "🔧 函数"
+
+#: ../../modules/dump.md:11 7ee0a200a8d44d2d89a17ec04b9ff46b
+msgid "You can find below all functions available in this module."
+msgstr "您可以在下方找到此模块中的所有可用函数。"
+
+#: ../../modules/dump.md:15 183bc09843654a2b98d42aff8108b023
+msgid "Dump Var"
+msgstr "打印变量"
+
+#: ../../modules/dump.md:19 1b3c203b0b3b42f9ab009b955c93cea0
+msgid "Dump the content of given variables to the chat."
+msgstr "将给定变量的内容打印到聊天栏。"
+
+#: ../../modules/dump.md:21 f78d0fe8d4a04a589bb914635c765e63
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../modules/dump.md:22 91d7e76549944e4eaba0320777ec09ad
+msgid "**Function macro**:"
+msgstr "**函数宏**："
+
+#: ../../modules/dump.md:24 a95c9199b8324374af8b477dc0dd1064
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr ""
+
+#: ../../modules/dump.md:25 e73091cf3ae5408898b65b576a689ed8
+#, python-brace-format
+msgid ""
+"{nbt}`compound` {nbt}`list` {nbt}`string` **var**: Can be any structured "
+"data. The only requirement is that all values must be valid string paths "
+"to data or scores:"
+msgstr ""
+
+#: ../../modules/dump.md:26 fb67b4fc714d40a0885b0811dad53f70
+msgid "[data]: `<entity|block|storage> <target> [<path>] [<depth>]`"
+msgstr ""
+
+#: ../../modules/dump.md:27 5c187c7df32d42c28586cb6315a266ed
+msgid "[score]: `<target> <objective>`"
+msgstr ""
+
+#: ../../modules/dump.md:31 972ef91443014cc4bbe782f8c0d22e58
+msgid "*Example: View position scores as an array:*"
+msgstr "*示例：把位置分数写成数组并查看：*"
+
+#: ../../modules/dump.md:39 c941be05a7fd43b89f3685aff7e48150
+msgid "![](/_imgs/modules/dump/example-1.png)"
+msgstr "![](/_imgs/modules/dump/example-1.png)"
+
+#: ../../modules/dump.md:41 7ed5af58f2774c3daa5460adb48bcd1d
+msgid ""
+"*Example: View an undefined score and the player recipe book (with a "
+"depth of 1):*"
+msgstr "*示例：查看一个未定义的分数和玩家配方书（深度为1）：*"
+
+#: ../../modules/dump.md:47 6b530b6379e34f0a9f916f2dae82d337
+msgid "![](/_imgs/modules/dump/example-2.png)"
+msgstr "![](/_imgs/modules/dump/example-2.png)"
+
+#: ../../modules/dump.md:50 8c6ed46162654a098a990cca5921badb
+msgid ""
+"Due to the implementation and its inherent constraints, it is necessary "
+"to escape values at the top level."
+msgstr "由于实现方式和其固有限制，在顶层级需要对值进行转义。"
+
+#: ../../modules/dump.md:57 e62c772f5b884df6a453429e23aaaefa
+msgid "**Credits**: Aksiome"
+msgstr "**制作人员**: Aksiome"
+
+#: ../../_templates/comments.md:4 0650decf0550479b9ef5e96922aa236f
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对您有帮助吗？**"
+
+#: ../../_templates/comments.md:6 9760812ab1fd4dc2b4fbdbdc0b99c7d7
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下您的问题和反馈！"
+

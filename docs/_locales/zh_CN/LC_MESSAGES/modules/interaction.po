@@ -1,0 +1,491 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/interaction.md:1 b6e24c2c8a824137b883a903d56e2b67
+msgid "🖱️ Interaction"
+msgstr "🖱️ 交互（Interaction）"
+
+#: ../../modules/interaction.md:3 cfaf71d4847a4f61be7644dad88ffb94
+msgid "**`#bs.interaction:help`**"
+msgstr "**`#bs.interaction:help`**"
+
+#: ../../modules/interaction.md:5 2dc994e746d84947ab6a5ed29c661e16
+msgid "Create and manage Graphical User Interfaces (GUIs) in Minecraft."
+msgstr "在 Minecraft 中创建和管理图形用户界面（GUI）。"
+
+#: ../../modules/interaction.md:8 da4f5c85e28b412ab347ae8a1f3743ed
+msgid "\"As far as the customer is concerned, the interface is the product.\""
+msgstr "“就客户而言，界面就是产品。”"
+
+#: ../../modules/interaction.md:9 b42d7af88a7847f4b047aa1e3d6b3fb9
+msgid "Jef Raskin"
+msgstr "杰夫·拉斯金（Jef Raskin）"
+
+#: ../../modules/interaction.md:13 2ac72faa70a442099d529ad2f1fc3fa8
+msgid ""
+"The Interaction API is a low-level API to create GUIs based on the "
+"[Interaction](https://minecraft.wiki/w/Interaction) entity. This API is "
+"low level since the possible events are directly and manually bound to "
+"the interaction."
+msgstr ""
+"Interaction API 是一个基于[交互实体](https://minecraft.wiki/w/Interaction)创建 GUI "
+"的低级 API。这是一个低级 API，是因为可能的事件直接手动绑定到交互实体。"
+
+#: ../../modules/interaction.md:18 3fbf4e166ef942e982ef64f7aeb2f921
+msgid "🔧 Functions"
+msgstr "🔧 函数"
+
+#: ../../modules/interaction.md:20 3d273b92eb174a23bdef1a4084c62f01
+msgid "You can find below below all functions available in this API."
+msgstr "您可以在下方找到此 API 中的所有可用函数。"
+
+#: ../../modules/interaction.md:24 6bc23ae4d8c4435eb745640ce6173eb5
+msgid "Clear Events"
+msgstr "清除事件"
+
+#: ../../modules/interaction.md:28 22c6c027bb5e4b01920657564d89f735
+msgid "Clear events registered for the specified interaction entity."
+msgstr "清除为指定交互实体注册的事件。"
+
+#: ../../modules/interaction.md:30 ../../modules/interaction.md:74
+#: ../../modules/interaction.md:99 ../../modules/interaction.md:124
+#: ../../modules/interaction.md:149 ../../modules/interaction.md:174
+#: 0d614f27f946449fbb99337d81388fa0 1626c1f7c9834a64b26c32ba14eb5843
+#: 3b16ccbd760e45339d7b818876a30651 c7a42ab18f2343d6be61018c5ee4b1f9
+#: d67c808f2b494206b9915e98d8f66c04 dd32fc6dcf1b4f5a891a1b3d4c75dba1
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../modules/interaction.md:31 4fe1495fce494e0ea9132e1c6a9ab22e
+msgid ""
+"**Execution `as <entity>`**: Interaction entity for which the events will"
+" be cleared."
+msgstr "**执行 `as <实体>`**：将要清除事件的交互实体。"
+
+#: ../../modules/interaction.md:33 ../../modules/interaction.md:77
+#: ../../modules/interaction.md:102 ../../modules/interaction.md:127
+#: ../../modules/interaction.md:152 ../../modules/interaction.md:177
+#: 11db0e9c03c44398bcc6708c7b919e0a 63139f9130d84c8e93d2d93867844400
+#: 781bc2e1eda84365b9be48b08fcba7d8 c1306099beb64fa0b6036b29c51b9a61
+#: df489d00b79444a1922f66c50307678e e08a2b4ab6424d4b981a4378acc25848
+msgid "**Function macro**:"
+msgstr "**函数宏**："
+
+#: ../../modules/interaction.md:35 ../../modules/interaction.md:79
+#: ../../modules/interaction.md:104 ../../modules/interaction.md:129
+#: ../../modules/interaction.md:154 ../../modules/interaction.md:179
+#: 3c9c2bb04b0c49159bc22cc2c0ed0573 4bcc7d643a984c66806c49b234917def
+#: 6bb0bb88af83494e958369702657079f 93e38d384e99472ab9a2c4113b558b88
+#: b8dbf70e46304f529b9f1ca8c1671228 ef81672f97fc4acb9091d2fa65f411e8
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr ""
+
+#: ../../modules/interaction.md:36 f556e0264d2641a194bd4314d13ded2c
+#, python-brace-format
+msgid ""
+"{nbt}`compound` **with**: Parameters to filter which events to clear. "
+"Clear all events if empty."
+msgstr ""
+
+#: ../../modules/interaction.md:37 8a25bea37c4c478196966d550ba30de0
+#, python-brace-format
+msgid "{nbt}`string` **type**: Specify the type of events to clear."
+msgstr ""
+
+#: ../../modules/interaction.md:38 c5028e71395b479ca9a5a48dbe8bbf36
+#, python-brace-format
+msgid "{nbt}`int` **id**: Specify the ID of events to clear."
+msgstr ""
+
+#: ../../modules/interaction.md:41 ../../modules/interaction.md:86
+#: ../../modules/interaction.md:111 ../../modules/interaction.md:136
+#: ../../modules/interaction.md:161 ../../modules/interaction.md:186
+#: 2af4648168404fd298d9844c568a1a4e 2fb85f9deef64018b7edd3bc26b8b2ed
+#: 3240d62f0d2f4dc4973dbae8cde37124 64b283f59a1a4eddaa84c03674d4d0d0
+#: a38d9d7bafbd4906a0e7067f3f7eed62 d2f11f33afae45a7892904dd8819ef86
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../modules/interaction.md:42 d9e999fbe71b43f69e3cd0283e1b10a4
+msgid "**Return**: The number of events removed."
+msgstr "**返回值**：移除的事件数量。"
+
+#: ../../modules/interaction.md:44 9d2bbfcf40ee47fe8f84c86a95f71e75
+msgid ""
+"**State**: The specified events for the interaction entity will be "
+"removed."
+msgstr "**状态**：交互实体的指定事件将被移除。"
+
+#: ../../modules/interaction.md:47 44576603c3a34492b7e8778b8ce0cb85
+msgid "*Example: Clear hover events for the interaction entity:*"
+msgstr "*示例：清除交互实体的悬停事件：*"
+
+#: ../../modules/interaction.md:59 ../../modules/interaction.md:212
+#: 03a53ad552224a75854e4ea0d3c5944e 429a60f4bd4849598d8f4306b85354be
+msgid "**Credits**: Aksiome, theogiraudet"
+msgstr "**制作人员**：Aksiome、theogiraudet"
+
+#: ../../modules/interaction.md:63 e4147d34a1504261807baf3b8c139595
+msgid "On Event"
+msgstr "事件触发"
+
+#: ../../modules/interaction.md 3db49829860c4ab0a00ffe59732ed940
+#: c5cc5c08feae46c0b40f15d100ddcca7
+msgid "Left Click"
+msgstr "左键点击"
+
+#: ../../modules/interaction.md:71 a212302d5dd2415697fe2d730c69733f
+msgid ""
+"Register a command to run when the left click is pressed on the current "
+"interaction. Each interaction can respond to multiple events."
+msgstr "注册当前交互实体被左键点击时运行的命令。每个交互实体可以响应多个事件。"
+
+#: ../../modules/interaction.md:75 ../../modules/interaction.md:100
+#: ../../modules/interaction.md:125 ../../modules/interaction.md:150
+#: ../../modules/interaction.md:175 06667e8ff6cd4752b6d7b3f9231b1621
+#: 45a65859abec4258b3b2b4a7d27fb536 5724f106eb5146c78ebaf9dc367042d9
+#: bd661067f857454d832456abcac40604 f055ed2660944815991b4751ed4e72d1
+msgid ""
+"**Execution `as <entity>`**: Interaction entity for which the event is "
+"registered."
+msgstr "**执行 `as <实体>`**：要注册事件的交互实体。"
+
+#: ../../modules/interaction.md:80 e22cf76562a048e7b9e500a6dcf3e518
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to execute upon left-click."
+msgstr ""
+
+#: ../../modules/interaction.md:81 ../../modules/interaction.md:106
+#: ../../modules/interaction.md:131 ../../modules/interaction.md:156
+#: ../../modules/interaction.md:181 1319f03077094fecbdebd3514380ec8b
+#: 17c9fb13b36f4c60b88d99c76645d91a 563c591b4cce4e349e56f44f2fcf62dc
+#: 7437910cba5740efa519b90461abdde6 ed758a1606fc4d38abb6bfe787cee4fa
+#, python-brace-format
+msgid ""
+"{nbt}`string` {nbt}`compound` **executor**: Defines the entity on which "
+"the command will be executed. Can be either **\"source\"** for the player"
+" who performed the action or **\"target\"** for the interaction entity "
+"itself. A compound can also be used to target other entities:"
+msgstr ""
+
+#: ../../modules/interaction.md:82 ../../modules/interaction.md:107
+#: ../../modules/interaction.md:132 ../../modules/interaction.md:157
+#: ../../modules/interaction.md:182 44af497c7fda48ea824d04233822c2c8
+#: adb8a1062d3349bdaed0a363ec19143b add881e02c4e440d8e49ceee2b2e4b81
+#: dba65e70c312416bb2532c0d89ecc0bb f2f0616d70a543f19c56d69329d0ed75
+#, python-brace-format
+msgid ""
+"{nbt}`string` **selector**: Specifies entities for the command execution "
+"(`execute as <entity>`)."
+msgstr ""
+
+#: ../../modules/interaction.md:83 ../../modules/interaction.md:108
+#: ../../modules/interaction.md:133 ../../modules/interaction.md:158
+#: ../../modules/interaction.md:183 195d00bb58e9499ca68fc53ebc06e8ba
+#: 4de1df87e76f43a68d6144874719b41f 5d476a9e57ef44ed8e69332293ad9131
+#: 9a814b049f8f481e863f800059cb1ac1 b49d34d8fcde48fc87ed3d0f028769ac
+#, python-brace-format
+msgid ""
+"{nbt}`bool` **lazy**: Determines whether to resolve the selector "
+"immediately (`false`) or at runtime (`true`, default). If `false`, the "
+"selector must target only one entity, replacing the selector with that "
+"entity's UUID. Useful for optimizing execution, especially when targeting"
+" graphical representations. If multiple entities are targeted, the first "
+"one is selected."
+msgstr ""
+
+#: ../../modules/interaction.md:87 ../../modules/interaction.md:112
+#: ../../modules/interaction.md:137 ../../modules/interaction.md:162
+#: ../../modules/interaction.md:187 01687a9b26e44c8ebea268bb8bd01450
+#: 0e3bf543536d471d8357a3cb6e229066 63dc31b299d2461ea5b7dc5ce692e5f6
+#: 97764e7c059448e581013ee36196aecc e56eff1de9d449cb92555d21aa1b9d10
+msgid "**Return**: The ID of the created event."
+msgstr "**返回值**：创建的事件ID。"
+
+#: ../../modules/interaction.md:89 6975e788dc5648c7a518f1d545177287
+msgid "**State**: The interaction will trigger the event when left clicked."
+msgstr "**状态**：交互实体将在被左键点击时触发事件。"
+
+#: ../../modules/interaction.md 65a88a5923564e43ade0d6c36c49edbd
+#: cb161761c52346fa96f6700565f56b9e
+msgid "Right Click"
+msgstr "右键点击"
+
+#: ../../modules/interaction.md:96 5b48f34500184d7d84e786f2b0157377
+msgid ""
+"Register a command to run when the right click is pressed on the current "
+"interaction. Each interaction can respond to multiple events."
+msgstr "注册当前交互实体被右键点击时运行的命令。每个交互实体可以响应多个事件。"
+
+#: ../../modules/interaction.md:105 06ebdbc869584d51bda1ebddfdbbf71e
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to execute upon right-click."
+msgstr ""
+
+#: ../../modules/interaction.md:114 899b5f7e28f34b92bb113620131062fe
+msgid "**State**: The interaction will trigger the event when right clicked."
+msgstr "**状态**：交互实体将在被右键点击时触发事件。"
+
+#: ../../modules/interaction.md 1eb6b9d1066149bcbb1df61035caeb2e
+#: 605286b185b342a18eec0c287cd4925a
+msgid "Hover"
+msgstr "悬停"
+
+#: ../../modules/interaction.md:121 56aada3cea14403794db3ddf38150d04
+msgid ""
+"Register a command to run continuously while the player is hovering over "
+"the interaction. Each interaction can respond to multiple events."
+msgstr "注册当玩家鼠标悬停在交互实体上时持续运行的命令。每个交互实体可以响应多个事件。"
+
+#: ../../modules/interaction.md:130 2d2cf3179b33483c9e5bdf37d056da5a
+#, python-brace-format
+msgid ""
+"{nbt}`string` **run**: Command to execute while hovering over the "
+"interaction."
+msgstr ""
+
+#: ../../modules/interaction.md:139 30d2b616eb874c01946babe89d549e72
+msgid ""
+"**State**: The interaction will trigger the event continuously while "
+"hovered over."
+msgstr "**状态**：交互实体将在被悬停时持续触发事件。"
+
+#: ../../modules/interaction.md 4e75b44358eb4782a32a2d9c26941231
+#: 734d64e2ea1143ef82a10fc1c076e6db
+msgid "Enter Hover"
+msgstr "进入悬停"
+
+#: ../../modules/interaction.md:146 f30a41523f644a65b6a3af2b712b8a5f
+msgid ""
+"Register a command to run once when the player begins hovering over the "
+"interaction. Each interaction can respond to multiple events."
+msgstr "注册当玩家开始鼠标悬停在交互实体上时运行一次的命令。每个交互实体可以响应多个事件。"
+
+#: ../../modules/interaction.md:155 6fe2b621f8634d85a8ce5d3da490d726
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to execute when hovering begins."
+msgstr ""
+
+#: ../../modules/interaction.md:164 9e8a5e5b92f64115bba54030d9fef0af
+msgid "**State**: The interaction will trigger the event once upon hover entry."
+msgstr "**状态**：交互实体将在进入悬停时触发一次事件。"
+
+#: ../../modules/interaction.md c0511af013d946f18f1377375f24427c
+#: e0acde30b07e4e8bad251c1b4ccfe173
+msgid "Leave Hover"
+msgstr "离开悬停"
+
+#: ../../modules/interaction.md:171 08f61eff46aa4f51b04516508388691e
+msgid ""
+"Register a command to run once when the player stops hovering over the "
+"interaction. Each interaction can respond to multiple events."
+msgstr "注册当玩家停止鼠标悬停在交互实体上时运行一次的命令。每个交互实体可以响应多个事件。"
+
+#: ../../modules/interaction.md:180 fae46275ad9b4d4ea0274055f790875c
+#, python-brace-format
+msgid "{nbt}`string` **run**: Command to execute when hovering ends."
+msgstr ""
+
+#: ../../modules/interaction.md:189 68ed891c713644c89327c93f4f21e414
+msgid "**State**: The interaction will trigger the event once upon hover exit."
+msgstr "**状态**：交互实体将在离开悬停时触发一次事件。"
+
+#: ../../modules/interaction.md:192 52f33f43fa9c4dddaf61c836119f8c00
+msgid "Edge Case"
+msgstr "边缘情况"
+
+#: ../../modules/interaction.md:195 77f81675a08c43eea40e56677ea84fe7
+msgid ""
+"If a player logs out while hovering over the interaction, the hover leave"
+" event will trigger on the executor. If the executor is the player, the "
+"event won't be triggered again when they log back in. Be sure to account "
+"for this edge case and handle it appropriately when the player returns."
+msgstr "如果玩家在悬停在交互实体上时退出游戏，悬停离开事件将在执行者上触发。如果执行者是玩家，当他们重新登录时该事件将不会再次触发。请务必考虑这种边缘情况，在玩家返回时适当处理。"
+
+#: ../../modules/interaction.md:200 b954a9fe8f8748d086ecd43b60c94a00
+msgid ""
+"*Example: Glow the interaction's icon while the interaction is hovered "
+"and unglow it when it is not hovered anymore:*"
+msgstr "*示例：当交互实体被悬停时让交互实体图标发光，不悬停时取消发光：*"
+
+#: ../../modules/interaction.md:216 7a82d6c36ea24f1bbf8fafb8f3795b54
+msgid "Predefined Callbacks"
+msgstr "预定义回调"
+
+#: ../../modules/interaction.md a5e7ad68410149e495eeabe694a6addf
+msgid "Glow"
+msgstr "发光"
+
+#: ../../modules/interaction.md:221 eeb439167f69477d8352e6f1fac46586
+msgid "**`#bs.interaction:callback/glow`**"
+msgstr "**`#bs.interaction:callback/glow`**"
+
+#: ../../modules/interaction.md:223 1f731254b485471ab7bd0cccd3fe6ed6
+msgid "Makes the target entity glow."
+msgstr "使目标实体发光。"
+
+#: ../../modules/interaction.md 390e467d3fb1485ca1686ccfc9b1006f
+msgid "Unglow"
+msgstr "取消发光"
+
+#: ../../modules/interaction.md:227 e706390f1e8049f4994c13a2da003431
+msgid "**`#bs.interaction:callback/unglow`**"
+msgstr "**`#bs.interaction:callback/unglow`**"
+
+#: ../../modules/interaction.md:229 b78923146162429ba006e286d7401dad
+msgid "Removes the glow effect from the target entity."
+msgstr "移除目标实体的发光效果。"
+
+#: ../../modules/interaction.md 93d82f058c0e4d7986fc1523e6d9f61f
+msgid "None"
+msgstr "无"
+
+#: ../../modules/interaction.md:233 6672e5e8b3a649739e204bd7121756d4
+msgid "**`#bs.interaction:callback/none`**"
+msgstr "**`#bs.interaction:callback/none`**"
+
+#: ../../modules/interaction.md:235 481292827c064a71bbccb3976b1eea14
+msgid ""
+"An empty callback that does nothing. May be used as a placeholder or to "
+"explicitly indicate that no action should occur."
+msgstr "不执行任何操作的空回调。可用作占位符或明确表示不应执行任何操作。"
+
+#: ../../modules/interaction.md:240 075d59316ece4139a69af37f114ceeb0
+msgid "🏷️ Entity Tags"
+msgstr "🏷️ 实体标签（Tags）"
+
+#: ../../modules/interaction.md:242 1b02a7cacf114b48aa761b1b04312003
+msgid "You can find below below all tags available in this API."
+msgstr "您可以在下方找到此 API 中的所有可用标签。"
+
+#: ../../modules/interaction.md:246 67829b0b87e5401dac3681ebecb500e9
+msgid "Is Hovered?"
+msgstr "是否被悬停？"
+
+#: ../../modules/interaction.md:248 8e10e900b002486c975a3f598288854f
+msgid "**`bs.interaction.hovered`**"
+msgstr "**`bs.interaction.hovered`**"
+
+#: ../../modules/interaction.md:250 90a8582facfd473fb14609b1baf35715
+msgid "Determine if an interaction is currently hovered by a player."
+msgstr "判断交互实体当前是否被玩家悬停。"
+
+#: ../../modules/interaction.md:253 a32025c374834734b834c59b142bac79
+msgid ""
+"This is useful in `hover_enter` and `hover_leave` events, which are per "
+"player. Since `hover_leave` triggers when a player stops hovering but "
+"doesn't check if all players have stopped, this tag can be used to "
+"determine when every player has left the interaction."
+msgstr ""
+"这在 `hover_enter` 和 `hover_leave` 事件中很有用，因为这些事件是针对每个玩家的。由于 `hover_leave` "
+"在玩家停止悬停时触发，但不检查是否所有玩家都停止了，所以可以使用此标签来确定所有玩家是否都已离开交互实体。"
+
+#: ../../modules/interaction.md:256 144ff77b5b6a441198a0546eb611a5b1
+msgid "**Credits**: Aksiome"
+msgstr "**制作人员**：Aksiome"
+
+#: ../../modules/interaction.md:260 0ab2bc1b7c2a41a7b6829761ee4a71fc
+msgid "Is Source?"
+msgstr "是否为源？"
+
+#: ../../modules/interaction.md:262 e3018d2018f54304b712a1639f09e9fc
+msgid "**`bs.interaction.source`**"
+msgstr "**`bs.interaction.source`**"
+
+#: ../../modules/interaction.md:264 7dfae8fcee924e288a409b6e2b006567
+msgid ""
+"Usable only in the callback of an event. Determine if the current entity "
+"is the source of the event."
+msgstr "仅在事件回调中可用。判断当前实体是否为事件的源。"
+
+#: ../../modules/interaction.md:267 ../../modules/interaction.md:278
+#: ../../modules/interaction.md:322 3e7400ace0a1448a8cf52f0f3c0ccb3b
+#: c22fb18525a5473f87d6b9d396824dc9 d19f081f6e1f45058faa399c632e37ea
+msgid "**Credits**: theogiraudet"
+msgstr "**制作人员**：theogiraudet"
+
+#: ../../modules/interaction.md:271 34ae82bde002442faaede844244ce1ae
+msgid "Is Target?"
+msgstr "是否为目标？"
+
+#: ../../modules/interaction.md:273 66a9c463e875427aad2d4386f18c4c4a
+msgid "**`bs.interaction.target`**"
+msgstr "**`bs.interaction.target`**"
+
+#: ../../modules/interaction.md:275 e0285cb3de7c45e1a1d18ac1d80a4bc1
+msgid ""
+"Usable only in the callback of an event. Determine if the current entity "
+"is the target of the event."
+msgstr "仅在事件回调中可用。判断当前实体是否为事件的目标。"
+
+#: ../../modules/interaction.md:282 69c949ba23394f9fa8406a27cf20dc6f
+msgid "Listen to a Specific Event?"
+msgstr "是否监听特定事件？"
+
+#: ../../modules/interaction.md:288 ffcf700824d84936a3431b2ba5f5efdd
+msgid "**`bs.interaction.listen_right_click`**"
+msgstr "**`bs.interaction.listen_right_click`**"
+
+#: ../../modules/interaction.md:290 8d24f3a137d04315ac347863a4309a5b
+msgid "Determine if the current interaction listens to right-click interactions."
+msgstr "判断当前交互实体是否监听右键点击交互实体。"
+
+#: ../../modules/interaction.md:295 24bca494662246268517b2d15d91f663
+msgid "**`bs.interaction.listen_left_click`**"
+msgstr "**`bs.interaction.listen_left_click`**"
+
+#: ../../modules/interaction.md:297 83bd44cc52e3413baacc98d7cf7f29f6
+msgid "Determine if the current interaction listens to left-click interactions."
+msgstr "判断当前交互实体是否监听左键点击交互实体。"
+
+#: ../../modules/interaction.md:302 c2cefa4ebf774a5182ddf7402f678d40
+msgid "**`bs.interaction.listen_hover`**"
+msgstr "**`bs.interaction.listen_hover`**"
+
+#: ../../modules/interaction.md:304 07524e83a53946d4bf252037ca387b79
+msgid "Determine if the current interaction listens to hover interactions."
+msgstr "判断当前交互实体是否监听悬停交互实体。"
+
+#: ../../modules/interaction.md:309 51b891758b7e49e4ad16685eb7f00e0b
+msgid "**`bs.interaction.listen_hover_enter`**"
+msgstr "**`bs.interaction.listen_hover_enter`**"
+
+#: ../../modules/interaction.md:311 5fa9702dc8fa459197182f346ca66df8
+msgid "Determine if the current interaction listens to enter hover interactions."
+msgstr "判断当前交互实体是否监听进入悬停交互实体。"
+
+#: ../../modules/interaction.md:316 ea8852793ce040dca1dbcd49162ec92e
+msgid "**`bs.interaction.listen_hover_leave`**"
+msgstr "**`bs.interaction.listen_hover_leave`**"
+
+#: ../../modules/interaction.md:318 5dccdb722fb9464f8a7a940ac69f8711
+msgid "Determine if the current interaction listens to leave hover interactions."
+msgstr "判断当前交互实体是否监听离开悬停交互实体。"
+
+#: ../../_templates/comments.md:4 2a22bedb721e4473bfa220e21301d85a
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对您有帮助吗？**"
+
+#: ../../_templates/comments.md:6 6ef77a2d982d4131b3c331f39fbf9b24
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下您的问题和反馈！"
+
