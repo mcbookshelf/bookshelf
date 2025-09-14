@@ -13,7 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set value {properties:{},delta:"0 0 0",speed:1,count:1,mode:"normal",viewers:"@a"}
-data modify storage bs:ctx _ merge from storage bs:in block.emit_block_particle
+data modify storage bs:ctx _ set value {source:"master",targets:"@s",pos:"~ ~ ~",volume:1,pitch:1,min_volume:0}
+data modify storage bs:ctx _ merge from storage bs:in block.play_hit_sound
 
-function bs.block:produce/block_particle/run with storage bs:ctx _
+execute if data storage bs:ctx _.type run function bs.block:produce/sound/hit/lookup with storage bs:ctx _
+execute unless data storage bs:ctx _.type run function bs.block:produce/sound/hit/get
+function bs.block:produce/sound/run with storage bs:ctx _

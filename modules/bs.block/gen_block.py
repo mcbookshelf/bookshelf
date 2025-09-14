@@ -83,18 +83,42 @@ def make_block_tag(
 
 def format_types_table(blocks: Sequence[Block]) -> dict:
     """Return mapping of block type → block data."""
-    # @deprecated sounds (removed in in 4.0.0)
     return {
-        b.type: b.model_dump(include={"type", "item", "group", "sounds"})
+        b.type: b.model_dump(include={
+            "type",
+            "item",
+            "group",
+            "can_occlude",
+            "ignited_by_lava",
+            "blast_resistance",
+            "friction",
+            "hardness",
+            "jump_factor",
+            "speed_factor",
+            "instrument",
+            "sounds",
+        })
         for b in blocks
     }
 
 
 def format_items_table(blocks: Sequence[Block]) -> dict:
     """Return mapping of block item → block data."""
-    # @deprecated sounds (removed in in 4.0.0)
     return {
-        b.item: b.model_dump(include={"type", "item", "group", "sounds"})
+        b.item: b.model_dump(include={
+            "type",
+            "item",
+            "group",
+            "can_occlude",
+            "ignited_by_lava",
+            "blast_resistance",
+            "friction",
+            "hardness",
+            "jump_factor",
+            "speed_factor",
+            "instrument",
+            "sounds",
+        })
         for b in reversed(blocks)
     }
 
