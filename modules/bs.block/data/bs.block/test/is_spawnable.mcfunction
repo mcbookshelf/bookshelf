@@ -13,7 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in block.emit_block_particle.type set value "minecraft:bookshelf"
-data modify storage bs:in block.emit_block_particle merge value {delta: "0 0 0", speed: 5, count: 30, properties: {}}
+setblock ~ ~ ~ minecraft:bookshelf
+execute unless function #bs.block:is_spawnable run fail "Block should be spawnable"
 
-function #bs.block:emit_block_particle
+setblock ~ ~ ~ minecraft:stone_slab[type=top]
+execute unless function #bs.block:is_spawnable run fail "Block should be spawnable"
+
+setblock ~ ~ ~ minecraft:stone_slab[type=bottom]
+execute if function #bs.block:is_spawnable run fail "Block should not be spawnable"
+
+setblock ~ ~ ~ minecraft:glass
+execute if function #bs.block:is_spawnable run fail "Block should not be spawnable"

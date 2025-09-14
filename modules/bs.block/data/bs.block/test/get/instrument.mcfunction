@@ -13,7 +13,20 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in block.emit_block_particle.type set value "minecraft:bookshelf"
-data modify storage bs:in block.emit_block_particle merge value {delta: "0 0 0", speed: 5, count: 30, properties: {}}
+data modify storage bs:out block set value {}
 
-function #bs.block:emit_block_particle
+setblock ~ ~ ~ minecraft:stone
+function #bs.block:get_instrument
+assert data storage bs:out block{ instrument: "minecraft:block.note_block.basedrum" }
+
+setblock ~ ~ ~ minecraft:bookshelf
+function #bs.block:get_instrument
+assert data storage bs:out block{ instrument: "minecraft:block.note_block.bass" }
+
+setblock ~ ~ ~ minecraft:glowstone
+function #bs.block:get_instrument
+assert data storage bs:out block{ instrument: "minecraft:block.note_block.pling" }
+
+setblock ~ ~ ~ minecraft:creeper_head
+function #bs.block:get_instrument
+assert data storage bs:out block{ instrument: "minecraft:block.note_block.imitate.creeper" }

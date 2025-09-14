@@ -13,7 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in block.emit_block_particle.type set value "minecraft:bookshelf"
-data modify storage bs:in block.emit_block_particle merge value {delta: "0 0 0", speed: 5, count: 30, properties: {}}
+data modify storage bs:out block set value {}
 
-function #bs.block:emit_block_particle
+setblock ~ ~ ~ minecraft:honey_block
+function #bs.block:get_speed_factor
+assert data storage bs:out block{ speed_factor: 0.4 }
+
+setblock ~ ~ ~ minecraft:bookshelf
+function #bs.block:get_speed_factor
+assert data storage bs:out block{ speed_factor: 1.0 }

@@ -13,7 +13,24 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in block.emit_block_particle.type set value "minecraft:bookshelf"
-data modify storage bs:in block.emit_block_particle merge value {delta: "0 0 0", speed: 5, count: 30, properties: {}}
+data modify storage bs:out block set value {}
 
-function #bs.block:emit_block_particle
+setblock ~ ~ ~ minecraft:light[level=0]
+function #bs.block:get_luminance
+assert data storage bs:out block{ luminance: 0 }
+
+setblock ~ ~ ~ minecraft:light[level=4]
+function #bs.block:get_luminance
+assert data storage bs:out block{ luminance: 4 }
+
+setblock ~ ~ ~ minecraft:light[level=6]
+function #bs.block:get_luminance
+assert data storage bs:out block{ luminance: 6 }
+
+setblock ~ ~ ~ minecraft:redstone_torch
+function #bs.block:get_luminance
+assert data storage bs:out block{ luminance: 7 }
+
+setblock ~ ~ ~ minecraft:glowstone
+function #bs.block:get_luminance
+assert data storage bs:out block{ luminance: 15 }
