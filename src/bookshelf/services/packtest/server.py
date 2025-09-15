@@ -83,8 +83,8 @@ LOG_RULES = [
 async def run(cwd: Path, server: str = "server.jar") -> AsyncIterable[LogEvent]:
     """Run the PackTest server, parses its output, and capture relevant logs."""
     flags = [
-        "-Xms2G",
-        "-Xmx2G",
+        "-Xms3G",
+        "-Xmx3G",
         "-XX:+UseG1GC",
         "-XX:MaxGCPauseMillis=100",
         "-XX:+UnlockExperimentalVMOptions",
