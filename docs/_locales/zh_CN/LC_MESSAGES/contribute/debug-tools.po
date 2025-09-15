@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
 "PO-Revision-Date: 2025-07-19 17:05+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -38,7 +38,9 @@ msgid ""
 "Tests are essential for ensuring code correctness and preventing future "
 "bugs. This project uses Misode's Minecraft Fabric mod, "
 "[PackTest](https://github.com/misode/packtest), for testing."
-msgstr "测试对确保代码正确性和预防未来错误至关重要。本项目使用 Misode 的 Minecraft Fabric 模组 [PackTest](https://github.com/misode/packtest) 进行测试。"
+msgstr ""
+"测试对确保代码正确性和预防未来错误至关重要。本项目使用 Misode 的 Minecraft Fabric 模组 "
+"[PackTest](https://github.com/misode/packtest) 进行测试。"
 
 #: ../../contribute/debug-tools.md:11 8dfbdeb217ef42cc9f06cfd045cabebb
 msgid "⚙️ Running Tests"
@@ -49,10 +51,10 @@ msgid "To run the tests, you have two options:"
 msgstr "运行测试有两种方式："
 
 #: ../../contribute/debug-tools.md:15 72db54823b714558bf2124e582d852d1
+#, fuzzy
 msgid ""
-"**Headless Mode**: We provide a simple command `pdm run modules test` "
-"that allows you to run the tests headlessly, without having to open the "
-"game"
+"**Headless Mode**: We provide a simple command `uv run modules test` that"
+" allows you to run the tests headlessly, without having to open the game"
 msgstr "**无界面模式**：提供简单命令 `pdm run modules test`，无需打开游戏即可无界面运行测试"
 
 #: ../../contribute/debug-tools.md:16 b480c2a3b34748b9b5ec00311c752afe
@@ -81,7 +83,9 @@ msgid ""
 "tests, make sure to clearly define what you are testing and what the "
 "expected outcome is. It's also a good idea to include edge cases to "
 "ensure your code can handle all possible inputs."
-msgstr "每个测试都是 `test` 文件夹内的 `.mcfunction` 文件。编写测试时，请清晰定义测试内容及预期结果。还应包含边界案例，确保代码能处理所有可能的输入情况。"
+msgstr ""
+"每个测试都是 `test` 文件夹内的 `.mcfunction` "
+"文件。编写测试时，请清晰定义测试内容及预期结果。还应包含边界案例，确保代码能处理所有可能的输入情况。"
 
 #: ../../contribute/debug-tools.md:28 9413cb5c2e9b45f1ab883aa3b089eae0
 msgid "🛠️ Custom Commands"
@@ -233,8 +237,8 @@ msgstr "`dummy <名称> use entity <实体>`：让模拟器在实体上使用手
 
 #: ../../contribute/debug-tools.md:65 6ceaad2077a44216b2b643b5e274dd03
 msgid ""
-"`dummy <name> attack <entity>`: Makes the dummy attack an entity with its "
-"mainhand"
+"`dummy <name> attack <entity>`: Makes the dummy attack an entity with its"
+" mainhand"
 msgstr "`dummy <名称> attack <实体>`：让模拟器用主手攻击实体"
 
 #: ../../contribute/debug-tools.md:66 650ca9211b064abeabecde01b74d78b7
@@ -321,3 +325,4 @@ msgid ""
 "time, helping with debugging and tracking. For more details, refer to the"
 " [dump module documentation](project:../modules/dump.md)."
 msgstr "提供随时显示分数或存储值的便捷方式，辅助调试和追踪。详情参见[输出模块文档](project:../modules/dump.md)。"
+
