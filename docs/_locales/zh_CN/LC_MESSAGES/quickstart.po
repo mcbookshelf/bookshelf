@@ -138,12 +138,9 @@ msgstr ""
 "若使用 [beet](https://github.com/mcbeet/beet) 构建流程，可通过 PyPI 安装 Bookshelf 包 "
 "(`mcbookshelf`) 以在构建中包含 Bookshelf 模块。"
 
-#: ../../quickstart.md:46 1f9c2ec2e5ad474c9623606e41924ff8
-msgid ""
-"📥 Installation "
-"StepsC:\\Users\\Maxime\\Documents\\GitHub\\aksiome\\bookshelf\\docs\\quickstart.md:46:"
-" (INFO/1) Duplicate implicit target name: \"📥 installation steps\"."
-msgstr ""
+#: ../../quickstart.md:46 0d9cb4d80b754343a978976da701589e
+msgid "📥 Installation Steps"
+msgstr "📥 安装步骤"
 
 #: ../../quickstart.md:52 62f8da8cee3e49c29b0274dc882732ff
 msgid ""
@@ -183,12 +180,9 @@ msgstr ""
 msgid "Git (for cloning the repository)"
 msgstr "Git（用于克隆仓库）"
 
-#: ../../quickstart.md:73 d83c87ee1c38429281d90de965b4afd3
-msgid ""
-"📥 Installation "
-"StepsC:\\Users\\Maxime\\Documents\\GitHub\\aksiome\\bookshelf\\docs\\quickstart.md:73:"
-" (INFO/1) Duplicate implicit target name: \"📥 installation steps\"."
-msgstr ""
+#: ../../quickstart.md:73 6fe4a5ec7cbf45b0a89c8eba116590a1
+msgid "📥 Installation Steps"
+msgstr "📥 安装步骤"
 
 #: ../../quickstart.md:75 da4059bd0ddd4b1ba390ad763418a373
 msgid "Clone the repository:"
@@ -288,4 +282,3 @@ msgstr "欢迎在下方留下您的问题和反馈！"
 
 #~ msgid "Install dependencies:"
 #~ msgstr "安装依赖："
-
