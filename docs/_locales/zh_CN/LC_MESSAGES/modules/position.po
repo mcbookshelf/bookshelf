@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,44 +19,44 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/position.md:1 3d4ba790c6614f629b969bc1853c726e
+#: ../../modules/position.md:1 9a815caff14940a48d4f9ebd77fd946f
 msgid "🧭 Position"
 msgstr "🧭 位置（Position）"
 
-#: ../../modules/position.md:3 cd079594dec04e06bce498d0dada67a5
+#: ../../modules/position.md:3 699d05e10b09447f8d1811a70a81d4ed
 msgid "**`#bs.position:help`**"
 msgstr "**`#bs.position:help`**"
 
-#: ../../modules/position.md:5 85d3ab6998bc41da897f83ad87d20dd2
+#: ../../modules/position.md:5 6d0469c5ed0848da9265614aca1de5d7
 msgid "Manage entity positions and rotations using scores."
 msgstr "使用分数管理实体位置和旋转。"
 
-#: ../../modules/position.md:13 5a7044e516be46958a08ea2287397875
+#: ../../modules/position.md:13 113932669b96425fa80b2832f0541259
 msgid "\"The excitement lies in the exploration of the world around us.\""
 msgstr "探索周围世界的过程中蕴含着兴奋。"
 
-#: ../../modules/position.md:14 900363c7dcfb4345879819d7252f9ac9
+#: ../../modules/position.md:14 c440da1b89af4475a7cc4efbf2d90e69
 msgid "Jim Peebles"
 msgstr "吉姆·皮布尔斯（Jim Peebles）"
 
-#: ../../modules/position.md:20 8b825665b8e1419a9aeb180b71577ff5
+#: ../../modules/position.md:20 107c06bb6c864bc19f6671beeac410f6
 msgid "🔧 Functions"
 msgstr "🔧 函数"
 
-#: ../../modules/position.md:22 bdb87b3cf2f648d0a91e9d6ba3fc6c85
+#: ../../modules/position.md:22 c733f7f00a6e46a8a4c2a04b0c8a13c8
 msgid "You can find below all functions available in this module."
-msgstr "您可以在下方找到此模块中的所有可用函数。"
+msgstr "你可以在下方找到此模块中的所有可用函数。"
 
-#: ../../modules/position.md:26 56392d63489d4a519e1b08eb5fabc87d
+#: ../../modules/position.md:26 f55ce57907cb493db8fe6fcac8275e30
 msgid "Add Position and Rotation"
 msgstr "添加位置和旋转"
 
-#: ../../modules/position.md 751aca49ab5548ba9f1c067c6e3993ef
-#: 866476f31f864f009954dd842e400ac1 e10dc771ccff4a90a8919b1be2cc603a
+#: ../../modules/position.md 0575c44896fb4e1f929df368975e9e28
+#: 6d5da991f8964b4fbb006bfe166f6e84 a732f99944a7446bac507918d6f837ac
 msgid "x,y,z"
 msgstr "x,y,z"
 
-#: ../../modules/position.md:35 506ae6748db541bc99fc5bec3a9b6994
+#: ../../modules/position.md:35 2eb937184ab84a8eb8f53b4652cd0e22
 msgid "Add position scores to the entity's coordinates."
 msgstr "将位置分数添加到实体的坐标。"
 
@@ -75,21 +75,21 @@ msgstr "将位置分数添加到实体的坐标。"
 #: ../../modules/position.md:756 ../../modules/position.md:786
 #: ../../modules/position.md:815 ../../modules/position.md:838
 #: ../../modules/position.md:860 ../../modules/position.md:882
-#: 0dfb4dad69bf435faa66a3a323cd5fd4 0e4b94f668a8456794648b278d918e81
-#: 350d383c847e4bd1b3a0de178c3bf6bc 43cac1bff7f146488be7dd31a8059abe
-#: 4bda0bfd94eb42e59ac9ad2a6890cd73 5a0482e029404839bee2bbd4838fb9a6
-#: 650c1026c1114da38cca27b81b51ac12 656b44a948dd4d36aef49a72188fc52a
-#: 6d3824e0c8a94bcf9fa8d93f3d1d2921 7248734116d946af88591b207cfec131
-#: 749ccb936ea74f4188f3e9c9092cf623 79daa20f8c73403abe3ab64c054c0a8e
-#: 7ae6684812ad4ba595967e4a2e9a0489 822de443663d4ef89eb19bfe550d3591
-#: 86ac50c904414b82b4c724458de9d24f 8ba7c8fe164e4d64b7df163469a12769
-#: 8c65e6b0cd0040188ea5d89676f8ff99 9b42bd875fd1424ab863ad49823deed6
-#: 9fe6ee770e6a407190d5853f2c07c88c b36ed8bd81ad43acac57097ebe23cdfd
-#: b8f698199b684e17890f1a738f6f6d70 d9dfeb794e9540a385533b4a9dfe7082
-#: db6ed33011a34434be1d92837ba9878b e072490b94734aefb0396685aaf63c09
-#: e858a093528442a59fd8fa9d94e0d56c ea7f717161b8452cbb688401e064bac0
-#: ecc592397e934149817da82f90264bd6 f0c1123c131340fbaa76963ca9e427fc
-#: f152f359a6b245debfcf5efc2e086b82 f65f92fd5cc14a93b02a4af9eb24c922
+#: 0f78855633204d67ba50b3c1525509c6 16962d6cc1e44da5955b03000c596b86
+#: 1fdc7ae998f24b709cebc0022b9375e0 22c36bc0604942318b67960bc77becad
+#: 257afbfede8b4ba194fee4a891e9fc06 37e17939fe9f4693b1c17dc39a073969
+#: 4c8fe8c9848243489531edd2ef138920 5859c994d402451193c7935ac689048c
+#: 5af6a49d409843eeb77c003ca6ab511e 5e0d977d73fc488c974d61172af6e15f
+#: 60b304852dcf48dd9e2cdde154345a8d 7c011b9a1aeb4ed6925ba8ea1bfb63be
+#: 8051746f0fd34ad59299f28005d71544 89d6d0a8ce994b24b1fa45bc49b8f456
+#: 8ce99f6f97a04afe8d36af973699d166 8f837e81e5144788ab2869d96064e3e2
+#: 94b276045bb64f7d97fb40bbc81171c3 9ca501b6ae0a4ab8b6d4bfe4c157a281
+#: 9ce25379de444231822d935548109a67 a2278dba48114934a2107d098ad6b7af
+#: b106dd00423c4bdea15e95771987eb8c bfc0cb7b4a8244e2bde9a2ef9e570ff8
+#: c17aefefed7546ea9d6a5a95f64e708d e1581800a133405c9023dfba598ff188
+#: e2a03cce36c94eeea4a35b2fb2c27fa3 e8e663d7d548461390d6f6f9870b8db1
+#: ec5e47f3deea41bb858c6f8afef13d85 ef3124db31fe4e328ade432937c48bcf
+#: fef766d763044aacb61c0fdbc8e45be1 ffa36e6039804829a61fc9f6fbb6ab25
 msgid "Inputs"
 msgstr "输入"
 
@@ -100,18 +100,18 @@ msgstr "输入"
 #: ../../modules/position.md:727 ../../modules/position.md:757
 #: ../../modules/position.md:787 ../../modules/position.md:816
 #: ../../modules/position.md:839 ../../modules/position.md:861
-#: 2fbd8c7dd6c9404180d118ca71a4ddf9 4042d154ef6045628ea5114308d194fe
-#: 55a6af427e7c446899ff9c00b690a33a 671018e936734b4ca3b3d5d70dc2df6d
-#: 7a6fa918b4644d918a7e5694de74878f 88cd9d73447a48d0bba5de84180b7b8d
-#: 9f4a798f36c94dc08f7e03c6059747f4 babefdbeb52e4866a086a9a36baf94da
-#: c83853bcd3bd4bacb54afd1c699f5246 c92ddb865c04435b8e3eb13fc1d54d35
-#: db0e1ab715604e939d10181683503514 ea077251c11349e7a48593970d4ed539
-#: edc3a66069e3489d8b30859611d76bda fad0755dbd114622a75fbf373dacd7eb
+#: 684de6111478448582aa5d313a1481d2 6d52e722b4664ad2a30e4bb412252a47
+#: 86586d2547ee44e5a5773c25a8009f90 9355d7e54b3f4b519f6e1887c2925579
+#: 94f27e2e8d854a91b675ae62720b22f3 96df4d13146c4673bdccae9e93b38c2a
+#: b0ae8e49b56444d7b83718d1d57eef67 b662e032bd8c46dd994ed3115353c8cb
+#: c431297ee72c4d0691fd4508c913900f d41d06a057a948399753cfbc36ec4104
+#: d5f80fcee7c348c5ab14583560c92f37 dd862f391284464f993d65327d49dfb9
+#: e0936f7e565148549c35dc7075db2e67 ff1d713c0672414d85b474cb3ec201ad
 msgid "**Execution `as <entities>`**: Entity to teleport."
 msgstr "**执行 `as <实体>`**：要传送的实体。"
 
 #: ../../modules/position.md:40 ../../modules/position.md:228
-#: 844e270122934975942ecf5418726fef d5e8deaf5f9448c2a0b41eb136a94798
+#: 06ac8ad89e87444a9171e2178d4eb2d0 fabe640cf4f946c489d31e5ec868c884
 msgid "**Scores `@s bs.pos.[x,y,z]`**: Coordinates to add."
 msgstr "**分数 `@s bs.pos.[x,y,z]`**：要添加的坐标。"
 
@@ -129,74 +129,22 @@ msgstr "**分数 `@s bs.pos.[x,y,z]`**：要添加的坐标。"
 #: ../../modules/position.md:761 ../../modules/position.md:791
 #: ../../modules/position.md:820 ../../modules/position.md:843
 #: ../../modules/position.md:865 ../../modules/position.md:887
-#: 001d9f5307a7428da6cbed1aed32ffaf 0d51dacdd89740f19a1d7e59c3a56b74
-#: 15aea86aedcc49ac893fdd2671b023da 181e28ec820140478b1724988707da82
-#: 206e56493f4d4fc8a140fda7e518edae 2ae70e2676274e9ab90a2212ddea43c8
-#: 36c9c2caee1a4a8b870c9676f94dadc6 3e19426dd41b41b493ac110534d9dd64
-#: 430d874479d74ca3b684e24b0116e772 4cdc4f62d1034fc18f34ec908f8e5683
-#: 4dcc72cb898941389e5cb1ad5e2e6b8a 5f7781d060e648a6b4664b90398c2d20
-#: 66c271ffbcd54e8690da3d35d3a1db01 6f4ec0709c774494af1a4baa46202808
-#: 74e327454637468cb8c78d6573f08925 74f27a2fdde9447fa59df2f4195ac7a1
-#: 96ef1bdaaab4494eb3a08ebc14c08eb7 b114ae5cd03b4ac2ab43a4fa8f5c8286
-#: bc6bc96f623b43d78525989cd5702fe5 bd597988fd1c4b58b1356bd8f68c371b
-#: c073badfc37848c1bba385921bc90bac cee1c5fd8788458aa1c790c549a0f595
-#: daf443e94be04e65a5a0263df2f2b784 ddb5209c12294b3eb02fbb37bd598e23
-#: de8cfdda2ed84bc98c4cfa70610f5466 e63ed8e83fd940f7bf285e8e9645898f
-#: ea7c6eb243b04ecb892be5bf381baece f8a6e7b28d0b42f0bc7591bb08fa31f2
+#: 0a13b29f7ed840db9e86b825baced9fd 0ed2db3c491b49c1bb600e581ac155ef
+#: 0eec7a328b3044b4b0e5a10380405abe 2f2386e706cf4f76a930d091595fd1e2
+#: 35b0d2173fb14a3581cd32c1a4a66079 37635aec0bf0406e8f936e79ee59b7c1
+#: 425cf0bfc2e049fb92cdd780c48cb3a1 49b5d7f5d82d4f919dcebfed58449044
+#: 4c6d0e104acb477da6b68a3282ab7c2d 57b81390987c4b739dc9a57f7c8dca0e
+#: 5c4049c0c1b643eab8bfbc96a3aea188 636d0611079048308f247c31affb24ac
+#: 64d09595f46a46afaa608859d9116862 65044f83f5084979a88d5f8ba5d78f2f
+#: 6516510b640a4562a42afda6cd78dd9d 71ac48e9dd614efea936e7c1e052f9b8
+#: 727d6bd3277f4a4bb1a3ed2b6bd44ebb 73b2294d67ee43149cdb9b758f11a19c
+#: 9b0175bc00af4fc2a3caf1f4f41b5c26 a278352234fb4aeba701b86ecd41b1c4
+#: b44270f1e5ca494db1e92eea2e413dad d1897f918c354b439ff65e040d58e557
+#: db7ca1bf05ce404e8d9cd8b06fc1b103 ef82df22b4844c84b2a417540b77355a
+#: f00894d001a643d19709ccf8e5ebdeb1 f102bdcb19c649459b81456f6569d896
+#: f6bbd1fdee4d4ddba650aef314b19e80 fdc32068348649afbced1420fb2b0298
 msgid "**Function macro**:"
 msgstr "**函数宏**："
-
-#: ../../modules/position.md:44 ../../modules/position.md:76
-#: ../../modules/position.md:106 ../../modules/position.md:136
-#: ../../modules/position.md:165 ../../modules/position.md:188
-#: ../../modules/position.md:210 ../../modules/position.md:234
-#: ../../modules/position.md:292 ../../modules/position.md:330
-#: ../../modules/position.md:377 ../../modules/position.md:409
-#: ../../modules/position.md:441 ../../modules/position.md:473
-#: ../../modules/position.md:505 ../../modules/position.md:527
-#: ../../modules/position.md:549 ../../modules/position.md:571
-#: ../../modules/position.md:604 ../../modules/position.md:636
-#: ../../modules/position.md:702 ../../modules/position.md:733
-#: ../../modules/position.md:763 ../../modules/position.md:793
-#: ../../modules/position.md:822 ../../modules/position.md:845
-#: ../../modules/position.md:867 ../../modules/position.md:889
-#: 2838a3b7dc0d480dac145453f51c860e 2f4dcf43ba174eae9595621981638137
-#: 318266cfc6544cad9f6a1a32517bfc14 3ff97325b6174270a001ede284c62073
-#: 5e3359b806a749578f67b68dbca90def 633af147cce6441f94b626781083611f
-#: 720e96861750494fb6e9ce8bd7bb014a 7662a2cf42ff4b6b86cae80cef307f56
-#: 8a6a9a0143204f7380a0e22186e26269 9397f3e6d23e42f4957fd330ab3253b9
-#: 949bf0db0bdc4020ad63635d2e0d5fba 9c0cea8e189e4dedbc42edc9b1df3618
-#: 9d527eb5ac0546778c1054ad3e1f8919 a18231daf5a64761ace10614dc34f5e2
-#: a54e2a37ba7045969034d3dd7d5fa0be a672bc917cce4b14aace8effc852954e
-#: a9e7aaa43bdd459f84d23e6cef6a1a79 b241a0b95e0e446c8cf1e14359c9f96a
-#: bb20e32b91da41939eb45729522f5e7a be668fd1db4f4ccc8a4f16abd78b28b1
-#: c04ac5f4d1a94e8a8d0e3f8f679570ff ca403e18259847e3b736ff382c7c6ed4
-#: d17781609b5049269928fb280091a8a0 d31f27947a4143d7a3bf167f8c1f4ec7
-#: e3a4724299e34dc2b2640efd01257803 e3d85721743d4b3c80d857f778accd7f
-#: f20c9e17670f4919a0e32bdec7782c2c fa35f60f909b4f2f8b24497635da03d1
-#, python-brace-format
-msgid "{nbt}`compound` Arguments"
-msgstr ""
-
-#: ../../modules/position.md:45 ../../modules/position.md:77
-#: ../../modules/position.md:107 ../../modules/position.md:137
-#: ../../modules/position.md:166 ../../modules/position.md:189
-#: ../../modules/position.md:211 ../../modules/position.md:235
-#: ../../modules/position.md:703 ../../modules/position.md:734
-#: ../../modules/position.md:764 ../../modules/position.md:794
-#: ../../modules/position.md:823 ../../modules/position.md:846
-#: ../../modules/position.md:868 ../../modules/position.md:890
-#: 08d347f0e7c74199bb783b1e1bc1d3df 22604750834b4cde82739f1e80bf4d2d
-#: 3d008ed7316d401582a8b857b55467d3 43d25c520f98450daa06cd60e9d4202b
-#: 4582a2ed26844e7ab24743c7d1e9389d 4f145651c91b4ad49bb2871007c7eeb6
-#: 5e22836298bb4c9eb0577d3c551b20a4 6d17fb924ad543b2ae6cd22a0b3983fc
-#: 718550464e3b45068e96e9d85df1183c 74c246d4a63b42728b2134346786b671
-#: 92e9c1897e4d485e9aa0c5eceb836f07 9b7d00c4ab4247b9987e0f96426adeb4
-#: a27d2d3604fd41318c87ce31c0eafb62 a62bb3b1cad146ddbf87f4dd340c7bcc
-#: d30f85f9ec9e4fbfa5e2d0acdfd7e979 e38018b6edf84a10b169030ac009f74c
-#, python-brace-format
-msgid "{nbt}`number` **scale**: Scalar applied to the output."
-msgstr ""
 
 #: ../../modules/position.md:48 ../../modules/position.md:80
 #: ../../modules/position.md:110 ../../modules/position.md:140
@@ -213,215 +161,215 @@ msgstr ""
 #: ../../modules/position.md:767 ../../modules/position.md:797
 #: ../../modules/position.md:826 ../../modules/position.md:849
 #: ../../modules/position.md:871 ../../modules/position.md:893
-#: 00c457060cea408989d00525ba8f461a 04ecfa8ffb63470b9ef58e9978f66d34
-#: 180d131ebf414d6dbc808fa31b686b34 2a57ad1bbc924e21b6f4d8860a680b40
-#: 3d644b4bad1a4212926c98ec783360c1 3f98960d9a0242169a9fa81f843a22f1
-#: 419bb96c08de4792b090808c0917ab6b 41b193854c3b4c0ea9c05135888b01da
-#: 43e17766214a45d6977aea0c9357e42c 4b3d44b49c3a4e43ac27202eeb7f22f6
-#: 53a8922ba67841adbfdd6f9e3a474127 5918af265e3244c48eceef114473e225
-#: 5d90bca480bf436d984f846f47feb85d 783806fdf61d4d6aad8e044aad71ae0c
-#: 84a01e70b48f42bda8b95e381f842d27 8c8a364f48d14edd846355c20923b79b
-#: a2b8f4e4019f4399a6e9c228df3834c9 a894b82ea95f4988a310095564bd049f
-#: a8df70b3534748d5b6435b83d2bd15c6 ad86f3976bc14bf9b1faed750cacff29
-#: bd056722548f49929c7fecb7ab27a3d7 bd4ccc6ffbeb4f5bb3479e001f63d391
-#: be5993b224614b54a58d84b1ef21eee1 c6a568fd269b4147808a73c92da0159a
-#: c80ad5249c624cfb8f52760c3c2ba53e cbdbcf6a703f4c178f5e54431a50c686
-#: ccf0f7d0143b44ba897800874c7935b1 dcb699bd922e451a939bcc14d7d9a6b1
-#: e8907ff219904e97a0716f4d13e641ad ee933944c7cf43a58e515ca087c31516
+#: 04dc71158af74e6c886937205f4b92cd 07f6f3b3b35f4fa3b3ea9b3d2110a23b
+#: 080dc5a226194dfeafef9bf8257ddfdb 0b225e2e67f5455c8023ba1eb4429237
+#: 0d2bcea4ccad4c9d88cc06596ce5e225 3a4b84a053594ecc91b4762c61f5ac4a
+#: 403804f7e6c941f8989e8010176492b7 4a2d1c25652d446281281c9425fecf15
+#: 56aec324e90d4ae39e339a304bd58d9e 5828217219a4477185519fd9eca9c1ef
+#: 5d9cfb8782a3417eac606f73464ad13c 6209b95a18c44899aec4e1648062a7d4
+#: 67a65f9168e940cda3678a52fefe945c 6814288ba09747f9aff4adc906e3e53b
+#: 6a8803251dce43c99f462b500925e8a4 6fcaf2f0fd704d86b7b9cf8eac93dcbf
+#: 7dd562a85a684afea2ef659e438e1e50 8c28083f326048d1af59e3c91031596d
+#: 8dcbeb573e624a6aa7d7b6f0ba7b25f3 8de157e69f4940759a5681aae6733916
+#: 9af496f34db6403d8e39193709e10273 a38ff35c95414ff491bf4ddb95a99b4e
+#: c7af196a21e14d9b8f3010557334ab1c c81d3475fc024b1eb411e0fa4e8ad1cc
+#: d4d685004f7849d2be761ffece62b6cb d6b76c1bf3a14e738762eb0af110d19e
+#: e4f60730cbb946e292143d2c43cad7a7 ece04eddf1b3454abe7963a9b6e7a7bd
+#: f204324812c04e8fbf89d665f332dbf3 f5bdb274dfdb43bf92433a2e4bfdb5cc
 msgid "Outputs"
 msgstr "输出"
 
-#: ../../modules/position.md:49 ec40cf6116cd483289d4a6042ab18602
+#: ../../modules/position.md:49 6cd3ef11550e4d608f20965960b10455
 msgid "**State**: Entity is teleported based on position scores."
 msgstr "**状态**：实体根据位置分数被传送。"
 
-#: ../../modules/position.md:52 60ae6756e5be4207b85d2967927efb62
+#: ../../modules/position.md:52 4aad7d51c94f404682d61f357c278cf5
 msgid "*Example: Teleport to ~48.85 ~ ~2.29:*"
 msgstr "*示例：传送到 ~48.85 ~ ~2.29：*"
 
-#: ../../modules/position.md 3a1c556a9546482f8a2b9183dceea915
-#: 4f32ba8d0c1747e1adb2e2a8fae571bc 6d64b4d5616c43b28e41a7c8ed000209
+#: ../../modules/position.md 8dbbbbfc62f44899b14525ca0a60a359
+#: d076d39ca22540aea419bced144fd369 fef488990ba84461948f5f381f42be13
 msgid "x only"
 msgstr "仅x"
 
-#: ../../modules/position.md:67 6aeaf89974f749ddbcdccbdd4f28fa37
+#: ../../modules/position.md:67 c6e48e0564ae4b5086af30cb7c4f320c
 msgid "Add the x axis position score to the entity's coordinates."
 msgstr "将x轴位置分数添加到实体的坐标。"
 
-#: ../../modules/position.md:72 d29b289c26e84947955600405fb41d49
+#: ../../modules/position.md:72 e844b527b356491a861953dd2073c59d
 msgid "**Score `@s bs.pos.x`**: Coordinate x to add."
 msgstr "**分数 `@s bs.pos.x`**：要添加的x坐标。"
 
-#: ../../modules/position.md:81 1c7725ea3c554a3da92b73dd386f90fc
+#: ../../modules/position.md:81 81ad1d67a3e3421e844a4a30761187d1
 msgid "**State**: Entity is teleported based on the x axis position score."
 msgstr "**状态**：实体根据x轴位置分数被传送。"
 
-#: ../../modules/position.md:84 09b98d52d2da421e98d9b45fb5aa2e0c
+#: ../../modules/position.md:84 c02fd0c686704d8588a18aef9adbabc1
 msgid "*Example: Teleport to ~70 ~ ~:*"
 msgstr "*示例：传送到 ~70 ~ ~：*"
 
-#: ../../modules/position.md 5eeb70518f0741d28409ee126983a418
-#: a554de8995b74dd3b4b4de9d272c3734 a6f44b8ecfdd47959c378f784c905cc2
+#: ../../modules/position.md 0ad81a13982f4c3cbcf23242f2943a78
+#: 30018fea4c0143e7b9a01a5473e0367e b19d68ce02604a509b025335f0e22f0f
 msgid "y only"
 msgstr "仅y"
 
-#: ../../modules/position.md:97 98c2f0f57a4f403a86cdebe6d93d66b5
+#: ../../modules/position.md:97 37ff03565cf14518b46d88b12707703d
 msgid "Add the y axis position score to the entity's coordinates."
 msgstr "将y轴位置分数添加到实体的坐标。"
 
-#: ../../modules/position.md:102 d1e4ed0d7c9b47e1bb48367eab421628
+#: ../../modules/position.md:102 5bb2e4acd04b4735b49c8c1692a5abe7
 msgid "**Score `@s bs.pos.y`**: Coordinate y to add."
 msgstr "**分数 `@s bs.pos.y`**：要添加的y坐标。"
 
-#: ../../modules/position.md:111 30e811a9009e4c85b11c87eeaf6da943
+#: ../../modules/position.md:111 eb285c33917d4317a6acb07e17dfb4f0
 msgid "**State**: Entity is teleported based on the y axis position score."
 msgstr "**状态**：实体根据y轴位置分数被传送。"
 
-#: ../../modules/position.md:114 409a3c1fd5654f0db87bac1c2369d224
+#: ../../modules/position.md:114 60a7575b816e41f490294ca8388165c3
 msgid "*Example: Teleport to ~ ~82 ~:*"
 msgstr "*示例：传送到 ~ ~82 ~：*"
 
-#: ../../modules/position.md 017487782c474e7c86cff955e13337a8
-#: 9ae6c3d397cd4b56aa0de9be86f21b8c e305249b41ca4308b3cb034e3f2dc10f
+#: ../../modules/position.md 8c14a5e59fa34fe386e2cfa235fe151d
+#: 8dbab3cf10b74c14a9aba050277b2aa9 b49b004481134f0288e1185187817a39
 msgid "z only"
 msgstr "仅z"
 
-#: ../../modules/position.md:127 b907835812324bf3933135d4e1a3858f
+#: ../../modules/position.md:127 29e70889dc674bebb5c0e6789255fece
 msgid "Add the z axis position score to the entity's coordinates."
 msgstr "将z轴位置分数添加到实体的坐标。"
 
-#: ../../modules/position.md:132 21a24ff8b35349f6b654e1725bbc04a5
+#: ../../modules/position.md:132 7358fe4cb0b040be908a59525a92a0a5
 msgid "**Score `@s bs.pos.z`**: Coordinate z to add."
 msgstr "**分数 `@s bs.pos.z`**：要添加的z坐标。"
 
-#: ../../modules/position.md:141 3712de1e3ae442d8a215b4229f92e9f0
+#: ../../modules/position.md:141 005876730f644bb9a5298bed3951fcf0
 msgid "**State**: Entity is teleported based on the z axis position score."
 msgstr "**状态**：实体根据z轴位置分数被传送。"
 
-#: ../../modules/position.md:144 a96b12e69a464f70b9f7b47e21048845
+#: ../../modules/position.md:144 d8fe1cb5f2a14383876a4f4cbd2402c8
 msgid "*Example: Teleport to ~ ~ ~65:*"
 msgstr "*示例：传送到 ~ ~ ~65：*"
 
-#: ../../modules/position.md 6bb9eb081bc6435099193e86e5914922
-#: 7c6b4d17d9704fc4b62b6b547112e37d 9e0a148266f946b6bcbfab86f57436e7
+#: ../../modules/position.md 3d7f1b1b46c344cd8a803774d8f35047
+#: b1b7be17b77e438eabe5ed7f6fc242a0 cbf018a07d164c0ba68d28ddebe2393a
 msgid "h,v"
 msgstr "h,v"
 
 #: ../../modules/position.md:156 ../../modules/position.md:813
-#: 5ddeac445d6c4eaa8384ca0db8f85d29 9db5ef9827984c9f9554324d89413bc4
+#: c988593091334503a5528109a92712c6 d2e4ca780ff34ae8b4a621f4568216df
 msgid "Rotate an entity according to its scores."
 msgstr "根据实体的分数旋转实体。"
 
 #: ../../modules/position.md:161 ../../modules/position.md:230
-#: 924dd6048ce44dc5973b58166af71a07 dc529c6c5726423bb8f73c4f34986b9f
+#: 39da55ba68d34db0821dfb29d90ea404 610b2c6b51474754aea33e71727f032e
 msgid "**Scores `@s bs.rot.[h,v]`**: Rotation to add."
 msgstr "**分数 `@s bs.rot.[h,v]`**：要添加的旋转。"
 
-#: ../../modules/position.md:170 ef78baa5eadb42958092a4a68fa2f34d
+#: ../../modules/position.md:170 9e1782a1539c4fcf853beec0a74f8957
 msgid "**State**: Entity is teleported by the rotation indicated by the scores."
 msgstr "**状态**：实体根据分数指示的旋转被传送。"
 
-#: ../../modules/position.md 17f76c5301ee41deae4efbc1948e5111
-#: 3f69528172284f008e96cc0dfdbb27e7 5e05f5818dde412bb6ec5973c5ca3444
+#: ../../modules/position.md 17ed906819064a2e92e96441b613b548
+#: 1de23569696347d692e0098ee84e0758 cde8550bbef8428983c594d4a1c8a946
 msgid "h only"
 msgstr "仅h"
 
 #: ../../modules/position.md:179 ../../modules/position.md:836
-#: 509d71510071420fa9198ef1c98401db ec1c1b0cd8cf4a709224493612e5e15c
+#: 532a00976c2c452ca37bbc3156825fff c9c5fd8c0f9344c2a258ec6f42234f0d
 msgid "Rotate an entity according to its horizontal rotation score."
 msgstr "根据实体的水平旋转分数旋转实体。"
 
-#: ../../modules/position.md:184 011539a86b8f4875a5360d79cae7953a
+#: ../../modules/position.md:184 a9b0b9d0bf2c4231ba381a7d7032a528
 msgid "**Score `@s bs.rot.h`**: Rotation to add."
 msgstr "**分数 `@s bs.rot.h`**：要添加的旋转。"
 
-#: ../../modules/position.md:193 42908752ef7c40b7bdba8fedec0c6a0c
+#: ../../modules/position.md:193 ab79fe908f104fbea6fce71dd25b57da
 msgid ""
 "**State**: Entity is teleported by the rotation indicated by the "
 "horizontal score."
 msgstr "**状态**：实体根据水平分数指示的旋转被传送。"
 
-#: ../../modules/position.md 003daa788b524fab88f15f681e45c2ae
-#: b0b1a2d2e0f14341abddd98019dc6209 f750e588fa9541258d25c78026399f44
+#: ../../modules/position.md 1e75c48027c940c0a2dbc869071d8aff
+#: 2c0d58ce2a1a4a678cfc30c56e21dd49 915faf79daf140e08c77839be2d8d154
 msgid "v only"
 msgstr "仅v"
 
 #: ../../modules/position.md:201 ../../modules/position.md:858
-#: 48b177139972419cbbdac44e84ce3769 78670137993741d38fc26b8d9861e37e
+#: 5537fa4ab0ac4db09a66af9a82853170 84971ee66f6c447a957c6acc032c57cc
 msgid "Rotate an entity according to its vertical rotation score."
 msgstr "根据实体的垂直旋转分数旋转实体。"
 
-#: ../../modules/position.md:206 6a804c4227874320a3a0a2b6ef83f35a
+#: ../../modules/position.md:206 b5b166d9be59456798ad159fac04ed74
 msgid "**Score `@s bs.rot.v`**: Rotation to add."
 msgstr "**分数 `@s bs.rot.v`**：要添加的旋转。"
 
-#: ../../modules/position.md:215 c61ba83204ad45ddaf0b175bb08ccb18
+#: ../../modules/position.md:215 efbfac74e4d9449c85b1a7b422c42a27
 msgid ""
 "**State**: Entity is teleported by the rotation indicated by the vertical"
 " score."
 msgstr "**状态**：实体根据垂直分数指示的旋转被传送。"
 
-#: ../../modules/position.md 2aa51e535c9d4db1843df10d5476eb6b
-#: 6139a9fb6f354bbf8d7a5b928ca956b4 ee5a82a6e5e64fb0bac5e38e833044bb
+#: ../../modules/position.md 78e082fb5a6e483985d31b2ecec22162
+#: 8c12ad182baa495e9539eb3670bc61d8 c1a6758dee6d440aaf1f640513c987a1
 msgid "x,y,z,h,v"
 msgstr "x,y,z,h,v"
 
-#: ../../modules/position.md:223 20b9d5d7dc294ae98f0a5987e91512e3
+#: ../../modules/position.md:223 3d244a35288842729e80832ba694c4b6
 msgid ""
 "Add position scores to the entity's coordinates and rotate it according "
 "to its rotation score."
 msgstr "将位置分数添加到实体的坐标，并根据其旋转分数旋转实体。"
 
-#: ../../modules/position.md:226 20d5ed4ac0a94de0bf2b358b698e646b
+#: ../../modules/position.md:226 10b7fb1b420f4b2689867df4f0c86f6c
 msgid "**Execution `as <entities>`**: Entity to teleport and rotate."
 msgstr "**执行 `as <实体>`**：要传送和旋转的实体。"
 
-#: ../../modules/position.md:239 73f6c84ae1f745269df3a4bec3a129f5
+#: ../../modules/position.md:239 89fc71ea571b4fe3b0c1c512f903fe72
 msgid ""
 "**State**: Entity is teleported at the position indicated by the position"
 " scores, and rotated according to the rotation scores."
 msgstr "**状态**：实体被传送到位置分数指示的位置，并根据旋转分数进行旋转。"
 
 #: ../../modules/position.md:245 ../../modules/position.md:356
-#: ../../modules/position.md:656 0c5d6fe0a0c748ccb61b4efa7c4ab4e0
-#: 280c591259a0472d804fe754bbacf8fd 9c2b30de05e94df8a911e1139939cfae
+#: ../../modules/position.md:656 96664ac65fc34f44a7d74f01e1b61014
+#: b1f66fc2b0384ffb8a2729c072c73eb4 cf8a1b3d05dc4f7fb7c6211c3c62404c
 msgid "**Credits**: Aksiome, Leirof"
 msgstr "**制作人员**：Aksiome、Leirof"
 
-#: ../../modules/position.md:250 25af327b718b4177a48cbdb52914ccf3
+#: ../../modules/position.md:250 6d3ebdebc0d346f7a42df81a7683634c
 msgid "Canonical to Local"
 msgstr "标准转局部"
 
-#: ../../modules/position.md:254 8a3d21f0dc8046df9d221f1c74c06913
+#: ../../modules/position.md:254 67a23c7e5997426fbcb659e255df887a
 msgid ""
 "Convert a canonical position (using the relative reference frame) into a "
 "local position (using the local reference frame)."
 msgstr "将标准位置（使用相对参考系）转换为局部位置（使用局部参考系）。"
 
 #: ../../modules/position.md:257 ../../modules/position.md:667
-#: b40407f68de1450086b786ba4e544650 e971482e3a2a4e9183c5de99f11bb1f6
+#: 2a17f6da95ef4e6499762aa3e31da1f5 d502dd0e835d4bf9a0b3e44840861fc7
 msgid ""
 "**Execution `rotated as <entity>` or `rotated <h> <v>`**: Rotation used "
 "for the conversion."
 msgstr "**执行 `rotated as <entity>` 或 `rotated <h> <v>`**：用于转换的旋转。"
 
 #: ../../modules/position.md:259 ../../modules/position.md:669
-#: 117b2e35045041368972be5e4f5264f6 11bc3aad841248a7a9d9b8878c7696f0
+#: 4cdc66edb33e46fbb3616f6d4907c723 c1bd8c0db73c457b823c45f563bc180e
 msgid "**Scores `@s bs.pos.[x,y,z]`**: Position to convert."
 msgstr "**分数 `@s bs.pos.[x,y,z]`**：要转换的位置。"
 
 #: ../../modules/position.md:262 ../../modules/position.md:672
-#: 8ad7d274c67442c1a3a2db38db52dfe7 ef45a5be1d434d8e9461b322be042609
+#: 31e576f08f724753af5040200750f05b b84af8805d7c44378cbd5fbf09aad162
 msgid "**Scores `@s bs.pos.[x,y,z]`**: Converted position."
 msgstr "**分数 `@s bs.pos.[x,y,z]`**：转换后的位置。"
 
 #: ../../modules/position.md:265 ../../modules/position.md:675
-#: 301fcf1cf3e844d9a65260becd77558a a76de33b758d4f6e9899f9b7e1a1d095
+#: b0e3570977154f4ba5cb21fe802f80ec d95a96182bce45489aba9839a4b74c09
 msgid "Local Position... 🥶 What's this?"
 msgstr "局部位置... 🥶 这是什么？"
 
 #: ../../modules/position.md:268 ../../modules/position.md:678
-#: 48bbcd1e7b34490e906588c6b5551280 bade98b31c734e3aa7e2d8d8d34907b2
+#: e40480d4ec3c40a0a73622e1d6ae118a e6086bbbc6274805839dc5619c69a5bb
 msgid ""
 "Unlike relative position (canonical), this reference frame considers the "
 "entity's rotation. Therefore, when the parent entity rotates, the child "
@@ -432,97 +380,85 @@ msgstr ""
 "`^` 符号使用。"
 
 #: ../../modules/position.md:271 ../../modules/position.md:681
-#: 13a1b33ee1f5451b8eb306a323abbfc7 ce5315198a414ee7a2291f3fa4ce387a
+#: 9ea69360564642babcb4a3cf22a93f49 c1c8c519f6044971a60d8d92660e11d9
 msgid "**Credits**: Aksiome"
 msgstr "**制作人员**：Aksiome"
 
-#: ../../modules/position.md:275 db6f4c5c8141434ab1b99c31845030d8
+#: ../../modules/position.md:275 c42c29e18d0b4c21a4e62f4c77af7856
 msgid "Get Distance"
 msgstr "获取距离"
 
-#: ../../modules/position.md 78447cb12ddf4b8ea1a5af4a28a406aa
+#: ../../modules/position.md 0257772bba76479789847bd9aa059987
 msgid "Normal"
 msgstr "正常"
 
-#: ../../modules/position.md:283 f33a3679a0c24cd4b481e22c633f7c3c
+#: ../../modules/position.md:283 77bf7dc2f19942a9b33fa666431a00d5
 msgid ""
 "Compute the distance between the source entity and the execution position"
 " of the function."
 msgstr "计算源实体与函数执行位置之间的距离。"
 
 #: ../../modules/position.md:286 ../../modules/position.md:324
-#: 097adcf5f9cb4585a68449d4a00e68ec 7903e8de65284556843a0c2b093153d8
+#: 4219e3cecfd24deba540b612fceb5f3b d8855c1e92aa41c0b08d7ab81d45fa19
 msgid "**Execution `as <entities>`**: Entity positioned at the reference point."
 msgstr "**执行 `as <实体>`**：位于参考点的实体。"
 
 #: ../../modules/position.md:288 ../../modules/position.md:326
-#: d59df8f8b5894a44ad4be76538a6a5e5 e1ea12af934b4ae0a7e701f12d5c2b7b
+#: 3525ba2f65df44f08a860b47c0492e01 e718e78206194b91900401a4ae44a1eb
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to get "
 "the distance from."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：要获取距离的位置。"
 
-#: ../../modules/position.md:293 ../../modules/position.md:331
-#: ../../modules/position.md:410 ../../modules/position.md:442
-#: ../../modules/position.md:474 ../../modules/position.md:528
-#: ../../modules/position.md:550 ../../modules/position.md:572
-#: 01b7d3d03ca44b50a798e322cbe1d327 12aaade0d35c43b5bd055e58df30f6b7
-#: 1fda0e17b1d74d23b0df11fe13dc8daf 7f70b35226834a05bbc6c610dd796375
-#: 92b1b8fdc31f4f6abc1cd2a58c581ff2 a043a5459fa04ab89aa6228aa01f2ac7
-#: aa83f5d7f83940e8939e83f1d56fe83d b4ed5af5e95c4367ad10a92f31d360a2
-#, python-brace-format
-msgid "{nbt}`number` **scale**: Scalar for the function's output."
-msgstr ""
-
-#: ../../modules/position.md:297 b27cb7e059834480829712c9edae24d5
+#: ../../modules/position.md:297 a6e0b4e651f54a41886de4588dc3ce63
 msgid ""
 "**Return | Score `$position.get_distance_ata bs.out`**: Distance between "
 "the two positions."
 msgstr "**返回值 | 分数 `$position.get_distance_ata bs.out`**：两个位置之间的距离。"
 
-#: ../../modules/position.md:300 4ce69199f42a48cc8b7b12d3bd4244aa
+#: ../../modules/position.md:300 e3ddeb7fc1454d7981cad84e96507fe7
 msgid ""
 "*Calculate the distance between you and the nearest sheep (in blocks, "
 "without scaling):*"
 msgstr "*计算你与最近的羊之间的距离（以方块为单位，无缩放）：*"
 
-#: ../../modules/position.md:310 b5f09f54ec2e4432a599d7acb21ea91c
+#: ../../modules/position.md:310 5613dbe4d07e4044a327e72f4ff17aa4
 msgid "Performance Tip"
 msgstr "性能提示"
 
-#: ../../modules/position.md:313 d2af93055ae64e65aaabe3f0259f1357
+#: ../../modules/position.md:313 53ed7dc10f03414daa70a292a7255bf9
 msgid ""
 "For several applications such as comparing distances, using the squared "
 "distance instead of the \"normal\" distance is more efficient to compute."
-msgstr "对于某些应用（如比较距离），使用平方距离而不是\"正常\"距离计算更有效率。"
+msgstr "对于某些应用（如比较距离），使用平方距离而不是“正常”距离计算更有效率。"
 
-#: ../../modules/position.md e56a552ffc4c4303a1d5f398acc508c8
+#: ../../modules/position.md 27b1bb0257804a7b893ec26f00a476cb
 msgid "Squared"
 msgstr "平方"
 
-#: ../../modules/position.md:321 155e4888552e4674a6f4125bd330ee9c
+#: ../../modules/position.md:321 bba166ab20c74e989a6920b5e89f90ff
 msgid ""
 "Compute the squared distance between the source entity and the execution "
 "position of the function."
 msgstr "计算源实体与函数执行位置之间的平方距离。"
 
-#: ../../modules/position.md:335 8b40b01d0573436a91404b809f21c12d
+#: ../../modules/position.md:335 043b8cdd0f354ea6b93a81247128daf4
 msgid ""
 "**Return | Score `$position.get_distance_squared_ata bs.out`**: Squared "
 "distance between the two positions."
 msgstr "**返回值 | 分数 `$position.get_distance_squared_ata bs.out`**：两个位置之间的平方距离。"
 
-#: ../../modules/position.md:338 5adcaeed240f4c2abbba52d633dfaacc
+#: ../../modules/position.md:338 cd8b2cf494194b2b9642287d9ac0dc40
 msgid ""
 "*Example: Calculate the squared distance between you and the nearest "
 "sheep (in blocks, without scaling):*"
 msgstr "*示例：计算你与最近的羊之间的平方距离（以方块为单位，无缩放）：*"
 
-#: ../../modules/position.md:348 78b2f35f9ce742e39d7e6705226bbb0a
+#: ../../modules/position.md:348 4e4bb8e343424a82a7e3c4de59fdb26f
 msgid "Score Limitation"
 msgstr "分数限制"
 
-#: ../../modules/position.md:351 2363462271fe4d628658a6d9435b34ce
+#: ../../modules/position.md:351 698ab5931da74738a7c9314fdfc48e3b
 msgid ""
 "Scores in Minecraft have a limited size similar to a signed integer "
 "variable. While this limit is substantial, it is not unlimited and can "
@@ -531,11 +467,11 @@ msgid ""
 "working with large distances."
 msgstr "Minecraft中的分数大小有限，类似于有符号整数变量。虽然这个限制很大，但并非无限，可能会溢出。由于此函数使用2的幂来计算结果，在处理大距离时最好使用\"正常\"版本（不依赖幂运算）。"
 
-#: ../../modules/position.md:360 95bdfb2b8a3b44a8a598eb351bf9469d
+#: ../../modules/position.md:360 ca85c3ae51394ffb9f63cd0e5f1280e9
 msgid "Get Position and Rotation"
 msgstr "获取位置和旋转"
 
-#: ../../modules/position.md:368 b1fe65fb263b4b8a9c08d7ed22f801dd
+#: ../../modules/position.md:368 605237ad0633433f8c06a0d97b4b16b7
 msgid ""
 "Get the execution position of the function and store the coordinates in 3"
 " scores."
@@ -545,312 +481,304 @@ msgstr "获取函数的执行位置并将坐标存储在3个分数中。"
 #: ../../modules/position.md:435 ../../modules/position.md:467
 #: ../../modules/position.md:499 ../../modules/position.md:521
 #: ../../modules/position.md:543 ../../modules/position.md:565
-#: ../../modules/position.md:630 2e17883aea6a46168f111e24c856560d
-#: 36677893b8014da3a3be8b91173eefff 39ee9ac6e91b47d5b88ae3b7d77af2ba
-#: 3e4446ff23494bf8b1a0a8e4031cc5a0 6b3b91ccda61435e84799bba0fe29062
-#: 7a15c84f19d94f76a8ecd207bd516fb9 86b97ac5dcae4522a3ea2c2202945e83
-#: c64df03bc92642c18719f02267e7985c dc6d9766995245cc9058884c7e2ac7a7
+#: ../../modules/position.md:630 087a903be2d44224bba89288a761fd6d
+#: 22e230d6cacf4c708310f5a6795c5645 36e1cb2ad3c74c5797a59812286b0b19
+#: 549a8309479e4e5991aa773efcb18b1a 8845832e2ac14282adb36392d4b097fc
+#: a81591288c614ef8b4010e1d94eb737b b614f02cb889403da1453f98e662f2fe
+#: cc707a8bc23a484cb772c98507f7d56d dbc6c68dda8a44d6be2c5e0c7d6a3dc5
 msgid "**Execution `as <entities>`**: Entity to store the score to."
 msgstr "**执行 `as <实体>`**：要存储分数的实体。"
 
 #: ../../modules/position.md:373 ../../modules/position.md:405
 #: ../../modules/position.md:437 ../../modules/position.md:469
-#: 5507ae0497114a7c82dadf355c25ee91 97185473df084e0f94fa0236929db894
-#: cddf9c9d08fb44aa9da1aad6dadb1ae7 d02fd9ebd7e9445ba83da965a5d825f2
+#: 7b78700e738f4cce9074f32a0bb307b5 7e8cff8edf80485d819ee65550d4a825
+#: b58cbd9626fe4656b117a3744d660db1 c33f6357d6924fb2b011dfbd308c8f95
 msgid "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to get."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：要获取的位置。"
 
-#: ../../modules/position.md:378 ../../modules/position.md:506
-#: ../../modules/position.md:605 ../../modules/position.md:637
-#: 53ad67f507e848f49578855c9ba894c4 6b2262c0bdf24dfa9c9c99e7711225b3
-#: a59bd53807c4402cbd90d30a092cc553 ed981c87270a4547bf32c6ed99e7ccca
-#, python-brace-format
-msgid "{nbt}`number` **scale**: Scalar for the function's outputs."
-msgstr ""
-
 #: ../../modules/position.md:382 ../../modules/position.md:576
-#: 15b25478b171443080606ce25ec76874 5aafb170c19d40b7b0a72b58db61e5c7
+#: 10a11bb24c3446e89120854853e42bb6 c72ca934d9b54d38b415e9f438116929
 msgid "**Scores `@s bs.pos.[x,y,z]`**: Coordinates of the position."
 msgstr "**分数 `@s bs.pos.[x,y,z]`**：位置的坐标。"
 
-#: ../../modules/position.md:385 0093515b1b0c4167931ef465c5967116
+#: ../../modules/position.md:385 4b03bc3a96a94e619191202fbb2421ab
 msgid ""
 "*Example: Detect and display the position of the nearest spider (without "
 "scaling):*"
 msgstr "*示例：检测并显示最近蜘蛛的位置（无缩放）：*"
 
-#: ../../modules/position.md:400 450756d5529e47a38356c75082191eec
+#: ../../modules/position.md:400 507d06bc964a41818687209c9a4b81ad
 msgid ""
 "Get the execution x position of the function and store the coordinate in "
 "a score."
 msgstr "获取函数的执行x位置并将坐标存储在分数中。"
 
-#: ../../modules/position.md:414 7903cedc36eb4e7b8a991d7d6b736e83
+#: ../../modules/position.md:414 2ec29d0fd4ce463eb4627d6133218871
 msgid "**Score `@s bs.pos.x`**: Coordinate of the position."
 msgstr "**分数 `@s bs.pos.x`**：位置的坐标。"
 
-#: ../../modules/position.md:417 4183bfad4a8c409385329d4659b1f333
+#: ../../modules/position.md:417 c7a96256b4114a4bb0559507e03a125a
 msgid ""
 "*Example: Detect and display the x position of the nearest spider "
 "(without scaling):*"
 msgstr "*示例：检测并显示最近蜘蛛的x位置（无缩放）：*"
 
-#: ../../modules/position.md:432 6df0b758b1e14b0f95643106f9757d69
+#: ../../modules/position.md:432 75cf19dafcef4b368c0af9bbbe86bc88
 msgid ""
 "Get the execution y position of the function and store the coordinate in "
 "a score."
 msgstr "获取函数的执行y位置并将坐标存储在分数中。"
 
-#: ../../modules/position.md:446 657af442a12e4d7190ac6b924c49fd61
+#: ../../modules/position.md:446 f1c791fd6f9d455c8b344c61311ac502
 msgid "**Score `@s bs.pos.y`**: Coordinate of the position."
 msgstr "**分数 `@s bs.pos.y`**：位置的坐标。"
 
-#: ../../modules/position.md:449 5874a569de2041e084b1de8a14c3b5df
+#: ../../modules/position.md:449 afa0c1f8276f4de49d2723972de5bb8e
 msgid ""
 "*Example: Detect and display the y position of the nearest spider "
 "(without scaling):*"
 msgstr "*示例：检测并显示最近蜘蛛的y位置（无缩放）：*"
 
-#: ../../modules/position.md:464 79227449f6534be08e6334be78f11a62
+#: ../../modules/position.md:464 5bfc9b09380e47cb9ce35e282abb1f58
 msgid ""
 "Get the execution z position of the function and store the coordinate in "
 "a score."
 msgstr "获取函数的执行z位置并将坐标存储在分数中。"
 
-#: ../../modules/position.md:478 0cb7736c7b8e4f14ba593c1464a02db3
+#: ../../modules/position.md:478 0641c6dd852740f8b829966e7c6201b3
 msgid "**Score `@s bs.pos.z`**: Coordinate of the position."
 msgstr "**分数 `@s bs.pos.z`**：位置的坐标。"
 
-#: ../../modules/position.md:481 1950137faacd4968af267cf2336fcd59
+#: ../../modules/position.md:481 59341d24bbf742c3adbc81b61dee8f1b
 msgid ""
 "*Example: Detect and display the z position of the nearest spider "
 "(without scaling):*"
 msgstr "*示例：检测并显示最近蜘蛛的z位置（无缩放）：*"
 
-#: ../../modules/position.md:496 aacb48eeb5df4226b33fd7e1ce32a181
+#: ../../modules/position.md:496 105e809c880f4e79a529a470dffdd7d5
 msgid "Get the execution rotation of the function and store it in 2 scores."
 msgstr "获取函数的执行旋转并将其存储在2个分数中。"
 
 #: ../../modules/position.md:501 ../../modules/position.md:523
-#: ../../modules/position.md:545 241b0e3905f04f39bc3c1e94c6ac8418
-#: b63b416f0e4c4772824979a6ecc7295f c34cb7407099442c83763096f84bd417
+#: ../../modules/position.md:545 72357522baa94334a46dfd622aa3bdd8
+#: a0dd9d402aa0435ab5b4b2637576996f e4b930dc37dd4a43a338e75a7e695ab9
 msgid "**Execution `at <entity>` or `rotated <h> <v>`**: Rotation to get."
 msgstr "**执行 `at <实体>` 或 `rotated <h> <v>`**：要获取的旋转。"
 
 #: ../../modules/position.md:510 ../../modules/position.md:578
-#: 106b6fa8e445445b84fb87d2cd411c18 6c07b50d79d94df5be699ef4a480261c
+#: 90a30f81e5d344edb7b3ae484703ba1a fb23e53f845a42f7a119617c7feb428c
 msgid "**Scores `@s bs.rot.[h,v]`**: Rotation of the position."
 msgstr "**分数 `@s bs.rot.[h,v]`**：位置的旋转。"
 
-#: ../../modules/position.md:518 5a4e096b0ad74d159e6dbbd83e5013fb
+#: ../../modules/position.md:518 0b72e1a5bbe640eabdd9b01ae5f7cfca
 msgid "Get the execution horizontal rotation of the function."
 msgstr "获取函数的执行水平旋转。"
 
-#: ../../modules/position.md:532 ac5d9738c73f4a6c86b68bd533bd17d5
+#: ../../modules/position.md:532 f12212d4604241179bcf5494c1375fe6
 msgid "**Score `@s bs.rot.h`**: Horizontal rotation of the position."
 msgstr "**分数 `@s bs.rot.h`**：位置的水平旋转。"
 
-#: ../../modules/position.md:540 01e0fe40ee694811818741fa4961a5e4
+#: ../../modules/position.md:540 41f67d9daad44537b099f7505f6534ef
 msgid "Get the execution vertical rotation of the function."
 msgstr "获取函数的执行垂直旋转。"
 
-#: ../../modules/position.md:554 8c06f38d84e6422fb86e5715d36025a4
+#: ../../modules/position.md:554 d02a75cc316e44d38ac18bacd550231b
 msgid "**Score `@s bs.rot.v`**: Vertical rotation of the position."
 msgstr "**分数 `@s bs.rot.v`**：位置的垂直旋转。"
 
-#: ../../modules/position.md:562 0921a816396c4d4a8c561f84ced7f330
+#: ../../modules/position.md:562 51f231426a25458fadd482fd8574cfd3
 msgid ""
 "Get the execution position and rotation of the function and store the "
 "coordinates and rotation in 5 scores."
 msgstr "获取函数的执行位置和旋转，并将坐标和旋转存储在5个分数中。"
 
-#: ../../modules/position.md:567 1234830af4bb46bc979609219047725c
+#: ../../modules/position.md:567 0796a3ee3cf44658b3c27cb99990f8a0
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z> rotated <h> <v>`**: "
 "Position and rotation to get."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z> rotated <h> <v>`**：要获取的位置和旋转。"
 
 #: ../../modules/position.md:583 ../../modules/position.md:899
-#: 38e87a04dbee464d9a3353e48bdf6050 eaf9c6d0cfc64c42aee416f2f4f83acb
+#: 43c9bbdc484045e2bc5ed6d82ff11b32 b6f571d35eb34d4ebb47266ffe0f3f23
 msgid "**Credits**: Aksiome, Leirof, theogiraudet"
 msgstr "**制作人员**：Aksiome、Leirof、theogiraudet"
 
-#: ../../modules/position.md:587 81aac6bb7e5742f7b09d83780327a473
+#: ../../modules/position.md:587 c95cf790316f470c986b0192fecf11f0
 msgid "Get Relative"
 msgstr "获取相对位置"
 
-#: ../../modules/position.md 038f72f240ca4fb3a0c4156129b40fa3
+#: ../../modules/position.md d3cb2a0b03a14337a8f13f73ce0404ea
 msgid "As to at"
 msgstr "As到at"
 
-#: ../../modules/position.md:595 876fbc781c6b4f9bb4ca8cb3cdb37308
+#: ../../modules/position.md:595 e512675e0ad844a59634eff4be64bb06
 msgid ""
 "Get the execution position of the function relatively to the position of "
 "the executing entity."
 msgstr "获取相对于执行实体位置的函数执行位置。"
 
-#: ../../modules/position.md:598 8fa38e7045194a43bcc4a4d975673d68
+#: ../../modules/position.md:598 ef8437245cc8493bacbbdd2544c4a93f
 msgid "**Execution `as <entities>`**: Entity considered at the reference point."
 msgstr "**执行 `as <实体>`**：视为在参考点的实体。"
 
-#: ../../modules/position.md:600 ccb5883839a040b3a643be2c4317f408
+#: ../../modules/position.md:600 2b1b648411b14fc4b0ae588af515b7de
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position te get "
 "the relative position from."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：要获取相对位置的位置。"
 
 #: ../../modules/position.md:609 ../../modules/position.md:641
-#: 3ea293207b804b8cb298ff79cd085575 dbc53d6e6a9f4feb8293bca0a0ad03c8
+#: 724a597564e340f492df13aa79ca1c5a a25471f181da48ab80223831e1781ad8
 msgid "**Scores `@s bs.pos.[x,y,z]`**: Relative coordinates."
 msgstr "**分数 `@s bs.pos.[x,y,z]`**：相对坐标。"
 
-#: ../../modules/position.md:612 089c739e93ea4d51b95f478477b63415
+#: ../../modules/position.md:612 21acf9ce18594dd19bfad0c63dc90bf1
 msgid ""
 "*Example: Get your position relative to the nearest Creeper (without "
 "scaling):*"
 msgstr "*示例：获取你相对于最近苦力怕的位置（无缩放）：*"
 
-#: ../../modules/position.md ac480b417c6840ef9d66e7a6bb0ce0a3
+#: ../../modules/position.md 2392bb3ed934468ca4286997e003c57b
 msgid "From Direction"
 msgstr "从方向"
 
-#: ../../modules/position.md:627 cb34f33b061e492baa88dcedc50e5264
+#: ../../modules/position.md:627 e53150e147e7410985e373d8301dcd0d
 msgid ""
 "Get a direction vector based on the execution position and rotation. "
 "Scale is used as the norm/length."
 msgstr "基于执行位置和旋转获取方向向量。缩放用作标准/长度。"
 
-#: ../../modules/position.md:632 11a6b1e8e6cc42b49eb61d36b9cc7e11
+#: ../../modules/position.md:632 2ccdf3114b4a4ac8bce1f543610c8e49
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z> rotated <h> <v>`**: "
 "Position and rotation to get the relative position from."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z> rotated <h> <v>`**：要获取相对位置的位置和旋转。"
 
-#: ../../modules/position.md:644 42563dad3a0442fba0579510405530f5
+#: ../../modules/position.md:644 efcb79549b384a148e926d119ee7c0a0
 msgid ""
 "*Example: Get your position relative to the position that is 2 blocks in "
 "front of you (scaled by 1000):*"
 msgstr "*示例：获取你相对于你前方2个方块位置的位置（缩放1000）：*"
 
-#: ../../modules/position.md:660 79dc5c6f286b47e395c0a6b33855aa7d
+#: ../../modules/position.md:660 64b931aa71194619b26884cd757392c9
 msgid "Local to Canonical"
 msgstr "局部转标准"
 
-#: ../../modules/position.md:664 98c2ff7d0fe54524a3666dbcc8bf5244
+#: ../../modules/position.md:664 601856f48ed94ca782a89f293d5927e2
 msgid ""
 "Convert a local position (using the local reference frame) into a "
 "canonical position (using the relative reference frame)."
 msgstr "将局部位置（使用局部参考系）转换为标准位置（使用相对参考系）。"
 
-#: ../../modules/position.md:685 e95477b7369647e5a191ac4e861699e2
+#: ../../modules/position.md:685 91191436b8ae41dbba4250c6c7742992
 msgid "Set Position and Rotation"
 msgstr "设置位置和旋转"
 
-#: ../../modules/position.md:693 5f72ba042f3b48d881af41156e9d8bd6
+#: ../../modules/position.md:693 9471620421d64e2491f2f50e32ec1273
 msgid "Place an entity at coordinates given by scores."
 msgstr "将实体放置在由分数给定的坐标处。"
 
-#: ../../modules/position.md:698 7af6303880354b25ab9851cb289d6740
+#: ../../modules/position.md:698 74b538b27c924933937c07268e7ae6f6
 msgid "**Scores `@s bs.pos.[x,y,z]`**: Coordinates to teleport to."
 msgstr "**分数 `@s bs.pos.[x,y,z]`**：要传送到的坐标。"
 
-#: ../../modules/position.md:707 24ead376ca24476fa23cd07b4a3bc9ae
+#: ../../modules/position.md:707 7021af5ae7864832a7968b05a0a577bf
 msgid ""
 "**State**: Entity is teleported to the coordinates indicated by the "
 "scores."
 msgstr "**状态**：实体被传送到分数指示的坐标。"
 
-#: ../../modules/position.md:710 9594434862534a6a98a369fdcdd11a07
+#: ../../modules/position.md:710 526094bd3a22472fac83849505c09178
 msgid "*Example: Teleport to 48.85 0 2.29:*"
 msgstr "*示例：传送到48.85 0 2.29：*"
 
-#: ../../modules/position.md:724 fb01d67643964837b0d441437277a3ac
+#: ../../modules/position.md:724 188fdb865d794665b92e152c07c325c0
 msgid "Place an entity at a precise x coordinate given by scores."
 msgstr "将实体放置在由分数给定的精确x坐标处。"
 
-#: ../../modules/position.md:729 56c422b2b84e452d93a6d522e4fb1131
+#: ../../modules/position.md:729 f6e8560c55794671bc5a2bea8e1313df
 msgid "**Score `@s bs.pos.x`**: Coordinate x to teleport to."
 msgstr "**分数 `@s bs.pos.x`**：要传送到的x坐标。"
 
-#: ../../modules/position.md:738 6988616571dc4979b055a92f957e09f9
+#: ../../modules/position.md:738 bb5dc760129e4b3c99ab2fbf343c7e9d
 msgid ""
 "**State**: Entity is teleported to the x coordinate indicated by the "
 "score."
 msgstr "**状态**：实体被传送到分数指示的x坐标。"
 
-#: ../../modules/position.md:741 cad1d1a0c22a449d838c4a996beea9a6
+#: ../../modules/position.md:741 ecafffb3131c4c4a9c9b7663631c69c9
 msgid "*Example: Teleport to 70 ~ ~:*"
 msgstr "*示例：传送到70 ~ ~：*"
 
-#: ../../modules/position.md:754 26da100edc52471583a190ac08b0215e
+#: ../../modules/position.md:754 ae24c32831e647a6883c36c4e429e021
 msgid "Place an entity at a precise y coordinate given by scores."
 msgstr "将实体放置在由分数给定的精确y坐标处。"
 
-#: ../../modules/position.md:759 3c9abe2315404c76b83ee9ab2706a186
+#: ../../modules/position.md:759 cb9d2c062ccc4c1e97538d8ae9ed00d2
 msgid "**Score `@s bs.pos.y`**: Coordinate y to teleport to."
 msgstr "**分数 `@s bs.pos.y`**：要传送到的y坐标。"
 
-#: ../../modules/position.md:768 c9383c545c1e4f6097126a546e091a6b
+#: ../../modules/position.md:768 6585d2b53c63463eb6d947294d298b19
 msgid ""
 "**State**: Entity is teleported to the y coordinate indicated by the "
 "score."
 msgstr "**状态**：实体被传送到分数指示的y坐标。"
 
-#: ../../modules/position.md:771 1f4fc62a53704f41b7c5da25684e3deb
+#: ../../modules/position.md:771 3dd503a9533243268d074047dc0ee10e
 msgid "*Example: Teleport to ~ 82 ~:*"
 msgstr "*示例：传送到 ~ 82 ~：*"
 
-#: ../../modules/position.md:784 d4649fecbaca4ce6a77584935a762155
+#: ../../modules/position.md:784 bbd8fd2cb86a4ed893163095ee29abb8
 msgid "Place an entity at a precise z coordinate given by scores."
 msgstr "将实体放置在由分数给定的精确z坐标处。"
 
-#: ../../modules/position.md:789 86cf1f0c65a14365b5ca3b466b91fbdd
+#: ../../modules/position.md:789 29041d5072524d69ae033fa3574a433a
 msgid "**Score `@s bs.pos.z`**: Coordinate z to teleport to."
 msgstr "**分数 `@s bs.pos.z`**：要传送到的z坐标。"
 
-#: ../../modules/position.md:798 b6d234e7d7b44910982116fdf38c0d0d
+#: ../../modules/position.md:798 da14f6a274284410a34d332adfea5693
 msgid ""
 "**State**: Entity is teleported to the z coordinate indicated by the "
 "score."
 msgstr "**状态**：实体被传送到分数指示的z坐标。"
 
-#: ../../modules/position.md:801 97a534f9b2f54013a9f90d9bcbdfef50
+#: ../../modules/position.md:801 28b66de2651446fbaa5fb458415e9698
 msgid "*Example: Teleport to ~ ~ 65:*"
 msgstr "*示例：传送到 ~ ~ 65：*"
 
-#: ../../modules/position.md:818 f054d9eb114d41a98035143f6172907c
+#: ../../modules/position.md:818 3da48b8740b3428dafd308fdd73f4504
 msgid "**Scores `@s bs.rot.[h,v]`**: Rotation to teleport to."
 msgstr "**分数 `@s bs.rot.[h,v]`**：要传送到的旋转。"
 
-#: ../../modules/position.md:827 7a3b616048ca42ff906ca39009c39048
+#: ../../modules/position.md:827 72a1434e17ce4b338ce971fec0d1761a
 msgid "**State**: Entity is teleported to the rotation indicated by the scores."
 msgstr "**状态**：实体被传送到分数指示的旋转。"
 
-#: ../../modules/position.md:841 06a3900af1e041829182b5aa4248edd6
+#: ../../modules/position.md:841 eda7932fead3432c854be4d608912e3b
 msgid "**Score `@s bs.rot.h`**: Rotation to teleport to."
 msgstr "**分数 `@s bs.rot.h`**：要传送到的旋转。"
 
-#: ../../modules/position.md:850 c009c239ff9f4a65ac589a33694e0903
+#: ../../modules/position.md:850 f8d0e05810554ef397764848a1dc8cf0
 msgid ""
 "**State**: Entity is teleported to the rotation indicated by the "
 "horizontal score."
 msgstr "**状态**：实体被传送到水平分数指示的旋转。"
 
-#: ../../modules/position.md:863 9a3e0c619a454a64bfbb73777a086210
+#: ../../modules/position.md:863 2cc598a50c914b769abd55193a1b8b61
 msgid "**Score `@s bs.rot.v`**: Rotation to teleport to."
 msgstr "**分数 `@s bs.rot.v`**：要传送到的旋转。"
 
-#: ../../modules/position.md:872 8f20c03c67a443709ff56131e35d8c4b
+#: ../../modules/position.md:872 1841e26cb20049dba6d87e137a18443b
 msgid ""
 "**State**: Entity is teleported to the rotation indicated by the vertical"
 " score."
 msgstr "**状态**：实体被传送到垂直分数指示的旋转。"
 
-#: ../../modules/position.md:880 8c5c6884d04a42cb94d45d16fd8f013d
+#: ../../modules/position.md:880 760045e16e7142abb71431465f3e96c6
 msgid "Place and rotate an entity according to its position and rotation scores."
 msgstr "根据实体的位置和旋转分数放置和旋转实体。"
 
-#: ../../modules/position.md:883 920b2b54aef94a6e924368fba8d31d67
+#: ../../modules/position.md:883 0179a75ca8df41dbbf2e27d758c16f08
 msgid ""
 "**Execution `as <entities>`**: Entity to teleport. **Scores `@s "
 "bs.pos.[x,y,z]`**: Coordinates to teleport to. **Scores `@s "
@@ -859,17 +787,32 @@ msgstr ""
 "**执行 `as <实体>`**：要传送的实体。**分数 `@s bs.pos.[x,y,z]`**：要传送到的坐标。**分数 `@s "
 "bs.rot.[h,v]`**：要传送到的旋转。"
 
-#: ../../modules/position.md:894 f00dc9ee1ec94f678761ef9d7b0a2cb5
+#: ../../modules/position.md:894 2c97d66e501248de85feac001de7c248
 msgid ""
 "**State**: Entity is teleported to the position indicated by the position"
 " scores and rotated according to the rotation scores."
 msgstr "**状态**：实体被传送到位置分数指示的位置，并根据旋转分数进行旋转。"
 
-#: ../../_templates/comments.md:4 60d18ca8e62d497e8b82edcc2e81ce9f
+#: ../../_templates/comments.md:4 74664f086adc432dbbf7773a169c8384
 msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
+msgstr "**💬 这对你有帮助吗？**"
 
-#: ../../_templates/comments.md:6 1acd60a4b0bf42aa81c9b6ca8c3e683e
+#: ../../_templates/comments.md:6 ff262c7bcf534d25b7465de40b63114f
 msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下您的问题和反馈！"
+msgstr "欢迎在下方留下你的问题和反馈！"
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar applied to the output."
+msgstr "{nbt}`number` **scale**: 输出的缩放值。"
+
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's outputs."
+msgstr "{nbt}`number` **scale**: 函数输出的缩放系数。"
+
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's output."
+msgstr "{nbt}`number` **scale**: 函数输出的缩放系数。"

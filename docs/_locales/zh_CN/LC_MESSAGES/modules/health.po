@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,31 +19,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/health.md:1 421b95d057be49e8841d06509fd97452
+#: ../../modules/health.md:1 c3e1bd5f72a6400298c3c3ba8e6f0ff6
 msgid "❤️ Health"
 msgstr "❤️ 生命（Health）"
 
-#: ../../modules/health.md:3 bc669e1e34a04cf2b5b359e20616eca3
+#: ../../modules/health.md:3 dd0f95753368486fae76091eb55eb12b
 msgid "**`#bs.health:help`**"
 msgstr "**`#bs.health:help`**"
 
-#: ../../modules/health.md:5 9643f9179d19425da8e7a0ae13f96378
+#: ../../modules/health.md:5 caac55f82f424aadab2002317e54a7d5
 msgid "Efficiently manage the lifecycle and vital aspects of an entity."
 msgstr "高效管理实体的生命周期和生命值。"
 
-#: ../../modules/health.md:8 eb521851ddaa4d85b487ae17084342a1
+#: ../../modules/health.md:8 9f3ff8d6555f403ba85449498dfd874f
 msgid "\"He who has a why to live can bear almost any how.\""
 msgstr "“知生命之意者，可承生命之重。”"
 
-#: ../../modules/health.md:9 06b2bdd793d14887a0934d05b7fbd48e
+#: ../../modules/health.md:9 3c7641dd24734865a199889dc80b143d
 msgid "Friedrich Nietzsche"
 msgstr "弗里德里希·尼采（Friedrich Nietzsche）"
 
-#: ../../modules/health.md:13 25393bddcc9c49518d7b02977ab1e9f7
+#: ../../modules/health.md:13 9c4237d0cde5410192067bff4f533e5f
 msgid "About NBTs"
 msgstr "关于 NBT"
 
-#: ../../modules/health.md:16 1facafafc33b40c9aa019b2f675e5703
+#: ../../modules/health.md:16 f0abcb8ea2ea467684c1e7bca80e035c
 msgid ""
 "When using this module, do not rely on NBTs to retrieve health "
 "information. Instead, use `get_health` to get the player's health and "
@@ -55,11 +55,11 @@ msgstr ""
 "`get_max_health_total` 获取最大生命值，而不是使用 `attribute @s minecraft:max_health "
 "get`。NBT 可能并不总是反映实际值，选择这种方法是为了绕过某些限制。"
 
-#: ../../modules/health.md:19 8e5c978a50dc41e0810aaafc7aa733f8
+#: ../../modules/health.md:19 162a444be8f84760bc5ea7930cb22169
 msgid "Effects Incompatibility"
 msgstr "效果不兼容"
 
-#: ../../modules/health.md:22 1d1c38bf061747e7a12e2421f204ac0d
+#: ../../modules/health.md:22 2b0222da0a2940b8988b291bc3ee5930
 msgid ""
 "This system uses the `instant_health` effect to heal the player and force"
 " an update to their health. Using amplifier values higher than 28 may "
@@ -70,279 +70,264 @@ msgstr ""
 "此系统通过 `instant_health` 效果来治疗玩家并强制更新其生命值。若效果等级大于 28 "
 "可能会导致问题。此外，当前刻内任何待处理的治疗命令会优先于该效果，可能会覆盖它。"
 
-#: ../../modules/health.md:27 3f331bc95f1d47669abff4da19d6c34d
+#: ../../modules/health.md:27 df8cd54471534cfc8e93487ca0f98d66
 msgid "🔧 Functions"
 msgstr "🔧 函数"
 
-#: ../../modules/health.md:29 320a2d82a4f04aa3a28ab68adfbd3574
+#: ../../modules/health.md:29 b7f55bc209104b9fac92b76258906ba4
 msgid "You can find below all functions available in this module."
-msgstr "您可以在下方找到此模块中的所有可用函数。"
+msgstr "你可以在下方找到此模块中的所有可用函数。"
 
-#: ../../modules/health.md:33 0cc67c912fb8421b8c40b83bb25f9544
+#: ../../modules/health.md:33 168e8e9f7f914067a22cb2f23ba12756
 msgid "Add / Remove"
 msgstr "增加/移除"
 
-#: ../../modules/health.md 0be4dd4ee7f54963a615a9005f0fd61e
-#: 365b6167f1b34d6ba87f6707d07dc65e 9ffd48c4fa5e49eb9ec245ce69123357
+#: ../../modules/health.md 50a0a0059cba4da9bb039333264f5006
+#: a1f0c10e99fa49698ad53dc26e657b19 c2256a0e46c9484aa90b48cc64440b41
 msgid "Health"
 msgstr "生命值"
 
-#: ../../modules/health.md:41 7715d0f3f3a74048912dd708023f500a
+#: ../../modules/health.md:41 43d447fe61524330b27a5e8a684f1b53
 msgid "Add or remove health points from players."
 msgstr "增加或移除玩家的生命值点数。"
 
 #: ../../modules/health.md:43 ../../modules/health.md:76
 #: ../../modules/health.md:118 ../../modules/health.md:145
 #: ../../modules/health.md:181 ../../modules/health.md:208
-#: ../../modules/health.md:240 24363e739c6049be95affbcfa1cb8136
-#: 28edde0ab9d241cdb2eb058d6dd2f592 4722acbfa07f4543b0974774882720bc
-#: 5006a085c6834414a2ee2bd1e2b2a863 642d6e2d4086474b87d4afff7d5ed765
-#: 6f485d67aeb3488a8fe0cc64d9412e8a 75c1ce72701f47a4b912f7af078f5d56
+#: ../../modules/health.md:240 0711f3c79340427c830cdaa2f84c8182
+#: 3fc3fb89254b4cb68cdc15b030dae12d 469dc836a0bd404c83952142a83b3ea8
+#: 63911d0582534de78555205693320a7a 75b98f112d1943509af3a3b6f8d3b7a0
+#: caa536ee4df04652927e9af825976c08 f9ef474bd89f4723a4d0faa136c54c5a
 msgid "Inputs"
 msgstr "输入"
 
 #: ../../modules/health.md:44 ../../modules/health.md:182
-#: 470fc67edebf424f9ee986533a833bac ba32229e16e74800bd72765645afbfe1
+#: 7b7910e668384125a1161ad280ccf6ee ed720a1505b64fd2b787dff62a61883a
 msgid "**Execution `as <players>`**: Players whose health will be updated."
 msgstr "**执行 `as <玩家>`**：要更改生命值的玩家。"
 
 #: ../../modules/health.md:46 ../../modules/health.md:79
 #: ../../modules/health.md:121 ../../modules/health.md:148
 #: ../../modules/health.md:184 ../../modules/health.md:211
-#: ../../modules/health.md:243 20734aa9ccf345f4a706bff2aedcd01e
-#: 2aeec3a3f5844cbd9fd2a89930723271 4544cc07095648c2be1d110556beeb41
-#: 8fb1a56e5b2c4e919f6c33377d90acfb 97b33cc0741247f6b20ad428aac10ba3
-#: d63c69e31f974c518eba9fb41eb3881b f52038a751f74d57aaf75ab5efc80496
+#: ../../modules/health.md:243 14307f583273495c8d56e74393a3f187
+#: 45b59af82f68417abc9b23b3fbf734f8 4b421baa0d06449f92ed202ee2cd8cf3
+#: 5561312298f0450f8e8c9771e397d95b 5c71d5aa7d6c4eccad71bf111d08d8df
+#: ae3e0867040a4dcda3892db065c42a48 d149ea5e4f4a41948c31675c38b521c4
 msgid "**Function macro**:"
 msgstr "**函数宏**："
-
-#: ../../modules/health.md:48 ../../modules/health.md:81
-#: ../../modules/health.md:123 ../../modules/health.md:150
-#: ../../modules/health.md:186 ../../modules/health.md:213
-#: ../../modules/health.md:245 2ec0638731024e60bb5b7836dfec37af
-#: 30be19b3b2614f8d948b71ab1ffb4fc1 740522eaeacf4008978f9b7c1d1a26ed
-#: 8b863609106141a7b751563ff4118126 8f1125ac4d6e4cdd89d507d5ff93e625
-#: 9eb24c9d3d66462184a8203f4d323c88 f71134ecfcf84e0e8ab789d60fa24a9d
-#, python-brace-format
-msgid "{nbt}`compound` Arguments"
-msgstr ""
-
-#: ../../modules/health.md:49 0ab38cbcb05e4537ba4dea7f1db43cd6
-#, python-brace-format
-msgid "{nbt}`number` **points**: Health points to add to players."
-msgstr ""
 
 #: ../../modules/health.md:52 ../../modules/health.md:85
 #: ../../modules/health.md:127 ../../modules/health.md:154
 #: ../../modules/health.md:190 ../../modules/health.md:217
-#: ../../modules/health.md:252 3e2a234d1c02418c92e54211e4e02e7d
-#: 5c6bd6969ebb4047aebf28af180afbc3 742df53a047940f386296f724df7f25c
-#: 87a53a0e2dd54511bd4aee34317c4597 94167c5aa0604300907a3b188ec19e21
-#: ce8e66d5b5424c84beef8dc8cbdfb3b8 eeeeac7b180748b2a07d104aa3921a35
+#: ../../modules/health.md:252 459f0d9d4530490bb0d2e700033b6ef6
+#: 482380cdda684ec080288fd19eed9883 591dea69d3cb49f0be59f0d5755e3664
+#: 8acb1da8da1340c38580beaf5b29cb1c cc26ead7bb964a00bdf614d1060c932b
+#: f7b6575be01a4f7c8b7df4a03a5c2de8 fa45ac4f6f034bcca0c71eb4cd033beb
 msgid "Outputs"
 msgstr "输出"
 
 #: ../../modules/health.md:53 ../../modules/health.md:191
-#: 771ee72fed7c4b61aa6ef604914d5d30 963527bd0abf4cd7a286bfda57b2655f
+#: 50d63622350049f2bdd83802bc3fb897 b8e8393adef54340904b00222c2e5d76
 msgid "**State**: Health is scheduled for update."
 msgstr "**状态**：生命值在计划刻更新。"
 
-#: ../../modules/health.md:56 18b470b549b24d41a575d14b506bedd6
+#: ../../modules/health.md:56 e9586767082f4c8fa93880f3a1ae1e55
 msgid "*Example: Heal yourself by 5 HP:*"
 msgstr "*示例：治疗自己 5 点生命值：*"
 
 #: ../../modules/health.md:63 ../../modules/health.md:96
-#: 1230b34d0af047b4a2353e31ddd57167 3fb3bf508db64c8999414e85ce1065aa
+#: 226d73ddaaf648859e8d5e51a1915432 657debd13a2b4c06a19528d7ab1ea924
 msgid "How to Remove?"
 msgstr "如何移除？"
 
-#: ../../modules/health.md:66 48dc76d30e1446f8a6a6f738d0c59926
+#: ../../modules/health.md:66 cfb7c40fa83c4391ad2e9ee7c2783193
 msgid "You can use negative numbers to remove health points from the player."
-msgstr "您可以使用负数来移除玩家的生命值点数。"
+msgstr "你可以使用负数来移除玩家的生命值点数。"
 
-#: ../../modules/health.md c1f8f6dd9fc441b0851611dd47f670d8
-#: db58a0776b0945a8930fa9166818e270 f7147f37ed1a49b780345013736e15f1
+#: ../../modules/health.md 32cf2fee432c4054ab1546504f1ef73c
+#: b9d4640cd6124527a463533294e8b145 cc9485805985429ba2684826bf1596e0
 msgid "Max Health"
 msgstr "最大生命值"
 
-#: ../../modules/health.md:74 076b0c7cd54f4274a1f54573a4d142ce
+#: ../../modules/health.md:74 b344e9b259a044ce82b042eaa3647dae
 msgid "Add or remove base maximum health points from players."
 msgstr "增加或移除玩家的基础最大生命值点数。"
 
 #: ../../modules/health.md:77 ../../modules/health.md:209
-#: 2bea4369475849b190d3bbc7f7940fd2 b11989c9e8c546ec8d4cbe4f391d85cf
+#: 6faddfefa60d4df281271fb8ce11254a b1880dc791c94d858b3f0c7a832f7b0f
 msgid "**Execution `as <players>`**: Players whose max health will be updated."
 msgstr "**执行 `as <玩家>`**：要更改最大生命值的玩家。"
 
-#: ../../modules/health.md:82 e92d927b84a04fe7a4c521212298a26b
-#, python-brace-format
-msgid "{nbt}`number` **points**: Max health points to add to players."
-msgstr ""
-
 #: ../../modules/health.md:86 ../../modules/health.md:218
-#: 425101462dae4c678e91f901d917e2cc 988751305b2d4292925fb91a40d37a2d
+#: 17ded3220b834bff9961faea3ad0775b b48be4e55c9547288eca22a215bb48b1
 msgid "**State**: Max health is scheduled for update."
 msgstr "**状态**：最大生命值在计划刻更新。"
 
-#: ../../modules/health.md:89 f380a86ff1064282a6bbbbf1e3357ec8
+#: ../../modules/health.md:89 02de9134eaef4714bb63f998e38ed8c7
 msgid "*Example: Increase your max HP by 5:*"
 msgstr "*示例：将自己的最大生命值增加 5 点：*"
 
-#: ../../modules/health.md:99 b2f2552c2f2740818d0f2956da3482c9
+#: ../../modules/health.md:99 57e4494360384f60bcdd2ec3c442a08b
 msgid "You can use negative numbers to remove max health from the player."
-msgstr "您可以使用负数来移除玩家的最大生命值。"
+msgstr "你可以使用负数来移除玩家的最大生命值。"
 
 #: ../../modules/health.md:104 ../../modules/health.md:167
-#: ../../modules/health.md:230 21ce510eb6e1401792d4d0c9e9547ac2
-#: 3b0114a90ee14f228672139f69b865ee 8d2f6f2ce1bd448f994b290974d8ae68
+#: ../../modules/health.md:230 0c5b43ca22554ac08db543bbe2b47a1a
+#: 449a32048ab44c1f86e3fb4facb67d29 547cbc4afad44f6b846f6b953db0a23e
 msgid "**Credits**: Aksiome"
 msgstr "**制作人员**：Aksiome"
 
-#: ../../modules/health.md:108 6c8390f6b0454c20937d9df381b8d1e5
+#: ../../modules/health.md:108 bdd7613e676e4b608f1094d1cf9d44f1
 msgid "Get"
 msgstr "获取"
 
-#: ../../modules/health.md:116 aa56e1583d6f44fe9b861ba815a9fa59
+#: ../../modules/health.md:116 e485d7f6f2654ca6a47baadd9e4ffdca
 msgid "Get a player's health points."
 msgstr "获取玩家的生命值点数。"
 
-#: ../../modules/health.md:119 a53277026391449bab92b7499a708278
+#: ../../modules/health.md:119 12998084bcd14ad296ebaba04726fd82
 msgid ""
 "**Execution `as <players>`**: Players from which you want to get health "
 "points."
-msgstr "**执行 `as <玩家>`**：您想要获取生命值点数的玩家。"
+msgstr "**执行 `as <玩家>`**：你想要获取生命值点数的玩家。"
 
-#: ../../modules/health.md:124 ../../modules/health.md:151
-#: 1eb09a330bd84ee5b0c9e4bcf79fd60b e5d34821a3d54f69a987d75bc3d8bb1a
-#, python-brace-format
-msgid "{nbt}`number` **scale**: Scalar for the function's returned value."
-msgstr ""
-
-#: ../../modules/health.md:128 9804cc3be179483b81a9696148d2efdd
+#: ../../modules/health.md:128 ec49ca231ff742119687f03cb77d5d45
 #, python-brace-format
 msgid ""
 "**Return | Storage `bs:out health.get_health`**: {nbt}`double` Player's "
 "health points."
 msgstr "**返回值 | 命令存储 `bs:out health.get_health`**：{nbt}`double` 玩家的生命值点数。"
 
-#: ../../modules/health.md:131 3fd86de347d748c99ebcc3316056a7c8
+#: ../../modules/health.md:131 874bd275451a4942b9e277184f4cb4e3
 msgid "*Example: Get your current HP (scaled by 1000):*"
 msgstr "*示例：获取自己当前的生命值（放大 1000 倍）：*"
 
-#: ../../modules/health.md:143 448ec7f12b374463aa8c9564e3cd78b3
+#: ../../modules/health.md:143 b46f35a2873042f9bdee14925de3cda3
 msgid "Get a player's base maximum health points."
 msgstr "获取玩家的基础最大生命值点数。"
 
-#: ../../modules/health.md:146 6387bcddd8e84d7cb72157552a90e9c8
+#: ../../modules/health.md:146 3fc2182abab64f95a2edcdaff3212194
 msgid ""
 "**Execution `as <players>`**: Players from which you want to get max "
 "health points."
-msgstr "**执行 `as <玩家>`**：您想要获取最大生命值点数的玩家。"
+msgstr "**执行 `as <玩家>`**：你想要获取最大生命值点数的玩家。"
 
-#: ../../modules/health.md:155 ffd23225652e4090a3e092f10d509f63
+#: ../../modules/health.md:155 b9c345e291b84c538a30b26102f15fd2
 #, python-brace-format
 msgid ""
 "**Return | Storage `bs:out health.get_max_health`**: {nbt}`double` "
 "Player's max health points."
 msgstr "**返回值 | 命令存储 `bs:out health.get_max_health`**：{nbt}`double` 玩家的最大生命值点数。"
 
-#: ../../modules/health.md:158 58644388b6074a5ea02a8180a379d958
+#: ../../modules/health.md:158 c85e2599878a4bdaa4f76bbfbcf0d9ec
 msgid "*Example: Get your maximum HP (scaled by 1000):*"
 msgstr "*示例：获取自己的最大生命值（放大 1000 倍）：*"
 
-#: ../../modules/health.md:171 c24260f3dccd47dd9cb5923c6da2815a
+#: ../../modules/health.md:171 82a74cd93c3a4a3e9be7fe338a5ff4c2
 msgid "Set"
 msgstr "设置"
 
-#: ../../modules/health.md:179 6eefbf65168043ae978d19775f8f38e1
+#: ../../modules/health.md:179 d80a35e4c08e4f98a335740444adf336
 msgid "Set players' health points."
 msgstr "设置玩家的生命值点数。"
 
-#: ../../modules/health.md:187 964b16b4d0d2480b927e432a45cc84ea
-#, python-brace-format
-msgid "{nbt}`number` **points**: Health points."
-msgstr ""
-
-#: ../../modules/health.md:194 cd85475741924d218c72d740beafeb39
+#: ../../modules/health.md:194 932b3dec394947b38fdab5e40a09d4b0
 msgid "*Example: Set your HP to 10:*"
 msgstr "*示例：将自己的生命值设置为 10：*"
 
-#: ../../modules/health.md:206 9665973e06144b80b5092726fa740968
+#: ../../modules/health.md:206 a161ceb1edb14070ba63d7129626c86c
 msgid "Set players' base maximum health points."
 msgstr "设置玩家的基础最大生命值点数。"
 
-#: ../../modules/health.md:214 4f165ef24623476289121322e47c42f6
-#, python-brace-format
-msgid "{nbt}`number` **points**: Max health points."
-msgstr ""
-
-#: ../../modules/health.md:221 afa4e4af89464e1593b40e58fd6c1163
+#: ../../modules/health.md:221 a4f9de888daf438e9bbcc3e9f2fd3464
 msgid "*Example: Set your max HP to 10:*"
 msgstr "*示例：将自己的最大生命值设置为 10：*"
 
-#: ../../modules/health.md:234 29ecd1b143634f32add3380f91970f62
+#: ../../modules/health.md:234 635175a09caf491ba42840999ea8f371
 msgid "Time to Live"
 msgstr "存活时间"
 
-#: ../../modules/health.md:238 16f0d1aea9aa4cbc915fee79a0e74361
+#: ../../modules/health.md:238 e91f9b3492de48c88e3516125f99d5dd
 msgid "Set the lifetime of entities."
 msgstr "设置实体的存活时间。"
 
-#: ../../modules/health.md:241 3dd71fe0c8e145ee998549d79ae90ea6
+#: ../../modules/health.md:241 bcc32070f1c5472e95b2c863ac5fe01a
 msgid "**Execution `as <entities>`**: Entities to add a lifetime to."
 msgstr "**执行 `as <实体>`**：要添加存活时间的实体。"
 
-#: ../../modules/health.md:246 664985500c80459ab3a7af8dd22cef79
-#, python-brace-format
-msgid "{nbt}`compound` **with**: Lifetime data."
-msgstr ""
-
-#: ../../modules/health.md:247 2220ebfa33d149839974ff4fe3cd0510
-#, python-brace-format
-msgid ""
-"{nbt}`int` **time**: Time to live. In ticks by default if unit is not "
-"defined."
-msgstr ""
-
-#: ../../modules/health.md:248 214d5df4c96c47daba8b0980cd8c63ff
-#, python-brace-format
-msgid ""
-"{nbt}`string` **unit**: Unit of the specified time (tick, second, minute,"
-" hour, t, s, m, h)."
-msgstr ""
-
-#: ../../modules/health.md:249 c8bea25b29434691b32206decf504a52
-#, python-brace-format
-msgid ""
-"{nbt}`string` **on_death**: Command that will be run as the entity on its"
-" death."
-msgstr ""
-
-#: ../../modules/health.md:253 da22ee030e91400397ba94a345eaeb6d
+#: ../../modules/health.md:253 eb95d70f32cd4e628fd614a6f63f1172
 msgid "**State**: The entity now has a finite lifetime."
 msgstr "**状态**：实体现在具有有限的存活时间。"
 
-#: ../../modules/health.md:256 94d004b6500e4881a63fe85925487218
+#: ../../modules/health.md:256 24e742f5a3eb462cb72899bbefb98612
 msgid "*Example: Give creepers a 10-second lifetime:*"
 msgstr "*示例：给爬行者设置 10 秒的存活时间：*"
 
-#: ../../modules/health.md:263 10c76753facf422c909d8344f05de265
+#: ../../modules/health.md:263 52f96bb3351240f1806c841e54dda55f
 msgid "*Example: Give an explosion effect to creepers at the end of their life:*"
 msgstr "*示例：在爬行者生命结束时给予爆炸效果：*"
 
-#: ../../modules/health.md:270 4b0a14e753ab45158921a8a46f941a47
+#: ../../modules/health.md:270 905cc6a911a54df5ba43f1a438ee0938
 msgid "*Example: Update the on_death callback at any given time:*"
 msgstr "*示例：在任意时间更新死亡回调：*"
 
-#: ../../modules/health.md:280 6ec95c9929a74cd7b8bd10d67f1fee8c
+#: ../../modules/health.md:280 9d1df0259fbc4201b8c0d5c3ba05198a
 msgid "**Credits**: Aksiome, Leirof"
 msgstr "**制作人员**：Aksiome、Leirof"
 
-#: ../../_templates/comments.md:4 b94f1e7584e74a11bfed457f30a49e92
+#: ../../_templates/comments.md:4 5f45c5ee6e63478a8401609aa66d264c
 msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
+msgstr "**💬 这对你有帮助吗？**"
 
-#: ../../_templates/comments.md:6 a7bc97a2888c4d1bb24bc3d3c2b6990f
+#: ../../_templates/comments.md:6 6608ceaae12b44268cca6cdb00274652
 msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下您的问题和反馈！"
+msgstr "欢迎在下方留下你的问题和反馈！"
 
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`number` **points**: Health points to add to players."
+msgstr "{nbt}`number` **points**: 要给玩家增加的生命值。"
+
+#, python-brace-format
+msgid "{nbt}`number` **points**: Max health points to add to players."
+msgstr "{nbt}`number` **points**: 要给玩家增加的最大生命值。"
+
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's returned value."
+msgstr "{nbt}`number` **scale**: 函数返回值的缩放值。"
+
+#, python-brace-format
+msgid "{nbt}`number` **points**: Health points."
+msgstr "{nbt}`number` **points**: 生命值。"
+
+#, python-brace-format
+msgid "{nbt}`number` **points**: Max health points."
+msgstr "{nbt}`number` **points**: 最大生命值。"
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Lifetime data."
+msgstr "{nbt}`compound` **with**: 存活时间数据。"
+
+#, python-brace-format
+msgid ""
+"{nbt}`int` **time**: Time to live. In"
+" ticks by default if unit is "
+"not defined."
+msgstr "{nbt}`int` **time**: 存活时间，如果没有指定单位（unit）则单位默认为游戏刻时间。"
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **unit**: Unit of the "
+"specified time (tick, second, minute, "
+"hour, t, s, m, h)."
+msgstr "{nbt}`string` **unit**: 时间单位（tick, second, minute, hour, t, s, m, h）。"
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_death**: Command that will"
+" be run as the entity on its"
+" death."
+msgstr "{nbt}`string` **on_death**: 实体死亡时对其运行的函数。"

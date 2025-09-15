@@ -45,7 +45,7 @@ msgstr "🔧 函数"
 
 #: ../../modules/view.md:22 cc273bd763eb42f2bdb58e3215f480bf
 msgid "You can find below all functions available in this module."
-msgstr "您可以在下方找到此模块中的所有可用函数。"
+msgstr "你可以在下方找到此模块中的所有可用函数。"
 
 #: ../../modules/view.md:26 baec50397d3441e093c46008b6083ba8
 msgid "Aimed Block"
@@ -102,12 +102,12 @@ msgstr "**函数宏**："
 #: eea65e0554bc49529cdb3332055b00e1
 #, python-brace-format
 msgid "{nbt}`compound` Arguments"
-msgstr ""
+msgstr "{nbt}`compound` 参数"
 
 #: ../../modules/view.md:38 7cde1466c32046a78607e07717791fbf
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to run at the targeted block position."
-msgstr ""
+msgstr "{nbt}`string` **run**: 在目标方块位置执行的命令。"
 
 #: ../../modules/view.md:39 ../../modules/view.md:83 ../../modules/view.md:108
 #: ../../modules/view.md:150 ../../modules/view.md:184
@@ -117,7 +117,7 @@ msgstr ""
 #: f60e579be1b14fe6867ee03d29114b0c
 #, python-brace-format
 msgid "{nbt}`compound` **with**: Optional settings (see advanced usage below)."
-msgstr ""
+msgstr "{nbt}`compound` **with**: 可选设置（详见下方高级用法）。"
 
 #: ../../modules/view.md:43 b313798454c84abfa21b9b2b2376f828
 msgid "*Example: Change the block you are looking at:*"
@@ -143,7 +143,7 @@ msgid ""
 "[Learn more here](raycast.md)"
 msgstr ""
 "该系统是 `#bs.raycast:run` "
-"函数的简化特定用例。它内部依赖于该函数，允许您读取其输出，并通过修改其输入来灵活地改变其行为。[详见此处](raycast.md)"
+"函数的简化特定用例。它内部依赖于该函数，允许你读取其输出，并通过修改其输入来灵活地改变其行为。[详见此处](raycast.md)"
 
 #: ../../modules/view.md:56 7bd4551a6ce94680b000e630f4cf8e05
 msgid "Avoid Advancements"
@@ -185,7 +185,7 @@ msgstr "以当前实体瞄准的实体为执行者执行指令。"
 #: ../../modules/view.md:82 6eaf46bc6131464081965194346f6426
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to run as the targeted entity."
-msgstr ""
+msgstr "{nbt}`string` **run**: 以瞄准的实体为执行者执行的命令。"
 
 #: ../../modules/view.md:87 526fe58e9e884746935210c3fa9df375
 msgid "*Example: Run a command as the entity that you are looking at:*"
@@ -203,7 +203,7 @@ msgstr "以当前实体瞄准的实体为执行位置执行指令。"
 #: ../../modules/view.md:107 6fbca7d918b14eeca8efe75aa6328dcf
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to run at the targeted entity."
-msgstr ""
+msgstr "{nbt}`string` **run**: 以瞄准的实体为执行位置执行的命令。"
 
 #: ../../modules/view.md:112 2e8c1385e9a84943930b5267645a760c
 msgid "*Example: Run a command at the entity that you are looking at:*"
@@ -233,7 +233,7 @@ msgstr "在射线命中的终点处执行命令。"
 #: ../../modules/view.md:149 ac80e36f1f1a4e1f9f4fd947da85bd20
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to run at the hit point."
-msgstr ""
+msgstr "{nbt}`string` **run**: 在射线命中的终点处执行的命令。"
 
 #: ../../modules/view.md:154 00928effb6214e63b21bb6f67b393907
 msgid "*Example: Run a command at the point you are looking at:*"
@@ -252,7 +252,7 @@ msgstr "根据方块的碰撞箱和其法线方向，精确地得到放置方块
 #: ../../modules/view.md:183 137abecfc6ab428d9386cb0aeb329bab
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to run before the targeted block position."
-msgstr ""
+msgstr "{nbt}`string` **run**: 在方块放置位置执行的命令。"
 
 #: ../../modules/view.md:188 ade0a71f52e14c9eb76ea3db87af02ce
 msgid "*Example: Set a block as if the player was placing it:*"
@@ -347,7 +347,7 @@ msgstr "**执行 `as <玩家>`**：将该玩家的眼部位置作为视线起点
 #: ../../modules/view.md:290 dfc8eaa9fe4549f2bf461f14bc873a18
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to run as the looked at entity."
-msgstr ""
+msgstr "{nbt}`string` **run**: 对被看着的实体执行的命令。"
 
 #: ../../modules/view.md:293 ../../modules/view.md:320
 #: 1842462f031d4b69bea45ceba021df88 ca9c7097a8724f1a9e999f24c9ddec92
@@ -365,9 +365,9 @@ msgid "Run a command at the entity a player is looking at."
 msgstr "在玩家正在看着的实体处执行命令。"
 
 #: ../../modules/view.md:317 f5cc23d21019480c87dcdcfb4a0cc4eb
-#, python-brace-format
+#, fuzzy, python-brace-format
 msgid "{nbt}`string` **run**: Command to run at the looked at entity."
-msgstr ""
+msgstr "{nbt}`string` **run**: 对被看着的实体执行的命令。"
 
 #: ../../modules/view.md:323 1c5400ce4dfd460a90a86c9a39ef4b7a
 msgid "*Example: Summon particles at the armor_stand the player is looking at:*"
@@ -393,7 +393,7 @@ msgstr "🏷️ 标签"
 
 #: ../../modules/view.md:345 ee6da610aacf43f287872713ca0c601b
 msgid "You can find below below all tags available in this module."
-msgstr "您可以在下方找到此模块中的所有可用标签。"
+msgstr "你可以在下方找到此模块中的所有可用标签。"
 
 #: ../../modules/view.md:349 53835e08e0134a0f98c399bd5d5ab1fa
 msgid "Blocks"
@@ -413,9 +413,9 @@ msgstr "确定方块能否被视线穿透。"
 
 #: ../../modules/view.md:367 c26fbb594e2a44e0b51ae35e5b7cf4fb
 msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
+msgstr "**💬 这对你有帮助吗？**"
 
 #: ../../modules/view.md:369 95247d1b4c86413dbee2a4ea40006f62
 msgid "Feel free to leave your questions and feedbacks below!"
-msgstr "欢迎在下方留下您的问题和反馈！"
+msgstr "欢迎在下方留下你的问题和反馈！"
 

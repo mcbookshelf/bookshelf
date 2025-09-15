@@ -49,7 +49,7 @@ msgstr "🔧 函数"
 
 #: ../../modules/environment.md:22 f39dc47076694daaa7d2a93b1f08219d
 msgid "You can find below all functions available in this module."
-msgstr "您可以在下方找到此模块中的所有可用函数。"
+msgstr "你可以在下方找到此模块中的所有可用函数。"
 
 #: ../../modules/environment.md:26 854d0fa97268422f85651137d3d47203
 msgid "Get Biome"
@@ -74,7 +74,7 @@ msgstr "输入"
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from "
 "which you want to get biome data."
-msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：您想要获取生物群系数据的位置。"
+msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：你想要获取生物群系数据的位置。"
 
 #: ../../modules/environment.md:35 ../../modules/environment.md:72
 #: ../../modules/environment.md:104 ../../modules/environment.md:139
@@ -95,26 +95,26 @@ msgstr "**命令存储 `bs:out environment.get_biome`**："
 #: ../../modules/environment.md:38 6ad9bd950a4242d5ac5a4af47c7fa9fd
 #, python-brace-format
 msgid "{nbt}`compound` Biome data"
-msgstr ""
+msgstr "{nbt}`compound` 群系数据"
 
 #: ../../modules/environment.md:39 3e056ce40b224ba7913605ae0a0ae20e
 #, python-brace-format
 msgid ""
 "{nbt}`string` **type**: String representation of the biome ID (e.g., "
 "`minecraft:plains`)."
-msgstr ""
+msgstr "{nbt}`string` **type**: 群系id的完整字符串表示（比如：`minecraft:plains`）。"
 
 #: ../../modules/environment.md:40 32c5b9022c56438fa4a24b076b4b49a6
 #, python-brace-format
 msgid "{nbt}`double` **temperature**: The base temperature of the biome."
-msgstr ""
+msgstr "{nbt}`double` **temperature**: 群系的基础温度。"
 
 #: ../../modules/environment.md:41 479be7b2482c4391b1abb6540fdef13a
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "{nbt}`bool` **has_precipitation**: Whether the biome has precipitation or"
 " not."
-msgstr "判断生物群系能否降水。"
+msgstr "{nbt}`bool` **has_precipitation**: 群系能否降水。"
 
 #: ../../modules/environment.md:45 20c8a43c62c34cf490471078f9a49b0c
 msgid "*Example: Get biome data at the current location:*"
@@ -141,7 +141,7 @@ msgstr "获取函数执行位置的温度，考虑海拔高度对温度的影响
 msgid ""
 "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from "
 "which you want to get the temperature."
-msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：您想要获取温度的位置。"
+msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：你想要获取温度的位置。"
 
 #: ../../modules/environment.md:66 ../../modules/environment.md:98
 #: ../../modules/environment.md:133 ../../modules/environment.md:172
@@ -158,12 +158,12 @@ msgstr "**函数宏**："
 #: a4ae48ae09ef4c638a36c3e09e5b36d2 e34caf9e8c9140cb91ae6cc3bd12e30d
 #, python-brace-format
 msgid "{nbt}`compound` Arguments"
-msgstr ""
+msgstr "{nbt}`compound` 参数"
 
 #: ../../modules/environment.md:69 c4794e2533c8483f9edfa17c1126eeab
 #, python-brace-format
 msgid "{nbt}`number` **scale**: Scalar for the function's output."
-msgstr ""
+msgstr "{nbt}`number` **scale**: 应用于函数输出的比例因子。"
 
 #: ../../modules/environment.md:73 45b48609277942b0a3161b340396552b
 msgid ""
@@ -199,9 +199,9 @@ msgstr ""
 #: ../../modules/environment.md:175 ../../modules/environment.md:209
 #: 3d66c93e67df4ff98a4e5613fdc6ef7f 4e0fb11eca83446dbe4b95535736eaa1
 #: a0aff98fc99d49c1bf81591ea9ddfdfe c49804103ac64f2ca75a8243ecbdc222
-#, python-brace-format
+#, fuzzy, python-brace-format
 msgid "{nbt}`number` **scale**: A scalar applied to the output."
-msgstr ""
+msgstr "{nbt}`number` **scale**: 应用于函数输出的比例因子。"
 
 #: ../../modules/environment.md:105 5fec1817cbe24842a78ae2188c05e292
 msgid "**Return**: Sun's angle in degrees (scaled by `scale`)."
@@ -447,7 +447,7 @@ msgstr "👁️ 谓词"
 
 #: ../../modules/environment.md:319 253f124e35a44d8494585299e1717b07
 msgid "You can find below all predicates available in this module."
-msgstr "您可以在下方找到此模块中的所有可用判据。"
+msgstr "你可以在下方找到此模块中的所有可用判据。"
 
 #: ../../modules/environment.md:323 9d2b85e91d334d029566c8277e4523b1
 msgid "Can It Rain?"
@@ -696,9 +696,9 @@ msgstr ""
 
 #: ../../_templates/comments.md:4 144d32745a15405d97327ea0e7b07c3a
 msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
+msgstr "**💬 这对你有帮助吗？**"
 
 #: ../../_templates/comments.md:6 ba244c6ee0f84edba2b694fda4275fe3
 msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下您的问题和反馈！"
+msgstr "欢迎在下方留下你的问题和反馈！"
 

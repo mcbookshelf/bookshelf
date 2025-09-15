@@ -65,7 +65,7 @@ msgstr "🔧 函数"
 
 #: ../../modules/move.md:30 5947c20229d24e6f8a6f910594d3095d
 msgid "You can find below all functions available in this module."
-msgstr "您可以在下方找到此模块中的所有可用函数。"
+msgstr "你可以在下方找到此模块中的所有可用函数。"
 
 #: ../../modules/move.md:34 1906655567084a0d89b74b920614ad08
 msgid "Apply Velocity"
@@ -108,20 +108,20 @@ msgstr "**函数宏**："
 #: 8471a651965045a3b331c6136dce20d2
 #, python-brace-format
 msgid "{nbt}`compound` Arguments"
-msgstr ""
+msgstr "{nbt}`compound` 参数"
 
 #: ../../modules/move.md:52 ../../modules/move.md:88 ../../modules/move.md:203
 #: 28ad02e8857246c5a7869e05eb9219d3 3a5f605a690342f6a0ac368d07e296d9
 #: 9d863d90c9b049d2b69815260708459e
 #, python-brace-format
 msgid "{nbt}`number` **scale**: Scalar applied to the output."
-msgstr ""
+msgstr "{nbt}`number` **scale**: 输出的缩放系数。"
 
 #: ../../modules/move.md:53 ../../modules/move.md:89
 #: 2ef42486e06b4f9cb4a1becbf6f9821e 364f9572e19d4e9e9afcf0b60e77d6b9
 #, python-brace-format
 msgid "{nbt}`compound` **with**: Collision settings."
-msgstr ""
+msgstr "{nbt}`compound` **with**: 碰撞设置。"
 
 #: ../../modules/move.md:54 ../../modules/move.md:90
 #: 4f4888cc05094d94b432ec7524af6696 8b61bab25820427888e8197df3510591
@@ -131,6 +131,9 @@ msgid ""
 "with blocks (default: true). Can be a block hitbox type (`interaction` or"
 " `collision`). `true` defaults to `collision`."
 msgstr ""
+"{nbt}`bool` {nbt}`string` **blocks**: "
+"此实体是否和方块碰撞（默认：true）。可为方块碰撞箱类型（`interaction` 或 `collision`），`true` 默认等价于 "
+"`collision`。"
 
 #: ../../modules/move.md:55 ../../modules/move.md:91
 #: 09edfb31b07e450ea4332b823c218e2c f3a9eb73cda04d1580b7c80741e204c3
@@ -140,6 +143,8 @@ msgid ""
 " with entities (default: false). Can be an entity tag. For performance, "
 "tagging entities to detect is recommended."
 msgstr ""
+"{nbt}`bool` {nbt}`string` **entities**: "
+"其他实体能否阻挡移动（默认：false），建议用标签（Tags）来指定哪些实体可以阻挡移动，这样性能更好。"
 
 #: ../../modules/move.md:56 ../../modules/move.md:92
 #: 048ab5077aa840238c3c6ed30846e95c f282cb42fe6c42f28f2f4c36788672f3
@@ -148,6 +153,8 @@ msgid ""
 "{nbt}`string` **ignored_blocks**: Blocks to ignore (default: "
 "`#bs.hitbox:can_pass_through`)."
 msgstr ""
+"{nbt}`string` **ignored_blocks**: "
+"要忽略的方块（默认：`#bs.hitbox:can_pass_through`）。"
 
 #: ../../modules/move.md:57 ../../modules/move.md:93
 #: 046c1b767bbe444ba0c616b0697abec0 ad9edd67d75d437c819dc62dfb5ea8a9
@@ -157,6 +164,8 @@ msgid ""
 "`#bs.hitbox:intangible`). Does not apply to entities with custom "
 "hitboxes."
 msgstr ""
+"{nbt}`string` **ignored_entities**: "
+"要忽略的实体类型（默认：`#bs.hitbox:intangible`）。不要在有自定义碰撞箱的实体上使用。"
 
 #: ../../modules/move.md:58 ../../modules/move.md:94
 #: 87c6b51e306441afa851c0887cd1a35c c01e7ff807d64ddd8ba8b4356027e5d2
@@ -166,6 +175,8 @@ msgid ""
 "used to resolve the collision (default: `function "
 "#bs.move:callback/bounce`)."
 msgstr ""
+"{nbt}`string` **on_collision**: 当碰撞时运行的命令，用来解决碰撞问题（默认: `function "
+"#bs.move:callback/bounce`）。"
 
 #: ../../modules/move.md:61 ../../modules/move.md:97 ../../modules/move.md:150
 #: ../../modules/move.md:175 ../../modules/move.md:206
@@ -218,7 +229,7 @@ msgstr "**状态**：实体根据其局部速度分数被传送。"
 
 #: ../../modules/move.md:103 a402862617874666978bb6f4d219e491
 msgid "Hitbox Types"
-msgstr ""
+msgstr "碰撞箱类型"
 
 #: ../../modules/move.md:105 c3cc7e1cebf649fe9c1625c9d7cb4d82
 msgid ""
@@ -226,10 +237,12 @@ msgid ""
 "use either `interaction` or `collision` hitboxes. Entities support three "
 "types: `dynamic`, `baked`, and `custom`."
 msgstr ""
+"Bookshelf 支持多种碰撞箱类型以实现精确控制。方块可使用 `interaction` 或 `collision` "
+"碰撞箱，实体支持三种类型：`dynamic`、`baked` 和 `custom`。"
 
 #: ../../modules/move.md:107 5853167194a54152a8b37f403adc4c41
 msgid "See [Hitbox Types](hitbox.md#types) for full details."
-msgstr ""
+msgstr "完整说明请参见[碰撞箱类型](hitbox.md#types)。"
 
 #: ../../modules/move.md:110 442d910d17c14180a6ee40afe25d2df2
 msgid ""
@@ -334,7 +347,7 @@ msgstr "👁️ 谓词"
 
 #: ../../modules/move.md:229 bc11fce1e6d6421d99b82dd325c03362
 msgid "You can find below all predicates available in this module."
-msgstr "您可以在下方找到此模块中的所有可用谓词。"
+msgstr "你可以在下方找到此模块中的所有可用谓词。"
 
 #: ../../modules/move.md:233 db5ca34d3a0c48cd8a1493d31232ec77
 msgid "Has Velocity?"
@@ -443,7 +456,7 @@ msgstr "*`#bs.move:callback/stick`*"
 msgid ""
 "For sliding, we need to cancel the velocity on the axis that was hit and "
 "continue traveling the remaining distance."
-msgstr "对于滑动，我们需要取消被击中轴上的速度，并继续行进剩余距离。"
+msgstr "对于滑动，我们需要取消被阻挡的轴上的速度，并继续行进剩余距离。"
 
 #: ../../modules/move.md:285 f3c9fa97daaa45d0a58a8b1007938cdb
 msgid "*`#bs.move:callback/slide`*"
@@ -461,35 +474,25 @@ msgstr ""
 
 #: ../../_templates/comments.md:4 379ac9cc69c54c8dbadc913bb8b2c7f1
 msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
+msgstr "**💬 这对你有帮助吗？**"
 
 #: ../../_templates/comments.md:6 b4814f22208b4803a3457cfaf352eaa0
 msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下您的问题和反馈！"
+msgstr "欢迎在下方留下你的问题和反馈！"
 
 #~ msgid ""
 #~ "{nbt}`bool` **blocks**: Whether the entity "
 #~ "should collide with blocks (default: "
 #~ "true)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "{nbt}`bool` {nbt}`string` **entities**: Whether "
-#~ "the entity should collide with entities"
-#~ " (default: false). Can also be a "
-#~ "tag that entities must have."
-#~ msgstr ""
+#~ msgstr "{nbt}`bool` **blocks**: 方块能否阻挡移动（默认: true）。"
 
 #~ msgid ""
 #~ "{nbt}`string` **hitbox_shape**: Hitbox type: "
 #~ "`interaction` or `collision` (default: "
 #~ "`collision`)."
 #~ msgstr ""
-
-#~ msgid ""
-#~ "{nbt}`string` **ignored_entities**: Entities to "
-#~ "ignore (default: `#bs.hitbox:intangible`)."
-#~ msgstr ""
+#~ "{nbt}`string` **hitbox_shape**: 碰撞箱类型: `interaction`"
+#~ " 或 `collision`（默认: `collision`）。"
 
 #~ msgid "Collision / Interaction Shape"
 #~ msgstr "碰撞/交互形状"
