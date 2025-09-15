@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-18 22:04+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2025-07-19 18:15+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
 "Language-Team: zh_CN <LL@li.org>\n"
@@ -25,11 +25,11 @@ msgstr "📄 文件格式"
 
 #: ../../../contribute/file-format.md:7 d5d3eca630784f398ed401ba1da94898
 msgid "Each function of Bookshelf should have a header to indicate the license."
-msgstr "每个 Bookshelf 函数都应该有一个文件头来指明许可证。"
+msgstr "每个 Bookshelf 函数都应包含标明许可证的文件头。"
 
 #: ../../../contribute/file-format.md:11 7487e6251aba4ad8b3d51b951c3a573d
 msgid "Header to put at the beginning of each function:"
-msgstr "放在每个函数开头的文件头："
+msgstr "放置在每个函数开头的文件头："
 
 #: ../../../contribute/file-format.md:29 a2637884b7b14f79b3bc0b8e4afc0311
 msgid ""
@@ -37,4 +37,4 @@ msgid ""
 "function, the CI/CD pipeline will reject the merge of the contribution in"
 " Bookshelf. To ensure the code meets the minimal requirements, see the "
 "[contribution validation page](project:contribution-validation.md)."
-msgstr "如果 Bookshelf 贡献者忘记在函数开头添加文件头，CI/CD 管线将拒绝合并该贡献到 Bookshelf。要确保代码符合最低要求，请参见[贡献验证页面](project:contribution-validation.md)。"
+msgstr "若 Bookshelf 贡献者忘记在函数开头添加文件头，CI/CD 流水线将拒绝该贡献合并到 Bookshelf。要确保代码符合最低要求，请参阅[贡献验证页面](project:contribution-validation.md)。"

@@ -32,7 +32,6 @@ msgid "Prefabs"
 msgstr "预制件（Prefabs）"
 
 #: ../../../modules/index.md:5 f03f51979a0b4126bb34274d7d64635b
-#, fuzzy
 msgid "🧩 Modules"
 msgstr "🧩 模块"
 
@@ -105,7 +104,7 @@ msgstr "通用概念"
 
 #: ../../../_templates/definitions.md:3 e8456400c971486eaba9bb7a57de6390
 msgid "**Bundle**"
-msgstr "**整合包**"
+msgstr "**捆绑包**"
 
 #: ../../../_templates/definitions.md:4 adcc7152c1b148548af1ab452b85eaff
 msgid "A set of modules packaged together for distribution."
@@ -195,4 +194,4 @@ msgid ""
 "Shortened from \"as to at.\" These functions take two positions: one "
 "given through a positional argument (e.g., `positioned`, `at`), and the "
 "other from the executor's position."
-msgstr "缩写自\"as to at\"。这些函数接受两个位置：一个通过位置参数给出（如 `positioned`、`at`），另一个来自执行者的位置。"
+msgstr "缩写自“as to at”。这些函数接受两个位置：一个通过位置参数给出（如 `positioned`、`at`），另一个来自执行者的位置。"

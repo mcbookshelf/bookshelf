@@ -23,7 +23,7 @@ msgstr ""
 msgid "🎲 Random"
 msgstr "🎲 随机（Random）"
 
-#: ../../modules/random.md:3 9f1bb5c8c6e14212b0ef0f7a6bdad644
+#: ../../modules/random.md:3 9f1bb5c8c6e14212b0ef0f7a6bdad644e
 msgid "**`#bs.random:help`**"
 msgstr "**`#bs.random:help`**"
 
@@ -49,7 +49,7 @@ msgstr "🔧 函数"
 
 #: ../../modules/random.md:22 f8589e5ccfdb410895d0a0185b879fc9
 msgid "You can find below all functions available in this module."
-msgstr "您可以在下方找到此模块中的所有可用函数。"
+msgstr "你可以在下方找到此模块中的所有可用函数。"
 
 #: ../../modules/random.md:26 7c1be437561645a8a44d027cf3054952
 msgid "Random Choice"
@@ -180,17 +180,17 @@ msgstr "**函数宏**："
 #: ca681f9a9e2f483dae2e1623d3090528 f5fe84702c4c4eb89e56f237b88933c0
 #, python-brace-format
 msgid "{nbt}`compound` Arguments"
-msgstr ""
+msgstr "{nbt}`compound` 参数"
 
 #: ../../modules/random.md:111 77313823b25547fc9f25711fa257fa7a
 #, python-brace-format
 msgid "{nbt}`int` **min**: The lower bound."
-msgstr ""
+msgstr "{nbt}`int` **min**: 下限。"
 
 #: ../../modules/random.md:112 7e905a00bd2041fc81a03c01a2769961
 #, python-brace-format
 msgid "{nbt}`int` **max**: The upper bound."
-msgstr ""
+msgstr "{nbt}`int` **max**: 上限。"
 
 #: ../../modules/random.md:116 12783521182f482c98903cb86c5fca0f
 msgid ""
@@ -214,13 +214,13 @@ msgstr "每个结果都有相同的发生概率。就像掷一个公平的骰子
 
 #: ../../modules/random.md 36d6a46253164f3caa23847330da13bc
 msgid "Binomial"
-msgstr "二项式"
+msgstr "二项"
 
 #: ../../modules/random.md:140 fb24eda5519e4b9b858f6fea5a8cc0b8
 msgid ""
 "Generate a random number with a binomial distribution using the specified"
 " `trials` and `probability`."
-msgstr "使用指定的 `trials`（试验次数）和 `probability`（概率）生成具有二项分布的随机数。"
+msgstr "使用指定的 `trials`（试验次数）和 `probability`（概率）生成符合二项分布的随机数。"
 
 #: ../../modules/random.md:146 78e52780879e4f7c8499fd6520e3d6df
 #, python-brace-format
@@ -228,6 +228,7 @@ msgid ""
 "{nbt}`int` **trials**: The number of Bernoulli trials. Maximum accepted "
 "value is 1000."
 msgstr ""
+"{nbt}`int` **trials**: 伯努利试验的次数。最大数量限制为1000。"
 
 #: ../../modules/random.md:147 bcc1733261bc4534b5aafd881207c66a
 #, python-brace-format
@@ -235,6 +236,7 @@ msgid ""
 "{nbt}`double` **probability**: The probability of success of each "
 "Bernoulli trial, in range [0,1]."
 msgstr ""
+"{nbt}`double` **probability**: 每个伯努利试验的成功概率，范围在[0,1]。"
 
 #: ../../modules/random.md:151 e703885a3ec74b19afddcf4eb3d427eb
 msgid ""
@@ -259,7 +261,7 @@ msgid ""
 "outcomes (success or failure). It calculates the probability of obtaining"
 " a specific number of successes. For example, flipping a coin 10 times "
 "and counting the number of heads."
-msgstr "用于有固定次数的试验，每次试验有两种可能的结果（成功或失败）。它计算获得特定成功次数的概率。例如，抛硬币10次并计算正面的次数。"
+msgstr "这个分布用于描述在固定次数的独立试验中（每次试验只有成功或失败两种结果，且成功概率相同），恰好发生“成功”的概率。​​举个例子，可以用这个分布模拟抛硬币10次，出现正面的次数。"
 
 #: ../../modules/random.md 1429867eb1744148b8a5a30444b72914
 msgid "Geometric"
@@ -269,7 +271,7 @@ msgstr "几何"
 msgid ""
 "Generate a random number following a geometric distribution with the "
 "given `probability`."
-msgstr "使用给定的 `probability`（概率）生成具有几何分布的随机数。"
+msgstr "使用给定的 `probability`（概率）生成符合几何分布的随机数。"
 
 #: ../../modules/random.md:181 7153e4be6dca49b98a96cf6722894a4b
 #, python-brace-format
@@ -277,6 +279,7 @@ msgid ""
 "{nbt}`double` **probability**: The probability of stopping at each trial,"
 " in range [0,1]."
 msgstr ""
+"{nbt}`double` **probability**: 每次试验的停止概率，范围在[0,1]。"
 
 #: ../../modules/random.md:185 bd1d5488cbd74577a1599b12bbfcee29
 msgid ""
@@ -298,24 +301,22 @@ msgid ""
 "Measures the number of trials required to achieve the first success in a "
 "sequence of independent and identical trials. For example, the number of "
 "dice rolls needed to obtain a six."
-msgstr "衡量在一系列独立且相同的试验中首次成功所需的试验次数。例如，掷骰子获得6点所需的次数。"
+msgstr "衡量在一系列独立重复试验中首次成功所需的试验次数。例如，掷骰子获得6点所需的次数。"
 
 #: ../../modules/random.md 36d6a46253164f3caa23847330da13bc
-#, fuzzy
 msgid "Normal"
-msgstr "二项式"
+msgstr "正态"
 
 #: ../../modules/random.md:209 fb24eda5519e4b9b858f6fea5a8cc0b8
-#, fuzzy
 msgid ""
 "Generate a random number following a normal (Gaussian) distribution with "
 "specified `mean` and `spread` (standard deviation)."
-msgstr "使用期望值 `lambda` 生成具有泊松分布的随机数。"
+msgstr "指定`mean`（均值）和`spread`（标准差），生成一个符合正态（高斯）分布的随机数。"
 
 #: ../../modules/random.md:215 a1e0a6f619ae4e27a40896de56d3eba6
 #, python-brace-format
 msgid "{nbt}`double` **mean**: The average (center) value of the distribution."
-msgstr ""
+msgstr "{nbt}`double` **mean**: 正态分布的均值（中心）。"
 
 #: ../../modules/random.md:216 fc2aa2ebeeb043048a220f1b9b239ecb
 #, python-brace-format
@@ -323,23 +324,21 @@ msgid ""
 "{nbt}`double` **spread**: The standard deviation controlling how spread "
 "out the values are."
 msgstr ""
+"{nbt}`double` **spread**: 标准差，用于控制随机数的分散程度。"
 
 #: ../../modules/random.md:220 12783521182f482c98903cb86c5fca0f
-#, fuzzy
 msgid ""
 "**Return | Score `$random.normal bs.out`**: A random integer centered "
 "near `mean`."
-msgstr "**返回值 | 分数 `$random.uniform bs.out`**：[`min`, `max`] 范围内的随机整数。"
+msgstr "**返回值 | 分数 `$random.uniform bs.out`**：在`mean`附近的随机整数。"
 
 #: ../../modules/random.md:223 5e531843ddc54c08b55914c1abb6ab2a
-#, fuzzy
 msgid "*Example: Generate a random number with mean 10 and spread 3:*"
-msgstr "*示例：生成1到100之间的随机数：*"
+msgstr "*示例：生成分散程度（标准差）为3，均值为10的正态分布随机数。*"
 
 #: ../../modules/random.md:233 df0dcffd93664a3ab0eaf9b9e348a29d
-#, fuzzy
 msgid "Normal Distribution... 🥶 What's this?"
-msgstr "二项分布... 🥶 这是什么？"
+msgstr "正态分布... 🥶 这是什么？"
 
 #: ../../modules/random.md:236 97192c3e834a420598d447581e66365d
 msgid ""
@@ -347,6 +346,7 @@ msgid ""
 "around the mean with a bell-shaped probability curve. Widely used to "
 "model natural variations and measurement errors."
 msgstr ""
+"正态分布，也被称为高斯分布。它产生的值聚集在均值周围，形成钟形概率曲线。这个分布广泛用于建模自然变化和测量误差。"
 
 #: ../../modules/random.md 15d07165786441a59fc2403662ef621d
 msgid "Poisson"
@@ -356,12 +356,12 @@ msgstr "泊松"
 msgid ""
 "Generate a random number following a Poisson distribution with the "
 "expected value `lambda`."
-msgstr "使用期望值 `lambda` 生成具有泊松分布的随机数。"
+msgstr "使用期望值 `lambda` 生成符合泊松分布的随机数。"
 
 #: ../../modules/random.md:250 17bbb1a252024d7ba60f6458e1eb1975
 #, python-brace-format
 msgid "{nbt}`double` **lambda**: The expected value in range [0,10]."
-msgstr ""
+msgstr "{nbt}`double` **lambda**: 期望在[0,10]的值。"
 
 #: ../../modules/random.md:254 cb04a773352b4977ba6e4843acd992ff
 msgid ""
@@ -419,7 +419,7 @@ msgstr ""
 msgid ""
 "**Return | Score `$random.simplex_noise_2d bs.out`**: The noise value in "
 "range [-1000,1000]"
-msgstr "**返回值 | 分数 `$random.simplex_noise_2d bs.out`**：范围在 [-1000,1000] 的噪声值"
+msgstr "**返回值 | 分数 `$random.simplex_noise_2d bs.out`**：范围在 [-1000,1000] 的噪声值。"
 
 #: ../../modules/random.md:308 ../../modules/random.md:340
 #: dd2345e9d71a466e88328c1a9e044b04
@@ -467,13 +467,13 @@ msgstr "**分数 `$random.fractal_noise_2d.persistence bs.in`**：每个倍频�
 msgid ""
 "**Score `$random.fractal_noise_2d.lacunarity bs.in`**: Increase in "
 "frequency for each octave, scaled by 1000."
-msgstr "**分数 `$random.fractal_noise_2d.lacunarity bs.in`**：每个倍频程的频率增加，缩放1000倍。"
+msgstr "**分数 `$random.fractal_noise_2d.lacunarity bs.in`**：每个倍频程的频率增长，缩放1000倍。"
 
 #: ../../modules/random.md:337 bc00cdf707f74a7989bc2b3519dd96e4
 msgid ""
 "**Return | Score `$random.fractal_noise_2d bs.out`**: The noise value in "
 "range [-1000,1000]"
-msgstr "**返回值 | 分数 `$random.fractal_noise_2d bs.out`**：范围在 [-1000,1000] 的噪声值"
+msgstr "**返回值 | 分数 `$random.fractal_noise_2d bs.out`**：范围在 [-1000,1000] 的噪声值。"
 
 #: ../../modules/random.md:359 722528f2188c4e4eb83de8edf36323fd
 msgid "Noise Matrices"
@@ -490,7 +490,7 @@ msgstr "生成一维白噪声值数组。"
 #: ../../modules/random.md:373 090e61cad1f64fe2828fff672e7b52ec
 #, python-brace-format
 msgid "{nbt}`int` **length**: Length of the array to generate."
-msgstr ""
+msgstr "{nbt}`int` **length**: 要生成的数组长度。"
 
 #: ../../modules/random.md:374 ../../modules/random.md:405
 #: ../../modules/random.md:435 ../../modules/random.md:468
@@ -498,7 +498,7 @@ msgstr ""
 #: 603f6a20d01e4d609b7c420dfcf2e763 d67695453ab142abbd847cae69a65bd0
 #, python-brace-format
 msgid "{nbt}`compound` **with**:"
-msgstr ""
+msgstr "{nbt}`compound` **with**:"
 
 #: ../../modules/random.md:375 ../../modules/random.md:406
 #: ../../modules/random.md:438 ../../modules/random.md:474
@@ -506,7 +506,7 @@ msgstr ""
 #: 96087f0ccd3a4e86a6f200ffd15c3c0e b635637ce1a14e6d85cfdaea91c8d935
 #, python-brace-format
 msgid "{nbt}`number` **scale**: Scalar for the function's output (default: 1)."
-msgstr ""
+msgstr "{nbt}`number` **scale**: 函数输出的缩放系数（默认：1）。"
 
 #: ../../modules/random.md:379 c32808e60db54f449ff7728e8ced6a71
 #, python-brace-format
@@ -534,14 +534,14 @@ msgstr "生成二维白噪声值数组。"
 #: c212b9be21784cb997dcc098bbdad9e8 ce0348e9cfc44158b20eaea4cccc9a4b
 #, python-brace-format
 msgid "{nbt}`int` **width**: Width of the array to generate."
-msgstr ""
+msgstr "{nbt}`int` **width**: 要生成的数组的宽度。"
 
 #: ../../modules/random.md:404 ../../modules/random.md:434
 #: ../../modules/random.md:467 1812d1d4228f4278822dd869d5ce13de
 #: 4009cb0202984f7ba4a84b56bf0b670a b2c43678b7fc44d0be5b6bdd226388b8
 #, python-brace-format
 msgid "{nbt}`int` **height**: Height of the array to generate."
-msgstr ""
+msgstr "{nbt}`int` **width**: 要生成的数组的高度。"
 
 #: ../../modules/random.md:410 eb987f4f3da544b19efab84718311bd2
 #, python-brace-format
@@ -564,7 +564,7 @@ msgstr "二维单纯形噪声"
 msgid ""
 "Generate a 2D simplex noise texture of size `width` by `height`. Simplex "
 "noise is a gradient noise often used for textures."
-msgstr "生成大小为 `width` x `height` 的二维单纯形噪声纹理。单纯形噪声是一种常用于纹理的梯度噪声。"
+msgstr "生成大小为 `width` × `height` 的二维单纯形噪声纹理。单纯形噪声是一种常用于纹理的梯度噪声。"
 
 #: ../../modules/random.md:436 ../../modules/random.md:469
 #: 3c2e2cdc68664e8f887b76b1c45e9cc2 5e0e278c373749f0b1264b6b662773ae
@@ -573,6 +573,7 @@ msgid ""
 "{nbt}`int` **size**: Size of the noise \"cell\" (default: 16). Lower size"
 " means more detail."
 msgstr ""
+"{nbt}`int` **size**: 噪声晶格的大小（默认：16）。这个值越小，结果就越复杂。"
 
 #: ../../modules/random.md:437 ../../modules/random.md:470
 #: 92ed6e9737d4404697365cd49b5c4a5c f813d77a0dfd424f9ecea4e424855d36
@@ -581,6 +582,7 @@ msgid ""
 "{nbt}`int` **seed**: Seed for the noise generation, allowing for "
 "reproducibility (default: random)."
 msgstr ""
+"{nbt}`int` **seed**: 噪声的种子，方便复现结果（默认：random）。"
 
 #: ../../modules/random.md:442 00d0102075d84d3a8e36cec07c987a71
 #, python-brace-format
@@ -603,14 +605,14 @@ msgstr "二维分形噪声"
 msgid ""
 "Generate a 2D fractal noise texture of size `width` by `height`. Fractal "
 "noise combines multiple layers of noise for detailed textures."
-msgstr "生成大小为 `width` x `height` 的二维分形噪声纹理。分形噪声将多层噪声组合以创建详细的纹理。"
+msgstr "生成大小为 `width` × `height` 的二维分形噪声纹理。分形噪声将多层噪声组合来创建更复杂的纹理。"
 
 #: ../../modules/random.md:471 344d3da01f034226a291ba9ec7606a2a
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "{nbt}`int` **octaves**: Number of noise layers (default: 4). More octaves"
 " = more detail."
-msgstr "**分数 `$random.fractal_noise_2d.octaves bs.in`**：要组合的噪声层数（更多倍频程 = 更多细节）。"
+msgstr "**分数 `$random.fractal_noise_2d.octaves bs.in`**：要组合的噪声层数（默认：4）。更多倍频程 = 更多细节。"
 
 #: ../../modules/random.md:472 61f4ae1ccd764859bf5aa04760e74a76
 #, python-brace-format
@@ -618,6 +620,7 @@ msgid ""
 "{nbt}`double` **persistence**: Contribution of each octave (default: "
 "0.5). Higher means more detail."
 msgstr ""
+"{nbt}`double` **persistence**: 每个倍频程的贡献（默认：0.5），更高的值细节更多。"
 
 #: ../../modules/random.md:473 8cd6680cf8854670ae661c1eecdb1caf
 #, python-brace-format
@@ -625,6 +628,7 @@ msgid ""
 "{nbt}`double` **lacunarity**: Increase in frequency for each octave "
 "(default: 2.0). Higher means more rapid frequency increase."
 msgstr ""
+"{nbt}`double` **lacunarity**: 每个倍频程的频率增长（默认：2.0），值越高频率增长越快。"
 
 #: ../../modules/random.md:478 ebcd5d514eed455d8082b1ab9a1596d1
 #, python-brace-format
@@ -657,9 +661,8 @@ msgstr "![](/_imgs/modules/random/fractal_noise.png)"
 
 #: ../../_templates/comments.md:4 0371e637cb4b4364a1a9295c15f9b6a4
 msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
+msgstr "**💬 这对你有帮助吗？**"
 
 #: ../../_templates/comments.md:6 78a5bc9cbb404a5ea2031fb328cfd4b7
 msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下您的问题和反馈！"
-
+msgstr "欢迎在下方留下你的问题和反馈！"

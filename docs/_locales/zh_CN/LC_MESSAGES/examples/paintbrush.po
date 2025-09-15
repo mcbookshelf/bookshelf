@@ -21,10 +21,9 @@ msgstr ""
 
 #: ../../../../examples/paintbrush.md:2 a7cae4378d184916a12d7b23bc54d6a4
 msgid "🖌️ Paintbrush"
-msgstr "🖌️ Paintbrush"
+msgstr "🖌️ 画笔"
 
 #: ../../../../examples/paintbrush.md:4 9c737df2b2aa4b538db9f37207f51eda
-#, fuzzy
 msgid ""
 "This example demonstrates how to create a **paintbrush** in Minecraft "
 "using the Bookshelf library. The paintbrush changes a block's material to"
@@ -66,22 +65,19 @@ msgstr "📦 要求"
 
 #: ../../../../examples/paintbrush.md:20 45a35a8433e74ef583405a847d7e371c
 msgid "Before we start, make sure you have:"
-msgstr "在开始之前，请确保您有："
+msgstr "在开始之前，请确保你有："
 
 #: ../../../../examples/paintbrush.md:22 0db49ea206e14d31a4836dbe079877ae
-#, fuzzy
 msgid "Minecraft Java Edition"
-msgstr "Minecraft Java 版 1.21.4 或更高版本"
+msgstr "Minecraft Java版"
 
 #: ../../../../examples/paintbrush.md:23 01a229f0c0f143d9ae0f2289822b72d7
-#, fuzzy
 msgid ""
 "A basic understanding of Minecraft datapacks, including functions, tags, "
 "and scoreboards"
 msgstr "数据包开发的基础知识，包括函数、标签和记分项"
 
 #: ../../../../examples/paintbrush.md:24 e835a96ddeb24f69a27f941a5585eaf7
-#, fuzzy
 msgid ""
 "Bookshelf `bs.block` and `bs.view` modules installed (see "
 "[Quickstart](https://docs.mcbookshelf.dev/en/latest/quickstart.html) for "
@@ -99,7 +95,6 @@ msgid "`@require bookshelf.module.view`"
 msgstr "`@require bookshelf.module.view`"
 
 #: ../../../../examples/paintbrush.md:30 a2da838920c24e38b3b903570f9c8755
-#, fuzzy
 msgid "🛠️ Step-by-Step Guide"
 msgstr "🛠️ 逐步实现"
 
@@ -126,7 +121,6 @@ msgid "`@function paintbrush:load`"
 msgstr "`@function paintbrush:load`"
 
 #: ../../../../examples/paintbrush.md:45 8bb651933d7f499089e7ceacf15032fc
-#, fuzzy
 msgid ""
 "This objective will store data for the paintbrush, primarily the values "
 "returned by commands."
@@ -211,8 +205,8 @@ msgid ""
 "per player, we need to reset it each time the brush is used."
 msgstr ""
 "接下来，通过运行 `function paintbrush:give` "
-"给自己一个画笔来测试。现在……右键点击，您会在聊天栏中看到“Paintbrush "
-"used!”。但是，如果您再次尝试，什么也不会发生。这是因为玩家现在已经获得了 `painterbrush:use` "
+"给自己一个画笔来测试。现在……右键点击，你会在聊天栏中看到“Paintbrush "
+"used!”。但是，如果你再次尝试，什么也不会发生。这是因为玩家现在已经获得了 `painterbrush:use` "
 "进度，这会阻止它再次触发。由于进度每个玩家只能触发一次，我们需要在每次使用画笔时重置它。"
 
 #: ../../../../examples/paintbrush.md:119
@@ -227,7 +221,7 @@ msgid ""
 "Try again (remember to manually reset the advancement once before "
 "testing), and you'll see that the message now appears every time you use "
 "the brush."
-msgstr "再次尝试（记得在测试前手动重置一次进度），您会看到每次使用画笔时消息都会显示。"
+msgstr "再次尝试（记得在测试前手动重置一次进度），你会看到每次使用画笔时消息都会显示。"
 
 #: ../../../../examples/paintbrush.md:131 0f71668e03c244a6b35ef4112096095e
 msgid "3. Replace the Targeted Block"
@@ -281,7 +275,7 @@ msgid ""
 "us to set default values for them. In this case, we don't need to pass "
 "any optional variables, so we leave it empty."
 msgstr ""
-"您可能已经注意到一个空的 `with` 宏变量。我们不能直接将可选的宏变量传递给函数，但使用 `with` "
+"你可能已经注意到一个空的 `with` 宏变量。我们不能直接将可选的宏变量传递给函数，但使用 `with` "
 "允许我们为它们设置默认值。在这种情况下，我们不需要传递任何可选变量，所以将其留空。"
 
 #: ../../../../examples/paintbrush.md:160 346e521e21eb4ac2b43daca60b2c66b3
@@ -405,7 +399,7 @@ msgstr "最后，我们使用 `set_block` 将转换后的方块应用到世界�
 msgid ""
 "This completes the transformation process. If you try to paint a block "
 "now, you will see that the block is transformed, perfect!"
-msgstr "这就完成了转换过程。如果您现在尝试绘制方块，您会看到方块被转换了，完美！"
+msgstr "这就完成了转换过程。如果你现在尝试绘制方块，你会看到方块被转换了，完美！"
 
 #: ../../../../examples/paintbrush.md:269 332daf0b925e4994b3389b246b21a4a2
 msgid "5. Going Further"
@@ -422,7 +416,7 @@ msgid ""
 "add a new `tick` function that runs on a loop and reset the score in the "
 "`paintbrush:use` function."
 msgstr ""
-"如果您在告示牌上尝试此操作，您会发现方块并没有转换为匹配手持方块的材质。这是因为 `using_item` "
+"如果你在告示牌上尝试此操作，你会发现方块并没有转换为匹配手持方块的材质。这是因为 `using_item` "
 "进度条件不会在某些方块（如告示牌）上触发。要解决此问题，我们可以使用记分板记分项来补充我们的方法，以跟踪玩家何时使用画笔。我们需要在分数增加时触发"
 " `use` 函数。为此，我们将添加一个循环运行的新 `tick` 函数，并在 `paintbrush:use` 函数中重置分数。"
 
@@ -442,7 +436,7 @@ msgstr "`@function paintbrush:tick`"
 msgid ""
 "And… That's it! You can now paint blocks with the painter tool, and as "
 "you can see, this is really simple to do!"
-msgstr "就是这样！您现在可以使用绘画工具绘制方块了，如您所见，这真的很简单！"
+msgstr "就是这样！你现在可以使用绘画工具绘制方块了，如你所见，这真的很简单！"
 
 #: ../../../../examples/paintbrush.md:305 9669a1cf0aa948f1bec30d6510fcfcfd
 msgid "✔️ Conclusion"
@@ -452,7 +446,7 @@ msgstr "✔️ 结语"
 msgid ""
 "Congratulations! You've successfully created a functional paintbrush "
 "using Bookshelf! This project demonstrates how to:"
-msgstr "恭喜！您已成功使用 Bookshelf 创建了一个功能性画笔！此项目演示了如何："
+msgstr "恭喜！你已成功使用 Bookshelf 创建了一个功能性画笔！此项目演示了如何："
 
 #: ../../../../examples/paintbrush.md:309 0ece61425ef04fddb1174c79a02ece5a
 msgid "Use Bookshelf's view module to get the aimed block"
@@ -468,16 +462,12 @@ msgid ""
 "Bookshelf simplifies complex datapack development. Feel free to "
 "experiment with the code and add your own features to make it even more "
 "powerful!"
-msgstr "画笔不仅是一个有用的工具，也是展示 Bookshelf 如何简化复杂数据包开发的绝佳示例。请随意尝试代码并添加您自己的功能，使其变得更强大！"
+msgstr "画笔不仅是一个有用的工具，也是展示 Bookshelf 如何简化复杂数据包开发的绝佳示例。请随意尝试代码并添加你自己的功能，使其变得更强大！"
 
 #: ../../../_templates/comments.md:4 7974efcd0aeb4d5fb2f1fa2e242a733a
 msgid "**💬 Did it help you?**"
-msgstr "**💬 这对您有帮助吗？**"
+msgstr "**💬 这对你有帮助吗？**"
 
 #: ../../../_templates/comments.md:6 5c4ffa6db47344658a7d0dd975557b6b
 msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下您的问题和反馈！"
-
-#~ msgid "A ready-to-use empty datapack"
-#~ msgstr "一个可用的空数据包"
-
+msgstr "欢迎在下方留下你的问题和反馈！"

@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../../examples/lifestring.md:2 b928d4f3f9004b04aff032bb63525066
 msgid "🧵 Lifestring"
-msgstr ""
+msgstr "🧵 生命链接"
 
 #: ../../../examples/lifestring.md:4 1293d24f9bcf45b4aff40dc48a406bf0
 msgid ""
@@ -30,6 +30,8 @@ msgid ""
 "health, so any health change made to one player is automatically applied "
 "to all others."
 msgstr ""
+"本示例展示使用Bookshelf的`bs.health`模块构建的**生命链接**系统。"
+"该系统将多名玩家的生命值相互绑定，使任一玩家的生命值变化自动同步至所有关联玩家。"
 
 #: ../../../examples/lifestring.md:6 5dacccd78ab24f47a643dcecabb24191
 msgid ""
@@ -39,44 +41,47 @@ msgid ""
 "current health at any point in the tick, even with pending changes, "
 "without worrying about tick safety."
 msgstr ""
+"原生Minecraft缺乏精确治疗玩家的可靠方法，替代方案常导致时序问题。"
+"Bookshelf通过确保生命值更新的一致性解决此问题，允许你在游戏刻的任何时刻获取当前生命值"
+"（即使存在待处理变更），无需担心刻安全性问题。"
 
 #: ../../../examples/lifestring.md:10 46eed23d7d714794af54eccafa5da374
 msgid "🎯 What We'll Build"
-msgstr ""
+msgstr "🎯 构建目标"
 
 #: ../../../examples/lifestring.md:12 6057c02a2f09423fa7b1acb768799696
 msgid "Our lifestring system will:"
-msgstr ""
+msgstr "生命链接系统将实现："
 
 #: ../../../examples/lifestring.md:13 1ea95311e563486fbf2cb88a1a78ab42
 msgid "Detect when a player's health changes"
-msgstr ""
+msgstr "检测玩家生命值变化时刻"
 
 #: ../../../examples/lifestring.md:14 1ee9e6ead6ff484f9c6170f853b6d6e5
 msgid "Find all other players who are linked to that player"
-msgstr ""
+msgstr "查找所有关联玩家"
 
 #: ../../../examples/lifestring.md:15 950a6078b74e4f47b051139b7a380036
 msgid "Propagate the health change across all linked players"
-msgstr ""
+msgstr "将生命值变化同步至所有关联玩家"
 
 #: ../../../examples/lifestring.md:19 a65bb7fa1ca24a41b67e039886b279a0
 msgid "📦 Requirements"
-msgstr ""
+msgstr "📦 准备工作"
 
 #: ../../../examples/lifestring.md:21 235688dd70a64e83894d4f876dbfbc59
 msgid "Before we begin, make sure you have:"
-msgstr ""
+msgstr "开始前请确保具备："
 
 #: ../../../examples/lifestring.md:23 ebcef9c4705f4894a078f548efecfa47
 msgid "Minecraft Java Edition"
-msgstr ""
+msgstr "Minecraft Java版"
 
 #: ../../../examples/lifestring.md:24 4e4aef6c78a149d5b4fdef3487587a28
 msgid ""
 "A basic understanding of Minecraft datapacks, including functions, tags, "
 "and scoreboards"
-msgstr ""
+msgstr "基础Minecraft数据包知识（函数、标签、记分板）"
 
 #: ../../../examples/lifestring.md:25 6ea0e77a349d4fc4990ad53afcd532c4
 msgid ""
@@ -84,18 +89,20 @@ msgid ""
 "[Quickstart](https://docs.mcbookshelf.dev/en/latest/quickstart.html) for "
 "instructions)"
 msgstr ""
+"已安装Bookshelf的`bs.health`模块（安装指南参见"
+"[快速入门](https://docs.mcbookshelf.dev/en/latest/quickstart.html)）"
 
 #: ../../../examples/lifestring.md:26 a6d97cdf6a484d0c8ac1c0974994f58d
 msgid "`@require bookshelf.module.health`"
-msgstr ""
+msgstr "`@require bookshelf.module.health`"
 
 #: ../../../examples/lifestring.md:30 6d41c30d93c24b9086d39f8ecaf053c1
 msgid "🛠️ Step-by-Step Guide"
-msgstr ""
+msgstr "🛠️ 分步指南"
 
 #: ../../../examples/lifestring.md:32 d0e7f5af1be64d818cd0c529f69497f7
 msgid "1. Prepare the Datapack"
-msgstr ""
+msgstr "1. 准备数据包"
 
 #: ../../../examples/lifestring.md:34 53237cb0f1f247cb87eb2c105ee1dbe4
 msgid ""
@@ -103,45 +110,51 @@ msgid ""
 "name it `lifestring:load` and register it in the `minecraft:load` tag. "
 "This function will set up the necessary objectives."
 msgstr ""
+"首先创建数据包加载时运行的函数`lifestring:load`，"
+"将其注册到`minecraft:load`标签中。"
+"这个函数用于初始化记分板项。"
 
 #: ../../../examples/lifestring.md:38 459521b0772943aca4b7bb1b4e873a44
 msgid "**➔ create the `load` function**"
-msgstr ""
+msgstr "**➔ 创建`load`函数**"
 
 #: ../../../examples/lifestring.md:40 ../../../examples/lifestring.md:99
 #: 4221d5f21e354e2d96ba53ba25d92e66 85246a5e72fc44cb8dabffd36492fe3e
 msgid "`@function lifestring:load`"
-msgstr ""
+msgstr "`@function lifestring:load`"
 
 #: ../../../examples/lifestring.md:46 fafdbccc69154923b4a6a068050e4923
 msgid ""
 "*`lifestring.link`*: Stores the link ID for each player. Players with the"
 " same ID will share health."
 msgstr ""
+"*`lifestring.link`*：存储玩家链接ID。相同ID的玩家共享生命值。"
 
 #: ../../../examples/lifestring.md:47 82a183a6793849edac49d4fb7e1d0b00
 msgid ""
 "*`lifestring.health`*: Stores each player's health from the previous "
 "tick, so we can detect changes."
 msgstr ""
+"*`lifestring.health`*：存储玩家上一游戏刻的生命值，用于检测变化。"
 
 #: ../../../examples/lifestring.md:49 7cd675813e0948aaad57124544237026
 msgid "**➔ register it in the `load` tag**"
-msgstr ""
+msgstr "**➔ 注册到`load`标签**"
 
 #: ../../../examples/lifestring.md:51 8547cae026c948fdbc896f043d2181d3
 msgid "`@function_tag minecraft:load`"
-msgstr ""
+msgstr "`@function_tag minecraft:load`"
 
 #: ../../../examples/lifestring.md:60 59fcd7acd4784bf080ccfaec60ee0d4c
 msgid ""
 "Adding `lifestring:load` to this tag ensures it runs automatically "
 "whenever the datapack is enabled or reloaded."
 msgstr ""
+"将`lifestring:load`添加至此标签可确保数据包启用或重载时自动运行。"
 
 #: ../../../examples/lifestring.md:64 6f84b673e59f4fb4b2999107f827ab43
 msgid "2. Link Players Together"
-msgstr ""
+msgstr "2. 建立玩家链接"
 
 #: ../../../examples/lifestring.md:67 59a360bf0a3c4ac5abe37e618884e103
 msgid ""
@@ -152,14 +165,18 @@ msgid ""
 "another (*`at`*). This makes it easy to link one player to another with a"
 " single command:"
 msgstr ""
+"要使玩家共享生命值，需设置相同的*`lifestring.link`*分数。"
+"创建`lifestring:create_link_ata`函数（“ata”代表“as to at”，即从执行者到执行位置，"
+"是Bookshelf中表示在源实体(*`as`*)上下文操作目标实体(*`at`*)的命名规范），"
+"通过单条命令链接玩家："
 
 #: ../../../examples/lifestring.md:73 490085fa51d04706a2d121c0a6ae3ba8
 msgid "**➔ create the `create_link_ata` function**"
-msgstr ""
+msgstr "**➔ 创建`create_link_ata`函数**"
 
 #: ../../../examples/lifestring.md:75 79b86f9a8b0748048e43fd893b3f9685
 msgid "`@function lifestring:create_link_ata`"
-msgstr ""
+msgstr "`@function lifestring:create_link_ata`"
 
 #: ../../../examples/lifestring.md:85 9bb0b4851f1846c8b57e02994b6fa4d4
 msgid ""
@@ -168,10 +185,13 @@ msgid ""
 "*`#counter`* score. Then, it copies that link ID from the target player "
 "(*`@p`*) to the source player (*`@s`*)."
 msgstr ""
+"此函数首先检查目标玩家(*`@p`*)是否已有链接ID。"
+"若无，则通过递增全局*`#counter`*分数分配新ID。"
+"随后将目标玩家的链接ID复制至源玩家(*`@s`*)。"
 
 #: ../../../examples/lifestring.md:89 0497a0e2ac1347bebdb2f70834f7ee70
 msgid "3. Detect Health Changes"
-msgstr ""
+msgstr "3. 检测生命值变化"
 
 #: ../../../examples/lifestring.md:91 d93340e313ca411db78d0dfcbca76335
 msgid ""
@@ -180,6 +200,9 @@ msgid ""
 "itself every tick, and a function `lifestring:check` that runs for each "
 "player."
 msgstr ""
+"需创建持续检测玩家生命值变化的函数："
+"- `lifestring:tick`：每游戏刻自调度执行"
+"- `lifestring:check`：为每个玩家执行"
 
 #: ../../../examples/lifestring.md:93 ad8c23dc0adb46358962920fdb11b337
 msgid ""
@@ -187,26 +210,28 @@ msgid ""
 "to the health stored from the previous tick (*`@s lifestring.health`*). "
 "If there's a difference, it will run `lifestring:change`."
 msgstr ""
+"`lifestring:check`函数比较玩家当前生命值与上一刻存储值(*`@s lifestring.health`*)。"
+"若存在差异则运行`lifestring:change`。"
 
 #: ../../../examples/lifestring.md:97 f2d7ff73c1a442309f671d19177195ff
 msgid "**➔ update the `load` function**"
-msgstr ""
+msgstr "**➔ 更新`load`函数**"
 
 #: ../../../examples/lifestring.md:106 3aa599012dd1472b8742ef64e0bd6566
 msgid "**➔ create the `tick` function**"
-msgstr ""
+msgstr "**➔ 创建`tick`函数**"
 
 #: ../../../examples/lifestring.md:108 0f503574415b4e2ea049f365b6d14b9d
 msgid "`@function lifestring:tick`"
-msgstr ""
+msgstr "`@function lifestring:tick`"
 
 #: ../../../examples/lifestring.md:114 086f50bc1f944eb09b0d887e9aeb1e08
 msgid "**➔ create the `check` function**"
-msgstr ""
+msgstr "**➔ 创建`check`函数**"
 
 #: ../../../examples/lifestring.md:116 ed764a82846d46d28b3261bf3aa79633
 msgid "`@function lifestring:check`"
-msgstr ""
+msgstr "`@function lifestring:check`"
 
 #: ../../../examples/lifestring.md:124 68321160ec7e49c5a4d120fb3688dc77
 msgid ""
@@ -217,27 +242,34 @@ msgid ""
 " player has a *`lifestring.health`* score. Then we add this change to the"
 " player's health score."
 msgstr ""
+"获取当前生命值（按1000倍缩放存储），"
+"减去上一刻生命值得出*`#this`*中的变化量。"
+"若非零则运行变更函数。"
+"第二次条件检查确保玩家存在*`lifestring.health`*分数，"
+"随后将变化量添加至玩家生命值分数。"
 
 #: ../../../examples/lifestring.md:126 86ce94db18d448f9abc769dd5f8d1cf9
 msgid "**➔ create the `change` function**"
-msgstr ""
+msgstr "**➔ 创建`change`函数**"
 
 #: ../../../examples/lifestring.md:128 ../../../examples/lifestring.md:177
 #: ../../../examples/lifestring.md:187 ../../../examples/lifestring.md:206
 #: 4e82bc3dd998463bbbfecce24caa1c7b 81b8c9e46cd842eb9cdef9ed92116429
 #: 88eeb929493c481b938f2a40098204b5 cad001810a0548be889e2cba73b144f8
 msgid "`@function lifestring:change`"
-msgstr ""
+msgstr "`@function lifestring:change`"
 
 #: ../../../examples/lifestring.md:133 37fe687c77f74365852315236ba231b3
 msgid ""
 "Now, whenever a linked player's health changes, the `lifestring:change` "
 "function is triggered, and you'll see a message in chat from that player."
 msgstr ""
+"当关联玩家生命值变化时，`lifestring:change`函数触发，"
+"该玩家将在聊天中发送消息。"
 
 #: ../../../examples/lifestring.md:137 5e17e732108e484da51b96b624a58988
 msgid "4. Find Linked Players"
-msgstr ""
+msgstr "4. 查找关联玩家"
 
 #: ../../../examples/lifestring.md:139 7f425130e9ed4f7ea5c86363fee2b27f
 msgid ""
@@ -245,14 +277,16 @@ msgid ""
 "other players who have the same *`lifestring.link`* score. We can do this"
 " using a predicate."
 msgstr ""
+"已知玩家生命值变化时机，需查找具有相同*`lifestring.link`*分数的其他玩家。"
+"可通过谓词实现。"
 
 #: ../../../examples/lifestring.md:143 8d70408ed1d04c88a567c618b20ed5ea
 msgid "**➔ create the `is_linked` predicate**"
-msgstr ""
+msgstr "**➔ 创建`is_linked`谓词**"
 
 #: ../../../examples/lifestring.md:145 ceece0c9eba9443d97b6634269a338e8
 msgid "`@predicate lifestring:is_linked`"
-msgstr ""
+msgstr "`@predicate lifestring:is_linked`"
 
 #: ../../../examples/lifestring.md:173 3b04fbba7da645faa49fed9df1ec513c
 msgid ""
@@ -260,12 +294,14 @@ msgid ""
 "being evaluated (`\"this\"`) is equal to the *`lifestring.link`* score "
 "stored in a temporary score named *`#this`*."
 msgstr ""
+"此谓词检查被评估实体(`\"this\"`)的*`lifestring.link`*分数"
+"是否等于临时分数*`#this`*中存储的值。"
 
 #: ../../../examples/lifestring.md:175 ../../../examples/lifestring.md:185
 #: ../../../examples/lifestring.md:204 1ebd68617c134bedb1f5861452c0e93d
 #: 33ff1b843def406e972542b5bc33a130 4df14ba90a0949f08dcc851d677a92f9
 msgid "**➔ update the `change` function**"
-msgstr ""
+msgstr "**➔ 更新`change`函数**"
 
 #: ../../../examples/lifestring.md:183 cf1c5647639e47b1b9f63e26aa35f456
 msgid ""
@@ -275,6 +311,9 @@ msgid ""
 "temporarily swap the *`#this`* score with the link ID of the player whose"
 " health changed."
 msgstr ""
+"当玩家生命值变化时，所有关联玩家将发送\"生命值变化！\"消息。"
+"但需仅更新其他关联玩家（排除变化源玩家）。"
+"可通过临时交换*`#this`*分数与变化源玩家的链接ID实现。"
 
 #: ../../../examples/lifestring.md:194 f98acc20e3f64147bff646db32b6be64
 msgid ""
@@ -284,10 +323,15 @@ msgid ""
 "*`#this`*), make them say the message, and then swap the scores back to "
 "normal."
 msgstr ""
+"*`><`*运算符交换分数值："
+"1. 将*`#this`*与玩家链接ID交换"
+"2. 查找所有关联玩家（此时原玩家链接ID在*`#this`*中故被排除）"
+"3. 发送消息"
+"4. 交换回原始分数"
 
 #: ../../../examples/lifestring.md:198 db1600b79d2e4dc7a8ae4a4b683ee2b7
 msgid "5. Update Players Health"
-msgstr ""
+msgstr "5. 更新玩家生命值"
 
 #: ../../../examples/lifestring.md:200 266cf3c091834a5580a8cf45b497eb10
 msgid ""
@@ -296,15 +340,18 @@ msgid ""
 "using Bookshelf's `#bs.health:add_health` function in a new "
 "`lifestring:update` function."
 msgstr ""
+"将存储于*`#this`*的生命值变化量应用于所有关联玩家。"
+"通过新建`lifestring:update`函数调用Bookshelf的"
+"`#bs.health:add_health`实现。"
 
 #: ../../../examples/lifestring.md:215 0c8b6dcd0a224a90ab94711f9277855a
 msgid "**➔ create the `update` function**"
-msgstr ""
+msgstr "**➔ 创建`update`函数**"
 
 #: ../../../examples/lifestring.md:217 ../../../examples/lifestring.md:227
 #: 0cedbb388e444cd196797ba8362c9df7 daf44f12248242bd80f1cb22717cebf0
 msgid "`@function lifestring:update`"
-msgstr ""
+msgstr "`@function lifestring:update`"
 
 #: ../../../examples/lifestring.md:223 18d90f60b8b140e3a619e1a727a16201
 msgid ""
@@ -315,20 +362,25 @@ msgid ""
 "ensure this doesn’t happen, we need to define a maximum health value for "
 "the score."
 msgstr ""
+"此方案存在潜在问题：`#bs.health:add_health`无法治疗超过玩家最大生命值。"
+"由于未限制*`lifestring.health`*分数，可能超出最大值。"
+"需定义分数上限值避免此问题。"
 
 #: ../../../examples/lifestring.md:225 796b29fbbe8f47dbb8750358db794804
 msgid "**➔ update the `update` function**"
-msgstr ""
+msgstr "**➔ 更新`update`函数**"
 
 #: ../../../examples/lifestring.md:235 ee7fe32492f9404ba68c770ba8a4c4f1
 msgid ""
 "The *`<`* operator sets the score to the minimum value, ensuring *`@s "
 "lifestring.health`* does not exceed *`#max lifestring.health`*."
 msgstr ""
+"*`<`*运算符将分数设为最小值，确保*`@s lifestring.health`*"
+"不超过*`#max lifestring.health`*。"
 
 #: ../../../examples/lifestring.md:239 90a95f8cd603487fb6754b693efcf539
 msgid "✔️ Conclusion"
-msgstr ""
+msgstr "✔️ 结语"
 
 #: ../../../examples/lifestring.md:241 2db5186947154a49b1842fee4874e218
 msgid ""
@@ -337,6 +389,8 @@ msgid ""
 "damage and healing they receive. But there are many ways you could make "
 "this system even better! Here are some ideas to think about:"
 msgstr ""
+"本系统是Bookshelf简化复杂任务的典范，实现了关联玩家共享伤害与治疗。"
+"你可通过以下方向进一步优化："
 
 #: ../../../examples/lifestring.md:243 4a8a77e395e14cd39fbbfd257f1480f7
 msgid ""
@@ -344,6 +398,7 @@ msgid ""
 "amounts of health to begin with? Should they all end up with the same "
 "health percentage, or the same exact health points?"
 msgstr ""
+"**差异化初始生命值**：若关联玩家初始生命值不同，应同步为相同百分比还是相同具体值？"
 
 #: ../../../examples/lifestring.md:244 30c01f8dfeec4b2db852e8679726fe2e
 msgid ""
@@ -351,24 +406,25 @@ msgid ""
 "together? If one player's max health changes (for example, from an effect"
 " or item), how should that affect the others?"
 msgstr ""
+"**最大生命值**：是否累加关联玩家的最大生命值？若某玩家最大生命值变化（如药水效果），如何影响其他玩家？"
 
 #: ../../../examples/lifestring.md:245 05419133799d46819ae6150ca0a48e0a
 msgid ""
 "**Player Login:** What happens when a linked player leaves the game and "
 "comes back? Should their health be saved and synced with the group?"
 msgstr ""
+"**玩家登录**：关联玩家退出后重进时，是否会保存生命值并与组内同步？"
 
 #: ../../../examples/lifestring.md:247 41b0d9d0ba3243fbbd2d259df2722a8d
 msgid ""
 "Try experimenting with these ideas to make the lifestring system work the"
 " way you want it to!"
-msgstr ""
+msgstr "尝试实现这些构想，定制属于你的生命链接系统！"
 
 #: ../../_templates/comments.md:4 a536234011e44314a55ecb5ccd8f5dd1
 msgid "**💬 Did it help you?**"
-msgstr ""
+msgstr "**💬 这对你有帮助吗？**"
 
 #: ../../_templates/comments.md:6 8149308788fb457fa5c5c37ba92789d9
 msgid "Feel free to leave your questions and feedback below!"
-msgstr ""
-
+msgstr "欢迎在下方留下你的问题与反馈！"
