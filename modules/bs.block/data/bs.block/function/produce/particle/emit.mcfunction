@@ -1,0 +1,20 @@
+# ------------------------------------------------------------------------------------------------------------
+# Copyright (c) 2025 Gunivers
+#
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
+#
+# This source code is subject to the terms of the Mozilla Public License, v. 2.0.
+# If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#
+# Conditions:
+# - You may use this file in compliance with the MPL v2.0
+# - Any modifications must be documented and disclosed under the same license
+#
+# For more details, refer to the MPL v2.0.
+# ------------------------------------------------------------------------------------------------------------
+
+data modify storage bs:ctx _ set value {properties:{},pos:"~ ~ ~",delta:"0 0 0",speed:1,count:1,mode:"normal",viewers:"@a"}
+data modify storage bs:ctx _ merge from storage bs:in block.emit_block_particle
+
+execute unless data storage bs:ctx _.type run function bs.block:particle/get
+function bs.block:particle/run with storage bs:ctx _

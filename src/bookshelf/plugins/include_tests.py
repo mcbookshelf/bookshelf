@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from typing import TYPE_CHECKING, ClassVar
 
 from beet import (
@@ -15,6 +16,9 @@ from bookshelf.definitions import VERSION
 
 if TYPE_CHECKING:
     from collections.abc import Generator
+
+
+PERSISTENT_ENTITY_UUID = re.compile(r"B5-0-0-0-\d+")
 
 
 class TestFunction(JsonFile, NamespaceFile):
@@ -43,12 +47,17 @@ def beet_default(ctx: Context) -> Generator:
         file.set_content(f"{file.text[:offset]}{environment}{file.text[offset:]}")
 
     if count > 0:
+        load = ctx.data.functions.get(f"{ctx.data.name}:__load__")
+        load_content = load.get_content() if load is not None else []
+        entities = {m for i in load_content for m in PERSISTENT_ENTITY_UUID.findall(i)}
         # Create a function that loads the test module with some setup commands
         ctx.data.functions[f"bs.load:v{VERSION}/test/{module}"] = Function([
             header,
             "function #bs.load:unload",
             f"function #bs.load:module/{module}",
+            "",
             "forceload add 0 0",
+            *(f"await entity {entity}" for entity in entities),
         ])
         # Register the test environment to run the setup function
         ctx.data.test_environments[f"bs.load:{module}"] = TestEnvironment({

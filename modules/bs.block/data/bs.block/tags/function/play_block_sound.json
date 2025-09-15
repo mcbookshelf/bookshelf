@@ -1,8 +1,10 @@
 {
   "__bookshelf__": {
     "feature": true,
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+    "deprecated": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
     "authors": [
+      "Aksiome",
       "theogiraudet"
     ],
     "created": {
@@ -15,6 +17,6 @@
     }
   },
   "values": [
-    "bs.block:produce/block_sound/play_block_sound"
+    "bs.block:produce/sound/play_block_sound"
   ]
 }

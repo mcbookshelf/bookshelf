@@ -14,9 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-await entity B5-0-0-0-1
-await entity B5-0-0-0-3
-
 # Position is outside the entity
 execute positioned ~.5 ~2 ~.5 if function #bs.hitbox:is_in_entity run fail "Should not be inside the entity"
 

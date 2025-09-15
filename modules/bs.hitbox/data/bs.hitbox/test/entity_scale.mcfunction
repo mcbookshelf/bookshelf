@@ -14,9 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-await entity B5-0-0-0-1
-await entity B5-0-0-0-3
-
 # Default entity scale
 function #bs.hitbox:get_entity
 assert data storage bs:out hitbox{ scale: 1.0 }

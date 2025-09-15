@@ -13,9 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-await entity B5-0-0-0-1
-await entity B5-0-0-0-3
-
 # Bottom stone slab shape
 setblock ~ ~ ~ minecraft:stone_slab[type=bottom]
 function #bs.hitbox:get_block_shape
