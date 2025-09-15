@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-07-19 16:47+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../contribute/conventions.md:5 bf3ec27e4f994e0db0b28b79dabbb77f
+msgid "📖 Conventions"
+msgstr "📖 规范"
+
+#: ../../../contribute/conventions.md:7 e7f85daad74a465fac3eba87311548c9
+msgid ""
+"Bookshelf respects certain naming conventions in order to reduce the "
+"effort needed to read and understand code."
+msgstr "Bookshelf 遵循特定命名规范，以降低阅读和理解代码所需的精力。"
+
+#: ../../../contribute/conventions.md:12 31d9488b0b7a4d70bf046431343691c1
+msgid "**Files**"
+msgstr "**文件**"
+
+#: ../../../contribute/conventions.md:13 12e9f3d0c3e340d5a5315639568033cf
+msgid ""
+"Use the snake_case convention. A few names are reserved for [Special "
+"Functions](project:../contribute/special-functions.md) at the root of "
+"each module: `__help__`, `__load__`, and `__unload__`"
+msgstr "使用 snake_case 规范。部分名称保留用于每个模块根目录的[特殊函数](project:../contribute/special-functions.md)：`__help__`、`__load__` 和 `__unload__`"
+
+#: ../../../contribute/conventions.md:15 52d01113b087490f809db21e2def7316
+msgid "*Example: `function/<my_function>.mcfunction`*"
+msgstr "*示例：`function/<my_function>.mcfunction`*"
+
+#: ../../../contribute/conventions.md:16 acf0846128aa44529c2434a2f54f16cd
+msgid "**Entity tags**"
+msgstr "**实体标签**"
+
+#: ../../../contribute/conventions.md:17 977159f055c3437cb693215dc9363f11
+msgid ""
+"Use the snake_case convention. Must be prefixed with `bs.` and the name "
+"of the module"
+msgstr "使用 snake_case 规范。必须以 `bs.` 和模块名称作为前缀"
+
+#: ../../../contribute/conventions.md:19 1cbaa80a266e448296dcc9b3dcc72d2a
+msgid "*Example: `bs.<module>.my_tag`*"
+msgstr "*示例：`bs.<module>.my_tag`*"
+
+#: ../../../contribute/conventions.md:20 22602a43f0534af3990321304331659f
+msgid "**Data storage**"
+msgstr "**数据存储**"
+
+#: ../../../contribute/conventions.md:21 8c83a44ef97d410fa517a2c8cfd5be6d
+msgid ""
+"Use the snake_case convention. Is limited to what is defined in the "
+"[Shared Resources](project:shared-resources.md) section"
+msgstr "使用 snake_case 规范。仅限于[共享资源](project:shared-resources.md)部分定义的内容"
+
+#: ../../../contribute/conventions.md:23 7f728abdb16a4e8ba921d2e6492ca856
+msgid "*Example: `bs:data <module>.<feature>`*"
+msgstr "*示例：`bs:data <module>.<feature>`*"
+
+#: ../../../contribute/conventions.md:24 44e2dc72920b4ffc8a9b482efc1c6885
+msgid "**Objectives**"
+msgstr "**计分板目标**"
+
+#: ../../../contribute/conventions.md:25 5ee570ef232b4b938b6cc33d2c2fb52b
+msgid ""
+"Use the snake_case convention and `bs.` prefix. Only create new "
+"objectives if no existing objective defined in the [Shared "
+"Resources](project:shared-resources.md) section can be used"
+msgstr "使用 snake_case 规范和 `bs.` 前缀。仅当[共享资源](project:shared-resources.md)部分定义的现有目标无法使用时才创建新目标"
+
+#: ../../../contribute/conventions.md:27 a0b7b34b0cc04de6ae0db83d81ac4e32
+msgid "*Example: `bs.my_objective`*"
+msgstr "*示例：`bs.my_objective`*"
+
+#: ../../../contribute/conventions.md:28 e669d6c4aabd44c0aab8a1f9af6a570e
+msgid "**Scoreholders**"
+msgstr "**计分板持有者**"
+
+#: ../../../contribute/conventions.md:29 1be4f7a46dbe44e3b3fca9efe6006a68
+msgid ""
+"Use the snake_case convention. Must be prefixed with the name of the "
+"module. Each score should also be prefixed by either `#` for private "
+"scores or `$` for public ones"
+msgstr "使用 snake_case 规范。必须以模块名称作为前缀。每个分数还应使用 `#`（私有分数）或 `$`（公共分数）作为前缀"
+
+#: ../../../contribute/conventions.md:31 088ea7cc2b094993b95948b1025d8bf6
+msgid "*Example: `$<module>.debug` or `#<module>.any`*"
+msgstr "*示例：`$<module>.debug` 或 `#<module>.any`*"
+
+#: ../../../contribute/conventions.md:34 5c57439950bd4e75b9149bb98ad61ef1
+msgid ""
+"Moreover, Bookshelf follows Smithed's "
+"[conventions](https://docs.smithed.dev/conventions/), especially for the "
+"entity tags. Here are the entity tags used in Bookshelf:"
+msgstr "此外，Bookshelf 遵循 Smithed 的[规范](https://docs.smithed.dev/conventions/)，尤其是实体标签。以下是 Bookshelf 使用的实体标签："
+
+#: ../../../contribute/conventions.md:38 87ea493fe657406992ca97accf80b7e4
+msgid "**smithed.entity**"
+msgstr "**smithed.entity**"
+
+#: ../../../contribute/conventions.md:39 5cbf362327e54444882af3713ee7436c
+msgid ""
+"Used to identify entities that are created by datapacks and that should "
+"not be modified by datapacks targeting vanilla entities"
+msgstr "用于标识由数据包创建的实体，不应被针对原版实体的数据包修改"
+
+#: ../../../contribute/conventions.md:41 1752c0c287bc462298d4e340bac605f2
+msgid "**smithed.strict**"
+msgstr "**smithed.strict**"
+
+#: ../../../contribute/conventions.md:42 381f624f656544a591df74a351fdec3c
+msgid ""
+"Used to identify entities that are created by datapacks and that should "
+"not be modified by other datapacks"
+msgstr "用于标识由数据包创建的实体，不应被其他数据包修改"
+
+#: ../../../contribute/conventions.md:44 fd3bb30789bd43e2a2a27e30f71451b0
+msgid "**bs.persistent**"
+msgstr "**bs.persistent**"
+
+#: ../../../contribute/conventions.md:45 c2130284c5994b4ba0509d8f2b71da2a
+msgid ""
+"Used to identify Bookshelf entities that are persistent and should not be"
+" despawned/killed"
+msgstr "用于标识 Bookshelf 中的持久性实体，不应被消失/杀死"
+
+#: ../../../contribute/conventions.md:47 d2cdb062908a46349109b8488ca209bd
+msgid "**bs.entity**"
+msgstr "**bs.entity**"
+
+#: ../../../contribute/conventions.md:48 7bcc5734960a4195a3ab1627969c64e6
+msgid "Used to identify entities that are created by Bookshelf"
+msgstr "用于标识由 Bookshelf 创建的实体"

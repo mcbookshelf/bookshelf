@@ -1,0 +1,385 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../changelog/v3.1.0.md:1 757be85ac4e14dcabf7148bd916df7d6
+msgid ""
+"📦 [Bookshelf - "
+"3.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.1.0)"
+msgstr ""
+"📦 [Bookshelf - "
+"3.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.1.0)"
+
+#: ../../changelog/v3.1.0.md:3 d3a40ec7465e436baf338389d0ad8a84
+#, fuzzy
+msgid "**💫 The Spatial Update!**"
+msgstr "**🧱 边界更新！**"
+
+#: ../../changelog/v3.1.0.md:5 44ec0c915dd0468cb24753dedafc8402
+#, fuzzy
+msgid ""
+"*Introduces Moon and Sun position features, as well as fully customizable"
+" hitboxes that integrate across the entire Bookshelf ecosystem.*"
+msgstr "*引入全自定义碰撞箱系统，深度整合至Bookshelf生态各模块。*"
+
+#: ../../changelog/v3.1.0.md:7 aaecfd463bd947c882460db0934b6b29
+#, fuzzy
+msgid "Bookshelf is now based on **Minecraft 1.21.8**."
+msgstr "Bookshelf 现基于 **Minecraft 1.21.7** 构建。"
+
+#: ../../changelog/v3.1.0.md:10 c2480d14914b45f4a51443ec5b7c40cd
+msgid "`🧱 bs.block`"
+msgstr "`🧱 bs.block`"
+
+#: ../../changelog/v3.1.0.md:12 ../../changelog/v3.1.0.md:64
+#: 0b3633bed9a34107b27ec8118f0a6c3c d19e571303e24ff69cef44f312cb32d6
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#469](https://github.com/mcbookshelf/bookshelf/issues/469)** - Fixed "
+"missing `execute in minecraft:overworld` when running location-based loot"
+" tables."
+msgstr ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#469](https://github.com/mcbookshelf/bookshelf/issues/469)** - "
+"修复基于位置的战利品表运行时缺失`execute in minecraft:overworld`的问题。"
+
+#: ../../changelog/v3.1.0.md:15 08198418731b453e91b2577df2ebb8fe
+msgid "`🔬 bs.dump`"
+msgstr "`🔬 bs.dump`"
+
+#: ../../changelog/v3.1.0.md:17 eec3e890c20845a2803a038f28de1f14
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#441](https://github.com/mcbookshelf/bookshelf/issues/441)** - Fixed "
+"`#bs.dump:var` incorrectly appending `undefined` to output."
+msgstr ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#441](https://github.com/mcbookshelf/bookshelf/issues/441)** - "
+"修复`#bs.dump:var`错误添加`undefined`到输出的问题。"
+
+#: ../../changelog/v3.1.0.md:19 17f6204cee5b4b82831010a12bb1c0dc
+msgid "`⛰️ bs.environment`"
+msgstr ""
+
+#: ../../changelog/v3.1.0.md:21 10df5d5f45a140e2852d2b9e4d8f5a77
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
+"`#bs.environment:get_sun_angle` to get the sun's angle at a specific time"
+" on the Y axis relative to the horizon, in degrees."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
+"新增完整**线性样条曲线**支持。"
+
+#: ../../changelog/v3.1.0.md:22 b4209e4bcd494725bc600c0a96d74963
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
+"`#bs.environment:get_moon_angle`to get the moon's angle at a specific "
+"time on the Y axis relative to the horizon, in degrees."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
+"新增完整**线性样条曲线**支持。"
+
+#: ../../changelog/v3.1.0.md:23 cb60eaa1fff94197bf112947c6165ee4
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
+"`#bs.environment:get_current_sun_angle` to get the current sun's angle on"
+" the Y axis relative to the horizon, in degrees."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#445](https://github.com/mcbookshelf/bookshelf/issues/445)** - "
+"`#bs.raycast:run` 现在调用回调前计算所有lambda数据。"
+
+#: ../../changelog/v3.1.0.md:24 e92c088d900449faa27429454ebde2f5
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
+"`#bs.environment:get_current_moon_angle` to get the current moon's angle "
+"on the Y axis relative to the horizon, in degrees."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#445](https://github.com/mcbookshelf/bookshelf/issues/445)** - "
+"`#bs.raycast:run` 现在调用回调前计算所有lambda数据。"
+
+#: ../../changelog/v3.1.0.md:25 231b072965884ae9af881ee6b2686d82
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
+"`#bs.environment:get_moon_phase` to get the current moon phase as a "
+"string identifier following Minecraft's 8-day lunar cycle."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
+"新增完整**线性样条曲线**支持。"
+
+#: ../../changelog/v3.1.0.md:26 d06abeb4d82c4575ad07e9d576634c3d
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
+"`#bs.environment:look_at_sun` to orient the executing entity to look at "
+"the sun."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - "
+"新增烘焙和自定义实体碰撞箱支持。"
+
+#: ../../changelog/v3.1.0.md:27 23a7cef2327a4a46b49534f11ec166e3
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
+"`#bs.environment:look_at_moon` to orient the executing entity to look at "
+"the moon."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
+"新增完整**线性样条曲线**支持。"
+
+#: ../../changelog/v3.1.0.md:28 fb2f2192241a4b098bebcb869c8a9644
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - Added "
+"time-based predicates: `is_day_time`, `is_night_time`, `is_sunrise_time`,"
+" `is_sunset_time` for determining current time of day."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
+"新增完整**线性样条曲线**支持。"
+
+#: ../../changelog/v3.1.0.md:29 bf445031f4024d0a9b4225587f08d778
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - Added "
+"villagers behavior predicates: `is_villager_working_time`, "
+"`is_villager_socializing_time`, `is_villager_sleeping_time` for detecting"
+" villager activity phases."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
+"新增完整**线性样条曲线**支持。"
+
+#: ../../changelog/v3.1.0.md:30 52dabf13aa074bea984171d0883af685
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - Added "
+"beds usage predicate: `is_bed_time` for determining when players can use "
+"beds based on weather and time conditions."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - "
+"新增烘焙和自定义实体碰撞箱支持。"
+
+#: ../../changelog/v3.1.0.md:31 4d6c5e5e0b2744d1b293a586343a9147
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - Added "
+"mobs behavior predicates: `is_undead_burning_time`, "
+"`is_monster_spawning_time` for detecting mob behavior condition according"
+" to weather and time."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
+"新增完整**线性样条曲线**支持。"
+
+#: ../../changelog/v3.1.0.md:32 06916a0353bf4c718fff83e043463c95
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - Added "
+"bees behavior predicate: `is_bee_sleeping_time` for detecting time when "
+"bees are in their nests/hives."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
+"新增完整**线性样条曲线**支持。"
+
+#: ../../changelog/v3.1.0.md:33 7730fd5b3fcb4df4a1b7fc0139d02731
+#, fuzzy
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - Added "
+"creakings spawning predicate: `is_creaking_spawn_time` for detecting time"
+" when creakings can spawn."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
+"新增完整**线性样条曲线**支持。"
+
+#: ../../changelog/v3.1.0.md:36 f895722c2b1049c88856c32b6a632318
+msgid "`❤️ bs.health`"
+msgstr "`❤️ bs.health`"
+
+#: ../../changelog/v3.1.0.md:38 cc3bc0c4cf6649bb9439fd9871d32098
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#466](https://github.com/mcbookshelf/bookshelf/issues/466)** - Fixed a"
+" bug where healing on Paper servers always set players' health to "
+"maximum."
+msgstr ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#466](https://github.com/mcbookshelf/bookshelf/issues/466)** - "
+"修复Paper服务器上治疗总将玩家生命值设为最大值的问题。"
+
+#: ../../changelog/v3.1.0.md:41 3ffbb58f13fb451cb64f691cfe4678a5
+msgid "`🎯 bs.hitbox`"
+msgstr "`🎯 bs.hitbox`"
+
+#: ../../changelog/v3.1.0.md:43 63bdc94cd014406b8bf476c6cba955e0
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - Added "
+"support for custom hitboxes. `#bs.hitbox:get_entity` now also returns "
+"`depth` in addition to `width`. For most dynamic entities `depth` equals "
+"`width`, except for static entities (e.g. item frames, paintings) and "
+"custom hitboxes."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - "
+"新增自定义碰撞箱支持。`#bs.hitbox:get_entity` "
+"现在额外返回`depth`值。对于大多数动态实体`depth`等于`width`，但静态实体（如物品展示框、画）及自定义碰撞箱除外。"
+
+#: ../../changelog/v3.1.0.md:46 6c7322fed4b64366a4ae68ca10ce428e
+msgid "`🖱️ bs.interaction`"
+msgstr "`🖱️ bs.interaction`"
+
+#: ../../changelog/v3.1.0.md:48 04ab4f252e4740c1b78cf9df321b513f
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#463](https://github.com/mcbookshelf/bookshelf/issues/463)** - Fixed "
+"an issue where left/right click events could incorrectly target "
+"previously clicked entities instead of the current one."
+msgstr ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#463](https://github.com/mcbookshelf/bookshelf/issues/463)** - "
+"修复左/右键点击事件可能错误定位至先前点击实体的问题。"
+
+#: ../../changelog/v3.1.0.md:51 01b359be081a4f36b7e4dda18653d205
+msgid "`🏃 bs.move`"
+msgstr "`🏃 bs.move`"
+
+#: ../../changelog/v3.1.0.md:53 8ee76b5ad0194b3392344e92100b05fd
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - Optimized"
+" bounding box computation for moving entities and added support for baked"
+" and custom hitboxes."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - "
+"优化移动实体的边界框计算，增加烘焙和自定义碰撞箱支持。"
+
+#: ../../changelog/v3.1.0.md:56 63b76825d1454de48f77ca127aa3f2c5
+msgid "`🧭 bs.position`"
+msgstr "`🧭 bs.position`"
+
+#: ../../changelog/v3.1.0.md:58 654e915dd67a4d14bca3abc76990d3f9
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#455](https://github.com/mcbookshelf/bookshelf/issues/455)** – "
+"Replaced `/rotate` with `/tp` in `bs.position` to fix jitter and momentum"
+" issues."
+msgstr ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#455](https://github.com/mcbookshelf/bookshelf/issues/455)** – "
+"在`bs.position`中用`/tp`替换`/rotate`，解决抖动和动量问题。"
+
+#: ../../changelog/v3.1.0.md:61 cf1f1001129c43619d5f8fab3a7b14fd
+msgid "`🎲 bs.random`"
+msgstr "`🎲 bs.random`"
+
+#: ../../changelog/v3.1.0.md:63 af9ac2c755b74e5391bed9ae6426814c
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr>  "
+"**[#286](https://github.com/mcbookshelf/bookshelf/issues/286)** - Added "
+"support for **normal distribution** generation to `bs.random` module."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#286](https://github.com/mcbookshelf/bookshelf/issues/286)** - "
+"`bs.random`模块新增**正态分布**生成支持。"
+
+#: ../../changelog/v3.1.0.md:67 58fb5a294fdc40d9b5f5812ad678f4f4
+msgid "`🔦 bs.raycast`"
+msgstr "`🔦 bs.raycast`"
+
+#: ../../changelog/v3.1.0.md:69 36b93417969e4188bec75aacba537633
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - Added "
+"support for baked and custom entity hitboxes."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - "
+"新增烘焙和自定义实体碰撞箱支持。"
+
+#: ../../changelog/v3.1.0.md:70 1ca9ad111cab47169de4f7994035c3f8
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#445](https://github.com/mcbookshelf/bookshelf/issues/445)** - "
+"`#bs.raycast:run` now computes all lambda data before invoking callbacks."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#445](https://github.com/mcbookshelf/bookshelf/issues/445)** - "
+"`#bs.raycast:run` 现在调用回调前计算所有lambda数据。"
+
+#: ../../changelog/v3.1.0.md:71 2b2693a2db8f4534b493db3430a5ea6a
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#457](https://github.com/mcbookshelf/bookshelf/issues/457)** - Fixed "
+"raycasts not stopping at the nearest hit when detecting both blocks and "
+"entities."
+msgstr ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#457](https://github.com/mcbookshelf/bookshelf/issues/457)** - "
+"修复同时检测方块和实体时射线未停止在最近碰撞点的问题。"
+
+#: ../../changelog/v3.1.0.md:74 eaf23da5eb624cf3a9e5e89b465f2ffb
+msgid "`🧣 bs.spline`"
+msgstr "`🧣 bs.spline`"
+
+#: ../../changelog/v3.1.0.md:76 eaec546cc7674fc3b5d93bab9a3546e4
+msgid ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - Added "
+"full support for **linear splines**."
+msgstr ""
+"<abbr title=\"New Feature\">✨</abbr> "
+"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
+"新增完整**线性样条曲线**支持。"
+
+#~ msgid "**[Update Name]**"
+#~ msgstr ""
+
+#~ msgid "*[Update Description]*"
+#~ msgstr ""
+

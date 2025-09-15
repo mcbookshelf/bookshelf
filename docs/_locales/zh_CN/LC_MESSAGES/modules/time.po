@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../modules/time.md:1 8c061d5d3ae04a68bc5e79be9e2770aa
+msgid "⌚ Time"
+msgstr "⌚ 时间（Time）"
+
+#: ../../../modules/time.md:3 a0b1fbc29f4c46a892cd6d387122846a
+msgid "**`#bs.time:help`**"
+msgstr "**`#bs.time:help`**"
+
+#: ../../../modules/time.md:5 04c64fd2caae4a0bb1214f5b46fdafd4
+msgid "Get system time information effortlessly."
+msgstr "轻松获取系统时间信息。"
+
+#: ../../../modules/time.md:7 26f5eac9c5ec4c59a6ff11f6ef1df2a5
+msgid "Enable Command Blocks"
+msgstr "启用命令方块"
+
+#: ../../../modules/time.md:10 f4c05557f51a4be6ad567925b3f9b90c
+msgid ""
+"This module uses a command block to get the system time. For the time to "
+"be displayed as intended, ensure that `enable-command-block` is set to "
+"`true` in your `server.properties` file and that the "
+"`sendCommandFeedback` gamerule is enabled."
+msgstr ""
+"此模块使用命令方块获取系统时间。为了按预期显示时间，请确保在 "
+"`server.properties` 文件中将 `enable-command-block` 设置为 `true`，并且启用 "
+"`sendCommandFeedback` 游戏规则。"
+
+#: ../../../modules/time.md:13 bff5bfff3876487cb209cacddbc4f1f3
+msgid "🔧 Functions"
+msgstr "🔧 函数"
+
+#: ../../../modules/time.md:15 7d09c8ef5add478d8a9e6ef829ba6bb7
+msgid "You can find below all functions available in this module."
+msgstr "你可以在下方找到此模块中的所有可用函数。"
+
+#: ../../../modules/time.md:19 70f65b3105f1425881179e3a2f614aa4
+msgid "System Time"
+msgstr "系统时间"
+
+#: ../../../modules/time.md:23 b857a7e796e249e8acc5cbeefdd25f61
+msgid "Get the system time corresponding to the real hours, minutes, and seconds."
+msgstr "获取对应于实际小时、分钟和秒的系统时间。"
+
+#: ../../../modules/time.md:25 4014771f09d24273975394bbf2c9e3fa
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../../modules/time.md:26 c32b0e11a9e3405ebb91d439ce338cf6
+msgid "**Score `$time.hours bs.out`**: System time hours."
+msgstr "**分数 `$time.hours bs.out`**：系统时间小时。"
+
+#: ../../../modules/time.md:28 be777dcef5a8422182d2bb6465833297
+msgid "**Score `$time.minutes bs.out`**: System time minutes."
+msgstr "**分数 `$time.minutes bs.out`**：系统时间分钟。"
+
+#: ../../../modules/time.md:30 cde2d570ae954c1a8b6845d159eb7e0b
+msgid "**Score `$time.seconds bs.out`**: System time seconds."
+msgstr "**分数 `$time.seconds bs.out`**：系统时间秒。"
+
+#: ../../../modules/time.md:33 830e6f7da1ea4a96ae485489885c2c10
+msgid "*Example: The moment we all dread:*"
+msgstr "*示例：每个人都畏惧的时刻：*"
+
+#: ../../../modules/time.md:41 3efb9365037f4b5fb71942690a774c2a
+msgid "**Credits**: Aksiome"
+msgstr "**制作人员**：Aksiome"
+
+#: ../../../_templates/comments.md:4 04b1ae8261704813a32b40aba4fd36ec
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对你有帮助吗？**"
+
+#: ../../../_templates/comments.md:6 3f6be7901e7947c8b0201867efea3042
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下你的问题和反馈！"

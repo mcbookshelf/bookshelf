@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-07-19 18:35+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../contribute/generated-files.md:1 33bbd58ffd3e48c18a0ffaade0c2fb24
+msgid "⚙️ Generated Files"
+msgstr "⚙️ 生成文件"
+
+#: ../../../contribute/generated-files.md:3 b760375807ef443abf73b26ebe020c3e
+msgid ""
+"When building modules with **[Beet](https://github.com/mcbeet/beet)**, "
+"several files are automatically generated to simplify development and "
+"improve consistency. This page outlines what happens behind the scenes."
+msgstr "使用 **[Beet](https://github.com/mcbeet/beet)** 构建模块时，系统会自动生成多个文件以简化开发并提高一致性。本页概述其背后的运作机制。"
+
+#: ../../../contribute/generated-files.md:7 ef8e936f56b0486bb4c0830de1e29bae
+msgid "📦 Module Management"
+msgstr "📦 模块管理"
+
+#: ../../../contribute/generated-files.md:9 f64506d2b70c49cc8663283d4f57fac3
+msgid "Modules are bundled with their dependencies:"
+msgstr "模块与其依赖项会被打包："
+
+#: ../../../contribute/generated-files.md:10 4a784d47faad43c3b4c94e6c64cf84c3
+msgid ""
+"If Module `A` depends on Module `B`, both are included in the build "
+"process."
+msgstr "若模块 `A` 依赖模块 `B`，两者均会被纳入构建流程。"
+
+#: ../../../contribute/generated-files.md:12 f6113e8e8a4449d6b6c20e114e430171
+msgid ""
+"A special loader module, `bs.load`, along with `load` (LanternLoad), is "
+"created to:"
+msgstr "系统会创建特殊加载器模块 `bs.load` 及 `load` (LanternLoad) 以实现："
+
+#: ../../../contribute/generated-files.md:13 42a7a62b35ce4a0f95146b4ea34df390
+msgid "Resolve version conflicts and manage dependencies between modules."
+msgstr "解决版本冲突并管理模块间依赖关系。"
+
+#: ../../../contribute/generated-files.md:14 08d74e03e5d34451a46a33aa39fb25d1
+msgid ""
+"Ensure load functions are called in the correct order, maintaining "
+"reliable datapack behaviors."
+msgstr "确保加载函数按正确顺序调用，维持数据包行为可靠性。"
+
+#: ../../../contribute/generated-files.md:16 84a932a6b063448db8109d4f757f1601
+msgid ""
+"During the build process, the `pack.mcmeta` file is automatically updated"
+" to ensure compatibility:"
+msgstr "构建过程中会自动更新 `pack.mcmeta` 文件以确保兼容性："
+
+#: ../../../contribute/generated-files.md:17 8dc047b21c4748288c29e71229585443
+msgid "`pack_format` is set to the latest supported Minecraft version."
+msgstr "`pack_format` 设为最新支持的 Minecraft 版本。"
+
+#: ../../../contribute/generated-files.md:18 87b34aae04614366abeac9537c3d0dd9
+msgid "`supported_formats` specifies a compatible version range."
+msgstr "`supported_formats` 指定兼容版本范围。"
+
+#: ../../../contribute/generated-files.md:22 d79d3367883e4beba82607feaea2e518
+msgid "🗂️ Resource-Based Plugins"
+msgstr "🗂️ 基于资源的插件"
+
+#: ../../../contribute/generated-files.md:24 b423f4f4d23d4dc09520f6f8a2ab5ed7
+msgid ""
+"Beyond module management, Bookshelf automatically generates data across "
+"multiple resource types."
+msgstr "除模块管理外，Bookshelf 还会自动生成多种资源类型的数据。"
+
+#: ../../../contribute/generated-files.md:26 9f9b58528299420fb03de3a7fe2002cb
+msgid "📄 Function Related"
+msgstr "📄 函数相关"
+
+#: ../../../contribute/generated-files.md:28 d85c3f19f3cf4584a95dc5387a9f201b
+msgid "Bookshelf enhances the contributor and user experience by:"
+msgstr "Bookshelf 通过以下方式提升贡献者和用户体验："
+
+#: ../../../contribute/generated-files.md:30 20ae830f5c844d6685c853fad8b5a33d
+msgid ""
+"Automatically adding functions from the module's `import` folder to the "
+"`__load__` function."
+msgstr "自动将模块 `import` 文件夹中的函数添加至 `__load__` 函数。"
+
+#: ../../../contribute/generated-files.md:31 17b7f0f7573f458aa49929ca57914681
+msgid ""
+"Generating a `__help__` function and its `help` tag linking to the "
+"module's documentation."
+msgstr "生成 `__help__` 函数及其 `help` 标签，链接至模块文档。"
+
+#: ../../../contribute/generated-files.md:33 87d3f7143f054a2baf647c13d2d9de5c
+msgid "🧪 Test Related"
+msgstr "🧪 测试相关"
+
+#: ../../../contribute/generated-files.md:35 3ea51312ec5848dcb90107c3ceab8bd5
+msgid ""
+"Bookshelf uses **PackTest** to run automated tests for its modules. To "
+"ensure smooth and isolated execution, it:"
+msgstr "Bookshelf 使用 **PackTest** 运行模块自动化测试。为确保顺利且隔离的执行："
+
+#: ../../../contribute/generated-files.md:37 75aed373dec5409ab7e9e5b4377c7bb4
+msgid ""
+"Automatically injects `@environment bs.load:<module>` instructions into "
+"test functions."
+msgstr "自动向测试函数注入 `@environment bs.load:<module>` 指令。"
+
+#: ../../../contribute/generated-files.md:38 08b7dc14a5ba4c5aabdabe5cebc569c2
+msgid ""
+"Creates a dedicated test environment inside the `bs.load` namespace that "
+"isolates and loads only the module under test."
+msgstr "在 `bs.load` 命名空间内创建专用测试环境，隔离并仅加载被测模块。"
+
+#: ../../../contribute/generated-files.md:40 761f6dd8fbe84b3182b7dfa0fc1f6ae5
+msgid "🏷️ Tag Related"
+msgstr "🏷️ 标签相关"
+
+#: ../../../contribute/generated-files.md:42 7837f017e26e460c9ad55923dab664e2
+msgid ""
+"To ensure proper loading and versioning, Bookshelf requires non-"
+"overridable tags. It:"
+msgstr "为确保正确加载和版本控制，Bookshelf 要求使用不可覆盖的标签："
+
+#: ../../../contribute/generated-files.md:44 dee797cdb5e94286a8fc1dc0dafd75a3
+msgid "Updates all tags with the `replace` key set to `true`."
+msgstr "将所有标签的 `replace` 键值设为 `true`。"
+
+#: ../../../contribute/generated-files.md:48 afee0c23446843debf51f55f89272d70
+msgid "🧩 Module-Specific Plugins"
+msgstr "🧩 模块专属插件"
+
+#: ../../../contribute/generated-files.md:50 ed7758ffbdae4af580314d1499495271
+msgid ""
+"In addition to these shared plugins, each module can include its own "
+"plugins that hook into the build pipeline. Some modules may have plugins "
+"that are responsible for generating data specific to themselves, "
+"providing even greater flexibility during the build process."
+msgstr "除共享插件外，每个模块可包含专属插件接入构建流程。部分模块拥有负责生成特定数据的插件，为构建过程提供更高灵活性。"

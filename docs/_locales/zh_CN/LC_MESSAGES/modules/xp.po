@@ -1,0 +1,349 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/xp.md:1 d0aeab1f20794bedb01937207b06181c
+msgid "🏅 XP"
+msgstr "🏅 经验值（XP）"
+
+#: ../../modules/xp.md:3 6e69feb42e40428898936de8980c667b
+msgid "**`#bs.xp:help`**"
+msgstr "**`#bs.xp:help`**"
+
+#: ../../modules/xp.md:5 d4156c8119ab420aa246ffef8c2c3cb1
+msgid "Efficiently manage the experience points and levels of players."
+msgstr "高效管理玩家的经验点数和等级。"
+
+#: ../../modules/xp.md:13 22be8448d01643898f7ca9e12d120244
+msgid "🔧 Functions"
+msgstr "🔧 函数"
+
+#: ../../modules/xp.md:15 9c267e40dc0d4d5d9c8599ef521cf9e6
+msgid "You can find below all functions available in this module."
+msgstr "你可以在下方找到此模块中的所有可用函数。"
+
+#: ../../modules/xp.md:19 b116b2664dd144e3b103ae31c7362a40
+msgid "Add / Remove"
+msgstr "添加/移除"
+
+#: ../../modules/xp.md d5d32b64dc57470d8ed8d2e7b9dd2394
+#: d97b9443f3cb410c9e0f6d21f50e7b09
+msgid "Levels"
+msgstr "等级"
+
+#: ../../modules/xp.md:27 e7cdbe87ab674d1f98726c7c92355ea1
+msgid "Add levels to the player."
+msgstr "给玩家添加等级。"
+
+#: ../../modules/xp.md:29 ../../modules/xp.md:59 ../../modules/xp.md:89
+#: ../../modules/xp.md:135 ../../modules/xp.md:159 ../../modules/xp.md:183
+#: ../../modules/xp.md:207 ../../modules/xp.md:246 ../../modules/xp.md:276
+#: ../../modules/xp.md:306 ../../modules/xp.md:336
+#: 3331c314f4ca4590a648aeb52292afb8 44a0de3c15f74bc8bc98b51e6764c19a
+#: 543ec5879fa94b5f8cde9ccc3ce537dd 5b76b540936e4a348704cc8e87c71d6a
+#: 751e8ad3c02849a3b3508e90025206f7 957978539dbb4fd7a374a815e62cf842
+#: b1c96fcd41374c5297013f23fd0e1467 b621efe746554d93b02864d811871fa6
+#: c7bd341ce81c4f5f850c42301ca63b49 d84798a158f947d5acd7a131306cd5bb
+#: fbc8a6b223214b74abc12a50e44742fc
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../modules/xp.md:30 a5896a4c060a4a4d998f343d52287957
+msgid "**Execution `as <players>`**: Players to add levels to."
+msgstr "**执行 `as <玩家>`**：要添加等级的玩家。"
+
+#: ../../modules/xp.md:32 ../../modules/xp.md:62 ../../modules/xp.md:92
+#: ../../modules/xp.md:210 ../../modules/xp.md:249 ../../modules/xp.md:279
+#: ../../modules/xp.md:309 ../../modules/xp.md:339
+#: 34b1ad7921af44679ca32321ec5859bc 4c610c60f6b7444384cbbfdcc29662a2
+#: 64c073a890ea4756946ea9748b102a2d 75f7a94c62894bdb974eb4af05870dfc
+#: 78a11d1dd55b4500af0f2733f13b15c2 825aaa0d2fed44b8beb3836c9f8ce5cd
+#: cecf46069bf0464fae7474bc79c88785 d8f9eb411c3d44a781ad05295971f1e4
+msgid "**Function macro**:"
+msgstr "**函数宏**："
+
+#: ../../modules/xp.md:38 ../../modules/xp.md:68 ../../modules/xp.md:98
+#: ../../modules/xp.md:138 ../../modules/xp.md:162 ../../modules/xp.md:186
+#: ../../modules/xp.md:216 ../../modules/xp.md:255 ../../modules/xp.md:285
+#: ../../modules/xp.md:315 ../../modules/xp.md:345
+#: 3e5ee51fcc7e4709896fa3f0511df8b6 59e462ab1e8a42979f38f107cfc449bc
+#: 5ce656fb9dcd478aad4ad38b965ce412 5f86c52268e84045bd339b8dcffcfe2c
+#: 7a85c61ab93249c2bff37611a2e13cba 7ba10cdb4aeb4b1a99aa3f7dc9136297
+#: 8060e91453904b19a39dc68e05a3c014 83d0863d30674bf6bfc83cb5dee3b903
+#: 846cd7fb8b3142099427bff69c9645fd 9f1d25604c6c4ea0a2f372f117e2d94d
+#: f6aa0e98f0f543928ec39cf6416d1e4e
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../modules/xp.md:39 ../../modules/xp.md:69 ../../modules/xp.md:99
+#: 49c16349f25649298e4d7cb05ba959fe aef8860f0c1e4908b7f647636c03f1cf
+#: cb4e847bd3064f798cdb0522dcb76389
+msgid "**State**: Players' XP is updated."
+msgstr "**状态**：玩家的经验值被更新。"
+
+#: ../../modules/xp.md:42 ec930a9647d84e9489368820485195d9
+msgid "*Example: Add 42 levels:*"
+msgstr "*示例：添加42级：*"
+
+#: ../../modules/xp.md 737e037e9274413f9d336be72a9dc2bf
+#: d0559cfe908f46a2896e5a970fc16f3c
+msgid "Points"
+msgstr "点数"
+
+#: ../../modules/xp.md:57 5f88d581d47d4597bc1089c06b80b5cf
+msgid "Add experience points to the player."
+msgstr "给玩家添加经验点数。"
+
+#: ../../modules/xp.md:60 b21bc45004ad42a4ab1357fe6a44f54e
+msgid "**Execution `as <players>`**: Players to add points to."
+msgstr "**执行 `as <玩家>`**：要添加点数的玩家。"
+
+#: ../../modules/xp.md:72 d7aeaab0137744a8b7bf780fd3ba2c65
+msgid "*Example: Add 42 experience points:*"
+msgstr "*示例：添加42点经验值：*"
+
+#: ../../modules/xp.md 7d28ec7757fa45a6b9d18057172e5a19
+#: e188f22a0bb548a0937f7abd584ed58d ed5f4471d77d4f14991db1a34a57b524
+msgid "Progress Bar"
+msgstr "经验条"
+
+#: ../../modules/xp.md:87 ../../modules/xp.md:334
+#: 473caf24d62442b2815cfe7c3231585e 7aed4608a15b401abd2c4ba1812da585
+msgid "Fill the XP bar partially."
+msgstr "填充一部分经验条。"
+
+#: ../../modules/xp.md:90 ../../modules/xp.md:337
+#: 1f2026efe2644bb78922d55888191abe 8865c46dda354e1fb53e7aef0ef6e4ab
+msgid "**Execution `as <players>`**: Players to fill the XP bar."
+msgstr "**执行 `as <玩家>`**：要填充经验条的玩家。"
+
+#: ../../modules/xp.md:102 b5386a38a6fe498098012c72c4e3cd01
+msgid "*Example: Add 25% to the fill level of your bar:*"
+msgstr "*示例：为你的经验条添加25%的填充度：*"
+
+#: ../../modules/xp.md:114 10ab79a030444dbd8d6272bf71baccd1
+msgid "How to Remove?"
+msgstr "如何减少经验？"
+
+#: ../../modules/xp.md:118 9a2a606934b34b67980079cae5fc664f
+msgid "You can use negative numbers to remove experience from the player."
+msgstr "你可以使用负数来减少玩家的经验。"
+
+#: ../../modules/xp.md:121 ../../modules/xp.md:232 ../../modules/xp.md:361
+#: 005464ce787f4a5d928dbfb48649061e 00855e37711f4c69b8b36b1029c751c3
+#: eb37c16a690f41279725460116157ce0
+msgid "**Credits**: Aksiome, Leirof"
+msgstr "**制作人员**：Aksiome、Leirof"
+
+#: ../../modules/xp.md:125 59c2ff8c7c914fd49b2fac372664245e
+msgid "Get"
+msgstr "获取"
+
+#: ../../modules/xp.md 3fa087d5549a401f8737e978cd922769
+msgid "Max Points"
+msgstr "最大点数"
+
+#: ../../modules/xp.md:133 ba1e4c829e984fd9bc62dae53a82d0af
+msgid "Get the total amount of points required to reach the next level."
+msgstr "获取达到下一级所需的总经验点数。"
+
+#: ../../modules/xp.md:136 6eeb02cdd3b0435bbe521f0c8aaf84be
+msgid ""
+"**Execution `as <players>`**: Players from whom you want to get the max "
+"amount of points."
+msgstr "**执行 `as <玩家>`**：要获取总点数的玩家。"
+
+#: ../../modules/xp.md:139 75ce3b0c7b7b4827bd361eaab7b92c47
+msgid ""
+"**Return | Score `$xp.get_max_points bs.out`**: Total amount of points "
+"required for the next level."
+msgstr "**返回值 | 分数 `$xp.get_max_points bs.out`**：达到下一级所需的总点数。"
+
+#: ../../modules/xp.md:142 085a8e13cd434bee9d1bc650a5270482
+msgid ""
+"*Example: Get the total amount of points required to pass to the next "
+"level:*"
+msgstr "*示例：获取升到下一级所需的总点数：*"
+
+#: ../../modules/xp.md 63c6fe390cf143d490b12ed8570f25e6
+msgid "Remaining Points"
+msgstr "剩余点数"
+
+#: ../../modules/xp.md:157 aadfa8ee0d1344cfad966b824147e245
+msgid "Get the remaining amount of points needed to reach the next level."
+msgstr "获取达到下一级所需的剩余经验点数。"
+
+#: ../../modules/xp.md:160 ca0131a19ce74115818dc7e9288ea91d
+msgid ""
+"**Execution `as <players>`**: Players from whom you want to get the "
+"remaining points."
+msgstr "**执行 `as <玩家>`**：要获取剩余点数的玩家。"
+
+#: ../../modules/xp.md:163 656f8903a4f74ee2920a4d1d6608327b
+msgid ""
+"**Return | Score `$xp.get_remaining_points bs.out`**: Points needed for "
+"the next level."
+msgstr "**返回值 | 分数 `$xp.get_remaining_points bs.out`**：升到下一级所需的点数。"
+
+#: ../../modules/xp.md:166 834058457273445ab58067fe26430af4
+msgid "*Example: Get the amount of points needed to pass to the next level:*"
+msgstr "*示例：获取升到下一级所需的点数：*"
+
+#: ../../modules/xp.md aed317a2f6e54b7fb03e83f7d6032aae
+#: e4e7c155a15346cc8f6bc12ce6317f30
+msgid "Total Points"
+msgstr "总点数"
+
+#: ../../modules/xp.md:181 f61b7229a6ac480c8a7754aa3c267ef4
+msgid "Get the sum of all points a player has gathered."
+msgstr "获取玩家所有经验点数之和。"
+
+#: ../../modules/xp.md:184 d505906e22054da3b5719a82413c6906
+msgid ""
+"**Execution `as <players>`**: Players from whom you want to get the total"
+" amount of points."
+msgstr "**执行 `as <玩家>`**：要获取点数之和的玩家。"
+
+#: ../../modules/xp.md:187 f92b542e18794e9faaed8dd7749a6d36
+msgid "**Return | Score `$xp.get_total_points bs.out`**: Total amount of points."
+msgstr "**返回值 | 分数 `$xp.get_total_points bs.out`**：总经验点数。"
+
+#: ../../modules/xp.md:190 790edd60f17c4662a785688c7f5a1fcf
+msgid "*Example: Get your total amount of points:*"
+msgstr "*示例：获取你的总经验点数：*"
+
+#: ../../modules/xp.md:205 7a4dca1279154e13b582891f9cfc0349
+msgid "Get the fill progress of the XP bar."
+msgstr "获取经验条的填充进度。"
+
+#: ../../modules/xp.md:208 b7ab9e5fb11f4e13a8fd9bd5b7588164
+msgid ""
+"**Execution `as <players>`**: Players from whom you want to get the bar "
+"progress."
+msgstr "**执行 `as <玩家>`**：要获取经验条进度的玩家。"
+
+#: ../../modules/xp.md:217 dca95fa9ca2043aabf65e9a47539f4a2
+msgid ""
+"**Return | Score `$xp.get_progress bs.out`**: Fill level of the XP bar "
+"after scaling."
+msgstr "**返回值 | 分数 `$xp.get_progress bs.out`**：缩放后的经验条填充度。"
+
+#: ../../modules/xp.md:220 9bf8877032324f05ab91c073ebbcf84e
+msgid "*Example: Get the fill percentage of the xp bar:*"
+msgstr "*示例：获取经验条的填充百分比：*"
+
+#: ../../modules/xp.md:236 b1b5c4a7c80b4fbca79f5e10c7d904d3
+msgid "Set"
+msgstr "设置"
+
+#: ../../modules/xp.md:244 13b0152dcc5247748ca3021889da5e6e
+msgid "Set players levels."
+msgstr "设置玩家等级。"
+
+#: ../../modules/xp.md:247 30b47d56f54c42dcb9dc3f4d5cad5697
+msgid "**Execution `as <players>`**: Players to set levels to."
+msgstr "**执行 `as <玩家>`**：要设置等级的玩家。"
+
+#: ../../modules/xp.md:256 ../../modules/xp.md:286 ../../modules/xp.md:316
+#: ../../modules/xp.md:346 078924a1bc924b5ba466d2557d052ba7
+#: 2a934cbc8eb74a4c941ce2654a2f050a 2c9438e3c67c4d45bdcd9c7464dd2f3f
+#: 8fa35d6d698344818345bf494193d0e1
+msgid "**State**: Players XP is updated."
+msgstr "**状态**：玩家经验值被更新。"
+
+#: ../../modules/xp.md:259 6cba6a12b9894cafa925107ef5d4ea7a
+msgid "*Example: Set your level to 42:*"
+msgstr "*示例：将你的等级设置为42：*"
+
+#: ../../modules/xp.md:274 4ef28e01181740909d8e1e0e1b7296da
+msgid "Set players experience points."
+msgstr "设置玩家经验点数。"
+
+#: ../../modules/xp.md:277 a9a4e080d434466b85588ec3d116c8b4
+msgid "**Execution `as <players>`**: Players to set points to."
+msgstr "**执行 `as <玩家>`**：要设置点数的玩家。"
+
+#: ../../modules/xp.md:289 b2f360d4cf504f9690ff3589875c0e12
+msgid "*Example: Set your points to 42:*"
+msgstr "*示例：将你的点数设置为42：*"
+
+#: ../../modules/xp.md:304 b64af12a6cac41ae828800f093a1d8b2
+msgid "Set players total experience points."
+msgstr "设置玩家总经验点数。"
+
+#: ../../modules/xp.md:307 7c01e624633640908ba70a82d6fdf5cb
+msgid "**Execution `as <players>`**: Players you want to set the total XP."
+msgstr "**执行 `as <玩家>`**：要设置总经验点数的玩家。"
+
+#: ../../modules/xp.md:319 433b515b075e4a50b49a263692ec44fa
+msgid "*Example: Set your total XP amount to 42:*"
+msgstr "*示例：将你的总经验值设置为42：*"
+
+#: ../../modules/xp.md:349 5e3dd568f8144012b30c22c734c6b288
+msgid "*Example: Fill your bar at 50%:*"
+msgstr "*示例：将你的经验条填充到50%：*"
+
+#: ../../_templates/comments.md:4 9ad4f36ead8d4796840389d116b97250
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对你有帮助吗？**"
+
+#: ../../_templates/comments.md:6 396dc3d6ad2247aeabe91c679e7ad809
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下你的问题和反馈！"
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#, python-brace-format
+msgid "{nbt}`int` **levels**: Amount of levels to add."
+msgstr "{nbt}`int` **levels**: 要增加的等级数量。"
+
+#, python-brace-format
+msgid "{nbt}`int` **points**: Amount of points to add."
+msgstr "{nbt}`int` **points**: 要增加的点数。"
+
+#, python-brace-format
+msgid ""
+"{nbt}`double` **progress**: Progress to add"
+" to the bar (in range [-1,1])."
+msgstr "{nbt}`double` **progress**: 要添加到经验条的进度值（取值范围[-1,1]）。"
+
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's output."
+msgstr "{nbt}`number` **scale**: 应用于函数输出的缩放系数。"
+
+#, python-brace-format
+msgid "{nbt}`int` **levels**: Amount of levels to set."
+msgstr "{nbt}`int` **levels**: 要设置的等级数量。"
+
+#, python-brace-format
+msgid "{nbt}`int` **points**: Amount of experience points to set."
+msgstr "{nbt}`int` **points**: 要设置的经验点数。"
+
+#, python-brace-format
+msgid "{nbt}`int` **points**: Amount of total experience points to set."
+msgstr "{nbt}`int` **points**: 要设置的总经验点数。"
+
+#, python-brace-format
+msgid ""
+"{nbt}`double` **progress**: Progress to set"
+" on the bar (in range [-1,1])."
+msgstr "{nbt}`double` **progress**: 要设置的经验条的进度值（取值范围[-1,1]）。"

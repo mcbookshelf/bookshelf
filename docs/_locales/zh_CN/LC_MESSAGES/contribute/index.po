@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/index.md:25
+msgid "Fundamentals"
+msgstr "基础知识"
+
+#: ../../contribute/index.md:35
+msgid "Key Concepts"
+msgstr "核心概念"
+
+#: ../../contribute/index.md:49
+msgid "Quick References"
+msgstr "快速参考"
+
+#: ../../contribute/index.md:5 0a8bd8c5fc5241ea9dd378ae3e31ca99
+msgid "🤝 Contribute"
+msgstr "🤝 参与贡献"
+
+#: ../../contribute/index.md:7 0c1259c969b146e09c28156bf64b8f4d
+msgid ""
+"Welcome to the Contribute section of our documentation! Whether you're "
+"fixing bugs, adding features, or writing new modules, this guide will "
+"help you get started and align with our project's standards."
+msgstr "欢迎来到文档的贡献指南！无论你是要修复问题、添加功能还是编写新模块，本指南都将帮助你快速入门并符合项目规范。"
+
+#: ../../contribute/index.md:9 7f87b16d42f8476894640a262c0840b9
+msgid "To contribute to this project, you must:"
+msgstr "参与本项目贡献需满足以下条件："
+
+#: ../../contribute/index.md:11 e3ca68ac80bb48aa9402337f7e605f1b
+msgid "Know the structure of a Minecraft datapack (5-10 min to learn on internet)"
+msgstr "了解Minecraft数据包结构（可通过网络学习，约5-10分钟）"
+
+#: ../../contribute/index.md:12 40243969d97a4238a93e3c75d0a458ad
+msgid "Know the basic usage of git projects (20-30 min to learn on internet)"
+msgstr "掌握Git基础操作（可通过网络学习，约20-30分钟）"
+
+#: ../../contribute/index.md:13 5fba64fce371491aabc8a3383f55f4d8
+msgid "Be accessible to answer questions about your work"
+msgstr "能及时回应关于你工作的询问"
+
+#: ../../contribute/index.md:15 110d4d774d464ce9921645e951ced39f
+msgid ""
+"If you're not familiar with GitHub pull requests or open-source "
+"collaboration, we recommend this guide to help you get started quickly: "
+"[First Contributions Guide](https://github.com/firstcontributions/first-"
+"contributions/blob/main/README.md)."
+msgstr ""
+"若不熟悉GitHub拉取请求或开源协作，推荐学习指南：[首次贡献指南](https://github.com/firstcontributions"
+"/first-contributions/blob/main/README.md)"
+
+#: ../../contribute/index.md:17 aeb8b0b7747b42649b13a40590712ec5
+msgid "**For French speakers**"
+msgstr ""
+
+#: ../../contribute/index.md:19 3127c427fb5048259fcf95459b791dec
+msgid ""
+"Ce projet est réalisé principalement par des membres francophones mais à "
+"destination d'un public international. C'est pourquoi toute la lib ainsi "
+"que la documentation est en anglais."
+msgstr ""
+
+#: ../../contribute/index.md:21 4765deb4780f4f79834377d9d4899a2d
+msgid ""
+"Si vous souhaitez contribuer mais que votre anglais n'est pas au niveau, "
+"vous pouvez utiliser des outils comme [DeepL](https://DeepL.com) puis "
+"demander une vérification."
+msgstr ""
+

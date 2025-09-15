@@ -13,7 +13,7 @@ dependencies = [
   "beet>=0.111.0",
   "frozendict>=2.4.6",
   "orjson>=3.11.3",
-  "pydantic>=2.11.7",
+  "pydantic>=2.11.9",
   "semver>=3.0.4",
 ]
 
@@ -43,6 +43,7 @@ docs = [
   "sphinx-autobuild>=2025.8.25",
   "sphinx-copybutton>=0.5.2",
   "sphinx-design>=0.6.1",
+  "sphinx-intl>=2.3.1",
   "sphinx-minecraft>=1.0.5",
   "sphinx-togglebutton>=0.3.2",
   "sphinx>=8.2.3",

@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-07-19 19:35+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../contribute/good-practices.md:1 93fb9985bc654d82a7a3a6bd132efba2
+msgid "🛡️ Good Practices"
+msgstr "🛡️ 良好实践"
+
+#: ../../../contribute/good-practices.md:3 755b24ca183e48f690b09ef430b65c42
+msgid ""
+"Bookshelf's development emphasizes collaboration, clarity, and "
+"efficiency. By following these guidelines, you can help maintain a high "
+"standard of code that is accessible, understandable, and non-intrusive."
+msgstr "Bookshelf 开发强调协作性、清晰度和效率。遵循这些准则可帮助保持代码的高标准：易访问、可理解且非侵入性。"
+
+#: ../../../contribute/good-practices.md:7 a596e151ff984109855aa712b2d44416
+msgid "💬 Commenting Code"
+msgstr "💬 代码注释"
+
+#: ../../../contribute/good-practices.md:9 efaf5104d27f4579a7fd6f29a10a9d71
+msgid ""
+"Bookshelf is a collaborative project designed to be both pedagogical and "
+"accessible. This means the code is not only functional but also "
+"understandable by developers and curious users alike."
+msgstr "Bookshelf 是一个兼具教育性和可访问性的协作项目，这意味着代码不仅要功能完备，还需对开发者和普通用户同样可理解。"
+
+#: ../../../contribute/good-practices.md:11 859ff592b9044adf8b7504b1ba501a8c
+msgid ""
+"To achieve this, **commenting your code regularly and cleanly** is "
+"essential:"
+msgstr "为实现这一目标，**定期且清晰地注释代码**至关重要："
+
+#: ../../../contribute/good-practices.md:13 dee9b3391092434c88ad0deb075f8c57
+msgid "Explain the purpose of each function and its key components"
+msgstr "解释每个函数的目的及其关键组成部分"
+
+#: ../../../contribute/good-practices.md:14 baa1af9203db442cb2a09e9d3a33ecc7
+msgid "Ensure comments are concise but provide enough context for others"
+msgstr "确保注释简洁但为他人提供充分上下文"
+
+#: ../../../contribute/good-practices.md:15 1d566f2c76a74c4582852699285cec94
+msgid "Update comments when the functionality changes to avoid confusion"
+msgstr "功能变更时更新注释以避免混淆"
+
+#: ../../../contribute/good-practices.md:17 4457e60a577e4ddbbcd878e3dddccc12
+msgid ""
+"Clear comments contribute to a smoother collaboration and make Bookshelf "
+"easier to learn from."
+msgstr "清晰的注释促进更顺畅的协作，并使 Bookshelf 更易于学习。"
+
+#: ../../../contribute/good-practices.md:21 31f11058f1b14d83b68e93b8d2b602d1
+msgid "♻️ Conservation Principle"
+msgstr "♻️ 守恒原则"
+
+#: ../../../contribute/good-practices.md:23 f606a867356d44d3ae6674ee5d3c9b75
+msgid ""
+"Bookshelf follows a conservation principle inspired by Antoine "
+"Lavoisier's maxim:"
+msgstr "Bookshelf 遵循受安托万·拉瓦锡格言启发的守恒原则："
+
+#: ../../../contribute/good-practices.md:26 23107a617c82421392814ca4e2e65e0e
+msgid "\"Nothing is lost, nothing is created, everything is transformed\""
+msgstr "“物质不灭，无物创生，万物皆变”"
+
+#: ../../../contribute/good-practices.md:27 270634bf267e427aa019297064274174
+msgid "Antoine Lavoisier"
+msgstr "安托万·拉瓦锡"
+
+#: ../../../contribute/good-practices.md:31 fb49959ed63b4d05bd0c689c98542019
+msgid ""
+"This principle minimizes interference with scores and other data, aiming "
+"to prevent accidental overwrites or unnecessary operations."
+msgstr "该原则最大限度减少对分数和其他数据的干扰，旨在防止意外覆盖或不必要操作。"
+
+#: ../../../contribute/good-practices.md:33 e31484e7e6dd4aad85876a82fe86a721
+msgid "Key Guidelines:"
+msgstr "核心准则："
+
+#: ../../../contribute/good-practices.md:35 daf0f81aacf947a0ad94bab593cf431e
+msgid ""
+"**Minimize the creation of new scores**: Use existing ones whenever "
+"possible"
+msgstr "**最小化创建新分数**：尽可能复用现有分数"
+
+#: ../../../contribute/good-practices.md:36 32c1b705bac94154b62e72d997af43d1
+msgid ""
+"**Strictly avoid score deletion**: Instead, repurpose scores or reset "
+"their values if necessary"
+msgstr "**严格避免删除分数**：必要时可重新利用分数或重置其值"
+
+#: ../../../contribute/good-practices.md:37 76f7d33cb5974b02acd4a045475c0934
+msgid ""
+"**Reduce unnecessary score rewrites**: Only update scores when absolutely"
+" required"
+msgstr "**减少不必要的分数重写**：仅在绝对必要时更新分数"
+
+#: ../../../contribute/good-practices.md:39 1b5e54556d84420fb31590e61ea992ef
+msgid ""
+"Each function should handle inputs responsibly, ensuring that only "
+"outputs are altered."
+msgstr "每个函数应负责任地处理输入，确保仅改变输出。"
