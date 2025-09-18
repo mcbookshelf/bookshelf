@@ -30,6 +30,7 @@ bitwise
 block
 color
 environment
+fsm
 generation
 health
 hitbox
