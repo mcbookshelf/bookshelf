@@ -14,7 +14,7 @@ Generate diverse terrains and landscapes, incorporating natural features.
 :class: only-dark
 ```
 
-```{epigraph}
+```{pull-quote}
 "Nature's beauty is a reflection of the harmony of numbers and patterns."
 
 -- Anonymous

@@ -4,7 +4,7 @@
 
 Create and manage Graphical User Interfaces (GUIs) in Minecraft.
 
-```{epigraph}
+```{pull-quote}
 "As far as the customer is concerned, the interface is the product."
 
 -- Jef Raskin

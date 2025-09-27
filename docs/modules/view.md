@@ -9,7 +9,7 @@ Execute commands based on what an entity sees.
 :class: dark_light p-2
 ```
 
-```{epigraph}
+```{pull-quote}
 "Vision is the act of seeing things as they could be, not as they are."
 
 -- Gretchen Rubin
@@ -47,8 +47,9 @@ Run a command at the aligned coordinates of the block an entity is aiming at.
 function #bs.view:at_aimed_block {run:"setblock ~ ~ ~ minecraft:sponge",with:{}}
 ```
 
-```{admonition} Advanced Usage
-:class: dropdown
+```{dropdown} Advanced Usage
+:color: info
+:icon: gear
 
 This system is a simplified, specific use case of the `#bs.raycast:run` function. It internally relies on it, allowing you to read its output and providing the flexibility to alter its behavior by modifying its input. [Learn more here](raycast.md)
 ```
@@ -118,8 +119,9 @@ function #bs.view:at_aimed_entity {run:"particle minecraft:heart ~ ~2 ~ 0 0 0 0 
 ::::
 :::::
 
-```{admonition} Advanced Usage
-:class: dropdown
+```{dropdown} Advanced Usage
+:color: info
+:icon: gear
 
 This system is a simplified, specific use case of the `#bs.raycast:run` function. It internally relies on it, allowing you to read its output and providing the flexibility to alter its behavior by modifying its input. [Learn more here](raycast.md)
 ```
@@ -158,8 +160,9 @@ Run a command at the point that was hit by a raycast.
 function #bs.view:at_aimed_point {run:"particle minecraft:flame ~ ~ ~ 0 0 0 0 1 force",with:{}}
 ```
 
-```{admonition} Advanced Usage
-:class: dropdown
+```{dropdown} Advanced Usage
+:color: info
+:icon: gear
 
 This system is a simplified, specific use case of the `#bs.raycast:run` function. It internally relies on it, allowing you to read its output and providing the flexibility to alter its behavior by modifying its input. [Learn more here](raycast.md)
 ```
@@ -192,8 +195,9 @@ Run a command at the precise coordinates where a block would align if placed, co
 function #bs.view:at_block_placement {run:"setblock ~ ~ ~ minecraft:sponge"}
 ```
 
-```{admonition} Advanced Usage
-:class: dropdown
+```{dropdown} Advanced Usage
+:color: info
+:icon: gear
 
 This system is a simplified, specific use case of the `#bs.raycast:run` function. It internally relies on it, allowing you to read its output and providing the flexibility to alter its behavior by modifying its input. [Learn more here](raycast.md)
 ```
@@ -232,8 +236,9 @@ execute at @s as @e[distance=0.1..,sort=nearest,limit=1] store success score #su
 execute if score #success bs.data matches 1 run say You're not hiding very well...
 ```
 
-```{admonition} Advanced Usage
-:class: dropdown
+```{dropdown} Advanced Usage
+:color: info
+:icon: gear
 
 This system is a simplified, specific use case of the `#bs.raycast:run` function. It internally relies on it, allowing you to read its output and providing the flexibility to alter its behavior by modifying its input. [Learn more here](raycast.md)
 ```

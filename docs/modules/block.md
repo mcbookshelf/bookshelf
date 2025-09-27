@@ -4,7 +4,7 @@
 
 Manage blocks, including states and NBTs, while offering advanced tools for seamless transformations.
 
-```{epigraph}
+```{pull-quote}
 "Architecture is the thoughtful making of space."
 
 -- Louis Kahn

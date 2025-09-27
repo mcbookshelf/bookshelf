@@ -9,7 +9,7 @@ Make your entity move exactly the way you want it to!
 :class: dark_light
 ```
 
-```{epigraph}
+```{pull-quote}
 "There is nothing permanent except change."
 
 -- Heraclitus
@@ -151,8 +151,9 @@ Convert a canonical velocity (using the relative reference frame) into a local v
   **Scores `@s bs.vel.[x,y,z]`**: Converted velocity.
 ```
 
-```{admonition} Local Velocity... 🥶 What's this?
-:class: dropdown
+```{dropdown} What is a Local Velocity?
+:color: info
+:icon: question
 
 Unlike relative velocity (canonical), this reference frame considers the entity's rotation. Therefore, when the parent entity rotates, the child entity rotates around it. For those familiar with Minecraft commands, local coordinates are available through the `^` symbol.
 ```
@@ -176,8 +177,9 @@ Convert a local velocity (using the local reference frame) into a canonical velo
   **Scores `@s bs.vel.[x,y,z]`**: Converted velocity.
 ```
 
-```{admonition} Local Velocity... 🥶 What's this?
-:class: dropdown
+```{dropdown} What is a Local Velocity?
+:color: info
+:icon: question
 
 Unlike relative velocity (canonical), this reference frame considers the entity's rotation. Therefore, when the parent entity rotates, the child entity rotates around it. For those familiar with Minecraft commands, local coordinates are available through the `^` symbol.
 ```

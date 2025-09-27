@@ -29,7 +29,7 @@ examples = "bookshelf.commands.examples:examples"
 
 [dependency-groups]
 dev = [
-  "click>=8.2.1",
+  "click>=8.3.0",
   "httpx>=0.28.1",
   "lectern>=0.34.0",
   "platformdirs>=4.4.0",
@@ -39,13 +39,12 @@ dev = [
 docs = [
   "linkify-it-py>=2.0.3",
   "myst-parser>=4.0.1",
-  "pydata-sphinx-theme>=0.16.0",
   "sphinx-autobuild>=2025.8.25",
+  "sphinx-breeze-theme>=0.0.1",
   "sphinx-copybutton>=0.5.2",
   "sphinx-design>=0.6.1",
   "sphinx-intl>=2.3.1",
   "sphinx-minecraft>=1.0.5",
-  "sphinx-togglebutton>=0.3.2",
   "sphinx>=8.2.3",
 ]
 

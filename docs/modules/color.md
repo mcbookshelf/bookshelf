@@ -9,7 +9,7 @@ Facilitate color conversion between various formats.
 :class: dark_light
 ```
 
-```{epigraph}
+```{pull-quote}
 "Color helps to express light—not the physical phenomenon, but the only light that really exists, that in the artist's brain."
 
 -- Henri Matisse

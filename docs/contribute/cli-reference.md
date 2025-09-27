@@ -6,7 +6,7 @@ html_theme.sidebar_secondary.remove: true
 
 This page provides a quick reference to the available commands. Use this reference to quickly look up commands and their usage without diving into detailed documentation.
 
-| **Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** | **Description** | **Arguments/Options**     |
+| **Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;** | **Description** | **Arguments/Options**     |
 |--------------------------|---------------------------------------------------------------|----------------------------------------------------------------|
 | **🔍 `check`**           | Check project requirements and metadata.                      | No arguments.                                                  |
 | **📑 `update`**          | Update project metadata changes.                              | No arguments.                                                  |

@@ -6,7 +6,7 @@ Absolutely! Bookshelf is designed to be used in any project. A mention of Booksh
 
 ## Is it compatible with other datapacks?
 
-Yes! Bookshelf adheres to constraints that ensure compatibility with most datapacks. All Bookshelf scores, tags, and namespaces start with `bs.` and use fake players whenever possible to avoid conflicts.
+Yes! Bookshelf follows strict constraints to ensure compatibility with most datapacks. All Bookshelf scores, tags, and other resources are properly namespaced and comply with Smithed conventions.
 
 ## Is it resource-heavy?
 
@@ -30,6 +30,8 @@ Bookshelf prioritizes accessibility and versatility. While this may occasionally
 
 Bookshelf is licensed to allow you to use and modify it for personal use and distribute maps or datapacks that use Bookshelf without any issues, as long as you share any modification made to the original source code. For that, we chose the [MPL 2.0](https://github.com/mcbookshelf/bookshelf/blob/master/LICENSE) (Mozilla Public License 2.0).
 
+---
+
 ```{button-link} https://discord.gg/MkXytNjmBt
 :color: primary
 :shadow:
@@ -37,8 +39,6 @@ Bookshelf is licensed to allow you to use and modify it for personal use and dis
 
 More questions? Join us on Discord!
 ```
-
----
 
 ```{include} _templates/comments.md
 ```

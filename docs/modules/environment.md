@@ -9,7 +9,7 @@ Comprehensive information and tools related to weather and biome properties.
 :class: dark_light
 ```
 
-```{epigraph}
+```{pull-quote}
 "The most dangerous worldview is the worldview of those who have not viewed the world."
 
 -- Alexander von Humboldt

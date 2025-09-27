@@ -14,7 +14,7 @@ The beautiful world of mathematics... **in Minecraft!**
 :class: only-dark
 ```
 
-```{epigraph}
+```{pull-quote}
 "Mathematics has very subtle inventions that can be of great service, both to satisfy the curious and to facilitate all arts and reduce the labor of men."
 
 -- René Descartes
@@ -631,8 +631,9 @@ tellraw @a [{"text": "cos(42) = ", "color": "dark_gray"},{"score":{"name":"$math
 
 ![](/_imgs/modules/math/cosine.png)
 
-```{admonition} How does it work?
-:class: dropdown
+```{dropdown} How does it work?
+:color: info
+:icon: question
 
 This function uses the Bhaskara approximation which tells us that
 
@@ -674,8 +675,9 @@ tellraw @a [{"text": "sin(42) = ", "color": "dark_gray"},{"score":{"name":"$math
 
 ![](/_imgs/modules/math/sine.png)
 
-```{admonition} How does it work?
-:class: dropdown
+```{dropdown} How does it work?
+:color: info
+:icon: question
 
 This function uses the Bhaskara approximation which tells us that
 
@@ -743,8 +745,9 @@ tellraw @a [{"text": "cos(42) = ", "color": "dark_gray"},{"score":{"name":"$math
 tellraw @a [{"text": "sin(42) = ", "color": "dark_gray"},{"score":{"name":"$math.sincos.sin", "objective": "bs.out"}, "color": "gold"}]
 ```
 
-```{admonition} How does this method differ from cos and sin?
-:class: dropdown
+```{dropdown} How does it work?
+:color: info
+:icon: question
 
 This function utilizes Minecraft teleportation to calculate both the cosine and sine values. While it's slightly less efficient than calling either cos or sin individually, it allows for computing both in a single operation.
 ```

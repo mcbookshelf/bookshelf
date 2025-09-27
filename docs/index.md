@@ -67,7 +67,7 @@ That is why we started this project: to provide a variety of reusable tools and 
 
 While we strive to keep our modules as optimized as possible, our top priority is accessibility. We focus on creating features that are easy to use and simple to install, ensuring they are practical for everyone.
 
-```{epigraph}
+```{pull-quote}
 "I have seen further than others because I have stood on the shoulders of giants."
 
 -- Isaac Newton
@@ -87,8 +87,7 @@ quickstart
 modules/index
 examples/index
 contribute/index
-related/index
-faq
 changelog/index
-special-thanks
+related
+faq
 ```

@@ -9,7 +9,7 @@ Construct coherent entity structures by linking entities' positions and rotation
 :class: dark_light
 ```
 
-```{epigraph}
+```{pull-quote}
 "Invisible threads are the strongest ties."
 
 -- Friedrich Nietzsche
@@ -237,8 +237,9 @@ execute as @e[type=armor_stand] run function #bs.link:create_link_ata
 execute as @e[predicate=bs.link:has_link] run function #bs.link:keep_local_pos
 ```
 
-```{admonition} Local Position... 🥶 What's this?
-:class: dropdown
+```{dropdown} What is a Local Position?
+:color: info
+:icon: question
 
 Unlike relative coordinates, this reference frame considers the entity's rotation. Therefore, when the parent entity rotates, the child entity rotates around it. For those familiar with Minecraft commands, local coordinates are available through the `^` symbol.
 ```

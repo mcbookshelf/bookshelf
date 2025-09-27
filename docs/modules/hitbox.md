@@ -4,7 +4,7 @@
 
 Get and check the hitboxes of blocks or entities.
 
-```{epigraph}
+```{pull-quote}
 "Talent hits a target no one else can hit; Genius hits a target no one else can see."
 
 -- Arthur Schopenhauer
@@ -37,8 +37,9 @@ Only use baked hitboxes when you are sure the entity’s size will not change, f
 If the hitbox changes after baking, **it may lead to incorrect collisions or broken logic**.
 ```
 
-```{admonition} What is a Baked Hitbox?
-:class: dropdown
+```{dropdown} What is a Baked Hitbox?
+:color: info
+:icon: question
 
 Baking captures a snapshot of the entity's hitbox at a specific moment. It does not update after that. If the entity has passengers, the baked result includes a bounding box that encapsulates both the base entity and all passengers.
 
@@ -137,8 +138,10 @@ Get the hitbox of a block as a shape, represented by a list of boxes coordinates
   :::
 ```
 
-```{admonition} Collision or Interaction Shape?
-:class: dropdown
+```{dropdown} Collision or Interaction Shape?
+:color: info
+:icon: question
+
 - **Collision Shape**: Defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block.
 - **Interaction Shape**: Defines the area where the player can interact with or break the block. This includes actions such as right-clicking to open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have an interaction shape but no collision, such as crops or scaffolding.
 
@@ -522,8 +525,10 @@ Define a [custom hitbox](#entity-types) for an entity with full control over its
 Custom hitboxes come with a **small performance cost**. Use them when you need precise control over shape and position, but avoid using too many of them in the same area.
 ```
 
-```{admonition} What is a Custom Hitbox?
-:class: dropdown
+
+```{dropdown} What is a Custom Hitbox?
+:color: info
+:icon: question
 
 A custom hitbox lets you override Minecraft's default hitbox system and define your own shape using width, height, and depth. Unlike dynamic or baked hitboxes, custom hitboxes:
 

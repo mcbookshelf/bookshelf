@@ -23,7 +23,7 @@ Vectors are fundamental and incredibly powerful tools to manage motions, forces 
 {octicon}`device-camera-video` Watch a demo
 ```
 
-```{epigraph}
+```{pull-quote}
 
 "With vectors, physics has found a magnificent language."
 

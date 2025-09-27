@@ -22,7 +22,7 @@ Si vous souhaitez contribuer mais que votre anglais n'est pas au niveau, vous po
 :::
 
 
-````{toctree}
+```{toctree}
 :hidden:
 :maxdepth: 1
 :caption: Fundamentals
@@ -30,9 +30,9 @@ getting-started
 conventions
 tree-structure
 file-format
-````
+```
 
-````{toctree}
+```{toctree}
 :hidden:
 :maxdepth: 1
 :caption: Key Concepts
@@ -44,13 +44,20 @@ contribution-validation
 commit-guidelines
 special-functions
 good-practices
-````
+```
 
-````{toctree}
+```{toctree}
 :hidden:
 :maxdepth: 1
 :caption: Quick References
 definitions
 cli-reference
 shared-resources
-````
+```
+
+```{toctree}
+:hidden:
+:caption: Contributors
+:maxdepth: 1
+special-thanks
+```

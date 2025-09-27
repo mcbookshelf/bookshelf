@@ -9,7 +9,7 @@ Manage entity positions and rotations using scores.
 :class: dark_light p-2
 ```
 
-```{epigraph}
+```{pull-quote}
 "The excitement lies in the exploration of the world around us."
 
 -- Jim Peebles
@@ -262,8 +262,9 @@ Convert a canonical position (using the relative reference frame) into a local p
   **Scores `@s bs.pos.[x,y,z]`**: Converted position.
 ```
 
-```{admonition} Local Position... 🥶 What's this?
-:class: dropdown
+```{dropdown} What is a Local Position?
+:color: info
+:icon: question
 
 Unlike relative position (canonical), this reference frame considers the entity's rotation. Therefore, when the parent entity rotates, the child entity rotates around it. For those familiar with Minecraft commands, local coordinates are available through the `^` symbol.
 ```
@@ -672,8 +673,9 @@ Convert a local position (using the local reference frame) into a canonical posi
   **Scores `@s bs.pos.[x,y,z]`**: Converted position.
 ```
 
-```{admonition} Local Position... 🥶 What's this?
-:class: dropdown
+```{dropdown} What is a Local Position?
+:color: info
+:icon: question
 
 Unlike relative position (canonical), this reference frame considers the entity's rotation. Therefore, when the parent entity rotates, the child entity rotates around it. For those familiar with Minecraft commands, local coordinates are available through the `^` symbol.
 ```

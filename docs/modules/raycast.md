@@ -8,7 +8,7 @@ Cast rays and detect collisions with blocks or entities.
 Unlike traditional raycasts, this module uses a [voxel traversal algorithm](http://www.cse.yorku.ca/~amana/research/grid.pdf) which provides much greater precision. Additionally, thanks to the `bs.hitbox` module, it supports all different hitbox types, including both blocks and entities.
 ```
 
-```{epigraph}
+```{pull-quote}
 "Reality only reveals itself when it is illuminated by a ray of poetry."
 
 -- Georges Braque
