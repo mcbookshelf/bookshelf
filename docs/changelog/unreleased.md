@@ -1,5 +1,12 @@
 ## 📦 Bookshelf - Unreleased
 
+### `🧱 bs.block`
+
+- <abbr title="Deprecations">🗑️</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - Deprecated `play_block_sound` in favor of more granular functions (`play_break_sound`, etc.).
+- <abbr title="New Features">✨</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - Added new block property functions: `get_blast_resistance`, `get_friction`, `get_hardness`, `get_instrument`, `get_jump_factor`, `get_luminance`, `get_sounds`, `get_speed_factor`, `is_conductive`, and `is_spawnable`.
+- <abbr title="New Features">✨</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - Added new block sound functions: `play_break_sound`, `play_hit_sound`, `play_fall_sound`, `play_place_sound`, and `play_step_sound`.
+- <abbr title="New Features">✨</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - Added new block tags: `can_occlude` and `ignited_by_lava`.
+- <abbr title="Enhancements">⚡</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - Modified `emit_block_particle` to support a default `type`, aligning it with the new block sound function behavior.
 
 ### `🎯 bs.hitbox`
 

@@ -145,7 +145,26 @@
       "tags": [
         "runtime"
       ],
+      "weak_dependencies": [
+        "bs.log"
+      ],
       "features": [
+        {
+          "id": "#bs.block:can_occlude",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#can-occlude",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
         {
           "id": "#bs.block:has_state",
           "kind": "block_tag",
@@ -158,15 +177,32 @@
             "minecraft_version": "1.20.5"
           },
           "updated": {
-            "date": "2025/03/10",
-            "minecraft_version": "1.21.4"
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:ignited_by_lava",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#ignited_by_lava",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
           }
         },
         {
           "id": "#bs.block:emit_block_particle",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#emit-particle",
           "authors": [
+            "Aksiome",
             "theogiraudet"
           ],
           "created": {
@@ -174,8 +210,8 @@
             "minecraft_version": "1.21.1"
           },
           "updated": {
-            "date": "2024/10/09",
-            "minecraft_version": "1.21.1"
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
           }
         },
         {
@@ -230,9 +266,25 @@
           }
         },
         {
+          "id": "#bs.block:get_blast_resistance",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-blast-resistance",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
           "id": "#bs.block:get_block",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-block",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -242,14 +294,126 @@
             "minecraft_version": "1.20.4"
           },
           "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_friction",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-friction",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_hardness",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-hardness",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_instrument",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-instrument",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_jump_factor",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-jump-factor",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_luminance",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-luminance",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_sounds",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-sounds",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_speed_factor",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-speed-factor",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
           }
         },
         {
           "id": "#bs.block:get_type",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-block",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -259,8 +423,40 @@
             "minecraft_version": "1.20.4"
           },
           "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:is_conductive",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-conductive",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:is_spawnable",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-spawnable",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
           }
         },
         {
@@ -282,7 +478,7 @@
         {
           "id": "#bs.block:lookup_item",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-type",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#lookup-block",
           "authors": [
             "Aksiome"
           ],
@@ -298,7 +494,7 @@
         {
           "id": "#bs.block:lookup_type",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-type",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#lookup-block",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -386,8 +582,9 @@
         {
           "id": "#bs.block:play_block_sound",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
           "authors": [
+            "Aksiome",
             "theogiraudet"
           ],
           "created": {
@@ -397,6 +594,91 @@
           "updated": {
             "date": "2025/01/25",
             "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.block:play_break_sound",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:play_fall_sound",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:play_hit_sound",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:play_place_sound",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:play_step_sound",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
           }
         },
         {
@@ -450,7 +732,7 @@
         {
           "id": "#bs.block:set_block",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#set",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#set-block",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -467,7 +749,7 @@
         {
           "id": "#bs.block:set_type",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#set",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#set-block",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -500,7 +782,7 @@
         {
           "id": "#bs.block:spawn_block_display",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#spawn-entity",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -517,7 +799,7 @@
         {
           "id": "#bs.block:spawn_falling_block",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#spawn-entity",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -534,7 +816,7 @@
         {
           "id": "#bs.block:spawn_solid_block_display",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#spawn-entity",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -1338,6 +1620,9 @@
       "kind": "data_pack",
       "tags": [
         "runtime"
+      ],
+      "weak_dependencies": [
+        "bs.log"
       ],
       "features": [
         {

@@ -3,7 +3,7 @@ from __future__ import annotations
 import asyncio
 import logging
 import shutil
-from queue import Queue
+from queue import SimpleQueue
 from threading import Thread
 from typing import TYPE_CHECKING
 
@@ -42,18 +42,21 @@ async def run(datapacks: Path, mc_version: str) -> AsyncIterable[server.LogEvent
 class WorkerStream[T]:
     """Synchronous iterable for streaming results from an AsyncIterable coroutine."""
 
+    _loop: asyncio.AbstractEventLoop | None = None
+
     def __init__(self, coro: AsyncIterable[T]) -> None:
         """Initialize the WorkerStream with a coroutine."""
-        self._queue: Queue[T | None] = Queue()
-        Thread(target=self._run, args=(coro,), daemon=True).start()
+        self._queue: SimpleQueue[T | None] = SimpleQueue()
+        if WorkerStream._loop is None:
+            WorkerStream._loop = asyncio.new_event_loop()
+            Thread(target=WorkerStream._loop.run_forever, daemon=True).start()
 
-    def _run(self, coro: AsyncIterable[T]) -> None:
-        """Run the coroutine and populate the queue with results."""
-        async def runner() -> None:
+        async def wrapper() -> None:
             async for item in coro:
                 self._queue.put(item)
             self._queue.put(None)
-        asyncio.run(runner())
+
+        asyncio.run_coroutine_threadsafe(wrapper(), WorkerStream._loop)
 
     def __iter__(self) -> WorkerStream[T]:
         """Return an iterator for synchronous iteration."""
@@ -61,7 +64,7 @@ class WorkerStream[T]:
 
     def __next__(self) -> T:
         """Get the next item from the queue or raise StopIteration."""
-        item = self._queue.get()
+        item = self._queue.get(timeout=60)
         if item is None:
             raise StopIteration
         return item

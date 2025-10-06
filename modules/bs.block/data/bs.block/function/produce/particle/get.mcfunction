@@ -13,4 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$particle block{block_state: { Name: "$(type)", Properties: $(properties) }} ~ ~ ~ $(delta) $(speed) $(count) $(mode) $(viewers)
+loot replace entity B5-0-0-0-3 contents loot bs.block:block/get_block
+data modify storage bs:ctx _ merge from entity B5-0-0-0-3 item.components."minecraft:custom_data"

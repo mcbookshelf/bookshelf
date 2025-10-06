@@ -15,9 +15,6 @@
 # @dummy
 # @skyaccess true
 
-await entity B5-0-0-0-1
-await entity B5-0-0-0-3
-
 setblock ~ ~ ~ minecraft:stone_slab[type=bottom]
 
 # Entity is outside the slab

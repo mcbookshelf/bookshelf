@@ -82,7 +82,32 @@ LOG_RULES = [
 
 async def run(cwd: Path, server: str = "server.jar") -> AsyncIterable[LogEvent]:
     """Run the PackTest server, parses its output, and capture relevant logs."""
-    flags = ["-Xmx2G", "-Dpacktest.auto", "-Dpacktest.auto.annotations", "-jar"]
+    flags = [
+        "-Xms3G",
+        "-Xmx3G",
+        "-XX:+UseG1GC",
+        "-XX:MaxGCPauseMillis=100",
+        "-XX:+UnlockExperimentalVMOptions",
+        "-XX:+DisableExplicitGC",
+        "-XX:+AlwaysPreTouch",
+        "-XX:G1NewSizePercent=30",
+        "-XX:G1MaxNewSizePercent=40",
+        "-XX:G1HeapRegionSize=8M",
+        "-XX:G1ReservePercent=20",
+        "-XX:G1HeapWastePercent=5",
+        "-XX:G1MixedGCCountTarget=4",
+        "-XX:InitiatingHeapOccupancyPercent=15",
+        "-XX:G1MixedGCLiveThresholdPercent=90",
+        "-XX:G1RSetUpdatingPauseTimePercent=5",
+        "-XX:SurvivorRatio=32",
+        "-XX:+PerfDisableSharedMem",
+        "-XX:MaxTenuringThreshold=1",
+        "-XX:+UseStringDeduplication",
+        "-XX:+ParallelRefProcEnabled",
+        "-Dpacktest.auto",
+        "-Dpacktest.auto.annotations",
+        "-jar",
+    ]
     # Start the server process inside the given directory
     process = await create_subprocess_exec(
         *[utils.locate_command("java"), *flags, server, "nogui"],
