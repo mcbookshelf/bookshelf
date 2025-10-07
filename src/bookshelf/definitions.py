@@ -5,8 +5,8 @@ from pathlib import Path
 
 # ─── Project Info ────────────────────────────────────────────────────────────
 
-VERSION = "3.1.1"
-MC_VERSIONS = ["1.21.6", "1.21.7", "1.21.8"]
+VERSION = "3.2.0"
+MC_VERSIONS = ["1.21.9", "1.21.10"]
 GITHUB_REPO = "mcbookshelf/bookshelf"
 
 # ─── Environment Flags ───────────────────────────────────────────────────────
