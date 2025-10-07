@@ -13,7 +13,16 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set value {properties:{},delta:"0 0 0",speed:1,count:1,mode:"normal",viewers:"@a"}
-data modify storage bs:ctx _ merge from storage bs:in block.emit_block_particle
+data modify storage bs:out block set value {}
 
-function bs.block:produce/block_particle/run with storage bs:ctx _
+setblock ~ ~ ~ minecraft:obsidian
+function #bs.block:get_blast_resistance
+assert data storage bs:out block{ blast_resistance: 1200.0 }
+
+setblock ~ ~ ~ minecraft:stone
+function #bs.block:get_blast_resistance
+assert data storage bs:out block{ blast_resistance: 6.0 }
+
+setblock ~ ~ ~ minecraft:basalt
+function #bs.block:get_blast_resistance
+assert data storage bs:out block{ blast_resistance: 4.2 }

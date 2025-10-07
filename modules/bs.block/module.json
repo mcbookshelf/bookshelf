@@ -9,7 +9,10 @@
     "slug": "bookshelf-block",
     "description": "Bookshelf block management module, enabling id and state transformations.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html",
-    "tags": ["runtime"]
+    "tags": ["runtime"],
+    "weak_dependencies": [
+      "bs.log"
+    ]
   },
   "pipeline": [
     "gen_block"

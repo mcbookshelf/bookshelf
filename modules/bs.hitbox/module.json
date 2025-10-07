@@ -9,7 +9,10 @@
     "slug": "bookshelf-hitbox",
     "description": "Bookshelf module for retrieving and checking the hitboxes of blocks and entities.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html",
-    "tags": ["runtime"]
+    "tags": ["runtime"],
+    "weak_dependencies": [
+      "bs.log"
+    ]
   },
   "pipeline": [
     "gen_hitbox"

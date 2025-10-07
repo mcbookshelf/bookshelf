@@ -110,8 +110,16 @@ def make_binary_loot_table[T](
         mid = len(entries) // 2
         left = build_node(entries[:mid])
         right = build_node(entries[mid:])
-        left["conditions"] = condition_factory(entries[:mid])
 
+        left["conditions"] = condition_factory(entries[:mid])
+        right["conditions"] = condition_factory(entries[mid:])
+
+        left_size = len(orjson.dumps(left["conditions"]))
+        right_size = len(orjson.dumps(right["conditions"]))
+        if left_size > right_size:
+            left, right = right, left
+
+        right.pop("conditions")
         return {"type":"alternatives","children":[left, right]}
 
     return make_loot_table({"pools":[{"rolls":1,"entries":[build_node(entries)]}]})

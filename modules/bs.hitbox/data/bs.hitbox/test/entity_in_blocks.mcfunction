@@ -15,9 +15,6 @@
 # @dummy
 # @skyaccess true
 
-await entity B5-0-0-0-1
-await entity B5-0-0-0-3
-
 setblock ~-1 ~ ~-1 minecraft:bookshelf
 
 # Entity is outside a block
