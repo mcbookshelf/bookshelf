@@ -36,25 +36,18 @@ def beet_default(ctx: Context) -> Generator:
 
     # Set metadata for resource pack
     ctx.assets.description = ctx.meta["description"]
-    ctx.assets.pack_format = formats["assets"]["max_inclusive"]
-    # TODO: uncomment when https://github.com/mcbeet/beet/pull/478 is merged
-    #ctx.assets.min_format = formats["assets"]["min_inclusive"]
-    #ctx.assets.max_format = formats["assets"]["max_inclusive"]
+    ctx.assets.min_format = formats["assets"]["min_inclusive"]
+    ctx.assets.max_format = formats["assets"]["max_inclusive"]
 
     # Set metadata for data pack
     ctx.data.description = ctx.meta["description"]
-    ctx.data.pack_format = formats["data"]["max_inclusive"]
-    # TODO: uncomment when https://github.com/mcbeet/beet/pull/478 is merged
-    #ctx.data.min_format = formats["data"]["min_inclusive"]
-    #ctx.data.max_format = formats["data"]["max_inclusive"]
+    ctx.data.min_format = formats["data"]["min_inclusive"]
+    ctx.data.max_format = formats["data"]["max_inclusive"]
 
     # Ensure the mcmeta file includes the data pack id (Smithed convention)
     mcmeta = ctx.data.mcmeta
     ctx.data.mcmeta.set_content({
         "id": ctx.data.name,
-        # TODO: remove when https://github.com/mcbeet/beet/pull/478 is merged
-        "min_format": formats["data"]["min_inclusive"],
-        "max_format": formats["data"]["max_inclusive"],
         **mcmeta.data,
     })
 
