@@ -21,9 +21,11 @@ def beet_default(ctx: Context) -> None:
         (f"v{VERSION}/bundle/append", "bundle/append"),
         (f"v{VERSION}/bundle/concat", "bundle/concat"),
         (f"v{VERSION}/cleanup", "process/cleanup"),
-        (f"v{VERSION}/validate", "process/validate"),
         (f"v{VERSION}/enumerate/{module}", "process/enumerate"),
         (f"v{VERSION}/errors/{module}", "process/errors"),
+        (f"v{VERSION}/validate", "process/validate"),
+        (f"v{VERSION}/status/status", "status/status"),
+        (f"v{VERSION}/status/module", "status/module"),
     ]:
         ctx.generate(
             f"bs.load:{file}",
