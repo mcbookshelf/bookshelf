@@ -1413,6 +1413,70 @@
       ]
     },
     {
+      "id": "bs.fsm",
+      "name": "Final State Machine",
+      "slug": "bookshelf-fsm",
+      "description": "Bookshelf final state machine module.",
+      "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/fsm.html",
+      "kind": "data_pack",
+      "tags": [
+        "runtime"
+      ],
+      "dependencies": [
+        "bs.random"
+      ],
+      "features": [
+        {
+          "id": "#bs.fsm:new",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/fsm.html#new",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          }
+        },
+        {
+          "id": "#bs.fsm:start",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/fsm.html#start",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/20",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/07/20",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.fsm:start_as",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/fsm.html#start-as",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/20",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/07/20",
+            "minecraft_version": "1.21.8"
+          }
+        }
+      ]
+    },
+    {
       "id": "bs.generation",
       "name": "Generation",
       "slug": "bookshelf-generation",
