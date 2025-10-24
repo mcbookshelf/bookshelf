@@ -18,6 +18,13 @@ scoreboard players operation #x bs.ctx -= #move.w bs.data
 scoreboard players operation #y bs.ctx -= #move.h bs.data
 scoreboard players operation #z bs.ctx -= #move.d bs.data
 
+execute if score #move.vx bs.data matches 0 if score #x bs.ctx matches 0.. run return 0
+execute if score #move.vx bs.data matches 0 if score #i bs.ctx matches ..0 run return 0
+execute if score #move.vy bs.data matches 0 if score #y bs.ctx matches 0.. run return 0
+execute if score #move.vy bs.data matches 0 if score #j bs.ctx matches ..0 run return 0
+execute if score #move.vz bs.data matches 0 if score #z bs.ctx matches 0.. run return 0
+execute if score #move.vz bs.data matches 0 if score #k bs.ctx matches ..0 run return 0
+
 # compute near and far values
 scoreboard players operation #x bs.ctx /= #move.vx bs.data
 scoreboard players operation #i bs.ctx /= #move.vx bs.data

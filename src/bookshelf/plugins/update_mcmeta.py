@@ -36,13 +36,13 @@ def beet_default(ctx: Context) -> Generator:
 
     # Set metadata for resource pack
     ctx.assets.description = ctx.meta["description"]
-    ctx.assets.pack_format = formats["assets"]["max_inclusive"]
-    ctx.assets.supported_formats = formats["assets"]
+    ctx.assets.min_format = formats["assets"]["min_inclusive"]
+    ctx.assets.max_format = formats["assets"]["max_inclusive"]
 
     # Set metadata for data pack
     ctx.data.description = ctx.meta["description"]
-    ctx.data.pack_format = formats["data"]["max_inclusive"]
-    ctx.data.supported_formats = formats["data"]
+    ctx.data.min_format = formats["data"]["min_inclusive"]
+    ctx.data.max_format = formats["data"]["max_inclusive"]
 
     # Ensure the mcmeta file includes the data pack id (Smithed convention)
     mcmeta = ctx.data.mcmeta

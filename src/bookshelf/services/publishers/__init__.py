@@ -3,12 +3,15 @@
 from __future__ import annotations
 
 from asyncio import run
-from typing import TYPE_CHECKING
 
 from . import modrinth, smithed
+from .utils import PublishSpec
 
-if TYPE_CHECKING:
-    from .utils import PublishSpec
+__all__ = [
+    "PublishSpec",
+    "publish_to_modrinth",
+    "publish_to_smithed",
+]
 
 
 def publish_to_modrinth(packs: list[PublishSpec]) -> None:

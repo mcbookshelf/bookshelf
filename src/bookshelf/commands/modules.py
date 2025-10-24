@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from typing import TYPE_CHECKING
@@ -91,12 +92,8 @@ def test(modules: tuple[str, ...], *, versions: bool) -> None:
             )
 
         with summarize_logs("🔬 TESTING MODULES…", exit_on_errors=True):
-            for worker in track([(
-                f"Test version [green]{v}[/green]",
-                packtest.run(output, v),
-            ) for v in (reversed(MC_VERSIONS) if versions else MC_VERSIONS[-1:])]):
-                for event in worker:
-                    event.log()
+            mc_versions = reversed(MC_VERSIONS) if versions else MC_VERSIONS[-1:]
+            asyncio.run(test_modules(output, list(mc_versions)))
 
 
 def build_modules(modules: Sequence[str], options: builder.BuildOptions) -> None:
@@ -107,3 +104,17 @@ def build_modules(modules: Sequence[str], options: builder.BuildOptions) -> None
         (builder.build_module, module),
     ) for module in modules):
         build(module, options)
+
+
+async def test_modules(datapacks: Path, mc_versions: list[str]) -> None:
+    """Run tests for the given datapacks on specified Minecraft versions."""
+    coros = [packtest.run(datapacks, v) for v in mc_versions]
+    tasks = [asyncio.create_task(coro) for coro in coros]
+
+    for task in track(
+        (f"Test version [green]{v}[/green]", process)
+        for v, process in zip(mc_versions, tasks, strict=True)
+    ):
+        logs = await task
+        for event in logs:
+            event.log()

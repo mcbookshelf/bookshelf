@@ -111,7 +111,15 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"carpet",attrs:["red","wool"],type:"minecraft:red_carpet"}, \
   {set:"carpet",attrs:["white","wool"],type:"minecraft:white_carpet"}, \
   {set:"carpet",attrs:["yellow","wool"],type:"minecraft:yellow_carpet"}, \
-  {set:"chain",attrs:["iron"],type:"minecraft:chain"}, \
+  {set:"chain",attrs:["iron"],type:"minecraft:iron_chain"}, \
+  {set:"chain",attrs:["copper"],type:"minecraft:copper_chain"}, \
+  {set:"chain",attrs:["copper","exposed"],type:"minecraft:exposed_copper_chain"}, \
+  {set:"chain",attrs:["copper","weathered"],type:"minecraft:weathered_copper_chain"}, \
+  {set:"chain",attrs:["copper","oxidized"],type:"minecraft:oxidized_copper_chain"}, \
+  {set:"chain",attrs:["copper","waxed"],type:"minecraft:waxed_copper_chain"}, \
+  {set:"chain",attrs:["copper","exposed","waxed"],type:"minecraft:waxed_exposed_copper_chain"}, \
+  {set:"chain",attrs:["copper","weathered","waxed"],type:"minecraft:waxed_weathered_copper_chain"}, \
+  {set:"chain",attrs:["copper","oxidized","waxed"],type:"minecraft:waxed_oxidized_copper_chain"}, \
   {set:"cube",attrs:["acacia","leaves"],type:"minecraft:acacia_leaves"}, \
   {set:"cube",attrs:["acacia","log"],type:"minecraft:acacia_log"}, \
   {set:"cube",attrs:["acacia","planks"],type:"minecraft:acacia_planks"}, \
@@ -545,6 +553,14 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"pane",attrs:["gray","glass"],type:"minecraft:gray_stained_glass_pane"}, \
   {set:"pane",attrs:["green","glass"],type:"minecraft:green_stained_glass_pane"}, \
   {set:"pane",attrs:["iron"],type:"minecraft:iron_bars"}, \
+  {set:"pane",attrs:["copper"],type:"minecraft:copper_bars"}, \
+  {set:"pane",attrs:["copper","exposed"],type:"minecraft:exposed_copper_bars"}, \
+  {set:"pane",attrs:["copper","weathered"],type:"minecraft:weathered_copper_bars"}, \
+  {set:"pane",attrs:["copper","oxidized"],type:"minecraft:oxidized_copper_bars"}, \
+  {set:"pane",attrs:["copper","waxed"],type:"minecraft:waxed_copper_bars"}, \
+  {set:"pane",attrs:["copper","exposed","waxed"],type:"minecraft:waxed_exposed_copper_bars"}, \
+  {set:"pane",attrs:["copper","weathered","waxed"],type:"minecraft:waxed_weathered_copper_bars"}, \
+  {set:"pane",attrs:["copper","oxidized","waxed"],type:"minecraft:waxed_oxidized_copper_bars"}, \
   {set:"pane",attrs:["light_blue","glass"],type:"minecraft:light_blue_stained_glass_pane"}, \
   {set:"pane",attrs:["light_gray","glass"],type:"minecraft:light_gray_stained_glass_pane"}, \
   {set:"pane",attrs:["lime","glass"],type:"minecraft:lime_stained_glass_pane"}, \

@@ -1,13 +1,12 @@
 from __future__ import annotations
 
 from logging import getLogger
+from pathlib import Path
 from typing import TYPE_CHECKING, Literal
 
 from pydantic import BaseModel
 
 if TYPE_CHECKING:
-    from pathlib import Path
-
     from httpx import Response
 
 logger = getLogger(__name__)
