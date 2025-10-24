@@ -60,15 +60,13 @@ html_context = {
     "github_repo": "Bookshelf",
     "github_version": "master",
     "doc_path": "docs",
+    "current_version": os.environ.get("READTHEDOCS_VERSION", "latest"),
+    "version_switcher": "https://docs.mcbookshelf.dev/en/master/_static/switcher.json",
     "languages": [
         ("English", "/en/%s/", "en"),
         ("Français", "/fr/%s/", "fr"),
         ("中文", "/zh-cn/%s/", "zh-cn"),
     ],
-    "versions": {
-        "current": os.environ.get("READTHEDOCS_VERSION", "latest"),
-        "url": "https://docs.mcbookshelf.dev/en/master/_static/switcher.json",
-    },
 }
 
 discord = """

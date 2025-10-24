@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: Unbounded;
-  src: url("fonts/unbounded.woff2");
+  font-family: Itim;
+  src: url("fonts/itim.ttf");
 }
 
 @font-face {
@@ -14,24 +14,30 @@
 }
 
 html {
-  --font-sans: "Nunito", "TossFace";
-  --font-sans: "Nunito", "TossFace";
+  --bz-font-sans: "Nunito", "TossFace";
+  --bz-header-brand-font-family: "Itim";
+  --bz-header-brand-color: var(--bz-color-muted);
+  --bz-header-brand-color-hover: var(--bz-color-gray-5);
 }
 
 .bs-footer-links {
   display: flex;
   flex-wrap: wrap;
-  font-size: var(--size-sm);
-  column-gap: calc(var(--spacing) * 6);
+  font-size: var(--bz-size-sm);
+  column-gap: calc(var(--bz-spacing) * 6);
   a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
   }
 }
 
 .bz-header-brand {
-  font-family: "Unbounded";
-  font-size: 1.4em;
-  span {
-    height: auto;
+  img {
+    transition: transform ease-in-out .3s;
+  }
+
+  &:hover img {
+    transform: rotate(180deg);
   }
 }
