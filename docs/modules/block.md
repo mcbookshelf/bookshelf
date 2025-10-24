@@ -221,47 +221,6 @@ function #bs.block:fill_random
 
 ---
 
-### Get Blast Resistance
-
-```{function} #bs.block:get_blast_resistance
-
-Get the blast resistance value of the block at the current location.
-
-:Inputs:
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to get block data from.
-
-:Outputs:
-  **Storage `bs:out block`**:
-  :::{treeview}
-  - {nbt}`compound` **[readonly]** Block data
-    - {nbt}`double` **blast_resistance**: The blast resistance of the block at the position.
-  :::
-```
-
-```{dropdown} What is Blast Resistance?
-:color: info
-:icon: question
-Blast resistance is a numeric value used by Minecraft to determine how well a block resists explosions. Higher values mean the block is harder to destroy by TNT, creepers, or other explosions.
-```
-
-*Example: Get the blast resistance of the block below your feet:*
-
-```mcfunction
-# Run the get function on a block
-execute positioned ~ ~-.5 ~ run function #bs.block:get_blast_resistance
-
-# See the result
-data get storage bs:out block
-```
-
-```{tip}
-This function merges its result into `bs:out block` rather than replacing it. This means previously retrieved block data (for example, from [`#bs.block:get_block`](#get-block)) remains intact.
-```
-
-> **Credits**: Aksiome
-
----
-
 ### Get Block
 
 :::::{tab-set}
@@ -342,8 +301,42 @@ The `bs:out block` output is intended to be read-only. Modifying parts manually 
 
 ---
 
-### Get Friction
+### Get Extras
 
+:::::{tab-set}
+::::{tab-item} Blast Res...
+```{function} #bs.block:get_blast_resistance
+
+Get the blast resistance value of the block at the current location.
+
+:Inputs:
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to get block data from.
+
+:Outputs:
+  **Storage `bs:out block`**:
+  :::{treeview}
+  - {nbt}`compound` **[readonly]** Block data
+    - {nbt}`double` **blast_resistance**: The blast resistance of the block at the position.
+  :::
+```
+
+```{dropdown} What is Blast Resistance?
+:color: info
+:icon: question
+Blast resistance is a numeric value used by Minecraft to determine how well a block resists explosions. Higher values mean the block is harder to destroy by TNT, creepers, or other explosions.
+```
+
+*Example: Get the blast resistance of the block below your feet:*
+
+```mcfunction
+# Run the get function on a block
+execute positioned ~ ~-.5 ~ run function #bs.block:get_blast_resistance
+
+# See the result
+data get storage bs:out block
+```
+::::
+::::{tab-item} Friction
 ```{function} #bs.block:get_friction
 
 Get the friction value of the block at the current location.
@@ -374,17 +367,8 @@ execute positioned ~ ~-.5 ~ run function #bs.block:get_friction
 # See the result
 data get storage bs:out block
 ```
-
-```{tip}
-This function merges its result into `bs:out block` rather than replacing it. This means previously retrieved block data (for example, from [`#bs.block:get_block`](#get-block)) remains intact.
-```
-
-> **Credits**: Aksiome
-
----
-
-### Get Hardness
-
+::::
+::::{tab-item} Hardness
 ```{function} #bs.block:get_hardness
 
 Get the hardness value of the block at the current location.
@@ -416,17 +400,8 @@ execute positioned ~ ~-.5 ~ run function #bs.block:get_hardness
 # See the result
 data get storage bs:out block
 ```
-
-```{tip}
-This function merges its result into `bs:out block` rather than replacing it. This means previously retrieved block data (for example, from [`#bs.block:get_block`](#get-block)) remains intact.
-```
-
-> **Credits**: Aksiome
-
----
-
-### Get Instrument
-
+::::
+::::{tab-item} Instrument
 ```{function} #bs.block:get_instrument
 
 Get the note block instrument of the block at the current location (e.g., `harp`, `bass`, `snare`).
@@ -451,17 +426,8 @@ execute positioned ~ ~-.5 ~ run function #bs.block:get_instrument
 # See the result
 data get storage bs:out block
 ```
-
-```{tip}
-This function merges its result into `bs:out block` rather than replacing it. This means previously retrieved block data (for example, from [`#bs.block:get_block`](#get-block)) remains intact.
-```
-
-> **Credits**: Aksiome
-
----
-
-### Get Jump Factor
-
+::::
+::::{tab-item} Jump Factor
 ```{function} #bs.block:get_jump_factor
 
 Get the jump factor value of the block at the current location.
@@ -486,17 +452,8 @@ execute positioned ~ ~-.5 ~ run function #bs.block:get_jump_factor
 # See the result
 data get storage bs:out block
 ```
-
-```{tip}
-This function merges its result into `bs:out block` rather than replacing it. This means previously retrieved block data (for example, from [`#bs.block:get_block`](#get-block)) remains intact.
-```
-
-> **Credits**: Aksiome
-
----
-
-### Get Luminance
-
+::::
+::::{tab-item} Luminance
 ```{function} #bs.block:get_luminance
 
 Get the luminance value of the block at the current location. The luminance can depend on block properties. For example, a `light` block may have different luminance values depending on its level.
@@ -521,17 +478,8 @@ execute positioned ~ ~-.5 ~ run function #bs.block:get_luminance
 # See the result
 data get storage bs:out block
 ```
-
-```{tip}
-This function merges its result into `bs:out block` rather than replacing it. This means previously retrieved block data (for example, from [`#bs.block:get_block`](#get-block)) remains intact.
-```
-
-> **Credits**: Aksiome
-
----
-
-### Get Sounds
-
+::::
+::::{tab-item} Sounds
 ```{function} #bs.block:get_sounds
 
 Get the sounds of the block at the current location.
@@ -561,17 +509,8 @@ execute positioned ~ ~-.5 ~ run function #bs.block:get_sounds
 # See the result
 data get storage bs:out block
 ```
-
-```{tip}
-This function merges its result into `bs:out block` rather than replacing it. This means previously retrieved block data (for example, from [`#bs.block:get_block`](#get-block)) remains intact.
-```
-
-> **Credits**: Aksiome
-
----
-
-### Get Speed Factor
-
+::::
+::::{tab-item} Speed Factor
 ```{function} #bs.block:get_speed_factor
 
 Get the speed factor value of the block at the current location.
@@ -596,9 +535,11 @@ execute positioned ~ ~-.5 ~ run function #bs.block:get_speed_factor
 # See the result
 data get storage bs:out block
 ```
+::::
+:::::
 
 ```{tip}
-This function merges its result into `bs:out block` rather than replacing it. This means previously retrieved block data (for example, from [`#bs.block:get_block`](#get-block)) remains intact.
+These functions merge their results into `bs:out block` rather than replacing it. This means previously retrieved block data (for example, from [`#bs.block:get_block`](#get-block)) remains intact.
 ```
 
 > **Credits**: Aksiome
