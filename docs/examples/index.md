@@ -10,7 +10,7 @@ In this section, you'll find practical examples showcasing how to use **Bookshel
 
 ## 🌟 Featured Examples
 
-::::{grid} 2
+::::{grid} 1 2 2 2
 
 :::{grid-item-card} 🧵 Lifestring
 :link: lifestring

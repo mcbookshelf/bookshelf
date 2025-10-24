@@ -1,4 +1,4 @@
-::::{grid} 2
+::::{grid} 1 2 2 2
 
 :::{grid-item-card} 🧱 Block
 :link: /modules/block

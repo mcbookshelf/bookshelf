@@ -460,7 +460,7 @@ Discover how these curves behave through these visual examples. For more in-dept
 
 ---
 
-::::{grid} 2
+::::{grid} 1 2 2 2
 :::{grid-item-card} Bézier
 :margin: 0 3 0 0
 :text-align: center

@@ -495,7 +495,7 @@ tellraw @a [{"text": "Noise: ", "color": "dark_gray"},{"nbt":"fractal_noise_mat_
 ::::
 :::::
 
-::::{grid} 3
+::::{grid} 1 3 3 3
 :::{grid-item-card} White Noise
 :margin: 0 3 0 0
 :text-align: center
