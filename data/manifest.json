@@ -268,7 +268,7 @@
         {
           "id": "#bs.block:get_blast_resistance",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-blast-resistance",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
           "authors": [
             "Aksiome"
           ],
@@ -301,7 +301,7 @@
         {
           "id": "#bs.block:get_friction",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-friction",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
           "authors": [
             "Aksiome"
           ],
@@ -317,7 +317,7 @@
         {
           "id": "#bs.block:get_hardness",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-hardness",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
           "authors": [
             "Aksiome"
           ],
@@ -333,7 +333,7 @@
         {
           "id": "#bs.block:get_instrument",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-instrument",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
           "authors": [
             "Aksiome"
           ],
@@ -349,7 +349,7 @@
         {
           "id": "#bs.block:get_jump_factor",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-jump-factor",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
           "authors": [
             "Aksiome"
           ],
@@ -365,7 +365,7 @@
         {
           "id": "#bs.block:get_luminance",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-luminance",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
           "authors": [
             "Aksiome"
           ],
@@ -381,7 +381,7 @@
         {
           "id": "#bs.block:get_sounds",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-sounds",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
           "authors": [
             "Aksiome"
           ],
@@ -397,7 +397,7 @@
         {
           "id": "#bs.block:get_speed_factor",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-speed-factor",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
           "authors": [
             "Aksiome"
           ],
