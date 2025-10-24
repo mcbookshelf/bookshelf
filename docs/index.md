@@ -24,7 +24,7 @@ sd_hide_title: true
 Bookshelf (formerly known as Gunivers Libs) is a modular library datapack designed to simplify complex systems in Minecraft maps. It is ideal for mapmakers seeking easy-to-implement tools.
 
 
-::::{grid} 1 2 2 2
+::::{grid} 2
 
 :::{grid-item}
 
