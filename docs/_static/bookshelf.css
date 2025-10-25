@@ -42,3 +42,7 @@ html {
     transform: rotate(180deg);
   }
 }
+
+.emoji {
+  filter: hue-rotate(-16deg);
+}
