@@ -98,6 +98,19 @@ If you like the project, don't hesitate to star it on [GitHub](https://github.co
 
 ## 👶 First Steps
 
+Once you’ve downloaded your Bookshelf datapack bundle (or multiple modules), install them in your Minecraft world.
+If you’re not familiar with installing datapacks, follow [this](https://datapack.wiki/guide/installing-a-datapack) tutorial.
+
+Now that Bookshelf is installed, you can verify that everything is working by running:
+
+```mcfunction
+function #bs.load:status
+```
+
+This command lists all loaded modules with their respective versions and checks for compatibility issues.
+
+From there, you can explore the documentation for individual modules, try out examples, and start integrating their functionality into your own projects!
+
 :::{important}
 
 Bookshelf relies on persistent entities to enhance performances. Therefore, it's important not to kill all entities. Instead, you can use the command `kill @e[tag=!bs.persistent]`. [Learn more here](contribute/shared-resources.md#entities)
@@ -105,57 +118,13 @@ Bookshelf relies on persistent entities to enhance performances. Therefore, it's
 
 ### 📖 Good Practices
 
-Bookshelf is designed to minimize unintended side effects. However, complications can arise when multiple datapacks utilize the same one. To prevent potential issues, it's always recommended to set inputs prior to executing a function. This holds true even though Bookshelf adheres to a strict policy of preserving inputs. By following this practice, you can ensure smoother operation and prevent unexpected behaviors.
+Bookshelf is designed to minimize unintended side effects. However, complications can arise when multiple datapacks utilize the same one. To prevent potential issues, it's always recommended to set inputs prior to executing a function. This holds true even though Bookshelf adheres to a strict policy of preserving inputs. By following this practice, you can prevent unexpected behaviors.
 
 :::{note}
 This section is in progress. If you have some ideas about how to improve the first steps with Bookshelf, please share it on our [Discord server](https://discord.gg/MkXytNjmBt).
 :::
 
 ---
-
-
-<!--
-
-Now that Bookshelf is installed on your map (or once you are on the sandbox map), let's start to make some basic stuff to understand how it work!
-
-First, let's test if Bookshelf is correctly installed. To do so, enter the following command in your chat:
-
-```
-/function bs:hello
-```
-
-If the Gunivers-Lib is well installed, you should see "Hello World!" in the chat. If it's not the case, verify that the cheat are enabled in your world (or command-blocks are enabled in the `server.properties` file if you are on a server).
-
-Great! Now, let's play with funny things. Place a command-block in repreat mode and powered.
-
-<div align="center">
-
-![](https://gunivers.net/wp-content/uploads/2022/06/Command-block-repeat-1.png)
-
-</div>
-
-In this command block, you can enter the command of one of the following example system:
-
-- **LGdir** : this system allow you to shoot lasers. To shoot, take a `carrot_on_a_stick` and right-click on it!
-    ```
-    function bs.example:lgdir
-    ```
-- **Drop to place** : this system allow you to place minecraft blocks by dropping the items instead of right clicking on it. Useless so essential!
-    ```
-    function bs.example:drop_to_place
-    ```
-- **Walk Trail** : this system create a trail where the players are walking. This trail is made of items corresponding to the block they are walking on.
-    ```
-    function bs.example:walk_trail
-    ```
-
-
-:::{note}
-This section is in progress. If you have some ideas about how to improves the first steps with the Glibs, please share it on our [Discord server](https://discord.gg/MkXytNjmBt).
-:::
-
----
--->
 
 ```{include} _templates/comments.md
 ```
