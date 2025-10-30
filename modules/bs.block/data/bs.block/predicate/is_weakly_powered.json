@@ -1,0 +1,163 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-weakly-powered",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2025/10/30",
+      "minecraft_version": "1.21.10"
+    },
+    "updated": {
+      "date": "2025/10/30",
+      "minecraft_version": "1.21.10"
+    }
+  },
+  "condition": "all_of",
+  "terms": [
+    {
+      "condition": "reference",
+      "name": "bs.block:is_conductive"
+    },
+    {
+      "condition": "any_of",
+      "terms": [
+        {
+          "condition": "location_check",
+          "offsetY": 1,
+          "predicate": {
+            "block": {
+              "blocks": "redstone_wire",
+              "state": {
+                "power": {
+                  "min": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "location_check",
+          "offsetX": 1,
+          "predicate": {
+            "block": {
+              "blocks": "redstone_wire",
+              "state": {
+                "west": "side",
+                "power": {
+                  "min": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "location_check",
+          "offsetX": -1,
+          "predicate": {
+            "block": {
+              "blocks": "redstone_wire",
+              "state": {
+                "east": "side",
+                "power": {
+                  "min": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "location_check",
+          "offsetZ": 1,
+          "predicate": {
+            "block": {
+              "blocks": "redstone_wire",
+              "state": {
+                "north": "side",
+                "power": {
+                  "min": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "location_check",
+          "offsetZ": -1,
+          "predicate": {
+            "block": {
+              "blocks": "redstone_wire",
+              "state": {
+                "south": "side",
+                "power": {
+                  "min": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "location_check",
+          "offsetX": 1,
+          "predicate": {
+            "block": {
+              "blocks": "redstone_wire",
+              "state": {
+                "west": "up",
+                "power": {
+                  "min": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "location_check",
+          "offsetX": -1,
+          "predicate": {
+            "block": {
+              "blocks": "redstone_wire",
+              "state": {
+                "east": "up",
+                "power": {
+                  "min": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "location_check",
+          "offsetZ": 1,
+          "predicate": {
+            "block": {
+              "blocks": "redstone_wire",
+              "state": {
+                "north": "up",
+                "power": {
+                  "min": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "location_check",
+          "offsetZ": -1,
+          "predicate": {
+            "block": {
+              "blocks": "redstone_wire",
+              "state": {
+                "south": "up",
+                "power": {
+                  "min": "1"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
