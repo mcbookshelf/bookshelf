@@ -13,5 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-loot replace entity B5-0-0-0-3 contents loot bs.block:is_spawnable/get
-return run execute if data entity B5-0-0-0-3 item.components."minecraft:custom_data"{"is_spawnable":1b}
+execute unless predicate bs.block:internal/is_touching_power \
+  positioned ~1 ~ ~ unless predicate bs.block:is_strongly_powered \
+  positioned ~ ~1 ~ unless predicate bs.block:is_strongly_powered \
+  positioned ~ ~ ~1 unless predicate bs.block:is_strongly_powered \
+  positioned ~-1 ~ ~ unless predicate bs.block:is_strongly_powered \
+  positioned ~ ~-1 ~ unless predicate bs.block:is_strongly_powered \
+  positioned ~ ~ ~-1 unless predicate bs.block:is_strongly_powered \
+  run return fail
+return 1

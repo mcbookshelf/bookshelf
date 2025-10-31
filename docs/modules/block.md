@@ -546,35 +546,14 @@ These functions merge their results into `bs:out block` rather than replacing it
 
 ---
 
-### Is Conductive
+### Is Touching Power
 
-```{function} #bs.block:is_conductive
+:::::{tab-set}
+::::{tab-item} Any
 
-Check if the block at the current location conducts redstone. The conductivity can depend on block properties. For example, a `slab` block may only be conductive if it is a double slab.
+```{function} #bs.block:is_touching_power
 
-:Inputs:
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position of the block to check.
-
-:Outputs:
-  **Return**: Success or failure.
-```
-
-*Example: Check if the block below your feet conducts redstone:*
-
-```mcfunction
-# Run the get function on a block
-execute positioned ~ ~-.5 ~ run function #bs.block:is_conductive
-```
-
-> **Credits**: Aksiome
-
----
-
-### Is Spawnable
-
-```{function} #bs.block:is_spawnable
-
-Check if the block at the current location can serve as a valid spawn surface. This does not consider light level and may depend on block properties. For example, a `slab` may be spawnable only if it is not a bottom slab.
+Determine whether the current position is touching a powered block or is powered by a redstone component.
 
 :Inputs:
   **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position of the block to check.
@@ -582,12 +561,45 @@ Check if the block at the current location can serve as a valid spawn surface. T
 :Outputs:
   **Return**: Success or failure.
 ```
+::::
+::::{tab-item} Strong
 
-*Example: Check if the block below your feet has a valid spawn surface:*
+```{function} #bs.block:is_touching_strong_power
+
+Determine whether the current position is touching a strongly powered block or is powered by a redstone component.
+
+:Inputs:
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position of the block to check.
+
+:Outputs:
+  **Return**: Success or failure.
+```
+::::
+::::{tab-item} Weak
+
+````{function} #bs.block:is_touching_weak_power
+
+Determine whether the current position is touching a weakly powered block.
+
+:Inputs:
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position of the block to check.
+
+:Outputs:
+  **Return**: Success or failure.
+````
+::::
+:::::
+
+*Example: Check whether the current location should activate a redstone mechanism:*
 
 ```mcfunction
-# Run the get function on a block
-execute positioned ~ ~-.5 ~ run function #bs.block:is_spawnable
+execute if function #bs.block:is_touching_power run say ACTIVATE
+```
+
+```{admonition} Unsupported Redstone Components
+:class: warning
+
+The `trapped_chest` block is not supported by these functions. They rely on block states to determine power, and `trapped_chest` blocks do not update their block state when opened.
 ```
 
 > **Credits**: Aksiome
@@ -601,7 +613,7 @@ execute positioned ~ ~-.5 ~ run function #bs.block:is_spawnable
 
 ```{function} #bs.block:lookup_type {type:<value>}
 
-Get block data from the given type string id. The output is equivalent to [`#bs.block:get_type`](#get-block), but also includes all additional properties that are not dependent on block state.
+Get block data from the given type string id. The output is equivalent to [`#bs.block:get_type`](#get-block), but also includes all additional attributes that are not dependent on block state.
 
 :Inputs:
   **Function macro**:
@@ -653,7 +665,7 @@ data get storage bs:out block.block
 Minecraft does not perfectly map between blocks and items. Some items may correspond to multiple blocks, and this function will only return one of them.
 ```
 
-Get block data from the given item string id. The output is equivalent to [`#bs.block:get_type`](#get-block), but also includes all additional properties that are not dependent on block state.
+Get block data from the given item string id. The output is equivalent to [`#bs.block:get_type`](#get-block), but also includes all additional attributes that are not dependent on block state.
 
 :Inputs:
   **Function macro**:
@@ -1463,6 +1475,78 @@ function #bs.block:spawn_solid_block_display
 :::::
 
 > **Credits**: Aksiome, theogiraudet
+
+---
+
+## 👁️ Predicates
+
+You can find below all predicates available in this module.
+
+---
+
+### Is Conductive
+
+**`bs.block:is_conductive`**
+
+Check if the block at the current location can conduct redstone. The conductivity can depend on block properties. For example, a slab block may only be conductive if it is a double slab.
+
+> **Credits**: Aksiome
+
+---
+
+### Is Powered
+
+**`bs.block:is_powered`**
+
+Check if the block is [`conductive`](#is-conductive) and powered by redstone.
+
+> **Credits**: Aksiome
+
+---
+
+### Is Spawnable
+
+**`bs.block:is_spawnable`**
+
+Check if the block at the current location can serve as a valid spawn surface. This does not consider light level and may depend on block properties. For example, a `slab` may be spawnable only if it is not a bottom slab.
+
+> **Credits**: Aksiome
+
+---
+
+### Is Strongly Powered
+
+**`bs.block:is_strongly_powered`**
+
+Check if the block is [`conductive`](#is-conductive) and strongly powered by redstone.
+
+```{dropdown} What is Strongly Powered?
+:color: info
+:icon: question
+A block is strongly powered when it can power adjacent redstone dust (including redstone dust on and beneath the block), in addition to activating adjacent mechanism component, and powering redstone repeaters and redstone comparators facing away from the block.
+
+A block becomes strongly powered by being powered by a redstone power component, a powered redstone repeater, or a powered redstone comparator.
+```
+
+> **Credits**: Aksiome
+
+---
+
+### Is Weakly Powered
+
+**`bs.block:is_weakly_powered`**
+
+Check if the block is [`conductive`](#is-conductive) and weakly powered by redstone.
+
+```{dropdown} What is Weakly Powered?
+:color: info
+:icon: question
+A block that is weakly powered cannot power adjacent redstone dust, but can still activate adjacent redstone mechanisms, and power redstone repeaters and redstone comparators facing away from the block.
+
+A block becomes weakly powered when it is powered only by redstone dust.
+```
+
+> **Credits**: Aksiome
 
 ---
 

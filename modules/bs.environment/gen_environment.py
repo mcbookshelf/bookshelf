@@ -57,7 +57,7 @@ def make_can_snow_predicate(biomes: Sequence[Biome]) -> Predicate:
 
 def make_biome_loot_table(biomes: Sequence[Biome]) -> LootTable:
     """Generate a loot table to retrieve biomes."""
-    return minecraft.make_binary_loot_table(biomes, lambda biome: {
+    return minecraft.make_loot_table_binary(biomes, lambda biome: {
             "type": "item",
             "name": "egg",
             "functions": [{

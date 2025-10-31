@@ -28,4 +28,4 @@ function #bs.log:warn { \
 data modify storage bs:ctx _ set value {source:"master",targets:"@s",pos:"~ ~ ~",volume:1,pitch:1,min_volume:0}
 data modify storage bs:ctx _ merge from storage bs:in block.play_block_sound
 
-function bs.block:playsound/run with storage bs:ctx _
+function bs.block:produce/playsound/run with storage bs:ctx _

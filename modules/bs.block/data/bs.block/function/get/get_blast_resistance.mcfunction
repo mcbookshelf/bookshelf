@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-loot replace entity B5-0-0-0-3 contents loot bs.block:blast_resistance/get
+loot replace entity B5-0-0-0-3 contents loot bs.block:internal/get_blast_resistance
 data modify storage bs:out block merge from entity B5-0-0-0-3 item.components."minecraft:custom_data"

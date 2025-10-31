@@ -150,6 +150,86 @@
       ],
       "features": [
         {
+          "id": "bs.block:is_conductive",
+          "kind": "predicate",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-conductive",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "bs.block:is_powered",
+          "kind": "predicate",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-powered",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "bs.block:is_spawnable",
+          "kind": "predicate",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-spawnable",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "bs.block:is_strongly_powered",
+          "kind": "predicate",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-strongly-powered",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "bs.block:is_weakly_powered",
+          "kind": "predicate",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-weakly-powered",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
           "id": "#bs.block:can_occlude",
           "kind": "block_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#can-occlude",
@@ -428,35 +508,51 @@
           }
         },
         {
-          "id": "#bs.block:is_conductive",
+          "id": "#bs.block:is_touching_power",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-conductive",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-touching-power",
           "authors": [
             "Aksiome"
           ],
           "created": {
-            "date": "2025/09/12",
-            "minecraft_version": "1.21.8"
+            "date": "2025/10/31",
+            "minecraft_version": "1.21.10"
           },
           "updated": {
-            "date": "2025/09/12",
-            "minecraft_version": "1.21.8"
+            "date": "2025/10/31",
+            "minecraft_version": "1.21.10"
           }
         },
         {
-          "id": "#bs.block:is_spawnable",
+          "id": "#bs.block:is_touching_strong_power",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-spawnable",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-touching-power",
           "authors": [
             "Aksiome"
           ],
           "created": {
-            "date": "2025/09/12",
-            "minecraft_version": "1.21.8"
+            "date": "2025/10/31",
+            "minecraft_version": "1.21.10"
           },
           "updated": {
-            "date": "2025/09/12",
-            "minecraft_version": "1.21.8"
+            "date": "2025/10/31",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "#bs.block:is_touching_weak_power",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-touching-power",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/31",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/31",
+            "minecraft_version": "1.21.10"
           }
         },
         {

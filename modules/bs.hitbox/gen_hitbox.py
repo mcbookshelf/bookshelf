@@ -1,8 +1,6 @@
 from collections import defaultdict
-from collections.abc import Callable, Sequence
-from itertools import chain
 
-from beet import BlockTag, Context, LootTable
+from beet import Context, LootTable
 
 from bookshelf.definitions import MC_VERSIONS
 from bookshelf.models import Block, StatePredicate, StateValue, VoxelShape
@@ -24,46 +22,28 @@ def beet_default(ctx: Context) -> None:
         for shape in (block.shape, block.collision_shape):
             if isinstance(shape, StatePredicate) and shape.group not in seen:
                 seen.add(shape.group)
-                loot_table = make_state_loot_table(shape)
+                loot_table = make_loot_table_state(shape)
                 ctx.generate(f"{namespace}:block/{shape.group}", render=loot_table)
 
     for name, mapping in groups.items():
         loot_table = make_shape_loot_table(mapping, f"{namespace}:block")
         ctx.generate(f"{namespace}:block/{name}", render=loot_table)
 
-    if tag := ctx.data.block_tags.get(f"{namespace}:has_shape_offset"):
-        tag.merge(make_block_tag(blocks, lambda b: b.has_shape_offset))
-    if tag := ctx.data.block_tags.get(f"{namespace}:has_visual_offset"):
-        tag.merge(make_block_tag(blocks, lambda b: b.has_visual_offset))
-
-    if tag := ctx.data.block_tags.get(f"{namespace}:can_pass_through"):
-        tag.merge(make_block_tag(blocks, lambda b: not b.collision_shape))
-    if tag := ctx.data.block_tags.get(f"{namespace}:intangible"):
-        tag.merge(make_block_tag(blocks, lambda b: not b.shape, [
+    for name, predicate, extras in [
+        ("has_shape_offset", lambda b: b.has_shape_offset, []),
+        ("has_visual_offset", lambda b: b.has_visual_offset, []),
+        ("can_pass_through", lambda b: not b.collision_shape, []),
+        ("intangible", lambda b: not b.shape, [
             "minecraft:light",
             "minecraft:structure_void",
-        ]))
-
-    if tag := ctx.data.block_tags.get(f"{namespace}:is_full_cube"):
-        tag.merge(make_block_tag(blocks, lambda block: (
+        ]),
+        ("is_full_cube", lambda block: (
             block.shape == ((0.0, 0.0, 0.0, 16.0, 16.0, 16.0),)
             and block.collision_shape == ((0.0, 0.0, 0.0, 16.0, 16.0, 16.0),)
-        )))
-
-
-def make_block_tag(
-    blocks: Sequence[Block],
-    predicate: Callable[[Block], bool],
-    extras: list | None = None,
-) -> BlockTag:
-    """Create a block tag for blocks that match the predicate."""
-    return BlockTag({
-        "replace": True,
-        "values": sorted(chain(
-            extras or [],
-            (block.type for block in blocks if predicate(block)),
-        )),
-    })
+        ), []),
+    ]:
+        if tag := ctx.data.block_tags.get(f"{namespace}:{name}"):
+            tag.merge(minecraft.make_block_tag(blocks, predicate, extras))
 
 
 def make_shape_loot_table(
@@ -71,7 +51,7 @@ def make_shape_loot_table(
     path: str,
 ) -> LootTable:
     """Create a loot table for a collection of blocks grouped by shape."""
-    return minecraft.make_binary_loot_table(
+    return minecraft.make_loot_table_binary(
         tuple(groups.items()),
         lambda entry: {
             "type": "loot_table",
@@ -94,9 +74,9 @@ def make_shape_loot_table(
     )
 
 
-def make_state_loot_table(entry: StatePredicate) -> LootTable:
+def make_loot_table_state(entry: StatePredicate) -> LootTable:
     """Create a loot table for a given state entry."""
-    return minecraft.make_state_loot_table(
+    return minecraft.make_loot_table_state(
         entry,
         lambda shape: {
             "type": "item",

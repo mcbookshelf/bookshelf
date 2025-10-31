@@ -440,7 +440,7 @@ docs = [
     { name = "myst-parser", specifier = ">=4.0.1" },
     { name = "sphinx", specifier = ">=8.2.3" },
     { name = "sphinx-autobuild", specifier = ">=2025.8.25" },
-    { name = "sphinx-breeze-theme", specifier = ">=0.3.1" },
+    { name = "sphinx-breeze-theme", specifier = ">=0.5.2" },
     { name = "sphinx-copybutton", specifier = ">=0.5.2" },
     { name = "sphinx-design", specifier = ">=0.6.1" },
     { name = "sphinx-intl", specifier = ">=2.3.1" },
@@ -897,7 +897,7 @@ wheels = [
 
 [[package]]
 name = "sphinx-breeze-theme"
-version = "0.3.1"
+version = "0.5.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "accessible-pygments" },
@@ -909,9 +909,9 @@ dependencies = [
     { name = "sphinxext-opengraph" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f6/a3/09254bb42d669aba34eef1b020639d45d4a8368fc13d0fbce61379131290/sphinx_breeze_theme-0.3.1.tar.gz", hash = "sha256:469d0a6fbc5b1ce47538e7976308bcd3f524e67947f45095b1c2d6e6860ffeb6", size = 148947, upload-time = "2025-10-24T22:41:21.218Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d7/b0/8989b607d992bb66253316721179e8445035e06e3f94fa6a544aad74d83f/sphinx_breeze_theme-0.5.2.tar.gz", hash = "sha256:e25cb940a8a4a6939daddbe3a601681b197b0ad5bdf54f1498f4c5edd5bf1495", size = 150097, upload-time = "2025-10-30T15:56:35.648Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ed/a0/d215843f64ae261daae78d753bbcef09d92edebd05621f0f7d90c31f259e/sphinx_breeze_theme-0.3.1-py3-none-any.whl", hash = "sha256:33e068b1f495d7ce2ce20c424111fe3fc32279cb2f664e2e21991aae91c31204", size = 90616, upload-time = "2025-10-24T22:41:19.985Z" },
+    { url = "https://files.pythonhosted.org/packages/98/bf/5cd39351a24d18b0718422b8097a0aa2f6b8c5e8300347acd3459e06ac65/sphinx_breeze_theme-0.5.2-py3-none-any.whl", hash = "sha256:423eb797aeb72c147c95d7412353d820abdad1d14a793e025a61372c6e19dbe7", size = 91215, upload-time = "2025-10-30T15:56:34.19Z" },
 ]
 
 [[package]]
