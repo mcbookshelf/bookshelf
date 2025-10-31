@@ -16,5 +16,5 @@
 data modify storage bs:ctx _ set value {properties:{},pos:"~ ~ ~",delta:"0 0 0",speed:1,count:1,mode:"normal",viewers:"@a"}
 data modify storage bs:ctx _ merge from storage bs:in block.emit_block_particle
 
-execute unless data storage bs:ctx _.type run function bs.block:particle/get
-function bs.block:particle/run with storage bs:ctx _
+execute unless data storage bs:ctx _.type run function bs.block:produce/particle/get
+function bs.block:produce/particle/run with storage bs:ctx _

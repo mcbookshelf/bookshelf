@@ -1,0 +1,389 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "reference",
+      "name": "bs.block:internal/is_strongly_powered"
+    },
+    {
+      "condition": "reference",
+      "name": "bs.block:internal/is_weakly_powered"
+    },
+    {
+      "condition": "location_check",
+      "offsetY": 1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_wall_torch",
+          "state": {
+            "lit": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "location_check",
+          "offsetX": 1,
+          "predicate": {
+            "block": {
+              "blocks": "#bs.block:internal/torch",
+              "state": {
+                "lit": "true"
+              }
+            }
+          }
+        },
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "location_check",
+            "offsetX": 1,
+            "predicate": {
+              "block": {
+                "state": {
+                  "facing": "east"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "location_check",
+          "offsetX": -1,
+          "predicate": {
+            "block": {
+              "blocks": "#bs.block:internal/torch",
+              "state": {
+                "lit": "true"
+              }
+            }
+          }
+        },
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "location_check",
+            "offsetX": -1,
+            "predicate": {
+              "block": {
+                "state": {
+                  "facing": "west"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "location_check",
+          "offsetZ": 1,
+          "predicate": {
+            "block": {
+              "blocks": "#bs.block:internal/torch",
+              "state": {
+                "lit": "true"
+              }
+            }
+          }
+        },
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "location_check",
+            "offsetZ": 1,
+            "predicate": {
+              "block": {
+                "state": {
+                  "facing": "south"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "condition": "all_of",
+      "terms": [
+        {
+          "condition": "location_check",
+          "offsetZ": -1,
+          "predicate": {
+            "block": {
+              "blocks": "#bs.block:internal/torch",
+              "state": {
+                "lit": "true"
+              }
+            }
+          }
+        },
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "location_check",
+            "offsetZ": -1,
+            "predicate": {
+              "block": {
+                "state": {
+                  "facing": "north"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "condition": "location_check",
+      "offsetX": 1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_block"
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": -1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_block"
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetY": 1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_block"
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetY": -1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_block"
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_block"
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_block"
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/power",
+          "state": {
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/power",
+          "state": {
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetY": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/power",
+          "state": {
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetY": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/power",
+          "state": {
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/power",
+          "state": {
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/power",
+          "state": {
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": 1,
+      "predicate": {
+        "block": {
+          "blocks": [
+            "calibrated_sculk_sensor",
+            "daylight_detector",
+            "sculk_sensor",
+            "target"
+          ],
+          "state": {
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": -1,
+      "predicate": {
+        "block": {
+          "blocks": [
+            "calibrated_sculk_sensor",
+            "daylight_detector",
+            "sculk_sensor",
+            "target"
+          ],
+          "state": {
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetY": 1,
+      "predicate": {
+        "block": {
+          "blocks": [
+            "calibrated_sculk_sensor",
+            "daylight_detector",
+            "sculk_sensor",
+            "target"
+          ],
+          "state": {
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetY": -1,
+      "predicate": {
+        "block": {
+          "blocks": [
+            "calibrated_sculk_sensor",
+            "daylight_detector",
+            "sculk_sensor",
+            "target"
+          ],
+          "state": {
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": [
+            "calibrated_sculk_sensor",
+            "daylight_detector",
+            "sculk_sensor",
+            "target"
+          ],
+          "state": {
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": [
+            "calibrated_sculk_sensor",
+            "daylight_detector",
+            "sculk_sensor",
+            "target"
+          ],
+          "state": {
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -51,13 +51,13 @@ def beet_default(ctx: Context) -> None:
     blocks = minecraft.get_blocks(ctx, MC_VERSIONS[-1])
 
     loot_table = make_block_loot_table(blocks)
-    ctx.generate(f"{namespace}:block/get_type", render=loot_table)
-    loot_table = make_block_loot_table(blocks, f"{namespace}:block")
-    ctx.generate(f"{namespace}:block/get_block", render=loot_table)
+    ctx.generate(f"{namespace}:internal/get_type", render=loot_table)
+    loot_table = make_block_loot_table(blocks, f"{namespace}:internal")
+    ctx.generate(f"{namespace}:internal/get_block", render=loot_table)
 
     for state in {s.group: s for b in blocks for s in b.properties}.values():
-        loot_table = make_block_state_loot_table(state, f"{namespace}:block")
-        ctx.generate(f"{namespace}:block/{state.group}", render=loot_table)
+        loot_table = make_block_state_loot_table(state, f"{namespace}:internal")
+        ctx.generate(f"{namespace}:internal/group_{state.group}", render=loot_table)
 
     for name, formatter in [
         ("types", format_types_table),
@@ -88,10 +88,10 @@ def beet_default(ctx: Context) -> None:
             if isinstance(value, StatePredicate) and value not in seen:
                 seen.add(value)
                 file = make_attr_state_loot_table(name, value)
-                ctx.generate(f"{namespace}:{name}/{value.group}", render=file)
+                ctx.generate(f"{namespace}:internal/{name}_{value.group}", render=file)
 
-        file = make_attr_loot_table(name, groups, f"{namespace}:{name}")
-        ctx.generate(f"{namespace}:{name}/get", render=file)
+        file = make_attr_loot_table(name, groups, f"{namespace}:internal")
+        ctx.generate(f"{namespace}:internal/get_{name}", render=file)
 
 
 def format_types_table(blocks: Sequence[Block]) -> dict:
@@ -149,7 +149,7 @@ def make_block_loot_table(
         blocks,
         lambda block: format_block_loot_entry({
             "type": "loot_table",
-            "value": f"{path}/{block.properties[-1].group}",
+            "value": f"{path}/group_{block.properties[-1].group}",
         } if path and block.group != 0 else {
             "type": "item",
             "name": "egg",
@@ -170,7 +170,7 @@ def make_block_state_loot_table(state: StateProperty, path: str) -> LootTable:
         ),
         lambda entry: format_state_loot_entry({
             "type": "loot_table",
-            "value": f"{path}/{state.sequence_ref}",
+            "value": f"{path}/group_{state.sequence_ref}",
         } if state.sequence_ref else {
             "type": "item",
             "name": "egg",
@@ -188,7 +188,7 @@ def make_attr_loot_table[T](
         tuple(groups.items()),
         lambda entry: {
             "type": "loot_table",
-            "value": f"{path}/{entry[0].group}",
+            "value": f"{path}/{attr}_{entry[0].group}",
         } if isinstance(entry[0], StatePredicate) else {
             "type": "item",
             "name": "egg",

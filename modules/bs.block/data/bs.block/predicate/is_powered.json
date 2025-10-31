@@ -1,7 +1,7 @@
 {
   "__bookshelf__": {
     "feature": true,
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-spawnable",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-powered",
     "authors": [
       "Aksiome"
     ],
@@ -14,15 +14,24 @@
       "minecraft_version": "1.21.10"
     }
   },
-  "condition": "any_of",
+  "condition": "all_of",
   "terms": [
     {
       "condition": "reference",
-      "name": "bs.block:is_strongly_powered"
+      "name": "bs.block:is_conductive"
     },
     {
-      "condition": "reference",
-      "name": "bs.block:is_weakly_powered"
+      "condition": "any_of",
+      "terms": [
+        {
+          "condition": "reference",
+          "name": "bs.block:internal/is_strongly_powered"
+        },
+        {
+          "condition": "reference",
+          "name": "bs.block:internal/is_weakly_powered"
+        }
+      ]
     }
   ]
 }
