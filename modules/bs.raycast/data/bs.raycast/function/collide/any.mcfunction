@@ -14,15 +14,19 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data remove storage bs:lambda raycast
-execute store result storage bs:lambda raycast.distance double .001 run scoreboard players get #raycast.tmin bs.data
-execute if score #raycast.tmin bs.data = #raycast.btmin bs.data run function bs.raycast:collide/block/at_block
-execute if score #raycast.tmin bs.data = #raycast.etmin bs.data positioned as @s run function bs.raycast:collide/entity/at_origin
+scoreboard players operation $raycast.pierce_distance bs.lambda -= $raycast.distance bs.lambda
+scoreboard players operation $raycast.pierce_distance bs.lambda *= -1 bs.const
+execute store result storage bs:lambda raycast.distance double .001 run scoreboard players get $raycast.distance bs.lambda
+execute if score $raycast.distance bs.lambda = #raycast.btoi bs.data run function bs.raycast:collide/block/handle
+execute if score $raycast.distance bs.lambda = #raycast.etoi bs.data positioned as @s run function bs.raycast:collide/entity/handle with storage bs:lambda raycast
 
 # stop the recursion if piercing is 0
 execute if score $raycast.piercing bs.lambda matches 0 run return run scoreboard players set #raycast.max_distance bs.data -2147483648
-scoreboard players remove $raycast.piercing bs.lambda 1
+scoreboard players set $raycast.distance bs.lambda 2147483646
+scoreboard players operation $raycast.distance bs.lambda < #raycast.btoi bs.data
+scoreboard players operation $raycast.distance bs.lambda < #raycast.etoi bs.data
 
-scoreboard players set #raycast.tmin bs.data 2147483647
-scoreboard players operation #raycast.tmin bs.data < #raycast.btmin bs.data
-scoreboard players operation #raycast.tmin bs.data < #raycast.etmin bs.data
-execute if score #raycast.tmin bs.data <= #raycast.lx bs.data if score #raycast.tmin bs.data <= #raycast.ly bs.data if score #raycast.tmin bs.data <= #raycast.lz bs.data run function bs.raycast:collide/any
+execute if score $raycast.distance bs.lambda <= #raycast.lx bs.data \
+  if score $raycast.distance bs.lambda <= #raycast.ly bs.data \
+  if score $raycast.distance bs.lambda <= #raycast.lz bs.data \
+  run function bs.raycast:collide/any

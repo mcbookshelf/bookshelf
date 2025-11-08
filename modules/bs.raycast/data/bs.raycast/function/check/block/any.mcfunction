@@ -13,13 +13,13 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return run function bs.raycast:collide/record/cube
+scoreboard players set $raycast.hit_flag bs.lambda 0
+$execute store result score $raycast.hit_flag bs.lambda run $(blocks)
+execute if score $raycast.hit_flag bs.lambda matches 1.. run return run function bs.raycast:collide/cube
 
-$$(blocks)
-execute unless data storage bs:out hitbox.shape run return 0
-data modify storage bs:ctx _ set from storage bs:out hitbox.shape
-execute store result score #p bs.ctx run data get storage bs:out hitbox.offset.x 10000000
-execute store result score #q bs.ctx run data get storage bs:out hitbox.offset.z 10000000
+execute unless data storage bs:lambda hitbox.shape[0] run return 0
+execute store result score #p bs.ctx run data get storage bs:lambda hitbox.offset.x 10000000
+execute store result score #q bs.ctx run data get storage bs:lambda hitbox.offset.z 10000000
 
 execute if score #raycast.ux bs.data matches 0.. run scoreboard players operation #raycast.lx bs.data -= #raycast.dx bs.data
 execute if score #raycast.uy bs.data matches 0.. run scoreboard players operation #raycast.ly bs.data -= #raycast.dy bs.data

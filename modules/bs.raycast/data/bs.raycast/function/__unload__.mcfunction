@@ -20,7 +20,7 @@ scoreboard objectives remove bs.ctx
 scoreboard objectives remove bs.const
 scoreboard objectives remove bs.lambda
 scoreboard objectives remove bs.data
-scoreboard objectives remove bs.tmin
+scoreboard objectives remove bs.toi
 
 data remove storage bs:lambda raycast
 data remove storage bs:data raycast

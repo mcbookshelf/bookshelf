@@ -17,11 +17,12 @@ data modify storage bs:data raycast set value { \
   sx: 1, \
   sy: 1, \
   sz: 1, \
-  blocks: true, \
+  blocks: "function #bs.hitbox:callback/get_block_placement", \
   entities: false, \
   max_distance: 16.0, \
   ignored_blocks: "#bs.hitbox:intangible", \
   ignored_entities: "#bs.hitbox:intangible", \
   on_targeted_block: "function bs.view:block_placement/displace", \
+  data: {hit_point:0b,hit_normal:1b,targeted_block:0b,targeted_entity:0b}, \
 }
 $data modify storage bs:data raycast merge value $(with)

@@ -3,11 +3,11 @@
     "useFilePolling": false,
     "exclude": [
       ".*/**",
-      "bookshelf/**",
       "build/**",
       "data/**",
       "docs/**",
-      "release/**"
+      "release/**",
+      "src/**"
     ],
     "mcmetaSummaryOverrides": {
       "commands": {

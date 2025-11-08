@@ -14,13 +14,12 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # get hitbox coordinates
-execute store result score #x bs.ctx run data get storage bs:ctx _[-1][0] 625000
-execute store result score #y bs.ctx run data get storage bs:ctx _[-1][1] 625000
-execute store result score #z bs.ctx run data get storage bs:ctx _[-1][2] 625000
-execute store result score #i bs.ctx run data get storage bs:ctx _[-1][3] 625000
-execute store result score #j bs.ctx run data get storage bs:ctx _[-1][4] 625000
-execute store result score #k bs.ctx run data get storage bs:ctx _[-1][5] 625000
-data remove storage bs:ctx _[-1]
+execute store result score #x bs.ctx run data get storage bs:lambda hitbox.shape[-1][0] 625000
+execute store result score #y bs.ctx run data get storage bs:lambda hitbox.shape[-1][1] 625000
+execute store result score #z bs.ctx run data get storage bs:lambda hitbox.shape[-1][2] 625000
+execute store result score #i bs.ctx run data get storage bs:lambda hitbox.shape[-1][3] 625000
+execute store result score #j bs.ctx run data get storage bs:lambda hitbox.shape[-1][4] 625000
+execute store result score #k bs.ctx run data get storage bs:lambda hitbox.shape[-1][5] 625000
 
 # offset coordinates if needed
 scoreboard players operation #x bs.ctx += #p bs.ctx
@@ -54,10 +53,10 @@ scoreboard players operation #i bs.ctx < #j bs.ctx
 scoreboard players operation #i bs.ctx < #k bs.ctx
 
 # check for valid intersection: near ≤ far and within ray bounds
-execute if score #i bs.ctx matches 0.. \
+execute if score #x bs.ctx matches 0.. \
   if score #x bs.ctx <= #i bs.ctx \
-  if score #x bs.ctx < #raycast.btmin bs.data \
   if score #x bs.ctx <= #raycast.max_distance bs.data \
   run function bs.raycast:collide/record/shape
 
-execute if data storage bs:ctx _[-1] run function bs.raycast:check/block/shape
+data remove storage bs:lambda hitbox.shape[-1]
+execute if data storage bs:lambda hitbox.shape[-1] run function bs.raycast:check/block/shape

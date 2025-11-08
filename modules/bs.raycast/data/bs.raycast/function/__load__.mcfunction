@@ -20,7 +20,7 @@ scoreboard objectives add bs.ctx dummy [{text:"BS ",color:"dark_gray"},{text:"Co
 scoreboard objectives add bs.const dummy [{text:"BS ",color:"dark_gray"},{text:"Constants",color:"aqua"}]
 scoreboard objectives add bs.lambda dummy [{text:"BS ",color:"dark_gray"},{text:"Lambda",color:"aqua"}]
 scoreboard objectives add bs.data dummy [{text:"BS ",color:"dark_gray"},{text:"Data",color:"aqua"}]
-scoreboard objectives add bs.tmin dummy [{text:"BS ",color:"dark_gray"},{text:"Near Collision",color:"aqua"}]
+scoreboard objectives add bs.toi dummy [{text:"BS ",color:"dark_gray"},{text:"Time of Impact",color:"aqua"}]
 
 scoreboard players set -2 bs.const -2
 scoreboard players set -1 bs.const -1

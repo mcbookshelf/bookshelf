@@ -9,16 +9,17 @@ from bookshelf.models import Block, StatePredicate, StateValue, VoxelShape
 from bookshelf.services import minecraft
 
 
+# TODO: UPDATE THIS WHEN #495 is merged
 def beet_default(ctx: Context) -> None:
     """Generate files used by the bs.hitbox module."""
     namespace = ctx.directory.name
     blocks = minecraft.get_blocks(ctx, MC_VERSIONS[-1])
 
-    groups = {"default": defaultdict(list), "collision": defaultdict(list)}
+    groups = {"shape": defaultdict(list), "collision": defaultdict(list)}
     seen = set()
 
     for block in blocks:
-        groups["default"][block.shape].append(block)
+        groups["shape"][block.shape].append(block)
         groups["collision"][block.collision_shape].append(block)
 
         for shape in (block.shape, block.collision_shape):
@@ -29,12 +30,17 @@ def beet_default(ctx: Context) -> None:
 
     for name, mapping in groups.items():
         loot_table = make_shape_loot_table(mapping, f"{namespace}:block")
-        ctx.generate(f"{namespace}:block/{name}", render=loot_table)
+        ctx.generate(f"{namespace}:block/get_{name}", render=loot_table)
 
     if tag := ctx.data.block_tags.get(f"{namespace}:has_shape_offset"):
         tag.merge(make_block_tag(blocks, lambda b: b.has_shape_offset))
     if tag := ctx.data.block_tags.get(f"{namespace}:has_visual_offset"):
         tag.merge(make_block_tag(blocks, lambda b: b.has_visual_offset))
+
+    if tag := ctx.data.block_tags.get(f"{namespace}:is_waterloggable"):
+        tag.merge(make_block_tag(blocks, lambda b: any(
+            prop.name == "waterlogged" for prop in b.properties
+        )))
 
     if tag := ctx.data.block_tags.get(f"{namespace}:can_pass_through"):
         tag.merge(make_block_tag(blocks, lambda b: not b.collision_shape))

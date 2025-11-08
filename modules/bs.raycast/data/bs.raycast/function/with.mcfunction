@@ -13,6 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+# @deprecated (set data to false in 4.0.0)
 data modify storage bs:data raycast set value { \
   sx: 1, \
   sy: 1, \
@@ -22,5 +23,6 @@ data modify storage bs:data raycast set value { \
   max_distance: 16.0, \
   ignored_blocks: "#bs.hitbox:intangible", \
   ignored_entities: "#bs.hitbox:intangible", \
+  data: {hit_point:1b,hit_normal:1b,targeted_block:1b,targeted_entity:1b}, \
 }
 $data modify storage bs:data raycast merge value $(with)

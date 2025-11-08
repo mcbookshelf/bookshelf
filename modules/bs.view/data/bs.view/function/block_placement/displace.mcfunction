@@ -13,6 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+scoreboard players operation $raycast.hit_flag bs.lambda %= 2 bs.const
+execute if score $raycast.hit_flag bs.lambda matches 0 run return run scoreboard players add $raycast.piercing bs.lambda 1
+
 data modify storage bs:data view.block_placement.x set from storage bs:lambda raycast.hit_normal[0]
 data modify storage bs:data view.block_placement.y set from storage bs:lambda raycast.hit_normal[1]
 data modify storage bs:data view.block_placement.z set from storage bs:lambda raycast.hit_normal[2]

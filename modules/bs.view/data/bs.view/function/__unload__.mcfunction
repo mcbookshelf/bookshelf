@@ -17,6 +17,7 @@ kill B5-0-0-0-1
 kill B5-0-0-0-2
 forceload remove -30000000 1600
 
+scoreboard objectives remove bs.const
 scoreboard objectives remove bs.data
 
 data remove storage bs:in view
