@@ -1706,6 +1706,22 @@
           }
         },
         {
+          "id": "#bs.hitbox:is_fluid",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/11/11",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/11/11",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
           "id": "#bs.hitbox:is_full_cube",
           "kind": "block_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
@@ -1719,6 +1735,38 @@
           "updated": {
             "date": "2025/03/10",
             "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.hitbox:is_waterloggable",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/11/11",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/11/11",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "#bs.hitbox:none",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/11/11",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/11/11",
+            "minecraft_version": "1.21.10"
           }
         },
         {
@@ -1788,7 +1836,7 @@
         {
           "id": "#bs.hitbox:get_block",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get-block",
           "authors": [
             "Aksiome"
           ],
@@ -1836,7 +1884,7 @@
         {
           "id": "#bs.hitbox:get_entity",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get-entity",
           "authors": [
             "Aksiome"
           ],
@@ -4336,7 +4384,7 @@
         {
           "id": "#bs.raycast:run",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html#run-the-raycast",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html#run",
           "authors": [
             "Aksiome"
           ],
@@ -4345,8 +4393,8 @@
             "minecraft_version": "1.20.2"
           },
           "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
+            "date": "2025/11/09",
+            "minecraft_version": "1.21.10"
           }
         }
       ]
