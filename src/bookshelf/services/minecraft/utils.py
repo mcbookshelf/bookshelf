@@ -3,14 +3,15 @@ from __future__ import annotations
 import re
 from collections.abc import Callable, Mapping, Sequence
 from functools import singledispatch, wraps
+from itertools import chain
 from typing import TYPE_CHECKING
 
 import orjson
-from beet import LootTable
+from beet import BlockTag, LootTable
 from pydantic import BaseModel
 
 from bookshelf.common import json
-from bookshelf.models import StateNode, StatePredicate
+from bookshelf.models import Block, StateNode, StatePredicate
 
 if TYPE_CHECKING:
     from beet import Context
@@ -90,6 +91,16 @@ def cache_version[T: BaseModel | dict | list](
     return decorator
 
 
+def make_block_tag(
+    blocks: Sequence[Block],
+    predicate: Callable[[Block], bool],
+    extras: list | None = None,
+) -> BlockTag:
+    """Create a block tag for blocks that match the predicate."""
+    values = chain(extras or [], (block.type for block in blocks if predicate(block)))
+    return BlockTag({"replace":True,"values":sorted(values)})
+
+
 def make_loot_table(content: dict) -> LootTable:
     """Build an optimized loot table from a dict using orjson."""
     loot_table = LootTable(content)
@@ -97,10 +108,10 @@ def make_loot_table(content: dict) -> LootTable:
     return loot_table
 
 
-def make_binary_loot_table[T](
+def make_loot_table_binary[T](
     entries: Sequence[T],
     entry_factory: Callable[[T], dict],
-    condition_factory: Callable[[Sequence[T]], list],
+    conditions_factory: Callable[[Sequence[T]], list],
 ) -> LootTable:
     """Build a binary loot table tree from a sequence of entries."""
     def build_node(entries: Sequence[T]) -> dict:
@@ -111,8 +122,8 @@ def make_binary_loot_table[T](
         left = build_node(entries[:mid])
         right = build_node(entries[mid:])
 
-        left["conditions"] = condition_factory(entries[:mid])
-        right["conditions"] = condition_factory(entries[mid:])
+        left["conditions"] = conditions_factory(entries[:mid])
+        right["conditions"] = conditions_factory(entries[mid:])
 
         left_size = len(orjson.dumps(left["conditions"]))
         right_size = len(orjson.dumps(right["conditions"]))
@@ -125,10 +136,10 @@ def make_binary_loot_table[T](
     return make_loot_table({"pools":[{"rolls":1,"entries":[build_node(entries)]}]})
 
 
-def make_state_loot_table[T](
+def make_loot_table_state[T](
     entry: StatePredicate[T],
     entry_factory: Callable[[T], dict],
-    condition_factory: Callable[[str, str], list] = lambda name, value: [{
+    conditions_factory: Callable[[str, str], list] = lambda name, value: [{
         "condition": "location_check",
         "predicate": {"block": {"state": {name: value}}},
     }],
@@ -142,7 +153,7 @@ def make_state_loot_table[T](
         branches = tuple(node.children.items())
         for value, child in branches[:-1]:
             entry = build_node(child)
-            entry["conditions"] = condition_factory(node.name, value)
+            entry["conditions"] = conditions_factory(node.name, value)
             children.append(entry)
         children.append(build_node(branches[-1][1]))
 

@@ -11,9 +11,9 @@ license = { text = "MPL-2.0" }
 requires-python = ">=3.12"
 dependencies = [
   "beet>=0.112.0",
-  "frozendict>=2.4.6",
+  "frozendict>=2.4.7",
   "orjson>=3.11.4",
-  "pydantic>=2.12.3",
+  "pydantic>=2.12.4",
   "semver>=3.0.4",
 ]
 
@@ -40,7 +40,7 @@ docs = [
   "linkify-it-py>=2.0.3",
   "myst-parser>=4.0.1",
   "sphinx-autobuild>=2025.8.25",
-  "sphinx-breeze-theme>=0.3.1",
+  "sphinx-breeze-theme>=0.6.0",
   "sphinx-copybutton>=0.5.2",
   "sphinx-design>=0.6.1",
   "sphinx-intl>=2.3.1",
