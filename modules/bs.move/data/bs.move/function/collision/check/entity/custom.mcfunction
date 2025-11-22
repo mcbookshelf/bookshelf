@@ -34,4 +34,5 @@ scoreboard players operation #j bs.ctx += @s bs.height
 scoreboard players operation #k bs.ctx += @s bs.depth
 
 # perform AABB collision check
+execute store result storage bs:ctx y int 1 run scoreboard players set #move.hit_flag bs.data -1
 function bs.move:collision/check/aabb

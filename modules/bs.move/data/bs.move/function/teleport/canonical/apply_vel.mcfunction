@@ -18,4 +18,5 @@ $execute store result storage bs:ctx x double $(scale) run scoreboard players ge
 $execute store result storage bs:ctx y double $(scale) run scoreboard players get @s bs.vel.y
 $execute store result storage bs:ctx z double $(scale) run scoreboard players get @s bs.vel.z
 
+scoreboard players set #move.it bs.data 0
 execute at @s run function bs.move:teleport/canonical/run with storage bs:ctx

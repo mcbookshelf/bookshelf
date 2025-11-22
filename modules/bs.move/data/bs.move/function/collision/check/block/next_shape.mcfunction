@@ -13,8 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# resolve collision using the on_collision callback
-function bs.move:collision/resolve/toi
-$$(on_collision)
-execute store result storage bs:ctx y int 1 run scoreboard players get $move.hit_flag bs.lambda
-function bs.move:collision/resolve/vel with storage bs:ctx
+data remove storage bs:lambda hitbox.shape[-1]
+execute store result score #move.hit_flag bs.data store result storage bs:ctx y int 1 run data get storage bs:lambda hitbox.shape[-1][6]
+execute if score #move.hit_flag bs.data matches 0 store result storage bs:ctx y int 1 run scoreboard players set #move.hit_flag bs.data 1
+execute if data storage bs:lambda hitbox.shape[-1] run function bs.move:collision/check/block/shape with storage bs:ctx

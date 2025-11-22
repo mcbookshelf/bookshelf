@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute align xyz positioned ~$(sx) ~$(sy) ~$(sz) run function bs.move:collision/check/kind
+$execute align xyz positioned ~$(sx) ~$(sy) ~$(sz) run function bs.move:collision/check/any

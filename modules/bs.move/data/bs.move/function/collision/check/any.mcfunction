@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless data storage bs:data move{entities:0b} run function bs.move:collision/check/entities with storage bs:data move
 execute unless data storage bs:data move{blocks:0b} run function bs.move:collision/check/blocks
+execute unless data storage bs:data move{entities:0b} run function bs.move:collision/check/entities with storage bs:data move

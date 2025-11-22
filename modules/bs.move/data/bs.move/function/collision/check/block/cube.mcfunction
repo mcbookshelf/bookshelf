@@ -13,6 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+$execute if entity @s[tag=bs.move.flag.$(y)] run return 0
+
 # get cube bounding box coordinates
 execute store result score #i bs.ctx run scoreboard players operation #x bs.ctx = #move.x bs.data
 execute store result score #j bs.ctx run scoreboard players operation #y bs.ctx = #move.y bs.data
