@@ -22,5 +22,6 @@ data modify storage bs:data raycast set value { \
   max_distance: 16.0, \
   ignored_blocks: "#bs.hitbox:intangible", \
   ignored_entities: "#bs.hitbox:intangible", \
+  data: {hit_point:0b,hit_normal:0b,targeted_block:0b,targeted_entity:0b}, \
 }
 $data modify storage bs:data raycast merge value $(with)

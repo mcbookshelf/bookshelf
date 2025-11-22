@@ -16,13 +16,13 @@
 execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run return run function bs.hitbox:get_entity/get_custom
 
 scoreboard players set #i bs.ctx 0
-execute if entity @s[type=#bs.hitbox:size/group_1] run scoreboard players add #i bs.ctx 1
-execute if entity @s[type=#bs.hitbox:size/group_2] run scoreboard players add #i bs.ctx 2
-execute if entity @s[type=#bs.hitbox:size/group_4] run scoreboard players add #i bs.ctx 4
-execute if entity @s[type=#bs.hitbox:size/group_8] run scoreboard players add #i bs.ctx 8
-execute if entity @s[type=#bs.hitbox:size/group_16] run scoreboard players add #i bs.ctx 16
-execute if entity @s[type=#bs.hitbox:size/group_32] run scoreboard players add #i bs.ctx 32
-execute if entity @s[type=#bs.hitbox:size/group_64] run scoreboard players add #i bs.ctx 64
+execute if entity @s[type=#bs.hitbox:internal/group_1] run scoreboard players add #i bs.ctx 1
+execute if entity @s[type=#bs.hitbox:internal/group_2] run scoreboard players add #i bs.ctx 2
+execute if entity @s[type=#bs.hitbox:internal/group_4] run scoreboard players add #i bs.ctx 4
+execute if entity @s[type=#bs.hitbox:internal/group_8] run scoreboard players add #i bs.ctx 8
+execute if entity @s[type=#bs.hitbox:internal/group_16] run scoreboard players add #i bs.ctx 16
+execute if entity @s[type=#bs.hitbox:internal/group_32] run scoreboard players add #i bs.ctx 32
+execute if entity @s[type=#bs.hitbox:internal/group_64] run scoreboard players add #i bs.ctx 64
 execute store result storage bs:ctx y short 1 run scoreboard players get #i bs.ctx
 function bs.hitbox:get_entity/dispatch with storage bs:ctx
 

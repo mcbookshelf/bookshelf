@@ -88,7 +88,7 @@ Run a command as the entity that is aimed by the current entity.
 
 ```mcfunction
 # Once (will run if you are targeting an entity)
-function #bs.view:as_aimed_entity {run:"say I'm sorry, are you hitting on me?",with:{}}
+function #bs.view:as_aimed_entity {run:"say Im sorry, are you hitting on me?",with:{}}
 ```
 
 ::::
@@ -192,7 +192,7 @@ Run a command at the precise coordinates where a block would align if placed, co
 
 ```mcfunction
 # Once (will run if you are targeting a block)
-function #bs.view:at_block_placement {run:"setblock ~ ~ ~ minecraft:sponge"}
+function #bs.view:at_block_placement {run:"setblock ~ ~ ~ minecraft:sponge",with:{}}
 ```
 
 ```{dropdown} Advanced Usage

@@ -6,17 +6,23 @@ from bookshelf.definitions import MC_VERSIONS
 from bookshelf.models import Block, StatePredicate, StateValue, VoxelShape
 from bookshelf.services import minecraft
 
+CUBE = ((0.0, 0.0, 0.0, 16.0, 16.0, 16.0),)
+INTANGIBLE = [
+    "minecraft:light",
+    "minecraft:structure_void",
+]
+
 
 def beet_default(ctx: Context) -> None:
     """Generate files used by the bs.hitbox module."""
     namespace = ctx.directory.name
     blocks = minecraft.get_blocks(ctx, MC_VERSIONS[-1])
 
-    groups = {"default": defaultdict(list), "collision": defaultdict(list)}
+    groups = {"shape": defaultdict(list), "collision": defaultdict(list)}
     seen = set()
 
     for block in blocks:
-        groups["default"][block.shape].append(block)
+        groups["shape"][block.shape].append(block)
         groups["collision"][block.collision_shape].append(block)
 
         for shape in (block.shape, block.collision_shape):
@@ -27,23 +33,19 @@ def beet_default(ctx: Context) -> None:
 
     for name, mapping in groups.items():
         loot_table = make_shape_loot_table(mapping, f"{namespace}:block")
-        ctx.generate(f"{namespace}:block/{name}", render=loot_table)
+        ctx.generate(f"{namespace}:block/get_{name}", render=loot_table)
 
-    for name, predicate, extras in [
-        ("has_shape_offset", lambda b: b.has_shape_offset, []),
-        ("has_visual_offset", lambda b: b.has_visual_offset, []),
-        ("can_pass_through", lambda b: not b.collision_shape, []),
-        ("intangible", lambda b: not b.shape, [
-            "minecraft:light",
-            "minecraft:structure_void",
-        ]),
-        ("is_full_cube", lambda block: (
-            block.shape == ((0.0, 0.0, 0.0, 16.0, 16.0, 16.0),)
-            and block.collision_shape == ((0.0, 0.0, 0.0, 16.0, 16.0, 16.0),)
-        ), []),
+    for name, predicate in [
+        ("has_shape_offset", lambda b: b.has_shape_offset),
+        ("has_visual_offset", lambda b: b.has_visual_offset),
+        ("can_pass_through", lambda b: not b.collision_shape),
+        ("intangible", lambda b: b.type in INTANGIBLE or not b.shape),
+        ("is_full_cube", lambda b: b.shape == CUBE and b.collision_shape == CUBE),
+        ("is_waterloggable", lambda b:
+            any(p.name == "waterlogged" for p in b.properties)),
     ]:
         if tag := ctx.data.block_tags.get(f"{namespace}:{name}"):
-            tag.merge(minecraft.make_block_tag(blocks, predicate, extras))
+            tag.merge(minecraft.make_block_tag(blocks, predicate))
 
 
 def make_shape_loot_table(

@@ -50,9 +50,9 @@ scoreboard players operation #i bs.ctx < #j bs.ctx
 scoreboard players operation #i bs.ctx < #k bs.ctx
 
 # check for valid intersection: near ≤ far and within ray bounds
-execute if score #i bs.ctx matches 0.. \
+execute if score #x bs.ctx matches 0.. \
   if score #x bs.ctx <= #i bs.ctx \
   if score #x bs.ctx <= #raycast.max_distance bs.data \
   run return run function bs.raycast:collide/record/size
 
-scoreboard players set @s bs.tmin 2147483647
+scoreboard players set @s bs.toi 2147483647

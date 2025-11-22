@@ -13,14 +13,16 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+$execute if entity @s[tag=bs.move.flag.$(y)] run return run function bs.move:collision/check/block/next_shape
+
 # get next AABB from block shape stack
-execute store result score #x bs.ctx run data get storage bs:ctx _[-1][0] 625000
-execute store result score #y bs.ctx run data get storage bs:ctx _[-1][1] 625000
-execute store result score #z bs.ctx run data get storage bs:ctx _[-1][2] 625000
-execute store result score #i bs.ctx run data get storage bs:ctx _[-1][3] 625000
-execute store result score #j bs.ctx run data get storage bs:ctx _[-1][4] 625000
-execute store result score #k bs.ctx run data get storage bs:ctx _[-1][5] 625000
-data remove storage bs:ctx _[-1]
+execute store result score #x bs.ctx run data get storage bs:lambda hitbox.shape[-1][0] 625000
+execute store result score #y bs.ctx run data get storage bs:lambda hitbox.shape[-1][1] 625000
+execute store result score #z bs.ctx run data get storage bs:lambda hitbox.shape[-1][2] 625000
+execute store result score #i bs.ctx run data get storage bs:lambda hitbox.shape[-1][3] 625000
+execute store result score #j bs.ctx run data get storage bs:lambda hitbox.shape[-1][4] 625000
+execute store result score #k bs.ctx run data get storage bs:lambda hitbox.shape[-1][5] 625000
+data remove storage bs:lambda hitbox.shape[-1]
 
 # offset hitbox coordinates by relative position
 scoreboard players operation #x bs.ctx += #p bs.ctx
@@ -34,4 +36,6 @@ scoreboard players operation #k bs.ctx += #q bs.ctx
 function bs.move:collision/check/aabb
 
 # continue checking remaining AABBs in the shape if any
-execute if data storage bs:ctx _[0] run function bs.move:collision/check/block/shape
+execute store result score #move.hit_flag bs.data store result storage bs:ctx y int 1 run data get storage bs:lambda hitbox.shape[-1][6]
+execute if score #move.hit_flag bs.data matches 0 store result storage bs:ctx y int 1 run scoreboard players set #move.hit_flag bs.data 1
+execute if data storage bs:lambda hitbox.shape[-1] run function bs.move:collision/check/block/shape with storage bs:ctx
