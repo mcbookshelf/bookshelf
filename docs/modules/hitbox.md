@@ -648,7 +648,7 @@ Bookshelf provides multiple hitbox types, each suited to different use cases. Un
 
 ::::{tab-set}
 
-:::{tab-item} 🖱 default
+:::{tab-item} 🖱 Default
 
 The `default` shape defines the area where players can interact with or break the block:
 
@@ -658,7 +658,7 @@ The `default` shape defines the area where players can interact with or break th
 ➔ Returned by [#bs.hitbox:get_block_shape](#get-block)
 
 :::
-:::{tab-item} 🧊 collision
+:::{tab-item} 🧊 Collision
 
 The `collision` shape defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block:
 
@@ -676,7 +676,7 @@ The `collision` shape defines the physical boundaries of a block that entities c
 ### Entities
 
 ::::{tab-set}
-:::{tab-item} 🔄 dynamic
+:::{tab-item} 🔄 Dynamic
 
 This is the native Minecraft hitbox, which updates automatically:
 
@@ -687,7 +687,7 @@ This is the native Minecraft hitbox, which updates automatically:
 ➔ Restored using [#bs.hitbox:reset_entity](#reset-entity)
 
 :::
-:::{tab-item} ❄️ baked
+:::{tab-item} ❄️ Baked
 
 A snapshot of the entity’s hitbox at a specific moment:
 
@@ -698,7 +698,7 @@ A snapshot of the entity’s hitbox at a specific moment:
 ➔ Set using [#bs.hitbox:bake_entity](#bake-entity)
 
 :::
-:::{tab-item} 🛠️ custom
+:::{tab-item} 🛠️ Custom
 
 A fully user-defined hitbox:
 
@@ -712,6 +712,71 @@ A fully user-defined hitbox:
 
 :::
 ::::
+
+---
+
+(providers)=
+## 🔌 Hitbox Providers
+
+Hitbox providers are callback functions used by other modules (notably `#bs.raycast:run`) to retrieve block shapes in different modes: **default**, **collision**, **placement**, and **fluid-aware** variants.
+
+```{admonition} Shape Flags
+:class: info
+Providers return one or more sub-shapes, each with a **flag**.  
+Flags have **no built-in meaning**; they are simply numbers used by the callback to classify shapes.
+
+Bookshelf’s built-in providers use the following conventions:
+- `1` solid sub-shape  
+- `2` fluid sub-shape  
+- `4` placement-only sub-shape  
+
+You may freely assign any flag in `1`, `2`, `4`, or `8` for your own providers.
+```
+
+---
+
+### Available Providers
+
+::::{tab-set}
+
+:::{tab-item} 🖱 Default
+These providers return the block’s **default** shape as defined in [block types](#block-types).
+- `#bs.hitbox:callback/get_block_shape`  
+- `#bs.hitbox:callback/get_block_shape_with_fluid`  
+:::
+
+:::{tab-item} 🧊 Collision
+These providers return the block’s **collision** shape as defined in [block types](#block-types).
+- `#bs.hitbox:callback/get_block_collision`  
+- `#bs.hitbox:callback/get_block_collision_with_fluid`  
+:::
+
+:::{tab-item} 🏗 Placement
+These providers add a placement-only sub-shape to help the `view` module mimic Minecraft’s default placement behavior.
+- `#bs.hitbox:callback/get_block_placement`  
+- `#bs.hitbox:callback/get_block_placement_with_fluid`  
+:::
+::::
+
+---
+
+### Custom Providers
+
+A hitbox provider is a function that returns either:
+
+- a **single flag** indicating that the block should be treated as a full cube (e.g. `return 1`), or  
+- an **array of sub-shapes**, where each sub-shape is `[min_x, min_y, min_z, max_x, max_y, max_z, flag]`.
+  If the flag is omitted, it defaults to `1`.
+
+Example custom provider:
+
+```mcfunction
+# Custom shape for <my_custom_block>
+execute if block ~ ~ ~ <my_custom_block> run return run data modify storage bs:lambda hitbox set value {shape:[[2,2,2,14,14,14,<flag>]]}
+
+# Otherwise, fall back to the default shape provider
+return run function #bs.hitbox:callback/get_block_shape
+```
 
 ---
 

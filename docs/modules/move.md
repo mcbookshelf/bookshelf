@@ -50,10 +50,13 @@ Teleport an entity by its velocity scores while handling collisions.
   - {nbt}`compound` Arguments
     - {nbt}`number` **scale**: Scalar applied to the output.
     - {nbt}`compound` **with**: Collision settings.
-      - {nbt}`bool` {nbt}`string` **blocks**: Whether the entity should collide with blocks (default: true). Can be a block hitbox type (`interaction` or `collision`). `true` defaults to `collision`.
-      - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false). Can be an entity tag. For performance, tagging entities to detect is recommended.
+      - {nbt}`bool` {nbt}`string` **blocks**: Whether the entity should collide with blocks (default: true).
+      *Can be a [hitbox provider](hitbox.md#available-providers) (e.g. `function #bs.hitbox:callback/get_block_collision`).*
+      - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false).
+      *Can be a `/tag` which is recommended for performance.*
       - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:can_pass_through`).
-      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`). Does not apply to entities with custom hitboxes.
+      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`).
+      *Does not apply to entities with custom hitboxes.*
       - {nbt}`string` **on_collision**: Command to run when a collision occurs, used to resolve the collision (default: `function #bs.move:callback/bounce`).
   :::
 
@@ -86,10 +89,13 @@ Teleport an entity by its velocity scores, using the local reference frame, whil
   - {nbt}`compound` Arguments
     - {nbt}`number` **scale**: Scalar applied to the output.
     - {nbt}`compound` **with**: Collision settings.
-      - {nbt}`bool` {nbt}`string` **blocks**: Whether the entity should collide with blocks (default: true). Can be a block hitbox type (`interaction` or `collision`). `true` defaults to `collision`.
-      - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false). Can be an entity tag. For performance, tagging entities to detect is recommended.
+      - {nbt}`bool` {nbt}`string` **blocks**: Whether the entity should collide with blocks (default: true).
+      *Can be a [hitbox provider](hitbox.md#available-providers) (e.g. `function #bs.hitbox:callback/get_block_collision`).*
+      - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false).
+      *Can be a `/tag` which is recommended for performance.*
       - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:can_pass_through`).
-      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`). Does not apply to entities with custom hitboxes.
+      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`).
+      *Does not apply to entities with custom hitboxes.*
       - {nbt}`string` **on_collision**: Command to run when a collision occurs, used to resolve the collision (default: `function #bs.move:callback/bounce`).
   :::
 
@@ -248,7 +254,7 @@ This module allows you to customize collision behaviors according to your specif
 
 ---
 
-By modifying the `on_collision` input key, you have the freedom to specify the function that triggers upon collision. However, managing the resolution yourself can be quite challenging. This is why Bookshelf provides several predefined functions:
+By modifying the `on_collision` input argument, you have the freedom to specify the function that triggers upon collision. However, managing the resolution yourself can be quite challenging. This is why Bookshelf provides several predefined functions:
 
 :::{list-table}
   *   - `#bs.move:callback/bounce`
@@ -263,7 +269,7 @@ By modifying the `on_collision` input key, you have the freedom to specify the f
 
 ### How It Works?
 
-Upon collision, you have the freedom to update both the velocity score that will be used in the next tick `@s bs.vel.[x,y,z]` and the remaining velocity `$move.vel.[x,y,z] bs.lambda`. Since the module will attempt to continue moving based on the remaining velocity, it's crucial to avoid introducing a race condition.
+When a collision occurs, you can modify both the velocity score used on the next tick (`@s bs.vel.[x,y,z]`) and the remaining velocity (`$move.vel.[x,y,z] bs.lambda`). If you preserve any velocity along the axis that triggered the collision, the entity will move partially into the block and the collision will be treated as soft. During this state, the entity receives a tag `bs.move.flag.<flag>`, where the flag value (`1`, `2`, `4` or `8`) corresponds to the specific shape currently being intersected. The tag is removed once the entity fully exits the shape.
 
 ```{admonition} Velocity Scaling
 :class: warning

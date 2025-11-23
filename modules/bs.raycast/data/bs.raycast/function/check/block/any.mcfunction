@@ -15,9 +15,10 @@
 
 scoreboard players set $raycast.hit_flag bs.lambda 0
 $execute store result score $raycast.hit_flag bs.lambda run $(blocks)
-execute if score $raycast.hit_flag bs.lambda matches 1.. run return run function bs.raycast:collide/cube
+execute if score $raycast.hit_flag bs.lambda matches 1.. unless data storage bs:lambda hitbox \
+    run return run function bs.raycast:collide/cube
 
-execute unless data storage bs:lambda hitbox.shape[0] run return 0
+execute unless data storage bs:lambda hitbox.shape[-1] run return 0
 execute store result score #p bs.ctx run data get storage bs:lambda hitbox.offset.x 10000000
 execute store result score #q bs.ctx run data get storage bs:lambda hitbox.offset.z 10000000
 
