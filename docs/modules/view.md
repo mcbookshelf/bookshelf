@@ -88,7 +88,7 @@ Run a command as the entity that is aimed by the current entity.
 
 ```mcfunction
 # Once (will run if you are targeting an entity)
-function #bs.view:as_aimed_entity {run:"say Im sorry, are you hitting on me?",with:{}}
+function #bs.view:as_aimed_entity {run:"say I am sorry, are you hitting on me?",with:{}}
 ```
 
 ::::

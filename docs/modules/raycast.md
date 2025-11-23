@@ -13,7 +13,7 @@ Cast rays and detect collisions with blocks or entities.
 ```{note}
 This module implements a **DDA** algorithm, also known as [voxel traversal](http://www.cse.yorku.ca/~amana/research/grid.pdf).
 
-Instead of checking points at fixed intervals (which can miss thin blocks or corners), the ray steps from one voxel boundary to the next. This ensures:
+Instead of checking points at fixed intervals (which can miss thin shapes), the ray steps from one block boundary to the next. This ensures:
 1. **Perfect Precision**: Every single block along the path is checked.
 2. **Performance**: No redundant checks within the same block.
 3. **Flexibility**: Works seamlessly with the `bs.hitbox` module to support complex shapes.
@@ -43,9 +43,9 @@ Cast a ray from the execution position and check if it hits something. Lambda sc
       - {nbt}`bool` {nbt}`string` **blocks**: Whether the ray stops on blocks (default: true).  
       *Can be a [hitbox provider](hitbox.md#available-providers) (e.g. `function #bs.hitbox:callback/get_block_collision`).*
       - {nbt}`bool` {nbt}`string` **entities**: Whether the ray stops on entities (default: false).  
-      *Can be a `/tag` which is recommended for performance.*
+      *Can be a selector tag (typically assigned via `/tag`), which is preferred for performance.*
       - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:intangible`).
-      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`).  
+      - {nbt}`string` **ignored_entities**: Entity type to ignore (default: `#bs.hitbox:intangible`).  
       *Does not apply to entities with custom hitboxes.*
       - {nbt}`number` **max_distance**: Maximum ray travel distance (default: 16.0).
       - {nbt}`string` **on_targeted_block**: Command to run `at` the block hit by the ray (aligned).
@@ -60,9 +60,9 @@ Cast a ray from the execution position and check if it hits something. Lambda sc
 :Lambdas:
   **Score `$raycast.distance bs.lambda`**: The distance from origin (scaled ×1000).
 
-  **Score `$raycast.hit_face bs.lambda`**: The face of the shape that was hit.
+  **Score `$raycast.hit_face bs.lambda`**: The face of the bounding box that was hit.
 
-  **Score `$raycast.hit_flag bs.lambda`**: The flag of the intersected sub-shape, `-1` for entities.
+  **Score `$raycast.hit_flag bs.lambda`**: The flag of the intersected bounding box, `-1` for entities.
 
   **Score `$raycast.piercing bs.lambda`**: The remaining number of blocks or entities the ray can pass through.
 
@@ -85,10 +85,10 @@ Cast a ray from the execution position and check if it hits something. Lambda sc
   :::{treeview}
   - {nbt}`compound` Ray output data (deprecated will be removed in v4.0)
     - {nbt}`double` **distance**: The distance from the ray's origin to the impact point.
-    - {nbt}`list` **hit_point**: The coordinates of the impact point (if enabled).
-    - {nbt}`list` **hit_normal**: The normal of the surface the ray hit (if enabled).
-    - {nbt}`list` **targeted_block**: The coordinates of the block that was hit (if enabled).
-    - {nbt}`list` **targeted_entity**: The UUID array of the entity that was hit (if enabled).
+    - {nbt}`list` **hit_point**: The coordinates of the impact point.
+    - {nbt}`list` **hit_normal**: The normal of the surface the ray hit.
+    - {nbt}`list` **targeted_block**: The coordinates of the block that was hit.
+    - {nbt}`list` **targeted_entity**: The UUID array of the entity that was hit.
   :::
 ```
 

@@ -38,7 +38,7 @@ You can find below all functions available in this module.
 
 ```{function} #bs.move:apply_vel {scale:<scaling>,with:{}}
 
-Teleport an entity by its velocity scores while handling collisions.
+Teleport an entity by its velocity scores while handling collisions. Lambda scores are only available during callback execution (`on_*`).
 
 :Inputs:
   **Execution `as <entities>`**: Entity to move.
@@ -50,15 +50,23 @@ Teleport an entity by its velocity scores while handling collisions.
   - {nbt}`compound` Arguments
     - {nbt}`number` **scale**: Scalar applied to the output.
     - {nbt}`compound` **with**: Collision settings.
-      - {nbt}`bool` {nbt}`string` **blocks**: Whether the entity should collide with blocks (default: true).
+      - {nbt}`bool` {nbt}`string` **blocks**: Whether the entity should collide with blocks (default: true).  
       *Can be a [hitbox provider](hitbox.md#available-providers) (e.g. `function #bs.hitbox:callback/get_block_collision`).*
-      - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false).
-      *Can be a `/tag` which is recommended for performance.*
+      - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false).  
+      *Can be a selector tag (typically assigned via `/tag`), which is preferred for performance.*
       - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:can_pass_through`).
-      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`).
+      - {nbt}`string` **ignored_entities**: Entity type to ignore (default: `#bs.hitbox:intangible`).  
       *Does not apply to entities with custom hitboxes.*
-      - {nbt}`string` **on_collision**: Command to run when a collision occurs, used to resolve the collision (default: `function #bs.move:callback/bounce`).
+      - {nbt}`string` **on_collision**: Command to run when a collision occurs.  
+      *Used to resolve the collision (default: `function #bs.move:callback/bounce`).*
   :::
+
+:Lambdas:
+  **Score `$move.hit_face bs.lambda`**: The face of the bounding box that was hit.
+
+  **Score `$move.hit_flag bs.lambda`**: The flag of the intersected bounding box, `-1` for entities.
+
+  **Scores `$move.vel.[x,y,z] bs.lambda`**: The remaining velocity in canonical coordinates after collision adjustments.
 
 :Outputs:
   **State**: Entity is teleported according to its velocity scores.
@@ -77,7 +85,7 @@ Always prefer the canonical version. Constant conversion between bases can lead 
 If you need to "shoot" an entity in a direction, you can still set velocity as a local vector and run `#bs.move:canonical_to_local` before using `#bs.move:apply_vel`.
 ```
 
-Teleport an entity by its velocity scores, using the local reference frame, while handling collisions.
+Teleport an entity by its velocity scores, using the local reference frame, while handling collisions. Lambda scores are only available during callback execution (`on_*`).
 
 :Inputs:
   **Execution `as <entities>`**: Entity to move.
@@ -89,15 +97,22 @@ Teleport an entity by its velocity scores, using the local reference frame, whil
   - {nbt}`compound` Arguments
     - {nbt}`number` **scale**: Scalar applied to the output.
     - {nbt}`compound` **with**: Collision settings.
-      - {nbt}`bool` {nbt}`string` **blocks**: Whether the entity should collide with blocks (default: true).
+      - {nbt}`bool` {nbt}`string` **blocks**: Whether the entity should collide with blocks (default: true).  
       *Can be a [hitbox provider](hitbox.md#available-providers) (e.g. `function #bs.hitbox:callback/get_block_collision`).*
-      - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false).
-      *Can be a `/tag` which is recommended for performance.*
+      - {nbt}`bool` {nbt}`string` **entities**: Whether the entity should collide with entities (default: false).  
+      *Can be a selector tag (typically assigned via `/tag`), which is preferred for performance.*
       - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:can_pass_through`).
-      - {nbt}`string` **ignored_entities**: Entities to ignore (default: `#bs.hitbox:intangible`).
+      - {nbt}`string` **ignored_entities**: Entity type to ignore (default: `#bs.hitbox:intangible`).  
       *Does not apply to entities with custom hitboxes.*
       - {nbt}`string` **on_collision**: Command to run when a collision occurs, used to resolve the collision (default: `function #bs.move:callback/bounce`).
   :::
+
+:Lambdas:
+  **Score `$move.hit_face bs.lambda`**: The face of the bounding box that was hit.
+
+  **Score `$move.hit_flag bs.lambda`**: The flag of the intersected bounding box, `-1` for entities.
+
+  **Scores `$move.vel.[x,y,z] bs.lambda`**: The remaining velocity in canonical coordinates after collision adjustments.
 
 :Outputs:
   **State**: Entity is teleported according to its local velocity scores.
@@ -106,11 +121,9 @@ Teleport an entity by its velocity scores, using the local reference frame, whil
 ::::
 :::::
 
-```{admonition} Hitbox Types
-:class: info
-Bookshelf supports multiple hitbox types for precise control. Blocks can use either `interaction` or `collision` hitboxes. Entities support three types: `dynamic`, `baked`, and `custom`.
-
-See [Hitbox Types](hitbox.md#types) for full details.
+```{admonition} Custom Hitboxes
+:class: hint
+Bookshelf supports multiple [hitbox types](hitbox.md#types) for precise control. Blocks can use custom [hitbox providers](hitbox.md#available-providers). Entities support three types: `dynamic`, `baked`, and `custom`.
 ```
 
 *Example: Move a cube (block_display) by its velocity scores (uses an interaction as the hitbox):*
@@ -267,9 +280,14 @@ By modifying the `on_collision` input argument, you have the freedom to specify 
       - The entity will stop and stick to the collision surface.
 :::
 
-### How It Works?
+### How It Works
 
-When a collision occurs, you can modify both the velocity score used on the next tick (`@s bs.vel.[x,y,z]`) and the remaining velocity (`$move.vel.[x,y,z] bs.lambda`). If you preserve any velocity along the axis that triggered the collision, the entity will move partially into the block and the collision will be treated as soft. During this state, the entity receives a tag `bs.move.flag.<flag>`, where the flag value (`1`, `2`, `4` or `8`) corresponds to the specific shape currently being intersected. The tag is removed once the entity fully exits the shape.
+When a collision occurs, the system tracks which bounding box was hit using the velocity and the flag of that bounding box. You can modify:
+
+- `@s bs.vel.[x,y,z]`: the velocity that will be applied on the next tick.  
+- `$move.vel.[x,y,z] bs.lambda`: the remaining velocity after rolling back to the time of impact.
+
+To simplify the creation of custom behaviors, there's no need to handle a local velocity directly. The vector is automatically converted before and after the collision resolution.
 
 ```{admonition} Velocity Scaling
 :class: warning
@@ -292,13 +310,38 @@ For sliding, we need to cancel the velocity on the axis that was hit and continu
 
 *`#bs.move:callback/slide`*
 ```mcfunction
-# set a component to 0 depending on the surface that was hit
+# set a component to 0 depending on the surface that was hit.
 execute if score $move.hit_face bs.lambda matches 4..5 store result score $move.vel.x bs.lambda run scoreboard players set @s bs.vel.x 0
 execute if score $move.hit_face bs.lambda matches 0..1 store result score $move.vel.y bs.lambda run scoreboard players set @s bs.vel.y 0
 execute if score $move.hit_face bs.lambda matches 2..3 store result score $move.vel.z bs.lambda run scoreboard players set @s bs.vel.z 0
 ```
 
-To simplify the creation of these behaviors, there's no need to handle a local velocity directly. The vector is automatically converted before and after the collision resolution. If you need help with custom collisions, you can ask us on our [discord server](https://discord.gg/MkXytNjmBt)!
+### Flags and Tags
+
+Flags and tags let you control how entities interact with multiple overlapping shapes, for example, allowing movement through fluid shapes while stopping at solid shapes.
+
+- Each bounding box has a numeric `flag` (`1`, `2`, `4`, or `8`).  
+- When an entity enters a bounding box, it receives a tag `bs.move.flag.<flag>`, which prevents repeated collisions while inside bounding boxes with the same flag. The tag is removed once the entity is no longer inside any bounding box with the same flag.
+
+Flags are particularly useful when using a [hitbox provider](hitbox.md#available-providers) that handles fluids. For example, here’s how a waterlogged stair could respond:
+
+1. The stair has two bounding boxes:  
+   - **Fluid** (water) with flag `2`  
+   - **Solid** (stair itself) with flag `1`  
+
+2. The entity enters the water:  
+   - `on_collision` is triggered.  
+   - We can choose to preserve the velocity along the axis of collision.  
+   - The entity receives `bs.move.flag.2`.  
+   - While this tag is active, collisions with other water blocks or fluid shapes do nothing, so the entity keeps moving smoothly through fluid.
+
+3. The entity hits the solid part of the stair:  
+   - `on_collision` is triggered again.  
+   - This time we reverse the velocity (bounce).  
+   - No tag is set, so collisions with other solid shapes are processed normally.  
+   - The entity stops or bounces off as expected, like a normal solid collision.
+
+If you need help with custom collisions, you can ask us on our [discord server](https://discord.gg/MkXytNjmBt)!
 
 ---
 

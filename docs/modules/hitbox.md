@@ -22,7 +22,7 @@ You can find below all functions available in this module.
 
 ```{function} #bs.hitbox:bake_entity
 
-Bake an [entity’s hitbox](#entity-types) to improve performance when its size never changes. If the entity has passengers, they are also baked, and the base entity's hitbox is expanded to include the full bounding box of the entire stack.
+Bake an [entity's hitbox](#entity-types) to improve performance when its size never changes. If the entity has passengers, they are also baked, and the base entity's hitbox is expanded to include the full bounding box of the entire stack.
 
 :Inputs:
   **Execution `as <entities>`**: The entity or entities whose hitbox should be baked.
@@ -32,7 +32,7 @@ Bake an [entity’s hitbox](#entity-types) to improve performance when its size 
 ```
 
 ```{warning}
-Only use baked hitboxes when you are sure the entity’s size will not change, for example: no growth (babies), no scaling, no new passengers, and no equipment that could affect size.
+Only use baked hitboxes when you are sure the entity's size will not change, for example: no growth (babies), no scaling, no new passengers, and no equipment that could affect size.
 
 If the hitbox changes after baking, **it may lead to incorrect collisions or broken logic**.
 ```
@@ -492,7 +492,7 @@ Reset an [entity's hitbox](#entity-types) to its default **dynamic** form, remov
   **Execution `as <entities>`**: The entity or entities whose hitbox should be reset.
 
 :Outputs:
-  **State**: The entity’s hitbox is now dynamic again and will automatically update with scaling, growth, or other changes.
+  **State**: The entity's hitbox is now dynamic again and will automatically update with scaling, growth, or other changes.
 ```
 
 > **Credits**: Aksiome
@@ -503,7 +503,7 @@ Reset an [entity's hitbox](#entity-types) to its default **dynamic** form, remov
 
 ```{function} #bs.hitbox:set_entity
 
-Define a [custom hitbox](#entity-types) for an entity with full control over its dimensions. This allows setting a hitbox not constrained by Minecraft’s built-in width/height system and can be used on entities that normally have no hitbox.
+Define a [custom hitbox](#entity-types) for an entity with full control over its dimensions. This allows setting a hitbox not constrained by Minecraft's built-in width/height system and can be used on entities that normally have no hitbox.
 
 :Inputs:
   **Execution `as <entities>`**: The entity or entities whose hitbox should be set with custom dimensions.
@@ -662,8 +662,8 @@ The `default` shape defines the area where players can interact with or break th
 
 The `collision` shape defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block:
 
-- Matches the block’s solid parts and prevents entities from moving through.
-- Can change dynamically depending on block state (e.g., a fence gate’s collision shape differs when open vs closed).
+- Matches the block's solid parts and prevents entities from moving through.
+- Can change dynamically depending on block state (e.g., a fence gate's collision shape differs when open vs closed).
 
 ➔ Returned by [#bs.hitbox:get_block_collision](#get-block)
 
@@ -682,16 +682,16 @@ This is the native Minecraft hitbox, which updates automatically:
 
 - Adjusts in real time with entity changes like scaling, baby growth, equipment, or new passengers.
 - No setup required, this is the default behavior.
-- Use when the entity’s shape is expected to change.
+- Use when the entity's shape is expected to change.
 
 ➔ Restored using [#bs.hitbox:reset_entity](#reset-entity)
 
 :::
 :::{tab-item} ❄️ Baked
 
-A snapshot of the entity’s hitbox at a specific moment:
+A snapshot of the entity's hitbox at a specific moment:
 
-- Improves performance when the entity’s size will never change.
+- Improves performance when the entity's size will never change.
 - Includes the base entity and all passengers in one combined box. When baking a pile of passengers, the base entity bakes all passengers and sets its hitbox to encompass the entire stack.
 - Does not update dynamically, collisions may break if the entity changes later.
 
@@ -704,8 +704,8 @@ A fully user-defined hitbox:
 
 - Set exact `width`, `height`, and optional `depth`.
 - Works on entities with no native hitbox (e.g. display entities).
-- Independent from Minecraft’s internal hitbox system.
-- Only applies to the base entity. When used with modules that process entity stacks, only the base entity’s hitbox is considered, passengers are ignored.
+- Independent from Minecraft's internal hitbox system.
+- Only applies to the base entity. When used with modules that process entity stacks, only the base entity's hitbox is considered, passengers are ignored.
 - Slight performance cost, avoid overuse in the same area.
 
 ➔ Set using [#bs.hitbox:set_entity](#set-entity)
@@ -718,41 +718,46 @@ A fully user-defined hitbox:
 (providers)=
 ## 🔌 Hitbox Providers
 
-Hitbox providers are callback functions used by other modules (notably `#bs.raycast:run`) to retrieve block shapes in different modes: **default**, **collision**, **placement**, and **fluid-aware** variants.
+A hitbox provider is a callback that returns a block's shape for consumers such as [`bs.raycast`](raycast.md) or [`bs.move`](move.md).
 
-```{admonition} Shape Flags
+A provider can return one of two forms:
+
+1. **A single flag** (e.g., `return 1`), telling the consumer to treat the block as a full 16×16×16 cube.
+2. **An array of bounding boxes**, stored in `bs:lambda hitbox`:
+   ```mcfunction
+   {shape:[[min_x, min_y, min_z, max_x, max_y, max_z, flag], ...]}
+   ```
+   Each bounding box uses coordinates from 0 to 16, and may include a flag (defaults to `1` if omitted).
+
+```{admonition} Flags
 :class: info
-Providers return one or more sub-shapes, each with a **flag**.  
-Flags have **no built-in meaning**; they are simply numbers used by the callback to classify shapes.
-
-Bookshelf’s built-in providers use the following conventions:
-- `1` solid sub-shape  
-- `2` fluid sub-shape  
-- `4` placement-only sub-shape  
-
-You may freely assign any flag in `1`, `2`, `4`, or `8` for your own providers.
+Flags do not have inherent meaning. They are numeric labels used by providers and consumers to classify bounding boxes.
+You may use any of the following flags: `1`, `2`, `4`, or `8`. 
 ```
 
 ---
 
 ### Available Providers
 
+All built-in providers include a fluid variant, where `1` represents the solid part and `2` represents the fluid part.
+
 ::::{tab-set}
 
 :::{tab-item} 🖱 Default
-These providers return the block’s **default** shape as defined in [block types](#block-types).
+These providers return the block's **default** shape as defined in [block types](#block-types).
 - `#bs.hitbox:callback/get_block_shape`  
 - `#bs.hitbox:callback/get_block_shape_with_fluid`  
 :::
 
 :::{tab-item} 🧊 Collision
-These providers return the block’s **collision** shape as defined in [block types](#block-types).
+These providers return the block's **collision** shape as defined in [block types](#block-types).
 - `#bs.hitbox:callback/get_block_collision`  
 - `#bs.hitbox:callback/get_block_collision_with_fluid`  
 :::
 
 :::{tab-item} 🏗 Placement
-These providers add a placement-only sub-shape to help the `view` module mimic Minecraft’s default placement behavior.
+Returns the block’s default shape and adds a placement-only bounding box (flag `4`) to replicate vanilla block-placement behavior for blocks such as cauldrons, composters, hoppers, and scaffolding.
+
 - `#bs.hitbox:callback/get_block_placement`  
 - `#bs.hitbox:callback/get_block_placement_with_fluid`  
 :::
@@ -762,20 +767,22 @@ These providers add a placement-only sub-shape to help the `view` module mimic M
 
 ### Custom Providers
 
-A hitbox provider is a function that returns either:
+A common pattern for custom providers is:
 
-- a **single flag** indicating that the block should be treated as a full cube (e.g. `return 1`), or  
-- an **array of sub-shapes**, where each sub-shape is `[min_x, min_y, min_z, max_x, max_y, max_z, flag]`.
-  If the flag is omitted, it defaults to `1`.
+1. Copy a built-in shape.
+2. Modify it.
+3. Return it.
 
-Example custom provider:
+*Example: Defining a custom shape with a custom flag:*
 
 ```mcfunction
-# Custom shape for <my_custom_block>
+# Custom shape for <my_custom_block>. You can add multiple bounding boxes, each with its own flag, if your block has a complex shape
 execute if block ~ ~ ~ <my_custom_block> run return run data modify storage bs:lambda hitbox set value {shape:[[2,2,2,14,14,14,<flag>]]}
 
-# Otherwise, fall back to the default shape provider
-return run function #bs.hitbox:callback/get_block_shape
+# If the block is a full cube, return 1, otherwise, return the shape.
+execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return 1
+function #bs.hitbox:get_block_shape
+data modify storage bs:lambda hitbox set from storage bs:out hitbox
 ```
 
 ---
