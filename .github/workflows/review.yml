@@ -3,7 +3,13 @@ name: 📋 Modules Review
 on:
   push:
     branches: ["master"]
+    paths:
+      - "modules/**"
+      - "src/**"
   pull_request:
+    paths:
+      - "modules/**"
+      - "src/**"
   workflow_call:
   workflow_dispatch:
 
