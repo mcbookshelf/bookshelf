@@ -1,5 +1,5 @@
 ---
-html_theme.sidebar_secondary.remove: true
+hide-sidebar-secondary: true
 ---
 
 # 📜 CLI Reference
