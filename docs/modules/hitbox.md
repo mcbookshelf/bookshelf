@@ -37,6 +37,13 @@ Only use baked hitboxes when you are sure the entity's size will not change, for
 If the hitbox changes after baking, **it may lead to incorrect collisions or broken logic**.
 ```
 
+```{dropdown} What is a Bounding Box?
+:color: info
+:icon: question
+
+A bounding box is a simple rectangular box that surrounds an object—or part of it—to help the game figure out where it is and what it touches. For example, a set of stairs in Minecraft uses two bounding boxes: one for the lower step and one for the upper step.
+```
+
 ```{dropdown} What is a Baked Hitbox?
 :color: info
 :icon: question
@@ -525,6 +532,12 @@ Define a [custom hitbox](#entity-types) for an entity with full control over its
 Custom hitboxes come with a **small performance cost**. Use them when you need precise control over shape and position, but avoid using too many of them in the same area.
 ```
 
+```{dropdown} What is a Bounding Box?
+:color: info
+:icon: question
+
+A bounding box is a simple rectangular box that surrounds an object—or part of it—to help the game figure out where it is and what it touches. For example, a set of stairs in Minecraft uses two bounding boxes: one for the lower step and one for the upper step.
+```
 
 ```{dropdown} What is a Custom Hitbox?
 :color: info
@@ -729,10 +742,19 @@ A provider can return one of two forms:
    ```
    Each bounding box uses coordinates from 0 to 16, and may include a flag (defaults to `1` if omitted).
 
+```{dropdown} What is a Bounding Box?
+:color: info
+:icon: question
+
+A bounding box is a simple rectangular box that surrounds an object—or part of it—to help the game figure out where it is and what it touches. For example, a set of stairs in Minecraft uses two bounding boxes: one for the lower step and one for the upper step.
+```
+
 ```{admonition} Flags
 :class: info
 Flags do not have inherent meaning. They are numeric labels used by providers and consumers to classify bounding boxes.
-You may use any of the following flags: `1`, `2`, `4`, or `8`. 
+You may use any of the following flags: `1`, `2`, `4`, or `8`.
+
+For example the Bookshelf built-in providers use `1` for solid and `2` for fluids.
 ```
 
 ---
@@ -756,7 +778,7 @@ These providers return the block's **collision** shape as defined in [block type
 :::
 
 :::{tab-item} 🏗 Placement
-Returns the block’s default shape and adds a placement-only bounding box (flag `4`) to replicate vanilla block-placement behavior for blocks such as cauldrons, composters, hoppers, and scaffolding.
+Returns the block's default shape and adds a placement-only bounding box (flag `4`) to replicate vanilla block-placement behavior for blocks such as cauldrons, composters, hoppers, and scaffolding.
 
 - `#bs.hitbox:callback/get_block_placement`  
 - `#bs.hitbox:callback/get_block_placement_with_fluid`  
@@ -767,7 +789,7 @@ Returns the block’s default shape and adds a placement-only bounding box (flag
 
 ### Custom Providers
 
-A common pattern for custom providers is:
+A common pattern for custom providers is either to directly return a custom shape or to:
 
 1. Copy a built-in shape.
 2. Modify it.
@@ -779,9 +801,11 @@ A common pattern for custom providers is:
 # Custom shape for <my_custom_block>. You can add multiple bounding boxes, each with its own flag, if your block has a complex shape
 execute if block ~ ~ ~ <my_custom_block> run return run data modify storage bs:lambda hitbox set value {shape:[[2,2,2,14,14,14,<flag>]]}
 
-# If the block is a full cube, return 1, otherwise, return the shape.
+# If the block is a full cube, return 1
 execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return 1
+# Get the shape (step 1)
 function #bs.hitbox:get_block_shape
+# Copy and return the shape (step 3)
 data modify storage bs:lambda hitbox set from storage bs:out hitbox
 ```
 

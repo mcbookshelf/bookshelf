@@ -60,7 +60,7 @@ Cast a ray from the execution position and check if it hits something. Lambda sc
 :Lambdas:
   **Score `$raycast.distance bs.lambda`**: The distance from origin (scaled ×1000).
 
-  **Score `$raycast.hit_face bs.lambda`**: The face of the bounding box that was hit.
+  **Score `$raycast.hit_face bs.lambda`**: The face of the bounding box that was hit: 5 is east, 4 is west, 3 is south, 2 is north, 1 is top, and 0 is bottom.
 
   **Score `$raycast.hit_flag bs.lambda`**: The flag of the intersected bounding box, `-1` for entities.
 
@@ -92,6 +92,13 @@ Cast a ray from the execution position and check if it hits something. Lambda sc
   :::
 ```
 
+```{dropdown} What is a Bounding Box?
+:color: info
+:icon: question
+
+A bounding box is a simple rectangular box that surrounds an object—or part of it—to help the game figure out where it is and what it touches. For example, a set of stairs in Minecraft uses two bounding boxes: one for the lower step and one for the upper step.
+```
+
 ```{admonition} Callback Order
 :class: info
 Callbacks `on_targeted_block` and `on_targeted_entity` are always run before `on_hit_point` to guarantee block/entity information is available before processing hit-point data.
@@ -118,8 +125,8 @@ data get storage bs:out raycast.hit_point
 execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{blocks:"function #bs.hitbox:callback/get_block_shape_with_fluid",ignored_blocks:"#air",piercing:1,on_hit_point:"particle minecraft:flame ~ ~ ~ 0 0 0 0 1 force"}}
 ```
 
-1. Callback `on_targeted_block` runs once with a `$raycast.hit_flag bs.lambda` score of `1` (solid), `2` (liquid), or `3` (both). The `hit_flag` is the bitwise OR of all intersected shape flags.
-2. Callback `on_hit_point` may run multiple times with a `$raycast.hit_flag bs.lambda` score of `1` or `2` depending on the hit shape.
+1. Callback `on_targeted_block` runs once with a `$raycast.hit_flag bs.lambda` score of `1` (solid), `2` (liquid), or `3` (both). Each unique flag is a power of 2 The `hit_flag` is the bitwise OR of all intersected shape flags ("both" being solid and liquid, `1` OR `2` = `3`).
+2. Callback `on_hit_point` may run multiple times with a `$raycast.hit_flag bs.lambda` score of `1` (solid) or `2` (liquid) depending on the hit shape.
 3. Piercing decremented only once per block.
 
 > **Credits**: Aksiome

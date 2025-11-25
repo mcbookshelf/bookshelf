@@ -62,7 +62,7 @@ Teleport an entity by its velocity scores while handling collisions. Lambda scor
   :::
 
 :Lambdas:
-  **Score `$move.hit_face bs.lambda`**: The face of the bounding box that was hit.
+  **Score `$move.hit_face bs.lambda`**: The face of the bounding box that was hit: 5 is east, 4 is west, 3 is south, 2 is north, 1 is top, and 0 is bottom.
 
   **Score `$move.hit_flag bs.lambda`**: The flag of the intersected bounding box, `-1` for entities.
 
@@ -120,6 +120,13 @@ Teleport an entity by its velocity scores, using the local reference frame, whil
 
 ::::
 :::::
+
+```{dropdown} What is a Bounding Box?
+:color: info
+:icon: question
+
+A bounding box is a simple rectangular box that surrounds an object—or part of it—to help the game figure out where it is and what it touches. For example, a set of stairs in Minecraft uses two bounding boxes: one for the lower step and one for the upper step.
+```
 
 ```{admonition} Custom Hitboxes
 :class: hint
@@ -318,24 +325,24 @@ execute if score $move.hit_face bs.lambda matches 2..3 store result score $move.
 
 ### Flags and Tags
 
-Flags and tags let you control how entities interact with multiple overlapping shapes, for example, allowing movement through fluid shapes while stopping at solid shapes.
+Flags and tags let you control how entities interact with multiple overlapping bounding boxes, for example, allowing movement through fluid shapes while stopping at solid shapes.
 
 - Each bounding box has a numeric `flag` (`1`, `2`, `4`, or `8`).  
 - When an entity enters a bounding box, it receives a tag `bs.move.flag.<flag>`, which prevents repeated collisions while inside bounding boxes with the same flag. The tag is removed once the entity is no longer inside any bounding box with the same flag.
 
-Flags are particularly useful when using a [hitbox provider](hitbox.md#available-providers) that handles fluids. For example, here’s how a waterlogged stair could respond:
+Flags are particularly useful when using a [hitbox provider](hitbox.md#available-providers) that handles fluids. For example, here's how a waterlogged stairs could respond:
 
-1. The stair has two bounding boxes:  
+1. The stairs have two types of bounding boxes:  
    - **Fluid** (water) with flag `2`  
-   - **Solid** (stair itself) with flag `1`  
+   - **Solid** (stairs themselves) with flag `1`  
 
 2. The entity enters the water:  
    - `on_collision` is triggered.  
    - We can choose to preserve the velocity along the axis of collision.  
    - The entity receives `bs.move.flag.2`.  
-   - While this tag is active, collisions with other water blocks or fluid shapes do nothing, so the entity keeps moving smoothly through fluid.
+   - While this tag is active, collisions with other water blocks or fluid shapes do nothing, so the entity keeps moving smoothly through fluids.
 
-3. The entity hits the solid part of the stair:  
+3. The entity hits the solid part of the stairs:  
    - `on_collision` is triggered again.  
    - This time we reverse the velocity (bounce).  
    - No tag is set, so collisions with other solid shapes are processed normally.  
