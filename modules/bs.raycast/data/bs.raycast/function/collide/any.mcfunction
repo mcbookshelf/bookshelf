@@ -18,7 +18,7 @@ scoreboard players operation $raycast.pierce_distance bs.lambda -= $raycast.dist
 scoreboard players operation $raycast.pierce_distance bs.lambda *= -1 bs.const
 execute store result storage bs:lambda raycast.distance double .001 run scoreboard players get $raycast.distance bs.lambda
 execute if score $raycast.distance bs.lambda = #raycast.btoi bs.data run function bs.raycast:collide/block/handle
-execute if score $raycast.distance bs.lambda = #raycast.etoi bs.data positioned as @s run function bs.raycast:collide/entity/handle with storage bs:lambda raycast
+execute if score $raycast.distance bs.lambda = #raycast.etoi bs.data positioned as @s run function bs.raycast:collide/entity/handle
 
 # stop the recursion if piercing is 0
 execute if score $raycast.piercing bs.lambda matches 0 run return run scoreboard players set #raycast.max_distance bs.data -2147483648

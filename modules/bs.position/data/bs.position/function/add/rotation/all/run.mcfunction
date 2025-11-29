@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute positioned as @s run tp @s ~ ~ ~ ~$(x) ~$(y)
+$execute rotated ~$(x) ~$(y) run function bs.position:rotate

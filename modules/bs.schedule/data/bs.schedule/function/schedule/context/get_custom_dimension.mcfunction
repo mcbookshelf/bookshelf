@@ -14,4 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _.dimension set from entity @s Brain.memories.minecraft:home.value.dimension
+tp @s ~ -100000 ~
 kill @s

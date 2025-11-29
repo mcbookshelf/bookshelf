@@ -13,6 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$tp @s ~$(x) ~$(y) ~$(z)
+$execute positioned ~$(x) ~$(y) ~$(z) run function bs.move:teleport/tp
 data modify storage bs:ctx _ set from entity @s Pos
+tp @s ~ -1000000 ~
 kill @s

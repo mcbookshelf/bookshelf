@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$tp @s ~ ~ ~ -90 $(celestial_angle)
+$execute rotated -90 $(celestial_angle) run function bs.environment:celestial/rotate

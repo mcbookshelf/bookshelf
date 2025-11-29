@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$tp @s ~$(x) ~$(y) ~$(z)
+$execute positioned ~$(x) ~$(y) ~$(z) run function bs.move:teleport/tp
 function bs.move:collision/handle {resolver:"canonical"}

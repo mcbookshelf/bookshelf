@@ -18,7 +18,7 @@
 
 tag @s add bs.interaction.source
 scoreboard players operation #h bs.ctx = @s bs.interaction.hover
-$tag @n[type=minecraft:interaction,distance=..$(y),predicate=bs.interaction:hover_equal] add bs.interaction.target
+$tag @n[type=minecraft:interaction,distance=..$(y),predicate=bs.interaction:internal/hover_equal] add bs.interaction.target
 execute unless predicate {condition:entity_properties,entity:this,predicate:{type_specific:{type:player,looking_at:{type:interaction,nbt:"{Tags:[bs.interaction.target]}"}}}} run return run function bs.interaction:on_event/hover_leave/hover_leave
 execute as @n[type=minecraft:interaction,tag=bs.interaction.target,distance=..24] run function bs.interaction:on_event/hover/as_target
 tag @s remove bs.interaction.source
