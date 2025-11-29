@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # sheep group
-execute unless predicate bs.hitbox:is_baby run return run data modify storage bs:out hitbox set value {width:0.9,height:1.3}
+execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.9,height:1.3}
 data modify storage bs:out hitbox set value {width:0.45,height:0.65}

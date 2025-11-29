@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # hoglin group
-execute unless predicate bs.hitbox:is_baby run return run data modify storage bs:out hitbox set value {width:1.3964844,height:1.4}
+execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:1.3964844,height:1.4}
 data modify storage bs:out hitbox set value {width:0.6982422,height:0.7}

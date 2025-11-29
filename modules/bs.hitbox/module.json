@@ -2,14 +2,23 @@
   "extend": "../config.json",
   "data_pack": {
     "name": "bs.hitbox",
-    "load": "."
+    "load": ".",
+    "overlays": [
+      {
+        "directory": "1.21.10",
+        "min_format": 88,
+        "max_format": 88
+      }
+    ]
   },
   "meta": {
     "name": "Hitbox",
     "slug": "bookshelf-hitbox",
     "description": "Bookshelf module for retrieving and checking the hitboxes of blocks and entities.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html",
-    "tags": ["runtime"],
+    "tags": [
+      "runtime"
+    ],
     "weak_dependencies": [
       "bs.log"
     ]

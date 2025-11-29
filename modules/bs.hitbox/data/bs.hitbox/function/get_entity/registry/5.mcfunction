@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # axolotl group
-execute unless predicate bs.hitbox:is_baby run return run data modify storage bs:out hitbox set value {width:0.75,height:0.42}
+execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.75,height:0.42}
 data modify storage bs:out hitbox set value {width:0.375,height:0.21}
