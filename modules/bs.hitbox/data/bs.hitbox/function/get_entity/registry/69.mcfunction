@@ -15,5 +15,5 @@
 
 # villager group
 execute at @s positioned ~ ~.5 ~ unless entity @s[dx=0] run return run data modify storage bs:out hitbox set value {width:0.2,height:0.2}
-execute unless predicate bs.hitbox:is_baby run return run data modify storage bs:out hitbox set value {width:0.6,height:1.95}
+execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.6,height:1.95}
 data modify storage bs:out hitbox set value {width:0.3,height:0.975}

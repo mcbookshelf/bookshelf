@@ -15,6 +15,6 @@
 
 # sniffer group
 execute at @s positioned ~ ~1.5 ~ if entity @s[dx=0] run return run data modify storage bs:out hitbox set value {width:1.9,height:1.75}
-execute unless predicate bs.hitbox:is_baby run return run data modify storage bs:out hitbox set value {width:1.9,height:0.4}
+execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:1.9,height:0.4}
 execute at @s positioned ~ ~.5 ~ if entity @s[dx=0] run return run data modify storage bs:out hitbox set value {width:0.95,height:0.875}
 data modify storage bs:out hitbox set value {width:0.95,height:0.4}

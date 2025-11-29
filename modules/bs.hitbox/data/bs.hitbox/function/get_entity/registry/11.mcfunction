@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # cat_like group
-execute unless predicate bs.hitbox:is_baby run return run data modify storage bs:out hitbox set value {width:0.6,height:0.7}
+execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.6,height:0.7}
 data modify storage bs:out hitbox set value {width:0.3,height:0.35}

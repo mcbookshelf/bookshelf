@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# squid group
-execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.4,height:0.4}
-data modify storage bs:out hitbox set value {width:0.8,height:0.8}
+# nautilus group
+execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.875,height:0.95}
+data modify storage bs:out hitbox set value {width:0.4375,height:0.475}

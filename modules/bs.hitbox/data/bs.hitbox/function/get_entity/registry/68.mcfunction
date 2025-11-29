@@ -15,7 +15,7 @@
 
 # player group
 execute if entity @s[gamemode=spectator] run return run data modify storage bs:out hitbox set value {width:0.0,height:0.0}
-execute if predicate bs.hitbox:is_sneaking run return run data modify storage bs:out hitbox set value {width:0.6,height:1.5}
-execute if predicate bs.hitbox:is_swimming run return run data modify storage bs:out hitbox set value {width:0.6,height:0.6}
-execute if predicate bs.hitbox:is_gliding run return run data modify storage bs:out hitbox set value {width:0.6,height:0.6}
+execute if predicate bs.hitbox:internal/is_sneaking run return run data modify storage bs:out hitbox set value {width:0.6,height:1.5}
+execute if predicate bs.hitbox:internal/is_swimming run return run data modify storage bs:out hitbox set value {width:0.6,height:0.6}
+execute if predicate bs.hitbox:internal/is_gliding run return run data modify storage bs:out hitbox set value {width:0.6,height:0.6}
 data modify storage bs:out hitbox set value {width:0.6,height:1.8}
