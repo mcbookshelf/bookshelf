@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute positioned 0.0 0.0 0.0 run tp @s ^$(x) ^$(y) ^$(z)
+$execute positioned 0.0 0.0 0.0 positioned ^$(x) ^$(y) ^$(z) run function bs.position:tp
 data modify storage bs:ctx _ set from entity @s Pos
 tp @s -30000000 0 1600

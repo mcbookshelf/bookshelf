@@ -14,6 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute store result score #v bs.ctx run data get entity @s Pos[1]
+tp @s ~ -100000 ~
 kill @s
 
 execute if score #v bs.ctx matches ..80 run return run scoreboard players get $environment.celestial_angle.daytime bs.in

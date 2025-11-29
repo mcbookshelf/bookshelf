@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$tp @s ~ ~$(y) ~
+$execute positioned ~ ~$(y) ~ run function bs.position:tp
