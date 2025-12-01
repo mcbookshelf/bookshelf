@@ -16,7 +16,7 @@
 # Get initial time values
 execute store result score $environment.celestial_angle.day bs.in run time query day
 execute store result score $environment.celestial_angle.daytime bs.in run time query daytime
-$data modify storage bs:ctx z set value $(scale)f
+$data modify storage bs:ctx z set value $(scale)
 
 # Get the current moon angle
 return run function bs.environment:celestial/get_moon_angle_internal

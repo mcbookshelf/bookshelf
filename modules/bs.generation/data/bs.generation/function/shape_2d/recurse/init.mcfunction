@@ -15,6 +15,7 @@
 
 execute if data storage bs:data generation._{direction:"xz"} run data modify storage bs:data generation._.oz set from entity @s Pos[2]
 execute unless data storage bs:data generation._{direction:"xz"} run data modify storage bs:data generation._.oy set from entity @s Pos[1]
+tp @s ~ -100000 ~
 kill @s
 
 $function bs.generation:shape_2d/strategy/$(impl)/setup

@@ -18,4 +18,4 @@ scoreboard players operation #r bs.ctx *= -1 bs.const
 execute store result storage bs:out environment.celestial_angle double 0.001 run scoreboard players get #r bs.ctx
 
 # --- Return value in degrees, at the scale from the macro ---
-return run function bs.environment:celestial/store_celestial_angle with storage bs:ctx
+return run function bs.environment:celestial/return_celestial_angle with storage bs:ctx
