@@ -16,7 +16,7 @@ INTANGIBLE = [
 def beet_default(ctx: Context) -> None:
     """Generate files used by the bs.hitbox module."""
     namespace = ctx.directory.name
-    blocks = minecraft.get_blocks(ctx, MC_VERSIONS[-1])
+    blocks = minecraft.get_blocks(ctx.cache, MC_VERSIONS[-1])
 
     groups = {"shape": defaultdict(list), "collision": defaultdict(list)}
     seen = set()
@@ -44,8 +44,8 @@ def beet_default(ctx: Context) -> None:
         ("is_waterloggable", lambda b:
             any(p.name == "waterlogged" for p in b.properties)),
     ]:
-        if tag := ctx.data.block_tags.get(f"{namespace}:{name}"):
-            tag.merge(minecraft.make_block_tag(blocks, predicate))
+        tag = ctx.data.block_tags[f"{namespace}:{name}"]
+        minecraft.update_block_tag(tag, blocks, predicate)
 
 
 def make_shape_loot_table(

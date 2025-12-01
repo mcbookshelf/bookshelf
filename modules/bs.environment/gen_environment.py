@@ -13,7 +13,7 @@ SNOW_THRESHOLD = 0.4
 def beet_default(ctx: Context) -> None:
     """Generate files used by the environment module."""
     namespace = ctx.directory.name
-    biomes = minecraft.get_biomes(ctx, MC_VERSIONS[-1])
+    biomes = minecraft.get_biomes(ctx.cache, MC_VERSIONS[-1])
 
     loot_table = make_biome_loot_table(biomes)
     ctx.generate(f"{namespace}:biome/get", render=loot_table)

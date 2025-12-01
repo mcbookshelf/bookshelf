@@ -1,3 +1,4 @@
+# ruff: noqa: TC003
 from __future__ import annotations
 
 from logging import getLogger

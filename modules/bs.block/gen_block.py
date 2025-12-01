@@ -48,7 +48,7 @@ DATA_TABLE_INCLUDE = {
 def beet_default(ctx: Context) -> None:
     """Generate files used by the bs.block module."""
     namespace = ctx.directory.name
-    blocks = minecraft.get_blocks(ctx, MC_VERSIONS[-1])
+    blocks = minecraft.get_blocks(ctx.cache, MC_VERSIONS[-1])
 
     loot_table = make_block_loot_table(blocks)
     ctx.generate(f"{namespace}:internal/get_type", render=loot_table)
@@ -71,14 +71,14 @@ def beet_default(ctx: Context) -> None:
         )
 
     for name, predicate in ATTR_TAGS:
-        tag = ctx.data.block_tags.get(f"{namespace}:{name}")
-        tag.merge(minecraft.make_block_tag(blocks, predicate))
+        tag = ctx.data.block_tags[f"{namespace}:{name}"]
+        minecraft.update_block_tag(tag, blocks, predicate)
 
     for name, attribute in ATTR_PREDICATES:
         groups = defaultdict(list)
         for block in blocks:
             groups[attribute(block)].append(block)
-        merge_attr_predicate(ctx.data.predicates.get(f"{namespace}:{name}"), groups)
+        merge_attr_predicate(ctx.data.predicates[f"{namespace}:{name}"], groups)
 
     for name, attribute in ATTR_LOOT_TABLES:
         seen = set()
@@ -252,7 +252,7 @@ def merge_attr_predicate(
         return optimize_entry({"condition":"any_of","terms":terms})
 
     predicate.set_content(optimize_entry({
-        **predicate.deserialize(predicate.get_content()),
+        **predicate.data,
         "condition": "any_of",
         "terms": [optimize_entry({
             "condition": "all_of", "terms":[{

@@ -6,10 +6,10 @@ from typing import TYPE_CHECKING, ClassVar
 from beet import (
     Context,
     Function,
-    JsonFile,
     NamespaceFile,
     NamespaceFileScope,
     TestEnvironment,
+    TextFileBase,
 )
 
 from bookshelf.definitions import VERSION
@@ -21,7 +21,7 @@ if TYPE_CHECKING:
 PERSISTENT_ENTITY_UUID = re.compile(r"B5-0-0-0-\d+")
 
 
-class TestFunction(JsonFile, NamespaceFile):
+class TestFunction(TextFileBase, NamespaceFile):
     """Represents a PackTest Minecraft function file."""
 
     scope: ClassVar[NamespaceFileScope] = ("test",)

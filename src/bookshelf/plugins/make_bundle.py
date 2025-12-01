@@ -4,7 +4,7 @@ import json
 from functools import cache
 from typing import TYPE_CHECKING
 
-from beet import Context, subproject
+from beet import Context, PngFile, subproject
 
 from bookshelf.definitions import MODULES, MODULES_DIR
 
@@ -19,6 +19,7 @@ def beet_default(ctx: Context) -> None:
     for mod in MODULES:
         config = {"directory": f"{MODULES_DIR}/{mod}", "extend": "module.json"}
         ctx.require(subproject(config))
+    ctx.data.icon = PngFile(source_path=ctx.directory / "pack.png")
 
 
 @cache
@@ -30,4 +31,5 @@ def __getattr__(tag: str) -> Callable[[Context], None]:
             if tag in meta.get("meta", {}).get("tags", []):
                 config = {"directory": f"{MODULES_DIR}/{mod}", "extend": "module.json"}
                 ctx.require(subproject(config))
+        ctx.data.icon = PngFile(source_path=ctx.directory / "pack.png")
     return plugin

@@ -29,12 +29,12 @@ def beet_default(ctx: Context) -> Generator:
     max_formats = get_supported_formats(ctx, MC_VERSIONS[-1])
 
     # Set metadata for resource pack
-    ctx.assets.description = ctx.meta["description"]
+    ctx.assets.description = ctx.meta.get("description")
     ctx.assets.min_format = min_formats["assets"]
     ctx.assets.max_format = max_formats["assets"]
 
     # Set metadata for data pack
-    ctx.data.description = ctx.meta["description"]
+    ctx.data.description = ctx.meta.get("description")
     ctx.data.min_format = min_formats["data"]
     ctx.data.max_format = max_formats["data"]
 

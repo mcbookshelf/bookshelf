@@ -3,7 +3,6 @@ from __future__ import annotations
 import re
 from collections.abc import Callable, Mapping, Sequence
 from functools import singledispatch, wraps
-from itertools import chain
 from typing import TYPE_CHECKING
 
 import orjson
@@ -14,7 +13,7 @@ from bookshelf.common import json
 from bookshelf.models import Block, StateNode, StatePredicate
 
 if TYPE_CHECKING:
-    from beet import Context
+    from beet import ProjectCache
 
 
 def quote_snbt_key(k: str) -> str:
@@ -77,35 +76,29 @@ def render_snbt_mapping(obj: Mapping) -> str:
 def cache_version[T: BaseModel | dict | list](
     key: str,
     expected_type: type[T],
-) -> Callable[[Callable[[Context, str], T]], Callable[[Context, str], T]]:
-    """Cache functions that accept a ctx and a version to a JSON file."""
-    def decorator(func: Callable[[Context, str], T]) -> Callable[[Context, str], T]:
+) -> Callable[[Callable[[str], T]], Callable[[ProjectCache, str], T]]:
+    """Cache functions that accept a version to a JSON file."""
+    def decorator(func: Callable[[str], T]) -> Callable[[ProjectCache, str], T]:
         @wraps(func)
-        def wrapper(ctx: Context, version: str) -> T:
-            file = ctx.cache[f"version/{version}"].get_path(key).with_suffix(".json")
+        def wrapper(cache: ProjectCache, version: str) -> T:
+            file = cache[f"version/{version}"].get_path(key).with_suffix(".json")
             if file.is_file():
                 return json.load(file, expected_type)
-            json.dump(file, result := func(ctx, version), None)
+            json.dump(file, result := func(version), None)
             return result
         return wrapper
     return decorator
 
 
-def make_block_tag(
+def update_block_tag(
+    tag: BlockTag,
     blocks: Sequence[Block],
     predicate: Callable[[Block], bool],
-    extras: list | None = None,
 ) -> BlockTag:
-    """Create a block tag for blocks that match the predicate."""
-    values = chain(extras or [], (block.type for block in blocks if predicate(block)))
-    return BlockTag({"replace":True,"values":sorted(values)})
-
-
-def make_loot_table(content: dict) -> LootTable:
-    """Build an optimized loot table from a dict using orjson."""
-    loot_table = LootTable(content)
-    loot_table.text = orjson.dumps(loot_table.data).decode("utf-8")
-    return loot_table
+    """Create or update a block tag for blocks that match the predicate."""
+    values = sorted(block.type for block in blocks if predicate(block))
+    tag.merge(BlockTag({"values": values}))
+    return tag
 
 
 def make_loot_table_binary[T](
@@ -133,7 +126,7 @@ def make_loot_table_binary[T](
         right.pop("conditions")
         return {"type":"alternatives","children":[left, right]}
 
-    return make_loot_table({"pools":[{"rolls":1,"entries":[build_node(entries)]}]})
+    return LootTable({"pools":[{"rolls":1,"entries":[build_node(entries)]}]})
 
 
 def make_loot_table_state[T](
@@ -159,4 +152,4 @@ def make_loot_table_state[T](
 
         return {"type":"alternatives","children":children}
 
-    return make_loot_table({"pools":[{"rolls":1,"entries":[build_node(entry.tree)]}]})
+    return LootTable({"pools":[{"rolls":1,"entries":[build_node(entry.tree)]}]})
