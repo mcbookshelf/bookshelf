@@ -1,11 +1,18 @@
+from __future__ import annotations
+
 from collections import defaultdict
-from collections.abc import Sequence
+from typing import TYPE_CHECKING
 
 from beet import Context, LootTable, Predicate
 
 from bookshelf.definitions import MC_VERSIONS
-from bookshelf.models import Biome
 from bookshelf.services import minecraft
+
+if TYPE_CHECKING:
+    from collections.abc import Sequence
+
+    from bookshelf.models import Biome
+
 
 SNOW_THRESHOLD = 0.4
 

@@ -52,6 +52,10 @@ class Block(BaseModel, frozen=True):
     is_conductive: StateValue[bool] = False
     is_spawnable: StateValue[bool] = False
 
+    def __hash__(self) -> int:
+        """Hash based on the block ID."""
+        return hash(self.type)
+
 
 class StatePredicate[T](BaseModel, frozen=True):
     """Predicate over a block's state."""

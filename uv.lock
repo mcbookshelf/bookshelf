@@ -70,7 +70,7 @@ wheels = [
 
 [[package]]
 name = "beet"
-version = "0.112.1"
+version = "0.112.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -84,9 +84,9 @@ dependencies = [
     { name = "toml" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b4/51/03ced57f81dd2be86a6d55ec99359eabcf017d5cf8929ef81731f87cef78/beet-0.112.1.tar.gz", hash = "sha256:9014049b804c3ca2766b7cdfea7e64120df952e92b67d22210c70000fe1b36a6", size = 93478, upload-time = "2025-11-29T15:23:34.967Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/58/bf/a7de57393f9d962dd93d5397c1025bdfe0d840e2df12dbf387da61468862/beet-0.112.2.tar.gz", hash = "sha256:fb007adb29df53a2300678cc9b79fc2922b36c685e2077f5832d740ec7fcb4c2", size = 93524, upload-time = "2025-12-01T22:39:24.142Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/dd/fb/11619fd28c1c923a5237fbaf9bbbf8d35b5b6edbee9608698160c07de458/beet-0.112.1-py3-none-any.whl", hash = "sha256:c3085af65aacc88d2811b772e3c377c023dcc5a864eaa45ec739c2f71ce82cf2", size = 118280, upload-time = "2025-11-29T15:23:33.413Z" },
+    { url = "https://files.pythonhosted.org/packages/86/83/c5d5b0574f82e2ce3af7616d3385862b98b6f94d8dcd894cef062f9a9b01/beet-0.112.2-py3-none-any.whl", hash = "sha256:270e98fb16ee7a28900d6544ae96d35b1a957ff9bd9077f7478aee58edcbfc85", size = 118341, upload-time = "2025-12-01T22:39:22.971Z" },
 ]
 
 [[package]]
@@ -417,7 +417,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "beet", specifier = ">=0.112.1" },
+    { name = "beet", specifier = ">=0.112.2" },
     { name = "frozendict", specifier = ">=2.4.7" },
     { name = "orjson", specifier = ">=3.11.4" },
     { name = "pydantic", specifier = ">=2.12.5" },

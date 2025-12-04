@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from beet import Context, Function
 
 LOWER_TO_UPPER = {chr(c): chr(c).upper() for c in range(0x110000) if chr(c).islower()}

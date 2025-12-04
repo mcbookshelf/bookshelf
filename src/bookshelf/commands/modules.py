@@ -9,7 +9,14 @@ import click
 from bookshelf.common.logging import summarize_logs
 from bookshelf.common.termui import track
 from bookshelf.common.utils import watch_and_run
-from bookshelf.definitions import BUILD_DIR, BUNDLES, MC_VERSIONS, MODULES, MODULES_DIR
+from bookshelf.definitions import (
+    BUILD_DIR,
+    BUNDLES,
+    MC_VERSIONS,
+    MODULES,
+    MODULES_DIR,
+    RELEASE_DIR,
+)
 from bookshelf.services import builder, packtest, publishers
 
 
@@ -25,8 +32,8 @@ def build(modules: tuple[str, ...]) -> None:
     with summarize_logs("🔨 BUILDING MODULES…"):
         entries = track((f"Build module [green]{m}", m) for m in modules)
         builder.ModuleBuilder(
-            output=BUILD_DIR,
-            require=["bookshelf.plugins.include_tests"],
+            require=["bookshelf.plugins.build_pack"],
+            meta={"build": {"output": BUILD_DIR}},
         ).build(entries)
 
 
@@ -38,25 +45,24 @@ def watch(modules: tuple[str, ...]) -> None:
         def run() -> None:
             entries = track((f"Build module [green]{m}", m) for m in modules)
             builder.ModuleBuilder(
-                output=BUILD_DIR,
-                require=["bookshelf.plugins.include_tests"],
+                require=["bookshelf.plugins.build_pack"],
+                meta={"build": {"output": BUILD_DIR}},
             ).build(entries)
-        watch_and_run(run, *[MODULES_DIR / m for m in modules])
+        watch_and_run(run, MODULES_DIR)
 
 
 @modules.command()
 def release() -> None:
     """Build and release zipped modules."""
-    packs = []
     with summarize_logs("🔨 BUILDING MODULES…", exit_on_errors=True):
+        packs = []
         entries = track((f"Build module [green]{m}", m) for m in [*BUNDLES, *MODULES])
         builder.ModuleBuilder(
-            zipped=True,
             require=["bookshelf.plugins.release_pack"],
-            meta={
-                "autosave": {"link": False},
-                "publish": lambda spec: packs.append(spec),
-            },
+            meta={"release": {
+                "output": RELEASE_DIR,
+                "enqueue": lambda spec: packs.append(spec),
+            }},
         ).build(entries)
 
     with summarize_logs("🚀 PUBLISHING MODULES…", exit_on_errors=True):
@@ -78,9 +84,8 @@ def test(modules: tuple[str, ...], *, versions: bool) -> None:
         with summarize_logs("🔨 BUILDING MODULES…", exit_on_errors=True):
             entries = track((f"Build module [green]{m}", m) for m in modules)
             builder.ModuleBuilder(
-                output=output,
-                require=["bookshelf.plugins.include_tests"],
-                meta={"autosave": {"link": False}},
+                require=["bookshelf.plugins.build_pack"],
+                meta={"build": {"output": output, "link": False}},
                 zipped=True,
             ).build(entries)
 

@@ -1,11 +1,17 @@
+from __future__ import annotations
+
 from collections import defaultdict
-from collections.abc import Sequence
+from typing import TYPE_CHECKING
 
 from beet import Context, Function, LootTable, Predicate
 
 from bookshelf.definitions import MC_VERSIONS
 from bookshelf.models import Block, StateNode, StatePredicate, StateProperty, StateValue
 from bookshelf.services import minecraft
+
+if TYPE_CHECKING:
+    from collections.abc import Sequence
+
 
 ATTR_TAGS = [
     ("has_state", lambda b: b.group > 0),

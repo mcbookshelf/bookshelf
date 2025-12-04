@@ -1,5 +1,7 @@
 {
   "pipeline": [
+    "bookshelf.plugins.setup_templates",
+    "bookshelf.plugins.minify_json",
     "bookshelf.plugins.include_deps",
     "bookshelf.plugins.update_tags",
     "bookshelf.plugins.inject_import",

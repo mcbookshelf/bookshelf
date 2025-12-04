@@ -34,7 +34,10 @@ def build(examples: tuple[str, ...]) -> None:
     """Build the specified examples."""
     with summarize_logs("🔨 BUILDING EXAMPLES…"):
         entries = track((f"Build example [green]{e}", e) for e in examples)
-        builder.ExampleBuilder(output=BUILD_DIR).build(entries)
+        builder.ExampleBuilder(
+            require=["bookshelf.plugins.build_pack"],
+            meta={"build": {"output": BUILD_DIR}},
+        ).build(entries)
 
 
 @examples.command()
@@ -44,5 +47,8 @@ def watch(examples: tuple[str, ...]) -> None:
     with summarize_logs("👀 WATCHING EXAMPLES…"):
         def run() -> None:
             entries = track((f"Build example [green]{e}", e) for e in examples)
-            builder.ExampleBuilder(output=BUILD_DIR).build(entries)
+            builder.ExampleBuilder(
+                require=["bookshelf.plugins.build_pack"],
+                meta={"build": {"output": BUILD_DIR}},
+            ).build(entries)
         watch_and_run(run, EXAMPLES_DIR)

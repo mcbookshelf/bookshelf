@@ -1,34 +1,33 @@
-# ruff: noqa: TC003
 from __future__ import annotations
 
-from collections.abc import Iterable
-from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
-from beet import PackConfig, Project, ProjectBuilder, ProjectConfig
+from beet import Context, PackConfig, Project, ProjectBuilder, ProjectConfig
 from pydantic import BaseModel, Field
 
 from bookshelf.definitions import EXAMPLES_DIR, MODULES_DIR, ROOT_DIR
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable
 
 
 class BaseBuilder(BaseModel):
     """Base class for build process implementations."""
 
-    pipeline: list[str] = Field(default_factory=list)
     require: list[str] = Field(default_factory=list)
+    pipeline: list[str] = Field(default_factory=list)
     meta: dict[str, Any] = Field(default_factory=dict)
-    output: Path | None = None
     zipped: bool = False
 
-    def build(self, _: Iterable[str]) -> None:
+    def run(self, ctx: Context, entries: Iterable[str]) -> None:
         """Run the Beet build pipeline for multiple entries."""
         raise NotImplementedError
 
-    def clean_links(self) -> None:
-        """Remove the previously linked files and folders."""
+    def build(self, entries: Iterable[str]) -> None:
+        """Run the builder for multiple entries."""
         project = Project(ProjectConfig().resolve(ROOT_DIR))
-        with ProjectBuilder(project=project, root=True).build():
-            pass
+        with ProjectBuilder(project=project, root=True).build() as ctx:
+            self.run(ctx, entries)
 
     def make_pack_config(self, *, zipped: bool) -> PackConfig:
         """Generate a Beet pack configuration with optional compression."""
@@ -42,43 +41,35 @@ class BaseBuilder(BaseModel):
 class ModuleBuilder(BaseBuilder):
     """Builder for modules."""
 
-    def build(self, modules: Iterable[str]) -> None:
-        """Run the Beet build pipeline for a single module."""
-        self.clean_links()
+    def run(self, _: Context, modules: Iterable[str]) -> None:
+        """Run the Beet build pipeline the given modules."""
         for module in modules:
             with ProjectBuilder(Project(ProjectConfig(
-                id=module,
-                output=self.output,
                 extend="module.json",
-                broadcast=[MODULES_DIR / module],
                 data_pack=self.make_pack_config(zipped=self.zipped),
                 resource_pack=self.make_pack_config(zipped=self.zipped),
-                pipeline=[*self.pipeline],
                 require=[*self.require, "bookshelf.plugins.update_mcmeta"],
-                meta=self.meta,
-            ).resolve(ROOT_DIR)), root=False).build():
+                pipeline=self.pipeline,
+                meta={**self.meta, "autosave": {"link": False}},
+            ).resolve(MODULES_DIR / module))).build():
                 pass
 
 
 class ExampleBuilder(BaseBuilder):
     """Builder for examples."""
 
-    def build(self, examples: Iterable[str]) -> None:
+    def run(self, _: Context, examples: Iterable[str]) -> None:
         """Run the Beet build pipeline for a single example."""
-        self.clean_links()
         for example in examples:
             with ProjectBuilder(Project(ProjectConfig(
-                id=example,
-                output=self.output,
-                broadcast=[EXAMPLES_DIR / f"{example}.md"],
                 data_pack=self.make_pack_config(zipped=self.zipped),
                 resource_pack=self.make_pack_config(zipped=self.zipped),
-                meta={**self.meta, "lectern": {"load": "."}},
+                require=["lectern.contrib.require", *self.require],
                 pipeline=["lectern", *self.pipeline],
-                require=[
-                    "lectern.contrib.require",
-                    *self.require,
-                    "bookshelf.plugins.update_mcmeta",
-                ],
-            ).resolve(ROOT_DIR)), root=False).build():
+                meta={
+                    **self.meta,
+                    "autosave": {"link": False},
+                    "lectern": {"load": "."},
+                },
+            ).resolve(EXAMPLES_DIR / f"{example}.md"))).build():
                 pass

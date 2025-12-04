@@ -1,10 +1,15 @@
-from collections import defaultdict
+from __future__ import annotations
 
-from beet import Context, LootTable
+from collections import defaultdict
+from typing import TYPE_CHECKING
 
 from bookshelf.definitions import MC_VERSIONS
 from bookshelf.models import Block, StatePredicate, StateValue, VoxelShape
 from bookshelf.services import minecraft
+
+if TYPE_CHECKING:
+    from beet import Context, LootTable
+
 
 CUBE = ((0.0, 0.0, 0.0, 16.0, 16.0, 16.0),)
 INTANGIBLE = [
