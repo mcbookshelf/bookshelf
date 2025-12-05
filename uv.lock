@@ -70,7 +70,7 @@ wheels = [
 
 [[package]]
 name = "beet"
-version = "0.112.0"
+version = "0.112.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -84,9 +84,9 @@ dependencies = [
     { name = "toml" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/1f/e9/2c890be2f96a4a05fe57b77dcfbf7de05a594ba6b9bd08493b4f31291800/beet-0.112.0.tar.gz", hash = "sha256:9732467adf7f33bc99077f58209dd41bd6e6fa18e13f3ae900f0be5994fcc86f", size = 93119, upload-time = "2025-10-15T22:16:49.766Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/58/bf/a7de57393f9d962dd93d5397c1025bdfe0d840e2df12dbf387da61468862/beet-0.112.2.tar.gz", hash = "sha256:fb007adb29df53a2300678cc9b79fc2922b36c685e2077f5832d740ec7fcb4c2", size = 93524, upload-time = "2025-12-01T22:39:24.142Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/24/cd/a08fdd765d848943cd2608aaa86cd5fad6300c4256aac654e144d3f9ea31/beet-0.112.0-py3-none-any.whl", hash = "sha256:3768c0f619ae8df1444067a0b869ea93b38d667dfb6b895e237e081971e94e36", size = 117871, upload-time = "2025-10-15T22:16:48.195Z" },
+    { url = "https://files.pythonhosted.org/packages/86/83/c5d5b0574f82e2ce3af7616d3385862b98b6f94d8dcd894cef062f9a9b01/beet-0.112.2-py3-none-any.whl", hash = "sha256:270e98fb16ee7a28900d6544ae96d35b1a957ff9bd9077f7478aee58edcbfc85", size = 118341, upload-time = "2025-12-01T22:39:22.971Z" },
 ]
 
 [[package]]
@@ -157,14 +157,14 @@ wheels = [
 
 [[package]]
 name = "click"
-version = "8.3.0"
+version = "8.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/46/61/de6cd827efad202d7057d93e0fed9294b96952e188f7384832791c7b2254/click-8.3.0.tar.gz", hash = "sha256:e7b8232224eba16f4ebe410c25ced9f7875cb5f3263ffc93cc3e8da705e229c4", size = 276943, upload-time = "2025-09-18T17:32:23.696Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz", hash = "sha256:12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a", size = 295065, upload-time = "2025-11-15T20:45:42.706Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/db/d3/9dcc0f5797f070ec8edf30fbadfb200e71d9db6b84d211e3b2085a7589a0/click-8.3.0-py3-none-any.whl", hash = "sha256:9b9f285302c6e3064f4330c05f05b81945b2a39544279343e6e7c5f27a9baddc", size = 107295, upload-time = "2025-09-18T17:32:22.42Z" },
+    { url = "https://files.pythonhosted.org/packages/98/78/01c019cdb5d6498122777c1a43056ebb3ebfeef2076d9d026bfe15583b2b/click-8.3.1-py3-none-any.whl", hash = "sha256:981153a64e25f12d547d3426c367a4857371575ee7ad18df2a6183ab0545b2a6", size = 108274, upload-time = "2025-11-15T20:45:41.139Z" },
 ]
 
 [[package]]
@@ -417,16 +417,16 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "beet", specifier = ">=0.112.0" },
+    { name = "beet", specifier = ">=0.112.2" },
     { name = "frozendict", specifier = ">=2.4.7" },
     { name = "orjson", specifier = ">=3.11.4" },
-    { name = "pydantic", specifier = ">=2.12.4" },
+    { name = "pydantic", specifier = ">=2.12.5" },
     { name = "semver", specifier = ">=3.0.4" },
 ]
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "click", specifier = ">=8.3.0" },
+    { name = "click", specifier = ">=8.3.1" },
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "lectern", specifier = ">=0.34.0" },
     { name = "platformdirs", specifier = ">=4.5.0" },
@@ -640,7 +640,7 @@ wheels = [
 
 [[package]]
 name = "pydantic"
-version = "2.12.4"
+version = "2.12.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "annotated-types" },
@@ -648,9 +648,9 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "typing-inspection" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/96/ad/a17bc283d7d81837c061c49e3eaa27a45991759a1b7eae1031921c6bd924/pydantic-2.12.4.tar.gz", hash = "sha256:0f8cb9555000a4b5b617f66bfd2566264c4984b27589d3b845685983e8ea85ac", size = 821038, upload-time = "2025-11-05T10:50:08.59Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/69/44/36f1a6e523abc58ae5f928898e4aca2e0ea509b5aa6f6f392a5d882be928/pydantic-2.12.5.tar.gz", hash = "sha256:4d351024c75c0f085a9febbb665ce8c0c6ec5d30e903bdb6394b7ede26aebb49", size = 821591, upload-time = "2025-11-26T15:11:46.471Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/82/2f/e68750da9b04856e2a7ec56fc6f034a5a79775e9b9a81882252789873798/pydantic-2.12.4-py3-none-any.whl", hash = "sha256:92d3d202a745d46f9be6df459ac5a064fdaa3c1c4cd8adcfa332ccf3c05f871e", size = 463400, upload-time = "2025-11-05T10:50:06.732Z" },
+    { url = "https://files.pythonhosted.org/packages/5a/87/b70ad306ebb6f9b585f114d0ac2137d792b48be34d732d60e597c2f8465a/pydantic-2.12.5-py3-none-any.whl", hash = "sha256:e561593fccf61e8a20fc46dfc2dfe075b8be7d0188df33f221ad1f0139180f9d", size = 463580, upload-time = "2025-11-26T15:11:44.605Z" },
 ]
 
 [[package]]

@@ -1,10 +1,16 @@
+from __future__ import annotations
+
 from collections import defaultdict
+from typing import TYPE_CHECKING
 
-from beet import Context, LootTable
-
-from bookshelf.definitions import MC_VERSIONS
 from bookshelf.models import Block, StatePredicate, StateValue, VoxelShape
 from bookshelf.services import minecraft
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
+    from beet import Context, LootTable, PackFile
+
 
 CUBE = ((0.0, 0.0, 0.0, 16.0, 16.0, 16.0),)
 INTANGIBLE = [
@@ -13,10 +19,11 @@ INTANGIBLE = [
 ]
 
 
-def beet_default(ctx: Context) -> None:
+@minecraft.generator
+def beet_default(ctx: Context, version: str) -> Iterable[tuple[str, PackFile]]:
     """Generate files used by the bs.hitbox module."""
-    namespace = ctx.directory.name
-    blocks = minecraft.get_blocks(ctx, MC_VERSIONS[-1])
+    ns = ctx.directory.name
+    blocks = minecraft.get_blocks(ctx.cache, version)
 
     groups = {"shape": defaultdict(list), "collision": defaultdict(list)}
     seen = set()
@@ -28,12 +35,10 @@ def beet_default(ctx: Context) -> None:
         for shape in (block.shape, block.collision_shape):
             if isinstance(shape, StatePredicate) and shape.group not in seen:
                 seen.add(shape.group)
-                loot_table = make_loot_table_state(shape)
-                ctx.generate(f"{namespace}:block/{shape.group}", render=loot_table)
+                yield f"{ns}:block/{shape.group}", make_loot_table_state(shape)
 
     for name, mapping in groups.items():
-        loot_table = make_shape_loot_table(mapping, f"{namespace}:block")
-        ctx.generate(f"{namespace}:block/get_{name}", render=loot_table)
+        yield f"{ns}:block/get_{name}", make_shape_loot_table(mapping, f"{ns}:block")
 
     for name, predicate in [
         ("has_shape_offset", lambda b: b.has_shape_offset),
@@ -44,8 +49,8 @@ def beet_default(ctx: Context) -> None:
         ("is_waterloggable", lambda b:
             any(p.name == "waterlogged" for p in b.properties)),
     ]:
-        if tag := ctx.data.block_tags.get(f"{namespace}:{name}"):
-            tag.merge(minecraft.make_block_tag(blocks, predicate))
+        base = ctx.data.block_tags[location := f"{ns}:{name}"]
+        yield location, minecraft.make_block_tag(base, blocks, predicate)
 
 
 def make_shape_loot_table(

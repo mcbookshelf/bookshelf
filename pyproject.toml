@@ -10,10 +10,10 @@ authors = [{ name = "Bookshelf Contributors", email = "contact@gunivers.net" }]
 license = { text = "MPL-2.0" }
 requires-python = ">=3.12"
 dependencies = [
-  "beet>=0.112.0",
+  "beet>=0.112.2",
   "frozendict>=2.4.7",
   "orjson>=3.11.4",
-  "pydantic>=2.12.4",
+  "pydantic>=2.12.5",
   "semver>=3.0.4",
 ]
 
@@ -29,7 +29,7 @@ examples = "bookshelf.commands.examples:examples"
 
 [dependency-groups]
 dev = [
-  "click>=8.3.0",
+  "click>=8.3.1",
   "httpx>=0.28.1",
   "lectern>=0.34.0",
   "platformdirs>=4.5.0",

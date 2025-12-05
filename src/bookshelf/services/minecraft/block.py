@@ -6,6 +6,7 @@ from itertools import chain, permutations, takewhile
 from logging import getLogger
 from typing import TYPE_CHECKING, Any
 
+import httpx
 from frozendict import frozendict
 
 from bookshelf.common import json
@@ -24,18 +25,17 @@ from .utils import cache_version
 if TYPE_CHECKING:
     from collections.abc import Callable
 
-    from beet import Context
-
 logger = getLogger(__name__)
 
 BLOCKS_URL = "https://raw.githubusercontent.com/mcbookshelf/mcdata/refs/tags/v1/{}/blocks/data.min.json"
 
 
 @cache_version("blocks", Collection[Block])
-def get_blocks(ctx: Context, version: str) -> Collection[Block]:
+def get_blocks(version: str) -> Collection[Block]:
     """Retrieve blocks for the provided version."""
-    cache = ctx.cache[f"version/{version}"]
-    raw = json.load(cache.download(BLOCKS_URL.format(version)), dict)
+    response = httpx.get(BLOCKS_URL.format(version))
+    response.raise_for_status()
+    raw = json.load(response.content, dict)
 
     blocks: list[dict[str, Any]] = []
     groups: dict[tuple[tuple[str, tuple[str, ...]], ...], int] = {(): 0}
@@ -61,6 +61,7 @@ def get_blocks(ctx: Context, version: str) -> Collection[Block]:
             "is_spawnable": _make_state_value("is_spawnable", states),
         })
 
+    blocks.sort(key=lambda b: b["type"])
     return Collection(root=_make_blocks(blocks))
 
 

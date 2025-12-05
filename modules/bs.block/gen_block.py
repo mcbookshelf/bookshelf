@@ -1,11 +1,15 @@
+from __future__ import annotations
+
 from collections import defaultdict
-from collections.abc import Sequence
+from typing import TYPE_CHECKING
 
-from beet import Context, Function, LootTable, Predicate
+from beet import Context, Function, LootTable, PackFile, Predicate
 
-from bookshelf.definitions import MC_VERSIONS
 from bookshelf.models import Block, StateNode, StatePredicate, StateProperty, StateValue
 from bookshelf.services import minecraft
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable, Sequence
 
 ATTR_TAGS = [
     ("has_state", lambda b: b.group > 0),
@@ -44,41 +48,47 @@ DATA_TABLE_INCLUDE = {
     "sounds",
 }
 
+LOOT_TABLE_INCLUDE = {
+    "type",
+    "item",
+    "group",
+    "sounds", # @deprecated sounds (removed in in 4.0.0)
+}
 
-def beet_default(ctx: Context) -> None:
-    """Generate files used by the bs.block module."""
-    namespace = ctx.directory.name
-    blocks = minecraft.get_blocks(ctx, MC_VERSIONS[-1])
 
-    loot_table = make_block_loot_table(blocks)
-    ctx.generate(f"{namespace}:internal/get_type", render=loot_table)
-    loot_table = make_block_loot_table(blocks, f"{namespace}:internal")
-    ctx.generate(f"{namespace}:internal/get_block", render=loot_table)
+@minecraft.generator
+def beet_default(ctx: Context, version: str) -> Iterable[tuple[str, PackFile]]:
+    """Generate files used by the module for a given version."""
+    ns = ctx.directory.name
+    blocks = minecraft.get_blocks(ctx.cache, version)
+
+    yield f"{ns}:internal/get_type", make_block_loot_table(blocks)
+    yield f"{ns}:internal/get_block", make_block_loot_table(blocks, f"{ns}:internal")
 
     for state in {s.group: s for b in blocks for s in b.properties}.values():
-        loot_table = make_block_state_loot_table(state, f"{namespace}:internal")
-        ctx.generate(f"{namespace}:internal/group_{state.group}", render=loot_table)
+        location = f"{ns}:internal/group_{state.group}"
+        yield location, make_block_state_loot_table(state, f"{ns}:internal")
 
     for name, formatter in [
         ("types", format_types_table),
         ("items", format_items_table),
         ("groups", format_groups_table),
     ]:
-        ctx.generate(
-            f"{namespace}:import/{name}_table",
-            render=Function(source_path=f"{name}_table.jinja"),
-            data=formatter(blocks),
-        )
+        location = f"{ns}:import/{name}_table"
+        content = ctx.template.render(f"{name}_table.jinja", data=formatter(blocks))
+        yield location, Function(content)
 
     for name, predicate in ATTR_TAGS:
-        tag = ctx.data.block_tags.get(f"{namespace}:{name}")
-        tag.merge(minecraft.make_block_tag(blocks, predicate))
+        base = ctx.data.block_tags[location := f"{ns}:{name}"]
+        yield location, minecraft.make_block_tag(base, blocks, predicate)
 
     for name, attribute in ATTR_PREDICATES:
         groups = defaultdict(list)
         for block in blocks:
             groups[attribute(block)].append(block)
-        merge_attr_predicate(ctx.data.predicates.get(f"{namespace}:{name}"), groups)
+
+        base = ctx.data.predicates[location := f"{ns}:{name}"]
+        yield location, make_attr_predicate(base, groups)
 
     for name, attribute in ATTR_LOOT_TABLES:
         seen = set()
@@ -87,11 +97,11 @@ def beet_default(ctx: Context) -> None:
             groups[value := attribute(block)].append(block)
             if isinstance(value, StatePredicate) and value not in seen:
                 seen.add(value)
-                file = make_attr_state_loot_table(name, value)
-                ctx.generate(f"{namespace}:internal/{name}_{value.group}", render=file)
+                location = f"{ns}:internal/{name}_{value.group}"
+                yield location, make_attr_state_loot_table(name, value)
 
-        file = make_attr_loot_table(name, groups, f"{namespace}:internal")
-        ctx.generate(f"{namespace}:internal/get_{name}", render=file)
+        location = f"{ns}:internal/get_{name}"
+        yield location, make_attr_loot_table(name, groups, f"{ns}:internal")
 
 
 def format_types_table(blocks: Sequence[Block]) -> dict:
@@ -120,11 +130,10 @@ def format_groups_table(blocks: Sequence[Block]) -> dict:
 
 def format_block_loot_entry(entry: dict, block: Block) -> dict:
     """Attach block data to a loot entry."""
-    # @deprecated sounds (removed in in 4.0.0)
     return {**entry, "functions": [{
         "function": "set_custom_data",
         "tag": minecraft.render_snbt(block.model_dump(
-            include={"type", "item", "group", "sounds"},
+            include=LOOT_TABLE_INCLUDE,
         )),
     }]}
 
@@ -219,10 +228,10 @@ def make_attr_state_loot_table(attr: str, entry: StatePredicate) -> LootTable:
     })
 
 
-def merge_attr_predicate(
-    predicate: Predicate,
+def make_attr_predicate(
+    base: Predicate,
     groups: dict[StateValue[bool], list[Block]],
-) -> None:
+) -> Predicate:
     """Create a predicate for a collection of blocks grouped by attribute."""
     def optimize_entry(entry: dict) -> dict | None:
         terms = list(filter(None, entry.get("terms", [])))
@@ -251,8 +260,8 @@ def merge_attr_predicate(
 
         return optimize_entry({"condition":"any_of","terms":terms})
 
-    predicate.set_content(optimize_entry({
-        **predicate.deserialize(predicate.get_content()),
+    return Predicate({
+        **base.data,
         "condition": "any_of",
         "terms": [optimize_entry({
             "condition": "all_of", "terms":[{
@@ -263,4 +272,4 @@ def merge_attr_predicate(
             "condition": "location_check",
             "predicate": {"block": {"blocks": [b.type[10:] for b in blocks]}},
         } for group, blocks in groups.items() if group],
-    }))
+    })

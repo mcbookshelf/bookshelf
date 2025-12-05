@@ -3,18 +3,21 @@ from __future__ import annotations
 import asyncio
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import TYPE_CHECKING
 
 import click
 
 from bookshelf.common.logging import summarize_logs
 from bookshelf.common.termui import track
 from bookshelf.common.utils import watch_and_run
-from bookshelf.definitions import BUILD_DIR, BUNDLES, MC_VERSIONS, MODULES, MODULES_DIR
+from bookshelf.definitions import (
+    BUILD_DIR,
+    BUNDLES,
+    MC_VERSIONS,
+    MODULES,
+    MODULES_DIR,
+    RELEASE_DIR,
+)
 from bookshelf.services import builder, packtest, publishers
-
-if TYPE_CHECKING:
-    from collections.abc import Sequence
 
 
 @click.group()
@@ -23,48 +26,44 @@ def modules() -> None:
 
 
 @modules.command()
-@click.argument("modules", nargs=-1)
+@click.argument("modules", default=MODULES, nargs=-1)
 def build(modules: tuple[str, ...]) -> None:
     """Build the specified modules."""
     with summarize_logs("🔨 BUILDING MODULES…"):
-        build_modules(
-            modules or MODULES,
-            builder.BuildOptions(
-                require=["bookshelf.plugins.include_tests"],
-                output=BUILD_DIR,
-            ),
-        )
+        entries = track((f"Build module [green]{m}", m) for m in modules)
+        builder.ModuleBuilder(
+            require=["bookshelf.plugins.build_pack"],
+            meta={"build": {"output": BUILD_DIR}},
+        ).build(entries)
 
 
 @modules.command()
-@click.argument("modules", nargs=-1)
+@click.argument("modules", default=MODULES, nargs=-1)
 def watch(modules: tuple[str, ...]) -> None:
     """Watch for changes in specified modules and rebuild them."""
     with summarize_logs("👀 WATCHING MODULES…"):
-        watch_and_run(
-            build_modules,
-            [MODULES_DIR],
-            modules or MODULES,
-            builder.BuildOptions(
-                require=["bookshelf.plugins.include_tests"],
-                output=BUILD_DIR,
-            ),
-        )
+        def run() -> None:
+            entries = track((f"Build module [green]{m}", m) for m in modules)
+            builder.ModuleBuilder(
+                require=["bookshelf.plugins.build_pack"],
+                meta={"build": {"output": BUILD_DIR}},
+            ).build(entries)
+        watch_and_run(run, MODULES_DIR)
 
 
 @modules.command()
 def release() -> None:
     """Build and release zipped modules."""
-    packs = []
     with summarize_logs("🔨 BUILDING MODULES…", exit_on_errors=True):
-        build_modules([*BUNDLES, *MODULES], builder.BuildOptions(
-            zipped=True,
+        packs = []
+        entries = track((f"Build module [green]{m}", m) for m in [*BUNDLES, *MODULES])
+        builder.ModuleBuilder(
             require=["bookshelf.plugins.release_pack"],
-            meta={
-                "autosave": {"link": False},
-                "publish": lambda spec: packs.append(spec),
-            },
-        ))
+            meta={"release": {
+                "output": RELEASE_DIR,
+                "enqueue": lambda spec: packs.append(spec),
+            }, "versions": MC_VERSIONS},
+        ).build(entries)
 
     with summarize_logs("🚀 PUBLISHING MODULES…", exit_on_errors=True):
         for publish in track([
@@ -75,46 +74,36 @@ def release() -> None:
 
 
 @modules.command()
-@click.argument("modules", nargs=-1)
+@click.argument("modules", default=MODULES, nargs=-1)
 @click.option("--versions", is_flag=True)
 def test(modules: tuple[str, ...], *, versions: bool) -> None:
     """Build and test modules."""
     with TemporaryDirectory() as directory:
+        output = Path(directory)
+
         with summarize_logs("🔨 BUILDING MODULES…", exit_on_errors=True):
-            build_modules(
-                modules or MODULES,
-                builder.BuildOptions(
-                    require=["bookshelf.plugins.include_tests"],
-                    meta={"autosave": {"link": False}},
-                    output=(output := Path(directory)),
-                    zipped=True,
-                ),
-            )
+            entries = track((f"Build module [green]{m}", m) for m in modules)
+            builder.ModuleBuilder(
+                require=["bookshelf.plugins.build_pack"],
+                meta={"build": {
+                    "output": output,
+                    "link": False,
+                }, "versions": MC_VERSIONS},
+                zipped=True,
+            ).build(entries)
 
         with summarize_logs("🔬 TESTING MODULES…", exit_on_errors=True):
-            mc_versions = reversed(MC_VERSIONS) if versions else MC_VERSIONS[-1:]
-            asyncio.run(test_modules(output, list(mc_versions)))
+            async def test_modules() -> None:
+                vers = list(reversed(MC_VERSIONS)) if versions else MC_VERSIONS[-1:]
+                coros = [packtest.run(output, v) for v in vers]
+                tasks = [asyncio.create_task(coro) for coro in coros]
 
+                for task in track(
+                    (f"Test version [green]{v}[/green]", t)
+                    for v, t in zip(vers, tasks, strict=True)
+                ):
+                    logs = await task
+                    for event in logs:
+                        event.log()
 
-def build_modules(modules: Sequence[str], options: builder.BuildOptions) -> None:
-    """Run the build for each module, reporting progress to the user."""
-    builder.clean_links()
-    for build, module in track((
-        f"Build module [green]{module}",
-        (builder.build_module, module),
-    ) for module in modules):
-        build(module, options)
-
-
-async def test_modules(datapacks: Path, mc_versions: list[str]) -> None:
-    """Run tests for the given datapacks on specified Minecraft versions."""
-    coros = [packtest.run(datapacks, v) for v in mc_versions]
-    tasks = [asyncio.create_task(coro) for coro in coros]
-
-    for task in track(
-        (f"Test version [green]{v}[/green]", process)
-        for v, process in zip(mc_versions, tasks, strict=True)
-    ):
-        logs = await task
-        for event in logs:
-            event.log()
+            asyncio.run(test_modules())

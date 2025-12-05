@@ -21,3 +21,7 @@ class Collection[T](RootModel[list[T]], Sequence[T]):
     def __len__(self) -> int:
         """Return the number of models in the collection."""
         return len(self.root)
+
+    def __hash__(self) -> int:
+        """Hash based on the collection items."""
+        return hash(tuple(self.root))

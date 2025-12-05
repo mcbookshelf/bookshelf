@@ -27,6 +27,10 @@ class Biome(BaseModel, frozen=True):
     temperature: float
     has_precipitation: bool = True
 
+    def __hash__(self) -> int:
+        """Hash based on the biome ID."""
+        return hash(self.type)
+
 
 class Block(BaseModel, frozen=True):
     """Represents a Minecraft block."""
@@ -51,6 +55,10 @@ class Block(BaseModel, frozen=True):
     luminance: StateValue[int] = 0
     is_conductive: StateValue[bool] = False
     is_spawnable: StateValue[bool] = False
+
+    def __hash__(self) -> int:
+        """Hash based on the block ID."""
+        return hash(self.type)
 
 
 class StatePredicate[T](BaseModel, frozen=True):

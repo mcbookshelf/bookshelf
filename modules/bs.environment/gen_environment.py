@@ -1,38 +1,49 @@
+from __future__ import annotations
+
 from collections import defaultdict
-from collections.abc import Sequence
+from typing import TYPE_CHECKING
 
-from beet import Context, LootTable, Predicate
+from beet import Context, LootTable, PackFile, Predicate
 
-from bookshelf.definitions import MC_VERSIONS
-from bookshelf.models import Biome
 from bookshelf.services import minecraft
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable, Sequence
+
+    from bookshelf.models import Biome
 
 SNOW_THRESHOLD = 0.4
 
 
-def beet_default(ctx: Context) -> None:
+@minecraft.generator
+def beet_default(ctx: Context, version: str) -> Iterable[tuple[str, PackFile]]:
     """Generate files used by the environment module."""
-    namespace = ctx.directory.name
-    biomes = minecraft.get_biomes(ctx, MC_VERSIONS[-1])
+    ns = ctx.directory.name
+    biomes = minecraft.get_biomes(ctx.cache, version)
 
-    loot_table = make_biome_loot_table(biomes)
-    ctx.generate(f"{namespace}:biome/get", render=loot_table)
-
-    if predicate := ctx.data.predicates.get(f"{namespace}:can_snow"):
-        predicate.data.update(make_can_snow_predicate(biomes).data)
-    if predicate := ctx.data.predicates.get(f"{namespace}:has_precipitation"):
-        predicate.data.update(make_has_precipitation_predicate(biomes).data)
+    yield f"{ns}:internal/get_biome", make_biome_loot_table(biomes)
+    base = ctx.data.predicates[location := f"{ns}:can_snow"]
+    yield location, make_can_snow_predicate(base, biomes)
+    base = ctx.data.predicates[location := f"{ns}:has_precipitation"]
+    yield location, make_has_precipitation_predicate(base, biomes)
 
 
-def make_has_precipitation_predicate(biomes: Sequence[Biome]) -> Predicate:
+def make_has_precipitation_predicate(
+    base: Predicate,
+    biomes: Sequence[Biome],
+) -> Predicate:
     """Create a predicate to determine biomes with precipitation."""
     return Predicate({
+        **base.data,
         "condition": "minecraft:location_check",
         "predicate": {"biomes": [b.type for b in biomes if b.has_precipitation]},
     })
 
 
-def make_can_snow_predicate(biomes: Sequence[Biome]) -> Predicate:
+def make_can_snow_predicate(
+    base: Predicate,
+    biomes: Sequence[Biome],
+) -> Predicate:
     """Create a predicate to determine where snow can occur."""
     groups = defaultdict(list[str])
     for biome in filter(
@@ -44,6 +55,7 @@ def make_can_snow_predicate(biomes: Sequence[Biome]) -> Predicate:
         groups[str(y if y > 0 else -2147483648)].append(biome.type)
 
     return Predicate({
+        **base.data,
         "condition":"minecraft:any_of",
         "terms": [{
             "condition": "minecraft:location_check",

@@ -15,6 +15,6 @@
 
 # camel group
 execute at @s positioned ~ ~1 ~ if entity @s[dx=0] run return run data modify storage bs:out hitbox set value {width:1.7,height:2.375}
-execute unless predicate bs.hitbox:is_baby run return run data modify storage bs:out hitbox set value {width:1.7,height:0.945}
+execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:1.7,height:0.945}
 execute at @s positioned ~ ~1 ~ if entity @s[dx=0] run return run data modify storage bs:out hitbox set value {width:0.765,height:1.06875}
 data modify storage bs:out hitbox set value {width:0.765,height:0.42525}

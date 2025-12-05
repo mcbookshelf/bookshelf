@@ -14,7 +14,7 @@ from bookshelf.common import errors
 from bookshelf.definitions import GITHUB_REPO, ROOT_DIR, VERSION
 
 if TYPE_CHECKING:
-    from collections.abc import Callable, Sequence
+    from collections.abc import Callable
 
 
 def locate_command(command: str) -> str:
@@ -32,11 +32,7 @@ def raw_github_url(file: Path, version: str = VERSION) -> str:
     return f"https://raw.githubusercontent.com/{GITHUB_REPO}/refs/tags/v{version}/{slug}"
 
 
-def validate_model[T: BaseModel](
-    file: Path,
-    model: type[T],
-    obj: object,
-) -> T:
+def validate_model[T: BaseModel](file: Path | None, model: type[T], obj: object) -> T:
     """Validate a Model with custom errors."""
     try:
         return model.model_validate(obj)
@@ -54,15 +50,10 @@ def validate_model[T: BaseModel](
         raise errors.BookshelfCompositeError(message, errs) from e
 
 
-def watch_and_run[**P, R](
-    run: Callable[P, R],
-    paths: Sequence[Path],
-    *args: P.args,
-    **kwargs: P.kwargs,
-) -> None:
+def watch_and_run(run: Callable[[], None], *paths: Path) -> None:
     """Run a callable once, then re-run it on file changes in the given paths."""
     console = Console()
-    run(*args, **kwargs)
+    run()
     for changes in watch(*paths):
         with error_handler(format_padding=1):
             count = len(changes)
@@ -72,4 +63,4 @@ def watch_and_run[**P, R](
                 f"{count} change{'s' if count != 1 else ''} detected "
                 f"[bright_black]({', '.join(filenames)})[/bright_black]",
             )
-            run(*args, **kwargs)
+            run()

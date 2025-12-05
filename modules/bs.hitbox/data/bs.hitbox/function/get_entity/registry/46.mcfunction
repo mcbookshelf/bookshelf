@@ -14,6 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # salmon group
-execute unless predicate bs.hitbox:salmon/large run return run data modify storage bs:out hitbox set value {width:1.05,height:0.6}
-execute unless predicate bs.hitbox:salmon/small run return run data modify storage bs:out hitbox set value {width:0.35,height:0.2}
+execute unless predicate bs.hitbox:internal/salmon/large run return run data modify storage bs:out hitbox set value {width:1.05,height:0.6}
+execute unless predicate bs.hitbox:internal/salmon/small run return run data modify storage bs:out hitbox set value {width:0.35,height:0.2}
 data modify storage bs:out hitbox set value {width:0.7,height:0.4}

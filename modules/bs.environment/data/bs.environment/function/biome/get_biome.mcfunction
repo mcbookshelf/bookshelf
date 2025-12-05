@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data remove storage bs:out environment.get_biome
-loot replace entity B5-0-0-0-3 contents loot bs.environment:biome/get
+loot replace entity B5-0-0-0-3 contents loot bs.environment:internal/get_biome
 data modify storage bs:out environment.get_biome set from entity B5-0-0-0-3 item.components."minecraft:custom_data"

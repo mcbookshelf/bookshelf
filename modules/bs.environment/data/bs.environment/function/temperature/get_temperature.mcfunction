@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-loot replace entity B5-0-0-0-3 contents loot bs.environment:biome/get
+loot replace entity B5-0-0-0-3 contents loot bs.environment:internal/get_biome
 execute store result score $environment.celestial_angle.daytime bs.in run data get entity B5-0-0-0-3 item.components."minecraft:custom_data".temperature
 execute store result storage bs:ctx y double .00000001 summon minecraft:marker run function bs.environment:temperature/variation
 $execute store result score $environment.get_temperature bs.out run return run data get storage bs:ctx y $(scale)
