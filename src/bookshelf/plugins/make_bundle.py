@@ -17,8 +17,11 @@ __path__ = ()
 def beet_default(ctx: Context) -> None:
     """Include all modules."""
     for mod in MODULES:
-        config = {"directory": f"{MODULES_DIR}/{mod}", "extend": "module.json"}
-        ctx.require(subproject(config))
+        ctx.require(subproject({
+            "directory": f"{MODULES_DIR}/{mod}",
+            "extend": "module.json",
+            "meta": ctx.meta,
+        }))
     ctx.data.icon = PngFile(source_path=ctx.directory / "pack.png")
 
 
@@ -29,7 +32,10 @@ def __getattr__(tag: str) -> Callable[[Context], None]:
         for mod in MODULES:
             meta = json.loads((MODULES_DIR / mod / "module.json").read_text("utf-8"))
             if tag in meta.get("meta", {}).get("tags", []):
-                config = {"directory": f"{MODULES_DIR}/{mod}", "extend": "module.json"}
-                ctx.require(subproject(config))
+                ctx.require(subproject({
+                    "directory": f"{MODULES_DIR}/{mod}",
+                    "extend": "module.json",
+                    "meta": ctx.meta,
+                }))
         ctx.data.icon = PngFile(source_path=ctx.directory / "pack.png")
     return plugin

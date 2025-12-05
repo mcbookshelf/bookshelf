@@ -6,13 +6,17 @@ from functools import singledispatch, wraps
 from typing import TYPE_CHECKING
 
 import orjson
-from beet import BlockTag, LootTable
+from beet import BlockTag, Context, JsonFileBase, LootTable, PackFile
 from pydantic import BaseModel
 
 from bookshelf.common import json
+from bookshelf.definitions import MC_VERSIONS
 from bookshelf.models import Block, StateNode, StatePredicate
+from bookshelf.plugins.update_mcmeta import get_supported_formats
 
 if TYPE_CHECKING:
+    from collections.abc import Iterable
+
     from beet import ProjectCache
 
 
@@ -90,15 +94,39 @@ def cache_version[T: BaseModel | dict | list](
     return decorator
 
 
-def update_block_tag(
-    tag: BlockTag,
+def generator(
+    func: Callable[[Context, str], Iterable[tuple[str, PackFile]]],
+) -> Callable[[Context], None]:
+    """Wrap a beet generator with overlay/compatibility logic."""
+    def decorator(ctx: Context) -> None:
+        seen = {}
+        for version in reversed(ctx.meta.get("versions", MC_VERSIONS[-1:])):
+            for location, file in func(ctx, version):
+                if isinstance(file, JsonFileBase):
+                    file.encoder = lambda obj: orjson.dumps(obj).decode()
+                    file.decoder = lambda obj: orjson.loads(obj.encode())
+                if location not in seen:
+                    seen[location] = file.ensure_serialized()
+                    ctx.data[location] = file
+                elif seen[location] != file.ensure_serialized():
+                    seen[location] = file.ensure_serialized()
+                    overlay = ctx.data.overlays[version]
+                    min_formats = get_supported_formats(ctx, MC_VERSIONS[0])
+                    max_formats = get_supported_formats(ctx, version)
+                    overlay.max_format = max_formats["data"]
+                    overlay.min_format = min_formats["data"]
+                    overlay[location] = file
+    return decorator
+
+
+def make_block_tag(
+    base: BlockTag,
     blocks: Sequence[Block],
     predicate: Callable[[Block], bool],
 ) -> BlockTag:
     """Create or update a block tag for blocks that match the predicate."""
     values = sorted(block.type for block in blocks if predicate(block))
-    tag.merge(BlockTag({"values": values}))
-    return tag
+    return BlockTag({**base.data, "values": values})
 
 
 def make_loot_table_binary[T](

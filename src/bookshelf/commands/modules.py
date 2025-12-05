@@ -62,7 +62,7 @@ def release() -> None:
             meta={"release": {
                 "output": RELEASE_DIR,
                 "enqueue": lambda spec: packs.append(spec),
-            }},
+            }, "versions": MC_VERSIONS},
         ).build(entries)
 
     with summarize_logs("🚀 PUBLISHING MODULES…", exit_on_errors=True):
@@ -85,7 +85,10 @@ def test(modules: tuple[str, ...], *, versions: bool) -> None:
             entries = track((f"Build module [green]{m}", m) for m in modules)
             builder.ModuleBuilder(
                 require=["bookshelf.plugins.build_pack"],
-                meta={"build": {"output": output, "link": False}},
+                meta={"build": {
+                    "output": output,
+                    "link": False,
+                }, "versions": MC_VERSIONS},
                 zipped=True,
             ).build(entries)
 

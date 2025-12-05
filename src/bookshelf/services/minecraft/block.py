@@ -61,6 +61,7 @@ def get_blocks(version: str) -> Collection[Block]:
             "is_spawnable": _make_state_value("is_spawnable", states),
         })
 
+    blocks.sort(key=lambda b: b["type"])
     return Collection(root=_make_blocks(blocks))
 
 
