@@ -1,0 +1,132 @@
+# Translations template for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-09-16 12:00+0100\n"
+"Last-Translator: Claude Code\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../mentions-legales.md:2 04f9b05e43764dd9b311a4bd80852014
+msgid "Mentions Légales"
+msgstr "Mentions Légales"
+
+#: ../../../mentions-legales.md:4 b51f75e02c094e299aa2aa888b18acf4
+msgid ""
+"Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour "
+"la confiance en l'économie numérique, il est précisé aux utilisateurs du "
+"site [docs.mcbookshelf.dev](https://docs.mcbookshelf.dev) l'identité des "
+"différents intervenants dans le cadre de sa réalisation et de son suivi."
+msgstr ""
+"Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour "
+"la confiance en l'économie numérique, il est précisé aux utilisateurs du "
+"site [docs.mcbookshelf.dev](https://docs.mcbookshelf.dev) l'identité des "
+"différents intervenants dans le cadre de sa réalisation et de son suivi."
+
+#: ../../../mentions-legales.md:6 ffa27502b5124c4d9b090a1986cc7117
+msgid "Edition du site"
+msgstr "Edition du site"
+
+#: ../../../mentions-legales.md:8 d420b332d49640c8908393853ddd485a
+msgid ""
+"Le présent site, accessible à l'URL "
+"[docs.mcbookshelf.dev](https://docs.mcbookshelf.dev) (le « Site »), est "
+"édité par :"
+msgstr ""
+"Le présent site, accessible à l'URL "
+"[docs.mcbookshelf.dev](https://docs.mcbookshelf.dev) (le « Site »), est "
+"édité par :"
+
+#: ../../../mentions-legales.md:10 c592124d3c754fb4ad06d373d1e7a363
+msgid ""
+"L'association Altearn, enregistrée auprès de la préfecture de police de "
+"Paris au répertoire national des associations sous le numéro W061014075, "
+"ayant son siège situé à Appartement 561, 16 rue Curial, 75019 PARIS, et "
+"représentée par Vincent Foriel, président."
+msgstr ""
+"L'association Altearn, enregistrée auprès de la préfecture de police de "
+"Paris au répertoire national des associations sous le numéro W061014075, "
+"ayant son siège situé à Appartement 561, 16 rue Curial, 75019 PARIS, et "
+"représentée par Vincent Foriel, président."
+
+#: ../../../mentions-legales.md:12 7a751fdfe08a484fbd61dbb4c94933c5
+msgid "Hébergement"
+msgstr "Hébergement"
+
+#: ../../../mentions-legales.md:14 421bec3599c94164a22ea48ee675ce7c
+msgid ""
+"Le Site est hébergé par la société Read the Docs, Inc., dont le siège "
+"social est situé aux États-Unis, en Oregon. Pour toute question relative "
+"à l'hébergement, vous pouvez contacter le support de Read the Docs par "
+"email à l'adresse "
+"[support@readthedocs.com](mailto:support@readthedocs.com) ou consulter "
+"leur site web à l'adresse "
+"[https://readthedocs.org](https://readthedocs.org)."
+msgstr ""
+"Le Site est hébergé par la société Read the Docs, Inc., dont le siège "
+"social est situé aux États-Unis, en Oregon. Pour toute question relative "
+"à l'hébergement, vous pouvez contacter le support de Read the Docs par "
+"email à l'adresse "
+"[support@readthedocs.com](mailto:support@readthedocs.com) ou consulter "
+"leur site web à l'adresse "
+"[https://readthedocs.org](https://readthedocs.org)."
+
+#: ../../../mentions-legales.md:17 296b621d94fb4db59843524aa9deb637
+msgid "Directeur de publication"
+msgstr "Directeur de publication"
+
+#: ../../../mentions-legales.md:19 57fab99c64a141cfad2a2f8d8d92f38b
+msgid ""
+"La direction de publication du Site est assurée par le·a président·e de "
+"l'association Altearn."
+msgstr ""
+"La direction de publication du Site est assurée par le·a président·e de "
+"l'association Altearn."
+
+#: ../../../mentions-legales.md:22 f4e447e4ec724f5693abb91796500217
+msgid "Nous contacter"
+msgstr "Nous contacter"
+
+#: ../../../mentions-legales.md:24 f88da63c27984fa7a5a8e854db759513
+msgid ""
+"Par téléphone : +33699274663 \\ Par email : "
+"[contact@altearn.xyz](mailto:contact@altearn.xyz) \\ Par courrier : "
+"Appartement 561, 16 rue Curial, 75019 Paris"
+msgstr ""
+"Par téléphone : +33699274663 \\ Par email : "
+"[contact@altearn.xyz](mailto:contact@altearn.xyz) \\ Par courrier : "
+"Appartement 561, 16 rue Curial, 75019 Paris"
+
+#: ../../../mentions-legales.md:28 a1486922ad7e438b917e9fc5d7fbab0c
+msgid "Données personnelles"
+msgstr "Données personnelles"
+
+#: ../../../mentions-legales.md:30 91a9ef43d6ef40f59eed570eee1477b9
+msgid ""
+"Nous traitons certaines données personnelles, telles que votre adresse "
+"IP, votre *user-agent* et d'autres informations techniques similaires, "
+"dans le but de faire fonctionner correctement notre site. Le traitement "
+"de ces données étant strictement nécessaire pour le fonctionnement du "
+"site, celui-ci est licite conformément à l'article 6.1(b) du RGPD (base "
+"légale \"le traitement est nécessaire à l'exécution d'un contrat\"). Nous"
+" ne traitons aucune autre donnée personnelle vous concernant."
+msgstr ""
+"Nous traitons certaines données personnelles, telles que votre adresse "
+"IP, votre *user-agent* et d'autres informations techniques similaires, "
+"dans le but de faire fonctionner correctement notre site. Le traitement "
+"de ces données étant strictement nécessaire pour le fonctionnement du "
+"site, celui-ci est licite conformément à l'article 6.1(b) du RGPD (base "
+"légale \"le traitement est nécessaire à l'exécution d'un contrat\"). Nous"
+" ne traitons aucune autre donnée personnelle vous concernant."
+

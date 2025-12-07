@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: https://github.com/mcbookshelf/bookshelf/issues\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-01-19 12:00+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v2.0.0.md:1 10d9879269b44822877d8b8ab8867369
+msgid ""
+"📦 [Bookshelf - "
+"2.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.0.0)"
+msgstr ""
+"📦 [Bookshelf - "
+"2.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.0.0)"
+
+#: ../../../changelog/v2.0.0.md:3 6a733f26a13d45d0b66e12958c453fc9
+msgid "**🌱 The Flourishing Update!**"
+msgstr "**🌱 La mise à jour Florissante !**"
+
+#: ../../../changelog/v2.0.0.md:5 9df0c97f30574bfe899c4eeb2a9f328a
+msgid ""
+"*This release replants the foundation of the Gunivers Library, growing "
+"into something entirely new.*"
+msgstr ""
+"*Cette version replante les fondations de Gunivers Libs, évoluant vers quelque chose d'entièrement nouveau.*"
+
+#: ../../../changelog/v2.0.0.md:7 e60c837a1d414849959fa3b07ec97f30
+msgid ""
+"**⚠️ BREAKING CHANGES**: This new version is filled with breaking "
+"changes. Since maintaining a list of those became unrealistic, the "
+"following changelog only highlights a selection of tweaks and new "
+"functionalities."
+msgstr ""
+"**⚠️ BREAKING CHANGES** : Cette nouvelle version est remplie de breaking changes. Comme maintenir une liste complète de ceux-ci est devenu irréaliste, "
+"le changelog suivant ne met en évidence qu'une sélection d'améliorations et de nouvelles fonctionnalités."
+
+#: ../../../changelog/v2.0.0.md:10 32b840f8884042ba942b5ead6846241b
+msgid "🎉 Addition"
+msgstr "🎉 Ajouts"
+
+#: ../../../changelog/v2.0.0.md:12 e05b45445d5a4504bcf2c646ca2e5859
+msgid "There is now a changelog!"
+msgstr "Il y a maintenant un changelog !"
+
+#: ../../../changelog/v2.0.0.md:13 165951a08b4c475f8756e66a3b699206
+msgid "Added player health manipulation."
+msgstr "Ajout de la manipulation de la santé du joueur."
+
+#: ../../../changelog/v2.0.0.md:14 7eda5c54420b48b4a8956fa175bc684a
+msgid "Added precise collisions (move, raycast and view)."
+msgstr "Ajout des collisions précises (move, raycast et view)."
+
+#: ../../../changelog/v2.0.0.md:15 22e70c2226d94631b4c1ae5c822d22f4
+msgid "Added float manipulation (frexp and ldexp)."
+msgstr "Ajout de la manipulation de nombres à virgule flottante (frexp et ldexp)."
+
+#: ../../../changelog/v2.0.0.md:16 e7ee929c032347649138061ea8e20e39
+msgid "Added a new hitbox module."
+msgstr "Ajout d'un nouveau module hitbox."
+
+#: ../../../changelog/v2.0.0.md:17 b0ce0bda68514cc8838780d677c51c04
+msgid "Added a new raycast module."
+msgstr "Ajout d'un nouveau module raycast."
+
+#: ../../../changelog/v2.0.0.md:18 8b874329e1724620a4a1bae7f30df6b7
+msgid "Added a new sidebar module."
+msgstr "Ajout d'un nouveau module sidebar."
+
+#: ../../../changelog/v2.0.0.md:20 e96b07847ed7434986dde1d9e296bda3
+msgid "⚡ Enhancements"
+msgstr "⚡ Améliorations"
+
+#: ../../../changelog/v2.0.0.md:22 90e03d0749104e38b43ccc0a7256f820
+msgid "The project has a new fresh identity: Bookshelf."
+msgstr "Le projet a une nouvelle identité toute fraîche : Bookshelf."
+
+#: ../../../changelog/v2.0.0.md:23 cebd53a9fb7743e598ef5a0489f38967
+msgid ""
+"Every module has been reworked for improved accuracy, performance, and/or"
+" simplicity."
+msgstr "Chaque module a été retravaillé pour une précision, des performances et/ou une simplicité améliorées."
+
+#: ../../../changelog/v2.0.0.md:24 3471dff010694e91ad2ac9d085f7db5f
+msgid "Renamed almost everything (scores, objectives, functions, ...)."
+msgstr "Renommage de presque tout (scores, objectifs, fonctions, ...)."
+
+#: ../../../changelog/v2.0.0.md:25 24ab5e3beedc4e609f24f0c6bf33ab67
+msgid ""
+"Many functions now utilize macros, storage, or fake scores instead of "
+"objectives."
+msgstr "De nombreuses fonctions utilisent maintenant des macros, du storage ou de faux scores au lieu d'objectifs."
+
+#: ../../../changelog/v2.0.0.md:26 05d91c2bc2294217bc896903cf0ca0da
+msgid "Removed the core module. The library no longer requires a base module."
+msgstr "Suppression du module core. La bibliothèque ne nécessite plus de module de base."
+
+#: ../../../changelog/v2.0.0.md:27 b0ecc37518e64092aabcf15e40794575
+msgid "Removed outdated modules (cache, item, mapedit, and memory)."
+msgstr "Suppression des modules obsolètes (cache, item, mapedit et memory)."
+
+#: ../../../changelog/v2.0.0.md:28 a046fece1c11403c88806246b80f868a
+msgid "Merged the location and orientation modules into a new position module."
+msgstr "Fusion des modules location et orientation en un nouveau module position."
+
+#: ../../../changelog/v2.0.0.md:29 ef672a52a5884ab9b9a4baa76de59767
+msgid ""
+"Bitwise operations have been moved out of the math module into a separate"
+" module."
+msgstr "Les opérations bitwise ont été déplacées hors du module math dans un module séparé."
+
+#: ../../../changelog/v2.0.0.md:30 f17ad3d041b341428d32a1729a3062ec
+msgid ""
+"Enhanced the accuracy of the move and view modules due to their rework "
+"and the addition of the new hitbox module."
+msgstr "Amélioration de la précision des modules move et view grâce à leur refonte et à l'ajout du nouveau module hitbox."
+
+#: ../../../changelog/v2.0.0.md:31 026939a38b0245acb0caeadc5dc7c7be
+msgid "The schedule module now maintains the current execution context."
+msgstr "Le module schedule maintient maintenant le contexte d'exécution actuel."
+
+#: ../../../changelog/v2.0.0.md:33 486f67c558b44bbea0f884c1f8b8ad60
+msgid "🐛 Bug Fixes"
+msgstr "🐛 Corrections de bugs"
+
+#: ../../../changelog/v2.0.0.md:35 d649451337f641aa9555dd57439c61d4
+msgid "Who knows at this point 🤷‍♂️, almost no legacy code remains..."
+msgstr "Qui sait à ce stade 🤷‍♂️, presque aucun code historique ne reste..."

@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-09-17 20:35+0100\n"
+"Last-Translator: Claude Code <claude@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <team@gunivers.net>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../contribute/shared-resources.md:5 4a2ce81cb40546e1aef4d0d00ee1afcb
+msgid "🌐 Shared Resources"
+msgstr "🌐 Ressources partagées"
+
+#: ../../../contribute/shared-resources.md:7 524949c453454c49aa6f9a7a9c8ebe9f
+msgid ""
+"To minimize redundancy and enhance efficiency, the library provides "
+"shared objectives, storages, blocks, and entities that modules can "
+"leverage."
+msgstr "Pour minimiser la redondance et améliorer l'efficacité, la bibliothèque fournit des objectifs, stockages, blocs et entités partagés que les modules peuvent exploiter."
+
+#: ../../../contribute/shared-resources.md
+#: ../../../contribute/shared-resources.md:11 1e3f942a56c140239f793e76cd1477f9
+#: 661c7217548e490a90a509a470b5c6b0
+msgid "Objectives"
+msgstr "Objectifs"
+
+#: ../../../contribute/shared-resources.md:11 661c7217548e490a90a509a470b5c6b0
+msgid "Description"
+msgstr "Description"
+
+#: ../../../contribute/shared-resources.md:11 ba2963317afb4e7385ed1995c66eb968
+msgid "`bs.in`"
+msgstr "`bs.in`"
+
+#: ../../../contribute/shared-resources.md:11 acbb1963012847bcae178210117a3e7f
+msgid "Stores input values. Format: `$<module>.<feature>.<input_key>`"
+msgstr "Stocke les valeurs d'entrée. Format : `$<module>.<fonctionnalité>.<clé_entrée>`"
+
+#: ../../../contribute/shared-resources.md:11 3ccd1eef81fd4d12a9cd7c63cb259c81
+msgid "`bs.out`"
+msgstr "`bs.out`"
+
+#: ../../../contribute/shared-resources.md:11 923ad4ce44394ca296bd9ec597aaa0de
+msgid ""
+"Stores output values. Format: `$<module>.<feature>` or "
+"`$<module>.<feature>.<output_key>`"
+msgstr "Stocke les valeurs de sortie. Format : `$<module>.<fonctionnalité>` ou `$<module>.<fonctionnalité>.<clé_sortie>`"
+
+#: ../../../contribute/shared-resources.md:11 eafec60be17c47df9e1b54e42af6ae22
+msgid "`bs.ctx`"
+msgstr "`bs.ctx`"
+
+#: ../../../contribute/shared-resources.md:11 296c033c182a42d1a7d9c88a2c29964a
+msgid ""
+"Temporary contextual objective for fast computations. Format: "
+"`#<single_letter>`"
+msgstr "Objectif contextuel temporaire pour les calculs rapides. Format : `#<lettre_unique>`"
+
+#: ../../../contribute/shared-resources.md:11 86d761f98f584604bb8f14870c82113b
+msgid "`bs.data`"
+msgstr "`bs.data`"
+
+#: ../../../contribute/shared-resources.md:11 bfbf043a14614347bf10cfc11c97680f
+msgid "Global score storage. Format: `#<module>.<my_key>`"
+msgstr "Stockage de score global. Format : `#<module>.<ma_clé>`"
+
+#: ../../../contribute/shared-resources.md:11 447c196cfa7043db8c36099a1fd63b9a
+msgid "`bs.const`"
+msgstr "`bs.const`"
+
+#: ../../../contribute/shared-resources.md:11 980646e809d74ef8bb687834a830bfcc
+msgid "Stores constant values. Format: `<value>`"
+msgstr "Stocke les valeurs constantes. Format : `<valeur>`"
+
+#: ../../../contribute/shared-resources.md:11 197d1b33d0374b72bc43d61be5b5bd62
+msgid "`bs.lambda`"
+msgstr "`bs.lambda`"
+
+#: ../../../contribute/shared-resources.md:11 8866c7b5501f44ca842ed81b7b869f5b
+msgid "Stores values used in callbacks. Format: `$<module>.<my_key>`"
+msgstr "Stocke les valeurs utilisées dans les callbacks. Format : `$<module>.<ma_clé>`"
+
+#: ../../../contribute/shared-resources.md:24 a5d6733c3c4147a98b430f4342ed1027
+msgid "Storages"
+msgstr "Stockages"
+
+#: ../../../contribute/shared-resources.md:24 71844f46fbad400baa25bd9f3bf8a8e0
+msgid "Namespaces"
+msgstr "Namespaces"
+
+#: ../../../contribute/shared-resources.md:24 5c0515ed42af47f3aca241f85d55b0cc
+msgid "`bs:in`"
+msgstr "`bs:in`"
+
+#: ../../../contribute/shared-resources.md:24 9fcbd6147a8842c3b6b70a095df569eb
+msgid "Stores input data. Path: `<module>.<feature>.<input_key>`"
+msgstr "Stocke les données d'entrée. Chemin : `<module>.<fonctionnalité>.<clé_entrée>`"
+
+#: ../../../contribute/shared-resources.md:24 ba3e2e7adfcd4f01a866da11d55db9e3
+msgid "`bs:out`"
+msgstr "`bs:out`"
+
+#: ../../../contribute/shared-resources.md:24 274cbd556c11499b913dccc62be00132
+msgid ""
+"Stores output data. Path: `<module>.<feature>` or "
+"`<module>.<feature>.<output_key>`"
+msgstr "Stocke les données de sortie. Chemin : `<module>.<fonctionnalité>` ou `<module>.<fonctionnalité>.<clé_sortie>`"
+
+#: ../../../contribute/shared-resources.md:24 570b37da9fab45299a3683b42570f613
+msgid "`bs:ctx`"
+msgstr "`bs:ctx`"
+
+#: ../../../contribute/shared-resources.md:24 29197ffa843e4e8c89bf9da6b817c880
+msgid ""
+"Fast contextual storage. Uses `x`, `y`, `z` for numeric values (i.e., "
+"execute store) and `_` for other data"
+msgstr "Stockage contextuel rapide. Utilise `x`, `y`, `z` pour les valeurs numériques (c.-à-d. execute store) et `_` pour les autres données"
+
+#: ../../../contribute/shared-resources.md:24 925eaf9f6f304e9d973e83aac9e87906
+msgid "`bs:data`"
+msgstr "`bs:data`"
+
+#: ../../../contribute/shared-resources.md:24 b393417bbd9b4d3f9683408f51f0497c
+msgid "General-purpose global storage. Path: `<module>.<my_key>`"
+msgstr "Stockage global à usage général. Chemin : `<module>.<ma_clé>`"
+
+#: ../../../contribute/shared-resources.md:24 1a7495f615e2462987e7ff3dc0680248
+msgid "`bs:const`"
+msgstr "`bs:const`"
+
+#: ../../../contribute/shared-resources.md:24 f365abc8917a4ff5a29b474eb359a175
+msgid "Stores constant data. Path: `<module>.<my_key>`"
+msgstr "Stocke les données constantes. Chemin : `<module>.<ma_clé>`"
+
+#: ../../../contribute/shared-resources.md:24 d1cbaba46d5841b4b6bcf9fbeefe8073
+msgid "`bs:lambda`"
+msgstr "`bs:lambda`"
+
+#: ../../../contribute/shared-resources.md:24 3ddfdefc201b4052989d9b94b24d367f
+msgid "Stores data used in callbacks. Path: `<module>.<my_key>`"
+msgstr "Stocke les données utilisées dans les callbacks. Chemin : `<module>.<ma_clé>`"
+
+#: ../../../contribute/shared-resources.md:37 498981ad4b114eda943741f8cd17c69f
+msgid "Blocks"
+msgstr "Blocs"
+
+#: ../../../contribute/shared-resources.md:39 9a67fe56c5964def9734e9acf054345d
+msgid ""
+"These commands can be used at load time to create blocks that can be used"
+" anywhere. These blocks must be kept in loaded chunks (`-30000000 1600`)."
+msgstr "Ces commandes peuvent être utilisées au moment du chargement pour créer des blocs qui peuvent être utilisés n'importe où. Ces blocs doivent être conservés dans des chunks toujours chargés (`-30000000 1600`)."
+
+#: ../../../contribute/shared-resources.md:51 c704b2371881443a83c50c11068fbf61
+msgid "Entities"
+msgstr "Entités"
+
+#: ../../../contribute/shared-resources.md:53 45627988df5946c39cb17b70168382d3
+msgid ""
+"Global entities are summoned with specific UUIDs, ensuring they remain "
+"accessible and avoid selector conflicts. They must persist in always-"
+"loaded chunks (`-30000000 1600`) at the end of each tick. The UUID "
+"`B5-0-0-0-0` is reserved for temporary contextual entities that must not "
+"persist beyond the current tick."
+msgstr "Les entités globales sont invoquées avec des UUID spécifiques, garantissant qu'elles restent accessibles et évitent les conflits de sélecteur. Elles doivent persister dans des chunks toujours chargés (`-30000000 1600`) à la fin de chaque tick. L'UUID `B5-0-0-0-0` est réservé pour les entités contextuelles temporaires qui ne doivent pas persister au-delà du tick actuel."

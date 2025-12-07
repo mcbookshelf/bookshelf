@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"PO-Revision-Date: 2025-01-19 12:00+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../changelog/unreleased.md:1 aa9c73f86e5940329f76f504feee5309
+msgid "📦 Bookshelf - Unreleased"
+msgstr "📦 Bookshelf - Non publié"
+
+#: ../../changelog/unreleased.md:4 3399b5bbf8364574884abd661e58d80c
+msgid "`🎯 bs.hitbox`"
+msgstr "`🎯 bs.hitbox`"
+
+#: ../../changelog/unreleased.md:6 6e5a07292d1547c19eb5dd9c1ca85e55
+msgid ""
+"<abbr title=\"Deprecations\">🗑️</abbr> - Block tag `has_offset` has been "
+"**deprecated** and will be removed in a v4.0.0. Please use "
+"`has_shape_offset` instead."
+msgstr ""
+"<abbr title=\"Dépréciations\">🗑️</abbr> - Le tag de bloc `has_offset` a été "
+"**déprécié** et sera supprimé dans la v4.0.0. Veuillez utiliser "
+"`has_shape_offset` à la place."
+
+#: ../../changelog/unreleased.md:7 d365a23079d8450ab9224e214ad41ac7
+msgid ""
+"<abbr title=\"Deprecations\">🗑️</abbr> - Function `#bs.hitbox:get_block` "
+"has been **deprecated** and will be removed in a v4.0.0. Please use "
+"`#bs.hitbox:get_block_shape` or `#bs.hitbox:get_block_collision` instead."
+msgstr ""
+"<abbr title=\"Dépréciations\">🗑️</abbr> - La fonction `#bs.hitbox:get_block` "
+"a été **dépréciée** et sera supprimée dans la v4.0.0. Veuillez utiliser "
+"`#bs.hitbox:get_block_shape` ou `#bs.hitbox:get_block_collision` à la place."
+
+#: ../../changelog/unreleased.md:8 930b382cdb954321a76bd47fa17f73a1
+msgid ""
+"<abbr title=\"Deprecations\">🗑️</abbr> - Functions "
+"`#bs.hitbox:is_entity_in_block_interaction`, "
+"`#bs.hitbox:is_entity_in_blocks_interaction`, and "
+"`#bs.hitbox:is_in_block_interaction` have been **deprecated** and will be"
+" removed in a v4.0.0. Please use `#bs.hitbox:is_entity_in_block_shape`, "
+"`#bs.hitbox:is_entity_in_blocks_shape`, or `#bs.hitbox:is_in_block_shape`"
+" instead."
+msgstr ""
+"<abbr title=\"Dépréciations\">🗑️</abbr> - Les fonctions "
+"`#bs.hitbox:is_entity_in_block_interaction`, "
+"`#bs.hitbox:is_entity_in_blocks_interaction`, et "
+"`#bs.hitbox:is_in_block_interaction` ont été **dépréciées** et seront"
+" supprimées dans la v4.0.0. Veuillez utiliser `#bs.hitbox:is_entity_in_block_shape`, "
+"`#bs.hitbox:is_entity_in_blocks_shape`, ou `#bs.hitbox:is_in_block_shape`"
+" à la place."

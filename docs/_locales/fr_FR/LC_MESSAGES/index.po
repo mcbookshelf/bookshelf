@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"PO-Revision-Date: 2025-09-19 15:00+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../index.md:8 b4a29e18b24840769564c13b6c92ac04
+msgid "Bookshelf"
+msgstr "Bookshelf"
+
+#: ../../index.md:22 fc3d06c05e644c9e85efa7d1ab73334b
+msgid "🕵️ What is Bookshelf?"
+msgstr "🕵️‍♂️ Qu'est-ce que Bookshelf ?"
+
+#: ../../index.md:24 38fa1b2ae4104d26b6f378e5c44354fe
+msgid ""
+"Bookshelf (formerly known as Gunivers Libs) is a modular library datapack"
+" designed to simplify complex systems in Minecraft maps. It is ideal for "
+"mapmakers seeking easy-to-implement tools."
+msgstr ""
+"Bookshelf (anciennement Gunivers Libs) est une bibliothèque de datapacks "
+"modulaire conçue pour simplifier les systèmes complexes dans les maps "
+"Minecraft. Elle est idéale pour les map makers cherchant des outils "
+"faciles à implémenter."
+
+#: ../../index.md:31 6b572b5e0c8f4712bf9fcec714eeebb0
+msgid "🚀 Quickstart!"
+msgstr "🚀 Guide de démarrage rapide !"
+
+#: ../../index.md:42 f4ecad124af2480ea955d033e0a45158
+msgid "🎬 Watch trailer"
+msgstr "🎬 Regarder le trailer"
+
+#: ../../index.md:55 ac6ed03eb26d45e299a2692e04a3fa58
+msgid "🌟 Featured Modules"
+msgstr "🌟 Modules en vedette"
+
+#: ../../_templates/featured-modules.md:5 d02718a9cb1e4b1991f63c409ef47973
+msgid "🧱 Block"
+msgstr "🧱 Blocs"
+
+#: ../../_templates/featured-modules.md:10 a6167ecf447c4f17b45e69f95ff12d17
+msgid "Get and manipulate blocks (supports BlockStates and NBT)."
+msgstr "Obtenir et manipuler les blocs (supporte les BlockStates et NBT)."
+
+#: ../../_templates/featured-modules.md:13 3214e76d878b491da80dc60189020a17
+msgid "🔦 Raycast"
+msgstr "🔦 Raycast"
+
+#: ../../_templates/featured-modules.md:18 7b68f2cf0f9846efad96c9cb8629bd5b
+msgid "Cast rays and see if they collide with blocks or entities."
+msgstr "Lancer des rayons et voir s'ils entrent en collision avec des blocs ou des entités."
+
+#: ../../_templates/featured-modules.md:21 17407d9a3e2d4ca28a6a03e15493a205
+msgid "🧮 Math"
+msgstr "🧮 Mathématiques"
+
+#: ../../_templates/featured-modules.md:26 46bd68f3cc6e4068acd9aa7b7b4f1243
+msgid "Mathematical functions: sin, cos, exp, log, sqrt, and much more!"
+msgstr "Fonctions mathématiques : sin, cos, exp, log, sqrt, et bien plus !"
+
+#: ../../_templates/featured-modules.md:29 0ae92eb54c404df0ad8154f67a685741
+msgid "🏗️ Generation"
+msgstr "🏗️ Génération"
+
+#: ../../_templates/featured-modules.md:34 b29f3dd2353346b28570da83d89d9c40
+msgid "Generate terrains and landscapes, incorporating natural features."
+msgstr "Générer des terrains et paysages, intégrant des caractéristiques naturelles."
+
+#: ../../_templates/featured-modules.md:37 3c490e54f3bb4a618e0930e8515ff08a
+msgid "🎲 Random"
+msgstr "🎲 Aléatoire"
+
+#: ../../_templates/featured-modules.md:42 50b3b781905f4a3eb354bb3bf3a2725d
+msgid "Random functions for different distributions and noise patterns."
+msgstr "Fonctions aléatoires pour différentes distributions et motifs de bruit."
+
+#: ../../_templates/featured-modules.md:45 b46ad4d8f35b4238b67bcb49e4bf6f9c
+msgid "❤️ Health"
+msgstr "❤️ Santé"
+
+#: ../../_templates/featured-modules.md:50 f3062be1775d4b77b4aa854d5cc68747
+msgid "Easily manage the health of a player or the lifetime of an entity!"
+msgstr "Gérez facilement la santé d'un joueur ou la durée de vie d'une entité !"
+
+
+#: ../../index.md:62 bbc800791cc14ca7a709df81baa3ec1f
+msgid "🔥 Motivation"
+msgstr "🔥 Motivation"
+
+#: ../../index.md:64 a008b4bcd3c74e70a2db19f079fabe88
+msgid ""
+"As developers, we understand the value of libraries: they save time, "
+"streamline workflows, and eliminate the need to reinvent the wheel. "
+"However, we have noticed that many mapmakers in the Minecraft community "
+"are less familiar with this concept."
+msgstr ""
+"En tant que développeurs, nous comprenons la valeur des bibliothèques : elles "
+"font gagner du temps, rationalisent les workflows et évitent de "
+"réinventer la roue. Cependant, nous avons remarqué que de nombreux "
+"map makers dans la communauté Minecraft sont moins familiers avec "
+"ce concept."
+
+#: ../../index.md:66 3c60f7b90f374ca28b57455f80a7c3b4
+msgid ""
+"That is why we started this project: to provide a variety of reusable "
+"tools and encourage mapmakers to embrace the use of libraries."
+msgstr ""
+"C'est pourquoi nous avons commencé ce projet : fournir une variété "
+"d'outils réutilisables et encourager les map makers à adopter "
+"l'utilisation de bibliothèques."
+
+#: ../../index.md:68 65c75eaade4342c995c5f659bd146d9f
+msgid ""
+"While we strive to keep our modules as optimized as possible, our top "
+"priority is accessibility. We focus on creating features that are easy to"
+" use and simple to install, ensuring they are practical for everyone."
+msgstr ""
+"Bien que nous nous efforcions de maintenir nos modules aussi optimisés "
+"que possible, notre priorité absolue est l'accessibilité. Nous nous "
+"concentrons sur la création de fonctionnalités faciles à utiliser et "
+"simples à installer, garantissant qu'elles soient pratiques pour tous."
+
+#: ../../index.md:71 f461e42034df4c88a030a789e9054168
+msgid ""
+"\"I have seen further than others because I have stood on the shoulders "
+"of giants.\""
+msgstr ""
+"\"J'ai vu plus loin que les autres parce que je me suis tenu sur les "
+"épaules de géants.\""
+
+#: ../../index.md:72 aa5e1a91429d4c278721891b9a14b2cf
+msgid "Isaac Newton"
+msgstr "Isaac Newton"
+
+#: ../../index.md:76 0f0612345f7a4afc8fa8603c488f9be6
+msgid "🤝 Contribution"
+msgstr "🤝 Contribution"
+
+#: ../../index.md:78 8cf472de39f543eaaa145b6000d321bb
+msgid ""
+"If you have any questions about the project or want to discuss something,"
+" join [our Discord](https://discord.gg/MkXytNjmBt) server."
+msgstr ""
+"Si vous avez des questions sur le projet ou souhaitez discuter de "
+"quelque chose, rejoignez notre serveur "
+"[Discord](https://discord.gg/MkXytNjmBt)."
+
+#: ../../index.md:80 2f1549b254e9472bbdfa4591364957d1
+msgid ""
+"If you want to contribute, please refer to the [contribution "
+"docs](https://docs.mcbookshelf.dev/en/latest/contribute/index.html) for "
+"more information."
+msgstr ""
+"Si vous souhaitez contribuer, veuillez vous référer à la "
+"[documentation de contribution](https://docs.mcbookshelf.dev/en/latest/contribute/index.html) "
+"pour plus d'informations."

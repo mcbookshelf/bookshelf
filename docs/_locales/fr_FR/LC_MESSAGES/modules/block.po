@@ -1,0 +1,1255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"PO-Revision-Date: 2025-09-17 15:30+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/block.md:1 47a285fc46b24f0196fdd78267088195
+msgid "🧱 Block"
+msgstr "🧱 Bloc"
+
+#: ../../modules/block.md:3 063b22a0bf0c4ac78bdc0bdc00d2a3ed
+msgid "**`#bs.block:help`**"
+msgstr "**`#bs.block:help`**"
+
+#: ../../modules/block.md:5 aad700b88aad4b7abc1e419ce5f3f50b
+msgid ""
+"Manage blocks, including states and NBTs, while offering advanced tools "
+"for seamless transformations."
+msgstr "Gérer les blocs, y compris les états et NBT, tout en offrant des outils avancés pour les transformations fluides."
+
+#: ../../modules/block.md:8 b967ff0b11e44c10ae45cde50584db39
+msgid "\"Architecture is the thoughtful making of space.\""
+msgstr "\"L'architecture est la création réfléchie de l'espace.\""
+
+#: ../../modules/block.md:9 d2c2164a627248409f7913ef6572f9f9
+msgid "Louis Kahn"
+msgstr "Louis Kahn"
+
+#: ../../modules/block.md:13 d579a405c8f04fa6839bbcd6e1db2485
+msgid "Virtual Block Format"
+msgstr "Format de bloc virtuel"
+
+#: ../../modules/block.md:16 81c3c9dfe793464ebe95552fb7c5ea45
+msgid ""
+"To manipulate blocks and their states, Bookshelf utilizes a [virtual "
+"block format](#get) stored in the block output. It's crucial not to "
+"update the virtual block format manually; instead, utilize the helper "
+"functions provided in the library."
+msgstr "Pour manipuler les blocs et leurs états, Bookshelf utilise un [format de bloc virtuel](#get) stocké dans la sortie du bloc. Il est crucial de ne pas mettre à jour le format de bloc virtuel manuellement ; utilisez plutôt les fonctions d'aide fournies dans la bibliothèque."
+
+#: ../../modules/block.md:21 6435fd9ed4d449f4a6422abe5ab49d3e
+msgid "🔧 Functions"
+msgstr "🔧 Fonctions"
+
+#: ../../modules/block.md:23 e770b35a3bb8435c8067888494ba0121
+msgid "You can find below all functions available in this module."
+msgstr "Vous pouvez trouver ci-dessous toutes les fonctions disponibles dans ce module."
+
+#: ../../modules/block.md:27 49c34a480fbb44e6b6cfb80db6823175
+msgid "Fill"
+msgstr "Remplir"
+
+#: ../../modules/block.md 6fe17015bed14ad39c3214f6d3abc52a
+#: bd9cf599c1ba453f9c1c24157921ceb4 d2793fbb5a424a4abc19492cf9b2890e
+msgid "Block"
+msgstr "Bloc"
+
+#: ../../modules/block.md:35 dde57b9bdfc54c0294183628da1018ea
+msgid "Fill all or part of a region with a specific block."
+msgstr "Remplir tout ou partie d'une région avec un bloc spécifique."
+
+#: ../../modules/block.md:37 ../../modules/block.md:86
+#: ../../modules/block.md:125 ../../modules/block.md:176
+#: ../../modules/block.md:216 ../../modules/block.md:268
+#: ../../modules/block.md:303 ../../modules/block.md:340
+#: ../../modules/block.md:375 ../../modules/block.md:411
+#: ../../modules/block.md:456 ../../modules/block.md:507
+#: ../../modules/block.md:567 ../../modules/block.md:603
+#: ../../modules/block.md:635 ../../modules/block.md:668
+#: ../../modules/block.md:704 ../../modules/block.md:735
+#: ../../modules/block.md:775 ../../modules/block.md:810
+#: ../../modules/block.md:845 ../../modules/block.md:880
+#: ../../modules/block.md:920 0285629187f64d72ade54de29948c249
+#: 09477cd1484e467a89eed67009ef5296 09a169af9abf485aaa2f8edc1ef3064a
+#: 0a628ab77dd242ac8c6eeb025b66f171 0a9579dcafa44f4c829eeca388049269
+#: 1133684757664fa983f45164e73b9aac 1295b16d857e4397a7c5e136216920a1
+#: 291c24195ce941a2aab985f4b8e7a264 8009ebbb2cb045c7824bdeb2f4f3ece5
+#: 811146c468484b72b01f7948ffd11bed 8cdfdeb8b07d4ac3a79f9f3c8881d780
+#: 93c036f571444eba9fa0371e57ff9496 94404638004b462cbca38761372e731e
+#: 988b8e05b953488588e5e7c2bd80195f 9c91734c527e46b49934d47acbddaba0
+#: 9f66f2b2be4440ffaa0193cb3d54b1d6 b4015e21e2434760ae009add0225a3f9
+#: b602eb262bbd4f4085e380a17942b18c c1c6cd3977674b6fadc3b8855de727da
+#: c630338dc1c44b69b64f6942d6b32c9d c972f6829fd74486bebbe1ad6749a295
+#: e63f96dffb9844008fb0a02e3c2f0435 e6c8b2a485ac4ecea619e7bcd9831de3
+msgid "Inputs"
+msgstr "Entrées"
+
+#: ../../modules/block.md:38 be2bdd7eb13747dbb2d37dc390ce4f44
+msgid "**Storage `bs:in block.fill_block`**:"
+msgstr "**Stockage `bs:in block.fill_block`** :"
+
+#: ../../modules/block.md:40 5489b90d76cd4baaa8414c302e738e77
+#, python-brace-format
+msgid "{nbt}`compound` Fill block data"
+msgstr "{nbt}`compound` Données de remplissage de bloc"
+
+#: ../../modules/block.md:41 02a23ee02f014e86a839f50ec61f770e
+#, python-brace-format
+msgid "{nbt}`string` **block**: Block to fill the region with."
+msgstr "{nbt}`string` **block** : Bloc avec lequel remplir la région."
+
+#: ../../modules/block.md:42 ../../modules/block.md:91
+#: ../../modules/block.md:133 003b473ed64044639d4cfee1bc2341f8
+#: 5ff2815a73574388b4c881d1cfb43e09 a11dce0077374ccd90da3581e428a577
+#, python-brace-format
+msgid ""
+"{nbt}`string` {nbt}`list` **from**: Starting position as a valid position"
+" string or a list of 3 elements (x, y, z)."
+msgstr "{nbt}`string` {nbt}`list` **from** : Position de départ sous forme de chaîne de position valide ou de liste de 3 éléments (x, y, z)."
+
+#: ../../modules/block.md:43 ../../modules/block.md:92
+#: ../../modules/block.md:134 0551b0550bfa4013b900140bd4e88937
+#: 5dc500b80ee7461891e110ef897cc525 62bae0e3b5d04bd484631b9cfc9ec287
+#, python-brace-format
+msgid ""
+"{nbt}`string` {nbt}`list` **to**: Ending position as a valid position "
+"string or a list of 3 elements (x, y, z)."
+msgstr "{nbt}`string` {nbt}`list` **to** : Position de fin sous forme de chaîne de position valide ou de liste de 3 éléments (x, y, z)."
+
+#: ../../modules/block.md:44 ../../modules/block.md:93
+#: ../../modules/block.md:135 3c539460768d4d269277dd6cce0daf73
+#: a7e5e4d9fe6a41099bc2ddfffb0b7a46 c6e9c36c633647b8bed171636a0eacbb
+#, python-brace-format
+msgid ""
+"{nbt}`int` **limit**: Limit how many blocks can be set in a single tick "
+"(default: 4096)."
+msgstr "{nbt}`int` **limit** : Limite du nombre de blocs pouvant être définis en un seul tick (par défaut : 4096)."
+
+#: ../../modules/block.md:45 ../../modules/block.md:94
+#: ../../modules/block.md:136 1c1c89619c8e4daba2da327ec6fd7758
+#: 91ded172023d42e691bd749b04d39b18 ce1a1466ded5470db68c788f565f1bda
+#, python-brace-format
+msgid ""
+"{nbt}`string` **mode**: Mode used to set blocks "
+"[destroy|keep|replace|strict] (default: replace)."
+msgstr "{nbt}`string` **mode** : Mode utilisé pour définir les blocs [destroy|keep|replace|strict] (par défaut : replace)."
+
+#: ../../modules/block.md:46 ../../modules/block.md:95
+#: ../../modules/block.md:137 97f1a621f1134438b1bfe4d8633f16dc
+#: 99e6c22b5c894812a7f5ecb7bcda1c6e d732a3eec2b245849ba5b2a6d0c1b848
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_finished**: Command executed at the end of the "
+"operation (at the location of the final block)."
+msgstr "{nbt}`string` **on_finished** : Commande exécutée à la fin de l'opération (à l'emplacement du bloc final)."
+
+#: ../../modules/block.md:47 f216a2ecb259450ab0e5b2abb959e2a4
+#, python-brace-format
+msgid ""
+"{nbt}`list` **masks**: Determine which blocks will be replaced by the "
+"fill operation."
+msgstr "{nbt}`list` **masks** : Détermine quels blocs seront remplacés par l'opération de remplissage."
+
+#: ../../modules/block.md:48 ../../modules/block.md:97
+#: ../../modules/block.md:139 0d4918b80b0c4fd8b5e638156f7dd9f4
+#: 7825de7f7c6f4fcab0c827abddb59246 b29088631f714c99a0a6dc0c8edc450c
+#, python-brace-format
+msgid "{nbt}`compound` Block mask"
+msgstr "{nbt}`compound` Masque de bloc"
+
+#: ../../modules/block.md:49 ../../modules/block.md:98
+#: ../../modules/block.md:140 258ea0c486504b52a0faf8765cad3ec1
+#: ccc9abc889c34667bdb36989f99c3ff7 dddafa5d87a34ed5b6191345a316750c
+#, python-brace-format
+msgid "{nbt}`string` **block**: Block acting as a filter."
+msgstr "{nbt}`string` **block** : Bloc agissant comme filtre."
+
+#: ../../modules/block.md:50 ../../modules/block.md:99
+#: ../../modules/block.md:141 372ee99930e745fa9701e163558afcb6
+#: 4de385735d314fbbb232b8662235eac0 efa58d0dec7e488c8affcf11b2b85b3c
+#, python-brace-format
+msgid "{nbt}`bool` **negate**: Reverse the mask (default: false)."
+msgstr "{nbt}`bool` **negate** : Inverser le masque (par défaut : false)."
+
+#: ../../modules/block.md:51 ../../modules/block.md:100
+#: ../../modules/block.md:142 3af1f17a257f4c698069ace0da062170
+#: cf8a30bb52b541b18ce3054970014365 f13675feb9894726b3ba8f6e03e9355b
+#, python-brace-format
+msgid "{nbt}`int` **x**: Mask filter x offset (default: 0)."
+msgstr "{nbt}`int` **x** : Décalage de filtre de masque x (par défaut : 0)."
+
+#: ../../modules/block.md:52 ../../modules/block.md:101
+#: ../../modules/block.md:143 608fbbe23ec64c8f875d28a8c3688876
+#: a37940c3e60f443ba133110959294585 f52062a6594b48e6904b1c0e759c337a
+#, python-brace-format
+msgid "{nbt}`int` **y**: Mask filter y offset (default: 0)."
+msgstr "{nbt}`int` **y** : Décalage de filtre de masque y (par défaut : 0)."
+
+#: ../../modules/block.md:53 ../../modules/block.md:102
+#: ../../modules/block.md:144 1ae5afd47a5f4fc7a348f4b0c9464957
+#: 2f23ca054b9d486bbecbe42866eac0f7 d0aafad77e5643afbbf20acec0d882c6
+#, python-brace-format
+msgid "{nbt}`int` **z**: Mask filter z offset (default: 0)."
+msgstr "{nbt}`int` **z** : Décalage de filtre de masque z (par défaut : 0)."
+
+#: ../../modules/block.md:56 ../../modules/block.md:105
+#: ../../modules/block.md:147 ../../modules/block.md:179
+#: ../../modules/block.md:219 ../../modules/block.md:279
+#: ../../modules/block.md:316 ../../modules/block.md:351
+#: ../../modules/block.md:387 ../../modules/block.md:423
+#: ../../modules/block.md:465 ../../modules/block.md:517
+#: ../../modules/block.md:577 ../../modules/block.md:610
+#: ../../modules/block.md:642 ../../modules/block.md:673
+#: ../../modules/block.md:714 ../../modules/block.md:745
+#: ../../modules/block.md:786 ../../modules/block.md:821
+#: ../../modules/block.md:856 ../../modules/block.md:895
+#: ../../modules/block.md:935 1847a16e06cf49d688ba937b19870476
+#: 19c23e0a8d8e41a59c7ee1efe6edccf6 275241922296402abc1483ce12ba6818
+#: 2fa7f650657647c186438ac1d304945e 378ee77578444b3f9fdaf9c8f265b92f
+#: 38483fdb546f4d2d994d100e5b570673 3fc7cabbcddf466aa700556b2371cf0b
+#: 40005c135dcb435eb54b8821ea4585c4 6b2ce5f4aca6410c8962ba7e2f37bd87
+#: 82c3bee0c90041228b259393f1da62d9 87874c01af3c4a08b2e722a7b6db1ce6
+#: 898906929b9443659c65f808cea0167c 8c7efdd5658a433290a817585d942aed
+#: 9389f927e6fa429dbbd42e9ee2d44104 b4fe61a17b3c4e1b90042c112000892d
+#: b917e3da08134dfeae0be10464b79543 bbefb1af15ea4d8295c72430d5129f42
+#: c6eb93f0d3094dacb1f8fcfe42e3db73 ca8fd05b46ce4676a15803f02c04c54c
+#: cd7dfa08910c40c999003c9c8daacd5d cec5dc86e76e439b8026aa1d4e9abca3
+#: d3c67346530945ecbfc0e61dcd9c3e73 f9e38b46fe634daa9f22a7a88126c7cf
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../modules/block.md:57 ../../modules/block.md:106
+#: ../../modules/block.md:148 003048cc3deb441d810dae4c9cd08fed
+#: 4d8508a30468455da238a9fe4ab801ea b6bdd217a7444b1fb11da57a75702a40
+msgid "**State**: Blocks are placed in the world."
+msgstr "**État** : Les blocs sont placés dans le monde."
+
+#: ../../modules/block.md:60 938eee26cc4841f19a5713af0850bbfa
+msgid ""
+"*Example: Replace the top layer of dirt by grass and use a say command "
+"when finished:*"
+msgstr "*Exemple : Remplacer la couche supérieure de terre par de l'herbe et utiliser une commande say à la fin :*"
+
+#: ../../modules/block.md:70 525acea5c5804d14af0ea0edc3cc9ca4
+msgid "*Example: Fill an area with stone a few blocks at a time:*"
+msgstr "*Exemple : Remplir une zone avec de la pierre quelques blocs à la fois :*"
+
+#: ../../modules/block.md 56abea9493fb49dd8d104ffa791fbbde
+#: 71148877599d47618ca34fe33d03c9ae c796dc6b44c44e9a8f5fecc23b5f21ea
+msgid "Type"
+msgstr "Type"
+
+#: ../../modules/block.md:84 ec1728d36ba3432a9d023ed017e42f0f
+msgid ""
+"Fill all or part of a region with a specific block type, preserving "
+"states and NBTs."
+msgstr "Remplir tout ou partie d'une région avec un type de bloc spécifique, en préservant les états et NBT."
+
+#: ../../modules/block.md:87 67fb9f9de6984dda82f8bb1f57c6a1ef
+msgid "**Storage `bs:in block.fill_type`**:"
+msgstr "**Stockage `bs:in block.fill_type`** :"
+
+#: ../../modules/block.md:89 a5667ad78cb94854aa0ef74ebbeb9d96
+#, python-brace-format
+msgid "{nbt}`compound` Fill type data"
+msgstr "{nbt}`compound` Données de type de remplissage"
+
+#: ../../modules/block.md:90 dc21afa258394fdcbd5fc10c8f5fc1c2
+#, python-brace-format
+msgid "{nbt}`string` **type**: Block id to fill the region with."
+msgstr "{nbt}`string` **type** : ID de bloc avec lequel remplir la région."
+
+#: ../../modules/block.md:96 ../../modules/block.md:138
+#: 7f0a1f499b584c699c1e0a42b4052285 a0625549500b4d96b85d05da8b5d2c4b
+#, python-brace-format
+msgid "{nbt}`list` **masks**: Determine which blocks will be replaced."
+msgstr "{nbt}`list` **masks** : Détermine quels blocs seront remplacés."
+
+#: ../../modules/block.md:109 1b3505506490453183ae7c17b46ff1f0
+msgid ""
+"*Example: Replace oak stairs with spruce stairs while preserving states "
+"and use a say command when finished:*"
+msgstr "*Exemple : Remplacer les escaliers en chêne par des escaliers en épicéa tout en préservant les états et utiliser une commande say à la fin :*"
+
+#: ../../modules/block.md ddc8a8f438ed400a8f61693e146c4091
+msgid "Random"
+msgstr "Aléatoire"
+
+#: ../../modules/block.md:123 4485015f5e0342088fb1e36b5cc57103
+msgid "Fill all or part of a region with random blocks or types."
+msgstr "Remplir tout ou partie d'une région avec des blocs ou types aléatoires."
+
+#: ../../modules/block.md:126 059aee99b7824ff2aa2bc51f8be06acb
+msgid "**Storage `bs:in block.fill_random`**:"
+msgstr "**Stockage `bs:in block.fill_random`** :"
+
+#: ../../modules/block.md:128 46af195701b04eed9e77d0064bb7fec4
+#, python-brace-format
+msgid "{nbt}`compound` Fill random data"
+msgstr "{nbt}`compound` Données de remplissage aléatoire"
+
+#: ../../modules/block.md:129 225e3ac990c6464c9f095d3fb7d1a7a7
+#, python-brace-format
+msgid "{nbt}`list` **entries**: List of entries to pick from randomly."
+msgstr "{nbt}`list` **entries** : Liste d'entrées à choisir aléatoirement."
+
+#: ../../modules/block.md:130 2a7f26c8a805413fb66661518e62a6a5
+#, python-brace-format
+msgid "{nbt}`compound` Block or type entry"
+msgstr "{nbt}`compound` Entrée de bloc ou de type"
+
+#: ../../modules/block.md:131 dad985da8acb4dc1a6032b194b8e693e
+#, python-brace-format
+msgid "{nbt}`string` **block | type**: Block or type to fill the region with."
+msgstr "{nbt}`string` **block | type** : Bloc ou type avec lequel remplir la région."
+
+#: ../../modules/block.md:132 b6abd0ae4a644c23a7abe03b07dc2d3d
+#, python-brace-format
+msgid ""
+"{nbt}`int` **weight**: Determine the likelihood of selecting the entry "
+"(default: 1)."
+msgstr "{nbt}`int` **weight** : Détermine la probabilité de sélectionner l'entrée (par défaut : 1)."
+
+#: ../../modules/block.md:151 5f782d673d7f430792c11d6a72ec6525
+msgid ""
+"*Example: Randomly fill an area with stone or air and use a say command "
+"when finished:*"
+msgstr "*Exemple : Remplir aléatoirement une zone avec de la pierre ou de l'air et utiliser une commande say à la fin :*"
+
+#: ../../modules/block.md:162 ../../modules/block.md:442
+#: ../../modules/block.md:658 328659ff36394a4196576a6572485d35
+#: 7e4aa408dcb04a059b0661b74f996b07 c52dd2f645c14898b8e5037dbe9923a2
+msgid "**Credits**: Aksiome"
+msgstr "**Crédits** : Aksiome"
+
+#: ../../modules/block.md:166 a53ae5cd62334171b3b51cba22894b9c
+msgid "Get"
+msgstr "Obtenir"
+
+#: ../../modules/block.md:174 03c854dacfb04cdbbfbec9afaa305687
+msgid ""
+"Get all data related to the block at the current location, including its "
+"state and NBTs."
+msgstr "Obtenir toutes les données relatives au bloc à l'emplacement actuel, y compris son état et ses NBT."
+
+#: ../../modules/block.md:177 ../../modules/block.md:217
+#: 5a0520dd14d9448fb5feecef677d2346 980b8dab1ab840808cc66054a5b970e4
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to get "
+"block data from."
+msgstr "**Exécution `at <entity>` ou `positioned <x> <y> <z>`** : Position pour obtenir les données du bloc."
+
+#: ../../modules/block.md:180 ../../modules/block.md:220
+#: 732f8e985c7846c2b2994accd4dc4994 79bebff729ca40ce90a387dee68fffc9
+msgid "**Storage `bs:out block`**:"
+msgstr "**Stockage `bs:out block`** :"
+
+#: ../../modules/block.md:182 ../../modules/block.md:222
+#: 5fbf15fabb744065b95ea62d34f002e9 9cbdfe0f11434c7684b8d487127f6cbb
+#, python-brace-format
+msgid "{nbt}`compound` **[readonly]** Block data"
+msgstr "{nbt}`compound` **[lecture seule]** Données du bloc"
+
+#: ../../modules/block.md:183 ../../modules/block.md:223
+#: 9aedb9fb79864d189b3568ba76f12b34 a728900a486846178365a587a50797dd
+#, python-brace-format
+msgid ""
+"{nbt}`int` **group**: Blocks within the same group share the same "
+"possible state (e.g., stairs)."
+msgstr "{nbt}`int` **group** : Les blocs dans le même groupe partagent le même état possible (par ex., escaliers)."
+
+#: ../../modules/block.md:184 ac9444840a804bcd8fb26de7dc21c837
+#, python-brace-format
+msgid ""
+"{nbt}`string` **block**: Full string representation of the block "
+"`type[state]{nbt}`."
+msgstr "{nbt}`string` **block** : Représentation complète en chaîne du bloc `type[state]{nbt}`."
+
+#: ../../modules/block.md:185 ../../modules/block.md:225
+#: 6c607c9c18524f57b12505e116f846af d3ff33eb349044ebbb36cfbb2267d958
+#, python-brace-format
+msgid ""
+"{nbt}`string` **item**: Item string id associated with the block, if it "
+"exists."
+msgstr "{nbt}`string` **item** : ID de chaîne d'objet associé au bloc, s'il existe."
+
+#: ../../modules/block.md:186 ../../modules/block.md:226
+#: ../../modules/block.md:460 ../../modules/block.md:511
+#: ../../modules/block.md:571 2192277b53ca4b5590e45c191a75311f
+#: 457cb7654e354ab28fe5b77350a7a69e 4ba373f560574897bd87e1226eabd588
+#: 99f4240ef3804f749ac152576253e14a cc14a6641cce42ec891f97e0089e020f
+#, python-brace-format
+msgid ""
+"{nbt}`string` **type**: String representation of the id (e.g., "
+"`minecraft:stone`)."
+msgstr "{nbt}`string` **type** : Représentation en chaîne de l'ID (par ex., `minecraft:stone`)."
+
+#: ../../modules/block.md:187 6191eb7833d44cd19e9d93c02175b654
+#, python-brace-format
+msgid ""
+"{nbt}`string` **state**: Represent the state of a block (e.g., "
+"`[shape=straight]`), if it exists."
+msgstr "{nbt}`string` **state** : Représentation de l'état d'un bloc (par ex., `[shape=straight]`), s'il existe."
+
+#: ../../modules/block.md:188 a4fd9783830e4b68bf7d70c5899b6063
+#, python-brace-format
+msgid "{nbt}`compound` **nbt**: Data tags used by block entities, if it exists."
+msgstr "{nbt}`compound` **nbt** : Tags de données utilisés par les entités de bloc, s'ils existent."
+
+#: ../../modules/block.md:189 b9023f1f3d4b4ce3a302f8a57e51e348
+#, python-brace-format
+msgid ""
+"{nbt}`compound` **properties**: Block state as properties (used by "
+"entities like falling blocks), if it exists."
+msgstr "{nbt}`compound` **properties** : État du bloc en tant que propriétés (utilisé par des entités comme les blocs tombants), s'il existe."
+
+#: ../../modules/block.md:190 ../../modules/block.md:227
+#: 06d4237e9a9e4cb08623cf7b4f4112e3 e17a8603d45c4656ab6324d1d34e538f
+#, python-brace-format
+msgid "{nbt}`compound` **sounds**: The sound list of a block."
+msgstr "{nbt}`compound` **sounds** : La liste des sons d'un bloc."
+
+#: ../../modules/block.md:191 ../../modules/block.md:228
+#: 4cc6523f55c94c95adb027df9b5a8238 756234816b91462c8833062a00f5c6a3
+#, python-brace-format
+msgid "{nbt}`string` **break**: The sound played when a player breaks the block."
+msgstr "{nbt}`string` **break** : Le son joué quand un joueur casse le bloc."
+
+#: ../../modules/block.md:192 ../../modules/block.md:229
+#: bd21d9099c5a4dcd8be6e1e1312618c6 f454c5ad564046a3a1fd0c0f8dc2fda0
+#, python-brace-format
+msgid "{nbt}`string` **hit**: The sound played when a player hits the block."
+msgstr "{nbt}`string` **hit** : Le son joué quand un joueur frappe le bloc."
+
+#: ../../modules/block.md:193 ../../modules/block.md:230
+#: 22edf1fb01c746edb5d663635c22d22a f734385ad1504e04bd8ff3847dc63f22
+#, python-brace-format
+msgid "{nbt}`string` **fall**: The sound played when a player falls on the block."
+msgstr "{nbt}`string` **fall** : Le son joué quand un joueur tombe sur le bloc."
+
+#: ../../modules/block.md:194 ../../modules/block.md:231
+#: 1ac80c7b8d6b4e34b2d94ac0110ab6b5 b51f069e65064ea289420972d9f00cd1
+#, python-brace-format
+msgid "{nbt}`string` **place**: The sound played when a player places the block."
+msgstr "{nbt}`string` **place** : Le son joué quand un joueur place le bloc."
+
+#: ../../modules/block.md:195 ../../modules/block.md:232
+#: 8bc67a1552d84d179d929171066bfd19 c73dcfee14464bb89a2825b75683bb16
+#, python-brace-format
+msgid "{nbt}`string` **step**: The sound played when a player steps on the block."
+msgstr "{nbt}`string` **step** : Le son joué quand un joueur marche sur le bloc."
+
+#: ../../modules/block.md:199 1da36c3be5ae447cbeeb685480da499a
+msgid "*Example: Get all data related to a block:*"
+msgstr "*Exemple : Obtenir toutes les données relatives à un bloc :*"
+
+#: ../../modules/block.md:214 eff6a3a4239f4d808f321c2f1235faf2
+msgid ""
+"Get the block type at the current location. Although states, NBTs, and "
+"properties will be empty, state transformation functions are still "
+"available."
+msgstr "Obtenir le type de bloc à l'emplacement actuel. Bien que les états, NBT et propriétés soient vides, les fonctions de transformation d'état sont toujours disponibles."
+
+#: ../../modules/block.md:224 853ce96a410c41089384229de2ed9e86
+#, python-brace-format
+msgid ""
+"{nbt}`string` **block**: Full string representation of the block (only "
+"the type)."
+msgstr "{nbt}`string` **block** : Représentation complète en chaîne du bloc (seulement le type)."
+
+#: ../../modules/block.md:236 60dcc317ad5e4f308c4238461ccec2d6
+msgid ""
+"*Example: Get only type data related to a block (no property value is "
+"selected):*"
+msgstr "*Exemple : Obtenir seulement les données de type relatives à un bloc (aucune valeur de propriété n'est sélectionnée) :*"
+
+#: ../../modules/block.md:248 5c60377a69e34df78b8f3c8a8b7ebf29
+msgid "Read-only Output"
+msgstr "Sortie en lecture seule"
+
+#: ../../modules/block.md:251 148ffbd36a16446ea6d4043f9e70f9d6
+msgid ""
+"The `bs:out block` output is intended to be read-only. Modifying parts "
+"manually could lead to potential bugs. That's why the module provides "
+"numerous functions capable of making modifications to the output while "
+"preserving its integrity."
+msgstr "La sortie `bs:out block` est destinée à être en lecture seule. Modifier manuellement des parties pourrait conduire à des bugs potentiels. C'est pourquoi le module fournit de nombreuses fonctions capables d'apporter des modifications à la sortie tout en préservant son intégrité."
+
+#: ../../modules/block.md:254 ../../modules/block.md:690
+#: ../../modules/block.md:761 ../../modules/block.md:955
+#: 1f3b5a97f24e4d40ace9e21ce9d79fc1 50e4b7e80c2844928020b7062b78a355
+#: a8d17981f779459695c16609a2e6d5b5 bc01f75c9c8a4d38be3adbf258616b6d
+msgid "**Credits**: Aksiome, theogiraudet"
+msgstr "**Crédits** : Aksiome, theogiraudet"
+
+#: ../../modules/block.md:258 eb8a60118865405aa5947fd92657ae24
+msgid "Manage State"
+msgstr "Gérer l'état"
+
+#: ../../modules/block.md 0970cd4a6bd04f859c581a23d98828cb
+msgid "Keep"
+msgstr "Garder"
+
+#: ../../modules/block.md:266 ed952388e5fd4a3fa88a508382027de5
+msgid ""
+"Filter properties to keep only the desired ones. This function acts on "
+"the [virtual block format](#get) stored in the block output."
+msgstr "Filtrer les propriétés pour ne garder que celles désirées. Cette fonction agit sur le [format de bloc virtuel](#get) stocké dans la sortie du bloc."
+
+#: ../../modules/block.md:269 ../../modules/block.md:306
+#: ../../modules/block.md:341 ../../modules/block.md:376
+#: ../../modules/block.md:412 ../../modules/block.md:457
+#: ../../modules/block.md:508 ../../modules/block.md:568
+#: ../../modules/block.md:604 ../../modules/block.md:636
+#: 20bb514d84d04891a7b4c76f44ba8b4f 2ae0002bb0824de1a98165dec8696e71
+#: 83192c92e5ad4744a45c31709a97e587 8941a65b8fa54882954140b9a70224db
+#: 99809614b7fc431aab05795adf10354f 9f2bbd2611404e089d7e2b6d002b68d7
+#: aabc8cb32f844c82a53d82bfdd7f95ad c39e25074b364f74b71eaa3d4e4ef8b0
+#: da6d2b409359459898458c58a35e92b1 e2f186bf8b9c49d3858c721635a2b150
+msgid "**Function macro**:"
+msgstr "**Macro de fonction** :"
+
+#: ../../modules/block.md:271 ../../modules/block.md:308
+#: ../../modules/block.md:343 ../../modules/block.md:378
+#: ../../modules/block.md:414 ../../modules/block.md:459
+#: ../../modules/block.md:510 ../../modules/block.md:570
+#: ../../modules/block.md:606 ../../modules/block.md:638
+#: 042e2bb128b941518e2c9fc9529ad879 272866d38450481c82890a401a1e34d5
+#: 3d69f03547fc4a8b9795dc84137e6c49 45fb61ac78384b53b17e29f205bd4600
+#: 521ee8d6ee02457d968226029bb2dcf4 69bb0bf50ba7495285c6aaedfe5cb82b
+#: 93d751142e1541e7ae6afc80fe6966b6 ba31a7b6ab6c42d0974f96d2b4e119c4
+#: cb9bd9445d244f20a33e4662a57cf47b de377c3a28004ba3b9892de85d6097d2
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` Arguments"
+
+#: ../../modules/block.md:272 a5489876771943bda54167218b2ae65a
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to keep."
+msgstr "{nbt}`list` **properties** : Liste des propriétés à garder."
+
+#: ../../modules/block.md:273 ../../modules/block.md:310
+#: ../../modules/block.md:345 ../../modules/block.md:380
+#: ../../modules/block.md:416 b940c56ea87a4c6ba535bb90d4a542e4
+#: c4ed84dcd9c24dd886ff391282f29098 d3038179eeb44232be869f50520a513c
+#: dfd49e4c5f3e458bb6f415816b6d2662 e5b58a6b80714c2bbe88192c7bc4752e
+#, python-brace-format
+msgid "{nbt}`compound` Property data"
+msgstr "{nbt}`compound` Données de propriété"
+
+#: ../../modules/block.md:274 ../../modules/block.md:311
+#: ../../modules/block.md:346 ../../modules/block.md:417
+#: 576bcb49340a4107adc115df616cdc03 bda6a296a43d4c29b270eb6b7bd5fcd8
+#: cf1ab65a808e4dae85b72f1741f8d0ed d3c56eef54ff41c0a9a2b6f59ae34955
+#, python-brace-format
+msgid "{nbt}`string` **name**: Name of the property (e.g., `shape`)."
+msgstr "{nbt}`string` **name** : Nom de la propriété (par ex., `shape`)."
+
+#: ../../modules/block.md:277 ../../modules/block.md:314
+#: ../../modules/block.md:349 ../../modules/block.md:385
+#: ../../modules/block.md:421 ../../modules/block.md:463
+#: ../../modules/block.md:515 ../../modules/block.md:575
+#: 60c29035a0b049f3a4c5cacfdbc06879 7645465054fd464d9c4f93f83777d7bf
+#: 78c9dd83df4e4866afe2b0c20bd83590 80c35b16aba14a888ef21f06cba5b10e
+#: adbe8b80cb5c401cb0b2a1ebffba3c55 b2186c9067024292a97f616dcce9a4aa
+#: bbe0e58d7a8f4ffab0f8866a7fe2d19d f16e356e3c3a407f9ab31e8c91599c32
+#, python-brace-format
+msgid ""
+"**Storage `bs:out block`**: {nbt}`compound` There's no need for manual "
+"specification; rather, employ the relevant functions, such as "
+"[`get_block`](#get)."
+msgstr ""
+"**Stockage `bs:out block`** : {nbt}`compound` Il n'est pas nécessaire de spécifier manuellement ; utilisez plutôt les fonctions appropriées, telles que "
+"[`get_block`](#get)."
+
+#: ../../modules/block.md:280 ../../modules/block.md:317
+#: ../../modules/block.md:352 ../../modules/block.md:388
+#: ../../modules/block.md:424 ../../modules/block.md:468
+#: ../../modules/block.md:520 ../../modules/block.md:580
+#: 2032a9f70e94454fa60c28f928e070c4 7296c554317c4783bd8e22a7d26f0c12
+#: 99f5fb47d8bb43c2a454c34878862dea b3ab9306ac274d55b8590cbe0c5de598
+#: c6fe65155fc84380af87711deee6f775 c90c4a6a7c1646d8a64526ff946de818
+#: eb0f63092e004163866eed91f26bb2b5 f10bc0e6d5e94a7583d69a875da9fc63
+#, python-brace-format
+msgid ""
+"**Storage `bs:out block`**: {nbt}`compound` The `block`, `state` and "
+"`properties` are updated to reflect this change."
+msgstr ""
+"**Stockage `bs:out block`** : {nbt}`compound` Les valeurs `block`, `state` et `properties` "
+"sont mises à jour pour refléter ce changement."
+
+#: ../../modules/block.md:283 ede0ab4ee6cc433a89261a368619be28
+msgid "*Example: Keep only the facing and shape properties:*"
+msgstr "*Exemple : Garder seulement les propriétés facing et shape :*"
+
+#: ../../modules/block.md f6b8d56e4943479abebe05314f371fc2
+msgid "Merge"
+msgstr "Fusionner"
+
+#: ../../modules/block.md:301 62f3178af5cf4747afbf9fcc5573e47e
+msgid ""
+"Merge state properties from the current location into the output. The "
+"merge occurs if the syntax is correct, regardless of logical coherence "
+"(e.g., using 'age' for different plants). This function acts on the "
+"[virtual block format](#get) stored in the block output."
+msgstr "Fusionner les propriétés d'état de l'emplacement actuel dans la sortie. La fusion se produit si la syntaxe est correcte, indépendamment de la cohérence logique (par ex., utiliser 'age' pour différentes plantes). Cette fonction agit sur le [format de bloc virtuel](#get) stocké dans la sortie du bloc."
+
+#: ../../modules/block.md:304 b1c30b4d0f354c9f8efe6588db3d4680
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Location of the "
+"block that act as input."
+msgstr "**Exécution `at <entity>` ou `positioned <x> <y> <z>`** : Emplacement du bloc qui agit comme entrée."
+
+#: ../../modules/block.md:309 70852eb9c67240379df1c2e861e2e187
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to merge."
+msgstr "{nbt}`list` **properties** : Liste des propriétés à fusionner."
+
+#: ../../modules/block.md:320 9ec70645558045188df93595239c6c07
+msgid "*Example: Merge the facing of a block onto stairs:*"
+msgstr "*Exemple : Fusionner la direction d'un bloc sur des escaliers :*"
+
+#: ../../modules/block.md 4ebd09618dd747c7908c9ee68004ac07
+msgid "Remove"
+msgstr "Retirer"
+
+#: ../../modules/block.md:338 4bb4f3067d96431581abff187228d732
+msgid ""
+"Filter properties by removing the undesired ones. This function acts on "
+"the [virtual block format](#get) stored in the block output."
+msgstr "Filtrer les propriétés en retirant celles indésirées. Cette fonction agit sur le [format de bloc virtuel](#get) stocké dans la sortie du bloc."
+
+#: ../../modules/block.md:344 098f8dd76798452a8e958eb2df35bf45
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to remove."
+msgstr "{nbt}`list` **properties** : Liste des propriétés à retirer."
+
+#: ../../modules/block.md:355 a3d1f418c9a84d64a207edcfdd1af08f
+msgid "*Example: Remove the facing and shape properties:*"
+msgstr "*Exemple : Retirer les propriétés facing et shape :*"
+
+#: ../../modules/block.md 0a546fb53adb4788a57cc8c48da94717
+#: 41cc98d267db45cab50e3363a881942c
+msgid "Replace"
+msgstr "Remplacer"
+
+#: ../../modules/block.md:373 57257914989f45ceb3a37ca55455c9a7
+msgid ""
+"Replace property values. Invalid values will not be replaced. This "
+"function acts on the [virtual block format](#get) stored in the block "
+"output."
+msgstr "Remplacer les valeurs de propriété. Les valeurs invalides ne seront pas remplacées. Cette fonction agit sur le [format de bloc virtuel](#get) stocké dans la sortie du bloc."
+
+#: ../../modules/block.md:379 b07b97c9548340098d8ba61bc6614678
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to replace."
+msgstr "{nbt}`list` **properties** : Liste des propriétés à remplacer."
+
+#: ../../modules/block.md:381 1bd30a7128b04aa3bddd78487f255d2d
+#, python-brace-format
+msgid "{nbt}`string` **name**: Name of the property (e.g., `facing`)."
+msgstr "{nbt}`string` **name** : Nom de la propriété (par ex., `shape`)."
+
+#: ../../modules/block.md:382 1dd13b7613e140fd995306a48ea43fd8
+#, python-brace-format
+msgid "{nbt}`string` **value**: Value of the property (e.g., `east`)."
+msgstr "{nbt}`string` **value** : Valeur de la propriété (par ex., `east`)."
+
+#: ../../modules/block.md:391 357cba6223c94c8c90879aff4e4e7da9
+msgid "*Example: Replace the facing property value:*"
+msgstr "*Exemple : Remplacer la valeur de la propriété facing :*"
+
+#: ../../modules/block.md a428a11ae8ff4e1ca4ae09c3a3110749
+msgid "Shift"
+msgstr "Décaler"
+
+#: ../../modules/block.md:409 2a77624990304a37a3bdf1eb275eeb14
+msgid ""
+"Shift properties by any amount, allowing cycling through their values. "
+"This function acts on the [virtual block format](#get) stored in the "
+"block output."
+msgstr "Décaler les propriétés de n'importe quelle quantité, permettant de parcourir leurs valeurs. Cette fonction agit sur le [format de bloc virtuel](#get) stocké dans la sortie du bloc."
+
+#: ../../modules/block.md:415 0baf00ce6719430d9361e24d76a2e8c4
+#, python-brace-format
+msgid "{nbt}`list` **properties**: List of properties to shift."
+msgstr "{nbt}`list` **properties** : Liste des propriétés à décaler."
+
+#: ../../modules/block.md:418 9aa6cc3dc8954df1a8afc62ed59b2a0c
+#, python-brace-format
+msgid "{nbt}`string` **by**: Shift amount (defaults to 1)."
+msgstr "{nbt}`string` **by** : Quantité de décalage (par défaut 1)."
+
+#: ../../modules/block.md:427 6d662be2a46b4506ba890c0e1bd05cd2
+msgid "*Example: Shift the facing property value by 2:*"
+msgstr "*Exemple : Décaler la valeur de la propriété facing de 2 :*"
+
+#: ../../modules/block.md:446 70f2d6d419da45ceadbc04898118a21d
+msgid "Manage Type"
+msgstr "Gérer le type"
+
+#: ../../modules/block.md:454 7e94c194b44c4aecb3f8afe1d37bc6ed
+msgid ""
+"Replace the block type while trying to conserve the state. State is "
+"preserved only if the group of the output matches the input. This "
+"function acts on the [virtual block format](#get) stored in the block "
+"output."
+msgstr "Remplacer le type de bloc tout en essayant de conserver l'état. L'état est préservé seulement si le groupe de la sortie correspond à l'entrée. Cette fonction agit sur le [format de bloc virtuel](#get) stocké dans la sortie du bloc."
+
+#: ../../modules/block.md:466 ../../modules/block.md:518
+#: ../../modules/block.md:578 611c533ca7594f84a67bc7f6a5e3ef6e
+#: 72ebca6136ab4d3088a114bec15df852 b86c22075cfc4e5d829dafda7eda8b7d
+msgid "**Return**: Whether a type was found and the replacement occurred."
+msgstr "**Retour** : Si un type a été trouvé et que le remplacement a eu lieu."
+
+#: ../../modules/block.md:471 4861d3aa60e74df3b65df32a4f14740e
+msgid ""
+"*Example: Replace oak stairs with spruce stairs, preserving the current "
+"state:*"
+msgstr "*Exemple : Remplacer les escaliers en chêne par des escaliers en épicéa, en préservant l'état actuel :*"
+
+#: ../../modules/block.md 63d6493a8f4546518d13201b6a162e2c
+msgid "Map"
+msgstr "Mapper"
+
+#: ../../modules/block.md:489 3c59b17b496343afaa702ed53589ba4f
+msgid ""
+"Swap related block types while ensuring coherent replacements within the "
+"defined mapping registry. A mapping registry is defined as follows:"
+msgstr "Échanger des types de blocs liés tout en assurant des remplacements cohérents dans le registre de mappage défini. Un registre de mappage est défini comme suit :"
+
+#: ../../modules/block.md:501 0a64ef65667d4ec699b0b86d33fdb459
+msgid ""
+"This function operates on the [virtual block format](#get) stored in the "
+"block output. It replaces the type in the output with one that belongs to"
+" the same set and better matches the attributes of the inputted type."
+msgstr "Cette fonction opère sur le [format de bloc virtuel](#get) stocké dans la sortie du bloc. Elle remplace le type dans la sortie par un qui appartient au même ensemble et correspond mieux aux attributs du type entré."
+
+#: ../../modules/block.md:503 df637b9e3cd449f5872d46559d7ad4a7
+msgid ""
+"For example, with the above mapping registry: if the input is "
+"`minecraft:red_wool` (attrs:[\"red\"]), and the virtual block type is "
+"`minecraft:green_carpet` (set:\"carpet\"), the resulting block will be "
+"`minecraft:red_carpet` (set:\"carpet\",attrs:[\"red\"])."
+msgstr ""
+"Par exemple, avec le registre de mappage ci-dessus : si l'entrée est "
+"`minecraft:red_wool` (attrs:[\"red\"]), et que le type de bloc virtuel est "
+"`minecraft:green_carpet` (set:\"carpet\"), le bloc résultant sera "
+"`minecraft:red_carpet` (set:\"carpet\",attrs:[\"red\"])."
+
+#: ../../modules/block.md:505 ../../modules/block.md:565
+#: 95531abd86854442965626b8cc24c762 cef769cc875e4c81b8185507012e8954
+msgid ""
+"Bookshelf includes two predefined mapping registries (`bs.shapes` and "
+"`bs.colors`). If these are insufficient, you can [create your own"
+"](#custom-mapping-registry)."
+msgstr ""
+"Bookshelf inclut deux registres de mappage prédéfinis (`bs.shapes` et "
+"`bs.colors`). Si ceux-ci sont insuffisants, vous pouvez [créer le vôtre"
+"](#custom-mapping-registry)."
+
+#: ../../modules/block.md:512 ../../modules/block.md:572
+#: a81863ff8e614177b784e9eff838aa18 eefe275d01904650adba8dfea30d4cc4
+#, python-brace-format
+msgid ""
+"{nbt}`string` **mapping_registry**: A path to the mapping registry used "
+"for the replacement (e.g., `bs.shapes`)."
+msgstr "{nbt}`string` **mapping_registry** : Un chemin vers le registre de mappage utilisé pour le remplacement (par ex., `bs.shapes`)."
+
+#: ../../modules/block.md:523 13e3030196534261b09320f4b23a668c
+msgid ""
+"*Example: Replace all oak-related blocks with spruce ones (the function "
+"replaces the oak stairs block with a spruce stairs block):*"
+msgstr "*Exemple : Remplacer tous les blocs liés au chêne par ceux en épicéa (la fonction remplace le bloc d'escalier en chêne par un bloc d'escalier en épicéa) :*"
+
+#: ../../modules/block.md da108657f0f8453288ea15c8cbc673b0
+msgid "Mix"
+msgstr "Mélanger"
+
+#: ../../modules/block.md:541 0502779a8f3b461091d8454c34b96970
+msgid "Experimental"
+msgstr "Expérimental"
+
+#: ../../modules/block.md:544 4bbf0ea8234f44d0a0d904637faa85d8
+msgid ""
+"This function may sometimes behave unpredictably due to the arbitrary "
+"nature of block relationship definitions. Additionally, while the "
+"provided registries aim to cover a wide range of blocks, they are "
+"handcrafted and therefore not exhaustive."
+msgstr "Cette fonction peut parfois se comporter de manière imprévisible en raison de la nature arbitraire des définitions de relations de blocs. De plus, bien que les registres fournis visent à couvrir un large éventail de blocs, ils sont faits à la main et donc non exhaustifs."
+
+#: ../../modules/block.md:547 e27cd7a3195149888cf0f2b395e824cd
+msgid ""
+"Mix block types while ensuring coherent replacements within the defined "
+"mapping registry. A mapping registry is defined as follows:"
+msgstr "Mélanger les types de blocs tout en assurant des remplacements cohérents dans le registre de mappage défini. Un registre de mappage est défini comme suit :"
+
+#: ../../modules/block.md:561 1cee895d7fe34cd699ac29fc85b3a9e5
+msgid ""
+"This function operates on the [virtual block format](#get) stored in the "
+"block output. It replaces the type in the output with one that belongs to"
+" the same set and better matches the attributes of both the output and "
+"input types while prioritizing the input type."
+msgstr "Cette fonction opère sur le [format de bloc virtuel](#get) stocké dans la sortie du bloc. Elle remplace le type dans la sortie par un qui appartient au même ensemble et correspond mieux aux attributs des types de sortie et d'entrée tout en priorisant le type d'entrée."
+
+#: ../../modules/block.md:563 adf35f2681704f948fe015a976223325
+msgid ""
+"For example, with the above mapping registry: if the input is "
+"`minecraft:bricks` (attrs:[\"brick\"]), and the virtual block type is "
+"`minecraft:stone_stairs` (set:\"stairs\",attrs:[\"stone\"]), the "
+"resulting block will be `minecraft:stone_brick_stairs` "
+"(set:\"stairs\",attrs:[\"stone\",\"brick\"])."
+msgstr ""
+"Par exemple, avec le registre de mappage ci-dessus : si l'entrée est "
+"`minecraft:bricks` (attrs:[\"brick\"]), et que le type de bloc virtuel est "
+"`minecraft:stone_stairs` (set:\"stairs\",attrs:[\"stone\"]), le "
+"bloc résultant sera `minecraft:stone_brick_stairs` "
+"(set:\"stairs\",attrs:[\"stone\",\"brick\"])."
+
+#: ../../modules/block.md:583 3a4ae7917f9c40ccb1ef657f95e06c42
+msgid ""
+"*Example: Mix a mossy cobblestone block with bricks resulting in a mossy "
+"stone bricks block:*"
+msgstr "*Exemple : Mélanger un bloc de pierre moussue avec des briques résultant en un bloc de briques de pierre moussue :*"
+
+#: ../../modules/block.md 4532530530d348ccbd5083baa364792b
+msgid "Lookup Item"
+msgstr "Rechercher un objet"
+
+#: ../../modules/block.md:601 80f146acbb1b4f63b11c3506fc186df6
+msgid "Get block data from the given item string id."
+msgstr "Obtenir les données de bloc à partir de l'ID de chaîne d'objet donné."
+
+#: ../../modules/block.md:607 364f7aa02cdc4e56ab065feaa1a707e0
+#, python-brace-format
+msgid "{nbt}`string` **item**: Item string id associated to a block."
+msgstr "{nbt}`string` **item** : ID de chaîne d'objet associé à un bloc."
+
+#: ../../modules/block.md:611 ../../modules/block.md:643
+#: 57d6f3bc6e324cab923e1ca9cdb05f6e a5c234d3f238492c87327c6e5cce4508
+#, python-brace-format
+msgid ""
+"**Storage `bs:out block`**: {nbt}`compound` Equivalent to the "
+"[`#bs.block:get_type`](#get) function."
+msgstr ""
+"**Stockage `bs:out block`** : {nbt}`compound` Équivalent à la "
+"fonction [`#bs.block:get_type`](#get)."
+
+#: ../../modules/block.md:614 0afb578d97b74093a011a6525b900f19
+msgid "*Example: Get block data for the stone item:*"
+msgstr "*Exemple : Obtenir les données de bloc pour l'objet pierre :*"
+
+#: ../../modules/block.md:625 d7b6d9a407e141c082dfd2fc079b9009
+msgid ""
+"Minecraft does not perfectly map between blocks and items. Some items may"
+" correspond to multiple blocks, and this function will only return one of"
+" them."
+msgstr "Minecraft ne mappe pas parfaitement entre les blocs et les objets. Certains objets peuvent correspondre à plusieurs blocs, et cette fonction ne retournera qu'un seul d'entre eux."
+
+#: ../../modules/block.md cc3ae83bd75d40da96d868eb416d3418
+msgid "Lookup Type"
+msgstr "Rechercher un type"
+
+#: ../../modules/block.md:633 739ea713931642fbbf2090b1bcb7234b
+msgid "Get block data from the given type string id."
+msgstr "Obtenir les données de bloc à partir de l'ID de chaîne de type donné."
+
+#: ../../modules/block.md:639 12441749e43a4c90b43bc82cb6ce2486
+#, python-brace-format
+msgid "{nbt}`string` **type**: Type string id associated to a block."
+msgstr "{nbt}`string` **type** : ID de chaîne de type associé à un bloc."
+
+#: ../../modules/block.md:646 c5be2ab7207e496590a968ef02d021f0
+msgid "*Example: Get block data for the stone type:*"
+msgstr "*Exemple : Obtenir les données de bloc pour le type pierre :*"
+
+#: ../../modules/block.md:662 7ea2f786328d4a208191e167aca79fdf
+msgid "Match"
+msgstr "Correspondre"
+
+#: ../../modules/block.md:666 b30c172cca1142f09ebe587484b78cf4
+msgid "Determine if the block at the specified location matches the provided one."
+msgstr "Déterminer si le bloc à l'emplacement spécifié correspond à celui fourni."
+
+#: ../../modules/block.md:669 7f4dcaeff07e4f16aa80ff0ba632ec15
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Location of the "
+"block to check."
+msgstr "**Exécution `at <entity>` ou `positioned <x> <y> <z>`** : Emplacement du bloc à vérifier."
+
+#: ../../modules/block.md:671 f3f6a341bab346ea823cc006157c64ec
+#, python-brace-format
+msgid ""
+"**Storage `bs:in block.match.block`**: {nbt}`string` Full string "
+"representation of the block to check against."
+msgstr "**Stockage `bs:in block.match.block`** : {nbt}`string` Représentation complète en chaîne du bloc à vérifier."
+
+#: ../../modules/block.md:674 cd55800931664703b1803f5fd7aed68a
+msgid "**Return**: Whether the check is a success or a failure (1 or 0)."
+msgstr "**Retour** : Si la vérification est un succès ou un échec (1 ou 0)."
+
+#: ../../modules/block.md:677 a5e5268dd28341eca3d18cdbeed52fd0
+msgid "*Example: Check that the block at 0 0 0 matches the block at 0 1 0:*"
+msgstr "*Exemple : Vérifier que le bloc à 0 0 0 correspond au bloc à 0 1 0 :*"
+
+#: ../../modules/block.md:694 4c55ed542b8a4a2eb2e75e3ff7c0cf4b
+msgid "Set"
+msgstr "Définir"
+
+#: ../../modules/block.md:702 20a4dac869be4f0d95db0ff0a3451561
+msgid "Place a block at the current location."
+msgstr "Placer un bloc à l'emplacement actuel."
+
+#: ../../modules/block.md:705 ../../modules/block.md:736
+#: c066b002efa54aa39e5efc2bfa693e36 fbfe32b42fe143008c34630d6f631fb7
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to set "
+"the block to."
+msgstr "**Exécution `at <entity>` ou `positioned <x> <y> <z>`** : Position pour définir le bloc."
+
+#: ../../modules/block.md:707 bb8d497827ec4b06ab498f7c8a563aab
+msgid "**Storage `bs:in block.set_block`**:"
+msgstr "**Stockage `bs:in block.set_block`** :"
+
+#: ../../modules/block.md:709 e1bf0c4162754479ad2ffeedec02d20c
+#, python-brace-format
+msgid "{nbt}`compound` Set block data"
+msgstr "{nbt}`compound` Données de définition de bloc"
+
+#: ../../modules/block.md:710 a2eb85acd626454f9287e73d514a31af
+#, python-brace-format
+msgid "{nbt}`string` **block**: Full string representation of the block to set."
+msgstr "{nbt}`string` **block** : Représentation complète en chaîne du bloc à définir."
+
+#: ../../modules/block.md:711 ../../modules/block.md:742
+#: d21b5f89090d4ee0b1dee309b0af922c db46fa5f0db4406ca95df06460995f9d
+#, python-brace-format
+msgid ""
+"{nbt}`string` **mode**: Mode used to set the block "
+"[destroy|keep|replace|strict] (default: replace)."
+msgstr ""
+"{nbt}`string` **mode** : Mode utilisé pour définir le bloc "
+"[destroy|keep|replace|strict] (par défaut : replace)."
+
+#: ../../modules/block.md:715 ../../modules/block.md:746
+#: 38a5ddd78290425e85da7eb82f5b0fc4 dc8fc8b275b74a8a86bfa214d65791f5
+msgid "**State**: A block is placed in the world."
+msgstr "**État** : Les blocs sont placés dans le monde."
+
+#: ../../modules/block.md:718 c91d171b3c0d412e9fb4ce4f509b450e
+msgid "*Example: Place a block of stone at 0 0 0 by destroying the existing one:*"
+msgstr "*Exemple : Placer un bloc de pierre à 0 0 0 en détruisant le bloc existant :*"
+
+#: ../../modules/block.md:733 73c33d45c5d04bf0b1600dd3352e832e
+msgid ""
+"Replace the block type at the current location while trying to conserve "
+"its state and NBTs."
+msgstr "Remplacer le type de bloc à l'emplacement actuel tout en essayant de conserver son état et ses NBT."
+
+#: ../../modules/block.md:738 eacef2a7f9b74d818f8b5a5239ba6b04
+msgid "**Storage `bs:in block.set_type`**:"
+msgstr "**Stockage `bs:in block.set_type`** :"
+
+#: ../../modules/block.md:740 2de34f413313479b833ca9396e31fa7e
+#, python-brace-format
+msgid "{nbt}`compound` Set type data"
+msgstr "{nbt}`compound` Données de définition de bloc"
+
+#: ../../modules/block.md:741 20e9a53a62044a34b957e8f96fd09b09
+#, python-brace-format
+msgid "{nbt}`string` **type**: String representation of the block id to set."
+msgstr "{nbt}`string` **type** : Représentation en chaîne de l'ID de bloc à définir."
+
+#: ../../modules/block.md:749 32136a85cba74032809737dce1c35d39
+msgid ""
+"*Example: Replace any stairs with oak stairs, preserving the current "
+"state:*"
+msgstr "*Exemple : Remplacer tous les escaliers par des escaliers en chêne, en préservant l'état actuel :*"
+
+#: ../../modules/block.md:765 46a24c1e0a2342fd811130d622d58207
+msgid "Produce"
+msgstr "Produire"
+
+#: ../../modules/block.md 75020f6b5cf64553a0973643f9c9bdb7
+msgid "Block Display"
+msgstr "Affichage de bloc"
+
+#: ../../modules/block.md:773 90d1b88d1d2e4995a4b9398f222201e8
+msgid "Spawn a block display representing the given block."
+msgstr "Générer un affichage de bloc représentant le bloc donné."
+
+#: ../../modules/block.md:776 ../../modules/block.md:811
+#: ../../modules/block.md:846 35469d3224b44355a9a5999568ccbd10
+#: 441287599cd948b1b72163d3a6ea2f71 afd4357e36e04f4086efece3fd5d0d8c
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where "
+"the entity will be summoned."
+msgstr "**Exécution `at <entity>` ou `positioned <x> <y> <z>`** : Position où l'entité sera invoquée."
+
+#: ../../modules/block.md:778 d2af144e65964714ab123ca0a99b034a
+msgid "**Storage `bs:in block.spawn_block_display`**:"
+msgstr "**Stockage `bs:in block.spawn_block_display`** :"
+
+#: ../../modules/block.md:780 ../../modules/block.md:850
+#: 966b3b50eea54dafbbeed3f04d42159d 9954a8e522e249ffbee1b94214a6aae9
+#, python-brace-format
+msgid "{nbt}`compound` Block display data"
+msgstr "{nbt}`compound` Données d'affichage de bloc"
+
+#: ../../modules/block.md:781 ../../modules/block.md:816
+#: ../../modules/block.md:851 ../../modules/block.md:886
+#: 0eda22f39a2d4a8095587f7c40720a6b 19e7ccef528a47b1b33e059e1cb8d651
+#: 261be4aa8af74077af5a79a828d2ee20 f4c5a5a00a2341ddafb79356b75fbbfe
+#, python-brace-format
+msgid "{nbt}`string` **type**: Block type (similar to block output)."
+msgstr "{nbt}`string` **type** : Type de bloc (similaire à la sortie de bloc)."
+
+#: ../../modules/block.md:782 ../../modules/block.md:817
+#: ../../modules/block.md:852 ../../modules/block.md:887
+#: 19d258938e874e96a6e35e6f75d0342c 1fedb879f8f7461a94caddb516999b29
+#: 6da304fe433f4c478ed077e82b0a7ad7 cdc690a8efd24ee392213ba0c877decb
+#, python-brace-format
+msgid ""
+"{nbt}`compound` **properties**: Block properties (similar to block "
+"output)."
+msgstr "{nbt}`compound` **properties** : Propriétés de bloc (similaires à la sortie de bloc)."
+
+#: ../../modules/block.md:783 ../../modules/block.md:818
+#: ../../modules/block.md:853 6e76b53e47b74df783c825a1c96457be
+#: 6f462cc817ce43b7a5d0e737c009c3b3 891b2cd84de94111b8a59cd4ae4ec7b6
+#, python-brace-format
+msgid "{nbt}`compound` **extra_nbt**: Additional NBTs to summon the entity with."
+msgstr "{nbt}`compound` **extra_nbt** : NBT supplémentaires pour invoquer l'entité."
+
+#: ../../modules/block.md:787 ../../modules/block.md:822
+#: ../../modules/block.md:857 08478be61f394b3d95686c27da54ab3a
+#: 31f298761a994566ba7dd857b7a1a4ae 6ca512a43c564caea626cf0ad826ac33
+msgid "**State**: The entity is summoned."
+msgstr "**État** : L'entité est invoquée."
+
+#: ../../modules/block.md:790 bdd2be8de80244c88895c04b30256113
+msgid "*Example: Summon a block display using the block at 0 0 0:*"
+msgstr "*Exemple : Invoquer un affichage de bloc en utilisant le bloc à 0 0 0 :*"
+
+#: ../../modules/block.md 7d58a898c9424eaf86a1701dc4a57805
+msgid "Falling Block"
+msgstr "Bloc tombant"
+
+#: ../../modules/block.md:808 4a5ad426c8944335b10edca509c28c35
+msgid "Spawn a falling block representing the given block."
+msgstr "Générer un bloc tombant représentant le bloc donné."
+
+#: ../../modules/block.md:813 0a1c1859e51d40d6bdb0a39c24ee1a63
+msgid "**Storage `bs:in block.spawn_falling_block`**:"
+msgstr "**Stockage `bs:in block.spawn_falling_block`** :"
+
+#: ../../modules/block.md:815 b5b0e99023984f11873704949ac86929
+#, python-brace-format
+msgid "{nbt}`compound` Falling block data"
+msgstr "{nbt}`compound` Données de bloc tombant"
+
+#: ../../modules/block.md:825 8725065db9044b5b8a80f6825b3a100b
+msgid "*Example: Summon a falling block using the block at 0 0 0:*"
+msgstr "*Exemple : Invoquer un bloc tombant en utilisant le bloc à 0 0 0 :*"
+
+#: ../../modules/block.md 4da112a231ce466d868b84e202400d68
+msgid "Solid Block Display"
+msgstr "Affichage de bloc solide"
+
+#: ../../modules/block.md:843 2b74fb71d4d948b4be3e8941b8000dd0
+msgid "Spawn a block display with a hitbox, representing the given block."
+msgstr "Générer un affichage de bloc avec une hitbox, représentant le bloc donné."
+
+#: ../../modules/block.md:848 65d92b97d3eb4b5084840a9fcf95a81e
+msgid "**Storage `bs:in block.spawn_solid_block_display`**:"
+msgstr "**Stockage `bs:in block.spawn_solid_block_display`** :"
+
+#: ../../modules/block.md:860 6467a653fa9f447b95e61c419cafa2bd
+msgid "*Example: Summon a block display with a hitbox using the block at 0 0 0:*"
+msgstr "*Exemple : Invoquer un affichage de bloc avec une hitbox en utilisant le bloc à 0 0 0 :*"
+
+#: ../../modules/block.md 3819a49ce227448bba06448ab94db4f1
+msgid "Block Particle"
+msgstr "Particule de bloc"
+
+#: ../../modules/block.md:878 f5f8d9bc6c144d7d85dc1324f46741b1
+msgid "Emit block particle of the given block."
+msgstr "Émettre une particule de bloc du bloc donné."
+
+#: ../../modules/block.md:881 451c597379d849b7b2270e870754ffc3
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where "
+"the particle will be emitted."
+msgstr "**Exécution `at <entity>` ou `positioned <x> <y> <z>`** : Position où la particule sera émise."
+
+#: ../../modules/block.md:883 30df907761ff4ca5ad801fb65bb36e02
+msgid "**Storage `bs:in block.emit_block_particle`**:"
+msgstr "**Stockage `bs:in block.emit_block_particle`** :"
+
+#: ../../modules/block.md:885 befe05878dcf4421a806045022098a97
+#, python-brace-format
+msgid "{nbt}`compound` Block particle data"
+msgstr "{nbt}`compound` Données de particule de bloc"
+
+#: ../../modules/block.md:888 b4e27970d68a4d37a4c5738783a83bd3
+#, python-brace-format
+msgid ""
+"{nbt}`string` **delta**: X Y Z coordinates, the motion value of the "
+"particle (default: `0 0 0`)."
+msgstr "{nbt}`string` **delta** : Coordonnées X Y Z, la valeur de mouvement de la particule (par défaut : `0 0 0`)."
+
+#: ../../modules/block.md:889 fafb61f8581c4708997e997721660021
+#, python-brace-format
+msgid "{nbt}`int` **speed**: Speed of the particle (default: `1`)."
+msgstr "{nbt}`int` **speed** : Vitesse de la particule (par défaut : `1`)."
+
+#: ../../modules/block.md:890 e8627b8f7341415ba227225535bfedde
+#, python-brace-format
+msgid "{nbt}`int` **count**: Number of particle (default: `1`)."
+msgstr "{nbt}`int` **count** : Nombre de particules (par défaut : `1`)."
+
+#: ../../modules/block.md:891 4fae61b11fee431782b5ed02b96f1245
+#, python-brace-format
+msgid ""
+"{nbt}`string` **mode**: Display mode: `normal` or `force` (default: "
+"`normal`)."
+msgstr "{nbt}`string` **mode** : Mode d'affichage : `normal` ou `force` (par défaut : `normal`)."
+
+#: ../../modules/block.md:892 6004430d99544fc6abdc8cf13c98cb9c
+#, python-brace-format
+msgid ""
+"{nbt}`string` **viewers**: Control which player should view this particle"
+" (default: `@a`)."
+msgstr "{nbt}`string` **viewers** : Contrôle quels joueurs doivent voir cette particule (par défaut : `@a`)."
+
+#: ../../modules/block.md:896 322cd47363e54e49a9927d584d57f084
+msgid "**State**: The particle is emitted."
+msgstr "**État** : La particule est émise."
+
+#: ../../modules/block.md:899 7b4109b7f78948c7a4e3786ff7e8bec8
+msgid "*Example: Emit the particle of the block at 0 0 0:*"
+msgstr "*Exemple : Émettre la particule du bloc à 0 0 0 :*"
+
+#: ../../modules/block.md 6cf23166c3054aecace0aabdf422e110
+msgid "Block Sound"
+msgstr "Son de bloc"
+
+#: ../../modules/block.md:918 552a759ef5824ae8964db61f80af78b3
+msgid "Play a block sound of the given block."
+msgstr "Jouer un son de bloc du bloc donné."
+
+#: ../../modules/block.md:921 aa3493a437474002b9e8b4b0c2eb8358
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where "
+"the sound will be played."
+msgstr "**Exécution `at <entity>` ou `positioned <x> <y> <z>`** : Position où le son sera joué."
+
+#: ../../modules/block.md:923 de9e3e62e8f5418d8f309410243bf8ee
+msgid "**Storage `bs:in block.play_block_sound`**:"
+msgstr "**Stockage `bs:in block.play_block_sound`** :"
+
+#: ../../modules/block.md:925 93e0dc2e9dfa493b95217cc2280e1baa
+#, python-brace-format
+msgid "{nbt}`compound` Block sound data"
+msgstr "{nbt}`compound` Données de son de bloc"
+
+#: ../../modules/block.md:926 c4404c785afa42f6904f0860c4536cf5
+#, python-brace-format
+msgid ""
+"{nbt}`string` **sound**: Sound to play. Found in the `sounds` property of"
+" the virtual block (cf get functions)."
+msgstr "{nbt}`string` **sound** : Son à jouer. Trouvé dans la propriété `sounds` du bloc virtuel (cf fonctions get)."
+
+#: ../../modules/block.md:927 d9839a49f1f4447d8b6e17bbf3aed74e
+#, python-brace-format
+msgid ""
+"{nbt}`string` **source**: Source of the sound: `master`, `music`, "
+"`record`, `weather`, `block`, `hostile`, `neutral`, `player`, `ambient`, "
+"or `voice` (default: `master`)."
+msgstr ""
+"{nbt}`string` **source** : "
+"Source du son : `master`, `music`, `record`, `weather`, `block`, `hostile`, `neutral`, `player`, `ambient` "
+"ou `voice` (par défaut : `master`)."
+
+#: ../../modules/block.md:928 b84fd66eca074d7bacb3064ee58e1091
+#, python-brace-format
+msgid "{nbt}`string` **targets**: The targets of the sound (default: `@s`)."
+msgstr "{nbt}`string` **targets** : Les cibles du son (par défaut : `@s`)."
+
+#: ../../modules/block.md:929 2ab5cee7164745fe97f51805685d5edb
+#, python-brace-format
+msgid ""
+"{nbt}`string` **pos**: X Y Z coordinates, the position of the sound "
+"(default: `~ ~ ~`)."
+msgstr "{nbt}`string` **pos** : Coordonnées X Y Z, la position du son (par défaut : `~ ~ ~`)."
+
+#: ../../modules/block.md:930 5e8f2fa328f342f3a9905b52a1046cdd
+#, python-brace-format
+msgid "{nbt}`int` **pitch**: Pitch of the sound (default: `1`)."
+msgstr "{nbt}`int` **pitch** : Hauteur du son (par défaut : `1`)."
+
+#: ../../modules/block.md:931 71ca5a43c97e469aa217bee22383c5e5
+#, python-brace-format
+msgid "{nbt}`int` **volume**: Volume of the sound (default: `1`)."
+msgstr "{nbt}`int` **volume** : Volume du son (par défaut : `1`)."
+
+#: ../../modules/block.md:932 6786e74d347a437a9b35fdb21e1e4aba
+#, python-brace-format
+msgid "{nbt}`int` **min_volume**: Minimum volume of the sound (default: `0`)."
+msgstr "{nbt}`int` **min_volume** : Volume minimum du son (par défaut : `0`)."
+
+#: ../../modules/block.md:936 45591cbb405c4750b804b4736e69aef6
+msgid "**State**: The sound is played."
+msgstr "**État** : Le son est joué."
+
+#: ../../modules/block.md:939 293baac6246e4c5baee6d190bf5a0b41
+msgid "*Example: Play the sound of the block at 0 0 0:*"
+msgstr "*Exemple : Jouer le son du bloc à 0 0 0 :*"
+
+#: ../../modules/block.md:960 9d6b661dd41a46d283a0d4e31c284e95
+msgid "🎓 Custom Mapping Registry"
+msgstr "🎓 Registre de mappage personnalisé"
+
+#: ../../modules/block.md:962 0c666ee4defa4647abe178fbbdd78beb
+msgid ""
+"This module allows you to create a personalized mapping registry tailored"
+" to your specific needs."
+msgstr "Ce module vous permet de créer un registre de mappage personnalisé adapté à vos besoins spécifiques."
+
+#: ../../modules/block.md:966 1047ce5654b746f881db33ea61850e2a
+msgid ""
+"To create a new registry, you need to define an array within the "
+"`bs:const block.mapping_registry` storage. Each new registry should be "
+"namespaced, and each element must include `set`, `attrs`, and `type`. "
+"Here's how you can define a new mapping registry:"
+msgstr ""
+"Pour créer un nouveau registre, vous devez définir un tableau dans le "
+"stockage `bs:const block.mapping_registry`. Chaque nouveau registre doit être "
+"avec un espace de noms, et chaque élément doit inclure `set`, `attrs` et "
+"`type`. Voici comment définir un nouveau registre de mappage :"
+
+#: ../../_templates/comments.md:4 0048061b3c50486187ad0274db4674de
+msgid "**💬 Did it help you?**"
+msgstr "**💬 Cela vous a-t-il aidé ?**"
+
+#: ../../_templates/comments.md:6 ec12427d204f43dbb14ef3f4a896fe2f
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "N'hésitez pas à laisser vos questions et commentaires ci-dessous !"
+
+#~ msgid "{nbt}`string` **block**: String representation of the block id to set."
+#~ msgstr "{nbt}`string` **block**: 要放置的方块的id的字符串表示。"

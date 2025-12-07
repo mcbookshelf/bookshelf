@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-07-19 19:35+0800\n"
+"Last-Translator: Claude <noreply@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../contribute/good-practices.md:1 93fb9985bc654d82a7a3a6bd132efba2
+msgid "🛡️ Good Practices"
+msgstr "🛡️ Bonnes pratiques"
+
+#: ../../../contribute/good-practices.md:3 755b24ca183e48f690b09ef430b65c42
+msgid ""
+"Bookshelf's development emphasizes collaboration, clarity, and "
+"efficiency. By following these guidelines, you can help maintain a high "
+"standard of code that is accessible, understandable, and non-intrusive."
+msgstr "Le développement de Bookshelf met l'accent sur la collaboration, la clarté et l'efficacité. En suivant ces directives, vous pouvez aider à maintenir un haut standard de code qui est accessible, compréhensible et non intrusif."
+
+#: ../../../contribute/good-practices.md:7 a596e151ff984109855aa712b2d44416
+msgid "💬 Commenting Code"
+msgstr "💬 Commentaires de code"
+
+#: ../../../contribute/good-practices.md:9 efaf5104d27f4579a7fd6f29a10a9d71
+msgid ""
+"Bookshelf is a collaborative project designed to be both pedagogical and "
+"accessible. This means the code is not only functional but also "
+"understandable by developers and curious users alike."
+msgstr "Bookshelf est un projet collaboratif conçu pour être à la fois pédagogique et accessible. Cela signifie que le code n'est pas seulement fonctionnel, mais aussi compréhensible par les développeurs et les utilisateurs curieux."
+
+#: ../../../contribute/good-practices.md:11 859ff592b9044adf8b7504b1ba501a8c
+msgid ""
+"To achieve this, **commenting your code regularly and cleanly** is "
+"essential:"
+msgstr "Pour atteindre cet objectif, **commenter votre code régulièrement et proprement** est essentiel :"
+
+#: ../../../contribute/good-practices.md:13 dee9b3391092434c88ad0deb075f8c57
+msgid "Explain the purpose of each function and its key components"
+msgstr "Expliquer le but de chaque fonction et ses composants clés"
+
+#: ../../../contribute/good-practices.md:14 baa1af9203db442cb2a09e9d3a33ecc7
+msgid "Ensure comments are concise but provide enough context for others"
+msgstr "S'assurer que les commentaires sont concis mais fournissent suffisamment de contexte pour les autres"
+
+#: ../../../contribute/good-practices.md:15 1d566f2c76a74c4582852699285cec94
+msgid "Update comments when the functionality changes to avoid confusion"
+msgstr "Mettre à jour les commentaires lorsque la fonctionnalité change pour éviter la confusion"
+
+#: ../../../contribute/good-practices.md:17 4457e60a577e4ddbbcd878e3dddccc12
+msgid ""
+"Clear comments contribute to a smoother collaboration and make Bookshelf "
+"easier to learn from."
+msgstr "Des commentaires clairs contribuent à une collaboration plus fluide et rendent Bookshelf plus facile à apprendre."
+
+#: ../../../contribute/good-practices.md:21 31f11058f1b14d83b68e93b8d2b602d1
+msgid "♻️ Conservation Principle"
+msgstr "♻️ Principe de conservation"
+
+#: ../../../contribute/good-practices.md:23 f606a867356d44d3ae6674ee5d3c9b75
+msgid ""
+"Bookshelf follows a conservation principle inspired by Antoine "
+"Lavoisier's maxim:"
+msgstr "Bookshelf suit un principe de conservation inspiré de la maxime d'Antoine Lavoisier :"
+
+#: ../../../contribute/good-practices.md:26 23107a617c82421392814ca4e2e65e0e
+msgid "\"Nothing is lost, nothing is created, everything is transformed\""
+msgstr "\"Rien ne se perd, rien ne se crée, tout se transforme\""
+
+#: ../../../contribute/good-practices.md:27 270634bf267e427aa019297064274174
+msgid "Antoine Lavoisier"
+msgstr "Antoine Lavoisier"
+
+#: ../../../contribute/good-practices.md:31 fb49959ed63b4d05bd0c689c98542019
+msgid ""
+"This principle minimizes interference with scores and other data, aiming "
+"to prevent accidental overwrites or unnecessary operations."
+msgstr "Ce principe minimise l'interférence avec les scores et autres données, visant à prévenir les écrasements accidentels ou les opérations inutiles."
+
+#: ../../../contribute/good-practices.md:33 e31484e7e6dd4aad85876a82fe86a721
+msgid "Key Guidelines:"
+msgstr "Directives clés :"
+
+#: ../../../contribute/good-practices.md:35 daf0f81aacf947a0ad94bab593cf431e
+msgid ""
+"**Minimize the creation of new scores**: Use existing ones whenever "
+"possible"
+msgstr "**Minimiser la création de nouveaux scores** : Utiliser les existants autant que possible"
+
+#: ../../../contribute/good-practices.md:36 32c1b705bac94154b62e72d997af43d1
+msgid ""
+"**Strictly avoid score deletion**: Instead, repurpose scores or reset "
+"their values if necessary"
+msgstr "**Éviter strictement la suppression de scores** : Plutôt réutiliser les scores ou réinitialiser leurs valeurs si nécessaire"
+
+#: ../../../contribute/good-practices.md:37 76f7d33cb5974b02acd4a045475c0934
+msgid ""
+"**Reduce unnecessary score rewrites**: Only update scores when absolutely"
+" required"
+msgstr "**Réduire les réécritures inutiles de scores** : Mettre à jour les scores uniquement quand absolument requis"
+
+#: ../../../contribute/good-practices.md:39 1b5e54556d84420fb31590e61ea992ef
+msgid ""
+"Each function should handle inputs responsibly, ensuring that only "
+"outputs are altered."
+msgstr "Chaque fonction doit gérer les entrées de manière responsable, en s'assurant que seules les sorties sont altérées."

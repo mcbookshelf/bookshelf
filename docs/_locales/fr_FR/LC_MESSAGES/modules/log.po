@@ -1,0 +1,552 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"PO-Revision-Date: 2025-09-17 16:00+0100\n"
+"Last-Translator: Claude <noreply@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/log.md:1 9f62bda6148042d0878da835bfeb9537
+msgid "📄 Log"
+msgstr "📄 Journal"
+
+#: ../../modules/log.md:3 e260d4a04bf142c5825b4aca308a3d12
+msgid "**`#bs.log:help`**"
+msgstr "**`#bs.log:help`**"
+
+#: ../../modules/log.md:5 6c9551c0d80d40d0965299a3b387e669
+msgid "Log messages in the chat with varying levels of severity."
+msgstr "Enregistrer des messages de journal dans le chat avec différents niveaux de gravité."
+
+#: ../../modules/log.md:7 fde43490df664d1ab3280e3c5fd9f1e4
+msgid "Enable Command Blocks"
+msgstr "Activer les blocs de commande"
+
+#: ../../modules/log.md:10 485e5b29fa5146889a1f1071046133bf
+msgid ""
+"This module uses a command block to get the system time. For the time to "
+"be displayed as intended, be sure that `enable-command-block` is set to "
+"`true` in your `server.properties` file and that the "
+"`sendCommandFeedback` gamerule is enabled."
+msgstr ""
+"Ce module utilise un bloc de commande pour obtenir l'heure système. Pour que l'heure s'affiche correctement, "
+"assurez-vous que `enable-command-block` est défini sur `true` dans votre fichier `server.properties` et que "
+"la règle de jeu `sendCommandFeedback` est activée."
+
+#: ../../modules/log.md:15 ca99fba445664b91b6b3c3ed3cd42879
+msgid "🔧 Functions"
+msgstr "🔧 Fonctions"
+
+#: ../../modules/log.md:17 7ce01694c04b446db471601aba25a051
+msgid "You can find below all functions available in this module."
+msgstr "Vous pouvez trouver ci-dessous toutes les fonctions disponibles dans ce module."
+
+#: ../../modules/log.md:21 988da8294518414cbc50b167515fd1e3
+msgid "Log Messages"
+msgstr "Messages de journal"
+
+#: ../../modules/log.md 44568557315040c1952420315a605ea9
+msgid "Error"
+msgstr "Erreur"
+
+#: ../../modules/log.md:29 3308e1462a41472ba27a3bb33963ac5c
+msgid ""
+"Log an error message. For more information on how it works see the "
+"[usage](#usage) section. By default, it's printed as: [ERROR] <tag> > "
+"<message> and hovering over the left part of the log reveals the "
+"timestamp and log function path."
+msgstr ""
+"Enregistre un message d'erreur. Pour plus d'informations sur son fonctionnement, consultez la section [usage](#usage). "
+"Par défaut, il s'affiche comme : [ERROR] <tag> > <message> et survoler la partie gauche du journal révèle "
+"l'horodatage et le chemin de la fonction de journal."
+
+#: ../../modules/log.md:31 ../../modules/log.md:55 ../../modules/log.md:79
+#: ../../modules/log.md:103 ../../modules/log.md:136 ../../modules/log.md:161
+#: 03a2954a8a9143f9a27fe5bfa93cefad 0f43181bae8d4033a8356e0ecae212c8
+#: 313f5c8989574f6d815db4b63e540105 58f02b2091a545d7b64e006a1f4dbe0c
+#: 6c228dae342b471e82e1cac3ed233476 f60987ee96e94e70b3d7b88659572b3a
+msgid "Inputs"
+msgstr "Entrées"
+
+#: ../../modules/log.md:32 ../../modules/log.md:56 ../../modules/log.md:80
+#: ../../modules/log.md:104 ../../modules/log.md:137 ../../modules/log.md:162
+#: 1b68f2784e904ef5b196732a41d879da 389e8e8ff48a4988b2ddcfc1b52ff669
+#: 3c2d4fe998e8458ea468702a374f7622 ac5d68ac8a4e4aa8b71bd7bb3f2ad9d8
+#: cba9d879ec094c44aca68be44ef20c88 f5eaf0402ec6424fb3cd17718d6ab6cf
+msgid "**Function macro**:"
+msgstr "**Macro de fonction** :"
+
+#: ../../modules/log.md:42 7770948de3cb4bff80f3f1cb6dca67b3
+msgid ""
+"*Example: Log an error message that originates from the `bs.foo:bar` "
+"function:*"
+msgstr "*Exemple : Enregistrer un message d'erreur provenant de la fonction `bs.foo:bar` :*"
+
+#: ../../modules/log.md 21469d5ae1db4bf3833da7d16b277943
+msgid "Warning"
+msgstr "Avertissement"
+
+#: ../../modules/log.md:53 716a27582cc0495c9d939572c32d57c9
+msgid ""
+"Log a warning message. For more information on how it works see the "
+"[usage](#usage) section. By default, it's printed as: [WARN] <tag> > "
+"<message> and hovering over the left part of the log reveals the "
+"timestamp and log function path."
+msgstr ""
+"Enregistre un message d'avertissement. Pour plus d'informations sur son fonctionnement, consultez la section [usage](#usage). "
+"Par défaut, il s'affiche comme : [WARN] <tag> > <message> et survoler la partie gauche du journal révèle "
+"l'horodatage et le chemin de la fonction de journal."
+
+#: ../../modules/log.md:66 eb96ed9cdba24e9bbf82a80c041acdb6
+msgid ""
+"*Example: Log a warning message that originates from the `bs.foo:bar` "
+"function:*"
+msgstr "*Exemple : Enregistrer un message d'avertissement provenant de la fonction `bs.foo:bar` :*"
+
+#: ../../modules/log.md 285ad754489e41ab94620951bd78f7d8
+msgid "Information"
+msgstr "Information"
+
+#: ../../modules/log.md:77 f4ee9914c91d4ff2a71656a8f2576c92
+msgid ""
+"Log an information message. For more information on how it works see the "
+"[usage](#usage) section. By default, it's printed as: [INFO] <tag> > "
+"<message> and hovering over the left part of the log reveals the "
+"timestamp and log function path."
+msgstr ""
+"Enregistre un message d'information. Pour plus d'informations sur son fonctionnement, consultez la section [usage](#usage). "
+"Par défaut, il s'affiche comme : [INFO] <tag> > <message> et survoler la partie gauche du journal révèle "
+"l'horodatage et le chemin de la fonction de journal."
+
+#: ../../modules/log.md:90 7c0d8e2fa1a943da85980410e16640e7
+msgid ""
+"*Example: Log an info message that originates from the `bs.foo:bar` "
+"function:*"
+msgstr "*Exemple : Enregistrer un message d'information provenant de la fonction `bs.foo:bar` :*"
+
+#: ../../modules/log.md a866f716aace4cf197045930e8a6bec2
+msgid "Debug"
+msgstr "Débogage"
+
+#: ../../modules/log.md:101 045429ba79f946c5bfed9c476cfa3916
+msgid ""
+"Log a debug message. For more information on how it works see the "
+"[usage](#usage) section. By default, it's printed as: [DEBUG] <tag> > "
+"<message> and hovering over the left part of the log reveals the "
+"timestamp and log function path."
+msgstr ""
+"Enregistre un message de débogage. Pour plus d'informations sur son fonctionnement, consultez la section [usage](#usage). "
+"Par défaut, il s'affiche comme : [DEBUG] <tag> > <message> et survoler la partie gauche du journal révèle "
+"l'horodatage et le chemin de la fonction de journal."
+
+#: ../../modules/log.md:114 d6cce2d6c02d4a82a5899fc14c76dc2d
+msgid ""
+"*Example: Log a debug message that originates from the `bs.foo:bar` "
+"function:*"
+msgstr "*Exemple : Enregistrer un message de débogage provenant de la fonction `bs.foo:bar` :*"
+
+#: ../../modules/log.md:122 69fe8831303649ee81f27668eca8aaf0
+msgid "**Credits**: theogiraudet"
+msgstr "**Crédits**: theogiraudet"
+
+#: ../../modules/log.md:126 e14ffc1daa4b47e8ba0df075fe02dcc6
+msgid "Log History"
+msgstr "Historique du journal"
+
+#: ../../modules/log.md 997436cb73934a8a934f3d719c0d7055
+msgid "View History"
+msgstr "Voir l'historique"
+
+#: ../../modules/log.md:134 f493480827d0475a9d518e479f7dc612
+msgid "Retrieve the log history. It shows all the previously logged messages."
+msgstr "Récupère l'historique du journal. Affiche tous les messages précédemment enregistrés."
+
+#: ../../modules/log.md:147 475a3b3178e144e4a978fea1ffbec34f
+msgid ""
+"*Example: View the log history for a specific namespace, tag, and "
+"severity level:*"
+msgstr "*Exemple : Voir l'historique du journal pour un espace de noms, une balise et un niveau de gravité spécifiques :*"
+
+#: ../../modules/log.md 5d6f9ab2e1884c94b0083878e193aade
+msgid "Clear History"
+msgstr "Effacer l'historique"
+
+#: ../../modules/log.md:159 7ed17f3ee05044738aef2a559e595f82
+msgid "Clear the log history."
+msgstr "Efface l'historique du journal."
+
+#: ../../modules/log.md:172 f2efef7afe9041ac8ea6010584000ede
+msgid ""
+"*Example: Clear the log history for a specific namespace, tag, and "
+"severity level:*"
+msgstr "*Exemple : Effacer l'historique du journal pour un espace de noms, une balise et un niveau de gravité spécifiques :*"
+
+#: ../../modules/log.md:181 f9fddb2b7f8f44fa926bf107f752891f
+msgid "**Credits**: Aksiome"
+msgstr "**Crédits**: Aksiome"
+
+#: ../../modules/log.md:186 e3535e74dbed442c8cb109976de9e026
+msgid "🎓 How to Use?"
+msgstr "🎓 Comment utiliser ?"
+
+#: ../../modules/log.md:188 ffddcc9be3f84737bdfce6bcb0f5faa0
+msgid "Different log levels are available for various types of logs:"
+msgstr "Différents niveaux de journal sont disponibles pour divers types de journaux :"
+
+#: ../../modules/log.md:189 8702794a66314c0fbce4dd4809eba334
+msgid "**Debug**: Detailed debug information."
+msgstr "**Débogage** : Informations de débogage détaillées."
+
+#: ../../modules/log.md:190 dc74d7da53954b6f8bcfeaf3aa44c862
+msgid "**Information**: Interesting / significant events."
+msgstr "**Information** : Événements intéressants ou significatifs."
+
+#: ../../modules/log.md:191 03acce81762d48a9bfa81b26f68d408e
+msgid "**Warning**: Exceptional occurrences that are not errors."
+msgstr "**Avertissement** : Occurrences exceptionnelles qui ne sont pas des erreurs."
+
+#: ../../modules/log.md:192 0de4e091d4154ad6bebab2c3a7c96b75
+msgid "**Error**: Runtime errors that should be monitored and fixed."
+msgstr "**Erreur** : Erreurs d'exécution qui doivent être surveillées et corrigées."
+
+#: ../../modules/log.md:196 b911f9202b814b32b293988dfb5bcd78
+msgid "Manage Granularity"
+msgstr "Gérer la granularité"
+
+#: ../../modules/log.md:198 6c4b0e075d1445568d8114b30cc2a7f1
+msgid ""
+"A significant number of logs can quickly flood the chat. To prevent this,"
+" Bookshelf's log module can be configured to display specific logs based "
+"on two parameters: the **log level**, the **tag** and the **namespace**."
+msgstr ""
+"Un nombre important de journaux peut rapidement inonder le chat. Pour éviter cela, le module de journal de Bookshelf "
+"peut être configuré pour afficher des journaux spécifiques en fonction de trois paramètres : le **niveau de journal**, "
+"la **balise** et l'**espace de noms**."
+
+#: ../../modules/log.md:200 6a1b7b39e37c45ca9a1516d6580a63e1
+msgid ""
+"Users need to give themselves tags that follow a strict syntax: "
+"`<namespace>.log.<tag>.<level>`, where the level can be `debug`, `info`, "
+"`warn`, or `error`."
+msgstr ""
+"Les utilisateurs doivent s'attribuer des balises qui suivent une syntaxe stricte : "
+"`<namespace>.log.<tag>.<level>`, où le niveau peut être `debug`, `info`, `warn` ou `error`."
+
+#: ../../modules/log.md:202 57414754091940e3a85090708ffecd01
+msgid "The `_` symbol acts as a wildcard, logging all tags or all levels:"
+msgstr "Le symbole `_` agit comme un caractère générique, enregistrant toutes les balises ou tous les niveaux :"
+
+#: ../../modules/log.md:203 919b2c1dae8943a4afb0c8f7d6bb0e18
+msgid "`bs.foo.log._.<level>`: show all logs of `bs.foo` regardless of the tag."
+msgstr "`bs.foo.log._.<level>` : affiche tous les journaux de `bs.foo` quelle que soit la balise."
+
+#: ../../modules/log.md:204 c600e56312994c3a8d16b4a6ded7e3b0
+msgid "`bs.foo.log.<tag>._`: show all logs of `bs.foo` regardless of the level."
+msgstr "`bs.foo.log.<tag>._` : affiche tous les journaux de `bs.foo` quel que soit le niveau."
+
+#: ../../modules/log.md:205 3d367427936b4514a8ea42ab40da6676
+msgid "`bs.foo.log._._`: show all logs of `bs.foo`."
+msgstr "`bs.foo.log._._` : affiche tous les journaux de `bs.foo`."
+
+#: ../../modules/log.md:206 7e4b95b2f0984b15be722c0c9c66c330
+msgid "`_.log._._`: show all logs."
+msgstr "`_.log._._` : affiche tous les journaux."
+
+#: ../../modules/log.md:209 0ebbefc90dce4056a02a739d116e497a
+msgid ""
+"Each level allows the visualization of subsequent levels. For example, if"
+" a user gives themselves a tag ending with warn, they can visualize logs "
+"of warn and error levels. By default, logs are not displayed to any user."
+msgstr "Chaque niveau permet la visualisation des niveaux suivants. Par exemple, si un utilisateur s'attribue une balise se terminant par warn, il peut visualiser les journaux de niveaux warn et error. Par défaut, les journaux ne sont affichés à aucun utilisateur."
+
+#: ../../modules/log.md:214 98ca711543d947ad8c8924c5fd1f70b0
+msgid "Define the Message"
+msgstr "Définir le message"
+
+#: ../../modules/log.md:216 8494d5b52b3340289457f3f40218c929
+msgid ""
+"Log functions take four variables as input. The `path` of the current "
+"function that inform users of the log origin, the `tag`, the `namespace` "
+"and the `message`."
+msgstr "Les fonctions de journal prennent quatre variables en entrée. Le `path` de la fonction actuelle qui informe les utilisateurs de l'origine du journal, le `tag`, le `namespace` et le `message`."
+
+#: ../../modules/log.md:219 1e0b67fdf3384cb88a0e43a5e4f3b62b
+msgid ""
+"The `message` string must be a valid SNBT text component. Thus, to "
+"specify a plain string text as a message, the message needs to be escaped"
+"  (`\"\\\"message\\\"\"` or `'\"message\"'`)."
+msgstr ""
+"La chaîne `message` doit être un composant de texte SNBT valide. Ainsi, pour spécifier une chaîne de texte brut "
+"comme message, le message doit être échappé (`\"\\\"message\\\"\"` ou `'\"message\"'`)."
+
+#: ../../modules/log.md:222 550c732007af40a6b487d32ca267f337
+msgid ""
+"*Example: Log a simple warning message. We assume the log originates from"
+" the `bs.foo:bar` function:*"
+msgstr "*Exemple : Enregistrer un simple message d'avertissement. Nous supposons que le journal provient de la fonction `bs.foo:bar` :*"
+
+#: ../../modules/log.md:228 18b263d0923e41df91403d1f02686069
+msgid ""
+"Will display the following message if the user has one of these tags: "
+"`bs.foo.log.bar.warn`, `bs.foo.log.bar.info`, `bs.foo.log.bar.debug`, "
+"`bs.foo.log._.warn`, `bs.foo.log._.info`, `bs.foo.log._.debug`, "
+"`bs.foo.log._._`, `bs.foo.log.bar._`, `_.log.bar.warn`, `_.log.bar.info`,"
+" `_.log.bar.debug`, `_.log._.warn`, `_.log._.info`, `_.log._.debug`, "
+"`_.log._._`, `_.log.bar._`."
+msgstr "Affichera le message suivant si l'utilisateur possède l'une de ces balises : `bs.foo.log.bar.warn`, `bs.foo.log.bar.info`, `bs.foo.log.bar.debug`, `bs.foo.log._.warn`, `bs.foo.log._.info`, `bs.foo.log._.debug`, `bs.foo.log._._`, `bs.foo.log.bar._`, `_.log.bar.warn`, `_.log.bar.info`, `_.log.bar.debug`, `_.log._.warn`, `_.log._.info`, `_.log._.debug`, `_.log._._`, `_.log.bar._`."
+
+#: ../../modules/log.md:230 8722c775355a4a23a440a2f0df3aba35
+msgid "![](/_imgs/modules/log/example-1.png)"
+msgstr "![](/_imgs/modules/log/example-1.png)"
+
+#: ../../modules/log.md:232 aef0fa0c8e404ae28370b5cbc8bfe602
+msgid ""
+"*Example: Log a complex info message. We assume the log originates from "
+"the `bs.foo:baz` function:*"
+msgstr "*Exemple : Enregistrer un message d'information complexe. Nous supposons que le journal provient de la fonction `bs.foo:baz` :*"
+
+#: ../../modules/log.md:238 fa506da3619e4c6286d692a3a72d7fa4
+msgid ""
+"Will display the following message if the user has one of these tags: "
+"`bs.foo.log.baz.info`, `bs.foo.log.baz.debug`, `bs.foo.log._.info`, "
+"`bs.foo.log._.debug`, `bs.foo.log.baz._`, `_.log.baz.info`, "
+"`_.log.baz.debug`, `_.log._.info`, `_.log._.debug`, `_.log.baz._`."
+msgstr "Affichera le message suivant si l'utilisateur possède l'une de ces balises : `bs.foo.log.baz.info`, `bs.foo.log.baz.debug`, `bs.foo.log._.info`, `bs.foo.log._.debug`, `bs.foo.log.baz._`, `_.log.baz.info`, `_.log.baz.debug`, `_.log._.info`, `_.log._.debug`, `_.log.baz._`."
+
+#: ../../modules/log.md:240 c7b7086f52164326bb9997ce4f2f2fb0
+msgid "![](/_imgs/modules/log/example-2.png)"
+msgstr "![](/_imgs/modules/log/example-2.png)"
+
+#: ../../modules/log.md:242 7d230a3c963b43b6a266ca31784c4614
+msgid "Customize the Format"
+msgstr "Personnaliser le format"
+
+#: ../../modules/log.md:244 84f6ba6b404c4e1eb00b8f1bbc354104
+msgid ""
+"Bookshelf proposes to define different log message formats according to "
+"the namespace. To add new log message formats, you have to write directly"
+" inside the storage array `bs:const log.messages`:"
+msgstr ""
+"Bookshelf propose de définir différents formats de messages de journal selon l'espace de noms. Pour ajouter de nouveaux "
+"formats de messages de journal, vous devez écrire directement dans le tableau de stockage `bs:const log.messages` :"
+
+#: ../../modules/log.md:260 fe00674df76f4d2d9ee8bc3d93001de7
+msgid ""
+"The `namespaces` array stores all the namespaces sharing the same log "
+"message formats. The four formats (`error`, `warn`, `info` and `debug`) "
+"describe the log format for the respecting severity level. The value of "
+"each must be a full SNBT text component."
+msgstr ""
+"Le tableau `namespaces` stocke tous les espaces de noms partageant les mêmes formats de messages de journal. "
+"Les quatre formats (`error`, `warn`, `info` et `debug`) décrivent le format de journal pour le niveau de gravité correspondant. "
+"La valeur de chacun doit être un composant de texte SNBT complet."
+
+#: ../../modules/log.md:264 e3a6b5bfee2f41848fef14c748009211
+msgid ""
+"Bookshelf exposes several values that can be used directly in the log "
+"messages format:"
+msgstr "Bookshelf expose plusieurs valeurs qui peuvent être utilisées directement dans le format des messages de journal :"
+
+#: ../../modules/log.md:247 e2e9a88fae724621a722f6814b794289
+msgid "storage"
+msgstr "stockage"
+
+#: ../../modules/log.md:247 0f81a5e0b75d42ea8f9691c2952e01b0
+msgid "path"
+msgstr "chemin"
+
+#: ../../modules/log.md:247 5a6981a18c5c4e6db33cca76ef83acca
+msgid "description"
+msgstr "description"
+
+#: ../../modules/log.md:247 083aae2c3dbc429586584ad0e55c88c2
+#: 0fad8a425117494c80ae28f62fc6f578 24cd4405fb9543558bd298c42f381eef
+#: 47a4156301f242a299a73b9e459a713a 61a949fd31424ce792c3432e63074253
+#: 7d385adb114b491a894621289a3d9438 b378ab8ec823471e932d6baaae408b61
+#: c0372c1c0ed9466ab4ff5ffba8c4c5ab dd53f69d39d84400b05a7dc591dd1f57
+#: de4abd3ab89a4bf0a7e143ab6c383eb6
+#, python-brace-format
+msgid "{nbt}`string`"
+msgstr "{nbt}`string`"
+
+#: ../../modules/log.md:247 23e56971a213479e949056275092c521
+#: 46d293a76556456fb97e1aaa3a6f196b 4947ade17fc64520afef40e86a3131ee
+#: 6b05e24ef5754b7c81b321de1e74c679 6d68781281104afaba5c0c1eb405706a
+#: 7bfe1710305f451185c424184088618d d51dd6373c6a4e87a7cbac80206e5173
+#: d6ab8596437d467b9e1fb9af6d60f5b5 ead0db4c636a4315918e4f91474d09f6
+msgid "bs:in"
+msgstr "bs:in"
+
+#: ../../modules/log.md:247 dc951c125ad34df1b06e36835f08b8d7
+msgid "log.message"
+msgstr "log.message"
+
+#: ../../modules/log.md:247 4b51d2ce2b184accbccfe39b8a130e87
+msgid "The message of the log (must be a valid SNBT text component)"
+msgstr "Le message du journal (doit être un composant de texte SNBT valide)"
+
+#: ../../modules/log.md:247 852fbbdceabb40bb82ed6718417dd12d
+msgid "log.namespace"
+msgstr "log.namespace"
+
+#: ../../modules/log.md:247 69e16c861c024875988b4cd7e2156276
+msgid "The namespace of the current log message"
+msgstr "L'espace de noms du message de journal actuel"
+
+#: ../../modules/log.md:247 eef53c8c76154380a8144d85645e6106
+msgid "log.path"
+msgstr "log.path"
+
+#: ../../modules/log.md:247 5bf89dc4c7274194959bca0f6affcdf2
+msgid "The path of the function that logs the current message"
+msgstr "Le chemin de la fonction qui enregistre le message actuel"
+
+#: ../../modules/log.md:247 99ca114d2c6f45b091baaf0afea0104a
+msgid "log.tag"
+msgstr "log.tag"
+
+#: ../../modules/log.md:247 16b405d22bd1423a93c53f3f6467966e
+msgid "The tag of the log message"
+msgstr "La balise du message de journal"
+
+#: ../../modules/log.md:247 2e62c3a8365f4d74b3a661dfdd0b9cb4
+msgid "log.hours"
+msgstr "log.hours"
+
+#: ../../modules/log.md:247 01f42db017974c6d8463ada7462dcb0a
+msgid "The hours of the log message timestamp"
+msgstr "Les heures de l'horodatage du message de journal"
+
+#: ../../modules/log.md:247 afdaca6d856042eea0af687d2132ca8a
+msgid "log.minutes"
+msgstr "log.minutes"
+
+#: ../../modules/log.md:247 abb2767b831241989b507b1f85e9a473
+msgid "The minutes of the log message timestamp"
+msgstr "Les minutes de l'horodatage du message de journal"
+
+#: ../../modules/log.md:247 f8405b44cd4c4a98af8450a2201b027d
+msgid "log.seconds"
+msgstr "log.seconds"
+
+#: ../../modules/log.md:247 873a5fa15d3e426ca6cc65b872cbeee5
+msgid "The seconds of the log message timestamp"
+msgstr "Les secondes de l'horodatage du message de journal"
+
+#: ../../modules/log.md:247 2f8cc3d5029240deb60311ffbbf3c430
+msgid "log.ticks"
+msgstr "log.ticks"
+
+#: ../../modules/log.md:247 3a3ba1127a394ab591d8b935c2ba0f5b
+msgid "The ticks of the log message timestamp"
+msgstr "Les ticks de l'horodatage du message de journal"
+
+#: ../../modules/log.md:247 953e34a9766d40b996d26485a1ca2cf5
+#, python-brace-format
+msgid "{nbt}`int`"
+msgstr "{nbt}`int`"
+
+#: ../../modules/log.md:247 d812acfb89514bcba447293a97e34430
+msgid "log.gametime"
+msgstr "log.gametime"
+
+#: ../../modules/log.md:247 6eba3162408c497d8a9bcd48ec150813
+msgid "The gametime where the message was logged"
+msgstr "Le temps de jeu où le message a été enregistré"
+
+#: ../../modules/log.md:247 b114e41d58444b4e9d51220be69807b7
+#: fe34ecd429f94861adf7c38c432d9182
+msgid "bs:const"
+msgstr "bs:const"
+
+#: ../../modules/log.md:247 2199d60f9ff74cd8a493cb9659073674
+msgid "log.time_hms"
+msgstr "log.time_hms"
+
+#: ../../modules/log.md:247 be09026a9b544f9396ae5ffd93026b5d
+msgid "A SNBT text component to display time in the in hh:mm:ss format"
+msgstr "Un composant de texte SNBT pour afficher l'heure au format hh:mm:ss"
+
+#: ../../modules/log.md:247 45f9f4ccc32d486baf7cf7a0835bbd04
+msgid "log.time_hmst"
+msgstr "log.time_hmst"
+
+#: ../../modules/log.md:247 04fde4d2ba7942b3ae2a463e2edd0d89
+msgid "A SNBT text component to display time in the in hh:mm:ss:tt format"
+msgstr "Un composant de texte SNBT pour afficher l'heure au format hh:mm:ss:tt"
+
+#: ../../modules/log.md:280 eb90608a79b342019efdba8d629e8d3a
+msgid "*Example: Define custom log message formats for the namespace `bs.foo`:*"
+msgstr "*Exemple : Définir des formats de messages de journal personnalisés pour l'espace de noms `bs.foo` :*"
+
+#: ../../modules/log.md:295 a3794546063e4c788c41d8acd4ad7711
+msgid "And to try the new format:"
+msgstr "Et pour essayer le nouveau format :"
+
+#: ../../_templates/comments.md:4 9a366cd85bfb48b7b799b97f783da54f
+msgid "**💬 Did it help you?**"
+msgstr "**💬 Cela vous a-t-il aidé ?**"
+
+#: ../../_templates/comments.md:6 7fbc284599a24d18855a5177eba1547a
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "N'hésitez pas à laisser vos questions et commentaires ci-dessous !"
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` Arguments"
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **message**: Logged message. "
+"Must be a valid SNBT text "
+"component."
+msgstr "{nbt}`string` **message** : Message enregistré. Doit être un composant de texte SNBT valide."
+
+#, python-brace-format
+msgid "{nbt}`string` **namespace**: Namespace of the function."
+msgstr "{nbt}`string` **namespace** : Espace de noms de la fonction."
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **path**: Origin path for "
+"the log (current Minecraft function)."
+msgstr "{nbt}`string` **path** : Chemin d'origine du journal (fonction Minecraft actuelle)."
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **tag**: A tag to identify"
+" the function. This tag is displayed"
+" in the log message and is used"
+" as group to manage the granularity."
+msgstr "{nbt}`string` **tag** : Une balise pour identifier la fonction. Cette balise est affichée dans le message de journal et est utilisée comme groupe pour gérer la granularité."
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Optional filters."
+msgstr "{nbt}`compound` **with** : Filtres optionnels."
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **severity**: Severity level to"
+" filter logs (`error`, `warn`, `info`, "
+"or `debug`)."
+msgstr "{nbt}`string` **severity** : Niveau de gravité pour filtrer les journaux (`error`, `warn`, `info` ou `debug`)."
+
+#, python-brace-format
+msgid "{nbt}`string` **namespace**: Namespace to filter the logs."
+msgstr "{nbt}`string` **namespace** : Espace de noms pour filtrer les journaux."
+
+#, python-brace-format
+msgid "{nbt}`string` **tag**: Tag to filter logs."
+msgstr "{nbt}`string` **tag** : Balise pour filtrer les journaux."

@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"PO-Revision-Date: 2025-01-17 10:00+0100\n"
+"Last-Translator: Claude AI <noreply@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/schedule.md:1 f98171f82e9643f09c982903d734ed13
+msgid "⏲️ Schedule"
+msgstr "⏲️ Planification"
+
+#: ../../modules/schedule.md:3 bf9776d0aa2d4446a6bb79834e329556
+msgid "**`#bs.schedule:help`**"
+msgstr "**`#bs.schedule:help`**"
+
+#: ../../modules/schedule.md:5 6b2fa55cd061482198bd76533ce6a15a
+msgid ""
+"Enhance command scheduling with this module, providing flexibility beyond"
+" vanilla capabilities. Cancel commands and maintain execution context "
+"(entity & location)."
+msgstr "Améliorez la planification des commandes avec ce module, offrant une flexibilité au-delà des capacités vanille. Annulez les commandes et maintenez le contexte d'exécution (entité et localisation)."
+
+#: ../../modules/schedule.md:9 51f8241c9ee34f6783b3b744042e86ee
+msgid "🔧 Functions"
+msgstr "🔧 Fonctions"
+
+#: ../../modules/schedule.md:11 ec39eb9fcbdf4ef4aed40cf2ddda9613
+msgid "You can find below all functions available in this module."
+msgstr "Vous pouvez trouver ci-dessous toutes les fonctions disponibles dans ce module."
+
+#: ../../modules/schedule.md:15 117cbd018c574317a1d5c95dff1236eb
+msgid "Cancel"
+msgstr "Annuler"
+
+#: ../../modules/schedule.md c034164212354609a9908199fc22f3fa
+msgid "All"
+msgstr "Tout"
+
+#: ../../modules/schedule.md:23 fe21ba6437b741fb960f0ecf983c5b32
+msgid "Cancel all scheduled commands that match the given ID."
+msgstr "Annule toutes les commandes planifiées qui correspondent à l'ID donné."
+
+#: ../../modules/schedule.md:25 ../../modules/schedule.md:47
+#: ../../modules/schedule.md:91 45ec2984dfa94aa9b46e706e63ef931e
+#: c6b875800e574831aa7eef8dddf5fd59 f353b5406f9b47ad9c8939a7fa12fc00
+msgid "Inputs"
+msgstr "Entrées"
+
+#: ../../modules/schedule.md:26 ../../modules/schedule.md:48
+#: ../../modules/schedule.md:92 21dc6db910434dcca6e34e56773163b4
+#: 4631e14457fe4785b1f56dd6391ba40e 4d5891c541c0480083bd58872ea5c955
+msgid "**Function macro**:"
+msgstr "**Macro de fonction** :"
+
+#: ../../modules/schedule.md:34 dc7daaa302024434af1df8c558e75ba7
+msgid "*Example: Cancel all commands with an `id` parameter set to \"foo\":*"
+msgstr "*Exemple : Annuler toutes les commandes avec un paramètre `id` défini sur \"foo\" :*"
+
+#: ../../modules/schedule.md fe4b9de4479c49a0aae0b0f4145d89f1
+msgid "Single One"
+msgstr "Unique"
+
+#: ../../modules/schedule.md:45 b0eb29c744704e75a34c1ae136dc3b2b
+msgid "Cancel the first scheduled command that matches the given ID."
+msgstr "Annule la première commande planifiée qui correspond à l'ID donné."
+
+#: ../../modules/schedule.md:56 0207194258584a9a85a1eef774a50a27
+msgid "*Example: Cancel the next command with an `id` parameter set to \"foo\":*"
+msgstr "*Exemple : Annuler la prochaine commande avec un paramètre `id` défini sur \"foo\" :*"
+
+#: ../../modules/schedule.md:63 ../../modules/schedule.md:80
+#: ../../modules/schedule.md:120 09c7394580c741bc9e38f8b976387986
+#: 6db6005884ee4228b68c92efe4d041e9 b2756c97f5414113ac560e796f9e7149
+msgid "**Credits**: Aksiome, theogiraudet"
+msgstr "**Crédits** : Aksiome, theogiraudet"
+
+#: ../../modules/schedule.md:67 006405bb25574d7f91c0e1f8ba039bc1
+msgid "Clear"
+msgstr "Effacer"
+
+#: ../../modules/schedule.md:71 62cd3d3050084594907c5b656d4ca49e
+msgid "Clear all scheduled commands."
+msgstr "Efface toutes les commandes planifiées."
+
+#: ../../modules/schedule.md:74 e640389d0a2646ae8d2321a04a47db8c
+msgid "*Example: Remove all scheduled commands:*"
+msgstr "*Exemple : Supprimer toutes les commandes planifiées :*"
+
+#: ../../modules/schedule.md:84 947a6a527f834a2e98d2eb28a34968db
+msgid "Schedule"
+msgstr "Planifier"
+
+#: ../../modules/schedule.md:88 1fce22cf64c84333b613d3e1e677cab5
+msgid ""
+"Schedule a command for execution. If a command is registered during a "
+"tick where other commands are already scheduled, it is added after those "
+"previously registered."
+msgstr "Planifie une commande pour exécution. Si une commande est enregistrée pendant un tick où d'autres commandes sont déjà planifiées, elle est ajoutée après celles précédemment enregistrées."
+
+#: ../../modules/schedule.md:102 d314bf0ef9f644a2b239a7e1433f9691
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../modules/schedule.md:103 30f52a8b752f40459043273e2e0b0782
+msgid "**Return**: A unique identifier for the scheduled command."
+msgstr "**Retour** : Un identifiant unique pour la commande planifiée."
+
+#: ../../modules/schedule.md:106 9c4c24ae4b3b49a99d67e39ab09cd9b1
+msgid "*Example: Execute `say foo` in 2 seconds:*"
+msgstr "*Exemple : Exécuter `say foo` dans 2 secondes :*"
+
+#: ../../modules/schedule.md:112 a3e2524cce314789970b05582d32393e
+msgid "*Example: Schedule then cancel commands that match a complex ID:*"
+msgstr "*Exemple : Planifier puis annuler des commandes qui correspondent à un ID complexe :*"
+
+#: ../../_templates/comments.md:4 200e6146b94642c8bd2174013209d94f
+msgid "**💬 Did it help you?**"
+msgstr "**💬 Cela vous a-t-il aidé ?**"
+
+#: ../../_templates/comments.md:6 76fead5501f44eb1bbb33aea573469aa
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "N'hésitez pas à laisser vos questions et commentaires ci-dessous !"
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` Arguments"
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Cancel filters."
+msgstr "{nbt}`compound` **with** : Filtres d'annulation."
+
+#, python-brace-format
+msgid "{nbt}`any` **id**: Scheduled command parameter to match against."
+msgstr "{nbt}`any` **id** : Paramètre de commande planifiée à faire correspondre."
+
+#, python-brace-format
+msgid "{nbt}`string` **run**: The command to schedule."
+msgstr "{nbt}`string` **run** : La commande à planifier."
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Optional scheduling parameters."
+msgstr "{nbt}`compound` **with** : Paramètres de planification optionnels."
+
+#, python-brace-format
+msgid "{nbt}`any` **id**: Optional identifier for the scheduled command."
+msgstr "{nbt}`any` **id** : Identifiant optionnel pour la commande planifiée."
+
+#, python-brace-format
+msgid ""
+"{nbt}`int` **time**: Delay before execution."
+" Defaults to `1` if not specified."
+msgstr "{nbt}`int` **time** : Délai avant exécution. Par défaut `1` si non spécifié."
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **unit**: Time unit (`tick`, "
+"`second`, `minute`, `hour`, `t`, `s`, "
+"`m`, `h`). Defaults to `tick`."
+msgstr "{nbt}`string` **unit** : Unité de temps (`tick`, `second`, `minute`, `hour`, `t`, `s`, `m`, `h`). Par défaut `tick`."

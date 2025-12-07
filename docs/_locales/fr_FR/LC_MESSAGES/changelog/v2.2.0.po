@@ -1,0 +1,313 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-01-19 12:00+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v2.2.0.md:1 112fae8a973e44ebb22cc5f743f2a2d4
+msgid ""
+"📦 [Bookshelf - "
+"2.2.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.0)"
+msgstr ""
+"📦 [Bookshelf - "
+"2.2.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.0)"
+
+#: ../../../changelog/v2.2.0.md:3 a4bf01993c874e929093e21791f48a8d
+msgid "**🪐 The Dimensional Update!**"
+msgstr "**🪐 La mise à jour Dimensionnelle !**"
+
+#: ../../../changelog/v2.2.0.md:5 7ee6d6291187420d885e566383cab7e5
+msgid ""
+"*This release introduces new modules for random distribution and terrain "
+"generation, improves existing modules, boosts performance, and fixes "
+"minor bugs. All > functions now work seamlessly across all dimensions.*"
+msgstr "*Cette version introduit de nouveaux modules pour la distribution aléatoire et la génération de terrain, améliore les modules existants, augmente les performances, et corrige des bugs mineurs. Toutes les fonctions fonctionnent maintenant parfaitement dans toutes les dimensions.*"
+
+#: ../../../changelog/v2.2.0.md:7 e06c30e8b89d429cac181e01d348b71a
+msgid "Bookshelf is now based on **Minecraft 1.21.3**."
+msgstr "Bookshelf est maintenant basé sur **Minecraft 1.21.3**."
+
+#: ../../../changelog/v2.2.0.md:10 116442cdb4ab4e1cbc752e57f429885a
+msgid ""
+"⚡ **[#265](https://github.com/mcbookshelf/bookshelf/pull/265)** - Load "
+"tags do not load modules in isolation anymore. This can now be done using"
+" the `exclusive_load` tag."
+msgstr ""
+"⚡ **[#265](https://github.com/mcbookshelf/bookshelf/pull/265)** - "
+"Les tags de chargement ne chargent plus les modules de manière isolée. Cela peut maintenant être fait en utilisant le tag `exclusive_load`."
+
+#: ../../../changelog/v2.2.0.md:11 de803a1fa3834d58909c26068f385661
+msgid ""
+"🐛 **[#270](https://github.com/mcbookshelf/bookshelf/issues/270)** - "
+"Enabled modules to operate seamlessly across all dimensions."
+msgstr ""
+"🐛 **[#270](https://github.com/mcbookshelf/bookshelf/issues/270)** - "
+"Permet aux modules de fonctionner parfaitement dans toutes les dimensions."
+
+#: ../../../changelog/v2.2.0.md:14 82bf776313ea4d26937d1d5eb020dc54
+msgid "`🧱 bs.block`"
+msgstr "`🧱 bs.block`"
+
+#: ../../../changelog/v2.2.0.md:16 2d4f27f594d44119ad1aec973d2e954a
+msgid ""
+"✨ **[#222](https://github.com/mcbookshelf/bookshelf/issues/222)** - Added"
+" `#bs.block:fill_random` for filling regions with randomly selected "
+"blocks."
+msgstr ""
+"✨ **[#222](https://github.com/mcbookshelf/bookshelf/issues/222)** - "
+"Ajout de `#bs.block:fill_random` pour remplir des régions avec des blocs sélectionnés aléatoirement."
+
+#: ../../../changelog/v2.2.0.md:17 ad17ba7b2d7143d6bdba834be5269ed8
+msgid ""
+"✨ **[#258](https://github.com/mcbookshelf/bookshelf/issues/258)** - Added"
+" `#bs.block:emit_block_particle` to emit block particles in specific "
+"locations."
+msgstr ""
+"✨ **[#258](https://github.com/mcbookshelf/bookshelf/issues/258)** - "
+"Ajout de `#bs.block:emit_block_particle` pour émettre des particules de bloc à des emplacements spécifiques."
+
+#: ../../../changelog/v2.2.0.md:18 1ed2455a85e24c38ae0d6fd4a935c171
+msgid ""
+"⚡ **[#251](https://github.com/mcbookshelf/bookshelf/issues/251)** - Fill "
+"functions now accept `from` and `to` as `[x, y, z]` lists or string "
+"coordinates (e.g., `~ ~5 25`)."
+msgstr ""
+"⚡ **[#251](https://github.com/mcbookshelf/bookshelf/issues/251)** - "
+"Les fonctions de remplissage acceptent maintenant `from` et `to` comme listes `[x, y, z]` ou coordonnées sous forme de chaîne (ex. `~ ~5 25`)."
+
+#: ../../../changelog/v2.2.0.md:21 d4b95e88240b4241897a693c208539d6
+msgid "`🏗️ bs.generate`"
+msgstr "`🏗️ bs.generate`"
+
+#: ../../../changelog/v2.2.0.md:23 ab116739a8684b938ef48d5768aad9ca
+msgid ""
+"🎉 **[#6](https://github.com/mcbookshelf/bookshelf/issues/6)** - Added "
+"module for terrain generation. Supports 2D algorithms for texture and "
+"heightmap-based generation."
+msgstr ""
+"🎉 **[#6](https://github.com/mcbookshelf/bookshelf/issues/6)** - "
+"Ajout d'un module pour la génération de terrain. Supporte les algorithmes 2D pour la génération basée sur les textures et les heightmaps."
+
+#: ../../../changelog/v2.2.0.md:25 b548de35b55e468ea2a46242e92efb37
+msgid "`❤️ bs.health`"
+msgstr "`❤️ bs.health`"
+
+#: ../../../changelog/v2.2.0.md:27 ../../../changelog/v2.2.0.md:59
+#: 9d44ceedf985416f9eecb756c4fd8c1e 9f5b96e0529347e8a73e38f3f594b42f
+msgid ""
+"🐛 **[#243](https://github.com/mcbookshelf/bookshelf/issues/243)** - Fixed"
+" unload function."
+msgstr ""
+"🐛 **[#243](https://github.com/mcbookshelf/bookshelf/issues/243)** - "
+"Correction de la fonction de déchargement."
+
+#: ../../../changelog/v2.2.0.md:30 b333655d80834c3b855b6f1a6cf404dd
+msgid "`🎯 bs.hitbox`"
+msgstr "`🎯 bs.hitbox`"
+
+#: ../../../changelog/v2.2.0.md:32 1d1eb0adb46243a68201b31edd0e4de2
+msgid ""
+"✨ **[#203](https://github.com/mcbookshelf/bookshelf/issues/203)** - Added"
+" `#bs.hitbox:is_entity_in_block` to check if an entity is in a block."
+msgstr ""
+"✨ **[#203](https://github.com/mcbookshelf/bookshelf/issues/203)** - "
+"Ajout de `#bs.hitbox:is_entity_in_block` pour vérifier si une entité est dans un bloc."
+
+#: ../../../changelog/v2.2.0.md:33 22f0e907325b4dbe87a4f5ed75602a0e
+msgid ""
+"✨ **[#203](https://github.com/mcbookshelf/bookshelf/issues/203)** - Added"
+" `#bs.hitbox:is_entity_in_blocks` to check if an entity is in any block."
+msgstr ""
+"✨ **[#203](https://github.com/mcbookshelf/bookshelf/issues/203)** - "
+"Ajout de `#bs.hitbox:is_entity_in_blocks` pour vérifier si une entité est dans n'importe quel bloc."
+
+#: ../../../changelog/v2.2.0.md:34 3f5b48ee648c48e1ac5c1169d7b9a2b8
+msgid ""
+"⚡ **[#252](https://github.com/mcbookshelf/bookshelf/pull/252)** - "
+"Optimized module for improved performance."
+msgstr ""
+"⚡ **[#252](https://github.com/mcbookshelf/bookshelf/pull/252)** - "
+"Optimisation du module pour améliorer les performances."
+
+#: ../../../changelog/v2.2.0.md:35 b650c15781564fe0af0eb237bb3b3d29
+msgid ""
+"⚡ **[#276](https://github.com/mcbookshelf/bookshelf/pull/276)** - Add new"
+" hitboxes (new babies and salmon variants)."
+msgstr ""
+"⚡ **[#276](https://github.com/mcbookshelf/bookshelf/pull/276)** - "
+"Ajout de nouvelles hitboxes (nouveaux bébés et variantes de saumon)."
+
+#: ../../../changelog/v2.2.0.md:36 05ec5dc39c274aa08a19d846234ae89f
+msgid ""
+"🐛 **[#265](https://github.com/mcbookshelf/bookshelf/pull/265)** - "
+"Corrected hitbox for player in spectator mode."
+msgstr ""
+"🐛 **[#265](https://github.com/mcbookshelf/bookshelf/pull/265)** - "
+"Correction de la hitbox du joueur en mode spectateur."
+
+#: ../../../changelog/v2.2.0.md:39 c3f6044e8ed14afa8209d9a60dabef86
+msgid "`🖱️ bs.interaction`"
+msgstr "`🖱️ bs.interaction`"
+
+#: ../../../changelog/v2.2.0.md:41 4b51b3c2f0fb44dd8c3f28724c092399
+msgid ""
+"🎉 **[#193](https://github.com/mcbookshelf/bookshelf/issues/193)** - Added"
+" module to track player actions on interaction entities: left/right "
+"click, and hover events."
+msgstr ""
+"🎉 **[#193](https://github.com/mcbookshelf/bookshelf/issues/193)** - "
+"Ajout d'un module pour suivre les actions du joueur sur les entités d'interaction : clics gauche/droit et événements de survol."
+
+#: ../../../changelog/v2.2.0.md:44 b8d013c681494a42a97a0ae02049f24e
+msgid "`🔗 bs.link`"
+msgstr "`🔗 bs.link`"
+
+#: ../../../changelog/v2.2.0.md:46 86531e4907cb428bbe0f42938e8dcab3
+msgid ""
+"✨ **[#233](https://github.com/mcbookshelf/bookshelf/issues/233)** - Added"
+" `#bs.link:remove_link` to remove specific links."
+msgstr ""
+"✨ **[#233](https://github.com/mcbookshelf/bookshelf/issues/233)** - "
+"Ajout de `#bs.link:remove_link` pour supprimer des liens spécifiques."
+
+#: ../../../changelog/v2.2.0.md:47 a39807dcfe16498f9eb7a4cb52f97d63
+msgid ""
+"✨ **[#233](https://github.com/mcbookshelf/bookshelf/issues/233)** - Added"
+" `#bs.link:<as|at>_children` and `#bs.link:<as|at>_parent` to handle "
+"parent-child link relationships."
+msgstr ""
+"✨ **[#233](https://github.com/mcbookshelf/bookshelf/issues/233)** - "
+"Ajout de `#bs.link:<as|at>_children` et `#bs.link:<as|at>_parent` pour gérer les relations de liens parent-enfant."
+
+#: ../../../changelog/v2.2.0.md:50 481b0ca6cf5448aea787229d73091098
+msgid "`📄 bs.log`"
+msgstr "`📄 bs.log`"
+
+#: ../../../changelog/v2.2.0.md:52 89b9ff602b2d44fb963dff1225bd628b
+msgid ""
+"✨ **[#171](https://github.com/mcbookshelf/bookshelf/issues/171)** - Added"
+" logging functions `#bs.log:history` and `#bs.log:clear_history` for "
+"viewing and clearing log history."
+msgstr ""
+"✨ **[#171](https://github.com/mcbookshelf/bookshelf/issues/171)** - "
+"Ajout des fonctions de logs `#bs.log:history` et `#bs.log:clear_history` pour visualiser et effacer l'historique des logs."
+
+#: ../../../changelog/v2.2.0.md:53 6ae2c245cefd42a69ee43bb0a10673f0
+msgid ""
+"⚡ **[#247](https://github.com/mcbookshelf/bookshelf/pull/247)** - "
+"Improved the default `bs.log` format for clarity."
+msgstr ""
+"⚡ **[#247](https://github.com/mcbookshelf/bookshelf/pull/247)** - "
+"Amélioration du format par défaut de `bs.log` pour plus de clarté."
+
+#: ../../../changelog/v2.2.0.md:56 a00d2093d8a248078efcd0de957cc552
+msgid "`🏃 bs.move`"
+msgstr "`🏃 bs.move`"
+
+#: ../../../changelog/v2.2.0.md:58 087ad30e9abb40a7b161b1aa5a47c104
+msgid ""
+"⚡ **[#265](https://github.com/mcbookshelf/bookshelf/pull/265)** - Enabled"
+" the module to work reliably at high coordinates with improved and more "
+"robust collision detection."
+msgstr ""
+"⚡ **[#265](https://github.com/mcbookshelf/bookshelf/pull/265)** - "
+"Activation du module pour fonctionner de manière fiable à des coordonnées élevées avec une détection de collision améliorée et plus robuste."
+
+#: ../../../changelog/v2.2.0.md:60 476c634943214be09d3993e3e8e73a49
+msgid ""
+"🐛 **[#255](https://github.com/mcbookshelf/bookshelf/issues/255)** - Fixed"
+" local velocity collisions."
+msgstr ""
+"🐛 **[#255](https://github.com/mcbookshelf/bookshelf/issues/255)** - "
+"Correction des collisions de vitesse locale."
+
+#: ../../../changelog/v2.2.0.md:61 ../../../changelog/v2.2.0.md:72
+#: 810ebda5bae04759abfd8af7ad0d065a 9bde48b6895142e98f9d7debf8ad594c
+msgid ""
+"🐛 **[#262](https://github.com/mcbookshelf/bookshelf/pull/262)** - "
+"Resolved collision issues with paintings."
+msgstr ""
+"🐛 **[#262](https://github.com/mcbookshelf/bookshelf/pull/262)** - "
+"Résolution des problèmes de collision avec les peintures."
+
+#: ../../../changelog/v2.2.0.md:64 30a841ac1d2341eba91667ac1b46c066
+msgid "`🎲 bs.random`"
+msgstr "`🎲 bs.random`"
+
+#: ../../../changelog/v2.2.0.md:66 c242112059424df88154736a6ab2e9c0
+msgid ""
+"🎉 **[#1](https://github.com/mcbookshelf/bookshelf/issues/1)** / "
+"**[#220](https://github.com/mcbookshelf/bookshelf/issues/220)** - Added "
+"module, which includes random distributions, noise generation, and random"
+" selection of an element from a list."
+msgstr ""
+"🎉 **[#1](https://github.com/mcbookshelf/bookshelf/issues/1)** / "
+"**[#220](https://github.com/mcbookshelf/bookshelf/issues/220)** - "
+"Ajout d'un module qui inclut les distributions aléatoires, la génération de bruit et la sélection aléatoire d'un élément dans une liste."
+
+#: ../../../changelog/v2.2.0.md:69 de2feeaa10a040eea3422fbd3ebb8cd7
+msgid "`🔦 bs.raycast`"
+msgstr "`🔦 bs.raycast`"
+
+#: ../../../changelog/v2.2.0.md:71 c6070f790266496398670ea2401346c2
+msgid ""
+"✨ **[#245](https://github.com/mcbookshelf/bookshelf/issues/245)** - Added"
+" `piercing` and callback options to `#bs.raycast:run`."
+msgstr ""
+"✨ **[#245](https://github.com/mcbookshelf/bookshelf/issues/245)** - "
+"Ajout des options `piercing` et de callback à `#bs.raycast:run`."
+
+#: ../../../changelog/v2.2.0.md:75 5766cc2b27c4448d9ccefd9beae23caf
+msgid "`⏲️ bs.schedule`"
+msgstr "`⏲️ bs.schedule`"
+
+#: ../../../changelog/v2.2.0.md:77 d16faa3c39194d0aa7e3f501922cf692
+msgid ""
+"⚡ **[#265](https://github.com/mcbookshelf/bookshelf/pull/265)** - "
+"Optimized module for improved performance."
+msgstr ""
+"⚡ **[#265](https://github.com/mcbookshelf/bookshelf/pull/265)** - "
+"Optimisation du module pour améliorer les performances."
+
+#: ../../../changelog/v2.2.0.md:78 cc7401cd62154c98a1b65f50c41ebc4e
+msgid ""
+"🐛 **[#254](https://github.com/mcbookshelf/bookshelf/issues/254)** - "
+"Resolved execution loop interruptions caused by callbacks."
+msgstr ""
+"🐛 **[#254](https://github.com/mcbookshelf/bookshelf/issues/254)** - "
+"Résolution des interruptions de boucle d'exécution causées par les callbacks."
+
+#: ../../../changelog/v2.2.0.md:79 baa3e031f60840bca14fc4a82de488b5
+msgid ""
+"🐛 **[#264](https://github.com/mcbookshelf/bookshelf/issues/264)** - "
+"Resolved compatibility issues with the schedule module outside the "
+"overworld."
+msgstr ""
+"🐛 **[#264](https://github.com/mcbookshelf/bookshelf/issues/264)** - "
+"Résolution des problèmes de compatibilité avec le module schedule en dehors de l'overworld."
+
+#: ../../../changelog/v2.2.0.md:82 7f8b2da4e9004cd88399cac278b0d7d0
+msgid "`🏅 bs.xp`"
+msgstr "`🏅 bs.xp`"
+
+#: ../../../changelog/v2.2.0.md:84 bf4fc32756c2489ea1cef322f1ad5224
+msgid ""
+"🐛 **[#256](https://github.com/mcbookshelf/bookshelf/issues/256)** - Fixed"
+" progress bar boundary issues at 0% and 100%."
+msgstr ""
+"🐛 **[#256](https://github.com/mcbookshelf/bookshelf/issues/256)** - "
+"Correction des problèmes de limites de la barre de progression à 0% et 100%."
