@@ -21,6 +21,6 @@ data modify storage bs:data raycast set value { \
   entities: false, \
   ignored_blocks: "#bs.view:can_see_through", \
   ignored_entities: "#bs.hitbox:intangible", \
-  data: {hit_point:0b,hit_normal:0b,targeted_block:0b,targeted_entity:0b}, \
+  data: {hit_point:1b,hit_normal:1b,targeted_block:1b,targeted_entity:1b}, \
 }
 $data modify storage bs:data raycast merge value $(with)

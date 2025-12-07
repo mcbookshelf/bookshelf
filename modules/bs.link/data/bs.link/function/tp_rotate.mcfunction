@@ -13,12 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# Compute relative position
-# Thanks to SilicatYT for sharing this trick on the Minecraft Commands discord
-$execute rotated 180 90 positioned ^$(x) ^$(z) ^$(y) run function bs.view:can_see_ata/max_distance/tp
-data modify storage bs:ctx _ set from entity @s Pos
-data modify storage bs:ctx x set from storage bs:ctx _[0]
-data modify storage bs:ctx y set from storage bs:ctx _[1]
-data modify storage bs:ctx z set from storage bs:ctx _[2]
-tp @s ~ -1000000 ~
-kill @s
+tp @s ~ ~ ~ ~ ~

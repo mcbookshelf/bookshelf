@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$tp @s $(from)
+$execute positioned $(from) run function bs.block:utils/tp
 data modify storage bs:data block._.from set from entity @s Pos

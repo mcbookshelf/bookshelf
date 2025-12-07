@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$tp @s ^ ^ ^$(distance)
+$execute positioned ^ ^ ^$(distance) run function bs.raycast:utils/tp

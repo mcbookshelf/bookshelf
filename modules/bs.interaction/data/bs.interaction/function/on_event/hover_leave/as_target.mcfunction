@@ -18,6 +18,6 @@ scoreboard players remove #interaction.hovered bs.data 1
 
 tag @s add bs.interaction.target
 scoreboard players operation #h bs.ctx = @s bs.interaction.hover
-execute unless entity @a[distance=..24,predicate=bs.interaction:hover_equal] run tag @s remove bs.interaction.hovered
+execute unless entity @a[distance=..24,predicate=bs.interaction:internal/hover_equal] run tag @s remove bs.interaction.hovered
 execute if entity @s[tag=bs.interaction.listen_hover_leave] run function bs.interaction:on_event/hover_leave/run
 tag @s remove bs.interaction.target

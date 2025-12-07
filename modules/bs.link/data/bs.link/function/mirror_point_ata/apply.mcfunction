@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$tp @s ^ ^ ^$(z) ~$(x) $(y)
+$execute positioned ^ ^ ^$(z) rotated ~$(x) $(y) run function bs.link:tp_rotate

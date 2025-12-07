@@ -17,5 +17,5 @@ $function bs.health:ttl/run_callback with storage bs:data health.ttl."$(UUID)"
 $data remove storage bs:data health.ttl."$(UUID)"
 
 scoreboard players reset @s bs.ttl
-execute at @s run tp @s ~ -1000000 ~
+tp @s ~ -1000000 ~
 kill @s
