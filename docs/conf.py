@@ -85,7 +85,7 @@ support = """
 html_theme_options = {
     "footer": [
         "footer-copyright.html",
-        "mentions-legales.html",
+        "footer-links.html",
         "external-links.html",
     ],
     "external_links": [

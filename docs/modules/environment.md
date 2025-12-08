@@ -114,10 +114,10 @@ function #bs.environment:get_current_sun_angle {scale: 1000}
 tellraw @a [{"text":"Sun angle: "},{"nbt":"environment.celestial_angle","storage":"bs:out","interpret":true},{"text":"°"}]
 ```
 
-```{admonition} doDaylightCycle gamerule
+```{admonition} `advance_time` game rule
 :class: info
 
-This feature also works when the doDaylightCycle gamerule is set to false.
+This feature also works when the `advance_time` game rule is set to false.
 In such situation, the returned value is the sun's angle at the time of daylight cycle freeze.
 ```
 
@@ -149,10 +149,10 @@ function #bs.environment:get_current_moon_angle {scale: 1000}
 tellraw @a [{"text":"Moon angle: "},{"nbt":"environment.celestial_angle","storage":"bs:out","interpret":true},{"text":"°"}]
 ```
 
-```{admonition} doDaylightCycle gamerule
+```{admonition} `advance_time` game rule
 :class: info
 
-This feature also works when the doDaylightCycle gamerule is set to false.
+This feature also works when the `advance_time` game rule is set to false.
 In such situation, the returned value is the moon's angle at the time of daylight cycle freeze.
 ```
 

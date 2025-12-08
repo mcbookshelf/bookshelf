@@ -24,7 +24,8 @@ html {
   display: flex;
   flex-wrap: wrap;
   font-size: var(--bz-size-sm);
-  column-gap: calc(var(--bz-spacing) * 6);
+  column-gap: 1rem;
+  row-gap: 0.5rem;
   a {
     display: flex;
     align-items: center;
