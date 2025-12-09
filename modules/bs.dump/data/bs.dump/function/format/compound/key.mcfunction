@@ -14,6 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute unless data storage bs:data dump{char:":"} run data modify storage bs:data dump.stack[-1].key set string storage bs:data dump.stack[-1].key 1 -1
-$execute unless data storage bs:data dump{char:":"} run data modify entity B5-0-0-0-2 text set value [{storage:"bs:data",nbt:"dump.char"},{storage:"bs:data",nbt:"dump.stack[-1].key",color:"$(key)"},{storage:"bs:data",nbt:"dump.char"},{text:": "}]
-$execute if data storage bs:data dump{char:":"} run data modify entity B5-0-0-0-2 text set value [{storage:"bs:data",nbt:"dump.stack[-1].key",color:"$(key)"},{text:": "}]
-data modify storage bs:data dump.out append from entity B5-0-0-0-2 text
+$execute unless data storage bs:data dump{char:":"} run loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:[{storage:"bs:data",nbt:"dump.char"},{storage:"bs:data",nbt:"dump.stack[-1].key",color:"$(key)"},{storage:"bs:data",nbt:"dump.char"},{text:": "}]}]}]}]}
+$execute if data storage bs:data dump{char:":"} run loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:[{storage:"bs:data",nbt:"dump.stack[-1].key",color:"$(key)"},{text:": "}]}]}]}]}
+data modify storage bs:data dump.out append from entity B5-0-0-0-3 item.components.minecraft:custom_name

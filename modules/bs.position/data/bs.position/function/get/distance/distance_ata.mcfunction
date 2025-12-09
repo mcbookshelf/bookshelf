@@ -21,8 +21,11 @@ $execute store result score #u bs.ctx run data get entity @s Pos[0] $(scale)
 $execute store result score #v bs.ctx run data get entity @s Pos[1] $(scale)
 $execute store result score #w bs.ctx run data get entity @s Pos[2] $(scale)
 
-execute store result storage bs:ctx x int 1 run scoreboard players operation #x bs.ctx -= #u bs.ctx
-execute store result storage bs:ctx y int 1 run scoreboard players operation #y bs.ctx -= #v bs.ctx
-execute store result storage bs:ctx z int 1 run scoreboard players operation #z bs.ctx -= #w bs.ctx
+# compute Euclidean distance: sqrt(x^2+y^2+z^2)
+# Thanks to Triton365 for sharing this trick on the Minecraft Commands discord
+execute store result storage bs:data position.distance[0] float 1 run scoreboard players operation #x bs.ctx -= #u bs.ctx
+execute store result storage bs:data position.distance[4] float 1 run scoreboard players operation #y bs.ctx -= #v bs.ctx
+execute store result storage bs:data position.distance[8] float 1 run scoreboard players operation #z bs.ctx -= #w bs.ctx
+data modify entity B5-0-0-0-2 transformation set from storage bs:data position.distance
 
-execute store result score $position.get_distance_ata bs.out as B5-0-0-0-2 run return run function bs.position:get/distance/compute with storage bs:ctx
+execute store result score $position.get_distance_ata bs.out run return run data get entity B5-0-0-0-2 transformation.scale[0]

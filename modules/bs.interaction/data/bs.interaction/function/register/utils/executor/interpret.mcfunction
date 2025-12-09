@@ -15,6 +15,6 @@
 
 data remove storage bs:ctx _.executor
 $execute store result score #i bs.ctx run tag $(selector) add bs.interaction.this
-data modify entity B5-0-0-0-2 text set value {"selector":"@n[tag=bs.interaction.this]"}
-data modify storage bs:ctx _.executor set from entity B5-0-0-0-2 text.insertion
+loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"stone",functions:[{function:"set_name",entity:"this",name:{"selector":"@n[tag=bs.interaction.this]"}}]}]}]}
+data modify storage bs:ctx _.executor set from entity B5-0-0-0-3 item.components.minecraft:custom_name.insertion
 tag @e[tag=bs.interaction.this] remove bs.interaction.this

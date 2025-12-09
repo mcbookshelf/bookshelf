@@ -26,3 +26,5 @@ scoreboard players set -1 bs.const -1
 scoreboard players set 2 bs.const 2
 scoreboard players set 100 bs.const 100
 scoreboard players set 1000 bs.const 1000
+
+data modify storage bs:data vector.distance set value [0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,1f]

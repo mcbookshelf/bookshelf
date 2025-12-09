@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-2
+kill B5-0-0-0-3
 forceload remove -30000000 1600
 
 execute as @e[type=minecraft:interaction] run function #bs.interaction:clear_events {with:{}}

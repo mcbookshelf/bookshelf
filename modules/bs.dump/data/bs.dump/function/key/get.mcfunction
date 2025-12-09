@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify entity B5-0-0-0-2 text set value {storage:"bs:data",nbt:"dump.stack[-1].var"}
-data modify storage bs:data dump.stack[-1].key set from entity B5-0-0-0-2 text
+loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:data",nbt:"dump.stack[-1].var"}}]}]}]}
+data modify storage bs:data dump.stack[-1].key set from entity B5-0-0-0-3 item.components.minecraft:custom_name
 data modify storage bs:data dump.char set string storage bs:data dump.stack[-1].key 1 2
 data modify storage bs:data dump.parse set string storage bs:data dump.stack[-1].key 2
 

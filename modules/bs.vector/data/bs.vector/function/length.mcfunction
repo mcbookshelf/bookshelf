@@ -13,7 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# compute Euclidean distance: sqrt(x^2+y^2+z^2)
-# Thanks to Triton365 for sharing this trick on the Minecraft Commands discord
-$data modify entity @s transformation set value [$(x)f,0f,0f,0f,$(y)f,0f,0f,0f,$(z)f,0f,0f,0f,0f,0f,0f,1f]
-return run data get entity @s transformation.scale[0]
+execute store result storage bs:data vector.distance[0] float 1 run scoreboard players get $vector.length.0 bs.in
+execute store result storage bs:data vector.distance[4] float 1 run scoreboard players get $vector.length.1 bs.in
+execute store result storage bs:data vector.distance[8] float 1 run scoreboard players get $vector.length.2 bs.in
+data modify entity B5-0-0-0-2 transformation set from storage bs:data vector.distance
+
+execute store result score $vector.length bs.out run return run data get entity B5-0-0-0-2 transformation.scale[0]

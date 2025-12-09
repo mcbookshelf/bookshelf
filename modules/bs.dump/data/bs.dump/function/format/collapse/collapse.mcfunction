@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify entity B5-0-0-0-2 text set value {storage:"bs:data",nbt:"dump.stack[-1].var"}
-data modify storage bs:data dump.escape._ set string entity B5-0-0-0-2 text
-data modify entity B5-0-0-0-2 text set value {storage:"bs:data",nbt:"dump.escape"}
-data modify storage bs:data dump.escape._ set string entity B5-0-0-0-2 text
+loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:data",nbt:"dump.stack[-1].var"}}]}]}]}
+data modify storage bs:data dump.escape._ set string entity B5-0-0-0-3 item.components.minecraft:custom_name
+loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:data",nbt:"dump.escape"}}]}]}]}
+data modify storage bs:data dump.escape._ set string entity B5-0-0-0-3 item.components.minecraft:custom_name
 data modify storage bs:data dump.char set string storage bs:data dump.escape._ 3 4
 data modify storage bs:data dump.value set string storage bs:data dump.escape._ 4 -2
 execute if data storage bs:data dump{char:"'"} run function bs.dump:format/collapse/escape with storage bs:data dump

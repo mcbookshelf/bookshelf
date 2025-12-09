@@ -43,5 +43,5 @@ execute unless score #s bs.ctx matches 1..15 run return run function #bs.log:err
 }
 
 # start the recursion to create each line abort if a line failed
-execute as B5-0-0-0-2 run function bs.sidebar:create/recurse/init with storage bs:ctx _
+execute as B5-0-0-0-3 run function bs.sidebar:create/recurse/init with storage bs:ctx _
 execute unless score #s bs.ctx = #i bs.ctx run function bs.sidebar:create/recurse/abort with storage bs:ctx _

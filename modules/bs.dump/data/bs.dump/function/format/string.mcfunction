@@ -14,9 +14,9 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:data dump.escape._ set from storage bs:data dump.value
-data modify entity B5-0-0-0-2 text set value {storage:"bs:data",nbt:"dump.escape"}
-data modify storage bs:data dump.value set string entity B5-0-0-0-2 text 3 -2
+loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:data",nbt:"dump.escape"}}]}]}]}
+data modify storage bs:data dump.value set string entity B5-0-0-0-3 item.components.minecraft:custom_name 3 -2
 data modify storage bs:data dump.char set string storage bs:data dump.value 0 1
 data modify storage bs:data dump.value set string storage bs:data dump.value 1
-$data modify entity B5-0-0-0-2 text set value [{storage:"bs:data",nbt:"dump.char"},{storage:"bs:data",nbt:"dump.value",color:"$(string)"},{storage:"bs:data",nbt:"dump.char"}]
-data modify storage bs:data dump.out append from entity B5-0-0-0-2 text
+$loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:[{storage:"bs:data",nbt:"dump.char"},{storage:"bs:data",nbt:"dump.value",color:"$(string)"},{storage:"bs:data",nbt:"dump.char"}]}]}]}]}
+data modify storage bs:data dump.out append from entity B5-0-0-0-3 item.components.minecraft:custom_name

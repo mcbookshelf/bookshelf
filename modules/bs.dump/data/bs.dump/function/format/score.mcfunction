@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify entity B5-0-0-0-2 text set value {score:{name:"#dump.var",objective:"bs.data"},color:"$(number)"}
-data modify storage bs:data dump.out append from entity B5-0-0-0-2 text
+$loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{score:{name:"#dump.var",objective:"bs.data"},color:"$(number)"}}]}]}]}
+data modify storage bs:data dump.out append from entity B5-0-0-0-3 item.components.minecraft:custom_name

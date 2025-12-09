@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 $data modify storage bs:data dump.escape._ set value '\'$(value)'
-data modify entity B5-0-0-0-2 text set value {storage:"bs:data",nbt:"dump.escape"}
-data modify storage bs:data dump.value set string entity B5-0-0-0-2 text 5 -2
+loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:data",nbt:"dump.escape"}}]}]}]}
+data modify storage bs:data dump.value set string entity B5-0-0-0-3 item.components.minecraft:custom_name 5 -2

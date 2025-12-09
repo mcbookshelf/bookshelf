@@ -30,3 +30,5 @@ scoreboard objectives add bs.rot.v dummy [{text:"BS ",color:"dark_gray"},{text:"
 scoreboard players set 180 bs.const 180
 scoreboard players set 360 bs.const 360
 scoreboard players set 1000 bs.const 1000
+
+data modify storage bs:data position.distance set value [0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,1f]

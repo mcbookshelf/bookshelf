@@ -21,3 +21,5 @@ scoreboard objectives add bs.const dummy [{text:"BS ",color:"dark_gray"},{text:"
 scoreboard objectives add bs.data dummy [{text:"BS ",color:"dark_gray"},{text:"Data",color:"aqua"}]
 
 scoreboard players set 2 bs.const 2
+
+data modify storage bs:data view.distance set value [0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,1f]

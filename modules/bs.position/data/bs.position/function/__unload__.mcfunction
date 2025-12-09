@@ -26,3 +26,5 @@ scoreboard objectives remove bs.pos.y
 scoreboard objectives remove bs.pos.z
 scoreboard objectives remove bs.rot.h
 scoreboard objectives remove bs.rot.v
+
+data remove storage bs:data position

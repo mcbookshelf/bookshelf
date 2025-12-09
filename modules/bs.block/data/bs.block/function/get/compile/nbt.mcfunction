@@ -15,10 +15,10 @@
 
 # convert the NBT to an escaped string
 data modify storage bs:out block.nbt."'" set value ""
-data modify entity @s text set value {storage:"bs:out",nbt:"block.nbt"}
-data modify storage bs:data block.nbt._ set from entity @s text
-data modify entity @s text set value {storage:"bs:data",nbt:"block.nbt"}
-data modify storage bs:ctx _.nbt set string entity @s text 13 -3
+loot replace entity @s contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:out",nbt:"block.nbt"}}]}]}]}
+data modify storage bs:data block.nbt._ set from entity @s item.components.minecraft:custom_name
+loot replace entity @s contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:data",nbt:"block.nbt"}}]}]}]}
+data modify storage bs:ctx _.nbt set string entity @s item.components.minecraft:custom_name 13 -3
 
 # generate the full block string representation
 execute unless data storage bs:ctx _.state run data modify storage bs:ctx _.state set value ""

@@ -14,9 +14,9 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:data log.history append value {}
-data modify entity B5-0-0-0-2 text set from storage bs:data log.message
+loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:data",nbt:"log.message",interpret:true}}]}]}]}
 data modify storage bs:data log.history[-1].severity set from storage bs:in log.severity
 data modify storage bs:data log.history[-1].namespace set from storage bs:in log.namespace
 data modify storage bs:data log.history[-1].tag set from storage bs:in log.tag
-data modify storage bs:data log.history[-1].message set from entity B5-0-0-0-2 text
+data modify storage bs:data log.history[-1].message set from entity B5-0-0-0-3 item.components.minecraft:custom_name
 execute if data storage bs:data log.history[4096] run data remove storage bs:data log.history[0]

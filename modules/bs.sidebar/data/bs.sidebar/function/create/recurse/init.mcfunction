@@ -20,14 +20,14 @@ execute store result storage bs:ctx _.line int 1 run scoreboard players set #i b
 
 data modify storage bs:ctx _.left set from storage bs:ctx _.contents[0]
 data modify storage bs:ctx _.left set from storage bs:ctx _.contents[0][0]
-data modify entity @s text set from storage bs:ctx _.left
+loot replace entity @s contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:ctx",nbt:"_.left",interpret:true}}]}]}]}
 data modify entity @s CustomName set from storage bs:ctx _.left
-execute store success score #l bs.ctx run data modify entity @s text set from entity @s CustomName
+execute store success score #l bs.ctx run data modify entity @s CustomName set from entity @s item.components.minecraft:custom_name
 data modify storage bs:ctx _.right set value ""
 data modify storage bs:ctx _.right set from storage bs:ctx _.contents[0][1]
-data modify entity @s text set from storage bs:ctx _.right
+loot replace entity @s contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:ctx",nbt:"_.right",interpret:true}}]}]}]}
 data modify entity @s CustomName set from storage bs:ctx _.right
-execute store success score #r bs.ctx run data modify entity @s text set from entity @s CustomName
+execute store success score #r bs.ctx run data modify entity @s CustomName set from entity @s item.components.minecraft:custom_name
 
 function bs.sidebar:create/recurse/next with storage bs:ctx _
 $data remove storage bs:data sidebar.'$(id)'
