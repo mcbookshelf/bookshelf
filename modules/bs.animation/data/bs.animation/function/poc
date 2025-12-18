@@ -1,0 +1,52 @@
+def = {
+  "position": {
+    "spline": {
+      "basis": "catmull_rom|bezier|bspline|hermite|linear|step",
+      "duration": 100,
+      "points": [
+        [0, 0, 0],
+        [1, 1, 1],
+        [2, 0, 2],
+        [3, 1, 3]
+      ]
+    },
+  },
+  "transformation": {
+    "translation": {
+      "keyframes": {
+        "interpolation": "smooth|linear|step",
+        "duration": 30,
+        "points": [
+          [0, 0, 0],
+          [1, 1, 1],
+          [2, 0, 2],
+          [3, 1, 3]
+        ]
+      },
+    }
+  }
+}
+
+// global
+bake = { uses: "storage path" }
+
+// on entity
+create = {
+  id: "walk",
+  uses: "storage path"
+}
+
+play = { id: "walk", with: { step: 1, interval: 1 } }
+pause = { id: "walk" }
+step = { id: "walk" }
+
+
+
+TODO: rework play and step ctx
+keyframes baking
+loop control
+optimize constant by only updating if changed
+do we keep scale (it's only for mob and armor stand)
+add a custom with a callback?
+
+THINK ABOUT HIGHER ORDER AND CALLBACK ISSUES
