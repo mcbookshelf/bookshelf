@@ -1,0 +1,219 @@
+## Terminal Operations (consume the stream, return single value or perform action)
+
+- [x] **reduce** - Reduce collection to single value using accumulator function
+  ```typescript
+  reduce<T>(collection: T[], fn: (accumulator: T, value: T) => T): T
+  ```
+
+- [x] **fold** - Reduce with initial value
+  ```typescript
+  fold<T, R>(collection: T[], initial: R, fn: (accumulator: R, value: T) => R): R
+  ```
+
+- [x] **count** - Count elements in collection
+  ```typescript
+  count<T>(collection: T[]): number
+  ```
+
+- [x] **any** - Check if any element matches predicate
+  ```typescript
+  any<T>(collection: T[], predicate: (value: T) => boolean): boolean
+  ```
+
+- [x] **all** - Check if all elements match predicate
+  ```typescript
+  all<T>(collection: T[], predicate: (value: T) => boolean): boolean
+  ```
+
+- [x] **none** - Check if no elements match predicate
+  ```typescript
+  none<T>(collection: T[], predicate: (value: T) => boolean): boolean
+  ```
+
+- [x] **find** - Find first element matching predicate
+  ```typescript
+  find<T>(collection: T[], predicate: (value: T) => boolean): T | null
+  ```
+
+- [x] **sum** - Sum numeric values
+  ```typescript
+  sum(collection: number[]): number
+  ```
+
+- [x] **min** - Find minimum value
+  ```typescript
+  min(collection: number[]): number
+  ```
+
+- [x] **max** - Find maximum value
+  ```typescript
+  max(collection: number[]): number
+  ```
+
+- [x] **average** - Calculate average of numeric values
+  ```typescript
+  average(collection: number[]): number
+  ```
+
+## Intermediate Operations (transform the stream, return new collection)
+
+- [ ] **distinct** - Remove duplicate elements
+  ```typescript
+  distinct<T>(collection: T[]): T[]
+  ```
+
+- [ ] **sorted** - Sort elements (with optional comparator)
+  ```typescript
+  sorted<T>(collection: T[], comparator?: (a: T, b: T) => number): T[]
+  ```
+
+- [x] **reverse** - Reverse element order
+  ```typescript
+  reverse<T>(collection: T[]): T[]
+  ```
+
+- [ ] **take** - Take first N elements
+  ```typescript
+  take<T>(collection: T[], count: number): T[]
+  ```
+
+- [ ] **drop** - Skip first N elements
+  ```typescript
+  drop<T>(collection: T[], count: number): T[]
+  ```
+
+- [ ] **take_while** - Take elements while predicate is true
+  ```typescript
+  takeWhile<T>(collection: T[], predicate: (value: T) => boolean): T[]
+  ```
+
+- [ ] **drop_while** - Drop elements while predicate is true
+  ```typescript
+  dropWhile<T>(collection: T[], predicate: (value: T) => boolean): T[]
+  ```
+
+- [ ] **slice** - Extract slice from start to end index
+  ```typescript
+  slice<T>(collection: T[], start: number, end: number): T[]
+  ```
+
+- [ ] **chunk** - Split into chunks of size N
+  ```typescript
+  chunk<T>(collection: T[], size: number): T[][]
+  ```
+
+- [ ] **partition** - Split into two collections based on predicate
+  ```typescript
+  partition<T>(collection: T[], predicate: (value: T) => boolean): { true: T[], false: T[] }
+  ```
+
+- [ ] **group_by** - Group elements by key function
+  ```typescript
+  groupBy<T, K extends string | number>(collection: T[], keyFn: (value: T) => K): Record<K, T[]>
+  ```
+
+- [ ] **zip** - Combine two collections element-wise
+  ```typescript
+  zip<A, B>(a: A[], b: B[]): [A, B][]
+  ```
+
+- [ ] **enumerate** - Add index to each element
+  ```typescript
+  enumerate<T>(collection: T[]): { index: number, value: T }[]
+  ```
+
+- [ ] **peek** - Execute side effect without consuming (like foreach but returns collection)
+  ```typescript
+  peek<T>(collection: T[], fn: (value: T, index: number) => void): T[]
+  ```
+
+- [ ] **scan** - Like reduce but returns intermediate results
+  ```typescript
+  scan<T, R>(collection: T[], initial: R, fn: (accumulator: R, value: T) => R): R[]
+  ```
+
+- [ ] **compact** - Remove null/empty values
+  ```typescript
+  compact<T>(collection: (T | null | undefined)[]): T[]
+  ```
+
+- [ ] **tap** - Execute callback on entire collection and return it
+  ```typescript
+  tap<T>(collection: T[], fn: (collection: T[]) => void): T[]
+  ```
+
+## Combination Operations (combine multiple collections)
+
+- [ ] **concat** - Combine multiple collections sequentially
+  ```typescript
+  concat<T>(collections: T[][]): T[]
+  ```
+
+- [ ] **merge** - Merge collections with custom merge function
+  ```typescript
+  merge<A, B, R>(a: A[], b: B[], fn: (a: A, b: B) => R): R[]
+  ```
+
+- [ ] **intersect** - Get common elements between collections
+  ```typescript
+  intersect<T>(a: T[], b: T[]): T[]
+  ```
+
+- [ ] **union** - Combine unique elements from multiple collections
+  ```typescript
+  union<T>(collections: T[][]): T[]
+  ```
+
+- [ ] **difference** - Elements in first but not in second collection
+  ```typescript
+  difference<T>(a: T[], b: T[]): T[]
+  ```
+
+- [ ] **symmetric_difference** - Elements in either but not both collections
+  ```typescript
+  symmetricDifference<T>(a: T[], b: T[]): T[]
+  ```
+
+## Advanced Operations (complex transformations)
+
+- [ ] **window** - Sliding window over elements
+  ```typescript
+  window<T>(collection: T[], size: number): T[][]
+  ```
+
+- [ ] **associate** - Create map from collection using key/value functions
+  ```typescript
+  associate<T, K extends string | number, V>(collection: T[], fn: (value: T) => { key: K, value: V }): Record<K, V>
+  ```
+
+- [ ] **associate_by** - Create map using key function (value is element)
+  ```typescript
+  associateBy<T, K extends string | number>(collection: T[], keyFn: (value: T) => K): Record<K, T>
+  ```
+
+- [ ] **flatten_deep** - Recursively flatten nested collections
+  ```typescript
+  flattenDeep<T>(collection: any[], depth?: number): T[]
+  ```
+
+## Utility Operations (collection queries)
+
+- [ ] **is_empty** - Check if collection is empty
+  ```typescript
+  isEmpty<T>(collection: T[]): boolean
+  ```
+
+- [ ] **contains** - Check if collection contains element
+  ```typescript
+  contains<T>(collection: T[], element: T): boolean
+  ```
+
+- [ ] **index_of** - Find index of first matching element
+  ```typescript
+  indexOf<T>(collection: T[], predicate: (value: T) => boolean): number
+  ```
+
+- [ ] **last_index_of** - Find index of last matching element
+  ```typescript
+  lastIndexOf<T>(collection: T[], predicate: (value: T) => boolean): number
+  ```
