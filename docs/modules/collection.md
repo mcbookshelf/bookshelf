@@ -257,6 +257,42 @@ execute store success score #result bs.ctx run function #bs.collection:none {run
 ```
 
 ::::
+::::{tab-item} Is Empty
+
+```{function} #bs.collection:is_empty
+
+Test if a collection is empty (contains no elements).
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to test.
+
+:Outputs:
+  **Return**: Success (1) if the collection is empty, fail (0) if it contains at least one element.
+```
+
+*Example: Check if a collection is empty:*
+
+```mcfunction
+data modify storage bs:out collection.value set value []
+execute store success score #result bs.ctx run function #bs.collection:is_empty
+# #result = 1 (true - collection is empty)
+```
+
+*Example: Check if a collection has elements:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3]
+execute store success score #result bs.ctx run function #bs.collection:is_empty
+# #result = 0 (false - collection is not empty)
+```
+
+```{admonition} Simple Size Check
+:class: tip
+
+This function is a lightweight alternative to `count` when you only need to know if a collection has any elements, without counting them. It's more efficient than checking `count > 0`.
+```
+
+::::
 :::::
 
 ---

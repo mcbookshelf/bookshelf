@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-return run execute if data storage bs:out collection.value[0]
+return run execute unless data storage bs:out collection.value[0]
