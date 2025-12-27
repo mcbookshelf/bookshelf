@@ -15,13 +15,13 @@
 
 # Save input collection
 data modify storage bs:data collection.stack prepend value { value: [] }
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection
+data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
 
 # Get sum at scale 1000
 execute store result score #s bs.ctx run function #bs.collection:sum
 
 # Restore collection for count
-data modify storage bs:out collection set from storage bs:data collection.stack[0].value
+data modify storage bs:out collection.value set from storage bs:data collection.stack[0].value
 
 # Get count
 execute store result score #c bs.ctx run function #bs.collection:count
@@ -30,7 +30,7 @@ execute store result score #c bs.ctx run function #bs.collection:count
 scoreboard players operation #s bs.ctx /= #c bs.ctx
 
 # Result on storage rescaled to original scale
-execute store result storage bs:out collection double 0.001 run scoreboard players get #s bs.ctx
+execute store result storage bs:out collection.value double 0.001 run scoreboard players get #s bs.ctx
 
 # Clean up
 data remove storage bs:data collection.stack[0]

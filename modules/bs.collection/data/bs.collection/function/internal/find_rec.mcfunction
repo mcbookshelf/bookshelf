@@ -21,7 +21,8 @@ execute store result storage bs:lambda collection.index int 1 run data get stora
 execute store success score #s bs.ctx run function bs.collection:internal/call with storage bs:data collection.stack[0]
 
 # If the recursive function succeeded, set the result and return
-execute if score #s bs.ctx matches 1 run data modify storage bs:out collection set from storage bs:data collection.stack[0].value[0]
+execute if score #s bs.ctx matches 1 run data modify storage bs:out collection.value set from storage bs:data collection.stack[0].value[0]
+execute if score #s bs.ctx matches 1 store result storage bs:out collection.index int 1 run data get storage bs:data collection.stack[0].consumed
 execute if score #s bs.ctx matches 1 run return 0
 
 # Shift the collection

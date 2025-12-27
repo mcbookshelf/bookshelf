@@ -15,7 +15,7 @@
 
 $data modify storage bs:data collection.stack prepend value { value: [], scale: $(scale) }
 
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection
+data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
 
 # Initialize minimum to max int value
 scoreboard players set #m bs.ctx 2147483647

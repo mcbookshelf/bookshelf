@@ -15,31 +15,31 @@
 # @dummy
 
 # Count of 5 elements - check return channel
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 execute store result score #c bs.ctx run function #bs.collection:count
 assert score #c bs.ctx matches 5
 
 # Count of 5 elements - check storage output
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 function #bs.collection:count
-assert data storage bs:out {collection: 5}
+assert data storage bs:out {collection: {value: 5}}
 
 # Count of empty collection - check return channel
-data modify storage bs:out collection set value []
+data modify storage bs:out collection.value set value []
 execute store result score #c bs.ctx run function #bs.collection:count
 assert score #c bs.ctx matches 0
 
 # Count of empty collection - check storage output
-data modify storage bs:out collection set value []
+data modify storage bs:out collection.value set value []
 function #bs.collection:count
-assert data storage bs:out {collection: 0}
+assert data storage bs:out {collection: {value: 0}}
 
 # Count of single element - check return channel
-data modify storage bs:out collection set value [42]
+data modify storage bs:out collection.value set value [42]
 execute store result score #c bs.ctx run function #bs.collection:count
 assert score #c bs.ctx matches 1
 
 # Count of single element - check storage output
-data modify storage bs:out collection set value [42]
+data modify storage bs:out collection.value set value [42]
 function #bs.collection:count
-assert data storage bs:out {collection: 1}
+assert data storage bs:out {collection: {value: 1}}

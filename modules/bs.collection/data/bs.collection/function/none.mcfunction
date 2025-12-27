@@ -15,7 +15,7 @@
 
 $data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: 1b, consumed: [] }
 
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection
+data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
 # If the collection is empty, the return value must be true
 scoreboard players set #s bs.ctx 1
 execute if data storage bs:data collection.stack[0].value[0] store success score #s bs.ctx run function bs.collection:internal/none_rec

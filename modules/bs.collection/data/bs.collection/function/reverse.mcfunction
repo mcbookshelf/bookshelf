@@ -15,8 +15,8 @@
 
 data modify storage bs:data collection.stack prepend value { value: [] }
 
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection
-data modify storage bs:out collection set value []
+data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
+data modify storage bs:out collection.value set value []
 execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:internal/reverse_rec
 
 data remove storage bs:data collection.stack[0]

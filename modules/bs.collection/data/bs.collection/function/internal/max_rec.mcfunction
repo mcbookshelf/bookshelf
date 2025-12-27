@@ -17,7 +17,7 @@
 $execute store result score #c bs.ctx run data get storage bs:data collection.stack[0].value[0] $(scale)
 
 # Update maximum if current is larger - copy both score and original value
-execute if score #c bs.ctx > #m bs.ctx run data modify storage bs:out collection set from storage bs:data collection.stack[0].value[0]
+execute if score #c bs.ctx > #m bs.ctx run data modify storage bs:out collection.value set from storage bs:data collection.stack[0].value[0]
 execute if score #c bs.ctx > #m bs.ctx run scoreboard players operation #m bs.ctx = #c bs.ctx
 
 # Shift the collection

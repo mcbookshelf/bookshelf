@@ -15,41 +15,41 @@
 # @dummy
 
 # Reverse a list of integers
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 function #bs.collection:reverse
-assert data storage bs:out {collection: [5, 4, 3, 2, 1]}
+assert data storage bs:out {collection: {value: [5, 4, 3, 2, 1]}}
 
 # Reverse a list of strings
-data modify storage bs:out collection set value ["a", "b", "c"]
+data modify storage bs:out collection.value set value ["a", "b", "c"]
 function #bs.collection:reverse
-assert data storage bs:out {collection: ["c", "b", "a"]}
+assert data storage bs:out {collection: {value: ["c", "b", "a"]}}
 
 # Reverse a list of doubles
-data modify storage bs:out collection set value [1.5d, 2.5d, 3.5d]
+data modify storage bs:out collection.value set value [1.5d, 2.5d, 3.5d]
 function #bs.collection:reverse
-assert data storage bs:out {collection: [3.5d, 2.5d, 1.5d]}
+assert data storage bs:out {collection: {value: [3.5d, 2.5d, 1.5d]}}
 
 # Reverse a single element - should return same element
-data modify storage bs:out collection set value [42]
+data modify storage bs:out collection.value set value [42]
 function #bs.collection:reverse
-assert data storage bs:out {collection: [42]}
+assert data storage bs:out {collection: {value: [42]}}
 
 # Reverse an empty collection - should return empty collection
-data modify storage bs:out collection set value []
+data modify storage bs:out collection.value set value []
 function #bs.collection:reverse
-assert data storage bs:out {collection: []}
+assert data storage bs:out {collection: {value: []}}
 
 # Reverse a list of mixed types
-data modify storage bs:out collection set value [1, "a", 2.5d, true]
+data modify storage bs:out collection.value set value [1, "a", 2.5d, true]
 function #bs.collection:reverse
-assert data storage bs:out {collection: [true, 2.5d, "a", 1]}
+assert data storage bs:out {collection: {value: [true, 2.5d, "a", 1]}}
 
 # Reverse a list with duplicate elements
-data modify storage bs:out collection set value [1, 2, 1, 2, 1]
+data modify storage bs:out collection.value set value [1, 2, 1, 2, 1]
 function #bs.collection:reverse
-assert data storage bs:out {collection: [1, 2, 1, 2, 1]}
+assert data storage bs:out {collection: {value: [1, 2, 1, 2, 1]}}
 
 # Reverse a nested list (elements are lists)
-data modify storage bs:out collection set value [[1, 2], [3, 4], [5, 6]]
+data modify storage bs:out collection.value set value [[1, 2], [3, 4], [5, 6]]
 function #bs.collection:reverse
-assert data storage bs:out {collection: [[5, 6], [3, 4], [1, 2]]}
+assert data storage bs:out {collection: {value: [[5, 6], [3, 4], [1, 2]]}}

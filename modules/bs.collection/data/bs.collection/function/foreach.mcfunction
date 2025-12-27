@@ -15,7 +15,7 @@
 
 $data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", consumed: [] }
 
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection
+data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
 execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:internal/foreach_rec
 
 data remove storage bs:data collection.stack[0]

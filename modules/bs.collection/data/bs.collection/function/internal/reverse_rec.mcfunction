@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out collection append from storage bs:data collection.stack[0].value[-1]
+data modify storage bs:out collection.value append from storage bs:data collection.stack[0].value[-1]
 data remove storage bs:data collection.stack[0].value[-1]
 
 # Recurse if there are more elements

@@ -15,12 +15,12 @@
 # @dummy
 
 # Empty
-data modify storage bs:out collection set value []
+data modify storage bs:out collection.value set value []
 function #bs.collection:foreach {run: "tellraw @a 'value'"}
 assert not chat "value"
 
 # Print
-data modify storage bs:out collection set value [0, 1, 2, 3]
+data modify storage bs:out collection.value set value [0, 1, 2, 3]
 function #bs.collection:foreach {run: "tellraw @a {nbt:'collection.value',storage:'bs:lambda'}"}
 assert chat "0"
 assert chat "1"
@@ -28,7 +28,7 @@ assert chat "2"
 assert chat "3"
 
 # Index
-data modify storage bs:out collection set value [10, 11, 12, 13]
+data modify storage bs:out collection.value set value [10, 11, 12, 13]
 function #bs.collection:foreach {run: "tellraw @a {nbt:'collection.index',storage:'bs:lambda'}"}
 assert chat "0"
 assert chat "1"

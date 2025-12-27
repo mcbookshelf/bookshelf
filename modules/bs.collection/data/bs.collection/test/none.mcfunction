@@ -15,26 +15,26 @@
 # @dummy
 
 # No elements have index 10
-data modify storage bs:out collection set value [1, 2, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 4, 5]
 execute store success score #s bs.ctx run function #bs.collection:none {run: "execute if data storage bs:lambda collection{index: 10}"}
 assert score #s bs.ctx matches 1
 
 # One element has index 2
-data modify storage bs:out collection set value [1, 2, 3, 4]
+data modify storage bs:out collection.value set value [1, 2, 3, 4]
 execute store success score #s bs.ctx run function #bs.collection:none {run: "execute if data storage bs:lambda collection{index: 2}"}
 assert score #s bs.ctx matches 0
 
 # Empty collection
-data modify storage bs:out collection set value []
+data modify storage bs:out collection.value set value []
 execute store success score #s bs.ctx run function #bs.collection:none {run: "execute if data storage bs:lambda collection{index: 0}"}
 assert score #s bs.ctx matches 1
 
 # No elements have value 99
-data modify storage bs:out collection set value [3, 3, 3]
+data modify storage bs:out collection.value set value [3, 3, 3]
 execute store success score #s bs.ctx run function #bs.collection:none {run: "execute if data storage bs:lambda collection{value: 99}"}
 assert score #s bs.ctx matches 1
 
 # First element has index 0
-data modify storage bs:out collection set value [3, 1, 2]
+data modify storage bs:out collection.value set value [3, 1, 2]
 execute store success score #s bs.ctx run function #bs.collection:none {run: "execute if data storage bs:lambda collection{index: 0}"}
 assert score #s bs.ctx matches 0

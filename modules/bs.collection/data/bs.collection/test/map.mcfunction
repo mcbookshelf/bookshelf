@@ -15,22 +15,22 @@
 # @dummy
 
 # Identity
-data modify storage bs:out collection set value [0, 1, 2]
+data modify storage bs:out collection.value set value [0, 1, 2]
 function #bs.collection:map {run: "data modify storage bs:lambda collection.result set from storage bs:lambda collection.value"}
-assert data storage bs:out {collection: [0, 1, 2]}
+assert data storage bs:out {collection: {value: [0, 1, 2]}}
 
 # Constant
-data modify storage bs:out collection set value [0, 1, 2]
+data modify storage bs:out collection.value set value [0, 1, 2]
 function #bs.collection:map {run: "data modify storage bs:lambda collection.result set value 'a'"}
-assert data storage bs:out {collection: ["a", "a", "a"]}
+assert data storage bs:out {collection: {value: ["a", "a", "a"]}}
 
 # Empty
-data modify storage bs:out collection set value []
+data modify storage bs:out collection.value set value []
 function #bs.collection:map {run: "say Should not run"}
 assert not chat "Should not run"
-assert data storage bs:out {collection: []}
+assert data storage bs:out {collection: {value: []}}
 
 # Index
-data modify storage bs:out collection set value [10, 11, 12]
+data modify storage bs:out collection.value set value [10, 11, 12]
 function #bs.collection:map {run: "data modify storage bs:lambda collection.result set from storage bs:lambda collection.index"}
-assert data storage bs:out {collection: [0, 1, 2]}
+assert data storage bs:out {collection: {value: [0, 1, 2]}}

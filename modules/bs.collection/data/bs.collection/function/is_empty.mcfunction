@@ -13,11 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: [], consumed: [] }
-
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:internal/flatmap_rec
-
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].result
-
-data remove storage bs:data collection.stack[0]
+return run execute if data storage bs:out collection.value[0]

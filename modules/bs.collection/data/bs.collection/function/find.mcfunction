@@ -15,9 +15,12 @@
 
 $data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", consumed: [] }
 
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection
+data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
 # Clear the output collection
-data remove storage bs:out collection
+data remove storage bs:out collection.value
+
+# Set the default result index to -1
+data modify storage bs:out collection.index set value -1
 
 execute unless data storage bs:data collection.stack[0].value[0] run return fail
 execute if data storage bs:data collection.stack[0].value[0] store success score #s bs.ctx run function bs.collection:internal/find_rec

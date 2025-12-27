@@ -38,15 +38,15 @@ Transform each element of a collection using a lambda function.
   **Macro `run`**: {nbt}`string` Lambda function to execute on each element. Receives `bs:lambda collection.value` (element value) and `bs:lambda collection.index` (element index).
 
 :Outputs:
-  **Storage `bs:out collection`**: {nbt}`list` The transformed collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` The transformed collection.
 ```
 
 *Example: Double each number in a list:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 function #bs.collection:map {run: "return run data get storage bs:lambda collection.value 2"}
-# bs:out collection = [2, 4, 6, 8, 10]
+# bs:out collection.value = [2, 4, 6, 8, 10]
 ```
 
 ::::
@@ -62,14 +62,14 @@ Transform each element into a collection and flatten the results into a single c
   **Macro `run`**: {nbt}`string` Lambda function to execute on each element. Receives `bs:lambda collection.value` (element value) and `bs:lambda collection.index` (element index).
 
 :Outputs:
-  **Storage `bs:out collection`**: {nbt}`list` The flattened transformed collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` The flattened transformed collection.
 ```
 
 *Example: Transform each number into a list of its multiples and flatten:*
 
 ```mcfunction
 # This would require a custom function that returns a list
-data modify storage bs:out collection set value [1, 2, 3]
+data modify storage bs:out collection.value set value [1, 2, 3]
 function #bs.collection:flatmap {run: "function mypack:get_multiples"}
 # If get_multiples returns [n, n*2] for each n, result would be [1, 2, 2, 4, 3, 6]
 ```
@@ -94,13 +94,13 @@ Keep only elements that satisfy a predicate condition.
   **Macro `run`**: {nbt}`string` Predicate function to test each element. Receives `bs:lambda collection.value` (element value) and `bs:lambda collection.index` (element index). Must return success (1) to keep the element.
 
 :Outputs:
-  **Storage `bs:out collection`**: {nbt}`list` The filtered collection containing only matching elements.
+  **Storage `bs:out collection.value`**: {nbt}`list` The filtered collection containing only matching elements.
 ```
 
 *Example: Keep only even numbers:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5, 6]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5, 6]
 function #bs.collection:filter {run: "execute store success score #r bs.ctx run data get storage bs:lambda collection.value"}
 # Further filtering logic needed for even check
 ```
@@ -118,17 +118,21 @@ Find the first element that satisfies a predicate condition.
   **Macro `run`**: {nbt}`string` Predicate function to test each element. Receives `bs:lambda collection.value` (element value) and `bs:lambda collection.index` (element index). Must return success (1) to match.
 
 :Outputs:
-  **Storage `bs:out collection`**: {nbt}`any` The first matching element, or nothing if no match found.
+  **Storage `bs:out collection.value`**: {nbt}`any` The first matching element, or nothing if no match found.
+
+  **Storage `bs:out collection.index`**: {nbt}`int` The zero-based index of the matching element, or -1 if no match found.
 
   **Return**: Success (1) if element found, fail (0) otherwise.
 ```
 
-*Example: Find first number greater than 3:*
+*Example: Find first number equal to 4:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 execute store success score #found bs.ctx run function #bs.collection:find {run: "execute if data storage bs:lambda collection{value: 4}"}
-# bs:out collection = 4, #found = 1
+# bs:out collection.value = 4
+# bs:out collection.index = 3
+# #found = 1
 ```
 
 ::::
@@ -139,12 +143,14 @@ execute store success score #found bs.ctx run function #bs.collection:find {run:
 Find the last element that satisfies a predicate condition.
 
 :Inputs:
-  **Storage `bs:out collection`**: {nbt}`list` The collection to search.
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to search.
 
   **Macro `run`**: {nbt}`string` Predicate function to test each element. Receives `bs:lambda collection.value` (element value) and `bs:lambda collection.index` (element index). Must return success (1) to match.
 
 :Outputs:
-  **Storage `bs:out collection`**: {nbt}`any` The last matching element, or nothing if no match found.
+  **Storage `bs:out collection.value`**: {nbt}`any` The last matching element, or nothing if no match found.
+
+  **Storage `bs:out collection.index`**: {nbt}`int` The zero-based index of the last matching element, or -1 if no match found.
 
   **Return**: Success (1) if element found, fail (0) otherwise.
 ```
@@ -152,9 +158,11 @@ Find the last element that satisfies a predicate condition.
 *Example: Find last occurrence of 3:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 3, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 3, 5]
 execute store success score #found bs.ctx run function #bs.collection:find_last {run: "execute if data storage bs:lambda collection{value: 3}"}
-# bs:out collection = 3, #found = 1
+# bs:out collection.value = 3
+# bs:out collection.index = 4 (last 3 is at index 4)
+# #found = 1
 ```
 
 ```{admonition} Search Direction
@@ -189,7 +197,7 @@ Test if at least one element satisfies a predicate condition.
 *Example: Check if any number equals 3:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 execute store success score #result bs.ctx run function #bs.collection:any {run: "execute if data storage bs:lambda collection{value: 3}"}
 # #result = 1 (true)
 ```
@@ -213,7 +221,7 @@ Test if all elements satisfy a predicate condition.
 *Example: Check if all numbers are positive:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 execute store success score #result bs.ctx run function #bs.collection:all {run: "execute if data storage bs:lambda collection.value > 0"}
 # #result = 1 (true)
 ```
@@ -243,7 +251,7 @@ Test if no elements satisfy a predicate condition.
 *Example: Check if no numbers equal 10:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 execute store success score #result bs.ctx run function #bs.collection:none {run: "execute if data storage bs:lambda collection{value: 10}"}
 # #result = 1 (true)
 ```
@@ -272,7 +280,7 @@ Count the number of elements in a collection.
 *Example: Count elements in a list:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 execute store result score #count bs.ctx run function #bs.collection:count
 # #count = 5
 ```
@@ -288,15 +296,15 @@ Find the minimum value in a collection of numbers.
   **Storage `bs:in collection`**: {nbt}`list` The collection of numbers.
 
 :Outputs:
-  **Storage `bs:out collection`**: {nbt}`int` The minimum value.
+  **Storage `bs:out collection.value`**: {nbt}`int` The minimum value.
 ```
 
 *Example: Find minimum value:*
 
 ```mcfunction
-data modify storage bs:out collection set value [5, 2, 8, 1, 9]
+data modify storage bs:out collection.value set value [5, 2, 8, 1, 9]
 function #bs.collection:min
-# bs:out collection = 1
+# bs:out collection.value = 1
 ```
 
 ```{admonition} Empty Collection Behavior
@@ -316,15 +324,15 @@ Find the maximum value in a collection of numbers.
   **Storage `bs:in collection`**: {nbt}`list` The collection of numbers.
 
 :Outputs:
-  **Storage `bs:out collection`**: {nbt}`int` The maximum value.
+  **Storage `bs:out collection.value`**: {nbt}`int` The maximum value.
 ```
 
 *Example: Find maximum value:*
 
 ```mcfunction
-data modify storage bs:out collection set value [5, 2, 8, 1, 9]
+data modify storage bs:out collection.value set value [5, 2, 8, 1, 9]
 function #bs.collection:max
-# bs:out collection = 9
+# bs:out collection.value = 9
 ```
 
 ```{admonition} Empty Collection Behavior
@@ -341,28 +349,28 @@ For an empty collection, the behavior is undefined. Ensure the collection has at
 Calculate the average (mean) of a collection of numbers. Uses an internal scale of 1000 for precision.
 
 :Inputs:
-  **Storage `bs:out collection`**: {nbt}`list` The collection of numbers.
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection of numbers.
 
 :Outputs:
   **Return**: Integer average at scale 1000.
 
-  **Storage `bs:out collection`**: {nbt}`double` The average value.
+  **Storage `bs:out collection.value`**: {nbt}`double` The average value.
 ```
 
 *Example: Calculate average of integers:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 function #bs.collection:average
-# bs:out collection = 3.0d (15/5)
+# bs:out collection.value = 3.0d (15/5)
 ```
 
 *Example: Calculate average of decimals:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1.5d, 2.5d, 3.0d]
+data modify storage bs:out collection.value set value [1.5d, 2.5d, 3.0d]
 function #bs.collection:average
-# bs:out collection = 2.333d ((1.5 + 2.5 + 3.0) / 3)
+# bs:out collection.value = 2.333d ((1.5 + 2.5 + 3.0) / 3)
 ```
 
 ```{admonition} Precision
@@ -385,28 +393,28 @@ For an empty collection, division by zero will occur. Ensure the collection has 
 Calculate the sum of all numbers in a collection. Uses an internal scale of 1000 for precision.
 
 :Inputs:
-  **Storage `bs:out collection`**: {nbt}`list` The collection of numbers.
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection of numbers.
 
 :Outputs:
   **Return**: Integer sum at scale 1000.
 
-  **Storage `bs:out collection`**: {nbt}`double` The sum as a double value.
+  **Storage `bs:out collection.value`**: {nbt}`double` The sum as a double value.
 ```
 
 *Example: Sum integers:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 function #bs.collection:sum
-# bs:out collection = 15.0d
+# bs:out collection.value = 15.0d
 ```
 
 *Example: Sum decimals:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1.5d, 2.5d, 3.0d]
+data modify storage bs:out collection.value set value [1.5d, 2.5d, 3.0d]
 function #bs.collection:sum
-# bs:out collection = 7.0d (sum of 1.5 + 2.5 + 3.0)
+# bs:out collection.value = 7.0d (sum of 1.5 + 2.5 + 3.0)
 ```
 
 ```{admonition} Precision
@@ -429,12 +437,12 @@ For an empty collection, the sum is 0.
 Reduce a collection to a single value by applying a function that combines the accumulator with each element.
 
 :Inputs:
-  **Storage `bs:out collection`**: {nbt}`list` The collection to reduce.
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to reduce.
 
   **Macro `run`**: {nbt}`string` Lambda function that combines accumulator and value.
 
 :Outputs:
-  **Storage `bs:out collection`**: The final accumulated value.
+  **Storage `bs:out collection.value`**: The final accumulated value.
 
   **Return**: 0 on success, fail if the collection is empty.
 ```
@@ -442,17 +450,17 @@ Reduce a collection to a single value by applying a function that combines the a
 *Example: Sum all numbers using reduce:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 function #bs.collection:reduce {run: "bs.collection:sum_tmp"}
-# bs:out collection = 15
+# bs:out collection.value = 15
 ```
 
 *Example: Calculate product using reduce:*
 
 ```mcfunction
-data modify storage bs:out collection set value [2, 3, 4]
+data modify storage bs:out collection.value set value [2, 3, 4]
 function #bs.collection:reduce {run: "function bs.collection:internal/reduce_product"}
-# bs:out collection = 24
+# bs:out collection.value = 24
 ```
 
 ```{admonition} Lambda Function Requirements
@@ -486,14 +494,14 @@ The reduce operation uses the first element of the collection as the initial acc
 Reduce a collection to a single value by applying a function that combines the accumulator with each element, starting with a provided initial value.
 
 :Inputs:
-  **Storage `bs:out collection`**: {nbt}`list` The collection to fold.
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to fold.
 
   **Macro `run`**: {nbt}`string` Lambda function that combines accumulator and value.
 
   **Macro `initial`**: {nbt}`any` Initial value for the accumulator.
 
 :Outputs:
-  **Storage `bs:out collection`**: The final accumulated value.
+  **Storage `bs:out collection.value`**: The final accumulated value.
 
   **Return**: 0 on success.
 ```
@@ -501,17 +509,17 @@ Reduce a collection to a single value by applying a function that combines the a
 *Example: Sum with initial value:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 function #bs.collection:fold {run: "bs.collection:sum_tmp", initial: 10}
-# bs:out collection = 25 (10 + 1 + 2 + 3 + 4 + 5)
+# bs:out collection.value = 25 (10 + 1 + 2 + 3 + 4 + 5)
 ```
 
 *Example: Build a list with fold:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3]
+data modify storage bs:out collection.value set value [1, 2, 3]
 function #bs.collection:fold {run: "function bs.collection:internal/fold_append", initial: []}
-# bs:out collection = [1, 2, 3]
+# bs:out collection.value = [1, 2, 3]
 ```
 
 ```{admonition} Lambda Function Requirements
@@ -548,12 +556,12 @@ For an empty collection, fold returns the initial value. This makes fold more fl
 Reduce a collection to a single value by applying a function from right to left, starting with the last element as the initial accumulator.
 
 :Inputs:
-  **Storage `bs:out collection`**: {nbt}`list` The collection to reduce.
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to reduce.
 
   **Macro `run`**: {nbt}`string` Lambda function that combines accumulator and value.
 
 :Outputs:
-  **Storage `bs:out collection`**: The final accumulated value.
+  **Storage `bs:out collection.value`**: The final accumulated value.
 
   **Return**: 0 on success, fail if the collection is empty.
 ```
@@ -561,7 +569,7 @@ Reduce a collection to a single value by applying a function from right to left,
 *Example: Build a reversed list using reduce_right:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 function #bs.collection:reduce_right {run: "bs.collection:sum_tmp"}
 # Processes: 5, 4, 3, 2, 1 (right to left)
 ```
@@ -586,14 +594,14 @@ For an empty collection, the function returns fail. Ensure the collection has at
 Reduce a collection to a single value by applying a function from right to left with a provided initial value.
 
 :Inputs:
-  **Storage `bs:out collection`**: {nbt}`list` The collection to fold.
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to fold.
 
   **Macro `run`**: {nbt}`string` Lambda function that combines accumulator and value.
 
   **Macro `initial`**: {nbt}`any` Initial value for the accumulator.
 
 :Outputs:
-  **Storage `bs:out collection`**: The final accumulated value.
+  **Storage `bs:out collection.value`**: The final accumulated value.
 
   **Return**: 0 on success.
 ```
@@ -601,7 +609,7 @@ Reduce a collection to a single value by applying a function from right to left 
 *Example: Build a reversed list with fold_right:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3]
+data modify storage bs:out collection.value set value [1, 2, 3]
 function #bs.collection:fold_right {run: "function bs.collection:internal/fold_append", initial: []}
 # Processes: 3, 2, 1 (right to left)
 ```
@@ -651,7 +659,7 @@ Execute an operation on each element of a collection.
 *Example: Display each element:*
 
 ```mcfunction
-data modify storage bs:out collection set value ["Hello", "World", "!"]
+data modify storage bs:out collection.value set value ["Hello", "World", "!"]
 function #bs.collection:foreach {run: "tellraw @a [{\"storage\":\"bs:lambda\",\"nbt\":\"collection.value\"}]"}
 # Displays each string to all players
 ```
@@ -668,15 +676,15 @@ Flatten a nested collection by one level.
   **Storage `bs:in collection`**: {nbt}`list` The nested collection to flatten.
 
 :Outputs:
-  **Storage `bs:out collection`**: {nbt}`list` The flattened collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` The flattened collection.
 ```
 
 *Example: Flatten a 2D array:*
 
 ```mcfunction
-data modify storage bs:out collection set value [[1, 2], [3, 4], [5]]
+data modify storage bs:out collection.value set value [[1, 2], [3, 4], [5]]
 function #bs.collection:flatten
-# bs:out collection = [1, 2, 3, 4, 5]
+# bs:out collection.value = [1, 2, 3, 4, 5]
 ```
 
 ---
@@ -686,32 +694,106 @@ function #bs.collection:flatten
 Reverse the order of elements in a collection.
 
 :Inputs:
-  **Storage `bs:out collection`**: {nbt}`list` The collection to reverse.
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to reverse.
 
 :Outputs:
-  **Storage `bs:out collection`**: {nbt}`list` The collection with elements in reversed order.
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection with elements in reversed order.
 ```
 
 *Example: Reverse a list:*
 
 ```mcfunction
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 function #bs.collection:reverse
-# bs:out collection = [5, 4, 3, 2, 1]
+# bs:out collection.value = [5, 4, 3, 2, 1]
 ```
 
 *Example: Reverse a list of strings:*
 
 ```mcfunction
-data modify storage bs:out collection set value ["a", "b", "c"]
+data modify storage bs:out collection.value set value ["a", "b", "c"]
 function #bs.collection:reverse
-# bs:out collection = ["c", "b", "a"]
+# bs:out collection.value = ["c", "b", "a"]
 ```
 
 ```{admonition} Empty Collection Behavior
 :class: tip
 
 For an empty collection, the function returns an empty collection. This operation is safe for all collection sizes.
+```
+
+---
+
+```{function} #bs.collection:index_of
+
+Find the index of the first element matching a predicate.
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to search.
+
+  **Macro `run`**: {nbt}`string` Predicate function to test each element. Receives `bs:lambda collection.value` (element value) and `bs:lambda collection.index` (element index). Must return success (1) for a match.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`int` The zero-based index of the first matching element, or -1 if no match found.
+```
+
+*Example: Find the index of the first occurrence of value 3:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 3, 5]
+function #bs.collection:index_of {run: "execute if data storage bs:lambda collection{value: 3}"}
+# bs:out collection.value = 2 (first 3 is at index 2)
+```
+
+*Example: Find the index of a string:*
+
+```mcfunction
+data modify storage bs:out collection.value set value ["a", "b", "c", "b", "d"]
+function #bs.collection:index_of {run: "execute if data storage bs:lambda collection{value: 'b'}"}
+# bs:out collection.value = 1 (first "b" is at index 1)
+```
+
+```{admonition} Not Found Behavior
+:class: tip
+
+When no element matches the predicate, the function returns -1. Check the returned value to determine if a match was found (index >= 0) or not (index = -1).
+```
+
+---
+
+```{function} #bs.collection:last_index_of
+
+Find the index of the last element matching a predicate, searching from right to left.
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to search.
+
+  **Macro `run`**: {nbt}`string` Predicate function to test each element. Receives `bs:lambda collection.value` (element value) and `bs:lambda collection.index` (element index). Must return success (1) for a match.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`int` The zero-based index of the last matching element, or -1 if no match found.
+```
+
+*Example: Find the index of the last occurrence of value 3:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 3, 5]
+function #bs.collection:last_index_of {run: "execute if data storage bs:lambda collection{value: 3}"}
+# bs:out collection.value = 4 (last 3 is at index 4)
+```
+
+*Example: Find the index of the last string match:*
+
+```mcfunction
+data modify storage bs:out collection.value set value ["a", "b", "c", "b", "d"]
+function #bs.collection:last_index_of {run: "execute if data storage bs:lambda collection{value: 'b'}"}
+# bs:out collection.value = 3 (last "b" is at index 3)
+```
+
+```{admonition} Search Direction
+:class: note
+
+Unlike `index_of` which searches from left to right, `last_index_of` searches from right to left to efficiently find the last occurrence. However, the returned index is still zero-based from the beginning of the collection.
 ```
 
 ---

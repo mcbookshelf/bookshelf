@@ -14,41 +14,48 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-# Find last element equal to 3
-data modify storage bs:out collection set value [1, 2, 3, 4, 3, 5]
+# Find last element equal to 3 - last 3 is at index 4
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 3, 5]
 execute store success score #r bs.ctx run function #bs.collection:find_last {run: "execute if data storage bs:lambda collection{value: 3}"}
 assert score #r bs.ctx matches 1
-assert data storage bs:out {collection: 3}
+assert data storage bs:out {collection: {value: 3}}
+assert data storage bs:out {collection: {index: 4}}
 
-# Find last element equal to 5
-data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+# Find last element equal to 5 - 5 is at index 4
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
 execute store success score #r bs.ctx run function #bs.collection:find_last {run: "execute if data storage bs:lambda collection{value: 5}"}
 assert score #r bs.ctx matches 1
-assert data storage bs:out {collection: 5}
+assert data storage bs:out {collection: {value: 5}}
+assert data storage bs:out {collection: {index: 4}}
 
 # Find last in collection where no element matches
-data modify storage bs:out collection set value [1, 2, 3]
+data modify storage bs:out collection.value set value [1, 2, 3]
 execute store success score #r bs.ctx run function #bs.collection:find_last {run: "execute if data storage bs:lambda collection{value: 10}"}
 assert score #r bs.ctx matches 0
+assert data storage bs:out {collection: {index: -1}}
 
 # Find last in empty collection - should fail
-data modify storage bs:out collection set value []
+data modify storage bs:out collection.value set value []
 execute store success score #r bs.ctx run function #bs.collection:find_last {run: "execute if data storage bs:lambda collection{value: 1}"}
 assert score #r bs.ctx matches 0
+assert data storage bs:out {collection: {index: -1}}
 
-# Find last string matching
-data modify storage bs:out collection set value ["a", "b", "c", "b", "d"]
+# Find last string matching - last "b" is at index 3
+data modify storage bs:out collection.value set value ["a", "b", "c", "b", "d"]
 execute store success score #r bs.ctx run function #bs.collection:find_last {run: "execute if data storage bs:lambda collection{value: 'b'}"}
 assert score #r bs.ctx matches 1
-assert data storage bs:out {collection: "b"}
+assert data storage bs:out {collection: {value: "b"}}
+assert data storage bs:out {collection: {index: 3}}
 
-# Find last with single element that matches
-data modify storage bs:out collection set value [42]
+# Find last with single element that matches - 42 is at index 0
+data modify storage bs:out collection.value set value [42]
 execute store success score #r bs.ctx run function #bs.collection:find_last {run: "execute if data storage bs:lambda collection{value: 42}"}
 assert score #r bs.ctx matches 1
-assert data storage bs:out {collection: 42}
+assert data storage bs:out {collection: {value: 42}}
+assert data storage bs:out {collection: {index: 0}}
 
 # Find last with single element that doesn't match
-data modify storage bs:out collection set value [42]
+data modify storage bs:out collection.value set value [42]
 execute store success score #r bs.ctx run function #bs.collection:find_last {run: "execute if data storage bs:lambda collection{value: 10}"}
 assert score #r bs.ctx matches 0
+assert data storage bs:out {collection: {index: -1}}

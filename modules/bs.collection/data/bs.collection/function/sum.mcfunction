@@ -15,15 +15,15 @@
 
 data modify storage bs:data collection.stack prepend value { value: [], scale: 1000 }
 
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection
+data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
 
 # Initialize sum to 0
 scoreboard players set #s bs.ctx 0
 execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:internal/sum_rec with storage bs:data collection.stack[0]
 
 # Result on storage rescaled to original scale using data get for precision
-execute store result storage bs:out collection int 1 run scoreboard players get #s bs.ctx
-execute store result storage bs:out collection double 0.001 run data get storage bs:out collection
+execute store result storage bs:out collection.value int 1 run scoreboard players get #s bs.ctx
+execute store result storage bs:out collection.value double 0.001 run data get storage bs:out collection.value
 
 data remove storage bs:data collection.stack[0]
 

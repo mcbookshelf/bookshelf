@@ -15,16 +15,16 @@
 # @dummy
 
 # Identity (List of singletons)
-data modify storage bs:out collection set value [[0], [1], [2]]
+data modify storage bs:out collection.value set value [[0], [1], [2]]
 function #bs.collection:flatten
-assert data storage bs:out {collection: [0, 1, 2]}
+assert data storage bs:out {collection: {value: [0, 1, 2]}}
 
 # Flattening (List of lists)
-data modify storage bs:out collection set value [[0, 1], [2, 3], [4]]
+data modify storage bs:out collection.value set value [[0, 1], [2, 3], [4]]
 function #bs.collection:flatten
-assert data storage bs:out {collection: [0, 1, 2, 3, 4]}
+assert data storage bs:out {collection: {value: [0, 1, 2, 3, 4]}}
 
 # Empty
-data modify storage bs:out collection set value []
+data modify storage bs:out collection.value set value []
 function #bs.collection:flatten
-assert data storage bs:out {collection: []}
+assert data storage bs:out {collection: {value: []}}

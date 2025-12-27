@@ -15,21 +15,21 @@
 # @dummy
 
 # Identity (List of singletons)
-data modify storage bs:out collection set value [[0], [1], [2]]
+data modify storage bs:out collection.value set value [[0], [1], [2]]
 function #bs.collection:flatmap {run: "data modify storage bs:lambda collection.result set from storage bs:lambda collection.value"}
-assert data storage bs:out {collection: [0, 1, 2]}
+assert data storage bs:out {collection: {value: [0, 1, 2]}}
 
 # Flattening (List of lists)
-data modify storage bs:out collection set value [[0, 1], [2, 3], [4]]
+data modify storage bs:out collection.value set value [[0, 1], [2, 3], [4]]
 function #bs.collection:flatmap {run: "data modify storage bs:lambda collection.result set from storage bs:lambda collection.value"}
-assert data storage bs:out {collection: [0, 1, 2, 3, 4]}
+assert data storage bs:out {collection: {value: [0, 1, 2, 3, 4]}}
 
 # Expansion (One element to multiple)
-data modify storage bs:out collection set value [0, 1]
+data modify storage bs:out collection.value set value [0, 1]
 function #bs.collection:flatmap {run: "data modify storage bs:lambda collection.result set value ['a', 'b']"}
-assert data storage bs:out {collection: ["a", "b", "a", "b"]}
+assert data storage bs:out {collection: {value: ["a", "b", "a", "b"]}}
 
 # Empty
-data modify storage bs:out collection set value []
+data modify storage bs:out collection.value set value []
 function #bs.collection:flatmap {run: "say Should not run"}
-assert data storage bs:out {collection: []}
+assert data storage bs:out {collection: {value: []}}
