@@ -13,14 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", consumed: [] }
+$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)"}
 
 data modify storage bs:data collection.stack[0].value set from storage bs:out collection
 # Clear the output collection
 data remove storage bs:out collection
 
 execute unless data storage bs:data collection.stack[0].value[0] run return fail
-execute if data storage bs:data collection.stack[0].value[0] store success score #s bs.ctx run function bs.collection:internal/find_rec
+execute if data storage bs:data collection.stack[0].value[0] store success score #s bs.ctx run function bs.collection:internal/find_last_rec
 
 data remove storage bs:data collection.stack[0]
 

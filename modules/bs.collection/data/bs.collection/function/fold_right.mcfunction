@@ -13,15 +13,18 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", consumed: [] }
+# reduce<T>(collection: T[], initial: T, fn: (accumulator: T, value: T) => T): T
 
+$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: null, accumulator: "$(initial)" }
+
+# Set the collection and accumulator to the first element of the collection
 data modify storage bs:data collection.stack[0].value set from storage bs:out collection
-# Clear the output collection
-data remove storage bs:out collection
 
-execute unless data storage bs:data collection.stack[0].value[0] run return fail
-execute if data storage bs:data collection.stack[0].value[0] store success score #s bs.ctx run function bs.collection:internal/find_rec
+# If the collection had at least one element, we reduce the collection
+execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:internal/reduce_right_rec
+
+# Set the result to the accumulator
+data modify storage bs:out collection set from storage bs:data collection.stack[0].accumulator
 
 data remove storage bs:data collection.stack[0]
-
-return run execute if score #s bs.ctx matches 1
+return 0

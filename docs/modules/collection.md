@@ -132,6 +132,38 @@ execute store success score #found bs.ctx run function #bs.collection:find {run:
 ```
 
 ::::
+::::{tab-item} Find Last
+
+```{function} #bs.collection:find_last
+
+Find the last element that satisfies a predicate condition.
+
+:Inputs:
+  **Storage `bs:out collection`**: {nbt}`list` The collection to search.
+
+  **Macro `run`**: {nbt}`string` Predicate function to test each element. Receives `bs:lambda collection.value` (element value) and `bs:lambda collection.index` (element index). Must return success (1) to match.
+
+:Outputs:
+  **Storage `bs:out collection`**: {nbt}`any` The last matching element, or nothing if no match found.
+
+  **Return**: Success (1) if element found, fail (0) otherwise.
+```
+
+*Example: Find last occurrence of 3:*
+
+```mcfunction
+data modify storage bs:out collection set value [1, 2, 3, 4, 3, 5]
+execute store success score #found bs.ctx run function #bs.collection:find_last {run: "execute if data storage bs:lambda collection{value: 3}"}
+# bs:out collection = 3, #found = 1
+```
+
+```{admonition} Search Direction
+:class: note
+
+Unlike `find` which searches from the beginning, `find_last` searches from the end of the collection backwards, returning the last element that matches the predicate.
+```
+
+::::
 :::::
 
 ---
@@ -506,6 +538,94 @@ For an empty collection, fold returns the initial value. This makes fold more fl
 - Handle empty collections gracefully
 - Start with a specific initial value
 - Build a result of a different type than the collection elements
+```
+
+::::
+::::{tab-item} Reduce Right
+
+```{function} #bs.collection:reduce_right
+
+Reduce a collection to a single value by applying a function from right to left, starting with the last element as the initial accumulator.
+
+:Inputs:
+  **Storage `bs:out collection`**: {nbt}`list` The collection to reduce.
+
+  **Macro `run`**: {nbt}`string` Lambda function that combines accumulator and value.
+
+:Outputs:
+  **Storage `bs:out collection`**: The final accumulated value.
+
+  **Return**: 0 on success, fail if the collection is empty.
+```
+
+*Example: Build a reversed list using reduce_right:*
+
+```mcfunction
+data modify storage bs:out collection set value [1, 2, 3, 4, 5]
+function #bs.collection:reduce_right {run: "bs.collection:sum_tmp"}
+# Processes: 5, 4, 3, 2, 1 (right to left)
+```
+
+```{admonition} Processing Direction
+:class: note
+
+**Reduce Right** processes elements from right to left (last to first), using the last element as the initial accumulator. This is useful for operations where order matters, such as building lists in reverse or right-associative operations.
+```
+
+```{admonition} Empty Collection Behavior
+:class: warning
+
+For an empty collection, the function returns fail. Ensure the collection has at least one element.
+```
+
+::::
+::::{tab-item} Fold Right
+
+```{function} #bs.collection:fold_right
+
+Reduce a collection to a single value by applying a function from right to left with a provided initial value.
+
+:Inputs:
+  **Storage `bs:out collection`**: {nbt}`list` The collection to fold.
+
+  **Macro `run`**: {nbt}`string` Lambda function that combines accumulator and value.
+
+  **Macro `initial`**: {nbt}`any` Initial value for the accumulator.
+
+:Outputs:
+  **Storage `bs:out collection`**: The final accumulated value.
+
+  **Return**: 0 on success.
+```
+
+*Example: Build a reversed list with fold_right:*
+
+```mcfunction
+data modify storage bs:out collection set value [1, 2, 3]
+function #bs.collection:fold_right {run: "function bs.collection:internal/fold_append", initial: []}
+# Processes: 3, 2, 1 (right to left)
+```
+
+```{admonition} Processing Direction
+:class: note
+
+**Fold Right** processes elements from right to left (last to first) with an initial value. This is the right-to-left equivalent of `fold`, useful for right-associative operations.
+```
+
+```{admonition} Lambda Function Requirements
+:class: note
+
+The lambda function receives:
+- **`bs:lambda collection.accumulator`**: The current accumulated value
+- **`bs:lambda collection.value`**: The current element being processed
+
+The lambda must set **`bs:lambda collection.result`** to the new accumulator value.
+```
+
+```{admonition} Difference from Fold
+:class: tip
+
+**Fold Right** processes from right to left, while **Fold** processes from left to right. Use fold_right when the order of processing matters for the operation, such as building reversed structures or implementing right-associative operators.
 ```
 
 ::::
