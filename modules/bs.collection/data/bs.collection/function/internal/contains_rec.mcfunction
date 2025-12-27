@@ -15,12 +15,10 @@
 
 execute store success score #s bs.ctx run data modify storage bs:out collection.value[0] set from storage bs:ctx _.searched
 # If we failed to overwrite the value with the searched value, so both are equal and the collection contains the value
-execute if score #s bs.ctx matches 0 run tellraw @a [{"text":"[DEBUG] Value found! Collection contains searched value."}]
 execute if score #s bs.ctx matches 0 run return 0
 
 # Else, we continue the search
 data remove storage bs:out collection.value[0]
-execute if data storage bs:out collection.value[0] run tellraw @a [{"text":"[DEBUG] Collection not empty, recursing into contains_rec..."}]
 execute if data storage bs:out collection.value[0] run return run function bs.collection:internal/contains_rec
 
 return fail
