@@ -18,7 +18,7 @@ data modify storage bs:out collection.index set value -1
 execute unless data storage bs:out collection.value[0] run data remove storage bs:out collection.value
 execute unless data storage bs:out collection.value[0] run return fail
 
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", consumed: [] }
+$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", i: -1 }
 
 data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
 # Clear the output collection

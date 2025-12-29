@@ -16,13 +16,12 @@
 # If empty collection, return fail
 execute unless data storage bs:out collection.value[0] run return fail
 
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: null, accumulator: null, consumed: [] }
+$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: null, accumulator: null, i: 0 }
 
 # Set the collection and accumulator to the first element of the collection
 data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
 data modify storage bs:data collection.stack[0].accumulator set from storage bs:out collection.value[0]
-# Since we have already consumed the first element, we append it to the consumed list
-data modify storage bs:data collection.stack[0].consumed append from storage bs:out collection.value[0]
+# We shift the collection
 data remove storage bs:data collection.stack[0].value[0]
 
 # If the collection had at least two elements, we reduce the collection

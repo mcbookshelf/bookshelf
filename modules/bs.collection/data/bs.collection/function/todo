@@ -6,7 +6,7 @@
 -[-] some features dont need the stack, also we could reverse recurse in some functions that are not of ordre superieur
 -[ ] in some stack like map consumed can be changed to an incremented value
 -[x] all_rec and any_rec: no need for last execute if score #s bs.ctx matches 1 
--[-] average (scaling for the output no need for the stack, do not use count feature and directly store in score)
+-[x] average (scaling for the output no need for the stack, do not use count feature and directly store in score)
 -[x] count: could be done with a single command
 -[x] find: early return return fail up
 -[x] findrec and find_last_rec:

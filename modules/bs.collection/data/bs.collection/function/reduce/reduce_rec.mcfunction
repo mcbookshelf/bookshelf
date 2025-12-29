@@ -13,19 +13,17 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# reduce<T>(collection: T[], fn: (accumulator: T, value: T) => T): T
-
 # Prepare args for the lambda function
 data modify storage bs:lambda collection.accumulator set from storage bs:data collection.stack[0].accumulator
 data modify storage bs:lambda collection.value set from storage bs:data collection.stack[0].value[0]
-execute store result storage bs:lambda collection.index int 1 run data get storage bs:data collection.stack[0].consumed
+execute store result score #i bs.ctx run data get storage bs:data collection.stack[0].i
+execute store result storage bs:data collection.stack[0].i int 1 store result storage bs:lambda collection.index int 1 run scoreboard players add #i bs.ctx 1
 
 # Call the lambda function to reduce the value
 function bs.collection:reduce/call with storage bs:data collection.stack[0]
 data modify storage bs:data collection.stack[0].accumulator set from storage bs:lambda collection.result
 
 # Shift the collection
-data modify storage bs:data collection.stack[0].consumed append from storage bs:data collection.stack[0].value[0]
 data remove storage bs:data collection.stack[0].value[0]
 
 # Recurse if there are more elements

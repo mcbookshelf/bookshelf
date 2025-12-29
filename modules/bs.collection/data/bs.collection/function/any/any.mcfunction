@@ -15,7 +15,7 @@
 
 # If the collection is empty, the return value must be false
 execute unless data storage bs:out collection.value[0] run return fail
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: 0b, consumed: [] }
+$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: 0b, i: -1 }
 
 data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
 execute store success score #s bs.ctx run function bs.collection:any/any_rec

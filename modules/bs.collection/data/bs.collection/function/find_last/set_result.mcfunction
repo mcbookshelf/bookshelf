@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].current
-execute store result storage bs:out collection.index int 1 run data get storage bs:data collection.stack[0].value
+data modify storage bs:out collection.value set from storage bs:data collection.stack[0].value[-1]
+data modify storage bs:out collection.index set from storage bs:data collection.stack[0].i

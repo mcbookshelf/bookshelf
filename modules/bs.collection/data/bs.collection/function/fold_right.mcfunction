@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute unless data storage bs:out collection.value[0] run return 0
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: null, accumulator: "$(initial)" }
+$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: null, accumulator: "$(initial)", i: -1 }
 
 # Set the collection and accumulator to the first element of the collection
 data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value

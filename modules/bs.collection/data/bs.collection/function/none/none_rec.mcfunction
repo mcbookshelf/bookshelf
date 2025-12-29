@@ -15,7 +15,8 @@
 
 # Prepare args for the lambda function
 data modify storage bs:lambda collection.value set from storage bs:data collection.stack[0].value[0]
-execute store result storage bs:lambda collection.index int 1 run data get storage bs:data collection.stack[0].consumed
+execute store result score #i bs.ctx run data get storage bs:data collection.stack[0].i
+execute store result storage bs:data collection.stack[0].i int 1 store result storage bs:lambda collection.index int 1 run scoreboard players add #i bs.ctx 1
 
 # Call the lambda function and check if it passes the predicate
 execute store success score #s bs.ctx run function bs.collection:none/call with storage bs:data collection.stack[0]
@@ -24,7 +25,6 @@ execute store success score #s bs.ctx run function bs.collection:none/call with 
 execute if score #s bs.ctx matches 1 run return fail
 
 # Shift the collection
-data modify storage bs:data collection.stack[0].consumed append from storage bs:data collection.stack[0].value[0]
 data remove storage bs:data collection.stack[0].value[0]
 
 # If the predicate failed, continue checking remaining elements
