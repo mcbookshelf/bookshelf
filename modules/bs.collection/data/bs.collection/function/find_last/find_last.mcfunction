@@ -24,8 +24,8 @@ data modify storage bs:data collection.stack[0].value set from storage bs:out co
 # Clear the output collection
 data remove storage bs:out collection.value
 
-execute store success score #s bs.ctx run function bs.collection:find_last/find_last_rec
+function bs.collection:find_last/find_last_rec
 
 data remove storage bs:data collection.stack[0]
 
-return run execute if score #s bs.ctx matches 1
+return run execute if data storage bs:out collection.value

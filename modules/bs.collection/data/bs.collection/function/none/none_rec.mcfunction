@@ -29,6 +29,4 @@ data remove storage bs:data collection.stack[0].value[0]
 
 # If the predicate failed, continue checking remaining elements
 execute if score #s bs.ctx matches 0 if data storage bs:data collection.stack[0].value[0] run return run function bs.collection:none/none_rec
-
-# If the predicate never succeeded and there are no more elements, return true
-execute if score #s bs.ctx matches 0 run return 1
+return 0

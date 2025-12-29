@@ -14,10 +14,8 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute unless data storage bs:out collection.value[0] run return 0
-data modify storage bs:data collection.stack prepend value { value: [] }
 
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
-data modify storage bs:out collection.value set value []
+data modify storage bs:ctx _ set value []
 function bs.collection:reverse/reverse_rec
 
-data remove storage bs:data collection.stack[0]
+data modify storage bs:out collection.value set from storage bs:ctx _

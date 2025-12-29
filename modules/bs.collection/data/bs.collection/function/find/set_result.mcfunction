@@ -13,12 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# Get current element value at scale and add to sum
-$execute store result score #n bs.ctx run data get storage bs:data collection.stack[0].value[0] $(scale)
-scoreboard players operation #s bs.ctx += #n bs.ctx
-
-# Shift the collection
-data remove storage bs:data collection.stack[0].value[0]
-
-# Recurse if there are more elements
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:sum/sum_rec with storage bs:data collection.stack[0]
+data modify storage bs:out collection.value set from storage bs:data collection.stack[0].value[0]
+execute store result storage bs:out collection.index int 1 run data get storage bs:data collection.stack[0].consumed

@@ -324,12 +324,12 @@ execute store result score #count bs.ctx run function #bs.collection:count
 ::::
 ::::{tab-item} Min
 
-```{function} #bs.collection:min
+```{function} #bs.collection:imin
 
-Find the minimum value in a collection of numbers.
+Find the minimum value in a collection of integers.
 
 :Inputs:
-  **Storage `bs:in collection`**: {nbt}`list` The collection of numbers.
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection of integers.
 
 :Outputs:
   **Storage `bs:out collection.value`**: {nbt}`int` The minimum value.
@@ -339,8 +339,14 @@ Find the minimum value in a collection of numbers.
 
 ```mcfunction
 data modify storage bs:out collection.value set value [5, 2, 8, 1, 9]
-function #bs.collection:min
+function #bs.collection:imin
 # bs:out collection.value = 1
+```
+
+```{admonition} Integer Only
+:class: warning
+
+This function only supports integers. Decimal values will be treated as integers (truncated) or may cause unexpected behavior. No scaling is applied.
 ```
 
 ```{admonition} Empty Collection Behavior
@@ -352,12 +358,12 @@ For an empty collection, the behavior is undefined. Ensure the collection has at
 ::::
 ::::{tab-item} Max
 
-```{function} #bs.collection:max
+```{function} #bs.collection:imax
 
-Find the maximum value in a collection of numbers.
+Find the maximum value in a collection of integers.
 
 :Inputs:
-  **Storage `bs:in collection`**: {nbt}`list` The collection of numbers.
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection of integers.
 
 :Outputs:
   **Storage `bs:out collection.value`**: {nbt}`int` The maximum value.
@@ -367,8 +373,14 @@ Find the maximum value in a collection of numbers.
 
 ```mcfunction
 data modify storage bs:out collection.value set value [5, 2, 8, 1, 9]
-function #bs.collection:max
+function #bs.collection:imax
 # bs:out collection.value = 9
+```
+
+```{admonition} Integer Only
+:class: warning
+
+This function only supports integers. Decimal values will be treated as integers (truncated) or may cause unexpected behavior. No scaling is applied.
 ```
 
 ```{admonition} Empty Collection Behavior
@@ -382,37 +394,47 @@ For an empty collection, the behavior is undefined. Ensure the collection has at
 
 ```{function} #bs.collection:average
 
-Calculate the average (mean) of a collection of numbers. Uses an internal scale of 1000 for precision.
+Calculate the average (mean) of a collection of numbers.
 
 :Inputs:
   **Storage `bs:out collection.value`**: {nbt}`list` The collection of numbers.
 
-:Outputs:
-  **Return**: Integer average at scale 1000.
+  **Macro `scale`**: {nbt}`int` The scale factor for the returned integer value.
 
-  **Storage `bs:out collection.value`**: {nbt}`double` The average value.
+:Outputs:
+  **Return**: Integer average scaled by the provided scale factor.
+
+  **Storage `bs:out collection.value`**: {nbt}`double` The exact average value as a double.
 ```
 
 *Example: Calculate average of integers:*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
-function #bs.collection:average
+function #bs.collection:average {scale: 1}
 # bs:out collection.value = 3.0d (15/5)
+# return = 3
 ```
 
-*Example: Calculate average of decimals:*
+*Example: Calculate average with scaling:*
 
 ```mcfunction
-data modify storage bs:out collection.value set value [1.5d, 2.5d, 3.0d]
-function #bs.collection:average
-# bs:out collection.value = 2.333d ((1.5 + 2.5 + 3.0) / 3)
+data modify storage bs:out collection.value set value [1, 2]
+function #bs.collection:average {scale: 100}
+# bs:out collection.value = 1.5d
+# return = 150 (1.5 * 100)
 ```
 
-```{admonition} Precision
+```{admonition} Integer Only
+:class: warning
+
+This function is designed for collections of integers. Using it with decimal values may yield unexpected results for the exact average stored in `bs:out collection.value`, although the scaled return value might still be computed.
+```
+
+```{admonition} Storage Value
 :class: note
 
-The function uses an internal scale of 1000 (10³) to handle decimal values with up to 3 decimal places of precision.
+The value stored in `bs:out collection.value` is always the exact calculated average as a double, regardless of the scale parameter. The scale parameter only affects the integer return value of the function.
 ```
 
 ```{admonition} Empty Collection Behavior

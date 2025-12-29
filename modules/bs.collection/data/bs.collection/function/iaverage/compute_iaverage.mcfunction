@@ -13,9 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless data storage bs:out collection.value[0] run return 0
-
-data modify storage bs:ctx _ set value []
-function bs.collection:flatten/flatten_rec
-
-data modify storage bs:out collection.value set from storage bs:ctx _
+$execute store result storage bs:out collection.value double $(ratio) run scoreboard players get #s bs.ctx

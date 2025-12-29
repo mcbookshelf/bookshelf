@@ -21,13 +21,11 @@ execute store result storage bs:lambda collection.index int 1 run data get stora
 execute store success score #s bs.ctx run function bs.collection:find/call with storage bs:data collection.stack[0]
 
 # If the lambda function succeeded, set the result and return
-execute if score #s bs.ctx matches 1 run data modify storage bs:out collection.value set from storage bs:data collection.stack[0].value[0]
-execute if score #s bs.ctx matches 1 store result storage bs:out collection.index int 1 run data get storage bs:data collection.stack[0].consumed
-execute if score #s bs.ctx matches 1 run return 0
+execute if score #s bs.ctx matches 1 run return run function bs.collection:find/set_result
 
 # Shift the collection
 data modify storage bs:data collection.stack[0].consumed append from storage bs:data collection.stack[0].value[0]
 data remove storage bs:data collection.stack[0].value[0]
 
 # If the lambda function failed, try the next element
-return run execute if score #s bs.ctx matches 0 if data storage bs:data collection.stack[0].value[0] run function bs.collection:find/find_rec
+execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:find/find_rec
