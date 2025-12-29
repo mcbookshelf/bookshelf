@@ -13,6 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #c bs.ctx run data get storage bs:out collection.value
-execute store result storage bs:out collection.value int 1 run scoreboard players get #c bs.ctx
-return run scoreboard players get #c bs.ctx
+return run execute store result storage bs:out collection.value int 1 if data storage bs:out collection.value[]
