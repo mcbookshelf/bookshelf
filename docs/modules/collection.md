@@ -724,28 +724,10 @@ function #bs.collection:foreach {run: "tellraw @a [{\"storage\":\"bs:lambda\",\"
 
 ---
 
-### Utility Operations
+### Intermediate Operations (transform the stream, return new collection)
 
-```{function} #bs.collection:flatten
-
-Flatten a nested collection by one level.
-
-:Inputs:
-  **Storage `bs:in collection`**: {nbt}`list` The nested collection to flatten.
-
-:Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The flattened collection.
-```
-
-*Example: Flatten a 2D array:*
-
-```mcfunction
-data modify storage bs:out collection.value set value [[1, 2], [3, 4], [5]]
-function #bs.collection:flatten
-# bs:out collection.value = [1, 2, 3, 4, 5]
-```
-
----
+:::::{tab-set}
+::::{tab-item} Reverse
 
 ```{function} #bs.collection:reverse
 
@@ -766,18 +748,112 @@ function #bs.collection:reverse
 # bs:out collection.value = [5, 4, 3, 2, 1]
 ```
 
-*Example: Reverse a list of strings:*
-
-```mcfunction
-data modify storage bs:out collection.value set value ["a", "b", "c"]
-function #bs.collection:reverse
-# bs:out collection.value = ["c", "b", "a"]
-```
-
 ```{admonition} Empty Collection Behavior
 :class: tip
 
 For an empty collection, the function returns an empty collection. This operation is safe for all collection sizes.
+```
+
+::::
+::::{tab-item} Take
+
+```{function} #bs.collection:take
+
+Take the first N elements from a collection.
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to take from.
+
+  **Macro `number`**: {nbt}`int` The number of elements to take.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection containing only the first N elements.
+```
+
+*Example: Take first 3 elements:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
+function #bs.collection:take {number: 3}
+# bs:out collection.value = [1, 2, 3]
+```
+
+*Example: Take more elements than available:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2]
+function #bs.collection:take {number: 5}
+# bs:out collection.value = [1, 2]
+```
+
+```{admonition} Empty Collection
+:class: tip
+
+If the collection is empty or the requested number is 0, the result is an empty collection.
+```
+
+::::
+::::{tab-item} Drop
+
+```{function} #bs.collection:drop
+
+Drop the first N elements from a collection.
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to drop from.
+
+  **Macro `number`**: {nbt}`int` The number of elements to drop.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection with the first N elements removed.
+```
+
+*Example: Drop first 2 elements:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
+function #bs.collection:drop {number: 2}
+# bs:out collection.value = [3, 4, 5]
+```
+
+*Example: Drop more elements than available:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2]
+function #bs.collection:drop {number: 5}
+# bs:out collection.value = []
+```
+
+```{admonition} Empty Collection
+:class: tip
+
+If the collection is empty or the requested number is greater than the collection size, the result is an empty collection.
+```
+
+::::
+:::::
+
+---
+
+### Utility Operations
+
+```{function} #bs.collection:flatten
+
+Flatten a nested collection by one level.
+
+:Inputs:
+  **Storage `bs:in collection`**: {nbt}`list` The nested collection to flatten.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The flattened collection.
+```
+
+*Example: Flatten a 2D array:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [[1, 2], [3, 4], [5]]
+function #bs.collection:flatten
+# bs:out collection.value = [1, 2, 3, 4, 5]
 ```
 
 ---
