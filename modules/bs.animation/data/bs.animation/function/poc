@@ -11,11 +11,25 @@ def = {
       ]
     },
   },
+  "rotation": {
+
+  },
+  "scale": {
+
+  },
+  "pose": {
+    "head": {
+      "spline": {
+
+      }
+    }
+  },
   "transformation": {
+    "left_rotation": {},
     "translation": {
       "keyframes": {
         "interpolation": "smooth|linear|step",
-        "duration": 30,
+        "duration": 100,
         "points": [
           [0, 0, 0],
           [1, 1, 1],
@@ -36,9 +50,9 @@ create = {
   uses: "storage path"
 }
 
-play = { id: "walk", with: { step: 1, interval: 1 } }
+play = { id: "walk", with: { step: 1, interval: 1, loop: false } }
 pause = { id: "walk" }
-step = { id: "walk" }
+step = { id: "walk", with: { step: 1 } }
 
 
 
