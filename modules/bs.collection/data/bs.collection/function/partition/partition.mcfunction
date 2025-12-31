@@ -13,16 +13,16 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+execute unless data storage bs:out collection.value[0] run data modify storage bs:out collection.value set value [[], []]
 execute unless data storage bs:out collection.value[0] run return 0
-execute unless data storage bs:in collection[0] run data modify storage bs:out collection.value set value []
-execute unless data storage bs:in collection[0] run return 0
 
-data modify storage bs:data collection.stack prepend value { value: [], other: [], result: [] }
-
+$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", true: [], false: [], i: -1 }
 data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
-data modify storage bs:data collection.stack[0].other set from storage bs:in collection
 
-function bs.collection:zip/zip_rec
+function bs.collection:partition/partition_rec
 
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].result
+data modify storage bs:out collection.value set value []
+data modify storage bs:out collection.value append from storage bs:data collection.stack[0].true
+data modify storage bs:out collection.value append from storage bs:data collection.stack[0].false
+
 data remove storage bs:data collection.stack[0]

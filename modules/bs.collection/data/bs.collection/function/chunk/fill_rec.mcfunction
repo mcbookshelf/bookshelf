@@ -13,16 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless data storage bs:out collection.value[0] run return 0
-execute unless data storage bs:in collection[0] run data modify storage bs:out collection.value set value []
-execute unless data storage bs:in collection[0] run return 0
+# Move one element from value to current chunk
+data modify storage bs:data collection.stack[0].current append from storage bs:data collection.stack[0].value[0]
+data remove storage bs:data collection.stack[0].value[0]
+scoreboard players remove #n bs.ctx 1
 
-data modify storage bs:data collection.stack prepend value { value: [], other: [], result: [] }
-
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
-data modify storage bs:data collection.stack[0].other set from storage bs:in collection
-
-function bs.collection:zip/zip_rec
-
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].result
-data remove storage bs:data collection.stack[0]
+# Continue if we need more elements and have them
+execute if score #n bs.ctx matches 1.. if data storage bs:data collection.stack[0].value[0] run function bs.collection:chunk/fill_rec

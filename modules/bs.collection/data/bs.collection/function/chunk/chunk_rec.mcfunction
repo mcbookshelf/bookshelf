@@ -13,16 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless data storage bs:out collection.value[0] run return 0
-execute unless data storage bs:in collection[0] run data modify storage bs:out collection.value set value []
-execute unless data storage bs:in collection[0] run return 0
+# Initialize new chunk
+data modify storage bs:data collection.stack[0].current set value []
+execute store result score #n bs.ctx run data get storage bs:data collection.stack[0].size
 
-data modify storage bs:data collection.stack prepend value { value: [], other: [], result: [] }
+# Fill the chunk
+function bs.collection:chunk/fill_rec
 
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
-data modify storage bs:data collection.stack[0].other set from storage bs:in collection
+# Add the chunk to the result
+data modify storage bs:data collection.stack[0].result append from storage bs:data collection.stack[0].current
 
-function bs.collection:zip/zip_rec
-
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].result
-data remove storage bs:data collection.stack[0]
+# Continue if there are more elements
+execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:chunk/chunk_rec
