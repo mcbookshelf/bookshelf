@@ -556,7 +556,7 @@ Reduce a collection to a single value by applying a function that combines the a
 
   **Macro `run`**: {nbt}`string` Lambda function that combines accumulator and value.
 
-  **Macro `initial`**: {nbt}`any` Initial value for the accumulator.
+  **Macro `initial`**: {nbt}`any` Initial value for the accumulator. Must be a valid SNBT value (e.g., strings must be quoted: `'foo'`).
 
 :Outputs:
   **Storage `bs:out collection.value`**: The final accumulated value.
@@ -656,7 +656,7 @@ Reduce a collection to a single value by applying a function from right to left 
 
   **Macro `run`**: {nbt}`string` Lambda function that combines accumulator and value.
 
-  **Macro `initial`**: {nbt}`any` Initial value for the accumulator.
+  **Macro `initial`**: {nbt}`any` Initial value for the accumulator. Must be a valid SNBT value (e.g., strings must be quoted: `'foo'`).
 
 :Outputs:
   **Storage `bs:out collection.value`**: The final accumulated value.
@@ -720,6 +720,53 @@ Execute an operation on each element of a collection.
 data modify storage bs:out collection.value set value ["Hello", "World", "!"]
 function #bs.collection:foreach {run: "tellraw @a [{\"storage\":\"bs:lambda\",\"nbt\":\"collection.value\"}]"}
 # Displays each string to all players
+```
+
+---
+
+```{function} #bs.collection:peek
+
+Execute an operation on each element of a collection and return the original collection. Useful for debugging or side effects in a chain of operations.
+
+:Inputs:
+  **Storage `bs:in collection`**: {nbt}`list` The collection to iterate over.
+
+  **Macro `run`**: {nbt}`string` Lambda function to execute on each element. Receives `bs:lambda collection.value` (element value) and `bs:lambda collection.index` (element index).
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The original collection, unchanged.
+```
+
+*Example: Log elements while processing:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3]
+# Log each element then continue with other operations
+function #bs.collection:peek {run: "tellraw @a [{\"text\":\"Processing: \"},{\"storage\":\"bs:lambda\",\"nbt\":\"collection.value\"}]"}
+# bs:out collection.value = [1, 2, 3]
+```
+
+---
+
+```{function} #bs.collection:tap
+
+Execute an operation on the entire collection. Useful for side effects or logging the collection state.
+
+:Inputs:
+  **Storage `bs:in collection`**: {nbt}`list` The collection to process.
+
+  **Macro `run`**: {nbt}`string` Lambda function to execute. Receives `bs:lambda collection.value` which is the entire collection.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The original collection, unchanged.
+```
+
+*Example: Log the size of the collection:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3]
+function #bs.collection:tap {run: "tellraw @a [{\"text\":\"Collection: \"},{\"storage\":\"bs:lambda\",\"nbt\":\"collection.value\"}]"}
+# bs:out collection.value = [1, 2, 3]
 ```
 
 ---

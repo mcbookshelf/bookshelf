@@ -14,15 +14,14 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute unless data storage bs:out collection.value[0] run return 0
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: null, accumulator: $(initial), i: -1 }
-
-# Set the collection and accumulator to the first element of the collection
+$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)" }
 data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
 
-# If the collection had at least one element, we reduce the collection
-function bs.collection:reduce/reduce_rec
+# Prepare args for the lambda function
+data modify storage bs:lambda collection.value set from storage bs:data collection.stack[0].value
+# Call the lambda function on the input
+function bs.collection:tap/call with storage bs:data collection.stack[0]
 
-# Set the result to the accumulator
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].accumulator
-
+# Restore the input to the output
+data modify storage bs:out collection.value set from storage bs:data collection.stack[0].value
 data remove storage bs:data collection.stack[0]

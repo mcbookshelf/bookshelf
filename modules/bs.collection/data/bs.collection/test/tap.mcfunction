@@ -12,17 +12,16 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+# @dummy
 
-execute unless data storage bs:out collection.value[0] run return 0
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: null, accumulator: $(initial), i: -1 }
+# Basic usage
+data modify storage bs:out collection.value set value [1, 2, 3]
+function bs.collection:tap {run: "tellraw @a [{\"text\":\"Collection: \"},{\"storage\":\"bs:lambda\",\"nbt\":\"collection.value\"}]"}
+assert chat "Collection: [1, 2, 3]"
+assert data storage bs:out {collection: {value: [1, 2, 3]}}
 
-# Set the collection and accumulator to the first element of the collection
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
-
-# If the collection had at least one element, we reduce the collection
-function bs.collection:reduce/reduce_rec
-
-# Set the result to the accumulator
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].accumulator
-
-data remove storage bs:data collection.stack[0]
+# Empty collection
+data modify storage bs:out collection.value set value []
+function bs.collection:tap {run: "tellraw @a [{\"text\":\"Empty: \"},{\"storage\":\"bs:lambda\",\"nbt\":\"collection.value\"}]"}
+assert chat "Empty: []"
+assert data storage bs:out {collection: {value: []}}
