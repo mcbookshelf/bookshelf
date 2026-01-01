@@ -1068,6 +1068,38 @@ function #bs.collection:generate_while {run: "data modify storage bs:lambda coll
 
 ---
 
+```{function} #bs.collection:slice
+
+Extract a portion of a collection from `min` (inclusive) to `max` (exclusive). Supports negative indices (counted from the end).
+The function fails if `min >= max`, or if indices are out of bounds (after negative index resolution).
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to slice.
+  **Macro `min`**: {nbt}`int` The start index (inclusive).
+  **Macro `max`**: {nbt}`int` The end index (exclusive).
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The sliced collection.
+```
+
+*Example: Get elements from index 1 to 3:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [0, 1, 2, 3, 4]
+function #bs.collection:slice {min: 1, max: 3}
+# bs:out collection.value = [1, 2]
+```
+
+*Example: Get the last 2 elements:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [0, 1, 2, 3, 4]
+function #bs.collection:slice {min: -2, max: 5}
+# bs:out collection.value = [3, 4]
+```
+
+---
+
 ```{function} #bs.collection:sliding
 
 Create sliding windows of elements from the collection. Partial windows are kept only if they are not subsets of the previous window (rule: `step > remaining_space`).
