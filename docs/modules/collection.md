@@ -106,6 +106,31 @@ function #bs.collection:filter {run: "execute store success score #r bs.ctx run 
 ```
 
 ::::
+::::{tab-item} Partition
+
+```{function} #bs.collection:partition
+
+Split a collection into two collections based on a predicate: one containing elements that match the predicate, and one containing elements that don't.
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to partition.
+
+  **Macro `run`**: {nbt}`string` Predicate function to test each element. Receives `bs:lambda collection.value` (element value) and `bs:lambda collection.index` (element index). Must return success (1) for match, fail (0) otherwise.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` A list containing two lists: `[matches, non_matches]`.
+```
+
+*Example: Partition even and odd numbers:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
+# Assume is_even returns 1 for even numbers, 0 for odd
+function #bs.collection:partition {run: "function mypack:is_even"}
+# bs:out collection.value = [[2, 4], [1, 3, 5]]
+```
+
+::::
 ::::{tab-item} Find
 
 ```{function} #bs.collection:find
@@ -901,6 +926,54 @@ Flatten a nested collection by one level.
 data modify storage bs:out collection.value set value [[1, 2], [3, 4], [5]]
 function #bs.collection:flatten
 # bs:out collection.value = [1, 2, 3, 4, 5]
+```
+
+---
+
+```{function} #bs.collection:chunk
+
+Split a collection into chunks of size N. If the collection size is not divisible by N, the last chunk will contain the remaining elements.
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to split.
+
+  **Macro `size`**: {nbt}`int` The size of each chunk.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The list of chunks (list of lists).
+```
+
+*Example: Chunk a list into pairs:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
+function #bs.collection:chunk {size: 2}
+# bs:out collection.value = [[1, 2], [3, 4], [5]]
+```
+
+---
+
+```{function} #bs.collection:sliding
+
+Create sliding windows of elements from the collection. Partial windows are kept only if they are not subsets of the previous window (rule: `step > remaining_space`).
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to process.
+
+  **Macro `size`**: {nbt}`int` The number of elements in each window.
+
+  **Macro `step`**: {nbt}`int` The number of elements to shift the window by.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` A list of windows (list of lists).
+```
+
+*Example: Sliding window of size 2 with step 1:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3, 4]
+function #bs.collection:sliding {size: 2, step: 1}
+# bs:out collection.value = [[1, 2], [2, 3], [3, 4]]
 ```
 
 ---
