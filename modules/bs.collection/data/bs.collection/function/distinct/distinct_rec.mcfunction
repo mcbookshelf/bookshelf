@@ -13,4 +13,13 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$return run $(predicate)
+# Check if current value is already in result (bs:out collection.value)
+data modify storage bs:ctx _.temp_check set from storage bs:out collection.value
+execute store success score #f bs.ctx run function bs.collection:distinct/contains_check
+
+# If not found (found=0), append it to result
+execute if score #f bs.ctx matches 0 run data modify storage bs:out collection.value append from storage bs:ctx _.value[0]
+
+# Next iteration
+data remove storage bs:ctx _.value[0]
+execute if data storage bs:ctx _.value[0] run function bs.collection:distinct/distinct_rec

@@ -13,4 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$return run $(predicate)
+execute unless data storage bs:ctx _.temp_check[0] run return fail
+
+# Try to overwrite temp_check[0] with current value. 
+execute store success score #s bs.ctx run data modify storage bs:ctx _.temp_check[0] set from storage bs:ctx _.value[0]
+
+# If #s is 0, we found it. Return success.
+execute if score #s bs.ctx matches 0 run return 0
+
+# Else continue
+data remove storage bs:ctx _.temp_check[0]
+return run function bs.collection:distinct/contains_check

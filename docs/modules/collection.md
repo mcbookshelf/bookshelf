@@ -1100,6 +1100,29 @@ function #bs.collection:slice {min: -2, max: 5}
 
 ---
 
+```{function} #bs.collection:distinct
+
+Remove duplicate elements from a collection, keeping only the first occurrence of each element.
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection to process.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection with duplicates removed.
+```
+
+*Example: Remove duplicates:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 2, 3, 1]
+function #bs.collection:distinct
+# bs:out collection.value = [1, 2, 3]
+```
+
+---
+
+---
+
 ```{function} #bs.collection:sliding
 
 Create sliding windows of elements from the collection. Partial windows are kept only if they are not subsets of the previous window (rule: `step > remaining_space`).

@@ -13,4 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$return run $(predicate)
+execute unless data storage bs:out collection.value[0] run return 0
+
+data modify storage bs:ctx _ set value {}
+data modify storage bs:ctx _.value set from storage bs:out collection.value
+data modify storage bs:out collection.value set value []
+
+function bs.collection:distinct/distinct_rec
