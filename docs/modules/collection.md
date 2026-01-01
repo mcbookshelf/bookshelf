@@ -487,6 +487,28 @@ function #bs.collection:flatten
 ```
 
 ::::
+::::{tab-item} Flatten Deep
+
+```{function} #bs.collection:flatten_deep
+
+Recursively flatten a nested collection of arbitrary depth. Preserves non-list elements.
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The nested collection to flatten.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The deeply flattened collection.
+```
+
+*Example: Flatten a deeply nested structure:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, [2, 3], [[4], 5]]
+function #bs.collection:flatten_deep
+# bs:out collection.value = [1, 2, 3, 4, 5]
+```
+
+::::
 ::::{tab-item} Reverse
 
 ```{function} #bs.collection:reverse
