@@ -1121,6 +1121,119 @@ function #bs.collection:distinct
 
 ---
 
+```{function} #bs.collection:concat
+
+Concatenate a list of lists into a single list.
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` A list of lists to concatenate.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The flattened list containing all elements from the sub-lists in order.
+```
+
+*Example: Concatenate lists:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [[1, 2], [3], [4, 5]]
+function #bs.collection:concat
+# bs:out collection.value = [1, 2, 3, 4, 5]
+```
+
+---
+
+```{function} #bs.collection:union
+
+Compute the union of two collections (elements present in either collection, without duplicates).
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The first collection.
+  **Storage `bs:in collection`**: {nbt}`list` The second collection.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The union of the two collections.
+```
+
+*Example: Union of [1, 2] and [2, 3]:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2]
+data modify storage bs:in collection set value [2, 3]
+function #bs.collection:union
+# bs:out collection.value = [1, 2, 3]
+```
+
+---
+
+```{function} #bs.collection:intersect
+
+Compute the intersection of two collections (elements present in both collections, without duplicates).
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The first collection.
+  **Storage `bs:in collection`**: {nbt}`list` The second collection.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The intersection of the two collections.
+```
+
+*Example: Intersect [1, 2, 3] and [2, 3, 4]:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3]
+data modify storage bs:in collection set value [2, 3, 4]
+function #bs.collection:intersect
+# bs:out collection.value = [2, 3]
+```
+
+---
+
+```{function} #bs.collection:difference
+
+Compute the difference of two collections (elements present in the first collection but not in the second, without duplicates).
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The first collection.
+  **Storage `bs:in collection`**: {nbt}`list` The second collection.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The difference of the two collections.
+```
+
+*Example: Difference of [1, 2, 3] and [2, 3, 4]:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3]
+data modify storage bs:in collection set value [2, 3, 4]
+function #bs.collection:difference
+# bs:out collection.value = [1]
+```
+
+---
+
+```{function} #bs.collection:symmetric_difference
+
+Compute the symmetric difference of two collections (elements present in either collection, but not in both, without duplicates).
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The first collection.
+  **Storage `bs:in collection`**: {nbt}`list` The second collection.
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The symmetric difference of the two collections.
+```
+
+*Example: Symmetric difference of [1, 2, 3] and [2, 3, 4]:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1, 2, 3]
+data modify storage bs:in collection set value [2, 3, 4]
+function #bs.collection:symmetric_difference
+# bs:out collection.value = [1, 4]
+```
+
+---
+
 ---
 
 ```{function} #bs.collection:sliding
