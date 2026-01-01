@@ -108,6 +108,38 @@
           }
         },
         {
+          "id": "#bs.animation:resume",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html#resume",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.animation:rewind",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html#rewind",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
           "id": "#bs.animation:step",
           "kind": "function_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html#step",
