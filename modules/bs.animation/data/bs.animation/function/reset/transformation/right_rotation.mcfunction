@@ -13,9 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _.transformation.right_rotation[0].t set value 0
-data modify storage bs:ctx _._ append from storage bs:ctx _.transformation.right_rotation[{t:0}]
-data remove storage bs:ctx _.transformation.right_rotation[{t:0}]
-data modify storage bs:ctx _.transformation.right_rotation append from storage bs:ctx _._[]
-data modify storage bs:ctx _.transformation.right_rotation[].t set value 0
-data remove storage bs:ctx _._
+data modify storage bs:data animation[-1].def[-1].transformation.right_rotation[0].t set value 0
+data modify storage bs:data animation[-1].def[-1]._ append from storage bs:data animation[-1].def[-1].transformation.right_rotation[{t:0}]
+data remove storage bs:data animation[-1].def[-1].transformation.right_rotation[{t:0}]
+data modify storage bs:data animation[-1].def[-1].transformation.right_rotation append from storage bs:data animation[-1].def[-1]._[]
+data modify storage bs:data animation[-1].def[-1].transformation.right_rotation[].t set value 0
+data remove storage bs:data animation[-1].def[-1]._

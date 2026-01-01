@@ -13,8 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if data storage bs:data animation._[-1].pose run function bs.animation:step/pose/any
-execute if data storage bs:data animation._[-1].transformation run function bs.animation:step/transformation/any
-execute if data storage bs:data animation._[-1].position run function bs.animation:step/position
-execute if data storage bs:data animation._[-1].rotation run function bs.animation:step/rotation
-execute if data storage bs:data animation._[-1].scale run function bs.animation:step/scale
+execute if data storage bs:data animation[-1].def[-1].pose run function bs.animation:step/pose/any
+execute if data storage bs:data animation[-1].def[-1].transformation run function bs.animation:step/transformation/any
+execute if data storage bs:data animation[-1].def[-1].position run function bs.animation:step/position
+execute if data storage bs:data animation[-1].def[-1].rotation run function bs.animation:step/rotation
+
+execute unless data storage bs:data animation[-1].def[-1].continue run function bs.animation:utils/stop
+data remove storage bs:data animation[-1].def[-1].continue

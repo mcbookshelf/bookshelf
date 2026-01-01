@@ -13,11 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set from storage bs:data animation._[-1].transformation.left_rotation
-function bs.animation:utils/evaluate/3d/any with storage bs:ctx _[0]
-function bs.animation:utils/step/next
-data modify storage bs:data animation._[-1].transformation.left_rotation set from storage bs:ctx _
+data modify storage bs:ctx _ set from storage bs:data animation[-1].def[-1].transformation.left_rotation
+execute if function bs.animation:utils/step/next run data modify storage bs:data animation[-1].def[-1].continue set value 1b
+function bs.animation:utils/eval/3d/any with storage bs:ctx _[0]
+data modify storage bs:data animation[-1].def[-1].transformation.left_rotation set from storage bs:ctx _
 
-execute store result storage bs:data animation.transformation.left_rotation[0] float .001 run scoreboard players get #x bs.ctx
-execute store result storage bs:data animation.transformation.left_rotation[1] float .001 run scoreboard players get #y bs.ctx
-execute store result storage bs:data animation.transformation.left_rotation[2] float .001 run scoreboard players get #z bs.ctx
+execute store result storage bs:data animation[-1].nbt.transformation.left_rotation[0] float .001 run scoreboard players get #x bs.ctx
+execute store result storage bs:data animation[-1].nbt.transformation.left_rotation[1] float .001 run scoreboard players get #y bs.ctx
+execute store result storage bs:data animation[-1].nbt.transformation.left_rotation[2] float .001 run scoreboard players get #z bs.ctx

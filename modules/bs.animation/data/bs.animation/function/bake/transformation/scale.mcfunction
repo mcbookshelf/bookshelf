@@ -13,8 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ merge from storage bs:ctx _.transformation.scale
-execute if data storage bs:ctx _.keyframes run function bs.animation:utils/keyframes/3d/bake with storage bs:ctx _.keyframes
-execute if data storage bs:ctx _.spline run function bs.animation:utils/spline/3d/bake with storage bs:ctx _.spline
-data modify storage bs:ctx _._.transformation.scale set from storage bs:ctx _.s
-data remove storage bs:ctx _.s
+data modify storage bs:ctx _ set from storage bs:ctx def.transformation.scale
+data modify storage bs:ctx _.basis set from storage bs:ctx _.interpolation
+function bs.animation:utils/def/3d/bake with storage bs:ctx _
+data modify storage bs:ctx def._.transformation.scale set from storage bs:ctx _._

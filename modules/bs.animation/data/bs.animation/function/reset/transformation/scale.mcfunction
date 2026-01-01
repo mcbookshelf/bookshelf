@@ -13,9 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _.transformation.scale[0].t set value 0
-data modify storage bs:ctx _._ append from storage bs:ctx _.transformation.scale[{t:0}]
-data remove storage bs:ctx _.transformation.scale[{t:0}]
-data modify storage bs:ctx _.transformation.scale append from storage bs:ctx _._[]
-data modify storage bs:ctx _.transformation.scale[].t set value 0
-data remove storage bs:ctx _._
+data modify storage bs:data animation[-1].def[-1].transformation.scale[0].t set value 0
+data modify storage bs:data animation[-1].def[-1]._ append from storage bs:data animation[-1].def[-1].transformation.scale[{t:0}]
+data remove storage bs:data animation[-1].def[-1].transformation.scale[{t:0}]
+data modify storage bs:data animation[-1].def[-1].transformation.scale append from storage bs:data animation[-1].def[-1]._[]
+data modify storage bs:data animation[-1].def[-1].transformation.scale[].t set value 0
+data remove storage bs:data animation[-1].def[-1]._

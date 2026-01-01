@@ -13,12 +13,20 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data animation set value {}
-data modify storage bs:data animation.data set from entity @s data
-$data modify storage bs:data animation._ append from storage bs:data animation.data."bs.animation"[{id:"$(id)"}]
-execute unless data storage bs:data animation._[-1] run return fail
-execute store result score #s bs.ctx run data get storage bs:ctx _.step 1000
+# Push the current entity animation onto the stack
+data modify storage bs:data animation append value {}
+data modify storage bs:data animation[-1].nbt.data set from entity @s data
+$data modify storage bs:data animation[-1].def append from storage bs:data animation[-1].nbt.data."bs.animation"[{id:"$(id)"}]
+execute unless data storage bs:data animation[-1].def[-1] run return run function bs.animation:utils/fail
+
+# Advance the animation by the user-provided step value and evaluate
+data modify storage bs:data animation[-1].def[-1]._step set from storage bs:data animation[-1].def[-1].step
+data modify storage bs:data animation[-1].def[-1].step set from storage bs:ctx _.step
 function bs.animation:step/any
-$data modify storage bs:data animation.data."bs.animation"[{id:"$(id)"}] set from storage bs:data animation._[-1]
-data remove storage bs:data animation._
-data modify entity @s {} merge from storage bs:data animation
+data modify storage bs:data animation[-1].def[-1].step set from storage bs:data animation[-1].def[-1]._step
+data remove storage bs:data animation[-1].def[-1]._step
+
+# Apply the evaluated animation to the entity and pop the stack
+$data modify storage bs:data animation[-1].nbt.data."bs.animation"[{id:"$(id)"}] set from storage bs:data animation[-1].def[-1]
+data modify entity @s {} merge from storage bs:data animation[-1].nbt
+data remove storage bs:data animation[-1]

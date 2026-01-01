@@ -13,8 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if data storage bs:ctx _.pose run function bs.animation:reset/pose/any
-execute if data storage bs:ctx _.transformation run function bs.animation:reset/transformation/any
-execute if data storage bs:ctx _.position run function bs.animation:reset/position
-execute if data storage bs:ctx _.rotation run function bs.animation:reset/rotation
-execute if data storage bs:ctx _.scale run function bs.animation:reset/scale
+# For each animated part:
+# 1. Set the current segment time (<part>[0].t) to 0
+# 2. Move segments whose time is 0 (<part>[{t:0}]) to the end of the segment list
+# 3. Set every segment time (<part>[].t) to 0
+
+execute if data storage bs:data animation[-1].def[-1].pose run function bs.animation:reset/pose/any
+execute if data storage bs:data animation[-1].def[-1].transformation run function bs.animation:reset/transformation/any
+execute if data storage bs:data animation[-1].def[-1].position run function bs.animation:reset/position
+execute if data storage bs:data animation[-1].def[-1].rotation run function bs.animation:reset/rotation

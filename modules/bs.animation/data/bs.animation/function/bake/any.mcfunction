@@ -13,8 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if data storage bs:ctx _.pose run function bs.animation:bake/pose/any
-execute if data storage bs:ctx _.transformation run function bs.animation:bake/transformation/any
-execute if data storage bs:ctx _.position run function bs.animation:bake/position
-execute if data storage bs:ctx _.rotation run function bs.animation:bake/rotation
-execute if data storage bs:ctx _.scale run function bs.animation:bake/scale
+# For each animated part:
+# 1. If the animation uses keyframes, convert them to a spline
+# 2. Bake the spline polynomials and store them in _
+
+execute if data storage bs:ctx def.pose run function bs.animation:bake/pose/any
+execute if data storage bs:ctx def.transformation run function bs.animation:bake/transformation/any
+execute if data storage bs:ctx def.position run function bs.animation:bake/position
+execute if data storage bs:ctx def.rotation run function bs.animation:bake/rotation

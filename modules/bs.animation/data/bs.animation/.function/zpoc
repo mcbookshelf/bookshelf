@@ -1,0 +1,69 @@
+def = {
+  "position": {
+    "basis": "catmull_rom|bezier|bspline|hermite",
+    "duration": 100,
+    "points": [
+      [0, 0, 0],
+      [1, 1, 1],
+      [2, 0, 2],
+      [3, 1, 3]
+    ]
+  },
+  "transformation": {
+    "left_rotation": {},
+    "translation": {
+      "interpolation": "smooth|linear|step",
+      "duration": 100,
+      "points": [
+        [0, 0, 0],
+        [1, 1, 1],
+        [2, 0, 2],
+        [3, 1, 3]
+      ]
+    }
+  }
+}
+
+// global
+bake = { uses: "storage path" }
+
+// on entity
+create = {
+  id: "walk",
+  uses: "storage path"
+}
+
+play = { id: "walk", with: { step: 1, interval: 1, loop: false } }
+pause = { id: "walk" }
+step = { id: "walk", with: { step: 1 } }
+
+
+
+bake => safe
+create => safe
+delete => safe
+pause =>  safe
+
+
+
+play => call higher order step 0 + process
+reset => first reset then call higher order step 0
+step => the complex real higher order
+
+
+
+keyframes baking
+loop control
+optimize constant by only updating if changed
+do we keep scale (it's only for mob and armor stand)
+add a custom with a callback?
+
+THINK ABOUT HIGHER ORDER AND CALLBACK ISSUES
+
+
+TODO ORDER:
+rework step with new ctx object
+rework play with new ctx and in process use a global data storage that is used only in the process (this way callback should not modify/mess with it)
+process has its own data space
+
+add on_step et on_end

@@ -13,9 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _.pose.right_leg[0].t set value 0
-data modify storage bs:ctx _._ append from storage bs:ctx _.pose.right_leg[{t:0}]
-data remove storage bs:ctx _.pose.right_leg[{t:0}]
-data modify storage bs:ctx _.pose.right_leg append from storage bs:ctx _._[]
-data modify storage bs:ctx _.pose.right_leg[].t set value 0
-data remove storage bs:ctx _._
+data modify storage bs:data animation[-1].def[-1].pose.right_leg[0].t set value 0
+data modify storage bs:data animation[-1].def[-1]._ append from storage bs:data animation[-1].def[-1].pose.right_leg[{t:0}]
+data remove storage bs:data animation[-1].def[-1].pose.right_leg[{t:0}]
+data modify storage bs:data animation[-1].def[-1].pose.right_leg append from storage bs:data animation[-1].def[-1]._[]
+data modify storage bs:data animation[-1].def[-1].pose.right_leg[].t set value 0
+data remove storage bs:data animation[-1].def[-1]._

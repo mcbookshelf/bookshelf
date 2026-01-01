@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if data storage bs:ctx _.transformation.translation run function bs.animation:reset/transformation/translation
-execute if data storage bs:ctx _.transformation.left_rotation run function bs.animation:reset/transformation/left_rotation
-execute if data storage bs:ctx _.transformation.right_rotation run function bs.animation:reset/transformation/right_rotation
-execute if data storage bs:ctx _.transformation.scale run function bs.animation:reset/transformation/scale
+execute if data storage bs:data animation[-1].def[-1].transformation.translation run function bs.animation:reset/transformation/translation
+execute if data storage bs:data animation[-1].def[-1].transformation.left_rotation run function bs.animation:reset/transformation/left_rotation
+execute if data storage bs:data animation[-1].def[-1].transformation.right_rotation run function bs.animation:reset/transformation/right_rotation
+execute if data storage bs:data animation[-1].def[-1].transformation.scale run function bs.animation:reset/transformation/scale

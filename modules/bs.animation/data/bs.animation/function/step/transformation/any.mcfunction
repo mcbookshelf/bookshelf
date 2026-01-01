@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data animation.transformation set from entity @s transformation
-execute if data storage bs:data animation._[-1].transformation.translation run function bs.animation:step/transformation/translation
-execute if data storage bs:data animation._[-1].transformation.left_rotation run function bs.animation:step/transformation/left_rotation
-execute if data storage bs:data animation._[-1].transformation.right_rotation run function bs.animation:step/transformation/right_rotation
-execute if data storage bs:data animation._[-1].transformation.scale run function bs.animation:step/transformation/scale
+data modify storage bs:data animation[-1].nbt.transformation set from entity @s transformation
+execute if data storage bs:data animation[-1].def[-1].transformation.translation run function bs.animation:step/transformation/translation
+execute if data storage bs:data animation[-1].def[-1].transformation.left_rotation run function bs.animation:step/transformation/left_rotation
+execute if data storage bs:data animation[-1].def[-1].transformation.right_rotation run function bs.animation:step/transformation/right_rotation
+execute if data storage bs:data animation[-1].def[-1].transformation.scale run function bs.animation:step/transformation/scale

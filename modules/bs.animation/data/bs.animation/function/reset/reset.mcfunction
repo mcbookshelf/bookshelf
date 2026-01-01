@@ -13,13 +13,19 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# For each animated part:
-# 1. Set the current segment time (<part>[0].t) to 0.
-# 2. Move segments whose time is 0 (<part>[{t:0}]) to the end of the segment list.
-# 3. Set every segment time (<part>[].t) to 0.
+# Push the current entity animation onto the stack
+data modify storage bs:data animation append value {}
+data modify storage bs:data animation[-1].nbt.data set from entity @s data
+$data modify storage bs:data animation[-1].def append from storage bs:data animation[-1].nbt.data."bs.animation"[{id:"$(id)"}]
+execute unless data storage bs:data animation[-1].def[-1] run return run function bs.animation:utils/fail
 
-data remove storage bs:ctx _
-$data modify storage bs:ctx _ set from entity @s data."bs.animation"[{id:"$(id)"}]
-execute unless data storage bs:ctx _ run return fail
+# Reset the animation and evaluate it at time 0
+data modify storage bs:data animation[-1].def[-1].step set value 0
 function bs.animation:reset/any
-$data modify entity @s data."bs.animation"[{id:"$(id)"}] set from storage bs:ctx _
+function bs.animation:step/any
+function bs.animation:utils/stop
+
+# Apply the evaluated animation to the entity and pop the stack
+$data modify storage bs:data animation[-1].nbt.data."bs.animation"[{id:"$(id)"}] set from storage bs:data animation[-1].def[-1]
+data modify entity @s {} merge from storage bs:data animation[-1].nbt
+data remove storage bs:data animation[-1]

@@ -13,14 +13,17 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data animation set value {}
-data modify storage bs:data animation.data set from entity @s data
-$data modify storage bs:data animation._ append from storage bs:data animation.data."bs.animation"[{id:"$(id)"}]
-execute unless data storage bs:data animation._[-1] run return fail
-data modify storage bs:data animation._[-1] merge from storage bs:ctx _
-function bs.animation:utils/process/step
-execute unless score @s bs.anim matches 1.. run scoreboard players set @s bs.anim 2147483647
-scoreboard players operation @s bs.anim < #t bs.ctx
-$data modify storage bs:data animation.data."bs.animation"[{id:"$(id)"}] set from storage bs:data animation._[-1]
-data remove storage bs:data animation._
-data modify entity @s {} merge from storage bs:data animation
+# Push the current entity animation onto the stack
+data modify storage bs:data animation append value {}
+data modify storage bs:data animation[-1].nbt.data set from entity @s data
+$data modify storage bs:data animation[-1].def append from storage bs:data animation[-1].nbt.data."bs.animation"[{id:"$(id)"}]
+execute unless data storage bs:data animation[-1].def[-1] run return run function bs.animation:utils/fail
+
+# Evaluate the animation at its current state without advancing
+data modify storage bs:data animation[-1].def[-1] merge from storage bs:ctx _
+function bs.animation:utils/proc/step
+
+# Apply the evaluated animation to the entity and pop the stack
+$data modify storage bs:data animation[-1].nbt.data."bs.animation"[{id:"$(id)"}] set from storage bs:data animation[-1].def[-1]
+data modify entity @s {} merge from storage bs:data animation[-1].nbt
+data remove storage bs:data animation[-1]

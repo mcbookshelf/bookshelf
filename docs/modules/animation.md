@@ -101,7 +101,7 @@ Remove an animation from an entity.
   **State**: animation is removed from the entity
 ```
 
-*Example: delete an animation from the nearest Armor Stand*
+*Example: remove an animation from the nearest Armor Stand*
 
 ```mcfunction
 execute as @n[type=armor_stand] run function #bs.animation:delete {id:"walk"}
@@ -115,7 +115,7 @@ execute as @n[type=armor_stand] run function #bs.animation:delete {id:"walk"}
 
 ```{function} #bs.animation:pause {id:<string>}
 
-Pause an animation running on an entity.
+Pause a running animation.
 
 :Inputs:
   **Execution `as <entities>`**: entity affected by the function
@@ -127,7 +127,7 @@ Pause an animation running on an entity.
   :::
 
 :Outputs:
-  **State**: animation is paused
+  **State**: animation is paused if it was running
 ```
 
 *Example: pause an animation on the nearest Armor Stand*
@@ -144,7 +144,7 @@ execute as @n[type=armor_stand] run function #bs.animation:pause {id:"walk"}
 
 ```{function} #bs.animation:play {id:<string>,with:{}}
 
-Play an animation on an entity.
+Start or resume an animation.
 
 :Inputs:
   **Execution `as <entities>`**: entity affected by the function
@@ -159,7 +159,7 @@ Play an animation on an entity.
   :::
 
 :Outputs:
-  **State**: animation is playing
+  **State**: animation is running
 ```
 
 ```{tip}
@@ -180,7 +180,7 @@ execute as @n[type=armor_stand] run function #bs.animation:play {id:"walk",with:
 
 ```{function} #bs.animation:reset {id:<string>}
 
-Reset an animation on an entity to its initial state.
+Stop an animation and reset it to its initial state.
 
 :Inputs:
   **Execution `as <entities>`**: entity affected by the function
@@ -192,7 +192,7 @@ Reset an animation on an entity to its initial state.
   :::
 
 :Outputs:
-  **State**: animation is reset to its initial state
+  **State**: animation is stopped at time `0`
 ```
 
 *Example: reset an animation on the nearest Armor Stand*
@@ -205,11 +205,69 @@ execute as @n[type=armor_stand] run function #bs.animation:reset {id:"walk"}
 
 ---
 
+### Resume
+
+```{function} #bs.animation:resume {id:<string>}
+
+Resume an animation that was paused.
+
+:Inputs:
+  **Execution `as <entities>`**: entity affected by the function
+
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` `id`: unique identifier of the animation to resume
+  :::
+
+:Outputs:
+  **State**: animation is resumed if it was paused
+```
+
+*Example: resume an animation on the nearest Armor Stand*
+
+```mcfunction
+execute as @n[type=armor_stand] run function #bs.animation:resume {id:"walk"}
+```
+
+> **Credits**: Aksiome
+
+---
+
+### Rewind
+
+```{function} #bs.animation:rewind {id:<string>}
+
+Set the animation playback time back to the start without changing its state.
+
+:Inputs:
+  **Execution `as <entities>`**: entity affected by the function
+
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` `id`: unique identifier of the animation to reset
+  :::
+
+:Outputs:
+  **State**: animation is rewinded at time `0`
+```
+
+*Example: rewind an animation on the nearest Armor Stand*
+
+```mcfunction
+execute as @n[type=armor_stand] run function #bs.animation:rewind {id:"walk"}
+```
+
+> **Credits**: Aksiome
+
+---
+
 ### Step
 
 ```{function} #bs.animation:step {id:<string>,with:{}}
 
-Step an animation forward on an entity.
+Step an animation forward.
 
 :Inputs:
   **Execution `as <entities>`**: entity affected by the function
@@ -223,7 +281,7 @@ Step an animation forward on an entity.
   :::
 
 :Outputs:
-  **State**: animation advances
+  **State**: animation advances by the given step
 ```
 
 ```{tip}
@@ -240,6 +298,47 @@ execute as @n[type=armor_stand] run function #bs.animation:step {id:"walk",with:
 
 ---
 
+## Lifecycle
+
+You’ll find below the general lifecycle and state transitions for animations.
+
+---
+
+### States
+
+Animations have three possible states:
+
+:::{list-table}
+*   - **Running**
+    - The animation is actively advancing via ticks.
+*   - **Paused**
+    - The animation is temporarily halted but can resume from its current time.
+*   - **Stopped**
+    - The animation is not scheduled for execution. Time may be at `0`, mid-animation, or at the end.
+:::
+
+---
+
+### Transitions
+
+Functions can be called in any state, except `#bs:animation:pause`, which requires the animation to be **Running** and `#bs:animation:resume`, which requires it to be **Paused**.
+
+```{mermaid}
+%%{ init: { 'flowchart': {'defaultRenderer': 'elk' } } }%%
+flowchart BT
+  Running -->|play/rewind/step|Running
+  Running -->|reset|Stopped
+  Running -->|pause|Paused
+
+  Paused -->|rewind/step|Paused
+  Paused -->|play/resume|Running
+  Paused -->|reset|Stopped
+
+  Stopped -->|reset/rewind/step|Stopped
+  Stopped -->|play|Running
+```
+
+---
 
 ```{include} ../_templates/comments.md
 ```

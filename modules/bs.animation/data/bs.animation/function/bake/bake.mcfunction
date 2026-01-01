@@ -13,10 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# For each animated part:
-# 1. If the animation uses keyframes, convert them to a spline.
-# 2. Bake the spline polynomials and store them in _.
-
-$data modify storage bs:ctx _ set from storage $(uses)
+$data modify storage bs:ctx def set from storage $(uses)
 function bs.animation:bake/any
-$data modify storage $(uses) set from storage bs:ctx _
+$data modify storage $(uses) set from storage bs:ctx def
+data remove storage bs:ctx def

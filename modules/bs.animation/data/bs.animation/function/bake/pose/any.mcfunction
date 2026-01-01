@@ -13,9 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if data storage bs:ctx _.pose.head run function bs.animation:bake/pose/head
-execute if data storage bs:ctx _.pose.body run function bs.animation:bake/pose/body
-execute if data storage bs:ctx _.pose.left_arm run function bs.animation:bake/pose/left_arm
-execute if data storage bs:ctx _.pose.left_leg run function bs.animation:bake/pose/left_leg
-execute if data storage bs:ctx _.pose.right_arm run function bs.animation:bake/pose/right_arm
-execute if data storage bs:ctx _.pose.right_leg run function bs.animation:bake/pose/right_leg
+execute if data storage bs:ctx def.pose.head run function bs.animation:bake/pose/head
+execute if data storage bs:ctx def.pose.body run function bs.animation:bake/pose/body
+execute if data storage bs:ctx def.pose.left_arm run function bs.animation:bake/pose/left_arm
+execute if data storage bs:ctx def.pose.left_leg run function bs.animation:bake/pose/left_leg
+execute if data storage bs:ctx def.pose.right_arm run function bs.animation:bake/pose/right_arm
+execute if data storage bs:ctx def.pose.right_leg run function bs.animation:bake/pose/right_leg

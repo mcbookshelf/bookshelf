@@ -13,7 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set from storage $(uses)
-execute unless data storage bs:ctx _._ run function bs.animation:bake/any
-$data modify storage bs:ctx _._.id set value "$(id)"
-$data modify entity @s data."bs.animation"[{id:"$(id)"}] set from storage bs:ctx _._
+$data modify storage bs:ctx def set from storage $(uses)
+execute unless data storage bs:ctx def._ run function bs.animation:bake/any
+$data modify storage bs:ctx def._.id set value "$(id)"
+$data modify entity @s data."bs.animation"[{id:"$(id)"}] set from storage bs:ctx def._
+data remove storage bs:ctx def

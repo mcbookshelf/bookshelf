@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set value { interval: 1 }
+data modify storage bs:ctx _ set value { _step: 0, interval: 1, loop: false }
 $data modify storage bs:ctx _ merge value $(with)
 execute unless data storage bs:ctx _.step run data modify storage bs:ctx _.step set from storage bs:ctx _.interval

@@ -13,8 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ merge from storage bs:ctx _.rotation
-execute if data storage bs:ctx _.keyframes run function bs.animation:utils/keyframes/2d/bake with storage bs:ctx _.keyframes
-execute if data storage bs:ctx _.spline run function bs.animation:utils/spline/2d/bake with storage bs:ctx _.spline
-data modify storage bs:ctx _._.rotation set from storage bs:ctx _.s
-data remove storage bs:ctx _.s
+data modify storage bs:ctx _ set from storage bs:ctx def.rotation
+data modify storage bs:ctx _.basis set from storage bs:ctx _.interpolation
+function bs.animation:utils/def/2d/bake with storage bs:ctx _
+data modify storage bs:ctx def._.rotation set from storage bs:ctx _._

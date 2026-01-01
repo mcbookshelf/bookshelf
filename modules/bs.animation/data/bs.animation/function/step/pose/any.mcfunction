@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data animation.Pose set from entity @s Pose
-execute if data storage bs:data animation._[-1].pose.body run function bs.animation:step/pose/body
-execute if data storage bs:data animation._[-1].pose.head run function bs.animation:step/pose/head
-execute if data storage bs:data animation._[-1].pose.left_arm run function bs.animation:step/pose/left_arm
-execute if data storage bs:data animation._[-1].pose.left_leg run function bs.animation:step/pose/left_leg
-execute if data storage bs:data animation._[-1].pose.right_arm run function bs.animation:step/pose/right_arm
-execute if data storage bs:data animation._[-1].pose.right_leg run function bs.animation:step/pose/right_leg
+data modify storage bs:data animation[-1].nbt.Pose set from entity @s Pose
+execute if data storage bs:data animation[-1].def[-1].pose.body run function bs.animation:step/pose/body
+execute if data storage bs:data animation[-1].def[-1].pose.head run function bs.animation:step/pose/head
+execute if data storage bs:data animation[-1].def[-1].pose.left_arm run function bs.animation:step/pose/left_arm
+execute if data storage bs:data animation[-1].def[-1].pose.left_leg run function bs.animation:step/pose/left_leg
+execute if data storage bs:data animation[-1].def[-1].pose.right_arm run function bs.animation:step/pose/right_arm
+execute if data storage bs:data animation[-1].def[-1].pose.right_leg run function bs.animation:step/pose/right_leg

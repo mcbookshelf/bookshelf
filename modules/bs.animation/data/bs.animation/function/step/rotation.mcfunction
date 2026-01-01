@@ -13,11 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set from storage bs:data animation._[-1].rotation
-function bs.animation:utils/evaluate/2d/any with storage bs:ctx _[0]
-function bs.animation:utils/step/next
-data modify storage bs:data animation._[-1].rotation set from storage bs:ctx _
+data modify storage bs:ctx _ set from storage bs:data animation[-1].def[-1].rotation
+execute if function bs.animation:utils/step/next run data modify storage bs:data animation[-1].def[-1].continue set value 1b
+function bs.animation:utils/eval/2d/any with storage bs:ctx _[0]
+data modify storage bs:data animation[-1].def[-1].rotation set from storage bs:ctx _
 
-data modify storage bs:data animation.Rotation set value [0f,0f]
-execute store result storage bs:data animation.Rotation[0] float .001 run scoreboard players get #x bs.ctx
-execute store result storage bs:data animation.Rotation[1] float .001 run scoreboard players get #y bs.ctx
+data modify storage bs:data animation[-1].nbt.Rotation set value [0f,0f]
+execute store result storage bs:data animation[-1].nbt.Rotation[0] float .001 run scoreboard players get #x bs.ctx
+execute store result storage bs:data animation[-1].nbt.Rotation[1] float .001 run scoreboard players get #y bs.ctx

@@ -16,6 +16,6 @@
 scoreboard objectives remove bs.ctx
 scoreboard objectives remove bs.const
 
-scoreboard objectives remove bs.anim
+scoreboard objectives remove bs.animation.tick
 
 data remove storage bs:data animation

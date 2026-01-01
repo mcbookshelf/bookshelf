@@ -13,9 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if data storage bs:ctx _.pose.head run function bs.animation:reset/pose/head
-execute if data storage bs:ctx _.pose.body run function bs.animation:reset/pose/body
-execute if data storage bs:ctx _.pose.left_arm run function bs.animation:reset/pose/left_arm
-execute if data storage bs:ctx _.pose.left_leg run function bs.animation:reset/pose/left_leg
-execute if data storage bs:ctx _.pose.right_arm run function bs.animation:reset/pose/right_arm
-execute if data storage bs:ctx _.pose.right_leg run function bs.animation:reset/pose/right_leg
+execute if data storage bs:data animation[-1].def[-1].pose.head run function bs.animation:reset/pose/head
+execute if data storage bs:data animation[-1].def[-1].pose.body run function bs.animation:reset/pose/body
+execute if data storage bs:data animation[-1].def[-1].pose.left_arm run function bs.animation:reset/pose/left_arm
+execute if data storage bs:data animation[-1].def[-1].pose.left_leg run function bs.animation:reset/pose/left_leg
+execute if data storage bs:data animation[-1].def[-1].pose.right_arm run function bs.animation:reset/pose/right_arm
+execute if data storage bs:data animation[-1].def[-1].pose.right_leg run function bs.animation:reset/pose/right_leg
