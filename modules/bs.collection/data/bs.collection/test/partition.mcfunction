@@ -17,20 +17,20 @@
 # Partition based on index (index < 2)
 # Indices: 0(true), 1(true), 2(false), 3(false)
 data modify storage bs:out collection.value set value [1, 2, 3, 4]
-function bs.collection:partition/partition {run: "return run execute if score #i bs.ctx matches ..1"}
+function #bs.collection:partition {run: "return run execute if score #i bs.ctx matches ..1"}
 assert data storage bs:out {collection: {value: [[1, 2], [3, 4]]}}
 
 # All true
 data modify storage bs:out collection.value set value [1, 2, 3]
-function bs.collection:partition/partition {run: "return 1"}
+function #bs.collection:partition {run: "return 1"}
 assert data storage bs:out {collection: {value: [[1, 2, 3], []]}}
 
 # All false
 data modify storage bs:out collection.value set value [1, 2, 3]
-function bs.collection:partition/partition {run: "return 0"}
+function #bs.collection:partition {run: "return 0"}
 assert data storage bs:out {collection: {value: [[], [1, 2, 3]]}}
 
 # Empty
 data modify storage bs:out collection.value set value []
-function bs.collection:partition/partition {run: "return 1"}
+function #bs.collection:partition {run: "return 1"}
 assert data storage bs:out {collection: {value: [[], []]}}

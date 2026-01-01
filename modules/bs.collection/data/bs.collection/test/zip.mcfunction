@@ -17,29 +17,29 @@
 # Zip same length
 data modify storage bs:out collection.value set value [1, 2, 3]
 data modify storage bs:in collection set value [4, 5, 6]
-function bs.collection:zip/zip
+function #bs.collection:zip
 assert data storage bs:out {collection: {value: [[1, 4], [2, 5], [3, 6]]}}
 
 # Zip input shorter
 data modify storage bs:out collection.value set value [1, 2, 3]
 data modify storage bs:in collection set value [4, 5]
-function bs.collection:zip/zip
+function #bs.collection:zip
 assert data storage bs:out {collection: {value: [[1, 4], [2, 5]]}}
 
 # Zip input longer
 data modify storage bs:out collection.value set value [1, 2]
 data modify storage bs:in collection set value [4, 5, 6]
-function bs.collection:zip/zip
+function #bs.collection:zip
 assert data storage bs:out {collection: {value: [[1, 4], [2, 5]]}}
 
 # Zip first empty
 data modify storage bs:out collection.value set value []
 data modify storage bs:in collection set value [4, 5]
-function bs.collection:zip/zip
+function #bs.collection:zip
 assert data storage bs:out {collection: {value: []}}
 
 # Zip second empty
 data modify storage bs:out collection.value set value [1, 2]
 data modify storage bs:in collection set value []
-function bs.collection:zip/zip
+function #bs.collection:zip
 assert data storage bs:out {collection: {value: []}}

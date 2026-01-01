@@ -16,25 +16,25 @@
 
 # Window(2,1): [[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]]
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5, 6]
-function bs.collection:sliding/sliding {size: 2, step: 1}
+function #bs.collection:sliding {size: 2, step: 1}
 assert data storage bs:out {collection: {value: [[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]]}}
 
 # Window(3,2): [[1, 2, 3], [3, 4]] (on [1, 2, 3, 4])
 data modify storage bs:out collection.value set value [1, 2, 3, 4]
-function bs.collection:sliding/sliding {size: 3, step: 2}
+function #bs.collection:sliding {size: 3, step: 2}
 assert data storage bs:out {collection: {value: [[1, 2, 3], [3, 4]]}}
 
 # Window(3,2) on [1, 2, 3, 4, 5, 6] -> [[1, 2, 3], [3, 4, 5], [5, 6]]
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5, 6]
-function bs.collection:sliding/sliding {size: 3, step: 2}
+function #bs.collection:sliding {size: 3, step: 2}
 assert data storage bs:out {collection: {value: [[1, 2, 3], [3, 4, 5], [5, 6]]}}
 
 # Window larger than list
 data modify storage bs:out collection.value set value [1, 2]
-function bs.collection:sliding/sliding {size: 3, step: 1}
+function #bs.collection:sliding {size: 3, step: 1}
 assert data storage bs:out {collection: {value: [[1, 2]]}}
 
 # Empty
 data modify storage bs:out collection.value set value []
-function bs.collection:sliding/sliding {size: 2, step: 1}
+function #bs.collection:sliding {size: 2, step: 1}
 assert data storage bs:out {collection: {value: []}}

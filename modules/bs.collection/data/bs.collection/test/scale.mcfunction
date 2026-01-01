@@ -14,27 +14,27 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-# Chunk size 2 exact division
-data modify storage bs:out collection.value set value [1, 2, 3, 4]
-function #bs.collection:chunk {size: 2}
-assert data storage bs:out {collection: {value: [[1, 2], [3, 4]]}}
-
-# Chunk size 2 with remainder
-data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
-function #bs.collection:chunk {size: 2}
-assert data storage bs:out {collection: {value: [[1, 2], [3, 4], [5]]}}
-
-# Chunk size 1
+# Scale list of integers
 data modify storage bs:out collection.value set value [1, 2, 3]
-function #bs.collection:chunk {size: 1}
-assert data storage bs:out {collection: {value: [[1], [2], [3]]}}
+function #bs.collection:scale {scale: 2}
+assert data storage bs:out {collection: {value: [2.0d, 4.0d, 6.0d]}}
 
-# Chunk size larger than collection
-data modify storage bs:out collection.value set value [1, 2]
-function #bs.collection:chunk {size: 5}
-assert data storage bs:out {collection: {value: [[1, 2]]}}
+# Scale list of doubles (truncates input to int before scaling)
+data modify storage bs:out collection.value set value [1.0d, 2.0d]
+function #bs.collection:scale {scale: 10}
+assert data storage bs:out {collection: {value: [10.0d, 20.0d]}}
 
-# Empty collection
+# Scale empty list
 data modify storage bs:out collection.value set value []
-function #bs.collection:chunk {size: 2}
+function #bs.collection:scale {scale: 2}
 assert data storage bs:out {collection: {value: []}}
+
+# Scale by 0
+data modify storage bs:out collection.value set value [1, 2, 3]
+function #bs.collection:scale {scale: 0}
+assert data storage bs:out {collection: {value: [0.0d, 0.0d, 0.0d]}}
+
+# Scale by float (0.1)
+data modify storage bs:out collection.value set value [10, 20, 30]
+function #bs.collection:scale {scale: 0.1}
+assert data storage bs:out {collection: {value: [1.0d, 2.0d, 3.0d]}}

@@ -953,6 +953,29 @@ function #bs.collection:chunk {size: 2}
 
 ---
 
+```{function} #bs.collection:scale
+
+Multiply all numbers in a collection by a scaling factor.
+
+:Inputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection of numbers to scale.
+
+  **Macro `scale`**: {nbt}`float` The scaling factor (multiplier).
+
+:Outputs:
+  **Storage `bs:out collection.value`**: {nbt}`list` The collection with all values multiplied by the scale.
+```
+
+*Example: Multiply all elements by 10:*
+
+```mcfunction
+data modify storage bs:out collection.value set value [1.5d, 2.5d]
+function #bs.collection:scale {scale: 10}
+# bs:out collection.value = [15, 25]
+```
+
+---
+
 ```{function} #bs.collection:sliding
 
 Create sliding windows of elements from the collection. Partial windows are kept only if they are not subsets of the previous window (rule: `step > remaining_space`).

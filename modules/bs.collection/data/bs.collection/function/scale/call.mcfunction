@@ -12,16 +12,5 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
-# Basic usage
-data modify storage bs:out collection.value set value [1, 2, 3]
-function #bs.collection:tap {run: "tellraw @a [{\"text\":\"Collection: \"},{\"storage\":\"bs:lambda\",\"nbt\":\"collection.value\"}]"}
-assert chat "Collection: [1, 2, 3]"
-assert data storage bs:out {collection: {value: [1, 2, 3]}}
-
-# Empty collection
-data modify storage bs:out collection.value set value []
-function #bs.collection:tap {run: "tellraw @a [{\"text\":\"Empty: \"},{\"storage\":\"bs:lambda\",\"nbt\":\"collection.value\"}]"}
-assert chat "Empty: []"
-assert data storage bs:out {collection: {value: []}}
+$return run $(run)

@@ -12,16 +12,11 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
-# Basic usage
-data modify storage bs:out collection.value set value [1, 2, 3]
-function #bs.collection:tap {run: "tellraw @a [{\"text\":\"Collection: \"},{\"storage\":\"bs:lambda\",\"nbt\":\"collection.value\"}]"}
-assert chat "Collection: [1, 2, 3]"
-assert data storage bs:out {collection: {value: [1, 2, 3]}}
+execute unless data storage bs:out collection.value[0] run return 0
 
-# Empty collection
+$data modify storage bs:ctx _ set value { scale: $(scale), array: [], value: null }
+data modify storage bs:ctx _.array set from storage bs:out collection.value
 data modify storage bs:out collection.value set value []
-function #bs.collection:tap {run: "tellraw @a [{\"text\":\"Empty: \"},{\"storage\":\"bs:lambda\",\"nbt\":\"collection.value\"}]"}
-assert chat "Empty: []"
-assert data storage bs:out {collection: {value: []}}
+
+function bs.collection:scale/scale_rec with storage bs:ctx _
