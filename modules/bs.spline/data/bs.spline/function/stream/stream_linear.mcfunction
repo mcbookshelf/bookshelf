@@ -14,6 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set from storage bs:in spline.stream_linear
+data modify storage bs:ctx _.points append from storage bs:const spline.pad[]
 data modify storage bs:ctx _.type set value "linear"
 
 scoreboard players set #t bs.ctx 1000
@@ -22,11 +23,11 @@ scoreboard players operation #t bs.ctx -= #s bs.ctx
 
 execute store result score #m bs.ctx if data storage bs:ctx _.points[]
 execute store result score #n bs.ctx if data storage bs:ctx _.points[][2]
-execute if score #n bs.ctx = #m bs.ctx run data modify storage bs:ctx _.coeffs set value [0,0,0,0]
+execute if score #n bs.ctx = #m bs.ctx run data modify storage bs:ctx _.coeffs set value [0,0,0,0,0,0,0,0,0,0,0,0]
 execute if score #n bs.ctx = #m bs.ctx run return run function bs.spline:stream/stream_3d with storage bs:ctx _
 execute store result score #n bs.ctx if data storage bs:ctx _.points[][1]
 execute if score #n bs.ctx = #m bs.ctx run data modify storage bs:ctx _.coeffs set value [0,0,0,0,0,0,0,0]
 execute if score #n bs.ctx = #m bs.ctx run return run function bs.spline:stream/stream_2d with storage bs:ctx _
 execute store result score #n bs.ctx if data storage bs:ctx _.points[][0]
-execute if score #n bs.ctx = #m bs.ctx run data modify storage bs:ctx _.coeffs set value [0,0,0,0,0,0,0,0,0,0,0,0]
+execute if score #n bs.ctx = #m bs.ctx run data modify storage bs:ctx _.coeffs set value [0,0,0,0]
 execute if score #n bs.ctx = #m bs.ctx run return run function bs.spline:stream/stream_1d with storage bs:ctx _

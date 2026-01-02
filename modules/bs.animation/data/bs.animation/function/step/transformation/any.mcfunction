@@ -1,0 +1,20 @@
+# ------------------------------------------------------------------------------------------------------------
+# Copyright (c) 2025 Gunivers
+#
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
+#
+# This source code is subject to the terms of the Mozilla Public License, v. 2.0.
+# If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#
+# Conditions:
+# - You may use this file in compliance with the MPL v2.0
+# - Any modifications must be documented and disclosed under the same license
+#
+# For more details, refer to the MPL v2.0.
+# ------------------------------------------------------------------------------------------------------------
+
+data modify storage bs:data animation[-1].nbt.transformation set from entity @s transformation
+execute if data storage bs:data animation[-1].def[-1].transformation.translation run function bs.animation:step/transformation/translation
+execute if data storage bs:data animation[-1].def[-1].transformation.left_rotation run function bs.animation:step/transformation/left_rotation
+execute if data storage bs:data animation[-1].def[-1].transformation.right_rotation run function bs.animation:step/transformation/right_rotation
+execute if data storage bs:data animation[-1].def[-1].transformation.scale run function bs.animation:step/transformation/scale

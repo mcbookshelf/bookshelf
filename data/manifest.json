@@ -1,6 +1,163 @@
 {
   "modules": [
     {
+      "id": "bs.animation",
+      "name": "Animation",
+      "slug": "bookshelf-animation",
+      "description": "",
+      "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html",
+      "kind": "data_pack",
+      "tags": [
+        "runtime"
+      ],
+      "features": [
+        {
+          "id": "#bs.animation:bake",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html#bake",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.animation:create",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html#create",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.animation:delete",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html#delete",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.animation:pause",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html#pause",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.animation:play",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html#play",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.animation:reset",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html#reset",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.animation:resume",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html#resume",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.animation:rewind",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html#rewind",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.animation:step",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html#step",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        }
+      ]
+    },
+    {
       "id": "bs.bitwise",
       "name": "Bitwise",
       "slug": "bookshelf-bitwise",
