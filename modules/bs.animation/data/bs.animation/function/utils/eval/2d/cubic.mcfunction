@@ -17,9 +17,9 @@ execute store result score #t bs.ctx run data get storage bs:ctx _[0].t
 execute store result score #d bs.ctx run data get storage bs:ctx _[0].d
 execute store result score #x bs.ctx store result score #y bs.ctx run scoreboard players operation #t bs.ctx /= #d bs.ctx
 
-execute store result score #a bs.ctx run data get storage bs:ctx _[0].p[0] 1
-execute store result score #b bs.ctx run data get storage bs:ctx _[0].p[1] 1
-execute store result score #c bs.ctx run data get storage bs:ctx _[0].p[2] 1
+execute store result score #a bs.ctx run data get storage bs:ctx _[0].p[0]
+execute store result score #b bs.ctx run data get storage bs:ctx _[0].p[1]
+execute store result score #c bs.ctx run data get storage bs:ctx _[0].p[2]
 execute store result score #d bs.ctx run data get storage bs:ctx _[0].p[3] -1
 scoreboard players operation #x bs.ctx *= #d bs.ctx
 scoreboard players operation #x bs.ctx /= -1000 bs.const
@@ -31,9 +31,9 @@ scoreboard players operation #x bs.ctx *= #t bs.ctx
 scoreboard players operation #x bs.ctx /= -1000 bs.const
 scoreboard players operation #x bs.ctx += #a bs.ctx
 
-execute store result score #a bs.ctx run data get storage bs:ctx _[0].p[4] 1
-execute store result score #b bs.ctx run data get storage bs:ctx _[0].p[5] 1
-execute store result score #c bs.ctx run data get storage bs:ctx _[0].p[6] 1
+execute store result score #a bs.ctx run data get storage bs:ctx _[0].p[4]
+execute store result score #b bs.ctx run data get storage bs:ctx _[0].p[5]
+execute store result score #c bs.ctx run data get storage bs:ctx _[0].p[6]
 execute store result score #d bs.ctx run data get storage bs:ctx _[0].p[7] -1
 scoreboard players operation #y bs.ctx *= #d bs.ctx
 scoreboard players operation #y bs.ctx /= -1000 bs.const

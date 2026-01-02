@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #x bs.ctx run data get storage bs:ctx _[0].p[0] 1000
-execute store result score #y bs.ctx run data get storage bs:ctx _[0].p[1] 1000
+execute store result score #x bs.ctx run data get storage bs:ctx _[0].p[0]
+execute store result score #y bs.ctx run data get storage bs:ctx _[0].p[1]

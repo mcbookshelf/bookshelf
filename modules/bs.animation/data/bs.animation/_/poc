@@ -38,32 +38,7 @@ pause = { id: "walk" }
 step = { id: "walk", with: { step: 1 } }
 
 
-
-bake => safe
-create => safe
-delete => safe
-pause =>  safe
-
-
-
-play => call higher order step 0 + process
-reset => first reset then call higher order step 0
-step => the complex real higher order
-
-
-
-keyframes baking
+TODO:
 loop control
-optimize constant by only updating if changed
-do we keep scale (it's only for mob and armor stand)
-add a custom with a callback?
-
-THINK ABOUT HIGHER ORDER AND CALLBACK ISSUES
-
-
-TODO ORDER:
-rework step with new ctx object
-rework play with new ctx and in process use a global data storage that is used only in the process (this way callback should not modify/mess with it)
-process has its own data space
-
-add on_step et on_end
+add a custom part with a callback
+add callbacks like on_step and on_end

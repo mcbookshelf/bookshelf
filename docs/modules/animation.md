@@ -2,7 +2,8 @@
 
 **`#bs.animation:help`**
 
-Animation system based on keyframes and splines.
+A keyframe-based animation system with spline support.
+Use it to animate entity parts over time with precise control.
 
 ```{pull-quote}
 "Animation is not the art of drawings that move but the art of movements that are drawn."
@@ -22,17 +23,17 @@ You can find below all functions available in this module.
 
 ```{function} #bs.animation:bake {uses:<string>}
 
-Precompute data on the storage for faster use later.
+Precompute animation data and store the result for faster use later.
 
 :Inputs:
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` arguments
-    - {nbt}`string` `uses`: storage containing animation data, for example `foo:bar my_anim`
+    - {nbt}`string` `uses`: storage that contains the animation definition
   :::
 
 :Outputs:
-  **Storage**: storage is updated with baked animation data
+  **Storage**: the storage is updated with baked animation data
 ```
 
 *Example: bake the animation stored in `storage foo:bar my_anim`*
@@ -49,33 +50,33 @@ function #bs.animation:bake {uses:"foo:bar my_anim"}
 
 ```{function} #bs.animation:create {id:<string>,uses:<string>}
 
-Create and attach a new animation to an entity. Automatically bakes it if required.
+Create and attach a new animation to an entity. If the animation is not baked, it is baked automatically.
 
 :Inputs:
-  **Execution `as <entities>`**: entity affected by the function
+  **Execution `as <entities>`**: entity affected
 
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` arguments
-    - {nbt}`string` `id`: unique identifier for the animation
-    - {nbt}`string` `uses`: storage containing animation data, for example `foo:bar my_anim`
+    - {nbt}`string` `id`: unique animation identifier for the entity
+    - {nbt}`string` `uses`: storage that contains the animation definition
   :::
 
 :Outputs:
-  **State**: animation is added to the entity
+  **State**: the animation is added to the entity
 ```
 
 ```{note}
-An animation `id` belongs to an entity and is not shared.
-The same `id` can exist on multiple entities with different animations.
+An animation `id` belongs to an entity.
 
-For example, two entities can both have a `walk` animation, but each animation is different.
+Multiple entities can use the same `id`, but each animation instance is independent.
+For example, several entities can have an animation named `walk`, each with different data.
 ```
 
-*Example: create a new animation on the nearest Armor Stand*
+*Example: create an animation on the nearest Armor Stand*
 
 ```mcfunction
-execute as @n[type=armor_stand] run function #bs.animation:create {id:"walk",uses:"foo:bar linear_walk"}
+execute as @n[type=armor_stand] run function #bs.animation:create {id:"walk",uses:"foo:bar walk_definition"}
 ```
 
 > **Credits**: Aksiome
@@ -89,7 +90,7 @@ execute as @n[type=armor_stand] run function #bs.animation:create {id:"walk",use
 Remove an animation from an entity.
 
 :Inputs:
-  **Execution `as <entities>`**: entity affected by the function
+  **Execution `as <entities>`**: entity affected
 
   **Function macro**:
   :::{treeview}
@@ -98,7 +99,7 @@ Remove an animation from an entity.
   :::
 
 :Outputs:
-  **State**: animation is removed from the entity
+  **State**: the animation is removed from the entity
 ```
 
 *Example: remove an animation from the nearest Armor Stand*
@@ -118,7 +119,7 @@ execute as @n[type=armor_stand] run function #bs.animation:delete {id:"walk"}
 Pause a running animation.
 
 :Inputs:
-  **Execution `as <entities>`**: entity affected by the function
+  **Execution `as <entities>`**: entity affected
 
   **Function macro**:
   :::{treeview}
@@ -127,7 +128,7 @@ Pause a running animation.
   :::
 
 :Outputs:
-  **State**: animation is paused if it was running
+  **State**: the animation is paused if it was running
 ```
 
 *Example: pause an animation on the nearest Armor Stand*
@@ -147,19 +148,19 @@ execute as @n[type=armor_stand] run function #bs.animation:pause {id:"walk"}
 Start or resume an animation.
 
 :Inputs:
-  **Execution `as <entities>`**: entity affected by the function
+  **Execution `as <entities>`**: entity affected
 
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` arguments
     - {nbt}`string` `id`: unique identifier of the animation to play
     - {nbt}`compound` `with`: optional arguments
-      - {nbt}`int` `interval`: tick refresh rate; defaults to `1`
+      - {nbt}`int` `interval`: tick interval between updates; defaults to `1`
       - {nbt}`number` `step`: amount to advance per interval; defaults to the value of `interval`
   :::
 
 :Outputs:
-  **State**: animation is running
+  **State**: the animation starts running
 ```
 
 ```{tip}
@@ -180,10 +181,10 @@ execute as @n[type=armor_stand] run function #bs.animation:play {id:"walk",with:
 
 ```{function} #bs.animation:reset {id:<string>}
 
-Stop an animation and reset it to its initial state.
+Stop an animation and reset its time to `0`.
 
 :Inputs:
-  **Execution `as <entities>`**: entity affected by the function
+  **Execution `as <entities>`**: entity affected
 
   **Function macro**:
   :::{treeview}
@@ -192,7 +193,7 @@ Stop an animation and reset it to its initial state.
   :::
 
 :Outputs:
-  **State**: animation is stopped at time `0`
+  **State**: the animation is stopped at time `0`
 ```
 
 *Example: reset an animation on the nearest Armor Stand*
@@ -209,10 +210,10 @@ execute as @n[type=armor_stand] run function #bs.animation:reset {id:"walk"}
 
 ```{function} #bs.animation:resume {id:<string>}
 
-Resume an animation that was paused.
+Resume a paused animation.
 
 :Inputs:
-  **Execution `as <entities>`**: entity affected by the function
+  **Execution `as <entities>`**: entity affected
 
   **Function macro**:
   :::{treeview}
@@ -221,7 +222,7 @@ Resume an animation that was paused.
   :::
 
 :Outputs:
-  **State**: animation is resumed if it was paused
+  **State**: the animation resumes if it was paused
 ```
 
 *Example: resume an animation on the nearest Armor Stand*
@@ -238,19 +239,19 @@ execute as @n[type=armor_stand] run function #bs.animation:resume {id:"walk"}
 
 ```{function} #bs.animation:rewind {id:<string>}
 
-Set the animation playback time back to the start without changing its state.
+Move the animation time back to `0` without changing its state.
 
 :Inputs:
-  **Execution `as <entities>`**: entity affected by the function
+  **Execution `as <entities>`**: entity affected
 
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` arguments
-    - {nbt}`string` `id`: unique identifier of the animation to reset
+    - {nbt}`string` `id`: unique identifier of the animation to rewind
   :::
 
 :Outputs:
-  **State**: animation is rewinded at time `0`
+  **State**: the animation time is set to `0`
 ```
 
 *Example: rewind an animation on the nearest Armor Stand*
@@ -267,21 +268,21 @@ execute as @n[type=armor_stand] run function #bs.animation:rewind {id:"walk"}
 
 ```{function} #bs.animation:step {id:<string>,with:{}}
 
-Step an animation forward.
+Advance an animation by a fixed amount.
 
 :Inputs:
-  **Execution `as <entities>`**: entity affected by the function
+  **Execution `as <entities>`**: entity affected
 
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` arguments
     - {nbt}`string` `id`: unique identifier of the animation to step
     - {nbt}`compound` `with`: optional arguments
-      - {nbt}`number` `step`: amount to advance; defaults to `1`
+      - {nbt}`number` `step`: amount of time to advance; defaults to `1`
   :::
 
 :Outputs:
-  **State**: animation advances by the given step
+  **State**: the animation advances by the given step
 ```
 
 ```{tip}
@@ -298,9 +299,136 @@ execute as @n[type=armor_stand] run function #bs.animation:step {id:"walk",with:
 
 ---
 
-## Lifecycle
+## 📝 Animation Definition
 
-You’ll find below the general lifecycle and state transitions for animations.
+An animation can affect multiple parts of an entity.
+Supported fields are shown below.
+
+```json
+{
+  "position": { <3D> },
+  "rotation": { <2D> },
+  // Armor Stand
+  "pose": { 
+    "body": { <3D> },
+    "head": { <3D> },
+    "left_arm": { <3D> },
+    "left_leg": { <3D> },
+    "right_arm": { <3D> },
+    "right_leg": { <3D> },
+  },
+  // Display Entities
+  "transformation": { 
+    "left_rotation": { <3D> },
+    "right_rotation": { <3D> },
+    "translation": { <3D> },
+    "scale": { <3D> },
+  },
+}
+```
+
+---
+
+### Keyframes
+
+Keyframes define fixed points along a timeline.
+
+```json
+{
+  "interpolation": "linear|smooth|step",
+  "duration": [<segment>, <segment>],
+  "points": [
+    [<x>, <y>, <z>],
+    [<x>, <y>, <z>],
+    [<x>, <y>, <z>],
+  ]
+}
+```
+
+| Field | Description |
+|-------|-------------|
+| interpolation | Interpolation type between points |
+| duration | Ticks per segment, or a single total duration |
+| points | 1D, 2D, or 3D keyframe values |
+
+---
+
+### Spline
+
+Splines generate smooth motion using control points.
+
+```json
+{
+  "basis": "bezier|bspline|catmull_rom|hermite",
+  "duration": <total>,
+  "points": [
+    [<x>, <y>, <z>],
+    [<x>, <y>, <z>],
+    [<x>, <y>, <z>],
+    [<x>, <y>, <z>],
+  ]
+}
+```
+
+| Field | Description |
+|-------|-------------|
+| basis | Spline type |
+| duration | Total duration or per-segment durations |
+| points | Control points; at least 4 points required |
+
+```{note}
+Splines use control points.
+The animation may not pass through every point.
+The exact behavior depends on the chosen spline basis.
+```
+
+---
+
+### Example
+
+We will create a camera using a `block_display` entity. The camera can then be used by a player by riding or spectating the entity.
+
+For this example, the path will have two segments. We choose an arbitrary `teleport_duration` of 3 and use the same value for the animation `interval` to reduce the number of commands executed each tick. Camera movement is sensitive to abrupt acceleration changes, so we must choose the right spline to ensure smooth motion.
+
+We use a single duration as well as a `bspline`, the only C² continuous spline, to guarantee smooth acceleration along the path.
+
+```mcfunction
+# Summon the camera entity
+summon minecraft:block_display ~ ~ ~ {teleport_duration:3}
+
+# Setup the animation data for the camera
+data modify storage foo:bar camera set value { \
+  position: { \
+    basis: "bspline", \
+    duration:100, \
+    points: [ \
+      [13.0,-15.0,1.0], \
+      [12.0,-15.0,-4.0], \
+      [9.0,-14.0,-10.0], \
+      [2.0,-12.0,-10.0], \
+      [-1.0,-9.0,-14.0], \
+    ], \
+  }, \
+}
+
+# Attach the animation to the entity
+execute as @n[type=block_display] run function #bs.animation:create {id:"camera",uses:"foo:bar camera"}
+
+# Play the animation
+execute as @n[type=block_display] run function #bs.animation:play {id:"camera",with:{interval:3}}
+```
+
+```{note}
+A B-spline is shaped by control points rather than passing directly through them. The curve follows a smooth path influenced by these points, and the number of segments is always the number of points minus three.
+
+To see how each spline type behaves, see the [Spline](spline.md#about-splines) section.
+```
+
+---
+
+## 🔄 Animation Lifecycle
+
+Animations move through defined states based on function calls.
 
 ---
 
@@ -310,7 +438,7 @@ Animations have three possible states:
 
 :::{list-table}
 *   - **Running**
-    - The animation is actively advancing via ticks.
+    - The animation is actively advancing over time.
 *   - **Paused**
     - The animation is temporarily halted but can resume from its current time.
 *   - **Stopped**
@@ -321,7 +449,10 @@ Animations have three possible states:
 
 ### Transitions
 
-Functions can be called in any state, except `#bs:animation:pause`, which requires the animation to be **Running** and `#bs:animation:resume`, which requires it to be **Paused**.
+Most functions can be called in any state with a few exceptions:
+
+- `#bs:animation:pause` requires **Running**
+- `#bs:animation:resume` requires **Paused**
 
 ```{mermaid}
 %%{ init: { 'flowchart': {'defaultRenderer': 'elk' } } }%%

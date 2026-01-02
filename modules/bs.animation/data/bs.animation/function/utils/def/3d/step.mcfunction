@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _._ append value {f:"constant",p:[0,0,0],t:0,d:0}
+data modify storage bs:ctx _._ append value {f:"step",p:[0,0,0],t:0,d:0}
 execute if score #n bs.ctx matches 0 run data modify storage bs:ctx _._[-1].d set from storage bs:ctx _.duration[0]
 execute if score #n bs.ctx matches 0 run data remove storage bs:ctx _.duration[0]
 
