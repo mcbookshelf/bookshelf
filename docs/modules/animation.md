@@ -29,7 +29,7 @@ Precompute animation data and store the result for faster use later.
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` arguments
-    - {nbt}`string` `uses`: storage that contains the animation definition
+    - {nbt}`string` `uses`: storage that contains the [animation definition](#animation-definition)
   :::
 
 :Outputs:
@@ -59,7 +59,7 @@ Create and attach a new animation to an entity. If the animation is not baked, i
   :::{treeview}
   - {nbt}`compound` arguments
     - {nbt}`string` `id`: unique animation identifier for the entity
-    - {nbt}`string` `uses`: storage that contains the animation definition
+    - {nbt}`string` `uses`: storage that contains the [animation definition](#animation-definition)
   :::
 
 :Outputs:
