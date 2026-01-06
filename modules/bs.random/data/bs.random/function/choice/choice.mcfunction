@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute store result score #i bs.ctx run random value 0..2147483646
-execute store result score #l bs.ctx if data storage bs:in random.choice.options[]
+execute store result score #l bs.ctx run data get storage bs:in random.choice.options
 execute store result storage bs:ctx y int 1 run scoreboard players operation #i bs.ctx %= #l bs.ctx
 function bs.random:choice/get with storage bs:ctx
 return run scoreboard players get #i bs.ctx
