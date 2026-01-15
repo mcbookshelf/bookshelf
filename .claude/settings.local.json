@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"e:\\Programmation\\Bookshelf\\Bookshelf\\modules\"\" 2>/dev/null || ls -la \"e:ProgrammationBookshelfBookshelfmodules \")",
+      "Bash(npm test:*)"
+    ]
+  }
+}
