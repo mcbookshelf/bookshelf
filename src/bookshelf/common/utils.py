@@ -7,8 +7,6 @@ from typing import TYPE_CHECKING
 
 from beet.toolchain.commands import error_handler
 from pydantic import BaseModel, ValidationError
-from rich.console import Console
-from watchfiles import watch
 
 from bookshelf.common import errors
 from bookshelf.definitions import GITHUB_REPO, ROOT_DIR, VERSION
@@ -52,6 +50,8 @@ def validate_model[T: BaseModel](file: Path | None, model: type[T], obj: object)
 
 def watch_and_run(run: Callable[[], None], *paths: Path) -> None:
     """Run a callable once, then re-run it on file changes in the given paths."""
+    from rich.console import Console  # noqa:  PLC0415
+    from watchfiles import watch  # noqa: PLC0415
     console = Console()
     run()
     for changes in watch(*paths):
