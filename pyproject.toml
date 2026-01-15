@@ -12,6 +12,7 @@ requires-python = ">=3.12"
 dependencies = [
   "beet>=0.112.2",
   "frozendict>=2.4.7",
+  "httpx[http2]>=0.28.1",
   "orjson>=3.11.5",
   "pydantic>=2.12.5",
   "semver>=3.0.4",
@@ -30,7 +31,6 @@ examples = "bookshelf.commands.examples:examples"
 [dependency-groups]
 dev = [
   "click>=8.3.1",
-  "httpx[http2]>=0.28.1",
   "lectern>=0.34.0",
   "platformdirs>=4.5.1",
   "rich>=14.2.0",
@@ -48,11 +48,16 @@ docs = [
   "sphinx>=8.2.3",
 ]
 
-[tool.hatch]
-build.packages = ["src/bookshelf", "modules", "examples"]
-version.path = "src/bookshelf/definitions.py"
+[tool.hatch.version]
+path = "src/bookshelf/definitions.py"
 
-[tool.hatch.build.force-include]
+[tool.hatch.build.targets.sdist]
+only-include = ["src/bookshelf", "modules", "examples"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bookshelf"]
+
+[tool.hatch.build.targets.wheel.force-include]
 modules = "bookshelf/data/modules"
 examples = "bookshelf/data/examples"
 
