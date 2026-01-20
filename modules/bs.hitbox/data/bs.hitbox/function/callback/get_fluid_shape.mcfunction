@@ -13,11 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if block ~ ~ ~ #bs.hitbox:is_fluid[level=7] run return run data modify storage bs:lambda hitbox set value {shape:[[0,0,0,16,1.7777777,16,2]]}
-execute if block ~ ~ ~ #bs.hitbox:is_fluid[level=6] run return run data modify storage bs:lambda hitbox set value {shape:[[0,0,0,16,3.5555555,16,2]]}
-execute if block ~ ~ ~ #bs.hitbox:is_fluid[level=5] run return run data modify storage bs:lambda hitbox set value {shape:[[0,0,0,16,5.3333333,16,2]]}
-execute if block ~ ~ ~ #bs.hitbox:is_fluid[level=4] run return run data modify storage bs:lambda hitbox set value {shape:[[0,0,0,16,7.1111111,16,2]]}
-execute if block ~ ~ ~ #bs.hitbox:is_fluid[level=3] run return run data modify storage bs:lambda hitbox set value {shape:[[0,0,0,16,8.8888888,16,2]]}
-execute if block ~ ~ ~ #bs.hitbox:is_fluid[level=2] run return run data modify storage bs:lambda hitbox set value {shape:[[0,0,0,16,10.6666666,16,2]]}
-execute if block ~ ~ ~ #bs.hitbox:is_fluid[level=1] run return run data modify storage bs:lambda hitbox set value {shape:[[0,0,0,16,12.4444444,16,2]]}
-data modify storage bs:lambda hitbox set value {shape:[[0,0,0,16,14.2222222,16,2]]}
+execute if block ~ ~1 ~ #bs.hitbox:is_fluid run return 2
+function bs.hitbox:callback/get_fluid_shape_level
