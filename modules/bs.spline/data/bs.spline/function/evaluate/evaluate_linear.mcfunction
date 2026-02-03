@@ -14,6 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set from storage bs:in spline.evaluate_linear
+data modify storage bs:ctx _.points append from storage bs:const spline.pad[]
 data modify storage bs:out spline.evaluate_linear set value []
 
 execute store result score #s bs.ctx store result score #t bs.ctx run data get storage bs:ctx _.time 1000
