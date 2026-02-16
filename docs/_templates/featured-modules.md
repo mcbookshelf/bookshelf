@@ -5,7 +5,7 @@
 :link-type: doc
 :margin: 0 3 0 0
 
-Get and manipulate blocks (supports BlockStates and NBT).
+Get and manipulate blocks (supports block states and NBTs).
 :::
 
 :::{grid-item-card} 🔦 Raycast
@@ -29,7 +29,7 @@ Mathematical functions: sin, cos, exp, log, sqrt, and much more!
 :link-type: doc
 :margin: 0 3 0 0
 
-Generate terrains and landscapes, incorporating natural features.
+Iterate efficiently over the world to generate terrains and landscapes.
 :::
 
 :::{grid-item-card} 🎲 Random

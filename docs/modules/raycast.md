@@ -106,7 +106,7 @@ Callbacks `on_targeted_block` and `on_targeted_entity` are always run before `on
 
 ```{admonition} Custom Hitboxes
 :class: hint
-Bookshelf supports multiple [hitbox types](hitbox.md#types) for precise control. Blocks can use custom [hitbox providers](hitbox.md#available-providers). Entities support three types: `dynamic`, `baked`, and `custom`.
+Bookshelf supports multiple [hitbox types](hitbox.md#hitbox-types) for precise control. Blocks can use custom [hitbox providers](hitbox.md#available-providers). Entities support three types: `dynamic`, `baked`, and `custom`.
 ```
 
 *Example: Cast a ray from your eyes and detect any collisions:*

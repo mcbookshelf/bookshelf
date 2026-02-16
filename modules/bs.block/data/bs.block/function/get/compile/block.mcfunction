@@ -13,18 +13,13 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store success score #s bs.ctx if data storage bs:out block._
-execute store success score #n bs.ctx if data storage bs:out block.nbt
-
 # return the block string: {type}
-execute if score #s bs.ctx matches 0 if score #n bs.ctx matches 0 run return run data modify storage bs:out block.block set from storage bs:out block.type
+execute unless data storage bs:out block._ run return run data modify storage bs:out block.block set from storage bs:out block.type
 
 # generate the state string
-execute if score #s bs.ctx matches 1 run function bs.block:get/compile/state
-data modify storage bs:ctx _ set from storage bs:out block
+data modify storage bs:ctx _ set value {0:"",1:"",2:"",3:"",4:"",5:"",6:"",7:""}
+data modify storage bs:ctx _ merge from storage bs:out block._
+function bs.block:get/compile/concat/state with storage bs:ctx _
 
 # return the block string: {type}{state}
-execute if score #n bs.ctx matches 0 run return run function bs.block:get/compile/concat/block/state with storage bs:ctx _
-
-# return the block string: {type}{state}{nbt}
-execute as B5-0-0-0-3 run return run function bs.block:get/compile/nbt
+return run function bs.block:get/compile/concat/block with storage bs:out block

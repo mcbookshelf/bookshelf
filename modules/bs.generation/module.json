@@ -7,10 +7,11 @@
   "meta": {
     "name": "Generation",
     "slug": "bookshelf-generation",
-    "description": "Bookshelf world manipulation module, useful for iterating over blocks and creating structures or landscapes.",
+    "description": "Bookshelf world manipulation module, useful for iterating over blocks and creating shapes.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html",
     "tags": ["runtime"],
-    "dependencies": [
+    "weak_dependencies": [
+      "bs.block",
       "bs.random"
     ]
   }

@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data generation._.dim set from entity @s Brain.memories.minecraft:home.value.dimension
+data modify storage bs:data generation[-1].dim set from entity @s Brain.memories.minecraft:home.value.dimension
 tp @s ~ -100000 ~
 kill @s
