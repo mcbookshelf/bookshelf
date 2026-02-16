@@ -52,7 +52,6 @@ LOOT_TABLE_INCLUDE = {
     "type",
     "item",
     "group",
-    "sounds", # @deprecated sounds (removed in in 4.0.0)
 }
 
 
