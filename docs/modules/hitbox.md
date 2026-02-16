@@ -50,7 +50,7 @@ A bounding box is a simple rectangular box that surrounds an object—or part of
 
 Baking captures a snapshot of the entity's hitbox at a specific moment. It does not update after that. If the entity has passengers, the baked result includes a bounding box that encapsulates both the base entity and all passengers.
 
-See [Hitbox Types](#types) for full details on block and entity hitboxes.
+See [Hitbox Types](#hitbox-types) for full details on block and entity hitboxes.
 ```
 
 > **Credits**: Aksiome
@@ -152,7 +152,7 @@ Get the hitbox of a block as a shape, represented by a list of boxes coordinates
 - **Collision Shape**: Defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block.
 - **Interaction Shape**: Defines the area where the player can interact with or break the block. This includes actions such as right-clicking to open a GUI (e.g., chests, furnaces) or mining the block. Some blocks have an interaction shape but no collision, such as crops or scaffolding.
 
-See [Hitbox Types](#types) for full details on block and entity hitboxes.
+See [Hitbox Types](#hitbox-types) for full details on block and entity hitboxes.
 ```
 
 *Example: Get the hitbox of stairs:*
@@ -549,7 +549,7 @@ A custom hitbox lets you override Minecraft's default hitbox system and define y
 - Are not tied to Minecraft's internal collision model.
 - Work on entities **without a native hitbox**, such as display entities.
 
-See [Hitbox Types](#types) for full details on block and entity hitboxes.
+See [Hitbox Types](#hitbox-types) for full details on block and entity hitboxes.
 ```
 
 > **Credits**: Aksiome
@@ -649,7 +649,7 @@ Identifies if the entity has a rectangular hitbox size.
 
 ---
 
-(types)=
+(hitbox-types)=
 ## 🎓 Hitbox Types
 
 Bookshelf provides multiple hitbox types, each suited to different use cases. Understanding the differences helps you choose the right one.
