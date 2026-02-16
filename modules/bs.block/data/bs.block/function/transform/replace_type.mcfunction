@@ -13,8 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store success score #s bs.ctx run data modify storage bs:ctx _ set from storage bs:const block.types."$(type)"
-execute if score #s bs.ctx matches 0 run return fail
+data remove storage bs:ctx _
+$data modify storage bs:ctx _ set from storage bs:const block.types."$(type)"
+execute unless data storage bs:ctx _ run return fail
 execute store success score #s bs.ctx run data modify storage bs:out block.group set from storage bs:ctx _.group
 execute if score #s bs.ctx matches 1 run data modify storage bs:out block set from storage bs:ctx _
 execute if score #s bs.ctx matches 0 store success score #s bs.ctx run data modify storage bs:out block.type set from storage bs:ctx _.type
