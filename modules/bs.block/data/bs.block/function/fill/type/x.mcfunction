@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in block.fill_block set value {block:"minecraft:stone",from:"~ ~ ~",to:"~ ~1 ~",limit:1,on_finished:"setblock ~ ~ ~ minecraft:bookshelf"}
-function #bs.block:fill_block
-assert block ~ ~ ~ minecraft:stone
-assert not block ~ ~1 ~ minecraft:stone
-await block ~ ~1 ~ minecraft:bookshelf
+scoreboard players operation #j bs.ctx = #y bs.ctx
+function bs.block:fill/type/y
+
+scoreboard players remove #i bs.ctx 1
+execute if score #i bs.ctx matches 0.. positioned ~1 ~ ~ run function bs.block:fill/type/x

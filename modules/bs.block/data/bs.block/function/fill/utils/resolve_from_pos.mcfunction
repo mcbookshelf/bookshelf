@@ -13,10 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute if data storage bs:ctx _{negate:0b} run data modify storage bs:ctx _.mask set value "if block ~$(x) ~$(y) ~$(z) $(block) $(mask)"
-$execute if data storage bs:ctx _{negate:1b} run data modify storage bs:ctx _.mask set value "unless block ~$(x) ~$(y) ~$(z) $(block) $(mask)"
-
-data remove storage bs:data block._.masks[-1]
-data modify storage bs:ctx _ merge value {x:0,y:0,z:0,negate:0b,block:0b}
-data modify storage bs:ctx _ merge from storage bs:data block._.masks[-1]
-execute unless data storage bs:ctx _{block:0b} run function bs.block:utils/masks/loop with storage bs:ctx _
+$execute positioned $(from) run function bs.block:fill/utils/tp
+data modify storage bs:ctx _ set from entity @s Pos

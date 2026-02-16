@@ -13,12 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result storage bs:data block._.pos[0] double 1 run scoreboard players get #block.x bs.data
-execute store result storage bs:data block._.pos[1] double 1 run scoreboard players get #block.y bs.data
-execute store result storage bs:data block._.pos[2] double 1 run scoreboard players get #block.z bs.data
-
-execute unless data storage bs:data block._.dim run function bs.block:utils/get_dimension
-execute unless data storage bs:data block._.rot run data modify storage bs:data block._.rot set from entity @s Rotation
-
-data modify storage bs:data block.fill prepend from storage bs:data block._
-schedule function bs.block:fill/process/scheduled 1t replace
+$execute positioned $(to) run function bs.block:fill/utils/tp
+data modify storage bs:ctx _ set from entity @s Pos

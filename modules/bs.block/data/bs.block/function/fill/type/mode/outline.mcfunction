@@ -13,9 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-fill ~ ~ ~ ~ ~1 ~ dirt
-data modify storage bs:in block.fill_block set value {block:"minecraft:grass_block",from:"~ ~ ~",to:"~ ~1 ~",masks:[{block:"minecraft:dirt"},{block:"minecraft:air",y:1}]}
-function #bs.block:fill_block
+execute if score #i bs.ctx matches 1.. \
+  if score #j bs.ctx matches 1.. \
+  if score #k bs.ctx matches 1.. \
+  if score #i bs.ctx < #x bs.ctx \
+  if score #j bs.ctx < #y bs.ctx \
+  if score #k bs.ctx < #z bs.ctx \
+  run return 0
 
-assert block ~ ~ ~ minecraft:dirt
-assert block ~ ~1 ~ minecraft:grass_block
+function bs.block:get/get_block
+function #bs.block:replace_type with storage bs:in block.fill_type
+function bs.block:fill/utils/set_replace with storage bs:out block
+execute if data storage bs:out block.nbt run data modify block ~ ~ ~ {} merge from storage bs:out block.nbt

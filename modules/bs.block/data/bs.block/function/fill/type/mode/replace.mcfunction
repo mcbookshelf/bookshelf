@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set value {x:0,y:0,z:0,negate:0b,mask:""}
-data modify storage bs:ctx _ merge from storage bs:data block._.masks[-1]
-execute if data storage bs:ctx _.block run function bs.block:utils/masks/loop with storage bs:ctx _
-data modify storage bs:data block._.mask set from storage bs:ctx _.mask
+function bs.block:get/get_block
+function #bs.block:replace_type with storage bs:in block.fill_type
+function bs.block:fill/utils/set_replace with storage bs:out block
+execute if data storage bs:out block.nbt run data modify block ~ ~ ~ {} merge from storage bs:out block.nbt

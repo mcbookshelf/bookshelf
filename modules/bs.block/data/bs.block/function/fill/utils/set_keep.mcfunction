@@ -13,6 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set value {pools:[{rolls:1,entries:[]}]}
-execute if data storage bs:data block._.entries[-1] run function bs.block:utils/random/loop
-data modify storage bs:data block._.entries set from storage bs:ctx _
+$setblock ~ ~ ~ $(block) keep

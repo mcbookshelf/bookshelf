@@ -13,6 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data block._.dim set from entity @s Brain.memories.minecraft:home.value.dimension
-tp @s ~ -100000 ~
-kill @s
+$execute if block ~ ~ ~ $(filter) run function bs.block:fill/type/mode/$(mode)

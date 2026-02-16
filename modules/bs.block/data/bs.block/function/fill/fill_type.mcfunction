@@ -13,15 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data block._ set value { \
-  mask: "", \
-  pos: [0d, 0d, 0d], \
-  mode: "replace", \
-  limit: 4096, \
-  masks: [], \
-  impl: "set_type", \
-}
-data modify storage bs:data block._ merge from storage bs:in block.fill_type
-
-execute if data storage bs:data block._.masks[0] run function bs.block:utils/masks/compile
-execute summon minecraft:marker run function bs.block:fill/recurse/init
+execute unless data storage bs:in block.fill_type.mode run data modify storage bs:in block.fill_type.mode set value "replace"
+execute align xyz summon minecraft:marker run function bs.block:fill/type/init

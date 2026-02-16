@@ -13,5 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute positioned $(from) run function bs.block:utils/tp
-data modify storage bs:data block._.from set from entity @s Pos
+$function bs.block:fill/type/mode/$(_) with storage bs:in block.fill_type
+
+scoreboard players remove #k bs.ctx 1
+execute if score #k bs.ctx matches 0.. positioned ~ ~ ~1 run function bs.block:fill/type/z with storage bs:in block.fill_type

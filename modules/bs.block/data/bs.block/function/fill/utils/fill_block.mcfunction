@@ -13,5 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data block.fill[]._ set value 1b
-execute as B5-0-0-0-1 run function bs.block:fill/process/resume with storage bs:data block.fill[-1]
+$fill $(from) $(to) $(block) $(mode)

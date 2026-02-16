@@ -13,9 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data remove storage bs:data block._.block
-$execute in minecraft:overworld run loot replace block -30000000 0 1606 contents loot $(entries)
-execute in minecraft:overworld run data modify storage bs:data block._ merge from block -30000000 0 1606 item.components."minecraft:custom_data"
-
-execute unless data storage bs:data block._.block run return run function bs.block:fill/strategy/set_type
-function bs.block:fill/strategy/set_block with storage bs:data block._
+function bs.block:get/get_block
+function #bs.block:replace_type with storage bs:in block.fill_type
+function bs.block:fill/utils/set_strict with storage bs:out block
+execute if data storage bs:out block.nbt run data modify block ~ ~ ~ {} merge from storage bs:out block.nbt

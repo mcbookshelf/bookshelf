@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if dimension minecraft:overworld run return run data modify storage bs:data block._.dim set value "minecraft:overworld"
-execute if dimension minecraft:the_nether run return run data modify storage bs:data block._.dim set value "minecraft:the_nether"
-execute if dimension minecraft:the_end run return run data modify storage bs:data block._.dim set value "minecraft:the_end"
+scoreboard players operation #k bs.ctx = #z bs.ctx
+function bs.block:fill/type/z with storage bs:in block.fill_type
 
-execute positioned -30000000 0 1600 summon piglin_brute run function bs.block:utils/get_custom_dimension
+scoreboard players remove #j bs.ctx 1
+execute if score #j bs.ctx matches 0.. positioned ~ ~1 ~ run function bs.block:fill/type/y

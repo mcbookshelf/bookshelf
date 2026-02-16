@@ -13,7 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-function bs.block:get/get_block
-function #bs.block:replace_type with storage bs:data block._
-data modify storage bs:data block._.block set from storage bs:out block.block
-function bs.block:fill/strategy/set_block with storage bs:data block._
+$fill $(from) $(to) $(block) replace $(filter) $(mode)
