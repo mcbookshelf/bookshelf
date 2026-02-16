@@ -13,13 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-setblock -30000000 0 1606 minecraft:air
-forceload remove -30000000 1600
-
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.data
-scoreboard objectives remove bs.lambda
-
-data remove storage bs:in generation
-data remove storage bs:data generation
+data modify storage bs:ctx _ set value {x:0,y:0,z:0,negate:0b,mask:""}
+data modify storage bs:ctx _ merge from storage bs:data generation[-1].masks[-1]
+execute if data storage bs:ctx _.block run function bs.generation:utils/block/masks/loop with storage bs:ctx _
+data modify storage bs:data generation[-1].mask set from storage bs:ctx _.mask

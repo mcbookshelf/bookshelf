@@ -13,13 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-setblock -30000000 0 1606 minecraft:air
-forceload remove -30000000 1600
-
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.data
-scoreboard objectives remove bs.lambda
-
-data remove storage bs:in generation
-data remove storage bs:data generation
+data modify storage bs:ctx _ set value "x"
+execute store result storage bs:data generation[-1].x int 1 run data get storage bs:in generation.on_cuboid.spacing

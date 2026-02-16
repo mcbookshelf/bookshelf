@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if dimension minecraft:overworld run return run data modify storage bs:data generation._.dim set value "minecraft:overworld"
-execute if dimension minecraft:the_nether run return run data modify storage bs:data generation._.dim set value "minecraft:the_nether"
-execute if dimension minecraft:the_end run return run data modify storage bs:data generation._.dim set value "minecraft:the_end"
+execute if dimension minecraft:overworld run return run data modify storage bs:data generation[-1].dim set value "minecraft:overworld"
+execute if dimension minecraft:the_nether run return run data modify storage bs:data generation[-1].dim set value "minecraft:the_nether"
+execute if dimension minecraft:the_end run return run data modify storage bs:data generation[-1].dim set value "minecraft:the_end"
 
 execute positioned -30000000 0 1600 summon piglin_brute run function bs.generation:utils/get_custom_dimension

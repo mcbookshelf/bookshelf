@@ -13,13 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-setblock -30000000 0 1606 minecraft:air
-forceload remove -30000000 1600
+scoreboard players operation $random.fractal_noise_2d.x bs.in = $generation.i bs.lambda
+scoreboard players operation $random.fractal_noise_2d.y bs.in = $generation.j bs.lambda
+scoreboard players operation $random.fractal_noise_2d.x bs.in *= #generation.s bs.data
+scoreboard players operation $random.fractal_noise_2d.y bs.in *= #generation.s bs.data
 
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.data
-scoreboard objectives remove bs.lambda
-
-data remove storage bs:in generation
-data remove storage bs:data generation
+execute store result score $generation.noise bs.lambda run function #bs.random:fractal_noise_2d
+$$(cb)

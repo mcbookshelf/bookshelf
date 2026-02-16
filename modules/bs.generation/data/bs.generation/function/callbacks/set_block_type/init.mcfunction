@@ -13,13 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-setblock -30000000 0 1606 minecraft:air
-forceload remove -30000000 1600
+data modify storage bs:data generation[-1] merge value { mode: "replace", mask: "" }
+$data modify storage bs:data generation[-1] merge value $(with)
+$data modify storage bs:data generation[-1].type set value '$(type)'
+data modify storage bs:data generation[-1].run set value 'function bs.generation:callbacks/set_block_type/run with storage bs:data generation[-1]'
+execute if data storage bs:data generation[-1].masks[0] run function bs.generation:utils/block/masks/compile
 
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.data
-scoreboard objectives remove bs.lambda
-
-data remove storage bs:in generation
-data remove storage bs:data generation
+function bs.generation:callbacks/set_block_type/run with storage bs:data generation[-1]

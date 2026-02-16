@@ -13,13 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-setblock -30000000 0 1606 minecraft:air
-forceload remove -30000000 1600
+fill ~ ~ ~ ~ ~1 ~ dirt
+data modify storage bs:in generation.on_cuboid set value {height:2,run:'function #bs.generation:callback/set_block {block:"minecraft:grass_block",with:{masks:[{block:"minecraft:dirt"},{block:"minecraft:air",y:1}]}}'}
+function #bs.generation:on_cuboid
 
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.data
-scoreboard objectives remove bs.lambda
-
-data remove storage bs:in generation
-data remove storage bs:data generation
+assert block ~ ~ ~ minecraft:dirt
+assert block ~ ~1 ~ minecraft:grass_block

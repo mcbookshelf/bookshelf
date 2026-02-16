@@ -13,13 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-setblock -30000000 0 1606 minecraft:air
-forceload remove -30000000 1600
+execute store result score $generation.i bs.lambda run data get storage bs:data generation[-1].i
+execute store result score $generation.j bs.lambda run data get storage bs:data generation[-1].j
+execute store result score #generation.w bs.data run data get storage bs:data generation[-1].w
+execute store result score #generation.h bs.data run data get storage bs:data generation[-1].h
+execute store result score #generation.d bs.data run data get storage bs:data generation[-1].d
+execute store result score #generation.i bs.data run data get storage bs:data generation[-1].n
 
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.data
-scoreboard objectives remove bs.lambda
-
-data remove storage bs:in generation
-data remove storage bs:data generation
+$function bs.generation:on_rectangle/recurse/$(0)$(1) with storage bs:data generation[-1]

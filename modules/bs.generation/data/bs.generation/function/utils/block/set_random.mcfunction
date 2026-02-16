@@ -13,13 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-setblock -30000000 0 1606 minecraft:air
-forceload remove -30000000 1600
-
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.data
-scoreboard objectives remove bs.lambda
-
-data remove storage bs:in generation
-data remove storage bs:data generation
+data remove storage bs:data generation[-1].block
+$execute in minecraft:overworld run loot replace block -30000000 0 1606 contents loot $(blocks)
+execute in minecraft:overworld run data modify storage bs:data generation[-1] merge from block -30000000 0 1606 item.components."minecraft:custom_data"
+execute unless data storage bs:data generation[-1].block run return run function bs.generation:utils/block/set_type
+function bs.generation:utils/block/set_block with storage bs:data generation[-1]
