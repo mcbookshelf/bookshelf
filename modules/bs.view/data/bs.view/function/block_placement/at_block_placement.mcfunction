@@ -15,6 +15,6 @@
 
 # run the raycast at the entity eyes
 tag @s add bs.view.this
-$data modify storage bs:data view.block_placement.run set value '$(run)'
+$data modify storage bs:data view.block_placement set value {x:0,y:0,z:0,run:'$(run)'}
 execute at @s anchored eyes run function bs.raycast:run
 tag @s remove bs.view.this

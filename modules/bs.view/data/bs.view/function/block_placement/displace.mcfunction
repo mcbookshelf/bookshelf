@@ -16,8 +16,11 @@
 scoreboard players operation $raycast.hit_flag bs.lambda %= 2 bs.const
 execute if score $raycast.hit_flag bs.lambda matches 0 run return run scoreboard players add $raycast.piercing bs.lambda 1
 
-data modify storage bs:data view.block_placement.x set from storage bs:lambda raycast.hit_normal[0]
-data modify storage bs:data view.block_placement.y set from storage bs:lambda raycast.hit_normal[1]
-data modify storage bs:data view.block_placement.z set from storage bs:lambda raycast.hit_normal[2]
+execute if score $raycast.hit_face bs.lambda matches 5 run data modify storage bs:data view.block_placement.x set value 1
+execute if score $raycast.hit_face bs.lambda matches 4 run data modify storage bs:data view.block_placement.x set value -1
+execute if score $raycast.hit_face bs.lambda matches 3 run data modify storage bs:data view.block_placement.z set value 1
+execute if score $raycast.hit_face bs.lambda matches 2 run data modify storage bs:data view.block_placement.z set value -1
+execute if score $raycast.hit_face bs.lambda matches 1 run data modify storage bs:data view.block_placement.y set value 1
+execute if score $raycast.hit_face bs.lambda matches 0 run data modify storage bs:data view.block_placement.y set value -1
 
 execute as @n[tag=bs.view.this,sort=arbitrary] run function bs.view:block_placement/run with storage bs:data view.block_placement

@@ -21,7 +21,7 @@ scoreboard players operation #h bs.ctx = @s bs.height
 scoreboard players operation #d bs.ctx = @s bs.depth
 
 # run size-based collision check
-execute if entity @s[tag=bs.hitbox.centered] run return run function bs.raycast:check/entity/size
+execute if entity @s[tag=bs.hitbox.centered] run return run function bs.raycast:check/entity/aabb
 scoreboard players operation #raycast.ry bs.data += #h bs.ctx
-function bs.raycast:check/entity/size
+function bs.raycast:check/entity/aabb
 scoreboard players operation #raycast.ry bs.data -= #h bs.ctx
