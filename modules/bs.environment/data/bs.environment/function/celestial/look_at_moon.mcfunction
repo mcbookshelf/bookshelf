@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score $environment.celestial_angle.day bs.in run time query day
-execute store result score $environment.celestial_angle.daytime bs.in run time query daytime
+execute store result score $environment.celestial_angle.day bs.in run time query minecraft:day repetition
+execute store result score $environment.celestial_angle.daytime bs.in run time query minecraft:day
 # scaling factor
 data modify storage bs:ctx z set value 1000f
 function bs.environment:celestial/get_moon_angle_internal
