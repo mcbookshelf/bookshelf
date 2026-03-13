@@ -14,8 +14,8 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Get initial time values
-execute store result score $environment.celestial_angle.day bs.in run time query day
-execute store result score $environment.celestial_angle.daytime bs.in run time query daytime
+execute store result score $environment.celestial_angle.day bs.in run time query minecraft:day repetition
+execute store result score $environment.celestial_angle.daytime bs.in run time query minecraft:day
 $data modify storage bs:ctx z set value $(scale)
 
 # Get the current moon angle

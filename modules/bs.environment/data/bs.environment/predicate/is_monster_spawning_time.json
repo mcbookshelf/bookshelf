@@ -10,8 +10,8 @@
       "minecraft_version": "1.21.7"
     },
     "updated": {
-      "date": "2025/07/16",
-      "minecraft_version": "1.21.7"
+      "date": "2026/02/27",
+      "minecraft_version": "26.1"
     }
   },
   "condition": "minecraft:any_of",
@@ -25,6 +25,7 @@
         },
         {
           "condition": "minecraft:time_check",
+          "clock": "minecraft:overworld",
           "value": {
             "min": 12969,
             "max": 23031
@@ -42,6 +43,7 @@
         },
         {
           "condition": "minecraft:time_check",
+          "clock": "minecraft:overworld",
           "value": {
             "min": 13188,
             "max": 22812
