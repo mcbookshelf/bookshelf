@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # panda group
-execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:1.3,height:1.25}
-data modify storage bs:out hitbox set value {width:0.65,height:0.625}
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.65,height:0.625}
+data modify storage bs:out hitbox set value {width:1.3,height:1.25}
