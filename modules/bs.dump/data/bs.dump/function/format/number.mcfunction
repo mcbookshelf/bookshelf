@@ -13,14 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data dump.char set string storage bs:data dump.value -1
-execute unless data storage bs:data dump{char:"b"} \
-  unless data storage bs:data dump{char:"s"} \
-  unless data storage bs:data dump{char:"l"} \
-  unless data storage bs:data dump{char:"f"} \
-  unless data storage bs:data dump{char:"d"} \
-  run data remove storage bs:data dump.char
+data modify storage bs:dump ctx.char set string storage bs:dump ctx.value -1
+execute unless data storage bs:dump ctx{char:"b"} \
+  unless data storage bs:dump ctx{char:"s"} \
+  unless data storage bs:dump ctx{char:"l"} \
+  unless data storage bs:dump ctx{char:"f"} \
+  unless data storage bs:dump ctx{char:"d"} \
+  run data remove storage bs:dump ctx.char
+execute if data storage bs:dump ctx.char run data modify storage bs:dump ctx.value set string storage bs:dump ctx.value 0 -1
 
-execute if data storage bs:data dump.char run data modify storage bs:data dump.value set string storage bs:data dump.value 0 -1
-$loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:[{storage:"bs:data",nbt:"dump.value",color:"$(number)"},{storage:"bs:data",nbt:"dump.char",color:"$(type)"}]}]}]}]}
-data modify storage bs:data dump.out append from entity B5-0-0-0-3 item.components.minecraft:custom_name
+$data modify storage bs:dump output append value [{text:"",color:"$(number)"},{text:"",color:"$(type)"}]
+data modify storage bs:dump output[-1][0].text set from storage bs:dump ctx.value
+data modify storage bs:dump output[-1][1].text set from storage bs:dump ctx.char

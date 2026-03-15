@@ -13,13 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #dump.count bs.data run data get storage bs:data dump.stack[-1].var
+execute store result score #dump.count bs.data run data get storage bs:dump stack[-1].var
 execute if score #dump.count bs.data matches 0 run return run function bs.dump:format/compound/empty
 
 function bs.dump:format/brace/open with storage bs:const dump
-function bs.dump:key/get
-function bs.dump:interpret/compound/loop with storage bs:data dump.stack[-1]
-data modify storage bs:data dump.out append value "\n"
-data modify storage bs:data dump.out append from storage bs:data dump.stack[].indent
-data remove storage bs:data dump.out[-1]
+function bs.dump:interpret/compound/loop
+data modify storage bs:dump output append value "\n"
+data modify storage bs:dump output append from storage bs:dump stack[].indent
+data remove storage bs:dump output[-1]
 function bs.dump:format/brace/close with storage bs:const dump

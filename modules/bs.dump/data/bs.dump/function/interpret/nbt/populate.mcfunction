@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 $execute store success score #dump.success bs.data run data get $(var)
-execute if score #dump.success bs.data matches 0 run data modify storage bs:data dump.stack[-1].var set value {}
-$execute if score #dump.success bs.data matches 1 run data modify storage bs:data dump.stack[-1].var set from $(var)
+execute if score #dump.success bs.data matches 0 run data modify storage bs:dump stack[-1].var set value {}
+$execute if score #dump.success bs.data matches 1 run data modify storage bs:dump stack[-1].var set from $(var)

@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data dump.stack[-1].expand set value 2
+data modify storage bs:dump stack[-1].expand set value 2
 return 1
 $data get $(var) 0
