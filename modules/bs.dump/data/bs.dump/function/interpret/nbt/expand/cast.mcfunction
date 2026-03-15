@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:data dump.stack[-1].expand set value $(value)
+$data modify storage bs:dump stack[-1].expand set value $(value)
