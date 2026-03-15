@@ -13,10 +13,6 @@ if TYPE_CHECKING:
 
 
 CUBE = ((0.0, 0.0, 0.0, 16.0, 16.0, 16.0),)
-INTANGIBLE = [
-    "minecraft:light",
-    "minecraft:structure_void",
-]
 
 
 @minecraft.generator
@@ -44,7 +40,6 @@ def beet_default(ctx: Context, version: str) -> Iterable[tuple[str, PackFile]]:
         ("has_shape_offset", lambda b: b.has_shape_offset),
         ("has_visual_offset", lambda b: b.has_visual_offset),
         ("can_pass_through", lambda b: not b.collision_shape),
-        ("intangible", lambda b: b.type in INTANGIBLE or not b.shape),
         ("is_full_cube", lambda b: b.shape == CUBE and b.collision_shape == CUBE),
         ("is_waterloggable", lambda b:
             any(p.name == "waterlogged" for p in b.properties)),

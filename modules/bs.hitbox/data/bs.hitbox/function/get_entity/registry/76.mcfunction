@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# dolphin group
-execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.9,height:0.6}
-data modify storage bs:out hitbox set value {width:0.585,height:0.39}
+# mule group
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.6982422,height:0.8}
+data modify storage bs:out hitbox set value {width:1.3964844,height:1.6}
