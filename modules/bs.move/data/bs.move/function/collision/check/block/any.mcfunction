@@ -15,9 +15,8 @@
 
 # if the block is a full cube, check collision using a fixed 1×1×1 AABB
 data remove storage bs:lambda hitbox
-scoreboard players set #move.hit_flag bs.data 0
 $execute store result storage bs:ctx y int 1 store result score #move.hit_flag bs.data run $(blocks)
-execute if score #move.hit_flag bs.data matches 1.. unless data storage bs:lambda hitbox run return run function bs.move:collision/check/block/cube with storage bs:ctx
+execute unless data storage bs:lambda hitbox run return run execute if score #move.hit_flag bs.data matches 1.. run function bs.move:collision/check/block/cube with storage bs:ctx
 
 # otherwise, check collision against the block shape
 execute store result score #p bs.ctx run data get storage bs:lambda hitbox.offset.x 10000000
