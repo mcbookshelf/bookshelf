@@ -10,13 +10,17 @@ Cast rays and detect collisions with blocks or entities.
 -- Georges Braque
 ```
 
-```{note}
-This module implements a **DDA** algorithm, also known as [voxel traversal](http://www.cse.yorku.ca/~amana/research/grid.pdf).
+```{admonition} Looking for simple use cases?
+:class: tip
 
-Instead of checking points at fixed intervals (which can miss thin shapes), the ray steps from one block boundary to the next. This ensures:
-1. **Perfect Precision**: Every single block along the path is checked.
-2. **Performance**: No redundant checks within the same block.
-3. **Flexibility**: Works seamlessly with the `bs.hitbox` module to support complex shapes.
+If you just want to detect what an entity is looking at (aimed block, aimed entity, hit point), the [View module](view.md) provides simplified wrappers that handle the common cases for you.
+```
+
+```{dropdown} How does it work?
+:color: info
+:icon: info
+
+This module uses a [voxel traversal](http://www.cse.yorku.ca/~amana/research/grid.pdf) algorithm. Instead of checking points at fixed intervals, the ray steps from one block boundary to the next, ensuring every block is checked without redundant operations.
 ```
 
 ---
@@ -31,105 +35,210 @@ You can find below all functions available in this module.
 
 ```{function} #bs.raycast:run {with:{}}
 
-Cast a ray from the execution position and check if it hits something. Lambda scores and storage are only available during callback execution (`on_*`).
+Cast a ray from the execution position and check if it hits something.
 
 :Inputs:
-  **Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: Origin of the ray.
+  **Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: origin of the ray
 
   **Function macro**:
   :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`compound` **with**: Ray input data.
-      - {nbt}`bool` {nbt}`string` **blocks**: Whether the ray stops on blocks (default: true).  
-      *Can be a [hitbox provider](hitbox.md#available-providers) (e.g. `function #bs.hitbox:callback/get_block_collision`).*
-      - {nbt}`bool` {nbt}`string` **entities**: Whether the ray stops on entities (default: false).  
-      *Can be a selector tag (typically assigned via `/tag`), which is preferred for performance.*
-      - {nbt}`string` **ignored_blocks**: Blocks to ignore (default: `#bs.hitbox:intangible`).
-      - {nbt}`string` **ignored_entities**: Entity type to ignore (default: `#bs.hitbox:intangible`).  
-      *Does not apply to entities with custom hitboxes.*
-      - {nbt}`number` **max_distance**: Maximum ray travel distance (default: 16.0).
-      - {nbt}`string` **on_targeted_block**: Command to run `at` the block hit by the ray (aligned).
-      - {nbt}`string` **on_targeted_entity**: Command to run `as` and `at` the entity hit by the ray.
-      - {nbt}`string` **on_hit_point**: Command to run `at` the exact point where the ray makes contact.  
-      *May run multiple times per block when multiple shapes are intersected.*
-      - {nbt}`int` {nbt}`compound` **piercing**: Number of blocks or entities the ray can pass through (default: `0`).
-        - {nbt}`int` **blocks**: Number of blocks to track independently from entities (default: `0`).
-        - {nbt}`int` **entities**: Number of entities to track independently from blocks (default: `0`).
+  - {nbt}`compound` arguments
+    - {nbt}`compound` **with**: ray input data
+      - {nbt}`string` {nbt}`bool` **blocks**: whether the ray stops on blocks (default: true)
+
+        *Can be a [hitbox provider](hitbox.md#available-providers) (e.g. `function #bs.hitbox:callback/get_block_collision`).*
+      - {nbt}`string` {nbt}`bool` **entities**: whether the ray stops on entities (default: false)
+
+        *Can be a selector tag (typically assigned via `/tag`), which is preferred for performance.*
+      - {nbt}`string` **ignored_blocks**: blocks to ignore (default: `#bs.hitbox:intangible`)
+      - {nbt}`string` **ignored_entities**: entity types to ignore (default: `#bs.hitbox:intangible`)
+
+        *Does not apply to entities with custom hitboxes.*
+      - {nbt}`number` **max_distance**: maximum ray travel distance (default: 16.0)
+      - {nbt}`string` **on_targeted_block**: callback to run `at` the targeted block (aligned)
+      - {nbt}`string` **on_targeted_entity**: callback to run `as` and `at` the targeted entity
+      - {nbt}`string` **on_entry_point**: callback to run `at` the point where the ray enters a shape
+
+        *May run multiple times per block with complex shapes and piercing.*
+      - {nbt}`string` **on_exit_point**: callback to run `at` the point where the ray exits a shape
+
+        *May run multiple times per block with complex shapes and piercing.*
+      - {nbt}`int` {nbt}`compound` **piercing**: blocks or entities the ray can pass through (default: `0`)
+        - {nbt}`int` **blocks**: blocks to track independently from entities (default: `0`)
+        - {nbt}`int` **entities**: entities to track independently from blocks (default: `0`)
   :::
 
 :Lambdas:
-  **Score `$raycast.distance bs.lambda`**: The distance from origin (scaled ×1000).
+  **Score `$raycast.entry_distance bs.lambda`**: distance from origin to the entry point (×1000)
 
-  **Score `$raycast.hit_face bs.lambda`**: The face of the bounding box that was hit: 5 is east, 4 is west, 3 is south, 2 is north, 1 is top, and 0 is bottom.
+  **Score `$raycast.exit_distance bs.lambda`**: distance from origin to the exit point (×1000)
 
-  **Score `$raycast.hit_flag bs.lambda`**: The flag of the intersected bounding box, `-1` for entities.
+  **Score `$raycast.prev_entry_distance bs.lambda`**: entry distance from the previous iteration (×1000)
 
-  **Score `$raycast.piercing bs.lambda`**: The remaining number of blocks or entities the ray can pass through.
+  **Score `$raycast.prev_exit_distance bs.lambda`**: exit distance from the previous iteration (×1000)
 
-  **Score `$raycast.pierce_distance bs.lambda`**: The distance from previous hit point (scaled ×1000).
+  **Score `$raycast.hit_face bs.lambda`**: entry face of the bounding box, `5` is east, `4` is west, `3` is south, `2` is north, `1` is top, and `0` is bottom
 
-  **Storage `bs:lambda raycast`**:
-  :::{treeview}
-  - {nbt}`compound` Ray lambda data (deprecated will be removed in v4.0)
-    - {nbt}`double` **distance**: The distance from the ray's origin to the impact point.
-    - {nbt}`list` **hit_point**: The coordinates of the impact point.
-    - {nbt}`list` **hit_normal**: The normal of the surface the ray hits.
-    - {nbt}`list` **targeted_block**: The coordinates of the block that was hit.
-    - {nbt}`list` **targeted_entity**: The UUID array of the entity that was hit.
-  :::
+  **Score `$raycast.hit_flag bs.lambda`**: flag of the intersected bounding box, `-1` for entities
+
+  **Score `$raycast.piercing bs.lambda`**: remaining number of blocks or entities the ray can pass through
+
+  **Scores `$raycast.entry_point.[x,y,z] bs.lambda`**: entry point relative to the block or entity (×1000)
+
+  **Scores `$raycast.exit_point.[x,y,z] bs.lambda`**: exit point relative to the block or entity (×1000)
+
+  **Scores `$raycast.targeted_block.[x,y,z] bs.lambda`**: coordinates of the targeted block
 
 :Outputs:
-  **Return**: Whether the ray collides with a hitbox or not (1 or 0).
-
-  **Storage `bs:out raycast`**:
-  :::{treeview}
-  - {nbt}`compound` Ray output data (deprecated will be removed in v4.0)
-    - {nbt}`double` **distance**: The distance from the ray's origin to the impact point.
-    - {nbt}`list` **hit_point**: The coordinates of the impact point.
-    - {nbt}`list` **hit_normal**: The normal of the surface the ray hit.
-    - {nbt}`list` **targeted_block**: The coordinates of the block that was hit.
-    - {nbt}`list` **targeted_entity**: The UUID array of the entity that was hit.
-  :::
+  **Return**: whether the ray collides with a hitbox or not (1 or 0)
 ```
 
-```{dropdown} What is a Bounding Box?
+```{dropdown} What is a bounding box?
 :color: info
 :icon: question
 
-A bounding box is a simple rectangular box that surrounds an object—or part of it—to help the game figure out where it is and what it touches. For example, a set of stairs in Minecraft uses two bounding boxes: one for the lower step and one for the upper step.
+A bounding box is a rectangular box that surrounds an object—or part of it—to detect where it is and what it touches. For example, stairs use two bounding boxes: one for the lower step and one for the upper step.
 ```
 
-```{admonition} Callback Order
-:class: info
-Callbacks `on_targeted_block` and `on_targeted_entity` are always run before `on_hit_point` to guarantee block/entity information is available before processing hit-point data.
-```
-
-```{admonition} Custom Hitboxes
+```{admonition} Custom hitboxes
 :class: hint
-Bookshelf supports multiple [hitbox types](hitbox.md#hitbox-types) for precise control. Blocks can use custom [hitbox providers](hitbox.md#available-providers). Entities support three types: `dynamic`, `baked`, and `custom`.
+
+Bookshelf supports multiple [hitbox types](hitbox.md#hitbox-types) for precise control. Blocks can use custom [hitbox providers](hitbox.md#available-providers). Entities support `dynamic`, `baked`, and `custom` types.
 ```
-
-*Example: Cast a ray from your eyes and detect any collisions:*
-
-```mcfunction
-# Once (returns 0 if no collision occurred)
-execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{}}
-
-# If a collision occurred, see the collision point
-data get storage bs:out raycast.hit_point
-```
-
-*Example: Piercing multi-layer block and fluid handling:*
-
-```mcfunction
-execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{blocks:"function #bs.hitbox:callback/get_block_shape_with_fluid",ignored_blocks:"#air",piercing:1,on_hit_point:"particle minecraft:flame ~ ~ ~ 0 0 0 0 1 force"}}
-```
-
-1. Callback `on_targeted_block` runs once with a `$raycast.hit_flag bs.lambda` score of `1` (solid), `2` (liquid), or `3` (both). Each unique flag is a power of 2 The `hit_flag` is the bitwise OR of all intersected shape flags ("both" being solid and liquid, `1` OR `2` = `3`).
-2. Callback `on_hit_point` may run multiple times with a `$raycast.hit_flag bs.lambda` score of `1` (solid) or `2` (liquid) depending on the hit shape.
-3. Piercing decremented only once per block.
 
 > **Credits**: Aksiome
+
+---
+
+## 🎓 How to use
+
+### Basic raycast
+
+At its simplest, a raycast checks if something is in front of you and returns `1` (hit) or `0` (miss):
+
+```mcfunction
+# Check if there's a block within 10 blocks in front of you
+execute anchored eyes positioned ^ ^ ^ store result score #hit bs.data run function #bs.raycast:run {with:{max_distance:10}}
+```
+
+By default, rays detect blocks but not entities. The return value tells you if a collision occurred.
+
+---
+
+### Using callbacks
+
+Callbacks let you run commands when the ray hits something. There are four callback types:
+
+| Callback | Runs at | Use case |
+|----------|---------|----------|
+| `on_targeted_block` | Aligned block position | Place/break blocks, check block type |
+| `on_targeted_entity` | Entity position (as & at) | Damage, tag, or interact with entity |
+| `on_entry_point` | Exact point where ray enters | Spawn particles, precise hit effects |
+| `on_exit_point` | Exact point where ray exits | Through-hit effects, exit wounds |
+
+*Example: spawn a particle exactly where your ray hits a block*
+
+```mcfunction
+execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{on_entry_point:"particle minecraft:flame ~ ~ ~"}}
+```
+
+---
+
+### Configuring detection
+
+By default, rays detect blocks but not entities. You can change this with the `blocks` and `entities` parameters.
+
+**Blocks** accepts `true` (default), `false`, or a [hitbox provider](hitbox.md#available-providers).
+
+```mcfunction
+# Ignore blocks entirely
+execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{blocks:false,entities:true,on_targeted_entity:"say Hit!"}}
+```
+
+**Entities** accepts `true`, `false` (default), or an entity tag to filter which entities can be hit.
+
+```mcfunction
+# Detect all entities
+execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{entities:true,on_targeted_entity:"say I was hit!"}}
+
+# Detect only entities with a specific tag (better performance)
+execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{entities:"my_tag",on_targeted_entity:"say I was hit!"}}
+```
+
+```{tip}
+Using a tag selector (`entities:"my_tag"`) is more performant than `entities:true` because it narrows down which entities to check.
+```
+
+---
+
+### Filtering targets
+
+Use `ignored_blocks` and `ignored_entities` to specify which targets the ray should skip:
+
+```mcfunction
+# Ignore glass blocks
+execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{ignored_blocks:"#c:glass_blocks",on_targeted_block:"setblock ~ ~ ~ stone"}}
+
+# Ignore specific entity types
+execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{entities:true,ignored_entities:"#bs.hitbox:intangible",on_targeted_entity:"say Hit!"}}
+```
+
+Defaults:
+- `ignored_blocks`: `#bs.hitbox:intangible` (air and other non-solid blocks)
+- `ignored_entities`: `#bs.hitbox:intangible` (markers, area effect clouds, etc.)
+
+---
+
+### Piercing
+
+By default, rays stop at the first collision. Use `piercing` to let rays pass through multiple targets:
+
+```mcfunction
+# Pass through up to 3 blocks before stopping
+execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{piercing:3,on_entry_point:"particle minecraft:flame ~ ~ ~"}}
+```
+
+You can also track blocks and entities separately:
+
+```mcfunction
+# Pass through 2 blocks but stop at first entity
+execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{entities:true,piercing:{blocks:2,entities:0},on_entry_point:"particle minecraft:flame ~ ~ ~"}}
+```
+
+---
+
+### Lambda scores
+
+Lambda scores provide detailed information about the collision, available only inside callbacks. See the function reference above for the full list.
+
+Common use cases:
+- `$raycast.entry_distance` - how far the hit is from the ray origin
+- `$raycast.entry_point.[x,y,z]` - exact hit position relative to the target
+- `$raycast.hit_face` - which face was hit (`0`=bottom, `1`=top, `2`=north, `3`=south, `4`=west, `5`=east)
+- `$raycast.hit_flag` - which hitbox shape was hit (provider-dependent, `-1` for entities)
+
+```{important}
+Position scores (`entry_point`, `exit_point`) have different reference points:
+- **Blocks**: relative to the aligned block position
+- **Entities**: relative to the entity's position
+```
+
+---
+
+### Hitbox providers
+
+Hitbox providers control which block shapes the ray detects. The default only detects solid collision shapes, but you can use other providers to detect additional shapes like fluids.
+
+```mcfunction
+# Detect both solid blocks and fluids
+execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{blocks:"function #bs.hitbox:callback/get_block_shape_with_fluid",ignored_blocks:"#air"}}
+```
+
+Providers can define multiple shapes with different flags. When this happens:
+- `on_targeted_block` runs once per block, with `$raycast.hit_flag` combining all intersected shapes
+- `on_entry_point` and `on_exit_point` run once per shape, with `$raycast.hit_flag` set to that shape's flag
+
+For example, the fluid provider uses `1` for solid and `2` for fluid. A waterlogged block could trigger entry/exit callbacks twice (with flag `1` and `2`), and `on_targeted_block` once with flag `3`.
 
 ---
 
