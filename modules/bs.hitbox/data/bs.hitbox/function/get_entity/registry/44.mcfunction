@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # rabbit group
-execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.4,height:0.5}
-data modify storage bs:out hitbox set value {width:0.2,height:0.25}
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.24,height:0.4}
+data modify storage bs:out hitbox set value {width:0.49,height:0.6}

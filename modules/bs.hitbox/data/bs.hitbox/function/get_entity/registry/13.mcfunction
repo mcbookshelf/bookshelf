@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # chicken group
-execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.4,height:0.7}
-data modify storage bs:out hitbox set value {width:0.2,height:0.35}
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.3,height:0.4}
+data modify storage bs:out hitbox set value {width:0.4,height:0.7}

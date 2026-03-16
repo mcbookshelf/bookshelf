@@ -13,12 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:data",nbt:"dump.stack[-1].var"}}]}]}]}
-data modify storage bs:data dump.stack[-1].key set from entity B5-0-0-0-3 item.components.minecraft:custom_name
-data modify storage bs:data dump.char set string storage bs:data dump.stack[-1].key 1 2
-data modify storage bs:data dump.parse set string storage bs:data dump.stack[-1].key 2
-
-execute store result storage bs:data dump.cursor int 1 run scoreboard players set #dump.cursor bs.data 2
-execute if data storage bs:data dump{char:'"'} run return run function bs.dump:key/parse/quoted/double
-execute if data storage bs:data dump{char:"'"} run return run function bs.dump:key/parse/quoted/single
-function bs.dump:key/parse/unquoted
+loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:dump",nbt:"stack[-1].var"}}]}]}]}
+data modify storage bs:dump stack[-1].qkey set value ""
+data modify storage bs:dump stack[-1].key set from entity B5-0-0-0-3 item.components.minecraft:custom_name.extra
+execute unless data storage bs:dump stack[-1].key[2].extra run return run data modify storage bs:dump stack[-1].key set from storage bs:dump stack[-1].key[2].text
+data modify storage bs:dump stack[-1].qkey set from storage bs:dump stack[-1].key[2].text
+data modify storage bs:dump stack[-1].key set from storage bs:dump stack[-1].key[2].extra[0].text

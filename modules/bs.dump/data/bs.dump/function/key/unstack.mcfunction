@@ -12,13 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
-data modify storage bs:data packtest set value {foo:"bar"}
-function #bs.dump:var { var: { storage: "storage bs:data packtest", entity:"entity @s {} 0", score: ["3 bs.const", "-_- bs.const"] }}
-
-assert chat '.*?\\{[\\s\\S]*storage: \\{[\\s\\S]*foo: \\"bar\\"[\\s\\S]*\\}[\\s\\S]*\\}'
-assert chat '.*?\\{[\\s\\S]*entity: \\{ [0-9]+ entries .*? \\}[\\s\\S]*\\}'
-assert chat '.*?\\{[\\s\\S]*score: \\[3, undefined\\][\\s\\S]*\\}'
-
-data remove storage bs:data packtest
+data remove storage bs:dump stack[-1]
+$data remove storage bs:dump stack[-1].var.$(qkey)$(key)$(qkey)
