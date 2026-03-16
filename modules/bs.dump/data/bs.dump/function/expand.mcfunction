@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:data dump.stack set value [{var:$(var),indent:"\u2000",expand:1}]
-data modify storage bs:data dump.out set value [[{text:"",color:"#cccccc"}]]
+$data modify storage bs:dump stack set value [{var:$(var),indent:"\u2000",expand:1}]
+data modify storage bs:dump output set value [[{text:"",color:"#cccccc"}]]
 function bs.dump:format/any
-tellraw @s {type:"nbt",storage:"bs:data",nbt:"dump.out[]",separator:"",interpret:true}
+tellraw @s {type:"nbt",storage:"bs:dump",nbt:"output",interpret:true}

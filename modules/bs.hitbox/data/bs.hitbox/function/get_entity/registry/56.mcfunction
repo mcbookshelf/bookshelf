@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # squid group
-execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.4,height:0.4}
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.5,height:0.63}
 data modify storage bs:out hitbox set value {width:0.8,height:0.8}

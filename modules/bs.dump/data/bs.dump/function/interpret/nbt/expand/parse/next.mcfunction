@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data dump.char set string storage bs:data dump.parse -1
-data modify storage bs:data dump.parse set string storage bs:data dump.parse 0 -1
-execute store result storage bs:data dump.cursor int 1 run scoreboard players remove #dump.cursor bs.data 1
-execute if data storage bs:data dump{char:" "} run return run function bs.dump:interpret/nbt/expand/parse/terminate with storage bs:data dump
+data modify storage bs:dump ctx.char set string storage bs:dump ctx.parse -1
+data modify storage bs:dump ctx.parse set string storage bs:dump ctx.parse 0 -1
+execute store result storage bs:dump ctx.cursor int 1 run scoreboard players remove #dump.cursor bs.data 1
+execute if data storage bs:dump ctx{char:" "} run return run function bs.dump:interpret/nbt/expand/parse/terminate with storage bs:dump ctx
 function bs.dump:interpret/nbt/expand/parse/next
