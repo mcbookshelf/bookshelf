@@ -42,7 +42,7 @@ Bookshelf has a long history. It started as LGDir and was later renamed Gunivers
 ## 🛠️ Tools
 
 - {bdg-muted}`Program` [Beet](https://mcbeet.dev/): a Minecraft pack development kit  
-- {bdg-muted}`Program` [MCCPF](https://www.mcfpp.top/en/): object-oriented language compiled into datapacks  
+- {bdg-muted}`Program` [MCFPP](https://www.mcfpp.top/en/): object-oriented language compiled into datapacks  
 - {bdg-warning}`Plugin` [Animated Java](https://animated-java.dev/): blockbench plugin for custom animations and models  
 - {bdg-warning}`Plugin` [NBT Viewer](https://marketplace.visualstudio.com/items?itemName=Misodee.vscode-nbt): VSCode extension to view NBT and structures in 3D  
 - {bdg-warning}`Plugin` [Spyglass](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server): VSCode extension with advanced datapack support  
