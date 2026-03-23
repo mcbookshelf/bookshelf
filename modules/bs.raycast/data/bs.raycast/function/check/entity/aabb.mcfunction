@@ -54,3 +54,5 @@ execute if score #x bs.ctx matches 0.. \
   if score #x bs.ctx <= #i bs.ctx \
   if score #x bs.ctx <= #raycast.dm bs.data \
   run return run function bs.raycast:record/entity/add
+
+scoreboard players reset @s bs.raycast.id

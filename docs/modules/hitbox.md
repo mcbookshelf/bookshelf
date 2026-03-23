@@ -451,7 +451,7 @@ Determine if the block has a purely visual random offset.
 
 **`#bs.hitbox:intangible`**
 
-Indicate whether the block is intangible, meaning it is typically invisible and lacks interaction collision.
+Blocks that cannot be physically interacted with, such as air variants, light blocks, and structure void.
 
 ::::
 ::::{tab-item} Is Full Cube
@@ -474,7 +474,7 @@ Check if the block is a full cube of 16×16×16.
 
 **`#bs.hitbox:intangible`**
 
-Determines if the entity's hitbox is intangible, meaning it won't interact physically with other blocks or entities.
+Entities that don't act as physical obstacles, such as projectiles, markers, and displays.
 
 :::
 :::{tab-item} Is Shaped

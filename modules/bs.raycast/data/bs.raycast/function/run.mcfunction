@@ -21,7 +21,8 @@ scoreboard players add #raycast.pb bs.data 1
 scoreboard players add #raycast.pe bs.data 1
 
 execute store result score #raycast.tb bs.data store result score #raycast.te bs.data run scoreboard players set #raycast.tm bs.data 2147483647
-execute store result score $raycast.entry_distance bs.lambda \
+execute store result score #count bs.raycast.id \
+  store result score $raycast.entry_distance bs.lambda \
   store result score $raycast.exit_distance bs.lambda \
   store result score $raycast.prev_entry_distance bs.lambda \
   store result score $raycast.prev_exit_distance bs.lambda \
@@ -32,6 +33,6 @@ execute unless data storage bs:data raycast{entities:0b} run scoreboard players 
 execute unless data storage bs:data raycast{entities:0b} if entity @e[tag=bs.hitbox.custom,distance=..255,limit=1] run scoreboard players add #i bs.ctx 1
 execute store result storage bs:ctx y int 1 run scoreboard players remove #i bs.ctx 1
 
+execute unless data storage bs:data raycast{entities:0b} run tag @e[tag=bs.raycast.checked,distance=..255] remove bs.raycast.checked
 execute positioned ^ ^ ^ summon minecraft:marker run function bs.raycast:recurse/init with storage bs:ctx
-execute unless data storage bs:data raycast{entities:0b} run tag @e[tag=bs.raycast.checked,distance=..512] remove bs.raycast.checked
 return run execute if score #raycast.tm bs.data matches ..2147483646

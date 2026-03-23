@@ -73,9 +73,9 @@ Cast a ray from the execution position and check if it hits something.
 
   **Score `$raycast.exit_distance bs.lambda`**: distance from origin to the exit point (×1000)
 
-  **Score `$raycast.prev_entry_distance bs.lambda`**: entry distance from the previous iteration (×1000)
+  **Score `$raycast.prev_entry_distance bs.lambda`**: entry distance from the previous hit (×1000)
 
-  **Score `$raycast.prev_exit_distance bs.lambda`**: exit distance from the previous iteration (×1000)
+  **Score `$raycast.prev_exit_distance bs.lambda`**: exit distance from the previous hit (×1000)
 
   **Score `$raycast.hit_face bs.lambda`**: entry face of the bounding box, `5` is east, `4` is west, `3` is south, `2` is north, `1` is top, and `0` is bottom
 
@@ -184,8 +184,8 @@ execute anchored eyes positioned ^ ^ ^ run function #bs.raycast:run {with:{entit
 ```
 
 Defaults:
-- `ignored_blocks`: `#bs.hitbox:intangible` (air and other non-solid blocks)
-- `ignored_entities`: `#bs.hitbox:intangible` (markers, area effect clouds, etc.)
+- `ignored_blocks`: `#bs.hitbox:intangible` (blocks that cannot be physically interacted with)
+- `ignored_entities`: `#bs.hitbox:intangible` (entities that don't act as physical obstacles)
 
 ---
 
