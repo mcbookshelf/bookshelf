@@ -1,5 +1,5 @@
 <h1>
-  <img alt="Bookshelf" src="docs/_static/logo-bookshelf.png" height="160px" align="right">
+  <img alt="Bookshelf" src="docs/_static/logo-bookshelf.png" height="160px" align="left">
   Bookshelf Library
 </h1>
 
