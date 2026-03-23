@@ -31,3 +31,4 @@ execute if score #y bs.ctx = #x bs.ctx run data modify storage bs:ctx _.e.norm s
 
 data modify storage bs:data raycast.re append from storage bs:ctx _.e
 data modify storage bs:data raycast.re append from storage bs:ctx _.r[]
+execute store result score #raycast.id bs.data run data get storage bs:data raycast.re[-1].id

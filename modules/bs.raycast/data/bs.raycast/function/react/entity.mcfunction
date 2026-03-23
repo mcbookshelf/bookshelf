@@ -58,7 +58,7 @@ scoreboard players operation $raycast.exit_point.x bs.lambda /= 10000 bs.const
 scoreboard players operation $raycast.exit_point.y bs.lambda /= 10000 bs.const
 scoreboard players operation $raycast.exit_point.z bs.lambda /= 10000 bs.const
 
-execute if data storage bs:data raycast.on_targeted_entity run function bs.raycast:utils/on_targeted_entity with storage bs:data raycast
+execute if data storage bs:data raycast.on_targeted_entity at @s run function bs.raycast:utils/on_targeted_entity with storage bs:data raycast
 execute if data storage bs:data raycast.on_entry_point run function bs.raycast:utils/at_entry_point with storage bs:data raycast
 execute if data storage bs:data raycast.on_exit_point run function bs.raycast:utils/at_exit_point with storage bs:data raycast
 
@@ -68,3 +68,4 @@ execute unless data storage bs:data raycast.piercing{} run scoreboard players op
 data remove storage bs:data raycast.re[-1]
 execute unless data storage bs:data raycast.re[-1] run return run scoreboard players set #raycast.te bs.data 2147483647
 execute store result score #raycast.te bs.data run data get storage bs:data raycast.re[-1].tmin
+execute store result score #raycast.id bs.data run data get storage bs:data raycast.re[-1].id

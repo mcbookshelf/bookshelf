@@ -4,14 +4,20 @@
   "scores": {
     "bs.raycast.id": {
       "min": {
-        "type": "minecraft:storage",
-        "storage": "bs:data",
-        "path": "raycast.re[-1].id"
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "#raycast.id"
+        },
+        "score": "bs.data"
       },
       "max": {
-        "type": "minecraft:storage",
-        "storage": "bs:data",
-        "path": "raycast.re[-1].id"
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "#raycast.id"
+        },
+        "score": "bs.data"
       }
     }
   }

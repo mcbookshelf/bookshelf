@@ -14,6 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 tag @s add bs.raycast.checked
+
 execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run return run function bs.raycast:check/entity/custom
 
 # get hitbox dimensions (width, depth, height)

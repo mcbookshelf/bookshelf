@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute if score #raycast.tm bs.data = #raycast.tb bs.data run function bs.raycast:react/block
-execute if score #raycast.tm bs.data = #raycast.te bs.data positioned as @s as @n[predicate=bs.raycast:internal/id,distance=..24,sort=arbitrary] run function bs.raycast:react/entity
+execute if score #raycast.tm bs.data = #raycast.te bs.data positioned as @s as @e[tag=bs.raycast.checked,predicate=bs.raycast:internal/id,distance=..255,limit=1] run function bs.raycast:react/entity
 
 # stop the recursion if piercing is 0
 execute if score $raycast.piercing bs.lambda matches 0 run return run scoreboard players set #raycast.dm bs.data -2147483648
@@ -22,7 +22,7 @@ execute if score $raycast.piercing bs.lambda matches 0 run return run scoreboard
 execute store result score $raycast.prev_entry_distance bs.lambda run data get storage bs:data raycast.tmin
 execute store result score $raycast.prev_exit_distance bs.lambda run data get storage bs:data raycast.tmax
 
-scoreboard players set #raycast.tm bs.data 2147483646
+scoreboard players set #raycast.tm bs.data 2147483647
 scoreboard players operation #raycast.tm bs.data < #raycast.tb bs.data
 scoreboard players operation #raycast.tm bs.data < #raycast.te bs.data
 
