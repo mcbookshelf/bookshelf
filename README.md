@@ -23,7 +23,7 @@
 
 <br/>
 
-# 🌟 Featured modules
+## 🌟 Featured modules
 
 <div align="center">
   <a href="https://docs.mcbookshelf.dev/en/latest/modules/block/">
@@ -70,17 +70,17 @@
 </div>
 <p align="center">And much more!</p>
 
-# 🔥 Motivation
+## 🔥 Motivation
 
 Libraries save time and make systems easier to create. But many Minecraft mapmakers aren't used to them. Bookshelf exists to change that.
 Bookshelf focuses on ease of use. Each module is simple, works for any skill level, and keeps performance in mind.
 
-> "I have seen further than others because I have stood on the shoulders of giants."
+> <i>"I have seen further than others because I have stood on the shoulders of giants."</i>
 >
-> -- Isaac Newton
+> — Isaac Newton
 
 
-# 🤝 Contribution
+## 🤝 Contribution
 
 Have questions or want to talk about the project? Join the [Discord](https://discord.gg/MkXytNjmBt) server.
 
