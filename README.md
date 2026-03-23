@@ -23,7 +23,7 @@
 
 <br/>
 
-## 🌟 Featured modules
+<h2 align="center">🌟 Featured modules</h2>
 
 <div align="center">
   <a href="https://docs.mcbookshelf.dev/en/latest/modules/block/">
