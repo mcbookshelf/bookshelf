@@ -430,21 +430,21 @@ You can find below below all tags available in this module.
 
 **`#bs.hitbox:can_pass_through`**
 
-Determine if the block has a collision box.
+Blocks without a collision box.
 
 ::::
 :::: {tab-item} Has Shape Offset
 
 **`#bs.hitbox:has_shape_offset`**
 
-Determine if the block has a physical random offset.
+Blocks with a physical random offset.
 
 ::::
 :::: {tab-item} Has Visual Offset
 
 **`#bs.hitbox:has_visual_offset`**
 
-Determine if the block has a purely visual random offset.
+Blocks with a purely visual random offset.
 
 ::::
 ::::{tab-item} Intangible
@@ -458,7 +458,7 @@ Blocks that cannot be physically interacted with, such as air variants, light bl
 
 **`#bs.hitbox:is_full_cube`**
 
-Check if the block is a full cube of 16×16×16.
+Blocks that are full 16×16×16 cubes.
 
 ::::
 :::::
@@ -481,14 +481,14 @@ Entities that don't act as physical obstacles, such as projectiles, markers, and
 
 **`#bs.hitbox:is_shaped`**
 
-Identifies if the entity has a non-standard hitbox shape, differing from the typical cubic or rectangular hitbox.
+Entities with different width and depth, such as paintings and item frames.
 
 :::
 :::{tab-item} Is Sized
 
 **`#bs.hitbox:is_sized`**
 
-Identifies if the entity has a rectangular hitbox size.
+Entities with equal width and depth.
 
 :::
 ::::
