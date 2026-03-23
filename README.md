@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Bookshelf" src="docs/_static/logo-bookshelf.png" height="60px" align="center">
+  <img alt="Bookshelf" src="docs/_static/logo-bookshelf.png" height="80px" align="center">
 
   # Bookshelf Library
 
