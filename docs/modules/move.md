@@ -82,7 +82,7 @@ Teleport an entity by its velocity scores while handling collisions. Lambda scor
 
 Always prefer the canonical version. Constant conversion between bases can lead to loss of accuracy, sometimes causing unpredictable behavior.
 
-If you need to "shoot" an entity in a direction, you can still set velocity as a local vector and run `#bs.move:canonical_to_local` before using `#bs.move:apply_vel`.
+If you need to "shoot" an entity in a direction, you can still set velocity as a local vector and run `#bs.move:local_to_canonical` before using `#bs.move:apply_vel`.
 ```
 
 Teleport an entity by its velocity scores, using the local reference frame, while handling collisions. Lambda scores are only available during callback execution (`on_*`).
@@ -130,7 +130,7 @@ A bounding box is a simple rectangular box that surrounds an object—or part of
 
 ```{admonition} Custom Hitboxes
 :class: hint
-Bookshelf supports multiple [hitbox types](hitbox.md#types) for precise control. Blocks can use custom [hitbox providers](hitbox.md#available-providers). Entities support three types: `dynamic`, `baked`, and `custom`.
+Bookshelf supports multiple [hitbox types](hitbox.md#hitbox-types) for precise control. Blocks can use custom [hitbox providers](hitbox.md#available-providers). Entities support three types: `dynamic`, `baked`, and `custom`.
 ```
 
 *Example: Move a cube (block_display) by its velocity scores (uses an interaction as the hitbox):*

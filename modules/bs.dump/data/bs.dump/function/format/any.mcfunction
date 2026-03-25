@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,11 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data dump.value set from storage bs:data dump.stack[-1].var
-execute if data storage bs:data dump.value[] run return run function bs.dump:format/array/array
-execute if data storage bs:data dump{value:[]} run return run function bs.dump:format/array/empty
-execute if data storage bs:data dump.value{} run return run function bs.dump:format/compound/compound
+data modify storage bs:dump ctx.value set from storage bs:dump stack[-1].var
+execute if data storage bs:dump ctx.value[] run return run function bs.dump:format/array/array
+execute if data storage bs:dump ctx{value:[]} run return run function bs.dump:format/array/empty
+execute if data storage bs:dump ctx.value{} run return run function bs.dump:format/compound/compound
 
-execute store success score #dump.success bs.data run data modify storage bs:data dump.value set string storage bs:data dump.stack[-1].var
+execute store success score #dump.success bs.data run data modify storage bs:dump ctx.value set string storage bs:dump stack[-1].var
 execute if score #dump.success bs.data matches 1 run return run function bs.dump:format/number with storage bs:const dump
-function bs.dump:format/string with storage bs:const dump
+
+loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:dump",nbt:"ctx.value"}}]}]}]}
+data modify storage bs:dump ctx.value set from entity B5-0-0-0-3 item.components.minecraft:custom_name.extra
+data modify storage bs:dump ctx.value[1].color set from storage bs:const dump.string
+data modify storage bs:dump output append from storage bs:dump ctx.value

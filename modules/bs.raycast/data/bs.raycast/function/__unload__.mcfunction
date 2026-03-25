@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -20,8 +20,7 @@ scoreboard objectives remove bs.ctx
 scoreboard objectives remove bs.const
 scoreboard objectives remove bs.lambda
 scoreboard objectives remove bs.data
-scoreboard objectives remove bs.toi
 
-data remove storage bs:lambda raycast
+scoreboard objectives remove bs.raycast.id
+
 data remove storage bs:data raycast
-data remove storage bs:out raycast

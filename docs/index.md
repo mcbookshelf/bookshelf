@@ -1,58 +1,48 @@
 ---
 hide-sidebar-secondary: true
-sd_hide_title: true
+content-width: 58rem
 ---
 
-<div align=center>
-
-# Bookshelf
-
-```{image} /_imgs/banner-light.png
-:class: only-light
-:width: 600px
+```{image} _static/logo-bookshelf.png
+:height: 8.5rem
+:align: right
 ```
 
-```{image} /_imgs/banner-dark.png
-:class: only-dark
-:width: 600px
-```
+# Bookshelf Library
 
-</div>
+<p style="max-width: 38rem">
+Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.
+</p>
 
-## 🕵️ What is Bookshelf?
-
-Bookshelf (formerly known as Gunivers Libs) is a modular library datapack designed to simplify complex systems in Minecraft maps. It is ideal for mapmakers seeking easy-to-implement tools.
-
-
-::::{grid} 2
+::::{grid}
+:gutter: 3
 
 :::{grid-item}
+:columns: auto
 
-```{button-link} quickstart.html
+```{button-ref} quickstart
 :color: primary
-:align: right
+:class: sd-rounded-pill
 :shadow:
 
-🚀 Quickstart!
+🚀 Get Started
 ```
-
 :::
 :::{grid-item}
+:columns: auto
 
-```{button-link} https://www.youtube.com/watch?v=E2nKYEvjETk
-:color: primary
-:align: left
+```{button-link} https://github.com/mcbookshelf/bookshelf
+:color: secondary
 :outline:
 
-🎬 Watch trailer
+{octicon}`mark-github` View on GitHub
 ```
-
 :::
 ::::
 
 ---
 
-### 🌟 Featured Modules
+### 🌟 Featured modules
 
 ```{include} _templates/featured-modules.md
 ```
@@ -61,11 +51,8 @@ Bookshelf (formerly known as Gunivers Libs) is a modular library datapack design
 
 ## 🔥 Motivation
 
-As developers, we understand the value of libraries: they save time, streamline workflows, and eliminate the need to reinvent the wheel. However, we have noticed that many mapmakers in the Minecraft community are less familiar with this concept.
-
-That is why we started this project: to provide a variety of reusable tools and encourage mapmakers to embrace the use of libraries.
-
-While we strive to keep our modules as optimized as possible, our top priority is accessibility. We focus on creating features that are easy to use and simple to install, ensuring they are practical for everyone.
+Libraries save time and make systems easier to create. But many Minecraft mapmakers aren't used to them. Bookshelf exists to change that.
+Bookshelf focuses on ease of use. Each module is simple, works for any skill level, and keeps performance in mind.
 
 ```{pull-quote}
 "I have seen further than others because I have stood on the shoulders of giants."
@@ -75,9 +62,9 @@ While we strive to keep our modules as optimized as possible, our top priority i
 
 ## 🤝 Contribution
 
-If you have any questions about the project or want to discuss something, join [our Discord](https://discord.gg/MkXytNjmBt) server.
+Have questions or want to talk about the project? Join the [Discord](https://discord.gg/MkXytNjmBt) server.
 
-If you want to contribute, please refer to the [contribution docs](https://docs.mcbookshelf.dev/en/latest/contribute/index.html) for more information.
+Want to help? See the [contribution](https://docs.mcbookshelf.dev/en/latest/contribute/index.html) section.
 
 ```{toctree}
 :hidden:

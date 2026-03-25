@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -46,12 +46,8 @@ tag @s remove bs.move.flag.1
 tag @s remove bs.move.flag.2
 tag @s remove bs.move.flag.4
 tag @s remove bs.move.flag.8
-# @deprecated hitbox_shape (update following lines in in 4.0.0)
 function bs.move:collision/utils/setup_tags
-execute if data storage bs:data move{blocks:1b} run data modify storage bs:data move.blocks set from storage bs:data move.hitbox_shape
-execute if data storage bs:data move{blocks:1b} run data modify storage bs:data move.blocks set value "collision"
-execute if data storage bs:data move{blocks:"collision"} run data modify storage bs:data move.blocks set value "function #bs.hitbox:callback/get_block_collision"
-execute if data storage bs:data move{blocks:"interaction"} run data modify storage bs:data move.blocks set value "function #bs.hitbox:callback/get_block_shape"
+execute if data storage bs:data move{blocks:1b} run data modify storage bs:data move.blocks set value "function #bs.hitbox:callback/get_block_collision"
 execute if data storage bs:data move{entities:1b} run data modify storage bs:data move.entities set value "!bs.move.omit"
 function bs.move:collision/check/init with storage bs:data move
 function bs.move:collision/utils/reset_tags

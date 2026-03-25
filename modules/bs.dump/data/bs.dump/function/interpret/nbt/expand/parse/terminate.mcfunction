@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:data dump.value set string storage bs:data dump.stack[-1].var $(cursor)
-function bs.dump:interpret/nbt/expand/cast with storage bs:data dump
-data modify storage bs:data dump.stack[-1].var set from storage bs:data dump.parse
+$data modify storage bs:dump ctx.value set string storage bs:dump stack[-1].var $(cursor)
+function bs.dump:interpret/nbt/expand/cast with storage bs:dump ctx
+data modify storage bs:dump stack[-1].var set from storage bs:dump ctx.parse

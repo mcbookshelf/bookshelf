@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -14,6 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 scoreboard players set #dump.cursor bs.data 0
-data modify storage bs:data dump.char set string storage bs:data dump.stack[-1].var -1
-data modify storage bs:data dump.parse set string storage bs:data dump.stack[-1].var 0 -1
+data modify storage bs:dump ctx.char set string storage bs:dump stack[-1].var -1
+data modify storage bs:dump ctx.parse set string storage bs:dump stack[-1].var 0 -1
 function bs.dump:interpret/nbt/expand/parse/next

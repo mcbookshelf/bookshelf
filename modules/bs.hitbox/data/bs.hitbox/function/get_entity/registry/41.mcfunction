@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # pig group
-execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.9,height:0.9}
-data modify storage bs:out hitbox set value {width:0.45,height:0.45}
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.45,height:0.45}
+data modify storage bs:out hitbox set value {width:0.9,height:0.9}

@@ -161,8 +161,8 @@
       "id": "bs.bitwise",
       "name": "Bitwise",
       "slug": "bookshelf-bitwise",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.bitwise/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.bitwise/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.bitwise/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.bitwise/README.md",
       "description": "Bookshelf bitwise operations module, offering tools for precise binary data manipulation in datapacks.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html",
       "kind": "data_pack",
@@ -294,8 +294,8 @@
       "id": "bs.block",
       "name": "Block",
       "slug": "bookshelf-block",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.block/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.block/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.block/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.block/README.md",
       "description": "Bookshelf block management module, enabling id and state transformations.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html",
       "kind": "data_pack",
@@ -465,25 +465,6 @@
           "updated": {
             "date": "2024/09/11",
             "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.block:fill_random",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#fill",
-          "authors": [
-            "Aksiome"
-          ],
-          "contributors": [
-            "SBtree-bit"
-          ],
-          "created": {
-            "date": "2024/06/16",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2025/07/09",
-            "minecraft_version": "1.21.5"
           }
         },
         {
@@ -833,23 +814,6 @@
           }
         },
         {
-          "id": "#bs.block:play_block_sound",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
-          "authors": [
-            "Aksiome",
-            "theogiraudet"
-          ],
-          "created": {
-            "date": "2025/01/25",
-            "minecraft_version": "1.21.4"
-          },
-          "updated": {
-            "date": "2025/01/25",
-            "minecraft_version": "1.21.4"
-          }
-        },
-        {
           "id": "#bs.block:play_break_sound",
           "kind": "function_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
@@ -1089,8 +1053,8 @@
       "id": "bs.color",
       "name": "Color",
       "slug": "bookshelf-color",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.color/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.color/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.color/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.color/README.md",
       "description": "Bookshelf color module, facilitating seamless conversion between various color formats.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html",
       "kind": "data_pack",
@@ -1206,8 +1170,8 @@
       "id": "bs.dump",
       "name": "Dump",
       "slug": "bookshelf-dump",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.dump/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.dump/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.dump/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.dump/README.md",
       "description": "Bookshelf debugging tool that outputs variable contents directly to chat.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/dump.html",
       "kind": "data_pack",
@@ -1227,8 +1191,8 @@
             "minecraft_version": "1.20.4"
           },
           "updated": {
-            "date": "2025/12/09",
-            "minecraft_version": "1.21.11"
+            "date": "2026/03/15",
+            "minecraft_version": "26.1"
           }
         }
       ]
@@ -1237,8 +1201,8 @@
       "id": "bs.environment",
       "name": "Environment",
       "slug": "bookshelf-environment",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.environment/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.environment/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.environment/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.environment/README.md",
       "description": "Bookshelf module providing comprehensive access to weather and biome properties.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html",
       "kind": "data_pack",
@@ -1306,8 +1270,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1322,8 +1286,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1338,8 +1302,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1354,8 +1318,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1370,8 +1334,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1386,7 +1350,7 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
+            "date": "2026/02/27",
             "minecraft_version": "1.21.7"
           }
         },
@@ -1418,8 +1382,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1434,7 +1398,7 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
+            "date": "2026/02/27",
             "minecraft_version": "1.21.7"
           }
         },
@@ -1466,8 +1430,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1482,8 +1446,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1498,8 +1462,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1514,8 +1478,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1546,8 +1510,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/11",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1562,8 +1526,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/11",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1594,8 +1558,8 @@
             "minecraft_version": "1.20.5"
           },
           "updated": {
-            "date": "2025/05/13",
-            "minecraft_version": "1.20.5"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1643,8 +1607,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/11/29",
-            "minecraft_version": "1.21.10"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1659,8 +1623,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/11/29",
-            "minecraft_version": "1.21.10"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         }
       ]
@@ -1669,64 +1633,49 @@
       "id": "bs.generation",
       "name": "Generation",
       "slug": "bookshelf-generation",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.generation/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.generation/README.md",
-      "description": "Bookshelf world manipulation module, useful for iterating over blocks and creating structures or landscapes.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.generation/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.generation/README.md",
+      "description": "Bookshelf world manipulation module, useful for iterating over blocks and creating shapes.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html",
       "kind": "data_pack",
       "tags": [
         "runtime"
       ],
-      "dependencies": [
+      "weak_dependencies": [
+        "bs.block",
         "bs.random"
       ],
       "features": [
         {
-          "id": "#bs.generation:gen_fractal_shape_2d",
+          "id": "#bs.generation:on_cuboid",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#shape-2d",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#on-cuboid",
           "authors": [
             "Aksiome"
           ],
           "created": {
-            "date": "2024/09/09",
-            "minecraft_version": "1.21"
+            "date": "2026/02/15",
+            "minecraft_version": "26.1"
           },
           "updated": {
-            "date": "2024/09/09",
-            "minecraft_version": "1.21"
+            "date": "2026/02/15",
+            "minecraft_version": "26.1"
           }
         },
         {
-          "id": "#bs.generation:gen_shape_2d",
+          "id": "#bs.generation:on_rectangle",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#shape-2d",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#on-rectangle",
           "authors": [
             "Aksiome"
           ],
           "created": {
-            "date": "2024/09/09",
-            "minecraft_version": "1.21"
+            "date": "2026/02/15",
+            "minecraft_version": "26.1"
           },
           "updated": {
-            "date": "2024/09/09",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.generation:gen_simplex_shape_2d",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#shape-2d",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/09",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/09/09",
-            "minecraft_version": "1.21"
+            "date": "2026/02/15",
+            "minecraft_version": "26.1"
           }
         }
       ]
@@ -1735,8 +1684,8 @@
       "id": "bs.health",
       "name": "Health",
       "slug": "bookshelf-health",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.health/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.health/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.health/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.health/README.md",
       "description": "Bookshelf health module for efficiently healing and damaging entities.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html",
       "kind": "data_pack",
@@ -1866,8 +1815,8 @@
       "id": "bs.hitbox",
       "name": "Hitbox",
       "slug": "bookshelf-hitbox",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.hitbox/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.hitbox/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.hitbox/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.hitbox/README.md",
       "description": "Bookshelf module for retrieving and checking the hitboxes of blocks and entities.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html",
       "kind": "data_pack",
@@ -1892,22 +1841,6 @@
           "updated": {
             "date": "2025/03/10",
             "minecraft_version": "1.21.4"
-          }
-        },
-        {
-          "id": "#bs.hitbox:has_offset",
-          "kind": "block_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
           }
         },
         {
@@ -1954,8 +1887,8 @@
             "minecraft_version": "1.21"
           },
           "updated": {
-            "date": "2025/03/10",
-            "minecraft_version": "1.21.4"
+            "date": "2026/03/15",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -2087,22 +2020,6 @@
           }
         },
         {
-          "id": "#bs.hitbox:get_block",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get-block",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/11/21",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
-          }
-        },
-        {
           "id": "#bs.hitbox:get_block_collision",
           "kind": "function_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get-block",
@@ -2146,8 +2063,8 @@
             "minecraft_version": "1.20.3"
           },
           "updated": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
+            "date": "2026/03/14",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -2164,22 +2081,6 @@
           "updated": {
             "date": "2025/07/06",
             "minecraft_version": "1.21.5"
-          }
-        },
-        {
-          "id": "#bs.hitbox:is_entity_in_block_interaction",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-entity-inside",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
           }
         },
         {
@@ -2215,22 +2116,6 @@
           }
         },
         {
-          "id": "#bs.hitbox:is_entity_in_blocks_interaction",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-entity-inside",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
-          }
-        },
-        {
           "id": "#bs.hitbox:is_entity_in_blocks_shape",
           "kind": "function_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-entity-inside",
@@ -2260,22 +2145,6 @@
           "updated": {
             "date": "2025/07/06",
             "minecraft_version": "1.21.5"
-          }
-        },
-        {
-          "id": "#bs.hitbox:is_in_block_interaction",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/11/21",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
           }
         },
         {
@@ -2348,8 +2217,8 @@
       "id": "bs.id",
       "name": "ID",
       "slug": "bookshelf-id",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.id/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.id/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.id/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.id/README.md",
       "description": "Bookshelf module for assigning and managing entity IDs.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html",
       "kind": "data_pack",
@@ -2574,8 +2443,8 @@
       "id": "bs.interaction",
       "name": "Interaction",
       "slug": "bookshelf-interaction",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.interaction/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.interaction/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.interaction/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.interaction/README.md",
       "description": "Bookshelf module for building GUI systems using Interaction entities and event binding.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html",
       "kind": "data_pack",
@@ -2693,8 +2562,8 @@
       "id": "bs.link",
       "name": "Link",
       "slug": "bookshelf-link",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.link/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.link/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.link/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.link/README.md",
       "description": "Bookshelf entity linking system, enabling synchronized movement and structured relationships.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html",
       "kind": "data_pack",
@@ -3195,8 +3064,8 @@
       "id": "bs.log",
       "name": "Log",
       "slug": "bookshelf-log",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.log/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.log/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.log/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.log/README.md",
       "description": "Bookshelf logging utility for structured messages in chat with severity levels.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html",
       "kind": "data_pack",
@@ -3306,8 +3175,8 @@
       "id": "bs.math",
       "name": "Math",
       "slug": "bookshelf-math",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.math/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.math/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.math/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.math/README.md",
       "description": "Bookshelf mathematical toolkit, bringing advanced calculations to Minecraft.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html",
       "kind": "data_pack",
@@ -3731,8 +3600,8 @@
       "id": "bs.move",
       "name": "Move",
       "slug": "bookshelf-move",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.move/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.move/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.move/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.move/README.md",
       "description": "Bookshelf module providing precise control over entity movement.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html",
       "kind": "data_pack",
@@ -3772,8 +3641,8 @@
             "minecraft_version": "1.13"
           },
           "updated": {
-            "date": "2025/11/23",
-            "minecraft_version": "1.21.10"
+            "date": "2026/03/14",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -3789,8 +3658,8 @@
             "minecraft_version": "1.13"
           },
           "updated": {
-            "date": "2025/11/23",
-            "minecraft_version": "1.21.10"
+            "date": "2026/03/14",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -3848,8 +3717,8 @@
       "id": "bs.position",
       "name": "Position",
       "slug": "bookshelf-position",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.position/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.position/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.position/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.position/README.md",
       "description": "Bookshelf position management system, allowing control over entity locations and rotations using scores.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html",
       "kind": "data_pack",
@@ -4379,8 +4248,8 @@
       "id": "bs.random",
       "name": "Random",
       "slug": "bookshelf-random",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.random/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.random/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.random/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.random/README.md",
       "description": "Bookshelf module featuring a variety of random number generation functions.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html",
       "kind": "data_pack",
@@ -4419,8 +4288,8 @@
             "minecraft_version": "1.21"
           },
           "updated": {
-            "date": "2024/08/05",
-            "minecraft_version": "1.21"
+            "date": "2026/01/03",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -4622,8 +4491,8 @@
       "id": "bs.raycast",
       "name": "Raycast",
       "slug": "bookshelf-raycast",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.raycast/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.raycast/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.raycast/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.raycast/README.md",
       "description": "Bookshelf raycasting module for casting rays that react to block and entity collisions.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html",
       "kind": "data_pack",
@@ -4646,8 +4515,8 @@
             "minecraft_version": "1.20.2"
           },
           "updated": {
-            "date": "2025/11/09",
-            "minecraft_version": "1.21.10"
+            "date": "2026/03/22",
+            "minecraft_version": "26.1"
           }
         }
       ]
@@ -4656,8 +4525,8 @@
       "id": "bs.schedule",
       "name": "Schedule",
       "slug": "bookshelf-schedule",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.schedule/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.schedule/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.schedule/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.schedule/README.md",
       "description": "Bookshelf command scheduler, including cancellation and execution context tracking.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html",
       "kind": "data_pack",
@@ -4742,8 +4611,8 @@
       "id": "bs.sidebar",
       "name": "Sidebar",
       "slug": "bookshelf-sidebar",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.sidebar/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.sidebar/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.sidebar/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.sidebar/README.md",
       "description": "Bookshelf utility for creating dynamic and visually appealing scoreboard-based sidebars.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/sidebar.html",
       "kind": "data_pack",
@@ -4795,8 +4664,8 @@
       "id": "bs.spline",
       "name": "Spline",
       "slug": "bookshelf-spline",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.spline/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.spline/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.spline/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.spline/README.md",
       "description": "Manipulate smooth curves created from control points.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html",
       "kind": "data_pack",
@@ -5050,8 +4919,8 @@
       "id": "bs.string",
       "name": "String",
       "slug": "bookshelf-string",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.string/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.string/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.string/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.string/README.md",
       "description": "Bookshelf utility for manipulating and transforming strings in Minecraft datapacks.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html",
       "kind": "data_pack",
@@ -5260,8 +5129,8 @@
       "id": "bs.time",
       "name": "Time",
       "slug": "bookshelf-time",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.time/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.time/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.time/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.time/README.md",
       "description": "Bookshelf system time module, retrieving real-time information in Minecraft.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/time.html",
       "kind": "data_pack",
@@ -5295,8 +5164,8 @@
       "id": "bs.tree",
       "name": "Tree",
       "slug": "bookshelf-tree",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.tree/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.tree/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.tree/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.tree/README.md",
       "description": "Bookshelf collection of ready-to-use trees for natural-looking landscapes.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/tree.html",
       "kind": "data_pack",
@@ -5308,8 +5177,8 @@
       "id": "bs.vector",
       "name": "Vector",
       "slug": "bookshelf-vector",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.vector/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.vector/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.vector/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.vector/README.md",
       "description": "Bookshelf vector math toolkit for manipulating and performing operations on vectors.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html",
       "kind": "data_pack",
@@ -5607,8 +5476,8 @@
       "id": "bs.view",
       "name": "View",
       "slug": "bookshelf-view",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.view/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.view/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.view/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.view/README.md",
       "description": "Bookshelf set of easy-to-use commands that execute based on what an entity sees.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html",
       "kind": "data_pack",
@@ -5787,8 +5656,8 @@
       "id": "bs.xp",
       "name": "XP",
       "slug": "bookshelf-xp",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.xp/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.2.0/modules/bs.xp/README.md",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.xp/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.0.0/modules/bs.xp/README.md",
       "description": "Bookshelf experience management system for handling player XP and levels efficiently.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html",
       "kind": "data_pack",

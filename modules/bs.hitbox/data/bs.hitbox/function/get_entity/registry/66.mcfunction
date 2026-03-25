@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # wolf group
-execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.6,height:0.85}
-data modify storage bs:out hitbox set value {width:0.3,height:0.425}
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.3,height:0.425}
+data modify storage bs:out hitbox set value {width:0.6,height:0.85}

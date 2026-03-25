@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -15,6 +15,6 @@
 
 # run the raycast at the entity eyes
 tag @s add bs.view.this
-$data modify storage bs:data raycast.on_hit_point set value 'execute as @n[tag=bs.view.this,sort=arbitrary] run $(run)'
+$data modify storage bs:data raycast.on_entry_point set value 'execute as @n[tag=bs.view.this,sort=arbitrary] run $(run)'
 execute at @s anchored eyes run function bs.raycast:run
 tag @s remove bs.view.this

@@ -1,0 +1,20 @@
+{
+  "__bookshelf__": {
+    "feature": false,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#noise-callbacks",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2026/02/15",
+      "minecraft_version": "26.1"
+    },
+    "updated": {
+      "date": "2026/02/15",
+      "minecraft_version": "26.1"
+    }
+  },
+  "values": [
+    "bs.generation:callbacks/fractal_noise_2d/init"
+  ]
+}

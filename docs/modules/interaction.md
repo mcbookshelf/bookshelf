@@ -17,7 +17,7 @@ This API is low level since the possible events are directly and manually bound 
 
 ## 🔧 Functions
 
-You can find below below all functions available in this API.
+You can find below all functions available in this module.
 
 ---
 
@@ -213,7 +213,11 @@ execute as @n[tag=bs.entity.interaction] run function #bs.interaction:on_hover_l
 
 ---
 
-### Predefined Callbacks
+## ↩️ Callbacks
+
+You can find below all callbacks available in this module.
+
+---
 
 :::::{tab-set}
 ::::{tab-item} Glow
@@ -239,7 +243,7 @@ An empty callback that does nothing. May be used as a placeholder or to explicit
 
 ## 🏷️ Entity Tags
 
-You can find below below all tags available in this API.
+You can find below all tags available in this module.
 
 ---
 

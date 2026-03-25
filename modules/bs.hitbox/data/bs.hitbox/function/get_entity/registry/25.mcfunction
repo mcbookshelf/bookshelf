@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # ghast group
-execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:4.0,height:4.0}
-data modify storage bs:out hitbox set value {width:0.95,height:0.95}
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.95,height:0.95}
+data modify storage bs:out hitbox set value {width:4.0,height:4.0}

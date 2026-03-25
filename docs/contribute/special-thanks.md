@@ -19,7 +19,7 @@ Bookshelf is a collaborative project, made possible by the dedication and contri
 
 ```{image} /_imgs/credits/leirof.png
 :align: center
-:class: dark_light, rounded
+:class: sd-rounded-circle
 ```
 
 ^^^
@@ -34,7 +34,7 @@ Creator of the original Gunivers Libs.
 
 ```{image} /_imgs/credits/aksiome.png
 :align: center
-:class: dark_light, rounded
+:class: sd-rounded-circle
 ```
 
 ^^^
@@ -49,7 +49,7 @@ Contributor and lead maintainer of Bookshelf.
 
 ```{image} /_imgs/credits/theogiraudet.png
 :align: center
-:class: dark_light, rounded
+:class: sd-rounded-circle
 ```
 
 ^^^
@@ -70,7 +70,7 @@ Contributor and maintainer of Bookshelf and the Gunivers Libs.
 
 ```{image} /_imgs/credits/plagiatus.png
 :align: center
-:class: dark_light, rounded
+:class: sd-rounded-circle
 ```
 
 ^^^
@@ -84,7 +84,7 @@ Main developer of the Bookshelf Manager.
 
 ```{image} /_imgs/credits/aeris.jpg
 :align: center
-:class: dark_light, rounded
+:class: sd-rounded-circle
 ```
 
 ^^^
@@ -106,7 +106,7 @@ Sysadmin and legal referent.
 
 ```{image} /_imgs/credits/ethanout.png
 :align: center
-:class: dark_light, rounded
+:class: sd-rounded-circle
 ```
 ^^^
 

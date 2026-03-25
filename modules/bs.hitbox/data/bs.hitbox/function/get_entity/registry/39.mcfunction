@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # panda group
-execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:1.3,height:1.25}
-data modify storage bs:out hitbox set value {width:0.65,height:0.625}
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.65,height:0.625}
+data modify storage bs:out hitbox set value {width:1.3,height:1.25}

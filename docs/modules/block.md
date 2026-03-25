@@ -96,41 +96,23 @@ Fill all or part of a region with a specific block.
   :::{treeview}
   - {nbt}`compound` Fill data
     - {nbt}`string` **block**: Block to fill the region with.
-    - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
-    - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
-    - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace|strict] (default: replace).
-    - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
-    - {nbt}`list` **masks**: Determine which blocks will be replaced by the fill operation.
-      - {nbt}`compound` Block mask
-        - {nbt}`string` **block**: Block acting as a filter.
-        - {nbt}`bool` **negate**: Reverse the mask (default: false).
-        - {nbt}`int` **x**: Mask filter x offset (default: 0).
-        - {nbt}`int` **y**: Mask filter y offset (default: 0).
-        - {nbt}`int` **z**: Mask filter z offset (default: 0).
+    - {nbt}`string` **from**: Starting position as a valid position string.
+    - {nbt}`string` **to**: Ending position as a valid position string.
+    - {nbt}`string` **mode**: Mode used to set blocks [outline|hollow|destroy|keep|replace|strict] (default: replace).
+    - {nbt}`string` **filter**: Block used as a filter (default: none).
   :::
 
 :Outputs:
   **State**: Blocks are placed in the world.
 ```
 
-*Example: Replace the top layer of dirt by grass and use a say command when finished:*
+*Example: Fill an area with stone:*
 
 ```mcfunction
 # Setup the input
-data modify storage bs:in block.fill_block set value {block:"minecraft:grass_block",from:"~-5 ~-5 ~-5",to:"~5 ~5 ~5",on_finished:"say added grass on top",masks:[{block:"minecraft:dirt"},{block:"minecraft:air",y:1}]}
+data modify storage bs:in block.fill_block set value {block:"minecraft:stone",from:"~-3 ~-3 ~-3",to:"~3 ~3 ~3"}
 
-# Run the process
-function #bs.block:fill_block
-```
-
-*Example: Fill an area with stone a few blocks at a time:*
-
-```mcfunction
-# Setup the input
-data modify storage bs:in block.fill_block set value {block:"minecraft:stone",from:[-5,-5,-5],to:[5,5,5],limit:8}
-
-# Run the process
+# Run the fill
 function #bs.block:fill_block
 ```
 ::::
@@ -145,18 +127,10 @@ Fill all or part of a region with a specific block type, preserving states and N
   :::{treeview}
   - {nbt}`compound` Fill data
     - {nbt}`string` **type**: Block id to fill the region with.
-    - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
-    - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
-    - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace|strict] (default: replace).
-    - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
-    - {nbt}`list` **masks**: Determine which blocks will be replaced.
-      - {nbt}`compound` Block mask
-        - {nbt}`string` **block**: Block acting as a filter.
-        - {nbt}`bool` **negate**: Reverse the mask (default: false).
-        - {nbt}`int` **x**: Mask filter x offset (default: 0).
-        - {nbt}`int` **y**: Mask filter y offset (default: 0).
-        - {nbt}`int` **z**: Mask filter z offset (default: 0).
+    - {nbt}`string` **from**: Starting position as a valid position string.
+    - {nbt}`string` **to**: Ending position as a valid position string.
+    - {nbt}`string` **mode**: Mode used to set blocks [outline|hollow|destroy|keep|replace|strict] (default: replace).
+    - {nbt}`string` **filter**: Block used as a filter (default: none).
   :::
 
 :Outputs:
@@ -167,52 +141,10 @@ Fill all or part of a region with a specific block type, preserving states and N
 
 ```mcfunction
 # Setup the input
-data modify storage bs:in block.fill_type set value {type:"minecraft:spruce_stairs",from:"~-5 ~-5 ~-5",to:"~5 ~5 ~5",on_finished:"say replaced the stairs",masks:[{block:"minecraft:oak_stairs"}]}
+data modify storage bs:in block.fill_type set value {type:"minecraft:spruce_stairs",from:"~-3 ~-3 ~-3",to:"~3 ~3 ~3",filter:"minecraft:oak_stairs"}
 
 # Run the process
 function #bs.block:fill_type
-```
-::::
-::::{tab-item} Random
-
-```{function} #bs.block:fill_random
-
-Fill all or part of a region with random blocks or types.
-
-:Inputs:
-  **Storage `bs:in block.fill_random`**:
-  :::{treeview}
-  - {nbt}`compound` Fill data
-    - {nbt}`list` **entries**: List of entries to pick from randomly.
-      - {nbt}`compound` Block or type entry
-        - {nbt}`string` **block | type**: Block or type to fill the region with.
-        - {nbt}`int` **weight**: Determine the likelihood of selecting the entry (default: 1).
-    - {nbt}`string` {nbt}`list` **from**: Starting position as a valid position string or a list of 3 elements (x, y, z).
-    - {nbt}`string` {nbt}`list` **to**: Ending position as a valid position string or a list of 3 elements (x, y, z).
-    - {nbt}`int` **limit**: Limit how many blocks can be set in a single tick (default: 4096).
-    - {nbt}`string` **mode**: Mode used to set blocks [destroy|keep|replace|strict] (default: replace).
-    - {nbt}`string` **on_finished**: Command executed at the end of the operation (at the location of the final block).
-    - {nbt}`list` **masks**: Determine which blocks will be replaced.
-      - {nbt}`compound` Block mask
-        - {nbt}`string` **block**: Block acting as a filter.
-        - {nbt}`bool` **negate**: Reverse the mask (default: false).
-        - {nbt}`int` **x**: Mask filter x offset (default: 0).
-        - {nbt}`int` **y**: Mask filter y offset (default: 0).
-        - {nbt}`int` **z**: Mask filter z offset (default: 0).
-  :::
-
-:Outputs:
-  **State**: Blocks are placed in the world.
-```
-
-*Example: Randomly fill an area with stone or air and use a say command when finished:*
-
-```mcfunction
-# Setup the input
-data modify storage bs:in block.fill_random set value {entries:[{block:"minecraft:stone"},{block:"minecraft:air"}],from:[-16,100,0],to:[-1,103,15],on_finished:"say randomly placed stone"}
-
-# Run the process
-function #bs.block:fill_random
 ```
 ::::
 :::::
@@ -1226,37 +1158,6 @@ Play the block’s step sound.
     - {nbt}`double` **pitch**: Pitch of the sound (default: `1.0`).
     - {nbt}`double` **volume**: Volume of the sound (default: `1.0`).
     - {nbt}`double` **min_volume**: Minimum volume of the sound (default: `0.0`).
-  :::
-
-:Outputs:
-  **State**: The sound is played.
-```
-::::
-::::{tab-item} Block
-
-```{deprecated} v3.2.0
-This feature is deprecated and will be removed in v4.0.0.
-
-Please use dedicated sound functions instead.
-```
-
-```{function} #bs.block:play_block_sound
-
-Play a block sound of the given block.
-
-:Inputs:
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position where the sound will be played.
-
-  **Storage `bs:in block.play_block_sound`**:
-  :::{treeview}
-  - {nbt}`compound` Block sound data
-    - {nbt}`string` **sound**: Sound to play. Found in the `sounds` property of the virtual block (cf get functions).
-    - {nbt}`string` **source**: Source of the sound: `master`, `music`, `record`, `weather`, `block`, `hostile`, `neutral`, `player`, `ambient`, or `voice` (default: `master`).
-    - {nbt}`string` **targets**: The targets of the sound (default: `@s`).
-    - {nbt}`string` **pos**: X Y Z coordinates, the position of the sound (default: `~ ~ ~`).
-    - {nbt}`int` **pitch**: Pitch of the sound (default: `1`).
-    - {nbt}`int` **volume**: Volume of the sound (default: `1`).
-    - {nbt}`int` **min_volume**: Minimum volume of the sound (default: `0`).
   :::
 
 :Outputs:

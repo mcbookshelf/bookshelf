@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # turtle group
-execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:1.2,height:0.4}
-data modify storage bs:out hitbox set value {width:0.36,height:0.12}
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.36,height:0.12}
+data modify storage bs:out hitbox set value {width:1.2,height:0.4}

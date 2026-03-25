@@ -463,19 +463,19 @@ Normalize the vector by placing the largest component at the given scale while k
   **Score `$vector.normalize_max_component.factor bs.out`**: Normalization factor.
 ```
 
-*Example: Fast normalize the vector (1000, 2000, 3000) with a scale of 1000:*
+*Example: Normalize the vector (1000, 2000, 3000) with a scale of 1000:*
 
 ```mcfunction
 # Define the vector
-scoreboard players set $vector.fast_normalize.0 bs.in 1000
-scoreboard players set $vector.fast_normalize.1 bs.in 2000
-scoreboard players set $vector.fast_normalize.2 bs.in 3000
+scoreboard players set $vector.normalize_max_component.0 bs.in 1000
+scoreboard players set $vector.normalize_max_component.1 bs.in 2000
+scoreboard players set $vector.normalize_max_component.2 bs.in 3000
 
 # Perform the fast normalization
-function #bs.vector:fast_normalize {scale:1000}
+function #bs.vector:normalize_max_component {scale:1000}
 
 # Display the result
-tellraw @a [{"text":"Normalized vector: ","color":"dark_gray"},{"score":{"name":"$vector.fast_normalize.0","objective":"bs.out"},"color":"gold"},{"text":", ","color":"gold"},{"score":{"name":"$vector.fast_normalize.1","objective":"bs.out"},"color":"gold"},{"text":", ","color":"gold"},{"score":{"name":"$vector.fast_normalize.2","objective":"bs.out"},"color":"gold"}]
+tellraw @a [{"text":"Normalized vector: ","color":"dark_gray"},{"score":{"name":"$vector.normalize_max_component.0","objective":"bs.out"},"color":"gold"},{"text":", ","color":"gold"},{"score":{"name":"$vector.normalize_max_component.1","objective":"bs.out"},"color":"gold"},{"text":", ","color":"gold"},{"score":{"name":"$vector.normalize_max_component.2","objective":"bs.out"},"color":"gold"}]
 ```
 
 ::::
