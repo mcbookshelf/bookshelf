@@ -21,6 +21,7 @@ scoreboard players operation #s bs.ctx /= 1000 bs.const
 execute if score #s bs.ctx matches 1.. run function bs.spline:utils/linear/get_segment
 
 execute store result score #m bs.ctx if data storage bs:ctx _.points[]
+data modify storage bs:ctx _.points append from storage bs:const spline.pad[]
 execute store result score #n bs.ctx if data storage bs:ctx _.points[][2]
 execute if score #n bs.ctx = #m bs.ctx run return run function bs.spline:evaluate/evaluate_3d {type:"linear"}
 execute store result score #n bs.ctx if data storage bs:ctx _.points[][1]
