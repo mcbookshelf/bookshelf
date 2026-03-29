@@ -1,12 +1,6 @@
 {
   "values": [
-    {
-      "id": "minecraft:nautilus",
-      "required": false
-    },
-    {
-      "id": "minecraft:zombie_nautilus",
-      "required": false
-    }
+    "minecraft:nautilus",
+    "minecraft:zombie_nautilus"
   ]
 }
