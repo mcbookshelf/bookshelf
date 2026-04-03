@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# horse_like group
+# horse group
 execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.97753908,height:1.12}
 data modify storage bs:out hitbox set value {width:1.3964844,height:1.6}

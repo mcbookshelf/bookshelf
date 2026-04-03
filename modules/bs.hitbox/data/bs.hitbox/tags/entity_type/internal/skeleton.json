@@ -1,11 +1,8 @@
 {
   "values": [
     "minecraft:bogged",
+    "minecraft:parched",
     "minecraft:skeleton",
-    "minecraft:stray",
-    {
-      "id": "minecraft:parched",
-      "required": false
-    }
+    "minecraft:stray"
   ]
 }

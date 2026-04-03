@@ -53,21 +53,3 @@ jobs:
           git push --delete origin latest || true
           git tag -f latest ${{ needs.check.outputs.release_tag }}
           git push origin latest
-
-  publish:
-    name: 🚀 PyPI Publish
-    needs: release
-    runs-on: ubuntu-latest
-    environment: release
-    permissions:
-      contents: read
-      id-token: write
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Install uv
-        uses: astral-sh/setup-uv@v6
-      - name: Publish to PyPI
-        run: |
-          uv build
-          uv publish

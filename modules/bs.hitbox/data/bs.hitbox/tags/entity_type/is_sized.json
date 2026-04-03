@@ -10,8 +10,8 @@
       "minecraft_version": "1.21.2"
     },
     "updated": {
-      "date": "2024/10/28",
-      "minecraft_version": "1.21.2"
+      "date": "2026/03/29",
+      "minecraft_version": "26.1"
     }
   },
   "values": [
@@ -20,11 +20,11 @@
     "#bs.hitbox:internal/boat",
     "#bs.hitbox:internal/camel",
     "#bs.hitbox:internal/cat_like",
-    "#bs.hitbox:internal/cow_like",
+    "#bs.hitbox:internal/cow",
     "#bs.hitbox:internal/falling_block_like",
-    "#bs.hitbox:internal/ghast_like",
+    "#bs.hitbox:internal/ghast",
     "#bs.hitbox:internal/hoglin",
-    "#bs.hitbox:internal/horse_like",
+    "#bs.hitbox:internal/horse",
     "#bs.hitbox:internal/item_like",
     "#bs.hitbox:internal/llama",
     "#bs.hitbox:internal/minecart",
@@ -33,6 +33,7 @@
     "#bs.hitbox:internal/skeleton",
     "#bs.hitbox:internal/slime_like",
     "#bs.hitbox:internal/small_fireball_like",
+    "#bs.hitbox:internal/squid",
     "#bs.hitbox:internal/zombie_like",
     "minecraft:allay",
     "minecraft:area_effect_cloud",
@@ -62,6 +63,7 @@
     "minecraft:iron_golem",
     "minecraft:leash_knot",
     "minecraft:mannequin",
+    "minecraft:mule",
     "minecraft:panda",
     "minecraft:phantom",
     "minecraft:pig",
@@ -75,7 +77,6 @@
     "minecraft:sniffer",
     "minecraft:snow_golem",
     "minecraft:spider",
-    "minecraft:squid",
     "minecraft:strider",
     "minecraft:tadpole",
     "minecraft:tropical_fish",

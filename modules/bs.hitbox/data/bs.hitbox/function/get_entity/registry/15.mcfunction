@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# cow_like group
+# cow group
 execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.45,height:0.7}
 data modify storage bs:out hitbox set value {width:0.9,height:1.4}
