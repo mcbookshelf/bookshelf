@@ -32,35 +32,30 @@
       <img alt="block" src="docs/_imgs/readme/block.svg">
     </picture>
   </a>
-  &nbsp;
   <a href="https://docs.mcbookshelf.dev/en/latest/modules/raycast/">
     <picture>
       <source media="(prefers-color-scheme: dark)" alt="raycast" srcset="docs/_imgs/readme/raycast-dark.svg">
       <img alt="raycast" src="docs/_imgs/readme/raycast.svg">
     </picture>
   </a>
-  &nbsp;
   <a href="https://docs.mcbookshelf.dev/en/latest/modules/math/">
     <picture>
       <source media="(prefers-color-scheme: dark)" alt="math" srcset="docs/_imgs/readme/math-dark.svg">
       <img alt="math" src="docs/_imgs/readme/math.svg">
     </picture>
   </a>
-  &nbsp;
   <a href="https://docs.mcbookshelf.dev/en/latest/modules/generation/">
     <picture>
       <source media="(prefers-color-scheme: dark)" alt="generation" srcset="docs/_imgs/readme/generation-dark.svg">
       <img alt="generation" src="docs/_imgs/readme/generation.svg">
     </picture>
   </a>
-  &nbsp;
   <a href="https://docs.mcbookshelf.dev/en/latest/modules/random/">
     <picture>
       <source media="(prefers-color-scheme: dark)" alt="random" srcset="docs/_imgs/readme/random-dark.svg">
       <img alt="random" src="docs/_imgs/readme/random.svg">
     </picture>
   </a>
-  &nbsp;
   <a href="https://docs.mcbookshelf.dev/en/latest/modules/health/">
     <picture>
       <source media="(prefers-color-scheme: dark)" alt="health" srcset="docs/_imgs/readme/health-dark.svg">
