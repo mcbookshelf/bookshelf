@@ -10,7 +10,7 @@ authors = [{ name = "Bookshelf Contributors", email = "contact@gunivers.net" }]
 license = { text = "MPL-2.0" }
 requires-python = ">=3.14"
 dependencies = [
-  "beet>=0.114.1",
+  "beet>=0.115.0",
   "frozendict>=2.4.7",
   "httpx[http2]>=0.28.1",
   "orjson>=3.11.7",
@@ -43,7 +43,7 @@ docs = [
   "sphinx-breeze-theme>=0.13.2",
   "sphinx-copybutton>=0.5.2",
   "sphinx-design>=0.7.0",
-  "sphinx-intl>=2.3.1",
+  "sphinx-intl>=2.3.2",
   "sphinx-minecraft>=1.0.5",
   "sphinx>=9.1.0",
 ]
