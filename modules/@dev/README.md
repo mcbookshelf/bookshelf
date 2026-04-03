@@ -1,9 +1,11 @@
-<h1 align="center">
+<div align="center">
+  <h1>
   <picture>
     <source media="(prefers-color-scheme: dark)" alt="Bookshelf" srcset="https://github.com/mcbookshelf/bookshelf/raw/master/docs/_imgs/banner-dark.png" width="400px">
     <img alt="Bookshelf" src="https://github.com/mcbookshelf/bookshelf/raw/master/docs/_imgs/banner-light.png" width="400px">
   </picture>
-</h1>
+  </h1>
+</div>
 
 <div align="center">
   <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
@@ -21,6 +23,7 @@
   <a href="https://discord.gg/MkXytNjmBt"><img src="https://img.shields.io/discord/1247513995376726116?style=for-the-badge&color=%237289DA&labelColor=363a4f&logo=discord&logoColor=cad3f5"></a>
 </div>
 
+<br/>
 <br/>
 
 ## 🛠️ Bookshelf Development
@@ -45,9 +48,9 @@
 This bundle is part of the Bookshelf Library:
 
 🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
-📦 Get the full suite [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
+📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get Involved
+## 🤝 Get involved
 
 💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
 🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
