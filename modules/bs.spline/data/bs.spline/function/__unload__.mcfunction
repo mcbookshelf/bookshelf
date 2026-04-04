@@ -21,4 +21,3 @@ data remove storage bs:out spline
 data remove storage bs:data spline
 data remove storage bs:const spline
 data remove storage bs:lambda spline
-data remove storage bs:const spline
