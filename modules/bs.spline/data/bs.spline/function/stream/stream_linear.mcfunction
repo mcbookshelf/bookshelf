@@ -14,7 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set from storage bs:in spline.stream_linear
-data modify storage bs:ctx _.points append from storage bs:const spline.pad[]
 data modify storage bs:ctx _.type set value "linear"
 
 scoreboard players set #t bs.ctx 1000

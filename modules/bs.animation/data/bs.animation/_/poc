@@ -24,14 +24,49 @@ def = {
   }
 }
 
+defalt = {
+  "run": "function #bs.animation:callback/position",
+  "basis": "catmull_rom|bezier|bspline|hermite",
+  "duration": 100,
+  "points": [
+    [0, 0, 0],
+    [1, 1, 1],
+    [2, 0, 2],
+    [3, 1, 3]
+  ],
+  "_": "<BAKED DATA>"
+}
+
+
+// $animation.x bs.lambda
+// $animation.y bs.lambda
+// $animation.z bs.lambda
+// bs:lambda animation.nbt
+
+orother = {
+  "run": "function #bs.animation:callback/transformation/left_rotation",
+  "interpolation": "smooth|linear|step",
+  "duration": [100, 50, 10],
+  "points": [
+    [0, 0, 0],
+    [1, 1, 1],
+    [2, 0, 2],
+    [3, 1, 3]
+  ]
+}
+
+
 // global
-bake = { uses: "storage path" }
+bake = { uses: "storage path (can be a list or a single object)" }
 
 // on entity
 create = {
   id: "walk",
-  uses: "storage path"
+  uses: "storage path (can be a list or a single object)"
 }
+
+// if storage is a list basically append all those under the same id so play and pause or other functions will all affect the filtered data list
+// loop back only when all of an id are at the end
 
 play = { id: "walk", with: { step: 1, interval: 1, loop: false } }
 pause = { id: "walk" }
