@@ -46,6 +46,7 @@ docs = [
   "sphinx-intl>=2.3.2",
   "sphinx-minecraft>=1.0.5",
   "sphinx>=9.1.0",
+  "sphinxcontrib.mermaid>=1.0.0",
 ]
 
 [tool.hatch.version]

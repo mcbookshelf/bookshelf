@@ -1,0 +1,15 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.animation",
+    "load": "."
+  },
+  "meta": {
+    "name": "Animation",
+    "slug": "bookshelf-animation",
+    "description": "",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/animation.html",
+    "tags": ["runtime"],
+    "dependencies": []
+  }
+}
