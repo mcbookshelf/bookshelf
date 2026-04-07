@@ -24,6 +24,10 @@
 </div>
 
 <br/>
+
+> We are searching for builders to contribute to this bundle. If you are interested, please contact us on [Discord](https://discord.gg/MkXytNjmBt) or check the dedicated [GitHub issue](https://github.com/mcbookshelf/bookshelf/issues/303)
+
+
 <br/>
 
 ## 🏗️ Bookshelf Prefabs
@@ -40,8 +44,6 @@ A collection of ready-to-use structures and templates for world-building.
 - **🎨 Tree variations**: each tree type comes in 5 different styles for variety
 - **🌲 Natural look**: trees designed to blend naturally with Minecraft's environment
 - **🔄 Future expansion**: more structure types planned for future updates
-
-> We are searching for builders to contribute to this bundle. If you are interested, please contact us on [Discord](https://discord.gg/MkXytNjmBt) or check the dedicated [GitHub issue](https://github.com/mcbookshelf/bookshelf/issues/303)
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/index.html)
 
