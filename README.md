@@ -70,7 +70,7 @@
 Libraries save time and make systems easier to create. But many Minecraft mapmakers aren't used to them. Bookshelf exists to change that.
 Bookshelf focuses on ease of use. Each module is simple, works for any skill level, and keeps performance in mind.
 
-> <i>"I have seen further than others because I have stood on the shoulders of giants."</i>
+> *"I have seen further than others because I have stood on the shoulders of giants."*
 >
 > — Isaac Newton
 
