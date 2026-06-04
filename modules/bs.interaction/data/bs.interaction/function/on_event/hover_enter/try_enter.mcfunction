@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute if predicate {condition:entity_properties,entity:this,predicate:{type_specific:{type:player,looking_at:{type:interaction,nbt:"{Tags:[bs.interaction.is_hoverable]}",distance:{absolute:{max:$(y)}}}}}} run function bs.interaction:on_event/hover_enter/hover_enter
+$execute if predicate {condition:"entity_properties",entity:"this",predicate:{"type_specific/player":{looking_at:{entity_type:"interaction",entity_tags:{all_of:["bs.interaction.is_hoverable"]},distance:{absolute:{max:$(y)}}}}}} run function bs.interaction:on_event/hover_enter/hover_enter
