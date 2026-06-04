@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 scoreboard players operation #h bs.ctx += @s bs.hmod
-execute if score #h bs.ctx matches ..0 unless predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","gamemode":["creative","spectator"]}}} run kill @s
+execute if score #h bs.ctx matches ..0 unless predicate {condition:"entity_properties",entity:"this",predicate:{"type_specific/player":{gamemode:["creative","spectator"]}}} run kill @s
 
 # Get add_multiplied_total to reduce health to the target value, it's applied last, so it won't mess with other modifiers
 execute store result storage bs:data health.div[0] float 1 run scoreboard players operation #h bs.ctx -= #m bs.ctx
