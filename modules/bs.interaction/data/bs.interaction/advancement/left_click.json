@@ -8,9 +8,13 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:interaction",
-              "nbt": "{ Tags: [ \"bs.interaction.listen_left_click\" ] }",
-              "distance": {
+              "minecraft:entity_type": "minecraft:interaction",
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "bs.interaction.listen_left_click"
+                ]
+              },
+              "minecraft:distance": {
                 "absolute": {
                   "max": 24
                 }
