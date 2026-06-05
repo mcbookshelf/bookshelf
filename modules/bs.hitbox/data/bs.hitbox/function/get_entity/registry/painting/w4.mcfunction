@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# bee group
-execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.275,height:0.25}
-data modify storage bs:out hitbox set value {width:0.55,height:0.5}
+execute positioned ~4 ~ ~ unless entity @s[dx=0] positioned ~-4 ~ ~ run return run function bs.hitbox:get_entity/registry/painting/w3
+scoreboard players add #w bs.ctx 8
+execute positioned ~4 ~ ~ run function bs.hitbox:get_entity/registry/painting/w3

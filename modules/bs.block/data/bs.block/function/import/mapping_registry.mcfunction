@@ -111,15 +111,15 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"carpet",attrs:["red","wool"],type:"minecraft:red_carpet"}, \
   {set:"carpet",attrs:["white","wool"],type:"minecraft:white_carpet"}, \
   {set:"carpet",attrs:["yellow","wool"],type:"minecraft:yellow_carpet"}, \
-  {set:"chain",attrs:["iron"],type:"minecraft:iron_chain"}, \
-  {set:"chain",attrs:["copper"],type:"minecraft:copper_chain"}, \
+  {set:"chain",attrs:["copper","exposed","waxed"],type:"minecraft:waxed_exposed_copper_chain"}, \
   {set:"chain",attrs:["copper","exposed"],type:"minecraft:exposed_copper_chain"}, \
-  {set:"chain",attrs:["copper","weathered"],type:"minecraft:weathered_copper_chain"}, \
+  {set:"chain",attrs:["copper","oxidized","waxed"],type:"minecraft:waxed_oxidized_copper_chain"}, \
   {set:"chain",attrs:["copper","oxidized"],type:"minecraft:oxidized_copper_chain"}, \
   {set:"chain",attrs:["copper","waxed"],type:"minecraft:waxed_copper_chain"}, \
-  {set:"chain",attrs:["copper","exposed","waxed"],type:"minecraft:waxed_exposed_copper_chain"}, \
   {set:"chain",attrs:["copper","weathered","waxed"],type:"minecraft:waxed_weathered_copper_chain"}, \
-  {set:"chain",attrs:["copper","oxidized","waxed"],type:"minecraft:waxed_oxidized_copper_chain"}, \
+  {set:"chain",attrs:["copper","weathered"],type:"minecraft:weathered_copper_chain"}, \
+  {set:"chain",attrs:["copper"],type:"minecraft:copper_chain"}, \
+  {set:"chain",attrs:["iron"],type:"minecraft:iron_chain"}, \
   {set:"cube",attrs:["acacia","leaves"],type:"minecraft:acacia_leaves"}, \
   {set:"cube",attrs:["acacia","log"],type:"minecraft:acacia_log"}, \
   {set:"cube",attrs:["acacia","planks"],type:"minecraft:acacia_planks"}, \
@@ -181,6 +181,10 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"cube",attrs:["cherry","stripped_log"],type:"minecraft:stripped_cherry_log"}, \
   {set:"cube",attrs:["cherry","stripped_wood"],type:"minecraft:stripped_cherry_wood"}, \
   {set:"cube",attrs:["cherry","wood"],type:"minecraft:cherry_wood"}, \
+  {set:"cube",attrs:["cinnabar","brick"],type:"minecraft:cinnabar_bricks"}, \
+  {set:"cube",attrs:["cinnabar","chiseled"],type:"minecraft:chiseled_cinnabar"}, \
+  {set:"cube",attrs:["cinnabar","polished"],type:"minecraft:polished_cinnabar"}, \
+  {set:"cube",attrs:["cinnabar"],type:"minecraft:cinnabar"}, \
   {set:"cube",attrs:["clay"],type:"minecraft:clay"}, \
   {set:"cube",attrs:["coal"],type:"minecraft:coal_block"}, \
   {set:"cube",attrs:["copper","chiseled"],type:"minecraft:chiseled_copper"}, \
@@ -460,6 +464,11 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"cube",attrs:["stone","redstone","ore"],type:"minecraft:redstone_ore"}, \
   {set:"cube",attrs:["stone","smooth"],type:"minecraft:smooth_stone"}, \
   {set:"cube",attrs:["stone"],type:"minecraft:stone"}, \
+  {set:"cube",attrs:["sulfur","brick"],type:"minecraft:sulfur_bricks"}, \
+  {set:"cube",attrs:["sulfur","chiseled"],type:"minecraft:chiseled_sulfur"}, \
+  {set:"cube",attrs:["sulfur","polished"],type:"minecraft:polished_sulfur"}, \
+  {set:"cube",attrs:["sulfur","potent"],type:"minecraft:potent_sulfur"}, \
+  {set:"cube",attrs:["sulfur"],type:"minecraft:sulfur"}, \
   {set:"cube",attrs:["terracotta"],type:"minecraft:terracotta"}, \
   {set:"cube",attrs:["tnt"],type:"minecraft:tnt"}, \
   {set:"cube",attrs:["tuff","brick","chiseled"],type:"minecraft:chiseled_tuff_bricks"}, \
@@ -548,19 +557,19 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"pane",attrs:["black","glass"],type:"minecraft:black_stained_glass_pane"}, \
   {set:"pane",attrs:["blue","glass"],type:"minecraft:blue_stained_glass_pane"}, \
   {set:"pane",attrs:["brown","glass"],type:"minecraft:brown_stained_glass_pane"}, \
+  {set:"pane",attrs:["copper","exposed","waxed"],type:"minecraft:waxed_exposed_copper_bars"}, \
+  {set:"pane",attrs:["copper","exposed"],type:"minecraft:exposed_copper_bars"}, \
+  {set:"pane",attrs:["copper","oxidized","waxed"],type:"minecraft:waxed_oxidized_copper_bars"}, \
+  {set:"pane",attrs:["copper","oxidized"],type:"minecraft:oxidized_copper_bars"}, \
+  {set:"pane",attrs:["copper","waxed"],type:"minecraft:waxed_copper_bars"}, \
+  {set:"pane",attrs:["copper","weathered","waxed"],type:"minecraft:waxed_weathered_copper_bars"}, \
+  {set:"pane",attrs:["copper","weathered"],type:"minecraft:weathered_copper_bars"}, \
+  {set:"pane",attrs:["copper"],type:"minecraft:copper_bars"}, \
   {set:"pane",attrs:["cyan","glass"],type:"minecraft:cyan_stained_glass_pane"}, \
   {set:"pane",attrs:["glass"],type:"minecraft:glass_pane"}, \
   {set:"pane",attrs:["gray","glass"],type:"minecraft:gray_stained_glass_pane"}, \
   {set:"pane",attrs:["green","glass"],type:"minecraft:green_stained_glass_pane"}, \
   {set:"pane",attrs:["iron"],type:"minecraft:iron_bars"}, \
-  {set:"pane",attrs:["copper"],type:"minecraft:copper_bars"}, \
-  {set:"pane",attrs:["copper","exposed"],type:"minecraft:exposed_copper_bars"}, \
-  {set:"pane",attrs:["copper","weathered"],type:"minecraft:weathered_copper_bars"}, \
-  {set:"pane",attrs:["copper","oxidized"],type:"minecraft:oxidized_copper_bars"}, \
-  {set:"pane",attrs:["copper","waxed"],type:"minecraft:waxed_copper_bars"}, \
-  {set:"pane",attrs:["copper","exposed","waxed"],type:"minecraft:waxed_exposed_copper_bars"}, \
-  {set:"pane",attrs:["copper","weathered","waxed"],type:"minecraft:waxed_weathered_copper_bars"}, \
-  {set:"pane",attrs:["copper","oxidized","waxed"],type:"minecraft:waxed_oxidized_copper_bars"}, \
   {set:"pane",attrs:["light_blue","glass"],type:"minecraft:light_blue_stained_glass_pane"}, \
   {set:"pane",attrs:["light_gray","glass"],type:"minecraft:light_gray_stained_glass_pane"}, \
   {set:"pane",attrs:["lime","glass"],type:"minecraft:lime_stained_glass_pane"}, \
@@ -622,6 +631,9 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"slab",attrs:["blackstone"],type:"minecraft:blackstone_slab"}, \
   {set:"slab",attrs:["brick"],type:"minecraft:brick_slab"}, \
   {set:"slab",attrs:["cherry","planks"],type:"minecraft:cherry_slab"}, \
+  {set:"slab",attrs:["cinnabar","brick"],type:"minecraft:cinnabar_brick_slab"}, \
+  {set:"slab",attrs:["cinnabar","polished"],type:"minecraft:polished_cinnabar_slab"}, \
+  {set:"slab",attrs:["cinnabar"],type:"minecraft:cinnabar_slab"}, \
   {set:"slab",attrs:["copper","cut"],type:"minecraft:cut_copper_slab"}, \
   {set:"slab",attrs:["copper","exposed","cut"],type:"minecraft:exposed_cut_copper_slab"}, \
   {set:"slab",attrs:["copper","exposed","waxed","cut"],type:"minecraft:waxed_exposed_cut_copper_slab"}, \
@@ -667,6 +679,9 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"slab",attrs:["stone","cobbled"],type:"minecraft:cobblestone_slab"}, \
   {set:"slab",attrs:["stone","smooth"],type:"minecraft:smooth_stone_slab"}, \
   {set:"slab",attrs:["stone"],type:"minecraft:stone_slab"}, \
+  {set:"slab",attrs:["sulfur","brick"],type:"minecraft:sulfur_brick_slab"}, \
+  {set:"slab",attrs:["sulfur","polished"],type:"minecraft:polished_sulfur_slab"}, \
+  {set:"slab",attrs:["sulfur"],type:"minecraft:sulfur_slab"}, \
   {set:"slab",attrs:["tuff","brick"],type:"minecraft:tuff_brick_slab"}, \
   {set:"slab",attrs:["tuff","polished"],type:"minecraft:polished_tuff_slab"}, \
   {set:"slab",attrs:["tuff"],type:"minecraft:tuff_slab"}, \
@@ -682,6 +697,9 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"stairs",attrs:["blackstone"],type:"minecraft:blackstone_stairs"}, \
   {set:"stairs",attrs:["brick"],type:"minecraft:brick_stairs"}, \
   {set:"stairs",attrs:["cherry","planks"],type:"minecraft:cherry_stairs"}, \
+  {set:"stairs",attrs:["cinnabar","brick"],type:"minecraft:cinnabar_brick_stairs"}, \
+  {set:"stairs",attrs:["cinnabar","polished"],type:"minecraft:polished_cinnabar_stairs"}, \
+  {set:"stairs",attrs:["cinnabar"],type:"minecraft:cinnabar_stairs"}, \
   {set:"stairs",attrs:["copper","cut"],type:"minecraft:cut_copper_stairs"}, \
   {set:"stairs",attrs:["copper","exposed","cut"],type:"minecraft:exposed_cut_copper_stairs"}, \
   {set:"stairs",attrs:["copper","exposed","waxed","cut"],type:"minecraft:waxed_exposed_cut_copper_stairs"}, \
@@ -724,6 +742,9 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"stairs",attrs:["stone","cobbled","mossy"],type:"minecraft:mossy_cobblestone_stairs"}, \
   {set:"stairs",attrs:["stone","cobbled"],type:"minecraft:cobblestone_stairs"}, \
   {set:"stairs",attrs:["stone"],type:"minecraft:stone_stairs"}, \
+  {set:"stairs",attrs:["sulfur","brick"],type:"minecraft:sulfur_brick_stairs"}, \
+  {set:"stairs",attrs:["sulfur","polished"],type:"minecraft:polished_sulfur_stairs"}, \
+  {set:"stairs",attrs:["sulfur"],type:"minecraft:sulfur_stairs"}, \
   {set:"stairs",attrs:["tuff","brick"],type:"minecraft:tuff_brick_stairs"}, \
   {set:"stairs",attrs:["tuff","polished"],type:"minecraft:polished_tuff_stairs"}, \
   {set:"stairs",attrs:["tuff"],type:"minecraft:tuff_stairs"}, \
@@ -794,6 +815,9 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"wall",attrs:["blackstone","polished"],type:"minecraft:polished_blackstone_wall"}, \
   {set:"wall",attrs:["blackstone"],type:"minecraft:blackstone_wall"}, \
   {set:"wall",attrs:["brick"],type:"minecraft:brick_wall"}, \
+  {set:"wall",attrs:["cinnabar","brick"],type:"minecraft:cinnabar_brick_wall"}, \
+  {set:"wall",attrs:["cinnabar","polished"],type:"minecraft:polished_cinnabar_wall"}, \
+  {set:"wall",attrs:["cinnabar"],type:"minecraft:cinnabar_wall"}, \
   {set:"wall",attrs:["deepslate","brick"],type:"minecraft:deepslate_brick_wall"}, \
   {set:"wall",attrs:["deepslate","cobbled"],type:"minecraft:cobbled_deepslate_wall"}, \
   {set:"wall",attrs:["deepslate","polished"],type:"minecraft:polished_deepslate_wall"}, \
@@ -811,6 +835,9 @@ data modify storage bs:const block.mapping_registry.bs.shapes set value [ \
   {set:"wall",attrs:["stone","brick"],type:"minecraft:stone_brick_wall"}, \
   {set:"wall",attrs:["stone","cobbled","mossy"],type:"minecraft:mossy_cobblestone_wall"}, \
   {set:"wall",attrs:["stone","cobbled"],type:"minecraft:cobblestone_wall"}, \
+  {set:"wall",attrs:["sulfur","brick"],type:"minecraft:sulfur_brick_wall"}, \
+  {set:"wall",attrs:["sulfur","polished"],type:"minecraft:polished_sulfur_wall"}, \
+  {set:"wall",attrs:["sulfur"],type:"minecraft:sulfur_wall"}, \
   {set:"wall",attrs:["tuff","brick"],type:"minecraft:tuff_brick_wall"}, \
   {set:"wall",attrs:["tuff","polished"],type:"minecraft:polished_tuff_wall"}, \
   {set:"wall",attrs:["tuff"],type:"minecraft:tuff_wall"}, \

@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute positioned ~ ~ ~4 unless entity @s[dx=0] positioned ~ ~ ~-4 run return run function bs.hitbox:get_entity/registry/painting/depth3
-scoreboard players add #d bs.ctx 8
-execute positioned ~ ~ ~4 run function bs.hitbox:get_entity/registry/painting/depth3
+execute positioned ~ ~2 ~ unless entity @s[dx=0] positioned ~ ~-2 ~ run return run function bs.hitbox:get_entity/registry/painting/h2
+scoreboard players add #h bs.ctx 4
+execute positioned ~ ~2 ~ run function bs.hitbox:get_entity/registry/painting/h2

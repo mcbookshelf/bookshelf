@@ -15,7 +15,7 @@
 
 # phantom group
 data modify storage bs:out hitbox set value {}
-execute store result score #s bs.ctx run data get entity @s Size 15
+execute store result score #s bs.ctx run data get entity @s size 15
 scoreboard players add #s bs.ctx 100
 scoreboard players set #w bs.ctx 9
 scoreboard players set #h bs.ctx 5

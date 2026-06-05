@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # hoglin group
-execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.6982422,height:0.7}
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.75,height:0.85}
 data modify storage bs:out hitbox set value {width:1.3964844,height:1.4}
