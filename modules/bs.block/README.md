@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🧱 Bookshelf Block
+## 🧱 Bookshelf Block Module
 
 Get and set block IDs and states in Minecraft datapacks. Mix block properties and produce sounds, particles, display blocks, and more from stored data.
 

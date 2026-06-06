@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🔗 Bookshelf Link
+## 🔗 Bookshelf Link Module
 
 Link entities together in Minecraft datapacks with synchronized positions and rotations. Create complex multi-entity structures.
 

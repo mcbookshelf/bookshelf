@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🎨 Bookshelf Color
+## 🎨 Bookshelf Color Module
 
 Convert colors between RGB, hexadecimal, and integer formats in Minecraft datapacks. Useful for dynamic text colors and visual effects.
 

@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🏗️ Bookshelf Generation
+## 🏗️ Bookshelf Generation Module
 
 Apply functions across world regions in Minecraft datapacks. Iterate over 2D/3D shapes with lag-free tick spreading and custom callbacks.
 

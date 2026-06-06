@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🖱️ Bookshelf Interaction
+## 🖱️ Bookshelf Interaction Module
 
 Build in-world GUIs in Minecraft using Interaction entities. Bind click events, detect hover, and create interactive 3D menus.
 

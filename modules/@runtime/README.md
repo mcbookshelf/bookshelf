@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## ⚡ Bookshelf Runtime
+## ⚡ Bookshelf Runtime Bundle
 
 Core utilities from the Bookshelf modular datapack library: math, vectors, raycasting, entity control, blocks, health, and more.
 

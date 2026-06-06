@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🛠️ Bookshelf Development
+## 🛠️ Bookshelf Development Bundle
 
 Debug and logging tools from the Bookshelf modular datapack library. Inspect variables, log with severity levels, and track issues.
 

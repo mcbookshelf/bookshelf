@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🖥️ Bookshelf Bitwise
+## 🖥️ Bookshelf Bitwise Module
 
 Perform bitwise AND, OR, XOR, and NOT operations in Minecraft datapacks. Useful for flags, permissions, and compact data storage.
 

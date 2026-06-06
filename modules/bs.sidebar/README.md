@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 📰 Bookshelf Sidebar
+## 📰 Bookshelf Sidebar Module
 
 Create dynamic sidebars in Minecraft using scoreboards. Supports rich text formatting, alignment, and real-time content updates.
 

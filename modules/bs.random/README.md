@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🎲 Bookshelf Random
+## 🎲 Bookshelf Random Module
 
 Generate random numbers in Minecraft datapacks. Supports various distributions, weighted choices, and noise functions like Simplex and Fractal.
 

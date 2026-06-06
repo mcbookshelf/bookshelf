@@ -30,7 +30,7 @@
 
 <br/>
 
-## 🏗️ Bookshelf Prefabs
+## 🏗️ Bookshelf Prefabs Bundle
 
 Ready-to-use structures from the Bookshelf modular datapack library: trees and templates to speed up world creation.
 

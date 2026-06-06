@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## ➡️ Bookshelf Vector
+## ➡️ Bookshelf Vector Module
 
 Vector math for Minecraft datapacks: rotations, coordinate conversions, and 3D operations. Essential for physics and movement.
 

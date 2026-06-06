@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 📄 Bookshelf Log
+## 📄 Bookshelf Log Module
 
 Log messages to chat with severity levels (error, warn, info, debug). Filter by namespace and tags, and browse log history.
 

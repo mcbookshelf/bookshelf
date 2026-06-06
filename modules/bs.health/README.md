@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## ❤️ Bookshelf Health
+## ❤️ Bookshelf Health Module
 
 Manage entity health in Minecraft datapacks: heal, damage, get/set values, modify max health, and assign lifetimes with death callbacks.
 

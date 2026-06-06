@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## ⛰️ Bookshelf Environment
+## ⛰️ Bookshelf Environment Module
 
 Access biome and weather data in Minecraft datapacks. Get the current biome, check temperature, and detect rain or snow at any position.
 

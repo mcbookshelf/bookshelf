@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🧭 Bookshelf Position
+## 🧭 Bookshelf Position Module
 
 Manage entity positions and rotations via scoreboard values in Minecraft datapacks. Set precise coordinates on any axis.
 

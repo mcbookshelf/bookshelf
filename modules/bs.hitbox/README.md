@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🎯 Bookshelf Hitbox
+## 🎯 Bookshelf Hitbox Module
 
 Get precise hitbox data for blocks and entities in Minecraft datapacks. Check collisions and access both collision and interaction shapes.
 

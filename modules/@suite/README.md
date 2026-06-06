@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 📚 Bookshelf Suite
+## 📚 Bookshelf Suite Bundle
 
 A modular datapack library for Minecraft with 25+ modules covering math, raycasting, hitboxes, blocks, entity control, and more.
 

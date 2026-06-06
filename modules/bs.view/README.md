@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 👀 Bookshelf View
+## 👀 Bookshelf View Module
 
 Execute commands based on where entities look in Minecraft. Detect aimed blocks, entities, and more.
 

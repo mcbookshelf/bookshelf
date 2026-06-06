@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🔠 Bookshelf String
+## 🔠 Bookshelf String Module
 
 Manipulate strings in Minecraft datapacks: concatenate, change case, search, replace, and count.
 

@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🧣 Bookshelf Spline
+## 🧣 Bookshelf Spline Module
 
 Create smooth curves from control points in Minecraft datapacks. Supports Bézier, Catmull-Rom, B-Spline, Hermite, and Linear interpolation.
 

@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🏷️ Bookshelf ID
+## 🏷️ Bookshelf ID Module
 
 Assign unique numeric IDs to entities in Minecraft datapacks. Create continuous ID chains and query entities by ID.
 

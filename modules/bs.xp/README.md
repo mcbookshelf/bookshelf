@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🏅 Bookshelf XP
+## 🏅 Bookshelf XP Module
 
 Manage player XP in Minecraft datapacks. Control the XP bar with precision, query status, and manipulate levels programmatically.
 

@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🏃 Bookshelf Move
+## 🏃 Bookshelf Move Module
 
 Control entity movement in Minecraft datapacks with velocity vectors and collision handling. Build physics-based projectiles and motion systems.
 

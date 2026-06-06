@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🌳 Bookshelf Tree
+## 🌳 Bookshelf Tree Module
 
 Pre-built tree structures for Minecraft: Birch, Cypress, Dark Oak with multiple variations.
 

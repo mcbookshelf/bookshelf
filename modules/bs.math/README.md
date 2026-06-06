@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🧮 Bookshelf Math
+## 🧮 Bookshelf Math Module
 
 Advanced math for Minecraft datapacks: trigonometry, exponentials, factorials, GCD, and float operations beyond vanilla commands.
 

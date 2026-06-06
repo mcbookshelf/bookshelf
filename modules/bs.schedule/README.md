@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## ⏲️ Bookshelf Schedule
+## ⏲️ Bookshelf Schedule Module
 
 Schedule commands in Minecraft datapacks with cancellation and context preservation. Remember which entity and location triggered it.
 
