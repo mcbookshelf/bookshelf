@@ -61,7 +61,7 @@ def release() -> None:
             require=["bookshelf.plugins.release_pack"],
             meta={"release": {
                 "output": RELEASE_DIR,
-                "enqueue": lambda spec: packs.append(spec),
+                "enqueue": packs.append,
             }, "versions": MC_VERSIONS},
         ).build(entries)
 

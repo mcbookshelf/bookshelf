@@ -28,7 +28,7 @@
 
 ## 🧮 Bookshelf Math
 
-The beautiful world of mathematics... **in Minecraft!**
+Advanced math for Minecraft datapacks: trigonometry, exponentials, factorials, GCD, and float operations beyond vanilla commands.
 
 > *"Mathematics has very subtle inventions that can be of great service, both to satisfy the curious and to facilitate all arts and reduce the labor of men."*
 >

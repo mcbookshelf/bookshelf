@@ -32,7 +32,7 @@
 
 ## 🏗️ Bookshelf Prefabs
 
-A collection of ready-to-use structures and templates for world-building.
+Ready-to-use structures from the Bookshelf modular datapack library: trees and templates to speed up world creation.
 
 > *"The mother art is architecture. Without an architecture of our own we have no soul of our own civilization."*
 > 

@@ -28,7 +28,7 @@
 
 ## 📄 Bookshelf Log
 
-Log messages in the chat with varying levels of severity.
+Log messages to chat with severity levels (error, warn, info, debug). Filter by namespace and tags, and browse log history.
 
 ### ✨ Features
 

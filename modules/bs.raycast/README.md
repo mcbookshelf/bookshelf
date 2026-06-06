@@ -28,7 +28,7 @@
 
 ## 🔦 Bookshelf Raycast
 
-Cast rays and detect collisions with blocks or entities.
+Cast rays in Minecraft datapacks to detect block and entity hits. Voxel-accurate collision detection with customizable callbacks.
 
 > *"Reality only reveals itself when it is illuminated by a ray of poetry."*
 >

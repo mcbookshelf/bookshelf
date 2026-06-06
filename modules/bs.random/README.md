@@ -28,7 +28,7 @@
 
 ## 🎲 Bookshelf Random
 
-Contains many random functions for different distributions and noise patterns.
+Generate random numbers in Minecraft datapacks. Supports various distributions, weighted choices, and noise functions like Simplex and Fractal.
 
 > *"Creativity is the ability to introduce order into the randomness of nature."*
 >

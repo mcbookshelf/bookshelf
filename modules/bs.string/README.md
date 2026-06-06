@@ -28,7 +28,7 @@
 
 ## 🔠 Bookshelf String
 
-Manage and transform strings with a versatile set of manipulation and search functions.
+Manipulate strings in Minecraft datapacks: concatenate, change case, search, replace, and count.
 
 > *"Words are the most powerful drug used by mankind."*
 >

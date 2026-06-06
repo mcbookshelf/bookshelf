@@ -28,7 +28,7 @@
 
 ## 🖱️ Bookshelf Interaction
 
-Create and manage Graphical User Interfaces (GUIs) in Minecraft.
+Build in-world GUIs in Minecraft using Interaction entities. Bind click events, detect hover, and create interactive 3D menus.
 
 > *"As far as the customer is concerned, the interface is the product."*
 >

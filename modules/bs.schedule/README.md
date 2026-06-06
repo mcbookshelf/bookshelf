@@ -28,7 +28,7 @@
 
 ## ⏲️ Bookshelf Schedule
 
-Enhance command scheduling with this module, providing flexibility beyond vanilla capabilities.
+Schedule commands in Minecraft datapacks with cancellation and context preservation. Remember which entity and location triggered it.
 
 ### ✨ Features
 

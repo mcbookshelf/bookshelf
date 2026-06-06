@@ -28,7 +28,7 @@
 
 ## 🔬 Bookshelf Dump
 
-The dump module provides mechanisms for printing the state of any "variables".
+Debug Minecraft datapacks by printing scoreboard values, NBT data, and storage contents to chat with a simple, unified syntax.
 
 ### ✨ Features
 

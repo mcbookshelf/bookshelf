@@ -28,7 +28,7 @@
 
 ## 🏗️ Bookshelf Generation
 
-Iterate over the world in various shapes, executing callbacks at each position. Processes can spread across multiple ticks to avoid lag.
+Apply functions across world regions in Minecraft datapacks. Iterate over 2D/3D shapes with lag-free tick spreading and custom callbacks.
 
 > *"Nature's beauty is a reflection of the harmony of numbers and patterns."*
 >

@@ -28,7 +28,7 @@
 
 ## 🏃 Bookshelf Move
 
-Make your entity move exactly the way you want it to!
+Control entity movement in Minecraft datapacks with velocity vectors and collision handling. Build physics-based projectiles and motion systems.
 
 > *"There is nothing permanent except change."*
 >

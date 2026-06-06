@@ -28,7 +28,7 @@
 
 ## ❤️ Bookshelf Health
 
-Efficiently manage the lifecycle and vital aspects of an entity.
+Manage entity health in Minecraft datapacks: heal, damage, get/set values, modify max health, and assign lifetimes with death callbacks.
 
 > *"He who has a why to live can bear almost any how."*
 >

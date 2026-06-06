@@ -28,7 +28,7 @@
 
 ## 👀 Bookshelf View
 
-Execute commands based on what an entity sees.
+Execute commands based on where entities look in Minecraft. Detect aimed blocks, entities, and more.
 
 > *"Vision is the act of seeing things as they could be, not as they are."*
 >

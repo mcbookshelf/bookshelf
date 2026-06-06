@@ -28,7 +28,7 @@
 
 ## 🔗 Bookshelf Link
 
-Construct coherent entity structures by linking entities' positions and rotations.
+Link entities together in Minecraft datapacks with synchronized positions and rotations. Create complex multi-entity structures.
 
 > *"Invisible threads are the strongest ties."*
 >

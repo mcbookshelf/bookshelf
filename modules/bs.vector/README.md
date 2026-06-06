@@ -28,7 +28,7 @@
 
 ## ➡️ Bookshelf Vector
 
-Vectors are fundamental and incredibly powerful tools to manage motions, forces and... well... do physics!
+Vector math for Minecraft datapacks: rotations, coordinate conversions, and 3D operations. Essential for physics and movement.
 
 > *"With vectors, physics has found a magnificent language."*
 >

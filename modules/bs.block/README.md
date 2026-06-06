@@ -28,7 +28,7 @@
 
 ## 🧱 Bookshelf Block
 
-Manage blocks, including states and NBTs, while offering advanced tools for seamless transformations.
+Get and set block IDs and states in Minecraft datapacks. Mix block properties and produce sounds, particles, display blocks, and more from stored data.
 
 > *"Architecture is the thoughtful making of space."*
 >

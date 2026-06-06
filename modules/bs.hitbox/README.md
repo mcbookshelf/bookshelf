@@ -28,7 +28,7 @@
 
 ## 🎯 Bookshelf Hitbox
 
-Get and check the hitboxes of blocks or entities.
+Get precise hitbox data for blocks and entities in Minecraft datapacks. Check collisions and access both collision and interaction shapes.
 
 > *"Talent hits a target no one else can hit; Genius hits a target no one else can see."*
 >

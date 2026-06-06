@@ -28,7 +28,7 @@
 
 ## 📚 Bookshelf Suite
 
-The complete Bookshelf package, combining all modules into one unified bundle.
+A modular datapack library for Minecraft with 25+ modules covering math, raycasting, hitboxes, blocks, entity control, and more.
 
 > *"The whole is greater than the sum of its parts."*
 >

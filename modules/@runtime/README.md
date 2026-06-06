@@ -28,7 +28,7 @@
 
 ## ⚡ Bookshelf Runtime
 
-A collection of essential utilities for building Minecraft datapacks and maps.
+Core utilities from the Bookshelf modular datapack library: math, vectors, raycasting, entity control, blocks, health, and more.
 
 > *"Don't reinvent the wheel, just realign it."*
 >

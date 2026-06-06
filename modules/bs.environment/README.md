@@ -28,7 +28,7 @@
 
 ## ⛰️ Bookshelf Environment
 
-Comprehensive information and tools related to weather and biome properties.
+Access biome and weather data in Minecraft datapacks. Get the current biome, check temperature, and detect rain or snow at any position.
 
 > *"The most dangerous worldview is the worldview of those have not viewed the world."*
 >

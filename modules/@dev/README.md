@@ -28,7 +28,7 @@
 
 ## 🛠️ Bookshelf Development
 
-  Development utilities for debugging, logging, and testing your datapacks.
+Debug and logging tools from the Bookshelf modular datapack library. Inspect variables, log with severity levels, and track issues.
 
 > *"Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it."*
 >

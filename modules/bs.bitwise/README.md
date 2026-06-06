@@ -28,7 +28,7 @@
 
 ## 🖥️ Bookshelf Bitwise
 
-A collection of various bitwise operations, providing versatile tools for manipulating binary data.
+Perform bitwise AND, OR, XOR, and NOT operations in Minecraft datapacks. Useful for flags, permissions, and compact data storage.
 
 > *"Binary is a very simple numbering system, but it is incredibly powerful when used correctly."*
 >

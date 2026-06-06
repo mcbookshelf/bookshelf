@@ -28,7 +28,7 @@
 
 ## 🧭 Bookshelf Position
 
-Manage entity positions and rotations using scores.
+Manage entity positions and rotations via scoreboard values in Minecraft datapacks. Set precise coordinates on any axis.
 
 > *"The excitement lies in the exploration of the world around us."*
 >
@@ -37,7 +37,7 @@ Manage entity positions and rotations using scores.
 ### ✨ Features
 
 - **🎯 Position control**: add and set precise coordinates for entities
-- **🔄 Rotation lanagement**: control entity rotations with horizontal and vertical angles
+- **🔄 Rotation management**: control entity rotations with horizontal and vertical angles
 - **📏 Axis-specific control**: fine-tune position and rotation on individual axes
 
 📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/position.html)

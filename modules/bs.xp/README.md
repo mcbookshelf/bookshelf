@@ -28,7 +28,7 @@
 
 ## 🏅 Bookshelf XP
 
-Efficiently manage the experience points and levels of players.
+Manage player XP in Minecraft datapacks. Control the XP bar with precision, query status, and manipulate levels programmatically.
 
 ### ✨ Features
 

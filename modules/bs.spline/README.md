@@ -28,7 +28,7 @@
 
 ## 🧣 Bookshelf Spline
 
-Create and manipulate smooth curves from control points.
+Create smooth curves from control points in Minecraft datapacks. Supports Bézier, Catmull-Rom, B-Spline, Hermite, and Linear interpolation.
 
 > *"Do not go where the path may lead, go instead where there is no path and leave a trail."*
 >

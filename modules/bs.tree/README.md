@@ -28,7 +28,7 @@
 
 ## 🌳 Bookshelf Tree
 
-Simplicity meets utility in this bank of trees.
+Pre-built tree structures for Minecraft: Birch, Cypress, Dark Oak with multiple variations.
 
 ### ✨ Features
 

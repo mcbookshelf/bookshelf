@@ -7,7 +7,7 @@
   "meta": {
     "name": "Sidebar",
     "slug": "bookshelf-sidebar",
-    "description": "Bookshelf utility for creating dynamic and visually appealing scoreboard-based sidebars.",
+    "description": "Create dynamic sidebars in Minecraft using scoreboards. Supports rich text formatting, alignment, and real-time content updates.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/sidebar.html",
     "tags": ["runtime"],
     "weak_dependencies": [

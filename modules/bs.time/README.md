@@ -28,7 +28,7 @@
 
 ## ⌚ Bookshelf Time
 
-Get system time information effortlessly.
+Access the real-world system time from Minecraft datapacks. Get hours, minutes, and seconds for time-based events.
 
 ### ✨ Features
 

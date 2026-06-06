@@ -28,7 +28,7 @@
 
 ## 🎨 Bookshelf Color
 
-Facilitate color conversion between various formats.
+Convert colors between RGB, hexadecimal, and integer formats in Minecraft datapacks. Useful for dynamic text colors and visual effects.
 
 > *"Color helps to express light—not the physical phenomenon, but the only light that really exists, that in the artist's brain."*
 >
