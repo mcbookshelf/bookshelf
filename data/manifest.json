@@ -6,7 +6,7 @@
       "slug": "bookshelf-bitwise",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.bitwise/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.bitwise/README.md",
-      "description": "Bookshelf bitwise operations module, offering tools for precise binary data manipulation in datapacks.",
+      "description": "Perform bitwise AND, OR, XOR, and NOT operations in Minecraft datapacks. Useful for flags, permissions, and compact data storage.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html",
       "kind": "data_pack",
       "tags": [
@@ -139,7 +139,7 @@
       "slug": "bookshelf-block",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.block/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.block/README.md",
-      "description": "Bookshelf block management module, enabling id and state transformations.",
+      "description": "Get and set block IDs and states in Minecraft datapacks. Mix block properties and produce sounds, particles, display blocks, and more from stored data.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html",
       "kind": "data_pack",
       "tags": [
@@ -898,7 +898,7 @@
       "slug": "bookshelf-color",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.color/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.color/README.md",
-      "description": "Bookshelf color module, facilitating seamless conversion between various color formats.",
+      "description": "Convert colors between RGB, hexadecimal, and integer formats in Minecraft datapacks. Useful for dynamic text colors and visual effects.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html",
       "kind": "data_pack",
       "tags": [
@@ -1015,7 +1015,7 @@
       "slug": "bookshelf-dump",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.dump/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.dump/README.md",
-      "description": "Bookshelf debugging tool that outputs variable contents directly to chat.",
+      "description": "Debug Minecraft datapacks by printing scoreboard values, NBT data, and storage contents to chat with a simple, unified syntax.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/dump.html",
       "kind": "data_pack",
       "tags": [
@@ -1046,7 +1046,7 @@
       "slug": "bookshelf-environment",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.environment/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.environment/README.md",
-      "description": "Bookshelf module providing comprehensive access to weather and biome properties.",
+      "description": "Access biome and weather data in Minecraft datapacks. Get the current biome, check temperature, and detect rain or snow at any position.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html",
       "kind": "data_pack",
       "tags": [
@@ -1478,7 +1478,7 @@
       "slug": "bookshelf-generation",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.generation/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.generation/README.md",
-      "description": "Bookshelf world manipulation module, useful for iterating over blocks and creating shapes.",
+      "description": "Apply functions across world regions in Minecraft datapacks. Iterate over 2D/3D shapes with lag-free tick spreading and custom callbacks.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html",
       "kind": "data_pack",
       "tags": [
@@ -1529,7 +1529,7 @@
       "slug": "bookshelf-health",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.health/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.health/README.md",
-      "description": "Bookshelf health module for efficiently healing and damaging entities.",
+      "description": "Manage entity health in Minecraft datapacks: heal, damage, get/set values, modify max health, and assign lifetimes with death callbacks.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html",
       "kind": "data_pack",
       "tags": [
@@ -1660,7 +1660,7 @@
       "slug": "bookshelf-hitbox",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.hitbox/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.hitbox/README.md",
-      "description": "Bookshelf module for retrieving and checking the hitboxes of blocks and entities.",
+      "description": "Get precise hitbox data for blocks and entities in Minecraft datapacks. Check collisions and access both collision and interaction shapes.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html",
       "kind": "data_pack",
       "tags": [
@@ -2062,7 +2062,7 @@
       "slug": "bookshelf-id",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.id/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.id/README.md",
-      "description": "Bookshelf module for assigning and managing entity IDs.",
+      "description": "Assign unique numeric IDs to entities in Minecraft datapacks. Create continuous ID chains and query entities by ID.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html",
       "kind": "data_pack",
       "tags": [
@@ -2288,7 +2288,7 @@
       "slug": "bookshelf-interaction",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.interaction/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.interaction/README.md",
-      "description": "Bookshelf module for building GUI systems using Interaction entities and event binding.",
+      "description": "Build in-world GUIs in Minecraft using Interaction entities. Bind click events, detect hover, and create interactive 3D menus.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html",
       "kind": "data_pack",
       "tags": [
@@ -2407,7 +2407,7 @@
       "slug": "bookshelf-link",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.link/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.link/README.md",
-      "description": "Bookshelf entity linking system, enabling synchronized movement and structured relationships.",
+      "description": "Link entities together in Minecraft datapacks with synchronized positions and rotations. Create complex multi-entity structures.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html",
       "kind": "data_pack",
       "tags": [
@@ -2909,7 +2909,7 @@
       "slug": "bookshelf-log",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.log/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.log/README.md",
-      "description": "Bookshelf logging utility for structured messages in chat with severity levels.",
+      "description": "Log messages to chat with severity levels (error, warn, info, debug). Filter by namespace and tags, and browse log history.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html",
       "kind": "data_pack",
       "tags": [
@@ -3020,7 +3020,7 @@
       "slug": "bookshelf-math",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.math/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.math/README.md",
-      "description": "Bookshelf mathematical toolkit, bringing advanced calculations to Minecraft.",
+      "description": "Advanced math for Minecraft datapacks: trigonometry, exponentials, factorials, GCD, and float operations beyond vanilla commands.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html",
       "kind": "data_pack",
       "tags": [
@@ -3445,7 +3445,7 @@
       "slug": "bookshelf-move",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.move/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.move/README.md",
-      "description": "Bookshelf module providing precise control over entity movement.",
+      "description": "Control entity movement in Minecraft datapacks with velocity vectors and collision handling. Build physics-based projectiles and motion systems.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html",
       "kind": "data_pack",
       "tags": [
@@ -3562,7 +3562,7 @@
       "slug": "bookshelf-position",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.position/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.position/README.md",
-      "description": "Bookshelf position management system, allowing control over entity locations and rotations using scores.",
+      "description": "Manage entity positions and rotations via scoreboard values in Minecraft datapacks. Set precise coordinates on any axis.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html",
       "kind": "data_pack",
       "tags": [
@@ -4093,7 +4093,7 @@
       "slug": "bookshelf-random",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.random/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.random/README.md",
-      "description": "Bookshelf module featuring a variety of random number generation functions.",
+      "description": "Generate random numbers in Minecraft datapacks. Supports various distributions, weighted choices, and noise functions like Simplex and Fractal.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html",
       "kind": "data_pack",
       "tags": [
@@ -4336,7 +4336,7 @@
       "slug": "bookshelf-raycast",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.raycast/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.raycast/README.md",
-      "description": "Bookshelf raycasting module for casting rays that react to block and entity collisions.",
+      "description": "Cast rays in Minecraft datapacks to detect block and entity hits. Voxel-accurate collision detection with customizable callbacks.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html",
       "kind": "data_pack",
       "tags": [
@@ -4370,7 +4370,7 @@
       "slug": "bookshelf-schedule",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.schedule/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.schedule/README.md",
-      "description": "Bookshelf command scheduler, including cancellation and execution context tracking.",
+      "description": "Schedule commands in Minecraft datapacks with cancellation and context preservation. Remember which entity and location triggered it.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html",
       "kind": "data_pack",
       "tags": [
@@ -4456,7 +4456,7 @@
       "slug": "bookshelf-sidebar",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.sidebar/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.sidebar/README.md",
-      "description": "Bookshelf utility for creating dynamic and visually appealing scoreboard-based sidebars.",
+      "description": "Create dynamic sidebars in Minecraft using scoreboards. Supports rich text formatting, alignment, and real-time content updates.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/sidebar.html",
       "kind": "data_pack",
       "tags": [
@@ -4509,7 +4509,7 @@
       "slug": "bookshelf-spline",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.spline/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.spline/README.md",
-      "description": "Manipulate smooth curves created from control points.",
+      "description": "Create smooth curves from control points in Minecraft datapacks. Supports Bézier, Catmull-Rom, B-Spline, Hermite, and Linear interpolation.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html",
       "kind": "data_pack",
       "tags": [
@@ -4764,7 +4764,7 @@
       "slug": "bookshelf-string",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.string/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.string/README.md",
-      "description": "Bookshelf utility for manipulating and transforming strings in Minecraft datapacks.",
+      "description": "Manipulate strings in Minecraft datapacks: concatenate, change case, search, replace, and count.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html",
       "kind": "data_pack",
       "tags": [
@@ -4974,7 +4974,7 @@
       "slug": "bookshelf-time",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.time/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.time/README.md",
-      "description": "Bookshelf system time module, retrieving real-time information in Minecraft.",
+      "description": "Access the real-world system time from Minecraft datapacks. Get hours, minutes, and seconds for time-based events.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/time.html",
       "kind": "data_pack",
       "tags": [
@@ -5009,7 +5009,7 @@
       "slug": "bookshelf-tree",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.tree/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.tree/README.md",
-      "description": "Bookshelf collection of ready-to-use trees for natural-looking landscapes.",
+      "description": "Pre-built tree structures for Minecraft: Birch, Cypress, Dark Oak with multiple variations.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/tree.html",
       "kind": "data_pack",
       "tags": [
@@ -5022,7 +5022,7 @@
       "slug": "bookshelf-vector",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.vector/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.vector/README.md",
-      "description": "Bookshelf vector math toolkit for manipulating and performing operations on vectors.",
+      "description": "Vector math for Minecraft datapacks: rotations, coordinate conversions, and 3D operations. Essential for physics and movement.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html",
       "kind": "data_pack",
       "tags": [
@@ -5321,7 +5321,7 @@
       "slug": "bookshelf-view",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.view/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.view/README.md",
-      "description": "Bookshelf set of easy-to-use commands that execute based on what an entity sees.",
+      "description": "Execute commands based on where entities look in Minecraft. Detect aimed blocks, entities, and more.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html",
       "kind": "data_pack",
       "tags": [
@@ -5501,7 +5501,7 @@
       "slug": "bookshelf-xp",
       "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.xp/pack.png",
       "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.xp/README.md",
-      "description": "Bookshelf experience management system for handling player XP and levels efficiently.",
+      "description": "Manage player XP in Minecraft datapacks. Control the XP bar with precision, query status, and manipulate levels programmatically.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html",
       "kind": "data_pack",
       "tags": [
