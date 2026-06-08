@@ -13,6 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute positioned ~4 ~ ~ unless entity @s[dx=0] positioned ~-4 ~ ~ run return run function bs.hitbox:get_entity/registry/painting/width3
-scoreboard players add #w bs.ctx 8
-execute positioned ~4 ~ ~ run function bs.hitbox:get_entity/registry/painting/width3
+return run execute at @s positioned ~ ~.20000001 ~ unless entity @s[dx=0] positioned ~ ~-.00000001 ~ if entity @s[dx=0] run scoreboard players set #z bs.ctx 100000

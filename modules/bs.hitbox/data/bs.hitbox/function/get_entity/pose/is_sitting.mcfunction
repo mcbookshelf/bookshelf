@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# bee group
-execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.275,height:0.25}
-data modify storage bs:out hitbox set value {width:0.55,height:0.5}
+execute store result score #h bs.ctx run data get storage bs:out hitbox.height 99.99999
+execute store result storage bs:ctx y double 0.0000001 run scoreboard players operation #h bs.ctx *= #z bs.ctx
+return run function bs.hitbox:get_entity/pose/check with storage bs:ctx

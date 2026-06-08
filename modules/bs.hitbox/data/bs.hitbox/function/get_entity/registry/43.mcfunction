@@ -16,5 +16,5 @@
 # pufferfish group
 execute store result score #s bs.ctx run data get entity @s PuffState
 execute if score #s bs.ctx matches 0 run return run data modify storage bs:out hitbox set value {width:0.35,height:0.35}
-execute if score #s bs.ctx matches 1 run return run data modify storage bs:out hitbox set value {width:0.48999998,height:0.48999998}
+execute if score #s bs.ctx matches 1 run return run data modify storage bs:out hitbox set value {width:0.49,height:0.49}
 execute if score #s bs.ctx matches 2 run return run data modify storage bs:out hitbox set value {width:0.7,height:0.7}
