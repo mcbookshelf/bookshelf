@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #

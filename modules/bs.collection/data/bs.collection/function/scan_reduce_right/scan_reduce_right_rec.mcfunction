@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -20,7 +20,7 @@ execute store result score #i bs.ctx run data get storage bs:data collection.sta
 execute store result storage bs:data collection.stack[0].i int 1 store result storage bs:lambda collection.index int 1 run scoreboard players remove #i bs.ctx 1
 
 # Call the lambda function to reduce the value
-function bs.collection:scanr_right/call with storage bs:data collection.stack[0]
+function bs.collection:scan_reduce_right/call with storage bs:data collection.stack[0]
 data modify storage bs:data collection.stack[0].accumulator set from storage bs:lambda collection.result
 data modify storage bs:data collection.stack[0].result append from storage bs:data collection.stack[0].accumulator
 
@@ -28,4 +28,4 @@ data modify storage bs:data collection.stack[0].result append from storage bs:da
 data remove storage bs:data collection.stack[0].value[-1]
 
 # Recurse if there are more elements
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:scanr_right/scanr_right_rec
+execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:scan_reduce_right/scan_reduce_right_rec

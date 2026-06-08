@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,7 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out collection.value append from storage bs:ctx _.value[0][]
-data remove storage bs:ctx _.value[0]
+execute unless data storage bs:out collection.value[0] run return 0
+$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: [], i: -1 }
 
-execute if data storage bs:ctx _.value[0] run function bs.collection:concat/concat_rec
+data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
+function bs.collection:flat_map/flat_map_rec
+
+data modify storage bs:out collection.value set from storage bs:data collection.stack[0].result
+
+data remove storage bs:data collection.stack[0]

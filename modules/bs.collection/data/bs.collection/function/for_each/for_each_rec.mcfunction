@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -18,14 +18,11 @@ data modify storage bs:lambda collection.value set from storage bs:data collecti
 execute store result score #i bs.ctx run data get storage bs:data collection.stack[0].i
 execute store result storage bs:data collection.stack[0].i int 1 store result storage bs:lambda collection.index int 1 run scoreboard players add #i bs.ctx 1
 
-# Call the lambda function to transform the value into an collection
-function bs.collection:flatmap/call with storage bs:data collection.stack[0]
-
-# Flatten and append all elements from the resulting collection
-data modify storage bs:data collection.stack[0].result append from storage bs:lambda collection.result[]
+# Call the lambda function for side effects (no result used)
+function bs.collection:for_each/call with storage bs:data collection.stack[0]
 
 # Shift the collection
 data remove storage bs:data collection.stack[0].value[0]
 
 # Recurse if there are more elements
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:flatmap/flatmap_rec
+execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:for_each/for_each_rec

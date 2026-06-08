@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,11 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: [], accumulator: $(initial), i: -1 }
-data modify storage bs:data collection.stack[0].result append from storage bs:data collection.stack[0].accumulator
+scoreboard objectives remove bs.ctx
 
-execute if data storage bs:out collection.value[0] run data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:scanr_right/scanr_right_rec
-
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].result
-data remove storage bs:data collection.stack[0]
+data remove storage bs:in collection
+data remove storage bs:out collection
+data remove storage bs:data collection
+data remove storage bs:lambda collection

@@ -25,7 +25,7 @@ Functional programming operations for working with collections in Minecraft.
 
 ## ✨ Features
 
-- **🔄 Transformation**: Map and flatmap operations to transform collection elements.
+- **🔄 Transformation**: Map and flat_map operations to transform collection elements.
 - **🔍 Filtering**: Filter and find operations to select specific elements.
 - **✅ Validation**: Any, all, and none predicates to test collection conditions.
 - **📊 Aggregation**: Count, min, max, and average to compute collection statistics.

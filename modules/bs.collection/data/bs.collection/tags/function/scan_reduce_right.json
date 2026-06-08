@@ -1,20 +1,20 @@
 {
   "__bookshelf__": {
     "feature": true,
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#transformation-operations",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
     "authors": [
       "theogiraudet"
     ],
     "created": {
-      "date": "2025/12/27",
+      "date": "2025/12/31",
       "minecraft_version": "1.21.11"
     },
     "updated": {
-      "date": "2025/12/27",
+      "date": "2025/12/31",
       "minecraft_version": "1.21.11"
     }
   },
   "values": [
-    "bs.collection:flatmap/flatmap"
+    "bs.collection:scan_reduce_right/scan_reduce_right"
   ]
 }

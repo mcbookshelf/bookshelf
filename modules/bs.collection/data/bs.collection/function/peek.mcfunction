@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -18,7 +18,7 @@ $data modify storage bs:data collection.stack prepend value { value: [], run: "$
 
 data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
 data modify storage bs:data collection.stack[0].input set from storage bs:out collection.value
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:foreach/foreach_rec
+execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:for_each/for_each_rec
 
 data modify storage bs:out collection.value set from storage bs:data collection.stack[0].input
 data remove storage bs:data collection.stack[0]

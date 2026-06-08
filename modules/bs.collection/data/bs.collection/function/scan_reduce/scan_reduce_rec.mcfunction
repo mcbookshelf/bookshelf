@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -14,15 +14,18 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Prepare args for the lambda function
+data modify storage bs:lambda collection.accumulator set from storage bs:data collection.stack[0].accumulator
 data modify storage bs:lambda collection.value set from storage bs:data collection.stack[0].value[0]
 execute store result score #i bs.ctx run data get storage bs:data collection.stack[0].i
 execute store result storage bs:data collection.stack[0].i int 1 store result storage bs:lambda collection.index int 1 run scoreboard players add #i bs.ctx 1
 
-# Call the lambda function for side effects (no result used)
-function bs.collection:foreach/call with storage bs:data collection.stack[0]
+# Call the lambda function to reduce the value
+function bs.collection:scan_reduce/call with storage bs:data collection.stack[0]
+data modify storage bs:data collection.stack[0].accumulator set from storage bs:lambda collection.result
+data modify storage bs:data collection.stack[0].result append from storage bs:data collection.stack[0].accumulator
 
 # Shift the collection
 data remove storage bs:data collection.stack[0].value[0]
 
 # Recurse if there are more elements
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:foreach/foreach_rec
+execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:scan_reduce/scan_reduce_rec

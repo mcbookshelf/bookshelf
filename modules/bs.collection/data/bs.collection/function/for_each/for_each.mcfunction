@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -14,8 +14,9 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute unless data storage bs:out collection.value[0] run return 0
+$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", i: -1 }
 
-data modify storage bs:ctx _.value set from storage bs:out collection.value
-data modify storage bs:out collection.value set value []
+data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
+function bs.collection:for_each/for_each_rec
 
-function bs.collection:concat/concat_rec
+data remove storage bs:data collection.stack[0]

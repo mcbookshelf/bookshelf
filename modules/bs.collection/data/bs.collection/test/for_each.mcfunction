@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -12,11 +12,25 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+# @dummy
 
-execute unless data storage bs:out collection.value[0] run return 0
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", i: -1 }
+# Empty
+data modify storage bs:out collection.value set value []
+function #bs.collection:for_each {run: "tellraw @a 'value'"}
+assert not chat "value"
 
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
-function bs.collection:foreach/foreach_rec
+# Print
+data modify storage bs:out collection.value set value [0, 1, 2, 3]
+function #bs.collection:for_each {run: "tellraw @a {nbt:'collection.value',storage:'bs:lambda'}"}
+assert chat "0"
+assert chat "1"
+assert chat "2"
+assert chat "3"
 
-data remove storage bs:data collection.stack[0]
+# Index
+data modify storage bs:out collection.value set value [10, 11, 12, 13]
+function #bs.collection:for_each {run: "tellraw @a {nbt:'collection.index',storage:'bs:lambda'}"}
+assert chat "0"
+assert chat "1"
+assert chat "2"
+assert chat "3"

@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -14,18 +14,18 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Prepare args for the lambda function
-data modify storage bs:lambda collection.accumulator set from storage bs:data collection.stack[0].accumulator
 data modify storage bs:lambda collection.value set from storage bs:data collection.stack[0].value[0]
 execute store result score #i bs.ctx run data get storage bs:data collection.stack[0].i
 execute store result storage bs:data collection.stack[0].i int 1 store result storage bs:lambda collection.index int 1 run scoreboard players add #i bs.ctx 1
 
-# Call the lambda function to reduce the value
-function bs.collection:scanr/call with storage bs:data collection.stack[0]
-data modify storage bs:data collection.stack[0].accumulator set from storage bs:lambda collection.result
-data modify storage bs:data collection.stack[0].result append from storage bs:data collection.stack[0].accumulator
+# Call the lambda function to transform the value into an collection
+function bs.collection:flat_map/call with storage bs:data collection.stack[0]
+
+# Flatten and append all elements from the resulting collection
+data modify storage bs:data collection.stack[0].result append from storage bs:lambda collection.result[]
 
 # Shift the collection
 data remove storage bs:data collection.stack[0].value[0]
 
 # Recurse if there are more elements
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:scanr/scanr_rec
+execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:flat_map/flat_map_rec

@@ -1114,7 +1114,7 @@
           }
         },
         {
-          "id": "#bs.collection:flatmap",
+          "id": "#bs.collection:flat_map",
           "kind": "function_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#transformation-operations",
           "authors": [
@@ -1194,7 +1194,7 @@
           }
         },
         {
-          "id": "#bs.collection:foreach",
+          "id": "#bs.collection:for_each",
           "kind": "function_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#iteration-operations",
           "authors": [
@@ -1530,7 +1530,7 @@
           }
         },
         {
-          "id": "#bs.collection:scanf",
+          "id": "#bs.collection:scan_fold",
           "kind": "function_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
           "authors": [
@@ -1546,7 +1546,7 @@
           }
         },
         {
-          "id": "#bs.collection:scanf_right",
+          "id": "#bs.collection:scan_fold_right",
           "kind": "function_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
           "authors": [
@@ -1562,7 +1562,7 @@
           }
         },
         {
-          "id": "#bs.collection:scanr",
+          "id": "#bs.collection:scan_reduce",
           "kind": "function_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
           "authors": [
@@ -1578,7 +1578,7 @@
           }
         },
         {
-          "id": "#bs.collection:scanr_right",
+          "id": "#bs.collection:scan_reduce_right",
           "kind": "function_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
           "authors": [
