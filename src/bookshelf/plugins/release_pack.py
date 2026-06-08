@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING
 
 from beet import Context, PluginOptions, configurable
 
-from bookshelf.definitions import DOC_DIR, MC_VERSIONS, VERSION
+from bookshelf.definitions import BUNDLES, DOC_DIR, MC_VERSIONS, VERSION
 from bookshelf.services.publishers import PublishSpec
 
 if TYPE_CHECKING:
@@ -28,10 +28,11 @@ def beet_default(ctx: Context, opts: ReleaseOptions) -> Generator:
     for pack in list(filter(None, ctx.packs)):
         pack.name = f"{pack.name}-{MC_VERSIONS[-1]}-v{VERSION}"
         file = pack.save(opts.output, overwrite=True, zipped=True)
+        typ = "Bundle" if ctx.directory.stem in BUNDLES else "Module"
 
         opts.enqueue(PublishSpec(
             file=file,
-            name=f"Bookshelf {ctx.meta.get('name', '')}".strip(),
+            name=f"Bookshelf {ctx.meta.get('name', '').strip()} {typ}",
             kind="datapack" if ctx.data else "resourcepack",
             slug=ctx.meta["slug"],
             icon=ctx.directory / "pack.png",

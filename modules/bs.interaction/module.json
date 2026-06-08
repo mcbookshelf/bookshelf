@@ -7,7 +7,7 @@
   "meta": {
     "name": "Interaction",
     "slug": "bookshelf-interaction",
-    "description": "Bookshelf module for building GUI systems using Interaction entities and event binding.",
+    "description": "Build in-world GUIs in Minecraft using Interaction entities. Bind click events, detect hover, and create interactive 3D menus.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html",
     "tags": ["runtime"],
     "weak_dependencies": [

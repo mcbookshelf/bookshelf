@@ -7,7 +7,7 @@
   "meta": {
     "name": "Environment",
     "slug": "bookshelf-environment",
-    "description": "Bookshelf module providing comprehensive access to weather and biome properties.",
+    "description": "Access biome and weather data in Minecraft datapacks. Get the current biome, check temperature, and detect rain or snow at any position.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html",
     "tags": ["runtime"]
   },

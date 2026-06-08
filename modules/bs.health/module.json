@@ -7,7 +7,7 @@
   "meta": {
     "name": "Health",
     "slug": "bookshelf-health",
-    "description": "Bookshelf health module for efficiently healing and damaging entities.",
+    "description": "Manage entity health in Minecraft datapacks: heal, damage, get/set values, modify max health, and assign lifetimes with death callbacks.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html",
     "tags": ["runtime"],
     "weak_dependencies": [

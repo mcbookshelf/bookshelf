@@ -7,7 +7,7 @@
   "meta": {
     "name": "Log",
     "slug": "bookshelf-log",
-    "description": "Bookshelf logging utility for structured messages in chat with severity levels.",
+    "description": "Log messages to chat with severity levels (error, warn, info, debug). Filter by namespace and tags, and browse log history.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html",
     "tags": ["dev"]
   }

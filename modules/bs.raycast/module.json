@@ -7,7 +7,7 @@
   "meta": {
     "name": "Raycast",
     "slug": "bookshelf-raycast",
-    "description": "Bookshelf raycasting module for casting rays that react to block and entity collisions.",
+    "description": "Cast rays in Minecraft datapacks to detect block and entity hits. Voxel-accurate collision detection with customizable callbacks.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html",
     "tags": ["runtime"],
     "dependencies": [
