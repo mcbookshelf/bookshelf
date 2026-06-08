@@ -28,7 +28,7 @@
 
 ## 🗂️ Bookshelf Collection Module
 
-Work with arrays and lists in Minecraft datapacks. Map, filter, reduce, find, and transform elements with functional operations.
+Work with collections in Minecraft datapacks. Map, filter, reduce, find, and transform elements with functional operations.
 
 > *"Simplicity is the ultimate sophistication."*
 >
