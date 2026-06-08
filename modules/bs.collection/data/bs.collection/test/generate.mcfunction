@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Generate sequence of 3 constant values
 function #bs.collection:generate {run: "data modify storage bs:lambda collection.result set value 1", limit: 3}

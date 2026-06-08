@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Generate sequence based on index (0, 1, 2) while value != 3
 function #bs.collection:generate_while {run: "data modify storage bs:lambda collection.result set from storage bs:lambda collection.index", predicate: "execute unless data storage bs:lambda {collection: {result: 3}}"}

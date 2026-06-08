@@ -43,20 +43,24 @@ Operations that remove elements from the start of a collection.
 :::::{tab-set}
 ::::{tab-item} Drop
 
-```{function} #bs.collection:drop
+```{function} #bs.collection:drop {number:<value>}
 
 Drop the first N elements from a collection.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to drop from.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to drop from
 
-  **Macro `number`**: {nbt}`int` The number of elements to drop.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`int` **number**: the number of elements to drop
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection with the first N elements removed.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection with the first N elements removed
 ```
 
-*Example: Drop first 2 elements:*
+*Example: drop first 2 elements*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
@@ -69,27 +73,34 @@ function #bs.collection:drop {number: 2}
 ::::
 ::::{tab-item} Drop While
 
-```{function} #bs.collection:drop_while
+```{function} #bs.collection:drop_while {run:<value>}
 
 Drop elements from the beginning of a collection as long as a predicate is true.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to drop from.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to drop from
 
-  **Macro `run`**: {nbt}`string` Predicate function.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: predicate function
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The remaining elements.
+  **Storage `bs:out collection.value`**: {nbt}`list` the remaining elements
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Return**: Success (1) to continue dropping, fail (0) otherwise.
+  **Return**: success (1) to continue dropping, fail (0) otherwise
 ```
 
-*Example: Drop elements until value is 3:*
+*Example: drop elements until value is 3*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
@@ -116,13 +127,13 @@ Operations that select a subset of elements.
 Remove duplicate elements from a collection, keeping only the first occurrence of each element.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to process.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to process
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection with duplicates removed.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection with duplicates removed
 ```
 
-*Example: Remove duplicates:*
+*Example: remove duplicates*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 2, 3, 1]
@@ -135,27 +146,34 @@ function #bs.collection:distinct
 ::::
 ::::{tab-item} Filter
 
-```{function} #bs.collection:filter
+```{function} #bs.collection:filter {run:<value>}
 
 Keep only elements that satisfy a predicate condition.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to filter.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to filter
 
-  **Macro `run`**: {nbt}`string` Predicate function to test each element.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: predicate function to test each element
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The filtered collection containing only matching elements.
+  **Storage `bs:out collection.value`**: {nbt}`list` the filtered collection containing only matching elements
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Return**: Success (1) to keep the element, fail (0) otherwise.
+  **Return**: success (1) to keep the element, fail (0) otherwise
 ```
 
-*Example: Keep only elements equal to 3:*
+*Example: keep only elements equal to 3*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 3, 2, 3, 4]
@@ -177,31 +195,41 @@ Operations that locate elements or their indices.
 :::::{tab-set}
 ::::{tab-item} Find
 
-```{function} #bs.collection:find
+```{function} #bs.collection:find {run:<value>}
 
 Find the first element that satisfies a predicate condition.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to search.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to search
 
-  **Macro `run`**: {nbt}`string` Predicate function.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: predicate function
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`any` The first matching element (removed if not found).
+  **Storage `bs:out collection`**:
+  :::{treeview}
+  - {nbt}`compound` output data
+    - {nbt}`any` **value**: the first matching element (removed if not found)
+    - {nbt}`int` **index**: the index of the matching element, or -1 if not found
+  :::
 
-  **Storage `bs:out collection.index`**: {nbt}`int` The index of the matching element, or -1 if not found.
+  **Return**: success if element found, fail otherwise
 
-  **Return**: Success if element found, fail otherwise.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Return**: Success (1) for match, fail (0) otherwise.
+  **Return**: success (1) for match, fail (0) otherwise
 ```
 
-*Example: Find the first element equal to "b":*
+*Example: find the first element equal to "b"*
 
 ```mcfunction
 data modify storage bs:out collection.value set value ["a", "b", "c"]
@@ -215,31 +243,41 @@ function #bs.collection:find {run: "execute if data storage bs:lambda collection
 ::::
 ::::{tab-item} Find Last
 
-```{function} #bs.collection:find_last
+```{function} #bs.collection:find_last {run:<value>}
 
 Find the last element that satisfies a predicate condition.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to search.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to search
 
-  **Macro `run`**: {nbt}`string` Predicate function.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: predicate function
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`any` The last matching element (removed if not found).
+  **Storage `bs:out collection`**:
+  :::{treeview}
+  - {nbt}`compound` output data
+    - {nbt}`any` **value**: the last matching element (removed if not found)
+    - {nbt}`int` **index**: the index of the matching element, or -1 if not found
+  :::
 
-  **Storage `bs:out collection.index`**: {nbt}`int` The index of the matching element, or -1 if not found.
+  **Return**: success if element found, fail otherwise
 
-  **Return**: Success if element found, fail otherwise.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Return**: Success (1) for match, fail (0) otherwise.
+  **Return**: success (1) for match, fail (0) otherwise
 ```
 
-*Example: Find the last element equal to 3:*
+*Example: find the last element equal to 3*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 3, 5]
@@ -253,29 +291,36 @@ function #bs.collection:find_last {run: "execute if data storage bs:lambda colle
 ::::
 ::::{tab-item} Index Of
 
-```{function} #bs.collection:index_of
+```{function} #bs.collection:index_of {run:<value>}
 
 Find the index of the first element matching a predicate.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to search.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to search
 
-  **Macro `run`**: {nbt}`string` Predicate function.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: predicate function
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`int` The zero-based index of the first matching element, or -1.
+  **Storage `bs:out collection.value`**: {nbt}`int` the zero-based index of the first matching element, or -1
 
-  **Return**: Success if element found, fail otherwise.
+  **Return**: success if element found, fail otherwise
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Return**: Success (1) for match, fail (0) otherwise.
+  **Return**: success (1) for match, fail (0) otherwise
 ```
 
-*Example: Find the index of value 3:*
+*Example: find the index of value 3*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 3, 5]
@@ -288,29 +333,36 @@ function #bs.collection:index_of {run: "execute if data storage bs:lambda collec
 ::::
 ::::{tab-item} Last Index Of
 
-```{function} #bs.collection:last_index_of
+```{function} #bs.collection:last_index_of {run:<value>}
 
 Find the index of the last element matching a predicate.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to search.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to search
 
-  **Macro `run`**: {nbt}`string` Predicate function.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: predicate function
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`int` The zero-based index of the last matching element, or -1.
+  **Storage `bs:out collection.value`**: {nbt}`int` the zero-based index of the last matching element, or -1
 
-  **Return**: Success if element found, fail otherwise.
+  **Return**: success if element found, fail otherwise
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Return**: Success (1) for match, fail (0) otherwise.
+  **Return**: success (1) for match, fail (0) otherwise
 ```
 
-*Example: Find the last index of value 3:*
+*Example: find the last index of value 3*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 3, 5]
@@ -337,13 +389,13 @@ Operations that flatten nested collections.
 Concatenate a list of lists into a single list. Functionally equivalent to `flatten`, provided as a semantic alias for when you think of the operation as concatenation rather than flattening.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` A list of lists to concatenate.
+  **Storage `bs:out collection.value`**: {nbt}`list` a list of lists to concatenate
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The flattened list containing all elements from the sub-lists in order.
+  **Storage `bs:out collection.value`**: {nbt}`list` the flattened list containing all elements from the sub-lists in order
 ```
 
-*Example: Concatenate lists:*
+*Example: concatenate lists*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [[1, 2], [3], [4, 5]]
@@ -361,13 +413,13 @@ function #bs.collection:concat
 Flatten a nested collection by one level.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The nested collection to flatten.
+  **Storage `bs:out collection.value`**: {nbt}`list` the nested collection to flatten
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The flattened collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` the flattened collection
 ```
 
-*Example: Flatten a 2D array:*
+*Example: flatten a 2D array*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [[1, 2], [3, 4], [5]]
@@ -385,13 +437,13 @@ function #bs.collection:flatten
 Recursively flatten a nested collection of arbitrary depth. Preserves non-list elements.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The nested collection to flatten.
+  **Storage `bs:out collection.value`**: {nbt}`list` the nested collection to flatten
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The deeply flattened collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` the deeply flattened collection
 ```
 
-*Example: Flatten a deeply nested structure:*
+*Example: flatten a deeply nested structure*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, [2, 3], [[4], 5]]
@@ -413,33 +465,37 @@ Reduce a collection to a single value using an explicit initial accumulator.
 :::::{tab-set}
 ::::{tab-item} Fold
 
-```{function} #bs.collection:fold
+```{function} #bs.collection:fold {run:<value>,initial:<value>}
 
 Reduce a collection to a single value by applying a function that combines the accumulator with each element, starting with a provided initial value.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to fold.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to fold
 
-  **Macro `run`**: {nbt}`string` Lambda function that combines accumulator and value.
-
-  **Macro `initial`**: {nbt}`any` Initial value for the accumulator. Must be a valid SNBT value.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function that combines accumulator and value
+    - {nbt}`any` **initial**: initial value for the accumulator, must be a valid NBT value
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: The final accumulated value.
+  **Storage `bs:out collection.value`**: the final accumulated value
 
-  **Return**: 0 on success.
+  **Return**: 0 on success
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.accumulator`**: {nbt}`any` The current accumulated value.
-
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Output Storage `bs:lambda collection.result`**: {nbt}`any` The new accumulated value.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **accumulator**: (input) the current accumulated value
+    - {nbt}`any` **value**: (input) the current element being processed
+    - {nbt}`int` **index**: (input) the zero-based index of the current element
+    - {nbt}`any` **result**: (output) the new accumulated value
+  :::
 ```
 
-*Example: Fold with a custom function (see reduce for lambda details):*
+*Example: fold with a custom function (see reduce for lambda details)*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3]
@@ -452,30 +508,34 @@ function #bs.collection:fold {run: "data modify storage bs:lambda collection.res
 ::::
 ::::{tab-item} Fold Right
 
-```{function} #bs.collection:fold_right
+```{function} #bs.collection:fold_right {run:<value>,initial:<value>}
 
 Reduce a collection to a single value by applying a function from right to left with a provided initial value.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to fold.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to fold
 
-  **Macro `run`**: {nbt}`string` Lambda function that combines accumulator and value.
-
-  **Macro `initial`**: {nbt}`any` Initial value for the accumulator.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function that combines accumulator and value
+    - {nbt}`any` **initial**: initial value for the accumulator, must be a valid NBT value
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: The final accumulated value.
+  **Storage `bs:out collection.value`**: the final accumulated value
 
-  **Return**: 0 on success.
+  **Return**: 0 on success
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.accumulator`**: {nbt}`any` The current accumulated value.
-
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Output Storage `bs:lambda collection.result`**: {nbt}`any` The new accumulated value.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **accumulator**: (input) the current accumulated value
+    - {nbt}`any` **value**: (input) the current element being processed
+    - {nbt}`int` **index**: (input) the zero-based index of the current element
+    - {nbt}`any` **result**: (output) the new accumulated value
+  :::
 ```
 
 > **Credits**: theogiraudet
@@ -492,25 +552,31 @@ Operations that create new collections.
 :::::{tab-set}
 ::::{tab-item} Generate
 
-```{function} #bs.collection:generate
+```{function} #bs.collection:generate {run:<value>,limit:<value>}
 
 Generate a collection by repeatedly calling a generator function up to a limit.
 
 :Inputs:
-  **Macro `run`**: {nbt}`string` The command to execute to generate a value.
-
-  **Macro `limit`**: {nbt}`int` The number of values to generate.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: the command to execute to generate a value
+    - {nbt}`int` **limit**: the number of values to generate
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The generated list.
+  **Storage `bs:out collection.value`**: {nbt}`list` the generated list
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The current index being generated (0-based).
-  
-  **Output Storage `bs:lambda collection.result`**: {nbt}`any` The value generated by `run`.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`int` **index**: the current index being generated (0-based)
+    - {nbt}`any` **result**: (output) the value generated by `run`
+  :::
 ```
 
-*Example: Generate [0, 1, 2]:*
+*Example: generate [0, 1, 2]*
 
 ```mcfunction
 function #bs.collection:generate {run: "data modify storage bs:lambda collection.result set from storage bs:lambda collection.index", limit: 3}
@@ -522,32 +588,41 @@ function #bs.collection:generate {run: "data modify storage bs:lambda collection
 ::::
 ::::{tab-item} Generate While
 
-```{function} #bs.collection:generate_while
+```{function} #bs.collection:generate_while {run:<value>,predicate:<value>}
 
 Generate a collection by repeatedly calling a generator function while a predicate is met.
 
 :Inputs:
-  **Macro `run`**: {nbt}`string` The command to execute to generate a value.
-
-  **Macro `predicate`**: {nbt}`string` The predicate to check on the generated value. Returns success to continue, fail to stop.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: the command to execute to generate a value
+    - {nbt}`string` **predicate**: the predicate to check on the generated value, returns success to continue, fail to stop
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The generated list.
+  **Storage `bs:out collection.value`**: {nbt}`list` the generated list
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The current index being generated (0-based).
-
-  **Output Storage `bs:lambda collection.result`**: {nbt}`any` The value generated by `run`.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`int` **index**: the current index being generated (0-based)
+    - {nbt}`any` **result**: (output) the value generated by `run`
+  :::
 
 :Lambda predicate:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The value generated by `run`.
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the value generated by `run`
+    - {nbt}`int` **index**: the current index being generated (0-based)
+  :::
 
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The current index being generated (0-based).
-
-  **Return**: Success to continue, fail to stop.
+  **Return**: success to continue, fail to stop
 ```
 
-*Example: Generate values equal to index while the result is not 3:*
+*Example: generate values equal to index while the result is not 3*
 
 ```mcfunction
 function #bs.collection:generate_while {run: "data modify storage bs:lambda collection.result set from storage bs:lambda collection.index", predicate: "execute unless data storage bs:lambda {collection: {result: 3}}"}
@@ -559,22 +634,24 @@ function #bs.collection:generate_while {run: "data modify storage bs:lambda coll
 ::::
 ::::{tab-item} Range
 
-```{function} #bs.collection:range
+```{function} #bs.collection:range {min:<value>,max:<value>,step:<value>}
 
 Generate a sequence of numbers from `min` (inclusive) to `max` (exclusive) with a specified `step`.
 
 :Inputs:
-  **Macro `min`**: {nbt}`int` The starting value (inclusive).
-
-  **Macro `max`**: {nbt}`int` The ending value (exclusive).
-
-  **Macro `step`**: {nbt}`int` The step between each value.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`int` **min**: the starting value (inclusive)
+    - {nbt}`int` **max**: the ending value (exclusive)
+    - {nbt}`int` **step**: the step between each value
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The generated list of integers.
+  **Storage `bs:out collection.value`**: {nbt}`list` the generated list of integers
 ```
 
-*Example: Generate 0, 1, 2, 3, 4:*
+*Example: generate 0, 1, 2, 3, 4*
 
 ```mcfunction
 function #bs.collection:range {min: 0, max: 5, step: 1}
@@ -589,20 +666,23 @@ function #bs.collection:range {min: 0, max: 5, step: 2}
 ::::
 ::::{tab-item} Repeat
 
-```{function} #bs.collection:repeat
+```{function} #bs.collection:repeat {value:<value>,count:<value>}
 
 Create a collection containing `count` copies of `value`.
 
 :Inputs:
-  **Macro `value`**: {nbt}`any` The value to repeat (must be a valid NBT value).
-
-  **Macro `count`**: {nbt}`int` The number of times to repeat the value.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`any` **value**: the value to repeat (must be a valid NBT value)
+    - {nbt}`int` **count**: the number of times to repeat the value
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The generated list.
+  **Storage `bs:out collection.value`**: {nbt}`list` the generated list
 ```
 
-*Example: Repeat a value 3 times:*
+*Example: repeat a value 3 times*
 
 ```mcfunction
 function #bs.collection:repeat {value: 5, count: 3}
@@ -612,7 +692,7 @@ function #bs.collection:repeat {value: 5, count: 3}
 ```{admonition} Repeat Strings
 :class: warning
 
-To repeat a string, the value must double quoted (e.g. "'Hello'").
+To repeat a string, the value must be double quoted (e.g. "'Hello'").
 ```
 
 > **Credits**: theogiraudet
@@ -629,25 +709,32 @@ Run a lambda over each element for its side effects.
 :::::{tab-set}
 ::::{tab-item} For Each
 
-```{function} #bs.collection:for_each
+```{function} #bs.collection:for_each {run:<value>}
 
 Execute an operation on each element of a collection.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to iterate over.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to iterate over
 
-  **Macro `run`**: {nbt}`string` Lambda function to execute on each element.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function to execute on each element
+  :::
 
 :Outputs:
   None. This function is used for side effects only.
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 ```
 
-*Example: Display each element:*
+*Example: display each element*
 
 ```mcfunction
 data modify storage bs:out collection.value set value ["Hello", "World", "!"]
@@ -669,27 +756,33 @@ Operations that transform each element.
 :::::{tab-set}
 ::::{tab-item} Flat Map
 
-```{function} #bs.collection:flat_map
+```{function} #bs.collection:flat_map {run:<value>}
 
 Transform each element into a collection and flatten the results into a single collection.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to transform.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to transform
 
-  **Macro `run`**: {nbt}`string` Lambda function to execute on each element.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function to execute on each element
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The flattened transformed collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` the flattened transformed collection
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Output Storage `bs:lambda collection.result`**: {nbt}`list` The list of values to flatten into the result.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+    - {nbt}`list` **result**: (output) the list of values to flatten into the result
+  :::
 ```
 
-*Example: Transform each number into a list of its multiples and flatten:*
+*Example: transform each number into a list of its multiples and flatten*
 
 ```mcfunction
 # This would require a custom function that returns a list
@@ -703,27 +796,33 @@ function #bs.collection:flat_map {run: "function mypack:get_multiples"}
 ::::
 ::::{tab-item} Map
 
-```{function} #bs.collection:map
+```{function} #bs.collection:map {run:<value>}
 
 Transform each element of a collection using a lambda function.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to transform.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to transform
 
-  **Macro `run`**: {nbt}`string` Lambda function to execute on each element.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function to execute on each element
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The transformed collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` the transformed collection
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Output Storage `bs:lambda collection.result`**: {nbt}`any` The transformed value for the element.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+    - {nbt}`any` **result**: (output) the transformed value for the element
+  :::
 ```
 
-*Example: Double each number in a list:*
+*Example: double each number in a list*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
@@ -745,22 +844,26 @@ Operations that compute a single numeric result from a collection.
 :::::{tab-set}
 ::::{tab-item} Average
 
-```{function} #bs.collection:iaverage
+```{function} #bs.collection:iaverage {scale:<value>}
 
 Calculate the average (mean) of a collection of numbers (integers).
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection of numbers.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection of numbers
 
-  **Macro `scale`**: {nbt}`int` Scale factor applied to the return value (e.g. 1000 to get 3 decimal places of precision).
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`int` **scale**: scale factor applied to the return value (e.g. 1000 to get 3 decimal places of precision)
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`double` The average (unscaled).
+  **Storage `bs:out collection.value`**: {nbt}`double` the average (unscaled)
 
-  **Return**: The average multiplied by `scale` as an integer.
+  **Return**: the average multiplied by `scale` as an integer
 ```
 
-*Example: Average of [1, 2, 3, 4, 5]:*
+*Example: average of [1, 2, 3, 4, 5]*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
@@ -779,15 +882,15 @@ function #bs.collection:iaverage {scale: 1000}
 Count the number of elements in a collection.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to count.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to count
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`int` The number of elements.
+  **Storage `bs:out collection.value`**: {nbt}`int` the number of elements
 
-  **Return**: Integer count of elements in the collection.
+  **Return**: integer count of elements in the collection
 ```
 
-*Example: Count elements:*
+*Example: count elements*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
@@ -805,10 +908,10 @@ function #bs.collection:count
 Find the maximum value in a collection of integers.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection of integers.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection of integers
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`int` The maximum value.
+  **Storage `bs:out collection.value`**: {nbt}`int` the maximum value
 ```
 
 > **Credits**: theogiraudet
@@ -821,10 +924,10 @@ Find the maximum value in a collection of integers.
 Find the minimum value in a collection of integers.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection of integers.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection of integers
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`int` The minimum value.
+  **Storage `bs:out collection.value`**: {nbt}`int` the minimum value
 ```
 
 > **Credits**: theogiraudet
@@ -837,10 +940,10 @@ Find the minimum value in a collection of integers.
 Calculate the sum of all numbers in a collection (integers).
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection of numbers.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection of numbers
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`int` The sum.
+  **Storage `bs:out collection.value`**: {nbt}`int` the sum
 ```
 
 > **Credits**: theogiraudet
@@ -857,27 +960,34 @@ Split a collection into two based on a predicate.
 :::::{tab-set}
 ::::{tab-item} Partition
 
-```{function} #bs.collection:partition
+```{function} #bs.collection:partition {run:<value>}
 
 Split a collection into two collections based on a predicate: one containing elements that match the predicate, and one containing elements that don't.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to partition.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to partition
 
-  **Macro `run`**: {nbt}`string` Predicate function to test each element.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: predicate function to test each element
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` A list containing two lists: `[matches, non_matches]`.
+  **Storage `bs:out collection.value`**: {nbt}`list` a list containing two lists: `[matches, non_matches]`
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Return**: Success (1) for match, fail (0) otherwise.
+  **Return**: success (1) for match, fail (0) otherwise
 ```
 
-*Example: Partition even and odd numbers:*
+*Example: partition even and odd numbers*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
@@ -900,25 +1010,32 @@ Run a lambda on each element while passing the collection through unchanged.
 :::::{tab-set}
 ::::{tab-item} Peek
 
-```{function} #bs.collection:peek
+```{function} #bs.collection:peek {run:<value>}
 
 Execute an operation on each element of a collection and return the original collection. Useful for debugging or side effects in a chain of operations.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to iterate over.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to iterate over
 
-  **Macro `run`**: {nbt}`string` Lambda function to execute on each element.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function to execute on each element
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The original collection, unchanged.
+  **Storage `bs:out collection.value`**: {nbt}`list` the original collection, unchanged
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 ```
 
-*Example: Log elements while processing:*
+*Example: log elements while processing*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3]
@@ -941,24 +1058,31 @@ Operations that test a collection and return success or failure.
 :::::{tab-set}
 ::::{tab-item} All
 
-```{function} #bs.collection:all
+```{function} #bs.collection:all {run:<value>}
 
 Test if all elements satisfy a predicate condition.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to test.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to test
 
-  **Macro `run`**: {nbt}`string` Predicate function.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: predicate function
+  :::
 
 :Outputs:
-  **Return**: Success (1) if all elements match.
+  **Return**: success (1) if all elements match
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Return**: Success (1) for match, fail (0) otherwise.
+  **Return**: success (1) for match, fail (0) otherwise
 ```
 
 > **Credits**: theogiraudet
@@ -966,24 +1090,31 @@ Test if all elements satisfy a predicate condition.
 ::::
 ::::{tab-item} Any
 
-```{function} #bs.collection:any
+```{function} #bs.collection:any {run:<value>}
 
 Test if at least one element satisfies a predicate condition.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to test.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to test
 
-  **Macro `run`**: {nbt}`string` Predicate function.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: predicate function
+  :::
 
 :Outputs:
-  **Return**: Success (1) if any element matches.
+  **Return**: success (1) if any element matches
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Return**: Success (1) for match, fail (0) otherwise.
+  **Return**: success (1) for match, fail (0) otherwise
 ```
 
 > **Credits**: theogiraudet
@@ -991,17 +1122,21 @@ Test if at least one element satisfies a predicate condition.
 ::::
 ::::{tab-item} Contains
 
-```{function} #bs.collection:contains
+```{function} #bs.collection:contains {searched:<value>}
 
 Check if a collection contains a specific value.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to search.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to search
 
-  **Macro `searched`**: {nbt}`any` The value to search for.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`any` **searched**: the value to search for
+  :::
 
 :Outputs:
-  **Return**: Success (1) if found, fail (0) otherwise.
+  **Return**: success (1) if found, fail (0) otherwise
 ```
 
 > **Credits**: theogiraudet
@@ -1014,10 +1149,10 @@ Check if a collection contains a specific value.
 Test if a collection is empty.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to test.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to test
 
 :Outputs:
-  **Return**: Success (1) if empty.
+  **Return**: success (1) if empty
 ```
 
 > **Credits**: theogiraudet
@@ -1025,24 +1160,31 @@ Test if a collection is empty.
 ::::
 ::::{tab-item} None
 
-```{function} #bs.collection:none
+```{function} #bs.collection:none {run:<value>}
 
 Test if no elements satisfy a predicate condition.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to test.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to test
 
-  **Macro `run`**: {nbt}`string` Predicate function.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: predicate function
+  :::
 
 :Outputs:
-  **Return**: Success (1) if no elements match.
+  **Return**: success (1) if no elements match
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Return**: Success (1) for match, fail (0) otherwise.
+  **Return**: success (1) for match, fail (0) otherwise
 ```
 
 > **Credits**: theogiraudet
@@ -1059,31 +1201,36 @@ Reduce a collection to a single value, using the first element as the initial ac
 :::::{tab-set}
 ::::{tab-item} Reduce
 
-```{function} #bs.collection:reduce
+```{function} #bs.collection:reduce {run:<value>}
 
 Reduce a collection to a single value by applying a function that combines the accumulator with each element.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to reduce.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to reduce
 
-  **Macro `run`**: {nbt}`string` Lambda function that combines accumulator and value.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function that combines accumulator and value
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: The final accumulated value.
+  **Storage `bs:out collection.value`**: the final accumulated value
 
-  **Return**: 0 on success, fail if the collection is empty.
+  **Return**: 0 on success, fail if the collection is empty
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.accumulator`**: {nbt}`any` The current accumulated value.
-
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Output Storage `bs:lambda collection.result`**: {nbt}`any` The new accumulated value.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **accumulator**: (input) the current accumulated value
+    - {nbt}`any` **value**: (input) the current element being processed
+    - {nbt}`int` **index**: (input) the zero-based index of the current element
+    - {nbt}`any` **result**: (output) the new accumulated value
+  :::
 ```
 
-*Example: Get the last element using reduce:*
+*Example: get the last element using reduce*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
@@ -1096,28 +1243,33 @@ function #bs.collection:reduce {run: "data modify storage bs:lambda collection.r
 ::::
 ::::{tab-item} Reduce Right
 
-```{function} #bs.collection:reduce_right
+```{function} #bs.collection:reduce_right {run:<value>}
 
 Reduce a collection to a single value by applying a function from right to left, starting with the last element as the initial accumulator.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to reduce.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to reduce
 
-  **Macro `run`**: {nbt}`string` Lambda function that combines accumulator and value.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function that combines accumulator and value
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: The final accumulated value.
+  **Storage `bs:out collection.value`**: the final accumulated value
 
-  **Return**: 0 on success, fail if the collection is empty.
+  **Return**: 0 on success, fail if the collection is empty
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.accumulator`**: {nbt}`any` The current accumulated value.
-
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Output Storage `bs:lambda collection.result`**: {nbt}`any` The new accumulated value.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **accumulator**: (input) the current accumulated value
+    - {nbt}`any` **value**: (input) the current element being processed
+    - {nbt}`int` **index**: (input) the zero-based index of the current element
+    - {nbt}`any` **result**: (output) the new accumulated value
+  :::
 ```
 
 > **Credits**: theogiraudet
@@ -1139,13 +1291,13 @@ Reverse the order of elements.
 Reverse the order of elements in a collection.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to reverse.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to reverse
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection with elements in reversed order.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection with elements in reversed order
 ```
 
-*Example: Reverse a list:*
+*Example: reverse a list*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
@@ -1167,20 +1319,24 @@ Multiply every number in a collection by a factor.
 :::::{tab-set}
 ::::{tab-item} Scale
 
-```{function} #bs.collection:scale
+```{function} #bs.collection:scale {scale:<value>}
 
 Multiply all numbers in a collection by a scaling factor.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection of numbers to scale.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection of numbers to scale
 
-  **Macro `scale`**: {nbt}`float` The scaling factor (multiplier).
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`float` **scale**: the scaling factor (multiplier)
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection with all values multiplied by the scale.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection with all values multiplied by the scale
 ```
 
-*Example: Multiply all elements by 10:*
+*Example: multiply all elements by 10*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1.5d, 2.5d]
@@ -1208,26 +1364,32 @@ suffix indicates right-to-left processing.
 :::::{tab-set}
 ::::{tab-item} Scan Fold
 
-```{function} #bs.collection:scan_fold
+```{function} #bs.collection:scan_fold {run:<value>,initial:<value>}
 
 Similar to `fold`, but returns a list of all intermediate accumulator values.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to scan.
-  **Macro `run`**: {nbt}`string` Lambda function.
-  **Macro `initial`**: {nbt}`any` Initial value.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to scan
+
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function
+    - {nbt}`any` **initial**: initial value, must be a valid NBT value
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The list of intermediate results.
+  **Storage `bs:out collection.value`**: {nbt}`list` the list of intermediate results
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.accumulator`**: {nbt}`any` The current accumulated value.
-
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Output Storage `bs:lambda collection.result`**: {nbt}`any` The new accumulated value.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **accumulator**: (input) the current accumulated value
+    - {nbt}`any` **value**: (input) the current element being processed
+    - {nbt}`int` **index**: (input) the zero-based index of the current element
+    - {nbt}`any` **result**: (output) the new accumulated value
+  :::
 ```
 
 > **Credits**: theogiraudet
@@ -1235,26 +1397,32 @@ Similar to `fold`, but returns a list of all intermediate accumulator values.
 ::::
 ::::{tab-item} Scan Fold Right
 
-```{function} #bs.collection:scan_fold_right
+```{function} #bs.collection:scan_fold_right {run:<value>,initial:<value>}
 
 Similar to `fold_right`, but returns a list of all intermediate accumulator values.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to scan.
-  **Macro `run`**: {nbt}`string` Lambda function.
-  **Macro `initial`**: {nbt}`any` Initial value.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to scan
+
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function
+    - {nbt}`any` **initial**: initial value, must be a valid NBT value
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The list of intermediate results.
+  **Storage `bs:out collection.value`**: {nbt}`list` the list of intermediate results
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.accumulator`**: {nbt}`any` The current accumulated value.
-
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Output Storage `bs:lambda collection.result`**: {nbt}`any` The new accumulated value.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **accumulator**: (input) the current accumulated value
+    - {nbt}`any` **value**: (input) the current element being processed
+    - {nbt}`int` **index**: (input) the zero-based index of the current element
+    - {nbt}`any` **result**: (output) the new accumulated value
+  :::
 ```
 
 > **Credits**: theogiraudet
@@ -1262,25 +1430,31 @@ Similar to `fold_right`, but returns a list of all intermediate accumulator valu
 ::::
 ::::{tab-item} Scan Reduce
 
-```{function} #bs.collection:scan_reduce
+```{function} #bs.collection:scan_reduce {run:<value>}
 
 Similar to `reduce`, but returns a list of all intermediate accumulator values.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to scan.
-  **Macro `run`**: {nbt}`string` Lambda function.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to scan
+
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The list of intermediate results.
+  **Storage `bs:out collection.value`**: {nbt}`list` the list of intermediate results
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.accumulator`**: {nbt}`any` The current accumulated value.
-
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Output Storage `bs:lambda collection.result`**: {nbt}`any` The new accumulated value.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **accumulator**: (input) the current accumulated value
+    - {nbt}`any` **value**: (input) the current element being processed
+    - {nbt}`int` **index**: (input) the zero-based index of the current element
+    - {nbt}`any` **result**: (output) the new accumulated value
+  :::
 ```
 
 > **Credits**: theogiraudet
@@ -1288,25 +1462,31 @@ Similar to `reduce`, but returns a list of all intermediate accumulator values.
 ::::
 ::::{tab-item} Scan Reduce Right
 
-```{function} #bs.collection:scan_reduce_right
+```{function} #bs.collection:scan_reduce_right {run:<value>}
 
 Similar to `reduce_right`, but returns a list of all intermediate accumulator values.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to scan.
-  **Macro `run`**: {nbt}`string` Lambda function.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to scan
+
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The list of intermediate results.
+  **Storage `bs:out collection.value`**: {nbt}`list` the list of intermediate results
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.accumulator`**: {nbt}`any` The current accumulated value.
-
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
-
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Output Storage `bs:lambda collection.result`**: {nbt}`any` The new accumulated value.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **accumulator**: (input) the current accumulated value
+    - {nbt}`any` **value**: (input) the current element being processed
+    - {nbt}`int` **index**: (input) the zero-based index of the current element
+    - {nbt}`any` **result**: (output) the new accumulated value
+  :::
 ```
 
 > **Credits**: theogiraudet
@@ -1328,15 +1508,15 @@ Operations treating collections as sets.
 Compute the difference of two collections (elements present in the first collection but not in the second, without duplicates).
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The first collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` the first collection
 
-  **Storage `bs:in collection`**: {nbt}`list` The second collection.
+  **Storage `bs:in collection`**: {nbt}`list` the second collection
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The difference of the two collections.
+  **Storage `bs:out collection.value`**: {nbt}`list` the difference of the two collections
 ```
 
-*Example: Difference of [1, 2, 3] and [2, 3, 4]:*
+*Example: difference of [1, 2, 3] and [2, 3, 4]*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3]
@@ -1355,15 +1535,15 @@ function #bs.collection:difference
 Compute the intersection of two collections (elements present in both collections, without duplicates).
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The first collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` the first collection
 
-  **Storage `bs:in collection`**: {nbt}`list` The second collection.
+  **Storage `bs:in collection`**: {nbt}`list` the second collection
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The intersection of the two collections.
+  **Storage `bs:out collection.value`**: {nbt}`list` the intersection of the two collections
 ```
 
-*Example: Intersect [1, 2, 3] and [2, 3, 4]:*
+*Example: intersect [1, 2, 3] and [2, 3, 4]*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3]
@@ -1382,15 +1562,15 @@ function #bs.collection:intersect
 Compute the symmetric difference of two collections (elements present in either collection, but not in both, without duplicates).
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The first collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` the first collection
 
-  **Storage `bs:in collection`**: {nbt}`list` The second collection.
+  **Storage `bs:in collection`**: {nbt}`list` the second collection
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The symmetric difference of the two collections.
+  **Storage `bs:out collection.value`**: {nbt}`list` the symmetric difference of the two collections
 ```
 
-*Example: Symmetric difference of [1, 2, 3] and [2, 3, 4]:*
+*Example: symmetric difference of [1, 2, 3] and [2, 3, 4]*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3]
@@ -1409,15 +1589,15 @@ function #bs.collection:symmetric_difference
 Compute the union of two collections (elements present in either collection, without duplicates).
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The first collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` the first collection
 
-  **Storage `bs:in collection`**: {nbt}`list` The second collection.
+  **Storage `bs:in collection`**: {nbt}`list` the second collection
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The union of the two collections.
+  **Storage `bs:out collection.value`**: {nbt}`list` the union of the two collections
 ```
 
-*Example: Union of [1, 2] and [2, 3]:*
+*Example: union of [1, 2] and [2, 3]*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2]
@@ -1440,20 +1620,24 @@ Operations that split a collection into sub-collections or windows.
 :::::{tab-set}
 ::::{tab-item} Chunk
 
-```{function} #bs.collection:chunk
+```{function} #bs.collection:chunk {size:<value>}
 
 Split a collection into chunks of size N. If the collection size is not divisible by N, the last chunk will contain the remaining elements.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to split.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to split
 
-  **Macro `size`**: {nbt}`int` The size of each chunk.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`int` **size**: the size of each chunk
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The list of chunks (list of lists).
+  **Storage `bs:out collection.value`**: {nbt}`list` the list of chunks (list of lists)
 ```
 
-*Example: Chunk a list into pairs:*
+*Example: chunk a list into pairs*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
@@ -1466,23 +1650,26 @@ function #bs.collection:chunk {size: 2}
 ::::
 ::::{tab-item} Slice
 
-```{function} #bs.collection:slice
+```{function} #bs.collection:slice {min:<value>,max:<value>}
 
 Extract a portion of a collection from `min` (inclusive) to `max` (exclusive). Supports negative indices (counted from the end).
 The function fails if `min >= max`, or if indices are out of bounds (after negative index resolution).
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to slice.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to slice
 
-  **Macro `min`**: {nbt}`int` The start index (inclusive).
-
-  **Macro `max`**: {nbt}`int` The end index (exclusive).
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`int` **min**: the start index (inclusive)
+    - {nbt}`int` **max**: the end index (exclusive)
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The sliced collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` the sliced collection
 ```
 
-*Example: Get elements from index 1 to 3:*
+*Example: get elements from index 1 to 3*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [0, 1, 2, 3, 4]
@@ -1495,22 +1682,25 @@ function #bs.collection:slice {min: 1, max: 3}
 ::::
 ::::{tab-item} Sliding
 
-```{function} #bs.collection:sliding
+```{function} #bs.collection:sliding {size:<value>,step:<value>}
 
 Create sliding windows of elements from the collection.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to process.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to process
 
-  **Macro `size`**: {nbt}`int` The number of elements in each window.
-
-  **Macro `step`**: {nbt}`int` The number of elements to shift the window by.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`int` **size**: the number of elements in each window
+    - {nbt}`int` **step**: the number of elements to shift the window by
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` A list of windows (list of lists).
+  **Storage `bs:out collection.value`**: {nbt}`list` a list of windows (list of lists)
 ```
 
-*Example: Sliding window of size 2 with step 1:*
+*Example: sliding window of size 2 with step 1*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4]
@@ -1532,20 +1722,24 @@ Operations that keep elements from the start of a collection.
 :::::{tab-set}
 ::::{tab-item} Take
 
-```{function} #bs.collection:take
+```{function} #bs.collection:take {number:<value>}
 
 Take the first N elements from a collection.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to take from.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to take from
 
-  **Macro `number`**: {nbt}`int` The number of elements to take.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`int` **number**: the number of elements to take
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection containing only the first N elements.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection containing only the first N elements
 ```
 
-*Example: Take first 3 elements:*
+*Example: take first 3 elements*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
@@ -1558,27 +1752,34 @@ function #bs.collection:take {number: 3}
 ::::
 ::::{tab-item} Take While
 
-```{function} #bs.collection:take_while
+```{function} #bs.collection:take_while {run:<value>}
 
 Take elements from the beginning of a collection as long as a predicate is true.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to take from.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to take from
 
-  **Macro `run`**: {nbt}`string` Predicate function.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: predicate function
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The elements taken.
+  **Storage `bs:out collection.value`**: {nbt}`list` the elements taken
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`any` The current element being processed.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`any` **value**: the current element being processed
+    - {nbt}`int` **index**: the zero-based index of the current element
+  :::
 
-  **Input Storage `bs:lambda collection.index`**: {nbt}`int` The zero-based index of the current element.
-
-  **Return**: Success (1) to continue taking, fail (0) otherwise.
+  **Return**: success (1) to continue taking, fail (0) otherwise
 ```
 
-*Example: Take elements until value is 4:*
+*Example: take elements until value is 4*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
@@ -1600,23 +1801,31 @@ Run a lambda on the whole collection, passing it through unchanged.
 :::::{tab-set}
 ::::{tab-item} Tap
 
-```{function} #bs.collection:tap
+```{function} #bs.collection:tap {run:<value>}
 
 Execute an operation on the entire collection. Useful for side effects or logging the collection state.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The collection to process.
+  **Storage `bs:out collection.value`**: {nbt}`list` the collection to process
 
-  **Macro `run`**: {nbt}`string` Lambda function to execute.
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` arguments
+    - {nbt}`string` **run**: lambda function to execute
+  :::
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The original collection, unchanged.
+  **Storage `bs:out collection.value`**: {nbt}`list` the original collection, unchanged
 
-:Lambda run:
-  **Input Storage `bs:lambda collection.value`**: {nbt}`list` The entire collection.
+:Lambdas:
+  **Storage `bs:lambda collection`**:
+  :::{treeview}
+  - {nbt}`compound` lambda data
+    - {nbt}`list` **value**: the entire collection
+  :::
 ```
 
-*Example: Log the size of the collection:*
+*Example: log the size of the collection*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3]
@@ -1643,15 +1852,15 @@ Combine two collections element-wise.
 Combine two collections into a list of pairs.
 
 :Inputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` The first collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` the first collection
 
-  **Storage `bs:in collection`**: {nbt}`list` The second collection.
+  **Storage `bs:in collection`**: {nbt}`list` the second collection
 
 :Outputs:
-  **Storage `bs:out collection.value`**: {nbt}`list` A list of pairs `[[a1, b1], [a2, b2], ...]`. Truncated to the length of the shorter collection.
+  **Storage `bs:out collection.value`**: {nbt}`list` a list of pairs `[[a1, b1], [a2, b2], ...]`, truncated to the length of the shorter collection
 ```
 
-*Example: Zip two lists:*
+*Example: zip two lists*
 
 ```mcfunction
 data modify storage bs:out collection.value set value [1, 2, 3]
@@ -1665,3 +1874,7 @@ function #bs.collection:zip
 ::::
 :::::
 
+---
+
+```{include} ../_templates/comments.md
+```

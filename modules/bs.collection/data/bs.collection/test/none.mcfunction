@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # No elements have index 10
 data modify storage bs:out collection.value set value [1, 2, 4, 5]

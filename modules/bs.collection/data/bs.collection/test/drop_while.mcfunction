@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Drop first 2 elements (indices 0, 1)
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]

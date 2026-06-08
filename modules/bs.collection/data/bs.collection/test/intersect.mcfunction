@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Intersect [1, 2, 3] and [2, 3, 4] -> [2, 3]
 data modify storage bs:out collection.value set value [1, 2, 3]

@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # All elements are string "a"
 data modify storage bs:out collection.value set value ["a", "a", "a", "a"]

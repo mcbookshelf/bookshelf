@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Repeat integer 3 times
 function #bs.collection:repeat {value: 5, count: 3}

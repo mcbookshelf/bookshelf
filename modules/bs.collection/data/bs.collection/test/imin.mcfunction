@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Minimum of positive numbers - check success channel
 data modify storage bs:out collection.value set value [5, 2, 8, 1, 9]

@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Range 0 to 5 step 1 -> [0, 1, 2, 3, 4]
 function #bs.collection:range {min: 0, max: 5, step: 1}

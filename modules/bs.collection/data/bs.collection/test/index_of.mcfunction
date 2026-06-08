@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Find index of element with value 3 - first 3 is at index 2
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 3, 5]

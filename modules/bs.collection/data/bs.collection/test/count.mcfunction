@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Count of 5 elements - check return channel
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]

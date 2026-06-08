@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Partition based on index (index < 2)
 # Indices: 0(true), 1(true), 2(false), 3(false)

@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Window(2,1): [[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]]
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5, 6]

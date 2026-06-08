@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Slice 1 to 3 of [0, 1, 2, 3, 4] -> [1, 2]
 data modify storage bs:out collection.value set value [0, 1, 2, 3, 4]

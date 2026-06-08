@@ -12,7 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
 
 # Average of 1,2,3,4,5 = 15/5 = 3 - check return channel (at scale 1000 = 3000)
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
