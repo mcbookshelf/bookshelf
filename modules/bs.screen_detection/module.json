@@ -1,0 +1,16 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.screen_detection",
+    "load": "."
+  },
+  "meta": {
+    "name": "Screen Detection",
+    "slug": "bookshelf-screen_detection",
+    "description": "compute the inplane coord of a line/plane intersection",
+    "documentation": "",
+    "tags": ["runtime"],
+    "weak_dependencies": [
+    ]
+  }
+}
