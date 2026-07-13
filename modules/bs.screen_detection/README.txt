@@ -17,9 +17,9 @@ This library allows you to retrieve the coordinates of M in plane P using three 
 -Execute the `plane_coord` command
     -No execution context required; this is a scoreboard operation
     -The result is stored in:
-        -#dx bs.screen_detection: the x-coordinate of point M in plane P
-        -#dy bs.screen_detection: the y-coordinate of point M in plane P
-        -#dz bs.screen_detection: the algebraic distance between O and M
+        -#dx bs.out: the x-coordinate of point M in plane P
+        -#dy bs.out: the y-coordinate of point M in plane P
+        -#dz bs.out: the algebraic distance between O and M
 
 
 Note:
@@ -35,7 +35,7 @@ Cette librairie permet en trois commandes de récupérer la coordonée de M dans
 [[1re étape- initialisation]] (l'étape la plus couteuse en performance, même si assez optimisée)
 -executer la commande `get_line` pour obtenir D
     -à partir du contexte d'execution de cette fonction (position et rotation) calcul les variables internes definissant D
-    -pour obtenir D correspondant à la ligne de regard d'un joueur lui faire executer la commande: `execute at @s anchored eyes positioned ^ ^ ^ run function bs.screen_detection:api/get_line` 
+    -pour obtenir D correspondant à la ligne de regard d'un joueur lui faire executer la commande: `execute at @s anchored eyes positioned ^ ^ ^ run function bs.const:api/get_line` 
 
 -executer la commande get_plane pour obtenir P
     -à partir du contexte d'execution de cette fonction (position et rotation) calcul les variables internes definissant P
@@ -44,9 +44,9 @@ Cette librairie permet en trois commandes de récupérer la coordonée de M dans
 -executer la commande `plane_coord`
     -pas de contexte d'execution requis, il s'agit d'operation via scoreboard
     -le resultat est stocké dans:
-        -#dx bs.screen_detection l'abscisse du point M dans le plan P
-        -#dy bs.screen_detection l'ordonnée du point M dans le plan P
-        -#dz bs.screen_detection la distance algébrique entre O et M
+        -#dx bs.out l'abscisse du point M dans le plan P
+        -#dy bs.out l'ordonnée du point M dans le plan P
+        -#dz bs.out la distance algébrique entre O et M
 
 
 Attention:
