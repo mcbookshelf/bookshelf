@@ -33,20 +33,20 @@ execute unless loaded ~ ~ ~ run return fail
 
 tp B5-0-0-0-9 ~ ~ ~
 
-data modify storage bs.out:data Pos set from entity B5-0-0-0-9 Pos
+data modify storage bs:data geometry.Pos set from entity B5-0-0-0-9 Pos
 execute store result score $geometry.get_plane.o0 bs.out run data get storage bs.out:data Pos[0] 1000
 execute store result score $geometry.get_plane.o1 bs.out run data get storage bs.out:data Pos[1] 1000
 execute store result score $geometry.get_plane.o2 bs.out run data get storage bs.out:data Pos[2] 1000
 
 
 execute positioned .0 .0 .0 run tp B5-0-0-0-9 ^ ^ ^1
-data modify storage bs.out:data Pos set from entity B5-0-0-0-9 Pos
+data modify storage bs:data geometry.Pos set from entity B5-0-0-0-9 Pos
 execute store result score $geometry.get_plane.n0 bs.out run data get storage bs.out:data Pos[0] 1000
 execute store result score $geometry.get_plane.n1 bs.out run data get storage bs.out:data Pos[1] 1000
 execute store result score $geometry.get_plane.n2 bs.out run data get storage bs.out:data Pos[2] 1000
 
 execute positioned .0 .0 .0 run tp B5-0-0-0-9 ^1 ^ ^
-data modify storage bs.out:data Pos set from entity B5-0-0-0-9 Pos
+data modify storage bs:data geometry.Pos set from entity B5-0-0-0-9 Pos
 execute store result score $geometry.get_plane.i0 bs.out run data get storage bs.out:data Pos[0] 1000
 execute store result score $geometry.get_plane.i1 bs.out run data get storage bs.out:data Pos[1] 1000
 execute store result score $geometry.get_plane.i2 bs.out run data get storage bs.out:data Pos[2] 1000

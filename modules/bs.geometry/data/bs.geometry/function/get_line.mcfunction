@@ -25,16 +25,16 @@ execute unless loaded ~ ~ ~ run return fail
 
 tp B5-0-0-0-9 ~ ~ ~
 
-data modify storage bs.screen_detection:data Pos set from entity B5-0-0-0-9 Pos
-execute store result score $geometry.get_line.v0 bs.out run data get storage bs.screen_detection:data Pos[0] 1000
-execute store result score $geometry.get_line.v1 bs.out run data get storage bs.screen_detection:data Pos[1] 1000
-execute store result score $geometry.get_line.v2 bs.out run data get storage bs.screen_detection:data Pos[2] 1000
+data modify storage bs:data geometry.Pos set from entity B5-0-0-0-9 Pos
+execute store result score $geometry.get_line.v0 bs.out run data get storage bs:data geometry.Pos[0] 1000
+execute store result score $geometry.get_line.v1 bs.out run data get storage bs:data geometry.Pos[1] 1000
+execute store result score $geometry.get_line.v2 bs.out run data get storage bs:data geometry.Pos[2] 1000
 
 
 execute positioned .0 .0 .0 run tp B5-0-0-0-9 ^ ^ ^1
-data modify storage bs.screen_detection:data Pos set from entity B5-0-0-0-9 Pos
-execute store result score $geometry.get_line.u0 bs.out run data get storage bs.screen_detection:data Pos[0] 1000
-execute store result score $geometry.get_line.u1 bs.out run data get storage bs.screen_detection:data Pos[1] 1000
-execute store result score $geometry.get_line.u2 bs.out run data get storage bs.screen_detection:data Pos[2] 1000
+data modify storage bs:data geometry.Pos set from entity B5-0-0-0-9 Pos
+execute store result score $geometry.get_line.u0 bs.out run data get storage bs:data geometry.Pos[0] 1000
+execute store result score $geometry.get_line.u1 bs.out run data get storage bs:data geometry.Pos[1] 1000
+execute store result score $geometry.get_line.u2 bs.out run data get storage bs:data geometry.Pos[2] 1000
 
 tp B5-0-0-0-9 -30000000 1000 1600
