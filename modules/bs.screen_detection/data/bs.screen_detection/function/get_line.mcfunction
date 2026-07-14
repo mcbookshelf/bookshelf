@@ -13,21 +13,21 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+execute unless loaded ~ ~ ~ run return fail
 
 
+tp B5-0-0-0-9 ~ ~ ~
 
-tp B5-0-0-0-1 ~ ~ ~
-
-data modify storage bs.screen_detection:data Pos set from entity B5-0-0-0-1 Pos
+data modify storage bs.screen_detection:data Pos set from entity B5-0-0-0-9 Pos
 execute store result score #v0 bs.ctx run data get storage bs.screen_detection:data Pos[0] 1000
 execute store result score #v1 bs.ctx run data get storage bs.screen_detection:data Pos[1] 1000
 execute store result score #v2 bs.ctx run data get storage bs.screen_detection:data Pos[2] 1000
 
 
-execute positioned .0 .0 .0 run tp B5-0-0-0-1 ^ ^ ^1
-data modify storage bs.screen_detection:data Pos set from entity B5-0-0-0-1 Pos
+execute positioned .0 .0 .0 run tp B5-0-0-0-9 ^ ^ ^1
+data modify storage bs.screen_detection:data Pos set from entity B5-0-0-0-9 Pos
 execute store result score #u0 bs.ctx run data get storage bs.screen_detection:data Pos[0] 1000
 execute store result score #u1 bs.ctx run data get storage bs.screen_detection:data Pos[1] 1000
 execute store result score #u2 bs.ctx run data get storage bs.screen_detection:data Pos[2] 1000
 
-tp B5-0-0-0-1 -30000000 1000 1600
+tp B5-0-0-0-9 -30000000 1000 1600

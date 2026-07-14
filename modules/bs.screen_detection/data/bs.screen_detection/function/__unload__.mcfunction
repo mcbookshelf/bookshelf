@@ -13,12 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-forceload add -1 -1 0 0
-forceload add -30000000 1600
-execute unless entity B5-0-0-0-9 run summon minecraft:marker -30000000 0 1600 {UUID:[I;181,0,0,9],Tags:["bs.entity","bs.persistent","smithed.entity","smithed.strict"]}
+kill B5-0-0-0-9
 
-scoreboard objectives add bs.const dummy [{text:"BS ",color:"dark_gray"},{text:"Constants",color:"aqua"}]
-scoreboard objectives add bs.ctx dummy [{text:"BS ",color:"dark_gray"},{text:"Context",color:"aqua"}]
-scoreboard objectives add bs.out dummy [{text:"BS ",color:"dark_gray"},{text:"Output",color:"aqua"}]
+forceload remove -1 -1 0 0
+forceload remove -30000000 1600
 
-scoreboard players set 1000 bs.const 1000
+scoreboard objectives remove bs.const
+scoreboard objectives remove bs.ctx
+scoreboard objectives remove bs.out

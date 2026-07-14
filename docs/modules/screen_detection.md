@@ -1,8 +1,6 @@
 
 # 🖼️ Screen Detection
 
-**`#bs.math:help`**
-
 Help to make nice screens!
 
 ---
@@ -21,7 +19,7 @@ Compute the intern variables defining the line
 
 :Inputs:
   **Context position and rotation, position will be the origin of the plane and rotation the direction of the line
-
+  The position should to be loaded
 :Outputs:
   **None
 ```
@@ -42,6 +40,7 @@ Compute the intern variables defining the plane
 
 :Inputs:
   **Context position and rotation, position will be the origin of the plane and the rotation the normal of the plane
+  The position should to be loaded
 
 :Outputs:
   **None

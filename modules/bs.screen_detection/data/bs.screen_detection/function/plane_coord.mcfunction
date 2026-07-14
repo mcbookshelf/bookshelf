@@ -13,10 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-
-
-
-
 scoreboard players reset $dx bs.out
 scoreboard players reset $dy bs.out
 scoreboard players reset $dz bs.out
@@ -31,7 +27,7 @@ scoreboard players operation #dot0 bs.ctx += #dot1 bs.ctx
 scoreboard players operation #dot1 bs.ctx = #n2 bs.ctx
 scoreboard players operation #dot1 bs.ctx *= #u2 bs.ctx
 scoreboard players operation #dot0 bs.ctx += #dot1 bs.ctx
-scoreboard players operation #dot0 bs.ctx /= #1000 bs.const
+scoreboard players operation #dot0 bs.ctx /= 1000 bs.const
 
 execute if score #dot0 bs.ctx matches 0 run return fail
 
@@ -69,9 +65,9 @@ scoreboard players operation #w0 bs.ctx *= $dz bs.out
 scoreboard players operation #w1 bs.ctx *= $dz bs.out
 scoreboard players operation #w2 bs.ctx *= $dz bs.out
 
-scoreboard players operation #w0 bs.ctx /= #1000 bs.const
-scoreboard players operation #w1 bs.ctx /= #1000 bs.const
-scoreboard players operation #w2 bs.ctx /= #1000 bs.const
+scoreboard players operation #w0 bs.ctx /= 1000 bs.const
+scoreboard players operation #w1 bs.ctx /= 1000 bs.const
+scoreboard players operation #w2 bs.ctx /= 1000 bs.const
 
 scoreboard players operation #w0 bs.ctx -= #d0 bs.ctx
 scoreboard players operation #w1 bs.ctx -= #d1 bs.ctx
@@ -88,7 +84,7 @@ scoreboard players operation #wp2 bs.ctx *= #i2 bs.ctx
 
 scoreboard players operation $dx bs.out += #wp1 bs.ctx
 scoreboard players operation $dx bs.out += #wp2 bs.ctx
-scoreboard players operation $dx bs.out /= #1000 bs.ctx
+scoreboard players operation $dx bs.out /= 1000 bs.ctx
 
 scoreboard players operation $dx bs.out = #w0 bs.ctx
 scoreboard players operation #wp1 bs.ctx = #w1 bs.ctx
@@ -99,4 +95,4 @@ scoreboard players operation #wp2 bs.ctx *= #j2 bs.ctx
 
 scoreboard players operation $dx bs.out += #wp1 bs.ctx
 scoreboard players operation $dx bs.out += #wp2 bs.ctx
-scoreboard players operation $dx bs.out /= #1000 bs.const
+scoreboard players operation $dx bs.out /= 1000 bs.const
