@@ -13,12 +13,16 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-9
-kill B5-0-0-0-7
+#this function accept an array of 2shapes as input
 
-forceload remove -1 -1 0 0
-forceload remove -30000000 1600
+#a point and a plane 
+execute if data storage bs:in geometry.shapes[{type:"point"}] if data storage bs:in geometry.shapes[{type:"plane"}] run return run function bs.geometry:transform/orth_proj/point_plane
 
-scoreboard objectives remove bs.const
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.out
+#a line and a plane 
+execute if data storage bs:in geometry.shapes[{type:"line"}] if data storage bs:in geometry.shapes[{type:"plane"}] run return run function bs.geometry:transform/orth_proj/line_plane
+
+
+
+
+
+

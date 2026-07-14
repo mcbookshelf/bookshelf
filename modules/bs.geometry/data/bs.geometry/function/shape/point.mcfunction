@@ -13,23 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-#Plane is also a cartesian space
-
-data modify storage bs:out geometry.shape set value {type:"plane"}
+data modify storage bs:out geometry.shape set value {type:"point"}
 
 execute unless loaded ~ ~ ~ run return fail
 
 function bs.geometry:shape/get_pos
 data modify storage bs:out geometry.shape.origin set from storage bs:out geometry.Pos
-
-execute positioned 0.0 0 0.0 positioned ^1 ^ ^ run function bs.geometry:shape/get_pos
-data modify storage bs:out geometry.shape.i set from storage bs:out geometry.Pos
-
-execute positioned 0.0 0 0.0 positioned ^ ^1 ^ run function bs.geometry:shape/get_pos
-data modify storage bs:out geometry.shape.j set from storage bs:out geometry.Pos
-
-execute positioned 0.0 0 0.0 positioned ^ ^ ^1 run function bs.geometry:shape/get_pos
-data modify storage bs:out geometry.shape.k set from storage bs:out geometry.Pos
-
 
 tp B5-0-0-0-9 -30000000 1000 1600

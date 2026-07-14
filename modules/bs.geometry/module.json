@@ -7,10 +7,11 @@
   "meta": {
     "name": "Geometry",
     "slug": "bookshelf-geometry",
-    "description": "compute the inplane coord of a line/plane intersection",
+    "description": "Get shapes and compute relations beetween",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/geometry.html",
     "tags": ["runtime"],
-    "weak_dependencies": [
+    "dependencies": [
+      "bs.math"
     ]
   }
 }
