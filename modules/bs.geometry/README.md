@@ -26,7 +26,7 @@
 <br/>
 <br/>
 
-## 🖼️ Bookshelf Screen Detection Module
+## 🖼️ Bookshelf Geometry
 
 Help to make nice screens!
 

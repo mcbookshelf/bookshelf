@@ -1,14 +1,14 @@
 {
   "extend": "../config.json",
   "data_pack": {
-    "name": "bs.screen_detection",
+    "name": "bs.geometry",
     "load": "."
   },
   "meta": {
-    "name": "Screen Detection",
-    "slug": "bookshelf-screen_detection",
+    "name": "Geometry",
+    "slug": "bookshelf-geometry",
     "description": "compute the inplane coord of a line/plane intersection",
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/screen_detection.html",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/geometry.html",
     "tags": ["runtime"],
     "weak_dependencies": [
     ]

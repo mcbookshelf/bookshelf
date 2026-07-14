@@ -19,7 +19,7 @@ Compute the intern variables defining the line
 
 :Inputs:
   **Context position and rotation, position will be the origin of the plane and rotation the direction of the line
-  The position should to be loaded
+  The position should be loaded
 :Outputs:
   **None
 ```
@@ -40,7 +40,7 @@ Compute the intern variables defining the plane
 
 :Inputs:
   **Context position and rotation, position will be the origin of the plane and the rotation the normal of the plane
-  The position should to be loaded
+  The position should be loaded
 
 :Outputs:
   **None
@@ -66,7 +66,7 @@ Compute the inplane coord of the line/plane intersection and the distance of the
   **None
   
 :Outputs:
-  **Return None | scores $dx bs.out $dy bs.out the inplane coord, $dz bs.out the distance
+  **Return None | scores $geometry.plane_coord.dx bs.out $geometry.plane_coord.dy bs.out the inplane coord, $geometry.plane_coord.dz bs.out the distance
 ```
 
 
