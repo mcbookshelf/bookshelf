@@ -14,16 +14,19 @@
 # ------------------------------------------------------------------------------------------------------------
 
 #this function accept an array of 2shapes as input
+execute if function bs.geometry:error/2array run return fail
 #a point and a plane/cylinder/sphere
 
-execute unless data storage bs:in geometry.shapes[{type:"point"}] run return fail
-execute unless data storage bs:in geometry.shapes[{type:"plane"}] unless data storage bs:in geometry.shapes[{type:"cylinder"}] unless data storage bs:in geometry.shapes[{type:"sphere"}] run return fail
+execute if function bs.geometry:error/need_point run return fail
+execute if function bs.geometry:error/need_3d_or_coord_space run return fail
 
-data modify storage bs:out geometry.shape set value {type:"point",origin:[0,0,0]}
+
+data modify storage bs:out geometry.shape set value {type:"point",coord_type:"cartesian",origin:[0,0,0]}
 
 data modify storage bs:ctx temp set from storage bs:in geometry.shapes[{type:"plane"}]
 data modify storage bs:ctx temp set from storage bs:in geometry.shapes[{type:"cylinder"}]
 data modify storage bs:ctx temp set from storage bs:in geometry.shapes[{type:"sphere"}]
+data modify storage bs:ctx temp set from storage bs:in geometry.shapes[{type:"coord_space"}]
 
 #get plane parameters
 execute store result score #l bs.ctx run data get storage bs:ctx temp.origin[0] 1000

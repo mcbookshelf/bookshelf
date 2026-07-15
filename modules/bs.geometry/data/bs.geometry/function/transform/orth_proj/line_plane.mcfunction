@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out geometry.shape set value {type:"line",origin:[0,0,0],k:[0,0,0]}
+data modify storage bs:out geometry.shape set value {type:"line",coord_type:"cartesian",origin:[0,0,0],k:[0,0,0]}
 
 #get plane parameters
 execute store result score #l bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].origin[0] 1000

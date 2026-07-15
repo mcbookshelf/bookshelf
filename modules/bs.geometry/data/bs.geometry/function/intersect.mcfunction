@@ -14,4 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 #this function accept an array of 2shapes as input
+execute if function bs.geometry:error/2array run return fail
+
 execute if data storage bs:in geometry.shapes[{type:"line"}] if data storage bs:in geometry.shapes[{type:"plane"}] run return run function bs.geometry:intersect/line_plane

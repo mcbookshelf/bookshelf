@@ -13,14 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out geometry.shape set value {type:"line",coord_type:"cartesian"}
 
-execute if function bs.geometry:error/unloaded run return fail
+execute if function bs.geometry:error/need_3d if function bs.geometry:error/need_coord_space run return run data modify storage bs:out geometry.error set value "Need a 3d shape a coord space input"
 
-function bs.geometry:shape/get_pos
-data modify storage bs:out geometry.shape.origin set from storage bs:out geometry.Pos
-
-execute positioned 0.0 0 0.0 positioned ^ ^ ^1 run function bs.geometry:shape/get_pos
-data modify storage bs:out geometry.shape.k set from storage bs:out geometry.Pos
-
-tp B5-0-0-0-9 -30000000 1000 1600

@@ -15,9 +15,9 @@
 
 #Plane is also a cartesian space
 
-data modify storage bs:out geometry.shape set value {type:"plane"}
+data modify storage bs:out geometry.shape set value {type:"plane",coord_type:"cartesian"}
 
-execute unless loaded ~ ~ ~ run return fail
+execute if function bs.geometry:error/unloaded run return fail
 
 function bs.geometry:shape/get_pos
 data modify storage bs:out geometry.shape.origin set from storage bs:out geometry.Pos
