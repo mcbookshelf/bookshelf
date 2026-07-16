@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-#transform cartesian (x,y,z) into spheric (theta,phi,r)
+#transform cartesian (x,y,z) into spheric (yaw,pitch,r)
 data modify storage bs:ctx temp set value [7,0,4,0, 0,1,0,0, -4,0,7,0, 0,0,0,1]
 data modify storage bs:ctx temp[0] set from storage bs:in geometry.shapes[{type:"point"}].origin[2]
 data modify storage bs:ctx temp[2] set from storage bs:in geometry.shapes[{type:"point"}].origin[0]
@@ -21,8 +21,8 @@ execute store result storage bs:ctx temp[8] float -0.0001 run data get storage b
 data modify storage bs:ctx temp[10] set from storage bs:in geometry.shapes[{type:"point"}].origin[2]
 
 #scale[0] = r_xy
-#left_rotation[1] = sin(theta/2)
-#left_rotation[3] = cos(theta/2)
+#left_rotation[1] = sin(yaw/2)
+#left_rotation[3] = cos(yaw/2)
 data modify entity B5-0-0-0-7 transformation set from storage bs:ctx temp
 
 data modify storage bs:out geometry.shape set value {type:"point",coord_type:"spheric",origin:[0d,0d,0d]}
@@ -30,7 +30,7 @@ data modify storage bs:out geometry.shape set value {type:"point",coord_type:"sp
 execute store result score $math.asin.x bs.in run data get entity B5-0-0-0-7 transformation.left_rotation[1] 1000
 execute store result storage bs:out geometry.shape.origin[0] double -0.02 run function #bs.math:asin
 
-#get phi
+#get pitch
 data modify storage bs:ctx temp set value [4,-7,0,0, 7,4,0,0, 0,0,1,0, 0,0,0,1]
 data modify storage bs:ctx temp[0] set from entity B5-0-0-0-7 transformation.scale[0]
 execute store result storage bs:ctx temp[1] float -0.0001 run data get storage bs:in geometry.shapes[{type:"point"}].origin[1] 10000
@@ -38,8 +38,8 @@ data modify storage bs:ctx temp[4] set from storage bs:in geometry.shapes[{type:
 data modify storage bs:ctx temp[5] set from entity B5-0-0-0-7 transformation.scale[0]
 
 #scale[0] = r
-#left_rotation[2] = sin(phi/2)
-#left_rotation[3] = cos(phi/2)
+#left_rotation[2] = sin(pitch/2)
+#left_rotation[3] = cos(pitch/2)
 data modify entity B5-0-0-0-7 transformation set from storage bs:ctx temp
 
 execute store result score $math.asin.x bs.in run data get entity B5-0-0-0-7 transformation.left_rotation[2] 1000

@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-#transform cartesian (x,y,z) into cylindric (theta,y,r)
+#transform cartesian (x,y,z) into cylindric (yaw,y,r)
 data modify storage bs:ctx temp set value [7,0,4,0, 0,1,0,0, -4,0,7,0, 0,0,0,1]
 
 data modify storage bs:ctx temp[0] set from storage bs:in geometry.shapes[{type:"point"}].origin[2]
@@ -22,8 +22,8 @@ execute store result storage bs:ctx temp[8] float -0.0001 run data get storage b
 data modify storage bs:ctx temp[10] set from storage bs:in geometry.shapes[{type:"point"}].origin[2]
 
 #scale[0] = r
-#left_rotation[1] = sin(theta/2)
-#left_rotation[3] = cos(theta/2)
+#left_rotation[1] = sin(yaw/2)
+#left_rotation[3] = cos(yaw/2)
 data modify entity B5-0-0-0-7 transformation set from storage bs:ctx temp
 
 data modify storage bs:out geometry.shape set value {type:"point",coord_type:"cylindric",origin:[0d,0d,0d]}
