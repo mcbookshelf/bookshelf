@@ -26,9 +26,9 @@ data modify storage bs:ctx temp[10] set from storage bs:in geometry.shapes[{type
 #left_rotation[3] = cos(yaw/2)
 data modify entity B5-0-0-0-7 transformation set from storage bs:ctx temp
 
-data modify storage bs:out geometry.shape set value {type:"point",coord_type:"cylindric",origin:[0d,0d,0d]}
+data modify storage bs:out geometry.coord_space set value {type:"point",coord_type:"cylindric",origin:[0d,0d,0d]}
 
 execute store result score $math.asin.x bs.in run data get entity B5-0-0-0-7 transformation.left_rotation[1] 1000
-execute store result storage bs:out geometry.shape.origin[0] double -0.02 run function #bs.math:asin
-data modify storage bs:out geometry.shape.origin[1] set from storage bs:in geometry.shapes[{type:"point"}].origin[1]
-execute store result storage bs:out geometry.shape.origin[2] double 0.0001 run data get entity B5-0-0-0-7 transformation.scale[0] 10000
+execute store result storage bs:out geometry.coord_space.origin[0] double -0.02 run function #bs.math:asin
+data modify storage bs:out geometry.coord_space.origin[1] set from storage bs:in geometry.shapes[{type:"point"}].origin[1]
+execute store result storage bs:out geometry.coord_space.origin[2] double 0.0001 run data get entity B5-0-0-0-7 transformation.scale[0] 10000

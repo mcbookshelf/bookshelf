@@ -86,6 +86,31 @@ execute positioned 0 0 0 rotated 0 0 run function #bs.geometry:shape/plane
 
 ---
 
+### get Sphere
+
+```{function} #bs.geometry:shape/sphere
+
+Get a sphere (determined by an origin and a radius)
+
+:Inputs:
+  **Context position and rotation, position will be the origin of the plane and rotation the direction
+  The position should be loaded
+  **score $geometry.shape.sphere.r bs.in , the radius of the sphere shifted by 3 digits (1.234 become 1234)
+:Outputs:
+  **Storage bs:out geometry.shape {type:"sphere",coord_type:"cartesian",origin,i,j,k} origin, i,j,k are arrays of 3 doubles, origin is the context's position, i,j,k the horizontal,vertical,depths director vectors
+```
+
+
+*Example: Get the sphere centered at 0 0 0 and facing south  with a radius of 1block :*
+
+```mcfunction
+# Once
+scoreboard players set $geometry.shape.sphere.r bs.in 1000
+execute positioned 0 0 0 rotated 0 0 run function #bs.geometry:shape/sphere
+```
+
+---
+
 ### Intersect
 
 ```{function} #bs.geometry:intersect
@@ -95,7 +120,7 @@ Get the intersection of two shapes
 :Inputs:
   **Storage bs:in geometry.shapes , and array of 2 shape
 :Outputs:
-  **Storage bs:out geometry.shape
+  **Storage bs:out geometry.intersect
 ```
 
 
@@ -123,7 +148,7 @@ Get the coordinates of the orthogonal projection of a point/line and a plane
 :Inputs:
   **Storage bs:in geometry.shapes , and array of 2 shape, a point/line and a plane
 :Outputs:
-  **Storage bs:out geometry.shape, a point/line
+  **Storage bs:out geometry.orth_proj, a point/line
 ```
 
 
@@ -150,7 +175,7 @@ Get the coordinates of a point with a 3d shapes as reference point (cartesian co
 :Inputs:
   **Storage bs:in geometry.shapes , and array of 2 shape, a point and a 3d shape
 :Outputs:
-  **Storage bs:out geometry.shape, a point
+  **Storage bs:out geometry.rot_axis, a point
 ```
 
 
@@ -180,7 +205,7 @@ Get a cartesian coord space (point's origin [x,y,z])
   **Context position and rotation, position will be the origin of the coord space and rotation its z-axis (depths)
   The position should be loaded
 :Outputs:
-  **Storage bs:out geometry.shape {type:"coord_space",coord_type:"cartesian",origin,i,j,k} origin, i,j,k are arrays of 3 doubles, origin is the context's position and i,j,k the horizontal,vertical,depths director vectors
+  **Storage bs:out geometry.coord_space {type:"coord_space",coord_type:"cartesian",origin,i,j,k} origin, i,j,k are arrays of 3 doubles, origin is the context's position and i,j,k the horizontal,vertical,depths director vectors
 ```
 
 
@@ -203,7 +228,7 @@ Get a cylindric coord space (point's origin [yaw,y,r])
   **Context position and rotation, position will be the origin of the coord space and rotation its z-axis (depths)
   The position should be loaded
 :Outputs:
-  **Storage bs:out geometry.shape {type:"coord_space",coord_type:"cylindric",origin,i,j,k} origin, i,j,k are arrays of 3 doubles, origin is the context's position and i,j,k the horizontal,vertical,depths director vectors
+  **Storage bs:out geometry.coord_space {type:"coord_space",coord_type:"cylindric",origin,i,j,k} origin, i,j,k are arrays of 3 doubles, origin is the context's position and i,j,k the horizontal,vertical,depths director vectors
 ```
 
 
@@ -226,7 +251,7 @@ Get a spherical coord space (point's origin [yaw,pitch,r])
   **Context position and rotation, position will be the origin of the coord space and rotation its z-axis (depths)
   The position should be loaded
 :Outputs:
-  **Storage bs:out geometry.shape {type:"coord_space",coord_type:"spherical",origin,i,j,k} origin, i,j,k are arrays of 3 doubles, origin is the context's position and i,j,k the horizontal,vertical,depths director vectors
+  **Storage bs:out geometry.coord_space {type:"coord_space",coord_type:"spherical",origin,i,j,k} origin, i,j,k are arrays of 3 doubles, origin is the context's position and i,j,k the horizontal,vertical,depths director vectors
 ```
 
 
@@ -248,7 +273,7 @@ Get the coordinates of a point in a coord space
 :Inputs:
   **Storage bs:in geometry.shapes , and array of 2 shape, a point and a coord space
 :Outputs:
-  **Storage bs:out geometry.shape, a point with the targeted coord space
+  **Storage bs:out geometry.coord_space, a point with the targeted coord space
 ```
 
 
@@ -266,6 +291,32 @@ function #bs.geometry:transform/coord_space
 
 ---
 
+### SDF
+
+```{function} #bs.geometry:sdf
+
+Get the signed distance of a point and a shape
+
+:Inputs:
+  **Storage bs:in geometry.shapes , and array of 2 shape, a point and a shape
+:Outputs:
+  **Return and $geometry.sdf bs.out , the signed distance shifted by 3digits (1.234 become 1234)
+```
+
+
+*Example: get the signed distance of a player (here FooBar) from a line :*
+
+```mcfunction
+# Once
+data modify storage bs:in geometry.shapes set value []
+execute at FooBar run function #bs.geometry:shape/point
+data modify storage bs:in geometry.shapes append from storage bs:out geometry.shape
+execute positioned 0 0 0 rotated 30 0 run function #bs.geometry:coord_space/line
+data modify storage bs:in geometry.shapes append from storage bs:out geometry.shape
+function #bs.geometry:sdf
+```
+
+---
 > **Credits**:  RacoonJohn
 
 ---

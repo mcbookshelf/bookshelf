@@ -13,13 +13,17 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out geometry.intersect set value []
-
 #this function accept an array of 2shapes as input
 execute if function bs.geometry:error/2array run return fail
+#and at least 1 point
+execute if function bs.geometry:error/need_point run return fail
 
+execute if data storage bs:in geometry.shapes[{type:"line"}] run return run function bs.geometry:sdf/line
 
-execute if data storage bs:in geometry.shapes[{type:"line"}] if data storage bs:in geometry.shapes[{type:"plane"}] run return run function bs.geometry:intersect/line_plane
+execute if data storage bs:in geometry.shapes[{type:"plane"}] run return run function bs.geometry:sdf/plane
 
-execute if data storage bs:in geometry.shapes[{type:"line"}] if data storage bs:in geometry.shapes[{type:"sphere"}] run return run function bs.geometry:intersect/line_sphere
+execute if data storage bs:in geometry.shapes[{type:"sphere"}] run return run function bs.geometry:sdf/sphere
 
+data modify storage bs:ctx a set from storage bs:in geometry.shapes[0]
+data modify storage bs:ctx b set from storage bs:in geometry.shapes[1]
+execute if data storage bs:ctx a{type:"point"} if data storage bs:ctx b{type:"point"} run return run function bs.geometry:sdf/point

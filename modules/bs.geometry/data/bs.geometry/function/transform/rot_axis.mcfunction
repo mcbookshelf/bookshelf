@@ -13,15 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+data modify storage bs:out geometry.rot_axis set value {}
+
 #this function accept an array of 2shapes as input
 execute if function bs.geometry:error/2array run return fail
 #a point and a plane/cylinder/sphere
 
 execute if function bs.geometry:error/need_point run return fail
 execute if function bs.geometry:error/need_3d_or_coord_space run return fail
-
-
-data modify storage bs:out geometry.shape set value {type:"point",coord_type:"cartesian",origin:[0,0,0]}
 
 data modify storage bs:ctx temp set from storage bs:in geometry.shapes[{type:"plane"}]
 data modify storage bs:ctx temp set from storage bs:in geometry.shapes[{type:"cylinder"}]
@@ -50,6 +49,8 @@ execute store result score #x bs.ctx run data get storage bs:in geometry.shapes[
 execute store result score #y bs.ctx run data get storage bs:in geometry.shapes[{type:"point"}].origin[1] 1000
 execute store result score #z bs.ctx run data get storage bs:in geometry.shapes[{type:"point"}].origin[2] 1000
 
+#set output
+data modify storage bs:out geometry.rot_axis set value {type:"point",coord_type:"cartesian",origin:[0,0,0]}
 
 #compute
 scoreboard players operation #x bs.ctx -= #l bs.ctx
@@ -60,17 +61,17 @@ scoreboard players operation #r bs.ctx *= #x bs.ctx
 scoreboard players operation #s bs.ctx *= #y bs.ctx
 scoreboard players operation #t bs.ctx *= #z bs.ctx
 scoreboard players operation #r bs.ctx += #s bs.ctx
-execute store result storage bs:out geometry.shape.origin[0] double 0.000001 run scoreboard players operation #r bs.ctx += #t bs.ctx
+execute store result storage bs:out geometry.rot_axis.origin[0] double 0.000001 run scoreboard players operation #r bs.ctx += #t bs.ctx
 
 scoreboard players operation #u bs.ctx *= #x bs.ctx
 scoreboard players operation #v bs.ctx *= #y bs.ctx
 scoreboard players operation #w bs.ctx *= #z bs.ctx
 scoreboard players operation #u bs.ctx += #v bs.ctx
-execute store result storage bs:out geometry.shape.origin[1] double 0.000001 run scoreboard players operation #u bs.ctx += #w bs.ctx
+execute store result storage bs:out geometry.rot_axis.origin[1] double 0.000001 run scoreboard players operation #u bs.ctx += #w bs.ctx
 
 scoreboard players operation #o bs.ctx *= #x bs.ctx
 scoreboard players operation #p bs.ctx *= #y bs.ctx
 scoreboard players operation #q bs.ctx *= #z bs.ctx
 scoreboard players operation #o bs.ctx += #p bs.ctx
 scoreboard players operation #o bs.ctx += #q bs.ctx
-execute store result storage bs:out geometry.shape.origin[2] double 0.001 run scoreboard players operation #o bs.ctx /= 1000 bs.const
+execute store result storage bs:out geometry.rot_axis.origin[2] double 0.001 run scoreboard players operation #o bs.ctx /= 1000 bs.const

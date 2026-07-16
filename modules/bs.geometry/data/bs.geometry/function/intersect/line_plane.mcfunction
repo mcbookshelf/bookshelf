@@ -23,7 +23,6 @@ execute store result score #o bs.ctx run data get storage bs:in geometry.shapes[
 execute store result score #p bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].k[1] 1000
 execute store result score #q bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].k[2] 1000
 
-
 #get line parameters
 execute store result score #l bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].origin[0] 1000
 execute store result score #m bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].origin[1] 1000
@@ -47,7 +46,7 @@ scoreboard players operation #a bs.ctx += #b bs.ctx
 scoreboard players operation #a bs.ctx /= 1000 bs.const
 
 #if the line is included in the plane
-execute if score #a bs.ctx matches 0 run return run data modify storage bs:out geometry.shape set from storage bs:in geometry.shapes[{type:"line"}]
+execute if score #a bs.ctx matches 0 run return run data modify storage bs:out geometry.intersect append from storage bs:in geometry.shapes[{type:"line"}]
 
 #Compute the value of the parameter of the axis
 scoreboard players operation #c bs.ctx = #l bs.ctx
@@ -83,7 +82,7 @@ scoreboard players operation #i bs.ctx /= 1000 bs.const
 scoreboard players operation #j bs.ctx /= 1000 bs.const
 scoreboard players operation #k bs.ctx /= 1000 bs.const
 
-data modify storage bs:out geometry.shape set value {type:"point",origin:[0d,0d,0d]}
+data modify storage bs:out geometry.intersect append value {type:"point",coord_type:"cartesian",origin:[0d,0d,0d]}
 execute store result storage bs:out geometry.shape.origin[0] double 0.001 run scoreboard players operation #i bs.ctx += #l bs.ctx
 execute store result storage bs:out geometry.shape.origin[1] double 0.001 run scoreboard players operation #j bs.ctx += #m bs.ctx
 execute store result storage bs:out geometry.shape.origin[2] double 0.001 run scoreboard players operation #k bs.ctx += #n bs.ctx

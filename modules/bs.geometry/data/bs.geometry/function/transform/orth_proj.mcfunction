@@ -13,6 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+data modify storage bs:out geometry.orth_proj set value {}
+
 #this function accept an array of 2shapes as input
 execute if function bs.geometry:error/2array run return fail
 
@@ -22,6 +24,8 @@ execute if data storage bs:in geometry.shapes[{type:"point"}] if data storage bs
 #a line and a plane 
 execute if data storage bs:in geometry.shapes[{type:"line"}] if data storage bs:in geometry.shapes[{type:"plane"}] run return run function bs.geometry:transform/orth_proj/line_plane
 
+#a point and a line 
+execute if data storage bs:in geometry.shapes[{type:"point"}] if data storage bs:in geometry.shapes[{type:"line"}] run return run function bs.geometry:transform/orth_proj/point_line
 
 
 

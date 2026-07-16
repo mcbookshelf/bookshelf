@@ -13,13 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out geometry.intersect set value []
-
-#this function accept an array of 2shapes as input
-execute if function bs.geometry:error/2array run return fail
-
-
-execute if data storage bs:in geometry.shapes[{type:"line"}] if data storage bs:in geometry.shapes[{type:"plane"}] run return run function bs.geometry:intersect/line_plane
-
-execute if data storage bs:in geometry.shapes[{type:"line"}] if data storage bs:in geometry.shapes[{type:"sphere"}] run return run function bs.geometry:intersect/line_sphere
-
+$particle dust{color:16711680,scale:1} $(a) $(b) $(c)

@@ -28,10 +28,10 @@ execute store result score #c bs.ctx run data get storage bs:out geometry.Pos[2]
 execute store result score #r bs.ctx run data get storage bs:in geometry.shapes[{type:"point"}].origin[2] 1000
 
 #set output
-data modify storage bs:out geometry.shape set value {type:"point",coord_type:"cartesian",origin:[0d,0d,0d]}
+data modify storage bs:out geometry.coord_space set value {type:"point",coord_type:"cartesian",origin:[0d,0d,0d]}
 
-execute store result storage bs:out geometry.shape.origin[0] double 0.000001 run scoreboard players operation #a bs.ctx *= #r bs.ctx
-execute store result storage bs:out geometry.shape.origin[1] double 0.000001 run scoreboard players operation #b bs.ctx *= #r bs.ctx
-execute store result storage bs:out geometry.shape.origin[2] double 0.000001 run scoreboard players operation #c bs.ctx *= #r bs.ctx
+execute store result storage bs:out geometry.coord_space.origin[0] double 0.000001 run scoreboard players operation #a bs.ctx *= #r bs.ctx
+execute store result storage bs:out geometry.coord_space.origin[1] double 0.000001 run scoreboard players operation #b bs.ctx *= #r bs.ctx
+execute store result storage bs:out geometry.coord_space.origin[2] double 0.000001 run scoreboard players operation #c bs.ctx *= #r bs.ctx
 
 

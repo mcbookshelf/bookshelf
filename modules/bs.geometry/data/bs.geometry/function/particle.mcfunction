@@ -13,13 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out geometry.intersect set value []
+data modify storage bs:ctx a set from storage bs:in geometry.shapes[0].origin[0]
+data modify storage bs:ctx b set from storage bs:in geometry.shapes[0].origin[1]
+data modify storage bs:ctx c set from storage bs:in geometry.shapes[0].origin[2]
 
-#this function accept an array of 2shapes as input
-execute if function bs.geometry:error/2array run return fail
+function bs.geometry:particle_macro with storage bs:ctx
 
+data modify storage bs:ctx a set from storage bs:in geometry.shapes[1].origin[0]
+data modify storage bs:ctx b set from storage bs:in geometry.shapes[1].origin[1]
+data modify storage bs:ctx c set from storage bs:in geometry.shapes[1].origin[2]
 
-execute if data storage bs:in geometry.shapes[{type:"line"}] if data storage bs:in geometry.shapes[{type:"plane"}] run return run function bs.geometry:intersect/line_plane
-
-execute if data storage bs:in geometry.shapes[{type:"line"}] if data storage bs:in geometry.shapes[{type:"sphere"}] run return run function bs.geometry:intersect/line_sphere
+function bs.geometry:particle_macro with storage bs:ctx
 

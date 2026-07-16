@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out geometry.shape set value {type:"line",coord_type:"cartesian",origin:[0,0,0],k:[0,0,0]}
+data modify storage bs:out geometry.orth_proj set value {type:"line",coord_type:"cartesian",origin:[0,0,0],k:[0,0,0]}
 
 #get plane parameters
 execute store result score #l bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].origin[0] 1000
@@ -59,9 +59,9 @@ scoreboard players operation #x bs.ctx -= #o bs.ctx
 scoreboard players operation #y bs.ctx -= #p bs.ctx
 scoreboard players operation #z bs.ctx -= #q bs.ctx
 
-execute store result storage bs:out geometry.shape.origin[0] double 0.001 run scoreboard players get #x bs.ctx
-execute store result storage bs:out geometry.shape.origin[1] double 0.001 run scoreboard players get #y bs.ctx
-execute store result storage bs:out geometry.shape.origin[2] double 0.001 run scoreboard players get #z bs.ctx
+execute store result storage bs:out geometry.orth_proj.origin[0] double 0.001 run scoreboard players get #x bs.ctx
+execute store result storage bs:out geometry.orth_proj.origin[1] double 0.001 run scoreboard players get #y bs.ctx
+execute store result storage bs:out geometry.orth_proj.origin[2] double 0.001 run scoreboard players get #z bs.ctx
 
 
 #get line director vector parameters
@@ -110,6 +110,6 @@ scoreboard players operation $math.isqrt.x bs.in += #d bs.ctx
 scoreboard players operation $math.isqrt.x bs.in /= 1000 bs.const
 execute store result score #d bs.ctx run function bs.math:isqrt
 
-execute store result storage bs:out geometry.shape.k[0] double 0.0316227766017 run scoreboard players operation #x bs.ctx /= #d bs.ctx
-execute store result storage bs:out geometry.shape.k[1] double 0.0316227766017 run scoreboard players operation #y bs.ctx /= #d bs.ctx
-execute store result storage bs:out geometry.shape.k[2] double 0.0316227766017 run scoreboard players operation #z bs.ctx /= #d bs.ctx
+execute store result storage bs:out geometry.orth_proj.k[0] double 0.0316227766017 run scoreboard players operation #x bs.ctx /= #d bs.ctx
+execute store result storage bs:out geometry.orth_proj.k[1] double 0.0316227766017 run scoreboard players operation #y bs.ctx /= #d bs.ctx
+execute store result storage bs:out geometry.orth_proj.k[2] double 0.0316227766017 run scoreboard players operation #z bs.ctx /= #d bs.ctx
