@@ -7,7 +7,7 @@
   "meta": {
     "name": "Link",
     "slug": "bookshelf-link",
-    "description": "Bookshelf entity linking system, enabling synchronized movement and structured relationships.",
+    "description": "Link entities together in Minecraft datapacks with synchronized positions and rotations. Create complex multi-entity structures.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html",
     "tags": ["runtime"],
     "dependencies": [

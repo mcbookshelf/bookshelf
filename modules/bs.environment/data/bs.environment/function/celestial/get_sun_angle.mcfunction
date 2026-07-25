@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -17,6 +17,6 @@
 # $environment.celestial_angle.day bs.in
 # $environment.celestial_angle.daytime bs.in
 
-$data modify storage bs:ctx z set value $(scale)f
+$data modify storage bs:ctx z set value $(scale)
 
 return run function bs.environment:celestial/get_sun_angle_internal

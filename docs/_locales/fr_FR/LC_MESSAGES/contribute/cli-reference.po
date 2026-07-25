@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"PO-Revision-Date: 2025-09-17 14:30+0100\n"
+"Last-Translator: Claude <claude@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/cli-reference.md:5 dc89051c735e4f1ba065f2abb232cc96
+msgid "📜 CLI Reference"
+msgstr "📜 Référence CLI"
+
+#: ../../contribute/cli-reference.md:7 dcf341707fc247f0a12dab2fa1d8d457
+msgid ""
+"This page provides a quick reference to the available commands. Use this "
+"reference to quickly look up commands and their usage without diving into"
+" detailed documentation."
+msgstr "Cette page fournit une référence rapide des commandes disponibles. Utilisez cette référence pour rechercher rapidement les commandes et leur utilisation sans avoir à consulter la documentation détaillée."
+
+#: ../../contribute/cli-reference.md 397b6b0740c548c79adc90fbea0e549d
+msgid "**Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**"
+msgstr "**Commande**"
+
+#: ../../contribute/cli-reference.md 12229cf582ad414c8e59c3731fdbef5c
+msgid "**Description**"
+msgstr "**Description**"
+
+#: ../../contribute/cli-reference.md ef8c57be64bb43ee837569b827c18337
+msgid "**Arguments/Options**"
+msgstr "**Arguments/Options**"
+
+#: ../../contribute/cli-reference.md 8a3bbbdd4a5e43cf8fe2e6d0dc32f525
+msgid "**🔍 `check`**"
+msgstr "**🔍 `check`**"
+
+#: ../../contribute/cli-reference.md 02137157136f44a7bc529d8999e744b4
+msgid "Check project requirements and metadata."
+msgstr "Vérifier les exigences et les métadonnées du projet."
+
+#: ../../contribute/cli-reference.md 6f74775b4bae4aedbcdace1ca0a19e49
+#: cc908ad8027344b9b18688c14c820085 f0bf63d4ad4c4a0bb61384fadc48274d
+msgid "No arguments."
+msgstr "Aucun argument."
+
+#: ../../contribute/cli-reference.md a4a5510ae667422eb70a1611849de615
+msgid "**📑 `update`**"
+msgstr "**📑 `update`**"
+
+#: ../../contribute/cli-reference.md b9e2cfd8058d40ed8a25a9df7b40e661
+msgid "Update project metadata changes."
+msgstr "Mettre à jour les modifications des métadonnées du projet."
+
+#: ../../contribute/cli-reference.md 42929e2d24254de3993fcb00028431a3
+msgid "**🔗 `link`**"
+msgstr "**🔗 `link`**"
+
+#: ../../contribute/cli-reference.md 25dc828bb3a64eaaa85fca851443a759
+msgid ""
+"Link the generated packs to Minecraft. More information [here](project"
+":getting-started.md#linking-modules-to-minecraft)."
+msgstr ""
+"Lier les packs générés à Minecraft. Plus d'informations [ici](project"
+":getting-started.md#linking-modules-to-minecraft)."
+
+#: ../../contribute/cli-reference.md 6ea5d0efa5104067ab091bf0cb200dd3
+msgid ""
+"`[world]`, `--minecraft`, `--data-pack`, `--resource-pack` - Paths to "
+"their respective directories."
+msgstr "`[world]`, `--minecraft`, `--data-pack`, `--resource-pack` - Chemins vers leurs répertoires respectifs."
+
+#: ../../contribute/cli-reference.md 603b727dbf0046d5af52fba73e20472c
+msgid "**📝 `docs build`**"
+msgstr "**📝 `docs build`**"
+
+#: ../../contribute/cli-reference.md e2666accd37141318fb3af991765129d
+msgid "Build static HTML documentation."
+msgstr "Construire la documentation HTML statique."
+
+#: ../../contribute/cli-reference.md 504060cc40bb4c1b9c23ba83eb9b210e
+#: b5b54c29dda14912961a056f3d007d22
+msgid "`[output]` - Build directory (optional, defaults to `_build`)."
+msgstr "`[output]` - Répertoire de construction (optionnel, par défaut `_build`)."
+
+#: ../../contribute/cli-reference.md f239e7cefd8244a5a828a1e76efbb0dd
+msgid "**📝 `docs watch`**"
+msgstr "**📝 `docs watch`**"
+
+#: ../../contribute/cli-reference.md 09211767c6d04f5d8db88bc01874d8e2
+msgid "Build and serve live documentation."
+msgstr "Construire et servir la documentation en temps réel."
+
+#: ../../contribute/cli-reference.md 248c0ae1e3d24a6c91cd5ff42a851e9e
+msgid "**📖 `examples build`**"
+msgstr "**📖 `examples build`**"
+
+#: ../../contribute/cli-reference.md e081e3ec8b39430c84837d1cb6371439
+msgid "Build the specified examples."
+msgstr "Construire les exemples spécifiés."
+
+#: ../../contribute/cli-reference.md 91217319505b4408b533ae2318daadf3
+msgid "`[examples...]` - List of examples to build (optional)."
+msgstr "`[examples...]` - Liste des exemples à construire (optionnel)."
+
+#: ../../contribute/cli-reference.md db8a75d677294f1cb054f4dfe143ca36
+msgid "**📖 `examples watch`**"
+msgstr "**📖 `examples watch`**"
+
+#: ../../contribute/cli-reference.md 7b38458d32894565b777b292c0e394ea
+msgid "Watch and rebuild the specified examples when changes occur."
+msgstr "Surveiller et reconstruire les exemples spécifiés lorsque des changements se produisent."
+
+#: ../../contribute/cli-reference.md f56c8d830c5349b0aaf7233690c963a3
+msgid "`[examples...]` - List of examples to watch (optional)."
+msgstr "`[examples...]` - Liste des exemples à surveiller (optionnel)."
+
+#: ../../contribute/cli-reference.md 4a990f2972504f6ab4f5db0b17f9dcad
+msgid "**🧩 `modules build`**"
+msgstr "**🧩 `modules build`**"
+
+#: ../../contribute/cli-reference.md b3d2826159e3403e91ef39beb6cc8512
+msgid "Build the specified modules."
+msgstr "Construire les modules spécifiés."
+
+#: ../../contribute/cli-reference.md 8d3b2a8dbbad487dac1a7598100c7f9b
+msgid "`[modules...]` - List of modules to build (optional)."
+msgstr "`[modules...]` - Liste des modules à construire (optionnel)."
+
+#: ../../contribute/cli-reference.md 30f603cfdfd14738bf620193700cf005
+msgid "**🧩 `modules release`**"
+msgstr "**🧩 `modules release`**"
+
+#: ../../contribute/cli-reference.md 1dc946b2722b419db91c4c49a853114c
+msgid "Build zipped modules for release."
+msgstr "Construire les modules compressés pour la publication."
+
+#: ../../contribute/cli-reference.md 7946c4b9a0524edaa412a237854df55c
+msgid "**🧩 `modules test`**"
+msgstr "**🧩 `modules test`**"
+
+#: ../../contribute/cli-reference.md 70cfdce5872f45df95b584d98f1dff9f
+msgid "Build and test the specified modules."
+msgstr "Construire et tester les modules spécifiés."
+
+#: ../../contribute/cli-reference.md ae1991865fb0434abff48ba6bb81b077
+msgid "`[modules...]` - List of modules to test (optional)."
+msgstr "`[modules...]` - Liste des modules à tester (optionnel)."
+
+#: ../../contribute/cli-reference.md 108fd496513a4801912bb3a8d7e38e5d
+msgid "**🧩 `modules watch`**"
+msgstr "**🧩 `modules watch`**"
+
+#: ../../contribute/cli-reference.md 5a2f54c4b7e4432a8611eee31e820371
+msgid "Watch and rebuild the specified modules when changes occur."
+msgstr "Surveiller et reconstruire les modules spécifiés lorsque des changements se produisent."
+
+#: ../../contribute/cli-reference.md c02f1f8e31a443a1973f40a236a5a0d5
+msgid "`[modules...]` - List of modules to watch (optional)."
+msgstr "`[modules...]` - Liste des modules à surveiller (optionnel)."
+
+#: ../../contribute/cli-reference.md:25 fb393aa74d064497a413d39ac942adab
+msgid ""
+"To run any command, type `uv run` before the command itself. "
+"Alternatively, you can activate the virtual environment (venv) manually "
+"and run the command directly. Some commands also have aliases:"
+msgstr "Pour exécuter n'importe quelle commande, tapez `uv run` avant la commande elle-même. Alternativement, vous pouvez activer l'environnement virtuel (venv) manuellement et exécuter la commande directement. Certaines commandes ont aussi des alias :"
+
+#: ../../contribute/cli-reference.md 4cd905fb56e24641bbdc240ac8ffec05
+msgid "**Alias**"
+msgstr "**Alias**"
+
+#: ../../contribute/cli-reference.md 465e6b9a528b47719fad72fdd075375c
+msgid "**Command**"
+msgstr "**Commande**"
+
+#: ../../contribute/cli-reference.md 92b77c7a1df8479c9f958b0d87c33fa5
+msgid "`uv run build`"
+msgstr "`uv run modules build`"
+
+#: ../../contribute/cli-reference.md 4bf5eed353ef47bf8f53461999bd9ffd
+msgid "`uv run modules build`"
+msgstr "`uv run modules build`"
+
+#: ../../contribute/cli-reference.md 3d31c13ad6bc4aa997a5c164602da028
+msgid "`uv run watch`"
+msgstr "`uv run modules watch`"
+
+#: ../../contribute/cli-reference.md cc76e25b806141a0852a4555dce3edc4
+msgid "`uv run modules watch`"
+msgstr "`uv run modules watch`"
+

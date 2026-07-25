@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-28 11:19+0800\n"
+"PO-Revision-Date: 2025-01-19 12:00+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v3.0.1.md:1 2e0f590587ba480aa76a279ed2ea7387
+msgid ""
+"📦 [Bookshelf - "
+"3.0.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.0.1)"
+msgstr ""
+"📦 [Bookshelf - "
+"3.0.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.0.1)"
+
+#: ../../../changelog/v3.0.1.md:3 c2b39d7511d343a9815d096348542b5e
+msgid "**🩹 Simple Hotfix!**"
+msgstr "**🩹 Correctif simple !**"
+
+#: ../../../changelog/v3.0.1.md:5 b37df7366cb949059e9e7cede8604e09
+msgid "*This is a hotfix for version 3.0.0.*"
+msgstr "*Il s'agit d'un correctif pour la version 3.0.0.*"
+
+#: ../../../changelog/v3.0.1.md:8 fd39394d81214c9b9e07d902bd69062c
+msgid ""
+"<abbr title=\"Documentation\">📝</abbr> "
+"**[#314](https://github.com/mcbookshelf/bookshelf/issues/314)** - Add the"
+" Lifestring example, linking players' health using the `bs.health` "
+"module."
+msgstr ""
+"<abbr title=\"Documentation\">📝</abbr> "
+"**[#314](https://github.com/mcbookshelf/bookshelf/issues/314)** - "
+"Ajout de l'exemple Lifestring, liant la santé des joueurs en utilisant le module `bs.health`."
+
+#: ../../../changelog/v3.0.1.md:11 6db9340ada5544a48739b2454aa7fbd6
+msgid "`❤️ bs.health`"
+msgstr "`❤️ bs.health`"
+
+#: ../../../changelog/v3.0.1.md:13 eaf7e34fbb8d466ca53b88f0eba82a0f
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#410](https://github.com/mcbookshelf/bookshelf/issues/410)** - Ensure "
+"player health updates consistently."
+msgstr ""
+"<abbr title=\"Correction de bug\">🐛</abbr> "
+"**[#410](https://github.com/mcbookshelf/bookshelf/issues/410)** - "
+"La santé du joueur se met maintenant à jour de manière cohérente."
+
+#: ../../../changelog/v3.0.1.md:14 bac3bd2329314e48a1e8cf410dcd641b
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#426](https://github.com/mcbookshelf/bookshelf/pull/426)** – Players "
+"are now correctly killed when their health drops below 0, unless they are"
+" in Creative or Spectator mode."
+msgstr ""
+"<abbr title=\"Correction de bug\">🐛</abbr> "
+"**[#426](https://github.com/mcbookshelf/bookshelf/pull/426)** - "
+"Les joueurs sont maintenant correctement tués lorsque leur santé tombe en dessous de 0, sauf s'ils sont en mode Créatif ou Spectateur."
+
+#: ../../../changelog/v3.0.1.md:17 33840d0e957d45ada3c9d655e1840fe1
+msgid "`🧣 bs.spline`"
+msgstr "`🧣 bs.spline`"
+
+#: ../../../changelog/v3.0.1.md:19 ../../../changelog/v3.0.1.md:26
+#: 23b96f57015148af9859094da5588897 9b7eb84586a1432b8293b6f426309806
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#423](https://github.com/mcbookshelf/bookshelf/pull/423)** - Fix "
+"module tag incorrectly set to default, now set to runtime to ensure the "
+"module is properly included in bundles."
+msgstr ""
+"<abbr title=\"Correction de bug\">🐛</abbr> "
+"**[#423](https://github.com/mcbookshelf/bookshelf/pull/423)** - "
+"Correction du tag de module incorrectement défini par défaut, maintenant défini sur runtime pour s'assurer que le module est correctement inclus dans les bundles."
+
+#: ../../../changelog/v3.0.1.md:20 97f4e99b240c49f49e7650c5e801832c
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#412](https://github.com/mcbookshelf/bookshelf/issues/412)** - Fix "
+"Hermite spline tangents to use absolute space instead of relative."
+msgstr ""
+"<abbr title=\"Correction de bug\">🐛</abbr> "
+"**[#412](https://github.com/mcbookshelf/bookshelf/issues/412)** - Correction "
+"des tangentes des spline Hermite pour utiliser l'espace absolu au lieu du relatif."
+
+#: ../../../changelog/v3.0.1.md:21 f722044fddca4f67a8438dd08a674b97
+msgid ""
+"<abbr title=\"Enhancements\">⚡</abbr> "
+"**[#409](https://github.com/mcbookshelf/bookshelf/issues/409)** - Improve"
+" performance of sampling and streaming functions."
+msgstr ""
+"<abbr title=\"Améliorations\">⚡</abbr> "
+"**[#409](https://github.com/mcbookshelf/bookshelf/issues/409)** - "
+"Amélioration des performances des fonctions d'échantillonnage et de streaming."
+
+#: ../../../changelog/v3.0.1.md:24 9d5a5e7407c14090a4e9f604c92dfa15
+msgid "`🔠 bs.string`"
+msgstr "`🔠 bs.string`"
+
+#: ../../../changelog/v3.0.1.md:29 35f17ef8f1984ce4a0758c9a476b7fdc
+msgid "`👀 bs.view`"
+msgstr "`👀 bs.view`"
+
+#: ../../../changelog/v3.0.1.md:31 42428ca747674ba593f2c432d1fd8fa2
+msgid ""
+"<abbr title=\"Bug Fix\">🐛</abbr> "
+"**[#424](https://github.com/mcbookshelf/bookshelf/issues/424)** - Fix "
+"`#bs.view:at_block_placement` that was incorrectly using hit normal data "
+"from the previous call instead of the current one."
+msgstr ""
+"<abbr title=\"Correction de bug\">🐛</abbr> "
+"**[#424](https://github.com/mcbookshelf/bookshelf/issues/424)** - Correction de "
+"`#bs.view:at_block_placement` qui utilisait incorrectement les données de normale "
+"de hit de l'appel précédent au lieu de l'appel actuel."

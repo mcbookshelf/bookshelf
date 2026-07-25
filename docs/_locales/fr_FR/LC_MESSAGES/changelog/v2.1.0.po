@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-01-19 12:00+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v2.1.0.md:1 33da4cb8111b4eb3acb3fc50125dfcdb
+msgid ""
+"📦 [Bookshelf - "
+"2.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.1.0)"
+msgstr ""
+"📦 [Bookshelf - "
+"2.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.1.0)"
+
+#: ../../../changelog/v2.1.0.md:3 938737e18a944f12b67296732d42713d
+msgid "**⚙️ The MetaData Update!**"
+msgstr "**⚙️ La mise à jour MétaDonnées !**"
+
+#: ../../../changelog/v2.1.0.md:5 c052f3c535354e528dcb212d3f4ea99c
+msgid ""
+"*This release enhances documentation and automated tools, and introduces "
+"new block manipulation features.*"
+msgstr "*Cette version améliore la documentation et les outils automatisés, et introduit de nouvelles fonctionnalités de manipulation de blocs.*"
+
+#: ../../../changelog/v2.1.0.md:7 8bfac9ddf4c343cf905dcac44dc80bfc
+msgid "Bookshelf is now based on **Minecraft 1.21**."
+msgstr "Bookshelf est maintenant basé sur **Minecraft 1.21**."
+
+#: ../../../changelog/v2.1.0.md:10 b283c6653dae40549cb567e387717332
+msgid ""
+"📝 **[#206](https://github.com/mcbookshelf/bookshelf/issues/206)** - Added"
+" new related datapacks and mods."
+msgstr ""
+"📝 **[#206](https://github.com/mcbookshelf/bookshelf/issues/206)** - "
+"Ajout de nouveaux datapacks et mods associés."
+
+#: ../../../changelog/v2.1.0.md:11 4a3e3541c2314446ba9266907ea1ba31
+msgid ""
+"📝 **[#200](https://github.com/mcbookshelf/bookshelf/issues/200)** - "
+"Replaced the old function header with a new license-only header, now "
+"mandatory for all functions. Metadata has been moved to the feature "
+"function tag."
+msgstr ""
+"📝 **[#200](https://github.com/mcbookshelf/bookshelf/issues/200)** - "
+"Remplacement de l'ancien en-tête de fonction par un nouvel en-tête n'indiquant que la licence, maintenant obligatoire pour toutes les fonctions. "
+"Les métadonnées ont été déplacées vers le tag de fonction de fonctionnalité."
+
+#: ../../../changelog/v2.1.0.md:12 ff62725035cb4317b22d3e7efb87618c
+msgid ""
+"📝 **[#52](https://github.com/mcbookshelf/bookshelf/issues/52)** / "
+"**[#175](https://github.com/mcbookshelf/bookshelf/issues/175)** - Each "
+"module now includes its own manual metadata, aiding in dependency "
+"management and supporting tools like the upcoming Bookshelf Manager. More"
+" info [here](project:/contribute/metadata.md)."
+msgstr ""
+"📝 **[#52](https://github.com/mcbookshelf/bookshelf/issues/52)** / "
+"**[#175](https://github.com/mcbookshelf/bookshelf/issues/175)** - "
+"Chaque module doit maintenant maintenir son propre fichier de métadonnées, ce qui aide à gérer les dépendances et fournit un support de base pour les nouveaux outils comme Bookshelf Manager. "
+"Plus d'informations [ici](project:/contribute/metadata.md)."
+
+#: ../../../changelog/v2.1.0.md:13 5cfc7d1cecb741ccae94263b10f0e912
+msgid ""
+"⚙️ **[#199](https://github.com/mcbookshelf/bookshelf/pull/199)** - "
+"Automated metadata verification during pull requests to ensure no data is"
+" missed. More info [here](project:/contribute/contribution-"
+"validation.md)."
+msgstr ""
+"⚙️ **[#199](https://github.com/mcbookshelf/bookshelf/pull/199)** - "
+"Vérification automatique des métadonnées lors des pull requests pour garantir l'intégrité des données. "
+"Plus d'informations [ici](project:/contribute/contribution-validation.md)."
+
+#: ../../../changelog/v2.1.0.md:14 d4986d6de6cd448aa328654d21340f7e
+msgid "⚙️ Added templates for pull requests and issues."
+msgstr "⚙️ Ajout de modèles pour les pull requests et les issues."
+
+#: ../../../changelog/v2.1.0.md:17 ac0f152870d94b788e929af8bbf39c97
+msgid "`🧱 bs.block`"
+msgstr "`🧱 bs.block`"
+
+#: ../../../changelog/v2.1.0.md:19 07de3c041fe6417a90a71d579e8afc17
+msgid ""
+"✨ **[#187](https://github.com/mcbookshelf/bookshelf/issues/187)** - Added"
+" `#bs.block:map_type` and `#bs.block:mix_type` functions."
+msgstr ""
+"✨ **[#187](https://github.com/mcbookshelf/bookshelf/issues/187)** - "
+"Ajout des fonctions `#bs.block:map_type` et `#bs.block:mix_type`."
+
+#: ../../../changelog/v2.1.0.md:22 dc71c46de4324b3fae524a1f73b0bc1f
+msgid "`🔗 bs.link`"
+msgstr "`🔗 bs.link`"
+
+#: ../../../changelog/v2.1.0.md:24 ../../../changelog/v2.1.0.md:34
+#: ../../../changelog/v2.1.0.md:39 8ce7b9fcfdd24407b594fd164517d6df
+#: b951641218a44e6e96b4aea38ef4a706 ce036a8c58754c72bcbeaf36dd6148f6
+msgid ""
+"🐛 **[#211](https://github.com/mcbookshelf/bookshelf/pull/211)** - Fixed "
+"missing help function tag."
+msgstr ""
+"🐛 **[#211](https://github.com/mcbookshelf/bookshelf/pull/211)** - "
+"Correction du tag de fonction d'aide manquant."
+
+#: ../../../changelog/v2.1.0.md:27 16eb5dd3f38c42528958f5d989b33040
+msgid "`🧭 bs.position`"
+msgstr "`🧭 bs.position`"
+
+#: ../../../changelog/v2.1.0.md:29 81f9af59baa643a498f427c28f4f41dc
+msgid ""
+"📝 **[#208](https://github.com/mcbookshelf/bookshelf/issues/208)** - "
+"Updated documentation for `#bs.position:<add|get|set>_pos_and_rot`."
+msgstr ""
+"📝 **[#208](https://github.com/mcbookshelf/bookshelf/issues/208)** - "
+"Mise à jour de la documentation pour `#bs.position:<add|get|set>_pos_and_rot`."
+
+#: ../../../changelog/v2.1.0.md:32 5679f412bbf441388b557af6c4509674
+msgid "`➡️ bs.vector`"
+msgstr "`➡️ bs.vector`"
+
+#: ../../../changelog/v2.1.0.md:37 26bddacc68134bfb90fe05a4490ba5d1
+msgid "`🏅 bs.xp`"
+msgstr "`🏅 bs.xp`"

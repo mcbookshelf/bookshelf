@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-09-17 18:35+0100\n"
+"Last-Translator: Claude Code <claude@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <team@gunivers.net>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../contribute/generated-files.md:1 33bbd58ffd3e48c18a0ffaade0c2fb24
+msgid "⚙️ Generated Files"
+msgstr "⚙️ Fichiers générés"
+
+#: ../../../contribute/generated-files.md:3 b760375807ef443abf73b26ebe020c3e
+msgid ""
+"When building modules with **[Beet](https://github.com/mcbeet/beet)**, "
+"several files are automatically generated to simplify development and "
+"improve consistency. This page outlines what happens behind the scenes."
+msgstr "Lors de la construction de modules avec **[Beet](https://github.com/mcbeet/beet)**, plusieurs fichiers sont automatiquement générés pour simplifier le développement et améliorer la cohérence. Cette page décrit ce qui se passe en arrière-plan."
+
+#: ../../../contribute/generated-files.md:7 ef8e936f56b0486bb4c0830de1e29bae
+msgid "📦 Module Management"
+msgstr "📦 Gestion des modules"
+
+#: ../../../contribute/generated-files.md:9 f64506d2b70c49cc8663283d4f57fac3
+msgid "Modules are bundled with their dependencies:"
+msgstr "Les modules sont regroupés avec leurs dépendances :"
+
+#: ../../../contribute/generated-files.md:10 4a784d47faad43c3b4c94e6c64cf84c3
+msgid ""
+"If Module `A` depends on Module `B`, both are included in the build "
+"process."
+msgstr "Si le Module `A` dépend du Module `B`, les deux sont inclus dans le processus de construction."
+
+#: ../../../contribute/generated-files.md:12 f6113e8e8a4449d6b6c20e114e430171
+msgid ""
+"A special loader module, `bs.load`, along with `load` (LanternLoad), is "
+"created to:"
+msgstr "Un module de chargeur spécial, `bs.load`, ainsi que `load` (LanternLoad), est créé pour :"
+
+#: ../../../contribute/generated-files.md:13 42a7a62b35ce4a0f95146b4ea34df390
+msgid "Resolve version conflicts and manage dependencies between modules."
+msgstr "Résoudre les conflits de version et gérer les dépendances entre modules."
+
+#: ../../../contribute/generated-files.md:14 08d74e03e5d34451a46a33aa39fb25d1
+msgid ""
+"Ensure load functions are called in the correct order, maintaining "
+"reliable datapack behaviors."
+msgstr "S'assurer que les fonctions de chargement sont appelées dans le bon ordre, maintenant des comportements de datapack fiables."
+
+#: ../../../contribute/generated-files.md:16 84a932a6b063448db8109d4f757f1601
+msgid ""
+"During the build process, the `pack.mcmeta` file is automatically updated"
+" to ensure compatibility:"
+msgstr "Pendant le processus de construction, le fichier `pack.mcmeta` est automatiquement mis à jour pour garantir la compatibilité :"
+
+#: ../../../contribute/generated-files.md:17 8dc047b21c4748288c29e71229585443
+msgid "`pack_format` is set to the latest supported Minecraft version."
+msgstr "`pack_format` est défini à la dernière version Minecraft supportée."
+
+#: ../../../contribute/generated-files.md:18 87b34aae04614366abeac9537c3d0dd9
+msgid "`supported_formats` specifies a compatible version range."
+msgstr "`supported_formats` spécifie une plage de versions compatibles."
+
+#: ../../../contribute/generated-files.md:22 d79d3367883e4beba82607feaea2e518
+msgid "🗂️ Resource-Based Plugins"
+msgstr "🗂️ Plugins basés sur les ressources"
+
+#: ../../../contribute/generated-files.md:24 b423f4f4d23d4dc09520f6f8a2ab5ed7
+msgid ""
+"Beyond module management, Bookshelf automatically generates data across "
+"multiple resource types."
+msgstr "Au-delà de la gestion des modules, Bookshelf génère automatiquement des données sur plusieurs types de ressources."
+
+#: ../../../contribute/generated-files.md:26 9f9b58528299420fb03de3a7fe2002cb
+msgid "📄 Function Related"
+msgstr "📄 Lié aux fonctions"
+
+#: ../../../contribute/generated-files.md:28 d85c3f19f3cf4584a95dc5387a9f201b
+msgid "Bookshelf enhances the contributor and user experience by:"
+msgstr "Bookshelf améliore l'expérience des contributeurs et des utilisateurs en :"
+
+#: ../../../contribute/generated-files.md:30 20ae830f5c844d6685c853fad8b5a33d
+msgid ""
+"Automatically adding functions from the module's `import` folder to the "
+"`__load__` function."
+msgstr "Ajoutant automatiquement les fonctions du dossier `import` du module à la fonction `__load__`."
+
+#: ../../../contribute/generated-files.md:31 17b7f0f7573f458aa49929ca57914681
+msgid ""
+"Generating a `__help__` function and its `help` tag linking to the "
+"module's documentation."
+msgstr "Générant une fonction `__help__` et son tag `help` pointant vers la documentation du module."
+
+#: ../../../contribute/generated-files.md:33 87d3f7143f054a2baf647c13d2d9de5c
+msgid "🧪 Test Related"
+msgstr "🧪 Lié aux tests"
+
+#: ../../../contribute/generated-files.md:35 3ea51312ec5848dcb90107c3ceab8bd5
+msgid ""
+"Bookshelf uses **PackTest** to run automated tests for its modules. To "
+"ensure smooth and isolated execution, it:"
+msgstr "Bookshelf utilise **PackTest** pour exécuter des tests automatisés pour ses modules. Pour garantir une exécution fluide et isolée, il :"
+
+#: ../../../contribute/generated-files.md:37 75aed373dec5409ab7e9e5b4377c7bb4
+msgid ""
+"Automatically injects `@environment bs.load:<module>` instructions into "
+"test functions."
+msgstr "Injecte automatiquement des instructions `@environment bs.load:<module>` dans les fonctions de test."
+
+#: ../../../contribute/generated-files.md:38 08b7dc14a5ba4c5aabdabe5cebc569c2
+msgid ""
+"Creates a dedicated test environment inside the `bs.load` namespace that "
+"isolates and loads only the module under test."
+msgstr "Crée un environnement de test dédié dans le namespace `bs.load` qui isole et charge uniquement le module sous test."
+
+#: ../../../contribute/generated-files.md:40 761f6dd8fbe84b3182b7dfa0fc1f6ae5
+msgid "🏷️ Tag Related"
+msgstr "🏷️ Lié aux tags"
+
+#: ../../../contribute/generated-files.md:42 7837f017e26e460c9ad55923dab664e2
+msgid ""
+"To ensure proper loading and versioning, Bookshelf requires non-"
+"overridable tags. It:"
+msgstr "Pour garantir un chargement et un versioning appropriés, Bookshelf nécessite des tags non remplaçables. Il :"
+
+#: ../../../contribute/generated-files.md:44 dee797cdb5e94286a8fc1dc0dafd75a3
+msgid "Updates all tags with the `replace` key set to `true`."
+msgstr "Met à jour tous les tags avec la clé `replace` définie à `true`."
+
+#: ../../../contribute/generated-files.md:48 afee0c23446843debf51f55f89272d70
+msgid "🧩 Module-Specific Plugins"
+msgstr "🧩 Plugins spécifiques aux modules"
+
+#: ../../../contribute/generated-files.md:50 ed7758ffbdae4af580314d1499495271
+msgid ""
+"In addition to these shared plugins, each module can include its own "
+"plugins that hook into the build pipeline. Some modules may have plugins "
+"that are responsible for generating data specific to themselves, "
+"providing even greater flexibility during the build process."
+msgstr "En plus de ces plugins partagés, chaque module peut inclure ses propres plugins qui s'intègrent dans le pipeline de construction. Certains modules peuvent avoir des plugins responsables de la génération de données spécifiques à eux-mêmes, offrant encore plus de flexibilité pendant le processus de construction."

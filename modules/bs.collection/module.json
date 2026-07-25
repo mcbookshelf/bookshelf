@@ -1,0 +1,15 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.collection",
+    "load": "."
+  },
+  "meta": {
+    "name": "Collection",
+    "slug": "bookshelf-collection",
+    "description": "Work with collections in Minecraft datapacks. Map, filter, reduce, find, and transform elements with functional operations.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html",
+    "tags": ["runtime"],
+    "dependencies": []
+  }
+}

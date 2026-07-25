@@ -4,7 +4,7 @@
 
 Efficiently manage the lifecycle and vital aspects of an entity.
 
-```{epigraph}
+```{pull-quote}
 "He who has a why to live can bear almost any how."
 
 -- Friedrich Nietzsche

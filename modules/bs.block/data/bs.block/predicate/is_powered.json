@@ -1,0 +1,37 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-powered",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2025/10/30",
+      "minecraft_version": "1.21.10"
+    },
+    "updated": {
+      "date": "2025/10/30",
+      "minecraft_version": "1.21.10"
+    }
+  },
+  "condition": "all_of",
+  "terms": [
+    {
+      "condition": "reference",
+      "name": "bs.block:is_conductive"
+    },
+    {
+      "condition": "any_of",
+      "terms": [
+        {
+          "condition": "reference",
+          "name": "bs.block:internal/is_strongly_powered"
+        },
+        {
+          "condition": "reference",
+          "name": "bs.block:internal/is_weakly_powered"
+        }
+      ]
+    }
+  ]
+}

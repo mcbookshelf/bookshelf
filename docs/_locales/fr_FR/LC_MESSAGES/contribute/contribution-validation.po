@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-09-17 16:35+0100\n"
+"Last-Translator: Claude Code <claude@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <team@gunivers.net>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../contribute/contribution-validation.md:1
+#: 0b0a63627511487aaf195ccf4b9077d9
+msgid "✅ Contribution Validation"
+msgstr "✅ Validation des contributions"
+
+#: ../../../contribute/contribution-validation.md:3
+#: 0b5086a6e3254b8c85d5cc3aa7cb8518
+msgid ""
+"Contributing often requires additional changes beyond the code itself. To"
+" ensure all contributions are properly integrated, we follow a series of "
+"validation steps."
+msgstr "Contribuer nécessite souvent des changements supplémentaires au-delà du code lui-même. Pour garantir que toutes les contributions sont correctement intégrées, nous suivons une série d'étapes de validation."
+
+#: ../../../contribute/contribution-validation.md:7
+#: 897d91d85f60474eae2437f16c2b31e9
+msgid "⚙️ Automatic Validation"
+msgstr "⚙️ Validation automatique"
+
+#: ../../../contribute/contribution-validation.md:9
+#: 62244106eac748bbb44ab191ed0b964e
+msgid ""
+"We use automated scripts to validate contributions whenever a pull "
+"request is opened or updated with new commits. These scripts check:"
+msgstr "Nous utilisons des scripts automatisés pour valider les contributions chaque fois qu'une pull request est ouverte ou mise à jour avec de nouveaux commits. Ces scripts vérifient :"
+
+#: ../../../contribute/contribution-validation.md:10
+#: 8712c44c3bca4e1298488ccd754a3d84
+msgid ""
+"Whether metadata is defined and up to date (see [metadata "
+"page](project:metadata.md))"
+msgstr "Si les métadonnées sont définies et à jour (voir [page des métadonnées](project:metadata.md))"
+
+#: ../../../contribute/contribution-validation.md:11
+#: 7b18fd460dfc43cba847fd2841cb0187
+msgid ""
+"Whether the code passes all unit tests, ensuring no regressions (see "
+"[debug page](project:debug-tools.md#-unit-tests))"
+msgstr "Si le code passe tous les tests unitaires, garantissant l'absence de régressions (voir [page de débogage](project:debug-tools.md#-unit-tests))"
+
+#: ../../../contribute/contribution-validation.md:13
+#: 0bdae8e8b5984bdf8566d8209bea001f
+msgid ""
+"Bookshelf contributors can also manually run these checks locally using "
+"the following commands:"
+msgstr "Les contributeurs Bookshelf peuvent également exécuter manuellement ces vérifications localement en utilisant les commandes suivantes :"
+
+#: ../../../contribute/contribution-validation.md:21
+#: d35eb6f519c44554aa0e7b2e0a6f8569
+msgid "📄 Pull Request Template"
+msgstr "📄 Modèle de pull request"
+
+#: ../../../contribute/contribution-validation.md:23
+#: b636da7ed68c4f72ae076eb4d3bb3fd9
+msgid ""
+"When creating a pull request, contributors are provided with a checklist "
+"template to ensure no essential steps are overlooked. This checklist "
+"covers changes that cannot be automatically validated, such as:"
+msgstr "Lors de la création d'une pull request, les contributeurs reçoivent un modèle de liste de vérification pour s'assurer qu'aucune étape essentielle n'est oubliée. Cette liste couvre les changements qui ne peuvent pas être validés automatiquement, tels que :"
+
+#: ../../../contribute/contribution-validation.md:24
+#: 755d4a5f991249c586d60e3f755be76d
+msgid ""
+"Updating the changelog with details about the contribution and the pull "
+"request ID"
+msgstr "Mise à jour du changelog avec les détails de la contribution et l'ID de la pull request"
+
+#: ../../../contribute/contribution-validation.md:25
+#: f3c4dc95649d44cba03d4edb4eaeb296
+msgid "Adding or updating documentation for new or existing features"
+msgstr "Ajout ou mise à jour de la documentation pour les fonctionnalités nouvelles ou existantes"
+
+#: ../../../contribute/contribution-validation.md:26
+#: a99ef356cbf443a7a908338c09e19aff
+msgid "Including unit tests where applicable"
+msgstr "Inclusion de tests unitaires le cas échéant"
+
+#: ../../../contribute/contribution-validation.md:27
+#: 11a28a50ec924d30960a69b107c898b0
+msgid "Linking the pull request to an existing issue"
+msgstr "Liaison de la pull request à un problème existant"
+
+#: ../../../contribute/contribution-validation.md:29
+#: 864a4efa9e1e46908ec4eaa8e678f9cc
+msgid ""
+"This checklist ensures contributions meet project standards before "
+"submission."
+msgstr "Cette liste de vérification garantit que les contributions respectent les standards du projet avant soumission."
+
+#: ../../../contribute/contribution-validation.md:33
+#: 004de81410384288a8eb12fb0fc85d1c
+msgid "🔎 Manual Review"
+msgstr "🔎 Révision manuelle"
+
+#: ../../../contribute/contribution-validation.md:35
+#: d85918fd18414a4dadf62f66a0552848
+msgid ""
+"After automated checks, other Bookshelf contributors manually review the "
+"pull request. This review ensures:"
+msgstr "Après les vérifications automatisées, d'autres contributeurs Bookshelf examinent manuellement la pull request. Cette révision garantit :"
+
+#: ../../../contribute/contribution-validation.md:36
+#: 602f329f5e034272953b8b2dad5cc511
+msgid "Code quality and alignment with project standards"
+msgstr "La qualité du code et l'alignement avec les standards du projet"
+
+#: ../../../contribute/contribution-validation.md:37
+#: 9d9afcdd808141299288c27b54d48336
+msgid "Adequate documentation and testing"
+msgstr "Une documentation et des tests adéquats"
+
+#: ../../../contribute/contribution-validation.md:38
+#: 232b98c05e744a89ba92d35f098669b0
+msgid "Compliance with the overall contribution guidelines"
+msgstr "La conformité aux directives générales de contribution"
+
+#: ../../../contribute/contribution-validation.md:40
+#: ef5281f3dc4f4036b572ef6620909a07
+msgid ""
+"Once the review process is complete, the contribution is approved and "
+"merged."
+msgstr "Une fois le processus de révision terminé, la contribution est approuvée et fusionnée."

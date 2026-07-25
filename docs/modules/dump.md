@@ -4,6 +4,12 @@
 
 The dump module provides mechanisms for printing the state of any "variables".
 
+```{warning}
+Since version 26.1, Minecraft now pretty-prints NBT data in text components. As a result, this module has become less useful. The update also introduced new constraints that broke several features.
+
+The module is still functional, however, when concatenation is required, expand and copy operations are not available at all. A future rework is planned to improve usability and reduce complexity. For now, the priority has been to keep the module operational.
+```
+
 ---
 
 ## 🔧 Functions

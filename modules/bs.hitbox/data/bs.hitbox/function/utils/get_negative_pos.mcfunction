@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -17,4 +17,5 @@ data modify storage bs:ctx _ set from entity @s Pos
 execute store result storage bs:ctx x int -1 run data get storage bs:ctx _[0]
 execute store result storage bs:ctx y int -1 run data get storage bs:ctx _[1]
 execute store result storage bs:ctx z int -1 run data get storage bs:ctx _[2]
+tp @s ~ -1000000 ~
 kill @s

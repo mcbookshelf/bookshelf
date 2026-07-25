@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -17,6 +17,6 @@ execute if data storage bs:out block{group:0} run return 0
 
 $data modify storage bs:ctx _ set value {i:$(properties)}
 function bs.block:transform/lookup_group with storage bs:out block
-loot replace entity B5-0-0-0-3 contents loot bs.block:get/get_block
+loot replace entity B5-0-0-0-3 contents loot bs.block:internal/get_block
 data modify storage bs:ctx _.p set from entity B5-0-0-0-3 item.components."minecraft:custom_data".properties
 function bs.block:transform/merge_properties/recurse/next with storage bs:ctx _.i[-1]

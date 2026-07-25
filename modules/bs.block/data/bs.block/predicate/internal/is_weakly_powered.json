@@ -1,0 +1,139 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "location_check",
+      "offsetY": 1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_wire",
+          "state": {
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": 1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_wire",
+          "state": {
+            "west": "side",
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": -1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_wire",
+          "state": {
+            "east": "side",
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_wire",
+          "state": {
+            "north": "side",
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_wire",
+          "state": {
+            "south": "side",
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": 1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_wire",
+          "state": {
+            "west": "up",
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": -1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_wire",
+          "state": {
+            "east": "up",
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_wire",
+          "state": {
+            "north": "up",
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "redstone_wire",
+          "state": {
+            "south": "up",
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

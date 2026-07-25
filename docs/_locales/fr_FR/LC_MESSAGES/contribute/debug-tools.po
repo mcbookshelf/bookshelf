@@ -1,0 +1,329 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"PO-Revision-Date: 2025-09-17 14:30+0100\n"
+"Last-Translator: Claude <claude@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/debug-tools.md:1 d92fd425e93441149060fbda23f1b712
+msgid "🕵️ Debug Tools"
+msgstr "🕵️ Outils de débogage"
+
+#: ../../contribute/debug-tools.md:3 44f93900e3c24005a658ab0a33c69f08
+msgid ""
+"Debugging is a fundamental aspect of software development. Bookshelf "
+"provides tools to help identify and resolve issues effectively."
+msgstr "Le débogage est un aspect fondamental du développement logiciel. Bookshelf fournit des outils pour aider à identifier et résoudre les problèmes efficacement."
+
+#: ../../contribute/debug-tools.md:7 fc7f930c609340eaa13881c5a5ac7f47
+msgid "🧪 Unit Tests"
+msgstr "🧪 Tests unitaires"
+
+#: ../../contribute/debug-tools.md:9 776db026d43744e3a019bcb20863ff97
+msgid ""
+"Tests are essential for ensuring code correctness and preventing future "
+"bugs. This project uses Misode's Minecraft Fabric mod, "
+"[PackTest](https://github.com/misode/packtest), for testing."
+msgstr ""
+"Les tests sont essentiels pour garantir la correction du code et prévenir "
+"les bugs futurs. Ce projet utilise le mod Minecraft Fabric de Misode, "
+"[PackTest](https://github.com/misode/packtest), pour les tests."
+
+#: ../../contribute/debug-tools.md:11 8dfbdeb217ef42cc9f06cfd045cabebb
+msgid "⚙️ Running Tests"
+msgstr "⚙️ Exécution des tests"
+
+#: ../../contribute/debug-tools.md:13 15273892b9e941ce8a6edbdb133227bd
+msgid "To run the tests, you have two options:"
+msgstr "Pour exécuter les tests, vous avez deux options :"
+
+#: ../../contribute/debug-tools.md:15 72db54823b714558bf2124e582d852d1
+msgid ""
+"**Headless Mode**: We provide a simple command `uv run modules test` that"
+" allows you to run the tests headlessly, without having to open the game"
+msgstr "**Mode sans interface** : Nous fournissons une commande simple `uv run modules test` qui vous permet d'exécuter les tests sans interface, sans avoir à ouvrir le jeu"
+
+#: ../../contribute/debug-tools.md:16 b480c2a3b34748b9b5ec00311c752afe
+msgid ""
+"**In-Game**: Download and install the Minecraft Fabric mod. Once that's "
+"done, you can run the tests using the test command in Minecraft"
+msgstr "**En jeu** : Téléchargez et installez le mod Minecraft Fabric. Une fois cela fait, vous pouvez exécuter les tests en utilisant la commande de test dans Minecraft"
+
+#: ../../contribute/debug-tools.md:18 41540889e6ed45098aca388c9c9e3fcc
+msgid "Java Required"
+msgstr "Java requis"
+
+#: ../../contribute/debug-tools.md:20 e73d672d292742f8a2d4d15884baab20
+msgid ""
+"Ensure that Java is installed on your system, as it is required for the "
+"command to work."
+msgstr "Assurez-vous que Java est installé sur votre système, car il est requis pour que la commande fonctionne."
+
+#: ../../contribute/debug-tools.md:23 0dd7b81f05b747158d4b029a100b22d8
+msgid "✍️ Writing Tests"
+msgstr "✍️ Écriture des tests"
+
+#: ../../contribute/debug-tools.md:25 1d3fdbadb3a84ef48c0cdc82cbed69c5
+msgid ""
+"Each test is a `.mcfunction` file inside the `test` folder. When writing "
+"tests, make sure to clearly define what you are testing and what the "
+"expected outcome is. It's also a good idea to include edge cases to "
+"ensure your code can handle all possible inputs."
+msgstr ""
+"Chaque test est un fichier `.mcfunction` situé dans le dossier `test`. Lors "
+"de l'écriture des tests, assurez-vous de définir clairement ce que vous testez "
+"et quel est le résultat attendu. Il est également recommandé d'inclure des cas "
+"limites pour garantir que votre code peut gérer toutes les entrées possibles."
+
+#: ../../contribute/debug-tools.md:28 9413cb5c2e9b45f1ab883aa3b089eae0
+msgid "🛠️ Custom Commands"
+msgstr "🛠️ Commandes personnalisées"
+
+#: ../../contribute/debug-tools.md:30 067dd7fd38a247e2a81836ae4a6fbc84
+msgid ""
+"PackTest offers a variety of commands to control test flow, validate "
+"conditions, and interact with Minecraft's environment:"
+msgstr "PackTest offre une variété de commandes pour contrôler le flux de test, valider les conditions et interagir avec l'environnement Minecraft :"
+
+#: ../../contribute/debug-tools.md:32 fe720ea449804755b402a17e9c3d45cc
+msgid "**Test Flow Commands**:"
+msgstr "**Commandes de flux de test** :"
+
+#: ../../contribute/debug-tools.md:33 974195c2cef3412388246f7d115559bb
+msgid ""
+"`fail [<text>]`: Immediately fails the current test and logs an optional "
+"message"
+msgstr "`fail [<texte>]` : Fait échouer immédiatement le test actuel et enregistre un message optionnel"
+
+#: ../../contribute/debug-tools.md:34 c8a3067e207c449a9844c569655839e8
+msgid "`succeed`: Immediately passes the current test"
+msgstr "`succeed` : Fait réussir immédiatement le test actuel"
+
+#: ../../contribute/debug-tools.md:35 4736f651f9a1418b8d3dd91c964a26eb
+msgid "`assert <condition>`: Fails the test if the condition is false"
+msgstr "`assert <condition>` : Fait échouer le test si la condition est fausse"
+
+#: ../../contribute/debug-tools.md:36 b6909da307124fb9b197d27901474e92
+msgid "`assert not <condition>`: Fails the test if the condition is true"
+msgstr "`assert not <condition>` : Fait échouer le test si la condition est vraie"
+
+#: ../../contribute/debug-tools.md:37 b56b0d833734427aa38fca0f582df472
+msgid ""
+"`await <condition>`: Continuously checks a condition until it succeeds or"
+" times out"
+msgstr "`await <condition>` : Vérifie continuellement une condition jusqu'à ce qu'elle réussisse ou expire"
+
+#: ../../contribute/debug-tools.md:38 da380311f6524001ae672b9324530909
+msgid "`await not <condition>`: Waits until the condition becomes false"
+msgstr "`await not <condition>` : Attend que la condition devienne fausse"
+
+#: ../../contribute/debug-tools.md:39 145f73272eb44f0fa77346142464d2ef
+msgid "`await delay <time>`: Pauses the test for a specified duration"
+msgstr "`await delay <temps>` : Suspend le test pour une durée spécifiée"
+
+#: ../../contribute/debug-tools.md:41 10bf453cbb984cb8aa6aa947ff60de62
+msgid "**Condition Types**:"
+msgstr "**Types de condition** :"
+
+#: ../../contribute/debug-tools.md:42 b9d87ee30575412b9dcedfc74a7268b7
+msgid ""
+"`block <pos> <block>`: Checks if a block at the specified position "
+"matches the given block"
+msgstr "`block <pos> <bloc>` : Vérifie si un bloc à la position spécifiée correspond au bloc donné"
+
+#: ../../contribute/debug-tools.md:43 8d7fcd44ed664892a234eb0fe22ce8a3
+msgid "`data <path>`: Verifies NBT data using standard Minecraft data syntax"
+msgstr "`data <chemin>` : Vérifie les données NBT en utilisant la syntaxe de données Minecraft standard"
+
+#: ../../contribute/debug-tools.md:44 6c78d5ccacd34f868d7ebec48e1a430e
+msgid ""
+"`entity <selector>`: Validates if entities match a selector (works beyond"
+" test boundaries)"
+msgstr "`entity <sélecteur>` : Valide si les entités correspondent à un sélecteur (fonctionne au-delà des limites de test)"
+
+#: ../../contribute/debug-tools.md:45 9dce4fa5a4874e8fa40a11432bb9417a
+msgid "`predicate <predicate>`: Executes a predicate in the data pack"
+msgstr "`predicate <prédicat>` : Exécute un prédicat dans le data pack"
+
+#: ../../contribute/debug-tools.md:46 cfc82a4fe3214f19a02022f2666cbede
+msgid "`score <target>`: Compares scores using Minecraft's score-based conditions"
+msgstr "`score <cible>` : Compare les scores en utilisant les conditions basées sur les scores de Minecraft"
+
+#: ../../contribute/debug-tools.md:47 9994acbfc022477ca1fc676fbb9f9fcb
+msgid ""
+"`chat <pattern> [<receivers>]`: Matches chat messages against a regex "
+"pattern"
+msgstr "`chat <motif> [<destinataires>]` : Compare les messages de chat à un motif regex"
+
+#: ../../contribute/debug-tools.md:49 0e3518ab61d24e5a93d27466e13a6588
+msgid "🧍 Player Dummies"
+msgstr "🧍 Joueurs simulés"
+
+#: ../../contribute/debug-tools.md:51 78cc17fa80ff46b689913d94f118d3e9
+msgid ""
+"PackTest allows you to spawn and control \"dummies,\" simulated players "
+"for testing:"
+msgstr "PackTest vous permet de générer et contrôler des \"dummies\" (joueurs simulés) pour les tests :"
+
+#: ../../contribute/debug-tools.md:53 9ffe5c790e014351b9e32edcdf8b1ed4
+msgid "`dummy <name> spawn`: Spawns a new dummy"
+msgstr "`dummy <nom> spawn` : Génère un nouveau dummy"
+
+#: ../../contribute/debug-tools.md:54 78b89771c99346ee8125f0ff3630a703
+msgid "`dummy <name> respawn`: Respawns the dummy after it has been killed"
+msgstr "`dummy <nom> respawn` : Fait réapparaître le dummy après qu'il a été tué"
+
+#: ../../contribute/debug-tools.md:55 1a517be58b514951be4ec098eb9447f5
+msgid "`dummy <name> leave`: Makes the dummy leave the server"
+msgstr "`dummy <nom> leave` : Fait quitter le serveur au dummy"
+
+#: ../../contribute/debug-tools.md:56 fec12bf9c013480d86443810744332f7
+msgid "`dummy <name> jump`: Makes the dummy jump"
+msgstr "`dummy <nom> jump` : Fait sauter le dummy"
+
+#: ../../contribute/debug-tools.md:57 b4bad03fe8f842e08c07e8834fa490ed
+msgid ""
+"`dummy <name> sneak [true|false]`: Makes the dummy hold shift or un-shift"
+" (not the same as currently crouching)"
+msgstr "`dummy <nom> sneak [true|false]` : Fait maintenir ou relâcher Shift au dummy (différent de l'état accroupi actuel)"
+
+#: ../../contribute/debug-tools.md:58 eae34df22bfb4b03af70ad5b38ddd452
+msgid "`dummy <name> sprint [true|false]`: Makes the dummy sprint or un-sprint"
+msgstr "`dummy <nom> sprint [true|false]` : Fait sprinter ou arrêter de sprinter le dummy"
+
+#: ../../contribute/debug-tools.md:59 cd5303189d514d39922516495ddc2ab9
+msgid ""
+"`dummy <name> drop [all]`: Makes the dummy drop the current mainhand, "
+"either one item or the entire stack"
+msgstr "`dummy <nom> drop [all]` : Fait lâcher au dummy l'objet de la main principale, soit un seul objet soit toute la pile"
+
+#: ../../contribute/debug-tools.md:60 82b0b8297fd44965a9e97545392a7dcb
+msgid "`dummy <name> swap`: Makes the dummy swap its mainhand and offhand"
+msgstr "`dummy <nom> swap` : Fait échanger au dummy sa main principale et sa main secondaire"
+
+#: ../../contribute/debug-tools.md:61 f1f709f6085a4fce9a0acb090eb32071
+msgid "`dummy <name> selectslot`: Makes the dummy select a different hotbar slot"
+msgstr "`dummy <nom> selectslot` : Fait sélectionner au dummy un emplacement différent de la barre d'action"
+
+#: ../../contribute/debug-tools.md:62 88571e424727421abf08fda0ec2ab877
+msgid ""
+"`dummy <name> use item`: Makes the dummy use its hand item, either "
+"mainhand or offhand"
+msgstr "`dummy <nom> use item` : Fait utiliser au dummy l'objet dans sa main, principale ou secondaire"
+
+#: ../../contribute/debug-tools.md:63 634e9bac320b407fa33ce9944618ff97
+msgid ""
+"`dummy <name> use block <pos> [<direction>]`: Makes the dummy use its "
+"hand item on a block position"
+msgstr "`dummy <nom> use block <pos> [<direction>]` : Fait utiliser au dummy l'objet de sa main sur une position de bloc"
+
+#: ../../contribute/debug-tools.md:64 5d4a28f2e06c48878e07314ade22f927
+msgid ""
+"`dummy <name> use entity <entity>`: Makes the dummy use its hand item on "
+"an entity"
+msgstr "`dummy <nom> use entity <entité>` : Fait utiliser au dummy l'objet de sa main sur une entité"
+
+#: ../../contribute/debug-tools.md:65 6ceaad2077a44216b2b643b5e274dd03
+msgid ""
+"`dummy <name> attack <entity>`: Makes the dummy attack an entity with its"
+" mainhand"
+msgstr "`dummy <nom> attack <entité>` : Fait attaquer au dummy une entité avec sa main principale"
+
+#: ../../contribute/debug-tools.md:66 650ca9211b064abeabecde01b74d78b7
+msgid "`dummy <name> mine <pos>`: Makes the dummy mine a block"
+msgstr "`dummy <nom> mine <pos>` : Fait miner au dummy un bloc"
+
+#: ../../contribute/debug-tools.md:68 880d1c414e1848f984ad63bde86b918a
+msgid "📋 Test Directives"
+msgstr "📋 Directives de test"
+
+#: ../../contribute/debug-tools.md:70 cd08cd8c51624cc9bb9389ce4db24765
+msgid ""
+"You can customize tests using directives (special comments at the "
+"beginning of the test):"
+msgstr "Vous pouvez personnaliser les tests en utilisant des directives (commentaires spéciaux au début du test) :"
+
+#: ../../contribute/debug-tools.md:72 74a82772f27a4c3a89138fa1048eaef1
+msgid ""
+"`@template`: The resource location of a structure template to use for the"
+" test, defaults to `minecraft:empty`, which is an empty 1×1×1 structure"
+msgstr "`@template` : L'emplacement de ressource d'un modèle de structure à utiliser pour le test, par défaut `minecraft:empty`, qui est une structure vide de 1×1×1"
+
+#: ../../contribute/debug-tools.md:73 9d3f3af6f1de40d695cd65c1748a3e0b
+msgid "`@timeout`: An integer specifying the timeout, defaults to `100`"
+msgstr "`@timeout` : Un entier spécifiant le délai d'expiration, par défaut `100`"
+
+#: ../../contribute/debug-tools.md:74 36797a73647c423c85f95328859807fa
+msgid ""
+"`@optional`: Whether this test is allowed to fail, defaults to `false`, "
+"if there is no value after the directive it is considered as `true`"
+msgstr "`@optional` : Indique si ce test est autorisé à échouer, par défaut `false`, s'il n'y a pas de valeur après la directive, elle est considérée comme `true`"
+
+#: ../../contribute/debug-tools.md:75 9fc2d7df49604b8da7b424bd4d1fe548
+msgid ""
+"`@skyaccess`: Whether this test needs sky access, defaults to `false`, "
+"which will place barrier blocks above the test"
+msgstr "`@skyaccess` : Indique si ce test nécessite un accès au ciel, par défaut `false`, ce qui placera des blocs de barrière au-dessus du test"
+
+#: ../../contribute/debug-tools.md:76 c298f2207fcf4e7b826c52779879ef87
+msgid ""
+"`@dummy`: Whether to spawn a dummy at the start of the test and set `@s` "
+"to this dummy, taking a position which defaults to `~0.5 ~ ~0.5`"
+msgstr "`@dummy` : Indique s'il faut générer un dummy au début du test et définir `@s` sur ce dummy, prenant une position qui est par défaut `~0.5 ~ ~0.5`"
+
+#: ../../contribute/debug-tools.md:78 94848b88964246d9ad413b921effc31f
+msgid "Learn more..."
+msgstr "En savoir plus..."
+
+#: ../../contribute/debug-tools.md:81 0f2e26701d01460da6ade5f4cd99e8ba
+msgid ""
+"If you need more information than this page provides, visit Misode's "
+"[repository](https://github.com/misode/packtest) for detailed guidance on"
+" writing tests."
+msgstr "Si vous avez besoin de plus d'informations que cette page n'en fournit, visitez le [dépôt](https://github.com/misode/packtest) de Misode pour des conseils détaillés sur l'écriture de tests."
+
+#: ../../contribute/debug-tools.md:86 c6749a84da094a48a5e7e84b5c396326
+msgid "📦 Modules"
+msgstr "📦 Modules"
+
+#: ../../contribute/debug-tools.md:88 74785e2539c84ac38d099f42c0dc1fbb
+msgid ""
+"Bookshelf includes a variety of modules designed to enhance your "
+"development experience."
+msgstr "Bookshelf inclut une variété de modules conçus pour améliorer votre expérience de développement."
+
+#: ../../contribute/debug-tools.md:90 4f8f7cc2362c4b93b44d042729991d8b
+msgid "📄 Logging"
+msgstr "📄 Journalisation"
+
+#: ../../contribute/debug-tools.md:92 7d890bc8b9304418b4aa79d9d9b14f49
+msgid ""
+"Centralizes and streamlines log management, making it easier to monitor "
+"and troubleshoot your project. For more details, refer to the [log module"
+" documentation](project:../modules/log.md)."
+msgstr "Centralise et simplifie la gestion des journaux, facilitant la surveillance et le dépannage de votre projet. Pour plus de détails, consultez la [documentation du module log](project:../modules/log.md)."
+
+#: ../../contribute/debug-tools.md:94 2a588a3bca9c4d51a8dabf543afb6578
+msgid "🔬 Var Dumping"
+msgstr "🔬 Affichage de variables"
+
+#: ../../contribute/debug-tools.md:96 4025f6497ad24458a1a6439b685ac044
+msgid ""
+"Provides an easy way to display scores or storage values at any given "
+"time, helping with debugging and tracking. For more details, refer to the"
+" [dump module documentation](project:../modules/dump.md)."
+msgstr "Fournit un moyen facile d'afficher les scores ou les valeurs de stockage à tout moment, aidant au débogage et au suivi. Pour plus de détails, consultez la [documentation du module dump](project:../modules/dump.md)."
+

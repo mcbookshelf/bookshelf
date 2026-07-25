@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-09-17 21:05+0100\n"
+"Last-Translator: Claude Code <claude@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <team@gunivers.net>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../contribute/special-functions.md:1 d36b3ea1add349a8b2ef050edad46ec9
+msgid "🌟 Special Functions"
+msgstr "🌟 Fonctions spéciales"
+
+#: ../../../contribute/special-functions.md:3 9b3e53b6559d47a49045d9b66adaffd4
+msgid ""
+"Some functions follow specific conventions to streamline functionality "
+"and ensure consistency across modules."
+msgstr "Certaines fonctions suivent des conventions spécifiques pour rationaliser les fonctionnalités et garantir la cohérence entre les modules."
+
+#: ../../../contribute/special-functions.md:7 7d3e3f6290aa4668a2fc1fca5364ff1c
+msgid "👉 The `ata` Functions"
+msgstr "👉 Les fonctions `ata`"
+
+#: ../../../contribute/special-functions.md:9 10e2d9634b9e49e5b3b0a39127566e93
+msgid ""
+"This is a reduction of \"as to at\". Several functions require two "
+"positions to work (example: retrieve the distance between 2 points) or an"
+" entity and a position. To simplify the use, no need to pass 3 scores for"
+" each position. You will be able to place an entity on point 1 (if it is "
+"useful), then execute the function at point 2 while executing it as the "
+"entity on point 1."
+msgstr "Ceci est une réduction de \"as to at\". Plusieurs fonctions nécessitent deux positions pour fonctionner (exemple : récupérer la distance entre 2 points) ou une entité et une position. Pour simplifier l'utilisation, pas besoin de passer 3 scores pour chaque position. Vous pourrez placer une entité sur le point 1 (si c'est utile), puis exécuter la fonction au point 2 tout en l'exécutant comme l'entité sur le point 1."
+
+#: ../../../contribute/special-functions.md:13 5f8fe0b0034c42ddb64c308c4be93f2b
+msgid "🔗 The `runner` Functions"
+msgstr "🔗 Les fonctions `runner`"
+
+#: ../../../contribute/special-functions.md:15 81138d3e617a42d2a983eecb53d3ba99
+msgid ""
+"These functions use the `run` callback to specify an action that will "
+"often be executed immediately. It works like a subcommand, defining what "
+"action should take place after the function call."
+msgstr "Ces fonctions utilisent le callback `run` pour spécifier une action qui sera souvent exécutée immédiatement. Cela fonctionne comme une sous-commande, définissant quelle action doit avoir lieu après l'appel de fonction."
+
+#: ../../../contribute/special-functions.md:17
+#: ../../../contribute/special-functions.md:28
+#: ../../../contribute/special-functions.md:39 14e656a29e0d4a1ba6c3d1e373e3bd81
+#: 59f7aee6d66247149eb3e332ae38d4d2 e0ee6305903142c6a555c81b92f887ab
+msgid "For example:"
+msgstr "Par exemple :"
+
+#: ../../../contribute/special-functions.md:24 c5b5624f9b2245bf9d18888e171f8d0b
+msgid "📡 The `listener` Functions"
+msgstr "📡 Les fonctions `listener`"
+
+#: ../../../contribute/special-functions.md:26 8910ac6bccc14d1a970ebaf6220f7158
+msgid ""
+"These functions are designed to react to specific events. The naming "
+"convention `on_<event>` is used for the inputs to indicate commands that "
+"will be triggered when a particular event occurs."
+msgstr "Ces fonctions sont conçues pour réagir à des événements spécifiques. La convention de nommage `on_<événement>` est utilisée pour les entrées pour indiquer les commandes qui seront déclenchées lorsqu'un événement particulier se produit."
+
+#: ../../../contribute/special-functions.md:35 050fd18efb874157a2d44b7157273d5b
+msgid "⚒️ The `callback` Functions"
+msgstr "⚒️ Les fonctions `callback`"
+
+#: ../../../contribute/special-functions.md:37 47fcd76981134a8491018d2d9e0a49ca
+msgid ""
+"These functions are intended to be executed exclusively as part of a "
+"callback, and their function tag must be placed inside a `callback` "
+"directory."
+msgstr "Ces fonctions sont destinées à être exécutées exclusivement dans le cadre d'un callback, et leur tag de fonction doit être placé dans un répertoire `callback`."
+
+#: ../../../contribute/special-functions.md:40 b786dd05d331425caf27acfce63f2605
+msgid "`#bs.move:callback/bounce`"
+msgstr "`#bs.move:callback/bounce`"
+
+#: ../../../contribute/special-functions.md:41 4174568d2ae84f6aae06a1bf0ed456d9
+msgid "`#bs.move:callback/slide`"
+msgstr "`#bs.move:callback/slide`"
+
+#: ../../../contribute/special-functions.md:42 fc221f3b0e894cf897e46686059fddb3
+msgid "`#bs.interaction:callback/glow`"
+msgstr "`#bs.interaction:callback/glow`"
+
+#: ../../../contribute/special-functions.md:46 193dd0e8339b4c028fa8e43a993d118a
+msgid "🔒 The `reserved` Functions"
+msgstr "🔒 Les fonctions `reserved`"
+
+#: ../../../contribute/special-functions.md:48 0339d45f5d1c49339a041dae0d12c2f1
+msgid ""
+"Reserved functions are special functions within each module that serve "
+"predefined purposes. They are located at the root of each module."
+msgstr "Les fonctions réservées sont des fonctions spéciales au sein de chaque module qui servent des objectifs prédéfinis. Elles sont situées à la racine de chaque module."
+
+#: ../../../contribute/special-functions.md:51 941253de82eb408799bfdea2d3d28c1c
+msgid "`__help__`"
+msgstr "`__help__`"
+
+#: ../../../contribute/special-functions.md:52 815dbe559d7a453d93a7f8d0d299eb58
+msgid ""
+"This function provides a path to the documentation for the module "
+"**(Automatically generated)**"
+msgstr "Cette fonction fournit un chemin vers la documentation du module **(Générée automatiquement)**"
+
+#: ../../../contribute/special-functions.md:53 b7cb70db5a11490997c865910cea75b1
+msgid "`__load__`"
+msgstr "`__load__`"
+
+#: ../../../contribute/special-functions.md:54 0159984a503d46b49343c6926e0c9648
+msgid ""
+"This function is executed when the module is loaded **(Must be present in"
+" every module)**"
+msgstr "Cette fonction est exécutée lorsque le module est chargé **(Doit être présente dans chaque module)**"
+
+#: ../../../contribute/special-functions.md:55 54b1b369af214d3e9a7e29b44f17e0fb
+msgid "`__unload__`"
+msgstr "`__unload__`"
+
+#: ../../../contribute/special-functions.md:56 80e351327a01430b8f2c5f36eb3ae2c1
+msgid ""
+"This function is executed when the module is unloaded **(Must be present "
+"in every module)**"
+msgstr "Cette fonction est exécutée lorsque le module est déchargé **(Doit être présente dans chaque module)**"

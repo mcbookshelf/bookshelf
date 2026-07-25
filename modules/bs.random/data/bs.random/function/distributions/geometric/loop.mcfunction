@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -15,4 +15,4 @@
 
 # Modified from https://github.com/Aeldrion/Minecraft-Random
 scoreboard players add $random.geometric bs.out 1
-execute unless predicate {condition:"minecraft:value_check",value:{min:1,max:1000000000},range:{min:1,max:{type:"minecraft:score",score:"bs.ctx",target:{type:"minecraft:fixed",name:"#p"}}}} unless score $random.geometric bs.out matches 1000 run function bs.random:distributions/geometric/loop
+execute unless predicate {condition:"value_check",value:{min:1,max:1000000000},range:{min:1,max:{type:"score",score:"bs.ctx",target:{type:"fixed",name:"#p"}}}} unless score $random.geometric bs.out matches 1000 run function bs.random:distributions/geometric/loop

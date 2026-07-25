@@ -10,9 +10,16 @@
       "minecraft_version": "1.21"
     },
     "updated": {
-      "date": "2025/03/10",
-      "minecraft_version": "1.21.4"
+      "date": "2026/03/15",
+      "minecraft_version": "26.1"
     }
   },
-  "values": []
+  "values": [
+    "minecraft:air",
+    "minecraft:cave_air",
+    "minecraft:light",
+    "minecraft:moving_piston",
+    "minecraft:structure_void",
+    "minecraft:void_air"
+  ]
 }

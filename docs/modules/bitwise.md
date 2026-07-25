@@ -14,7 +14,7 @@ A collection of various bitwise operations, providing versatile tools for manipu
 :class: only-dark p-2
 ```
 
-```{epigraph}
+```{pull-quote}
 "Binary is a very simple numbering system, but it is incredibly powerful when used correctly."
 
 -- Alan Turing

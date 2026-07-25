@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"PO-Revision-Date: 2025-09-19 15:00+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../changelog/v3.1.1.md:1 414cc5cd8eb443219954e0957cfbb2d3
+msgid ""
+"📦 [Bookshelf - "
+"3.1.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.1.1)"
+msgstr ""
+
+#: ../../changelog/v3.1.1.md:3 f3d9f044f54b4f57a3e2f0fbf436fa27
+msgid "**🩹 Hotfix Release!**"
+msgstr "**🩹 Version corrective !**"
+
+#: ../../changelog/v3.1.1.md:5 9749e3a8e39c4e5f9797ddf3e2be4d04
+msgid "*Patch release for version 3.1.0.*"
+msgstr "*Version de correction pour la version 3.1.0.*"
+
+#: ../../changelog/v3.1.1.md:8 cf9c3fbbfc44425e989ec0a318f4f856
+msgid "`🎯 bs.environment`"
+msgstr "`🎯 bs.environment`"
+
+#: ../../changelog/v3.1.1.md:10 78a70dc4256d4d8fa7729b809caae4d3
+msgid ""
+"🐛 **[#482](https://github.com/mcbookshelf/bookshelf/issues/482)** - Fixed"
+" misplaced test function that caused module load errors."
+msgstr ""
+"🐛 **[#482](https://github.com/mcbookshelf/bookshelf/issues/482)** - Corrigé une "
+"fonction de test mal placée qui causait des erreurs de chargement du module."

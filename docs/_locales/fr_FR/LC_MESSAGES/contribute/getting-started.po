@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"PO-Revision-Date: 2025-07-19 19:05+0800\n"
+"Last-Translator: Claude <noreply@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/getting-started.md:5 35b9cdf3e25144a48cd3372ac68b6f4b
+msgid "🚀 Getting Started"
+msgstr "🚀 Guide de démarrage"
+
+#: ../../contribute/getting-started.md:7 b0f1cc6cc38a401f91e6641d323b4106
+msgid ""
+"This guide will walk you through setting up a local development "
+"environment to build, test, and contribute to our modules."
+msgstr "Ce guide vous guidera dans la configuration d'un environnement de développement local pour construire, tester et contribuer à nos modules."
+
+#: ../../contribute/getting-started.md:11 ad7328ab8ea9466a8938eb8a24d84920
+msgid "⚙️ Prerequisites"
+msgstr "⚙️ Prérequis"
+
+#: ../../contribute/getting-started.md:13 11ed70b6b7be40a895eed857acb82ac9
+msgid ""
+"Before you start, make sure your system is ready by completing the "
+"following steps:"
+msgstr "Avant de commencer, assurez-vous que votre système est prêt en complétant les étapes suivantes :"
+
+#: ../../contribute/getting-started.md:15 c88adc1812514cb8905f6e5d343a8ad7
+msgid ""
+"**Install [UV](https://docs.astral.sh/uv/getting-"
+"started/installation/)**, a Python package and project manager."
+msgstr "**Installer [UV](https://docs.astral.sh/uv/getting-started/installation/)**, un gestionnaire de paquets et de projets Python."
+
+#: ../../contribute/getting-started.md:16 1d30931a817d4fce9c21f7ec2ff7bbcd
+msgid ""
+"**Clone the repository**, if you haven't done this before, follow this "
+"step-by-step tutorial: [First Contributions "
+"Guide](https://github.com/firstcontributions/first-"
+"contributions/blob/main/README.md). Once cloned, open the project folder "
+"in your preferred code editor."
+msgstr ""
+"**Cloner le dépôt**, si vous ne l'avez pas déjà fait, suivez ce tutoriel "
+"étape par étape : [Guide des premières "
+"contributions](https://github.com/firstcontributions/first-"
+"contributions/blob/main/README.md). Une fois cloné, ouvrez le dossier du projet "
+"dans votre éditeur de code préféré."
+
+#: ../../contribute/getting-started.md:20 6674add8d89647e38bed0ef2038d2bb8
+msgid "🔨 Building Modules"
+msgstr "🔨 Construction des modules"
+
+#: ../../contribute/getting-started.md:22 a0b9ecf601814480a64d31a29a16000f
+msgid ""
+"The `modules` directory contains the source files for all modules. Use "
+"the following commands to manage and build them efficiently:"
+msgstr "Le répertoire `modules` contient les fichiers sources de tous les modules. Utilisez les commandes suivantes pour les gérer et les construire efficacement :"
+
+#: ../../contribute/getting-started.md:25 a852d079099c4221abd3cd7961dda423
+msgid "`uv run modules build`"
+msgstr "`uv run modules build`"
+
+#: ../../contribute/getting-started.md:26 f2b8280d95df4596a535666d77b021e0
+msgid "Build all modules"
+msgstr "Construire tous les modules"
+
+#: ../../contribute/getting-started.md:27 4e03b0b76b1a4da5baaf4715a2527554
+msgid "`uv run modules watch`"
+msgstr "`uv run modules watch`"
+
+#: ../../contribute/getting-started.md:28 44feb39887f14215a2e6874684a862e0
+msgid "Monitor changes and rebuild modules automatically"
+msgstr "Surveiller les changements et reconstruire automatiquement les modules"
+
+#: ../../contribute/getting-started.md:29 3d689d9d95b74050845ff41de4330f8b
+msgid "`uv run modules <build|watch> <module1> ...`"
+msgstr "`uv run modules <build|watch> <module1> ...`"
+
+#: ../../contribute/getting-started.md:30 e88149c742e7433a8a71c3de9f05ac53
+msgid "Build or watch only the specified modules"
+msgstr "Construire ou surveiller seulement les modules spécifiés"
+
+#: ../../contribute/getting-started.md:31 f0084887edae4c3da12d4fd1d5aba689
+msgid "`uv run link [world]`"
+msgstr "`uv run link [world]`"
+
+#: ../../contribute/getting-started.md:32 8b5228ff5178456ba7b6dcbe62d15a2f
+msgid "Link the generated resource and data packs to a Minecraft world"
+msgstr "Lier les packs de ressources et de données générés à un monde Minecraft"
+
+#: ../../contribute/getting-started.md:35 a8a162ccef87412d8c66ac09f5953d7f
+msgid "Watching Modules"
+msgstr "Surveillance des modules"
+
+#: ../../contribute/getting-started.md:38 e76109bb5d3d41f18400ea7093e30847
+msgid ""
+"Building modules can take some time. For a smoother experience, it's "
+"recommended to only watch the module you're currently working on: `uv run"
+" modules watch <module>`."
+msgstr "La construction des modules peut prendre du temps. Pour une expérience plus fluide, il est recommandé de ne surveiller que le module sur lequel vous travaillez actuellement : `uv run modules watch <module>`."
+
+#: ../../contribute/getting-started.md:41 58051d6e93de44758987b44529719b48
+msgid "Linking Modules to Minecraft"
+msgstr "Liaison des modules à Minecraft"
+
+#: ../../contribute/getting-started.md:43 7a45061cefed4d8c89eca4eb3beae8aa
+msgid ""
+"The `link` command allows you to integrate generated packs directly into "
+"a Minecraft world. Below are the options available for this command:"
+msgstr "La commande `link` vous permet d'intégrer les packs générés directement dans un monde Minecraft. Voici les options disponibles pour cette commande :"
+
+#: ../../contribute/getting-started.md:46 fe84da8d38b042d88b65e219a3ad35fa
+msgid "`world (optional)`"
+msgstr "`world (optionnel)`"
+
+#: ../../contribute/getting-started.md:47 646c3cee2ed14a05a940f84c0b4220f1
+msgid "The name of the Minecraft world to link"
+msgstr "Le nom du monde Minecraft à lier"
+
+#: ../../contribute/getting-started.md:48 8c3fa3a350eb4a48a0d46db919c86eb2
+msgid "`--minecraft <DIRECTORY>`"
+msgstr "`--minecraft <RÉPERTOIRE>`"
+
+#: ../../contribute/getting-started.md:49 6e6dfb97475347d88ed931529d56ffef
+msgid "Path to the `.minecraft` directory (location of Minecraft files)"
+msgstr "Chemin vers le répertoire `.minecraft` (emplacement des fichiers Minecraft)"
+
+#: ../../contribute/getting-started.md:50 d3bc356791264193a2436a216d6e0fdb
+msgid "`--data-pack <DIRECTORY>`"
+msgstr "`--data-pack <RÉPERTOIRE>`"
+
+#: ../../contribute/getting-started.md:51 ce72eb374e5b482ea506ffb5bc9315aa
+msgid "Path to the directory where data packs are stored"
+msgstr "Chemin vers le répertoire où les datapacks sont stockés"
+
+#: ../../contribute/getting-started.md:52 9bdcb3c45c2a4a1ba4a5d7ec9a51915b
+msgid "`--resource-pack <DIRECTORY>`"
+msgstr "`--resource-pack <RÉPERTOIRE>`"
+
+#: ../../contribute/getting-started.md:53 7b22851c49fc4b1f88cbc01f385122c9
+msgid "Path to the directory where resource packs are stored"
+msgstr "Chemin vers le répertoire où les resource packs sont stockés"
+
+#: ../../contribute/getting-started.md:56 01979dfba26248469e60866f1b3d3dd2
+msgid ""
+"This workflow demonstrates how to link and continuously test your modules"
+" directly in Minecraft:"
+msgstr "Ce workflow démontre comment lier et tester en continu vos modules directement dans Minecraft :"
+
+#: ../../contribute/getting-started.md:67 597ed571a9924c54b5a83f441f102070
+msgid "🧪 Testing Modules"
+msgstr "🧪 Tests des modules"
+
+#: ../../contribute/getting-started.md:69 0cec29b087c442229eac73db18feae68
+msgid ""
+"Testing is a fundamental aspect of software development. It helps ensure "
+"the correctness of your code and can save you from potential bugs in the "
+"future."
+msgstr "Les tests sont un aspect fondamental du développement logiciel. Ils aident à assurer la correction de votre code et peuvent vous éviter des bugs potentiels à l'avenir."
+
+#: ../../contribute/getting-started.md:71 4f6b89af7cca49e788852e59475ebf0a
+msgid ""
+"To learn how to write and run tests for your modules, refer to the [Debug"
+" Section](project:debug-tools.md#-unit-tests)."
+msgstr "Pour apprendre à écrire et exécuter des tests pour vos modules, consultez la [Section de débogage](project:debug-tools.md#-unit-tests)."
+
+#~ msgid ""
+#~ "Install [**PDM**](https://pdm-project.org/en/latest/), "
+#~ "the Python Dependency Manager"
+#~ msgstr "安装 [**PDM**](https://pdm-project.org/en/latest/)（Python 依赖管理器）"
+
+#~ msgid ""
+#~ "Open a terminal at the root of "
+#~ "the project and run the following "
+#~ "command to install all required "
+#~ "dependencies:"
+#~ msgstr "在项目根目录打开终端，运行以下命令安装所有必需依赖："
+
+#~ msgid ""
+#~ "Running this command prepares your "
+#~ "environment for building and testing the"
+#~ " project."
+#~ msgstr "运行此命令将为项目构建和测试准备环境。"
+

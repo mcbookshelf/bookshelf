@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"PO-Revision-Date: 2025-01-17 14:30+0100\n"
+"Last-Translator: Claude <noreply@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/health.md:1 c3e1bd5f72a6400298c3c3ba8e6f0ff6
+msgid "❤️ Health"
+msgstr "❤️ Santé"
+
+#: ../../modules/health.md:3 dd0f95753368486fae76091eb55eb12b
+msgid "**`#bs.health:help`**"
+msgstr "**`#bs.health:help`**"
+
+#: ../../modules/health.md:5 caac55f82f424aadab2002317e54a7d5
+msgid "Efficiently manage the lifecycle and vital aspects of an entity."
+msgstr "Gérer efficacement le cycle de vie et les aspects vitaux d'une entité."
+
+#: ../../modules/health.md:8 9f3ff8d6555f403ba85449498dfd874f
+msgid "\"He who has a why to live can bear almost any how.\""
+msgstr "\"Celui qui a un pourquoi pour vivre peut supporter presque n'importe quel comment.\""
+
+#: ../../modules/health.md:9 3c7641dd24734865a199889dc80b143d
+msgid "Friedrich Nietzsche"
+msgstr "Friedrich Nietzsche"
+
+#: ../../modules/health.md:13 9c4237d0cde5410192067bff4f533e5f
+msgid "About NBTs"
+msgstr "À propos des NBT"
+
+#: ../../modules/health.md:16 f0abcb8ea2ea467684c1e7bca80e035c
+msgid ""
+"When using this module, do not rely on NBTs to retrieve health "
+"information. Instead, use `get_health` to get the player's health and "
+"`get_max_health_total` for the max health, rather than using `attribute "
+"@s minecraft:max_health get`. NBTs may not always reflect the actual "
+"values, and this approach was chosen to bypass certain limitations."
+msgstr ""
+"Lorsque vous utilisez ce module, ne vous fiez pas aux NBT pour récupérer les "
+"informations de santé. Utilisez plutôt `get_health` pour obtenir la santé du "
+"joueur et `get_max_health_total` pour la santé maximale, au lieu d'utiliser "
+"`attribute @s minecraft:max_health get`. Les NBT peuvent ne pas toujours "
+"refléter les valeurs réelles, et cette approche a été choisie pour contourner "
+"certaines limitations."
+
+#: ../../modules/health.md:19 162a444be8f84760bc5ea7930cb22169
+msgid "Effects Incompatibility"
+msgstr "Incompatibilité des effets"
+
+#: ../../modules/health.md:22 2b0222da0a2940b8988b291bc3ee5930
+msgid ""
+"This system uses the `instant_health` effect to heal the player and force"
+" an update to their health. Using amplifier values higher than 28 may "
+"cause issues. Additionally, any pending healing command will take "
+"precedence over the effect for the current tick, potentially overriding "
+"it."
+msgstr ""
+"Ce système utilise l'effet `instant_health` pour soigner le joueur et forcer "
+"une mise à jour de sa santé. L'utilisation de valeurs d'amplificateur "
+"supérieures à 28 peut causer des problèmes. De plus, toute commande de soin "
+"en attente prendra la priorité sur l'effet pour le tick actuel, pouvant "
+"potentiellement l'annuler."
+
+#: ../../modules/health.md:27 df8cd54471534cfc8e93487ca0f98d66
+msgid "🔧 Functions"
+msgstr "🔧 Fonctions"
+
+#: ../../modules/health.md:29 b7f55bc209104b9fac92b76258906ba4
+msgid "You can find below all functions available in this module."
+msgstr "Vous pouvez trouver ci-dessous toutes les fonctions disponibles dans ce module."
+
+#: ../../modules/health.md:33 168e8e9f7f914067a22cb2f23ba12756
+msgid "Add / Remove"
+msgstr "Ajouter / Supprimer"
+
+#: ../../modules/health.md 50a0a0059cba4da9bb039333264f5006
+#: a1f0c10e99fa49698ad53dc26e657b19 c2256a0e46c9484aa90b48cc64440b41
+msgid "Health"
+msgstr "Santé"
+
+#: ../../modules/health.md:41 43d447fe61524330b27a5e8a684f1b53
+msgid "Add or remove health points from players."
+msgstr "Ajouter ou supprimer des points de santé aux joueurs."
+
+#: ../../modules/health.md:43 ../../modules/health.md:76
+#: ../../modules/health.md:118 ../../modules/health.md:145
+#: ../../modules/health.md:181 ../../modules/health.md:208
+#: ../../modules/health.md:240 0711f3c79340427c830cdaa2f84c8182
+#: 3fc3fb89254b4cb68cdc15b030dae12d 469dc836a0bd404c83952142a83b3ea8
+#: 63911d0582534de78555205693320a7a 75b98f112d1943509af3a3b6f8d3b7a0
+#: caa536ee4df04652927e9af825976c08 f9ef474bd89f4723a4d0faa136c54c5a
+msgid "Inputs"
+msgstr "Entrées"
+
+#: ../../modules/health.md:44 ../../modules/health.md:182
+#: 7b7910e668384125a1161ad280ccf6ee ed720a1505b64fd2b787dff62a61883a
+msgid "**Execution `as <players>`**: Players whose health will be updated."
+msgstr "**Exécution `as <joueurs>`** : Joueurs dont la santé sera mise à jour."
+
+#: ../../modules/health.md:46 ../../modules/health.md:79
+#: ../../modules/health.md:121 ../../modules/health.md:148
+#: ../../modules/health.md:184 ../../modules/health.md:211
+#: ../../modules/health.md:243 14307f583273495c8d56e74393a3f187
+#: 45b59af82f68417abc9b23b3fbf734f8 4b421baa0d06449f92ed202ee2cd8cf3
+#: 5561312298f0450f8e8c9771e397d95b 5c71d5aa7d6c4eccad71bf111d08d8df
+#: ae3e0867040a4dcda3892db065c42a48 d149ea5e4f4a41948c31675c38b521c4
+msgid "**Function macro**:"
+msgstr "**Macro de fonction** :"
+
+#: ../../modules/health.md:52 ../../modules/health.md:85
+#: ../../modules/health.md:127 ../../modules/health.md:154
+#: ../../modules/health.md:190 ../../modules/health.md:217
+#: ../../modules/health.md:252 459f0d9d4530490bb0d2e700033b6ef6
+#: 482380cdda684ec080288fd19eed9883 591dea69d3cb49f0be59f0d5755e3664
+#: 8acb1da8da1340c38580beaf5b29cb1c cc26ead7bb964a00bdf614d1060c932b
+#: f7b6575be01a4f7c8b7df4a03a5c2de8 fa45ac4f6f034bcca0c71eb4cd033beb
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../modules/health.md:53 ../../modules/health.md:191
+#: 50d63622350049f2bdd83802bc3fb897 b8e8393adef54340904b00222c2e5d76
+msgid "**State**: Health is scheduled for update."
+msgstr "**État** : La santé est programmée pour mise à jour."
+
+#: ../../modules/health.md:56 e9586767082f4c8fa93880f3a1ae1e55
+msgid "*Example: Heal yourself by 5 HP:*"
+msgstr "*Exemple : Soigner soi-même de 5 HP :*"
+
+#: ../../modules/health.md:63 ../../modules/health.md:96
+#: 226d73ddaaf648859e8d5e51a1915432 657debd13a2b4c06a19528d7ab1ea924
+msgid "How to Remove?"
+msgstr "Comment supprimer ?"
+
+#: ../../modules/health.md:66 cfb7c40fa83c4391ad2e9ee7c2783193
+msgid "You can use negative numbers to remove health points from the player."
+msgstr "Vous pouvez utiliser des nombres négatifs pour supprimer des points de santé du joueur."
+
+#: ../../modules/health.md 32cf2fee432c4054ab1546504f1ef73c
+#: b9d4640cd6124527a463533294e8b145 cc9485805985429ba2684826bf1596e0
+msgid "Max Health"
+msgstr "Santé maximale"
+
+#: ../../modules/health.md:74 b344e9b259a044ce82b042eaa3647dae
+msgid "Add or remove base maximum health points from players."
+msgstr "Ajouter ou supprimer des points de santé maximale de base aux joueurs."
+
+#: ../../modules/health.md:77 ../../modules/health.md:209
+#: 6faddfefa60d4df281271fb8ce11254a b1880dc791c94d858b3f0c7a832f7b0f
+msgid "**Execution `as <players>`**: Players whose max health will be updated."
+msgstr "**Exécution `as <joueurs>`** : Joueurs dont la santé maximale sera mise à jour."
+
+#: ../../modules/health.md:86 ../../modules/health.md:218
+#: 17ded3220b834bff9961faea3ad0775b b48be4e55c9547288eca22a215bb48b1
+msgid "**State**: Max health is scheduled for update."
+msgstr "**État** : La santé maximale est programmée pour mise à jour."
+
+#: ../../modules/health.md:89 02de9134eaef4714bb63f998e38ed8c7
+msgid "*Example: Increase your max HP by 5:*"
+msgstr "*Exemple : Augmenter sa santé maximale de 5 points :*"
+
+#: ../../modules/health.md:99 57e4494360384f60bcdd2ec3c442a08b
+msgid "You can use negative numbers to remove max health from the player."
+msgstr "Vous pouvez utiliser des nombres négatifs pour supprimer de la santé maximale du joueur."
+
+#: ../../modules/health.md:104 ../../modules/health.md:167
+#: ../../modules/health.md:230 0c5b43ca22554ac08db543bbe2b47a1a
+#: 449a32048ab44c1f86e3fb4facb67d29 547cbc4afad44f6b846f6b953db0a23e
+msgid "**Credits**: Aksiome"
+msgstr "**Crédits** : Aksiome"
+
+#: ../../modules/health.md:108 bdd7613e676e4b608f1094d1cf9d44f1
+msgid "Get"
+msgstr "Obtenir"
+
+#: ../../modules/health.md:116 e485d7f6f2654ca6a47baadd9e4ffdca
+msgid "Get a player's health points."
+msgstr "Obtenir les points de santé d'un joueur."
+
+#: ../../modules/health.md:119 12998084bcd14ad296ebaba04726fd82
+msgid ""
+"**Execution `as <players>`**: Players from which you want to get health "
+"points."
+msgstr "**Exécution `as <joueurs>`** : Joueurs dont vous voulez obtenir les points de santé."
+
+#: ../../modules/health.md:128 ec49ca231ff742119687f03cb77d5d45
+#, python-brace-format
+msgid ""
+"**Return | Storage `bs:out health.get_health`**: {nbt}`double` Player's "
+"health points."
+msgstr "**Retour | Stockage `bs:out health.get_health`** : {nbt}`double` Points de santé du joueur."
+
+#: ../../modules/health.md:131 874bd275451a4942b9e277184f4cb4e3
+msgid "*Example: Get your current HP (scaled by 1000):*"
+msgstr "*Exemple : Obtenir sa santé actuelle (mise à l'échelle par 1000) :*"
+
+#: ../../modules/health.md:143 b46f35a2873042f9bdee14925de3cda3
+msgid "Get a player's base maximum health points."
+msgstr "Obtenir les points de santé maximale de base d'un joueur."
+
+#: ../../modules/health.md:146 3fc2182abab64f95a2edcdaff3212194
+msgid ""
+"**Execution `as <players>`**: Players from which you want to get max "
+"health points."
+msgstr "**Exécution `as <joueurs>`** : Joueurs dont vous voulez obtenir les points de santé maximale."
+
+#: ../../modules/health.md:155 b9c345e291b84c538a30b26102f15fd2
+#, python-brace-format
+msgid ""
+"**Return | Storage `bs:out health.get_max_health`**: {nbt}`double` "
+"Player's max health points."
+msgstr "**Retour | Stockage `bs:out health.get_max_health`** : {nbt}`double` Points de santé maximale du joueur."
+
+#: ../../modules/health.md:158 c85e2599878a4bdaa4f76bbfbcf0d9ec
+msgid "*Example: Get your maximum HP (scaled by 1000):*"
+msgstr "*Exemple : Obtenir sa santé maximale (mise à l'échelle par 1000) :*"
+
+#: ../../modules/health.md:171 82a74cd93c3a4a3e9be7fe338a5ff4c2
+msgid "Set"
+msgstr "Définir"
+
+#: ../../modules/health.md:179 d80a35e4c08e4f98a335740444adf336
+msgid "Set players' health points."
+msgstr "Définir les points de santé des joueurs."
+
+#: ../../modules/health.md:194 932b3dec394947b38fdab5e40a09d4b0
+msgid "*Example: Set your HP to 10:*"
+msgstr "*Exemple : Définir sa santé à 10 :*"
+
+#: ../../modules/health.md:206 a161ceb1edb14070ba63d7129626c86c
+msgid "Set players' base maximum health points."
+msgstr "Définir les points de santé maximale de base des joueurs."
+
+#: ../../modules/health.md:221 a4f9de888daf438e9bbcc3e9f2fd3464
+msgid "*Example: Set your max HP to 10:*"
+msgstr "*Exemple : Définir sa santé maximale à 10 :*"
+
+#: ../../modules/health.md:234 635175a09caf491ba42840999ea8f371
+msgid "Time to Live"
+msgstr "Durée de vie"
+
+#: ../../modules/health.md:238 e91f9b3492de48c88e3516125f99d5dd
+msgid "Set the lifetime of entities."
+msgstr "Définir la durée de vie des entités."
+
+#: ../../modules/health.md:241 bcc32070f1c5472e95b2c863ac5fe01a
+msgid "**Execution `as <entities>`**: Entities to add a lifetime to."
+msgstr "**Exécution `as <entités>`** : Entités auxquelles ajouter une durée de vie."
+
+#: ../../modules/health.md:253 eb95d70f32cd4e628fd614a6f63f1172
+msgid "**State**: The entity now has a finite lifetime."
+msgstr "**État** : L'entité a maintenant une durée de vie limitée."
+
+#: ../../modules/health.md:256 24e742f5a3eb462cb72899bbefb98612
+msgid "*Example: Give creepers a 10-second lifetime:*"
+msgstr "*Exemple : Donner aux creepers une durée de vie de 10 secondes :*"
+
+#: ../../modules/health.md:263 52f96bb3351240f1806c841e54dda55f
+msgid "*Example: Give an explosion effect to creepers at the end of their life:*"
+msgstr "*Exemple : Donner un effet d'explosion aux creepers à la fin de leur vie :*"
+
+#: ../../modules/health.md:270 905cc6a911a54df5ba43f1a438ee0938
+msgid "*Example: Update the on_death callback at any given time:*"
+msgstr "*Exemple : Mettre à jour le callback de mort à tout moment :*"
+
+#: ../../modules/health.md:280 9d1df0259fbc4201b8c0d5c3ba05198a
+msgid "**Credits**: Aksiome, Leirof"
+msgstr "**Crédits** : Aksiome, Leirof"
+
+#: ../../_templates/comments.md:4 5f45c5ee6e63478a8401609aa66d264c
+msgid "**💬 Did it help you?**"
+msgstr "**💬 Cela vous a-t-il aidé ?**"
+
+#: ../../_templates/comments.md:6 6608ceaae12b44268cca6cdb00274652
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "N'hésitez pas à laisser vos questions et commentaires ci-dessous !"
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` Arguments"
+
+#, python-brace-format
+msgid "{nbt}`number` **points**: Health points to add to players."
+msgstr "{nbt}`number` **points** : Points de santé à ajouter aux joueurs."
+
+#, python-brace-format
+msgid "{nbt}`number` **points**: Max health points to add to players."
+msgstr "{nbt}`number` **points** : Points de santé maximale à ajouter aux joueurs."
+
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's returned value."
+msgstr "{nbt}`number` **scale** : Facteur d'échelle pour la valeur de retour de la fonction."
+
+#, python-brace-format
+msgid "{nbt}`number` **points**: Health points."
+msgstr "{nbt}`number` **points** : Points de santé."
+
+#, python-brace-format
+msgid "{nbt}`number` **points**: Max health points."
+msgstr "{nbt}`number` **points** : Points de santé maximale."
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Lifetime data."
+msgstr "{nbt}`compound` **with** : Données de durée de vie."
+
+#, python-brace-format
+msgid ""
+"{nbt}`int` **time**: Time to live. In"
+" ticks by default if unit is "
+"not defined."
+msgstr "{nbt}`int` **time** : Durée de vie. En ticks par défaut si l'unité n'est pas définie."
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **unit**: Unit of the "
+"specified time (tick, second, minute, "
+"hour, t, s, m, h)."
+msgstr "{nbt}`string` **unit** : Unité du temps spécifié (tick, second, minute, hour, t, s, m, h)."
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **on_death**: Command that will"
+" be run as the entity on its"
+" death."
+msgstr "{nbt}`string` **on_death** : Commande qui sera exécutée en tant qu'entité à sa mort."

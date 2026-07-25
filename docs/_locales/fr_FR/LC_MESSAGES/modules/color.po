@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"PO-Revision-Date: 2025-01-15 12:00+0000\n"
+"Last-Translator: Claude <claude@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/color.md:1 0ecaaf4fb6b94433aca10ceb4531d9b5
+msgid "🎨 Color"
+msgstr "🎨 Couleur"
+
+#: ../../modules/color.md:3 de761f0ee02f44e0b5d0b39d25f5233b
+msgid "**`#bs.color:help`**"
+msgstr "**`#bs.color:help`**"
+
+#: ../../modules/color.md:5 ca96fb4c39a14d7c90fd91209878fd97
+msgid "Facilitate color conversion between various formats."
+msgstr "Facilite la conversion de couleurs entre différents formats."
+
+#: ../../modules/color.md:13 7f18c442a0a543adb286c45cf490d5a8
+msgid ""
+"\"Color helps to express light—not the physical phenomenon, but the only "
+"light that really exists, that in the artist's brain.\""
+msgstr "\"La couleur aide à exprimer la lumière — non pas le phénomène physique, mais la seule lumière qui existe vraiment, celle qui est dans l'esprit de l'artiste.\""
+
+#: ../../modules/color.md:14 fde1906aa739471e93cf5a1cfe5b3eb3
+msgid "Henri Matisse"
+msgstr "Henri Matisse"
+
+#: ../../modules/color.md:18 d3ae501f55374c04978ef9e8e84c6a81
+msgid "Minecraft Color Format"
+msgstr "Format de couleur Minecraft"
+
+#: ../../modules/color.md:21 9d9720c4a48d4e4d8986f6647ea6d202
+msgid ""
+"The internal color format for Minecraft is decimal. This module "
+"facilitates the conversion between this integer (decimal) format and "
+"other commonly used formats."
+msgstr "Le format de couleur interne de Minecraft est décimal. Ce module facilite la conversion entre ce format entier (décimal) et d'autres formats couramment utilisés."
+
+#: ../../modules/color.md:26 d4787344d3a740b39ada84e2a6981cbf
+msgid "🔧 Functions"
+msgstr "🔧 Fonctions"
+
+#: ../../modules/color.md:28 a8b9b4cf6a1d409486c9ad6ab6171f25
+msgid "You can find below all functions available in this module."
+msgstr "Vous pouvez trouver ci-dessous toutes les fonctions disponibles dans ce module."
+
+#: ../../modules/color.md:32 38ba02f0e17143e5bf7e5f4bf4cf5e71
+msgid "Convert to Hexadecimal"
+msgstr "Conversion vers hexadécimal"
+
+#: ../../modules/color.md 4643f3ffbada4e8a8afe2455335292ec
+msgid "RGB to Hexadecimal"
+msgstr "RGB vers hexadécimal"
+
+#: ../../modules/color.md:40 c448743bc87e4b9298bb565d9821f0d9
+msgid "Convert a color from RGB to hexadecimal."
+msgstr "Convertit une couleur de RGB vers hexadécimal."
+
+#: ../../modules/color.md:42 ../../modules/color.md:70
+#: ../../modules/color.md:107 ../../modules/color.md:137
+#: ../../modules/color.md:176 ../../modules/color.md:206
+#: 0c8af01846e94af7bb40cf887fc6f9f6 640856c6261d47dd923066d4ff3365f2
+#: 717fad0f79c24e20a5c78eb196dab8d9 7279383efddd45eba71f5e36a1d81c77
+#: be736ed5945443e792eb7e1aaa71c0d7 fcc93247cc144b3583557fe211064e13
+msgid "Inputs"
+msgstr "Entrées"
+
+#: ../../modules/color.md:43 ../../modules/color.md:71
+#: ../../modules/color.md:108 ../../modules/color.md:138
+#: ../../modules/color.md:177 ../../modules/color.md:207
+#: 16b5aa51bae44fd88eceb5c6f286e7a4 37be9ed900524cf7855177383c0fd8fb
+#: 3f0fa5a5811f4d92912ecaa4fa72db57 73fd195091b24cf28dd17411f6d844d0
+#: 9a12f11fac6d468b8224f4e936e5bcf1 b80a5eec79684278943136c8cb1a88fe
+msgid "**Function macro**:"
+msgstr "**Macro de fonction** :"
+
+#: ../../modules/color.md:49 ../../modules/color.md:77
+#: ../../modules/color.md:114 ../../modules/color.md:144
+#: ../../modules/color.md:183 ../../modules/color.md:213
+#: 17bb61963cb64725a164e023dcebf345 3794534954e44367a478cdb05fa2c23f
+#: b34d1a35df354462bd383f53d0d76e54 d2f1720f7dcd46d28ab957cbebf4b08d
+#: f0f3dbebfbb043b49ff83bdc9737de4c fb4980b3c2274178a3c74a7a4ef5d6f9
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../modules/color.md:50 874d326e2f154fe5aebafd967ab6b43d
+#, python-brace-format
+msgid ""
+"**Storage `bs:out color.rgb_to_hex`**: {nbt}`string` Color as a "
+"hexadecimal string."
+msgstr "**Stockage `bs:out color.rgb_to_hex`** : {nbt}`string` Couleur sous forme de chaîne hexadécimale."
+
+#: ../../modules/color.md:53 785e78afe1e14684ad5127ecaf5c9b91
+msgid "*Example: Convert an RGB color to hexadecimal:*"
+msgstr "*Exemple : Convertir une couleur RGB vers hexadécimal :*"
+
+#: ../../modules/color.md a37c2e905d0b41ff90748dcb901a1f7d
+msgid "Integer to Hexadecimal"
+msgstr "Entier vers hexadécimal"
+
+#: ../../modules/color.md:68 46919ac2121d44b9861d66053f18469a
+msgid "Convert a color from integer to hexadecimal."
+msgstr "Convertit une couleur d'entier vers hexadécimal."
+
+#: ../../modules/color.md:78 ce7a36275f8d49be98748001f728d53c
+#, python-brace-format
+msgid ""
+"**Storage `bs:out color.int_to_hex`**: {nbt}`string` Color as a "
+"hexadecimal string."
+msgstr "**Stockage `bs:out color.int_to_hex`** : {nbt}`string` Couleur sous forme de chaîne hexadécimale."
+
+#: ../../modules/color.md:81 ad1e52d2d6ca423a92251d477bbecb47
+msgid ""
+"*Example: Get the hexadecimal color of the nearest zombie's leather "
+"helmet:*"
+msgstr "*Exemple : Obtenir la couleur hexadécimale du casque en cuir du zombie le plus proche :*"
+
+#: ../../modules/color.md:93 ../../modules/color.md:162
+#: ../../modules/color.md:231 08512ff2db844910812b5d327fd9c6be
+#: 47080f331acf45bdae7758ba95cf2a15 ba916e1d2b2e42958272a26fb79d81bd
+msgid "**Credits**: Aksiome, theogiraudet"
+msgstr "**Crédits** : Aksiome, theogiraudet"
+
+#: ../../modules/color.md:97 f1cfb5469ab24595b6825b1014911d8f
+msgid "Convert to Integer"
+msgstr "Conversion vers entier"
+
+#: ../../modules/color.md 40961a1f65814a1bbca3579ddc1715bf
+msgid "Hexadecimal to Integer"
+msgstr "Hexadécimal vers entier"
+
+#: ../../modules/color.md:105 8fac149d7a1c40ec8a0fc8da72ffe9f0
+msgid "Convert a color from hexadecimal to integer."
+msgstr "Convertit une couleur d'hexadécimal vers entier."
+
+#: ../../modules/color.md:115 a5e55a4fae29463597ab424d87583ae3
+msgid "**Return | Score `$color.hex_to_int bs.out`**: Color as an integer."
+msgstr "**Retour | Score `$color.hex_to_int bs.out`** : Couleur sous forme d'entier."
+
+#: ../../modules/color.md:117 793becbe445e4975afdb5af4aac157ac
+#, python-brace-format
+msgid "**Storage `bs:out color.hex_to_int`**: {nbt}`int` Color as an integer."
+msgstr "**Stockage `bs:out color.hex_to_int`** : {nbt}`int` Couleur sous forme d'entier."
+
+#: ../../modules/color.md:120 f6554017004c4d3ba3c8225c9765377e
+msgid ""
+"*Example: Change the color of the nearest zombie's leather helmet using "
+"the hexadecimal format:*"
+msgstr "*Exemple : Changer la couleur du casque en cuir du zombie le plus proche en utilisant le format hexadécimal :*"
+
+#: ../../modules/color.md f655001ebbdd4d3aa23c7b8a59b8ae16
+msgid "RGB to Integer"
+msgstr "RGB vers entier"
+
+#: ../../modules/color.md:135 8568b5d432334cd4b6b36cc12cf4ec43
+msgid "Convert a color from RGB to integer."
+msgstr "Convertit une couleur de RGB vers entier."
+
+#: ../../modules/color.md:145 e98b519941ee4e0ebd33704b4338e899
+msgid "**Return | Score `$color.rgb_to_int bs.out`**: Color as an integer."
+msgstr "**Retour | Score `$color.rgb_to_int bs.out`** : Couleur sous forme d'entier."
+
+#: ../../modules/color.md:147 de9f76f3d3f348afbc88c1207f537eea
+#, python-brace-format
+msgid "**Storage `bs:out color.rgb_to_int`**: {nbt}`int` Color as an integer."
+msgstr "**Stockage `bs:out color.rgb_to_int`** : {nbt}`int` Couleur sous forme d'entier."
+
+#: ../../modules/color.md:150 1263d847ad72471ab06212c87d27bf9f
+msgid ""
+"*Example: Change the color of the nearest zombie's leather helmet using "
+"the RGB format:*"
+msgstr "*Exemple : Changer la couleur du casque en cuir du zombie le plus proche en utilisant le format RGB :*"
+
+#: ../../modules/color.md:166 f92e07e98d304045a0dd1746ae78f3d0
+msgid "Convert to RGB"
+msgstr "Conversion vers RGB"
+
+#: ../../modules/color.md a5044dd8dc97448fb9a0f06c417a563a
+msgid "Hexadecimal to RGB"
+msgstr "Hexadécimal vers RGB"
+
+#: ../../modules/color.md:174 56794cc8c4294410aeee7eaec57fcdf3
+msgid "Convert a color from hexadecimal to RGB."
+msgstr "Convertit une couleur d'hexadécimal vers RGB."
+
+#: ../../modules/color.md:184 0141be090a1f471caf314c4df77b6bd4
+#, python-brace-format
+msgid ""
+"**Storage `bs:out color.hex_to_rgb`**: {nbt}`list` Vector representing "
+"the RGB color."
+msgstr "**Stockage `bs:out color.hex_to_rgb`** : {nbt}`list` Vecteur représentant la couleur RGB."
+
+#: ../../modules/color.md:186 a922b4cc908b4fd0802b3e683d558b3b
+msgid ""
+"**Scores `$color.hex_to_rgb.[r,g,b] bs.out`**: Vector components "
+"representing the RGB color."
+msgstr "**Scores `$color.hex_to_rgb.[r,g,b] bs.out`** : Composants du vecteur représentant la couleur RGB."
+
+#: ../../modules/color.md:189 c14b85a571824bbfaf1227b6d8a7f2cd
+msgid "*Example: Convert a hexadecimal color to RGB:*"
+msgstr "*Exemple : Convertir une couleur hexadécimale vers RGB :*"
+
+#: ../../modules/color.md 52b1aa649a7c4656b9f8be7f336430e9
+msgid "Integer to RGB"
+msgstr "Entier vers RGB"
+
+#: ../../modules/color.md:204 4c976af43a4a464cab4640ff75503a34
+msgid "Convert a color from integer to RGB."
+msgstr "Convertit une couleur d'entier vers RGB."
+
+#: ../../modules/color.md:214 7eccdf3c7bd64786a803e399c50c9bf8
+#, python-brace-format
+msgid ""
+"**Storage `bs:out color.int_to_rgb`**: {nbt}`list` Vector representing "
+"the RGB color."
+msgstr "**Stockage `bs:out color.int_to_rgb`** : {nbt}`list` Vecteur représentant la couleur RGB."
+
+#: ../../modules/color.md:216 e6785b6a8e2142ffa1380c68e47c4133
+msgid ""
+"**Scores `$color.int_to_rgb.[r,g,b] bs.out`**: Vector components "
+"representing the RGB color."
+msgstr "**Scores `$color.int_to_rgb.[r,g,b] bs.out`** : Composants du vecteur représentant la couleur RGB."
+
+#: ../../modules/color.md:219 72ff95aaedea44f18c1a85142793d87a
+msgid "*Example: Get the RGB color of the nearest zombie's leather helmet:*"
+msgstr "*Exemple : Obtenir la couleur RGB du casque en cuir du zombie le plus proche :*"
+
+#: ../../_templates/comments.md:4 fd01c529dd9b4d2e81a73ad18a3fde06
+msgid "**💬 Did it help you?**"
+msgstr "**💬 Cela vous a-t-il aidé ?**"
+
+#: ../../_templates/comments.md:6 0c4095ccb4574c248f780f0472e964e2
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "N'hésitez pas à laisser vos questions et commentaires ci-dessous !"
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` Arguments"
+
+#, python-brace-format
+msgid ""
+"{nbt}`list` **color**: Vector representing the"
+" RGB color (example: [0,255,128])."
+msgstr "{nbt}`list` **color** : Vecteur représentant la couleur RGB (exemple : [0,255,128])."
+
+#, python-brace-format
+msgid "{nbt}`int` **color**: Color as an integer."
+msgstr "{nbt}`int` **color** : Couleur sous forme d'entier."
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **color**: Color as a "
+"hexadecimal string (example: #ffffff)."
+msgstr "{nbt}`string` **color** : Couleur sous forme de chaîne hexadécimale (exemple : #ffffff)."

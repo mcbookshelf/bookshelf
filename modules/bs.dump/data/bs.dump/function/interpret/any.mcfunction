@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if data storage bs:data dump.stack[-1].var[] run return run function bs.dump:interpret/array/array
-execute if data storage bs:data dump.stack[-1].var{} run return run function bs.dump:interpret/compound/compound
+execute if data storage bs:dump stack[-1].var[] run return run function bs.dump:interpret/array/array
+execute if data storage bs:dump stack[-1].var{} run return run function bs.dump:interpret/compound/compound
 
-execute store success score #dump.success bs.data run function bs.dump:interpret/nbt/nbt with storage bs:data dump.stack[-1]
-execute if score #dump.success bs.data matches 0 run function bs.dump:interpret/score with storage bs:data dump.stack[-1]
+execute store success score #dump.success bs.data run function bs.dump:interpret/nbt/nbt with storage bs:dump stack[-1]
+execute if score #dump.success bs.data matches 0 run function bs.dump:interpret/score with storage bs:dump stack[-1]

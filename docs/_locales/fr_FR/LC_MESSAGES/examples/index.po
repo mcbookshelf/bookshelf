@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-28 11:19+0800\n"
+"PO-Revision-Date: 2025-01-15 14:30+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../examples/index.md:5 8a63ecfbc7a349b3aa214e1e76cfa2ab
+msgid "📖 Examples"
+msgstr "📖 Exemples"
+
+#: ../../../examples/index.md:7 63b8d57b3a444de9be30c170ba3b3af6
+msgid ""
+"In this section, you'll find practical examples showcasing how to use "
+"**Bookshelf**. effectively. Each example is designed as a mini-tutorial, "
+"demonstrating specific features and their real-world applications. The "
+"code provided can be easily converted into fully functional Minecraft "
+"datapacks thanks to **Lectern**, ensuring that everything in the "
+"documentation is directly applicable in-game."
+msgstr ""
+"Dans cette section, vous trouverez des exemples pratiques montrant comment "
+"utiliser **Bookshelf** efficacement. Chaque exemple est conçu comme un "
+"mini-tutoriel, démontrant des fonctionnalités spécifiques et leurs "
+"applications concrètes. Grâce à **Lectern**, le code fourni peut être "
+"facilement converti en datapacks Minecraft entièrement fonctionnels, "
+"garantissant que tout dans la documentation est directement applicable "
+"en jeu."
+
+#: ../../../examples/index.md:11 4868914e0eb7411a983a46572bf4b9c0
+msgid "🌟 Featured Examples"
+msgstr "🌟 Exemples en vedette"
+
+#: ../../../examples/index.md:15 db4e16bdb3a748dd9536a6a65077f07f
+msgid "🧵 Lifestring"
+msgstr "🧵 Lien de vie"
+
+#: ../../../examples/index.md:20 abe2a31629a141b985e7ab415cf18191
+msgid "Link players' health so that damage and healing are shared between them."
+msgstr "Lie la santé des joueurs pour qu'ils partagent les dégâts et les soins."
+
+#: ../../../examples/index.md:22 ae37e0d7d5234bc9aa02e440d34fc441
+msgid "🖌️ Paintbrush"
+msgstr "🖌️ Pinceau"
+
+#: ../../../examples/index.md:27 22916747386d4d39b475d42e8d7eb9ba
+msgid "Change a block's material to match the item in the player’s hand."
+msgstr "Change le matériau d'un bloc pour correspondre à l'objet dans la main du joueur."

@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -16,4 +16,4 @@
 data modify storage bs:out hitbox set value {scale:1.0}
 execute store result storage bs:out hitbox.width double .0000002 run scoreboard players get @s bs.width
 execute store result storage bs:out hitbox.depth double .0000002 run scoreboard players get @s bs.depth
-execute store result storage bs:out hitbox.height double .0000001 run scoreboard players get @s bs.height
+execute store result storage bs:out hitbox.height double .0000002 run scoreboard players get @s bs.height

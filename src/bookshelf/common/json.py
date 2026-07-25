@@ -1,15 +1,12 @@
 from __future__ import annotations
 
 from functools import cache
-from typing import TYPE_CHECKING
+from pathlib import Path
 
 import orjson
 from pydantic import BaseModel
 
 from bookshelf.common import errors, utils
-
-if TYPE_CHECKING:
-    from pathlib import Path
 
 
 def dump(file: Path, data: BaseModel | dict | list, indent: int | None = 2) -> int:
@@ -19,9 +16,14 @@ def dump(file: Path, data: BaseModel | dict | list, indent: int | None = 2) -> i
     return file.write_bytes(contents)
 
 
-def load[T: BaseModel | dict | list](file: Path, expected_type: type[T]) -> T:
-    """Load a JSON file and return its content."""
-    data = _parse_json(file)
+def load[T: BaseModel | dict | list](obj: bytes | Path, expected_type: type[T]) -> T:
+    """Load JSON from bytes or a file path and return its content."""
+    if isinstance(obj, Path):
+        data = _parse_file(obj)
+        file = obj
+    else:
+        data = _parse_bytes(obj)
+        file = None
     if isinstance(data, expected_type):
         return data
     if isinstance(expected_type, type) and issubclass(expected_type, BaseModel):
@@ -35,11 +37,16 @@ def _orjson_default(obj: object) -> object:
     raise TypeError
 
 
-@cache
-def _parse_json(file: Path) -> dict | list:
+def _parse_bytes(data: bytes) -> dict | list:
     try:
-        raw = file.read_bytes()
-        return orjson.loads(raw)
+        return orjson.loads(data)
+    except orjson.JSONDecodeError as e:
+        raise errors.JSONDecodeError(message=str(e), line=e.lineno) from e
+
+@cache
+def _parse_file(file: Path) -> dict | list:
+    try:
+        return orjson.loads(file.read_bytes())
     except FileNotFoundError as e:
         raise errors.JSONFileNotFoundError(file=file) from e
     except orjson.JSONDecodeError as e:

@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -15,7 +15,7 @@
 
 # Note: Thanks to tryashtar and PiggyPig for inspiring the idea behind this module.
 
-$data modify storage bs:data dump.stack set value [{var:$(var),indent:"\u2000"}]
-data modify storage bs:data dump.out set value [[{text:"[",color:"#cccccc"},{selector:"@s"},"] ⇒ "]]
+$data modify storage bs:dump stack set value [{var:$(var),indent:"\u2000"}]
+data modify storage bs:dump output set value [{text:"[",color:"#cccccc"},{selector:"@s"},"] ⇒ "]
 function bs.dump:interpret/any
-tellraw @a {type:"nbt",storage:"bs:data",nbt:"dump.out[]",separator:"",interpret:true}
+tellraw @a {type:"nbt",storage:"bs:dump",nbt:"output",interpret:true}

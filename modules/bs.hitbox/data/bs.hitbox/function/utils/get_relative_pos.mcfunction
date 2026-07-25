@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,6 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$tp @s ~$(x) ~$(y) ~$(z)
+$execute positioned ~$(x) ~$(y) ~$(z) run function bs.hitbox:utils/tp
 data modify storage bs:ctx _ set from entity @s Pos
+tp @s ~ -1000000 ~
 kill @s

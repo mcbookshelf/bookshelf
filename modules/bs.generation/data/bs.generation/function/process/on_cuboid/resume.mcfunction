@@ -1,0 +1,24 @@
+# ------------------------------------------------------------------------------------------------------------
+# Copyright (c) 2026 Gunivers
+#
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
+#
+# This source code is subject to the terms of the Mozilla Public License, v. 2.0.
+# If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#
+# Conditions:
+# - You may use this file in compliance with the MPL v2.0
+# - Any modifications must be documented and disclosed under the same license
+#
+# For more details, refer to the MPL v2.0.
+# ------------------------------------------------------------------------------------------------------------
+
+execute store result score $generation.i bs.lambda run data get storage bs:data generation[-1].i
+execute store result score $generation.j bs.lambda run data get storage bs:data generation[-1].j
+execute store result score $generation.k bs.lambda run data get storage bs:data generation[-1].k
+execute store result score #generation.w bs.data run data get storage bs:data generation[-1].w
+execute store result score #generation.h bs.data run data get storage bs:data generation[-1].h
+execute store result score #generation.d bs.data run data get storage bs:data generation[-1].d
+execute store result score #generation.i bs.data run data get storage bs:data generation[-1].n
+
+$function bs.generation:on_cuboid/recurse/$(0)$(1)$(2) with storage bs:data generation[-1]

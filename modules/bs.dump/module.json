@@ -7,7 +7,7 @@
   "meta": {
     "name": "Dump",
     "slug": "bookshelf-dump",
-    "description": "Bookshelf debugging tool that outputs variable contents directly to chat.",
+    "description": "Debug Minecraft datapacks by printing scoreboard values, NBT data, and storage contents to chat with a simple, unified syntax.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/dump.html",
     "tags": ["dev"]
   }

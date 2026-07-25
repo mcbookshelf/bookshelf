@@ -22,7 +22,7 @@ Clear comments contribute to a smoother collaboration and make Bookshelf easier 
 
 Bookshelf follows a conservation principle inspired by Antoine Lavoisier's maxim:
 
-```{epigraph}
+```{pull-quote}
 "Nothing is lost, nothing is created, everything is transformed"
 
 -- Antoine Lavoisier

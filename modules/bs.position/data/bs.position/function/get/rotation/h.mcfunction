@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,5 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
+execute in minecraft:overworld run tp B5-0-0-0-1 -30000000 0 1600 0 0
 execute in minecraft:overworld run tp B5-0-0-0-1 -30000000 0 1600 ~ ~
 $execute store result score @s bs.rot.h run data get entity B5-0-0-0-1 Rotation[0] $(scale)

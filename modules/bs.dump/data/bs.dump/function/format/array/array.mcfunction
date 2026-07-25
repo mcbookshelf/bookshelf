@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,19 +13,19 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #dump.count bs.data if data storage bs:data dump.stack[-1].var[]
-execute store result score #dump.expand bs.data run data get storage bs:data dump.stack[-1].expand
+execute store result score #dump.count bs.data if data storage bs:dump stack[-1].var[]
+execute store result score #dump.expand bs.data run data get storage bs:dump stack[-1].expand
 
 execute if score #dump.count bs.data matches ..3 \
-  unless data storage bs:data dump.stack[-1].var[][] \
-  unless data storage bs:data dump.stack[-1].var[{}] \
+  unless data storage bs:dump stack[-1].var[][] \
+  unless data storage bs:dump stack[-1].var[{}] \
   run return run function bs.dump:format/array/compact/compact
 
 execute if score #dump.expand bs.data matches 0 run return run function bs.dump:format/array/collapse
 
 function bs.dump:format/bracket/open with storage bs:const dump
 function bs.dump:format/array/loop
-data modify storage bs:data dump.out append value "\n"
-data modify storage bs:data dump.out append from storage bs:data dump.stack[].indent
-data remove storage bs:data dump.out[-1]
+data modify storage bs:dump output append value "\n"
+data modify storage bs:dump output append from storage bs:dump stack[].indent
+data remove storage bs:dump output[-1]
 function bs.dump:format/bracket/close with storage bs:const dump

@@ -9,7 +9,7 @@ Contains many random functions for different distributions and noise patterns.
 :class: dark_light p-2
 ```
 
-```{epigraph}
+```{pull-quote}
 "Creativity is the ability to introduce order into the randomness of nature."
 
 -- Eric Hoffer
@@ -125,8 +125,9 @@ function #bs.random:uniform {min:1,max:100}
 tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.uniform", "objective": "bs.out"}, "color": "gold"}]
 ```
 
-```{admonition} Uniform Distribution... 🥶 What's this?
-:class: dropdown
+```{dropdown} What is a Uniform Distribution?
+:color: info
+:icon: question
 
 Every outcome has an equal probability of occurring. It's like rolling a fair die where each number (1 through 6) has the same probability.
 ```
@@ -160,8 +161,9 @@ function #bs.random:binomial {trials:10,probability:0.2}
 tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.binomial", "objective": "bs.out"}, "color": "gold"}]
 ```
 
-```{admonition} Binomial Distribution... 🥶 What's this?
-:class: dropdown
+```{dropdown} What is a Binomial Distribution?
+:color: info
+:icon: question
 
 Used when you have a fixed number of trials, each with two possible outcomes (success or failure). It calculates the probability of obtaining a specific number of successes. For example, flipping a coin 10 times and counting the number of heads.
 ```
@@ -194,8 +196,9 @@ function #bs.random:geometric {probability:0.02}
 tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.geometric", "objective": "bs.out"}, "color": "gold"}]
 ```
 
-```{admonition} Geometric Distribution... 🥶 What's this?
-:class: dropdown
+```{dropdown} What is a Geometric Distribution?
+:color: info
+:icon: question
 
 Measures the number of trials required to achieve the first success in a sequence of independent and identical trials. For example, the number of dice rolls needed to obtain a six.
 ```
@@ -229,8 +232,9 @@ function #bs.random:normal {mean:10,spread:3}
 tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.normal", "objective": "bs.out"}, "color": "gold"}]
 ```
 
-```{admonition} Normal Distribution... 🥶 What's this?
-:class: dropdown
+```{dropdown} What is a Normal Distribution?
+:color: info
+:icon: question
 
 Also known as the Gaussian distribution, it produces values clustered around the mean with a bell-shaped probability curve. Widely used to model natural variations and measurement errors.
 ```
@@ -263,8 +267,9 @@ function #bs.random:poisson {lambda:5}
 tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.poisson", "objective": "bs.out"}, "color": "gold"}]
 ```
 
-```{admonition} Poisson Distribution... 🥶 What's this?
-:class: dropdown
+```{dropdown} What is a Poisson Distribution?
+:color: info
+:icon: question
 
 A Poisson distribution generates values that cluster around an average value, **λ (lambda)**. Results tend to concentrate near this average, making it ideal for modeling random events occurring at a consistent rate.
 ```
@@ -490,7 +495,7 @@ tellraw @a [{"text": "Noise: ", "color": "dark_gray"},{"nbt":"fractal_noise_mat_
 ::::
 :::::
 
-::::{grid} 3
+::::{grid} 1 3 3 3
 :::{grid-item-card} White Noise
 :margin: 0 3 0 0
 :text-align: center

@@ -1,0 +1,206 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "location_check",
+      "offsetY": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/torch",
+          "state": {
+            "lit": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/facing",
+          "state": {
+            "facing": "east",
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/facing",
+          "state": {
+            "facing": "west",
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/facing",
+          "state": {
+            "facing": "south",
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/facing",
+          "state": {
+            "facing": "north",
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetY": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/facing",
+          "state": {
+            "facing": "up",
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetY": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/facing",
+          "state": {
+            "facing": "down",
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/attached",
+          "state": {
+            "face": "wall",
+            "facing": "east",
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetX": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/attached",
+          "state": {
+            "face": "wall",
+            "facing": "west",
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/attached",
+          "state": {
+            "face": "wall",
+            "facing": "south",
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/attached",
+          "state": {
+            "face": "wall",
+            "facing": "north",
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetY": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/attached",
+          "state": {
+            "face": "floor",
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetY": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/attached",
+          "state": {
+            "face": "ceiling",
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetY": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#bs.block:internal/plate",
+          "state": {
+            "powered": "true"
+          }
+        }
+      }
+    },
+    {
+      "condition": "location_check",
+      "offsetY": 1,
+      "predicate": {
+        "block": {
+          "blocks": [
+            "calibrated_sculk_sensor",
+            "sculk_sensor"
+          ],
+          "state": {
+            "power": {
+              "min": "1"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# horse_like group
-execute unless predicate bs.hitbox:is_baby run return run data modify storage bs:out hitbox set value {width:1.3964844,height:1.6}
-data modify storage bs:out hitbox set value {width:0.6982422,height:0.8}
+# horse group
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.97753906,height:1.12}
+data modify storage bs:out hitbox set value {width:1.3964844,height:1.6}

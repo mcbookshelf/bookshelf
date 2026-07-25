@@ -7,7 +7,7 @@
   "meta": {
     "name": "String",
     "slug": "bookshelf-string",
-    "description": "Bookshelf utility for manipulating and transforming strings in Minecraft datapacks.",
+    "description": "Manipulate strings in Minecraft datapacks: concatenate, change case, search, replace, and count.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html",
     "tags": ["runtime"],
     "weak_dependencies": [

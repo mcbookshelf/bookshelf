@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -14,4 +14,4 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # painting group
-function bs.hitbox:get_entity/registry/painting/dispatch with entity @s
+function bs.hitbox:get_entity/registry/painting/_ with entity @s

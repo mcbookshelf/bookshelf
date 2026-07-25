@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,15 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data dump.out append value "\n"
-data modify storage bs:data dump.out append from storage bs:data dump.stack[].indent
+data modify storage bs:dump output append value "\n"
+data modify storage bs:dump output append from storage bs:dump stack[].indent
 
-data modify storage bs:data dump.stack append from storage bs:data dump.stack[-1]
-data modify storage bs:data dump.stack[-1].var set from storage bs:data dump.stack[-1].var[0]
-execute store result storage bs:data dump.stack[-1].expand int .99999999 run data get storage bs:data dump.stack[-1].expand
+data modify storage bs:dump stack append from storage bs:dump stack[-1]
+data modify storage bs:dump stack[-1].var set from storage bs:dump stack[-1].var[0]
+execute store result storage bs:dump stack[-1].expand int .99999999 run data get storage bs:dump stack[-1].expand
 function bs.dump:format/any
-data remove storage bs:data dump.stack[-1]
-data remove storage bs:data dump.stack[-1].var[0]
+data remove storage bs:dump stack[-1]
+data remove storage bs:dump stack[-1].var[0]
 
-execute if data storage bs:data dump.stack[-1].var[0] run data modify storage bs:data dump.out append value ", "
-execute if data storage bs:data dump.stack[-1].var[0] run function bs.dump:format/array/loop
+execute if data storage bs:dump stack[-1].var[0] run data modify storage bs:dump output append value ", "
+execute if data storage bs:dump stack[-1].var[0] run function bs.dump:format/array/loop

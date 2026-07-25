@@ -1,0 +1,632 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-19 14:34+0800\n"
+"PO-Revision-Date: 2025-01-17 12:00+0100\n"
+"Last-Translator: Claude Code Assistant <claude@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../modules/link.md:1
+msgid "🔗 Link"
+msgstr "🔗 Link"
+
+#: ../../../modules/link.md:3
+msgid "**`#bs.link:help`**"
+msgstr "**`#bs.link:help`**"
+
+#: ../../../modules/link.md:5
+msgid ""
+"Construct coherent entity structures by linking entities' positions and "
+"rotations."
+msgstr "Construire des structures d'entités cohérentes en liant les positions et rotations des entités."
+
+#: ../../../modules/link.md:13
+msgid "\"Invisible threads are the strongest ties.\""
+msgstr "\"Les fils invisibles sont les liens les plus forts.\""
+
+#: ../../../modules/link.md:14
+msgid "Friedrich Nietzsche"
+msgstr "Friedrich Nietzsche"
+
+#: ../../../modules/link.md:19
+msgid ""
+"This module uses scaled integers and can overflow when coordinates are "
+"higher than 2,000,000."
+msgstr "Ce module utilise des entiers mis à l'échelle et peut déborder quand les coordonnées sont supérieures à 2 000 000."
+
+#: ../../../modules/link.md:24
+msgid "🔧 Functions"
+msgstr "🔧 Fonctions"
+
+#: ../../../modules/link.md:26
+msgid "You can find below all functions available in this module."
+msgstr "Vous pouvez trouver ci-dessous toutes les fonctions disponibles dans ce module."
+
+#: ../../../modules/link.md:30
+msgid "Create Link"
+msgstr "Créer un Lien"
+
+#: ../../../modules/link.md:34
+msgid ""
+"Create a link between the entity executing the function and the entity "
+"closest to the execution position."
+msgstr "Créer un lien entre l'entité exécutant la fonction et l'entité la plus proche de la position d'exécution."
+
+#: ../../../modules/link.md:36 ../../../modules/link.md:74
+#: ../../../modules/link.md:102 ../../../modules/link.md:128
+#: ../../../modules/link.md:154 ../../../modules/link.md:184
+#: ../../../modules/link.md:221 ../../../modules/link.md:256
+#: ../../../modules/link.md:289 ../../../modules/link.md:322
+#: ../../../modules/link.md:344 ../../../modules/link.md:366
+#: ../../../modules/link.md:388 ../../../modules/link.md:415
+#: ../../../modules/link.md:444 ../../../modules/link.md:472
+#: ../../../modules/link.md:498 ../../../modules/link.md:524
+#: ../../../modules/link.md:554 ../../../modules/link.md:591
+#: ../../../modules/link.md:637
+msgid "Inputs"
+msgstr "Entrées"
+
+#: ../../../modules/link.md:37
+msgid ""
+"**Execution `as <entities>`**: Child entities that you wish to link to a "
+"parent."
+msgstr "**Exécution `as <entités>`** : Entités enfants que vous souhaitez lier à un parent."
+
+#: ../../../modules/link.md:39
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Use the nearest "
+"entity as the parent."
+msgstr "**Exécution `at <entité>` ou `positioned <x> <y> <z>`** : Utiliser l'entité la plus proche comme parent."
+
+#: ../../../modules/link.md:41 ../../../modules/link.md:81
+#: ../../../modules/link.md:107 ../../../modules/link.md:133
+#: ../../../modules/link.md:159 ../../../modules/link.md:189
+#: ../../../modules/link.md:226 ../../../modules/link.md:263
+#: ../../../modules/link.md:294 ../../../modules/link.md:325
+#: ../../../modules/link.md:347 ../../../modules/link.md:369
+#: ../../../modules/link.md:391 ../../../modules/link.md:418
+#: ../../../modules/link.md:451 ../../../modules/link.md:477
+#: ../../../modules/link.md:503 ../../../modules/link.md:529
+#: ../../../modules/link.md:559 ../../../modules/link.md:594
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../../modules/link.md:42 ../../../modules/link.md:77
+#: ../../../modules/link.md:105 ../../../modules/link.md:259
+#: ../../../modules/link.md:447 ../../../modules/link.md:475
+#: ../../../modules/link.md:595
+msgid "**Scores `@s bs.link.r[x,y,z]`**: Relative position to the parent entity."
+msgstr "**Scores `@s bs.link.r[x,y,z]`** : Position relative à l'entité parent."
+
+#: ../../../modules/link.md:44 ../../../modules/link.md:597
+msgid ""
+"**Scores `@s bs.link.l[x,y,z,h,v]`**: Local position and rotation "
+"relative to the parent entity."
+msgstr "**Scores `@s bs.link.l[x,y,z,h,v]`** : Position et rotation locales relatives à l'entité parent."
+
+#: ../../../modules/link.md:46
+msgid "**Scores `@s bs.link.to`**: ID of the parent entity to which it is linked."
+msgstr "**Scores `@s bs.link.to`** : ID de l'entité parent à laquelle elle est liée."
+
+#: ../../../modules/link.md:49
+msgid "*Example: Link armor stands to the nearest sheep:*"
+msgstr "*Exemple : Lier des supports d'armure au mouton le plus proche :*"
+
+#: ../../../modules/link.md:57
+msgid ""
+"You should generally avoid changing output scores, as they serve as "
+"parameters for other link functions. Therefore, it is recommended to "
+"exclusively let Bookshelf handle them."
+msgstr "Vous devriez généralement éviter de modifier les scores de sortie, car ils servent de paramètres pour d'autres fonctions de lien. Par conséquent, il est recommandé de laisser exclusivement Bookshelf les gérer."
+
+#: ../../../modules/link.md:60 ../../../modules/link.md:211
+#: ../../../modules/link.md:246 ../../../modules/link.md:581
+#: ../../../modules/link.md:611
+msgid "**Credits**: Aksiome, Leirof"
+msgstr "**Crédits** : Aksiome, Leirof"
+
+#: ../../../modules/link.md:64
+msgid "Imitate Behaviors"
+msgstr "Imiter les Comportements"
+
+#: ../../../modules/link.md
+msgid "Pos & Rot"
+msgstr "Pos & Rot"
+
+#: ../../../modules/link.md:72
+msgid ""
+"Replace the entity at its relative position and local rotation. This "
+"operation repeated in a loop simulates the movements and rotations of the"
+" parent entity."
+msgstr "Replacer l'entité à sa position relative et rotation locale. Cette opération répétée en boucle simule les mouvements et rotations de l'entité parent."
+
+#: ../../../modules/link.md:75 ../../../modules/link.md:103
+#: ../../../modules/link.md:129 ../../../modules/link.md:155
+#: ../../../modules/link.md:185 ../../../modules/link.md:222
+#: ../../../modules/link.md:257 ../../../modules/link.md:290
+#: ../../../modules/link.md:445 ../../../modules/link.md:473
+#: ../../../modules/link.md:499 ../../../modules/link.md:525
+#: ../../../modules/link.md:555 ../../../modules/link.md:592
+msgid ""
+"**Execution `as <entities>`**: Executing entities that must be linked to "
+"another entity."
+msgstr "**Exécution `as <entités>`** : Entités exécutantes qui doivent être liées à une autre entité."
+
+#: ../../../modules/link.md:79 ../../../modules/link.md:131
+#: ../../../modules/link.md:261 ../../../modules/link.md:449
+#: ../../../modules/link.md:501
+msgid ""
+"**Scores `@s bs.link.l[h,v]`**: Local rotation relative to the parent "
+"entity."
+msgstr "**Scores `@s bs.link.l[h,v]`** : Rotation locale relative à l'entité parent."
+
+#: ../../../modules/link.md:82
+msgid ""
+"**State**: The entity is moved to maintain its relative position and "
+"local rotation relative to the parent entity."
+msgstr "**État** : L'entité est déplacée pour conserver sa position relative et rotation locale par rapport à l'entité parent."
+
+#: ../../../modules/link.md:85 ../../../modules/link.md:111
+#: ../../../modules/link.md:137 ../../../modules/link.md:163
+#: ../../../modules/link.md:193
+msgid "*Example: Make armor stands mimic your moves:*"
+msgstr "*Exemple : Faire imiter vos mouvements aux supports d'armure :*"
+
+#: ../../../modules/link.md
+msgid "Position"
+msgstr "Position"
+
+#: ../../../modules/link.md:100
+msgid ""
+"Replace the entity at its relative position. This operation repeated in a"
+" loop simulates the movements of the parent entity."
+msgstr "Replacer l'entité à sa position relative. Cette opération répétée en boucle simule les mouvements de l'entité parent."
+
+#: ../../../modules/link.md:108
+msgid ""
+"**State**: The entity is moved to maintain its relative position with the"
+" parent entity."
+msgstr "**État** : L'entité est déplacée pour conserver sa position relative avec l'entité parent."
+
+#: ../../../modules/link.md
+msgid "Rotation"
+msgstr "Rotation"
+
+#: ../../../modules/link.md:126
+msgid ""
+"Replace the entity at its local rotation. This operation repeated in a "
+"loop simulates the rotation of the parent entity."
+msgstr "Replacer l'entité à sa rotation locale. Cette opération répétée en boucle simule la rotation de l'entité parent."
+
+#: ../../../modules/link.md:134
+msgid ""
+"**State**: The entity is moved to maintain its local rotation relative to"
+" the parent entity."
+msgstr "**État** : L'entité est déplacée pour conserver sa rotation locale par rapport à l'entité parent."
+
+#: ../../../modules/link.md
+msgid "Single Axis"
+msgstr "Axe Unique"
+
+#: ../../../modules/link.md:152
+msgid ""
+"Replace the entity at its relative position along an axis. This operation"
+" repeated in a loop simulates the movements of the parent entity on a "
+"single axis."
+msgstr "Replacer l'entité à sa position relative le long d'un axe. Cette opération répétée en boucle simule les mouvements de l'entité parent sur un seul axe."
+
+#: ../../../modules/link.md:157 ../../../modules/link.md:527
+msgid "**Score `@s bs.link.r[x|y|z]`**: Relative position to the parent entity."
+msgstr "**Score `@s bs.link.r[x|y|z]`** : Position relative à l'entité parent."
+
+#: ../../../modules/link.md:160
+msgid ""
+"**State**: The entity is moved to maintain its relative position with the"
+" parent entity on a single axis."
+msgstr "**État** : L'entité est déplacée pour conserver sa position relative avec l'entité parent sur un seul axe."
+
+#: ../../../modules/link.md
+msgid "Single Angle"
+msgstr "Angle Unique"
+
+#: ../../../modules/link.md:182
+msgid ""
+"Replace the entity at its horizontal or vertical local rotation. This "
+"operation repeated in a loop simulates the rotation of the parent entity "
+"on a single rotation axis."
+msgstr "Replacer l'entité à sa rotation locale horizontale ou verticale. Cette opération répétée en boucle simule la rotation de l'entité parent sur un seul axe de rotation."
+
+#: ../../../modules/link.md:187 ../../../modules/link.md:557
+msgid ""
+"**Score `@s bs.link.l[h|v]`**: Local rotation relative to the parent "
+"entity."
+msgstr "**Score `@s bs.link.l[h|v]`** : Rotation locale relative à l'entité parent."
+
+#: ../../../modules/link.md:190
+msgid ""
+"**State**: The entity is moved to maintain its local rotation relative to"
+" the parent entity on a single rotation axis."
+msgstr "**État** : L'entité est déplacée pour conserver sa rotation locale par rapport à l'entité parent sur un seul axe de rotation."
+
+#: ../../../modules/link.md:208 ../../../modules/link.md:578
+msgid ""
+"While chaining behavior functions is possible, it's not advisable because"
+" it involves repeatedly fetching coordinates, performing computations, "
+"and applying them. Instead, consider creating [custom behaviors](#custom-"
+"behaviors)."
+msgstr "Bien qu'enchaîner les fonctions de comportement soit possible, ce n'est pas conseillé car cela implique de récupérer répétitivement les coordonnées, d'effectuer des calculs et de les appliquer. Envisagez plutôt de créer des [comportements personnalisés](#custom-behaviors)."
+
+#: ../../../modules/link.md:215
+msgid "Keep Local Position"
+msgstr "Conserver la Position Locale"
+
+#: ../../../modules/link.md:219
+msgid "Keep the local position relative to the parent entity."
+msgstr "Conserver la position locale relative à l'entité parent."
+
+#: ../../../modules/link.md:224
+msgid ""
+"**Scores `@s bs.link.l[x,y,z]`**: Local position relative to the parent "
+"entity."
+msgstr "**Scores `@s bs.link.l[x,y,z]`** : Position locale relative à l'entité parent."
+
+#: ../../../modules/link.md:227
+msgid ""
+"**State**: The entity is moved to maintain its local position relative to"
+" the parent entity."
+msgstr "**État** : L'entité est déplacée pour conserver sa position locale par rapport à l'entité parent."
+
+#: ../../../modules/link.md:230
+msgid "*Example: Make armor stands lock to your rotation:*"
+msgstr "*Exemple : Verrouiller les supports d'armure à votre rotation :*"
+
+#: ../../../modules/link.md:240
+msgid "Local Position... 🥶 What's this?"
+msgstr "Position Locale... 🥶 Qu'est-ce que c'est ?"
+
+#: ../../../modules/link.md:243
+msgid ""
+"Unlike relative coordinates, this reference frame considers the entity's "
+"rotation. Therefore, when the parent entity rotates, the child entity "
+"rotates around it. For those familiar with Minecraft commands, local "
+"coordinates are available through the `^` symbol."
+msgstr "Contrairement aux coordonnées relatives, ce référentiel prend en compte la rotation de l'entité. Par conséquent, lorsque l'entité parent tourne, l'entité enfant tourne autour d'elle. Pour ceux familiers avec les commandes Minecraft, les coordonnées locales sont disponibles via le symbole `^`."
+
+#: ../../../modules/link.md:250
+msgid "Mirror Plane"
+msgstr "Miroir Plan"
+
+#: ../../../modules/link.md:254
+msgid "Mirror the position and rotation of an entity along a plane."
+msgstr "Refléter la position et la rotation d'une entité le long d'un plan."
+
+#: ../../../modules/link.md:264
+msgid ""
+"**State**: The entity is moved such as it mirrors the relative position "
+"and rotation of the parent entity."
+msgstr "**État** : L'entité est déplacée de manière à refléter la position relative et la rotation de l'entité parent."
+
+#: ../../../modules/link.md:267
+msgid ""
+"*Example: Make armor stands mirror your position and rotation along a "
+"plane:*"
+msgstr "*Exemple : Faire en sorte que les supports d'armure reflètent votre position et rotation le long d'un plan :*"
+
+#: ../../../modules/link.md:279 ../../../modules/link.md:308
+#: ../../../modules/link.md:405 ../../../modules/link.md:430
+#: ../../../modules/link.md:627 ../../../modules/link.md:648
+msgid "**Credits**: Aksiome"
+msgstr "**Crédits** : Aksiome"
+
+#: ../../../modules/link.md:283
+msgid "Mirror Point"
+msgstr "Miroir Point"
+
+#: ../../../modules/link.md:287
+msgid "Mirror the position and rotation of an entity around a given point."
+msgstr "Refléter la position et la rotation d'une entité autour d'un point donné."
+
+#: ../../../modules/link.md:292
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position of the "
+"point around which the entity is mirrored."
+msgstr "**Exécution `at <entité>` ou `positioned <x> <y> <z>`** : Position du point autour duquel l'entité est reflétée."
+
+#: ../../../modules/link.md:295
+msgid ""
+"**State**: The entity is moved such as it mirrors the position and "
+"rotation of the parent entity around the given point."
+msgstr "**État** : L'entité est déplacée de manière à refléter la position et la rotation de l'entité parent autour du point donné."
+
+#: ../../../modules/link.md:298
+msgid ""
+"*Example: Make armor stands mirror your position and rotation around 0 0 "
+"0:*"
+msgstr "*Exemple : Faire en sorte que les supports d'armure reflètent votre position et rotation autour de 0 0 0 :*"
+
+#: ../../../modules/link.md:312
+msgid "Relationships"
+msgstr "Relations"
+
+#: ../../../modules/link.md
+msgid "As Children"
+msgstr "En tant qu'Enfants"
+
+#: ../../../modules/link.md:320
+msgid "Execute a command as child entities linked to the executing parent entity."
+msgstr "Exécuter une commande en tant qu'entités enfants liées à l'entité parent exécutante."
+
+#: ../../../modules/link.md:323 ../../../modules/link.md:367
+msgid ""
+"**Execution `as <entities>`**: Execute as parent entities that must have "
+"valid child entities."
+msgstr "**Exécution `as <entités>`** : Exécuter en tant qu'entités parents qui doivent avoir des entités enfants valides."
+
+#: ../../../modules/link.md:326 ../../../modules/link.md:370
+msgid "**Return**: Fails if the execution entity has no linked child entities."
+msgstr "**Retour** : Échoue si l'entité d'exécution n'a pas d'entités enfants liées."
+
+#: ../../../modules/link.md:329
+msgid "*Example: Execute a command as all armor stand children:*"
+msgstr "*Exemple : Exécuter une commande en tant que tous les enfants supports d'armure :*"
+
+#: ../../../modules/link.md
+msgid "As Parent"
+msgstr "En tant que Parent"
+
+#: ../../../modules/link.md:342
+msgid ""
+"Execute a command as the parent entity linked to the executing child "
+"entity."
+msgstr "Exécuter une commande en tant qu'entité parent liée à l'entité enfant exécutante."
+
+#: ../../../modules/link.md:345 ../../../modules/link.md:389
+msgid ""
+"**Execution `as <entities>`**: Execute as child entities that must have a"
+" valid parent entity."
+msgstr "**Exécution `as <entités>`** : Exécuter en tant qu'entités enfants qui doivent avoir une entité parent valide."
+
+#: ../../../modules/link.md:348 ../../../modules/link.md:392
+msgid "**Return**: Fails if the execution entity has no linked parent entity."
+msgstr "**Retour** : Échoue si l'entité d'exécution n'a pas d'entité parent liée."
+
+#: ../../../modules/link.md:351
+msgid "*Example: Execute a command as the parent of an armor stand:*"
+msgstr "*Exemple : Exécuter une commande en tant que parent d'un support d'armure :*"
+
+#: ../../../modules/link.md
+msgid "At Children"
+msgstr "Aux Enfants"
+
+#: ../../../modules/link.md:364
+msgid ""
+"Execute a command at the location of child entities linked to the "
+"executing parent entity."
+msgstr "Exécuter une commande à l'emplacement des entités enfants liées à l'entité parent exécutante."
+
+#: ../../../modules/link.md:373
+msgid "*Example: Execute a command at the location of all armor stand children:*"
+msgstr "*Exemple : Exécuter une commande à l'emplacement de tous les enfants supports d'armure :*"
+
+#: ../../../modules/link.md
+msgid "At Parent"
+msgstr "Au Parent"
+
+#: ../../../modules/link.md:386
+msgid ""
+"Execute a command at the location of the parent entity linked to the "
+"executing child entity."
+msgstr "Exécuter une commande à l'emplacement de l'entité parent liée à l'entité enfant exécutante."
+
+#: ../../../modules/link.md:395
+msgid ""
+"*Example: Execute a command at the location of the parent of an armor "
+"stand:*"
+msgstr "*Exemple : Exécuter une commande à l'emplacement du parent d'un support d'armure :*"
+
+#: ../../../modules/link.md:409
+msgid "Remove Link"
+msgstr "Supprimer le Lien"
+
+#: ../../../modules/link.md:413
+msgid ""
+"Removes an existing link between entities. When executed on a parent "
+"entity, it removes all child entities from the link. It does not reset "
+"the `bs.id` of entities."
+msgstr "Supprime un lien existant entre entités. Lorsqu'exécuté sur une entité parent, il supprime toutes les entités enfants du lien. Il ne réinitialise pas le `bs.id` des entités."
+
+#: ../../../modules/link.md:416
+msgid ""
+"**Execution `as <entities>`**: Child or parent entities that you want to "
+"unlink."
+msgstr "**Exécution `as <entités>`** : Entités enfants ou parents que vous souhaitez délier."
+
+#: ../../../modules/link.md:419
+msgid "**Scores `<children> bs.link.[...]`**: Resets all link-related scores."
+msgstr "**Scores `<enfants> bs.link.[...]`** : Réinitialise tous les scores liés au lien."
+
+#: ../../../modules/link.md:422
+msgid "*Example: Unlink the nearest armor stand from a sheep:*"
+msgstr "*Exemple : Délier le support d'armure le plus proche d'un mouton :*"
+
+#: ../../../modules/link.md:434
+msgid "Reverse Behaviors"
+msgstr "Comportements Inversés"
+
+#: ../../../modules/link.md:442
+msgid ""
+"Determine the rotation and movement made by the parent entity, and "
+"reproduce them in the opposite direction."
+msgstr "Déterminer la rotation et le mouvement effectués par l'entité parent, et les reproduire dans la direction opposée."
+
+#: ../../../modules/link.md:452
+msgid ""
+"**State**: The entity is moved and rotated opposingly to the movements "
+"and rotations of the parent entity."
+msgstr "**État** : L'entité est déplacée et pivotée de manière opposée aux mouvements et rotations de l'entité parent."
+
+#: ../../../modules/link.md:455
+msgid "*Example: Make armor stands invert your moves and rotations:*"
+msgstr "*Exemple : Faire en sorte que les supports d'armure inversent vos mouvements et rotations :*"
+
+#: ../../../modules/link.md:470
+msgid ""
+"Determine the movement made by the parent entity, and reproduce it in the"
+" opposite direction."
+msgstr "Déterminer le mouvement effectué par l'entité parent, et le reproduire dans la direction opposée."
+
+#: ../../../modules/link.md:478
+msgid ""
+"**State**: The entity is moved opposingly to the movements of the parent "
+"entity."
+msgstr "**État** : L'entité est déplacée de manière opposée aux mouvements de l'entité parent."
+
+#: ../../../modules/link.md:481
+msgid "*Example: Make armor stands do the opposite of your moves:*"
+msgstr "*Exemple : Faire en sorte que les supports d'armure fassent l'opposé de vos mouvements :*"
+
+#: ../../../modules/link.md:496
+msgid ""
+"Determine the rotation performed by the parent entity, and reproduce it "
+"in the opposite direction."
+msgstr "Déterminer la rotation effectuée par l'entité parent, et la reproduire dans la direction opposée."
+
+#: ../../../modules/link.md:504 ../../../modules/link.md:560
+msgid ""
+"**State**: The entity is rotated opposingly to the rotations of the "
+"parent entity."
+msgstr "**État** : L'entité est pivotée de manière opposée aux rotations de l'entité parent."
+
+#: ../../../modules/link.md:507
+msgid "*Example: Make armor stands invert your rotations:*"
+msgstr "*Exemple : Faire en sorte que les supports d'armure inversent vos rotations :*"
+
+#: ../../../modules/link.md:522
+msgid ""
+"Determine the movement made by the parent entity along a single axis, and"
+" reproduce it in the opposite direction."
+msgstr "Déterminer le mouvement effectué par l'entité parent le long d'un seul axe, et le reproduire dans la direction opposée."
+
+#: ../../../modules/link.md:530
+msgid ""
+"**State**: The entity is moved opposingly to the movements of the parent "
+"entity along a single axis."
+msgstr "**État** : L'entité est déplacée de manière opposée aux mouvements de l'entité parent le long d'un seul axe."
+
+#: ../../../modules/link.md:533
+msgid "*Example: Make armor stands do the opposite of your moves along an axis:*"
+msgstr "*Exemple : Faire en sorte que les supports d'armure fassent l'opposé de vos mouvements le long d'un axe :*"
+
+#: ../../../modules/link.md:552
+msgid ""
+"Determine the rotation performed by the parent entity along a rotation "
+"axis, and reproduce it in the opposite direction."
+msgstr "Déterminer la rotation effectuée par l'entité parent le long d'un axe de rotation, et la reproduire dans la direction opposée."
+
+#: ../../../modules/link.md:563
+msgid "*Example: Make armor stands invert your rotations along a rotation axis:*"
+msgstr "*Exemple : Faire en sorte que les supports d'armure inversent vos rotations le long d'un axe de rotation :*"
+
+#: ../../../modules/link.md:585
+msgid "Update Link"
+msgstr "Mettre à jour le Lien"
+
+#: ../../../modules/link.md:589
+msgid "Update scores that represent the link between an entity and its parent."
+msgstr "Mettre à jour les scores qui représentent le lien entre une entité et son parent."
+
+#: ../../../modules/link.md:600
+msgid "*Example: Update armor stands link:*"
+msgstr "*Exemple : Mettre à jour le lien des supports d'armure :*"
+
+#: ../../../modules/link.md:608
+msgid ""
+"You usually don't need to call this function while using others. However,"
+" if you move a child entity and want to maintain the new connection it "
+"forms with the parent, updating the link is necessary to prevent changes "
+"from being reversed."
+msgstr "Vous n'avez généralement pas besoin d'appeler cette fonction lors de l'utilisation d'autres. Cependant, si vous déplacez une entité enfant et souhaitez maintenir la nouvelle connexion qu'elle forme avec le parent, la mise à jour du lien est nécessaire pour empêcher l'inversion des modifications."
+
+#: ../../../modules/link.md:615
+msgid "👁️ Predicates"
+msgstr "👁️ Prédicats"
+
+#: ../../../modules/link.md:617
+msgid "You can find below all predicates available in this module."
+msgstr "Vous pouvez trouver ci-dessous tous les prédicats disponibles dans ce module."
+
+#: ../../../modules/link.md:621
+msgid "Has Link"
+msgstr "Possède un Lien"
+
+#: ../../../modules/link.md:623
+msgid "**`bs.link:has_link`**"
+msgstr "**`bs.link:has_link`**"
+
+#: ../../../modules/link.md:625
+msgid "Determine if an entity has a `bs.link.to` score."
+msgstr "Déterminer si une entité possède un score `bs.link.to`."
+
+#: ../../../modules/link.md:631
+msgid "Link Equal"
+msgstr "Lien Égal"
+
+#: ../../../modules/link.md:635
+msgid "Find an entity that has the same `bs.link.to` as the input value."
+msgstr "Trouver une entité qui possède le même `bs.link.to` que la valeur d'entrée."
+
+#: ../../../modules/link.md:638
+msgid "**Score `$link.to bs.in`**: Value to check against."
+msgstr "**Score `$link.to bs.in`** : Valeur à vérifier."
+
+#: ../../../modules/link.md:641
+msgid "*Example: Find the entity that has a `bs.link.to` equal to 1:*"
+msgstr "*Exemple : Trouver l'entité qui possède un `bs.link.to` égal à 1 :*"
+
+#: ../../../modules/link.md:653
+msgid "🎓 Custom Behaviors"
+msgstr "🎓 Comportements Personnalisés"
+
+#: ../../../modules/link.md:655
+msgid ""
+"This module allows you to combine multiple behaviors to create your very "
+"own optimized custom one."
+msgstr "Ce module vous permet de combiner plusieurs comportements pour créer votre propre comportement personnalisé optimisé."
+
+#: ../../../modules/link.md:659
+msgid ""
+"To create a new behavior, you first need to create a new function tag. "
+"The tag must start with `#bs.link:behaviors/setup` and end with "
+"`#bs.link:behaviors/apply`. Between those 2 functions you are free to use"
+" any behaviors that are provided inside the `#bs.link:behaviors` folder."
+msgstr ""
+"Pour créer un nouveau comportement, vous devez d'abord créer une nouvelle balise de fonction. "
+"La balise doit commencer par `#bs.link:behaviors/setup` et se terminer par "
+"`#bs.link:behaviors/apply`. Entre ces 2 fonctions, vous êtes libre d'utiliser "
+"tous les comportements fournis dans le dossier `#bs.link:behaviors`."
+
+#: ../../../modules/link.md:661
+msgid ""
+"*Example: This is how `#bs.link:mirror_x_plane` is implemented inside "
+"bookshelf:*"
+msgstr "*Exemple : Voici comment `#bs.link:mirror_x_plane` est implémenté dans bookshelf :*"
+
+#: ../../../_templates/comments.md:4
+msgid "**💬 Did it help you?**"
+msgstr "**💬 Cela vous a-t-il aidé ?**"
+
+#: ../../../_templates/comments.md:6
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "N'hésitez pas à laisser vos questions et commentaires ci-dessous !"

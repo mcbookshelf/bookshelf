@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -12,6 +12,8 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+
+$execute if entity @s[tag=bs.move.flag.$(y)] run return 0
 
 # get cube bounding box coordinates
 execute store result score #i bs.ctx run scoreboard players operation #x bs.ctx = #move.x bs.data

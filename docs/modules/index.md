@@ -1,5 +1,5 @@
 ---
-html_theme.sidebar_secondary.remove: true
+hide-sidebar-secondary: true
 ---
 
 # 🧩 Modules
@@ -28,6 +28,7 @@ Bookshelf is designed with modularity in mind. Features that serve a common purp
 
 bitwise
 block
+collection
 color
 environment
 generation

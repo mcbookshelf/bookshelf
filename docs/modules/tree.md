@@ -14,7 +14,7 @@ You can find below below all structures available in this module.
 
 ### Birch
 
-::::{grid} 3
+::::{grid} 2 3 3 3
 
 :::{grid-item}
 
@@ -92,7 +92,7 @@ You can find below below all structures available in this module.
 
 ### Cypress
 
-::::{grid} 3
+::::{grid} 2 3 3 3
 
 :::{grid-item}
 
@@ -171,7 +171,7 @@ You can find below below all structures available in this module.
 
 ### Dark Oak
 
-::::{grid} 3
+::::{grid} 2 3 3 3
 
 :::{grid-item}
 
@@ -250,7 +250,7 @@ You can find below below all structures available in this module.
 
 ### Dead Spruce
 
-::::{grid} 3
+::::{grid} 2 3 3 3
 
 :::{grid-item}
 
@@ -329,7 +329,7 @@ You can find below below all structures available in this module.
 
 ### Exotic
 
-::::{grid} 3
+::::{grid} 2 3 3 3
 
 :::{grid-item}
 
@@ -408,7 +408,7 @@ You can find below below all structures available in this module.
 
 ### Fir
 
-::::{grid} 3
+::::{grid} 2 3 3 3
 
 :::{grid-item}
 
@@ -487,7 +487,7 @@ You can find below below all structures available in this module.
 
 ### Jungle
 
-::::{grid} 3
+::::{grid} 2 3 3 3
 
 :::{grid-item}
 
@@ -566,7 +566,7 @@ You can find below below all structures available in this module.
 
 ### Mushroom
 
-::::{grid} 3
+::::{grid} 2 3 3 3
 
 :::{grid-item}
 
@@ -645,7 +645,7 @@ You can find below below all structures available in this module.
 
 ### Oak
 
-::::{grid} 3
+::::{grid} 2 3 3 3
 
 :::{grid-item}
 
@@ -724,7 +724,7 @@ You can find below below all structures available in this module.
 
 ### Palm
 
-::::{grid} 3
+::::{grid} 2 3 3 3
 
 :::{grid-item}
 

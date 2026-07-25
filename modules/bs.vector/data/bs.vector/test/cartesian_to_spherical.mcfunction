@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -12,9 +12,6 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-
-await entity B5-0-0-0-1
-await entity B5-0-0-0-2
 
 scoreboard players set $vector.cartesian_to_spherical.0 bs.in 577
 scoreboard players set $vector.cartesian_to_spherical.1 bs.in 577

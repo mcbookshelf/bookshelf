@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -17,7 +17,7 @@ data modify storage bs:data raycast set value { \
   sx: 1, \
   sy: 1, \
   sz: 1, \
-  blocks: true, \
+  blocks: "function #bs.hitbox:callback/get_block_placement", \
   entities: false, \
   max_distance: 16.0, \
   ignored_blocks: "#bs.hitbox:intangible", \

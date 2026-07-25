@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -24,3 +24,5 @@ scoreboard players set 3 bs.const 3
 scoreboard players set 4 bs.const 4
 scoreboard players set 6 bs.const 6
 scoreboard players set 1000 bs.const 1000
+
+data modify storage bs:const spline.pad set value [[],[]]

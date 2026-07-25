@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -12,6 +12,8 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+
+tag @s add bs.raycast.checked
 
 execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run return run function bs.raycast:check/entity/custom
 
@@ -27,7 +29,7 @@ scoreboard players operation #h bs.ctx *= #s bs.ctx
 scoreboard players operation #d bs.ctx *= #s bs.ctx
 
 # run size-based collision check
-execute if entity @s[type=#bs.hitbox:is_shaped] run return run function bs.raycast:check/entity/size
+execute if entity @s[type=#bs.hitbox:is_shaped] run return run function bs.raycast:check/entity/aabb
 scoreboard players operation #raycast.ry bs.data += #h bs.ctx
-function bs.raycast:check/entity/size
+function bs.raycast:check/entity/aabb
 scoreboard players operation #raycast.ry bs.data -= #h bs.ctx

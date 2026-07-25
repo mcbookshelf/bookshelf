@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"PO-Revision-Date: 2025-01-17 10:00+0100\n"
+"Last-Translator: Claude AI <noreply@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/sidebar.md:1 b381322123b44e4b9b8f80217d4392d2
+msgid "📰 Sidebar"
+msgstr "📰 Barre latérale"
+
+#: ../../modules/sidebar.md:3 28041dc47b424bedb2e0d483d4c410c2
+msgid "**`#bs.sidebar:help`**"
+msgstr "**`#bs.sidebar:help`**"
+
+#: ../../modules/sidebar.md:5 03bb652b2e80442089cd5d4072390eaf
+msgid ""
+"Create visually appealing and dynamic sidebars using the scoreboard "
+"system."
+msgstr "Créez des barres latérales visuellement attrayantes et dynamiques en utilisant le système de tableau de scores."
+
+#: ../../modules/sidebar.md:9 207885c48ef848d0880d3805707d4392
+msgid "🔧 Functions"
+msgstr "🔧 Fonctions"
+
+#: ../../modules/sidebar.md:11 987c0a3ca9524b5eb6324b0f60a1e5c1
+msgid "You can find below all functions available in this module."
+msgstr "Vous pouvez trouver ci-dessous toutes les fonctions disponibles dans ce module."
+
+#: ../../modules/sidebar.md:15 36ce40c208474cc9a81d9074fd5464e2
+msgid "Create"
+msgstr "Créer"
+
+#: ../../modules/sidebar.md:19 26d96442a5904cecb608a33a373f0239
+msgid "Create and register a new sidebar."
+msgstr "Crée et enregistre une nouvelle barre latérale."
+
+#: ../../modules/sidebar.md:21 ../../modules/sidebar.md:80
+#: 8aafa8a262df45a3a0064e686d8ae7b9 b0d6a70df36247378196f5b347ee592a
+msgid "Inputs"
+msgstr "Entrées"
+
+#: ../../modules/sidebar.md:22 ../../modules/sidebar.md:81
+#: beb3f472c235495a81d2cc45c314fd88 cf7048daaa1944db8d023d57207d7867
+msgid "**Function macro**:"
+msgstr "**Macro de fonction** :"
+
+#: ../../modules/sidebar.md:32 869faebf579542eb95fc921f587039b0
+msgid "*Example: Create and display a new sidebar with left-aligned text:*"
+msgstr "*Exemple : Créer et afficher une nouvelle barre latérale avec du texte aligné à gauche :*"
+
+#: ../../modules/sidebar.md:51 f4255e949aad43e1869e9592a0c36d14
+msgid "*Example: Create and display a new sidebar with right-aligned text:*"
+msgstr "*Exemple : Créer et afficher une nouvelle barre latérale avec du texte aligné à droite :*"
+
+#: ../../modules/sidebar.md:70 ../../modules/sidebar.md:94
+#: 97d55fa624f1493fb2ccc585ec3ad35a f6bbf1f94fa2472199bee8cdcb627a0e
+msgid "**Credits**: Aksiome"
+msgstr "**Crédits** : Aksiome"
+
+#: ../../modules/sidebar.md:74 2caf9866b68d435d86fe005c27cf3b2a
+msgid "Refresh"
+msgstr "Actualiser"
+
+#: ../../modules/sidebar.md:78 bc0ed3275f8c4aa9b4d8afafeaa11bff
+msgid "Update dynamic parts of the sidebar."
+msgstr "Met à jour les parties dynamiques de la barre latérale."
+
+#: ../../modules/sidebar.md:88 c3af2829e1544b3e93331c00d92680a7
+msgid "*Example: Refresh a sidebar:*"
+msgstr "*Exemple : Actualiser une barre latérale :*"
+
+#: ../../_templates/comments.md:4 7511724ab46f4d7c8a3e25948a1814b2
+msgid "**💬 Did it help you?**"
+msgstr "**💬 Cela vous a-t-il aidé ?**"
+
+#: ../../_templates/comments.md:6 290688abf5ca4644bb61c13ca08525b0
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "N'hésitez pas à laisser vos questions et commentaires ci-dessous !"
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` Arguments"
+
+#, python-brace-format
+msgid "{nbt}`string` **objective**: An objective used for the sidebar."
+msgstr "{nbt}`string` **objective** : Un objectif utilisé pour la barre latérale."
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **display_name**: Displayed objective"
+" name. Must be a valid SNBT "
+"text component."
+msgstr "{nbt}`string` **display_name** : Nom d'objectif affiché. Doit être un composant de texte SNBT valide."
+
+#, python-brace-format
+msgid "{nbt}`list` **contents**: Lines displayed on the sidebar."
+msgstr "{nbt}`list` **contents** : Lignes affichées sur la barre latérale."
+
+#, python-brace-format
+msgid ""
+"{nbt}`list` {nbt}`string`: Must either be "
+"a valid SNBT text component or an"
+" array with two SNBT text components"
+" for the left and right sides."
+msgstr "{nbt}`list` {nbt}`string` : Doit être soit un composant de texte SNBT valide ou un tableau avec deux composants de texte SNBT pour les côtés gauche et droit."
+
+#, python-brace-format
+msgid "{nbt}`string` **objective**: The objective for the sidebar to refresh."
+msgstr "{nbt}`string` **objective** : L'objectif de la barre latérale à actualiser."

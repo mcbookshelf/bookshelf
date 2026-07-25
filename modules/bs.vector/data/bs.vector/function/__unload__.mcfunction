@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -21,3 +21,5 @@ scoreboard objectives remove bs.in
 scoreboard objectives remove bs.out
 scoreboard objectives remove bs.const
 scoreboard objectives remove bs.ctx
+
+data remove storage bs:data vector

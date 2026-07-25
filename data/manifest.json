@@ -4,9 +4,9 @@
       "id": "bs.bitwise",
       "name": "Bitwise",
       "slug": "bookshelf-bitwise",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.bitwise/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.bitwise/README.md",
-      "description": "Bookshelf bitwise operations module, offering tools for precise binary data manipulation in datapacks.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.bitwise/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.bitwise/README.md",
+      "description": "Perform bitwise AND, OR, XOR, and NOT operations in Minecraft datapacks. Useful for flags, permissions, and compact data storage.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html",
       "kind": "data_pack",
       "tags": [
@@ -137,15 +137,114 @@
       "id": "bs.block",
       "name": "Block",
       "slug": "bookshelf-block",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.block/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.block/README.md",
-      "description": "Bookshelf block management module, enabling id and state transformations.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.block/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.block/README.md",
+      "description": "Get and set block IDs and states in Minecraft datapacks. Mix block properties and produce sounds, particles, display blocks, and more from stored data.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html",
       "kind": "data_pack",
       "tags": [
         "runtime"
       ],
+      "weak_dependencies": [
+        "bs.log"
+      ],
       "features": [
+        {
+          "id": "bs.block:is_conductive",
+          "kind": "predicate",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-conductive",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "bs.block:is_powered",
+          "kind": "predicate",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-powered",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "bs.block:is_spawnable",
+          "kind": "predicate",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-spawnable",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "bs.block:is_strongly_powered",
+          "kind": "predicate",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-strongly-powered",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "bs.block:is_weakly_powered",
+          "kind": "predicate",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-weakly-powered",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/30",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "#bs.block:can_occlude",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#can-occlude",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
         {
           "id": "#bs.block:has_state",
           "kind": "block_tag",
@@ -158,15 +257,32 @@
             "minecraft_version": "1.20.5"
           },
           "updated": {
-            "date": "2025/03/10",
-            "minecraft_version": "1.21.4"
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:ignited_by_lava",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#ignited_by_lava",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
           }
         },
         {
           "id": "#bs.block:emit_block_particle",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#emit-particle",
           "authors": [
+            "Aksiome",
             "theogiraudet"
           ],
           "created": {
@@ -174,8 +290,8 @@
             "minecraft_version": "1.21.1"
           },
           "updated": {
-            "date": "2024/10/09",
-            "minecraft_version": "1.21.1"
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
           }
         },
         {
@@ -195,25 +311,6 @@
           }
         },
         {
-          "id": "#bs.block:fill_random",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#fill",
-          "authors": [
-            "Aksiome"
-          ],
-          "contributors": [
-            "SBtree-bit"
-          ],
-          "created": {
-            "date": "2024/06/16",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2025/07/09",
-            "minecraft_version": "1.21.5"
-          }
-        },
-        {
           "id": "#bs.block:fill_type",
           "kind": "function_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#fill",
@@ -230,9 +327,25 @@
           }
         },
         {
+          "id": "#bs.block:get_blast_resistance",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
           "id": "#bs.block:get_block",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-block",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -242,14 +355,126 @@
             "minecraft_version": "1.20.4"
           },
           "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.block:get_friction",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_hardness",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_instrument",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_jump_factor",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_luminance",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_sounds",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:get_speed_factor",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-extras",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
           }
         },
         {
           "id": "#bs.block:get_type",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#get-block",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -259,8 +484,56 @@
             "minecraft_version": "1.20.4"
           },
           "updated": {
-            "date": "2024/01/15",
-            "minecraft_version": "1.20.4"
+            "date": "2025/09/12",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:is_touching_power",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-touching-power",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/31",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/31",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "#bs.block:is_touching_strong_power",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-touching-power",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/31",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/31",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "#bs.block:is_touching_weak_power",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#is-touching-power",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/10/31",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/10/31",
+            "minecraft_version": "1.21.10"
           }
         },
         {
@@ -282,7 +555,7 @@
         {
           "id": "#bs.block:lookup_item",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-type",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#lookup-block",
           "authors": [
             "Aksiome"
           ],
@@ -298,7 +571,7 @@
         {
           "id": "#bs.block:lookup_type",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#manage-type",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#lookup-block",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -384,19 +657,88 @@
           }
         },
         {
-          "id": "#bs.block:play_block_sound",
+          "id": "#bs.block:play_break_sound",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
           "authors": [
+            "Aksiome",
             "theogiraudet"
           ],
           "created": {
-            "date": "2025/01/25",
-            "minecraft_version": "1.21.4"
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
           },
           "updated": {
-            "date": "2025/01/25",
-            "minecraft_version": "1.21.4"
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:play_fall_sound",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:play_hit_sound",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:play_place_sound",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          }
+        },
+        {
+          "id": "#bs.block:play_step_sound",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#play-sound",
+          "authors": [
+            "Aksiome",
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2025/09/14",
+            "minecraft_version": "1.21.8"
           }
         },
         {
@@ -450,7 +792,7 @@
         {
           "id": "#bs.block:set_block",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#set",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#set-block",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -467,7 +809,7 @@
         {
           "id": "#bs.block:set_type",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#set",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#set-block",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -500,7 +842,7 @@
         {
           "id": "#bs.block:spawn_block_display",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#spawn-entity",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -517,7 +859,7 @@
         {
           "id": "#bs.block:spawn_falling_block",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#spawn-entity",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -534,7 +876,7 @@
         {
           "id": "#bs.block:spawn_solid_block_display",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#produce",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html#spawn-entity",
           "authors": [
             "Aksiome",
             "theogiraudet"
@@ -551,12 +893,843 @@
       ]
     },
     {
+      "id": "bs.collection",
+      "name": "Collection",
+      "slug": "bookshelf-collection",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.collection/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.collection/README.md",
+      "description": "Work with collections in Minecraft datapacks. Map, filter, reduce, find, and transform elements with functional operations.",
+      "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html",
+      "kind": "data_pack",
+      "tags": [
+        "runtime"
+      ],
+      "features": [
+        {
+          "id": "#bs.collection:all",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#validation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:any",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#validation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:chunk",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:concat",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:contains",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#validation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:count",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:difference",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:distinct",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:drop",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#intermediate-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:drop_while",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#filtering-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/30",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/30",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:filter",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#filtering-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:find",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#validation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:find_last",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#filtering-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:flat_map",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#transformation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:flatten",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:flatten_deep",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#transformation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:fold",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:fold_right",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:for_each",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#iteration-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:generate",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#generation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:generate_while",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#generation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:iaverage",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:imax",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:imin",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:index_of",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:intersect",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:is_empty",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#search-check-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:isum",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:last_index_of",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:map",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#transformation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:none",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#validation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:partition",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#filtering-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:peek",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#iteration-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:range",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#generation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:reduce",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:reduce_right",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:repeat",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#generation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:reverse",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/27",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:scale",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#transformation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:scan_fold",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:scan_fold_right",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:scan_reduce",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:scan_reduce_right",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#aggregation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:slice",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:sliding",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:symmetric_difference",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:take",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#intermediate-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/29",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:take_while",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#filtering-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/30",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/30",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:tap",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#iteration-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:union",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#utility-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        },
+        {
+          "id": "#bs.collection:zip",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html#transformation-operations",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          },
+          "updated": {
+            "date": "2025/12/31",
+            "minecraft_version": "1.21.11"
+          }
+        }
+      ]
+    },
+    {
       "id": "bs.color",
       "name": "Color",
       "slug": "bookshelf-color",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.color/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.color/README.md",
-      "description": "Bookshelf color module, facilitating seamless conversion between various color formats.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.color/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.color/README.md",
+      "description": "Convert colors between RGB, hexadecimal, and integer formats in Minecraft datapacks. Useful for dynamic text colors and visual effects.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html",
       "kind": "data_pack",
       "tags": [
@@ -671,9 +1844,9 @@
       "id": "bs.dump",
       "name": "Dump",
       "slug": "bookshelf-dump",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.dump/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.dump/README.md",
-      "description": "Bookshelf debugging tool that outputs variable contents directly to chat.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.dump/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.dump/README.md",
+      "description": "Debug Minecraft datapacks by printing scoreboard values, NBT data, and storage contents to chat with a simple, unified syntax.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/dump.html",
       "kind": "data_pack",
       "tags": [
@@ -692,8 +1865,8 @@
             "minecraft_version": "1.20.4"
           },
           "updated": {
-            "date": "2025/05/12",
-            "minecraft_version": "1.21.5"
+            "date": "2026/03/15",
+            "minecraft_version": "26.1"
           }
         }
       ]
@@ -702,9 +1875,9 @@
       "id": "bs.environment",
       "name": "Environment",
       "slug": "bookshelf-environment",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.environment/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.environment/README.md",
-      "description": "Bookshelf module providing comprehensive access to weather and biome properties.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.environment/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.environment/README.md",
+      "description": "Access biome and weather data in Minecraft datapacks. Get the current biome, check temperature, and detect rain or snow at any position.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html",
       "kind": "data_pack",
       "tags": [
@@ -771,8 +1944,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -787,8 +1960,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -803,8 +1976,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -819,8 +1992,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -835,8 +2008,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -851,7 +2024,7 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
+            "date": "2026/02/27",
             "minecraft_version": "1.21.7"
           }
         },
@@ -883,8 +2056,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -899,7 +2072,7 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
+            "date": "2026/02/27",
             "minecraft_version": "1.21.7"
           }
         },
@@ -931,8 +2104,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -947,8 +2120,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -963,8 +2136,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -979,8 +2152,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/16",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1002,7 +2175,7 @@
         {
           "id": "#bs.environment:get_current_moon_angle",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#get-celestial-movement",
           "authors": [
             "theogiraudet"
           ],
@@ -1011,14 +2184,14 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/11",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
           "id": "#bs.environment:get_current_sun_angle",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#get-celestial-movement",
           "authors": [
             "theogiraudet"
           ],
@@ -1027,14 +2200,14 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/11",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
           "id": "#bs.environment:get_moon_angle",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#get-celestial-movement",
           "authors": [
             "theogiraudet"
           ],
@@ -1059,14 +2232,14 @@
             "minecraft_version": "1.20.5"
           },
           "updated": {
-            "date": "2025/05/13",
-            "minecraft_version": "1.20.5"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
           "id": "#bs.environment:get_sun_angle",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#get-celestial-movement",
           "authors": [
             "theogiraudet"
           ],
@@ -1099,7 +2272,7 @@
         {
           "id": "#bs.environment:look_at_moon",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#look-at-celestial-object",
           "authors": [
             "theogiraudet"
           ],
@@ -1108,14 +2281,14 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/11",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         },
         {
           "id": "#bs.environment:look_at_sun",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#celestial-movement",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html#look-at-celestial-object",
           "authors": [
             "theogiraudet"
           ],
@@ -1124,8 +2297,8 @@
             "minecraft_version": "1.21.7"
           },
           "updated": {
-            "date": "2025/07/11",
-            "minecraft_version": "1.21.7"
+            "date": "2026/02/27",
+            "minecraft_version": "26.1"
           }
         }
       ]
@@ -1134,64 +2307,49 @@
       "id": "bs.generation",
       "name": "Generation",
       "slug": "bookshelf-generation",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.generation/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.generation/README.md",
-      "description": "Bookshelf world manipulation module, useful for iterating over blocks and creating structures or landscapes.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.generation/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.generation/README.md",
+      "description": "Apply functions across world regions in Minecraft datapacks. Iterate over 2D/3D shapes with lag-free tick spreading and custom callbacks.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html",
       "kind": "data_pack",
       "tags": [
         "runtime"
       ],
-      "dependencies": [
+      "weak_dependencies": [
+        "bs.block",
         "bs.random"
       ],
       "features": [
         {
-          "id": "#bs.generation:gen_fractal_shape_2d",
+          "id": "#bs.generation:on_cuboid",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#shape-2d",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#on-cuboid",
           "authors": [
             "Aksiome"
           ],
           "created": {
-            "date": "2024/09/09",
-            "minecraft_version": "1.21"
+            "date": "2026/02/15",
+            "minecraft_version": "26.1"
           },
           "updated": {
-            "date": "2024/09/09",
-            "minecraft_version": "1.21"
+            "date": "2026/02/15",
+            "minecraft_version": "26.1"
           }
         },
         {
-          "id": "#bs.generation:gen_shape_2d",
+          "id": "#bs.generation:on_rectangle",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#shape-2d",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#on-rectangle",
           "authors": [
             "Aksiome"
           ],
           "created": {
-            "date": "2024/09/09",
-            "minecraft_version": "1.21"
+            "date": "2026/02/15",
+            "minecraft_version": "26.1"
           },
           "updated": {
-            "date": "2024/09/09",
-            "minecraft_version": "1.21"
-          }
-        },
-        {
-          "id": "#bs.generation:gen_simplex_shape_2d",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html#shape-2d",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/09",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2024/09/09",
-            "minecraft_version": "1.21"
+            "date": "2026/02/15",
+            "minecraft_version": "26.1"
           }
         }
       ]
@@ -1200,9 +2358,9 @@
       "id": "bs.health",
       "name": "Health",
       "slug": "bookshelf-health",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.health/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.health/README.md",
-      "description": "Bookshelf health module for efficiently healing and damaging entities.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.health/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.health/README.md",
+      "description": "Manage entity health in Minecraft datapacks: heal, damage, get/set values, modify max health, and assign lifetimes with death callbacks.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/health.html",
       "kind": "data_pack",
       "tags": [
@@ -1331,13 +2489,16 @@
       "id": "bs.hitbox",
       "name": "Hitbox",
       "slug": "bookshelf-hitbox",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.hitbox/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.hitbox/README.md",
-      "description": "Bookshelf module for retrieving and checking the hitboxes of blocks and entities.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.hitbox/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.hitbox/README.md",
+      "description": "Get precise hitbox data for blocks and entities in Minecraft datapacks. Check collisions and access both collision and interaction shapes.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html",
       "kind": "data_pack",
       "tags": [
         "runtime"
+      ],
+      "weak_dependencies": [
+        "bs.log"
       ],
       "features": [
         {
@@ -1354,22 +2515,6 @@
           "updated": {
             "date": "2025/03/10",
             "minecraft_version": "1.21.4"
-          }
-        },
-        {
-          "id": "#bs.hitbox:has_offset",
-          "kind": "block_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
           }
         },
         {
@@ -1416,8 +2561,24 @@
             "minecraft_version": "1.21"
           },
           "updated": {
-            "date": "2025/03/10",
-            "minecraft_version": "1.21.4"
+            "date": "2026/03/15",
+            "minecraft_version": "26.1"
+          }
+        },
+        {
+          "id": "#bs.hitbox:is_fluid",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/11/11",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/11/11",
+            "minecraft_version": "1.21.10"
           }
         },
         {
@@ -1434,6 +2595,38 @@
           "updated": {
             "date": "2025/03/10",
             "minecraft_version": "1.21.4"
+          }
+        },
+        {
+          "id": "#bs.hitbox:is_waterloggable",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/11/11",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/11/11",
+            "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "#bs.hitbox:none",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2025/11/11",
+            "minecraft_version": "1.21.10"
+          },
+          "updated": {
+            "date": "2025/11/11",
+            "minecraft_version": "1.21.10"
           }
         },
         {
@@ -1480,8 +2673,8 @@
             "minecraft_version": "1.21.2"
           },
           "updated": {
-            "date": "2024/10/28",
-            "minecraft_version": "1.21.2"
+            "date": "2026/03/29",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1498,22 +2691,6 @@
           "updated": {
             "date": "2025/05/18",
             "minecraft_version": "1.21.5"
-          }
-        },
-        {
-          "id": "#bs.hitbox:get_block",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/11/21",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
           }
         },
         {
@@ -1551,7 +2728,7 @@
         {
           "id": "#bs.hitbox:get_entity",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#get-entity",
           "authors": [
             "Aksiome"
           ],
@@ -1560,8 +2737,8 @@
             "minecraft_version": "1.20.3"
           },
           "updated": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
+            "date": "2026/03/29",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -1578,22 +2755,6 @@
           "updated": {
             "date": "2025/07/06",
             "minecraft_version": "1.21.5"
-          }
-        },
-        {
-          "id": "#bs.hitbox:is_entity_in_block_interaction",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-entity-inside",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
           }
         },
         {
@@ -1629,22 +2790,6 @@
           }
         },
         {
-          "id": "#bs.hitbox:is_entity_in_blocks_interaction",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-entity-inside",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2024/09/28",
-            "minecraft_version": "1.21"
-          },
-          "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
-          }
-        },
-        {
           "id": "#bs.hitbox:is_entity_in_blocks_shape",
           "kind": "function_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-entity-inside",
@@ -1674,22 +2819,6 @@
           "updated": {
             "date": "2025/07/06",
             "minecraft_version": "1.21.5"
-          }
-        },
-        {
-          "id": "#bs.hitbox:is_in_block_interaction",
-          "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#is-inside",
-          "authors": [
-            "Aksiome"
-          ],
-          "created": {
-            "date": "2023/11/21",
-            "minecraft_version": "1.20.3"
-          },
-          "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
           }
         },
         {
@@ -1762,9 +2891,9 @@
       "id": "bs.id",
       "name": "ID",
       "slug": "bookshelf-id",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.id/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.id/README.md",
-      "description": "Bookshelf module for assigning and managing entity IDs.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.id/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.id/README.md",
+      "description": "Assign unique numeric IDs to entities in Minecraft datapacks. Create continuous ID chains and query entities by ID.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/id.html",
       "kind": "data_pack",
       "tags": [
@@ -1988,9 +3117,9 @@
       "id": "bs.interaction",
       "name": "Interaction",
       "slug": "bookshelf-interaction",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.interaction/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.interaction/README.md",
-      "description": "Bookshelf module for building GUI systems using Interaction entities and event binding.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.interaction/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.interaction/README.md",
+      "description": "Build in-world GUIs in Minecraft using Interaction entities. Bind click events, detect hover, and create interactive 3D menus.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/interaction.html",
       "kind": "data_pack",
       "tags": [
@@ -2029,8 +3158,8 @@
             "minecraft_version": "24w13a"
           },
           "updated": {
-            "date": "2025/03/24",
-            "minecraft_version": "1.21.5"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -2046,8 +3175,8 @@
             "minecraft_version": "24w13a"
           },
           "updated": {
-            "date": "2025/03/24",
-            "minecraft_version": "1.21.5"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -2063,8 +3192,8 @@
             "minecraft_version": "24w13a"
           },
           "updated": {
-            "date": "2025/03/24",
-            "minecraft_version": "1.21.5"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -2080,8 +3209,8 @@
             "minecraft_version": "24w13a"
           },
           "updated": {
-            "date": "2025/06/08",
-            "minecraft_version": "1.21.5"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -2097,8 +3226,8 @@
             "minecraft_version": "24w13a"
           },
           "updated": {
-            "date": "2025/06/08",
-            "minecraft_version": "1.21.5"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         }
       ]
@@ -2107,9 +3236,9 @@
       "id": "bs.link",
       "name": "Link",
       "slug": "bookshelf-link",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.link/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.link/README.md",
-      "description": "Bookshelf entity linking system, enabling synchronized movement and structured relationships.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.link/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.link/README.md",
+      "description": "Link entities together in Minecraft datapacks with synchronized positions and rotations. Create complex multi-entity structures.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/link.html",
       "kind": "data_pack",
       "tags": [
@@ -2609,9 +3738,9 @@
       "id": "bs.log",
       "name": "Log",
       "slug": "bookshelf-log",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.log/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.log/README.md",
-      "description": "Bookshelf logging utility for structured messages in chat with severity levels.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.log/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.log/README.md",
+      "description": "Log messages to chat with severity levels (error, warn, info, debug). Filter by namespace and tags, and browse log history.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/log.html",
       "kind": "data_pack",
       "tags": [
@@ -2646,8 +3775,8 @@
             "minecraft_version": "23w31a"
           },
           "updated": {
-            "date": "2025/03/23",
-            "minecraft_version": "1.21.5"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -2662,8 +3791,8 @@
             "minecraft_version": "23w31a"
           },
           "updated": {
-            "date": "2025/03/23",
-            "minecraft_version": "1.21.5"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -2694,8 +3823,8 @@
             "minecraft_version": "23w31a"
           },
           "updated": {
-            "date": "2025/03/23",
-            "minecraft_version": "1.21.5"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -2710,8 +3839,8 @@
             "minecraft_version": "23w31a"
           },
           "updated": {
-            "date": "2025/03/23",
-            "minecraft_version": "1.21.5"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         }
       ]
@@ -2720,9 +3849,9 @@
       "id": "bs.math",
       "name": "Math",
       "slug": "bookshelf-math",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.math/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.math/README.md",
-      "description": "Bookshelf mathematical toolkit, bringing advanced calculations to Minecraft.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.math/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.math/README.md",
+      "description": "Advanced math for Minecraft datapacks: trigonometry, exponentials, factorials, GCD, and float operations beyond vanilla commands.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html",
       "kind": "data_pack",
       "tags": [
@@ -3145,9 +4274,9 @@
       "id": "bs.move",
       "name": "Move",
       "slug": "bookshelf-move",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.move/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.move/README.md",
-      "description": "Bookshelf module providing precise control over entity movement.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.move/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.move/README.md",
+      "description": "Control entity movement in Minecraft datapacks with velocity vectors and collision handling. Build physics-based projectiles and motion systems.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html",
       "kind": "data_pack",
       "tags": [
@@ -3186,8 +4315,8 @@
             "minecraft_version": "1.13"
           },
           "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
+            "date": "2026/03/14",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -3203,8 +4332,8 @@
             "minecraft_version": "1.13"
           },
           "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
+            "date": "2026/03/14",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -3262,9 +4391,9 @@
       "id": "bs.position",
       "name": "Position",
       "slug": "bookshelf-position",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.position/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.position/README.md",
-      "description": "Bookshelf position management system, allowing control over entity locations and rotations using scores.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.position/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.position/README.md",
+      "description": "Manage entity positions and rotations via scoreboard values in Minecraft datapacks. Set precise coordinates on any axis.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html",
       "kind": "data_pack",
       "tags": [
@@ -3439,8 +4568,8 @@
             "minecraft_version": "1.14.3"
           },
           "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -3793,9 +4922,9 @@
       "id": "bs.random",
       "name": "Random",
       "slug": "bookshelf-random",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.random/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.random/README.md",
-      "description": "Bookshelf module featuring a variety of random number generation functions.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.random/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.random/README.md",
+      "description": "Generate random numbers in Minecraft datapacks. Supports various distributions, weighted choices, and noise functions like Simplex and Fractal.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/random.html",
       "kind": "data_pack",
       "tags": [
@@ -3833,8 +4962,8 @@
             "minecraft_version": "1.21"
           },
           "updated": {
-            "date": "2024/08/05",
-            "minecraft_version": "1.21"
+            "date": "2026/01/03",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -4036,9 +5165,9 @@
       "id": "bs.raycast",
       "name": "Raycast",
       "slug": "bookshelf-raycast",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.raycast/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.raycast/README.md",
-      "description": "Bookshelf raycasting module for casting rays that react to block and entity collisions.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.raycast/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.raycast/README.md",
+      "description": "Cast rays in Minecraft datapacks to detect block and entity hits. Voxel-accurate collision detection with customizable callbacks.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html",
       "kind": "data_pack",
       "tags": [
@@ -4051,7 +5180,7 @@
         {
           "id": "#bs.raycast:run",
           "kind": "function_tag",
-          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html#run-the-raycast",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/raycast.html#run",
           "authors": [
             "Aksiome"
           ],
@@ -4060,8 +5189,8 @@
             "minecraft_version": "1.20.2"
           },
           "updated": {
-            "date": "2025/08/27",
-            "minecraft_version": "1.21.8"
+            "date": "2026/03/22",
+            "minecraft_version": "26.1"
           }
         }
       ]
@@ -4070,9 +5199,9 @@
       "id": "bs.schedule",
       "name": "Schedule",
       "slug": "bookshelf-schedule",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.schedule/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.schedule/README.md",
-      "description": "Bookshelf command scheduler, including cancellation and execution context tracking.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.schedule/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.schedule/README.md",
+      "description": "Schedule commands in Minecraft datapacks with cancellation and context preservation. Remember which entity and location triggered it.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html",
       "kind": "data_pack",
       "tags": [
@@ -4156,9 +5285,9 @@
       "id": "bs.sidebar",
       "name": "Sidebar",
       "slug": "bookshelf-sidebar",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.sidebar/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.sidebar/README.md",
-      "description": "Bookshelf utility for creating dynamic and visually appealing scoreboard-based sidebars.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.sidebar/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.sidebar/README.md",
+      "description": "Create dynamic sidebars in Minecraft using scoreboards. Supports rich text formatting, alignment, and real-time content updates.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/sidebar.html",
       "kind": "data_pack",
       "tags": [
@@ -4183,8 +5312,8 @@
             "minecraft_version": "23w32a"
           },
           "updated": {
-            "date": "2025/03/24",
-            "minecraft_version": "1.21.5"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -4209,9 +5338,9 @@
       "id": "bs.spline",
       "name": "Spline",
       "slug": "bookshelf-spline",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.spline/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.spline/README.md",
-      "description": "Manipulate smooth curves created from control points.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.spline/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.spline/README.md",
+      "description": "Create smooth curves from control points in Minecraft datapacks. Supports Bézier, Catmull-Rom, B-Spline, Hermite, and Linear interpolation.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html",
       "kind": "data_pack",
       "tags": [
@@ -4294,8 +5423,8 @@
             "minecraft_version": "1.21.5"
           },
           "updated": {
-            "date": "2025/05/14",
-            "minecraft_version": "1.21.5"
+            "date": "2026/03/29",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -4374,8 +5503,8 @@
             "minecraft_version": "1.21.5"
           },
           "updated": {
-            "date": "2025/05/14",
-            "minecraft_version": "1.21.5"
+            "date": "2026/03/29",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -4390,8 +5519,8 @@
             "minecraft_version": "1.21.4"
           },
           "updated": {
-            "date": "2025/04/21",
-            "minecraft_version": "1.21.5"
+            "date": "2026/03/29",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -4406,8 +5535,8 @@
             "minecraft_version": "1.21.4"
           },
           "updated": {
-            "date": "2025/04/21",
-            "minecraft_version": "1.21.5"
+            "date": "2026/03/29",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -4422,8 +5551,8 @@
             "minecraft_version": "1.21.4"
           },
           "updated": {
-            "date": "2025/04/21",
-            "minecraft_version": "1.21.5"
+            "date": "2026/03/29",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -4438,8 +5567,8 @@
             "minecraft_version": "1.21.4"
           },
           "updated": {
-            "date": "2025/04/21",
-            "minecraft_version": "1.21.5"
+            "date": "2026/03/29",
+            "minecraft_version": "26.1"
           }
         },
         {
@@ -4454,8 +5583,8 @@
             "minecraft_version": "1.21.5"
           },
           "updated": {
-            "date": "2025/05/14",
-            "minecraft_version": "1.21.5"
+            "date": "2026/03/29",
+            "minecraft_version": "26.1"
           }
         }
       ]
@@ -4464,9 +5593,9 @@
       "id": "bs.string",
       "name": "String",
       "slug": "bookshelf-string",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.string/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.string/README.md",
-      "description": "Bookshelf utility for manipulating and transforming strings in Minecraft datapacks.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.string/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.string/README.md",
+      "description": "Manipulate strings in Minecraft datapacks: concatenate, change case, search, replace, and count.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html",
       "kind": "data_pack",
       "tags": [
@@ -4674,9 +5803,9 @@
       "id": "bs.time",
       "name": "Time",
       "slug": "bookshelf-time",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.time/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.time/README.md",
-      "description": "Bookshelf system time module, retrieving real-time information in Minecraft.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.time/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.time/README.md",
+      "description": "Access the real-world system time from Minecraft datapacks. Get hours, minutes, and seconds for time-based events.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/time.html",
       "kind": "data_pack",
       "tags": [
@@ -4709,9 +5838,9 @@
       "id": "bs.tree",
       "name": "Tree",
       "slug": "bookshelf-tree",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.tree/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.tree/README.md",
-      "description": "Bookshelf collection of ready-to-use trees for natural-looking landscapes.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.tree/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.tree/README.md",
+      "description": "Pre-built tree structures for Minecraft: Birch, Cypress, Dark Oak with multiple variations.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/tree.html",
       "kind": "data_pack",
       "tags": [
@@ -4722,9 +5851,9 @@
       "id": "bs.vector",
       "name": "Vector",
       "slug": "bookshelf-vector",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.vector/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.vector/README.md",
-      "description": "Bookshelf vector math toolkit for manipulating and performing operations on vectors.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.vector/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.vector/README.md",
+      "description": "Vector math for Minecraft datapacks: rotations, coordinate conversions, and 3D operations. Essential for physics and movement.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/vector.html",
       "kind": "data_pack",
       "tags": [
@@ -4794,8 +5923,8 @@
             "minecraft_version": "1.20.2"
           },
           "updated": {
-            "date": "2024/02/27",
-            "minecraft_version": "1.20.4"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -4846,8 +5975,8 @@
             "minecraft_version": "1.19.2"
           },
           "updated": {
-            "date": "2023/11/20",
-            "minecraft_version": "23w46a"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -5021,9 +6150,9 @@
       "id": "bs.view",
       "name": "View",
       "slug": "bookshelf-view",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.view/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.view/README.md",
-      "description": "Bookshelf set of easy-to-use commands that execute based on what an entity sees.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.view/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.view/README.md",
+      "description": "Execute commands based on where entities look in Minecraft. Detect aimed blocks, entities, and more.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html",
       "kind": "data_pack",
       "tags": [
@@ -5174,8 +6303,8 @@
             "minecraft_version": "1.20.3"
           },
           "updated": {
-            "date": "2025/05/12",
-            "minecraft_version": "1.21.5"
+            "date": "2025/12/09",
+            "minecraft_version": "1.21.11"
           }
         },
         {
@@ -5201,9 +6330,9 @@
       "id": "bs.xp",
       "name": "XP",
       "slug": "bookshelf-xp",
-      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.xp/pack.png",
-      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v3.1.1/modules/bs.xp/README.md",
-      "description": "Bookshelf experience management system for handling player XP and levels efficiently.",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.xp/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.1.0/modules/bs.xp/README.md",
+      "description": "Manage player XP in Minecraft datapacks. Control the XP bar with precision, query status, and manipulate levels programmatically.",
       "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html",
       "kind": "data_pack",
       "tags": [

@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -14,5 +14,4 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # warden group
-execute at @s positioned ~ ~1.5 ~ if entity @s[dx=0] run return run data modify storage bs:out hitbox set value {width:0.9,height:2.9}
-data modify storage bs:out hitbox set value {width:0.9,height:1.0}
+data modify storage bs:out hitbox set value {width:0.9,height:2.9}

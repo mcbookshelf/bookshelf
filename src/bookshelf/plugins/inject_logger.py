@@ -10,7 +10,6 @@ if TYPE_CHECKING:
 
 def beet_default(ctx: Context) -> Generator:
     """Inject a command to register the module in the bookshelf log namespace."""
-    ctx.require("bookshelf.plugins.setup_templates")
     yield
     # Only add if the module depends on bs.log to avoid extra noise
     if "bs.log" in [

@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -19,4 +19,5 @@ scoreboard objectives remove bs.const
 data remove storage bs:in spline
 data remove storage bs:out spline
 data remove storage bs:data spline
+data remove storage bs:const spline
 data remove storage bs:lambda spline

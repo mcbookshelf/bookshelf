@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -18,4 +18,4 @@ function #bs.block:get_block
 setblock ~ ~ ~ minecraft:furnace[facing=north]
 function #bs.block:merge_properties {properties:[{name:"facing"}]}
 
-assert data storage bs:out block{ block: "minecraft:stone_stairs[shape=straight,half=top,waterlogged=false,facing=north,]", type: "minecraft:stone_stairs", state: "[shape=straight,half=top,waterlogged=false,facing=north,]", properties: { facing: "north", half: "top", shape: "straight", waterlogged: "false" } }
+assert data storage bs:out block{ block: "minecraft:stone_stairs[shape=straight,half=top,facing=north,waterlogged=false,]", type: "minecraft:stone_stairs", state: "[shape=straight,half=top,facing=north,waterlogged=false,]", properties: { facing: "north", half: "top", shape: "straight", waterlogged: "false" } }

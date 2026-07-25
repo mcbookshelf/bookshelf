@@ -9,7 +9,7 @@ Comprehensive information and tools related to weather and biome properties.
 :class: dark_light
 ```
 
-```{epigraph}
+```{pull-quote}
 "The most dangerous worldview is the worldview of those who have not viewed the world."
 
 -- Alexander von Humboldt
@@ -84,12 +84,12 @@ function #bs.environment:get_temperature {scale:1000}
 
 ---
 
-### Celestial Movement
+### Get Celestial Angle
 
 :::::{tab-set}
 ::::{tab-item} Get Current Sun Angle
 
-```{function} #bs.environment:get_current_sun_angle
+```{function} #bs.environment:get_current_sun_angle {scale:<scaling>}
 
 Get the current sun's angle on the Y axis relative to the horizon, in degrees.
 
@@ -114,17 +114,15 @@ function #bs.environment:get_current_sun_angle {scale: 1000}
 tellraw @a [{"text":"Sun angle: "},{"nbt":"environment.celestial_angle","storage":"bs:out","interpret":true},{"text":"°"}]
 ```
 
-```{admonition} doDaylightCycle gamerule
-:class: info
-
-This feature also works when the doDaylightCycle gamerule is set to false.
+```{note}
+This feature also works when the `advance_time` game rule is set to false.
 In such situation, the returned value is the sun's angle at the time of daylight cycle freeze.
 ```
 
 ::::
 ::::{tab-item} Get Current Moon Angle
 
-```{function} #bs.environment:get_current_moon_angle
+```{function} #bs.environment:get_current_moon_angle {scale:<scaling>}
 
 Get the current moon's angle on the Y axis relative to the horizon, in degrees.
 
@@ -149,17 +147,15 @@ function #bs.environment:get_current_moon_angle {scale: 1000}
 tellraw @a [{"text":"Moon angle: "},{"nbt":"environment.celestial_angle","storage":"bs:out","interpret":true},{"text":"°"}]
 ```
 
-```{admonition} doDaylightCycle gamerule
-:class: info
-
-This feature also works when the doDaylightCycle gamerule is set to false.
+```{note}
+This feature also works when the `advance_time` game rule is set to false.
 In such situation, the returned value is the moon's angle at the time of daylight cycle freeze.
 ```
 
 ::::
 ::::{tab-item} Get Sun Angle
 
-```{function} #bs.environment:get_sun_angle
+```{function} #bs.environment:get_sun_angle {scale:<scaling>}
 
 Get the sun's angle on the Y axis relative to the horizon at a specific time.
 
@@ -194,7 +190,7 @@ tellraw @a [{"text":"Sun angle at day 100, noon: "},{"nbt":"environment.celestia
 ::::
 ::::{tab-item} Get Moon Angle
 
-```{function} #bs.environment:get_moon_angle
+```{function} #bs.environment:get_moon_angle {scale:<scaling>}
 Get the moon's angle on the Y axis relative to the horizon at a specific time.
 
 :Inputs:
@@ -223,48 +219,6 @@ scoreboard players set $environment.celestial_angle.daytime bs.in 18000
 
 function #bs.environment:get_moon_angle {scale: 1000}
 tellraw @a [{"text":"Moon angle at day 100, midnight: "},{"nbt":"environment.celestial_angle","storage":"bs:out","interpret":true},{"text":"°"}]
-```
-
-::::
-::::{tab-item} Look at Sun
-
-```{function} #bs.environment:look_at_sun
-
-Orient the executing entity to look at the sun.
-
-:Inputs:
-  **Execution `as <entity>`**: The entity to orient.
-
-:Outputs:
-  **State**: The entity's rotation is modified to face the sun.
-```
-
-*Example: Make the current entity look at the sun:*
-
-```mcfunction
-# Once
-function #bs.environment:look_at_sun
-```
-
-::::
-::::{tab-item} Look at Moon
-
-```{function} #bs.environment:look_at_moon
-
-Orient the executing entity to look at the moon.
-
-:Inputs:
-  **Execution `as <entity>`**: The entity to orient.
-
-:Outputs:
-  **State**: The entity's rotation is modified to face the moon.
-```
-
-*Example: Make the current entity look at the moon:*
-
-```mcfunction
-# Once
-function #bs.environment:look_at_moon
 ```
 
 ::::
@@ -309,6 +263,57 @@ The function returns one of the following string values:
 
 The moon phase cycle follows Minecraft's 8-day lunar cycle.
 ```
+
+> **Credits**: theogiraudet
+
+---
+
+### Look at Celestial Object
+
+:::::{tab-set}
+::::{tab-item} Look at Sun
+
+```{function} #bs.environment:look_at_sun
+
+Orient the executing entity to look at the sun.
+
+:Inputs:
+  **Execution `as <entity>`**: The entity to orient.
+
+:Outputs:
+  **State**: The entity's rotation is modified to face the sun.
+```
+
+*Example: Make the current entity look at the sun:*
+
+```mcfunction
+# Once
+function #bs.environment:look_at_sun
+```
+
+::::
+::::{tab-item} Look at Moon
+
+```{function} #bs.environment:look_at_moon
+
+Orient the executing entity to look at the moon.
+
+:Inputs:
+  **Execution `as <entity>`**: The entity to orient.
+
+:Outputs:
+  **State**: The entity's rotation is modified to face the moon.
+```
+
+*Example: Make the current entity look at the moon:*
+
+```mcfunction
+# Once
+function #bs.environment:look_at_moon
+```
+
+::::
+:::::
 
 > **Credits**: theogiraudet
 

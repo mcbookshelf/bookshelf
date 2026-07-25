@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------------------------
-# Copyright (c) 2025 Gunivers
+# Copyright (c) 2026 Gunivers
 #
 # This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
 #
@@ -13,11 +13,13 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-2
+kill B5-0-0-0-3
 forceload remove -30000000 1600
 
 scoreboard objectives remove bs.const
 scoreboard objectives remove bs.data
 
 data remove storage bs:const dump
-data remove storage bs:data dump
+data remove storage bs:dump ctx
+data remove storage bs:dump stack
+data remove storage bs:dump output

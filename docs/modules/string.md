@@ -9,7 +9,7 @@ Manage and transform strings with a versatile set of manipulation and search fun
 :class: dark_light p-2
 ```
 
-```{epigraph}
+```{pull-quote}
 "Words are the most powerful drug used by mankind."
 
 -- Rudyard Kipling
