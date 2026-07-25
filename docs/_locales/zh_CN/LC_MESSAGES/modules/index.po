@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-28 11:19+0800\n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,179 +18,165 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../modules/index.md:25
+#: ../../modules/index.md:25
 msgid "Runtime"
 msgstr "运行时模块（Runtime）"
 
-#: ../../../modules/index.md:54
+#: ../../modules/index.md:55
 msgid "Development"
 msgstr "开发模块（Development）"
 
-#: ../../../modules/index.md:62
+#: ../../modules/index.md:63
 msgid "Prefabs"
 msgstr "预制件（Prefabs）"
 
-#: ../../../modules/index.md:5 f03f51979a0b4126bb34274d7d64635b
+#: ../../modules/index.md:5 e60b4357ffe242c4be75739b9a3d5323
 msgid "🧩 Modules"
 msgstr "🧩 模块"
 
-#: ../../../modules/index.md:7 363d29553e5a407f94cabfc6db6b808f
-msgid ""
-"Bookshelf is designed with modularity in mind. Features that serve a "
-"common purpose are organized into distinct, standalone, namespaced "
-"modules."
+#: ../../modules/index.md:7 90c8bfdce53b4cce84219e9582a97841
+msgid "Bookshelf is designed with modularity in mind. Features that serve a common purpose are organized into distinct, standalone, namespaced modules."
 msgstr "Bookshelf ​采用模块化设计理念，​将实现统一功能的特性归入独立的、带命名空间的单独模块。"
 
-#: ../../../modules/index.md:11 5d1f0ba54dd44dd9922e8dabb49188db
+#: ../../modules/index.md:11 4faa778e54eb46fca5cf9657ddf27e0f
 msgid "🌟 Featured Modules"
 msgstr "🌟 精选模块"
 
-#: ../../../_templates/featured-modules.md:5 ebe31ffaa5c443e5a2425cf3a7d39b93
+#: ../../_templates/featured-modules.md:5 6cba33837ddf409588ec0fd2d22a6d3d
 msgid "🧱 Block"
 msgstr "🧱 方块"
 
-#: ../../../_templates/featured-modules.md:10 5b558f8cbe014b8da573a02a975ea337
-msgid "Get and manipulate blocks (supports BlockStates and NBT)."
+#: ../../_templates/featured-modules.md:10 1d1d4b2dead14f4cb3f76fe8811d9546
+msgid "Get and manipulate blocks (supports block states and NBTs)."
 msgstr "获取和操作方块（支持 BlockStates 和 NBT）。"
 
-#: ../../../_templates/featured-modules.md:13 053b8fd643ba459b992b47f305e69e49
+#: ../../_templates/featured-modules.md:13 8b89295f98d84673901a88531b60c25d
 msgid "🔦 Raycast"
 msgstr "🔦 射线追踪"
 
-#: ../../../_templates/featured-modules.md:18 4f714c0e481441738dda9044e652887a
+#: ../../_templates/featured-modules.md:18 27db8125fb424020a9b2c9cdbb11dd2d
 msgid "Cast rays and see if they collide with blocks or entities."
 msgstr "发射光线并检测它们是否与方块或实体发生碰撞。"
 
-#: ../../../_templates/featured-modules.md:21 4cb02984ca1a467eb775af8a1c98b3c2
+#: ../../_templates/featured-modules.md:21 dfcbc1de43c746f38a23421a2d6e9581
 msgid "🧮 Math"
 msgstr "🧮 数学"
 
-#: ../../../_templates/featured-modules.md:26 b7bfed0f3281444a9ae731ed928c02cc
+#: ../../_templates/featured-modules.md:26 b3fcee147837492fb3501b4f666ed229
 msgid "Mathematical functions: sin, cos, exp, log, sqrt, and much more!"
 msgstr "数学函数：三角函数、指数、对数、开方等等！"
 
-#: ../../../_templates/featured-modules.md:29 1fc273de6bb34f658611f03c13e76eb9
+#: ../../_templates/featured-modules.md:29 96bfee2015db42cc8f8aa1aa0f8a5ea8
 msgid "🏗️ Generation"
 msgstr "🏗️ 生成"
 
-#: ../../../_templates/featured-modules.md:34 cc698c4bfc1b4f87975ed1568cab827b
-msgid "Generate terrains and landscapes, incorporating natural features."
-msgstr "生成包含自然地貌的地形和景观。"
+#: ../../_templates/featured-modules.md:34 5185d12107874c7fb2fb0d21b16159ed
+msgid "Iterate efficiently over the world to generate terrains and landscapes."
+msgstr "高效遍历世界以生成地形和景观。"
 
-#: ../../../_templates/featured-modules.md:37 8314fa5205554fc1a2e8fec469f0e823
+#: ../../_templates/featured-modules.md:37 6fe68c4d15b642c4aefdc61be88ee2ee
 msgid "🎲 Random"
 msgstr "🎲 随机"
 
-#: ../../../_templates/featured-modules.md:42 5f7c9b015d6c4d5f9f6aa5c245804088
+#: ../../_templates/featured-modules.md:42 8712ed3c4d874f8d992b3328ab7da163
 msgid "Random functions for different distributions and noise patterns."
 msgstr "用于不同分布和噪声模式的随机函数。"
 
-#: ../../../_templates/featured-modules.md:45 732f7744b67c416998c9f7b289be65ea
+#: ../../_templates/featured-modules.md:45 ec5f654a5c7a48609e12435117a20206
 msgid "❤️ Health"
 msgstr "❤️ 生命"
 
-#: ../../../_templates/featured-modules.md:50 be6ed3a727fe477ebc66960337ee7a7c
+#: ../../_templates/featured-modules.md:50 c9574dc2d16e4049a75b82a79a238849
 msgid "Easily manage the health of a player or the lifetime of an entity!"
 msgstr "轻松管理玩家的生命值或实体的生命周期！"
 
-#: ../../../modules/index.md:18 178198199e9644a189a3f04a17b97f1b
+#: ../../modules/index.md:18 6c89fc94ee534a879ffbdfe7bd6990fa
 msgid "📖 Key Definitions"
 msgstr "📖 关键概念"
 
-#: ../../../_templates/definitions.md:2 e9209cce87704f88affc72b6e2a21d5a
+#: ../../_templates/definitions.md:2 3d7140cbdf404729886b7fcefbf0a270
 msgid "General Concepts"
 msgstr "通用概念"
 
-#: ../../../_templates/definitions.md:3 e8456400c971486eaba9bb7a57de6390
+#: ../../_templates/definitions.md:3 e09c32a05d114daaa9f9ffde8ea42475
 msgid "**Bundle**"
 msgstr "**捆绑包**"
 
-#: ../../../_templates/definitions.md:4 adcc7152c1b148548af1ab452b85eaff
+#: ../../_templates/definitions.md:4 9d9dcf1665aa487f8f65535f386b2405
 msgid "A set of modules packaged together for distribution."
 msgstr "一组打包在一起用于分发的模块。"
 
-#: ../../../_templates/definitions.md:5 881de22f4b5243a2abdce3e96a704fb3
+#: ../../_templates/definitions.md:5 010a6f978f83424582779f99547c17be
 msgid "**Dependency**"
 msgstr "**依赖项**"
 
-#: ../../../_templates/definitions.md:6 d326b1a734744dfe88ed85870c6ec585
-msgid ""
-"A module that another module relies on to function properly. It must be "
-"loaded for the dependent module to work."
+#: ../../_templates/definitions.md:6 c3ad2a25e5084928982e01ecdb60cf73
+msgid "A module that another module relies on to function properly. It must be loaded for the dependent module to work."
 msgstr "其他模块正常运行所依赖的模块。依赖项必须被加载才能让依赖它的模块正常工作。"
 
-#: ../../../_templates/definitions.md:7 9b946c96f3894e5caa18ff6eceee9f2b
+#: ../../_templates/definitions.md:7 ef644c259afd4448adb76ace0fc32518
 msgid "**Feature**"
 msgstr "**特性**"
 
-#: ../../../_templates/definitions.md:8 250a838be8cc4da6b3dfcb73087e3705
-msgid ""
-"A user-facing element designed to accomplish a task. Features are often "
-"represented as function tags, but can also include loot tables, "
-"structures, predicates, and more."
+#: ../../_templates/definitions.md:8 cd4649d389e94b59a983822d592ee065
+msgid "A user-facing element designed to accomplish a task. Features are often represented as function tags, but can also include loot tables, structures, predicates, and more."
 msgstr "一个面向用户的、用于完成特定任务的元素。特性通常表现为函数标签，但也可以包括战利品表、结构、谓词等。"
 
-#: ../../../_templates/definitions.md:9 4a84b402313b43c38e7926e6c4b491db
+#: ../../_templates/definitions.md:9 6a2ce4189e38440893bd98bd4ab948e7
 msgid "**Module**"
 msgstr "**模块**"
 
-#: ../../../_templates/definitions.md:10 ab0d77a15e3a4fa0bfb501bcebb07aac
-msgid ""
-"A collection of related features within a namespace, serving a specific "
-"purpose."
+#: ../../_templates/definitions.md:10 d76661060e8545f3bfe3ae0e80f38860
+msgid "A collection of related features within a namespace, serving a specific purpose."
 msgstr "在同一命名空间内服务于特定目的的相关特性的集合。"
 
-#: ../../../_templates/definitions.md:11 40f0f9120b1e466089827544dcb47628
+#: ../../_templates/definitions.md:11 e501b8349142498aa816cd35a9cb1d56
 msgid "**Weak Dependency**"
 msgstr "**弱依赖项**"
 
-#: ../../../_templates/definitions.md:12 5fd3d6518cb3464a94f687504635f96a
-msgid ""
-"An optional dependency that enhances functionality if present, but is not"
-" essential for the main module to function correctly."
+#: ../../_templates/definitions.md:12 21220df0d426485695ade6b1cb2b062f
+msgid "An optional dependency that enhances functionality if present, but is not essential for the main module to function correctly."
 msgstr "可选的依赖项，存在时可以增强功能，但对主模块的正常运行不是必需的。"
 
-#: ../../../_templates/definitions.md:15 324b4df910914d718b2abbe28ea6b52d
+#: ../../_templates/definitions.md:15 d026dafeb83a4fae9add5edb8ab8a2b7
 msgid "Special Arguments"
 msgstr "特殊参数"
 
-#: ../../../_templates/definitions.md:16 ad43b4e783b74f3ab5d45a2149dc4378
+#: ../../_templates/definitions.md:16 b43e42672e8a4464aa71eec7f8680125
 msgid "**`on_*`**"
 msgstr "**`on_*`**"
 
-#: ../../../_templates/definitions.md:17 db408e37c0214023977ee079da304abe
-msgid ""
-"Specifies a command to be executed by a feature when a particular event "
-"occurs."
+#: ../../_templates/definitions.md:17 bc37919ddd1a457b978a0e84e0ad552e
+msgid "Specifies a command to be executed by a feature when a particular event occurs."
 msgstr "指定在特定事件发生时由特性执行的命令。"
 
-#: ../../../_templates/definitions.md:18 357b7bbdeeb1410682ecbb193ccabaa7
+#: ../../_templates/definitions.md:18 83de5cdcb5f5477e845570ee87933321
 msgid "**`run`**"
 msgstr "**`run`**"
 
-#: ../../../_templates/definitions.md:19 e2c736abc5a04b29aedd9bbbfb1958c1
+#: ../../_templates/definitions.md:19 0c5df0af5d804301a9ca2e673fe90434
 msgid "Specifies a command to be executed by a feature, often immediately."
 msgstr "指定由特性执行的命令，通常是立即执行。"
 
-#: ../../../_templates/definitions.md:20 fd24c8e9368c4378aca9ab7434b5a3e7
+#: ../../_templates/definitions.md:20 cecfc4715faf4acfaf5dd27a23c7ecdf
 msgid "**`with`**"
 msgstr "**`with`**"
 
-#: ../../../_templates/definitions.md:21 04bee169374c40169a7cb694f5deb870
+#: ../../_templates/definitions.md:21 cc11bd9abcb1448db13fdbb2ca1ea748
 msgid "Specifies optional arguments."
 msgstr "指定可选参数。"
 
-#: ../../../_templates/definitions.md:24 f0a657c3ef9d44f59b17165cf9b569d9
+#: ../../_templates/definitions.md:24 99d6f5b4a5eb4b87a9ce462d18683750
 msgid "Special Functions"
 msgstr "特殊函数"
 
-#: ../../../_templates/definitions.md:25 39aac842ec294705b04caac3037801a1
+#: ../../_templates/definitions.md:25 faaeddb110c840549c14f6d34dea81bf
 msgid "**`*_ata`**"
 msgstr "**`*_ata`**"
 
-#: ../../../_templates/definitions.md:26 e547e212c8f243dd92166cc9b24b0810
-msgid ""
-"Shortened from \"as to at.\" These functions take two positions: one "
-"given through a positional argument (e.g., `positioned`, `at`), and the "
-"other from the executor's position."
+#: ../../_templates/definitions.md:26 bf20e038f68d41779a023e8c2e2d82c1
+msgid "Shortened from \"as to at.\" These functions take two positions: one given through a positional argument (e.g., `positioned`, `at`), and the other from the executor's position."
 msgstr "缩写自“as to at”。这些函数接受两个位置：一个通过位置参数给出（如 `positioned`、`at`），另一个来自执行者的位置。"
+
+#~ msgid "Generate terrains and landscapes, incorporating natural features."
+#~ msgstr "生成包含自然地貌的地形和景观。"

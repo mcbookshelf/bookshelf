@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-19 14:34+0800\n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,617 +18,554 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../modules/link.md:1
+#: ../../modules/link.md:1 2f22dbb2627f47be9cf0c0235094af83
 msgid "🔗 Link"
 msgstr "🔗 链接（Link）"
 
-#: ../../../modules/link.md:3
+#: ../../modules/link.md:3 37d910f602714e3e80f065860b3f1104
 msgid "**`#bs.link:help`**"
 msgstr "**`#bs.link:help`**"
 
-#: ../../../modules/link.md:5
-msgid ""
-"Construct coherent entity structures by linking entities' positions and "
-"rotations."
+#: ../../modules/link.md:5 e41d9d7b08b34b1d8bd0ce95dae7156b
+msgid "Construct coherent entity structures by linking entities' positions and rotations."
 msgstr "通过链接实体的位置和旋转方向来构建相连的实体结构。"
 
-#: ../../../modules/link.md:13
+#: ../../modules/link.md:13 997b9c209bb14d88858da1666a1fffc5
 msgid "\"Invisible threads are the strongest ties.\""
 msgstr "“看不见的线是最强的纽带。”"
 
-#: ../../../modules/link.md:14
+#: ../../modules/link.md:14 b56f4f1647084faa930040f12bfad61e
 msgid "Friedrich Nietzsche"
 msgstr "弗里德里希·尼采"
 
-#: ../../../modules/link.md:19
-msgid ""
-"This module uses scaled integers and can overflow when coordinates are "
-"higher than 2,000,000."
+#: ../../modules/link.md:19 fe5e67e0f3bf4d52b9ab70ddace99174
+msgid "This module uses scaled integers and can overflow when coordinates are higher than 2,000,000."
 msgstr "此模块使用了缩放的整数，当坐标值高于 2,000,000 时可能会溢出。"
 
-#: ../../../modules/link.md:24
+#: ../../modules/link.md:24 e467f630f70c49ecb1e1007b49ea11f3
 msgid "🔧 Functions"
 msgstr "🔧 函数"
 
-#: ../../../modules/link.md:26
+#: ../../modules/link.md:26 d86308ae55b3430d9780a5f51256f954
 msgid "You can find below all functions available in this module."
 msgstr "你可以在下方找到此模块中的所有可用函数。"
 
-#: ../../../modules/link.md:30
+#: ../../modules/link.md:30 e0f339f6bb964a3ebd5087a548e8f4b5
 msgid "Create Link"
 msgstr "创建链接"
 
-#: ../../../modules/link.md:34
-msgid ""
-"Create a link between the entity executing the function and the entity "
-"closest to the execution position."
+#: ../../modules/link.md:34 f764e2b706fa446d9a5acb9535b0409b
+msgid "Create a link between the entity executing the function and the entity closest to the execution position."
 msgstr "在执行函数的实体和最接近执行位置的实体之间创建链接。"
 
-#: ../../../modules/link.md:36 ../../../modules/link.md:74
-#: ../../../modules/link.md:102 ../../../modules/link.md:128
-#: ../../../modules/link.md:154 ../../../modules/link.md:184
-#: ../../../modules/link.md:221 ../../../modules/link.md:256
-#: ../../../modules/link.md:289 ../../../modules/link.md:322
-#: ../../../modules/link.md:344 ../../../modules/link.md:366
-#: ../../../modules/link.md:388 ../../../modules/link.md:415
-#: ../../../modules/link.md:444 ../../../modules/link.md:472
-#: ../../../modules/link.md:498 ../../../modules/link.md:524
-#: ../../../modules/link.md:554 ../../../modules/link.md:591
-#: ../../../modules/link.md:637
+#: ../../modules/link.md:36 ../../modules/link.md:74 ../../modules/link.md:102
+#: ../../modules/link.md:128 ../../modules/link.md:154
+#: ../../modules/link.md:184 ../../modules/link.md:221
+#: ../../modules/link.md:257 ../../modules/link.md:290
+#: ../../modules/link.md:323 ../../modules/link.md:345
+#: ../../modules/link.md:367 ../../modules/link.md:389
+#: ../../modules/link.md:416 ../../modules/link.md:445
+#: ../../modules/link.md:473 ../../modules/link.md:499
+#: ../../modules/link.md:525 ../../modules/link.md:555
+#: ../../modules/link.md:592 ../../modules/link.md:638
+#: 06fb528c66524f0f94115d0e59702e48 0c333016cc404e66be2a53ab1683003d
+#: 111b03cd372448c5b35316a69686a8b6 25af884d96bc430b90c20c405ab8b05d
+#: 2620a60ba5124abc8deef82c461c07b7 3d6b917484ea492ba0c5ff17c9565316
+#: 3dca1fd02917450bb6bd7b0716bcf13d 4d9fb5739c464774bdf4ff26a8178645
+#: 501dffbbdb3241b68a3d0521b3285196 554bc3669269441f980d98028681fac5
+#: 6be045fc4f0f4e89bc6e9467a69eff83 71ee4a9694134684bde6830d29e8b027
+#: 79625b2e770b4903961b8a9922b645c9 98ddcc606e524c45b604cbdb878ece11
+#: b0d96d953e8b44008362fad34fd8bd7d c823fc2f33cb462593548b2ce7db3b85
+#: ca301a2d587947daa8535808617b9f7b d96fecc1eb754f9bb119f7627cf1ad89
+#: e367b2b57cbb4323b7c414110624b951 e8c3d0ba5c9c4239a5e9953c89109500
+#: f21af67850ac4496bb962e0164df0b88
 msgid "Inputs"
 msgstr "输入"
 
-#: ../../../modules/link.md:37
-msgid ""
-"**Execution `as <entities>`**: Child entities that you wish to link to a "
-"parent."
+#: ../../modules/link.md:37 4c47fae5f13943e18620238bc6331a93
+msgid "**Execution `as <entities>`**: Child entities that you wish to link to a parent."
 msgstr "**执行 `as <实体>`**: 你想要链接到父实体的子实体。"
 
-#: ../../../modules/link.md:39
-msgid ""
-"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Use the nearest "
-"entity as the parent."
+#: ../../modules/link.md:39 3c0a8035b4094ed5b7f67df625e72a8a
+msgid "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Use the nearest entity as the parent."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**: 使用最近的实体作为父实体。"
 
-#: ../../../modules/link.md:41 ../../../modules/link.md:81
-#: ../../../modules/link.md:107 ../../../modules/link.md:133
-#: ../../../modules/link.md:159 ../../../modules/link.md:189
-#: ../../../modules/link.md:226 ../../../modules/link.md:263
-#: ../../../modules/link.md:294 ../../../modules/link.md:325
-#: ../../../modules/link.md:347 ../../../modules/link.md:369
-#: ../../../modules/link.md:391 ../../../modules/link.md:418
-#: ../../../modules/link.md:451 ../../../modules/link.md:477
-#: ../../../modules/link.md:503 ../../../modules/link.md:529
-#: ../../../modules/link.md:559 ../../../modules/link.md:594
+#: ../../modules/link.md:41 ../../modules/link.md:81 ../../modules/link.md:107
+#: ../../modules/link.md:133 ../../modules/link.md:159
+#: ../../modules/link.md:189 ../../modules/link.md:226
+#: ../../modules/link.md:264 ../../modules/link.md:295
+#: ../../modules/link.md:326 ../../modules/link.md:348
+#: ../../modules/link.md:370 ../../modules/link.md:392
+#: ../../modules/link.md:419 ../../modules/link.md:452
+#: ../../modules/link.md:478 ../../modules/link.md:504
+#: ../../modules/link.md:530 ../../modules/link.md:560
+#: ../../modules/link.md:595 0d3aeddb366e40d8babf367487cc45cd
+#: 1202f078198343d5aea199e7ea17badc 1def28323c9d4ffd9ffb4163989c57a3
+#: 2e98d645feca4d72b1ee5b1bd2d87b62 54caab7be81445ffab5eafe7b4b50aa1
+#: 74322f1a5e5d40988a23a788852caf2c 7d0ec57a14124bf3a3d2adca7d529622
+#: 86825d7411aa4a14a3084d1a9cdf07d5 8717435dfa7046cab17edf84786900d2
+#: 9db5f6789d2740e8a3c5de049b7db31d a12cf261b3ce41ccbb8ca55ecbf3c398
+#: a94f185a15aa4ab39b86d7fdc2d7192e c61b1bca22404d85a11107c431a9c62e
+#: cc5cc80ba78b40048c6433ff69d9e8df dc0457ba73f64acc8dc7cdee273bff6a
+#: dccd04c733014aa1a9a514e8ce2f356a de52b4cb08c44f0b857aed4a157f2613
+#: e2dbafead43642218dfce9c5f47645ed e6ce4af6afb045d8a8a5bc7586a6bb0f
+#: f13677af8963492d9550c013a7cfa268
 msgid "Outputs"
 msgstr "输出"
 
-#: ../../../modules/link.md:42 ../../../modules/link.md:77
-#: ../../../modules/link.md:105 ../../../modules/link.md:259
-#: ../../../modules/link.md:447 ../../../modules/link.md:475
-#: ../../../modules/link.md:595
+#: ../../modules/link.md:42 ../../modules/link.md:77 ../../modules/link.md:105
+#: ../../modules/link.md:260 ../../modules/link.md:448
+#: ../../modules/link.md:476 ../../modules/link.md:596
+#: 0d5728334e4c45dfaee1ac04e792ff39 190a5f558e56407ba5e7633df010fa30
+#: 1e11e3260cd04f3697a15a3ecbc7f1be 56d2a8521f734e27b8935b53a17bf3e7
+#: 68c59416247541f1a49e2fa0c5f6d8cb c35f85a3a8a8471185aa2519af174029
+#: e6af7f634c6049bd81e0f08a11b8873e
 msgid "**Scores `@s bs.link.r[x,y,z]`**: Relative position to the parent entity."
 msgstr "**分数 `@s bs.link.r[x,y,z]`**: 相对于父实体的位置。"
 
-#: ../../../modules/link.md:44 ../../../modules/link.md:597
-msgid ""
-"**Scores `@s bs.link.l[x,y,z,h,v]`**: Local position and rotation "
-"relative to the parent entity."
+#: ../../modules/link.md:44 ../../modules/link.md:598
+#: 1cd70720e07642528c6c179f77dbbc25 859ed63b10ae42bfbbf349ade0f9adc1
+msgid "**Scores `@s bs.link.l[x,y,z,h,v]`**: Local position and rotation relative to the parent entity."
 msgstr "**分数 `@s bs.link.l[x,y,z,h,v]`**: 相对于父实体的局部位置和旋转。"
 
-#: ../../../modules/link.md:46
+#: ../../modules/link.md:46 5a460204685d4b4b86d04b60219691c0
 msgid "**Scores `@s bs.link.to`**: ID of the parent entity to which it is linked."
 msgstr "**分数 `@s bs.link.to`**: 链接到的父实体的 ID。"
 
-#: ../../../modules/link.md:49
+#: ../../modules/link.md:49 415532970e6a43b1ba1125afe86e9847
 msgid "*Example: Link armor stands to the nearest sheep:*"
 msgstr "*示例：将盔甲架链接到最近的羊：*"
 
-#: ../../../modules/link.md:57
-msgid ""
-"You should generally avoid changing output scores, as they serve as "
-"parameters for other link functions. Therefore, it is recommended to "
-"exclusively let Bookshelf handle them."
+#: ../../modules/link.md:57 d1544b6f83f04f5780efcfe3e4f5abcd
+msgid "You should generally avoid changing output scores, as they serve as parameters for other link functions. Therefore, it is recommended to exclusively let Bookshelf handle them."
 msgstr "你通常应该避免修改输出分数，因为它们作为其他链接函数的参数。因此，建议仅让 Bookshelf 来处理它们。"
 
-#: ../../../modules/link.md:60 ../../../modules/link.md:211
-#: ../../../modules/link.md:246 ../../../modules/link.md:581
-#: ../../../modules/link.md:611
+#: ../../modules/link.md:60 ../../modules/link.md:211 ../../modules/link.md:247
+#: ../../modules/link.md:582 ../../modules/link.md:612
+#: 1f5b06bdc65e4cc5b9ac6b0bf28796dc 4a974a4d0d384f67a025906af415cae1
+#: 8b9f9c542e3841cbbf24ec3924f1408b c0fefc9bbdc540abb1146fd81f1af49a
+#: f918d38f2ecc4eaa8b6848194e27e984
 msgid "**Credits**: Aksiome, Leirof"
-msgstr "**制作人员**：Aksiome、Leirof"
+msgstr "**贡献者**：Aksiome、Leirof"
 
-#: ../../../modules/link.md:64
+#: ../../modules/link.md:64 a83b793a7f2e4b8a8f6935d62975dbab
 msgid "Imitate Behaviors"
 msgstr "模仿行为"
 
-#: ../../../modules/link.md
+#: ../../modules/link.md c21095443e194c25bb95f57096cd54bc
+#: ce3e8c12d8584356a9ca3a6f9b493022
 msgid "Pos & Rot"
 msgstr "位置与旋转"
 
-#: ../../../modules/link.md:72
-msgid ""
-"Replace the entity at its relative position and local rotation. This "
-"operation repeated in a loop simulates the movements and rotations of the"
-" parent entity."
+#: ../../modules/link.md:72 0fd56c5154ce43cf848b2aa989bfddce
+msgid "Replace the entity at its relative position and local rotation. This operation repeated in a loop simulates the movements and rotations of the parent entity."
 msgstr "将实体放置在关联的位置和局部旋转处。在循环中重复此操作可模拟父实体的移动和旋转。"
 
-#: ../../../modules/link.md:75 ../../../modules/link.md:103
-#: ../../../modules/link.md:129 ../../../modules/link.md:155
-#: ../../../modules/link.md:185 ../../../modules/link.md:222
-#: ../../../modules/link.md:257 ../../../modules/link.md:290
-#: ../../../modules/link.md:445 ../../../modules/link.md:473
-#: ../../../modules/link.md:499 ../../../modules/link.md:525
-#: ../../../modules/link.md:555 ../../../modules/link.md:592
-msgid ""
-"**Execution `as <entities>`**: Executing entities that must be linked to "
-"another entity."
+#: ../../modules/link.md:75 ../../modules/link.md:103 ../../modules/link.md:129
+#: ../../modules/link.md:155 ../../modules/link.md:185
+#: ../../modules/link.md:222 ../../modules/link.md:258
+#: ../../modules/link.md:291 ../../modules/link.md:446
+#: ../../modules/link.md:474 ../../modules/link.md:500
+#: ../../modules/link.md:526 ../../modules/link.md:556
+#: ../../modules/link.md:593 0dc9e6f42e3b4487a2974e4d627e098f
+#: 17457ab33ad54a52be410225c697d4f5 183b334f97e04aefaca5a4a038074e02
+#: 1cd5797b6d854ddb930c474ae72acadd 246ea04a836d4a738edffe268b167ed0
+#: 371cc31979004293b43936d454f8b91f 4c688e67999b462a829766b589a13751
+#: 50a8e754350242fa8211005222a58ee8 579ff645a7384314afa3852ab61bdadb
+#: 889e0c334d474a10ac3989eed663b110 bcf29b7a08fa487a8523165841abcfdb
+#: cc76499b78d24396ac0d4610ac2eb129 f899fa28fe7b46e587f74f288b97e8d6
+#: fdacbb633eac45c38667e412e2a9deeb
+msgid "**Execution `as <entities>`**: Executing entities that must be linked to another entity."
 msgstr "**执行 `as <实体>`**：对实体执行，实体必须链接到另一个实体。"
 
-#: ../../../modules/link.md:79 ../../../modules/link.md:131
-#: ../../../modules/link.md:261 ../../../modules/link.md:449
-#: ../../../modules/link.md:501
-msgid ""
-"**Scores `@s bs.link.l[h,v]`**: Local rotation relative to the parent "
-"entity."
+#: ../../modules/link.md:79 ../../modules/link.md:131 ../../modules/link.md:262
+#: ../../modules/link.md:450 ../../modules/link.md:502
+#: 60b89fc0d2ef42d7bda1a85f0a101484 9b604dbbce4d49b49d0adeac8b54aa3f
+#: b1ad46a2a7f64f17a3ffd3946eb76ddc d7e596ed608f4eeaa745fe1f046a671c
+#: de17b131a6dc44b0baed643032d4f66a
+msgid "**Scores `@s bs.link.l[h,v]`**: Local rotation relative to the parent entity."
 msgstr "**分数 `@s bs.link.l[h,v]`**：相对于父实体的局部旋转。"
 
-#: ../../../modules/link.md:82
-msgid ""
-"**State**: The entity is moved to maintain its relative position and "
-"local rotation relative to the parent entity."
+#: ../../modules/link.md:82 3f59b081101f4d78aa200d093a405430
+msgid "**State**: The entity is moved to maintain its relative position and local rotation relative to the parent entity."
 msgstr "**状态**：移动实体以保持其相对于父实体的相对位置和局部旋转。"
 
-#: ../../../modules/link.md:85 ../../../modules/link.md:111
-#: ../../../modules/link.md:137 ../../../modules/link.md:163
-#: ../../../modules/link.md:193
+#: ../../modules/link.md:85 ../../modules/link.md:111 ../../modules/link.md:137
+#: ../../modules/link.md:163 ../../modules/link.md:193
+#: 1ac5b5a1c5084dddb3871997e0c20d7c 21bcaa05b2544748bbab43b06abbbc73
+#: 6f2ee09bf57446afaff961941d7f182f b1672f8536d048eea0719821b8338ae2
+#: f099dffc93084502a03f865befb4b808
 msgid "*Example: Make armor stands mimic your moves:*"
 msgstr "*示例：让盔甲架模仿你的移动：*"
 
-#: ../../../modules/link.md
+#: ../../modules/link.md cbebe1096c0443afa9741f506861bcdb
+#: dcbdfa0822ec484fa039baeafb5ff7d0
 msgid "Position"
 msgstr "位置"
 
-#: ../../../modules/link.md:100
-msgid ""
-"Replace the entity at its relative position. This operation repeated in a"
-" loop simulates the movements of the parent entity."
+#: ../../modules/link.md:100 88f902ad5ee4482aa389922d2b779d54
+msgid "Replace the entity at its relative position. This operation repeated in a loop simulates the movements of the parent entity."
 msgstr "将实体放置在相关联的位置处。在循环中重复此操作可模拟父实体的移动。"
 
-#: ../../../modules/link.md:108
-msgid ""
-"**State**: The entity is moved to maintain its relative position with the"
-" parent entity."
+#: ../../modules/link.md:108 d109c08f59254cdc9c9c79386fb80368
+msgid "**State**: The entity is moved to maintain its relative position with the parent entity."
 msgstr "**状态**：移动实体以保持其相对于父实体的相对位置。"
 
-#: ../../../modules/link.md
+#: ../../modules/link.md 2a15b393e03a4e5e96f7a0a8f41f5c8b
+#: 51996d4ae5d046d0a2c68b8956ab61eb
 msgid "Rotation"
 msgstr "旋转"
 
-#: ../../../modules/link.md:126
-msgid ""
-"Replace the entity at its local rotation. This operation repeated in a "
-"loop simulates the rotation of the parent entity."
+#: ../../modules/link.md:126 12390ce3a333428ca1aa2c4dca7e3e1d
+msgid "Replace the entity at its local rotation. This operation repeated in a loop simulates the rotation of the parent entity."
 msgstr "将实体放置在其局部旋转处。在循环中重复此操作可模拟父实体的旋转。"
 
-#: ../../../modules/link.md:134
-msgid ""
-"**State**: The entity is moved to maintain its local rotation relative to"
-" the parent entity."
+#: ../../modules/link.md:134 c2385ed5f2454d6c8a2fbe4b866f5e2e
+msgid "**State**: The entity is moved to maintain its local rotation relative to the parent entity."
 msgstr "**状态**：移动实体以保持其相对于父实体的局部旋转。"
 
-#: ../../../modules/link.md
+#: ../../modules/link.md 6f2fda3f612a4476aee9778adf7e572e
+#: bf6c24f7482b4475bbddea8e01259197
 msgid "Single Axis"
 msgstr "单轴"
 
-#: ../../../modules/link.md:152
-msgid ""
-"Replace the entity at its relative position along an axis. This operation"
-" repeated in a loop simulates the movements of the parent entity on a "
-"single axis."
+#: ../../modules/link.md:152 3c41fc8f92c74b27ab4c7cd3973e7e00
+msgid "Replace the entity at its relative position along an axis. This operation repeated in a loop simulates the movements of the parent entity on a single axis."
 msgstr "将实体放置在相关联的位置的某轴处。在循环中重复此操作可模拟父实体在单个轴上的移动。"
 
-#: ../../../modules/link.md:157 ../../../modules/link.md:527
+#: ../../modules/link.md:157 ../../modules/link.md:528
+#: 10c868a8cfbc4acc9e9a813b6766778e bc37172211624c57ab9d665c6a6212d9
 msgid "**Score `@s bs.link.r[x|y|z]`**: Relative position to the parent entity."
 msgstr "**分数 `@s bs.link.r[x|y|z]`**：相对于父实体的位置。"
 
-#: ../../../modules/link.md:160
-msgid ""
-"**State**: The entity is moved to maintain its relative position with the"
-" parent entity on a single axis."
+#: ../../modules/link.md:160 15fd962facff424f881e72fdebe41303
+msgid "**State**: The entity is moved to maintain its relative position with the parent entity on a single axis."
 msgstr "**状态**：移动实体以保持其在单个轴上相对于父实体的相对位置。"
 
-#: ../../../modules/link.md
+#: ../../modules/link.md 19738825699747b9898b45a90d1b883b
+#: 98a2bdf2f8704bf5aa0006b5b246f68b
 msgid "Single Angle"
 msgstr "单旋转角"
 
-#: ../../../modules/link.md:182
-msgid ""
-"Replace the entity at its horizontal or vertical local rotation. This "
-"operation repeated in a loop simulates the rotation of the parent entity "
-"on a single rotation axis."
+#: ../../modules/link.md:182 4c6faa068fa340d798e0e3fa7d21a6b6
+msgid "Replace the entity at its horizontal or vertical local rotation. This operation repeated in a loop simulates the rotation of the parent entity on a single rotation axis."
 msgstr "将实体放置在其水平或垂直局部旋转处。在循环中重复此操作可模拟父实体在单个旋转轴上的旋转。"
 
-#: ../../../modules/link.md:187 ../../../modules/link.md:557
-msgid ""
-"**Score `@s bs.link.l[h|v]`**: Local rotation relative to the parent "
-"entity."
+#: ../../modules/link.md:187 ../../modules/link.md:558
+#: 103c4f6c012d4e278ba193be58ed2b0c d1652dc037af43439ff1da54b78d58f2
+msgid "**Score `@s bs.link.l[h|v]`**: Local rotation relative to the parent entity."
 msgstr "**分数 `@s bs.link.l[h|v]`**：相对于父实体的局部旋转。"
 
-#: ../../../modules/link.md:190
-msgid ""
-"**State**: The entity is moved to maintain its local rotation relative to"
-" the parent entity on a single rotation axis."
+#: ../../modules/link.md:190 bd57e8b907724647a5cd0d6c0b7205b5
+msgid "**State**: The entity is moved to maintain its local rotation relative to the parent entity on a single rotation axis."
 msgstr "**状态**：移动实体以保持其在单个旋转轴上相对于父实体的局部旋转。"
 
-#: ../../../modules/link.md:208 ../../../modules/link.md:578
-msgid ""
-"While chaining behavior functions is possible, it's not advisable because"
-" it involves repeatedly fetching coordinates, performing computations, "
-"and applying them. Instead, consider creating [custom behaviors](#custom-"
-"behaviors)."
-msgstr "虽然链接的行为函数可以叠加使用，但不建议这样做，因为这涉及重复获取坐标、执行计算和应用它们。请考虑创建[自定义行为](#custom-"
-"behaviors)。"
+#: ../../modules/link.md:208 ../../modules/link.md:579
+#: 293dd69fc49746ceb3040ec42c4c45e7 58ab7268770e44f785a9898755ded65d
+msgid "While chaining behavior functions is possible, it's not advisable because it involves repeatedly fetching coordinates, performing computations, and applying them. Instead, consider creating [custom behaviors](#custom-behaviors)."
+msgstr "虽然链接的行为函数可以叠加使用，但不建议这样做，因为这涉及重复获取坐标、执行计算和应用它们。请考虑创建[自定义行为](#custom-behaviors)。"
 
-#: ../../../modules/link.md:215
+#: ../../modules/link.md:215 e87e17c064074e9e8e569dac5abc7c96
 msgid "Keep Local Position"
 msgstr "保持局部坐标"
 
-#: ../../../modules/link.md:219
+#: ../../modules/link.md:219 9d816de9166545d5ad293aa4ebb5cf33
 msgid "Keep the local position relative to the parent entity."
 msgstr "保持相对于父实体的局部坐标。"
 
-#: ../../../modules/link.md:224
-msgid ""
-"**Scores `@s bs.link.l[x,y,z]`**: Local position relative to the parent "
-"entity."
+#: ../../modules/link.md:224 8b3f6e1161244d0da59fb4ef8e54bd98
+msgid "**Scores `@s bs.link.l[x,y,z]`**: Local position relative to the parent entity."
 msgstr "**分数 `@s bs.link.l[x,y,z]`**：相对于父实体的局部坐标。"
 
-#: ../../../modules/link.md:227
-msgid ""
-"**State**: The entity is moved to maintain its local position relative to"
-" the parent entity."
+#: ../../modules/link.md:227 ad9385a43d5940c091150b0db47f4a7d
+msgid "**State**: The entity is moved to maintain its local position relative to the parent entity."
 msgstr "**状态**：移动实体以保持其相对于父实体的局部坐标。"
 
-#: ../../../modules/link.md:230
+#: ../../modules/link.md:230 05c510eb14214287a1094e6a6bb74da8
 msgid "*Example: Make armor stands lock to your rotation:*"
 msgstr "*示例：让盔甲架锁定到你的旋转：*"
 
-#: ../../../modules/link.md:240
-msgid "Local Position... 🥶 What's this?"
-msgstr "局部坐标...🥶 这是什么？"
+#: ../../modules/link.md ef96c55f6c124dc899742750029ca7a1
+msgid "What is a Local Position?"
+msgstr "保持局部坐标"
 
-#: ../../../modules/link.md:243
-msgid ""
-"Unlike relative coordinates, this reference frame considers the entity's "
-"rotation. Therefore, when the parent entity rotates, the child entity "
-"rotates around it. For those familiar with Minecraft commands, local "
-"coordinates are available through the `^` symbol."
-msgstr ""
-"与相对坐标不同，此参考系考虑实体的旋转。因此，当父实体旋转时，子实体会围绕它旋转。对于熟悉 Minecraft 命令的人来说，可以通过 `^` "
-"符号使用局部坐标。"
+#: ../../modules/link.md:244 cdfd2aa15b8f495c801adbbd272e64c8
+msgid "Unlike relative coordinates, this reference frame considers the entity's rotation. Therefore, when the parent entity rotates, the child entity rotates around it. For those familiar with Minecraft commands, local coordinates are available through the `^` symbol."
+msgstr "与相对坐标不同，此参考系考虑实体的旋转。因此，当父实体旋转时，子实体会围绕它旋转。对于熟悉 Minecraft 命令的人来说，可以通过 `^` 符号使用局部坐标。"
 
-#: ../../../modules/link.md:250
+#: ../../modules/link.md:251 eb55a4a1b8f34a6498a75e71db36bd62
 msgid "Mirror Plane"
 msgstr "镜像平面"
 
-#: ../../../modules/link.md:254
+#: ../../modules/link.md:255 6a999b0b41c249d8884b5c45d1d9b884
 msgid "Mirror the position and rotation of an entity along a plane."
 msgstr "沿平面镜像实体的位置和旋转。"
 
-#: ../../../modules/link.md:264
-msgid ""
-"**State**: The entity is moved such as it mirrors the relative position "
-"and rotation of the parent entity."
+#: ../../modules/link.md:265 7f7f9f4ea26d44758827955b52b64479
+msgid "**State**: The entity is moved such as it mirrors the relative position and rotation of the parent entity."
 msgstr "**状态**：移动实体以使其镜像父实体的相对位置和旋转。"
 
-#: ../../../modules/link.md:267
-msgid ""
-"*Example: Make armor stands mirror your position and rotation along a "
-"plane:*"
+#: ../../modules/link.md:268 6df7ee085e5d4b62a87a0e53c0338881
+msgid "*Example: Make armor stands mirror your position and rotation along a plane:*"
 msgstr "*示例：让盔甲架沿平面镜像你的位置和旋转：*"
 
-#: ../../../modules/link.md:279 ../../../modules/link.md:308
-#: ../../../modules/link.md:405 ../../../modules/link.md:430
-#: ../../../modules/link.md:627 ../../../modules/link.md:648
+#: ../../modules/link.md:280 ../../modules/link.md:309
+#: ../../modules/link.md:406 ../../modules/link.md:431
+#: ../../modules/link.md:628 ../../modules/link.md:649
+#: 45b40669f51e4722b59201ebeaa8ea1c 467dbc269a2f43af879f6273a764afbd
+#: 565841b48edf4126a17f779ff5473151 7abdd3b655fe4c409b4dc25b619c6d9d
+#: c7175b5b88404d76bf812db6720a06b6 e2cb05306aab4667a51dbb65dd5c4d5e
 msgid "**Credits**: Aksiome"
-msgstr "**制作人员**：Aksiome"
+msgstr "**贡献者**：Aksiome"
 
-#: ../../../modules/link.md:283
+#: ../../modules/link.md:284 3dc5cbe4d1384aa7a36fb97440ea362d
 msgid "Mirror Point"
 msgstr "镜像点"
 
-#: ../../../modules/link.md:287
+#: ../../modules/link.md:288 fb9675852446402fbe6375dfdfb88807
 msgid "Mirror the position and rotation of an entity around a given point."
 msgstr "围绕给定点镜像实体的位置和旋转。"
 
-#: ../../../modules/link.md:292
-msgid ""
-"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position of the "
-"point around which the entity is mirrored."
+#: ../../modules/link.md:293 4b73d479223f46f4a5f4191f6723599e
+msgid "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position of the point around which the entity is mirrored."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：实体被镜像的点的位置。"
 
-#: ../../../modules/link.md:295
-msgid ""
-"**State**: The entity is moved such as it mirrors the position and "
-"rotation of the parent entity around the given point."
+#: ../../modules/link.md:296 ecbe52d2bc9c4b5fb063add632a3d459
+msgid "**State**: The entity is moved such as it mirrors the position and rotation of the parent entity around the given point."
 msgstr "**状态**：移动实体以使其围绕给定点镜像父实体的位置和旋转。"
 
-#: ../../../modules/link.md:298
-msgid ""
-"*Example: Make armor stands mirror your position and rotation around 0 0 "
-"0:*"
+#: ../../modules/link.md:299 dec97e865bac49e8b18fcb406fea3b26
+msgid "*Example: Make armor stands mirror your position and rotation around 0 0 0:*"
 msgstr "*示例：让盔甲架围绕 0 0 0 镜像你的位置和旋转：*"
 
-#: ../../../modules/link.md:312
+#: ../../modules/link.md:313 74659723d3ff4ee195a9f91ab51866d4
 msgid "Relationships"
 msgstr "关系"
 
-#: ../../../modules/link.md
+#: ../../modules/link.md 3b8a2c758bdf4f22aad0919cd7f9e397
 msgid "As Children"
 msgstr "对子实体"
 
-#: ../../../modules/link.md:320
+#: ../../modules/link.md:321 f60fd9e0c81849c3aa69d44e4627db45
 msgid "Execute a command as child entities linked to the executing parent entity."
 msgstr "以父实体的子实体为执行者执行命令。"
 
-#: ../../../modules/link.md:323 ../../../modules/link.md:367
-msgid ""
-"**Execution `as <entities>`**: Execute as parent entities that must have "
-"valid child entities."
+#: ../../modules/link.md:324 ../../modules/link.md:368
+#: 378abaab8c3641649777216488245282 c1d39a1b2ade453588643120bfd37aed
+msgid "**Execution `as <entities>`**: Execute as parent entities that must have valid child entities."
 msgstr "**执行 `as <实体>`**：以父实体为执行者，该实体必须有有效子实体。"
 
-#: ../../../modules/link.md:326 ../../../modules/link.md:370
+#: ../../modules/link.md:327 ../../modules/link.md:371
+#: 936cea91d34d4683a13c606eda48995d a7ef97947257409f8838095fdec16cb2
 msgid "**Return**: Fails if the execution entity has no linked child entities."
 msgstr "**返回值**：如果执行者没有链接的子实体则失败。"
 
-#: ../../../modules/link.md:329
+#: ../../modules/link.md:330 8b7360d962ee472185a843a1140ad451
 msgid "*Example: Execute a command as all armor stand children:*"
 msgstr "*示例：对所有盔甲架的子实体执行命令：*"
 
-#: ../../../modules/link.md
+#: ../../modules/link.md 46f0cbd7642e44588ee4d338c75016fc
 msgid "As Parent"
 msgstr "对父实体"
 
-#: ../../../modules/link.md:342
-msgid ""
-"Execute a command as the parent entity linked to the executing child "
-"entity."
+#: ../../modules/link.md:343 fb715dec3f8d45d0b2dcedc0c7432845
+msgid "Execute a command as the parent entity linked to the executing child entity."
 msgstr "以子实体的父实体为执行者执行命令。"
 
-#: ../../../modules/link.md:345 ../../../modules/link.md:389
-msgid ""
-"**Execution `as <entities>`**: Execute as child entities that must have a"
-" valid parent entity."
+#: ../../modules/link.md:346 ../../modules/link.md:390
+#: ae123eb0c08f40789701320ee89ba8a8 bf090dfd916343c9b550f5cc371f23e4
+msgid "**Execution `as <entities>`**: Execute as child entities that must have a valid parent entity."
 msgstr "**执行 `as <实体>`**：以子实体为执行者，该实体必须有有效父实体。"
 
-#: ../../../modules/link.md:348 ../../../modules/link.md:392
+#: ../../modules/link.md:349 ../../modules/link.md:393
+#: 7f3ede2b7b7e401ea97b4a002f51ca80 a164f485fdc145948eec61eb1d5463d1
 msgid "**Return**: Fails if the execution entity has no linked parent entity."
 msgstr "**返回值**：如果执行者没有链接的父实体则失败。"
 
-#: ../../../modules/link.md:351
+#: ../../modules/link.md:352 02ac73c11b624295857633d357896cfd
 msgid "*Example: Execute a command as the parent of an armor stand:*"
 msgstr "*示例：对盔甲架的父实体执行命令：*"
 
-#: ../../../modules/link.md
+#: ../../modules/link.md 68539ec6bd0a4a889c496d9f374a4bf4
 msgid "At Children"
 msgstr "在子实体处"
 
-#: ../../../modules/link.md:364
-msgid ""
-"Execute a command at the location of child entities linked to the "
-"executing parent entity."
+#: ../../modules/link.md:365 116546e8cf234438a1ebd69609ac3d29
+msgid "Execute a command at the location of child entities linked to the executing parent entity."
 msgstr "在父实体的子实体位置执行命令。"
 
-#: ../../../modules/link.md:373
+#: ../../modules/link.md:374 5155dc10c83846308968bb6ad3aafb66
 msgid "*Example: Execute a command at the location of all armor stand children:*"
 msgstr "*示例：在所有盔甲架子实体的位置执行命令：*"
 
-#: ../../../modules/link.md
+#: ../../modules/link.md d4a9652a2b0743929ef97eca788123ce
 msgid "At Parent"
 msgstr "在父实体处"
 
-#: ../../../modules/link.md:386
-msgid ""
-"Execute a command at the location of the parent entity linked to the "
-"executing child entity."
+#: ../../modules/link.md:387 49ab28aabab44586b2bbf1d57fea4be7
+msgid "Execute a command at the location of the parent entity linked to the executing child entity."
 msgstr "在子实体的父实体位置执行命令。"
 
-#: ../../../modules/link.md:395
-msgid ""
-"*Example: Execute a command at the location of the parent of an armor "
-"stand:*"
+#: ../../modules/link.md:396 b6f22c02198542678c1f80240f96c3e0
+msgid "*Example: Execute a command at the location of the parent of an armor stand:*"
 msgstr "*示例：在盔甲架的父实体位置执行命令：*"
 
-#: ../../../modules/link.md:409
+#: ../../modules/link.md:410 5f3ef6a0207046ffb138863c0231557f
 msgid "Remove Link"
 msgstr "移除链接"
 
-#: ../../../modules/link.md:413
-msgid ""
-"Removes an existing link between entities. When executed on a parent "
-"entity, it removes all child entities from the link. It does not reset "
-"the `bs.id` of entities."
+#: ../../modules/link.md:414 ca3852b603cd4a85a8cf3e7d07cc7ed0
+msgid "Removes an existing link between entities. When executed on a parent entity, it removes all child entities from the link. It does not reset the `bs.id` of entities."
 msgstr "移除实体之间的现有链接。当在父实体上执行时，它会从链接中移除所有子实体。它不会重置实体的 `bs.id`。"
 
-#: ../../../modules/link.md:416
-msgid ""
-"**Execution `as <entities>`**: Child or parent entities that you want to "
-"unlink."
+#: ../../modules/link.md:417 deab6383b6634709b39d34775363fc16
+msgid "**Execution `as <entities>`**: Child or parent entities that you want to unlink."
 msgstr "**执行 `as <实体>`**：你想要取消链接的子实体或父实体。"
 
-#: ../../../modules/link.md:419
+#: ../../modules/link.md:420 9eec84b329f4449fb52cbe862e85327b
 msgid "**Scores `<children> bs.link.[...]`**: Resets all link-related scores."
 msgstr "**分数 `<子实体> bs.link.[...]`**：重置所有链接相关的分数。"
 
-#: ../../../modules/link.md:422
+#: ../../modules/link.md:423 1cc2f140f6c04a429bf123af930827ef
 msgid "*Example: Unlink the nearest armor stand from a sheep:*"
 msgstr "*示例：将最近的盔甲架与一只羊取消链接：*"
 
-#: ../../../modules/link.md:434
+#: ../../modules/link.md:435 5476b0a49576413dbd898003c1d08072
 msgid "Reverse Behaviors"
 msgstr "反向行为"
 
-#: ../../../modules/link.md:442
-msgid ""
-"Determine the rotation and movement made by the parent entity, and "
-"reproduce them in the opposite direction."
+#: ../../modules/link.md:443 5d27223a8ae04736a2f0df8516f69c05
+msgid "Determine the rotation and movement made by the parent entity, and reproduce them in the opposite direction."
 msgstr "确定父实体的旋转和移动，并以相反方向重现它们。"
 
-#: ../../../modules/link.md:452
-msgid ""
-"**State**: The entity is moved and rotated opposingly to the movements "
-"and rotations of the parent entity."
+#: ../../modules/link.md:453 6d793de122f34de28f13ac58b2ff76a4
+msgid "**State**: The entity is moved and rotated opposingly to the movements and rotations of the parent entity."
 msgstr "**状态**：实体以与父实体移动和旋转相反的方向移动和旋转。"
 
-#: ../../../modules/link.md:455
+#: ../../modules/link.md:456 510403d6b3914d7ea7837ae5d0b77e43
 msgid "*Example: Make armor stands invert your moves and rotations:*"
 msgstr "*示例：让盔甲架反转你的移动和旋转：*"
 
-#: ../../../modules/link.md:470
-msgid ""
-"Determine the movement made by the parent entity, and reproduce it in the"
-" opposite direction."
+#: ../../modules/link.md:471 535998bb3d734fa8952a27576581f9af
+msgid "Determine the movement made by the parent entity, and reproduce it in the opposite direction."
 msgstr "确定父实体的移动，并以相反方向重现它。"
 
-#: ../../../modules/link.md:478
-msgid ""
-"**State**: The entity is moved opposingly to the movements of the parent "
-"entity."
+#: ../../modules/link.md:479 9e2892a136e2408e99d119a3acc34a3c
+msgid "**State**: The entity is moved opposingly to the movements of the parent entity."
 msgstr "**状态**：实体以与父实体移动相反的方向移动。"
 
-#: ../../../modules/link.md:481
+#: ../../modules/link.md:482 7af7a590fef34e26adc2040146519cd4
 msgid "*Example: Make armor stands do the opposite of your moves:*"
 msgstr "*示例：让盔甲架做出与你移动相反的动作：*"
 
-#: ../../../modules/link.md:496
-msgid ""
-"Determine the rotation performed by the parent entity, and reproduce it "
-"in the opposite direction."
+#: ../../modules/link.md:497 563a7e0f06204710b90ba454f495fa74
+msgid "Determine the rotation performed by the parent entity, and reproduce it in the opposite direction."
 msgstr "确定父实体执行的旋转，并以相反方向重现它。"
 
-#: ../../../modules/link.md:504 ../../../modules/link.md:560
-msgid ""
-"**State**: The entity is rotated opposingly to the rotations of the "
-"parent entity."
+#: ../../modules/link.md:505 ../../modules/link.md:561
+#: cf764301d07b483199e71d2cd6941c0c f3ca91814f614f2fabb8d1e871f156d4
+msgid "**State**: The entity is rotated opposingly to the rotations of the parent entity."
 msgstr "**状态**：实体以与父实体旋转相反的方向旋转。"
 
-#: ../../../modules/link.md:507
+#: ../../modules/link.md:508 caf1f6b6d3b549908b3b95deb6855f0f
 msgid "*Example: Make armor stands invert your rotations:*"
 msgstr "*示例：让盔甲架反转你的旋转：*"
 
-#: ../../../modules/link.md:522
-msgid ""
-"Determine the movement made by the parent entity along a single axis, and"
-" reproduce it in the opposite direction."
+#: ../../modules/link.md:523 fecad850bf08479cba702ba101a9ee53
+msgid "Determine the movement made by the parent entity along a single axis, and reproduce it in the opposite direction."
 msgstr "确定父实体沿单个轴的移动，并以相反方向重现它。"
 
-#: ../../../modules/link.md:530
-msgid ""
-"**State**: The entity is moved opposingly to the movements of the parent "
-"entity along a single axis."
+#: ../../modules/link.md:531 25117eaffd0b48e0b35416d0d914599c
+msgid "**State**: The entity is moved opposingly to the movements of the parent entity along a single axis."
 msgstr "**状态**：实体沿单个轴以与父实体移动相反的方向移动。"
 
-#: ../../../modules/link.md:533
+#: ../../modules/link.md:534 3d729b8a84424ca5a32a30e236dc4057
 msgid "*Example: Make armor stands do the opposite of your moves along an axis:*"
 msgstr "*示例：让盔甲架沿一个轴做出与你移动相反的动作：*"
 
-#: ../../../modules/link.md:552
-msgid ""
-"Determine the rotation performed by the parent entity along a rotation "
-"axis, and reproduce it in the opposite direction."
+#: ../../modules/link.md:553 8d7395cffc2e44d188c244fc66295c6c
+msgid "Determine the rotation performed by the parent entity along a rotation axis, and reproduce it in the opposite direction."
 msgstr "确定父实体沿旋转轴执行的旋转，并以相反方向重现它。"
 
-#: ../../../modules/link.md:563
+#: ../../modules/link.md:564 39cdffeea42b4387866314c663f7ca02
 msgid "*Example: Make armor stands invert your rotations along a rotation axis:*"
 msgstr "*示例：让盔甲架沿旋转轴反转你的旋转：*"
 
-#: ../../../modules/link.md:585
+#: ../../modules/link.md:586 258b1ab3c20f488cb68f5c0277f6a6aa
 msgid "Update Link"
 msgstr "更新链接"
 
-#: ../../../modules/link.md:589
+#: ../../modules/link.md:590 feac7804661b4e369e2d038251e44c83
 msgid "Update scores that represent the link between an entity and its parent."
 msgstr "更新表示实体与其父实体之间链接的分数。"
 
-#: ../../../modules/link.md:600
+#: ../../modules/link.md:601 e06f735e36264009993c56c10539b04f
 msgid "*Example: Update armor stands link:*"
 msgstr "*示例：更新盔甲架链接：*"
 
-#: ../../../modules/link.md:608
-msgid ""
-"You usually don't need to call this function while using others. However,"
-" if you move a child entity and want to maintain the new connection it "
-"forms with the parent, updating the link is necessary to prevent changes "
-"from being reversed."
+#: ../../modules/link.md:609 2ac941548531450482bfee0e5e311aeb
+msgid "You usually don't need to call this function while using others. However, if you move a child entity and want to maintain the new connection it forms with the parent, updating the link is necessary to prevent changes from being reversed."
 msgstr "在使用其他函数时通常不需要调用此函数。但是如果你想移动子实体，以修改它和父实体的关系，则需要更新链接以确保更改生效。"
 
-#: ../../../modules/link.md:615
+#: ../../modules/link.md:616 3a13fbfe0fbf4b6b80ad64886af79340
 msgid "👁️ Predicates"
 msgstr "👁️ 谓词"
 
-#: ../../../modules/link.md:617
+#: ../../modules/link.md:618 0e869547c1f74b1a948f46d970138ce9
 msgid "You can find below all predicates available in this module."
 msgstr "你可以在下方找到此模块中的所有可用谓词。"
 
-#: ../../../modules/link.md:621
+#: ../../modules/link.md:622 265434c121064590b4b20762ecd56d64
 msgid "Has Link"
 msgstr "有链接"
 
-#: ../../../modules/link.md:623
+#: ../../modules/link.md:624 5ff82912eddc4e0fabd3587d8c1ad293
 msgid "**`bs.link:has_link`**"
 msgstr "**`bs.link:has_link`**"
 
-#: ../../../modules/link.md:625
+#: ../../modules/link.md:626 7f7a66d1adb44d5c95020d420abd8011
 msgid "Determine if an entity has a `bs.link.to` score."
 msgstr "判断实体是否有 `bs.link.to` 分数。"
 
-#: ../../../modules/link.md:631
+#: ../../modules/link.md:632 64a99358e1a74964a2c14d7e2bf213ae
 msgid "Link Equal"
 msgstr "链接相等"
 
-#: ../../../modules/link.md:635
+#: ../../modules/link.md:636 2e3a13f600f24eb7bc89e5bdf9aa10c8
 msgid "Find an entity that has the same `bs.link.to` as the input value."
 msgstr "查找具有与输入值相同 `bs.link.to` 的实体。"
 
-#: ../../../modules/link.md:638
+#: ../../modules/link.md:639 848d4644931c49fab610b8f6f8e3f32b
 msgid "**Score `$link.to bs.in`**: Value to check against."
 msgstr "**分数 `$link.to bs.in`**：要检查的值。"
 
-#: ../../../modules/link.md:641
+#: ../../modules/link.md:642 b3b05b6e0a394a76a5168b15ed589cf3
 msgid "*Example: Find the entity that has a `bs.link.to` equal to 1:*"
 msgstr "*示例：查找具有 `bs.link.to` 等于 1 的实体：*"
 
-#: ../../../modules/link.md:653
+#: ../../modules/link.md:654 11ae4543f1ce4c958d8b8de3b97d41bc
 msgid "🎓 Custom Behaviors"
 msgstr "🎓 自定义行为"
 
-#: ../../../modules/link.md:655
-msgid ""
-"This module allows you to combine multiple behaviors to create your very "
-"own optimized custom one."
+#: ../../modules/link.md:656 37b6295ffcfd43c2a59fa3b682e885d3
+msgid "This module allows you to combine multiple behaviors to create your very own optimized custom one."
 msgstr "此模块允许你组合多个行为来创建你自己优化的自定义行为。"
 
-#: ../../../modules/link.md:659
-msgid ""
-"To create a new behavior, you first need to create a new function tag. "
-"The tag must start with `#bs.link:behaviors/setup` and end with "
-"`#bs.link:behaviors/apply`. Between those 2 functions you are free to use"
-" any behaviors that are provided inside the `#bs.link:behaviors` folder."
-msgstr ""
-"要创建新行为，你首先需要创建一个新的函数标签。该标签必须以 `#bs.link:behaviors/setup` 开头并以 "
-"`#bs.link:behaviors/apply` 结尾。在这两个函数之间，你可以自由使用 `#bs.link:behaviors` "
-"文件夹中提供的任何行为。"
+#: ../../modules/link.md:660 c09e37eb8d0945c3b497e7c472c1e89a
+msgid "To create a new behavior, you first need to create a new function tag. The tag must start with `#bs.link:behaviors/setup` and end with `#bs.link:behaviors/apply`. Between those 2 functions you are free to use any behaviors that are provided inside the `#bs.link:behaviors` folder."
+msgstr "要创建新行为，你首先需要创建一个新的函数标签。该标签必须以 `#bs.link:behaviors/setup` 开头并以 `#bs.link:behaviors/apply` 结尾。在这两个函数之间，你可以自由使用 `#bs.link:behaviors` 文件夹中提供的任何行为。"
 
-#: ../../../modules/link.md:661
-msgid ""
-"*Example: This is how `#bs.link:mirror_x_plane` is implemented inside "
-"bookshelf:*"
+#: ../../modules/link.md:662 93ea1e4a564e499ba6ca69cfdc227574
+msgid "*Example: This is how `#bs.link:mirror_x_plane` is implemented inside bookshelf:*"
 msgstr "*示例：这是 `#bs.link:mirror_x_plane` 在 bookshelf 中的实现方式：*"
 
-#: ../../../_templates/comments.md:4
+#: ../../_templates/comments.md:4 3b0b6d6b3fe8485fb2dbc2668c91ea01
 msgid "**💬 Did it help you?**"
 msgstr "**💬 这对你有帮助吗？**"
 
-#: ../../../_templates/comments.md:6
+#: ../../_templates/comments.md:6 b0b8390164614573b3ec255fa966d3e6
 msgid "Feel free to leave your questions and feedback below!"
 msgstr "欢迎在下方留下你的问题和反馈！"
+
+#~ msgid "Local Position... 🥶 What's this?"
+#~ msgstr "局部坐标...🥶 这是什么？"

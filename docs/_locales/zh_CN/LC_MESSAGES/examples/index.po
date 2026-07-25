@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-28 11:19+0800\n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,40 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../../examples/index.md:5 8a63ecfbc7a349b3aa214e1e76cfa2ab
+#: ../../examples/index.md:5 e34e393b1ef24ee9bf8697284bfd940f
 msgid "📖 Examples"
 msgstr "📖 示例"
 
-#: ../../../examples/index.md:7 63b8d57b3a444de9be30c170ba3b3af6
-msgid ""
-"In this section, you'll find practical examples showcasing how to use "
-"**Bookshelf**. effectively. Each example is designed as a mini-tutorial, "
-"demonstrating specific features and their real-world applications. The "
-"code provided can be easily converted into fully functional Minecraft "
-"datapacks thanks to **Lectern**, ensuring that everything in the "
-"documentation is directly applicable in-game."
-msgstr ""
-"在本章节中，你将找到展示如何**高效运用Bookshelf**的实用示例。"
-"每个示例均设计为微型教程，演示特定功能及其实际应用场景。"
-"借助**Lectern**工具，所提供代码可轻松转换为功能完整的Minecraft数据包，"
-"确保文档中的所有内容都能直接在游戏中实现。"
+#: ../../examples/index.md:7 f0e95e285c004c80b000d2c88fa9ef57
+msgid "In this section, you'll find practical examples showcasing how to use **Bookshelf**. Each example is designed as a mini-tutorial, demonstrating specific features and their real-world applications. The code provided can be easily converted into fully functional Minecraft datapacks thanks to **Lectern**, ensuring that everything in the documentation is directly applicable in-game."
+msgstr "在本章节中，你将找到展示如何**高效运用Bookshelf**的实用示例。每个示例均设计为微型教程，演示特定功能及其实际应用场景。借助**Lectern**工具，所提供代码可轻松转换为功能完整的Minecraft数据包，确保文档中的所有内容都能直接在游戏中实现。"
 
-#: ../../../examples/index.md:11 4868914e0eb7411a983a46572bf4b9c0
+#: ../../examples/index.md:11 0e3c5ef1b53448e4813c5c07914dc2bc
 msgid "🌟 Featured Examples"
 msgstr "🌟 精选示例"
 
-#: ../../../examples/index.md:15 db4e16bdb3a748dd9536a6a65077f07f
+#: ../../examples/index.md:15 1ce33bcc49924218abcba06f180488f6
 msgid "🧵 Lifestring"
 msgstr "🧵 生命链接"
 
-#: ../../../examples/index.md:20 abe2a31629a141b985e7ab415cf18191
+#: ../../examples/index.md:20 fb45b1b5e526420faf5598078f82d1cc
 msgid "Link players' health so that damage and healing are shared between them."
 msgstr "关联玩家的生命值，让玩家之间共享伤害和治疗效果。"
 
-#: ../../../examples/index.md:22 ae37e0d7d5234bc9aa02e440d34fc441
+#: ../../examples/index.md:22 fb784e162618486a877cefe25fd2e2b1
 msgid "🖌️ Paintbrush"
 msgstr "🖌️ 画笔"
 
-#: ../../../examples/index.md:27 22916747386d4d39b475d42e8d7eb9ba
+#: ../../examples/index.md:27 28ffadb157034951a4617655f6921c9e
 msgid "Change a block's material to match the item in the player’s hand."
 msgstr "根据玩家手中的物品来更改方块的材质。"

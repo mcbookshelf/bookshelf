@@ -3,196 +3,152 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Bookshelf \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-15 01:06+0200\n"
-"PO-Revision-Date: 2025-07-19 19:05+0800\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: zh_CN\n"
-"Language-Team: zh_CN <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../contribute/getting-started.md:5 35b9cdf3e25144a48cd3372ac68b6f4b
+#: ../../contribute/getting-started.md:5 58776885cad24ba884268b17c2983b44
 msgid "🚀 Getting Started"
-msgstr "🚀 入门指南"
+msgstr "馃殌 鍏ラ棬鎸囧崡"
 
-#: ../../contribute/getting-started.md:7 b0f1cc6cc38a401f91e6641d323b4106
-msgid ""
-"This guide will walk you through setting up a local development "
-"environment to build, test, and contribute to our modules."
-msgstr "本指南将引导你设置本地开发环境，用于构建、测试并为我们的模块做出贡献。"
+#: ../../contribute/getting-started.md:7 a644c5c7091445449c6fceb1f3d68c5f
+msgid "This guide will walk you through setting up a local development environment to build, test, and contribute to our modules."
+msgstr "鏈寚鍗楀皢寮曞浣犺缃湰鍦板紑鍙戠幆澧冿紝鐢ㄤ簬鏋勫缓銆佹祴璇曞苟涓烘垜浠殑妯″潡鍋氬嚭璐＄尞銆"
 
-#: ../../contribute/getting-started.md:11 ad7328ab8ea9466a8938eb8a24d84920
+#: ../../contribute/getting-started.md:11 2fb47e2fe43f4667b1dec1f287f66813
 msgid "⚙️ Prerequisites"
-msgstr "⚙️ 准备工作"
+msgstr "鈿欙笍 鍑嗗宸ヤ綔"
 
-#: ../../contribute/getting-started.md:13 11ed70b6b7be40a895eed857acb82ac9
-#, fuzzy
-msgid ""
-"Before you start, make sure your system is ready by completing the "
-"following steps:"
-msgstr "开始前，请按以下步骤准备系统环境："
+#: ../../contribute/getting-started.md:13 21b117cba5204d4b88e6bf64283f60f2
+msgid "Before you start, make sure your system is ready by completing the following steps:"
+msgstr "寮€濮嬪墠锛岃鎸変互涓嬫楠ゅ噯澶囩郴缁熺幆澧冿細"
 
-#: ../../contribute/getting-started.md:15 c88adc1812514cb8905f6e5d343a8ad7
-msgid ""
-"**Install [UV](https://docs.astral.sh/uv/getting-"
-"started/installation/)**, a Python package and project manager."
-msgstr ""
+#: ../../contribute/getting-started.md:15 f4cc14bdece24b83bcdce88490e042b6
+msgid "**Install [UV](https://docs.astral.sh/uv/getting-started/installation/)**, a Python package and project manager."
+msgstr "**鍏嬮殕浠撳簱**銆傚鏋滄鍓嶆病鏈夊仛杩囪繖涓€姝ワ紝璇锋寜鐓ф鍒嗘鏁欑▼鎿嶄綔锛歔棣栨璐＄尞鎸囧崡](https://github.com/firstcontributions/first-contributions/blob/main/README.md)銆傚厠闅嗗畬鎴愬悗锛岀敤浣犲亸濂界殑浠ｇ爜缂栬緫鍣ㄦ墦寮€椤圭洰鏂囦欢澶广€"
 
-#: ../../contribute/getting-started.md:16 1d30931a817d4fce9c21f7ec2ff7bbcd
-msgid ""
-"**Clone the repository**, if you haven’t done this before, follow this "
-"step-by-step tutorial: [First Contributions "
-"Guide](https://github.com/firstcontributions/first-"
-"contributions/blob/main/README.md). Once cloned, open the project folder "
-"in your preferred code editor."
-msgstr ""
+#: ../../contribute/getting-started.md:16 d38c989da7ea413984feac69b9d16b71
+msgid "**Clone the repository**, if you haven’t done this before, follow this step-by-step tutorial: [First Contributions Guide](https://github.com/firstcontributions/first-contributions/blob/main/README.md). Once cloned, open the project folder in your preferred code editor."
+msgstr "**鍏嬮殕浠撳簱**銆傚鏋滄鍓嶆病鏈夊仛杩囪繖涓€姝ワ紝璇锋寜鐓ф鍒嗘鏁欑▼鎿嶄綔锛歔棣栨璐＄尞鎸囧崡](https://github.com/firstcontributions/first-contributions/blob/main/README.md)銆傚厠闅嗗畬鎴愬悗锛岀敤浣犲亸濂界殑浠ｇ爜缂栬緫鍣ㄦ墦寮€椤圭洰鏂囦欢澶广€"
 
-#: ../../contribute/getting-started.md:20 6674add8d89647e38bed0ef2038d2bb8
+#: ../../contribute/getting-started.md:20 5b546bc1a035475ea26d44dc1198d9e7
 msgid "🔨 Building Modules"
-msgstr "🔨 构建模块"
+msgstr "馃敤 鏋勫缓妯″潡"
 
-#: ../../contribute/getting-started.md:22 a0b9ecf601814480a64d31a29a16000f
-msgid ""
-"The `modules` directory contains the source files for all modules. Use "
-"the following commands to manage and build them efficiently:"
-msgstr "`modules` 目录包含所有模块的源文件。使用以下命令高效管理和构建："
+#: ../../contribute/getting-started.md:22 e486d911373f42fb89d4acbf764bc089
+msgid "The `modules` directory contains the source files for all modules. Use the following commands to manage and build them efficiently:"
+msgstr "`modules` 鐩綍鍖呭惈鎵€鏈夋ā鍧楃殑婧愭枃浠躲€備娇鐢ㄤ互涓嬪懡浠ら珮鏁堢鐞嗗拰鏋勫缓锛"
 
-#: ../../contribute/getting-started.md:25 a852d079099c4221abd3cd7961dda423
-#, fuzzy
+#: ../../contribute/getting-started.md:25 1ac024ff591f426ca69830487575169d
 msgid "`uv run modules build`"
 msgstr "`pdm run modules build`"
 
-#: ../../contribute/getting-started.md:26 f2b8280d95df4596a535666d77b021e0
+#: ../../contribute/getting-started.md:26 1b9905f73a484642877685c91266b8c1
 msgid "Build all modules"
-msgstr "构建所有模块"
+msgstr "鏋勫缓鎵€鏈夋ā鍧"
 
-#: ../../contribute/getting-started.md:27 4e03b0b76b1a4da5baaf4715a2527554
-#, fuzzy
+#: ../../contribute/getting-started.md:27 3a08af8b6fac4dbfb06b59268173ed14
 msgid "`uv run modules watch`"
 msgstr "`pdm run modules watch`"
 
-#: ../../contribute/getting-started.md:28 44feb39887f14215a2e6874684a862e0
+#: ../../contribute/getting-started.md:28 2a966efc0ce54ff084f3f1822c6c30aa
 msgid "Monitor changes and rebuild modules automatically"
-msgstr "监控变更并自动重建模块"
+msgstr "鐩戞帶鍙樻洿骞惰嚜鍔ㄩ噸寤烘ā鍧"
 
-#: ../../contribute/getting-started.md:29 3d689d9d95b74050845ff41de4330f8b
-#, fuzzy
+#: ../../contribute/getting-started.md:29 fdad7f4b690848f4b2adbf0db74c8147
 msgid "`uv run modules <build|watch> <module1> ...`"
-msgstr "`pdm run modules <build|watch> <模块1> ...`"
+msgstr "`pdm run modules <build|watch> <妯″潡1> ...`"
 
-#: ../../contribute/getting-started.md:30 e88149c742e7433a8a71c3de9f05ac53
+#: ../../contribute/getting-started.md:30 7b13dc7e65d14896ad9f704cc350f5c9
 msgid "Build or watch only the specified modules"
-msgstr "仅构建或监控指定模块"
+msgstr "浠呮瀯寤烘垨鐩戞帶鎸囧畾妯″潡"
 
-#: ../../contribute/getting-started.md:31 f0084887edae4c3da12d4fd1d5aba689
-#, fuzzy
+#: ../../contribute/getting-started.md:31 3f494c77e20943b699d691cfe41e9a86
 msgid "`uv run link [world]`"
-msgstr "`pdm run modules link [世界名称]`"
+msgstr "`pdm run modules link [涓栫晫鍚嶇О]`"
 
-#: ../../contribute/getting-started.md:32 8b5228ff5178456ba7b6dcbe62d15a2f
+#: ../../contribute/getting-started.md:32 948f29bcf28247f9b944f916a24ba65e
 msgid "Link the generated resource and data packs to a Minecraft world"
-msgstr "将生成的资源包和数据包链接到 Minecraft 世界"
+msgstr "灏嗙敓鎴愮殑璧勬簮鍖呭拰鏁版嵁鍖呴摼鎺ュ埌 Minecraft 涓栫晫"
 
-#: ../../contribute/getting-started.md:35 a8a162ccef87412d8c66ac09f5953d7f
+#: ../../contribute/getting-started.md:35 bdad1f46d9324043911ee82294f07857
 msgid "Watching Modules"
-msgstr "监控模块"
+msgstr "鐩戞帶妯″潡"
 
-#: ../../contribute/getting-started.md:38 e76109bb5d3d41f18400ea7093e30847
-#, fuzzy
-msgid ""
-"Building modules can take some time. For a smoother experience, it's "
-"recommended to only watch the module you're currently working on: `uv run"
-" modules watch <module>`."
-msgstr "构建模块可能耗时较长。为获得更流畅体验，建议仅监控当前工作模块：`pdm run modules watch <模块>`。"
+#: ../../contribute/getting-started.md:38 694ec5eb4cd945b5ac62805311a7b4f4
+msgid "Building modules can take some time. For a smoother experience, it's recommended to only watch the module you're currently working on: `uv run modules watch <module>`."
+msgstr "鏋勫缓妯″潡鍙兘鑰楁椂杈冮暱銆備负鑾峰緱鏇存祦鐣呬綋楠岋紝寤鸿浠呯洃鎺у綋鍓嶅伐浣滄ā鍧楋細`pdm run modules watch <妯″潡>`銆"
 
-#: ../../contribute/getting-started.md:41 58051d6e93de44758987b44529719b48
+#: ../../contribute/getting-started.md:41 33ef0477646d4795aab416d831880bfa
 msgid "Linking Modules to Minecraft"
-msgstr "链接模块到 Minecraft"
+msgstr "閾炬帴妯″潡鍒?Minecraft"
 
-#: ../../contribute/getting-started.md:43 7a45061cefed4d8c89eca4eb3beae8aa
-msgid ""
-"The `link` command allows you to integrate generated packs directly into "
-"a Minecraft world. Below are the options available for this command:"
-msgstr "`link` 命令可将生成的包直接集成到 Minecraft 世界。该命令可用选项如下："
+#: ../../contribute/getting-started.md:43 239c83811ee14eae9a121db69e730a94
+msgid "The `link` command allows you to integrate generated packs directly into a Minecraft world. Below are the options available for this command:"
+msgstr "`link` 鍛戒护鍙皢鐢熸垚鐨勫寘鐩存帴闆嗘垚鍒?Minecraft 涓栫晫銆傝鍛戒护鍙敤閫夐」濡備笅锛"
 
-#: ../../contribute/getting-started.md:46 fe84da8d38b042d88b65e219a3ad35fa
+#: ../../contribute/getting-started.md:46 c7e4ace2bd754e26adff08b2696bcf4e
 msgid "`world (optional)`"
-msgstr "`world（可选）`"
+msgstr "`world锛堝彲閫夛級`"
 
-#: ../../contribute/getting-started.md:47 646c3cee2ed14a05a940f84c0b4220f1
+#: ../../contribute/getting-started.md:47 0e09c55c424941659386e55a8e457ac6
 msgid "The name of the Minecraft world to link"
-msgstr "要链接的 Minecraft 世界名称"
+msgstr "瑕侀摼鎺ョ殑 Minecraft 涓栫晫鍚嶇О"
 
-#: ../../contribute/getting-started.md:48 8c3fa3a350eb4a48a0d46db919c86eb2
+#: ../../contribute/getting-started.md:48 97ba3177ac4d48a5b5935322e2d25b8a
 msgid "`--minecraft <DIRECTORY>`"
-msgstr "`--minecraft <目录>`"
+msgstr "`--minecraft <鐩綍>`"
 
-#: ../../contribute/getting-started.md:49 6e6dfb97475347d88ed931529d56ffef
+#: ../../contribute/getting-started.md:49 b29dfa6a96ee44bcb605942b1f57846e
 msgid "Path to the `.minecraft` directory (location of Minecraft files)"
-msgstr "`.minecraft` 目录路径（Minecraft 文件位置）"
+msgstr "`.minecraft` 鐩綍璺緞锛圡inecraft 鏂囦欢浣嶇疆锛"
 
-#: ../../contribute/getting-started.md:50 d3bc356791264193a2436a216d6e0fdb
+#: ../../contribute/getting-started.md:50 b321cec58a8e49c693c4107c58b47f37
 msgid "`--data-pack <DIRECTORY>`"
-msgstr "`--data-pack <目录>`"
+msgstr "`--data-pack <鐩綍>`"
 
-#: ../../contribute/getting-started.md:51 ce72eb374e5b482ea506ffb5bc9315aa
+#: ../../contribute/getting-started.md:51 ed34967934ec40afa8e1362b9e506447
 msgid "Path to the directory where data packs are stored"
-msgstr "数据包存储目录路径"
+msgstr "鏁版嵁鍖呭瓨鍌ㄧ洰褰曡矾寰"
 
-#: ../../contribute/getting-started.md:52 9bdcb3c45c2a4a1ba4a5d7ec9a51915b
+#: ../../contribute/getting-started.md:52 80afca4c9ebc44e5acb86e077a98dba9
 msgid "`--resource-pack <DIRECTORY>`"
-msgstr "`--resource-pack <目录>`"
+msgstr "`--resource-pack <鐩綍>`"
 
-#: ../../contribute/getting-started.md:53 7b22851c49fc4b1f88cbc01f385122c9
+#: ../../contribute/getting-started.md:53 575c8890db0c4ed2bbed3159b23745ea
 msgid "Path to the directory where resource packs are stored"
-msgstr "资源包存储目录路径"
+msgstr "璧勬簮鍖呭瓨鍌ㄧ洰褰曡矾寰"
 
-#: ../../contribute/getting-started.md:56 01979dfba26248469e60866f1b3d3dd2
-msgid ""
-"This workflow demonstrates how to link and continuously test your modules"
-" directly in Minecraft:"
-msgstr "以下工作流展示如何在 Minecraft 中直接链接并持续测试模块："
+#: ../../contribute/getting-started.md:56 9becb4de7ad245d4824ca1ab32a06c6e
+msgid "This workflow demonstrates how to link and continuously test your modules directly in Minecraft:"
+msgstr "浠ヤ笅宸ヤ綔娴佸睍绀哄浣曞湪 Minecraft 涓洿鎺ラ摼鎺ュ苟鎸佺画娴嬭瘯妯″潡锛"
 
-#: ../../contribute/getting-started.md:67 597ed571a9924c54b5a83f441f102070
+#: ../../contribute/getting-started.md:67 4397bc97af1e471483562b8a31647dce
 msgid "🧪 Testing Modules"
-msgstr "🧪 测试模块"
+msgstr "馃И 娴嬭瘯妯″潡"
 
-#: ../../contribute/getting-started.md:69 0cec29b087c442229eac73db18feae68
-msgid ""
-"Testing is a fundamental aspect of software development. It helps ensure "
-"the correctness of your code and can save you from potential bugs in the "
-"future."
-msgstr "测试是软件开发的基本环节，有助于确保代码正确性并避免未来潜在错误。"
+#: ../../contribute/getting-started.md:69 b53af5ed57124c298472a5e44043d1bc
+msgid "Testing is a fundamental aspect of software development. It helps ensure the correctness of your code and can save you from potential bugs in the future."
+msgstr "娴嬭瘯鏄蒋浠跺紑鍙戠殑鍩烘湰鐜妭锛屾湁鍔╀簬纭繚浠ｇ爜姝ｇ‘鎬у苟閬垮厤鏈潵娼滃湪閿欒銆"
 
-#: ../../contribute/getting-started.md:71 4f6b89af7cca49e788852e59475ebf0a
-msgid ""
-"To learn how to write and run tests for your modules, refer to the [Debug"
-" Section](project:debug-tools.md#-unit-tests)."
-msgstr "学习如何为模块编写和运行测试，请参阅[调试章节](project:debug-tools.md#-unit-tests)。"
+#: ../../contribute/getting-started.md:71 d2888ecaf1c1439b905e94469b1180ab
+msgid "To learn how to write and run tests for your modules, refer to the [Debug Section](project:debug-tools.md#-unit-tests)."
+msgstr "瀛︿範濡備綍涓烘ā鍧楃紪鍐欏拰杩愯娴嬭瘯锛岃鍙傞槄[璋冭瘯绔犺妭](project:debug-tools.md#-unit-tests)銆"
 
-#~ msgid ""
-#~ "Install [**PDM**](https://pdm-project.org/en/latest/), "
-#~ "the Python Dependency Manager"
-#~ msgstr "安装 [**PDM**](https://pdm-project.org/en/latest/)（Python 依赖管理器）"
+#~ msgid "Install [**PDM**](https://pdm-project.org/en/latest/), the Python Dependency Manager"
+#~ msgstr "瀹夎 [**PDM**](https://pdm-project.org/en/latest/)锛圥ython 渚濊禆绠＄悊鍣級"
 
-#~ msgid ""
-#~ "Open a terminal at the root of "
-#~ "the project and run the following "
-#~ "command to install all required "
-#~ "dependencies:"
-#~ msgstr "在项目根目录打开终端，运行以下命令安装所有必需依赖："
+#~ msgid "Open a terminal at the root of the project and run the following command to install all required dependencies:"
+#~ msgstr "鍦ㄩ」鐩牴鐩綍鎵撳紑缁堢锛岃繍琛屼互涓嬪懡浠ゅ畨瑁呮墍鏈夊繀闇€渚濊禆锛"
 
-#~ msgid ""
-#~ "Running this command prepares your "
-#~ "environment for building and testing the"
-#~ " project."
-#~ msgstr "运行此命令将为项目构建和测试准备环境。"
-
+#~ msgid "Running this command prepares your environment for building and testing the project."
+#~ msgstr "杩愯姝ゅ懡浠ゅ皢涓洪」鐩瀯寤哄拰娴嬭瘯鍑嗗鐜銆"

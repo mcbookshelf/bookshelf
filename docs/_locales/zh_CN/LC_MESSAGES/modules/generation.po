@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,234 +18,479 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/generation.md:1 644d87fa084a44d29442810f4c9feeb2
+#: ../../modules/generation.md:1 6c1aac50e25b4321b75b1f237979c823
 msgid "🏗️ Generation"
 msgstr "🏗️ 生成（Generation）"
 
-#: ../../modules/generation.md:3 48c958b3adb8470db85eccc490291d7d
+#: ../../modules/generation.md:3 4d0a815afe9944b1837cf2acc614fba0
 msgid "**`#bs.generation:help`**"
 msgstr "**`#bs.generation:help`**"
 
-#: ../../modules/generation.md:5 8f1b6ca833c9419db3a70429ca8eaea6
-msgid "Generate diverse terrains and landscapes, incorporating natural features."
-msgstr "生成包含自然地貌的多样化地形和景观。"
+#: ../../modules/generation.md:5 75242314594f4361bc012842392a64f5
+msgid "Iterate over the world in various shapes, executing callbacks at each position. Processes can spread across multiple ticks to avoid lag."
+msgstr "以多种形状遍历世界，在每个位置执行回调。处理过程可以跨多个游戏刻进行，以避免卡顿。"
 
-#: ../../modules/generation.md:18 e60ae7b8c93147eb8431f69ffb371d9e
-msgid ""
-"\"Nature's beauty is a reflection of the harmony of numbers and "
-"patterns.\""
+#: ../../modules/generation.md:18 d918f6dd788248e2bcb62c0d53eef648
+msgid "\"Nature's beauty is a reflection of the harmony of numbers and patterns.\""
 msgstr "“美是数的和谐。”"
 
-#: ../../modules/generation.md:19 af10a0ab56384624908e1ed2b058c318
+#: ../../modules/generation.md:19 f91cf3c3d86e461f837b4dc559594c6e
 msgid "Anonymous"
 msgstr "佚名"
 
-#: ../../modules/generation.md:23 390d175204d94537b2939e799ac65523
-msgid ""
-"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
-"sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
-"hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 "
-"10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 "
-"3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 "
-"0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
-" .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
-"2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
-msgstr ""
-"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
-"sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
-"hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 "
-"10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 "
-"3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 "
-"0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
-" .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
-"2.1v-5.85l-3.5 2.1Z\"></path></svg> 观看演示"
+#: ../../modules/generation.md:23 2449fdf56c474fd9906ff0f3987cad06
+msgid "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
+msgstr "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 2.1v-5.85l-3.5 2.1Z\"></path></svg> 观看演示"
 
-#: ../../modules/generation.md:33 fc757c97c95f422dbed8f5291f644c67
+#: ../../modules/generation.md:33 e64a8f5229b94371911e988195c705c6
 msgid "🔧 Functions"
 msgstr "🔧 函数"
 
-#: ../../modules/generation.md:35 f2ff79483f304f0988a1bf6b9d6aba44
+#: ../../modules/generation.md:35 156e4b860abe4bffb38e20f14715c944
 msgid "You can find below all functions available in this module."
 msgstr "你可以在下方找到此模块中的所有可用函数。"
 
-#: ../../modules/generation.md ../../modules/generation.md:39
-#: 5faea2a30ca640d4a88845920e5a73ac 76a98a4879fb432d9c3a8afed96c4d22
-msgid "Shape 2D"
-msgstr "二维平面形状"
+#: ../../modules/generation.md:39 5e3a284d377f4b0fb3322ed3de99871b
+msgid "On cuboid"
+msgstr "在长方体上"
 
-#: ../../modules/generation.md:47 740216fa22374cc08de63a87c6cf2ff3
-msgid ""
-"Generate a shape in 2D space at the specified origin, with the callback "
-"executed at each step, allowing the user to handle the X and Y "
-"coordinates directly."
-msgstr "以指定位置为原点遍历二维平面。每一步运行都有回调，用户可以直接在回调中操作 X 和 Y 坐标。"
+#: ../../modules/generation.md:43 6b124561840c4945acf141d6434ce4d9
+msgid "Iterate over a 3D cuboid, executing a callback at each position."
+msgstr "遍历一个 3D 长方体，在每个位置执行回调。"
 
-#: ../../modules/generation.md:49 ../../modules/generation.md:77
-#: ../../modules/generation.md:108 10345cdf82984e28aacb71349f126c12
-#: 284c9763a72b4e2787bfe7dded0eec21 593f379edcc94a1a98eeb2c323eeb897
+#: ../../modules/generation.md:45 ../../modules/generation.md:94
+#: ../../modules/generation.md:172 ../../modules/generation.md:202
+#: ../../modules/generation.md:232 ../../modules/generation.md:283
+#: ../../modules/generation.md:311 10e5aaa06f1f41d7a9a168a80fa74875
+#: 220df892305744379d30f66c3d62f13d 284997c242d14cb7b9cdd214ca68e7d2
+#: 3b6a6e2257774948b4e1ae57a43faace 3c7db171365f4510b3490a76049d8be1
+#: 6864164e329c4640909b023e0c949a3b e614ca58bf344995a952112f56f41f9a
 msgid "Inputs"
 msgstr "输入"
 
-#: ../../modules/generation.md:50 ../../modules/generation.md:78
-#: ../../modules/generation.md:109 75ad2989011545d9a1408f15af0b3bb8
-#: b6f133a11f5d4bb695bde21647872282 d7802d8ad6d349d592eb5d59813c7fc3
-msgid ""
-"**Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: "
-"Origin of the shape."
+#: ../../modules/generation.md:46 ../../modules/generation.md:95
+#: 63b566282aa14b7e89007f92f7c914b2 afa6cda681374e90811fc11b401b13b0
+msgid "**Execution `at <entity>` or `positioned <x> <y> <z>`**: origin of the shape"
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z> rotated <rot>`**：形状的原点。"
 
-#: ../../modules/generation.md:52 ../../modules/generation.md:80
-#: ../../modules/generation.md:111 2299e3d4d1f14894b26e809a86860a43
-#: 540c2748bbff469f8ac127e601db4d03 d6ba993d5c3342758190afec7d76862a
-msgid "**Function macro**:"
-msgstr "**函数宏**："
+#: ../../modules/generation.md:48 a68e3ad8534141d28453a45dd4ac4c82
+msgid "**Storage `bs:in generation.on_cuboid`**:"
+msgstr "**存储 `bs:in generation.on_cuboid`**:"
 
-#: ../../modules/generation.md:66 ../../modules/generation.md:97
-#: ../../modules/generation.md:131 701a51629a004a068bce1546627ea296
-#: 9e3d4799f98b4b1082ec1451695d2c5a b0e85785cd2146979c4581afaf66cc65
+#: ../../modules/generation.md:50 ../../modules/generation.md:99
+#: 50cd19ae79b848cc9419dd6c6f02408e 5d9442a9e9be452bb02cc284a832fb5f
+#, python-brace-format
+msgid "{nbt}`compound` iteration data"
+msgstr "{nbt}`compound` 参数"
+
+#: ../../modules/generation.md:51 ../../modules/generation.md:100
+#: afae2c0379854178b57a5c854b80a33e fe3b566097e643f0be486234751c6119
+#, python-brace-format
+msgid "{nbt}`string` **run**: callback to execute at each step"
+msgstr "{nbt}`string` **run**: 每一步运行的回调命令，每一步调用中可以读取这些分数："
+
+#: ../../modules/generation.md:52 a6f778f0b64c412cb1217a16285cbdf5
+#, python-brace-format
+msgid "{nbt}`string` **direction**: 3-letter string defining axis iteration order and direction"
+msgstr "{nbt}`string` **direction**: 定义轴迭代顺序和方向的三字母字符串"
+
+#: ../../modules/generation.md:54 b21d5b7cffb7401589cc597dafe87f54
+msgid "`e`/`w` for east/west, `s`/`n` for south/north, and `u`/`d` for up/down (default: `eus`, +x, +y, +z)"
+msgstr "`e`/`w` 表示东/西，`s`/`n` 表示南/北，`u`/`d` 表示上/下（默认：`eus`，+x，+y，+z）"
+
+#: ../../modules/generation.md:55 ../../modules/generation.md:104
+#: 6753453b741d47c990deaac5bb6efd14 8c3a230fa89b49fe88ce33cf4b124fee
+#, python-brace-format
+msgid "{nbt}`string` **on_finished**: command executed at the end of the process, at the final block position"
+msgstr "{nbt}`string` **on_finished**: 在过程结束时，在最终方块位置执行的命令"
+
+#: ../../modules/generation.md:56 ../../modules/generation.md:105
+#: 83c836354cd64d67ae8096d639eb4e79 eb9d84bc57494a61a09a46820da8b287
+#, python-brace-format
+msgid "{nbt}`int` **width**: size along the x axis (default: 1)"
+msgstr "{nbt}`int` **spacing**: 生成形状中方块的间隔（默认：1）。"
+
+#: ../../modules/generation.md:57 ../../modules/generation.md:106
+#: 89a6ac9658594b31b02e0025fa1f4548 c0f222935dfc408b820be3765e88a314
+#, python-brace-format
+msgid "{nbt}`int` **height**: size along the y axis (default: 1)"
+msgstr "{nbt}`int` **spacing**: 生成形状中方块的间隔（默认：1）。"
+
+#: ../../modules/generation.md:58 ../../modules/generation.md:107
+#: 7615cc0d9e98413aa79bbff7e7e99d47 85175d1892d54fc1adac6b3ba6fd578e
+#, python-brace-format
+msgid "{nbt}`int` **depth**: size along the z axis (default: 1)"
+msgstr "{nbt}`int` **spacing**: 生成形状中方块的间隔（默认：1）。"
+
+#: ../../modules/generation.md:59 ../../modules/generation.md:108
+#: 7c9c279b03064b3b8b2b8f651b290072 b5c783faf9d84f1db555467507aabf9b
+#, python-brace-format
+msgid "{nbt}`int` **spacing**: distance between positions (default: 1)"
+msgstr "{nbt}`int` **spacing**: 生成形状中方块的间隔（默认：1）。"
+
+#: ../../modules/generation.md:60 ../../modules/generation.md:109
+#: 28dcc0c76a1144e8bb9aab7059824543 ca4156b2e8cf4ae0af52626118561d54
+#, python-brace-format
+msgid "{nbt}`int` **limit**: maximum steps per tick (default: 256)"
+msgstr "{nbt}`int` **limit**: 限制每tick最多运行多少步（默认：256）。"
+
+#: ../../modules/generation.md:63 ../../modules/generation.md:112
+#: ../../modules/generation.md:296 ../../modules/generation.md:321
+#: 18066cf77e5b41908823a48f97d4aef8 3e97b72b034648918f99b2f852ebb03b
+#: b4dce021e7724f0c95a0a6a36a1cf9f6 f4a92278d0be4ec0b5fd7571e8392bb2
+msgid "Lambdas"
+msgstr "Lambda表达式"
+
+#: ../../modules/generation.md:64 ../../modules/generation.md:113
+#: 31b3e7f981ae4f4aaf94f26a819fd812 44f3240ddd714c47b8d228f4b1f3f65b
+msgid "**Score `$generation.i bs.lambda`**: first dimension index (0 to size-1, tied to 1st direction letter)"
+msgstr "**分数 `$generation.i bs.lambda`**：第一维度索引（0到size-1，与第一个方向字母绑定）"
+
+#: ../../modules/generation.md:66 ../../modules/generation.md:115
+#: 9fb27719c90746919c60b906475cce1f beed0c031f6b43c292d3c9957570db33
+msgid "**Score `$generation.j bs.lambda`**: second dimension index (0 to size-1, tied to 2nd direction letter)"
+msgstr "**分数 `$generation.j bs.lambda`**：第二维度索引（0到size-1，与第二个方向字母绑定）"
+
+#: ../../modules/generation.md:68 a1461b2053b4488d950b0cffd9ee6e6e
+msgid "**Score `$generation.k bs.lambda`**: third dimension index (0 to size-1, tied to 3rd direction letter)"
+msgstr "**分数 `$generation.k bs.lambda`**：第三维度索引（0到size-1，与第三个方向字母绑定）"
+
+#: ../../modules/generation.md:70 ../../modules/generation.md:117
+#: 1b3f00c1fcfc4652b50f18bb844710de c014c88746344b73a97f40e227d21b9e
 msgid "Outputs"
 msgstr "输出"
 
-#: ../../modules/generation.md:67 ../../modules/generation.md:98
-#: ../../modules/generation.md:132 49e0ce470c574c00b1ac6e64532bc52b
-#: 89f2f08f37ff4093aebbad68ae1c00ba d72c2239811345848ed7a2274b2c5b0d
-msgid ""
-"**State**: The callback gets executed at the appropriate coordinates in "
-"the world."
+#: ../../modules/generation.md:71 ../../modules/generation.md:118
+#: 87d144cb68dd4e9fbd8e3db3fd6fa0d7 e661c9b39a434bcd910287a9d0c78f5c
+msgid "**State**: the callback is executed at each position"
 msgstr "**状态**：回调在世界中的适当坐标处执行。"
 
-#: ../../modules/generation.md 7edf370ab4734daa99feba2cae301c5f
-msgid "Simplex Shape 2D"
-msgstr "单纯二维形状"
+#: ../../modules/generation.md:74 db90c8edd5cc4162a0110eb6b04bff81
+msgid "*Example: replace spruce stairs with oak stairs using the [`set_block_type`](#block-callbacks) callback*"
+msgstr "*示例：使用[`set_block_type`](#block-callbacks)回调将云杉楼梯替换为橡木楼梯*"
 
-#: ../../modules/generation.md:75 a963f6df81f54caeb95c00b5307cb4bd
-msgid ""
-"Generate a shape in 2D space using a Simplex noise algorithm. The shape "
-"is generated at the specified origin, with the callback executed at each "
-"step to facilitate custom behavior during the generation process."
-msgstr "以指定位置为原点，使用单纯形噪声算法，在二维平面上生成形状。每一步生成都有回调，可以在这个过程中自定义行为。"
+#: ../../modules/generation.md:84 ../../modules/generation.md:140
+#: ../../modules/generation.md:263 ../../modules/generation.md:331
+#: 22ec641362fa472d92122cae8bbb642d 3e3c1d356c524ed6bf0f6f310e5d7df5
+#: d451ba9add4444cbb836ede03493fc70 fef815501cd540018e9d95fd309b127d
+msgid "**Credits**: Aksiome"
+msgstr "**贡献者**：Aksiome"
 
-#: ../../modules/generation.md 417882f0f3c04ee49b94d6ff93a82720
-msgid "Fractal Shape 2D"
+#: ../../modules/generation.md:88 aed8765db63a445283451cc3c7d6c678
+msgid "On rectangle"
+msgstr "矩形迭代"
+
+#: ../../modules/generation.md:92 c1983bfb5c8944e9af87cdb7e0ab6e67
+msgid "Iterate over a 2D rectangle, executing a callback at each position."
+msgstr "遍历一个2D矩形，在每个位置执行回调。"
+
+#: ../../modules/generation.md:97 a2d9193cac0f4c7dbc2ced76de51998f
+msgid "**Storage `bs:in generation.on_rectangle`**:"
+msgstr "**存储 `bs:in generation.on_rectangle`**："
+
+#: ../../modules/generation.md:101 79db4da0d49a408999c2716c130ba534
+#, python-brace-format
+msgid "{nbt}`string` **direction**: 2-letter string defining axis iteration order and direction"
+msgstr "{nbt}`string` **direction**：定义轴向迭代顺序和方向的2字母字符串"
+
+#: ../../modules/generation.md:103 4e5820521b384a4baef82f1d31755339
+msgid "`e`/`w` for east/west, `s`/`n` for south/north, and `u`/`d` for up/down (default: `es`, +x, +z)."
+msgstr "`e`/`w` 表示东/西，`s`/`n` 表示南/北，`u`/`d` 表示上/下（默认：`es`，+x，+z）。"
+
+#: ../../modules/generation.md:121 df53f0939fc541ca839a31ec822c04e8
+msgid "*Example: generate terrain using fractal noise*"
+msgstr "*示例：使用分形噪声生成地形*"
+
+#: ../../modules/generation.md:144 c4b6b6315c7c41c4b32f08a9091e5159
+msgid "↩️ Callbacks"
+msgstr "↩️ 回调"
+
+#: ../../modules/generation.md:146 5817b210cbfe495cbfeb8cba2676dccb
+msgid "You can find below all callbacks available in this module."
+msgstr "你可以在下方找到此模块中的所有可用函数。"
+
+#: ../../modules/generation.md:150 538b80ed25674793b252988d37575ac8
+msgid "Implementation note"
+msgstr "实现说明"
+
+#: ../../modules/generation.md:153 472da3b4d60d4c6e91f0727d484b812a
+msgid "These are not simple callbacks. They hook into internals to inject optimized sub-callbacks. Heavy initialization runs once, then lightweight callbacks handle the actual iteration."
+msgstr "这些不是简单的回调。它们钩入内部以注入优化的子回调。繁重的初始化运行一次，然后轻量级回调处理实际的迭代。"
+
+#: ../../modules/generation.md:156 28983601723f4c7f8bfd3de3e4e8d526
+msgid "Block callbacks"
+msgstr "方块回调"
+
+#: ../../modules/generation.md:158 ../../modules/generation.md:269
+#: 87891e5b090246acbe88420250a805ce c7f328b8695e4673af2c015761955fd7
+msgid "Dependency"
+msgstr "依赖项"
+
+#: ../../modules/generation.md:161 eb9be0f8073f4096878e8a9e4792af49
+msgid "The `set_block_type` and `set_random_block` callbacks require the **bs.block** module to be installed."
+msgstr "`set_block_type` 和 `set_random_block` 回调需要安装 **bs.block** 模块。"
+
+#: ../../modules/generation.md 9d092bd08e5f4642a61e83dce772bdfe
+msgid "Set block"
+msgstr "设置方块"
+
+#: ../../modules/generation.md:170 462e2fff2d0f477da78c48c9e1ba3d02
+msgid "Place a specific block at each position."
+msgstr "在每个位置放置特定方块。"
+
+#: ../../modules/generation.md:173 ../../modules/generation.md:203
+#: ../../modules/generation.md:233 ../../modules/generation.md:284
+#: ../../modules/generation.md:312 1ecd7d0c1bdf4b0d877b566c2f2d71de
+#: 57d7823dcb9c43c584b51f4bc7ed237d 979bc76040f4484292fcba0b22f889a6
+#: abcd69e8392e46e59f48b46223fcfee9 e2dfbe3dcff345d1bd909230ad8b385d
+msgid "**Function macro**:"
+msgstr "**函数宏**："
+
+#: ../../modules/generation.md:175 ../../modules/generation.md:205
+#: ../../modules/generation.md:235 ../../modules/generation.md:286
+#: ../../modules/generation.md:314 39b27521762f49548b9e4580d8f5d20a
+#: 4efd96f9073845098dc28c130d64df65 748036fb5a7a4467a7afb47389602619
+#: 92b7868b02a940049fbc5779aed75a42 943c4c8dc45243a3848ae9cf89ec7399
+#, python-brace-format
+msgid "{nbt}`compound` arguments"
+msgstr "{nbt}`compound` 参数"
+
+#: ../../modules/generation.md:176 39764c14aecb40829cfaff313ef5a813
+#, python-brace-format
+msgid "{nbt}`string` **block**: block to place (e.g., `minecraft:stone`)"
+msgstr "{nbt}`string` **block**: block to place (e.g., `minecraft:stone`)"
+
+#: ../../modules/generation.md:177 ../../modules/generation.md:207
+#: ../../modules/generation.md:240 3613c4e553e845348fd57693f60eb32d
+#: 68ded88d7dc940ab959bdf8f11691ec7 d2e4608406fa492abfdbadf36f978391
+#, python-brace-format
+msgid "{nbt}`compound` **with**: additional settings"
+msgstr "{nbt}`compound` **with**: 形状设置"
+
+#: ../../modules/generation.md:178 ../../modules/generation.md:208
+#: ../../modules/generation.md:241 1c53179e14e743bf88902f752975445d
+#: 4aff4977d319463683097608495a77e3 b9e957ed71764c338fe56c104713780a
+#, python-brace-format
+msgid "{nbt}`string` **mode**: placement mode [destroy|keep|replace] (default: `replace`)"
+msgstr "{nbt}`string` **mode**: placement mode [destroy|keep|replace] (default: `replace`)"
+
+#: ../../modules/generation.md:179 ../../modules/generation.md:209
+#: ../../modules/generation.md:242 13ae2d9f71824e8ba0abee7086b62fcd
+#: 3e360c299682491aa06eadd29b60044e b9c8db64369f4247a8816f048513ff4a
+#, python-brace-format
+msgid "{nbt}`list` **masks**: list of masks to filter positions (combine as AND)"
+msgstr "{nbt}`list` **masks**：用于过滤位置的掩码列表（以AND方式组合）"
+
+#: ../../modules/generation.md:180 ../../modules/generation.md:210
+#: ../../modules/generation.md:243 209747575ab34d7d91c61a1d850eadaa
+#: 443b9907286546b4b12c6c8fad0c6d5d 51bc9af1a50a49f19d42cd5ca13a445f
+#, python-brace-format
+msgid "{nbt}`compound` mask entry"
+msgstr "{nbt}`compound` 参数"
+
+#: ../../modules/generation.md:181 ../../modules/generation.md:211
+#: ../../modules/generation.md:244 33d72ebfefae41e881ca9bb4c130ca2c
+#: 769a0df14c194d84ad481a71bb25a20b d940e8e605244ca48c2ce03a9322b787
+#, python-brace-format
+msgid "{nbt}`string` **block**: block to check (e.g., `minecraft:stone`, `#minecraft:logs`)"
+msgstr "{nbt}`string` **block**: block to check (e.g., `minecraft:stone`, `#minecraft:logs`)"
+
+#: ../../modules/generation.md:182 ../../modules/generation.md:212
+#: ../../modules/generation.md:245 1dfe9cdd7c964bb1a4d2dba644b8a2d9
+#: cf303acc303542fb9d4a26c9144e5145 f2baa44ac5f04030aa0d47ad8345e890
+#, python-brace-format
+msgid "{nbt}`bool` **negate**: invert the condition (default: false)"
+msgstr "{nbt}`bool` **negate**：反转条件（默认：false）"
+
+#: ../../modules/generation.md:183 ../../modules/generation.md:213
+#: ../../modules/generation.md:246 08708d03890d4b908a1aa751f9bedb5e
+#: 7fd3531ce8f8406f820a0bebcb7c9780 ef6a7fef74704fb3afb62b79350caed7
+#, python-brace-format
+msgid "{nbt}`int` **x**: x offset (default: 0)"
+msgstr "{nbt}`int` **x**：x偏移（默认：0）"
+
+#: ../../modules/generation.md:184 ../../modules/generation.md:214
+#: ../../modules/generation.md:247 9defc39167ac4280ac64a20636322694
+#: e50aee2a0ed64c1cb2984d46557b729c f4a07ef45e3f4e668bba585400d0b1d4
+#, python-brace-format
+msgid "{nbt}`int` **y**: y offset (default: 0)"
+msgstr "{nbt}`int` **y**：y偏移（默认：0）"
+
+#: ../../modules/generation.md:185 ../../modules/generation.md:215
+#: ../../modules/generation.md:248 11250ec2436648b396296d49708a97a2
+#: b7a053dc8df646fb953dbd586b4c3eb8 d36a5faa01b049dca1946b293b93ac86
+#, python-brace-format
+msgid "{nbt}`int` **z**: z offset (default: 0)"
+msgstr "{nbt}`int` **z**：z偏移（默认：0）"
+
+#: ../../modules/generation.md:189 ea9336d6fade4f16a7a6eb47b0fec018
+msgid "*Example: fill with stone, replacing only air*"
+msgstr "*示例：用石头填充，仅替换空气*"
+
+#: ../../modules/generation.md fbc145119924463a993da20c6eb849f5
+msgid "Set block type"
+msgstr "设置方块类型"
+
+#: ../../modules/generation.md:200 7e7dc145d9b4438f97c0b10b7f29c45d
+msgid "Replace block types while preserving states and NBT data."
+msgstr "替换方块类型，同时保留状态和NBT数据。"
+
+#: ../../modules/generation.md:206 cacc9c420c7547968ef790ca22dea735
+#, python-brace-format
+msgid "{nbt}`string` **type**: block type ID (e.g., `minecraft:oak_stairs`)"
+msgstr "{nbt}`string` **type**: block type ID (e.g., `minecraft:oak_stairs`)"
+
+#: ../../modules/generation.md:219 2b5aaf7155ad4ea7b16430e813e7ebbe
+msgid "*Example: convert spruce stairs to oak, preserving orientation*"
+msgstr "*示例：将云杉楼梯转换为橡木楼梯，保留朝向*"
+
+#: ../../modules/generation.md 47ae7cd9e6a64c9dae45fbdec673eb3b
+msgid "Set random block"
+msgstr "设置随机方块"
+
+#: ../../modules/generation.md:230 7bf587d3e33c4260b77288a23d54080b
+msgid "Place a randomly selected block from a weighted list."
+msgstr "从加权列表中放置随机选择的方块。"
+
+#: ../../modules/generation.md:236 90bab2fbc9ce474da0bd09649b65f523
+#, python-brace-format
+msgid "{nbt}`list` **blocks**: weighted block list"
+msgstr "{nbt}`list` **blocks**：加权方块列表"
+
+#: ../../modules/generation.md:237 951d42fadc4f409783ce9b1579f2aa93
+#, python-brace-format
+msgid "{nbt}`compound` block entry"
+msgstr "{nbt}`compound` 参数"
+
+#: ../../modules/generation.md:238 a204be0eff034713bf05e148d037e475
+#, python-brace-format
+msgid "{nbt}`string` **block** | **type**: full block string or type that preserves states"
+msgstr "{nbt}`string` **block** | **type**：完整的方块字符串或保留状态的类型"
+
+#: ../../modules/generation.md:239 63cd0dff94bd41838d839d000ab118aa
+#, python-brace-format
+msgid "{nbt}`int` **weight**: selection weight (default: 1)"
+msgstr "{nbt}`int` **weight**：选择权重（默认：1）"
+
+#: ../../modules/generation.md:252 01592e805e47420d91a2a67e69e1480c
+msgid "*Example: create a mixed ore vein*"
+msgstr "*示例：创建混合矿脉*"
+
+#: ../../modules/generation.md:267 43a5af7d932b411cbc47b7c3d338baab
+msgid "Noise callbacks"
+msgstr "噪声回调"
+
+#: ../../modules/generation.md:272 1c04dffe462748ceadb08540e2436fcb
+msgid "Noise callbacks require the **bs.random** module to be installed."
+msgstr "噪声回调需要安装 **bs.random** 模块。"
+
+#: ../../modules/generation.md 9fafc85bc92544fb9b16c4dc662cbeea
+msgid "Fractal noise 2D"
 msgstr "分形二维形状"
 
-#: ../../modules/generation.md:106 dc4346a82d3f446a992e9f278d04f278
-msgid ""
-"Generate a shape in 2D space using a Fractal noise algorithm. The shape "
-"is generated at the specified origin, with the callback executed at each "
-"step to facilitate custom behavior during the generation process."
-msgstr "以指定位置为原点，使用分形噪声算法，在二维平面上生成形状。每一步生成都有回调，可以在这个过程中自定义行为。"
+#: ../../modules/generation.md:281 08a61031e9e847779cea0e5e4cb86f15
+msgid "Compute fractal noise and execute a callback with the noise value. Combines multiple octaves of simplex noise for natural patterns."
+msgstr "计算分形噪声并以噪声值执行回调。组合多个八度的单纯形噪声以生成自然图案。"
 
-#: ../../modules/generation.md:137 2ed42182be8d42699422f012d7fc9cdf
-msgid ""
-"*Example: Generate a 3D terrain using a heightmap. This function employs "
-"a linear approach; for more interesting terrain, consider scaling the "
-"noise values differently according to various ranges. Check out [this "
-"video](https://www.youtube.com/watch?v=CSa5O6knuwI) for more insights on "
-"terrain generation:*"
-msgstr "*示例：使用高度图生成3D地形。此函数采用线性方法；为了生成更有趣的地形，考虑根据不同范围对噪声值进行缩放。查看[此视频](https://www.youtube.com/watch?v=CSa5O6knuwI)以获取有关地形生成的更多见解：*"
+#: ../../modules/generation.md:287 ../../modules/generation.md:315
+#: 9cded7aa51864fb6a1da8df439672f61 f60507d6ad2d4db4a7e8d4ad26847501
+#, python-brace-format
+msgid "{nbt}`string` **run**: callback to execute with the noise value"
+msgstr "{nbt}`string` **run**: 每一步运行的回调命令，每一步调用中可以读取这些分数："
 
-#: ../../modules/generation.md:152 45e91d34958a40179e396de7a26bd0c2
-msgid "**Credits**: Aksiome"
-msgstr "**制作人员**：Aksiome"
+#: ../../modules/generation.md:288 ../../modules/generation.md:316
+#: 26c6168c3a964262ac40e27d38ee52ba 898a0fa83f0849e98ae8347fa8bcd8b0
+#, python-brace-format
+msgid "{nbt}`compound` **with**: noise settings"
+msgstr "{nbt}`compound` **with**: 形状设置"
 
-#: ../../_templates/comments.md:4 2b2668589f2944cb916fe7dfd1afca19
+#: ../../modules/generation.md:289 ../../modules/generation.md:317
+#: 4897664b66e2417f9935b1cef2c26732 fa031998d155432387714e79144225f1
+#, python-brace-format
+msgid "{nbt}`int` **size**: noise granularity, lower = more detail (default: 32)"
+msgstr "{nbt}`int` **size**: 噪声的粒度，数字越低细节越多（默认：32）。"
+
+#: ../../modules/generation.md:290 ../../modules/generation.md:318
+#: 136d4806f961428c88c88b56921acb56 3071c8e4a2424073bc91bb1d241111ec
+#, python-brace-format
+msgid "{nbt}`int` **seed**: seed for reproducibility (default: random)"
+msgstr "{nbt}`int` **seed**: 噪声的种子，方便重现结果（默认：随机）。"
+
+#: ../../modules/generation.md:291 da5dd6300e5e44a09e5b3f43c6c53930
+#, python-brace-format
+msgid "{nbt}`int` **octaves**: number of noise layers (default: 2)"
+msgstr "**分数 `$random.fractal_noise_2d.octaves bs.in`**：要组合的噪声层数（默认：2）。频程越多细节越多。"
+
+#: ../../modules/generation.md:292 44f15bce2ee849098ea3f707b65253f4
+#, python-brace-format
+msgid "{nbt}`double` **persistence**: amplitude multiplier per octave (default: 0.5)"
+msgstr "{nbt}`double` **persistence**: 每个倍频程的贡献，更高的值细节更多（默认：0.5）。"
+
+#: ../../modules/generation.md:293 41bb080874c94f9a89a3d3ba0d88e7ff
+#, python-brace-format
+msgid "{nbt}`double` **lacunarity**: frequency multiplier per octave (default: 2.0)"
+msgstr "{nbt}`double` **lacunarity**: 每个倍频程的频率增长，值越高频率增长越快（默认：2.0）。"
+
+#: ../../modules/generation.md:297 ../../modules/generation.md:322
+#: c1fc7c81c1814595907d3ddf48c0f4e7 f79b1d58134a41b488e65a540e839386
+msgid "**Score `$generation.noise bs.lambda`**: noise value in range [-1000, 1000]"
+msgstr "**`$generation.noise bs.lambda`**: 噪声值，范围在[-1000, 1000]。"
+
+#: ../../modules/generation.md:299 ../../modules/generation.md:324
+#: 6783c018d6474562b4eb30d9f13773d6 7ec96781af1d4da0a9b4b7a2ce283341
+msgid "**Score `$generation.i bs.lambda`**: first dimension index (inherited from iterator)"
+msgstr "**分数 `$generation.i bs.lambda`**：第一维度索引（从迭代器继承）"
+
+#: ../../modules/generation.md:301 ../../modules/generation.md:326
+#: 668280a2d4284a8d8adb50b942ba4a89 7a72761fdb16476c81c322b242979063
+msgid "**Score `$generation.j bs.lambda`**: second dimension index (inherited from iterator)"
+msgstr "**分数 `$generation.j bs.lambda`**：第二维度索引（从迭代器继承）"
+
+#: ../../modules/generation.md 731de158e34e44239c90cee8de0b4821
+msgid "Simplex noise 2D"
+msgstr "单纯二维形状"
+
+#: ../../modules/generation.md:309 9b505b6d52b94f528f944099fc7acb06
+msgid "Compute simplex noise and execute a callback with the noise value."
+msgstr "计算单纯形噪声并以噪声值执行回调。"
+
+#: ../../_templates/comments.md:4 64ef21ebfe264234a638fe047d7cb053
 msgid "**💬 Did it help you?**"
 msgstr "**💬 这对你有帮助吗？**"
 
-#: ../../_templates/comments.md:6 e570b60eb2ed490e9bf707a938e3bb9c
+#: ../../_templates/comments.md:6 d5b8aeedbc184335817e94067b53d3af
 msgid "Feel free to leave your questions and feedback below!"
 msgstr "欢迎在下方留下你的问题和反馈！"
 
-#, python-brace-format
-msgid "{nbt}`compound` Arguments"
-msgstr "{nbt}`compound` 参数"
+#~ msgid "Generate diverse terrains and landscapes, incorporating natural features."
+#~ msgstr "生成包含自然地貌的多样化地形和景观。"
 
-#, python-brace-format
-msgid ""
-"{nbt}`string` **run**: Callback to run "
-"at each step. For each step, the"
-" following scores can be used:"
-msgstr "{nbt}`string` **run**: 每一步运行的回调命令，每一步调用中可以读取这些分数："
+#~ msgid "Shape 2D"
+#~ msgstr "二维平面形状"
 
+#~ msgid "Generate a shape in 2D space at the specified origin, with the callback executed at each step, allowing the user to handle the X and Y coordinates directly."
+#~ msgstr "以指定位置为原点遍历二维平面。每一步运行都有回调，用户可以直接在回调中操作 X 和 Y 坐标。"
 
-msgid "**`$generation.x bs.lambda`**: The X coordinate of the current step."
-msgstr "**`$generation.x bs.lambda`**: 这一步的x坐标。"
+#~ msgid "Generate a shape in 2D space using a Simplex noise algorithm. The shape is generated at the specified origin, with the callback executed at each step to facilitate custom behavior during the generation process."
+#~ msgstr "以指定位置为原点，使用单纯形噪声算法，在二维平面上生成形状。每一步生成都有回调，可以在这个过程中自定义行为。"
 
-msgid "**`$generation.y bs.lambda`**: The Y coordinate of the current step."
-msgstr "**`$generation.y bs.lambda`**: 这一步的y坐标。"
+#~ msgid "Generate a shape in 2D space using a Fractal noise algorithm. The shape is generated at the specified origin, with the callback executed at each step to facilitate custom behavior during the generation process."
+#~ msgstr "以指定位置为原点，使用分形噪声算法，在二维平面上生成形状。每一步生成都有回调，可以在这个过程中自定义行为。"
 
-#, python-brace-format
-msgid "{nbt}`int` **width**: Width of the shape to generate."
-msgstr "{nbt}`int` **width**: 生成形状的宽度。"
+#~ msgid "*Example: Generate a 3D terrain using a heightmap. This function employs a linear approach; for more interesting terrain, consider scaling the noise values differently according to various ranges. Check out [this video](https://www.youtube.com/watch?v=CSa5O6knuwI) for more insights on terrain generation:*"
+#~ msgstr "*示例：使用高度图生成3D地形。此函数采用线性方法；为了生成更有趣的地形，考虑根据不同范围对噪声值进行缩放。查看[此视频](https://www.youtube.com/watch?v=CSa5O6knuwI)以获取有关地形生成的更多见解：*"
 
-#, python-brace-format
-msgid "{nbt}`int` **height**: Height of the shape to generate."
-msgstr "{nbt}`int` **height**: 生成形状的高度。"
+#~ msgid "**`$generation.x bs.lambda`**: The X coordinate of the current step."
+#~ msgstr "**`$generation.x bs.lambda`**: 这一步的x坐标。"
 
-#, python-brace-format
-msgid "{nbt}`compound` **with**: Shape settings."
-msgstr "{nbt}`compound` **with**: 形状设置"
+#~ msgid "**`$generation.y bs.lambda`**: The Y coordinate of the current step."
+#~ msgstr "**`$generation.y bs.lambda`**: 这一步的y坐标。"
 
-#, python-brace-format
-msgid ""
-"{nbt}`string` **direction**: Plane used to "
-"generate the shape (`xz`, `xy`, or "
-"`zy`, default: `xz`)."
-msgstr "{nbt}`string` **direction**: 形状的生成平面（`xz`，`xy`，或`zy`，默认：`xz`）。"
+#~ msgid "{nbt}`int` **width**: Width of the shape to generate."
+#~ msgstr "{nbt}`int` **width**: 生成形状的宽度。"
 
-#, python-brace-format
-msgid ""
-"{nbt}`int` **spacing**: Distance between "
-"blocks in the generated shape (default:"
-" 1)."
-msgstr "{nbt}`int` **spacing**: 生成形状中方块的间隔（默认：1）。"
+#~ msgid "{nbt}`int` **height**: Height of the shape to generate."
+#~ msgstr "{nbt}`int` **height**: 生成形状的高度。"
 
-#, python-brace-format
-msgid ""
-"{nbt}`int` **limit**: Limit how many "
-"steps are executed in a single "
-"tick (default: 256)."
-msgstr "{nbt}`int` **limit**: 限制每tick最多运行多少步（默认：256）。"
-
-#, python-brace-format
-msgid ""
-"{nbt}`int` **size**: Granularity of the "
-"noise. Lower values increase detail "
-"(default: 32)."
-msgstr "{nbt}`int` **size**: 噪声的粒度，数字越低细节越多（默认：32）。"
-
-#, python-brace-format
-msgid ""
-"{nbt}`int` **seed**: Seed for the noise"
-" generation, allowing for reproducibility "
-"(default: random)."
-msgstr "{nbt}`int` **seed**: 噪声的种子，方便重现结果（默认：随机）。"
-
-#, python-brace-format
-msgid ""
-"{nbt}`int` **octaves**: Number of noise "
-"layers; more octaves enhance detail "
-"(default: 2)."
-msgstr ""
-"**分数 `$random.fractal_noise_2d.octaves "
-"bs.in`**：要组合的噪声层数（默认：2）。频程越多细节越多。"
-
-#, python-brace-format
-msgid ""
-"{nbt}`double` **persistence**: Contribution of "
-"each octave. Higher means more detail"
-" (default: 0.5)."
-msgstr "{nbt}`double` **persistence**: 每个倍频程的贡献，更高的值细节更多（默认：0.5）。"
-
-#, python-brace-format
-msgid ""
-"{nbt}`double` **lacunarity**: Frequency increase "
-"for each octave. Higher means more "
-"rapid frequency increase (default: 2.0)."
-msgstr "{nbt}`double` **lacunarity**: 每个倍频程的频率增长，值越高频率增长越快（默认：2.0）。"
-
-msgid ""
-"**`$generation.noise bs.lambda`**: The noise "
-"value in the range [-1000, 1000]."
-msgstr "**`$generation.noise bs.lambda`**: 噪声值，范围在[-1000, 1000]。"
+#~ msgid "{nbt}`string` **direction**: Plane used to generate the shape (`xz`, `xy`, or `zy`, default: `xz`)."
+#~ msgstr "{nbt}`string` **direction**: 形状的生成平面（`xz`，`xy`，或`zy`，默认：`xz`）。"

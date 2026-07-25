@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -20,12 +19,8 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../changelog/v3.0.2.md:1 7894da0778704074ad1b5751c2b60f12
-msgid ""
-"📦 [Bookshelf - "
-"3.0.2](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.0.2)"
-msgstr ""
-"📦 [Bookshelf - "
-"3.0.2](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.0.2)"
+msgid "📦 [Bookshelf - 3.0.2](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.0.2)"
+msgstr "📦 [Bookshelf - 3.0.2](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.0.2)"
 
 #: ../../changelog/v3.0.2.md:3 fb29bed572e8475d8a0ea502a69b0a4c
 msgid "**🩹 A Quick Hotfix!**"
@@ -36,41 +31,21 @@ msgid "*This is a hotfix for version 3.0.1.*"
 msgstr "*此版本为 3.0.1 的热修复更新。*"
 
 #: ../../changelog/v3.0.2.md:7 17549256c8e84750803f93966f9b3308
-msgid ""
-"<abbr title=\"Bug "
-"Fix\">🐛</abbr>**[#431](https://github.com/mcbookshelf/bookshelf/pull/431)**"
-" - Improve compatibility by using deflate instead of bzip2 for "
-"compression."
-msgstr ""
-"<abbr title=\"Bug "
-"Fix\">🐛</abbr>**[#431](https://github.com/mcbookshelf/bookshelf/pull/431)**"
-" - 使用deflate替代bzip2压缩算法以提升兼容性。"
+msgid "<abbr title=\"Bug Fix\">🐛</abbr>**[#431](https://github.com/mcbookshelf/bookshelf/pull/431)** - Improve compatibility by using deflate instead of bzip2 for compression."
+msgstr "<abbr title=\"Bug Fix\">🐛</abbr>**[#431](https://github.com/mcbookshelf/bookshelf/pull/431)** - 使用deflate替代bzip2压缩算法以提升兼容性。"
 
 #: ../../changelog/v3.0.2.md:10 402c218dafeb48f084f1e1340e171a5e
 msgid "`❤️ bs.health`"
 msgstr "`❤️ bs.health`"
 
 #: ../../changelog/v3.0.2.md:12 580dbe50701c4e8ca3e953af4fdab5ea
-msgid ""
-"<abbr title=\"Bug Fix\">🐛</abbr> "
-"**[#428](https://github.com/mcbookshelf/bookshelf/pull/428)** - Ensure "
-"player health updates correctly when using percentage-based max health "
-"attributes."
-msgstr ""
-"<abbr title=\"Bug Fix\">🐛</abbr> "
-"**[#428](https://github.com/mcbookshelf/bookshelf/pull/428)** - "
-"修复使用百分比最大生命值属性时玩家生命值更新异常的问题。"
+msgid "<abbr title=\"Bug Fix\">🐛</abbr> **[#428](https://github.com/mcbookshelf/bookshelf/pull/428)** - Ensure player health updates correctly when using percentage-based max health attributes."
+msgstr "<abbr title=\"Bug Fix\">🐛</abbr> **[#428](https://github.com/mcbookshelf/bookshelf/pull/428)** - 修复使用百分比最大生命值属性时玩家生命值更新异常的问题。"
 
 #: ../../changelog/v3.0.2.md:15 9d9e9086c9574551a499f39499f86d55
 msgid "`🔬 bs.dump`"
 msgstr "`🔬 bs.dump`"
 
 #: ../../changelog/v3.0.2.md:17 f6cc7320516346b4b77a0c2ac66916ee
-msgid ""
-"<abbr title=\"Bug Fix\">🐛</abbr> "
-"**[#432](https://github.com/mcbookshelf/bookshelf/issues/432)** - Fix "
-"dump failing on compounds with single-letter keys."
-msgstr ""
-"<abbr title=\"Bug Fix\">🐛</abbr> "
-"**[#432](https://github.com/mcbookshelf/bookshelf/issues/432)** - "
-"修复包含单字母键名的复合结构dump失败问题。"
+msgid "<abbr title=\"Bug Fix\">🐛</abbr> **[#432](https://github.com/mcbookshelf/bookshelf/issues/432)** - Fix dump failing on compounds with single-letter keys."
+msgstr "<abbr title=\"Bug Fix\">🐛</abbr> **[#432](https://github.com/mcbookshelf/bookshelf/issues/432)** - 修复包含单字母键名的复合结构dump失败问题。"

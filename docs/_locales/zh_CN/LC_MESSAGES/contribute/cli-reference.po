@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,195 +18,172 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../contribute/cli-reference.md:5 dc89051c735e4f1ba065f2abb232cc96
+#: ../../contribute/cli-reference.md:5 792fe1d6fc194feea797241b303eb094
 msgid "📜 CLI Reference"
-msgstr "📜 CLI 参考手册"
+msgstr "馃摐 CLI 鍙傝€冩墜鍐"
 
-#: ../../contribute/cli-reference.md:7 dcf341707fc247f0a12dab2fa1d8d457
-msgid ""
-"This page provides a quick reference to the available commands. Use this "
-"reference to quickly look up commands and their usage without diving into"
-" detailed documentation."
-msgstr "本页面提供可用命令的快速参考。使用此手册可快速查阅命令及其用法，无需深入详细文档。"
+#: ../../contribute/cli-reference.md:7 f6b6ee75f8b9423eaad5b6016860925f
+msgid "This page provides a quick reference to the available commands. Use this reference to quickly look up commands and their usage without diving into detailed documentation."
+msgstr "鏈〉闈㈡彁渚涘彲鐢ㄥ懡浠ょ殑蹇€熷弬鑰冦€備娇鐢ㄦ鎵嬪唽鍙揩閫熸煡闃呭懡浠ゅ強鍏剁敤娉曪紝鏃犻渶娣卞叆璇︾粏鏂囨。銆"
 
-#: ../../contribute/cli-reference.md 397b6b0740c548c79adc90fbea0e549d
-msgid "**Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**"
-msgstr "**命令**"
+#: ../../contribute/cli-reference.md c68aeb5d19c04b7e95a29b5d3e9da41a
+msgid "**Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**"
+msgstr "**鍛戒护**"
 
-#: ../../contribute/cli-reference.md 12229cf582ad414c8e59c3731fdbef5c
+#: ../../contribute/cli-reference.md 6f03f65d3ac645beb627f5965add1157
 msgid "**Description**"
-msgstr "**描述**"
+msgstr "**鎻忚堪**"
 
-#: ../../contribute/cli-reference.md ef8c57be64bb43ee837569b827c18337
+#: ../../contribute/cli-reference.md 622892cf03084b00acff1479fa17c90a
 msgid "**Arguments/Options**"
-msgstr "**参数/选项**"
+msgstr "**鍙傛暟/閫夐」**"
 
-#: ../../contribute/cli-reference.md 8a3bbbdd4a5e43cf8fe2e6d0dc32f525
-#, fuzzy
+#: ../../contribute/cli-reference.md b6705d29866a41e58518b9b3cbd8cfa0
 msgid "**🔍 `check`**"
-msgstr "**🧩 `modules check`**"
+msgstr "**馃З `modules check`**"
 
-#: ../../contribute/cli-reference.md 02137157136f44a7bc529d8999e744b4
-#, fuzzy
+#: ../../contribute/cli-reference.md 1e24f8b011004737a9e00bf42aa0b9af
 msgid "Check project requirements and metadata."
-msgstr "校验模块需求及元数据。"
+msgstr "鏍￠獙妯″潡闇€姹傚強鍏冩暟鎹€"
 
-#: ../../contribute/cli-reference.md 6f74775b4bae4aedbcdace1ca0a19e49
-#: cc908ad8027344b9b18688c14c820085 f0bf63d4ad4c4a0bb61384fadc48274d
+#: ../../contribute/cli-reference.md 5981b6f4c0ef4d5bb2349e236aa93da4
+#: 8cf185bb21f449eb8b6dc150c4c61858 ae70a7cf2dc547b8adf0974a18a0c2f5
 msgid "No arguments."
-msgstr "无参数。"
+msgstr "鏃犲弬鏁般€"
 
-#: ../../contribute/cli-reference.md a4a5510ae667422eb70a1611849de615
-#, fuzzy
+#: ../../contribute/cli-reference.md da88954001134abc969b74d320dfb301
 msgid "**📑 `update`**"
-msgstr "**🧩 `modules update`**"
+msgstr "**馃З `modules update`**"
 
-#: ../../contribute/cli-reference.md b9e2cfd8058d40ed8a25a9df7b40e661
-#, fuzzy
+#: ../../contribute/cli-reference.md 028f5c4402ee4a99ace8ce3b38d59c2e
 msgid "Update project metadata changes."
-msgstr "更新元数据变更。"
+msgstr "鏇存柊鍏冩暟鎹彉鏇淬€"
 
-#: ../../contribute/cli-reference.md 42929e2d24254de3993fcb00028431a3
-#, fuzzy
+#: ../../contribute/cli-reference.md bbc908b1c5824ef091ae77bdbd15f59e
 msgid "**🔗 `link`**"
-msgstr "**🧩 `modules link`**"
+msgstr "**馃З `modules link`**"
 
-#: ../../contribute/cli-reference.md 25dc828bb3a64eaaa85fca851443a759
-msgid ""
-"Link the generated packs to Minecraft. More information [here](project"
-":getting-started.md#linking-modules-to-minecraft)."
-msgstr ""
-"将生成的资源包链接至 Minecraft。详细信息参见[此文档](project:getting-started.md#linking-"
-"modules-to-minecraft)。"
+#: ../../contribute/cli-reference.md 6e350097ef0543ce85ccb0c3ce07b1d3
+msgid "Link the generated packs to Minecraft. More information [here](project:getting-started.md#linking-modules-to-minecraft)."
+msgstr "灏嗙敓鎴愮殑璧勬簮鍖呴摼鎺ヨ嚦 Minecraft銆傝缁嗕俊鎭弬瑙乕姝ゆ枃妗(project:getting-started.md#linking-modules-to-minecraft)銆"
 
-#: ../../contribute/cli-reference.md 6ea5d0efa5104067ab091bf0cb200dd3
-msgid ""
-"`[world]`, `--minecraft`, `--data-pack`, `--resource-pack` - Paths to "
-"their respective directories."
-msgstr "`[world]`, `--minecraft`, `--data-pack`, `--resource-pack` - 指向对应目录的路径。"
+#: ../../contribute/cli-reference.md b423e15f6ae54ab1b540493e6c9f6dbf
+msgid "`[world]`, `--minecraft`, `--data-pack`, `--resource-pack` - Paths to their respective directories."
+msgstr "`[world]`, `--minecraft`, `--data-pack`, `--resource-pack` - 鎸囧悜瀵瑰簲鐩綍鐨勮矾寰勩€"
 
-#: ../../contribute/cli-reference.md 603b727dbf0046d5af52fba73e20472c
+#: ../../contribute/cli-reference.md fa12363d3ddd4b04a94bb22fa9be02bd
 msgid "**📝 `docs build`**"
-msgstr "**📝 `docs build`**"
+msgstr "**馃摑 `docs build`**"
 
-#: ../../contribute/cli-reference.md e2666accd37141318fb3af991765129d
+#: ../../contribute/cli-reference.md 40cb4c1ee3434feca028ff3af95b3fb4
 msgid "Build static HTML documentation."
-msgstr "构建静态 HTML 文档。"
+msgstr "鏋勫缓闈欐€?HTML 鏂囨。銆"
 
-#: ../../contribute/cli-reference.md 504060cc40bb4c1b9c23ba83eb9b210e
-#: b5b54c29dda14912961a056f3d007d22
+#: ../../contribute/cli-reference.md 6ed62ef8b29b4a9993dde845a86275a7
+#: c9d4e44593234c96a15b976189339b76
 msgid "`[output]` - Build directory (optional, defaults to `_build`)."
-msgstr "`[output]` - 构建目录（可选，默认值 `_build`）"
+msgstr "`[output]` - 鏋勫缓鐩綍锛堝彲閫夛紝榛樿鍊?`_build`锛"
 
-#: ../../contribute/cli-reference.md f239e7cefd8244a5a828a1e76efbb0dd
+#: ../../contribute/cli-reference.md 9f25ebf0925b47f4af9e4844086b61e9
 msgid "**📝 `docs watch`**"
-msgstr "**📝 `docs watch`**"
+msgstr "**馃摑 `docs watch`**"
 
-#: ../../contribute/cli-reference.md 09211767c6d04f5d8db88bc01874d8e2
+#: ../../contribute/cli-reference.md df5d7f51902c487ebaf91dd87a2d56c0
 msgid "Build and serve live documentation."
-msgstr "构建并实时预览文档。"
+msgstr "鏋勫缓骞跺疄鏃堕瑙堟枃妗ｃ€"
 
-#: ../../contribute/cli-reference.md 248c0ae1e3d24a6c91cd5ff42a851e9e
+#: ../../contribute/cli-reference.md 60cb0b265b1641179193aefade37d71e
 msgid "**📖 `examples build`**"
-msgstr "**📖 `examples build`**"
+msgstr "**馃摉 `examples build`**"
 
-#: ../../contribute/cli-reference.md e081e3ec8b39430c84837d1cb6371439
+#: ../../contribute/cli-reference.md bc7de250c62e4ccfbeff40132e8c7055
 msgid "Build the specified examples."
-msgstr "构建指定示例。"
+msgstr "鏋勫缓鎸囧畾绀轰緥銆"
 
-#: ../../contribute/cli-reference.md 91217319505b4408b533ae2318daadf3
+#: ../../contribute/cli-reference.md 31eb24d0c4c544b081177f0f5b4e7344
 msgid "`[examples...]` - List of examples to build (optional)."
-msgstr "`[examples...]` - 需构建的示例列表（可选）"
+msgstr "`[examples...]` - 闇€鏋勫缓鐨勭ず渚嬪垪琛紙鍙€夛級"
 
-#: ../../contribute/cli-reference.md db8a75d677294f1cb054f4dfe143ca36
+#: ../../contribute/cli-reference.md 5378ca311f1e4382b3bd3fce8393d340
 msgid "**📖 `examples watch`**"
-msgstr "**📖 `examples watch`**"
+msgstr "**馃摉 `examples watch`**"
 
-#: ../../contribute/cli-reference.md 7b38458d32894565b777b292c0e394ea
+#: ../../contribute/cli-reference.md aad1d8ccae784dd6a01ff4bbb0e3d18e
 msgid "Watch and rebuild the specified examples when changes occur."
-msgstr "监听变更并自动重建指定示例。"
+msgstr "鐩戝惉鍙樻洿骞惰嚜鍔ㄩ噸寤烘寚瀹氱ず渚嬨€"
 
-#: ../../contribute/cli-reference.md f56c8d830c5349b0aaf7233690c963a3
+#: ../../contribute/cli-reference.md ec44645bb4c84161ad65b3ce7c87d613
 msgid "`[examples...]` - List of examples to watch (optional)."
-msgstr "`[examples...]` - 需监听的示例列表（可选）"
+msgstr "`[examples...]` - 闇€鐩戝惉鐨勭ず渚嬪垪琛紙鍙€夛級"
 
-#: ../../contribute/cli-reference.md 4a990f2972504f6ab4f5db0b17f9dcad
+#: ../../contribute/cli-reference.md 7ab70981b4194bdb97e6bd48f6c0f2d4
 msgid "**🧩 `modules build`**"
-msgstr "**🧩 `modules build`**"
+msgstr "**馃З `modules build`**"
 
-#: ../../contribute/cli-reference.md b3d2826159e3403e91ef39beb6cc8512
+#: ../../contribute/cli-reference.md 7c29e823ba804d4fa835196d074cae47
 msgid "Build the specified modules."
-msgstr "构建指定模块。"
+msgstr "鏋勫缓鎸囧畾妯″潡銆"
 
-#: ../../contribute/cli-reference.md 8d3b2a8dbbad487dac1a7598100c7f9b
+#: ../../contribute/cli-reference.md 3914a94f1abd478a9a85138ef8c68049
 msgid "`[modules...]` - List of modules to build (optional)."
-msgstr "`[modules...]` - 需构建的模块列表（可选）"
+msgstr "`[modules...]` - 闇€鏋勫缓鐨勬ā鍧楀垪琛紙鍙€夛級"
 
-#: ../../contribute/cli-reference.md 30f603cfdfd14738bf620193700cf005
+#: ../../contribute/cli-reference.md 4288d8da6e214c6a9cc9b5288e777c74
 msgid "**🧩 `modules release`**"
-msgstr "**🧩 `modules release`**"
+msgstr "**馃З `modules release`**"
 
-#: ../../contribute/cli-reference.md 1dc946b2722b419db91c4c49a853114c
+#: ../../contribute/cli-reference.md 8f9321e33f004d4f9e8226414a1a97a4
 msgid "Build zipped modules for release."
-msgstr "构建用于发布的模块压缩包。"
+msgstr "鏋勫缓鐢ㄤ簬鍙戝竷鐨勬ā鍧楀帇缂╁寘銆"
 
-#: ../../contribute/cli-reference.md 7946c4b9a0524edaa412a237854df55c
+#: ../../contribute/cli-reference.md 1b338214903a481a90efc175448218f4
 msgid "**🧩 `modules test`**"
-msgstr "**🧩 `modules test`**"
+msgstr "**馃З `modules test`**"
 
-#: ../../contribute/cli-reference.md 70cfdce5872f45df95b584d98f1dff9f
+#: ../../contribute/cli-reference.md ef8a523f4ac4494b818c5ee09e593a32
 msgid "Build and test the specified modules."
-msgstr "构建并测试指定模块。"
+msgstr "鏋勫缓骞舵祴璇曟寚瀹氭ā鍧椼€"
 
-#: ../../contribute/cli-reference.md ae1991865fb0434abff48ba6bb81b077
+#: ../../contribute/cli-reference.md e0b0ea2d4e8042c583a3547f08f31c46
 msgid "`[modules...]` - List of modules to test (optional)."
-msgstr "`[modules...]` - 需测试的模块列表（可选）"
+msgstr "`[modules...]` - 闇€娴嬭瘯鐨勬ā鍧楀垪琛紙鍙€夛級"
 
-#: ../../contribute/cli-reference.md 108fd496513a4801912bb3a8d7e38e5d
+#: ../../contribute/cli-reference.md 28bcf01cdd174df190301bf2f997e5d0
 msgid "**🧩 `modules watch`**"
-msgstr "**🧩 `modules watch`**"
+msgstr "**馃З `modules watch`**"
 
-#: ../../contribute/cli-reference.md 5a2f54c4b7e4432a8611eee31e820371
+#: ../../contribute/cli-reference.md feec37b5f68c496d8057959c345ca06e
 msgid "Watch and rebuild the specified modules when changes occur."
-msgstr "监听变更并自动重建指定模块。"
+msgstr "鐩戝惉鍙樻洿骞惰嚜鍔ㄩ噸寤烘寚瀹氭ā鍧椼€"
 
-#: ../../contribute/cli-reference.md c02f1f8e31a443a1973f40a236a5a0d5
+#: ../../contribute/cli-reference.md f0f772deb726484ba1c70f0600ef1ec7
 msgid "`[modules...]` - List of modules to watch (optional)."
-msgstr "`[modules...]` - 需监听的模块列表（可选）"
+msgstr "`[modules...]` - 闇€鐩戝惉鐨勬ā鍧楀垪琛紙鍙€夛級"
 
-#: ../../contribute/cli-reference.md:25 fb393aa74d064497a413d39ac942adab
-#, fuzzy
-msgid ""
-"To run any command, type `uv run` before the command itself. "
-"Alternatively, you can activate the virtual environment (venv) manually "
-"and run the command directly. Some commands also have aliases:"
-msgstr "执行任何命令前需添加 `pdm run` 前缀。也可手动激活虚拟环境（venv）后直接运行命令。部分命令设有别名："
+#: ../../contribute/cli-reference.md:25 da4ae7bc05294cedb2d1d99b4aa5a5f4
+msgid "To run any command, type `uv run` before the command itself. Alternatively, you can activate the virtual environment (venv) manually and run the command directly. Some commands also have aliases:"
+msgstr "鎵ц浠讳綍鍛戒护鍓嶉渶娣诲姞 `pdm run` 鍓嶇紑銆備篃鍙墜鍔ㄦ縺娲昏櫄鎷熺幆澧冿紙venv锛夊悗鐩存帴杩愯鍛戒护銆傞儴鍒嗗懡浠よ鏈夊埆鍚嶏細"
 
-#: ../../contribute/cli-reference.md 4cd905fb56e24641bbdc240ac8ffec05
+#: ../../contribute/cli-reference.md 3a9df00185584ed2ac8d928498075d61
 msgid "**Alias**"
-msgstr "**别名**"
+msgstr "**鍒悕**"
 
-#: ../../contribute/cli-reference.md 465e6b9a528b47719fad72fdd075375c
+#: ../../contribute/cli-reference.md 38f5b6cd2b044c9fbb368b0a0cc8ef40
 msgid "**Command**"
-msgstr "**等效命令**"
+msgstr "**绛夋晥鍛戒护**"
 
-#: ../../contribute/cli-reference.md 92b77c7a1df8479c9f958b0d87c33fa5
-#, fuzzy
+#: ../../contribute/cli-reference.md 45b8b8eca3974cd182c7fc656e668fc1
 msgid "`uv run build`"
 msgstr "`pdm run build`"
 
-#: ../../contribute/cli-reference.md 4bf5eed353ef47bf8f53461999bd9ffd
-#, fuzzy
+#: ../../contribute/cli-reference.md c0d0ceab7fbb4ce9b7b9b6b82661318e
 msgid "`uv run modules build`"
 msgstr "`pdm run modules build`"
 
-#: ../../contribute/cli-reference.md 3d31c13ad6bc4aa997a5c164602da028
-#, fuzzy
+#: ../../contribute/cli-reference.md 90c4ad97ccf842179fa9da059bc2c18e
 msgid "`uv run watch`"
 msgstr "`pdm run watch`"
 
-#: ../../contribute/cli-reference.md cc76e25b806141a0852a4555dce3edc4
-#, fuzzy
+#: ../../contribute/cli-reference.md b13cdb527afe4e04b36a33e6574ec000
 msgid "`uv run modules watch`"
 msgstr "`pdm run modules watch`"
-
