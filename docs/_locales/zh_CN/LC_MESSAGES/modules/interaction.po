@@ -17,7 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
-
 #: ../../modules/interaction.md:1 203cbb7158f64f56b893fecb27713a42
 msgid "🖱️ Interaction"
 msgstr "🖱️ 交互（Interaction）"
@@ -40,7 +39,7 @@ msgstr "杰夫·拉斯金（Jef Raskin）"
 
 #: ../../modules/interaction.md:13 99f2231cc2484c2380a9d4462d96b374
 msgid "The Interaction API is a low-level API to create GUIs based on the [Interaction](https://minecraft.wiki/w/Interaction) entity. This API is low level since the possible events are directly and manually bound to the interaction."
-msgstr "Interaction API 是一个基于[交互实体](https://minecraft.wiki/w/Interaction)创建 GUI 的低级 API。这是一个低级 API，是因为可能的事件直接手动绑定到交互实体。"
+msgstr "Interaction API 是一套基于[交互实体](https://minecraft.wiki/w/Interaction)创建 GUI 的底层接口，需要将各类事件直接绑定到对应的交互实体。"
 
 #: ../../modules/interaction.md:18 c1cb648118cb4cd08d71fd39c5a04134
 msgid "🔧 Functions"
@@ -48,7 +47,7 @@ msgstr "🔧 函数"
 
 #: ../../modules/interaction.md:20 51d74c408e0c4658a70eae3c0d270202
 msgid "You can find below all functions available in this module."
-msgstr "你可以在下方找到此 API 中的所有可用函数。"
+msgstr "下面列出了此模块中所有可用的函数。"
 
 #: ../../modules/interaction.md:24 a79b6865d2cf4c9bb055d7122797823d
 msgid "Clear Events"
@@ -124,7 +123,7 @@ msgstr "**状态**：交互实体的指定事件将被移除。"
 
 #: ../../modules/interaction.md:47 211a32c24d2c4bc1884d53d663772d55
 msgid "*Example: Clear hover events for the interaction entity:*"
-msgstr "*示例：清除交互实体的悬停事件：*"
+msgstr "*示例：清除交互实体的指向事件：*"
 
 #: ../../modules/interaction.md:59 ../../modules/interaction.md:212
 #: 0320095540c1448aacc5e5adafabffd6 3986dcfd1381455d9d05b30d475e0663
@@ -217,56 +216,56 @@ msgstr "**状态**：交互实体将在被右键点击时触发事件。"
 #: ../../modules/interaction.md ec17aacf071a47a99b2174d671e14380
 #: f8fb4631018a45c0ad8324bf5c75cacd
 msgid "Hover"
-msgstr "悬停"
+msgstr "指向"
 
 #: ../../modules/interaction.md:121 a157f2e1a8344c95b5942f30a558daab
 msgid "Register a command to run continuously while the player is hovering over the interaction. Each interaction can respond to multiple events."
-msgstr "注册当玩家鼠标悬停在交互实体上时持续运行的命令。每个交互实体可以响应多个事件。"
+msgstr "注册玩家准星持续指向交互实体时运行的命令。每个交互实体可以响应多个事件。"
 
 #: ../../modules/interaction.md:130 01ffbde35eee4267b90876016a244652
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to execute while hovering over the interaction."
-msgstr "{nbt}`string` **run**: 准星悬停在交互实体上时持续执行的命令。"
+msgstr "{nbt}`string` **run**：准星持续指向交互实体时执行的命令。"
 
 #: ../../modules/interaction.md:139 f11e89533f9f45f7a7c9d9ff1d2e190b
 msgid "**State**: The interaction will trigger the event continuously while hovered over."
-msgstr "**状态**：交互实体将在被悬停时持续触发事件。"
+msgstr "**状态**：准星持续指向交互实体时，会持续触发该事件。"
 
 #: ../../modules/interaction.md 0a7e5e88744c4ad09d99a6e96db227fc
 #: c30a506cbed74392bcbc59d37d11c569
 msgid "Enter Hover"
-msgstr "进入悬停"
+msgstr "开始指向"
 
 #: ../../modules/interaction.md:146 5bfc72b9776948d7b7a9c53d0aeae322
 msgid "Register a command to run once when the player begins hovering over the interaction. Each interaction can respond to multiple events."
-msgstr "注册当玩家开始鼠标悬停在交互实体上时运行一次的命令。每个交互实体可以响应多个事件。"
+msgstr "注册玩家准星开始指向交互实体时运行一次的命令。每个交互实体可以响应多个事件。"
 
 #: ../../modules/interaction.md:155 d0b3f5278d124df180ceac72ffbb3fb6
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to execute when hovering begins."
-msgstr "{nbt}`string` **run**: 准星开始悬停时执行的命令。"
+msgstr "{nbt}`string` **run**: 准星开始指向时执行的命令。"
 
 #: ../../modules/interaction.md:164 364621de05cd425a9b4b56e82cd9c2f5
 msgid "**State**: The interaction will trigger the event once upon hover entry."
-msgstr "**状态**：交互实体将在进入悬停时触发一次事件。"
+msgstr "**状态**：交互实体将在进入指向时触发一次事件。"
 
 #: ../../modules/interaction.md 01dfd70a45a148ffafa06f7ae3c5e7df
 #: 15051c8572044679b436a1f7a7097779
 msgid "Leave Hover"
-msgstr "离开悬停"
+msgstr "不再指向"
 
 #: ../../modules/interaction.md:171 3a6fba045adb4f01a3da34551d42b0ba
 msgid "Register a command to run once when the player stops hovering over the interaction. Each interaction can respond to multiple events."
-msgstr "注册当玩家停止鼠标悬停在交互实体上时运行一次的命令。每个交互实体可以响应多个事件。"
+msgstr "注册玩家准星不再指向交互实体时运行一次的命令。每个交互实体可以响应多个事件。"
 
 #: ../../modules/interaction.md:180 3724a68c15a740e6a19f42ce42c9ae84
 #, python-brace-format
 msgid "{nbt}`string` **run**: Command to execute when hovering ends."
-msgstr "{nbt}`string` **run**: 准星结束悬停时执行的命令。"
+msgstr "{nbt}`string` **run**: 准星结束指向时执行的命令。"
 
 #: ../../modules/interaction.md:189 025204ae0bb443e185fed26ec0665296
 msgid "**State**: The interaction will trigger the event once upon hover exit."
-msgstr "**状态**：交互实体将在离开悬停时触发一次事件。"
+msgstr "**状态**：交互实体将在离开指向时触发一次事件。"
 
 #: ../../modules/interaction.md:192 bbc42e39a3a546ec91c7f44939c2051f
 msgid "Edge Case"
@@ -274,19 +273,19 @@ msgstr "边缘情况"
 
 #: ../../modules/interaction.md:195 914f2ebedf8c4701a880c90d82dfafa4
 msgid "If a player logs out while hovering over the interaction, the hover leave event will trigger on the executor. If the executor is the player, the event won't be triggered again when they log back in. Be sure to account for this edge case and handle it appropriately when the player returns."
-msgstr "如果玩家在悬停在交互实体上时退出游戏，悬停离开事件将在执行者上触发。如果执行者是玩家，当他们重新登录时该事件将不会再次触发。请务必考虑这种边缘情况，在玩家返回时适当处理。"
+msgstr "如果玩家在指向在交互实体上时退出游戏，指向离开事件将在执行者上触发。如果执行者是玩家，当他们重新登录时该事件将不会再次触发。请务必考虑这种边缘情况，在玩家返回时适当处理。"
 
 #: ../../modules/interaction.md:200 f9c24e9f85914cd2a107923df4be6e25
 msgid "*Example: Glow the interaction's icon while the interaction is hovered and unglow it when it is not hovered anymore:*"
-msgstr "*示例：当交互实体被悬停时让交互实体图标发光，不悬停时取消发光：*"
+msgstr "*示例：当交互实体被指向时让交互实体图标发光，不指向时取消发光：*"
 
 #: ../../modules/interaction.md:216 441a07a1ef2b4262a2ae25ea369f9a93
 msgid "↩️ Callbacks"
-msgstr "预定义回调"
+msgstr "↩️ 回调"
 
 #: ../../modules/interaction.md:218 e7bc2e6c6b0e435883abda27ae82e430
 msgid "You can find below all callbacks available in this module."
-msgstr "你可以在下方找到此 API 中的所有可用标签。"
+msgstr "下面列出了此模块中所有可用的回调。"
 
 #: ../../modules/interaction.md f439c1aaf6dd42d4bbc7e3fbc8b9edc7
 msgid "Glow"
@@ -330,11 +329,11 @@ msgstr "🏷️ 实体标签（Tags）"
 
 #: ../../modules/interaction.md:246 608aef8d4e9d4256a2f2b6eecbe12ea6
 msgid "You can find below all tags available in this module."
-msgstr "你可以在下方找到此 API 中的所有可用标签。"
+msgstr "下面列出了此模块中所有可用的标签。"
 
 #: ../../modules/interaction.md:250 917c42db78d84880a8634b2faa3b584f
 msgid "Is Hovered?"
-msgstr "是否被悬停？"
+msgstr "是否被指向？"
 
 #: ../../modules/interaction.md:252 a1b567f78665408889f559b6c819fefa
 msgid "**`bs.interaction.hovered`**"
@@ -342,11 +341,11 @@ msgstr "**`bs.interaction.hovered`**"
 
 #: ../../modules/interaction.md:254 86bc5af70e954bde95e55694de0606ca
 msgid "Determine if an interaction is currently hovered by a player."
-msgstr "判断交互实体当前是否被玩家悬停。"
+msgstr "判断交互实体当前是否被玩家指向。"
 
 #: ../../modules/interaction.md:257 6d97c20239c34aa49038f597e7b09c35
 msgid "This is useful in `hover_enter` and `hover_leave` events, which are per player. Since `hover_leave` triggers when a player stops hovering but doesn't check if all players have stopped, this tag can be used to determine when every player has left the interaction."
-msgstr "这在 `hover_enter` 和 `hover_leave` 事件中很有用，因为这些事件是针对每个玩家的。由于 `hover_leave` 在玩家停止悬停时触发，但不检查是否所有玩家都停止了，所以可以使用此标签来确定所有玩家是否都已离开交互实体。"
+msgstr "这在 `hover_enter` 和 `hover_leave` 事件中很有用，因为这些事件是针对每个玩家的。由于 `hover_leave` 在玩家停止指向时触发，但不检查是否所有玩家都停止了，所以可以使用此标签来确定所有玩家是否都已离开交互实体。"
 
 #: ../../modules/interaction.md:260 754763f1a0d148bba79fbeea18b0a0fe
 msgid "**Credits**: Aksiome"
@@ -408,7 +407,7 @@ msgstr "**`bs.interaction.listen_hover`**"
 
 #: ../../modules/interaction.md:308 74fb47e4a2e14ee9957f58639abd816f
 msgid "Determine if the current interaction listens to hover interactions."
-msgstr "判断当前交互实体是否监听悬停交互实体。"
+msgstr "判断当前交互实体是否监听指向交互实体。"
 
 #: ../../modules/interaction.md:313 d79bc62cf0ac4a23adda0dd2faa8a89d
 msgid "**`bs.interaction.listen_hover_enter`**"
@@ -416,7 +415,7 @@ msgstr "**`bs.interaction.listen_hover_enter`**"
 
 #: ../../modules/interaction.md:315 613ac9858d2c46268a1d5291554b1fb3
 msgid "Determine if the current interaction listens to enter hover interactions."
-msgstr "判断当前交互实体是否监听进入悬停交互实体。"
+msgstr "判断当前交互实体是否监听进入指向交互实体。"
 
 #: ../../modules/interaction.md:320 5458a63ec71644609f34b4e4a747478a
 msgid "**`bs.interaction.listen_hover_leave`**"
@@ -424,7 +423,7 @@ msgstr "**`bs.interaction.listen_hover_leave`**"
 
 #: ../../modules/interaction.md:322 4e6e5e584eb54f4aa1720280fd9cbbbd
 msgid "Determine if the current interaction listens to leave hover interactions."
-msgstr "判断当前交互实体是否监听离开悬停交互实体。"
+msgstr "判断当前交互实体是否监听离开指向交互实体。"
 
 #: ../../_templates/comments.md:4 fa596c047dee4bed8fb67058b67f49f3
 msgid "**💬 Did it help you?**"

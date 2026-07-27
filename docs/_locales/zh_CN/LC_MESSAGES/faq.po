@@ -24,11 +24,11 @@ msgstr "📋 常见问题"
 
 #: ../../faq.md:3 842694f660e740f49832ef2ed7422a11
 msgid "Can anyone use Bookshelf?"
-msgstr "我可以在我的项目中使用Bookshelf吗？"
+msgstr "任何人都可以使用 Bookshelf 吗？"
 
 #: ../../faq.md:5 80f081e02fdf411795ef35483d233e03
 msgid "Anyone can use Bookshelf in a project. If you can, a mention of Bookshelf is always welcome as it helps keep the open source world a respectful place. You can also share your projects on the [Discord](https://discord.gg/MkXytNjmBt) server. This shows others how you use Bookshelf and helps keep the community active."
-msgstr "任何人都可以在项目中使用 Bookshelf。如果可以，提及 Bookshelf 总是受欢迎的，因为这有助于保持开源世界的尊重。你也可以在 [Discord](https://discord.gg/MkXytNjmBt) 服务器上分享你的项目。这向其他人展示你如何使用 Bookshelf，并帮助保持社区活跃。"
+msgstr "任何人都可以在项目中使用 Bookshelf。如果方便，也欢迎在项目中注明使用了 Bookshelf，共同尊重开源作者的付出。你也可以在 [Discord](https://discord.gg/MkXytNjmBt) 服务器上分享项目，向其他人展示 Bookshelf 的用法，也让社区保持活跃。"
 
 #: ../../faq.md:7 4044ce2a5ebc4791a351a51f5c102291
 msgid "Is it compatible with other datapacks?"
@@ -44,7 +44,7 @@ msgstr "资源占用高吗？"
 
 #: ../../faq.md:13 d5d68d265a9941c89da2ccd5ecd99ba5
 msgid "🧠 CPU usage"
-msgstr "🧠 CPU占用"
+msgstr "🧠 CPU 使用率"
 
 #: ../../faq.md:15 39baebc9b485448b956b6c70d08b354c
 msgid "Bookshelf is mainly a set of functions that only run when you use them. They don't affect CPU on their own. Their impact depends on how complex the function is and how often you run it."
@@ -52,19 +52,19 @@ msgstr "Bookshelf 主要是一组函数，仅在使用时运行。它们本身�
 
 #: ../../faq.md:17 3e85aab4ca4b40d29fa1cd724655d53b
 msgid "💾 Memory usage"
-msgstr "💾 内存占用"
+msgstr "💾 内存使用率"
 
 #: ../../faq.md:19 df2a04a6aad343b5a39734ea61708e1b
 msgid "Minecraft loads datapacks at startup, so file count has little effect on memory use. Instructions are lightweight, and you can include many functions without increasing RAM needs. Bookshelf's modular design also lets you load only the modules you need."
-msgstr "Minecraft在加载时会解析整个数据包，因此文件数量并不重要。指令在内存中非常轻量，即使包含大量函数也不会显著增加RAM占用。此外，Bookshelf的模块化设计使你可以仅选择所需的模块。"
+msgstr "Minecraft 在启动时加载数据包，因此文件数量对内存使用影响很小。指令本身轻量，你可以包含大量函数而不会增加内存需求。Bookshelf 的模块化设计还允许你仅加载所需的模块。"
 
 #: ../../faq.md:21 0ec31723aa5e491dbcf9f991851eef1b
 msgid "💽 Disk usage"
-msgstr "💽 磁盘占用"
+msgstr "💽 磁盘使用率"
 
 #: ../../faq.md:23 08e9db88748443bbb86e4798a52424fb
 msgid "Bookshelf comes as compressed zip datapacks. If size matters, use the [Bookshelf Manager](https://mcbookshelf.dev) to download a bundle and pick only the modules you need."
-msgstr "Bookshelf 以压缩的 zip 数据包形式提供。如果大小重要，请使用 [Bookshelf Manager](https://mcbookshelf.dev) 下载捆绑包并仅选择你需要的模块。"
+msgstr "Bookshelf 以压缩的 zip 数据包形式提供。如果在意文件大小，请使用 [Bookshelf Manager](https://mcbookshelf.dev) 下载捆绑包，只选择需要的模块。"
 
 #: ../../faq.md:25 dfb7929c654f417d876c8b4dcc39e764
 msgid "Are the functions optimized?"
@@ -72,7 +72,7 @@ msgstr "函数优化如何？"
 
 #: ../../faq.md:27 cdc08d82877243a1b290dcd53468f18d
 msgid "Yes, optimization is a key focus, but Bookshelf aims to be easy to use and flexible. Some design choices may not be fully optimal because of this."
-msgstr "是的，优化是关键重点，但 Bookshelf 旨在易于使用和灵活。因此，某些设计选择可能不完全最优。"
+msgstr "是的，Bookshelf 一直很重视性能优化，但也希望保持易用和灵活。为了兼顾这些目标，部分设计未必能在所有场景下达到最佳性能。"
 
 #: ../../faq.md:29 25a09a2c37984e0d92c1fc54d88eb8f7
 msgid "What about copyrights?"
@@ -84,7 +84,7 @@ msgstr "你可以在任何地图或数据包中使用 Bookshelf。你可以修�
 
 #: ../../faq.md:35 b8c4eea95abb45ccbf0672bf59188403
 msgid "More questions? Join us on Discord!"
-msgstr "还有疑问？加入我们的Discord社区！"
+msgstr "还有疑问？欢迎加入我们的 Discord 社区！"
 
 #: ../../_templates/comments.md:4 f61172cf9c3c440cb7b7b060b2bca3ca
 msgid "**💬 Did it help you?**"

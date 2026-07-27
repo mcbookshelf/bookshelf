@@ -17,7 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
-
 #: ../../modules/time.md:1 d0995a3b66fe4859b7a4d78a3da295de
 msgid "⌚ Time"
 msgstr "⌚ 时间（Time）"
@@ -36,7 +35,7 @@ msgstr "启用命令方块"
 
 #: ../../modules/time.md:10 391cee5467c8480bb98209d57990a951
 msgid "This module uses a command block to get the system time. For the time to be displayed as intended, be sure that both the `command_blocks_work` and `send_command_feedback` game rules are set to `true`."
-msgstr "此模块使用命令方块获取系统时间。为了按预期显示时间，请确保在 `server.properties` 文件中将 `enable-command-block` 设置为 `true`，并且启用 `sendCommandFeedback` 游戏规则。"
+msgstr "此模块使用命令方块获取系统时间。为使时间按预期显示，请确保将 `command_blocks_work` 和 `send_command_feedback` 这两个游戏规则均设置为 `true`。"
 
 #: ../../modules/time.md:13 8f800d9bdb1d4daeb0f2f580f949218a
 msgid "🔧 Functions"

@@ -17,7 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
-
 #: ../../modules/link.md:1 2f22dbb2627f47be9cf0c0235094af83
 msgid "🔗 Link"
 msgstr "🔗 链接（Link）"
@@ -150,7 +149,7 @@ msgstr "**贡献者**：Aksiome、Leirof"
 
 #: ../../modules/link.md:64 a83b793a7f2e4b8a8f6935d62975dbab
 msgid "Imitate Behaviors"
-msgstr "模仿行为"
+msgstr "跟随父实体"
 
 #: ../../modules/link.md c21095443e194c25bb95f57096cd54bc
 #: ce3e8c12d8584356a9ca3a6f9b493022
@@ -287,7 +286,7 @@ msgstr "*示例：让盔甲架锁定到你的旋转：*"
 
 #: ../../modules/link.md ef96c55f6c124dc899742750029ca7a1
 msgid "What is a Local Position?"
-msgstr "保持局部坐标"
+msgstr "什么是局部位置？"
 
 #: ../../modules/link.md:244 cdfd2aa15b8f495c801adbbd272e64c8
 msgid "Unlike relative coordinates, this reference frame considers the entity's rotation. Therefore, when the parent entity rotates, the child entity rotates around it. For those familiar with Minecraft commands, local coordinates are available through the `^` symbol."

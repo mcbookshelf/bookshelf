@@ -17,7 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
-
 #: ../../modules/random.md:1 00629dbf5ae54947821e0cf7e6e542d9
 msgid "🎲 Random"
 msgstr "🎲 随机（Random）"
@@ -200,7 +199,7 @@ msgstr "*示例：生成1到100之间的随机数：*"
 
 #: ../../modules/random.md e0403f6d642741f0bc23b81d183e76dd
 msgid "What is a Uniform Distribution?"
-msgstr "均匀分布... 🥶 这是什么？"
+msgstr "什么是均匀分布？"
 
 #: ../../modules/random.md:133 708f0afc999749749438b3cce968652b
 msgid "Every outcome has an equal probability of occurring. It's like rolling a fair die where each number (1 through 6) has the same probability."
@@ -229,13 +228,13 @@ msgid "**Return | Score `$random.binomial bs.out`**: A random integer in range [
 msgstr "**返回值 | 分数 `$random.binomial bs.out`**：[0, `trials`] 范围内的随机整数。"
 
 #: ../../modules/random.md:155 b82ef74e86a34e6fbcaab83a7d837e4d
-#, python-format
+#, no-python-format
 msgid "*Example: Generate a random number with 10 trials and a 20% success chance:*"
-msgstr "*示例：生成一个有 10 次试验和 20% success（成功）几率的随机数：*"
+msgstr "*示例：生成一个进行 10 次试验、每次成功概率为 20% 的随机数：<!-- % success -->*"
 
 #: ../../modules/random.md 9d2c46e374b84b30a0394f57d99cc9ed
 msgid "What is a Binomial Distribution?"
-msgstr "随机分布"
+msgstr "什么是二项分布？"
 
 #: ../../modules/random.md:169 4b8b859166194da9b83d776300566b54
 msgid "Used when you have a fixed number of trials, each with two possible outcomes (success or failure). It calculates the probability of obtaining a specific number of successes. For example, flipping a coin 10 times and counting the number of heads."
@@ -259,13 +258,13 @@ msgid "**Return | Score `$random.geometric bs.out`**: A random integer in range 
 msgstr "**返回值 | 分数 `$random.geometric bs.out`**：[0, 1000] 范围内的随机整数。"
 
 #: ../../modules/random.md:190 7b387af3295d4c558f8c2e4af5dbdfe7
-#, python-format
+#, no-python-format
 msgid "*Example: Generate a random number with a 2% chance of stopping:*"
-msgstr "*示例：生成一个有 2% chance（停止概率）的随机数：*"
+msgstr "*示例：生成一个每次有 2% 概率停止的随机数：<!-- % chance -->*"
 
 #: ../../modules/random.md e74e6005f246485b9ffb79f1cb185d3d
 msgid "What is a Geometric Distribution?"
-msgstr "几何分布... 🥶 这是什么？"
+msgstr "什么是几何分布？"
 
 #: ../../modules/random.md:204 0048a5ea50b04a058f4f10899a1144a2
 msgid "Measures the number of trials required to achieve the first success in a sequence of independent and identical trials. For example, the number of dice rolls needed to obtain a six."
@@ -291,7 +290,7 @@ msgstr "{nbt}`double` **spread**: 标准差，用于控制随机数的分散程�
 
 #: ../../modules/random.md:223 9aa809b7e01c4cf580fdad618a029a47
 msgid "**Return | Score `$random.normal bs.out`**: A random integer centered near `mean`."
-msgstr "**返回值 | 分数 `$random.uniform bs.out`**：在`mean`附近的随机整数。"
+msgstr "**返回值 | 分数 `$random.normal bs.out`**：在 `mean` 附近的随机整数。"
 
 #: ../../modules/random.md:226 4580b1182b1441faa70ff9d84253bf19
 msgid "*Example: Generate a random number with mean 10 and spread 3:*"
@@ -299,7 +298,7 @@ msgstr "*示例：生成分散程度（标准差）为3，均值为10的正态�
 
 #: ../../modules/random.md 5db7d02270f64091837a2915bc947f91
 msgid "What is a Normal Distribution?"
-msgstr "随机分布"
+msgstr "什么是正态分布？"
 
 #: ../../modules/random.md:240 6e8d4b4041694d33ad78ca319b477c2b
 msgid "Also known as the Gaussian distribution, it produces values clustered around the mean with a bell-shaped probability curve. Widely used to model natural variations and measurement errors."
@@ -328,7 +327,7 @@ msgstr "*示例：生成一个偏向5的随机数：*"
 
 #: ../../modules/random.md 7af9db7a9252499c8d6488d042b99525
 msgid "What is a Poisson Distribution?"
-msgstr "泊松分布... 🥶 这是什么？"
+msgstr "什么是泊松分布？"
 
 #: ../../modules/random.md:275 2f94ed85519e4d41a5acf5b7d72318de
 msgid "A Poisson distribution generates values that cluster around an average value, **λ (lambda)**. Results tend to concentrate near this average, making it ideal for modeling random events occurring at a consistent rate."

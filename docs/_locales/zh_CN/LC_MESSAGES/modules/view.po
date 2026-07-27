@@ -10,7 +10,9 @@ msgstr ""
 "POT-Creation-Date: 2026-07-26 01:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -70,7 +72,7 @@ msgstr "输入"
 #: 727444901ae946fcaded89c0dc90c6c7 b6fc3207df7146ee9675c3b631de4887
 #: cc17c53054084daab757ec9fe1382f82
 msgid "**Execution `as <entities>`**: entity whose eyes determine the vision origin"
-msgstr "**执行 `as <实体>`**：视线起点实体。"
+msgstr "**执行 `as <entities>`**：以该实体的眼睛为视线起点。"
 
 #: ../../modules/view.md:35 ../../modules/view.md:80 ../../modules/view.md:105
 #: ../../modules/view.md:148 ../../modules/view.md:183
@@ -100,7 +102,7 @@ msgstr "{nbt}`compound` 参数"
 #: ../../modules/view.md:38 daa67aef773d49338b80e4cb7cd7b3c5
 #, python-brace-format
 msgid "{nbt}`string` **run**: command to run at the targeted block position"
-msgstr "{nbt}`string` **run**: 在目标方块位置执行的命令。"
+msgstr "{nbt}`string` **run**：在目标方块位置执行的命令。"
 
 #: ../../modules/view.md:39 ../../modules/view.md:84 ../../modules/view.md:109
 #: ../../modules/view.md:152 ../../modules/view.md:187
@@ -110,11 +112,11 @@ msgstr "{nbt}`string` **run**: 在目标方块位置执行的命令。"
 #: 6f47444706b4400b8388244bb6907103
 #, python-brace-format
 msgid "{nbt}`compound` **with**: optional settings (see advanced usage below)"
-msgstr "{nbt}`compound` **with**: 可选设置（详见下方高级用法）。"
+msgstr "{nbt}`compound` **with**：可选设置（参见下方的高级用法）。"
 
 #: ../../modules/view.md:43 fceee89dfb24458792eef502549bbfc8
 msgid "*Example: change the block you are looking at*"
-msgstr "*示例：改变你正在看着的方块：*"
+msgstr "*示例：更改你正在注视的方块。*"
 
 #: ../../modules/view.md 0e31b2e7391d42af938cf8723646c936
 #: 35f2a2ae028f4e889098692fa1ce676d 4ed9bf8c5aa348b4a7eebaed072439b6
@@ -132,7 +134,7 @@ msgstr "该系统是 `#bs.raycast:run` 函数的简化特定用例。它内部�
 
 #: ../../modules/view.md:57 f79dae3ea1bf40379b0fccd8367f3008
 msgid "Avoid advancements"
-msgstr "避免使用进度"
+msgstr "不建议使用进度检测"
 
 #: ../../modules/view.md:60 9860961140cb4a438491a286b19c66d4
 msgid "This function *can* be used with the `placed_block` advancement to detect block placement, but this is discouraged due to potential precision differences compared to Minecraft's native detection. Additionally, rapid mouse movements within the same tick may cause the wrong block to be targeted."
@@ -163,11 +165,11 @@ msgstr "以当前实体瞄准的实体为执行者执行指令。"
 #: ../../modules/view.md:83 56e2240296f74184b96bd761d17eed6b
 #, python-brace-format
 msgid "{nbt}`string` **run**: command to run as the targeted entity"
-msgstr "{nbt}`string` **run**: 以瞄准的实体为执行者执行的命令。"
+msgstr "{nbt}`string` **run**：以目标实体身份运行的命令。"
 
 #: ../../modules/view.md:88 5317db6f0fa743169e30aeaf35f18fca
 msgid "*Example: run a command as the entity you are looking at*"
-msgstr "*示例：让你正在看着的实体执行命令：*"
+msgstr "*示例：以你注视的实体身份执行命令。*"
 
 #: ../../modules/view.md 0c8cb624f78e41bab53092bbdd51696e
 #: 3f44e9019b1a49e59f242adfa0f8d4dc
@@ -181,11 +183,11 @@ msgstr "以当前实体瞄准的实体为执行位置执行指令。"
 #: ../../modules/view.md:108 c63b75f973f844219888b12448a4ed8e
 #, python-brace-format
 msgid "{nbt}`string` **run**: command to run at the targeted entity"
-msgstr "{nbt}`string` **run**: 以瞄准的实体为执行位置执行的命令。"
+msgstr "{nbt}`string` **run**：在目标实体处运行的命令。"
 
 #: ../../modules/view.md:113 cf003dc5d4784008b2c040d46858c6ed
 msgid "*Example: run a command at the entity you are looking at*"
-msgstr "*示例：在你正在看着的实体处执行命令：*"
+msgstr "*示例：在你注视的实体位置执行命令。*"
 
 #: ../../modules/view.md:129 0c6aec42a7fc464fa7e5aa9ce84aecbd
 msgid "Performance tip"
@@ -193,7 +195,7 @@ msgstr "性能提示"
 
 #: ../../modules/view.md:132 59c538d4e503486ba9a2e7d946324ee7
 msgid "In Minecraft, predicates can check if a player is looking at an entity. If you only need a simple player-specific check, you should consider using the [looked entity](#looked-entity) functions."
-msgstr "在 Minecraft 中，谓词可以检查玩家是否在看着一个实体。如果你只需要简单的特定玩家检查，应该考虑使用[被看着的实体](#looked-entity)函数。"
+msgstr "在 Minecraft 中，谓词可以检测玩家是否正在注视某个实体。如果只需要简单的玩家特定检查，建议使用 [被注视的实体](#looked-entity) 函数。"
 
 #: ../../modules/view.md:139 1e7b17c096e14f099504926d8265b19f
 msgid "Aimed point"
@@ -206,15 +208,15 @@ msgstr "在射线命中的终点处执行命令。"
 #: ../../modules/view.md:151 4737fed5d59148109e8adadc6a7632a2
 #, python-brace-format
 msgid "{nbt}`string` **run**: command to run at the hit point"
-msgstr "{nbt}`string` **run**: 在射线命中的终点处执行的命令。"
+msgstr "{nbt}`string` **run**：在命中点执行的命令。"
 
 #: ../../modules/view.md:156 8ea9a124615e4c389f0c9993fa0a38e5
 msgid "*Example: run a command at the point you are looking at*"
-msgstr "*示例：在你正在看着的点处执行命令：*"
+msgstr "*示例：在你瞄准的位置执行命令。*"
 
 #: ../../modules/view.md:174 ed6a6eda19af44b8aa8080920f9b992a
 msgid "Block placement"
-msgstr "方块放置"
+msgstr "方块放置位置"
 
 #: ../../modules/view.md:178 273ba1e621dc438ea5cf13273e293770
 msgid "Run a command at the precise coordinates where a block would align if placed, considering the collision block and its normal."
@@ -223,15 +225,15 @@ msgstr "根据方块的碰撞箱和其法线方向，精确地得到放置方块
 #: ../../modules/view.md:186 f1678c7d31eb4e49af34eff2241f201a
 #, python-brace-format
 msgid "{nbt}`string` **run**: command to run at the block placement position"
-msgstr "{nbt}`string` **run**: 在目标方块位置执行的命令。"
+msgstr "{nbt}`string` **run**：在方块放置位置执行的命令。"
 
 #: ../../modules/view.md:191 da1cdf3bee324ad3bf383a7d0cf12666
 msgid "*Example: set a block as if the player was placing it*"
-msgstr "*示例：像玩家放置方块一样设置方块：*"
+msgstr "*示例：在玩家将要放置方块的位置设置方块。*"
 
 #: ../../modules/view.md:209 8c0f096a230d4c0f8f53f30d5a382832
 msgid "Can see \"as to at\""
-msgstr "视线能否穿过“从执行者到执行位置”"
+msgstr "视线是否畅通（as → at）"
 
 #: ../../modules/view.md:213 c8dc2fed6d2741d9b934d545a4898d32
 msgid "Determine if an entity, from its current position, can have an unobstructed view to the execution position."
@@ -239,11 +241,11 @@ msgstr "验证从实体当前位置到执行位置之间能否被视线穿过。
 
 #: ../../modules/view.md:216 be8b3d7a39ab45f88b9bcf4e0ac0ac57
 msgid "**Execution `as <entities>`**: entities to check"
-msgstr "**执行 `as <实体>`**：被检查的实体。"
+msgstr "**执行 `as <entities>`**：要检查的实体"
 
 #: ../../modules/view.md:218 fafb95a0062440c48475ab3598fa275a
 msgid "**Execution `at <entity>` or `positioned <x> <y> <z>`**: position to check for visibility"
-msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：你想检查的位置。"
+msgstr "**执行 `at <entity>` 或 `positioned <x> <y> <z>`**：要检查的目标位置。"
 
 #: ../../modules/view.md:226 ../../modules/view.md:267
 #: 20df00ddb349404990450803eeaa43e1 70deb2018c1543b0b15276a96b112f3f
@@ -253,11 +255,11 @@ msgstr "输出"
 #: ../../modules/view.md:227 ../../modules/view.md:268
 #: a9310fbe07c84c25922b81d6b274d451 fa6052e776a04aa3a65e71e6fe4a62df
 msgid "**Return**: whether the check is successful (1 or 0)"
-msgstr "**返回值**：检查是否成功或失败（1或0）。"
+msgstr "**返回值**：检查是否成功（1 或 0）。"
 
 #: ../../modules/view.md:230 828dc4a8c57b47e6807d7a608326c389
 msgid "*Example: see if the nearest entity is able to see you*"
-msgstr "*示例：检查最近的实体是否能看到你：*"
+msgstr "*示例：查看最近的实体是否能看见你。*"
 
 #: ../../modules/view.md:246 ../../modules/view.md:278
 #: 2334060567104c6b83940779ff8e97bb f3ef79c10c454a3dafc268c3a39229dc
@@ -266,7 +268,7 @@ msgstr "**贡献者**：Aksiome、Leirof"
 
 #: ../../modules/view.md:250 6924cbcc7e384d6da526c0eee20be734
 msgid "In view \"as to at\""
-msgstr "在视野内“从执行者到执行位置”"
+msgstr "是否位于视野内（as → at）"
 
 #: ../../modules/view.md:254 5ff4c90a779d46bf98e41d88252f3318
 msgid "Determine if an entity has a specific position within its field of view, which is represented as a cone originating from the entity's eye."
@@ -274,11 +276,11 @@ msgstr "判断某个位置是否在实体的视野范围（从实体眼睛发出
 
 #: ../../modules/view.md:257 6bb9a4e58c284a87a47d957201ac7735
 msgid "**Execution `as <entities>`**: entities whose field of view is being checked"
-msgstr "**执行 `as <实体>`**：将该实体作为视野锥体。"
+msgstr "**执行 `as <entities>`**：正在检查其视野的实体"
 
 #: ../../modules/view.md:259 a68397424db74a65af8e3fd700696490
 msgid "**Execution `at <entity>` or `positioned <x> <y> <z>`**: position to check if within the field of view cone"
-msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：被检查是否在视野锥体内的位置。"
+msgstr "**执行 `at <entity>` 或 `positioned <x> <y> <z>`**：用于判断目标是否位于视野锥内的位置。"
 
 #: ../../modules/view.md:264 19df287d50eb4d629faef059ae07d7d8
 #, python-brace-format
@@ -287,11 +289,11 @@ msgstr "{nbt}`number` **angle**：表示视野的角度。这是圆锥开口的�
 
 #: ../../modules/view.md:271 6c9220d93ae944a1bc9495cefee69bc8
 msgid "*Example: check whether the position 0 5 0 is in your field of view*"
-msgstr "*示例：检查位置0 5 0是否在你的视野内：*"
+msgstr "*示例：检查坐标 0 5 0 是否在你的视野内。*"
 
 #: ../../modules/view.md:282 218ad47db59f4d78ba35807ac82b1eee
 msgid "Looked entity"
-msgstr "被看着的实体"
+msgstr "注视的实体"
 
 #: ../../modules/view.md:290 139b1038547f4d0ca71e26979d5763b3
 msgid "Run a command as the entity a player is looking at."
@@ -300,21 +302,21 @@ msgstr "以玩家正在看着的实体为执行者执行命令。"
 #: ../../modules/view.md:293 ../../modules/view.md:320
 #: 5af2317d7e64422a9134590fb01da89b fb0c32a3d7d84e97a7a7d8e407b872f8
 msgid "**Execution `as <players>`**: player whose eyes determine the vision origin"
-msgstr "**执行 `as <玩家>`**：将该玩家的眼部位置作为视线起点。"
+msgstr "**执行 `as <players>`**：以该玩家的眼睛作为视线原点。"
 
 #: ../../modules/view.md:298 04c46ea9e88345a6a76d9d9f3b61407b
 #, python-brace-format
 msgid "{nbt}`string` **run**: command to run as the looked at entity"
-msgstr "{nbt}`string` **run**: 对被看着的实体执行的命令。"
+msgstr "{nbt}`string` **run**：以被注视实体身份执行的命令。"
 
 #: ../../modules/view.md:301 ../../modules/view.md:328
 #: 8db79e185cb74e37b093e981c6828037 b9042e589bb040d3a4ff53573a001dd8
 msgid "**Tag `bs.view.is_lookable`**: tag that must be added to entities that can be looked at"
-msgstr "**标签 `bs.view.is_lookable`**：要检测的实体必须加上此标签。"
+msgstr "**标签 `bs.view.is_lookable`**：必须添加到可被注视的实体上的标签。"
 
 #: ../../modules/view.md:304 83465acc4ab34b348f2432e1ba7c0eb4
 msgid "*Example: make the armor stand the player is looking at glow*"
-msgstr "*示例：让玩家正在看着的盔甲架发光：*"
+msgstr "*示例：让玩家正注视的盔甲架发光。*"
 
 #: ../../modules/view.md:317 c435ad0948354adaa68833be1e6b0602
 msgid "Run a command at the entity a player is looking at."
@@ -323,11 +325,11 @@ msgstr "在玩家正在看着的实体处执行命令。"
 #: ../../modules/view.md:325 376d489edb0049d8bd3ab36ed274e9bd
 #, python-brace-format
 msgid "{nbt}`string` **run**: command to run at the looked at entity"
-msgstr "{nbt}`string` **run**: 对被看着的实体执行的命令。"
+msgstr "{nbt}`string` **run**：在注视实体处执行的命令。"
 
 #: ../../modules/view.md:331 54c439920c874291b22a41b5c6a16881
 msgid "*Example: summon particles at the armor stand the player is looking at*"
-msgstr "*示例：在玩家正在看着的盔甲架处召唤粒子：*"
+msgstr "*示例：在玩家注视的盔甲架处生成粒子。*"
 
 #: ../../modules/view.md:341 651efee831b34a83a63f235b14168b92
 msgid "Technical limitations"
@@ -343,11 +345,11 @@ msgstr "🏷️ 标签"
 
 #: ../../modules/view.md:353 ca9f4a551b304e1d9f9bd3a2fe73ec70
 msgid "You can find below all tags available in this module."
-msgstr "你可以在下方找到此模块中的所有可用标签。"
+msgstr "以下为此模块中所有可用的标签。"
 
 #: ../../modules/view.md:357 82dd2721d24a4efe8d7858b2b6d06b52
 msgid "Can see through"
-msgstr "可穿透"
+msgstr "视线可穿透"
 
 #: ../../modules/view.md:359 2cf5bc99b93f42b180fdfca5914a23ba
 msgid "**`#bs.view:can_see_through`**"

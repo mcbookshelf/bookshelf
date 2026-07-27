@@ -44,7 +44,7 @@ msgstr "运行测试有两种方式："
 
 #: ../../contribute/debug-tools.md:15 72db54823b714558bf2124e582d852d1
 msgid "**Headless Mode**: We provide a simple command `uv run modules test` that allows you to run the tests headlessly, without having to open the game"
-msgstr "**无界面模式**：提供简单命令 `pdm run modules test`，无需打开游戏即可无界面运行测试"
+msgstr "**无界面模式**：提供简单命令 `uv run modules test`，无需打开游戏即可无界面运行测试"
 
 #: ../../contribute/debug-tools.md:16 b480c2a3b34748b9b5ec00311c752afe
 msgid "**In-Game**: Download and install the Minecraft Fabric mod. Once that's done, you can run the tests using the test command in Minecraft"

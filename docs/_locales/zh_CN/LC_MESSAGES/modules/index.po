@@ -17,7 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
-
 #: ../../modules/index.md:25
 msgid "Runtime"
 msgstr "运行时模块（Runtime）"
@@ -36,7 +35,7 @@ msgstr "🧩 模块"
 
 #: ../../modules/index.md:7 90c8bfdce53b4cce84219e9582a97841
 msgid "Bookshelf is designed with modularity in mind. Features that serve a common purpose are organized into distinct, standalone, namespaced modules."
-msgstr "Bookshelf ​采用模块化设计理念，​将实现统一功能的特性归入独立的、带命名空间的单独模块。"
+msgstr "Bookshelf 采用模块化设计理念，将实现相近功能的特性归入独立的命名空间模块。"
 
 #: ../../modules/index.md:11 4faa778e54eb46fca5cf9657ddf27e0f
 msgid "🌟 Featured Modules"
@@ -48,15 +47,15 @@ msgstr "🧱 方块"
 
 #: ../../_templates/featured-modules.md:10 1d1d4b2dead14f4cb3f76fe8811d9546
 msgid "Get and manipulate blocks (supports block states and NBTs)."
-msgstr "获取和操作方块（支持 BlockStates 和 NBT）。"
+msgstr "获取并操作方块（支持方块状态和NBT标签）。"
 
 #: ../../_templates/featured-modules.md:13 8b89295f98d84673901a88531b60c25d
 msgid "🔦 Raycast"
-msgstr "🔦 射线追踪"
+msgstr "🔦 光线投射"
 
 #: ../../_templates/featured-modules.md:18 27db8125fb424020a9b2c9cdbb11dd2d
 msgid "Cast rays and see if they collide with blocks or entities."
-msgstr "发射光线并检测它们是否与方块或实体发生碰撞。"
+msgstr "投射光线并检测它们是否与方块或实体发生碰撞。"
 
 #: ../../_templates/featured-modules.md:21 dfcbc1de43c746f38a23421a2d6e9581
 msgid "🧮 Math"

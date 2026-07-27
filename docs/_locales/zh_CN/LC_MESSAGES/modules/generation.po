@@ -17,7 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
-
 #: ../../modules/generation.md:1 6c1aac50e25b4321b75b1f237979c823
 msgid "🏗️ Generation"
 msgstr "🏗️ 生成（Generation）"
@@ -71,7 +70,7 @@ msgstr "输入"
 #: ../../modules/generation.md:46 ../../modules/generation.md:95
 #: 63b566282aa14b7e89007f92f7c914b2 afa6cda681374e90811fc11b401b13b0
 msgid "**Execution `at <entity>` or `positioned <x> <y> <z>`**: origin of the shape"
-msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z> rotated <rot>`**：形状的原点。"
+msgstr "**执行 `at <entity>` 或 `positioned <x> <y> <z>`**：形状的原点"
 
 #: ../../modules/generation.md:48 a68e3ad8534141d28453a45dd4ac4c82
 msgid "**Storage `bs:in generation.on_cuboid`**:"
@@ -81,13 +80,13 @@ msgstr "**存储 `bs:in generation.on_cuboid`**:"
 #: 50cd19ae79b848cc9419dd6c6f02408e 5d9442a9e9be452bb02cc284a832fb5f
 #, python-brace-format
 msgid "{nbt}`compound` iteration data"
-msgstr "{nbt}`compound` 参数"
+msgstr "{nbt}`compound` 遍历数据"
 
 #: ../../modules/generation.md:51 ../../modules/generation.md:100
 #: afae2c0379854178b57a5c854b80a33e fe3b566097e643f0be486234751c6119
 #, python-brace-format
 msgid "{nbt}`string` **run**: callback to execute at each step"
-msgstr "{nbt}`string` **run**: 每一步运行的回调命令，每一步调用中可以读取这些分数："
+msgstr "{nbt}`string` **run**：每一步执行的回调"
 
 #: ../../modules/generation.md:52 a6f778f0b64c412cb1217a16285cbdf5
 #, python-brace-format
@@ -108,31 +107,31 @@ msgstr "{nbt}`string` **on_finished**: 在过程结束时，在最终方块位�
 #: 83c836354cd64d67ae8096d639eb4e79 eb9d84bc57494a61a09a46820da8b287
 #, python-brace-format
 msgid "{nbt}`int` **width**: size along the x axis (default: 1)"
-msgstr "{nbt}`int` **spacing**: 生成形状中方块的间隔（默认：1）。"
+msgstr "{nbt}`int` **width**：沿 x 轴的大小（默认值：1）"
 
 #: ../../modules/generation.md:57 ../../modules/generation.md:106
 #: 89a6ac9658594b31b02e0025fa1f4548 c0f222935dfc408b820be3765e88a314
 #, python-brace-format
 msgid "{nbt}`int` **height**: size along the y axis (default: 1)"
-msgstr "{nbt}`int` **spacing**: 生成形状中方块的间隔（默认：1）。"
+msgstr "{nbt}`int` **height**：沿 y 轴的大小（默认值：1）"
 
 #: ../../modules/generation.md:58 ../../modules/generation.md:107
 #: 7615cc0d9e98413aa79bbff7e7e99d47 85175d1892d54fc1adac6b3ba6fd578e
 #, python-brace-format
 msgid "{nbt}`int` **depth**: size along the z axis (default: 1)"
-msgstr "{nbt}`int` **spacing**: 生成形状中方块的间隔（默认：1）。"
+msgstr "{nbt}`int` **depth**：沿 z 轴的大小（默认值：1）"
 
 #: ../../modules/generation.md:59 ../../modules/generation.md:108
 #: 7c9c279b03064b3b8b2b8f651b290072 b5c783faf9d84f1db555467507aabf9b
 #, python-brace-format
 msgid "{nbt}`int` **spacing**: distance between positions (default: 1)"
-msgstr "{nbt}`int` **spacing**: 生成形状中方块的间隔（默认：1）。"
+msgstr "{nbt}`int` **spacing**：位置之间的间距（默认值：1）"
 
 #: ../../modules/generation.md:60 ../../modules/generation.md:109
 #: 28dcc0c76a1144e8bb9aab7059824543 ca4156b2e8cf4ae0af52626118561d54
 #, python-brace-format
 msgid "{nbt}`int` **limit**: maximum steps per tick (default: 256)"
-msgstr "{nbt}`int` **limit**: 限制每tick最多运行多少步（默认：256）。"
+msgstr "{nbt}`int` **limit**：每个游戏刻最多执行的步数（默认值：256）。"
 
 #: ../../modules/generation.md:63 ../../modules/generation.md:112
 #: ../../modules/generation.md:296 ../../modules/generation.md:321
@@ -163,7 +162,7 @@ msgstr "输出"
 #: ../../modules/generation.md:71 ../../modules/generation.md:118
 #: 87d144cb68dd4e9fbd8e3db3fd6fa0d7 e661c9b39a434bcd910287a9d0c78f5c
 msgid "**State**: the callback is executed at each position"
-msgstr "**状态**：回调在世界中的适当坐标处执行。"
+msgstr "**State**：回调在每个位置执行。"
 
 #: ../../modules/generation.md:74 db90c8edd5cc4162a0110eb6b04bff81
 msgid "*Example: replace spruce stairs with oak stairs using the [`set_block_type`](#block-callbacks) callback*"
@@ -207,7 +206,7 @@ msgstr "↩️ 回调"
 
 #: ../../modules/generation.md:146 5817b210cbfe495cbfeb8cba2676dccb
 msgid "You can find below all callbacks available in this module."
-msgstr "你可以在下方找到此模块中的所有可用函数。"
+msgstr "下面列出了此模块中所有可用的回调。"
 
 #: ../../modules/generation.md:150 538b80ed25674793b252988d37575ac8
 msgid "Implementation note"
@@ -265,7 +264,7 @@ msgstr "{nbt}`string` **block**: block to place (e.g., `minecraft:stone`)"
 #: 68ded88d7dc940ab959bdf8f11691ec7 d2e4608406fa492abfdbadf36f978391
 #, python-brace-format
 msgid "{nbt}`compound` **with**: additional settings"
-msgstr "{nbt}`compound` **with**: 形状设置"
+msgstr "{nbt}`compound` **with**：附加设置"
 
 #: ../../modules/generation.md:178 ../../modules/generation.md:208
 #: ../../modules/generation.md:241 1c53179e14e743bf88902f752975445d
@@ -286,7 +285,7 @@ msgstr "{nbt}`list` **masks**：用于过滤位置的掩码列表（以AND方式
 #: 443b9907286546b4b12c6c8fad0c6d5d 51bc9af1a50a49f19d42cd5ca13a445f
 #, python-brace-format
 msgid "{nbt}`compound` mask entry"
-msgstr "{nbt}`compound` 参数"
+msgstr "{nbt}`compound` 掩码条目"
 
 #: ../../modules/generation.md:181 ../../modules/generation.md:211
 #: ../../modules/generation.md:244 33d72ebfefae41e881ca9bb4c130ca2c
@@ -360,7 +359,7 @@ msgstr "{nbt}`list` **blocks**：加权方块列表"
 #: ../../modules/generation.md:237 951d42fadc4f409783ce9b1579f2aa93
 #, python-brace-format
 msgid "{nbt}`compound` block entry"
-msgstr "{nbt}`compound` 参数"
+msgstr "{nbt}`compound` 方块条目"
 
 #: ../../modules/generation.md:238 a204be0eff034713bf05e148d037e475
 #, python-brace-format
@@ -386,7 +385,7 @@ msgstr "噪声回调需要安装 **bs.random** 模块。"
 
 #: ../../modules/generation.md 9fafc85bc92544fb9b16c4dc662cbeea
 msgid "Fractal noise 2D"
-msgstr "分形二维形状"
+msgstr "二维分形噪声"
 
 #: ../../modules/generation.md:281 08a61031e9e847779cea0e5e4cb86f15
 msgid "Compute fractal noise and execute a callback with the noise value. Combines multiple octaves of simplex noise for natural patterns."
@@ -396,45 +395,45 @@ msgstr "计算分形噪声并以噪声值执行回调。组合多个八度的单
 #: 9cded7aa51864fb6a1da8df439672f61 f60507d6ad2d4db4a7e8d4ad26847501
 #, python-brace-format
 msgid "{nbt}`string` **run**: callback to execute with the noise value"
-msgstr "{nbt}`string` **run**: 每一步运行的回调命令，每一步调用中可以读取这些分数："
+msgstr "{nbt}`string` **run**：接收噪声值并执行的回调函数。"
 
 #: ../../modules/generation.md:288 ../../modules/generation.md:316
 #: 26c6168c3a964262ac40e27d38ee52ba 898a0fa83f0849e98ae8347fa8bcd8b0
 #, python-brace-format
 msgid "{nbt}`compound` **with**: noise settings"
-msgstr "{nbt}`compound` **with**: 形状设置"
+msgstr "{nbt}`compound` **with**：噪声设置。"
 
 #: ../../modules/generation.md:289 ../../modules/generation.md:317
 #: 4897664b66e2417f9935b1cef2c26732 fa031998d155432387714e79144225f1
 #, python-brace-format
 msgid "{nbt}`int` **size**: noise granularity, lower = more detail (default: 32)"
-msgstr "{nbt}`int` **size**: 噪声的粒度，数字越低细节越多（默认：32）。"
+msgstr "{nbt}`int` **size**：噪声粒度，数值越小细节越丰富（默认值：32）。"
 
 #: ../../modules/generation.md:290 ../../modules/generation.md:318
 #: 136d4806f961428c88c88b56921acb56 3071c8e4a2424073bc91bb1d241111ec
 #, python-brace-format
 msgid "{nbt}`int` **seed**: seed for reproducibility (default: random)"
-msgstr "{nbt}`int` **seed**: 噪声的种子，方便重现结果（默认：随机）。"
+msgstr "{nbt}`int` **seed**：用于复现结果的种子（默认值：随机）。"
 
 #: ../../modules/generation.md:291 da5dd6300e5e44a09e5b3f43c6c53930
 #, python-brace-format
 msgid "{nbt}`int` **octaves**: number of noise layers (default: 2)"
-msgstr "**分数 `$random.fractal_noise_2d.octaves bs.in`**：要组合的噪声层数（默认：2）。频程越多细节越多。"
+msgstr "{nbt}`int` **octaves**：噪声层数（默认值：2）。"
 
 #: ../../modules/generation.md:292 44f15bce2ee849098ea3f707b65253f4
 #, python-brace-format
 msgid "{nbt}`double` **persistence**: amplitude multiplier per octave (default: 0.5)"
-msgstr "{nbt}`double` **persistence**: 每个倍频程的贡献，更高的值细节更多（默认：0.5）。"
+msgstr "{nbt}`double` **persistence**：每层振幅乘数（默认值：0.5）。"
 
 #: ../../modules/generation.md:293 41bb080874c94f9a89a3d3ba0d88e7ff
 #, python-brace-format
 msgid "{nbt}`double` **lacunarity**: frequency multiplier per octave (default: 2.0)"
-msgstr "{nbt}`double` **lacunarity**: 每个倍频程的频率增长，值越高频率增长越快（默认：2.0）。"
+msgstr "{nbt}`double` **lacunarity**：每层的频率倍数（默认：2.0）。"
 
 #: ../../modules/generation.md:297 ../../modules/generation.md:322
 #: c1fc7c81c1814595907d3ddf48c0f4e7 f79b1d58134a41b488e65a540e839386
 msgid "**Score `$generation.noise bs.lambda`**: noise value in range [-1000, 1000]"
-msgstr "**`$generation.noise bs.lambda`**: 噪声值，范围在[-1000, 1000]。"
+msgstr "**分数 `$generation.noise bs.lambda`**：噪声值，范围为 [-1000, 1000]。"
 
 #: ../../modules/generation.md:299 ../../modules/generation.md:324
 #: 6783c018d6474562b4eb30d9f13773d6 7ec96781af1d4da0a9b4b7a2ce283341
@@ -448,7 +447,7 @@ msgstr "**分数 `$generation.j bs.lambda`**：第二维度索引（从迭代器
 
 #: ../../modules/generation.md 731de158e34e44239c90cee8de0b4821
 msgid "Simplex noise 2D"
-msgstr "单纯二维形状"
+msgstr "二维 Simplex 噪声"
 
 #: ../../modules/generation.md:309 9b505b6d52b94f528f944099fc7acb06
 msgid "Compute simplex noise and execute a callback with the noise value."

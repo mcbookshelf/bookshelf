@@ -23,6 +23,9 @@ __pycache__/
 build/
 dist/
 docs/_build/
+# Sphinx/Babel temporary gettext output
+locales/
+docs/_locales/zh_CN/LC_MESSAGES/gettext/
 env.bak/
 env/
 ENV/

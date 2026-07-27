@@ -17,10 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
-
 #: ../../modules/raycast.md:1 be2dccf83a9040a1b85ea56f368e02ad
 msgid "🔦 Raycast"
-msgstr "🔦 射线追踪（Raycast）"
+msgstr "🔦 光线投射（Raycast）"
 
 #: ../../modules/raycast.md:3 76efa66c9b98463ab4425a0272eb75cd
 msgid "**`#bs.raycast:help`**"
@@ -76,7 +75,7 @@ msgstr "输入"
 
 #: ../../modules/raycast.md:41 b628d1c99a6f43429d8abbaf8a54e322
 msgid "**Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: origin of the ray"
-msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z> rotated <rot>`**: 射线的起点和方向。"
+msgstr "**执行 `at <entity>` 或 `positioned <x> <y> <z> rotated <rot>`**：射线的原点"
 
 #: ../../modules/raycast.md:43 df82bf3b317a46f9b60f5632522d07b1
 msgid "**Function macro**:"
@@ -90,7 +89,7 @@ msgstr "{nbt}`compound` 参数"
 #: ../../modules/raycast.md:46 91a28ed245ac4f578df441015076e272
 #, python-brace-format
 msgid "{nbt}`compound` **with**: ray input data"
-msgstr "{nbt}`compound` **with**: 射线输入数据。"
+msgstr "{nbt}`compound` **with**：射线输入数据"
 
 #: ../../modules/raycast.md:47 61d00e8ca4df41a1acdf61f149d5e43b
 #, python-brace-format
@@ -113,12 +112,12 @@ msgstr "*可以是选择器标签（通常通过 `/tag` 分配），出于性能
 #: ../../modules/raycast.md:53 ca03ebf1622c4504947ed33f33781fa3
 #, python-brace-format
 msgid "{nbt}`string` **ignored_blocks**: blocks to ignore (default: `#bs.hitbox:intangible`)"
-msgstr "{nbt}`string` **ignored_blocks**: 要忽略的方块（默认：`#bs.hitbox:intangible`）。"
+msgstr "{nbt}`string` **ignored_blocks**：要忽略的方块（默认值：`#bs.hitbox:intangible`）"
 
 #: ../../modules/raycast.md:54 5cf7669060814a008629e241190a520b
 #, python-brace-format
 msgid "{nbt}`string` **ignored_entities**: entity types to ignore (default: `#bs.hitbox:intangible`)"
-msgstr "{nbt}`string` **ignored_blocks**: 要忽略的方块（默认：`#bs.hitbox:intangible`）。"
+msgstr "{nbt}`string` **ignored_entities**：要忽略的实体类型（默认值：`#bs.hitbox:intangible`）"
 
 #: ../../modules/raycast.md:56 915e3648baae4098a2b0aa0df457b50e
 msgid "*Does not apply to entities with custom hitboxes.*"
@@ -127,22 +126,22 @@ msgstr "*不适用于具有自定义碰撞箱的实体。*"
 #: ../../modules/raycast.md:57 23437103ff4349e49639427508bf658c
 #, python-brace-format
 msgid "{nbt}`number` **max_distance**: maximum ray travel distance (default: 16.0)"
-msgstr "{nbt}`number` **max_distance**: 射线最大前进距离（默认：16.0）。"
+msgstr "{nbt}`number` **max_distance**：射线最大传播距离（默认值：16.0）"
 
 #: ../../modules/raycast.md:58 4f5fb2db761a48cc87f62bbb1c796d00
 #, python-brace-format
 msgid "{nbt}`string` **on_targeted_block**: callback to run `at` the targeted block (aligned)"
-msgstr "{nbt}`string` **on_targeted_block**: 在射线碰撞的方块处执行命令。"
+msgstr "{nbt}`string` **on_targeted_block**：以目标方块为 `at` 位置运行的回调（坐标已对齐）。"
 
 #: ../../modules/raycast.md:59 96770ad0c34a401db9f97f99ecb49e24
 #, python-brace-format
 msgid "{nbt}`string` **on_targeted_entity**: callback to run `as` and `at` the targeted entity"
-msgstr "{nbt}`string` **on_targeted_entity**: 以射线碰撞的实体为执行者执行命令。"
+msgstr "{nbt}`string` **on_targeted_entity**：对目标实体执行 `as` 和 `at` 的回调。"
 
 #: ../../modules/raycast.md:60 a90f4ee4a08d4e12866b1c14b4152a37
 #, python-brace-format
 msgid "{nbt}`string` **on_entry_point**: callback to run `at` the point where the ray enters a shape"
-msgstr "{nbt}`string` **on_hit_point**: 在射线和其他物体的交点位置执行的命令。"
+msgstr "{nbt}`string` **on_entry_point**：对射线进入形状的点执行 `at` 的回调。"
 
 #: ../../modules/raycast.md:62 ../../modules/raycast.md:65
 #: 70dfdbc59fcf446ba3629f6f047d25de 8b2e8f6240024d59951a888dec5319b9
@@ -152,12 +151,12 @@ msgstr "*对于复杂形状和穿透，可能每个方块运行多次。*"
 #: ../../modules/raycast.md:63 0259a96edf6b4ebbaafe1f75005b8db4
 #, python-brace-format
 msgid "{nbt}`string` **on_exit_point**: callback to run `at` the point where the ray exits a shape"
-msgstr "{nbt}`string` **on_hit_point**: 在射线和其他物体的交点位置执行的命令。"
+msgstr "{nbt}`string` **on_exit_point**：对射线离开形状的点执行 `at` 的回调。"
 
 #: ../../modules/raycast.md:66 f303abdcaa5e491293b566581c7af7e6
 #, python-brace-format
 msgid "{nbt}`int` {nbt}`compound` **piercing**: blocks or entities the ray can pass through (default: `0`)"
-msgstr "{nbt}`int` **piercing**: 射线可以穿过实体或方块的最大次数（默认：0）。"
+msgstr "{nbt}`int` {nbt}`compound` **piercing**：射线可穿过的方块或实体（默认值：`0`）。"
 
 #: ../../modules/raycast.md:67 7befe18e69094ed0a4166e5731e81c97
 #, python-brace-format
@@ -199,7 +198,7 @@ msgstr "**记分板 `$raycast.hit_flag bs.lambda`**：相交边界框的标志�
 
 #: ../../modules/raycast.md:84 24479a5c861648d786f1007e8a11a7e3
 msgid "**Score `$raycast.piercing bs.lambda`**: remaining number of blocks or entities the ray can pass through"
-msgstr "{nbt}`int` **piercing**: 射线可以穿过实体或方块的最大次数（默认：0）。"
+msgstr "**Score `$raycast.piercing bs.lambda`**：剩余可穿过的方块或实体数量。"
 
 #: ../../modules/raycast.md:86 6eae8ee394774a2bb9f637229427b65d
 msgid "**Scores `$raycast.entry_point.[x,y,z] bs.lambda`**: entry point relative to the block or entity (×1000)"
@@ -219,7 +218,7 @@ msgstr "输出"
 
 #: ../../modules/raycast.md:93 915d10908f164822baa797a20ce4d898
 msgid "**Return**: whether the ray collides with a hitbox or not (1 or 0)"
-msgstr "**返回值**：射线是否与碰撞箱相撞（1或0）。"
+msgstr "**返回值**：射线是否与碰撞箱发生碰撞（1 或 0）。"
 
 #: ../../modules/raycast.md 59eba54f6650493a9a1fb8b26167560f
 msgid "What is a bounding box?"
@@ -235,7 +234,7 @@ msgstr "自定义碰撞箱"
 
 #: ../../modules/raycast.md:106 1eb67fa72bc943bb84bead845d7d2275
 msgid "Bookshelf supports multiple [hitbox types](hitbox.md#hitbox-types) for precise control. Blocks can use custom [hitbox providers](hitbox.md#available-providers). Entities support `dynamic`, `baked`, and `custom` types."
-msgstr "Bookshelf 支持多种碰撞箱类型以实现精确控制。方块可使用 `interaction` 或 `collision` 碰撞箱，实体支持三种类型：`dynamic`、`baked` 和 `custom`。"
+msgstr "Bookshelf 支持多种 [hitbox types](hitbox.md#hitbox-types) 以实现精确控制。方块可使用自定义 [hitbox providers](hitbox.md#available-providers)。实体支持 `dynamic`、`baked` 和 `custom` 类型。"
 
 #: ../../modules/raycast.md:109 87eb7bc84ee5488295d852a2dbf31d52
 msgid "**Credits**: Aksiome"
@@ -247,7 +246,7 @@ msgstr "🎓 使用方法"
 
 #: ../../modules/raycast.md:115 cc39a5134ba647809369f17c740a36f0
 msgid "Basic raycast"
-msgstr "🔦 射线追踪（Raycast）"
+msgstr "基础射线投射"
 
 #: ../../modules/raycast.md:117 5944a09fca8a403d87af04cf22d00aa9
 msgid "At its simplest, a raycast checks if something is in front of you and returns `1` (hit) or `0` (miss):"
@@ -335,7 +334,7 @@ msgstr "配置检测"
 
 #: ../../modules/raycast.md:149 a87434c258b14932b53f9826e94bbdfe
 msgid "By default, rays detect blocks but not entities. You can change this with the `blocks` and `entities` parameters."
-msgstr "默认情况下，射线检测方块但不检测实体。您可以使用 `blocks` 和 `entities` 参数更改此设置。"
+msgstr "默认情况下，射线检测方块但不检测实体。你可以使用 `blocks` 和 `entities` 参数更改此设置。"
 
 #: ../../modules/raycast.md:151 30ba76702cc644a9ac471bc2b892e1dd
 msgid "**Blocks** accepts `true` (default), `false`, or a [hitbox provider](hitbox.md#available-providers)."
@@ -379,11 +378,11 @@ msgstr "默认情况下，射线在第一次碰撞时停止。使用 `piercing` 
 
 #: ../../modules/raycast.md:201 1c3ecfdd286e43f08893136f34c53e90
 msgid "You can also track blocks and entities separately:"
-msgstr "您还可以分别跟踪方块和实体："
+msgstr "你还可以分别跟踪方块和实体："
 
 #: ../../modules/raycast.md:210 c458e1c7282b444388887323320aeccd
 msgid "Lambda scores"
-msgstr "Lambda 函数"
+msgstr "Lambda 分数"
 
 #: ../../modules/raycast.md:212 e57f3647c8244ec8b11050d3effb956b
 msgid "Lambda scores provide detailed information about the collision, available only inside callbacks. See the function reference above for the full list."
@@ -423,11 +422,11 @@ msgstr "**实体**：相对于实体的位置"
 
 #: ../../modules/raycast.md:228 93f95239a26e4e938a2c6065a9976c1c
 msgid "Hitbox providers"
-msgstr "碰撞箱类型"
+msgstr "碰撞箱提供者"
 
 #: ../../modules/raycast.md:230 315199f10092462dbebecaea1f9e588b
 msgid "Hitbox providers control which block shapes the ray detects. The default only detects solid collision shapes, but you can use other providers to detect additional shapes like fluids."
-msgstr "碰撞箱提供者控制射线检测的方块形状。默认只检测实心碰撞形状，但您可以使用其他提供者来检测其他形状，如流体。"
+msgstr "碰撞箱提供者控制射线检测使用的方块形状。默认只检测实心碰撞形状，但你可以使用其他提供者检测流体等形状。"
 
 #: ../../modules/raycast.md:237 1fc4a02ab62049359acd663a5024400c
 msgid "Providers can define multiple shapes with different flags. When this happens:"

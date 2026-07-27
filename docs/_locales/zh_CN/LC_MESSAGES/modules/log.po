@@ -17,7 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
-
 #: ../../modules/log.md:1 83e03976c9774b5088f7122c89d98944
 msgid "📄 Log"
 msgstr "📄 日志（Log）"
@@ -36,7 +35,7 @@ msgstr "启用命令方块"
 
 #: ../../modules/log.md:10 a51d7553aa5d4280a1646fa88a57ef2d
 msgid "This module uses a command block to get the system time. For the time to be displayed as intended, be sure that both the `command_blocks_work` and `send_command_feedback` game rules are set to `true`."
-msgstr "此模块使用命令方块获取系统时间。为了正确显示时间，请确保在你的 `server.properties` 文件中将 `enable-command-block` 设置为 `true`，并启用 `sendCommandFeedback` 游戏规则。"
+msgstr "此模块使用命令方块获取系统时间。为正确显示时间，请确保将游戏规则 `command_blocks_work` 和 `send_command_feedback` 均设为 `true`。"
 
 #: ../../modules/log.md:15 670b334ea49841088d8952b08b244394
 msgid "🔧 Functions"
@@ -56,7 +55,7 @@ msgstr "错误"
 
 #: ../../modules/log.md:29 0765e72b5b51415c96bb6f785a8ab59f
 msgid "Log an error message. For more information on how it works see the [usage](#usage) section. By default, it's printed as: [ERROR] <tag> > <message> and hovering over the left part of the log reveals the timestamp and log function path."
-msgstr "记录错误消息。有关其工作原理的更多信息，请参见[使用方法](#usage)部分。默认情况下，它显示为：[ERROR] <标签> > <消息>，将鼠标悬停在日志左侧部分可显示时间戳和日志函数路径。"
+msgstr "记录错误消息。有关其工作原理的更多信息，请参见[使用方法](#usage)部分。默认显示为：[ERROR] <标签> > <消息>；将指针移到日志左侧即可查看时间戳和日志函数路径。"
 
 #: ../../modules/log.md:31 ../../modules/log.md:55 ../../modules/log.md:79
 #: ../../modules/log.md:103 ../../modules/log.md:136 ../../modules/log.md:161
@@ -125,7 +124,7 @@ msgstr "警告"
 
 #: ../../modules/log.md:53 b0c6f6fcc2a3499183e29b32940aca07
 msgid "Log a warning message. For more information on how it works see the [usage](#usage) section. By default, it's printed as: [WARN] <tag> > <message> and hovering over the left part of the log reveals the timestamp and log function path."
-msgstr "记录警告消息。有关其工作原理的更多信息，请参见[使用方法](#usage)部分。默认情况下，它显示为：[WARN] <标签> > <消息>，将鼠标悬停在日志左侧部分可显示时间戳和日志函数路径。"
+msgstr "记录警告消息。有关其工作原理的更多信息，请参见[使用方法](#usage)部分。默认显示为：[WARN] <标签> > <消息>；将指针移到日志左侧即可查看时间戳和日志函数路径。"
 
 #: ../../modules/log.md:66 f89079edda7742d0b946e8fb5b52b655
 msgid "*Example: Log a warning message that originates from the `bs.foo:bar` function:*"
@@ -137,7 +136,7 @@ msgstr "信息"
 
 #: ../../modules/log.md:77 5a46e773c72a4810a73cfa1bcd23ec84
 msgid "Log an information message. For more information on how it works see the [usage](#usage) section. By default, it's printed as: [INFO] <tag> > <message> and hovering over the left part of the log reveals the timestamp and log function path."
-msgstr "记录信息消息。有关其工作原理的更多信息，请参见[使用方法](#usage)部分。默认情况下，它显示为：[INFO] <标签> > <消息>，将鼠标悬停在日志左侧部分可显示时间戳和日志函数路径。"
+msgstr "记录信息消息。有关其工作原理的更多信息，请参见[使用方法](#usage)部分。默认显示为：[INFO] <标签> > <消息>；将指针移到日志左侧即可查看时间戳和日志函数路径。"
 
 #: ../../modules/log.md:90 00b529017f4b4c91b95b83c74f691381
 msgid "*Example: Log an info message that originates from the `bs.foo:bar` function:*"
@@ -149,7 +148,7 @@ msgstr "调试"
 
 #: ../../modules/log.md:101 1355991bb7ab4749946b403680d3723d
 msgid "Log a debug message. For more information on how it works see the [usage](#usage) section. By default, it's printed as: [DEBUG] <tag> > <message> and hovering over the left part of the log reveals the timestamp and log function path."
-msgstr "记录调试消息。有关其工作原理的更多信息，请参见[使用方法](#usage)部分。默认情况下，它显示为：[DEBUG] <标签> > <消息>，将鼠标悬停在日志左侧部分可显示时间戳和日志函数路径。"
+msgstr "记录调试消息。有关其工作原理的更多信息，请参见[使用方法](#usage)部分。默认显示为：[DEBUG] <标签> > <消息>；将指针移到日志左侧即可查看时间戳和日志函数路径。"
 
 #: ../../modules/log.md:114 54353ac680a84c1eae571141127f14a7
 msgid "*Example: Log a debug message that originates from the `bs.foo:bar` function:*"
@@ -229,7 +228,7 @@ msgstr "**调试**：详细的调试信息。"
 
 #: ../../modules/log.md:190 9f9eac561dab43448618ae5fd2407742
 msgid "**Information**: Interesting / significant events."
-msgstr "**信息**：兴趣/重要事件。"
+msgstr "**信息**：值得关注的重要事件。"
 
 #: ../../modules/log.md:191 4ea8db7b99fd4fe2ba51e73b0b425c3e
 msgid "**Warning**: Exceptional occurrences that are not errors."
@@ -241,7 +240,7 @@ msgstr "**错误**：应该监控和修复的运行时错误。"
 
 #: ../../modules/log.md:196 64354d586e4a477a9d626be4bc88a409
 msgid "Manage Granularity"
-msgstr "管理日志粒度"
+msgstr "控制日志显示范围"
 
 #: ../../modules/log.md:198 719679617d9a4e9da198491060ed2400
 msgid "A significant number of logs can quickly flood the chat. To prevent this, Bookshelf's log module can be configured to display specific logs based on two parameters: the **log level**, the **tag** and the **namespace**."
@@ -273,7 +272,7 @@ msgstr "`_.log._._`：显示所有日志。"
 
 #: ../../modules/log.md:209 0b02ac50de2e464a9238b17bef3f0a3f
 msgid "Each level allows the visualization of subsequent levels. For example, if a user gives themselves a tag ending with warn, they can visualize logs of warn and error levels. By default, logs are not displayed to any user."
-msgstr "每个级别允许显示后续级别。例如，如果用户给自己添加了以 warn 结尾的标签，他们就可以看到警告和错误级别的日志。默认情况下，不向任何用户显示日志。"
+msgstr "某一级别的标签也会显示所有更严重的日志。例如，以 `warn` 结尾的标签会同时显示警告和错误。默认情况下，不向任何用户显示日志。"
 
 #: ../../modules/log.md:214 0fa8a8fb100c4a5784eb058afa427daa
 msgid "Define the Message"

@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../index.md:11 34830bbd899b4aea899509eb6e24e3f8
 msgid "Bookshelf Library"
-msgstr "Bookshelf"
+msgstr "Bookshelf 库"
 
 #: ../../index.md:23 ab591b53fbd1421d9d59a2173aaf03c2
 msgid "🚀 Get Started"
@@ -32,7 +32,7 @@ msgstr "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon
 
 #: ../../index.md:45 e643a8570619429c8cbcd930cfd4b11d
 msgid "🌟 Featured modules"
-msgstr "🌟 功能模块"
+msgstr "🌟 精选模块"
 
 #: ../../_templates/featured-modules.md:5 96d9673ecbb84ae6bae511d2945d465a
 msgid "🧱 Block"
@@ -40,7 +40,7 @@ msgstr "🧱 方块"
 
 #: ../../_templates/featured-modules.md:10 f4cad98a53f44a8a8e84b15abfae2d04
 msgid "Get and manipulate blocks (supports block states and NBTs)."
-msgstr "获取和操作方块（支持方块状态和 NBT）。"
+msgstr "获取并操作方块（支持方块状态与 NBT）。"
 
 #: ../../_templates/featured-modules.md:13 8aff2e303d6145199d4dad0ef912e923
 msgid "🔦 Raycast"
@@ -64,11 +64,11 @@ msgstr "🏗️ 生成"
 
 #: ../../_templates/featured-modules.md:34 e643bfb6de3f4027a3f0a30771bcbdb6
 msgid "Iterate efficiently over the world to generate terrains and landscapes."
-msgstr "高效地迭代世界以生成地形和景观。"
+msgstr "高效遍历世界以生成地形和景观。"
 
 #: ../../_templates/featured-modules.md:37 35d9aeb57c5b4b3a8cef2ac58d2d724f
 msgid "🎲 Random"
-msgstr "🎲 随机数"
+msgstr "🎲 随机"
 
 #: ../../_templates/featured-modules.md:42 ae1df6d1e19e4dc2bdce0c5ca45abb46
 msgid "Random functions for different distributions and noise patterns."
@@ -84,7 +84,7 @@ msgstr "轻松管理玩家的生命值或实体的存活时间！"
 
 #: ../../index.md:52 678741e26a404f7d84a8f154614b1956
 msgid "🔥 Motivation"
-msgstr "🔥 开发动机"
+msgstr "🔥 为什么开发 Bookshelf？"
 
 #: ../../index.md:54 61f9e8993a374b1887e18311c8e37f05
 msgid "Libraries save time and make systems easier to create. But many Minecraft mapmakers aren't used to them. Bookshelf exists to change that. Bookshelf focuses on ease of use. Each module is simple, works for any skill level, and keeps performance in mind."
@@ -104,11 +104,11 @@ msgstr "🤝 贡献"
 
 #: ../../index.md:65 4fa0ee6839bd4cdfb3b16dca54bb2755
 msgid "Have questions or want to talk about the project? Join the [Discord](https://discord.gg/MkXytNjmBt) server."
-msgstr "如果你对项目有任何疑问或想讨论某些内容，请加入[我们的 Discord](https://discord.gg/MkXytNjmBt)服务器。"
+msgstr "有疑问或想讨论项目？加入 [Discord](https://discord.gg/MkXytNjmBt) 服务器。"
 
 #: ../../index.md:67 78c29f3c4fcc4556a2e607aab33d87a1
 msgid "Want to help? See the [contribution](https://docs.mcbookshelf.dev/en/latest/contribute/index.html) section."
-msgstr "如果你想贡献，请参考[贡献文档](https://docs.mcbookshelf.dev/en/latest/contribute/index.html)以获取更多信息。"
+msgstr "想贡献力量？请查看 [贡献](https://docs.mcbookshelf.dev/en/latest/contribute/index.html) 部分。"
 
 #~ msgid "🕵️ What is Bookshelf?"
 #~ msgstr "🕵️‍♂️ Bookshelf是什么？"

@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../../../examples/paintbrush.md:2 a7cae4378d184916a12d7b23bc54d6a4
 msgid "🖌️ Paintbrush"
-msgstr "🖌️ 画笔"
+msgstr "🖌️ Paintbrush（画笔）"
 
 #: ../../../../examples/paintbrush.md:4 9c737df2b2aa4b538db9f37207f51eda
 msgid "This example demonstrates how to create a **paintbrush** in Minecraft using the Bookshelf library. The paintbrush changes a block's material to match the item in the player's hand, while preserving important properties like orientation, waterlogging, and other block states. For instance, if the player holds oak planks, birch stairs will transform into oak stairs."

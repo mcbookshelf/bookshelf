@@ -10,12 +10,13 @@ msgstr ""
 "POT-Creation-Date: 2026-07-26 01:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
-
 #: ../../modules/hitbox.md:1 715e55dbfcce499c9ffdf111a44b951d
 msgid "🎯 Hitbox"
 msgstr "🎯 碰撞箱（Hitbox）"
@@ -46,11 +47,11 @@ msgstr "你可以在下方找到此模块中的所有可用函数。"
 
 #: ../../modules/hitbox.md:21 0a277c62cf324bb2bdaf2d6b041f395f
 msgid "Bake Entity"
-msgstr "烘培实体"
+msgstr "固化实体碰撞箱"
 
 #: ../../modules/hitbox.md:25 9cb02d6c55b74e35bba57b4ed45c5a40
 msgid "Bake an [entity's hitbox](#entity-types) to improve performance when its size never changes. If the entity has passengers, they are also baked, and the base entity's hitbox is expanded to include the full bounding box of the entire stack."
-msgstr "Bake an [entity's hitbox](#entity-types) to improve performance when its size never changes. If the entity has passengers, they are also baked, and the base entity's hitbox is expanded to include the full bounding box of the entire stack."
+msgstr "将[实体的碰撞箱](#entity-types)固化，以便在实体尺寸不变时提升性能。如果实体带有乘客，也会一并固化，并扩大基础实体的碰撞箱以覆盖整个实体堆的边界框。"
 
 #: ../../modules/hitbox.md:27 ../../modules/hitbox.md:70
 #: ../../modules/hitbox.md:99 ../../modules/hitbox.md:133
@@ -70,7 +71,7 @@ msgstr "输入"
 
 #: ../../modules/hitbox.md:28 8963fa3e67144fbf9dc6989c71bbcb72
 msgid "**Execution `as <entities>`**: The entity or entities whose hitbox should be baked."
-msgstr "**执行 `as <entities>`**: 要烘培碰撞箱的实体。"
+msgstr "**执行 `as <entities>`**：要固化碰撞箱的实体。"
 
 #: ../../modules/hitbox.md:30 ../../modules/hitbox.md:73
 #: ../../modules/hitbox.md:102 ../../modules/hitbox.md:136
@@ -90,15 +91,15 @@ msgstr "输出"
 
 #: ../../modules/hitbox.md:31 498ce15a4ea441dfa30d7b2fae152761
 msgid "**State**: The entity's hitbox is saved in a baked state for later use."
-msgstr "**状态**：实体的碰撞箱将以烘焙状态保存，供后续使用。"
+msgstr "**状态**：实体的碰撞箱会以固化状态保存，供后续使用。"
 
 #: ../../modules/hitbox.md:35 669452aa59704be48c389046eee7d2c3
 msgid "Only use baked hitboxes when you are sure the entity's size will not change, for example: no growth (babies), no scaling, no new passengers, and no equipment that could affect size."
-msgstr "仅在确定实体大小不会改变时使用烘烤碰撞箱，例如：无成长（幼年）、无缩放、无新乘客以及无可能影响大小的装备。"
+msgstr "只有确定实体尺寸不会变化时才应使用固化碰撞箱，例如实体不会成长（幼年体）、缩放、增加乘客，也没有会影响尺寸的装备。"
 
 #: ../../modules/hitbox.md:37 35234095b3de4623b77acfade1292658
 msgid "If the hitbox changes after baking, **it may lead to incorrect collisions or broken logic**."
-msgstr "若碰撞箱在烘焙后发生变化，**可能导致碰撞检测错误或逻辑错误**。"
+msgstr "如果碰撞箱在固化后发生变化，**可能导致碰撞检测或逻辑出错**。"
 
 #: ../../modules/hitbox.md 2662adbcedc84e84bc24c0a9f4fc5546
 #: 901494d6f6794541ab5e7e61e20fc2df b76e31528b6243b5a883330c24c8fb5f
@@ -113,16 +114,16 @@ msgstr "边界框是一个简单的矩形框，围绕对象或其部分，以帮
 
 #: ../../modules/hitbox.md 7d4db1967150459ead8275059ddac6b2
 msgid "What is a Baked Hitbox?"
-msgstr "什么是烘焙碰撞箱？"
+msgstr "什么是固化碰撞箱？"
 
 #: ../../modules/hitbox.md:51 9c1175e39f404f33b3d44d00465e9b58
 msgid "Baking captures a snapshot of the entity's hitbox at a specific moment. It does not update after that. If the entity has passengers, the baked result includes a bounding box that encapsulates both the base entity and all passengers."
-msgstr "烘焙会捕捉实体碰撞箱在特定时刻的状态，此后不再更新。若实体运载乘客，烘焙结果将生成一个同时包容基础实体与所有乘客的边界框。"
+msgstr "固化会捕捉实体碰撞箱在特定时刻的状态，此后不再更新。若实体运载乘客，固化结果将生成一个同时包容基础实体与所有乘客的边界框。"
 
 #: ../../modules/hitbox.md:53 ../../modules/hitbox.md:413
 #: 083d51f8def542af995a2c395ae97e94 d15c2b79ffac40dbb9a7b08840d82f84
 msgid "See [Hitbox Types](#hitbox-types) for full details on block and entity hitboxes."
-msgstr "See [Hitbox Types](#hitbox-types) for full details on block and entity hitboxes."
+msgstr "方块和实体碰撞箱的详细信息请参阅[碰撞箱类型](#hitbox-types)。"
 
 #: ../../modules/hitbox.md:56 ../../modules/hitbox.md:123
 #: ../../modules/hitbox.md:159 ../../modules/hitbox.md:278
@@ -138,16 +139,16 @@ msgstr "**贡献者**：Aksiome"
 
 #: ../../modules/hitbox.md:60 d65f6a36e84043ba9a4659da26c56933
 msgid "Get Block"
-msgstr "方块"
+msgstr "获取方块"
 
 #: ../../modules/hitbox.md 1f785720eabf43d8a3588b6c6263a3f0
 #: dcc7ec0f2fb44807a38cde379421ca30 f6819c99ba67478ab8893a114f8bde32
 msgid "Block Shape"
-msgstr "方块"
+msgstr "方块形状"
 
 #: ../../modules/hitbox.md:68 5c54ef7a01b54455be191a850327327d
 msgid "Get the `default` shape of a block, represented by a list of box coordinates. This shape defines the area where the player can interact with or aim at the block. Coordinates range from `0` to `16` within a block space, as in block models."
-msgstr "Get the `default` shape of a block, represented by a list of box coordinates. This shape defines the area where the player can interact with or aim at the block. Coordinates range from `0` to `16` within a block space, as in block models."
+msgstr "获取方块的 `default` 形状，以方框坐标列表表示。该形状定义玩家可以与方块交互或瞄准方块的区域。坐标范围为方块空间内的 `0` 到 `16`，与方块模型相同。"
 
 #: ../../modules/hitbox.md:71 ../../modules/hitbox.md:100
 #: 4433adaa320a4541ba9261094f46ebfb ae9a034d391143e68aa9dfa39fb771eb
@@ -170,7 +171,7 @@ msgstr "{nbt}`compound` 方块碰撞箱"
 #: 13eb2cc3a11048f6b01db3c836f323f3 5285a83274c549c891ec046f36d034e3
 #, python-brace-format
 msgid "{nbt}`list` **shape**: A list of cube coordinates (`[[min_x, min_y, min_z, max_x, max_y, max_z]]`)."
-msgstr "{nbt}`list` **collision_shape**: 一个立方体坐标列表 (`[[min_x, min_y, min_z, max_x, max_y, max_z]]`)。"
+msgstr "{nbt}`list` **shape**：立方体坐标列表（`[[min_x, min_y, min_z, max_x, max_y, max_z]]`）。"
 
 #: ../../modules/hitbox.md:78 ../../modules/hitbox.md:107
 #: 955cc6e2433d4b5c96a5fa5eca7c28a8 df1b5b1bcaeb43cfb1c48033af431c7f
@@ -192,7 +193,7 @@ msgstr "{nbt}`double` **z**: z轴坐标的偏移量。"
 
 #: ../../modules/hitbox.md:84 3522359be8ec4a56ad3c8136221e00f2
 msgid "*Example: Get the shape of an open fence gate (can be targeted, even though you can walk through it):*"
-msgstr "*绀轰緥锛氳幏鍙栨墦寮€鐨勬爡鏍忛棬鐨勫舰鐘讹紙铏界劧鍙互绌胯繃锛屼絾浠嶅彲琚瀯鍑嗭級锛?"
+msgstr "*示例：获取打开的栅栏门形状（虽然可以穿过，但仍可被瞄准）：*"
 
 #: ../../modules/hitbox.md 47a19e2ef1ae4d8a993350ee6c04e875
 #: c41d6ef0592f4af6972725a736b0eb28 fbb1805a01d144b18ef3eb8071728eab
@@ -201,15 +202,15 @@ msgstr "方块碰撞箱"
 
 #: ../../modules/hitbox.md:97 739e070d30104923bd0cecf256d9abd7
 msgid "Get the `collision` shape of a block, represented by a list of box coordinates. This shape defines the solid boundaries of the block that entities cannot pass through. Coordinates range from `0` to `16` within a block space, as in block models."
-msgstr "Get the `collision` shape of a block, represented by a list of box coordinates. This shape defines the solid boundaries of the block that entities cannot pass through. Coordinates range from `0` to `16` within a block space, as in block models."
+msgstr "获取方块的 `collision` 形状，以方框坐标列表表示。该形状定义实体无法穿过的方块实体边界。坐标范围为方块空间内的 `0` 到 `16`，与方块模型相同。"
 
 #: ../../modules/hitbox.md:113 ad13b49b7e3a47f0be345c737ddc8667
 msgid "*Example: Get the collision of an open fence gate (no collision, entities can pass through):*"
-msgstr "*绀轰緥锛氳幏鍙栨墦寮€鐨勬爡鏍忛棬鐨勭鎾炲舰鐘讹紙鏃犵鎾烇紝瀹炰綋鍙互绌胯繃锛夛細*"
+msgstr "*示例：获取打开的栅栏门碰撞形状（没有碰撞，实体可以穿过）：*"
 
 #: ../../modules/hitbox.md:127 4896b7db9c57441685182f8e209ae8a8
 msgid "Get Entity"
-msgstr "设置实体"
+msgstr "获取实体"
 
 #: ../../modules/hitbox.md:131 ad08a3d861ce47dfbe0ff19cb7e63779
 msgid "Get the width and height of an entity."
@@ -227,7 +228,7 @@ msgstr "{nbt}`compound` 实体碰撞箱数据"
 #: ../../modules/hitbox.md:140 e5ce3bd4f6af4a209852ade74f9fd915
 #, python-brace-format
 msgid "{nbt}`double` **width**: Width of the entity (X axis)."
-msgstr "{nbt}`double` **width**: 实体的宽度。"
+msgstr "{nbt}`double` **width**：实体的宽度。"
 
 #: ../../modules/hitbox.md:141 0be0728db5664102b682809109130485
 #, python-brace-format
@@ -237,7 +238,7 @@ msgstr "{nbt}`double` **height**：实体的高度。"
 #: ../../modules/hitbox.md:142 1b875f07284e46f8af03604eb4b8c368
 #, python-brace-format
 msgid "{nbt}`double` **depth**: Depth of the entity (Z axis)."
-msgstr "{nbt}`double` **width**: 实体的宽度。"
+msgstr "{nbt}`double` **depth**：实体的深度。"
 
 #: ../../modules/hitbox.md:143 d2706786202343d396a41e268253a580
 #, python-brace-format
@@ -246,7 +247,7 @@ msgstr "{nbt}`double` **scale**: 实体碰撞箱的缩放。"
 
 #: ../../modules/hitbox.md:148 904e0a8a4ba9470a9e5b23e4d3046f32
 msgid "For most entities without a custom hitbox, `depth` is equal to `width`. However, some entities like paintings and item frames return more complex dimensions."
-msgstr "For most entities without a custom hitbox, `depth` is equal to `width`. However, some entities like paintings and item frames return more complex dimensions."
+msgstr "对于大多数没有自定义碰撞箱的实体，`depth` 等于 `width`。但画、物品展示框等实体的尺寸更为复杂。"
 
 #: ../../modules/hitbox.md:152 6f2be43cb77746ea929e3de94bfd87f6
 msgid "*Example: Get the hitbox of an armor stand:*"
@@ -262,7 +263,7 @@ msgstr "任意方块形状"
 
 #: ../../modules/hitbox.md:171 fa92e5559a0b41c8a1174087e4d2c3e6
 msgid "Check if the specified entity is within the `default` shape of any block."
-msgstr "检查指定实体是否在方块的 `collision` 碰撞箱内。"
+msgstr "检查指定实体是否位于任意方块的 `default` 形状内。"
 
 #: ../../modules/hitbox.md:174 ../../modules/hitbox.md:200
 #: ../../modules/hitbox.md:226 ../../modules/hitbox.md:255
@@ -293,7 +294,7 @@ msgstr "*示例：检查召唤的牛是否在方块内部：*"
 
 #: ../../modules/hitbox.md 31830851ced04da6b77f162ad71a788a
 msgid "Any Block Collision Shape"
-msgstr "方块碰撞箱"
+msgstr "任意方块碰撞形状"
 
 #: ../../modules/hitbox.md:197 30e313cd634045b4b680a2aa93adda51
 msgid "Check if the specified entity is within the `collision` shape of any block."
@@ -301,7 +302,7 @@ msgstr "检查指定实体是否在方块的 `collision` 碰撞箱内。"
 
 #: ../../modules/hitbox.md:223 f79b384c456f4262948c47cdf9a04e70
 msgid "Check if the specified entity is within the `default` shape of the block at the execution position."
-msgstr "检查指定实体是否在执行位置所在方块的 `collision` 碰撞箱内。"
+msgstr "检查指定实体是否位于执行位置所在方块的 `default` 形状内。"
 
 #: ../../modules/hitbox.md:228 ../../modules/hitbox.md:257
 #: ../../modules/hitbox.md:293 ../../modules/hitbox.md:313
@@ -331,7 +332,7 @@ msgstr "是否在内部"
 
 #: ../../modules/hitbox.md:290 b904039ddb9245cab93eca21397d3f1a
 msgid "Check if the execution position is within the `default` shape of a block."
-msgstr "检查执行位置是否在方块的 `collision` 碰撞箱内。"
+msgstr "检查执行位置是否位于方块的 `default` 形状内。"
 
 #: ../../modules/hitbox.md:299 ../../modules/hitbox.md:319
 #: 187ab4a52123479db9747c52d46f7a77 346f5097db9445809afa7fda66fea4d8
@@ -364,7 +365,7 @@ msgstr "重置实体"
 
 #: ../../modules/hitbox.md:357 eef8644f58aa4e4798edb1fe65a15c53
 msgid "Reset an [entity's hitbox](#entity-types) to its default **dynamic** form, removing any previously applied **baked** or **custom** hitbox."
-msgstr "将[实体的碰撞箱](#entity-types)重置为默认的**动态**形式，移除所有先前应用的**烘焙**或**自定义**碰撞箱。"
+msgstr "将[实体的碰撞箱](#entity-types)重置为默认的**动态**形式，移除所有先前应用的**固化**或**自定义**碰撞箱。"
 
 #: ../../modules/hitbox.md:360 2c6e1a6070e84e28a5d7b5dc130a848e
 msgid "**Execution `as <entities>`**: The entity or entities whose hitbox should be reset."
@@ -380,7 +381,7 @@ msgstr "设置实体"
 
 #: ../../modules/hitbox.md:374 bdd3e72bbbbe4466ac67517699782590
 msgid "Define a [custom hitbox](#entity-types) for an entity with full control over its dimensions. This allows setting a hitbox not constrained by Minecraft's built-in width/height system and can be used on entities that normally have no hitbox."
-msgstr "Define a [custom hitbox](#entity-types) for an entity with full control over its dimensions. This allows setting a hitbox not constrained by Minecraft's built-in width/height system and can be used on entities that normally have no hitbox."
+msgstr "为实体定义[自定义碰撞箱](#entity-types)，完全控制其尺寸。这样可以设置不受 Minecraft 内置宽度/高度系统限制的碰撞箱，也适用于通常没有碰撞箱的实体。"
 
 #: ../../modules/hitbox.md:377 efe64c2c487d439c84f6fd7ec3d87d74
 msgid "**Execution `as <entities>`**: The entity or entities whose hitbox should be set with custom dimensions."
@@ -434,7 +435,7 @@ msgstr "什么是自定义碰撞箱？"
 
 #: ../../modules/hitbox.md:407 8bcb3d140b2e4632bf90ed3acca3890e
 msgid "A custom hitbox lets you override Minecraft's default hitbox system and define your own shape using width, height, and depth. Unlike dynamic or baked hitboxes, custom hitboxes:"
-msgstr "自定义碰撞箱允许你覆盖Minecraft的默认碰撞箱系统，使用宽度、高度和深度定义自己的形状。与动态或烘焙碰撞箱不同，自定义碰撞箱具有以下特点："
+msgstr "自定义碰撞箱允许你覆盖 Minecraft 的默认碰撞箱系统，使用宽度、高度和深度定义自己的形状。与动态或固化碰撞箱不同，自定义碰撞箱具有以下特点："
 
 #: ../../modules/hitbox.md:409 baa98bf256564234bfbfa862125450e7
 msgid "Can be **freely shaped**, including along the Z axis (depth)."
@@ -471,36 +472,36 @@ msgstr "**`#bs.hitbox:can_pass_through`**"
 
 #: ../../modules/hitbox.md:434 19c65e5e902b4690b641665be21e7bda
 msgid "Blocks without a collision box."
-msgstr "鏂瑰潡浜や簰绠"
+msgstr "没有碰撞箱的方块。"
 
 #: ../../modules/hitbox.md 9b2bc43055814af791488d25d029de53
 msgid "Has Shape Offset"
-msgstr "有偏移"
+msgstr "存在形状偏移"
 
 #: ../../modules/hitbox.md:439 d47d22a7b5a54fa683160fdd4d1fe9fb
 msgid "**`#bs.hitbox:has_shape_offset`**"
-msgstr "**`#bs.hitbox:has_offset`**"
+msgstr "**`#bs.hitbox:has_shape_offset`**"
 
 #: ../../modules/hitbox.md:441 e0db64e085d6432db626ccfb61564cb0
 msgid "Blocks with a physical random offset."
-msgstr "鍒ゆ柇鏂瑰潡鏄惁鏈夌鎾炵銆"
+msgstr "具有物理随机偏移的方块。"
 
 #: ../../modules/hitbox.md 91e0fe6e7f774246940cb577850f9081
 msgid "Has Visual Offset"
-msgstr "有偏移"
+msgstr "存在视觉偏移"
 
 #: ../../modules/hitbox.md:446 ebf82cffd2154bc88db2ab6f129d430d
 msgid "**`#bs.hitbox:has_visual_offset`**"
-msgstr "**`#bs.hitbox:has_offset`**"
+msgstr "**`#bs.hitbox:has_visual_offset`**"
 
 #: ../../modules/hitbox.md:448 2fe994a595c74c56bc7743de230a8fe2
 msgid "Blocks with a purely visual random offset."
-msgstr "鍒ゆ柇鏂瑰潡鏄惁鏈夌鎾炵銆"
+msgstr "仅在视觉上随机偏移的方块。"
 
 #: ../../modules/hitbox.md 47c87c88ba404bf49db66d7c4f229bb3
 #: b7866e5b43f1454da37a81a322ae5d48
 msgid "Intangible"
-msgstr "无形的"
+msgstr "不可碰撞"
 
 #: ../../modules/hitbox.md:453 ../../modules/hitbox.md:476
 #: 4b6f226c204a46da8e31f2260727b6d7 780684d1352a49e8992c7d0e41875f57
@@ -571,7 +572,7 @@ msgstr "🖱 默认"
 
 #: ../../modules/hitbox.md:514 bf6cd4e0d72a49e896de980a3475d0fc
 msgid "The `default` shape defines the area where players can interact with or break the block:"
-msgstr "`interaction` 定义玩家可交互或破坏方块的区域："
+msgstr "`default` 定义玩家可交互或破坏方块的区域："
 
 #: ../../modules/hitbox.md:516 b0da69b8450e419cbb667c0aed337286
 msgid "Specifies the zone where right-clicks, mining, or other interactions register."
@@ -583,7 +584,7 @@ msgstr "可能与碰撞箱不同（例如：栅栏门无论开启或关闭都保
 
 #: ../../modules/hitbox.md:519 af5a159d94b24d0b84dde678dc390e4b
 msgid "➔ Returned by [#bs.hitbox:get_block_shape](#get-block)"
-msgstr "➔ 通过 [#bs.hitbox:get_block](#get) 返回"
+msgstr "➔ 通过 [#bs.hitbox:get_block_shape](#get-block) 返回"
 
 #: ../../modules/hitbox.md 9778c1c3ce2e490d905351c44bac1c25
 #: c1d5ce13a3d14fc993ed3074e73db216
@@ -596,7 +597,7 @@ msgstr "`collision` 定义方块阻挡实体通过的物理边界。决定实体
 
 #: ../../modules/hitbox.md:526 99bc2e3841eb457d90a5d56adc77b307
 msgid "Matches the block's solid parts and prevents entities from moving through."
-msgstr "鍖归厤鏂瑰潡鐨勫疄浣撻儴鍒嗗苟闃绘瀹炰綋绌胯秺銆"
+msgstr "与方块的实心部分对应，阻止实体穿过。"
 
 #: ../../modules/hitbox.md:527 7cfc71374bac4883b605ec5ac62601a6
 msgid "Can change dynamically depending on block state (e.g., a fence gate's collision shape differs when open vs closed)."
@@ -604,7 +605,7 @@ msgstr "可根据方块状态动态变化（例如，栅栏门在打开与关闭
 
 #: ../../modules/hitbox.md:529 2d999060f0ea48dfa588f1a94673b416
 msgid "➔ Returned by [#bs.hitbox:get_block_collision](#get-block)"
-msgstr "➔ 通过 [#bs.hitbox:get_block](#get) 返回"
+msgstr "➔ 通过 [#bs.hitbox:get_block_collision](#get-block) 返回"
 
 #: ../../modules/hitbox.md ac7cbafed9624d5287f381bd79f33e1e
 msgid "🔄 Dynamic"
@@ -612,7 +613,7 @@ msgstr "🔄 动态"
 
 #: ../../modules/hitbox.md:543 550d35ddcf004f169d9e6a216422eea9
 msgid "This is the native Minecraft hitbox, which updates automatically:"
-msgstr "即 Minecraft 原生碰撞箱，自动更新机制："
+msgstr "这是会自动更新的 Minecraft 原生碰撞箱："
 
 #: ../../modules/hitbox.md:545 1c955d3c001e4ef7a505caab62492f3e
 msgid "Adjusts in real time with entity changes like scaling, baby growth, equipment, or new passengers."
@@ -624,7 +625,7 @@ msgstr "无需配置（默认行为）。"
 
 #: ../../modules/hitbox.md:547 dcfdbfde1b1c43fa8042f75e9675e80f
 msgid "Use when the entity's shape is expected to change."
-msgstr "閫傜敤浜庡舰鐘跺彲鑳藉彉鍖栫殑瀹炰綋銆"
+msgstr "适用于形状可能发生变化的实体。"
 
 #: ../../modules/hitbox.md:549 13685cbc368341bfbf64a863d014517e
 msgid "➔ Restored using [#bs.hitbox:reset_entity](#reset-entity)"
@@ -632,19 +633,19 @@ msgstr "➔ 通过 [#bs.hitbox:reset_entity](#reset-entity) 恢复"
 
 #: ../../modules/hitbox.md 7877e4474ff34e1fb82cacf6b328d518
 msgid "❄️ Baked"
-msgstr "❄️ 烘烤"
+msgstr "❄️ 固化"
 
 #: ../../modules/hitbox.md:554 76da846569034c869231d2727045243d
 msgid "A snapshot of the entity's hitbox at a specific moment:"
-msgstr "实体碰撞箱在特定时刻的状态："
+msgstr "实体碰撞箱在特定时刻的快照："
 
 #: ../../modules/hitbox.md:556 10a4aa17524a4d1487a3a20564c9c43f
 msgid "Improves performance when the entity's size will never change."
-msgstr "褰撳疄浣撳昂瀵告案涓嶅彉鍖栨椂鍙彁鍗囨€ц兘銆"
+msgstr "实体尺寸不会变化时，可以提升性能。"
 
 #: ../../modules/hitbox.md:557 cddbe4ddecc4425aa970820df7a8ed4e
 msgid "Includes the base entity and all passengers in one combined box. When baking a pile of passengers, the base entity bakes all passengers and sets its hitbox to encompass the entire stack."
-msgstr "包含基础实体及所有乘客的合并边界框。烘焙实体乘客堆时，基础实体会烘焙所有乘客并将其碰撞箱扩展至覆盖整个实体堆。"
+msgstr "包含基础实体及所有乘客的合并边界框。固化实体乘客堆时，基础实体会固化所有乘客，并将其碰撞箱扩展至覆盖整个实体堆。"
 
 #: ../../modules/hitbox.md:558 12251b51d52b44429b5e9e5ac546da09
 msgid "Does not update dynamically, collisions may break if the entity changes later."
@@ -676,7 +677,7 @@ msgstr "独立于Minecraft的内部碰撞箱系统。"
 
 #: ../../modules/hitbox.md:570 808ba38109b144e48a1162ed13c8722f
 msgid "Only applies to the base entity. When used with modules that process entity stacks, only the base entity's hitbox is considered, passengers are ignored."
-msgstr "浠呬綔鐢ㄤ簬鍩虹瀹炰綋銆備笌澶勭悊瀹炰綋鍫嗙殑妯″潡鑱旂敤鏃讹紝浠呰€冭檻鍩虹瀹炰綋鐨勭鎾炵锛堝拷鐣ヤ箻瀹級銆"
+msgstr "仅作用于基础实体。与处理实体堆的模块联用时，只考虑基础实体的碰撞箱，忽略乘客。"
 
 #: ../../modules/hitbox.md:571 815d1440a9954747a4e2d401d7cf2037
 msgid "Slight performance cost, avoid overuse in the same area."
@@ -692,7 +693,7 @@ msgstr "🔌 碰撞箱提供者"
 
 #: ../../modules/hitbox.md:582 36513a458fb34417bde0e0892a059e55
 msgid "A hitbox provider is a callback that returns a block's shape for consumers such as [`bs.raycast`](raycast.md) or [`bs.move`](move.md)."
-msgstr "碰撞箱提供者是一个回调函数，为诸如[`bs.raycast`](raycast.md)或[`bs.move`](move.md)这样的消费者返回方块的形状。"
+msgstr "碰撞箱提供者是一种回调函数，用来向 [`bs.raycast`](raycast.md)、[`bs.move`](move.md) 等模块提供方块形状。"
 
 #: ../../modules/hitbox.md:584 8bc305b2fcbe44cb9fb0e574263f4f46
 msgid "A provider can return one of two forms:"
@@ -700,15 +701,15 @@ msgstr "提供者可以返回两种形式之一："
 
 #: ../../modules/hitbox.md:586 3ce00e20c6b148389def4ab580857145
 msgid "**A single flag** (e.g., `return 1`), telling the consumer to treat the block as a full 16×16×16 cube."
-msgstr "**单个标志**（例如 `return 1`），告诉消费者将该方块视为完整的16×16×16立方体。"
+msgstr "**单个标志**（例如 `return 1`），让调用方将该方块视为完整的 16×16×16 立方体。"
 
 #: ../../modules/hitbox.md:587 70484518e8104734bb4a27d1ead35309
 msgid "**An array of bounding boxes**, stored in `bs:lambda hitbox`:"
-msgstr "**一个边界框数组**，存储在`bs:lambda hitbox`中："
+msgstr "**一个边界框数组**，存储在 `bs:lambda hitbox` 中："
 
 #: ../../modules/hitbox.md:591 28b977e777004cdd802c074f9c6ea402
 msgid "Each bounding box uses coordinates from 0 to 16, and may include a flag (defaults to `1` if omitted)."
-msgstr "每个边界框使用0到16的坐标，并且可以包含一个标志（如果省略则默认为`1`）。"
+msgstr "每个边界框的坐标范围为 0 到 16，也可以包含一个标志（省略时默认为 `1`）。"
 
 #: ../../modules/hitbox.md:600 efa9221c28ef46f08a634d3eb6a95c13
 msgid "Flags"
@@ -716,7 +717,7 @@ msgstr "标志"
 
 #: ../../modules/hitbox.md:602 5263977c5f7141f6aa48effea75d180e
 msgid "Flags do not have inherent meaning. They are numeric labels used by providers and consumers to classify bounding boxes. You may use any of the following flags: `1`, `2`, `4`, or `8`."
-msgstr "标志没有固有含义。它们是提供者和消费者用于分类边界框的数字标签。您可以使用以下任何标志：`1`、`2`、`4`或`8`。"
+msgstr "标志本身没有固定含义，只是提供者和调用方用于分类边界框的数字标签。可以使用以下任一标志：`1`、`2`、`4` 或 `8`。"
 
 #: ../../modules/hitbox.md:605 ffbf9f7f5de24bd79119c4916e271f94
 msgid "For example the Bookshelf built-in providers use `1` for solid and `2` for fluids."
@@ -736,7 +737,7 @@ msgstr "这些提供者返回方块的**默认**形状，如[方块类型](#bloc
 
 #: ../../modules/hitbox.md:618 a0f070a59f604ff4bb79764a94a97a98
 msgid "`#bs.hitbox:callback/get_block_shape`"
-msgstr "**`#bs.hitbox:is_shaped`**"
+msgstr "`#bs.hitbox:callback/get_block_shape`"
 
 #: ../../modules/hitbox.md:619 872e99d12ffc4bf2a6b88df3b7472484
 msgid "`#bs.hitbox:callback/get_block_shape_with_fluid`"
@@ -748,7 +749,7 @@ msgstr "这些提供者返回方块的**碰撞**形状，如[方块类型](#bloc
 
 #: ../../modules/hitbox.md:624 08f3483f287f4069903d2274bdcfe502
 msgid "`#bs.hitbox:callback/get_block_collision`"
-msgstr "鉃?閫氳繃 [#bs.hitbox:get_block](#get) 杩斿洖"
+msgstr "`#bs.hitbox:callback/get_block_collision`"
 
 #: ../../modules/hitbox.md:625 5234a0711b014ac7a290e133eab9f268
 msgid "`#bs.hitbox:callback/get_block_collision_with_fluid`"

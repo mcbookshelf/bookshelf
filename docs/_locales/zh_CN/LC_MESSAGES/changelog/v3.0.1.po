@@ -32,7 +32,7 @@ msgstr "*这是版本 3.0.0 的一个热修复。*"
 
 #: ../../../changelog/v3.0.1.md:8 fd39394d81214c9b9e07d902bd69062c
 msgid "<abbr title=\"Documentation\">📝</abbr> **[#314](https://github.com/mcbookshelf/bookshelf/issues/314)** - Add the Lifestring example, linking players' health using the `bs.health` module."
-msgstr "<abbr title=\"文档\">🐛</abbr> **[#410](https://github.com/mcbookshelf/bookshelf/issues/314)** - 增加了生命同步示例，使用`bs.health`模块链接两个玩家的生命值。"
+msgstr "<abbr title=\"文档\">📝</abbr> **[#314](https://github.com/mcbookshelf/bookshelf/issues/314)** - 增加 Lifestring 示例，使用 `bs.health` 模块连接玩家的生命值。"
 
 #: ../../../changelog/v3.0.1.md:11 6db9340ada5544a48739b2454aa7fbd6
 msgid "`❤️ bs.health`"
@@ -44,7 +44,7 @@ msgstr "<abbr title=\"漏洞修复\">🐛</abbr> **[#410](https://github.com/mcb
 
 #: ../../../changelog/v3.0.1.md:14 bac3bd2329314e48a1e8cf410dcd641b
 msgid "<abbr title=\"Bug Fix\">🐛</abbr> **[#426](https://github.com/mcbookshelf/bookshelf/pull/426)** – Players are now correctly killed when their health drops below 0, unless they are in Creative or Spectator mode."
-msgstr "<abbr title=\"漏洞修复\">🐛</abbr> **[#426](https://github.com/mcbookshelf/bookshelf/issues/426)** - 现在不处于旁观者模式且不处于创造模式的玩家血量低于0时会被杀死。"
+msgstr "<abbr title=\"漏洞修复\">🐛</abbr> **[#426](https://github.com/mcbookshelf/bookshelf/pull/426)** - 玩家生命值降至 0 以下时会被正确击杀；创造或旁观模式下除外。"
 
 #: ../../../changelog/v3.0.1.md:17 33840d0e957d45ada3c9d655e1840fe1
 msgid "`🧣 bs.spline`"
@@ -57,7 +57,7 @@ msgstr "<abbr title=\"漏洞修复\">🐛</abbr> **[#423](https://github.com/mcb
 
 #: ../../../changelog/v3.0.1.md:20 97f4e99b240c49f49e7650c5e801832c
 msgid "<abbr title=\"Bug Fix\">🐛</abbr> **[#412](https://github.com/mcbookshelf/bookshelf/issues/412)** - Fix Hermite spline tangents to use absolute space instead of relative."
-msgstr "<abbr title=\"漏洞修复\">🐛</abbr> **[#412](https://github.com/mcbookshelf/bookshelf/issues/412)** - 修复 Hermite 样条曲线切线使用相对空间而非绝对空间的问题。"
+msgstr "<abbr title=\"漏洞修复\">🐛</abbr> **[#424](https://github.com/mcbookshelf/bookshelf/issues/424)** - 修复 `#bs.view:at_block_placement` 错误使用上一次调用的命中法线，而不是当前调用数据的问题。"
 
 #: ../../../changelog/v3.0.1.md:21 f722044fddca4f67a8438dd08a674b97
 msgid "<abbr title=\"Enhancements\">⚡</abbr> **[#409](https://github.com/mcbookshelf/bookshelf/issues/409)** - Improve performance of sampling and streaming functions."

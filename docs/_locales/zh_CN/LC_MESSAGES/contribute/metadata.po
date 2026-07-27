@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-26 01:39+0800\n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
 "PO-Revision-Date: 2025-07-19 19:55+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -18,192 +18,213 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../contribute/metadata.md:1 6245d613926a4e8491b8d4c555240859
+#: ../../contribute/metadata.md:1 173dd17441604c6faf981aecec49bc9b
 msgid "🔖 Metadata"
-msgstr "馃敄 鍏冩暟鎹"
+msgstr "🔖 元数据"
 
-#: ../../contribute/metadata.md:3 f190eeb8839c470ba0f5c4dcb9c0bcb8
-msgid "To support automation by tools like the Bookshelf Manager, modules must declare specific metadata. All metadata are verified during the CI/CD process (see the [contribution validation page](project:../contribute/contribution-validation.md))."
-msgstr "涓烘敮鎸?Bookshelf Manager 绛夊伐鍏风殑鑷姩鍖栨搷浣滐紝妯″潡蹇呴』澹版槑鐗瑰畾鍏冩暟鎹€傛墍鏈夊厓鏁版嵁鍧囧湪 CI/CD 娴佺▼涓獙璇侊紙鍙傝[璐＄尞楠岃瘉椤甸潰](project:../contribute/contribution-validation.md)锛夈€"
+#: ../../contribute/metadata.md:3 3f14546f9670411ebf7154ebea2d7be9
+msgid ""
+"To support automation by tools like the Bookshelf Manager, modules must "
+"declare specific metadata. All metadata are verified during the CI/CD "
+"process (see the [contribution validation page](project:../contribute"
+"/contribution-validation.md))."
+msgstr ""
+"为支持 Bookshelf Manager 等工具的自动化操作，模块必须声明特定元数据。所有元数据均在 CI/CD "
+"流程中验证（参见[贡献验证页面](project:../contribute/contribution-validation.md)）。"
 
-#: ../../contribute/metadata.md:7 0e7879590ea04adc86bef9ab4f4e10db
+#: ../../contribute/metadata.md:7 fcbbc5c274a245ee91b8f6f6ebf18907
 msgid "⭐ Feature Metadata"
-msgstr "猸?鍔熻兘鍏冩暟鎹"
+msgstr "⭐ 功能元数据"
 
-#: ../../contribute/metadata.md:9 8b136e629c904b16a0af29e60276a6ac
-msgid "Feature metadata are defined directly within each `.json` file, as shown below:"
-msgstr "鍔熻兘鍏冩暟鎹洿鎺ュ畾涔夊湪姣忎釜 `.json` 鏂囦欢涓紝濡備笅鎵€绀猴細"
+#: ../../contribute/metadata.md:9 a833685af2a9408b9ba363e106eec49b
+msgid ""
+"Feature metadata are defined directly within each `.json` file, as shown "
+"below:"
+msgstr "功能元数据直接定义在每个 `.json` 文件中，如下所示："
 
 #: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 1561240236044aa3ace76b838711865b 2c7d1e863a7e468aace605f4dbf7c2d1
+#: 303b4fb70a5b4281809382fed9957d95 3556475e987f46f9b383f89211331bae
 msgid "Field"
-msgstr "瀛楁"
+msgstr "字段"
 
 #: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 070b5f583f464739a46ca540f350b662 3349bf612ee342fb867cfb6e4fca7936
+#: 05382a061e4c462a85ecf6165d546385 47f7d445837b428ebc1897f54c3c6503
 msgid "Description"
-msgstr "鎻忚堪"
-
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 09bfebe333694baa981f82a8c25aeeaa c677ef5b9167420983a1606e9ff07bda
-msgid "Mandatory"
-msgstr "蹇呴渶"
-
-#: ../../contribute/metadata.md:11 4d939af5b03c4663b9e0aa136bb917fa
-msgid "feature"
-msgstr "功能"
-
-#: ../../contribute/metadata.md:11 7030ed165a424149922f8a7a857192b6
-msgid "Indicates whether the file is the endpoint of a feature"
-msgstr "鎸囩ず褰撳墠鍑芥暟鏍囩鏄惁涓哄姛鑳界殑绔偣"
-
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 219dbdd37bd84a23bf1100c43f32103b 4a112d8bc05a4d588f928bf98debe93a
-#: 56acd20734a441debd7fe91eff1280ee 655bdff37c8548ae95fec17100eb3ad3
-#: 71cdc8b02b1244198e022dec1a213e16 72503fda94214d1b801c7ffc0b63d40d
-#: a15c1c9195d74dab9c62b23cc81e0fbc a60989eeebd644a4a94ef035988d3ffb
-#: e4641df88e164cde9ddd20bdcc60f37e
-msgid "yes"
-msgstr "鏄"
-
-#: ../../contribute/metadata.md:11 52320f474eec4736a48f51c78028211f
-msgid "deprecated"
-msgstr "created"
-
-#: ../../contribute/metadata.md:11 7234a6ea4827408ea568fdb907511103
-msgid "Indicates whether the feature has been deprecated"
-msgstr "鎸囩ず璇ュ姛鑳芥槸鍚﹀凡寮冪敤"
-
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 1002205226174fb4a608491561fafc20 32380a2c08e841a9aa6eb3814b7690e6
-#: 4e2867e093a14ceba3b8ca37696065db 63857986e10e45be83720882ed607da0
-#: 7cbeaece72924b13838408a78a238b9d e17df6a7eca94d208cdab098d98eb1f6
-msgid "no"
-msgstr "鍚"
-
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 2b5557ee4e0e48169d842bdf3190a090 bd9c3c39f7324069a22dea70efbbc4f2
-msgid "documentation"
-msgstr "文档"
-
-#: ../../contribute/metadata.md:11 d6844fabb79f448bbae82fe60e6fbc5f
-msgid "A link to the feature's documentation"
-msgstr "鍔熻兘鏂囨。鐨勯摼鎺"
-
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 5518cac0fc22410b92c9e0c7d726083d 5f968e5341364b30bfd17532991a1353
-msgid "authors"
-msgstr "作者"
-
-#: ../../contribute/metadata.md:11 7f79163abd8347d090809b1ba21ed79a
-msgid "A list of feature authors. Cannot be empty"
-msgstr "鍔熻兘浣滆€呭垪琛紙涓嶅彲涓虹┖锛"
-
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 3b72fe1f8dc54111a362f27b1a63a392 549da3e57aa14ac5a7d3ab46bdb13dac
-msgid "contributors"
-msgstr "贡献者"
-
-#: ../../contribute/metadata.md:11 17eecb13cabf4f6fb75fb265074bf666
-msgid "A list of contributors (e.g., those who provided insights, fixes, or indirect help)"
-msgstr "璐＄尞鑰呭垪琛紙濡傛彁渚涜瑙ｃ€佷慨澶嶆垨闂存帴甯姪鐨勪汉鍛橈級"
-
-#: ../../contribute/metadata.md:11 a139a754ac674d2fa9a677cb8057841b
-msgid "created"
-msgstr "创建时间"
-
-#: ../../contribute/metadata.md:11 4848ee3f312c4ae09a078262e612b815
-msgid "The creation date and Minecraft version for historical purposes"
-msgstr "鍒涘缓鏃ユ湡鍜?Minecraft 鐗堟湰锛堢敤浜庡巻鍙茶褰曪級"
-
-#: ../../contribute/metadata.md:11 9ca26b29c35943d7b70a3749cc46432c
-msgid "updated"
-msgstr "更新时间"
-
-#: ../../contribute/metadata.md:11 9240c77b98f7437799e98934f602bbb8
-msgid "The date and Minecraft version of the most recent update"
-msgstr "鏈€杩戞洿鏂扮殑鏃ユ湡鍜?Minecraft 鐗堟湰"
-
-#: ../../contribute/metadata.md:49 8f8f7cea0d864dac8c91519c189da19a
-msgid "🧩 Module Metadata"
-msgstr "馃З 妯″潡鍏冩暟鎹"
-
-#: ../../contribute/metadata.md:51 55f996d0f7014969bc970ed62d34d6c1
-msgid "Module metadata are defined in `modules/<module>/module.json`. Below is an example:"
-msgstr "妯″潡鍏冩暟鎹畾涔夊湪 `modules/<module>/module.json` 涓€傜ず渚嬪涓嬶細"
-
-#: ../../contribute/metadata.md:53 412a44895e8c485b8ab3005b75ea6b0e
-msgid "name"
-msgstr "名称"
-
-#: ../../contribute/metadata.md:53 4054b8367f614e2d9e9cc74c2e77e2dc
-msgid "The module's display name (e.g., `Foo`)"
-msgstr "妯″潡鏄剧ず鍚嶇О锛堝 `Foo`锛"
-
-#: ../../contribute/metadata.md:53 d6864bc346e54f569ef0b71a66ee41c4
-msgid "slug"
-msgstr "标识"
-
-#: ../../contribute/metadata.md:53 b886bdfa4a6d4507b2a5d4a49538f99f
-msgid "The module's slug used to publish to platforms (e.g., `bookshelf-foo`)"
-msgstr "妯″潡鐨?slug锛堢敤浜庡彂甯冨埌骞冲彴锛屽 `bookshelf-foo`锛"
-
-#: ../../contribute/metadata.md:53 91854e71a86f4a9b8ab6e14f3db4bff6
-msgid "description"
 msgstr "描述"
 
-#: ../../contribute/metadata.md:53 de68eeb6c3be42beae142833f98f93ac
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 01077e0d582641e79d6e7e9abb838bd9 bb795b1541ae491d8a3709089974bfb3
+msgid "Mandatory"
+msgstr "必需"
+
+#: ../../contribute/metadata.md:11 cbace52bc5cf460b94fb0291386cef96
+msgid "feature"
+msgstr "feature"
+
+#: ../../contribute/metadata.md:11 af9adb8ec4e7497f93ded91460424bf6
+msgid "Indicates whether the file is the endpoint of a feature"
+msgstr "指示当前函数标签是否为功能的端点"
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 5e86f9c29333404a95b9a95efbc25a14 5e9549b74e554c09b644471447fd59f7
+#: 62363e66baf34bab85f10555568bc2b4 6acb98b6873c4a3db424f34b067e36f9
+#: 6e50eb42789f49df86de1213b16636f0 7e1262edf61242759932c694ddb500df
+#: 937098ed842c4946af82c04326bf5c96 9b0a8b015f5346e28e831ca646df3ba2
+#: f6068e67f49e4f96b5f6552956d9ae74
+msgid "yes"
+msgstr "是"
+
+#: ../../contribute/metadata.md:11 af4820d5a23348499197661b1ac9c532
+msgid "deprecated"
+msgstr "deprecated"
+
+#: ../../contribute/metadata.md:11 2840592262b44a6c8d2f9225997f1d45
+msgid "Indicates whether the feature has been deprecated"
+msgstr "表示该功能是否已弃用"
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 3caea657ec034e2686ceb5a07be6280e 41432e64ff9d4027a58a22697674eb7e
+#: 9a7303ad2fce48d7a86886557108e191 d5739f31587349b59def57e97d4ee34b
+#: e107b796a177464db7c7f2faa12d9199 fca60076f61e4ff8ba8f18cc713c8d25
+msgid "no"
+msgstr "否"
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 2550127dd1c540fb9e06120b3c21f1dd d39194c4c6e6438981f6c46e1fbb126c
+msgid "documentation"
+msgstr "documentation"
+
+#: ../../contribute/metadata.md:11 dd3e1bd55de44072a7e30d04d940b766
+msgid "A link to the feature's documentation"
+msgstr "功能文档的链接"
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 49c9a27d35b549b899103d1e47e92221 d71808cd47a8408ab56899f3821c2d05
+msgid "authors"
+msgstr "authors"
+
+#: ../../contribute/metadata.md:11 422cfdc2f574401fb5734bece89bafe4
+msgid "A list of feature authors. Cannot be empty"
+msgstr "功能作者列表（不可为空）"
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 4e4c69785b244415ad3d5618fad067cf b0d644dbd0f542c59df65a5bcb45c2c3
+msgid "contributors"
+msgstr "contributors"
+
+#: ../../contribute/metadata.md:11 d1322adb28dc479888ed557b78dd4096
+msgid ""
+"A list of contributors (e.g., those who provided insights, fixes, or "
+"indirect help)"
+msgstr "贡献者列表（如提供见解、修复或间接帮助的人员）"
+
+#: ../../contribute/metadata.md:11 10a06150494943f4b5c049163e553458
+msgid "created"
+msgstr "created"
+
+#: ../../contribute/metadata.md:11 c32a0326c0764cc3a3c5a92cfe87b543
+msgid "The creation date and Minecraft version for historical purposes"
+msgstr "创建日期和 Minecraft 版本（用于历史记录）"
+
+#: ../../contribute/metadata.md:11 178e66d4681c4bdfbc0e3640614ea2e4
+msgid "updated"
+msgstr "updated"
+
+#: ../../contribute/metadata.md:11 1bcfd66d590c428fb913e290d360128d
+msgid "The date and Minecraft version of the most recent update"
+msgstr "最近更新的日期和 Minecraft 版本"
+
+#: ../../contribute/metadata.md:49 7bab91f80f224950bee81b9d0f721eb5
+msgid "🧩 Module Metadata"
+msgstr "🧩 模块元数据"
+
+#: ../../contribute/metadata.md:51 13bda0dab854453e82c8b820e84bcd20
+msgid ""
+"Module metadata are defined in `modules/<module>/module.json`. Below is "
+"an example:"
+msgstr "模块元数据定义在 `modules/<module>/module.json` 中。示例如下："
+
+#: ../../contribute/metadata.md:53 e71ca31eb43f46d59091cecb8ef2cf4d
+msgid "name"
+msgstr "name"
+
+#: ../../contribute/metadata.md:53 c918f47c358546bf87da547c71d0f3f4
+msgid "The module's display name (e.g., `Foo`)"
+msgstr "模块显示名称（如 `Foo`）"
+
+#: ../../contribute/metadata.md:53 8230e219453f45d3875164876592d592
+msgid "slug"
+msgstr "slug"
+
+#: ../../contribute/metadata.md:53 4736368cabdf4b57870335ea6b56c022
+msgid "The module's slug used to publish to platforms (e.g., `bookshelf-foo`)"
+msgstr "模块的 slug（用于发布到平台，如 `bookshelf-foo`）"
+
+#: ../../contribute/metadata.md:53 0a82f4b25c1942ba816cba9e20385491
+msgid "description"
+msgstr "description"
+
+#: ../../contribute/metadata.md:53 2340adae61914709b03fca826b4d268a
 msgid "A description of the module's purpose"
-msgstr "妯″潡鐢ㄩ€旂殑鎻忚堪"
+msgstr "模块用途的描述"
 
-#: ../../contribute/metadata.md:53 476f362579d145fb8d2e285b6522547a
+#: ../../contribute/metadata.md:53 1714c5becddd4ed491e89d7d5ec56a86
 msgid "A link to the module's documentation"
-msgstr "妯″潡鏂囨。鐨勯摼鎺"
+msgstr "模块文档的链接"
 
-#: ../../contribute/metadata.md:53 d5ba23ca13264ed8a8169e3fe80cc6f3
+#: ../../contribute/metadata.md:53 df10f741e82d413283dfea2053c7d618
 msgid "tags"
-msgstr "标签"
+msgstr "tags"
 
-#: ../../contribute/metadata.md:53 c2e15a9a49344428a4011d6dde1c3a49
-msgid "A list of tags for categorizing or identifying modules. Tags are also used to generate bundles (e.g., `default` and `dev`)"
-msgstr "鐢ㄤ簬鍒嗙被鎴栨爣璇嗘ā鍧楃殑鏍囩鍒楄〃锛屼篃鐢ㄤ簬鐢熸垚鎹嗙粦鍖咃紙濡?`default` 鍜?`dev`锛"
+#: ../../contribute/metadata.md:53 a49a1fcb3a274436b734903371192d34
+msgid ""
+"A list of tags for categorizing or identifying modules. Tags are also "
+"used to generate bundles (e.g., `default` and `dev`)"
+msgstr "用于分类或标识模块的标签列表，也用于生成捆绑包（如 `default` 和 `dev`）"
 
-#: ../../contribute/metadata.md:53 3c2ff662c3c147a393235a5120df2894
+#: ../../contribute/metadata.md:53 b39a6899bdc1491680d9f7ea6c526645
 msgid "no (but trigger warnings)"
-msgstr "鍚︼紙浣嗕細瑙﹀彂璀﹀憡锛"
+msgstr "否（但会触发警告）"
 
-#: ../../contribute/metadata.md:53 16f43df92903457fac84714edc199b74
-msgid "A list of module authors (supplements authors from features). Cannot be empty"
-msgstr "妯″潡浣滆€呭垪琛紙琛ュ厖鍔熻兘涓殑浣滆€咃級锛屼笉鍙负绌"
+#: ../../contribute/metadata.md:53 4734eaacb7fd4b938f947581d059c23d
+msgid ""
+"A list of module authors (supplements authors from features). Cannot be "
+"empty"
+msgstr "模块作者列表（补充功能中的作者），不可为空"
 
-#: ../../contribute/metadata.md:53 ba33fa9d6cef4888adbea507b7547af1
+#: ../../contribute/metadata.md:53 07b291319d0b444889ae6bda7ccda3c8
 msgid "A list of contributors (supplements contributors from features)"
-msgstr "璐＄尞鑰呭垪琛紙琛ュ厖鍔熻兘涓殑璐＄尞鑰咃級"
+msgstr "贡献者列表（补充功能中的贡献者）"
 
-#: ../../contribute/metadata.md:53 10a41a01b6a24550a9377d3098092f55
+#: ../../contribute/metadata.md:53 9b6f0e8f29cd466c8c1924f49928e77a
 msgid "dependencies"
-msgstr "依赖"
+msgstr "dependencies"
 
-#: ../../contribute/metadata.md:53 36490465fa324b71a0b711e73e7366c1
+#: ../../contribute/metadata.md:53 6a675244dc5c45a6b35454d239018974
 msgid "Essential modules required for this module to function (e.g., `bs.hitbox`)"
-msgstr "妯″潡杩愯蹇呴渶鐨勪緷璧栨ā鍧楋紙濡?`bs.hitbox`锛"
+msgstr "模块运行必需的依赖模块（如 `bs.hitbox`）"
 
-#: ../../contribute/metadata.md:53 5b74e99807874107b04a200c0f0caad9
+#: ../../contribute/metadata.md:53 fdfd8a52385643e8986d668ae31c6732
 msgid "weak dependencies"
-msgstr "弱依赖"
+msgstr "weak dependencies"
 
-#: ../../contribute/metadata.md:53 7b1a9dfce0f24eb1bc8ef32bd046cc89
-msgid "Optional modules that enhance functionality but are not essential (e.g., `bs.log`)"
-msgstr "澧炲己鍔熻兘浣嗛潪蹇呴渶鐨勬ā鍧楋紙濡?`bs.log`锛"
+#: ../../contribute/metadata.md:53 34ebbd4e1fa744059f736a8175e241b0
+msgid ""
+"Optional modules that enhance functionality but are not essential (e.g., "
+"`bs.log`)"
+msgstr "增强功能但非必需的模块（如 `bs.log`）"
 
-#: ../../contribute/metadata.md:95 c8dcff612efc4a2982f16c70ff66dd9e
+#: ../../contribute/metadata.md:95 fb68342310cc45c0a275ef7693fdca2a
 msgid "📜 Manifest"
-msgstr "馃摐 娓呭崟"
+msgstr "📜 清单"
 
-#: ../../contribute/metadata.md:97 e37c82e80e5b443f88588e14dcf56184
-msgid "The manifest consolidates metadata for all modules and features in Bookshelf. It is automatically generated and can be updated using the following command:"
-msgstr "娓呭崟鏁村悎浜?Bookshelf 鎵€鏈夋ā鍧楀拰鍔熻兘鐨勫厓鏁版嵁锛岃嚜鍔ㄧ敓鎴愬苟鍙€氳繃浠ヤ笅鍛戒护鏇存柊锛"
+#: ../../contribute/metadata.md:97 7130c6a841e2417481689ac1e1550bc8
+msgid ""
+"The manifest consolidates metadata for all modules and features in "
+"Bookshelf. It is automatically generated and can be updated using the "
+"following command:"
+msgstr "清单整合了 Bookshelf 所有模块和功能的元数据，自动生成并可通过以下命令更新："
 
-#: ../../contribute/metadata.md:101 365684fa95bf4389b4eb80e06ecb27f9
+#: ../../contribute/metadata.md:101 7691e3936f384ac7aa81fb9e44bdb5cf
 msgid "The generated file is located at `meta/manifest.json`."
-msgstr "鐢熸垚鐨勬枃浠朵綅浜?`meta/manifest.json`銆"
+msgstr "生成的文件位于 `meta/manifest.json`。"

@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v4.0.1.md:1 f228373c01264ff4a399a7d043bd8ea8
+msgid "📦 [Bookshelf - 4.0.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v4.0.1)"
+msgstr "📦 [Bookshelf - 4.0.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v4.0.1)"
+
+#: ../../../changelog/v4.0.1.md:3 dd4e73dc7ae94939aca85fe8213f7d08
+msgid "**🩹 Hotfix!**"
+msgstr "**🩹 热修复！**"
+
+#: ../../../changelog/v4.0.1.md:5 a83c61627a3946f0a968df9b20138265
+msgid "*This is a hotfix for version 4.0.0.*"
+msgstr "*这是版本 4.0.0 的热修复。*"
+
+#: ../../../changelog/v4.0.1.md:8 c01b9e577f4149c7b682ae50e300b098
+msgid "`🎯 bs.hitbox`"
+msgstr "`🎯 bs.hitbox`"
+
+#: ../../../changelog/v4.0.1.md:10 3705efc29156416d9db15b12b77ca341
+msgid "🐛 **[#543](https://github.com/mcbookshelf/bookshelf/issues/543)** - Fixed glow squid entities hitboxes and the `is_sized` entity type tag."
+msgstr "🐛 **[#543](https://github.com/mcbookshelf/bookshelf/issues/543)** - 修复了发光鱿鱼实体的碰撞箱以及 `is_sized` 实体类型标签。"
+
+#: ../../../changelog/v4.0.1.md:13 ad03496940d84dfb9cd4baf52dbf81dc
+msgid "`🧣 bs.spline`"
+msgstr "`🧣 bs.spline`"
+
+#: ../../../changelog/v4.0.1.md:15 57e4745c6dc6455883c8bad3292266a7
+msgid "🐛 **[#545](https://github.com/mcbookshelf/bookshelf/issues/545)** - Fixed an issue where 2D and 3D stream functions incorrectly returned 1D results."
+msgstr "🐛 **[#545](https://github.com/mcbookshelf/bookshelf/issues/545)** - 修复了二维和三维 `stream` 函数错误地返回一维结果的问题。"
