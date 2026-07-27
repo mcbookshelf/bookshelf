@@ -19,29 +19,29 @@ execute store result score #l bs.ctx run data get storage bs:in geometry.shapes[
 execute store result score #m bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].origin[1] 1000
 execute store result score #n bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].origin[2] 1000
 
-execute store result score #o bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].k[0] 1000
-execute store result score #p bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].k[1] 1000
-execute store result score #q bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].k[2] 1000
+execute store result score #i bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].k[0] 1000
+execute store result score #j bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].k[1] 1000
+execute store result score #k bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].k[2] 1000
 
 #get line parameters
-execute store result score #l bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].origin[0] 1000
-execute store result score #m bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].origin[1] 1000
-execute store result score #n bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].origin[2] 1000
+execute store result score #x bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].origin[0] 1000
+execute store result score #y bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].origin[1] 1000
+execute store result score #z bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].origin[2] 1000
 
-execute store result score #x bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].k[0] 1000
-execute store result score #y bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].k[1] 1000
-execute store result score #z bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].k[2] 1000
+execute store result score #o bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].k[0] 1000
+execute store result score #p bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].k[1] 1000
+execute store result score #q bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].k[2] 1000
 
 #compute dot product of the normal vector of the plane and the director vector of the line
-scoreboard players operation #a bs.ctx = #o bs.ctx
-scoreboard players operation #a bs.ctx *= #x bs.ctx
+scoreboard players operation #a bs.ctx = #i bs.ctx
+scoreboard players operation #a bs.ctx *= #o bs.ctx
 
-scoreboard players operation #b bs.ctx = #p bs.ctx
-scoreboard players operation #b bs.ctx *= #y bs.ctx
+scoreboard players operation #b bs.ctx = #j bs.ctx
+scoreboard players operation #b bs.ctx *= #p bs.ctx
 scoreboard players operation #a bs.ctx += #b bs.ctx
 
-scoreboard players operation #b bs.ctx = #q bs.ctx
-scoreboard players operation #b bs.ctx *= #z bs.ctx
+scoreboard players operation #b bs.ctx = #k bs.ctx
+scoreboard players operation #b bs.ctx *= #q bs.ctx
 scoreboard players operation #a bs.ctx += #b bs.ctx
 scoreboard players operation #a bs.ctx /= 1000 bs.const
 
@@ -53,36 +53,29 @@ scoreboard players operation #c bs.ctx = #l bs.ctx
 scoreboard players operation #d bs.ctx = #m bs.ctx
 scoreboard players operation #e bs.ctx = #n bs.ctx
 
-scoreboard players operation #c bs.ctx -= #l bs.ctx
-scoreboard players operation #d bs.ctx -= #m bs.ctx
-scoreboard players operation #e bs.ctx -= #n bs.ctx
+scoreboard players operation #c bs.ctx -= #x bs.ctx
+scoreboard players operation #d bs.ctx -= #y bs.ctx
+scoreboard players operation #e bs.ctx -= #z bs.ctx
 
-scoreboard players operation #f bs.ctx = #c bs.ctx
-scoreboard players operation #g bs.ctx = #d bs.ctx
-scoreboard players operation #h bs.ctx = #e bs.ctx
+scoreboard players operation #c bs.ctx *= #i bs.ctx
+scoreboard players operation #d bs.ctx *= #j bs.ctx
+scoreboard players operation #e bs.ctx *= #k bs.ctx
 
-scoreboard players operation #f bs.ctx *= #o bs.ctx
-scoreboard players operation #g bs.ctx *= #p bs.ctx
-scoreboard players operation #h bs.ctx *= #q bs.ctx
+scoreboard players operation #c bs.ctx += #d bs.ctx
+scoreboard players operation #c bs.ctx += #e bs.ctx
+scoreboard players operation #c bs.ctx /= #a bs.ctx
 
-scoreboard players operation #f bs.ctx += #g bs.ctx
-scoreboard players operation #f bs.ctx += #h bs.ctx
+scoreboard players operation $geometry.intersect.dz bs.out = #c bs.ctx
 
-scoreboard players operation $geometry.plane_coord.dz bs.out /= #a bs.ctx
+scoreboard players operation #o bs.ctx *= #c bs.ctx
+scoreboard players operation #p bs.ctx *= #c bs.ctx
+scoreboard players operation #q bs.ctx *= #c bs.ctx
 
-scoreboard players operation #i bs.ctx = #x bs.ctx
-scoreboard players operation #j bs.ctx = #y bs.ctx
-scoreboard players operation #k bs.ctx = #z bs.ctx
-
-scoreboard players operation #i bs.ctx *= #f bs.ctx
-scoreboard players operation #j bs.ctx *= #f bs.ctx
-scoreboard players operation #k bs.ctx *= #f bs.ctx
-
-scoreboard players operation #i bs.ctx /= 1000 bs.const
-scoreboard players operation #j bs.ctx /= 1000 bs.const
-scoreboard players operation #k bs.ctx /= 1000 bs.const
+scoreboard players operation #o bs.ctx /= 1000 bs.const
+scoreboard players operation #p bs.ctx /= 1000 bs.const
+scoreboard players operation #q bs.ctx /= 1000 bs.const
 
 data modify storage bs:out geometry.intersect append value {type:"point",coord_type:"cartesian",origin:[0d,0d,0d]}
-execute store result storage bs:out geometry.shape.origin[0] double 0.001 run scoreboard players operation #i bs.ctx += #l bs.ctx
-execute store result storage bs:out geometry.shape.origin[1] double 0.001 run scoreboard players operation #j bs.ctx += #m bs.ctx
-execute store result storage bs:out geometry.shape.origin[2] double 0.001 run scoreboard players operation #k bs.ctx += #n bs.ctx
+execute store result storage bs:out geometry.intersect[-1].origin[0] double 0.001 run scoreboard players operation #o bs.ctx += #x bs.ctx
+execute store result storage bs:out geometry.intersect[-1].origin[1] double 0.001 run scoreboard players operation #p bs.ctx += #y bs.ctx
+execute store result storage bs:out geometry.intersect[-1].origin[2] double 0.001 run scoreboard players operation #q bs.ctx += #z bs.ctx
