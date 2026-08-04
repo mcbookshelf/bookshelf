@@ -13,11 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result storage bs:ctx _.value double $(scale) run data get storage bs:ctx _.array[0]
-data modify storage bs:out collection.value append from storage bs:ctx _.value
+data modify storage bs:out collection.value append value 0
+$execute store result storage bs:out collection.value[-1] double $(scale) run data get storage bs:ctx _.value[0]
 
 # Shift the collection
-data remove storage bs:ctx _.array[0]
+data remove storage bs:ctx _.value[0]
 
 # Recurse if there are more elements
-execute if data storage bs:ctx _.array[0] run function bs.collection:scale/scale_rec with storage bs:ctx _
+execute if data storage bs:ctx _.value[0] run function bs.collection:scale/scale_rec with storage bs:ctx _

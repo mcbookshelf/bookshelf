@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-return run execute store result storage bs:out collection.value int 1 if data storage bs:out collection.value[]
+return run execute store result storage bs:out collection.value int 1 run data get storage bs:out collection.value

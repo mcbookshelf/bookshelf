@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless data storage bs:out collection.value[0] run return fail
-
-$data modify storage bs:ctx _ set value { searched: $(searched) }
-return run function bs.collection:contains/contains_rec
+data modify storage bs:out collection.value append from storage bs:ctx _[0]
+data remove storage bs:ctx _[0]
+scoreboard players remove #i bs.ctx 1
+execute if score #i bs.ctx matches 1.. if data storage bs:ctx _[0] run function bs.collection:slice/slice_take

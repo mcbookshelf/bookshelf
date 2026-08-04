@@ -15,10 +15,8 @@
 
 # Empty
 data modify storage bs:out collection.value set value []
-execute store success score #s bs.ctx run function #bs.collection:is_empty
-assert score #s bs.ctx matches 1
+assert run function #bs.collection:is_empty
 
 # Not empty
 data modify storage bs:out collection.value set value [1]
-execute store success score #s bs.ctx run function #bs.collection:is_empty
-assert score #s bs.ctx matches 0
+assert not run function #bs.collection:is_empty

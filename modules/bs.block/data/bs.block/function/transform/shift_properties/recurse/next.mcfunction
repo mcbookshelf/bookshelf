@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result score #l bs.ctx if data storage bs:ctx _.g[{n:"$(name)"}].o[]
+$execute store result score #l bs.ctx run data get storage bs:ctx _.g[{n:"$(name)"}].o
 
 execute if score #l bs.ctx matches 1.. \
   run function bs.block:transform/shift_properties/recurse/shift_property with storage bs:ctx _.i[-1]

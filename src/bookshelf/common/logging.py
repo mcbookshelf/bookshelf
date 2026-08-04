@@ -144,7 +144,7 @@ def log_errors(
 @contextmanager
 def count_logs(
     logger: logging.Logger = logger,
-) -> Generator[dict, Any, None]:
+) -> Generator[dict, Any]:
     """Context manager to count log messages."""
     handler = LogCounterHandler()
     logger.addHandler(handler)
@@ -162,7 +162,7 @@ def summarize_logs(
     logger: logging.Logger = logger,
     *,
     exit_on_errors: bool = False,
-) -> Generator[dict, Any, None]:
+) -> Generator[dict, Any]:
     """Context manager to count logs and print a summary at the end."""
     console = console or get_console()
     logger = logger or logging.getLogger("bookshelf")

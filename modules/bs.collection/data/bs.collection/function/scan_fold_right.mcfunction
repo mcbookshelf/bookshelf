@@ -13,11 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: [], accumulator: $(initial), i: -1 }
-data modify storage bs:data collection.stack[0].result append from storage bs:data collection.stack[0].accumulator
+$data modify storage bs:data collection.stack append value { value: [], run: "$(run)", result: [], accumulator: $(initial), i: -1 }
+data modify storage bs:data collection.stack[-1].result append from storage bs:data collection.stack[-1].accumulator
 
-execute if data storage bs:out collection.value[0] run data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:scan_reduce_right/scan_reduce_right_rec
+execute if data storage bs:out collection.value[0] run data modify storage bs:data collection.stack[-1].value set from storage bs:out collection.value
+execute if data storage bs:data collection.stack[-1].value[0] run function bs.collection:scan_reduce_right/scan_reduce_right_rec
 
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].result
-data remove storage bs:data collection.stack[0]
+data modify storage bs:out collection.value set from storage bs:data collection.stack[-1].result
+data remove storage bs:data collection.stack[-1]

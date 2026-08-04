@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result storage bs:out collection.value double $(ratio) run scoreboard players get #s bs.ctx
+$execute store result storage bs:out collection.value double $(y) run scoreboard players get #s bs.ctx

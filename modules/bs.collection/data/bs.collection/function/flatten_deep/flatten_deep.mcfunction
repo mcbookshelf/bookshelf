@@ -15,7 +15,7 @@
 
 execute unless data storage bs:out collection.value[0] run return 0
 
-data modify storage bs:ctx _.flatten_deep.queue set from storage bs:out collection.value
+data modify storage bs:ctx _ set from storage bs:out collection
 data modify storage bs:out collection.value set value []
 
 function bs.collection:flatten_deep/flatten_deep_rec

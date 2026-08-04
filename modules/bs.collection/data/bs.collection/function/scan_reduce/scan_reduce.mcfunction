@@ -14,14 +14,14 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute unless data storage bs:out collection.value[0] run return fail
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", result: [], accumulator: null, i: 0 }
+$data modify storage bs:data collection.stack append value { value: [], run: "$(run)", result: [], accumulator: null, i: 0 }
 
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
-data modify storage bs:data collection.stack[0].accumulator set from storage bs:out collection.value[0]
-data modify storage bs:data collection.stack[0].result append from storage bs:data collection.stack[0].accumulator
-data remove storage bs:data collection.stack[0].value[0]
+data modify storage bs:data collection.stack[-1].value set from storage bs:out collection.value
+data modify storage bs:data collection.stack[-1].accumulator set from storage bs:out collection.value[0]
+data modify storage bs:data collection.stack[-1].result append from storage bs:data collection.stack[-1].accumulator
+data remove storage bs:data collection.stack[-1].value[0]
 
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:scan_reduce/scan_reduce_rec
+execute if data storage bs:data collection.stack[-1].value[0] run function bs.collection:scan_reduce/scan_reduce_rec
 
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].result
-data remove storage bs:data collection.stack[0]
+data modify storage bs:out collection.value set from storage bs:data collection.stack[-1].result
+data remove storage bs:data collection.stack[-1]

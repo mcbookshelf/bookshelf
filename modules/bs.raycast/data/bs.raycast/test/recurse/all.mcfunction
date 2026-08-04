@@ -17,109 +17,109 @@ fill ~-1 ~ ~-1 ~1 ~1 ~1 minecraft:air
 setblock ~-1 ~ ~-1 minecraft:bookshelf
 summon minecraft:interaction ~-.5 ~ ~-.5
 execute positioned ~-.5 ~ ~-.5 summon minecraft:marker run function #bs.hitbox:set_entity {with:{width:1,height:1}}
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~1 ~.5 facing ~-.51 ~-1.01 ~-1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~1 ~.5 facing ~-1.49 ~-1.01 ~-.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~1 ~.5 facing ~-.51 ~-1.01 ~-1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~1 ~.5 facing ~-1.49 ~-1.01 ~-.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
 
 kill @e[type=!minecraft:player,distance=..2]
 fill ~-1 ~ ~-1 ~1 ~1 ~1 minecraft:air
 setblock ~-1 ~ ~1 minecraft:bookshelf
 summon minecraft:interaction ~-.5 ~ ~1.5
 execute positioned ~-.5 ~ ~1.5 summon minecraft:marker run function #bs.hitbox:set_entity {with:{width:1,height:1}}
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~1 ~.5 facing ~-.51 ~-1.01 ~1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~1 ~.5 facing ~-1.49 ~-1.01 ~.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~1 ~.5 facing ~-.51 ~-1.01 ~1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~1 ~.5 facing ~-1.49 ~-1.01 ~.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
 
 kill @e[type=!minecraft:player,distance=..2]
 fill ~-1 ~ ~-1 ~1 ~1 ~1 minecraft:air
 setblock ~1 ~ ~-1 minecraft:bookshelf
 summon minecraft:interaction ~1.5 ~ ~-.5
 execute positioned ~1.5 ~ ~-.5 summon minecraft:marker run function #bs.hitbox:set_entity {with:{width:1,height:1}}
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~1 ~.5 facing ~.51 ~-1.01 ~-1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~1 ~.5 facing ~1.49 ~-1.01 ~-.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~1 ~.5 facing ~.51 ~-1.01 ~-1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~1 ~.5 facing ~1.49 ~-1.01 ~-.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
 
 kill @e[type=!minecraft:player,distance=..2]
 fill ~-1 ~ ~-1 ~1 ~1 ~1 minecraft:air
 setblock ~1 ~ ~1 minecraft:bookshelf
 summon minecraft:interaction ~1.5 ~ ~1.5
 execute positioned ~1.5 ~ ~1.5 summon minecraft:marker run function #bs.hitbox:set_entity {with:{width:1,height:1}}
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~1 ~.5 facing ~.51 ~-1.01 ~1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~1 ~.5 facing ~1.49 ~-1.01 ~.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~1 ~.5 facing ~.51 ~-1.01 ~1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~1 ~.5 facing ~1.49 ~-1.01 ~.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
 
 kill @e[type=!minecraft:player,distance=..2]
 fill ~-1 ~ ~-1 ~1 ~1 ~1 minecraft:air
 setblock ~-1 ~ ~-1 minecraft:bookshelf
 summon minecraft:interaction ~-.5 ~ ~-.5
 execute positioned ~-.5 ~ ~-.5 summon minecraft:marker run function #bs.hitbox:set_entity {with:{width:1,height:1}}
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~ ~.5 facing ~-.51 ~.99 ~-1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~ ~.5 facing ~-1.49 ~.99 ~-.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~ ~.5 facing ~-.51 ~.99 ~-1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~ ~.5 facing ~-1.49 ~.99 ~-.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
 
 kill @e[type=!minecraft:player,distance=..2]
 fill ~-1 ~ ~-1 ~1 ~1 ~1 minecraft:air
 setblock ~-1 ~ ~1 minecraft:bookshelf
 summon minecraft:interaction ~-.5 ~ ~1.5
 execute positioned ~-.5 ~ ~1.5 summon minecraft:marker run function #bs.hitbox:set_entity {with:{width:1,height:1}}
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~ ~.5 facing ~-.51 ~.99 ~1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~ ~.5 facing ~-1.49 ~.99 ~.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~ ~.5 facing ~-.51 ~.99 ~1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~ ~.5 facing ~-1.49 ~.99 ~.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
 
 kill @e[type=!minecraft:player,distance=..2]
 fill ~-1 ~ ~-1 ~1 ~1 ~1 minecraft:air
 setblock ~1 ~ ~-1 minecraft:bookshelf
 summon minecraft:interaction ~1.5 ~ ~-.5
 execute positioned ~1.5 ~ ~-.5 summon minecraft:marker run function #bs.hitbox:set_entity {with:{width:1,height:1}}
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~ ~.5 facing ~.51 ~.99 ~-1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~ ~.5 facing ~1.49 ~.99 ~-.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~ ~.5 facing ~.51 ~.99 ~-1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~ ~.5 facing ~1.49 ~.99 ~-.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
 
 kill @e[type=!minecraft:player,distance=..2]
 fill ~-1 ~ ~-1 ~1 ~1 ~1 minecraft:air
 setblock ~1 ~ ~1 minecraft:bookshelf
 summon minecraft:interaction ~1.5 ~ ~1.5
 execute positioned ~1.5 ~ ~1.5 summon minecraft:marker run function #bs.hitbox:set_entity {with:{width:1,height:1}}
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~ ~.5 facing ~.51 ~.99 ~1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
-execute store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~.5 ~ ~.5 facing ~1.49 ~.99 ~.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~ ~.5 facing ~.51 ~.99 ~1.49 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2
+execute store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~.5 ~ ~.5 facing ~1.49 ~.99 ~.51 run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:2,on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 2

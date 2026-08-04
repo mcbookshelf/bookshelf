@@ -15,30 +15,18 @@
 
 # Maximum of positive numbers - check success channel
 data modify storage bs:out collection.value set value [5, 2, 8, 1, 9]
-execute store success score #s bs.ctx run function #bs.collection:imax
-assert score #s bs.ctx matches 1
+assert run function #bs.collection:imax
 
-# Maximum of positive numbers - check return channel
+# Maximum of positive numbers
 data modify storage bs:out collection.value set value [5, 2, 8, 1, 9]
-execute store result score #r bs.ctx run function #bs.collection:imax
-assert score #r bs.ctx matches 9
-
-# Maximum of positive numbers - check storage output
-data modify storage bs:out collection.value set value [5, 2, 8, 1, 9]
-function #bs.collection:imax
+assert result 9 run function #bs.collection:imax
 assert data storage bs:out {collection: {value: 9}}
 
-# Maximum with negative numbers - check return channel
+# Maximum with negative numbers
 data modify storage bs:out collection.value set value [-5, -2, -7, -3, -1]
-execute store result score #r bs.ctx run function #bs.collection:imax
-assert score #r bs.ctx matches -1
-
-# Maximum with negative numbers - check storage output
-data modify storage bs:out collection.value set value [-5, -2, -7, -3, -1]
-function #bs.collection:imax
+assert result -1 run function #bs.collection:imax
 assert data storage bs:out {collection: {value: -1}}
 
-# Maximum with negative numbers - check storage output
+# Maximum with empty collection - check success channel
 data modify storage bs:out collection.value set value []
-execute store success score #s bs.ctx run function #bs.collection:imax
-assert score #s bs.ctx matches 0
+assert not run function #bs.collection:imax

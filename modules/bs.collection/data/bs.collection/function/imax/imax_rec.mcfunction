@@ -18,7 +18,7 @@ execute store result score #c bs.ctx run data get storage bs:out collection.valu
 
 # Update minimum if current is larger - copy both score and original value
 execute if score #c bs.ctx > #m bs.ctx run data modify storage bs:ctx _ set from storage bs:out collection.value[0]
-execute if score #c bs.ctx > #m bs.ctx run scoreboard players operation #m bs.ctx = #c bs.ctx
+scoreboard players operation #m bs.ctx > #c bs.ctx
 
 # Shift the collection
 data remove storage bs:out collection.value[0]

@@ -13,8 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute unless data storage bs:out collection.value[$(number)] run data modify storage bs:out collection.value set value []
-$execute unless data storage bs:out collection.value[$(number)] run return 0
+$execute unless data storage bs:out collection.value[$(number)] run return run data modify storage bs:out collection.value set value []
 
 $scoreboard players set #n bs.ctx $(number)
 

@@ -13,13 +13,13 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-summon minecraft:marker ~ ~ ~ {Tags:["bs.packtest"]}
+summon minecraft:marker ~ ~ ~ {Tags:["bs.ward"]}
 
-execute store result score @n[type=minecraft:marker,tag=bs.packtest] bs.rot.h run random value -10000..10000
-execute as @n[type=minecraft:marker,tag=bs.packtest] run function #bs.position:set_rot_h {scale:.001}
-execute store result score #h bs.ctx run data get entity @n[type=minecraft:marker,tag=bs.packtest] Rotation[0] 1000
-scoreboard players operation #h bs.ctx -= @n[type=minecraft:marker,tag=bs.packtest] bs.rot.h
+execute store result score @n[type=minecraft:marker,tag=bs.ward] bs.rot.h run random value -10000..10000
+execute as @n[type=minecraft:marker,tag=bs.ward] run function #bs.position:set_rot_h {scale:.001}
+execute store result score #h bs.ctx run data get entity @n[type=minecraft:marker,tag=bs.ward] Rotation[0] 1000
+scoreboard players operation #h bs.ctx -= @n[type=minecraft:marker,tag=bs.ward] bs.rot.h
 
-kill @n[type=minecraft:marker,tag=bs.packtest]
+kill @n[type=minecraft:marker,tag=bs.ward]
 
 assert score #h bs.ctx matches -2..2

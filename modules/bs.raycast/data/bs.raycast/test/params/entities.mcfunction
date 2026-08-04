@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 summon minecraft:armor_stand ~.5 ~ ~.5
-summon minecraft:armor_stand ~.5 ~ ~1.5 {Tags:["bs.packtest"]}
-execute positioned ~.5 ~ ~-.5 run function #bs.raycast:run {with:{blocks:false,entities:"bs.packtest",on_targeted_entity:"assert entity @s[tag=bs.packtest]"}}
+summon minecraft:armor_stand ~.5 ~ ~1.5 {Tags:["bs.ward"]}
+execute positioned ~.5 ~ ~-.5 run function #bs.raycast:run {with:{blocks:false,entities:"bs.ward",on_targeted_entity:"assert entity @s[tag=bs.ward]"}}

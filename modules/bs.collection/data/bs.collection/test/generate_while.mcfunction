@@ -14,12 +14,12 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Generate sequence based on index (0, 1, 2) while value != 3
-function #bs.collection:generate_while {run: "data modify storage bs:lambda collection.result set from storage bs:lambda collection.index", predicate: "execute unless data storage bs:lambda {collection: {result: 3}}"}
+function #bs.collection:generate_while {run: "data modify storage bs:lambda collection.result set from storage bs:lambda collection.index", predicate: "execute unless data storage bs:lambda collection{result: 3}"}
 assert data storage bs:out {collection: {value: [0, 1, 2]}}
 
 # Simplified predicate for test (assume execute if score or data)
 # Generate 0..5 while value < 3
-function #bs.collection:generate_while {run: "data modify storage bs:lambda collection.result set from storage bs:lambda collection.index", predicate: "execute if score #i bs.ctx matches ..2"}
+function #bs.collection:generate_while {run: "data modify storage bs:lambda collection.result set from storage bs:lambda collection.index", predicate: "execute unless data storage bs:lambda collection{index:3}"}
 assert data storage bs:out {collection: {value: [0, 1, 2]}}
 
 # Generate while always false -> empty

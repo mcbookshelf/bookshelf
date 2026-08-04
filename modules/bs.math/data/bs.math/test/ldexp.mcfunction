@@ -15,15 +15,12 @@
 
 data modify storage bs:in math.ldexp set value {x:.652,e:-3}
 function #bs.math:ldexp
-execute store result score #r bs.ctx run data get storage bs:out math.ldexp 10000
-assert score #r bs.ctx matches 814..816
+assert result 814..816 run data get storage bs:out math.ldexp 10000
 
 data modify storage bs:in math.ldexp set value {x:-.725,e:3}
 function #bs.math:ldexp
-execute store result score #r bs.ctx run data get storage bs:out math.ldexp
-assert score #r bs.ctx matches -6
+assert result -6 run data get storage bs:out math.ldexp
 
 data modify storage bs:in math.ldexp set value {x:.85,e:11}
 function #bs.math:ldexp
-execute store result score #r bs.ctx run data get storage bs:out math.ldexp 10000
-assert score #r bs.ctx matches 17407999..17408001
+assert result 17407999..17408001 run data get storage bs:out math.ldexp 10000

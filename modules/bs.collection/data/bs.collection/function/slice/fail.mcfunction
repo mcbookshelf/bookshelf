@@ -13,6 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data remove storage bs:ctx _[0]
-scoreboard players add #i bs.ctx 1
-execute if score #i bs.ctx < #m bs.ctx if data storage bs:ctx _[0] run function bs.collection:slice/call_drop
+$function #bs.log:error {namespace: "bs.collection", path: "bs.collection:slice/slice", tag: "slice", message: '"$(msg)"'}
+return fail

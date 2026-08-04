@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:data collection.stack[0].current append from storage bs:data collection.stack[0].temp[0]
-data remove storage bs:data collection.stack[0].temp[0]
+data modify storage bs:data collection.stack[-1].current append from storage bs:data collection.stack[-1].temp[0]
+data remove storage bs:data collection.stack[-1].temp[0]
 scoreboard players remove #n bs.ctx 1
 
-execute if score #n bs.ctx matches 1.. if data storage bs:data collection.stack[0].temp[0] run function bs.collection:sliding/fill_rec
+execute if score #n bs.ctx matches 1.. if data storage bs:data collection.stack[-1].temp[0] run function bs.collection:sliding/fill_rec

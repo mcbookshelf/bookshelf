@@ -14,6 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Set context lambda for the user function
-data modify storage bs:lambda collection.value set from storage bs:data collection.stack[0].value
+data modify storage bs:lambda collection.value set from storage bs:data collection.stack[-1].value
 
 $return run $(run)

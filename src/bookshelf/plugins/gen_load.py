@@ -3,10 +3,10 @@ from __future__ import annotations
 import re
 
 from beet import Context, Function, FunctionTag, TestEnvironment
+from mcward.beet import TestFunction
 from semver import Version
 
 from bookshelf.definitions import MODULES, VERSION
-from bookshelf.plugins.include_tests import TestFunction
 
 PERSISTENT_ENTITY_UUID = re.compile(r"B5-0-0-0-\d+")
 

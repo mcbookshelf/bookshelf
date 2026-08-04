@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute store result score #h bs.ctx run data get storage bs:out hitbox.height 99.99999
-execute store result storage bs:ctx y double 0.0000001 run scoreboard players operation #h bs.ctx *= #z bs.ctx
+execute store result storage bs:ctx y double 0.00000001 run scoreboard players operation #h bs.ctx *= #z bs.ctx
 return run function bs.hitbox:get_entity/pose/check with storage bs:ctx
