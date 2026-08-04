@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import sys
 from itertools import groupby
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -139,7 +140,8 @@ def test(
             run = github.run if reporter == "github" else live.run
             resolve = pack_resolver([MODULES_DIR / m for m in modules])
             paths = [datapack.path for datapack in datapacks]
-            run(paths, envs, resolve=resolve, selector=selector)
+            if run(paths, envs, resolve=resolve, selector=selector).failed:
+                sys.exit(1)
         except WardError as e:
             raise click.ClickException(str(e)) from e
 
