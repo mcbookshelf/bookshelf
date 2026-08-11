@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -26,10 +25,7 @@ msgstr "✅ 贡献验证"
 
 #: ../../../contribute/contribution-validation.md:3
 #: 0b5086a6e3254b8c85d5cc3aa7cb8518
-msgid ""
-"Contributing often requires additional changes beyond the code itself. To"
-" ensure all contributions are properly integrated, we follow a series of "
-"validation steps."
+msgid "Contributing often requires additional changes beyond the code itself. To ensure all contributions are properly integrated, we follow a series of validation steps."
 msgstr "除代码本身外，贡献通常还需要额外的变更。为确保所有贡献被正确集成，我们遵循一系列验证步骤。"
 
 #: ../../../contribute/contribution-validation.md:7
@@ -39,30 +35,22 @@ msgstr "⚙️ 自动验证"
 
 #: ../../../contribute/contribution-validation.md:9
 #: 62244106eac748bbb44ab191ed0b964e
-msgid ""
-"We use automated scripts to validate contributions whenever a pull "
-"request is opened or updated with new commits. These scripts check:"
+msgid "We use automated scripts to validate contributions whenever a pull request is opened or updated with new commits. These scripts check:"
 msgstr "每当有拉取请求被创建或用新提交更新时，我们会使用自动化脚本来验证贡献。这些脚本检查："
 
 #: ../../../contribute/contribution-validation.md:10
 #: 8712c44c3bca4e1298488ccd754a3d84
-msgid ""
-"Whether metadata is defined and up to date (see [metadata "
-"page](project:metadata.md))"
+msgid "Whether metadata is defined and up to date (see [metadata page](project:metadata.md))"
 msgstr "元数据是否已定义且为最新（参见[元数据页面](project:metadata.md)）"
 
 #: ../../../contribute/contribution-validation.md:11
 #: 7b18fd460dfc43cba847fd2841cb0187
-msgid ""
-"Whether the code passes all unit tests, ensuring no regressions (see "
-"[debug page](project:debug-tools.md#-unit-tests))"
+msgid "Whether the code passes all unit tests, ensuring no regressions (see [debug page](project:debug-tools.md#-unit-tests))"
 msgstr "代码是否通过所有单元测试，确保无回归问题（参见[调试页面](project:debug-tools.md#-单元测试)）"
 
 #: ../../../contribute/contribution-validation.md:13
 #: 0bdae8e8b5984bdf8566d8209bea001f
-msgid ""
-"Bookshelf contributors can also manually run these checks locally using "
-"the following commands:"
+msgid "Bookshelf contributors can also manually run these checks locally using the following commands:"
 msgstr "Bookshelf 贡献者也可在本地通过以下命令手动执行这些检查："
 
 #: ../../../contribute/contribution-validation.md:21
@@ -72,17 +60,12 @@ msgstr "📄 拉取请求模板"
 
 #: ../../../contribute/contribution-validation.md:23
 #: b636da7ed68c4f72ae076eb4d3bb3fd9
-msgid ""
-"When creating a pull request, contributors are provided with a checklist "
-"template to ensure no essential steps are overlooked. This checklist "
-"covers changes that cannot be automatically validated, such as:"
+msgid "When creating a pull request, contributors are provided with a checklist template to ensure no essential steps are overlooked. This checklist covers changes that cannot be automatically validated, such as:"
 msgstr "创建拉取请求时，贡献者会收到检查清单模板，确保关键步骤不被遗漏。该清单涵盖无法自动验证的变更，例如："
 
 #: ../../../contribute/contribution-validation.md:24
 #: 755d4a5f991249c586d60e3f755be76d
-msgid ""
-"Updating the changelog with details about the contribution and the pull "
-"request ID"
+msgid "Updating the changelog with details about the contribution and the pull request ID"
 msgstr "更新变更日志，包含贡献详情及拉取请求ID"
 
 #: ../../../contribute/contribution-validation.md:25
@@ -102,9 +85,7 @@ msgstr "将拉取请求关联至现有问题"
 
 #: ../../../contribute/contribution-validation.md:29
 #: 864a4efa9e1e46908ec4eaa8e678f9cc
-msgid ""
-"This checklist ensures contributions meet project standards before "
-"submission."
+msgid "This checklist ensures contributions meet project standards before submission."
 msgstr "该清单确保贡献在提交前符合项目标准。"
 
 #: ../../../contribute/contribution-validation.md:33
@@ -114,9 +95,7 @@ msgstr "🔎 人工评审"
 
 #: ../../../contribute/contribution-validation.md:35
 #: d85918fd18414a4dadf62f66a0552848
-msgid ""
-"After automated checks, other Bookshelf contributors manually review the "
-"pull request. This review ensures:"
+msgid "After automated checks, other Bookshelf contributors manually review the pull request. This review ensures:"
 msgstr "自动化检查后，其他 Bookshelf 贡献者会对拉取请求进行人工评审，该评审确保："
 
 #: ../../../contribute/contribution-validation.md:36
@@ -136,7 +115,5 @@ msgstr "遵守整体贡献指南要求"
 
 #: ../../../contribute/contribution-validation.md:40
 #: ef5281f3dc4f4036b572ef6620909a07
-msgid ""
-"Once the review process is complete, the contribution is approved and "
-"merged."
+msgid "Once the review process is complete, the contribution is approved and merged."
 msgstr "评审流程完成后，贡献将被批准并合并。"

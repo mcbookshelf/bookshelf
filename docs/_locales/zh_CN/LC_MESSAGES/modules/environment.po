@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,686 +18,606 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/environment.md:1 6d48dc61a7b042b7985bcb20910497a6
+#: ../../modules/environment.md:1 4084cd7918ba4b808515bd431a7a38a8
 msgid "⛰️ Environment"
 msgstr "⛰️ 环境（Environment）"
 
-#: ../../modules/environment.md:3 78d080b29a5e4f52ba16a2e913bf1039
+#: ../../modules/environment.md:3 3c782a1e150945578d9f4bb4ef726bc3
 msgid "**`#bs.environment:help`**"
 msgstr "**`#bs.environment:help`**"
 
-#: ../../modules/environment.md:5 69681c68b9e64337a898aedbda7eac8e
-msgid ""
-"Comprehensive information and tools related to weather and biome "
-"properties."
+#: ../../modules/environment.md:5 cbaa697791f34614a27aea6665920bb4
+msgid "Comprehensive information and tools related to weather and biome properties."
 msgstr "与天气和生物群系属性相关的综合信息和工具。"
 
-#: ../../modules/environment.md:13 5182579a99324b3fad31115d4f21fb21
-msgid ""
-"\"The most dangerous worldview is the worldview of those who have not "
-"viewed the world.\""
+#: ../../modules/environment.md:13 6bfa3e52667547b1a9b4cca70a3c845f
+msgid "\"The most dangerous worldview is the worldview of those who have not viewed the world.\""
 msgstr "“最危险的世界观是那些从未观察过世界的人的世界观。”"
 
-#: ../../modules/environment.md:14 d0b2856dc36a432f854e7e9aecd84e3c
+#: ../../modules/environment.md:14 80d0dc01169841299e27a92a01014e2f
 msgid "Alexander von Humboldt"
 msgstr "亚历山大·冯·洪堡（Alexander von Humboldt）"
 
-#: ../../modules/environment.md:20 9246e8697d324db38823c48c49288c17
+#: ../../modules/environment.md:20 f3d711e78f5e42ba9a8766b7d878f121
 msgid "🔧 Functions"
 msgstr "🔧 函数"
 
-#: ../../modules/environment.md:22 f39dc47076694daaa7d2a93b1f08219d
+#: ../../modules/environment.md:22 579d32ccff1f47ddbee419f4fa8b8c9c
 msgid "You can find below all functions available in this module."
 msgstr "你可以在下方找到此模块中的所有可用函数。"
 
-#: ../../modules/environment.md:26 854d0fa97268422f85651137d3d47203
+#: ../../modules/environment.md:26 d916988ccd624d1487c72276691a8b44
 msgid "Get Biome"
 msgstr "获取生物群系"
 
-#: ../../modules/environment.md:30 c7ee55feb246449ead4d3233a9cbe5db
+#: ../../modules/environment.md:30 1552963ad2b14a72b2d11da6e2f85117
 msgid "Get biome data at the execution position of the function."
 msgstr "获取函数执行位置的生物群系数据。"
 
 #: ../../modules/environment.md:32 ../../modules/environment.md:63
-#: ../../modules/environment.md:97 ../../modules/environment.md:132
-#: ../../modules/environment.md:167 ../../modules/environment.md:201
-#: ../../modules/environment.md:236 ../../modules/environment.md:257
-#: 2538e8e2255d4505bfbe0bbcdc5ee0ac 393466f4434d489f9a4807339efcbc68
-#: 3db5a45b907945f0a88b54c4aff9b42e 4f73708a31604a5e9d65020a6bd4d20c
-#: 876aa20c538b43b2adfce66456afd120 ad18ba73a4bd474bb09003d8237aff02
-#: d997a77000ba47b9b1f3975dbf776800 de6377c43f82449b9971033372946079
+#: ../../modules/environment.md:97 ../../modules/environment.md:130
+#: ../../modules/environment.md:163 ../../modules/environment.md:197
+#: ../../modules/environment.md:281 ../../modules/environment.md:302
+#: 015cc3b072d849109b97b2f1f3727aed 020c1025302e4c36a0de05302652380c
+#: 4268a002c89f44fea7b4ffb2f942eec1 513bb0387cf04b93b9d4d1f04b8cc2c0
+#: 6633c6eade88427e843ef58bbed8efcb 9fab800f5994428e85fb6b706991a786
+#: c6f122393cb947bcb8647704de8e303f d58965a73e274a3585543246844f1e4d
 msgid "Inputs"
 msgstr "输入"
 
-#: ../../modules/environment.md:33 764090bba45d420c959f1236bb6f28c1
-msgid ""
-"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from "
-"which you want to get biome data."
+#: ../../modules/environment.md:33 5437a4c3ccd54f64962e61ce1efa181f
+msgid "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from which you want to get biome data."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：你想要获取生物群系数据的位置。"
 
 #: ../../modules/environment.md:35 ../../modules/environment.md:72
-#: ../../modules/environment.md:104 ../../modules/environment.md:139
-#: ../../modules/environment.md:178 ../../modules/environment.md:212
-#: ../../modules/environment.md:239 ../../modules/environment.md:260
-#: ../../modules/environment.md:283 240a5990ec9d4224b9142bea57978cc1
-#: 2c3e2ec7bff449418584ad42fc5d8a2c 2dd3dd6239e746ab9d892b96cb66c4c5
-#: 54adb56aee8f44e18453cd6f974f3e20 5a0b935ee3f1435abb792e84299d562a
-#: 606ac40ef6754c68b18ad88c2f17ac4a ce18fa99ddef473a9f322ab1bccc80e4
-#: daf308116dd7476baa39e03c3ee606ce e8059e79618f42e8abd72f623bd64d72
+#: ../../modules/environment.md:104 ../../modules/environment.md:137
+#: ../../modules/environment.md:174 ../../modules/environment.md:208
+#: ../../modules/environment.md:237 ../../modules/environment.md:284
+#: ../../modules/environment.md:305 1ea8a7a896d94965b5984c8f2cfabb14
+#: 2425592edccb42bf834a9a7147ff79e4 38bf7bfe7109473294280b0e1c958921
+#: 6cf5d0b65dca42dcbbbe35855ff3061c 90af7cd48f0340d7a56fedad57bc9b40
+#: b0c616e3534446a58ade629b3e2d06e7 d8029670193f4dc1b9488239a2073f2c
+#: e12ec7fa76674bdeb53f0414bc8098ef e8d752dc202e4f6891d78a557e7c2355
 msgid "Outputs"
 msgstr "输出"
 
-#: ../../modules/environment.md:36 190dac36404b47bcbccc1d477a2056b4
+#: ../../modules/environment.md:36 80dba0ac980f4ff89f35fd588bc97676
 msgid "**Storage `bs:out environment.get_biome`**:"
 msgstr "**命令存储 `bs:out environment.get_biome`**："
 
-#: ../../modules/environment.md:38 6ad9bd950a4242d5ac5a4af47c7fa9fd
+#: ../../modules/environment.md:38 2aeb446df9274fc3acf0ca448e5a753c
 #, python-brace-format
 msgid "{nbt}`compound` Biome data"
 msgstr "{nbt}`compound` 群系数据"
 
-#: ../../modules/environment.md:39 3e056ce40b224ba7913605ae0a0ae20e
+#: ../../modules/environment.md:39 db54dc348d1e497fa38db6263af2e9ab
 #, python-brace-format
-msgid ""
-"{nbt}`string` **type**: String representation of the biome ID (e.g., "
-"`minecraft:plains`)."
+msgid "{nbt}`string` **type**: String representation of the biome ID (e.g., `minecraft:plains`)."
 msgstr "{nbt}`string` **type**: 群系id的完整字符串表示（比如：`minecraft:plains`）。"
 
-#: ../../modules/environment.md:40 32c5b9022c56438fa4a24b076b4b49a6
+#: ../../modules/environment.md:40 77abfaf2c6ca4980a3d7bbbd9a5224cc
 #, python-brace-format
 msgid "{nbt}`double` **temperature**: The base temperature of the biome."
 msgstr "{nbt}`double` **temperature**: 群系的基础温度。"
 
-#: ../../modules/environment.md:41 479be7b2482c4391b1abb6540fdef13a
+#: ../../modules/environment.md:41 a8bae0ba92da4945971c8743bf05287b
 #, python-brace-format
-msgid ""
-"{nbt}`bool` **has_precipitation**: Whether the biome has precipitation or"
-" not."
+msgid "{nbt}`bool` **has_precipitation**: Whether the biome has precipitation or not."
 msgstr "{nbt}`bool` **has_precipitation**: 群系能否降水。"
 
-#: ../../modules/environment.md:45 20c8a43c62c34cf490471078f9a49b0c
+#: ../../modules/environment.md:45 777919f5238248a595e28adf1f23defe
 msgid "*Example: Get biome data at the current location:*"
 msgstr "*示例：获取当前位置的生物群系数据：*"
 
-#: ../../modules/environment.md:53 ../../modules/environment.md:329
-#: ../../modules/environment.md:339 ../../modules/environment.md:349
-#: 56c4358f9e4a43fa9f74252665e166da 6f925422bab2433483e6a7034891d819
-#: 88906f0974494a04ad512561a74436d8 c94207bc7c8f46189a0941d32f5bbaa7
+#: ../../modules/environment.md:53 ../../modules/environment.md:334
+#: ../../modules/environment.md:344 ../../modules/environment.md:354
+#: 505d4f69124144939798eefd904eadf7 761b08c5c74948adbe18871c73d9348c
+#: dc8cee9f1cbe40e6ae3e9ccf320f8b0e df49624922ed403c8f71318106c1927f
 msgid "**Credits**: Aksiome"
-msgstr "**制作人员**：Aksiome"
+msgstr "**贡献者**：Aksiome"
 
-#: ../../modules/environment.md:57 30f6ddb2db9a43978e9d5813738d341c
+#: ../../modules/environment.md:57 8b907091216d41fc97cb41310103ac00
 msgid "Get Temperature"
 msgstr "获取温度"
 
-#: ../../modules/environment.md:61 e7c5054de0a44894b331c91ecdc05091
-msgid ""
-"Get the temperature at the execution position of the function, taking the"
-" altitude into account."
+#: ../../modules/environment.md:61 82456325cf724bf89ce6e13f1419d769
+msgid "Get the temperature at the execution position of the function, taking the altitude into account."
 msgstr "获取函数执行位置的温度，考虑海拔高度对温度的影响。"
 
-#: ../../modules/environment.md:64 6db7a967d336497c93b0bd7c647cf7ff
-msgid ""
-"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from "
-"which you want to get the temperature."
+#: ../../modules/environment.md:64 60a49c7e3de846efbe6ae7d35739ec49
+msgid "**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from which you want to get the temperature."
 msgstr "**执行 `at <实体>` 或 `positioned <x> <y> <z>`**：你想要获取温度的位置。"
 
 #: ../../modules/environment.md:66 ../../modules/environment.md:98
-#: ../../modules/environment.md:133 ../../modules/environment.md:172
-#: ../../modules/environment.md:206 176684340c214a4e89916d78a5188240
-#: 46ec75e51eef4849ab712c928961826d 5df257450d2b4498961e6b2d3e6827c1
-#: 79c000b01f4840f8a6d45131f47e89c0 d0652e4c9068465bb9a5bd747a471ea9
+#: ../../modules/environment.md:131 ../../modules/environment.md:168
+#: ../../modules/environment.md:202 51ee648b580c4933ab8f7c40fe579228
+#: 708c0ca42c884406a5951467f481ef55 7855e36478cd423db5570f6f2a0a5db2
+#: d6b81b61fec24ebcacd0083c941484d5 dbc405195a23455cb988680c9ff81f79
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
 #: ../../modules/environment.md:68 ../../modules/environment.md:100
-#: ../../modules/environment.md:135 ../../modules/environment.md:174
-#: ../../modules/environment.md:208 149ba69f7896459192c3b851503e50f3
-#: 199a9550e910426ea806ea54d562564c 3fb501f54d964f5b847355a10b41f137
-#: a4ae48ae09ef4c638a36c3e09e5b36d2 e34caf9e8c9140cb91ae6cc3bd12e30d
+#: ../../modules/environment.md:133 ../../modules/environment.md:170
+#: ../../modules/environment.md:204 102163bd06fe492cb0e3368b5180c1c8
+#: 574f80e7231d4a11b48dd4dddfe2d21f a07ba9169b164a508653942a485a64ed
+#: b475f795fc9f47c9b37a916467ad1587 bfd281e4b1c24fd7b93c7f528ba2bcdb
 #, python-brace-format
 msgid "{nbt}`compound` Arguments"
 msgstr "{nbt}`compound` 参数"
 
-#: ../../modules/environment.md:69 c4794e2533c8483f9edfa17c1126eeab
+#: ../../modules/environment.md:69 1141cfea9b5c4d22a915a328e8254652
 #, python-brace-format
 msgid "{nbt}`number` **scale**: Scalar for the function's output."
 msgstr "{nbt}`number` **scale**: 应用于函数输出的比例因子。"
 
-#: ../../modules/environment.md:73 45b48609277942b0a3161b340396552b
-msgid ""
-"**Return | Score `$environment.get_temperature bs.out`**: Temperature at "
-"the given position."
+#: ../../modules/environment.md:73 314e9cf3c7a948158a747c3bdcf4d360
+msgid "**Return | Score `$environment.get_temperature bs.out`**: Temperature at the given position."
 msgstr "**返回值 | 分数 `$environment.get_temperature bs.out`**：给定位置的温度。"
 
-#: ../../modules/environment.md:76 557e2abf508144579bc84df126bbde84
+#: ../../modules/environment.md:76 354e5f5ead324b2f979a5b3c29d9355f
 msgid "*Example: Get the temperature at the current altitude:*"
 msgstr "*示例：获取当前海拔高度的温度：*"
 
-#: ../../modules/environment.md:83 ../../modules/environment.md:359
-#: ../../modules/environment.md:369 88f6cb8a01bd43e4adfffc3b12476052
-#: a31e2bf33d5944dd85f8a358ad0b7649 dc0df05acc604ddf9036fc5f7817a5d8
+#: ../../modules/environment.md:83 ../../modules/environment.md:364
+#: ../../modules/environment.md:374 0e47c69f45794fc8a7d0e88690f1f0c3
+#: 308b378fca474b16ad31252f192359cb 491f102c50cc44cb9d385b7a6767ccbf
 msgid "**Credits**: Aksiome, theogiraudet"
-msgstr "**制作人员**：Aksiome、theogiraudet"
+msgstr "**贡献者**：Aksiome、theogiraudet"
 
-#: ../../modules/environment.md:87 956d5655f27849eca9d0b073a7f5c2aa
-msgid "Celestial Movement"
-msgstr ""
+#: ../../modules/environment.md:87 9879870285e44959b9d198581910216d
+msgid "Get Celestial Angle"
+msgstr "获取太阳角度"
 
-#: ../../modules/environment.md 09a68ba77106406f8e22d2261d0fb622
+#: ../../modules/environment.md 5ccd6815d6f64275a70e3130dc84db3c
 msgid "Get Current Sun Angle"
-msgstr ""
+msgstr "获取当前太阳角度"
 
-#: ../../modules/environment.md:95 4985c52da9f54d71beda504b8549963c
-msgid ""
-"Get the current sun's angle on the Y axis relative to the horizon, in "
-"degrees."
-msgstr ""
+#: ../../modules/environment.md:95 148e1348636d4842a26ccb813a5fa5bd
+msgid "Get the current sun's angle on the Y axis relative to the horizon, in degrees."
+msgstr "获取当前太阳相对于地平线的 Y 轴角度，单位为度。"
 
-#: ../../modules/environment.md:101 ../../modules/environment.md:136
-#: ../../modules/environment.md:175 ../../modules/environment.md:209
-#: 3d66c93e67df4ff98a4e5613fdc6ef7f 4e0fb11eca83446dbe4b95535736eaa1
-#: a0aff98fc99d49c1bf81591ea9ddfdfe c49804103ac64f2ca75a8243ecbdc222
-#, fuzzy, python-brace-format
+#: ../../modules/environment.md:101 ../../modules/environment.md:134
+#: ../../modules/environment.md:171 ../../modules/environment.md:205
+#: 1a77e45ada2a4483936fef91372f46fc 1d58b33519bc4581975091fe9aac4511
+#: 8c2546dba0134fd193c35f010b690e4c c15e1150f92b4b54b749b728fef01e41
+#, python-brace-format
 msgid "{nbt}`number` **scale**: A scalar applied to the output."
 msgstr "{nbt}`number` **scale**: 应用于函数输出的比例因子。"
 
-#: ../../modules/environment.md:105 5fec1817cbe24842a78ae2188c05e292
+#: ../../modules/environment.md:105 a285884113d64e5ab80e166ea9f89327
 msgid "**Return**: Sun's angle in degrees (scaled by `scale`)."
-msgstr ""
+msgstr "**返回值**：太阳角度，单位为度（按 `scale` 缩放）。"
 
-#: ../../modules/environment.md:107 ../../modules/environment.md:181
-#: 09478336bbfd4faebb773549a7e87b15 e9cf9ac6e90e4097aba27e865d302c7f
+#: ../../modules/environment.md:107 ../../modules/environment.md:177
+#: 849e59bfd07e4a908198a0889f364eca ab5192393229410cb2fe1039e235a164
 #, python-brace-format
-msgid ""
-"**Storage `bs:out environment.celestial_angle`** {nbt}`double`: Sun's "
-"angle in degrees."
-msgstr ""
+msgid "**Storage `bs:out environment.celestial_angle`** {nbt}`double`: Sun's angle in degrees."
+msgstr "**命令存储 `bs:out environment.celestial_angle`** {nbt}`double`：太阳角度，单位为度。"
 
-#: ../../modules/environment.md:110 b12b66decd0e4fecad06b5f34d19d60c
-#, fuzzy
+#: ../../modules/environment.md:110 78b7945420eb42b49e4cda878a146c87
 msgid "*Example: Get the sun's current angle:*"
-msgstr "*示例：获取当前海拔高度的温度：*"
+msgstr "*示例：获取当前太阳角度：*"
 
-#: ../../modules/environment.md:118 ../../modules/environment.md:153
-#: 3b520864550d41eb87d404f5c3090607 58a24bbc89884bd6a6d4128ac999c922
-msgid "doDaylightCycle gamerule"
-msgstr ""
+#: ../../modules/environment.md:119 ccd793db7b1949f3a33c7712842a9d93
+msgid "This feature also works when the `advance_time` game rule is set to false. In such situation, the returned value is the sun's angle at the time of daylight cycle freeze."
+msgstr "即使 doDaylightCycle 游戏规则设为 false，此功能也可使用。此时返回的是昼夜循环冻结时太阳的角度。"
 
-#: ../../modules/environment.md:121 ad490ef12de64c7eb9635b52497df6de
-msgid ""
-"This feature also works when the doDaylightCycle gamerule is set to "
-"false. In such situation, the returned value is the sun's angle at the "
-"time of daylight cycle freeze."
-msgstr ""
-
-#: ../../modules/environment.md 3682f4860c7240378227130c2de19720
+#: ../../modules/environment.md 20aaf4ae22ea437ba951afa6c0e487a1
 msgid "Get Current Moon Angle"
-msgstr ""
+msgstr "获取当前月亮角度"
 
-#: ../../modules/environment.md:130 d043acc276d94de685a7502f71ec9d78
-msgid ""
-"Get the current moon's angle on the Y axis relative to the horizon, in "
-"degrees."
-msgstr ""
+#: ../../modules/environment.md:128 c5c0ae6d9db94485bfef41e8edd77357
+msgid "Get the current moon's angle on the Y axis relative to the horizon, in degrees."
+msgstr "获取当前月亮相对于地平线的 Y 轴角度，单位为度。"
 
-#: ../../modules/environment.md:140 1fa52437892241f9bd46d6a9b93a5b9e
+#: ../../modules/environment.md:138 ca1f671d6ef54ce7b5fd6c7d1e67a080
 msgid "**Return**: Moon's angle in degrees (scaled by `scale`)."
-msgstr ""
+msgstr "**返回值**：月亮角度，单位为度（按 `scale` 缩放）。"
 
-#: ../../modules/environment.md:142 ../../modules/environment.md:215
-#: 667ab57fdee14295818be543890cfbc3 73925edd7fb54a0e940934477c033614
+#: ../../modules/environment.md:140 ../../modules/environment.md:211
+#: 1a905d0e9a914a43b8339bdd91143cc2 ea8d9632d2a7414c90835fd504334ec2
 #, python-brace-format
-msgid ""
-"**Storage `bs:out environment.celestial_angle`** {nbt}`double`: Moon's "
-"angle in degrees."
-msgstr ""
+msgid "**Storage `bs:out environment.celestial_angle`** {nbt}`double`: Moon's angle in degrees."
+msgstr "**命令存储 `bs:out environment.celestial_angle`** {nbt}`double`：月亮角度，单位为度。"
 
-#: ../../modules/environment.md:145 04589455b35942f0a0560b71d0aacfe2
-#, fuzzy
+#: ../../modules/environment.md:143 f5e7ee2fe3804e3496711c7e2f82ed4a
 msgid "*Example: Get the moon's current angle:*"
-msgstr "*示例：获取当前海拔高度的温度：*"
+msgstr "*示例：获取当前月亮角度：*"
 
-#: ../../modules/environment.md:156 3f670fe316814c37abd6f53ec467415a
-msgid ""
-"This feature also works when the doDaylightCycle gamerule is set to "
-"false. In such situation, the returned value is the moon's angle at the "
-"time of daylight cycle freeze."
-msgstr ""
+#: ../../modules/environment.md:152 2354812367874835a5a100a5a57fcdbf
+msgid "This feature also works when the `advance_time` game rule is set to false. In such situation, the returned value is the moon's angle at the time of daylight cycle freeze."
+msgstr "即使 doDaylightCycle 游戏规则设为 false，此功能也可使用。此时返回的是昼夜循环冻结时月亮的角度。"
 
-#: ../../modules/environment.md 75e03391d0194535a595cd6c29a3c819
+#: ../../modules/environment.md 16f4c49bf9954ba9b8534d156a109bc0
 msgid "Get Sun Angle"
-msgstr ""
+msgstr "获取太阳角度"
 
-#: ../../modules/environment.md:165 d4443ccd8f0b4078a519c8fdc2fc57f2
-msgid ""
-"Get the sun's angle on the Y axis relative to the horizon at a specific "
-"time."
-msgstr ""
+#: ../../modules/environment.md:161 151092e833624679a2237bae56c5179c
+msgid "Get the sun's angle on the Y axis relative to the horizon at a specific time."
+msgstr "获取指定时间太阳相对于地平线的 Y 轴角度。"
 
-#: ../../modules/environment.md:168 ../../modules/environment.md:202
-#: 9175a2d67c5144ffb30d82e13298f23d ba92b030daf44d07bdbf0674aec04996
+#: ../../modules/environment.md:164 ../../modules/environment.md:198
+#: 8cdb2baa56334e10b877776f7667cb3b f35c9dceba45422cacb8a9175b2f2544
 msgid "**Scores `$environment.celestial_angle.day bs.in`**: The day number."
-msgstr ""
+msgstr "**分数 `$environment.celestial_angle.day bs.in`**：天数。"
 
-#: ../../modules/environment.md:170 ../../modules/environment.md:204
-#: 9d7a6ac523f348658b30a8e3bb9f24b2 9f926523382f46fbad69c38013dcdb85
-msgid ""
-"**Scores `$environment.celestial_angle.daytime bs.in`**: The time of day "
-"in ticks (0-24000)."
-msgstr ""
+#: ../../modules/environment.md:166 ../../modules/environment.md:200
+#: 7b346bdf555a4339b0d487b23450be1f 9e598bd9aeaa484c97a0ab7df4b7ab4c
+msgid "**Scores `$environment.celestial_angle.daytime bs.in`**: The time of day in ticks (0-24000)."
+msgstr "**分数 `$environment.celestial_angle.daytime bs.in`**：以游戏刻计的时间（0-24000）。"
 
-#: ../../modules/environment.md:179 178f64d8c6ad407ca2722950beff6eca
+#: ../../modules/environment.md:175 047dfec0345e42ccb8eedd4d18de4722
 msgid "**Return**: Sun's angle at the given time, in degrees (scaled by `scale`)."
-msgstr ""
+msgstr "**返回值**：指定时间的太阳角度，单位为度（按 `scale` 缩放）。"
 
-#: ../../modules/environment.md:184 55418344fffa445fbab15a1172e7b41f
+#: ../../modules/environment.md:180 55345b7f1c4e43db9ffdfa4ee2ebcf9d
 msgid "*Example: Get the sun's angle on day 100 at noon (6000 ticks):*"
-msgstr ""
+msgstr "*示例：获取第 100 天正午（6000 游戏刻）的太阳角度：*"
 
-#: ../../modules/environment.md 524ab4754d34458fb0c5b95fe9d470fb
+#: ../../modules/environment.md 0a6546b174724a42a1d1a071c0ecb87f
 msgid "Get Moon Angle"
-msgstr ""
+msgstr "获取月亮角度"
 
-#: ../../modules/environment.md:199 7d4e358ae72046b187b203ca049a6c06
-msgid ""
-"Get the moon's angle on the Y axis relative to the horizon at a specific "
-"time."
-msgstr ""
+#: ../../modules/environment.md:195 5cbe52d0887345c0acc9565dcfc4d6bd
+msgid "Get the moon's angle on the Y axis relative to the horizon at a specific time."
+msgstr "获取指定时间月亮相对于地平线的 Y 轴角度。"
 
-#: ../../modules/environment.md:213 892bda0de7634a40a3f72f9c1040e4ed
-msgid ""
-"**Return**: Moon's angle at the given time, in degrees (scaled by "
-"`scale`)."
-msgstr ""
+#: ../../modules/environment.md:209 36a606bc1f1d4ae78b0867729ede66fc
+msgid "**Return**: Moon's angle at the given time, in degrees (scaled by `scale`)."
+msgstr "**返回值**：指定时间的月亮角度，单位为度（按 `scale` 缩放）。"
 
-#: ../../modules/environment.md:218 dec345ccd44b46f89d11331b68d5a25f
+#: ../../modules/environment.md:214 6c0d9befa9f34ec8a6f2bb67549872ad
 msgid "*Example: Get the moon's angle on day 100 at midnight (18000 ticks):*"
-msgstr ""
+msgstr "*示例：获取第 100 天午夜（18000 游戏刻）的月亮角度：*"
 
-#: ../../modules/environment.md 8a58a466c33749658938fb742a7bfb6f
-msgid "Look at Sun"
-msgstr ""
-
-#: ../../modules/environment.md:234 0b82c83a91a44a638b495923ca3fe915
-msgid "Orient the executing entity to look at the sun."
-msgstr ""
-
-#: ../../modules/environment.md:237 ../../modules/environment.md:258
-#: d6eb1319a93f4b19bdb8046e9be69e63 f1aac85b710d4f6584668822bd1315be
-msgid "**Execution `as <entity>`**: The entity to orient."
-msgstr ""
-
-#: ../../modules/environment.md:240 8a6f4cf1059f49138ed84bb6c1bd749f
-msgid "**State**: The entity's rotation is modified to face the sun."
-msgstr ""
-
-#: ../../modules/environment.md:243 f057f197c34f4077859c7ddafdac59b3
-#, fuzzy
-msgid "*Example: Make the current entity look at the sun:*"
-msgstr "*示例：获取当前位置的生物群系数据：*"
-
-#: ../../modules/environment.md 03030b323c1848fe93d0a8ad735ac9a1
-msgid "Look at Moon"
-msgstr ""
-
-#: ../../modules/environment.md:255 c8fca7ff2d7e44c5aed036006f5c6364
-msgid "Orient the executing entity to look at the moon."
-msgstr ""
-
-#: ../../modules/environment.md:261 b6a88528b5de4ba0b25540e081880d87
-msgid "**State**: The entity's rotation is modified to face the moon."
-msgstr ""
-
-#: ../../modules/environment.md:264 a405615cec9b4ec18bc56ce808440f1e
-#, fuzzy
-msgid "*Example: Make the current entity look at the moon:*"
-msgstr "*示例：获取当前位置的生物群系数据：*"
-
-#: ../../modules/environment.md:273 ../../modules/environment.md:313
-#: ../../modules/environment.md:383 ../../modules/environment.md:392
-#: ../../modules/environment.md:401 ../../modules/environment.md:410
-#: ../../modules/environment.md:426 ../../modules/environment.md:435
-#: ../../modules/environment.md:444 ../../modules/environment.md:456
-#: ../../modules/environment.md:466 ../../modules/environment.md:476
-#: ../../modules/environment.md:486 ../../modules/environment.md:496
-#: 32f8319a7ff2437baa6e77b5833838dd 5eb8e613a7ea466e98d0ab484a89cd27
-#: 636c66f77c8540179cdc799c40bb1684 6e01e5e94bca48aca2768bb6d2eddef3
-#: 7b55b912f0e94e0bb710edddb6405715 7d11c6cd0348489eb91b89cd33b52eea
-#: 7d9d1436f73f4ef990587415a9199f1a 7f7329df7134460990c910cb904cbab6
-#: 87c16e6dc9694d2e87444d894a3fbe9d 98b9ea4e77b04e709a8c8ba4101127e9
-#: b63675f0963141ba8b930d1ac3f3a4bb bee91ecab9b14059baa926856a00b6ed
-#: d4e9bc5255c0458189028abb9b1b0901 e54497f8df74453d873d50215510cf62
-#, fuzzy
+#: ../../modules/environment.md:227 ../../modules/environment.md:267
+#: ../../modules/environment.md:318 ../../modules/environment.md:388
+#: ../../modules/environment.md:397 ../../modules/environment.md:406
+#: ../../modules/environment.md:415 ../../modules/environment.md:431
+#: ../../modules/environment.md:440 ../../modules/environment.md:449
+#: ../../modules/environment.md:461 ../../modules/environment.md:471
+#: ../../modules/environment.md:481 ../../modules/environment.md:491
+#: ../../modules/environment.md:501 0594dee005cd489787ddee5c4b46d2e2
+#: 22b709a9d3f34dc9ae3cbc7cefada875 2ca8c82fe2ae4b3198ff279409d9ecc6
+#: 3a270b1ed09b4f6da4d0626740d44308 4812ca0b523f4c3a9b6245962f1f542d
+#: 4931f518aa734d1a8206dfcadd4cdab6 5ad1a4cd2d3242e38079bb51315053d5
+#: 68c5f298969249fcac9ef705a620be27 7ebf373350814e29931680f074d6ef60
+#: 97142393c07a4d6999d075743c1d682a 9dea5579c6bd4df1b56d15dfa6505669
+#: bda5b0daf14a48668832e544c21fcc07 d3fd8be988914c03a33a051c26759d01
+#: dafd741abba94712ab75f0289f65365d e5cce6a04d3e4694b904b43bc5502430
 msgid "**Credits**: theogiraudet"
-msgstr "**制作人员**：Aksiome、theogiraudet"
+msgstr "**贡献者**：theogiraudet"
 
-#: ../../modules/environment.md:277 41b5517bb76c4e9eb47bbb85ecf07646
+#: ../../modules/environment.md:231 91144287016445d2bd60432e7b34e82f
 msgid "Get Moon Phase"
-msgstr ""
+msgstr "获取月相"
 
-#: ../../modules/environment.md:281 2fdb0065675347f389f98433a9f49982
+#: ../../modules/environment.md:235 d12edceb2c17402bbb595ac7b6178b80
 msgid "Get the current moon phase as a string identifier."
-msgstr ""
+msgstr "以字符串标识符的形式获取当前月相。"
 
-#: ../../modules/environment.md:284 71ea606dff414195a5a57f7cdc36824e
-#, fuzzy, python-brace-format
-msgid ""
-"**Storage `bs:out environment.get_moon_phase`**: {nbt}`string` Moon phase"
-" identifier."
-msgstr "**命令存储 `bs:out environment.get_biome`**："
+#: ../../modules/environment.md:238 6ce63e68d5a1426e98954df7099f6a39
+#, python-brace-format
+msgid "**Storage `bs:out environment.get_moon_phase`**: {nbt}`string` Moon phase identifier."
+msgstr "**命令存储 `bs:out environment.get_moon_phase`**：{nbt}`string` 月相标识符。"
 
-#: ../../modules/environment.md:286 a107df5163a84d5a87d611c3f67f2f90
+#: ../../modules/environment.md:240 228359f5ce2441799e5aaabd1d6f3bba
 msgid "**Return**: Moon phase identifier (see the note below)."
-msgstr ""
+msgstr "**返回值**：月相标识符（参见下方说明）。"
 
-#: ../../modules/environment.md:289 8b7f30e4be954ba2b8ca064246a21f5c
-#, fuzzy
+#: ../../modules/environment.md:243 0d02e3c1a14c471b85c3a1bc18bbbf30
 msgid "*Example: Get the current moon phase:*"
-msgstr "*示例：获取当前位置的生物群系数据：*"
+msgstr "*示例：获取当前月相：*"
 
-#: ../../modules/environment.md:297 2062147d26614530bbcc5710105dcd56
+#: ../../modules/environment.md:251 b571bba489014ea1af5b5342c338c60e
 msgid "Moon Phase Values"
-msgstr ""
+msgstr "月相取值"
 
-#: ../../modules/environment.md:300 af471407e0ad4319be2f2e568433041c
+#: ../../modules/environment.md:254 b2b6bbd2594b423482e4e26d78ef0d89
 msgid "The function returns one of the following string values:"
-msgstr ""
+msgstr "该函数会返回以下字符串值之一："
 
-#: ../../modules/environment.md:301 78be90cf562047cd86661106cad9c10d
+#: ../../modules/environment.md:255 a6393c34dd2542c9a3908351e510b020
 msgid "`\"full_moon\"` (id: 0)"
-msgstr ""
+msgstr "`\"full_moon\"`（id：0，满月）"
 
-#: ../../modules/environment.md:302 75312fb89d4b4c45a36a15091935e1c4
+#: ../../modules/environment.md:256 01c96cd969964c16ac8b8e5ce8d43e6c
 msgid "`\"waning_gibbous\"` (id: 1)"
-msgstr ""
+msgstr "`\"waning_gibbous\"`（id：1，亏凸月）"
 
-#: ../../modules/environment.md:303 f09094ce8f154af4b1c8078165689b9b
+#: ../../modules/environment.md:257 2fe06b24eada4ab5904a795cfe3052ed
 msgid "`\"third_quarter\"` (id: 2)"
-msgstr ""
+msgstr "`\"third_quarter\"`（id：2，下弦月）"
 
-#: ../../modules/environment.md:304 124e5e0536ac4207bae98253073973f3
+#: ../../modules/environment.md:258 c0876ecf3e4f410f80f93803c26c6f82
 msgid "`\"waning_crescent\"` (id: 3)"
-msgstr ""
+msgstr "`\"waning_crescent\"`（id：3，残月）"
 
-#: ../../modules/environment.md:305 5466a919fd6648779f659d8462fbb20e
+#: ../../modules/environment.md:259 9524d04039a84e548abc1ca0cf12b4af
 msgid "`\"new_moon\"` (id: 4)"
-msgstr ""
+msgstr "`\"new_moon\"`（id：4，新月）"
 
-#: ../../modules/environment.md:306 060a8264d2f74740b4086febfe16f1ef
+#: ../../modules/environment.md:260 12e5c2ea1aae4c4e9e85884b65e6b05e
 msgid "`\"waxing_crescent\"` (id: 5)"
-msgstr ""
+msgstr "`\"waxing_crescent\"`（id：5，娥眉月）"
 
-#: ../../modules/environment.md:307 879fe1f867df46bf8cda463669f6e326
+#: ../../modules/environment.md:261 58ef177bacee4dd59db545c21113e087
 msgid "`\"first_quarter\"` (id: 6)"
-msgstr ""
+msgstr "`\"first_quarter\"`（id：6，上弦月）"
 
-#: ../../modules/environment.md:308 c0c748316c554b878fc975d6b6fd09aa
+#: ../../modules/environment.md:262 64c058fd9d1b43499d25584c26fc8970
 msgid "`\"waxing_gibbous\"` (id: 7)"
-msgstr ""
+msgstr "`\"waxing_gibbous\"`（id：7，盈凸月）"
 
-#: ../../modules/environment.md:310 309581d364944d408bbdf6afa94d4611
+#: ../../modules/environment.md:264 8f488c5af78d4e0e9734a2fd33579693
 msgid "The moon phase cycle follows Minecraft's 8-day lunar cycle."
-msgstr ""
+msgstr "月相循环遵循 Minecraft 的 8 天月相周期。"
 
-#: ../../modules/environment.md:317 b9303457eb91470391687ca1f2b450d8
+#: ../../modules/environment.md:271 1df4afcdcd604b61a53b40250139ada5
+msgid "Look at Celestial Object"
+msgstr "天体运动"
+
+#: ../../modules/environment.md 63c8ff4d156e408ea89ab41af9a6003e
+msgid "Look at Sun"
+msgstr "看向太阳"
+
+#: ../../modules/environment.md:279 0ecebb52ead749538029ccd0efd08e7e
+msgid "Orient the executing entity to look at the sun."
+msgstr "使执行实体看向太阳。"
+
+#: ../../modules/environment.md:282 ../../modules/environment.md:303
+#: 64c0143beaa44473a8b0c81b84284e29 d3eb1c7f0af14b738b50b6133cf8cb03
+msgid "**Execution `as <entity>`**: The entity to orient."
+msgstr "**执行 `as <entity>`**：要调整朝向的实体。"
+
+#: ../../modules/environment.md:285 901f1e70afb8416487f1a4ba4a0d9661
+msgid "**State**: The entity's rotation is modified to face the sun."
+msgstr "**状态**：实体的旋转会被修改为面向太阳。"
+
+#: ../../modules/environment.md:288 71e19558788b4061a2d4a1b13cc10b2f
+msgid "*Example: Make the current entity look at the sun:*"
+msgstr "*示例：使当前实体看向太阳：*"
+
+#: ../../modules/environment.md 83a45b4e075a4f4497b226f8cb5a893b
+msgid "Look at Moon"
+msgstr "看向月亮"
+
+#: ../../modules/environment.md:300 580dce4a38a8480bbb8cd18a564ef956
+msgid "Orient the executing entity to look at the moon."
+msgstr "使执行实体看向月亮。"
+
+#: ../../modules/environment.md:306 6f130c130ae84181ad08bf2af254b9b0
+msgid "**State**: The entity's rotation is modified to face the moon."
+msgstr "**状态**：实体的旋转会被修改为面向月亮。"
+
+#: ../../modules/environment.md:309 7df0090e08044b10ac6c736fec931131
+msgid "*Example: Make the current entity look at the moon:*"
+msgstr "*示例：使当前实体看向月亮：*"
+
+#: ../../modules/environment.md:322 53f7baf922044bfcb568c5e8007bb52d
 msgid "👁️ Predicates"
 msgstr "👁️ 谓词"
 
-#: ../../modules/environment.md:319 253f124e35a44d8494585299e1717b07
+#: ../../modules/environment.md:324 550db1f707124ff4bf6ec4b8fdb03e9f
 msgid "You can find below all predicates available in this module."
 msgstr "你可以在下方找到此模块中的所有可用判据。"
 
-#: ../../modules/environment.md:323 9d2b85e91d334d029566c8277e4523b1
+#: ../../modules/environment.md:328 71aa386d8abb4162bb0c90b33f4fc206
 msgid "Can It Rain?"
 msgstr "能否下雨？"
 
-#: ../../modules/environment.md:325 5657eb0efa924c729fa6bbca07a1bb7d
+#: ../../modules/environment.md:330 2e8e44b038c54758b52a47fe13cc66b3
 msgid "**`bs.environment:can_rain`**"
 msgstr "**`bs.environment:can_rain`**"
 
-#: ../../modules/environment.md:327 2f7cd6976e164945817d124ac110495b
+#: ../../modules/environment.md:332 5177cf714200439184a980d5f559130c
 msgid "Determine if it can rain or not."
 msgstr "判断能否下雨。"
 
-#: ../../modules/environment.md:333 b49b6b6d7c324a9287d63ab3ae262cf6
+#: ../../modules/environment.md:338 6e9f8117e3f64ce097b8f0b3a31d8bb4
 msgid "Can It Snow?"
 msgstr "能否下雪？"
 
-#: ../../modules/environment.md:335 d86d43ebb4194e3886d1d5bba61d8255
+#: ../../modules/environment.md:340 34e1d2eaf23746189b9eb45291a4b39f
 msgid "**`bs.environment:can_snow`**"
 msgstr "**`bs.environment:can_snow`**"
 
-#: ../../modules/environment.md:337 ce4b137180ae4f83adb170791ccf6881
+#: ../../modules/environment.md:342 90b8d810fbf84510bb4d3b5b6f2adfb0
 msgid "Determine if it can snow or not."
 msgstr "判断能否下雪。"
 
-#: ../../modules/environment.md:343 38122f03966c486da888248b050a807d
+#: ../../modules/environment.md:348 d02e3a5020494e409c3170b3499acd8a
 msgid "Can It Rain or Snow?"
 msgstr "能否降水？"
 
-#: ../../modules/environment.md:345 952197f2995340f7bf4d50a68843cd89
+#: ../../modules/environment.md:350 eabdad40b2274f6eb5503748dba3dde9
 msgid "**`bs.environment:has_precipitation`**"
 msgstr "**`bs.environment:has_precipitation`**"
 
-#: ../../modules/environment.md:347 280acfb25a7e4dfa964e1afff6e57d46
+#: ../../modules/environment.md:352 699126b1f8384b30b8dcaac1073a2f1a
 msgid "Determine if the biome has precipitation or not."
 msgstr "判断生物群系能否降水。"
 
-#: ../../modules/environment.md:353 d065ca80ca114d9f8a13c956318943fe
+#: ../../modules/environment.md:358 2bb3d7b9ddb94c18a28d8c76bf969ae0
 msgid "Is It Raining?"
 msgstr "是否正在下雨？"
 
-#: ../../modules/environment.md:355 21c1733c5ee1486fbe88f9756b0b3ef4
+#: ../../modules/environment.md:360 5f6c7f0807e5460499f13263fa964585
 msgid "**`bs.environment:is_raining`**"
 msgstr "**`bs.environment:is_raining`**"
 
-#: ../../modules/environment.md:357 7d7d992fa76f4a1daa70b393017917f5
+#: ../../modules/environment.md:362 480878aa53c84f11a40f4f04216f6756
 msgid "Determine if it is currently raining or not."
 msgstr "判断现在是否正在下雨。"
 
-#: ../../modules/environment.md:363 79b26103c62d4587b93e4a6fb8777297
+#: ../../modules/environment.md:368 a3ebb28b6be143508cf75025c923ce8a
 msgid "Is It Thundering?"
 msgstr "是否正在打雷？"
 
-#: ../../modules/environment.md:365 2606b47dd0024b8ca6ab2977aed3410d
+#: ../../modules/environment.md:370 86329147a83b424faa76acb2a3a79d5d
 msgid "**`bs.environment:is_thundering`**"
 msgstr "**`bs.environment:is_thundering`**"
 
-#: ../../modules/environment.md:367 caebe8d1ea1b4319bffbcfcb5ee3627e
+#: ../../modules/environment.md:372 900006d601074844a6f138173d2c73b4
 msgid "Determine if it is currently thundering or not."
 msgstr "判断现在是否正在打雷。"
 
-#: ../../modules/environment.md:373 1b397d7b756c4b48bf076f4bc1ccfeb5
-#, fuzzy
+#: ../../modules/environment.md:378 755bc73916744ee1847764373c8003ea
 msgid "Time Predicates"
-msgstr "👁️ 谓词"
+msgstr "时间谓词"
 
-#: ../../modules/environment.md 4e1668981c7e46e490108922f005f5eb
+#: ../../modules/environment.md 3ef24d4c5f51473196be99d34b4f9dad
 msgid "Day Time"
-msgstr ""
+msgstr "白天"
 
-#: ../../modules/environment.md:379 7ae161059b2e44df93c549f44a2cb13e
-#, fuzzy
+#: ../../modules/environment.md:384 531b298e327f49ca863aedf6567bd537
 msgid "**`bs.environment:is_day_time`**"
-msgstr "**`bs.environment:is_raining`**"
+msgstr "**`bs.environment:is_day_time`**"
 
-#: ../../modules/environment.md:381 bb2a766e949a4fccb2fc1f2cdfbc1cf8
-#, fuzzy
+#: ../../modules/environment.md:386 bd0f55e4bb864aa0967af6fa45ab5d23
 msgid "Determine if it is currently daytime (between 07:00 and 18:00)."
-msgstr "判断现在是否正在下雨。"
+msgstr "判断当前是否为白天（07:00 至 18:00）。"
 
-#: ../../modules/environment.md 78b324d190e641cd861250ae48323392
-#, fuzzy
+#: ../../modules/environment.md 1e4957a7a2b74824a9b6d7df83f483dd
 msgid "Night Time"
-msgstr "获取生物群系"
+msgstr "夜晚"
 
-#: ../../modules/environment.md:388 d6a387cdd8cf4355a2e18344936a2e27
-#, fuzzy
+#: ../../modules/environment.md:393 0736c222903d4c62983f439212a59f6c
 msgid "**`bs.environment:is_night_time`**"
-msgstr "**`bs.environment:is_raining`**"
+msgstr "**`bs.environment:is_night_time`**"
 
-#: ../../modules/environment.md:390 dfeaad4bdc2347ab8c77617b6762a68b
-#, fuzzy
+#: ../../modules/environment.md:395 3de11f9279e94a258fe871a5aa7f31d4
 msgid "Determine if it is currently nighttime (between 19:00 and 06:00)."
-msgstr "判断现在是否正在下雨。"
+msgstr "判断当前是否为夜晚（19:00 至 06:00）。"
 
-#: ../../modules/environment.md 2d74c1d0984442278892e6ed58ca5ceb
+#: ../../modules/environment.md 5d0b0424054d4a43953f1e69e863440f
 msgid "Sunrise"
-msgstr ""
+msgstr "日出"
 
-#: ../../modules/environment.md:397 2c9ce6046dd5415197967522dc7b3f80
-#, fuzzy
+#: ../../modules/environment.md:402 788b98eee72246fcbd7020b348bccfe0
 msgid "**`bs.environment:is_sunrise_time`**"
-msgstr "**`bs.environment:is_raining`**"
+msgstr "**`bs.environment:is_sunrise_time`**"
 
-#: ../../modules/environment.md:399 b79c42c1cf25403fad763007d0b89ba2
-#, fuzzy
+#: ../../modules/environment.md:404 c632073825414ce9b5c92d2ee8a7d409
 msgid "Determine if it is currently sunrise (between 06:00 and 07:00)."
-msgstr "判断现在是否正在打雷。"
+msgstr "判断当前是否为日出时段（06:00 至 07:00）。"
 
-#: ../../modules/environment.md dc7c380e6af6467ca5ca866107da0263
+#: ../../modules/environment.md ab15f8b23fbd4782a96c5a36c4d296d7
 msgid "Sunset"
-msgstr ""
+msgstr "日落"
 
-#: ../../modules/environment.md:406 5eb57e8a0cff45d4911814c9338e37ff
-#, fuzzy
+#: ../../modules/environment.md:411 4f761f106ac841c7b2b877a9b22d796b
 msgid "**`bs.environment:is_sunset_time`**"
-msgstr "**`bs.environment:is_thundering`**"
+msgstr "**`bs.environment:is_sunset_time`**"
 
-#: ../../modules/environment.md:408 f22c716e333a4574b104d16cb4ec19d1
-#, fuzzy
+#: ../../modules/environment.md:413 78ad246426944bd896139fbeb6dd20f6
 msgid "Determine if it is currently sunset (between 18:00 and 19:00)."
-msgstr "判断现在是否正在打雷。"
+msgstr "判断当前是否为日落时段（18:00 至 19:00）。"
 
-#: ../../modules/environment.md:416 6f5cb20e0b3f4b7c9fd2484a7a90b84a
+#: ../../modules/environment.md:421 cc0eff26d53244e6bd0453a5cb767281
 msgid "Villager Behavior"
-msgstr ""
+msgstr "村民行为"
 
-#: ../../modules/environment.md ba09d68fe514485dbc13c4a9c84e8380
+#: ../../modules/environment.md 3908833264af40178ecea42e72a6aee0
 msgid "Working"
-msgstr ""
+msgstr "工作"
 
-#: ../../modules/environment.md:422 ../../modules/environment.md:440
-#: 6f1e032fe4474deeafa2d11677f46b12 d445b7c25e7c428a949486f601799e3e
-#, fuzzy
+#: ../../modules/environment.md:427 ../../modules/environment.md:445
+#: 7361b106438d4343b2bcf3ce2d8fe366 eeb0a89d25854c328fb0eecd93232c86
 msgid "**`bs.environment:is_villager_sleeping_time`**"
-msgstr "**`bs.environment:is_raining`**"
+msgstr "**`bs.environment:is_villager_sleeping_time`**"
 
-#: ../../modules/environment.md:424 5754bcab8461405fbc3a53d742e6c738
-msgid ""
-"Determine if villagers are currently in their working phase (between "
-"08:00 and 15:00)."
-msgstr ""
+#: ../../modules/environment.md:429 a84189bf09ad419a8a200032f818cd2e
+msgid "Determine if villagers are currently in their working phase (between 08:00 and 15:00)."
+msgstr "判断村民当前是否处于工作阶段（08:00 至 15:00）。"
 
-#: ../../modules/environment.md 84196eb0b9504b24b18e8323bf19b7df
+#: ../../modules/environment.md ac0a10ff2c6d41d0a7e03ef08f71bb54
 msgid "Socializing"
-msgstr ""
+msgstr "社交"
 
-#: ../../modules/environment.md:431 630de4f627ce4f978ace60943020769d
-#, fuzzy
+#: ../../modules/environment.md:436 b87d47e7cd204018b2056a64d1183199
 msgid "**`bs.environment:is_villager_socializing_time`**"
-msgstr "**`bs.environment:is_raining`**"
+msgstr "**`bs.environment:is_villager_socializing_time`**"
 
-#: ../../modules/environment.md:433 cde9a541726c481caf58c3db87abd117
-msgid ""
-"Determine if villagers are currently in their socializing phase (between "
-"15:00 and 18:00)."
-msgstr ""
+#: ../../modules/environment.md:438 f55660a1639b4c90a6f18639cee00159
+msgid "Determine if villagers are currently in their socializing phase (between 15:00 and 18:00)."
+msgstr "判断村民当前是否处于社交阶段（15:00 至 18:00）。"
 
-#: ../../modules/environment.md 4d7f04e864da42b381151afa45d87acd
+#: ../../modules/environment.md d3be06ff497549df9a917a1b3b740996
 msgid "Sleeping"
-msgstr ""
+msgstr "睡眠"
 
-#: ../../modules/environment.md:442 0747acc29543466486f76e62172b4b8b
-msgid ""
-"Determine if villagers are currently in their sleeping phase (between "
-"18:00 and 07:00)."
-msgstr ""
+#: ../../modules/environment.md:447 f5f0af208887461d898d8357de4577b6
+msgid "Determine if villagers are currently in their sleeping phase (between 18:00 and 07:00)."
+msgstr "判断村民当前是否处于睡眠阶段（18:00 至 07:00）。"
 
-#: ../../modules/environment.md:450 e89fa4d822bd4aa6aeea60234dd7059b
+#: ../../modules/environment.md:455 ecaad55af30f4849a084ec79f9355eb9
 msgid "Is It Bed Time?"
-msgstr ""
+msgstr "是否为可睡眠时间？"
 
-#: ../../modules/environment.md:452 3215c1bdd58d4e5a8b0e93524f6a6240
-#, fuzzy
+#: ../../modules/environment.md:457 e0cfa2546faf4d87b8de782b6c8c4660
 msgid "**`bs.environment:is_bed_time`**"
-msgstr "**`bs.environment:is_raining`**"
+msgstr "**`bs.environment:is_bed_time`**"
 
-#: ../../modules/environment.md:454 c2e563f2f1754492850c3109f99eb459
-msgid ""
-"Determine if beds can currently be used by players (between 18:32 and "
-"05:27 in clear weather, or 18:00 and 05:59 in rainy weather)."
-msgstr ""
+#: ../../modules/environment.md:459 0de9934d44ab4de8942860b7ae1e37de
+msgid "Determine if beds can currently be used by players (between 18:32 and 05:27 in clear weather, or 18:00 and 05:59 in rainy weather)."
+msgstr "判断玩家当前能否使用床（晴天为 18:32 至 05:27，雨天为 18:00 至 05:59）。"
 
-#: ../../modules/environment.md:460 7312cefb69774da7a556db5fa03bc447
-#, fuzzy
+#: ../../modules/environment.md:465 899f8c42b64b453ca3d51d35029f4bfc
 msgid "Is It Undead Burning Time?"
-msgstr "是否正在打雷？"
+msgstr "是否为亡灵燃烧时间？"
 
-#: ../../modules/environment.md:462 5a2b97db347542db9576e6971c81a1fc
-#, fuzzy
+#: ../../modules/environment.md:467 f001370c81c64a66ac71b4025453a81a
 msgid "**`bs.environment:is_undead_burning_time`**"
-msgstr "**`bs.environment:is_thundering`**"
+msgstr "**`bs.environment:is_undead_burning_time`**"
 
-#: ../../modules/environment.md:464 b5acc867f61d44279d57a8a6be355b2a
-msgid ""
-"Determine if undead mobs (zombies, skeletons, etc.) can currently burn in"
-" sunlight (between 05:27 and 18:32 in clear weather)."
-msgstr ""
+#: ../../modules/environment.md:469 d478eede4529466bbd8d92af92d192f2
+msgid "Determine if undead mobs (zombies, skeletons, etc.) can currently burn in sunlight (between 05:27 and 18:32 in clear weather)."
+msgstr "判断亡灵生物（僵尸、骷髅等）当前能否在阳光下燃烧（晴天为 05:27 至 18:32）。"
 
-#: ../../modules/environment.md:470 2cc725775165477094ed1aeec65fb2aa
-#, fuzzy
+#: ../../modules/environment.md:475 2987234918f84323b18c779037274d31
 msgid "Is It Monster Spawning Time?"
-msgstr "是否正在下雨？"
+msgstr "是否为怪物生成时间？"
 
-#: ../../modules/environment.md:472 59a500bc725748e097b30559ca0ab9f0
-#, fuzzy
+#: ../../modules/environment.md:477 8dc0c75925514e999e2fba8f62356fea
 msgid "**`bs.environment:is_monster_spawning_time`**"
-msgstr "**`bs.environment:is_raining`**"
+msgstr "**`bs.environment:is_monster_spawning_time`**"
 
-#: ../../modules/environment.md:474 c5df48e1392b4f2fb66e8f0d1a837940
-msgid ""
-"Determine if hostile monsters can currently spawn outdoors (between 19:11"
-" and 04:48 in clear weather, or 18:58 and 05:01 in rainy weather)."
-msgstr ""
+#: ../../modules/environment.md:479 b3eb66e0e32e42899c0a1e198f1325f4
+msgid "Determine if hostile monsters can currently spawn outdoors (between 19:11 and 04:48 in clear weather, or 18:58 and 05:01 in rainy weather)."
+msgstr "判断敌对怪物当前能否在户外生成（晴天为 19:11 至 04:48，雨天为 18:58 至 05:01）。"
 
-#: ../../modules/environment.md:480 9e08fb64089c476fbeba32ff9c885f3d
+#: ../../modules/environment.md:485 b5e218ef22e14d44808e0ca4f06919e3
 msgid "Is It Bee Sleeping Time?"
-msgstr ""
+msgstr "是否为蜜蜂睡眠时间？"
 
-#: ../../modules/environment.md:482 7231f744a36d4b4ea0f3f40fc3ce992f
-#, fuzzy
+#: ../../modules/environment.md:487 45c1a8dc2e2646c6911804807b86a8cc
 msgid "**`bs.environment:is_bee_sleeping_time`**"
-msgstr "**`bs.environment:is_raining`**"
+msgstr "**`bs.environment:is_bee_sleeping_time`**"
 
-#: ../../modules/environment.md:484 2725a1820a3b4056877af5a3757fbb7f
-msgid ""
-"Determine if bees are currently in their sleeping phase (between 18:32 "
-"and 05:27 in clear weather)."
-msgstr ""
+#: ../../modules/environment.md:489 ebb6432220aa48b2a21077a7662bf241
+msgid "Determine if bees are currently in their sleeping phase (between 18:32 and 05:27 in clear weather)."
+msgstr "判断蜜蜂当前是否处于睡眠阶段（晴天为 18:32 至 05:27）。"
 
-#: ../../modules/environment.md:490 5c6bda01e60e4b57878e9306e7958cf2
-#, fuzzy
+#: ../../modules/environment.md:495 dc4e17b974dc44de97d899f1c860d26b
 msgid "Is It Creaking Spawning Time?"
-msgstr "是否正在下雨？"
+msgstr "是否为嘎枝怪生成时间？"
 
-#: ../../modules/environment.md:492 495768435c1349e2a2c137687a2375e8
-#, fuzzy
+#: ../../modules/environment.md:497 0a4c382310cd4973b8eb59f656070a11
 msgid "**`bs.environment:is_creaking_spawning_time`**"
-msgstr "**`bs.environment:is_raining`**"
+msgstr "**`bs.environment:is_creaking_spawning_time`**"
 
-#: ../../modules/environment.md:494 0f7987e2a80a409f9bc3bfa586a5daec
-msgid ""
-"Determine if creakings can currently spawn (between 18:32 and 05:27 in "
-"clear weather, or 18:00 and 05:59 in rainy weather)."
-msgstr ""
+#: ../../modules/environment.md:499 351c60f0e94d44938bae42a036b3a073
+msgid "Determine if creakings can currently spawn (between 18:32 and 05:27 in clear weather, or 18:00 and 05:59 in rainy weather)."
+msgstr "判断嘎枝怪当前能否生成（晴天为 18:32 至 05:27，雨天为 18:00 至 05:59）。"
 
-#: ../../_templates/comments.md:4 144d32745a15405d97327ea0e7b07c3a
+#: ../../_templates/comments.md:4 2fe35e1db8a84fc4ba7dfecbea2d7a72
 msgid "**💬 Did it help you?**"
 msgstr "**💬 这对你有帮助吗？**"
 
-#: ../../_templates/comments.md:6 ba244c6ee0f84edba2b694fda4275fe3
+#: ../../_templates/comments.md:6 037d123ef85344ad9eb01aa0d7410fda
 msgid "Feel free to leave your questions and feedback below!"
 msgstr "欢迎在下方留下你的问题和反馈！"
 
+#~ msgid "doDaylightCycle gamerule"
+#~ msgstr "doDaylightCycle 游戏规则"

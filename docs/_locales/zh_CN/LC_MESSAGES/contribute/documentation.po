@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -24,10 +23,7 @@ msgid "📝 Documentation"
 msgstr "📝 文档编写"
 
 #: ../../../contribute/documentation.md:3 1b2f90a460e042949de923ec33a6aeee
-msgid ""
-"Bookshelf aims to simplify map making and make it accessible. We've "
-"worked hard to create a comprehensive documentation website and ask that "
-"every new feature be documented properly."
+msgid "Bookshelf aims to simplify map making and make it accessible. We've worked hard to create a comprehensive documentation website and ask that every new feature be documented properly."
 msgstr "Bookshelf 致力于简化地图制作并提高其可访问性。我们努力创建了全面的文档网站，要求所有新功能都需妥善记录。"
 
 #: ../../../contribute/documentation.md:7 d34cac6a3a804d3f8ed1038ee3e87671
@@ -35,12 +31,7 @@ msgid "✍️ Write the Documentation"
 msgstr "✍️ 撰写文档"
 
 #: ../../../contribute/documentation.md:9 809396fb303947aa88729edddfb4ca62
-msgid ""
-"The documentation is written in Markdown, extended with Myst Parser. You "
-"can view the [Myst Parser documentation here](https://myst-"
-"parser.readthedocs.io/en/latest/intro.html). To add or update "
-"documentation, simply follow the structure of existing pages and "
-"features. All images are stored in the `/docs/_imgs` folder."
+msgid "The documentation is written in Markdown, extended with Myst Parser. You can view the [Myst Parser documentation here](https://myst-parser.readthedocs.io/en/latest/intro.html). To add or update documentation, simply follow the structure of existing pages and features. All images are stored in the `/docs/_imgs` folder."
 msgstr "文档使用 Markdown 格式编写，并通过 Myst Parser 扩展。你可查阅[Myst Parser 文档](https://myst-parser.readthedocs.io/en/latest/intro.html)。添加或更新文档时，遵循现有页面和功能的结构即可。所有图像存储在 `/docs/_imgs` 文件夹中。"
 
 #: ../../../contribute/documentation.md:13 e1cdd9ead6de43f8824ffffcf1fdc9a7
@@ -48,9 +39,7 @@ msgid "🔨 Build the Documentation"
 msgstr "🔨 构建文档"
 
 #: ../../../contribute/documentation.md:15 f186b130f59542d0ade2f0209a494e33
-msgid ""
-"To verify that your documentation changes work as expected, you can build"
-" and view it locally on your computer:"
+msgid "To verify that your documentation changes work as expected, you can build and view it locally on your computer:"
 msgstr "为验证文档更改是否符合预期，可在本地计算机构建并查看："
 
 #: ../../../contribute/documentation.md:17 6200af9ac5694572a70ab9c4a8ecbeb5
@@ -66,9 +55,7 @@ msgid "Option 1: Build Documentation"
 msgstr "选项 1：构建文档"
 
 #: ../../../contribute/documentation.md:26 eaebcf93e9f84f929708bfcfe702ae0c
-msgid ""
-"This command will generate the documentation, which you can find in the "
-"`/docs/_build` folder."
+msgid "This command will generate the documentation, which you can find in the `/docs/_build` folder."
 msgstr "此命令将生成文档，结果位于 `/docs/_build` 文件夹中。"
 
 #: ../../../contribute/documentation.md:28 0cf695adfd7946fb8b89109be88c51ff
@@ -76,8 +63,5 @@ msgid "Option 2: Build with Hot Reload"
 msgstr "选项 2：支持热重载的构建"
 
 #: ../../../contribute/documentation.md:34 19616e75b9644a2395d8b9fb14deadd2
-msgid ""
-"This option will also generate the documentation but will allow you to "
-"view it in your browser at `http://127.0.0.1:8000` with hot reloading, so"
-" any changes you make will automatically update in the browser."
+msgid "This option will also generate the documentation but will allow you to view it in your browser at `http://127.0.0.1:8000` with hot reloading, so any changes you make will automatically update in the browser."
 msgstr "此选项同样生成文档，但支持通过浏览器访问 `http://127.0.0.1:8000` 并启用热重载功能，任何修改将自动在浏览器中更新。"

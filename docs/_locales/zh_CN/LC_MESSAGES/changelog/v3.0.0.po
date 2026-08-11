@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -233,7 +232,6 @@ msgstr ""
 "`replace_type` 现在会返回类型是否被找到并替换。"
 
 #: ../../../changelog/v3.0.0.md:33 7fd306191713484187e265628d908b03
-#, fuzzy
 msgid "`⛰️ bs.environment`"
 msgstr "`🧱 bs.environment`"
 
@@ -332,9 +330,9 @@ msgid ""
 "Introduced `collision_shape` for block hitboxes and renamed `shape` to "
 "`interaction_shape`."
 msgstr ""
-"<abbr title=\"新增功能\">✨</abbr> "
-"**[#285](https://github.com/mcbookshelf/bookshelf/pull/285)** - 新增 "
-"`#bs.hitbox:is_sized` 标签以优化碰撞箱管理。"
+"<abbr title=\"破坏性变更\">⚠️</abbr> "
+"**[#318](https://github.com/mcbookshelf/bookshelf/issues/318)** - 为方块碰撞箱新增 "
+"`collision_shape`，并将 `shape` 重命名为 `interaction_shape`。"
 
 #: ../../../changelog/v3.0.0.md:56 d14d5df7dbdf4d9a9610246533e1f5fc
 msgid ""

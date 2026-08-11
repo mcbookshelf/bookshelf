@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,61 +18,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../modules/vector.md:1 b351b084c752447292bf5b2a7ff6d22c
+#: ../../modules/vector.md:1 c5ccba395be543c1930d7f67e3e7d86b
 msgid "➡️ Vector"
 msgstr "➡️ 向量（Vector）"
 
-#: ../../modules/vector.md:3 2e9149b40d1a452ea3dcf2c803114ecf
+#: ../../modules/vector.md:3 3196544c386a410d865eec212939bc39
 msgid "**`#bs.vector:help`**"
 msgstr "**`#bs.vector:help`**"
 
-#: ../../modules/vector.md:5 1fc4e9a840134960a53c3641f1450377
-msgid ""
-"Vectors are fundamental and incredibly powerful tools to manage motions, "
-"forces and... well... do physics!"
+#: ../../modules/vector.md:5 329b3d38d8a54befb1f6ed9cc7b497fa
+msgid "Vectors are fundamental and incredibly powerful tools to manage motions, forces and... well... do physics!"
 msgstr "向量是管理运动、力和……嗯……做物理的基础且强大的工具！"
 
-#: ../../modules/vector.md:18 e6786f1c46624d1582bd607a22bc4990
-msgid ""
-"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
-"sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
-"hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 "
-"10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 "
-"3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 "
-"0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
-" .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
-"2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
-msgstr ""
-"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
-"sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
-"hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 "
-"10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 "
-"3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 "
-"0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
-" .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
-"2.1v-5.85l-3.5 2.1Z\"></path></svg> 观看演示"
+#: ../../modules/vector.md:18 ff8ace0665dc42c69cbc256bc7aacafb
+msgid "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
+msgstr "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 2.1v-5.85l-3.5 2.1Z\"></path></svg> 观看演示"
 
-#: ../../modules/vector.md:28 6fdd1bb9c2334b07a7f03c3939df8824
+#: ../../modules/vector.md:28 760dbefea4f74f7893b51292d372df35
 msgid "\"With vectors, physics has found a magnificent language.\""
 msgstr "“有了向量，物理学找到了一种优美的语言。”"
 
-#: ../../modules/vector.md:29 14c7f9cabd3448e79a8410db5c4c6f57
+#: ../../modules/vector.md:29 c828aa08535843fdad000190124cc3c8
 msgid "Richard Feynman"
 msgstr "理查德·费曼（Richard Feynman）"
 
-#: ../../modules/vector.md:35 e168e0e6c32e48669cba886f6aa1a531
+#: ../../modules/vector.md:35 c93974fc12be4a0bbc2adbfe642ce4a7
 msgid "🔧 Functions"
 msgstr "🔧 函数"
 
-#: ../../modules/vector.md:37 ae806cbe7ff3422baeec02edc9d7ba70
+#: ../../modules/vector.md:37 aa21ff9e97fc40ec9c156854f9e41c38
 msgid "You can find below all functions available in this module."
 msgstr "你可以在下方找到此模块中的所有可用函数。"
 
-#: ../../modules/vector.md:41 e882f8c984684a52bb76a2f057f82269
+#: ../../modules/vector.md:41 dc682d0e2c9f44baa7749f20ddb15c2b
 msgid "Absolute Max"
 msgstr "绝对值最大"
 
-#: ../../modules/vector.md:45 3f60990c221c489f8f3049559be3cde1
+#: ../../modules/vector.md:45 b34a3932654c48de851763c132ee3f92
 msgid "Get the number furthest to zero, regardless of sign."
 msgstr "获取距离零最远的数，不考虑符号。"
 
@@ -82,16 +63,16 @@ msgstr "获取距离零最远的数，不考虑符号。"
 #: ../../modules/vector.md:240 ../../modules/vector.md:284
 #: ../../modules/vector.md:332 ../../modules/vector.md:369
 #: ../../modules/vector.md:411 ../../modules/vector.md:452
-#: ../../modules/vector.md:494 1b231489b83546eeb869a570792b9b4c
-#: 20bb236e90c44030afdbc3b21e76c41e 369d04b8ceea468b9794d889511e45e9
-#: 3a2b4309418f425487b791ab0d0790b8 3e1aab79bd984032a5ff4e37420f36ec
-#: 4b86efd57ccf4c56b0e72f3cc069362a 60ebe670a3fb41049c57c355871ad076
-#: 9e32fb049fc04dd3993ab972eb02ca19 b023d51bb2b34ebb8ec4d6885444db8f
-#: b314abc8979d4fe3a1ee9afb345a5995 f3255d0461bf4b41ba816118c3fd9a40
+#: ../../modules/vector.md:494 035d915809d249579f648848f8cb9ec8
+#: 4207bbce03b94cdfa6864abd171c94f7 46584e6b32d14b5e9582a6fcb5d24c12
+#: 5b5d1b5beb9247c8903d3c7507c40e5b 5d1fa155ca8c49b783f2ea6d1eb6c8b5
+#: 824a3b5fc50a45dc845d82dbd7061095 8e5621251d8c4d2a8bf287a7241e6f45
+#: 972bb7d1c5fe489a8286fdddc4c5434a aa56c6b8bba44fce9d7025f8377e1762
+#: b4c15c47ba044f458e90abef1e87689c f3ac5f20eca547dfb29ac04c71a2c63f
 msgid "Inputs"
 msgstr "输入"
 
-#: ../../modules/vector.md:48 98cd756d53b9414f8ccdce3a28672dcc
+#: ../../modules/vector.md:48 47c237d949ce4c5d857c1c837f012745
 msgid "**Scores `$vector.abs_max.[0,1,2] bs.in`**: Vector components."
 msgstr "**分数 `$vector.abs_max.[0,1,2] bs.in`**：向量分量。"
 
@@ -100,463 +81,386 @@ msgstr "**分数 `$vector.abs_max.[0,1,2] bs.in`**：向量分量。"
 #: ../../modules/vector.md:251 ../../modules/vector.md:295
 #: ../../modules/vector.md:335 ../../modules/vector.md:378
 #: ../../modules/vector.md:420 ../../modules/vector.md:461
-#: ../../modules/vector.md:503 06bba1757cb2423cb8676d2654b5dc94
-#: 12a80638a6634fc1bb2b9dd1f1652aa6 22282d2d97f54deba7532f287456e137
-#: 226b7c71218f4c01a65d5e76ac9dec83 2d25c67ef9664b86843775d75e5d9a6c
-#: 6287c1c5566645c89289a44c89f6575b 6ab2940d19a249bc8590957f8e927c9f
-#: 7201275ed6ce4614836abd915a618ae2 94d79595dcc64cae8795da605fa6c039
-#: 9cfd992232774c558c8667e7662ee096 b8d780f6393942caa88839a51733ef29
+#: ../../modules/vector.md:503 316ed09747444a63855ec6a8ab5742df
+#: 41613884bd464511b3cd95066491d648 4d0f28eacc524c15bbb1dd627c49f481
+#: 54dae000e05f4d81bb32e9ff0fd085a8 70cf5ef66d56434a83843c3cc841169e
+#: 8d637d5eeca74e7a8629daab15c2f12c 905a1e27ebdb4de68e47a955608a5f31
+#: c1eba2be08ee4322b4699995dded85a8 c52fe65175a741a2a9fcdd7c9c779b7d
+#: c7a76f30016a429f884a00a26bedda96 fa184f352c13424eb9b1f81346a8141d
 msgid "Outputs"
 msgstr "输出"
 
-#: ../../modules/vector.md:51 8aca8addffe140bf935ce4d68eaf624d
-msgid ""
-"**Return | Score `$vector.abs_max bs.out`**: Component with the value "
-"furthest from 0."
+#: ../../modules/vector.md:51 d386090a6ca944d6a3d71dc4a41c741f
+msgid "**Return | Score `$vector.abs_max bs.out`**: Component with the value furthest from 0."
 msgstr "**返回值 | 分数 `$vector.abs_max bs.out`**：离0最远的分量值。"
 
-#: ../../modules/vector.md:54 cdba766ea5c34be392c6b4dbef2b2b74
-msgid ""
-"*Example: I want to get the max component of the vector (1000, 2000, "
-"3000):*"
+#: ../../modules/vector.md:54 5bdc2d69c5c845caaf2fc5e3e50239a5
+msgid "*Example: I want to get the max component of the vector (1000, 2000, 3000):*"
 msgstr "*示例：我想获取向量(1000, 2000, 3000)的最大分量：*"
 
 #: ../../modules/vector.md:69 ../../modules/vector.md:183
 #: ../../modules/vector.md:397 ../../modules/vector.md:484
-#: 01f0fa60f5c340909d51ec9faf6b0e2d 6da9743f08f6404dbafdd39a458387d6
-#: 8641b68f3b754f3b9d29f61c94325403 fde1eb18e61c40098fa326c60aa9c9a0
+#: 3a32305c0f3041ec880fa62b82ee5075 7877b542836a4cf193205e85365ae599
+#: b56eef13c1a64c91a5b3ed334c6cf0d3 c08897c3a7274925a01157c8ea0b4b9b
 msgid "**Credits**: Aksiome, Leirof"
-msgstr "**制作人员**：Aksiome、Leirof"
+msgstr "**贡献者**：Aksiome、Leirof"
 
-#: ../../modules/vector.md:73 eaaf6848041c43528a17f2381636dbcd
+#: ../../modules/vector.md:73 1eeedbdede3641ca844d7ad37db01ca6
 msgid "Absolute Min"
 msgstr "绝对值最小"
 
-#: ../../modules/vector.md:77 26bd94528a924cf38579323a58361b7a
+#: ../../modules/vector.md:77 851193ab45c54d62bed5627ed12ca651
 msgid "Get the number closest to zero, regardless of sign."
 msgstr "获取离零最近的数，不考虑符号。"
 
-#: ../../modules/vector.md:80 f0fbf61a0b3940fa96ef8d79876b5e18
+#: ../../modules/vector.md:80 4cad1cc95bcb40888e38a012c8241be5
 msgid "**Scores `$vector.abs_min.[0,1,2] bs.in`**: Vector components."
 msgstr "**分数 `$vector.abs_min.[0,1,2] bs.in`**：向量分量。"
 
-#: ../../modules/vector.md:83 eed499d35754443ba0289fa7e4057dab
-msgid ""
-"**Return | Score `$vector.abs_min bs.out`**: Component with the value "
-"closest to 0."
+#: ../../modules/vector.md:83 c3ec87abba7446608ba2a341877d53b5
+msgid "**Return | Score `$vector.abs_min bs.out`**: Component with the value closest to 0."
 msgstr "**返回值 | 分数 `$vector.abs_min bs.out`**：离0最近的分量值。"
 
-#: ../../modules/vector.md:86 004fbf0b6323435a9bed247b94c68de1
-msgid ""
-"*Example: I want to get the min component of the vector (1000, 2000, "
-"3000):*"
+#: ../../modules/vector.md:86 c6cbb1b061f9486a9d6e5006d782e314
+msgid "*Example: I want to get the min component of the vector (1000, 2000, 3000):*"
 msgstr "*示例：我想获取向量(1000, 2000, 3000)的最小分量：*"
 
 #: ../../modules/vector.md:101 ../../modules/vector.md:230
-#: ../../modules/vector.md:531 2654c35a11ba406a9c0978714702f4c7
-#: 5a473931383e444c9783f28e6ac265df f913bfbb297f4f59834c119d58cade52
+#: ../../modules/vector.md:531 724fd2b161ea4ff28527c0c3b2a05ffa
+#: 8b2b03beaec0461c8d3b2c2bc96078f0 d5ba979c33154e56940d53b24f182b77
 msgid "**Credits**: Aksiome"
-msgstr "**制作人员**：Aksiome"
+msgstr "**贡献者**：Aksiome"
 
-#: ../../modules/vector.md:105 a0ed446759b64920a5af2b244f076074
+#: ../../modules/vector.md:105 c4cf707de6a24c4a8351c0a5bb2f5c06
 msgid "Basis Rotation 3D"
 msgstr "3D基底旋转"
 
-#: ../../modules/vector.md:109 ed400ca1ec2841fa80f5e634152d874a
-msgid ""
-"Get the equivalent of the vector passed in parameter in a base with a "
-"different rotation. Useful to convert absolute/relative positions into "
-"local positions."
+#: ../../modules/vector.md:109 8917cafa06d345eeb8a8672a45e28b3a
+msgid "Get the equivalent of the vector passed in parameter in a base with a different rotation. Useful to convert absolute/relative positions into local positions."
 msgstr "获取传入参数向量在另一旋转基下的等效向量，可用于将绝对/相对坐标转换为局部坐标系中的位置。"
 
-#: ../../modules/vector.md:112 3a34dc0cb3a3480592d260b48f038fb5
-msgid ""
-"**Scores `$vector.basis_rot_3d.pos.[0,1,2] bs.in`**: Vector coordinates "
-"$=(X,Y,Z)$ in the starting base."
+#: ../../modules/vector.md:112 67f3463f715843f78d9eceecde396802
+msgid "**Scores `$vector.basis_rot_3d.pos.[0,1,2] bs.in`**: Vector coordinates $=(X,Y,Z)$ in the starting base."
 msgstr "**分数 `$vector.basis_rot_3d.pos.[0,1,2] bs.in`**：在起始基底中的向量坐标 $=(X,Y,Z)$。"
 
-#: ../../modules/vector.md:114 2f48e8f1b862464a958a555c8f0ed755
+#: ../../modules/vector.md:114 dbe4a49fe60e4ef8af7ff192cc18ad37
 #, python-brace-format
-msgid ""
-"**Scores `$vector.basis_rot_3d.rot.[0,1] bs.in`**: Horizontal angle "
-"$=\\phi$ (along $=\\hat{y}$) and vertical angle $=\\theta$ (along "
-"$=\\hat{\\phi}$) rotation (in degree) from the starting base."
-msgstr ""
-"**分数 `$vector.basis_rot_3d.rot.[0,1] bs.in`**：相对于起始基底的水平角 $=\\phi$（沿 "
-"$=\\hat{y}$ 轴）和垂直角 $=\\theta$（沿 $=\\hat{\\phi}$ 轴）旋转（以度为单位）。"
+msgid "**Scores `$vector.basis_rot_3d.rot.[0,1] bs.in`**: Horizontal angle $=\\phi$ (along $=\\hat{y}$) and vertical angle $=\\theta$ (along $=\\hat{\\phi}$) rotation (in degree) from the starting base."
+msgstr "**分数 `$vector.basis_rot_3d.rot.[0,1] bs.in`**：相对于起始基底的水平角 $=\\phi$（沿 $=\\hat{y}$ 轴）和垂直角 $=\\theta$（沿 $=\\hat{\\phi}$ 轴）旋转（以度为单位）。"
 
 #: ../../modules/vector.md:116 ../../modules/vector.md:196
 #: ../../modules/vector.md:245 ../../modules/vector.md:289
 #: ../../modules/vector.md:372 ../../modules/vector.md:414
 #: ../../modules/vector.md:455 ../../modules/vector.md:497
-#: 116bfdefa96f48b183f0692844e60a60 6db83e693a0a46739be44786bff6f194
-#: 6e8df51cbb2e46d394e2cce4e9c075e4 7f01e86042df4338a5afd89f9e98c1fd
-#: 91f36b84476e45f9bcfe2cd0865e416e 93f2e54c91aa45a99a5db67f0df3b934
-#: a7ba5eac0c3644bbb4558c31f883f676 f86f938ab56b4d17b37b527f3f6dd002
+#: 1f58b1cc416d4b298e61747ab388f901 2ccc741a397049d4bdd3c185edf80e4d
+#: 30f5cfb4f60b4b7eb2450e95232ada12 41e507cda3b44fdd968996d7c1767f06
+#: 986c196e23ff48408557ba5a70bd8262 b3a26e8d32234490957f847c696f403c
+#: ecf1129860db474bb80f101a6af091d0 f04f6503e0614bbc8ab1d76e2ec5d5b5
 msgid "**Function macro**:"
 msgstr "**函数宏**："
 
-#: ../../modules/vector.md:123 afb5411057934be28f923015bf228cd5
-msgid ""
-"**Scores `$vector.basis_rot_3d.[0,1,2] bs.out`**: Vector coordinates "
-"$=(X',Y',Z')$ in the target base."
+#: ../../modules/vector.md:118 ../../modules/vector.md:198
+#: ../../modules/vector.md:247 ../../modules/vector.md:291
+#: ../../modules/vector.md:374 ../../modules/vector.md:416
+#: ../../modules/vector.md:457 ../../modules/vector.md:499
+#: 05b6f80f22ff44caae1ffc6cf811f9f0 0c7cb0979f124b64a89416e947178074
+#: 2b3aaccbc00340ab831f797712bc0a79 5870a741ee024320bc4fa8625d8c6a72
+#: 658b6ce3e7fa4d7cb9ade2a7fed6e0eb affb8a25bf0641ed9a9a33544b71c9a3
+#: b42f93bc999540489d82b75a1d183d4a ddb91eba1c534c768b261cddc03922dc
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` 参数"
+
+#: ../../modules/vector.md:119 ../../modules/vector.md:199
+#: ../../modules/vector.md:248 ../../modules/vector.md:292
+#: ../../modules/vector.md:375 ../../modules/vector.md:500
+#: 06e13b53fe5a4ed88e37c573b32f4ca0 08e664a944144e26bb432b4fb98c082a
+#: 5327c07b7b0a4e7f8ba84e02149de58c a93ce46f4d404faca024e193ce5765ad
+#: b89b7f3d00214318bc21fb0f0189ef3b cc687e25dceb420f8329e646e7cdb304
+#, python-brace-format
+msgid "{nbt}`number` **scaling**: Scalar for the function's input and output."
+msgstr "{nbt}`number` **scaling**: 应用于函数输入和输出的缩放系数。"
+
+#: ../../modules/vector.md:123 e232a17c9ae9453c9f8627cf9c8ca337
+msgid "**Scores `$vector.basis_rot_3d.[0,1,2] bs.out`**: Vector coordinates $=(X',Y',Z')$ in the target base."
 msgstr "**分数 `$vector.basis_rot_3d.[0,1,2] bs.out`**：在目标基底中的向量坐标 $=(X',Y',Z')$。"
 
-#: ../../modules/vector.md:126 f7d22b523b244bcba8c5c729a69bf26e
+#: ../../modules/vector.md:126 90cdd20cc08f4debb5372eae0ceea842
 msgid "Basis System"
 msgstr "基底系统"
 
-#: ../../modules/vector.md:129 cf943d2b98ad44e5bf58d55e2d0076b1
+#: ../../modules/vector.md:129 3a25ccc546da414a8bb6a1fbc1bca1f0
 msgid "This system uses the Minecraft coordinate system. Thus:"
 msgstr "此系统使用Minecraft坐标系。因此："
 
-#: ../../modules/vector.md:130 1b93798d99394192871a44a3ab8b0dc8
+#: ../../modules/vector.md:130 b61c142c0258443a8f176a58d2ee2179
 #, python-brace-format
 msgid "$\\hat{y}$ is the vertical axis."
 msgstr "$\\hat{y}$ 是垂直轴。"
 
-#: ../../modules/vector.md:131 f7ca2d2cde2a4875a5715190b08d0ac7
+#: ../../modules/vector.md:131 12f183cf3dda41dda70b758cd379f5b0
 #, python-brace-format
-msgid ""
-"$\\phi=0$ (starting point of the horizontal angle) is along the "
-"$\\hat{z}$ axis."
+msgid "$\\phi=0$ (starting point of the horizontal angle) is along the $\\hat{z}$ axis."
 msgstr "$\\phi=0$（水平角的起点）是沿着 $\\hat{z}$ 轴的。"
 
-#: ../../modules/vector.md:132 06342e6e0bee4638b3188db2c38f7a31
-msgid ""
-"$\\theta=0$ (starting point of the vertical angle) is on the horizontal "
-"plane."
+#: ../../modules/vector.md:132 cecc18dcee564dc5880306ee1432ea23
+msgid "$\\theta=0$ (starting point of the vertical angle) is on the horizontal plane."
 msgstr "$\\theta=0$（垂直角的起点）在水平平面上。"
 
-#: ../../modules/vector.md:135 cda32ee93bbc4199bef3fa41cef3a4bd
-msgid ""
-"*Example: A block is located at ~2 ~5 ~10 relative to me, I want to have "
-"this position in local coordinate (^? ^? ^?):*"
+#: ../../modules/vector.md:135 b7d9f184316e4959bf298f0702c68abe
+msgid "*Example: A block is located at ~2 ~5 ~10 relative to me, I want to have this position in local coordinate (^? ^? ^?):*"
 msgstr "*示例：一个方块相对于我的位置在~2 ~5 ~10，我想获取这个位置的局部坐标（^? ^? ^?）：*"
 
-#: ../../modules/vector.md:157 df5385085d9a4846ba4c8350e0dedbde
-msgid ""
-"*Example: I want to have a vector pointing to where I'm looking at, but "
-"in relative coordinates ~X ~Y ~Z:*"
+#: ../../modules/vector.md:157 090fd456191d486dbfe5285655dad79c
+msgid "*Example: I want to have a vector pointing to where I'm looking at, but in relative coordinates ~X ~Y ~Z:*"
 msgstr "*示例：我想要一个指向我正在看的方向的向量，但用相对坐标~X ~Y ~Z表示：*"
 
-#: ../../modules/vector.md:187 8233f5da71ef41058d7635aba3cde46d
+#: ../../modules/vector.md:187 5aae06d9dc3047c4b2b4d2f12c715cfe
 msgid "Cartesian to Spherical"
 msgstr "笛卡尔坐标转球坐标"
 
-#: ../../modules/vector.md:191 0822a1e0a7b547b8b616866123fa7591
+#: ../../modules/vector.md:191 e2a4e62655d248bda820f2ac6701a31e
 msgid "Convert cartesian coordinates to spherical coordinates."
 msgstr "将笛卡尔坐标转换为球坐标。"
 
-#: ../../modules/vector.md:194 ad22a87df6d940c3997c7c91d2dab225
-msgid ""
-"**Scores `$vector.cartesian_to_spherical.[0,1,2] bs.in`**: Vector "
-"representing the cartesian coordinates $=(X,Y,Z)$."
-msgstr ""
-"**分数 `$vector.cartesian_to_spherical.[0,1,2] bs.in`**：表示笛卡尔坐标 $=(X,Y,Z)$ "
-"的向量。"
+#: ../../modules/vector.md:194 0123b1ec8515449699d0235b8d253aed
+msgid "**Scores `$vector.cartesian_to_spherical.[0,1,2] bs.in`**: Vector representing the cartesian coordinates $=(X,Y,Z)$."
+msgstr "**分数 `$vector.cartesian_to_spherical.[0,1,2] bs.in`**：表示笛卡尔坐标 $=(X,Y,Z)$ 的向量。"
 
-#: ../../modules/vector.md:203 ae8e7a14646c43deb9429b154d0c3e72
-msgid ""
-"**Scores `$vector.cartesian_to_spherical.[0,1,2] bs.out`**: Vector "
-"representing the spherical coordinates $=(H,V,R)$."
-msgstr ""
-"**分数 `$vector.cartesian_to_spherical.[0,1,2] bs.out`**：表示球坐标 $=(H,V,R)$ "
-"的向量。"
+#: ../../modules/vector.md:203 3b479baf613d438cb5aa3934a93ba7fb
+msgid "**Scores `$vector.cartesian_to_spherical.[0,1,2] bs.out`**: Vector representing the spherical coordinates $=(H,V,R)$."
+msgstr "**分数 `$vector.cartesian_to_spherical.[0,1,2] bs.out`**：表示球坐标 $=(H,V,R)$ 的向量。"
 
 #: ../../modules/vector.md:206 ../../modules/vector.md:507
-#: 56706f3f5b3d46a8871ad35f750f8d1b e51c53415c364272940ccb073594acf3
+#: 3e188ebf09e34789837318220bfa3493 bb7dfe8e211b4e4f9e1ead92b23ba803
 msgid "Spherical Coordinates"
 msgstr "球坐标"
 
-#: ../../modules/vector.md:209 0d1aae4705384d78a01997831fd473f6
-msgid ""
-"This system returns non conventional [spherical "
-"coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system)."
+#: ../../modules/vector.md:209 b218b6e475d24eb492f5445413dcf718
+msgid "This system returns non conventional [spherical coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system)."
 msgstr "此系统返回的是非常规的[球坐标](https://en.wikipedia.org/wiki/Spherical_coordinate_system)。"
 
 #: ../../modules/vector.md:210 ../../modules/vector.md:511
-#: 8448ba4f7b3446e1a1e6a1b560fc238d b976a8192dd64fc89b6081e076f9eac6
+#: 4f86b9e245674733bc31036a484884e7 836a2c2763c4496c8a111a1169618d18
 #, python-brace-format
 msgid "$H$ (horizontal angle) is along the $\\hat{z}$ axis."
 msgstr "$H$（水平角）是沿着 $\\hat{z}$ 轴的。"
 
 #: ../../modules/vector.md:211 ../../modules/vector.md:512
-#: 0754f7a594564fd4baba1d020598f19f a481ec75a6ae4231bacba083e21e9a10
+#: 2db077f67f1d41578cb334301d5d39e1 305441168e6a448d9489e8f56b0f191e
 msgid "$V$ (vertical angle) is on the horizontal plane."
 msgstr "$V$（垂直角）在水平平面上。"
 
 #: ../../modules/vector.md:212 ../../modules/vector.md:513
-#: 322e5b4c2b764d70b5a66a66767a0a36 6334b42fd5ea412d85ad759b2445ada6
+#: 011f55bd35e0451c9b6ee6ee971da30d d0cd54a31b724a9392cbef90a8d1cf04
 msgid "$R$ is the radial distance."
 msgstr "$R$ 是径向距离。"
 
-#: ../../modules/vector.md:215 96534dc99f2c44a39a308f71b489d97a
-msgid ""
-"*Example: I want to convert the vector (1000, 2000, 3000) to spherical "
-"coordinates:*"
+#: ../../modules/vector.md:215 6851e73628344d3ca469d317a9e312c3
+msgid "*Example: I want to convert the vector (1000, 2000, 3000) to spherical coordinates:*"
 msgstr "*示例：我想将向量(1000, 2000, 3000)转换为球坐标：*"
 
-#: ../../modules/vector.md:234 7479667d74764408bc8cb00ee4986ab7
+#: ../../modules/vector.md:234 bf4b36ec2c4440748ab80dcb905788b4
 msgid "Cross Product"
 msgstr "叉乘"
 
-#: ../../modules/vector.md:238 b4dbea3c117d44d6b0c65eab69409bd0
+#: ../../modules/vector.md:238 d7dca4c959764727955ca13a6faf25e3
 msgid "Compute the vector product between $u$ and $v$."
 msgstr "计算 $u$ 和 $v$ 的叉乘。"
 
-#: ../../modules/vector.md:241 6b2c69ca3bb74b12bb742ceb84635971
-msgid ""
-"**Scores `$vector.cross_product.u.[0,1,2] bs.in`**: First vector "
-"components."
+#: ../../modules/vector.md:241 2271ba9f2870427b853b794f8a40f0e4
+msgid "**Scores `$vector.cross_product.u.[0,1,2] bs.in`**: First vector components."
 msgstr "**分数 `$vector.cross_product.u.[0,1,2] bs.in`**：第一个向量分量。"
 
-#: ../../modules/vector.md:243 0d09322debac4959b53b32ca2f4b1484
-msgid ""
-"**Scores `$vector.cross_product.v.[0,1,2] bs.in`**: Second vector "
-"components."
+#: ../../modules/vector.md:243 49c244960f104d5d92980694ba4da274
+msgid "**Scores `$vector.cross_product.v.[0,1,2] bs.in`**: Second vector components."
 msgstr "**分数 `$vector.cross_product.v.[0,1,2] bs.in`**：第二个向量分量。"
 
-#: ../../modules/vector.md:252 320af457769048d4a2b8ccf1c0f79657
-msgid ""
-"**Scores `$vector.cross_product.[0,1,2] bs.out`**: Result of the "
-"operation $=u \\times v$."
+#: ../../modules/vector.md:252 f62329d13a8c4d69864190bc7f1b913f
+msgid "**Scores `$vector.cross_product.[0,1,2] bs.out`**: Result of the operation $=u \\times v$."
 msgstr "**分数 `$vector.cross_product.[0,1,2] bs.out`**：操作结果 $=u \\times v$。"
 
-#: ../../modules/vector.md:255 b7199d887a90433cbd7bfe4506f624d6
-msgid ""
-"*Example: I want to perform $u \\times v$ with $u=(1,2,3)$ and "
-"$v=(4,5,6):*"
+#: ../../modules/vector.md:255 ccfbadb4b9a5484c8685831488d955a0
+msgid "*Example: I want to perform $u \\times v$ with $u=(1,2,3)$ and $v=(4,5,6):*"
 msgstr "*示例：我想对 $u=(1,2,3)$ 和 $v=(4,5,6)$ 计算 $u \\times v$：*"
 
 #: ../../modules/vector.md:274 ../../modules/vector.md:318
-#: 36d39703300a40e08b54a713d3f37ac4 44ffbf4d3e1c46009b906b1bce63a678
+#: 1de6dad70e504385a86d382fe3070d40 b049c1f6177641079b5994a249ad3f2d
 msgid "**Credits**: Aksiome, Majoras16"
-msgstr "**制作人员**：Aksiome、Majoras16"
+msgstr "**贡献者**：Aksiome、Majoras16"
 
-#: ../../modules/vector.md:278 72a50a07adbe41ea9e680f1b7dcb7e7c
+#: ../../modules/vector.md:278 92f752a1df92417f93d412c3cdf630d6
 msgid "Dot Product"
 msgstr "点乘"
 
-#: ../../modules/vector.md:282 0e70174203864223ba5f6f6fb8cb0bfb
+#: ../../modules/vector.md:282 51eaf175596e4c6c818a1f3eab58d629
 msgid "Compute the scalar product between $u$ and $v$."
 msgstr "计算 $u$ 和 $v$ 的点乘。"
 
-#: ../../modules/vector.md:285 7165c44f7a7240f78a92d768e2ee2076
+#: ../../modules/vector.md:285 e39ef2ef0f1d4d3eb631f9edd2a35e84
 msgid "**Scores `$vector.dot_product.u.[0,1,2] bs.in`**: First vector components."
 msgstr "**分数 `$vector.dot_product.u.[0,1,2] bs.in`**：第一个向量分量。"
 
-#: ../../modules/vector.md:287 5e08dfed2e6b474d8ad26dff8321fac8
-msgid ""
-"**Scores `$vector.dot_product.v.[0,1,2] bs.in`**: Second vector "
-"components."
+#: ../../modules/vector.md:287 2ebfb7ff9be84ca1ac84221b5527dd08
+msgid "**Scores `$vector.dot_product.v.[0,1,2] bs.in`**: Second vector components."
 msgstr "**分数 `$vector.dot_product.v.[0,1,2] bs.in`**：第二个向量分量。"
 
-#: ../../modules/vector.md:296 a048d6ad2bf545239c7244baeb504ca3
+#: ../../modules/vector.md:296 85bdb737912c4372929daebf6784e2e3
 msgid "**Scores `$vector.dot_product bs.out`**: Result of the operation $=u · v$."
 msgstr "**分数 `$vector.dot_product bs.out`**：运算结果 $=u · v$。"
 
-#: ../../modules/vector.md:299 1a599026fbfd4d90ac10240b1a26150d
+#: ../../modules/vector.md:299 96abd9f9c46742af9b8253dff84cdd16
 msgid "*Example: I want to perform $u \\cdot v$ with $u=(1,2,3)$ and $v=(4,5,6):*"
 msgstr "*示例：我想对 $u=(1,2,3)$ 和 $v=(4,5,6)$ 计算 $u \\cdot v$：*"
 
 #: ../../modules/vector.md ../../modules/vector.md:322
-#: 555d76d5a1d647aabc62dc078ab166c2 6b40e5204ebf4b9da972f82f39e1f7d7
+#: 056fce2af25641569c889ebbcae6f6bb f5ab61bea596450fa8915c92d3ef7bcf
 msgid "Length"
 msgstr "长度"
 
-#: ../../modules/vector.md:330 a374146fb7d24b1e9e07ace00b64d704
+#: ../../modules/vector.md:330 516048637af64a7f9cf21df338608dcd
 msgid "Compute the norm of the vector."
 msgstr "计算向量的范数。"
 
-#: ../../modules/vector.md:333 5dae916d4fe04d6889360cfe3ab87357
+#: ../../modules/vector.md:333 55efa83543a349df9a43a4b8e5bf1d70
 msgid "**Scores `$vector.length.[0,1,2] bs.in`**: Vector components."
 msgstr "**分数 `$vector.length.[0,1,2] bs.in`**：向量分量。"
 
-#: ../../modules/vector.md:336 676f7ae50b1741f0a9f73b4433dbb3be
+#: ../../modules/vector.md:336 07c735da43d94f94b599d6d3e331ab50
 msgid "**Return | Score `$vector.length bs.out`**: Vector length."
 msgstr "**返回值 | 分数 `$vector.length bs.out`**：向量长度。"
 
-#: ../../modules/vector.md:339 3a4b4c5a7f3d48ca9e6f2100344b8fdd
+#: ../../modules/vector.md:339 d02b2cacf9cd43bb9926be924fb4ed05
 msgid "*Example: Compute the length of a vector:*"
 msgstr "*示例：计算向量的长度：*"
 
 #: ../../modules/vector.md:352 ../../modules/vector.md:424
-#: 67c6ce665d924e9da5b01e77501028a7 c088d408568140469babb3afa9e8d72f
+#: 368bc6adc6af4ec1800d16af509a49ed 71ea6d4d3f7a46deb158bbf3ca9c8518
 msgid "Performance Tip"
 msgstr "性能提示"
 
-#: ../../modules/vector.md:355 cec7ef308c674289b5c697a382e2f7dd
-msgid ""
-"To minimize performance impact, we recommend using the `length_squared` "
-"function instead of this one when possible. Computing the length of a "
-"vector requires a square root operation, which is computationally "
-"intensive, especially in Minecraft."
-msgstr ""
-"为了最小化性能影响，我们建议尽可能使用 `length_squared` "
-"函数代替此函数。计算向量的长度需要进行平方根运算，这在计算上很耗费资源，特别是在 Minecraft 中。"
+#: ../../modules/vector.md:355 d3046aef89d64f9f963bfab1ad378992
+msgid "To minimize performance impact, we recommend using the `length_squared` function instead of this one when possible. Computing the length of a vector requires a square root operation, which is computationally intensive, especially in Minecraft."
+msgstr "为了最小化性能影响，我们建议尽可能使用 `length_squared` 函数代替此函数。计算向量的长度需要进行平方根运算，这在计算上很耗费资源，特别是在 Minecraft 中。"
 
-#: ../../modules/vector.md:357 5558c50ba0004cc79e367689562c51a5
+#: ../../modules/vector.md:357 d307049279244e68b4f3f52238636105
 msgid "`length_squared` can be used effectively in these cases:"
 msgstr "`length_squared` 在以下情况下可以有效使用："
 
-#: ../../modules/vector.md:358 e2a3de4f550b4f309fb754db6c6c6663
-msgid ""
-"When comparing a vector's length with a given value, compute the square "
-"of the given value manually and compare it with the result of "
-"`length_squared`."
+#: ../../modules/vector.md:358 d1564da6ff884d01bddc849fd334247c
+msgid "When comparing a vector's length with a given value, compute the square of the given value manually and compare it with the result of `length_squared`."
 msgstr "当比较向量长度与给定值时，手动计算给定值的平方并与 `length_squared` 的结果进行比较。"
 
-#: ../../modules/vector.md:359 38985e3be2f242798f6302824c7116c2
-msgid ""
-"When comparing the lengths of two vectors, compare their `length_squared`"
-" results instead of computing their actual lengths."
+#: ../../modules/vector.md:359 b639a80cc3ab4ed88f9c62e0af1ad98f
+msgid "When comparing the lengths of two vectors, compare their `length_squared` results instead of computing their actual lengths."
 msgstr "当比较两个向量的长度时，比较它们的 `length_squared` 结果而不是计算它们的实际长度。"
 
-#: ../../modules/vector.md 4760c9f6c234492583c9e4c6c0f8c28f
+#: ../../modules/vector.md cbe40b22aadf431496aa0db337eef6a9
 msgid "Length Squared"
 msgstr "平方长度"
 
-#: ../../modules/vector.md:367 b6e86c9b4e594ce2914a210904558b60
+#: ../../modules/vector.md:367 b6e2829769074bbf9d2bafcdefd559cb
 msgid "Compute the squared norm of the vector."
 msgstr "计算向量的范数的平方。"
 
-#: ../../modules/vector.md:370 c1edec09e2fd4763b8c1de93c327825f
+#: ../../modules/vector.md:370 460f800c34af4e97968543f99abbda81
 msgid "**Scores `$vector.length_squared.[0,1,2] bs.in`**: Vector components."
 msgstr "**分数 `$vector.length_squared.[0,1,2] bs.in`**：向量分量。"
 
-#: ../../modules/vector.md:379 0c0a399bc54c4b2386d7f3e6a803f89f
+#: ../../modules/vector.md:379 0959bbd0d06146d38041f4142782a146
 msgid "**Return | Score `$vector.length_squared bs.out`**: Vector length squared."
 msgstr "**返回值 | 分数 `$vector.length_squared bs.out`**：向量的长度的平方。"
 
-#: ../../modules/vector.md:382 c27e4ae73d104f7382d0757925017391
+#: ../../modules/vector.md:382 9d3b55c8d4464a08b6c8dd0648c97941
 msgid "*Example: Compute the squared length of a vector:*"
 msgstr "*示例：计算向量的长度的平方：*"
 
-#: ../../modules/vector.md:401 e17550f22afc40009e9746777034f1a0
+#: ../../modules/vector.md:401 295d76dc4764482181d63dbc9a36a572
 msgid "Normalize"
 msgstr "归一化"
 
-#: ../../modules/vector.md d7217c784c4340eca25c97b9e3287125
+#: ../../modules/vector.md dd73210b72564a52922bb02f97c9399d
 msgid "Norm"
 msgstr "范数"
 
-#: ../../modules/vector.md:409 080156570b0547698904f45fd2460ff0
-msgid ""
-"Normalize the vector by putting the length at the given scale while "
-"keeping proportions."
+#: ../../modules/vector.md:409 a53fb9fc1794483fb6a7882791f78b20
+msgid "Normalize the vector by putting the length at the given scale while keeping proportions."
 msgstr "将向量的长度缩放到指定值，并保持其方向不变。"
 
-#: ../../modules/vector.md:412 f818dea9eb7343ee923cf96c5873e12c
+#: ../../modules/vector.md:412 23e2d0afa920489ea5e518bc86b1782a
 msgid "**Scores `$vector.normalize.[0,1,2] bs.in`**: Vector components."
 msgstr "**分数 `$vector.normalize.[0,1,2] bs.in`**：向量分量。"
 
-#: ../../modules/vector.md:421 b94f036d3aaa47749eb5c86e6e1bbbc2
-msgid ""
-"**Scores `$vector.normalize.[0,1,2] bs.out`**: Normalized vector "
-"components."
-msgstr "**分数 `$vector.normalize.[0,1,2] bs.out`**：归一化后的向量分量。"
-
-#: ../../modules/vector.md:427 a545c6e1b97f4e6795f9eec3369b2bf6
-msgid ""
-"Vector normalization doesn't always require using the length. Often, the "
-"`normalize_max_component` function can be used instead. While this method"
-" doesn't normalize the length, it simplifies operations and improves "
-"performance."
-msgstr ""
-"向量归一化并不总是需要使用长度。通常可以使用 `normalize_max_component` "
-"函数代替。虽然这种方法不会归一化长度，但它简化了操作并提高了性能。"
-
-#: ../../modules/vector.md:430 cb0e9faa3d6f4b9b84eeccfbcfcf18ed
-msgid "*Example: Normalize the vector (1000, 2000, 3000) with a scale of 1000:*"
-msgstr "*示例：将向量(1000, 2000, 3000)按比例1000归一化：*"
-
-#: ../../modules/vector.md 47ffa8eb5e714d928d9186a1ca9c9606
-msgid "Max Component"
-msgstr "最大分量"
-
-#: ../../modules/vector.md:450 c71bb82af31c455a9e33d5d4707e2c45
-msgid ""
-"Normalize the vector by placing the largest component at the given scale "
-"while keeping proportions."
-msgstr "将向量的所有分量除以最大分量值，并保持其方向不变。"
-
-#: ../../modules/vector.md:453 816cb7ad4eec46fda8d0aed3d2f90f05
-msgid ""
-"**Scores `$vector.normalize_max_component.[0,1,2] bs.in`**: Vector "
-"components."
-msgstr "**分数 `$vector.normalize_max_component.[0,1,2] bs.in`**：向量分量。"
-
-#: ../../modules/vector.md:462 95c4df82d9444fb1b9171aa24ceff6d6
-msgid ""
-"**Scores `$vector.normalize_max_component.[0,1,2] bs.out`**: Normalized "
-"vector components."
-msgstr "**分数 `$vector.normalize_max_component.[0,1,2] bs.out`**：归一化后的向量分量。"
-
-#: ../../modules/vector.md:464 bc4684242eef4fb0bcb828f8c71c8ceb
-msgid ""
-"**Score `$vector.normalize_max_component.factor bs.out`**: Normalization "
-"factor."
-msgstr "**分数 `$vector.normalize_max_component.factor bs.out`**：归一化因子。"
-
-#: ../../modules/vector.md:467 ed4b78be82aa49fca4ee410c14bf89d5
-msgid ""
-"*Example: Fast normalize the vector (1000, 2000, 3000) with a scale of "
-"1000:*"
-msgstr "*示例：快速将向量(1000, 2000, 3000)按比例1000归一化：*"
-
-#: ../../modules/vector.md:488 05d83e2271564afd90822092e51d5ad8
-msgid "Spherical to Cartesian"
-msgstr "球坐标转笛卡尔坐标"
-
-#: ../../modules/vector.md:492 15d9597123f64e0a8ca6146bbb33d37a
-msgid "Convert spherical coordinates to cartesian coordinates."
-msgstr "将球坐标转换为笛卡尔坐标。"
-
-#: ../../modules/vector.md:495 8be45da5f6f548fd961577a6382d9417
-msgid ""
-"**Scores `$vector.spherical_to_cartesian.[0,1,2] bs.in`**: Vector "
-"representing the spherical coordinates $=(H,V,R)$."
-msgstr ""
-"**分数 `$vector.spherical_to_cartesian.[0,1,2] bs.in`**：表示球坐标 $=(H,V,R)$ "
-"的向量。"
-
-#: ../../modules/vector.md:504 eb9a8a01a872452698493e5838319b0e
-msgid ""
-"**Scores `$vector.spherical_to_cartesian.[0,1,2] bs.out`**: Vector "
-"representing the cartesian coordinates $=(X,Y,Z)$."
-msgstr ""
-"**分数 `$vector.spherical_to_cartesian.[0,1,2] bs.out`**：表示笛卡尔坐标 $=(X,Y,Z)$"
-" 的向量。"
-
-#: ../../modules/vector.md:510 a8d30a08b37c4caa9e2e78d3d0137faf
-msgid ""
-"This system uses non conventional [spherical "
-"coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system)."
-msgstr "此系统使用非常规的[球坐标](https://en.wikipedia.org/wiki/Spherical_coordinate_system)。"
-
-#: ../../modules/vector.md:516 7976045b4e034e6c871e39c5e2c60975
-msgid ""
-"*Example: I want to convert the spherical coordinates $(45°, 30°, 1)$ to "
-"cartesian coordinates:*"
-msgstr "*示例：我想将球坐标 $(45°, 30°, 1)$ 转换为笛卡尔坐标：*"
-
-#: ../../_templates/comments.md:4 f54f1280c522462b931fdc89e239bd49
-msgid "**💬 Did it help you?**"
-msgstr "**💬 这对你有帮助吗？**"
-
-#: ../../_templates/comments.md:6 db20e33d5bbf408b8c082f2046db5ec7
-msgid "Feel free to leave your questions and feedback below!"
-msgstr "欢迎在下方留下你的问题和反馈！"
-
-#, python-brace-format
-msgid "{nbt}`compound` Arguments"
-msgstr "{nbt}`compound` 参数"
-
-#, python-brace-format
-msgid "{nbt}`number` **scaling**: Scalar for the function's input and output."
-msgstr "{nbt}`number` **scaling**: 应用于函数输入和输出的缩放系数。"
-
+#: ../../modules/vector.md:417 ../../modules/vector.md:458
+#: 144388c5298a4dd58bd2f5d8325e4ada 15e1ac88a1944f5caa9d6fdb064d2580
 #, python-brace-format
 msgid "{nbt}`number` **scale**: Scalar for the function's output."
 msgstr "{nbt}`number` **scale**: 应用于函数输出的缩放系数。"
+
+#: ../../modules/vector.md:421 9c0cc229c8e24bfe9334651643eb779d
+msgid "**Scores `$vector.normalize.[0,1,2] bs.out`**: Normalized vector components."
+msgstr "**分数 `$vector.normalize.[0,1,2] bs.out`**：归一化后的向量分量。"
+
+#: ../../modules/vector.md:427 d08a15b4083544c482c563dfc42314cc
+msgid "Vector normalization doesn't always require using the length. Often, the `normalize_max_component` function can be used instead. While this method doesn't normalize the length, it simplifies operations and improves performance."
+msgstr "向量归一化并不总是需要使用长度。通常可以使用 `normalize_max_component` 函数代替。虽然这种方法不会归一化长度，但它简化了操作并提高了性能。"
+
+#: ../../modules/vector.md:430 ../../modules/vector.md:467
+#: a440755c266049dfb345a5c419f2ac61 c1c4c247b2f749f79e3b359fbc1c80dc
+msgid "*Example: Normalize the vector (1000, 2000, 3000) with a scale of 1000:*"
+msgstr "*示例：将向量(1000, 2000, 3000)按比例1000归一化：*"
+
+#: ../../modules/vector.md 9197fd63185a47cf9f7b13e149aba9da
+msgid "Max Component"
+msgstr "最大分量"
+
+#: ../../modules/vector.md:450 086c04c47d034e6c8fcf2159d7046801
+msgid "Normalize the vector by placing the largest component at the given scale while keeping proportions."
+msgstr "将向量的所有分量除以最大分量值，并保持其方向不变。"
+
+#: ../../modules/vector.md:453 f8e833f0d3cc4349be6b0e0ed880eca0
+msgid "**Scores `$vector.normalize_max_component.[0,1,2] bs.in`**: Vector components."
+msgstr "**分数 `$vector.normalize_max_component.[0,1,2] bs.in`**：向量分量。"
+
+#: ../../modules/vector.md:462 368cd0211e6342f387c82aa5a9bb0bfd
+msgid "**Scores `$vector.normalize_max_component.[0,1,2] bs.out`**: Normalized vector components."
+msgstr "**分数 `$vector.normalize_max_component.[0,1,2] bs.out`**：归一化后的向量分量。"
+
+#: ../../modules/vector.md:464 618acd2bf7ed457a9a07abb750066c77
+msgid "**Score `$vector.normalize_max_component.factor bs.out`**: Normalization factor."
+msgstr "**分数 `$vector.normalize_max_component.factor bs.out`**：归一化因子。"
+
+#: ../../modules/vector.md:488 c16890157332451db7a6e18b809b6fee
+msgid "Spherical to Cartesian"
+msgstr "球坐标转笛卡尔坐标"
+
+#: ../../modules/vector.md:492 4fe46e2b858e4761bac4182f941708fc
+msgid "Convert spherical coordinates to cartesian coordinates."
+msgstr "将球坐标转换为笛卡尔坐标。"
+
+#: ../../modules/vector.md:495 42396e0d7fc1409a97d718874a610a09
+msgid "**Scores `$vector.spherical_to_cartesian.[0,1,2] bs.in`**: Vector representing the spherical coordinates $=(H,V,R)$."
+msgstr "**分数 `$vector.spherical_to_cartesian.[0,1,2] bs.in`**：表示球坐标 $=(H,V,R)$ 的向量。"
+
+#: ../../modules/vector.md:504 f81c442c45854facb5ebe02712b32aea
+msgid "**Scores `$vector.spherical_to_cartesian.[0,1,2] bs.out`**: Vector representing the cartesian coordinates $=(X,Y,Z)$."
+msgstr "**分数 `$vector.spherical_to_cartesian.[0,1,2] bs.out`**：表示笛卡尔坐标 $=(X,Y,Z)$ 的向量。"
+
+#: ../../modules/vector.md:510 37d3448ca4c34b9bbedd1155059734d0
+msgid "This system uses non conventional [spherical coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system)."
+msgstr "此系统使用非常规的[球坐标](https://en.wikipedia.org/wiki/Spherical_coordinate_system)。"
+
+#: ../../modules/vector.md:516 c2508da9215a417f9b6eccf294c636b3
+msgid "*Example: I want to convert the spherical coordinates $(45°, 30°, 1)$ to cartesian coordinates:*"
+msgstr "*示例：我想将球坐标 $(45°, 30°, 1)$ 转换为笛卡尔坐标：*"
+
+#: ../../_templates/comments.md:4 58b7267240a94fea9aac237f2c7608d2
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对你有帮助吗？**"
+
+#: ../../_templates/comments.md:6 9fc63aa2cefd4ac6a977f9164e287e4f
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下你的问题和反馈！"
+
+#~ msgid "*Example: Fast normalize the vector (1000, 2000, 3000) with a scale of 1000:*"
+#~ msgstr "*示例：快速将向量(1000, 2000, 3000)按比例1000归一化：*"

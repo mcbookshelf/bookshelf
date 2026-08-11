@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
@@ -22,23 +21,18 @@ msgid "❤️ Special Thanks"
 msgstr "❤️ 特别鸣谢"
 
 #: ../../special-thanks.md:7 5df6ccd4c5054ff0aa3d153ca7837381
-msgid ""
-"Bookshelf is a collaborative project, made possible by the dedication and"
-" contributions of numerous individuals. We extend special thanks to those"
-" who have made significant contributions to this project, without whom it"
-" would not be what it is today."
+msgid "Bookshelf is a collaborative project, made possible by the dedication and contributions of numerous individuals. We extend special thanks to those who have made significant contributions to this project, without whom it would not be what it is today."
 msgstr "Bookshelf 是一个协作项目，得益于众多贡献者的奉献和付出。我们特别感谢那些为该项目做出重大贡献的人，没有他们，就不会有今天的成果。"
 
 #: ../../special-thanks.md:11 2f21bd01836040ff9e2f00d57fd5788a
 msgid "🌟 Direct Contributors"
-msgstr "🌟 直接贡献者"
+msgstr "🌟 主要贡献者"
 
 #: ../../special-thanks.md:16 1b5fd924f61c468fb66887d0e175f7c5
 msgid "Vincent Foriel (aka Leirof)"
 msgstr "Vincent Foriel (又名 Leirof)"
 
 #: ../../special-thanks.md:29 c8455e71eb7640e5baea5f69d89ab801
-#, fuzzy
 msgid "Creator of the original Gunivers Libs."
 msgstr "原始 Gunivers Libs 的贡献者。"
 
@@ -103,11 +97,8 @@ msgid "🫶 Acknowledgements"
 msgstr "🫶 致谢"
 
 #: ../../special-thanks.md:142 b1d907df8272444e95ac138fb6a0fdf2
-msgid ""
-"This website uses the Tossface font, a freely available typeface designed"
-" and provided by the [Toss Team](https://toss.im)."
+msgid "This website uses the Tossface font, a freely available typeface designed and provided by the [Toss Team](https://toss.im)."
 msgstr "本网站使用 Tossface 字体，这是一种由 [Toss Team](https://toss.im) 设计和提供的免费字体。"
 
 #~ msgid "Creator of the original Gunivers Libs, and contributor of Bookshelf."
 #~ msgstr "原始 Gunivers Libs 的创建者，Bookshelf 的贡献者。"
-

@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -150,7 +149,7 @@ msgstr "你可以使用负数来减少玩家的经验。"
 #: 005464ce787f4a5d928dbfb48649061e 00855e37711f4c69b8b36b1029c751c3
 #: eb37c16a690f41279725460116157ce0
 msgid "**Credits**: Aksiome, Leirof"
-msgstr "**制作人员**：Aksiome、Leirof"
+msgstr "**贡献者**：Aksiome、Leirof"
 
 #: ../../modules/xp.md:125 59c2ff8c7c914fd49b2fac372664245e
 msgid "Get"
@@ -165,21 +164,15 @@ msgid "Get the total amount of points required to reach the next level."
 msgstr "获取达到下一级所需的总经验点数。"
 
 #: ../../modules/xp.md:136 6eeb02cdd3b0435bbe521f0c8aaf84be
-msgid ""
-"**Execution `as <players>`**: Players from whom you want to get the max "
-"amount of points."
+msgid "**Execution `as <players>`**: Players from whom you want to get the max amount of points."
 msgstr "**执行 `as <玩家>`**：要获取总点数的玩家。"
 
 #: ../../modules/xp.md:139 75ce3b0c7b7b4827bd361eaab7b92c47
-msgid ""
-"**Return | Score `$xp.get_max_points bs.out`**: Total amount of points "
-"required for the next level."
+msgid "**Return | Score `$xp.get_max_points bs.out`**: Total amount of points required for the next level."
 msgstr "**返回值 | 分数 `$xp.get_max_points bs.out`**：达到下一级所需的总点数。"
 
 #: ../../modules/xp.md:142 085a8e13cd434bee9d1bc650a5270482
-msgid ""
-"*Example: Get the total amount of points required to pass to the next "
-"level:*"
+msgid "*Example: Get the total amount of points required to pass to the next level:*"
 msgstr "*示例：获取升到下一级所需的总点数：*"
 
 #: ../../modules/xp.md 63c6fe390cf143d490b12ed8570f25e6
@@ -191,15 +184,11 @@ msgid "Get the remaining amount of points needed to reach the next level."
 msgstr "获取达到下一级所需的剩余经验点数。"
 
 #: ../../modules/xp.md:160 ca0131a19ce74115818dc7e9288ea91d
-msgid ""
-"**Execution `as <players>`**: Players from whom you want to get the "
-"remaining points."
+msgid "**Execution `as <players>`**: Players from whom you want to get the remaining points."
 msgstr "**执行 `as <玩家>`**：要获取剩余点数的玩家。"
 
 #: ../../modules/xp.md:163 656f8903a4f74ee2920a4d1d6608327b
-msgid ""
-"**Return | Score `$xp.get_remaining_points bs.out`**: Points needed for "
-"the next level."
+msgid "**Return | Score `$xp.get_remaining_points bs.out`**: Points needed for the next level."
 msgstr "**返回值 | 分数 `$xp.get_remaining_points bs.out`**：升到下一级所需的点数。"
 
 #: ../../modules/xp.md:166 834058457273445ab58067fe26430af4
@@ -216,9 +205,7 @@ msgid "Get the sum of all points a player has gathered."
 msgstr "获取玩家所有经验点数之和。"
 
 #: ../../modules/xp.md:184 d505906e22054da3b5719a82413c6906
-msgid ""
-"**Execution `as <players>`**: Players from whom you want to get the total"
-" amount of points."
+msgid "**Execution `as <players>`**: Players from whom you want to get the total amount of points."
 msgstr "**执行 `as <玩家>`**：要获取点数之和的玩家。"
 
 #: ../../modules/xp.md:187 f92b542e18794e9faaed8dd7749a6d36
@@ -234,15 +221,11 @@ msgid "Get the fill progress of the XP bar."
 msgstr "获取经验条的填充进度。"
 
 #: ../../modules/xp.md:208 b7ab9e5fb11f4e13a8fd9bd5b7588164
-msgid ""
-"**Execution `as <players>`**: Players from whom you want to get the bar "
-"progress."
+msgid "**Execution `as <players>`**: Players from whom you want to get the bar progress."
 msgstr "**执行 `as <玩家>`**：要获取经验条进度的玩家。"
 
 #: ../../modules/xp.md:217 dca95fa9ca2043aabf65e9a47539f4a2
-msgid ""
-"**Return | Score `$xp.get_progress bs.out`**: Fill level of the XP bar "
-"after scaling."
+msgid "**Return | Score `$xp.get_progress bs.out`**: Fill level of the XP bar after scaling."
 msgstr "**返回值 | 分数 `$xp.get_progress bs.out`**：缩放后的经验条填充度。"
 
 #: ../../modules/xp.md:220 9bf8877032324f05ab91c073ebbcf84e
@@ -321,9 +304,7 @@ msgid "{nbt}`int` **points**: Amount of points to add."
 msgstr "{nbt}`int` **points**: 要增加的点数。"
 
 #, python-brace-format
-msgid ""
-"{nbt}`double` **progress**: Progress to add"
-" to the bar (in range [-1,1])."
+msgid "{nbt}`double` **progress**: Progress to add to the bar (in range [-1,1])."
 msgstr "{nbt}`double` **progress**: 要添加到经验条的进度值（取值范围[-1,1]）。"
 
 #, python-brace-format
@@ -343,7 +324,5 @@ msgid "{nbt}`int` **points**: Amount of total experience points to set."
 msgstr "{nbt}`int` **points**: 要设置的总经验点数。"
 
 #, python-brace-format
-msgid ""
-"{nbt}`double` **progress**: Progress to set"
-" on the bar (in range [-1,1])."
+msgid "{nbt}`double` **progress**: Progress to set on the bar (in range [-1,1])."
 msgstr "{nbt}`double` **progress**: 要设置的经验条的进度值（取值范围[-1,1]）。"

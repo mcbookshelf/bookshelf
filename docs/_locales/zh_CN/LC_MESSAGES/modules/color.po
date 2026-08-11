@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -32,9 +31,7 @@ msgid "Facilitate color conversion between various formats."
 msgstr "实现各种格式之间的颜色转换。"
 
 #: ../../modules/color.md:13 7f18c442a0a543adb286c45cf490d5a8
-msgid ""
-"\"Color helps to express light—not the physical phenomenon, but the only "
-"light that really exists, that in the artist's brain.\""
+msgid "\"Color helps to express light—not the physical phenomenon, but the only light that really exists, that in the artist's brain.\""
 msgstr "“色彩是光的表达——不是物理意义上的光，而是真正存在于艺术家脑海中的光。”"
 
 #: ../../modules/color.md:14 fde1906aa739471e93cf5a1cfe5b3eb3
@@ -46,10 +43,7 @@ msgid "Minecraft Color Format"
 msgstr "Minecraft 颜色格式"
 
 #: ../../modules/color.md:21 9d9720c4a48d4e4d8986f6647ea6d202
-msgid ""
-"The internal color format for Minecraft is decimal. This module "
-"facilitates the conversion between this integer (decimal) format and "
-"other commonly used formats."
+msgid "The internal color format for Minecraft is decimal. This module facilitates the conversion between this integer (decimal) format and other commonly used formats."
 msgstr "Minecraft 的内部颜色格式是十进制。此模块实现了这种整数（十进制）格式与其他常用格式之间的转换。"
 
 #: ../../modules/color.md:26 d4787344d3a740b39ada84e2a6981cbf
@@ -101,9 +95,7 @@ msgstr "输出"
 
 #: ../../modules/color.md:50 874d326e2f154fe5aebafd967ab6b43d
 #, python-brace-format
-msgid ""
-"**Storage `bs:out color.rgb_to_hex`**: {nbt}`string` Color as a "
-"hexadecimal string."
+msgid "**Storage `bs:out color.rgb_to_hex`**: {nbt}`string` Color as a hexadecimal string."
 msgstr "**命令存储 `bs:out color.rgb_to_hex`**：{nbt}`string` 十六进制字符串形式的颜色。"
 
 #: ../../modules/color.md:53 785e78afe1e14684ad5127ecaf5c9b91
@@ -120,22 +112,18 @@ msgstr "将颜色从整数转换为十六进制。"
 
 #: ../../modules/color.md:78 ce7a36275f8d49be98748001f728d53c
 #, python-brace-format
-msgid ""
-"**Storage `bs:out color.int_to_hex`**: {nbt}`string` Color as a "
-"hexadecimal string."
+msgid "**Storage `bs:out color.int_to_hex`**: {nbt}`string` Color as a hexadecimal string."
 msgstr "**命令存储 `bs:out color.int_to_hex`**：{nbt}`string` 十六进制字符串形式的颜色。"
 
 #: ../../modules/color.md:81 ad1e52d2d6ca423a92251d477bbecb47
-msgid ""
-"*Example: Get the hexadecimal color of the nearest zombie's leather "
-"helmet:*"
+msgid "*Example: Get the hexadecimal color of the nearest zombie's leather helmet:*"
 msgstr "*示例：获取最近的僵尸皮革头盔的十六进制颜色：*"
 
 #: ../../modules/color.md:93 ../../modules/color.md:162
 #: ../../modules/color.md:231 08512ff2db844910812b5d327fd9c6be
 #: 47080f331acf45bdae7758ba95cf2a15 ba916e1d2b2e42958272a26fb79d81bd
 msgid "**Credits**: Aksiome, theogiraudet"
-msgstr "**制作人员**：Aksiome、theogiraudet"
+msgstr "**贡献者**：Aksiome、theogiraudet"
 
 #: ../../modules/color.md:97 f1cfb5469ab24595b6825b1014911d8f
 msgid "Convert to Integer"
@@ -159,9 +147,7 @@ msgid "**Storage `bs:out color.hex_to_int`**: {nbt}`int` Color as an integer."
 msgstr "**命令存储 `bs:out color.hex_to_int`**：{nbt}`int` 整数形式的颜色。"
 
 #: ../../modules/color.md:120 f6554017004c4d3ba3c8225c9765377e
-msgid ""
-"*Example: Change the color of the nearest zombie's leather helmet using "
-"the hexadecimal format:*"
+msgid "*Example: Change the color of the nearest zombie's leather helmet using the hexadecimal format:*"
 msgstr "*示例：使用十六进制格式更改最近的僵尸皮革头盔的颜色：*"
 
 #: ../../modules/color.md f655001ebbdd4d3aa23c7b8a59b8ae16
@@ -182,9 +168,7 @@ msgid "**Storage `bs:out color.rgb_to_int`**: {nbt}`int` Color as an integer."
 msgstr "**命令存储 `bs:out color.rgb_to_int`**：{nbt}`int` 整数形式的颜色。"
 
 #: ../../modules/color.md:150 1263d847ad72471ab06212c87d27bf9f
-msgid ""
-"*Example: Change the color of the nearest zombie's leather helmet using "
-"the RGB format:*"
+msgid "*Example: Change the color of the nearest zombie's leather helmet using the RGB format:*"
 msgstr "*示例：使用RGB格式更改最近的僵尸皮革头盔的颜色：*"
 
 #: ../../modules/color.md:166 f92e07e98d304045a0dd1746ae78f3d0
@@ -201,15 +185,11 @@ msgstr "将颜色从十六进制转换为RGB。"
 
 #: ../../modules/color.md:184 0141be090a1f471caf314c4df77b6bd4
 #, python-brace-format
-msgid ""
-"**Storage `bs:out color.hex_to_rgb`**: {nbt}`list` Vector representing "
-"the RGB color."
+msgid "**Storage `bs:out color.hex_to_rgb`**: {nbt}`list` Vector representing the RGB color."
 msgstr "**命令存储 `bs:out color.hex_to_rgb`**：{nbt}`list` 表示RGB颜色的向量。"
 
 #: ../../modules/color.md:186 a922b4cc908b4fd0802b3e683d558b3b
-msgid ""
-"**Scores `$color.hex_to_rgb.[r,g,b] bs.out`**: Vector components "
-"representing the RGB color."
+msgid "**Scores `$color.hex_to_rgb.[r,g,b] bs.out`**: Vector components representing the RGB color."
 msgstr "**分数 `$color.hex_to_rgb.[r,g,b] bs.out`**：表示RGB颜色的向量分量。"
 
 #: ../../modules/color.md:189 c14b85a571824bbfaf1227b6d8a7f2cd
@@ -226,15 +206,11 @@ msgstr "将颜色从整数转换为RGB。"
 
 #: ../../modules/color.md:214 7eccdf3c7bd64786a803e399c50c9bf8
 #, python-brace-format
-msgid ""
-"**Storage `bs:out color.int_to_rgb`**: {nbt}`list` Vector representing "
-"the RGB color."
+msgid "**Storage `bs:out color.int_to_rgb`**: {nbt}`list` Vector representing the RGB color."
 msgstr "**命令存储 `bs:out color.int_to_rgb`**：{nbt}`list` 表示RGB颜色的向量。"
 
 #: ../../modules/color.md:216 e6785b6a8e2142ffa1380c68e47c4133
-msgid ""
-"**Scores `$color.int_to_rgb.[r,g,b] bs.out`**: Vector components "
-"representing the RGB color."
+msgid "**Scores `$color.int_to_rgb.[r,g,b] bs.out`**: Vector components representing the RGB color."
 msgstr "**分数 `$color.int_to_rgb.[r,g,b] bs.out`**：表示RGB颜色的向量分量。"
 
 #: ../../modules/color.md:219 72ff95aaedea44f18c1a85142793d87a
@@ -254,9 +230,7 @@ msgid "{nbt}`compound` Arguments"
 msgstr "{nbt}`compound` 参数"
 
 #, python-brace-format
-msgid ""
-"{nbt}`list` **color**: Vector representing the"
-" RGB color (example: [0,255,128])."
+msgid "{nbt}`list` **color**: Vector representing the RGB color (example: [0,255,128])."
 msgstr "{nbt}`list` **color**: 用来表示RGB颜色的向量（比如：[0,255,128]）。"
 
 #, python-brace-format
@@ -264,7 +238,5 @@ msgid "{nbt}`int` **color**: Color as an integer."
 msgstr "{nbt}`int` **color**: 用整数表示的颜色。"
 
 #, python-brace-format
-msgid ""
-"{nbt}`string` **color**: Color as a "
-"hexadecimal string (example: #ffffff)."
+msgid "{nbt}`string` **color**: Color as a hexadecimal string (example: #ffffff)."
 msgstr "{nbt}`string` **color**: 用16进制字符串表示的颜色（比如：#ffffff）。"
