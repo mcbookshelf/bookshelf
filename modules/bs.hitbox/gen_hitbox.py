@@ -20,6 +20,7 @@ def beet_default(ctx: Context, version: str) -> Iterable[tuple[str, PackFile]]:
     """Generate files used by the bs.hitbox module."""
     ns = ctx.directory.name
     blocks = minecraft.get_blocks(ctx.cache, version)
+    water = ctx.data.block_tags[location := f"{ns}:is_water"].data["values"]
 
     groups = {"shape": defaultdict(list), "collision": defaultdict(list)}
     seen = set()
@@ -36,13 +37,25 @@ def beet_default(ctx: Context, version: str) -> Iterable[tuple[str, PackFile]]:
     for name, mapping in groups.items():
         yield f"{ns}:block/get_{name}", make_shape_loot_table(mapping, f"{ns}:block")
 
+    def is_waterloggable(block: Block) -> bool:
+        return any(p.name == "waterlogged" for p in block.properties)
+
+    def is_waterlogged(block: Block) -> bool:
+        return (
+            not any(p.name == "waterlogged" for p in block.properties)
+            and block.fluid == "minecraft:water"
+            and block.type not in water
+        )
+
     for name, predicate in [
         ("has_shape_offset", lambda b: b.has_shape_offset),
         ("has_visual_offset", lambda b: b.has_visual_offset),
         ("can_pass_through", lambda b: not b.collision_shape),
         ("is_full_cube", lambda b: b.shape == CUBE and b.collision_shape == CUBE),
-        ("is_waterloggable", lambda b:
-            any(p.name == "waterlogged" for p in b.properties)),
+        ("is_full_cube_collision", lambda b: b.collision_shape == CUBE),
+        ("is_full_cube_shape", lambda b: b.shape == CUBE),
+        ("is_waterloggable", is_waterloggable),
+        ("is_waterlogged", is_waterlogged),
     ]:
         base = ctx.data.block_tags[location := f"{ns}:{name}"]
         yield location, minecraft.make_block_tag(base, blocks, predicate)

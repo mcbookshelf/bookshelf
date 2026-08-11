@@ -1453,7 +1453,7 @@ A block becomes weakly powered when it is powered only by redstone dust.
 
 ## 🏷️ Tags
 
-You can find below below all tags available in this module.
+You can find below all tags available in this module.
 
 ---
 

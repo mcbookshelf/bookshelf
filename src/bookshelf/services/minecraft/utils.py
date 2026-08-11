@@ -126,6 +126,7 @@ def make_block_tag(
 ) -> BlockTag:
     """Create or update a block tag for blocks that match the predicate."""
     values = sorted(block.type for block in blocks if predicate(block))
+    base.data.pop("__generated__", None)
     return BlockTag({**base.data, "values": values})
 
 
