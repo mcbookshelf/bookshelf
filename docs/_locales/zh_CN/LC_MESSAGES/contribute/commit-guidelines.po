@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -24,10 +23,7 @@ msgid "📋 Commit Guidelines"
 msgstr "📋 提交规范"
 
 #: ../../../contribute/commit-guidelines.md:3 2b7c059dc1d34286a72cba647dfc8f30
-msgid ""
-"This section is meant for maintainers. Contributors do not need to worry "
-"about commit messages as PRs are squash-merged before being integrated "
-"into the project."
+msgid "This section is meant for maintainers. Contributors do not need to worry about commit messages as PRs are squash-merged before being integrated into the project."
 msgstr "本部分面向维护者。普通贡献者无需关注提交信息规范，因为PR在合并前会进行压缩合并。"
 
 #: ../../../contribute/commit-guidelines.md:7 b891cbcfa8b74563af7f5e45440ad0f5
@@ -35,11 +31,7 @@ msgid "✍️ Commit Format"
 msgstr "✍️ 提交格式"
 
 #: ../../../contribute/commit-guidelines.md:9 c943ccd075df46bb8d95a64c0c4fd647
-msgid ""
-"We follow **Conventional Commits** to standardize commit messages, making"
-" it easier to understand the purpose of each change. Commit messages "
-"should include an **emoji** to indicate the type of change and follow the"
-" format below:"
+msgid "We follow **Conventional Commits** to standardize commit messages, making it easier to understand the purpose of each change. Commit messages should include an **emoji** to indicate the type of change and follow the format below:"
 msgstr "我们采用**约定式提交(Conventional Commits)**规范，包含**表情符号**标识变更类型，格式如下："
 
 #: ../../../contribute/commit-guidelines.md:15 a0493f9289874c21953bc1ef28aae2bd
@@ -135,9 +127,7 @@ msgid "🎯 Using Scopes"
 msgstr "🎯 作用域规范"
 
 #: ../../../contribute/commit-guidelines.md:48 ec495c0aaba6478dbe8f30da9ab27a03
-msgid ""
-"Commit messages can include a **scope** to specify which part of the "
-"project is affected. Example:"
+msgid "Commit messages can include a **scope** to specify which part of the project is affected. Example:"
 msgstr "可通过**作用域(scope)**指定变更影响的模块。示例："
 
 #: ../../../contribute/commit-guidelines.md:56 46d7f03f75d04e779c2ed6b6c89f9541
@@ -145,13 +135,9 @@ msgid "⚠️ Breaking Changes"
 msgstr "⚠️ 重大变更"
 
 #: ../../../contribute/commit-guidelines.md:58 2537eca24a2c43a98fb4638c39ee88b1
-msgid ""
-"If a change introduces a **breaking change**, add a `!` after the type or"
-" scope. Example:"
+msgid "If a change introduces a **breaking change**, add a `!` after the type or scope. Example:"
 msgstr "若变更导致**不兼容修改**，应在类型/作用域后添加`!`标识。示例："
 
 #: ../../../contribute/commit-guidelines.md:64 5b8eb6720c544c3c9d9e89b9435543a0
-msgid ""
-"This helps ensure that users are aware of any changes that might affect "
-"compatibility."
+msgid "This helps ensure that users are aware of any changes that might affect compatibility."
 msgstr "此规范确保使用者能及时识别可能影响兼容性的变更。"

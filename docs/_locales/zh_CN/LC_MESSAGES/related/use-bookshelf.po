@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -24,118 +23,69 @@ msgid "📁 Projects Using Bookshelf"
 msgstr "📁 使用Bookshelf的项目"
 
 #: ../../../related/use-bookshelf.md:7 b3747eb5183b4e4c99201e66bb1bd5d5
-msgid ""
-"Bookshelf is a project with a long history. Starting with the name of "
-"LGDir following by Gunivers-Lib (Glib), this library was used by several "
-"projects of the Gunivers community. This page lists various projects "
-"using Bookshelf or the older versions of the library."
-msgstr ""
-"Bookshelf是一个历史悠久的项目，最初名为LGDir，后更名为Gunivers-Lib（Glib）。"
-"该库已被Gunivers社区的多个项目采用。本页面列出了使用Bookshelf或其早期版本的各种项目。"
+msgid "Bookshelf is a project with a long history. Starting with the name of LGDir following by Gunivers-Lib (Glib), this library was used by several projects of the Gunivers community. This page lists various projects using Bookshelf or the older versions of the library."
+msgstr "Bookshelf是一个历史悠久的项目，最初名为LGDir，后更名为Gunivers-Lib（Glib）。该库已被Gunivers社区的多个项目采用。本页面列出了使用Bookshelf或其早期版本的各种项目。"
 
 #: ../../../related/use-bookshelf.md:14 1206e5fee70e435683b818cdc00a6bc8
 msgid "🌋 Blazing Scaffolding"
 msgstr "🌋 炽热脚手架（Blazing Scaffolding）"
 
 #: ../../../related/use-bookshelf.md:18 910e788d417d424fbcca299620d65ac6
-msgid ""
-"Blazing Scaffolding is a simple, fast & nervous minigame in which you "
-"will have to push your enemies in the lava. To do so, you only have "
-"access to scaffoldings and concrete powders, so every structure you build"
-" is fragile…"
-msgstr ""
-"炽热脚手架是一款简单快速的紧张小游戏，目标是将敌人推入熔岩。"
-"你只能使用脚手架和混凝土粉末建造结构，因此所有建筑都脆弱易塌..."
+msgid "Blazing Scaffolding is a simple, fast & nervous minigame in which you will have to push your enemies in the lava. To do so, you only have access to scaffoldings and concrete powders, so every structure you build is fragile…"
+msgstr "炽热脚手架是一款简单快速的紧张小游戏，目标是将敌人推入熔岩。你只能使用脚手架和混凝土粉末建造结构，因此所有建筑都脆弱易塌..."
 
 #: ../../../related/use-bookshelf.md:22 cabcdbf0f7c54a10a046d54a38a8c97d
 msgid "🔥 Creative Olympics"
 msgstr "🔥 创意奥运会（Creative Olympics）"
 
 #: ../../../related/use-bookshelf.md:26 b6f69121467547c1ad999ada97c035b1
-msgid ""
-"Creative Olympics is a week-long charity event. During this week, "
-"different teams that come from all around the world compete to make the "
-"best creation (map, resource-pack, datapack, build) in a short amount of "
-"time."
-msgstr ""
-"创意奥运会是为期一周的慈善活动。"
-"活动期间，来自世界各地的团队竞相在有限时间内创作最佳作品"
-"（地图、资源包、数据包、建筑）。"
+msgid "Creative Olympics is a week-long charity event. During this week, different teams that come from all around the world compete to make the best creation (map, resource-pack, datapack, build) in a short amount of time."
+msgstr "创意奥运会是为期一周的慈善活动。活动期间，来自世界各地的团队竞相在有限时间内创作最佳作品（地图、资源包、数据包、建筑）。"
 
 #: ../../../related/use-bookshelf.md:29 090cf4a4cd9e466885e4fb8d4665edc7
 msgid "⚔️ Hierarchy"
 msgstr "⚔️ 阶层战争（Hierarchy）"
 
 #: ../../../related/use-bookshelf.md:33 5940a2fa02464717ab1f7ca46283addc
-msgid ""
-"Inspired by MOBA-type games, Hierarchy will make you rediscover Minecraft"
-" PvP by offering you a wide variety of kits (called elementals) and "
-"skills."
-msgstr ""
-"受MOBA类游戏启发，阶层战争通过提供多样化的装备（称为元素使）和技能，"
-"让你重新发现Minecraft PvP的乐趣。"
+msgid "Inspired by MOBA-type games, Hierarchy will make you rediscover Minecraft PvP by offering you a wide variety of kits (called elementals) and skills."
+msgstr "受MOBA类游戏启发，阶层战争通过提供多样化的装备（称为元素使）和技能，让你重新发现Minecraft PvP的乐趣。"
 
 #: ../../../related/use-bookshelf.md:36 76d26b14070e4bc78c5f9476492e6f19
 msgid "🟩 Miniature blocks by Sotshi"
 msgstr "🟩 Sotshi的微缩方块（Miniature blocks by Sotshi）"
 
 #: ../../../related/use-bookshelf.md:40 c270d0d3c3c944da8dbbe5e4d255a922
-msgid ""
-"Link in French. In one of these videos, the Youtuber Sotshi used "
-"Bookshelf to create a 3D printer."
-msgstr ""
-"法语链接。YouTuber Sotshi在其中一个视频中使用Bookshelf创建了3D打印机。"
+msgid "Link in French. In one of these videos, the Youtuber Sotshi used Bookshelf to create a 3D printer."
+msgstr "法语链接。YouTuber Sotshi在其中一个视频中使用Bookshelf创建了3D打印机。"
 
 #: ../../../related/use-bookshelf.md:43 4553d0ccd40242828239f4fa7087ae04
 msgid "🏃 Rush Reloaded"
 msgstr "🏃 极速冲锋重制版（Rush Reloaded）"
 
 #: ../../../related/use-bookshelf.md:47 8f6188cd9811446b817290e7d989d53f
-msgid ""
-"One of the most iconic maps in Minecraft's history, which Gunivers has "
-"brought up to date. Gunivers lets you rediscover this competitive game "
-"mode whose décor is now as modern as it is colourful."
-msgstr ""
-"Minecraft历史上最具标志性的地图之一，由Gunivers团队重制。"
-"让你重新体验这个竞技游戏模式，其装饰既现代又多彩。"
+msgid "One of the most iconic maps in Minecraft's history, which Gunivers has brought up to date. Gunivers lets you rediscover this competitive game mode whose décor is now as modern as it is colourful."
+msgstr "Minecraft历史上最具标志性的地图之一，由Gunivers团队重制。让你重新体验这个竞技游戏模式，其装饰既现代又多彩。"
 
 #: ../../../related/use-bookshelf.md:50 25b4642bfbda4475983ee8e90d716b39
 msgid "🐟 Scuba Diving"
 msgstr "🐟 深潜探险（Scuba Diving）"
 
 #: ../../../related/use-bookshelf.md:54 f2184cf4548d4761a7a34894326a572c
-msgid ""
-"Scuba Diving is a Minecraft mini-game map on an ocean theme. It mixes "
-"Dropper environments with various game modes such as the famous Thimble "
-"or base jump modes called \"Swimming\" and \"Lifebuoy\"."
-msgstr ""
-"深潜探险是以海洋为主题的Minecraft小游戏地图。"
-"融合了坠落挑战环境和多种游戏模式，如著名的顶针模式，以及名为\"游泳\"和\"救生圈\"的基地跳跃模式。"
+msgid "Scuba Diving is a Minecraft mini-game map on an ocean theme. It mixes Dropper environments with various game modes such as the famous Thimble or base jump modes called \"Swimming\" and \"Lifebuoy\"."
+msgstr "深潜探险是以海洋为主题的Minecraft小游戏地图。融合了坠落挑战环境和多种游戏模式，如著名的顶针模式，以及名为\"游泳\"和\"救生圈\"的基地跳跃模式。"
 
 #: ../../../related/use-bookshelf.md:57 e32c35fa4a334980acde78a9c46b1445
 msgid "🏭 Usine 4.0"
 msgstr "🏭 工厂4.0（Usine 4.0）"
 
 #: ../../../related/use-bookshelf.md:61 cd262e654ef54dfd82c925ea1f2a696c
-msgid ""
-"Usine 4.0 is a mini-game designed for the University of Poitiers as a "
-"teaching aid on the theme of system automation. Page in French."
-msgstr ""
-"工厂4.0是为普瓦捷大学设计的教学小游戏，主题为系统自动化。"
-"法语页面。"
+msgid "Usine 4.0 is a mini-game designed for the University of Poitiers as a teaching aid on the theme of system automation. Page in French."
+msgstr "工厂4.0是为普瓦捷大学设计的教学小游戏，主题为系统自动化。法语页面。"
 
 #: ../../../related/use-bookshelf.md:64 721a8009feb047deabe6211b9a8e2c56
 msgid "🪄 Wichery"
 msgstr "🪄 巫术（Wichery）"
 
 #: ../../../related/use-bookshelf.md:68 a1991a2f5dc8482dbf1763a4bf1a0d52
-msgid ""
-"Witchery is a map incorporating an advanced ball physics, allowing among "
-"other things to bounce on all surfaces, just like … One bullet! You will "
-"be able to fool your enemies by throwing the ball against the walls to "
-"retrieve it immediately after, making two with your friends (if you have "
-"one)."
-msgstr ""
-"巫术地图采用先进的球体物理系统，允许球体在所有表面反弹，就像...一颗子弹！"
-"你可以通过将球投向墙壁并立即接回的方式迷惑敌人，"
-"与朋友（如果你有的话）进行双人配合。"
+msgid "Witchery is a map incorporating an advanced ball physics, allowing among other things to bounce on all surfaces, just like … One bullet! You will be able to fool your enemies by throwing the ball against the walls to retrieve it immediately after, making two with your friends (if you have one)."
+msgstr "巫术地图采用先进的球体物理系统，允许球体在所有表面反弹，就像...一颗子弹！你可以通过将球投向墙壁并立即接回的方式迷惑敌人，与朋友（如果你有的话）进行双人配合。"

@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -32,9 +31,5 @@ msgid "Header to put at the beginning of each function:"
 msgstr "放置在每个函数开头的文件头："
 
 #: ../../../contribute/file-format.md:29 a2637884b7b14f79b3bc0b8e4afc0311
-msgid ""
-"If a Bookshelf contributor forgot to put a header at the beginning of a "
-"function, the CI/CD pipeline will reject the merge of the contribution in"
-" Bookshelf. To ensure the code meets the minimal requirements, see the "
-"[contribution validation page](project:contribution-validation.md)."
+msgid "If a Bookshelf contributor forgot to put a header at the beginning of a function, the CI/CD pipeline will reject the merge of the contribution in Bookshelf. To ensure the code meets the minimal requirements, see the [contribution validation page](project:contribution-validation.md)."
 msgstr "若 Bookshelf 贡献者忘记在函数开头添加文件头，CI/CD 流水线将拒绝该贡献合并到 Bookshelf。要确保代码符合最低要求，请参阅[贡献验证页面](project:contribution-validation.md)。"

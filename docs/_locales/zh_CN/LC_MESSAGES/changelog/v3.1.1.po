@@ -3,43 +3,35 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Bookshelf \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-07-26 01:57+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: zh_CN\n"
-"Language-Team: zh_CN <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../changelog/v3.1.1.md:1 414cc5cd8eb443219954e0957cfbb2d3
-msgid ""
-"📦 [Bookshelf - "
-"3.1.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.1.1)"
-msgstr ""
+msgid "📦 [Bookshelf - 3.1.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.1.1)"
+msgstr "📦 [Bookshelf - 3.1.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.1.1)"
 
 #: ../../changelog/v3.1.1.md:3 f3d9f044f54b4f57a3e2f0fbf436fa27
 msgid "**🩹 Hotfix Release!**"
-msgstr ""
+msgstr "**🩹 热修复版本发布！**"
 
 #: ../../changelog/v3.1.1.md:5 9749e3a8e39c4e5f9797ddf3e2be4d04
 msgid "*Patch release for version 3.1.0.*"
-msgstr ""
+msgstr "*针对 3.1.0 版本的补丁更新。*"
 
 #: ../../changelog/v3.1.1.md:8 cf9c3fbbfc44425e989ec0a318f4f856
 msgid "`🎯 bs.environment`"
-msgstr ""
+msgstr "`🎯 bs.environment`"
 
 #: ../../changelog/v3.1.1.md:10 78a70dc4256d4d8fa7729b809caae4d3
-msgid ""
-"🐛 **[#482](https://github.com/mcbookshelf/bookshelf/issues/482)** - Fixed"
-" misplaced test function that caused module load errors."
-msgstr ""
-
+msgid "🐛 **[#482](https://github.com/mcbookshelf/bookshelf/issues/482)** - Fixed misplaced test function that caused module load errors."
+msgstr "🐛 **[#482](https://github.com/mcbookshelf/bookshelf/issues/482)** - 修复了导致模块加载错误的测试函数位置错误问题。"

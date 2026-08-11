@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -38,12 +37,10 @@ msgid ""
 msgstr "*这个版本增强了文档和自动化工具，并引入了新的方块操作特性。*"
 
 #: ../../../changelog/v2.1.0.md:7 8bfac9ddf4c343cf905dcac44dc80bfc
-#, fuzzy
 msgid "Bookshelf is now based on **Minecraft 1.21**."
 msgstr "Bookshelf 现在适配 **Minecraft 1.21**。"
 
 #: ../../../changelog/v2.1.0.md:10 b283c6653dae40549cb567e387717332
-#, fuzzy
 msgid ""
 "📝 **[#206](https://github.com/mcbookshelf/bookshelf/issues/206)** - Added"
 " new related datapacks and mods."
@@ -52,7 +49,6 @@ msgstr ""
 "新增相关数据包与模组。"
 
 #: ../../../changelog/v2.1.0.md:11 4a3e3541c2314446ba9266907ea1ba31
-#, fuzzy
 msgid ""
 "📝 **[#200](https://github.com/mcbookshelf/bookshelf/issues/200)** - "
 "Replaced the old function header with a new license-only header, now "
@@ -64,7 +60,6 @@ msgstr ""
 "元数据已被移动到特性函数标签中。"
 
 #: ../../../changelog/v2.1.0.md:12 ff62725035cb4317b22d3e7efb87618c
-#, fuzzy
 msgid ""
 "📝 **[#52](https://github.com/mcbookshelf/bookshelf/issues/52)** / "
 "**[#175](https://github.com/mcbookshelf/bookshelf/issues/175)** - Each "
@@ -78,7 +73,6 @@ msgstr ""
 "等新工具提供底层支持。详见[此处](project:/contribute/metadata.md)。"
 
 #: ../../../changelog/v2.1.0.md:13 5cfc7d1cecb741ccae94263b10f0e912
-#, fuzzy
 msgid ""
 "⚙️ **[#199](https://github.com/mcbookshelf/bookshelf/pull/199)** - "
 "Automated metadata verification during pull requests to ensure no data is"
@@ -98,7 +92,6 @@ msgid "`🧱 bs.block`"
 msgstr "`🧱 bs.block`"
 
 #: ../../../changelog/v2.1.0.md:19 07de3c041fe6417a90a71d579e8afc17
-#, fuzzy
 msgid ""
 "✨ **[#187](https://github.com/mcbookshelf/bookshelf/issues/187)** - Added"
 " `#bs.block:map_type` and `#bs.block:mix_type` functions."
@@ -113,7 +106,6 @@ msgstr "`🔗 bs.link`"
 #: ../../../changelog/v2.1.0.md:24 ../../../changelog/v2.1.0.md:34
 #: ../../../changelog/v2.1.0.md:39 8ce7b9fcfdd24407b594fd164517d6df
 #: b951641218a44e6e96b4aea38ef4a706 ce036a8c58754c72bcbeaf36dd6148f6
-#, fuzzy
 msgid ""
 "🐛 **[#211](https://github.com/mcbookshelf/bookshelf/pull/211)** - Fixed "
 "missing help function tag."
@@ -126,7 +118,6 @@ msgid "`🧭 bs.position`"
 msgstr "`🧭 bs.position`"
 
 #: ../../../changelog/v2.1.0.md:29 81f9af59baa643a498f427c28f4f41dc
-#, fuzzy
 msgid ""
 "📝 **[#208](https://github.com/mcbookshelf/bookshelf/issues/208)** - "
 "Updated documentation for `#bs.position:<add|get|set>_pos_and_rot`."

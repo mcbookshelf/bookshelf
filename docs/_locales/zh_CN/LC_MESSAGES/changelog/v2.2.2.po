@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -20,12 +19,8 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../../changelog/v2.2.2.md:1 4a2b2709d4694916bed989789399efdc
-msgid ""
-"📦 [Bookshelf - "
-"2.2.2](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.2)"
-msgstr ""
-"📦 [Bookshelf - "
-"2.2.2](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.2)"
+msgid "📦 [Bookshelf - 2.2.2](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.2)"
+msgstr "📦 [Bookshelf - 2.2.2](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.2)"
 
 #: ../../../changelog/v2.2.2.md:3 454d76812c6b465ca81e50852dcce972
 msgid "**🩹 A Quick Hotfix!**"
@@ -40,10 +35,5 @@ msgid "`🎯 bs.hitbox`"
 msgstr "`🎯 bs.hitbox`"
 
 #: ../../../changelog/v2.2.2.md:10 0c40d0fa9cd547c68dd753773356c7d3
-msgid ""
-"🐛 **[#293](https://github.com/mcbookshelf/bookshelf/issues/293)** - Fixed"
-" module issues caused by the removal of `creaking_transient` in Minecraft"
-" 1.21.4."
-msgstr ""
-"🐛 **[#293](https://github.com/mcbookshelf/bookshelf/issues/293)** - 修复 "
-"`creaking_transient` 在Minecraft 1.21.4.中被移除的问题。"
+msgid "🐛 **[#293](https://github.com/mcbookshelf/bookshelf/issues/293)** - Fixed module issues caused by the removal of `creaking_transient` in Minecraft 1.21.4."
+msgstr "🐛 **[#293](https://github.com/mcbookshelf/bookshelf/issues/293)** - 修复 `creaking_transient` 在Minecraft 1.21.4.中被移除的问题。"
