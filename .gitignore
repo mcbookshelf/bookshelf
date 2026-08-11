@@ -24,8 +24,8 @@ build/
 dist/
 docs/_build/
 # Sphinx/Babel temporary gettext output
+docs/_locales/**/LC_MESSAGES/gettext/
 locales/
-docs/_locales/zh_CN/LC_MESSAGES/gettext/
 env.bak/
 env/
 ENV/
