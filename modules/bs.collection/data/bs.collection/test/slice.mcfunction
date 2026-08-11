@@ -25,20 +25,17 @@ assert data storage bs:out {collection: {value: [0, 1]}}
 
 # Slice with max > size -> Error
 data modify storage bs:out collection.value set value [0, 1, 2]
-execute store success score #success bs.ctx run function #bs.collection:slice {min: 1, max: 5}
-assert score #success bs.ctx matches 0
+assert not run function #bs.collection:slice {min: 1, max: 5}
 assert data storage bs:out {collection: {value: [0, 1, 2]}}
 
 # Slice with min > size -> Error
 data modify storage bs:out collection.value set value [0, 1, 2]
-execute store success score #success bs.ctx run function #bs.collection:slice {min: 5, max: 6}
-assert score #success bs.ctx matches 0
+assert not run function #bs.collection:slice {min: 5, max: 6}
 assert data storage bs:out {collection: {value: [0, 1, 2]}}
 
 # Slice with min >= max -> Error (Min must be lower than max)
 data modify storage bs:out collection.value set value [0, 1, 2]
-execute store success score #success bs.ctx run function #bs.collection:slice {min: 2, max: 1}
-assert score #success bs.ctx matches 0
+assert not run function #bs.collection:slice {min: 2, max: 1}
 assert data storage bs:out {collection: {value: [0, 1, 2]}}
 
 # Slice with negative min (-2) -> last 2 elements -> [3, 4] (if size 5, -2 => 3. slice 3 to 5)
@@ -58,6 +55,5 @@ assert data storage bs:out {collection: {value: [2, 3]}}
 
 # Slice with min < -size -> Error
 data modify storage bs:out collection.value set value [0, 1, 2]
-execute store success score #success bs.ctx run function #bs.collection:slice {min: -10, max: 2}
-assert score #success bs.ctx matches 0
+assert not run function #bs.collection:slice {min: -10, max: 2}
 assert data storage bs:out {collection: {value: [0, 1, 2]}}

@@ -14,19 +14,17 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Prepare args for the lambda function
-data modify storage bs:lambda collection.value set from storage bs:data collection.stack[0].value[0]
-execute store result score #i bs.ctx run data get storage bs:data collection.stack[0].i
-execute store result storage bs:data collection.stack[0].i int 1 store result storage bs:lambda collection.index int 1 run scoreboard players add #i bs.ctx 1
+data modify storage bs:lambda collection.value set from storage bs:data collection.stack[-1].value[0]
+execute store result score #i bs.ctx run data get storage bs:data collection.stack[-1].i
+execute store result storage bs:data collection.stack[-1].i int 1 store result storage bs:lambda collection.index int 1 run scoreboard players add #i bs.ctx 1
 
-# Call the lambda function and check if it passes the predicate
-execute store success score #s bs.ctx run function bs.collection:all/call with storage bs:data collection.stack[0]
-
-# If the predicate failed, set result to false and short-circuit
+# Call the predicate function and return early if it fails
+execute store success score #s bs.ctx run function bs.collection:all/call with storage bs:data collection.stack[-1]
 execute if score #s bs.ctx matches 0 run return fail
 
 # Shift the collection
-data remove storage bs:data collection.stack[0].value[0]
+data remove storage bs:data collection.stack[-1].value[0]
 
-# If the predicate succeeded, continue checking remaining elements
-execute if score #s bs.ctx matches 1 if data storage bs:data collection.stack[0].value[0] run return run function bs.collection:all/all_rec
-return 0
+# Continue checking remaining elements
+execute if data storage bs:data collection.stack[-1].value[0] run return run function bs.collection:all/all_rec
+return 1

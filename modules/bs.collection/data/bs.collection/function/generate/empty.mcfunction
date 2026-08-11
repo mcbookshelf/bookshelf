@@ -13,4 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$return run $(run)
+execute if score #l bs.ctx matches ..-1 run function #bs.log:error {namespace: "bs.collection", path: "bs.collection:generate/generate", tag: "generate", message: '"Limit must be positive"'}
+execute if score #l bs.ctx matches ..-1 run return fail
+data modify storage bs:out collection.value set value []
+return 0

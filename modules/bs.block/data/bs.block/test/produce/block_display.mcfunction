@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:in block.spawn_block_display.type set value "minecraft:bookshelf"
-data modify storage bs:in block.spawn_block_display.extra_nbt set value {Tags:["bs.packtest"]}
+data modify storage bs:in block.spawn_block_display.extra_nbt set value {Tags:["bs.ward"]}
 function #bs.block:spawn_block_display
 
-assert entity @e[type=minecraft:block_display,tag=bs.packtest] inside
+assert entity @e[type=minecraft:block_display,tag=bs.ward] inside

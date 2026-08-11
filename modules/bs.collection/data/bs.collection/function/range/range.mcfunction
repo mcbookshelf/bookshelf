@@ -13,13 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$scoreboard players set #m bs.ctx $(min)
-$scoreboard players set #n bs.ctx $(max)
-$scoreboard players set #s bs.ctx $(step)
+$data modify storage bs:ctx _ set value {min: $(min), max: $(max), step: $(step)}
+execute store result score #m bs.ctx run data get storage bs:ctx _.min 1
+execute store result score #n bs.ctx run data get storage bs:ctx _.max 1
+execute store result score #s bs.ctx run data get storage bs:ctx _.step 1
 
 # Check for error condition min >= max
-execute if score #m bs.ctx >= #n bs.ctx run function #bs.log:error {namespace: "bs.collection", path: "bs.collection:range/range", tag: "range", message: '"Min must be strictly lower than max"'}
-execute if score #m bs.ctx >= #n bs.ctx run return fail
+execute if score #s bs.ctx matches 1.. if score #m bs.ctx >= #n bs.ctx run return run function bs.collection:range/fail
+execute if score #s bs.ctx matches ..-1 if score #m bs.ctx <= #n bs.ctx run return run function bs.collection:range/fail
 
 data modify storage bs:out collection.value set value []
+scoreboard players operation #m bs.ctx -= #s bs.ctx
 function bs.collection:range/range_rec

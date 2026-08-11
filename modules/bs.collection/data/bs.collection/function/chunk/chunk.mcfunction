@@ -13,10 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:data collection.stack prepend value { value: [], size: $(size), current: [], result: [] }
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
+execute store result score #l bs.ctx run data get storage bs:out collection.value
+execute if score #l bs.ctx matches 0 run return 0
 
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:chunk/chunk_rec
-
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].result
-data remove storage bs:data collection.stack[0]
+$scoreboard players set #n bs.ctx $(size)
+data modify storage bs:ctx _ set from storage bs:out collection.value
+data modify storage bs:out collection set value { value: [] }
+execute if score #l bs.ctx > #n bs.ctx run return run function bs.collection:chunk/chunk_rec
+data modify storage bs:out collection.value append from storage bs:ctx _

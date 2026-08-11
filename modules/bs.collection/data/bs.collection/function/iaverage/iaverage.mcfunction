@@ -14,17 +14,15 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Get sum & count
-execute store result score #c bs.ctx if data storage bs:out collection.value[]
+execute store result score #c bs.ctx run data get storage bs:out collection.value
 execute store result score #s bs.ctx run function #bs.collection:isum
 
 # Compute a ratio for the average computation
 scoreboard players set #r bs.ctx 1000000000
-scoreboard players operation #r bs.ctx /= #c bs.ctx
-data modify storage bs:ctx _ set value {}
-execute store result storage bs:ctx _.ratio double .000000001 run scoreboard players get #r bs.ctx
+execute store result storage bs:ctx y double .000000001 run scoreboard players operation #r bs.ctx /= #c bs.ctx
 
 # Compute the average
 data remove storage bs:out collection.value
-function bs.collection:iaverage/compute_iaverage with storage bs:ctx _
+function bs.collection:iaverage/compute_iaverage with storage bs:ctx
 
 $return run data get storage bs:out collection.value $(scale)

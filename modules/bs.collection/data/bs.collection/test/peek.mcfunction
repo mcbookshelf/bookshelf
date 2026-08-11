@@ -14,25 +14,22 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Empty
+data modify storage bs:ward collection.peek set value []
 data modify storage bs:out collection.value set value []
-function #bs.collection:peek {run: "tellraw @a 'value'"}
-assert not chat "value"
+function #bs.collection:peek {run: "data modify storage bs:ward collection.peek append value 1"}
+assert not data storage bs:ward collection{peek: [1]}
 assert data storage bs:out {collection: {value: []}}
 
 # Print
-data modify storage bs:out collection.value set value [0, 1, 2, 3]
-function #bs.collection:peek {run: "tellraw @a {nbt:'collection.value',storage:'bs:lambda'}"}
-assert chat "0"
-assert chat "1"
-assert chat "2"
-assert chat "3"
-assert data storage bs:out {collection: {value: [0, 1, 2, 3]}}
+data modify storage bs:ward collection.peek set value []
+data modify storage bs:out collection.value set value [10, 11, 12, 13]
+function #bs.collection:peek {run: "data modify storage bs:ward collection.peek append from storage bs:lambda collection.value"}
+assert data storage bs:out {collection: {value: [10, 11, 12, 13]}}
+assert data storage bs:ward collection{peek: [10, 11, 12, 13]}
 
 # Index
+data modify storage bs:ward collection.peek set value []
 data modify storage bs:out collection.value set value [10, 11, 12, 13]
-function #bs.collection:peek {run: "tellraw @a {nbt:'collection.index',storage:'bs:lambda'}"}
-assert chat "0"
-assert chat "1"
-assert chat "2"
-assert chat "3"
+function #bs.collection:peek {run: "data modify storage bs:ward collection.peek append from storage bs:lambda collection.index"}
 assert data storage bs:out {collection: {value: [10, 11, 12, 13]}}
+assert data storage bs:ward collection{peek: [0, 1, 2, 3]}

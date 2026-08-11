@@ -14,9 +14,9 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Move one element from value to current chunk
-data modify storage bs:data collection.stack[0].current append from storage bs:data collection.stack[0].value[0]
-data remove storage bs:data collection.stack[0].value[0]
-scoreboard players remove #n bs.ctx 1
+data modify storage bs:out collection.value[-1] append from storage bs:ctx _[0]
+data remove storage bs:ctx _[0]
+scoreboard players remove #i bs.ctx 1
 
 # Continue if we need more elements and have them
-execute if score #n bs.ctx matches 1.. if data storage bs:data collection.stack[0].value[0] run function bs.collection:chunk/fill_rec
+execute if score #i bs.ctx matches 1.. if data storage bs:ctx _[0] run function bs.collection:chunk/fill_rec

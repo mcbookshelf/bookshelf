@@ -14,16 +14,16 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Create the pair [value1, value2]
-data modify storage bs:data collection.stack[0].pair set value []
-data modify storage bs:data collection.stack[0].pair append from storage bs:data collection.stack[0].value[0]
-data modify storage bs:data collection.stack[0].pair append from storage bs:data collection.stack[0].other[0]
+data modify storage bs:data collection.stack[-1].pair set value []
+data modify storage bs:data collection.stack[-1].pair append from storage bs:data collection.stack[-1].value[0]
+data modify storage bs:data collection.stack[-1].pair append from storage bs:data collection.stack[-1].other[0]
 
 # Add pair to result
-data modify storage bs:data collection.stack[0].result append from storage bs:data collection.stack[0].pair
+data modify storage bs:data collection.stack[-1].result append from storage bs:data collection.stack[-1].pair
 
 # Shift both collections
-data remove storage bs:data collection.stack[0].value[0]
-data remove storage bs:data collection.stack[0].other[0]
+data remove storage bs:data collection.stack[-1].value[0]
+data remove storage bs:data collection.stack[-1].other[0]
 
 # Recurse if both collections have elements
-execute if data storage bs:data collection.stack[0].value[0] if data storage bs:data collection.stack[0].other[0] run function bs.collection:zip/zip_rec
+execute if data storage bs:data collection.stack[-1].value[0] if data storage bs:data collection.stack[-1].other[0] run function bs.collection:zip/zip_rec

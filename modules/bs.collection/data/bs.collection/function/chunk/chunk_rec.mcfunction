@@ -14,14 +14,11 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Initialize new chunk
-data modify storage bs:data collection.stack[0].current set value []
-execute store result score #n bs.ctx run data get storage bs:data collection.stack[0].size
+scoreboard players operation #i bs.ctx = #n bs.ctx
+data modify storage bs:out collection.value append value []
 
 # Fill the chunk
 function bs.collection:chunk/fill_rec
 
-# Add the chunk to the result
-data modify storage bs:data collection.stack[0].result append from storage bs:data collection.stack[0].current
-
 # Continue if there are more elements
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:chunk/chunk_rec
+execute if data storage bs:ctx _[0] run function bs.collection:chunk/chunk_rec

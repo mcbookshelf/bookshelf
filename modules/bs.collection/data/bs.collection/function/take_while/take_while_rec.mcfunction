@@ -14,14 +14,14 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Prepare args for the lambda function
-data modify storage bs:lambda collection.value set from storage bs:data collection.stack[0].value[0]
-execute store result score #i bs.ctx run data get storage bs:data collection.stack[0].i
-execute store result storage bs:data collection.stack[0].i int 1 store result storage bs:lambda collection.index int 1 run scoreboard players add #i bs.ctx 1
+data modify storage bs:lambda collection.value set from storage bs:data collection.stack[-1].value[0]
+execute store result score #i bs.ctx run data get storage bs:data collection.stack[-1].i
+execute store result storage bs:data collection.stack[-1].i int 1 store result storage bs:lambda collection.index int 1 run scoreboard players add #i bs.ctx 1
 
 # Call the lambda function and check if it passes the predicate
-execute store success score #s bs.ctx run function bs.collection:take_while/call with storage bs:data collection.stack[0]
+execute store success score #s bs.ctx run function bs.collection:take_while/call with storage bs:data collection.stack[-1]
 
 # If the predicate succeeded, keep the element and continue
-execute if score #s bs.ctx matches 1 run data modify storage bs:data collection.stack[0].result append from storage bs:data collection.stack[0].value[0]
-execute if score #s bs.ctx matches 1 run data remove storage bs:data collection.stack[0].value[0]
-execute if score #s bs.ctx matches 1 if data storage bs:data collection.stack[0].value[0] run function bs.collection:take_while/take_while_rec
+execute if score #s bs.ctx matches 1 run data modify storage bs:data collection.stack[-1].result append from storage bs:data collection.stack[-1].value[0]
+execute if score #s bs.ctx matches 1 run data remove storage bs:data collection.stack[-1].value[0]
+execute if score #s bs.ctx matches 1 if data storage bs:data collection.stack[-1].value[0] run function bs.collection:take_while/take_while_rec

@@ -15,10 +15,8 @@
 
 data modify storage bs:in math.exp.x set value 3.0
 function #bs.math:exp
-execute store result score #r bs.ctx run data get storage bs:out math.exp 10000
-assert score #r bs.ctx matches 200854..200856
+assert result 200854..200856 run data get storage bs:out math.exp 10000
 
 data modify storage bs:in math.exp.x set value 7.25
 function #bs.math:exp
-execute store result score #r bs.ctx run data get storage bs:out math.exp 10000
-assert score #r bs.ctx matches 14081047..14081049
+assert result 14081047..14081049 run data get storage bs:out math.exp 10000

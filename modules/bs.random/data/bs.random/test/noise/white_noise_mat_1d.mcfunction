@@ -14,12 +14,10 @@
 # ------------------------------------------------------------------------------------------------------------
 
 function #bs.random:white_noise_mat_1d {length:0,with:{}}
-execute store result score #n bs.ctx if data storage bs:out random.white_noise_mat_1d[]
-assert score #n bs.ctx matches 0
+assert result 0 run data get storage bs:out random.white_noise_mat_1d
 
 function #bs.random:white_noise_mat_1d {length:5,with:{}}
-execute store result score #n bs.ctx if data storage bs:out random.white_noise_mat_1d[]
-assert score #n bs.ctx matches 5
+assert result 5 run data get storage bs:out random.white_noise_mat_1d
 
 execute store result score #0 bs.ctx run data get storage bs:out random.white_noise_mat_1d[0] 1000
 execute store result score #1 bs.ctx run data get storage bs:out random.white_noise_mat_1d[1] 1000

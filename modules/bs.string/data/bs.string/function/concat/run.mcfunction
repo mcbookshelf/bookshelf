@@ -15,7 +15,7 @@
 
 data modify storage bs:ctx _.1 set from storage bs:ctx _.list[-1]
 data remove storage bs:ctx _.list[-1]
-execute store result score #n bs.ctx if data storage bs:ctx _.list[]
+execute store result score #n bs.ctx run data get storage bs:ctx _.list
 
 # sizes below 64 are processed in a single step
 execute if score #n bs.ctx matches 65.. run function bs.string:concat/dispatch/chunked

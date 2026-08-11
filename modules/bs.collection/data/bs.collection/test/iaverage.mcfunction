@@ -13,38 +13,22 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# Average of 1,2,3,4,5 = 15/5 = 3 - check return channel (at scale 1000 = 3000)
+# Average of 1,2,3,4,5 = 15/5 = 3
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
-execute store result score #r bs.ctx run function #bs.collection:iaverage {scale: 1000}
-assert score #r bs.ctx matches 3000
-
-# Average of 1,2,3,4,5 - check storage output
-data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
-function #bs.collection:iaverage {scale: 1000}
+assert result 3000 run function #bs.collection:iaverage {scale: 1000}
 assert data storage bs:out {collection: {value: 3.0d}}
 
-# Average of 1,2 - check storage output
+# Average of 1,2
 data modify storage bs:out collection.value set value [1, 2]
-execute store result score #r bs.ctx run function #bs.collection:iaverage {scale: 1000}
-assert score #r bs.ctx matches 1500
+assert result 1500 run function #bs.collection:iaverage {scale: 1000}
 assert data storage bs:out {collection: {value: 1.5d}}
 
 # Average of single element
 data modify storage bs:out collection.value set value [42]
-execute store result score #r bs.ctx run function #bs.collection:iaverage {scale: 1000}
-assert score #r bs.ctx matches 42000
-
-# Average of single element - check storage output
-data modify storage bs:out collection.value set value [42]
-function #bs.collection:iaverage {scale: 1000}
+assert result 42000 run function #bs.collection:iaverage {scale: 1000}
 assert data storage bs:out {collection: {value: 42.0d}}
 
 # Average with negative numbers
 data modify storage bs:out collection.value set value [-10, 0, 10]
-execute store result score #r bs.ctx run function #bs.collection:iaverage {scale: 1000}
-assert score #r bs.ctx matches 0
-
-# Average with negative numbers - check storage output
-data modify storage bs:out collection.value set value [-10, 0, 10]
-function #bs.collection:iaverage {scale: 1000}
+assert result 0 run function #bs.collection:iaverage {scale: 1000}
 assert data storage bs:out {collection: {value: 0.0d}}

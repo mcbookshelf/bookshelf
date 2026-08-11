@@ -13,9 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-summon minecraft:pig ~ ~ ~ {Tags:["bs.packtest"]}
-scoreboard players set @e[type=minecraft:pig,tag=bs.packtest] bs.vel.x 250
-scoreboard players set @e[type=minecraft:pig,tag=bs.packtest] bs.vel.y 50
-scoreboard players set @e[type=minecraft:pig,tag=bs.packtest] bs.vel.z 0
-execute as @e[type=minecraft:pig,tag=bs.packtest] run function #bs.move:set_motion {scale:0.001}
-assert data entity @n[type=minecraft:pig,tag=bs.packtest] {Motion:[0.25d,0.05d,0.0d]}
+summon minecraft:pig ~ ~ ~ {Tags:["bs.ward"]}
+scoreboard players set @e[type=minecraft:pig,tag=bs.ward] bs.vel.x 250
+scoreboard players set @e[type=minecraft:pig,tag=bs.ward] bs.vel.y 50
+scoreboard players set @e[type=minecraft:pig,tag=bs.ward] bs.vel.z 0
+execute as @e[type=minecraft:pig,tag=bs.ward] run function #bs.move:set_motion {scale:0.001}
+assert data entity @n[type=minecraft:pig,tag=bs.ward] {Motion:[0.25d,0.05d,0.0d]}

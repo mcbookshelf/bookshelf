@@ -14,9 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 scoreboard players set $bitwise.not.n bs.in 123456
-function #bs.bitwise:not
-assert score $bitwise.not bs.out matches -123457
+assert result -123457 run function #bs.bitwise:not
 
 scoreboard players set $bitwise.not.n bs.in -197364158
-function #bs.bitwise:not
-assert score $bitwise.not bs.out matches 197364157
+assert result 197364157 run function #bs.bitwise:not

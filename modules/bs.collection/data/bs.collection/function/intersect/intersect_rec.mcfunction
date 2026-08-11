@@ -13,19 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless data storage bs:ctx _.value[0] run return 0
-
-# Check if current value is in other
-data modify storage bs:ctx _.temp_check set from storage bs:ctx _.other
-execute store success score #a bs.ctx run function bs.collection:distinct/contains_check
-
-# If in other, check if already in result (to ensure distinctness)
-execute if score #a bs.ctx matches 1 run data modify storage bs:ctx _.temp_check set from storage bs:out collection.value
-execute if score #a bs.ctx matches 1 store success score #r bs.ctx run function bs.collection:distinct/contains_check
-execute if score #r bs.ctx matches 1 run scoreboard players set #a bs.ctx 0
-
-# Append if needed
-execute if score #a bs.ctx matches 1 run data modify storage bs:out collection.value append from storage bs:ctx _.value[0]
+data modify storage bs:ctx _.other set from storage bs:in collection
+execute if function bs.collection:utils/contains run function bs.collection:intersect/try_add
 
 # Next iteration
 data remove storage bs:ctx _.value[0]

@@ -14,17 +14,17 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Prepare args for the lambda function
-data modify storage bs:lambda collection.accumulator set from storage bs:data collection.stack[0].accumulator
-data modify storage bs:lambda collection.value set from storage bs:data collection.stack[0].value[0]
-execute store result score #i bs.ctx run data get storage bs:data collection.stack[0].i
-execute store result storage bs:data collection.stack[0].i int 1 store result storage bs:lambda collection.index int 1 run scoreboard players add #i bs.ctx 1
+data modify storage bs:lambda collection.accumulator set from storage bs:data collection.stack[-1].accumulator
+data modify storage bs:lambda collection.value set from storage bs:data collection.stack[-1].value[0]
+execute store result score #i bs.ctx run data get storage bs:data collection.stack[-1].i
+execute store result storage bs:data collection.stack[-1].i int 1 store result storage bs:lambda collection.index int 1 run scoreboard players add #i bs.ctx 1
 
 # Call the lambda function to reduce the value
-function bs.collection:reduce/call with storage bs:data collection.stack[0]
-data modify storage bs:data collection.stack[0].accumulator set from storage bs:lambda collection.result
+function bs.collection:reduce/call with storage bs:data collection.stack[-1]
+data modify storage bs:data collection.stack[-1].accumulator set from storage bs:lambda collection.result
 
 # Shift the collection
-data remove storage bs:data collection.stack[0].value[0]
+data remove storage bs:data collection.stack[-1].value[0]
 
 # Recurse if there are more elements
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:reduce/reduce_rec
+execute if data storage bs:data collection.stack[-1].value[0] run function bs.collection:reduce/reduce_rec

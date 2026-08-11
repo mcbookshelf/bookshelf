@@ -18,7 +18,7 @@ def track[T](
     *,
     console: Console | None = None,
     show_pending: bool = True,
-) -> Generator[T, None, None]:
+) -> Generator[T]:
     """Yield items from a sequence while displaying progress output."""
     if GITHUB_WORKSPACE:
         yield from _track_github(sequence, console=console)
@@ -30,7 +30,7 @@ def _track_github[T](
     sequence: Iterable[tuple[str, T]],
     *,
     console: Console | None = None,
-) -> Generator[T, None, None]:
+) -> Generator[T]:
     console = console or get_console()
     for name, item in sequence:
         console.print(f"::group::{name}")
@@ -45,9 +45,9 @@ def _track_console[T](
     *,
     console: Console | None = None,
     show_pending: bool = True,
-) -> Generator[T, None, None]:
+) -> Generator[T]:
     with Progress(
-        SpinnerColumn(finished_text="[green]✔"),
+        SpinnerColumn(finished_text="[green]✓"),
         TextColumn("{task.description}"),
         TimeElapsedColumn(),
         console=console,

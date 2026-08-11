@@ -23,10 +23,10 @@ scoreboard players set @s bs.vel.z -1000
 
 function #bs.move:apply_vel {scale:0.001,with:{blocks:true,entities:false,on_collision:"function #bs.move:callback/stick"}}
 
-execute store result score #packtest.x bs.data run data get entity @s Pos[0] 1000
-execute store result score #packtest.z bs.data run data get entity @s Pos[2] 1000
+execute store result score #ward.x bs.data run data get entity @s Pos[0] 1000
+execute store result score #ward.z bs.data run data get entity @s Pos[2] 1000
 
 dummy @s leave
 
-assert score #packtest.x bs.data matches -303..-297
-assert score #packtest.z bs.data matches 1297..1303
+assert score #ward.x bs.data matches -303..-297
+assert score #ward.z bs.data matches 1297..1303

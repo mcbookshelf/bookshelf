@@ -1,10 +1,17 @@
 from __future__ import annotations
 
-import asyncio
+import sys
+from itertools import groupby
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from typing import TYPE_CHECKING
 
 import click
+from mcward import WardError
+from mcward.cli.datapacks import discover_datapacks, pack_resolver
+from mcward.cli.environments import get_environments, manager, start_environments
+from mcward.cli.reporters import github, live
+from rich import get_console
 
 from bookshelf.common.logging import summarize_logs
 from bookshelf.common.termui import track
@@ -17,7 +24,11 @@ from bookshelf.definitions import (
     MODULES_DIR,
     RELEASE_DIR,
 )
-from bookshelf.services import builder, packtest, publishers
+from bookshelf.services import builder, publishers
+
+if TYPE_CHECKING:
+    from mcward import Version
+    from mcward.cli.datapacks import DataPack
 
 
 @click.group()
@@ -75,9 +86,30 @@ def release() -> None:
 
 @modules.command()
 @click.argument("modules", default=MODULES, nargs=-1)
-@click.option("--versions", is_flag=True)
-def test(modules: tuple[str, ...], *, versions: bool) -> None:
+@click.option(
+    "--versions",
+    is_flag=True,
+    help="Test on all compatible versions instead of only the latest.",
+)
+@click.option(
+    "--reporter",
+    type=click.Choice(["live", "github"]),
+    default="live",
+    help="Result output: interactive live display, or GitHub Actions annotations.",
+)
+def test(
+    modules: tuple[str, ...],
+    *,
+    versions: bool,
+    reporter: str,
+) -> None:
     """Build and test modules."""
+    selector = "*:*"
+    if len(modules) == 1 and ":" in modules[0]:
+        module, _, path = modules[0].partition(":")
+        selector = f"{module}:{path or '*'}"
+        modules = (module,)
+
     with TemporaryDirectory() as directory:
         output = Path(directory)
 
@@ -92,18 +124,45 @@ def test(modules: tuple[str, ...], *, versions: bool) -> None:
                 zipped=True,
             ).build(entries)
 
-        with summarize_logs("🔬 TESTING MODULES…", exit_on_errors=True):
-            async def test_modules() -> None:
-                vers = list(reversed(MC_VERSIONS)) if versions else MC_VERSIONS[-1:]
-                coros = [packtest.run(output, v) for v in vers]
-                tasks = [asyncio.create_task(coro) for coro in coros]
+        console = get_console()
+        console.print("")
+        console.print("🔬 TESTING MODULES…", style="b bright_black", highlight=False)
+        console.print("┈" * 32, style="bright_black")
 
-                for task in track(
-                    (f"Test version [green]{v}[/green]", t)
-                    for v, t in zip(vers, tasks, strict=True)
-                ):
-                    logs = await task
-                    for event in logs:
-                        event.log()
+        datapacks = discover_datapacks([str(path) for path in output.iterdir()])
+        if not datapacks:
+            err = "No datapacks found in the build output"
+            raise click.ClickException(err)
 
-            asyncio.run(test_modules())
+        selected = resolve_versions(datapacks, all_versions=versions)
+        try:
+            envs = start_environments(get_environments(selected))
+            run = github.run if reporter == "github" else live.run
+            resolve = pack_resolver([MODULES_DIR / m for m in modules])
+            paths = [datapack.path for datapack in datapacks]
+            if run(paths, envs, resolve=resolve, selector=selector).failed:
+                sys.exit(1)
+        except WardError as e:
+            raise click.ClickException(str(e)) from e
+
+
+def resolve_versions(
+    datapacks: list[DataPack],
+    *,
+    all_versions: bool,
+) -> list[Version]:
+    """Resolve the newest compatible version of each major line, or the latest one."""
+    min_format = max(datapack.min_format for datapack in datapacks)
+    max_format = min(datapack.max_format for datapack in datapacks)
+
+    compatible = manager.list_compatible(min_format, max_format)
+    if not compatible:
+        err = (
+            "No compatible versions found for pack format range "
+            f"{min_format}..{max_format}"
+        )
+        raise click.ClickException(err)
+
+    lines = groupby(compatible, key=lambda version: (version.year, version.major))
+    selected = [next(group) for _, group in lines]
+    return selected if all_versions else selected[:1]

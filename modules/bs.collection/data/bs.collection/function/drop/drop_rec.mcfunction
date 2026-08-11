@@ -17,4 +17,4 @@ data remove storage bs:out collection.value[0]
 scoreboard players remove #n bs.ctx 1
 
 # Recurse if there are more elements
-execute if data storage bs:out collection.value[0] if score #n bs.ctx matches 1.. run function bs.collection:drop/drop_rec
+execute if score #n bs.ctx matches 1.. if data storage bs:out collection.value[0] run function bs.collection:drop/drop_rec

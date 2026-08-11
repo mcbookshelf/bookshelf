@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data remove storage bs:data collection.stack[0].value[0]
+data remove storage bs:data collection.stack[-1].value[0]
 scoreboard players remove #step bs.ctx 1
 
-execute if score #step bs.ctx matches 1.. if data storage bs:data collection.stack[0].value[0] run function bs.collection:sliding/shift_rec
+execute if score #step bs.ctx matches 1.. if data storage bs:data collection.stack[-1].value[0] run function bs.collection:sliding/shift_rec

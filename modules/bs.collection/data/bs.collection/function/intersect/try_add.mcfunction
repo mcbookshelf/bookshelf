@@ -13,12 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store success score #s bs.ctx run data modify storage bs:out collection.value[0] set from storage bs:ctx _.searched
-# If we failed to overwrite the value with the searched value, so both are equal and the collection contains the value
-execute if score #s bs.ctx matches 0 run return 0
-
-# Else, we continue the search
-data remove storage bs:out collection.value[0]
-execute if data storage bs:out collection.value[0] run return run function bs.collection:contains/contains_rec
-
-return fail
+data modify storage bs:ctx _.other set from storage bs:out collection.value
+execute unless function bs.collection:utils/contains run data modify storage bs:out collection.value append from storage bs:ctx _.value[0]

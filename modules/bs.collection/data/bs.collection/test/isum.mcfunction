@@ -15,8 +15,7 @@
 
 # Sum of 1,2,3,4,5 = 15 - check return channel
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
-execute store result score #r bs.ctx run function #bs.collection:isum
-assert score #r bs.ctx matches 15
+assert result 15 run function #bs.collection:isum
 
 # Sum of 1,2,3,4,5 - check storage output
 data modify storage bs:out collection.value set value [1, 2, 3, 4, 5]
@@ -25,8 +24,7 @@ assert data storage bs:out {collection: {value: 15}}
 
 # Sum of single element
 data modify storage bs:out collection.value set value [42]
-execute store result score #r bs.ctx run function #bs.collection:isum
-assert score #r bs.ctx matches 42
+assert result 42 run function #bs.collection:isum
 
 # Sum of single element - check storage output
 data modify storage bs:out collection.value set value [42]
@@ -35,8 +33,7 @@ assert data storage bs:out {collection: {value: 42}}
 
 # Sum with negative numbers
 data modify storage bs:out collection.value set value [-10, 5, 10]
-execute store result score #r bs.ctx run function #bs.collection:isum
-assert score #r bs.ctx matches 5
+assert result 5 run function #bs.collection:isum
 
 # Sum with negative numbers - check storage output
 data modify storage bs:out collection.value set value [-10, 5, 10]
@@ -45,8 +42,7 @@ assert data storage bs:out {collection: {value: 5}}
 
 # Sum of empty collection - check return channel
 data modify storage bs:out collection.value set value []
-execute store result score #r bs.ctx run function #bs.collection:isum
-assert score #r bs.ctx matches 0
+assert result 0 run function #bs.collection:isum
 
 # Sum of empty collection - check storage output
 data modify storage bs:out collection.value set value []
