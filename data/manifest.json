@@ -2598,6 +2598,54 @@
           }
         },
         {
+          "id": "#bs.hitbox:is_full_cube_collision",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2026/08/11",
+            "minecraft_version": "26.2"
+          },
+          "updated": {
+            "date": "2026/08/11",
+            "minecraft_version": "26.2"
+          }
+        },
+        {
+          "id": "#bs.hitbox:is_full_cube_shape",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2026/08/11",
+            "minecraft_version": "26.2"
+          },
+          "updated": {
+            "date": "2026/08/11",
+            "minecraft_version": "26.2"
+          }
+        },
+        {
+          "id": "#bs.hitbox:is_water",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2026/08/11",
+            "minecraft_version": "26.2"
+          },
+          "updated": {
+            "date": "2026/08/11",
+            "minecraft_version": "26.2"
+          }
+        },
+        {
           "id": "#bs.hitbox:is_waterloggable",
           "kind": "block_tag",
           "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
@@ -2611,6 +2659,22 @@
           "updated": {
             "date": "2025/11/11",
             "minecraft_version": "1.21.10"
+          }
+        },
+        {
+          "id": "#bs.hitbox:is_waterlogged",
+          "kind": "block_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html#blocks",
+          "authors": [
+            "Aksiome"
+          ],
+          "created": {
+            "date": "2026/08/11",
+            "minecraft_version": "26.2"
+          },
+          "updated": {
+            "date": "2026/08/11",
+            "minecraft_version": "26.2"
           }
         },
         {
