@@ -33,7 +33,7 @@ examples = "bookshelf.commands.examples:examples"
 dev = [
   "click>=8.4.2",
   "lectern>=0.35.0",
-  "platformdirs>=4.11.0",
+  "platformdirs>=4.11.2",
   "rich>=15.0.0",
   "watchfiles>=1.2.0",
 ]
