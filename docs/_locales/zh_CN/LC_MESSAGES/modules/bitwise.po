@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -28,15 +27,11 @@ msgid "**`#bs.bitwise:help`**"
 msgstr "**`#bs.bitwise:help`**"
 
 #: ../../../modules/bitwise.md:5
-msgid ""
-"A collection of various bitwise operations, providing versatile tools for"
-" manipulating binary data."
+msgid "A collection of various bitwise operations, providing versatile tools for manipulating binary data."
 msgstr "一个位运算操作的集合，为操作二进制数据提供了多种工具。"
 
 #: ../../../modules/bitwise.md:18
-msgid ""
-"\"Binary is a very simple numbering system, but it is incredibly powerful"
-" when used correctly.\""
+msgid "\"Binary is a very simple numbering system, but it is incredibly powerful when used correctly.\""
 msgstr "“二进制是一个十分简易的计数系统，但当正确使用时会变得非常强大。”"
 
 #: ../../../modules/bitwise.md:19
@@ -78,9 +73,7 @@ msgid "Outputs"
 msgstr "输出"
 
 #: ../../../modules/bitwise.md:41
-msgid ""
-"**Return | Score `$bitwise.bit_count bs.out`**: Number of positive bits "
-"needed to represent the number."
+msgid "**Return | Score `$bitwise.bit_count bs.out`**: Number of positive bits needed to represent the number."
 msgstr "**返回值 | 分数 `$bitwise.bit_count bs.out`**：输入数字的二进制形式中的1的个数。"
 
 #: ../../../modules/bitwise.md:44
@@ -89,7 +82,7 @@ msgstr "*示例：计算并显示12的二进制形式中的1的个数：*"
 
 #: ../../../modules/bitwise.md:55
 msgid "**Credits**: Aksiome"
-msgstr "**制作人员**：Aksiome"
+msgstr "**贡献者**：Aksiome"
 
 #: ../../../modules/bitwise.md:59
 msgid "Bit Length"
@@ -104,9 +97,7 @@ msgid "**Score `$bitwise.bit_length.n bs.in`**: Number to get the bit_length of.
 msgstr "**分数 `$bitwise.bit_length.n bs.in`**：要获取位长度的数字。"
 
 #: ../../../modules/bitwise.md:69
-msgid ""
-"**Return | Score `$bitwise.bit_length bs.out`**: Number of bits needed to"
-" represent the number."
+msgid "**Return | Score `$bitwise.bit_length bs.out`**: Number of bits needed to represent the number."
 msgstr "**返回值 | 分数 `$bitwise.bit_length bs.out`**：输入数字所占的位长度。"
 
 #: ../../../modules/bitwise.md:72
@@ -116,7 +107,7 @@ msgstr "*示例：计算并显示表示12所占的位长度：*"
 #: ../../../modules/bitwise.md:83 ../../../modules/bitwise.md:111
 #: ../../../modules/bitwise.md:229
 msgid "**Credits**: Aksiome, theogiraudet"
-msgstr "**制作人员**：Aksiome、theogiraudet"
+msgstr "**贡献者**：Aksiome、theogiraudet"
 
 #: ../../../modules/bitwise.md:87
 msgid "Complement to 2"
@@ -127,15 +118,11 @@ msgid "Compute the two's complement of a number."
 msgstr "计算一个数字的二的补码。"
 
 #: ../../../modules/bitwise.md:94
-msgid ""
-"**Score `$bitwise.two_complement.n bs.in`**: Number to compute the two's "
-"complement of."
+msgid "**Score `$bitwise.two_complement.n bs.in`**: Number to compute the two's complement of."
 msgstr "**分数 `$bitwise.two_complement.n bs.in`**：要计算二的补码的数字。"
 
 #: ../../../modules/bitwise.md:97
-msgid ""
-"**Return | Score `$bitwise.two_complement bs.out`**: The two's complement"
-" of the number."
+msgid "**Return | Score `$bitwise.two_complement bs.out`**: The two's complement of the number."
 msgstr "**返回值 | 分数 `$bitwise.two_complement bs.out`**：输入数字的二的补码。"
 
 #: ../../../modules/bitwise.md:100
@@ -163,9 +150,7 @@ msgid "**Score `$bitwise.and.b bs.in`**: Second operand $=b$."
 msgstr "**分数 `$bitwise.and.b bs.in`**：第二个数 $=b$。"
 
 #: ../../../modules/bitwise.md:131
-msgid ""
-"**Return | Score `$bitwise.and bs.out`**: Result of the operation $=a "
-"\\land b$."
+msgid "**Return | Score `$bitwise.and bs.out`**: Result of the operation $=a \\land b$."
 msgstr "**返回值 | 分数 `$bitwise.and bs.out`**：$=a \\land b$ 的运算结果。"
 
 #: ../../../modules/bitwise.md:134
@@ -189,9 +174,7 @@ msgid "**Score `$bitwise.or.b bs.in`**: Second operand $=b$."
 msgstr "**分数 `$bitwise.or.b bs.in`**：第二个数 $=b$。"
 
 #: ../../../modules/bitwise.md:159
-msgid ""
-"**Return | Score `$bitwise.or bs.out`**: Result of the operation $=a "
-"\\lor b$."
+msgid "**Return | Score `$bitwise.or bs.out`**: Result of the operation $=a \\lor b$."
 msgstr "**返回值 | 分数 `$bitwise.or bs.out`**：$=a \\lor b$ 的运算结果。"
 
 #: ../../../modules/bitwise.md:162
@@ -215,9 +198,7 @@ msgid "**Score `$bitwise.xor.b bs.in`**: Second operand $=b$."
 msgstr "**分数 `$bitwise.xor.b bs.in`**：第二个数 $=b$。"
 
 #: ../../../modules/bitwise.md:187
-msgid ""
-"**Return | Score `$bitwise.xor bs.out`**: Result of the operation $=a "
-"\\oplus b$."
+msgid "**Return | Score `$bitwise.xor bs.out`**: Result of the operation $=a \\oplus b$."
 msgstr "**返回值 | 分数 `$bitwise.xor bs.out`**：$=a \\oplus b$ 的运算结果。"
 
 #: ../../../modules/bitwise.md:190

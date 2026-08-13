@@ -25,13 +25,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Setup Git User
         uses: fregante/setup-git-user@v2
       - name: Install uv
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@v9.0.0
       - name: Cache Beet Content
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .beet_cache
           key: ${{ runner.os }}-beet-cache

@@ -1,0 +1,1796 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
+"PO-Revision-Date: 2026-07-26 02:00+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_Hans_CN\n"
+"Language-Team: zh_Hans_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/collection.md:1 3d368f9711b54d10aed0f28a602af0b8
+msgid "🗂️ Collection"
+msgstr "🗂️ 集合（Collection）"
+
+#: ../../modules/collection.md:3 8822877ac202472d802bc0e0eaf17123
+msgid "**`#bs.collection:help`**"
+msgstr "**`#bs.collection:help`**"
+
+#: ../../modules/collection.md:5 4c346319176f45f8a185e849369837ca
+msgid "Functional programming operations for working with collections in Minecraft. This module is NOT a stream module, features are not lazy."
+msgstr "用于在 Minecraft 中处理集合的函数式操作。该模块不是流模块，功能不会惰性执行。"
+
+#: ../../modules/collection.md:19 c65ac79594f146cc968c91f94d66bd8d
+msgid "\"It is better to have 100 functions operate on one data structure than 10 functions on 10 data structures.\""
+msgstr "“一种数据结构配上一百个函数，胜过十种数据结构各配十个函数。”"
+
+#: ../../modules/collection.md:20 8f929b80b4c7426c8f38feb2ca5eff20
+msgid "Alan Perlis"
+msgstr "艾伦·佩利"
+
+#: ../../modules/collection.md:26 b3035b652f4d48e4b16802aad5a0fcc4
+msgid "🔧 Functions"
+msgstr "🔧 函数"
+
+#: ../../modules/collection.md:28 cc88b4dfddf441e29b33bcf319387c00
+msgid "You can find below all functions available in this module."
+msgstr "下方列出了该模块提供的全部函数。"
+
+#: ../../modules/collection.md:30 39f831bc3f2745b59c27bc62b462e021
+msgid "Input and Output"
+msgstr "输入与输出"
+
+#: ../../modules/collection.md:33 4ccf25297867462a9c90ef013896a192
+msgid "Unlike most Bookshelf modules, collection features typically read their input from `bs:out` instead of `bs:in`. This design facilitates operation chaining, as the output of one function immediately becomes the input for the next."
+msgstr "与大多数 Bookshelf 模块不同，集合功能通常从 `bs:out` 而非 `bs:in` 读取输入。这样设计便于链式操作：一个函数的输出会立刻成为下一个函数的输入。"
+
+#: ../../modules/collection.md ../../modules/collection.md:39
+#: b758c84c83e94508a9638d73a1e7e498 ef3f84c19fce49d58e749b4509ec1987
+msgid "Drop"
+msgstr "移除开头元素"
+
+#: ../../modules/collection.md:41 9fbcb8f7303d44e5a2283ea2bcd6d012
+msgid "Operations that remove elements from the start of a collection."
+msgstr "从集合开头移除元素的操作。"
+
+#: ../../modules/collection.md:49 55ee1c1b2a3748358a7f277e651a2986
+msgid "Drop the first N elements from a collection."
+msgstr "移除集合中的前 N 个元素。"
+
+#: ../../modules/collection.md:51 ../../modules/collection.md:81
+#: ../../modules/collection.md:130 ../../modules/collection.md:154
+#: ../../modules/collection.md:203 ../../modules/collection.md:251
+#: ../../modules/collection.md:299 ../../modules/collection.md:341
+#: ../../modules/collection.md:392 ../../modules/collection.md:416
+#: ../../modules/collection.md:440 ../../modules/collection.md:473
+#: ../../modules/collection.md:516 ../../modules/collection.md:560
+#: ../../modules/collection.md:596 ../../modules/collection.md:642
+#: ../../modules/collection.md:674 ../../modules/collection.md:717
+#: ../../modules/collection.md:764 ../../modules/collection.md:804
+#: ../../modules/collection.md:852 ../../modules/collection.md:885
+#: ../../modules/collection.md:911 ../../modules/collection.md:927
+#: ../../modules/collection.md:943 ../../modules/collection.md:968
+#: ../../modules/collection.md:1018 ../../modules/collection.md:1066
+#: ../../modules/collection.md:1098 ../../modules/collection.md:1130
+#: ../../modules/collection.md:1152 ../../modules/collection.md:1168
+#: ../../modules/collection.md:1209 ../../modules/collection.md:1251
+#: ../../modules/collection.md:1294 ../../modules/collection.md:1327
+#: ../../modules/collection.md:1372 ../../modules/collection.md:1405
+#: ../../modules/collection.md:1438 ../../modules/collection.md:1470
+#: ../../modules/collection.md:1511 ../../modules/collection.md:1538
+#: ../../modules/collection.md:1565 ../../modules/collection.md:1592
+#: ../../modules/collection.md:1628 ../../modules/collection.md:1659
+#: ../../modules/collection.md:1690 ../../modules/collection.md:1730
+#: ../../modules/collection.md:1760 ../../modules/collection.md:1809
+#: ../../modules/collection.md:1855 06296a1895004d0eb53434866fa55f9f
+#: 075bc1932b5d4fee807b352626bf0b72 0db8b6069c9949ed9ad17c32510cd02e
+#: 14e18a332f924d4e97a0dd1d0c6c32cb 1de210cb33e141508731e1ad4c015210
+#: 1eebcc072e90472b81bad272165f41d1 1ef840c50b3d478f9715d22b6c22016f
+#: 269bd62f7b6d435f94319b9b8d6debfc 2e96236609294c08b0a798e35ec76daa
+#: 30a9907b9b6d4eab97ed801ac0f796dd 34463f80672349d5b94a2a16964124c2
+#: 34d22591d51a4005ab6af7cb8189cf03 35971ae96c694e53bc98180d5b5550c3
+#: 39636fb94670469781ed1851494f709c 3b6c597ffd0244ca8e2a9e282194020b
+#: 404c61af484d4fa0884560bc572cad4a 49ea8886752a4e71a2de2eb77d70979e
+#: 533768c61cb14eb88b5639fb466938b0 5e0cd7aff91e4d278124818c36ec656b
+#: 62f04f639f8a40b0ac5ddeb72e974854 6971becf7a364c5d8078e47604fc3fc7
+#: 722b1533fb314b9b88c562f7996b7ae1 742d8a6ef1af4a8fbd31b6ad89d42d15
+#: 8342e278a0204b85945d5de6572e3758 888ef541e26d4c198cfce0c65f33e4f0
+#: 89376bcee09a49fe927573465f71760f 8a43400779de474aaeed44352383bd27
+#: 9063eb22d7f04a61b8353b13a9761397 923ebc1b836f40d1b260105cec9d4b1d
+#: 9480991f02d4447ba55e4ea4707702fd 95b53e068c8c46278dc69d630d698c3b
+#: 9c6b4d1ce6794dfabc26a79e9f4c8275 a2fe41327ce14fd48256500a37d11939
+#: b65a7f5786c2486fbedd87cefa7d3cde b8ee7ed1546b45848aa2debf658fdc6e
+#: c1546259f74f4bbe8808dc3b045beaea c3b735c064af4f26bad2c495af85e552
+#: cd8813d343d84dcbba54e08690d0de0f cf48804a31c245d3b13b91fe309dc2d6
+#: d1a9940b5e5a4301adc173e9b294f1b5 d57026993c4d4250a51ba503081cad9b
+#: d9b1a70e8691448785c3111944203f8d dc6aea41dad548e9b2db20034c0d373f
+#: df59f3faa54b44f68898d4a4a857dab4 e3855885bd744e61abc29c45985648b7
+#: e672d13f5b754f028ac9056b5318caaa e82ffb2f4ab74894ac08378f130e1326
+#: f0fc482f013246c592b29fe217a1da2f faa884b51836421b87c42bfea41786e6
+#: fc04e8d6999249c39bf0de7125e4396e fe1c8485594649c7a655aebe16816ff9
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../modules/collection.md:52 ../../modules/collection.md:82
+#: 56887230a22d49afbc7c9f946f1853ef fe414def36fc4160b9e298bc89cf324e
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to drop from"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 要从中删除元素的集合。"
+
+#: ../../modules/collection.md:54 ../../modules/collection.md:84
+#: ../../modules/collection.md:157 ../../modules/collection.md:206
+#: ../../modules/collection.md:254 ../../modules/collection.md:302
+#: ../../modules/collection.md:344 ../../modules/collection.md:476
+#: ../../modules/collection.md:519 ../../modules/collection.md:561
+#: ../../modules/collection.md:597 ../../modules/collection.md:643
+#: ../../modules/collection.md:675 ../../modules/collection.md:720
+#: ../../modules/collection.md:767 ../../modules/collection.md:807
+#: ../../modules/collection.md:855 ../../modules/collection.md:971
+#: ../../modules/collection.md:1021 ../../modules/collection.md:1069
+#: ../../modules/collection.md:1101 ../../modules/collection.md:1133
+#: ../../modules/collection.md:1171 ../../modules/collection.md:1212
+#: ../../modules/collection.md:1254 ../../modules/collection.md:1330
+#: ../../modules/collection.md:1375 ../../modules/collection.md:1408
+#: ../../modules/collection.md:1441 ../../modules/collection.md:1473
+#: ../../modules/collection.md:1631 ../../modules/collection.md:1662
+#: ../../modules/collection.md:1693 ../../modules/collection.md:1733
+#: ../../modules/collection.md:1763 ../../modules/collection.md:1812
+#: 016cea196af74e519fc3209f0d3f8952 04f8f697512d4b918dd7cefc12adfe9f
+#: 0d88d06efe9a4f09b2fcac4239e2205d 106f19e0090d4fb5a211eb253592213f
+#: 111c0373e3d84fc9beb1df6ba1f73c6c 182a283ab4c24201941fa8778e93fd3d
+#: 19937d7d7e664023b70a84a8a88bc57d 1e659d1e5fb9416dacc01586b7aadc95
+#: 1e6617b941894e418c45efa28d41cfe6 20d795a6835c4746b66cf258bc8c7d00
+#: 2658d16b33364da3b5c0d8636608e6e8 2863dd7005134acea5e2d86b2286fb68
+#: 2bb8862c86df48b2bede11d17cc0a662 37022afa078742778a8b8ff11aa60e59
+#: 45ec605e3ae143a9ade17b209a776ace 49b28c1a08a243c182c714e749db0c47
+#: 4d0fad55a862430eab8e72c3a2ad5677 5c55e71b448b43cda11223b304810a75
+#: 605ca596de244fda9c37aa307f9b415b 6202a37e832b4b14a4b5faa88396fa21
+#: 70940513f9414617909aa8cb14aaa172 9c32df07be394897a546f66a8669316c
+#: 9df51b9d0bc74993bee631da5ca65792 a026757c1a824d5d99f98b72d78cba07
+#: a1ebebd1b9ba431f940a8e9d68be5ab2 a3d21e5b21494b4fab8190ab51200b22
+#: a4355397f35b4794b0c855c14cba675e a964ce4f57b5410fa544da992fdcc2fb
+#: b16475d571714ff7a87eb9c47639aed4 b930987821774215b98ab5315c7b82bc
+#: ba23222415424fd883861fa35e109611 c89001cd26d94fd584999e0285103bbd
+#: d9e5a383dfb8423aac0c147aaf4a6fda e0ba38f5a51f46ea8d2ace6c0364207a
+#: e0f458ca241940ca802efd05e8536b44 e847515879d64b43bfb518a92e015da1
+msgid "**Function macro**:"
+msgstr "**函数宏**："
+
+#: ../../modules/collection.md:56 ../../modules/collection.md:86
+#: ../../modules/collection.md:159 ../../modules/collection.md:208
+#: ../../modules/collection.md:256 ../../modules/collection.md:304
+#: ../../modules/collection.md:346 ../../modules/collection.md:478
+#: ../../modules/collection.md:521 ../../modules/collection.md:563
+#: ../../modules/collection.md:599 ../../modules/collection.md:645
+#: ../../modules/collection.md:677 ../../modules/collection.md:722
+#: ../../modules/collection.md:769 ../../modules/collection.md:809
+#: ../../modules/collection.md:857 ../../modules/collection.md:973
+#: ../../modules/collection.md:1023 ../../modules/collection.md:1071
+#: ../../modules/collection.md:1103 ../../modules/collection.md:1135
+#: ../../modules/collection.md:1173 ../../modules/collection.md:1214
+#: ../../modules/collection.md:1256 ../../modules/collection.md:1332
+#: ../../modules/collection.md:1377 ../../modules/collection.md:1410
+#: ../../modules/collection.md:1443 ../../modules/collection.md:1475
+#: ../../modules/collection.md:1633 ../../modules/collection.md:1664
+#: ../../modules/collection.md:1695 ../../modules/collection.md:1735
+#: ../../modules/collection.md:1765 ../../modules/collection.md:1814
+#: 051ea1760d94433788cedb7f123cd969 0751e1bc7b4249729443694f749af900
+#: 0dbd808088834ca696154062802c7672 11b031648a3d4959bfa90e865af6191e
+#: 140e05e476164cccb9d027532f2ae5cb 1cfff96a994b4c42b7e8e5988e1c682d
+#: 22eab18edfda4518ae316be4690ffe85 3502c7c9ae5e4ccfb988ca30e81b4f68
+#: 525a39109be34853923fcad41d6cc131 5ac975d2266f4eee9d00d7b7a00eb5fa
+#: 5bd04092469e4479aafcf90fbdc1a9d0 6f9475dd616a46b8a2bf27566170229b
+#: 7734ff55211b4d8f9f486737f40cf941 7e9c3510d63d4345b1dcca315d9d5684
+#: 81cd985d4cf1410f8dd0009a5e30ded0 8201622159944cf08ec46b72de2e94f3
+#: 911f933a8bc141c7b13491847aeda13e 91ec13f7cb1344829d7cf170d6148322
+#: 98ebe31726574121973735da296017b2 9988c24a6dec4b26b9584dafa6fa4444
+#: a478563100be4a7593e3d54d0fe7f4b0 ab7e86fb56454545a2b19c1c2adda0c0
+#: ac91d6adb1d844dc844dd8ba2745e2c9 b8791a3250e94f32be2fe5910a63ebb3
+#: bb706a0a7ea34f0e8e75f0fa0ccefb64 bef3cb4331924d9eb17cd9c32eaae588
+#: c2bbe00dcb33472bb994baae70b1508d c38a39b160ec428d9da060825892f776
+#: c5a17e2cb8724a4c9b663cf1253117ae c9985df259214c04852c6f187c97c6cc
+#: ce762c44130e4872a7797b18812db00b cf2f5819ee574c9497b0732748136b26
+#: db2cc538fa0340babf96e84dad2358d7 db80e75c9d2d42049c2c5499a6d77753
+#: ebd8c9cb438945d8997f14459f56e378 ff9dfa2821cc4f90b4b8296665c2449a
+#, python-brace-format
+msgid "{nbt}`compound` arguments"
+msgstr "{nbt}`compound` 参数"
+
+#: ../../modules/collection.md:57 eb3014b6c4404b2d8b62678bed6f2a90
+#, python-brace-format
+msgid "{nbt}`int` **number**: the number of elements to drop"
+msgstr "{nbt}`int` **number**：要移除的元素数量。"
+
+#: ../../modules/collection.md:60 ../../modules/collection.md:90
+#: ../../modules/collection.md:133 ../../modules/collection.md:163
+#: ../../modules/collection.md:212 ../../modules/collection.md:260
+#: ../../modules/collection.md:308 ../../modules/collection.md:350
+#: ../../modules/collection.md:395 ../../modules/collection.md:419
+#: ../../modules/collection.md:443 ../../modules/collection.md:483
+#: ../../modules/collection.md:526 ../../modules/collection.md:568
+#: ../../modules/collection.md:604 ../../modules/collection.md:651
+#: ../../modules/collection.md:682 ../../modules/collection.md:726
+#: ../../modules/collection.md:773 ../../modules/collection.md:813
+#: ../../modules/collection.md:861 ../../modules/collection.md:888
+#: ../../modules/collection.md:914 ../../modules/collection.md:930
+#: ../../modules/collection.md:946 ../../modules/collection.md:977
+#: ../../modules/collection.md:1027 ../../modules/collection.md:1075
+#: ../../modules/collection.md:1107 ../../modules/collection.md:1139
+#: ../../modules/collection.md:1155 ../../modules/collection.md:1177
+#: ../../modules/collection.md:1218 ../../modules/collection.md:1260
+#: ../../modules/collection.md:1297 ../../modules/collection.md:1336
+#: ../../modules/collection.md:1382 ../../modules/collection.md:1415
+#: ../../modules/collection.md:1447 ../../modules/collection.md:1479
+#: ../../modules/collection.md:1516 ../../modules/collection.md:1543
+#: ../../modules/collection.md:1570 ../../modules/collection.md:1597
+#: ../../modules/collection.md:1637 ../../modules/collection.md:1669
+#: ../../modules/collection.md:1700 ../../modules/collection.md:1739
+#: ../../modules/collection.md:1769 ../../modules/collection.md:1818
+#: ../../modules/collection.md:1860 01932f5fe84143c0a6f7d857d15c17a8
+#: 01ef4b38262b48b08804652b4f9ea7e9 033cdcb0d1f74129b817d2d67d15854a
+#: 04f41b79eaca4bec9d9eae8a06c0776b 0ce41a2abcbb4635866cc14f6d9535e4
+#: 10e283a36b7746cbb85ede2161d3f098 1b2394368ce14941b427cdeda2c01eb8
+#: 1b3de4a4e7e7496a937139e0dd99b67f 24ed1b47c97c4e7fa9a9e18e52078413
+#: 30676f3d66684a3899e21a4d15897808 33e53274b2fb498caf69edd8a14b2655
+#: 36f33f48640d485ca9869602e3c2985d 38cc4d9c62dc4238ad2c1e9eefb024cb
+#: 3965c5a8f3024acba572e56116bd0514 3a066a8086c14c77bbd24dc944d0fcd8
+#: 3a50527fee2a4d5cb60c5bed7daff8be 43612701ae7e4b58b84ad2ac9c235866
+#: 4e290f00607344989b9cb50464a81f7b 4e8be7dc2676416999c227c65b5fc092
+#: 5cfc71a644e441e093b7fe56237c21bf 65deff32da4d4735a54a41b72fe39b72
+#: 6c3714ab2c7f4038b97c30b00008e7f1 71408c9211664eb8a6b4254733a8af3e
+#: 7188f5c02ead4f42b0ee8eb2a216cbd5 724aa5925d6d4ab2b45688ec85fd5c60
+#: 73a44d2ff2b045d6af241ccc312d4be6 788dc829dfe643dcbe5ba933669e2c32
+#: 7da5eb909d0e41d6a90ae61ef4ce01ca 87ee48c3b1974ee3a3838f7bbe9b5f3b
+#: 891536e4eb2340f9967b597784b82168 89b0d31c5b6a427aa1884c466568310b
+#: 89e0e36e1dc54dcab4d64f6082fb3011 8f709587f11543229b0b5f4e581c1e71
+#: 947c9ac05afb4b5584453b87cdeabce4 94f1c2918c1848b7b155d49afce8f92b
+#: 9ed03f7ebe0a45fb9c06ad54f6a621b2 a56deef5e9964339905b516853ad0a60
+#: abcfe11fb6ee482398a20b6e4ed8a1eb b3b34a37a5ee4e09917b79ddac0bfe43
+#: c11d9cd2aae94889bc9a8b896554e2f3 c7b88a2e8ece491c98e1e49dbc698852
+#: cb12eabe251848ba8c6904adc625bafe d4fb0a47e57a49d58b06e522d95fd2ac
+#: d74b82930f134ae0aa645d79b0480621 d82e47f247e244519f147718879a2571
+#: d93a1b6e73fa42fbbeebef1aa2c19efb dc6426eeb02b46e2ac5aaa5e4fa45dbb
+#: ecb76907c8604d708b1a0d8e8153a446 f6487198623d4edab30df87fa9ee2d9b
+#: fc64378071d14945a240f2bdad388d99 ffa17297ec6243419cc316fc10be2015
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../modules/collection.md:61 3f0e509af06048e28a1fd67399160f2d
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection with the first N elements removed"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 删除了前 N 个元素后的集合。"
+
+#: ../../modules/collection.md:64 8bfefae28b484526b636b290bbf248a4
+msgid "*Example: drop first 2 elements*"
+msgstr "*示例：移除前 2 个元素*。"
+
+#: ../../modules/collection.md:72 ../../modules/collection.md:112
+#: ../../modules/collection.md:145 ../../modules/collection.md:185
+#: ../../modules/collection.md:242 ../../modules/collection.md:290
+#: ../../modules/collection.md:332 ../../modules/collection.md:374
+#: ../../modules/collection.md:407 ../../modules/collection.md:431
+#: ../../modules/collection.md:455 ../../modules/collection.md:507
+#: ../../modules/collection.md:542 ../../modules/collection.md:587
+#: ../../modules/collection.md:633 ../../modules/collection.md:665
+#: ../../modules/collection.md:699 ../../modules/collection.md:746
+#: ../../modules/collection.md:795 ../../modules/collection.md:834
+#: ../../modules/collection.md:876 ../../modules/collection.md:902
+#: ../../modules/collection.md:918 ../../modules/collection.md:934
+#: ../../modules/collection.md:950 ../../modules/collection.md:1000
+#: ../../modules/collection.md:1048 ../../modules/collection.md:1089
+#: ../../modules/collection.md:1121 ../../modules/collection.md:1143
+#: ../../modules/collection.md:1159 ../../modules/collection.md:1191
+#: ../../modules/collection.md:1242 ../../modules/collection.md:1276
+#: ../../modules/collection.md:1309 ../../modules/collection.md:1348
+#: ../../modules/collection.md:1396 ../../modules/collection.md:1429
+#: ../../modules/collection.md:1461 ../../modules/collection.md:1493
+#: ../../modules/collection.md:1529 ../../modules/collection.md:1556
+#: ../../modules/collection.md:1583 ../../modules/collection.md:1610
+#: ../../modules/collection.md:1649 ../../modules/collection.md:1681
+#: ../../modules/collection.md:1712 ../../modules/collection.md:1751
+#: ../../modules/collection.md:1791 ../../modules/collection.md:1837
+#: ../../modules/collection.md:1873 06515aea336a4eb4a68744bf7edc33b8
+#: 075417a3a7894ba8b23e67ebefc002e3 0861903f58574fc2a53fc2b10e308138
+#: 0d1598d7373f44bfa23ba71baafaa0db 0decdd4d7d0a4af59b1ba3b13ff7b728
+#: 123a08c892a14415a93df0133be9832b 17b8ad2518844bf6970dbff81d1dc564
+#: 1eae5a632b214e15b7ded53b8358f452 2700dad5576c4d7caa46dd34e49e1e7d
+#: 2d2a10ef0652466caedd8e1d97cc2ad7 32401bf979444022a99f278c6b557558
+#: 334eb704f0904ac8b51660a5859a2b24 36e41b17f6bb43f4bf7b9e374f2384af
+#: 37ab25e2dc8c48ae853be6c470a3b046 3914a8dd14cc4b038f123e3533830f2a
+#: 3b9a3a2eec47427ca7cd9c67694a83a5 4441f2d273ee4dbe8a1abb00c8aaa4d3
+#: 580e5eeb28c949ae95531d26cc7848bd 59cfef7f706449478f356544d8ae50f4
+#: 5e19f08342b84d08ab581bcdb12e4be9 608ca53e9aa5458c8a205e650212dcf8
+#: 632ba1cef05646c7b2d8a0873d5cdffb 66d3c517bd1f4ef7871c9a93d9b890d8
+#: 6f678da3ed1a4db4a2e452c373fd0ee6 708d4fcddb6d475a8a39d6287941f9ff
+#: 70ed435a198e4baeb24dcb59eb7d8405 74a2f72300bc47b29111853e87c2eeb4
+#: 75e1f6cf476f4d94b44a3fca68375c1a 7b5744212c8a4f2d86b18181b3e21eb9
+#: 85a070c2d2644128acec0fdf76bb7e00 8a0e9794ce384b1b9093c0bf4a9b6cbb
+#: 8e0817b78d9b4fc5bc73353a1caad548 8e93de81c8644003a3c7012b0272d856
+#: 920ab08324ec444aae2df64f604764b6 9d36b05ed57749bc9828bdbd9f1a9ae7
+#: a2e507a534fe47c8bb6829d31d1fd35e af83884803f8431d89843255e36e23bc
+#: b0f4db3974a24d0993cf425bb6280458 b1c4e4599e9d4493aaa861504aa36e24
+#: b64e32d410504684a783dac0ee51eaab bd44610c6bc9453f9f41279fc5b30e86
+#: c7346969f7c847e693e9cb69618d971e cd503988d239423a96f9ea08d37f72b9
+#: d385279567b14897bff8848c4269e29a d5bba372c2ff4475b2111d87d9312fed
+#: dcfc785574444e6396bc501ed83b8340 e17c02433ade45c7b5d6b81b6900182d
+#: e3623a7aa7e54b7d97f9dc52e92f2ac6 e3c59e1b4d154ba8bbbb39904c5b03bf
+#: e96ea43077c6465385b1e15da8e3eeff ffdac52a85314fd7bc281cf4ce7503d1
+msgid "**Credits**: theogiraudet"
+msgstr "**贡献者**：theogiraudet"
+
+#: ../../modules/collection.md 6a2d5c4589884d69be8c4d496e5a7d3f
+msgid "Drop While"
+msgstr "移除开头符合条件的元素"
+
+#: ../../modules/collection.md:79 9bca4fd422044d5197e8cbeb3c7a955b
+msgid "Drop elements from the beginning of a collection as long as a predicate is true."
+msgstr "只要谓词条件成立，就从集合开头依次移除元素，直到遇到不满足条件的元素时停止。"
+
+#: ../../modules/collection.md:87 ../../modules/collection.md:209
+#: ../../modules/collection.md:257 ../../modules/collection.md:305
+#: ../../modules/collection.md:347 ../../modules/collection.md:1072
+#: ../../modules/collection.md:1104 ../../modules/collection.md:1174
+#: ../../modules/collection.md:1766 14cdbf310d9742dd91d3483488f00e24
+#: 3d42cfe5a98b457f9013e20e0b567708 56c0b27dc702436d92ac5ec748dd109f
+#: 5a57c4b3d37f4e889f6c7b3791650210 85edcdf0b96e4de48caf1631255d71d5
+#: 98e355330daa463bbba6d4c56c457399 9a236ce143a84eea9894fadfefd873a3
+#: bb91678b509247cbb30e5edc9c838287 d16e50d89b0746d69af4c0b6ef703d04
+#, python-brace-format
+msgid "{nbt}`string` **run**: predicate function"
+msgstr "{nbt}`string` **run**：谓词函数。"
+
+#: ../../modules/collection.md:91 dcd39b9436bd49b19e016baee42a89df
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the remaining elements"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 剩余的元素。"
+
+#: ../../modules/collection.md:93 ../../modules/collection.md:166
+#: ../../modules/collection.md:222 ../../modules/collection.md:270
+#: ../../modules/collection.md:313 ../../modules/collection.md:355
+#: ../../modules/collection.md:488 ../../modules/collection.md:531
+#: ../../modules/collection.md:571 ../../modules/collection.md:607
+#: ../../modules/collection.md:729 ../../modules/collection.md:776
+#: ../../modules/collection.md:816 ../../modules/collection.md:980
+#: ../../modules/collection.md:1030 ../../modules/collection.md:1078
+#: ../../modules/collection.md:1110 ../../modules/collection.md:1180
+#: ../../modules/collection.md:1223 ../../modules/collection.md:1265
+#: ../../modules/collection.md:1385 ../../modules/collection.md:1418
+#: ../../modules/collection.md:1450 ../../modules/collection.md:1482
+#: ../../modules/collection.md:1772 ../../modules/collection.md:1821
+#: 022afbeb0531411c8e4e23c0f1e2df61 082af421680f4357ab67541e3eaf2113
+#: 1a67b640a3ab41619f959f0ebc5fabcb 1c4f49336b964a7984c224fdeb0a6211
+#: 23f9ff55ec9945ecb37766b47490b845 2b38d2a3ec5b49c69f09fc682195953d
+#: 3680dd3d248d4eb0b6001c31eec74dfe 3c042f08d5d24057bbefc75302f5e08c
+#: 41b55ff6cde3404baca8b4ae63454882 431ee7209b194f1e911ac9a6c964ddc0
+#: 5e0ebd5efdc74c69a305459f4f6d8aa8 64a92c6ac2774761bd802493335c9f7d
+#: 64dd512dcbfa40c3bb5b81b76443fd7e 6bd219e295b84a818b0503a40112bdfd
+#: 71d43fd7009943ad9e07e4d8bc9313a8 817e4129455047a1b130c230bd2fb060
+#: 84aa84d7e5f14e0f8ea750ce9323bfda 95fe2aef7a6e49fcb8ff54ebeea96918
+#: 9c00d45f1666454cbc9aad567a13e48b b8094fcea7284c19adab9102e3e29c95
+#: bb5b089e16804062b00fbc4aa0e0754c ca0593e8dd2e4e249cb273e8a2820394
+#: dd14538c6c4146a2a2a6a07ef3d011d2 e7c86a3ae58b46f3b6652424987e2955
+#: f9cbaff10e9c42fa878b5bd2f63701cf ffb731b8dc184080bd1a37d200fe264e
+msgid "Lambdas"
+msgstr "Lambda 函数"
+
+#: ../../modules/collection.md:94 ../../modules/collection.md:167
+#: ../../modules/collection.md:223 ../../modules/collection.md:271
+#: ../../modules/collection.md:314 ../../modules/collection.md:356
+#: ../../modules/collection.md:489 ../../modules/collection.md:532
+#: ../../modules/collection.md:572 ../../modules/collection.md:608
+#: ../../modules/collection.md:616 ../../modules/collection.md:730
+#: ../../modules/collection.md:777 ../../modules/collection.md:817
+#: ../../modules/collection.md:981 ../../modules/collection.md:1031
+#: ../../modules/collection.md:1079 ../../modules/collection.md:1111
+#: ../../modules/collection.md:1181 ../../modules/collection.md:1224
+#: ../../modules/collection.md:1266 ../../modules/collection.md:1386
+#: ../../modules/collection.md:1419 ../../modules/collection.md:1451
+#: ../../modules/collection.md:1483 ../../modules/collection.md:1773
+#: ../../modules/collection.md:1822 091e367445a54e3fa553c00a42952079
+#: 100ee0ab06b84ba091199329749ffc5a 1e21df3835f64df08520669a64623a4c
+#: 324531a47ea94374b8f88c7533de9b6e 39bef60a73fc4b23bb5ce227259a289b
+#: 3e475ba019024caab5bf1c4284131632 408d12bae0804292acb91310d8ad08aa
+#: 447b480db2054640a5c8f91f17fcd5dc 4f4ff3c129ad40f0ba878612607208f0
+#: 52a907fb7b8c4a96826d9a19d13348ff 54b17d415a3549a98a75d8ae900fbdd1
+#: 5d893cb737b64743bb4dc6e13ddd7bb4 5eea0a1c05cc462ea48950c1d213ee89
+#: 61c46b0149e14e0fb3be79b9e0933d9d 82d1d8e483364290b52a597081cc04ff
+#: 8ccc474658a84cb8a4e2da2fdcd44166 91cff0b0af41443ebbd05da86c0da351
+#: 97ae802c2a4c48fd976d9aa30b7eb0dc b46c46da03a7442a8bc404caf73487d9
+#: b9c9efaf5e164278940a1b98ef7ad020 c3cace3f01094686aecccdfa34f2a55f
+#: c4731f4109e24c5cae5b5acbdcabe5aa c4c5def098a646fbbd6d2b3b3800f28c
+#: cec9e33db1c3402aadbe86cefd3ef81b d0284747602740629e087f65faa01e67
+#: debf0677644c4a58bbf30726d853a208 fad2ca6f76264ce08dde4a4d4d2a7908
+msgid "**Storage `bs:lambda collection`**:"
+msgstr "**存储 `bs:lambda collection`**:"
+
+#: ../../modules/collection.md:96 ../../modules/collection.md:169
+#: ../../modules/collection.md:225 ../../modules/collection.md:273
+#: ../../modules/collection.md:316 ../../modules/collection.md:358
+#: ../../modules/collection.md:491 ../../modules/collection.md:534
+#: ../../modules/collection.md:574 ../../modules/collection.md:610
+#: ../../modules/collection.md:618 ../../modules/collection.md:732
+#: ../../modules/collection.md:779 ../../modules/collection.md:819
+#: ../../modules/collection.md:983 ../../modules/collection.md:1033
+#: ../../modules/collection.md:1081 ../../modules/collection.md:1113
+#: ../../modules/collection.md:1183 ../../modules/collection.md:1226
+#: ../../modules/collection.md:1268 ../../modules/collection.md:1388
+#: ../../modules/collection.md:1421 ../../modules/collection.md:1453
+#: ../../modules/collection.md:1485 ../../modules/collection.md:1775
+#: ../../modules/collection.md:1824 01ba164c442749beb48381944955ac6c
+#: 0982838d1de14f93b77f4ca22b94f05e 2581daffec7d40e6b1e5023a83b4a7e1
+#: 2840ac4df12940c4a1d0d595ba83c78c 3228df3bc57a492d9d0f761494cbc783
+#: 38c95c3da3484971b7cf5ffd0c7daf57 39f40bff1f16446ea82de7f50a5c5396
+#: 40c4de8d8a764afb9abfaca4783eaa9f 4ce49e0b8cd249aea002219aa1446c5f
+#: 570e041241d945fe95789606b0c88076 597adcc38291434d9acf4fbaa58cf555
+#: 5e7f5a82ddc14dbd822e4d09d717b0e1 706bbed3a7274a7598dd9bd2991518a1
+#: 727f41d602d94a6589c83c05f7069b3f 8e279369220a478589b1aee6a1500172
+#: 8e6efb6c96e5427285e3b8038d376b73 ad10532d077b490cb89fc7bea2c46a15
+#: ba7bf7bc0f334bbba22746ba6777e963 bca05c4c99134ae8b31ea1c6c9147816
+#: c4c03e1f77854cdc94f44307748248a9 cbbae8c11aa64c389fc4c0adafa47986
+#: cf68ea5736fb442f921a89058be3338e d96a44e57bf74a4f8c892ac88a4734ef
+#: da72e004693f4d469ff7a1965839ea63 e3951b558ad94054a0c5ef5f8df4204e
+#: e756dcef10ef450a8d909be678d4a408 ffe0394e1c41471b8862a83c5a4d6cd6
+#, python-brace-format
+msgid "{nbt}`compound` lambda data"
+msgstr "{nbt}`compound` Lambda 数据"
+
+#: ../../modules/collection.md:97 ../../modules/collection.md:170
+#: ../../modules/collection.md:226 ../../modules/collection.md:274
+#: ../../modules/collection.md:317 ../../modules/collection.md:359
+#: ../../modules/collection.md:733 ../../modules/collection.md:780
+#: ../../modules/collection.md:820 ../../modules/collection.md:984
+#: ../../modules/collection.md:1034 ../../modules/collection.md:1082
+#: ../../modules/collection.md:1114 ../../modules/collection.md:1184
+#: ../../modules/collection.md:1776 022f7874559c4a66998a582b753d0907
+#: 1f39359058864d5dad28be2953670fbc 23effc1918f7414b85c45a41ac4fe827
+#: 26ac5b531789486f8e6cf42c15935634 6535d52aadd14d20b62a9d7156335bd6
+#: 6d7ec49c702d449a879c227514aa0fb1 754fcafb1b7541e98615bd2eae74341c
+#: 76f1c14cba1747beb902f0206dafbadd 8b8854e806a84f70b55f3cd6302ebbe0
+#: 9786a85ee8014d04abb3283a7784a160 b6fed4ac042c459a96bf73fdb24bcfea
+#: bde4aef42d514111b48c72ee4ade0f59 c2afe198354c4a929682c94eae1d5827
+#: ef68b3d9236c495dbd3d09bb909460f4 f2983a8358934dfdbd4b52b19161e978
+#, python-brace-format
+msgid "{nbt}`any` **value**: the current element being processed"
+msgstr "{nbt}`any` **value**：当前正在处理的元素。"
+
+#: ../../modules/collection.md:98 ../../modules/collection.md:171
+#: ../../modules/collection.md:227 ../../modules/collection.md:275
+#: ../../modules/collection.md:318 ../../modules/collection.md:360
+#: ../../modules/collection.md:734 ../../modules/collection.md:781
+#: ../../modules/collection.md:821 ../../modules/collection.md:985
+#: ../../modules/collection.md:1035 ../../modules/collection.md:1083
+#: ../../modules/collection.md:1115 ../../modules/collection.md:1185
+#: ../../modules/collection.md:1777 22139c23820d4f20b0ef2fd5042e8562
+#: 26dd00bbd2d24081b1895603862b7be3 35f2c7097260459eaa5cc18479c91c10
+#: 4b5b2f3b0e8f4273b852f889500d4286 7cdafb25cad34524be42eda46aa16f71
+#: 9002597f1384414ea01132b674b0b099 92699c0b0baa4b21966e0c6524a21b92
+#: 99df1a67d5624fb98c6e7986dfcee70f b0bd638c07264690be990578e6311e94
+#: b4271f0708ca486183a1302d98d7a164 b9ae786712d84806933a68650cbbd6f9
+#: c5bbcdf13d0e4a47993a91fa4309f882 ca1068d5bb5845cc91da75ca195ba9ae
+#: ca189f46faf045fcafc0fc18042c9d98 df7d1617f5224720b08ccad40a35ae2b
+#, python-brace-format
+msgid "{nbt}`int` **index**: the zero-based index of the current element"
+msgstr "{nbt}`int` **index**：从零开始的当前元素索引。"
+
+#: ../../modules/collection.md:101 4d2e880e46e142b08d312db9eff2e23b
+msgid "**Return**: success (1) to continue dropping, fail (0) otherwise"
+msgstr "**返回**：成功（1）则继续移除，失败（0）则停止。"
+
+#: ../../modules/collection.md:104 f85330a12ea642d1baab9e51c854b7e4
+msgid "*Example: drop elements until value is 3*"
+msgstr "*示例：删除元素直到值为 3*。"
+
+#: ../../modules/collection.md:118 388fa527f6a54268a1ea2f70b36ecf1b
+msgid "Filtering"
+msgstr "筛选"
+
+#: ../../modules/collection.md:120 ebf992565a904b6c9a976f714200453c
+msgid "Operations that select a subset of elements."
+msgstr "用于筛选集合中一部分元素的操作。"
+
+#: ../../modules/collection.md 847137872b0a411cb1c53a25bf785873
+msgid "Distinct"
+msgstr "去重"
+
+#: ../../modules/collection.md:128 38a5aeb5221044b3a695d0ef6691dd7b
+msgid "Remove duplicate elements from a collection, keeping only the first occurrence of each element."
+msgstr "移除集合中的重复项，仅保留每个元素首次出现的项。"
+
+#: ../../modules/collection.md:131 ../../modules/collection.md:1691
+#: ../../modules/collection.md:1810 204e8817420e406ba09ca388db8060ef
+#: 95accfadb5b74bcf9c2b269162e557e9 f8f64e29b02b4bc2a7a4892d447e9bcb
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to process"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 要处理的集合。"
+
+#: ../../modules/collection.md:134 21789ada309a454d8447b01c3bf97b84
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection with duplicates removed"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 去重后的集合。"
+
+#: ../../modules/collection.md:137 9bb3fc21b8904692a2dc7cd9826ae518
+msgid "*Example: remove duplicates*"
+msgstr "*示例：去除重复项*。"
+
+#: ../../modules/collection.md 127636a11d124882aa8d7d62a035b185
+msgid "Filter"
+msgstr "过滤"
+
+#: ../../modules/collection.md:152 7ab4ff1ea0ee4787b5f140e5828b0746
+msgid "Keep only elements that satisfy a predicate condition."
+msgstr "仅保留满足谓词条件的元素。"
+
+#: ../../modules/collection.md:155 5054f5bf6fbd4234b1bfeb3a865ab916
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to filter"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 要过滤的集合。"
+
+#: ../../modules/collection.md:160 ../../modules/collection.md:974
+#: 2a5d425e0bb5476882357c146565b57e a2c6a156ce7c46c69daeeb03412560b3
+#, python-brace-format
+msgid "{nbt}`string` **run**: predicate function to test each element"
+msgstr "{nbt}`string` **运行**: 测试每个元素的谓词函数。"
+
+#: ../../modules/collection.md:164 38a3250670ce410b80c4b8da1a5e04e7
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the filtered collection containing only matching elements"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 仅包含匹配元素的过滤后的集合。"
+
+#: ../../modules/collection.md:174 03d89988bbc54c72a0fa928ed595c2c2
+msgid "**Return**: success (1) to keep the element, fail (0) otherwise"
+msgstr "**返回值**: 成功 (1) 保留元素，否则失败 (0)。"
+
+#: ../../modules/collection.md:177 7de39d24c43b479188943e59b680d1fc
+msgid "*Example: keep only elements equal to 3*"
+msgstr "*示例：仅保留等于 3 的元素*。"
+
+#: ../../modules/collection.md ../../modules/collection.md:191
+#: 78b0c8f7011249e098a377e99ad13cf2 d6b6ad729bf144898889a44615f7865a
+msgid "Find"
+msgstr "查找"
+
+#: ../../modules/collection.md:193 d5bc0d0afd4d4fb682ecd319a963854b
+msgid "Operations that locate elements or their indices."
+msgstr "定位元素或其索引的操作。"
+
+#: ../../modules/collection.md:201 e777c16c948b4a25a3c1d67694a93aaf
+msgid "Find the first element that satisfies a predicate condition."
+msgstr "查找第一个满足谓词条件的元素。"
+
+#: ../../modules/collection.md:204 ../../modules/collection.md:252
+#: ../../modules/collection.md:300 ../../modules/collection.md:342
+#: ../../modules/collection.md:1131 22702df5bb9a4af7ab0fc7d2562534c7
+#: 33eba4a21cd74efc9d6f5d3852e026fc 4974776d43064aa2adf07601224e961e
+#: 9df226873cf74c23ac5fb652b6019007 b7bc994889b944f3b2ab7fae1468f917
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to search"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 要搜索的集合。"
+
+#: ../../modules/collection.md:213 ../../modules/collection.md:261
+#: 2f60e9af71c74a3faed08bbb0acf5f95 637f8c99fb914309b29c8bcba913c71b
+msgid "**Storage `bs:out collection`**:"
+msgstr "**存储 `bs:out collection`**:"
+
+#: ../../modules/collection.md:215 ../../modules/collection.md:263
+#: b81abe2b8b8c4042b4a04ee1dc546abc c5e1b3244f164794a526e1dce03d44fc
+#, python-brace-format
+msgid "{nbt}`compound` output data"
+msgstr "{nbt}`compound` 输出数据"
+
+#: ../../modules/collection.md:216 773a70d2259f4af1af9fcf138dfe2949
+#, python-brace-format
+msgid "{nbt}`any` **value**: the first matching element (removed if not found)"
+msgstr "{nbt}`any` **值**: 第一个匹配的元素（如果未找到则移除）。"
+
+#: ../../modules/collection.md:217 ../../modules/collection.md:265
+#: a19cc779a00c4c37abe84e4e5bf7572e aea3cf012c9d4ee4ac64f095ee2a81d2
+#, python-brace-format
+msgid "{nbt}`int` **index**: the index of the matching element, or -1 if not found"
+msgstr "{nbt}`int` **索引**: 匹配元素的索引，如果未找到则为 -1。"
+
+#: ../../modules/collection.md:220 ../../modules/collection.md:268
+#: ../../modules/collection.md:311 ../../modules/collection.md:353
+#: 05bb42579c7646c1831647cc33443b85 576820efa6ef4c2c9815ebede8f7a269
+#: a068a055e65a43fe848bbbc40b2ba46c cae6dfad4fa240d99fff92543676d8b9
+msgid "**Return**: success if element found, fail otherwise"
+msgstr "**返回值**: 如果找到元素则成功，否则失败。"
+
+#: ../../modules/collection.md:230 ../../modules/collection.md:278
+#: ../../modules/collection.md:321 ../../modules/collection.md:363
+#: ../../modules/collection.md:988 ../../modules/collection.md:1086
+#: ../../modules/collection.md:1118 ../../modules/collection.md:1188
+#: 42ab94fe413b4c9090bbbba8d8d523c2 9628df768a974246ba943fae807232fa
+#: ada8be2bc3c74d548210f745fdbfa9f5 adf23bbdfe5f4b13906c5f80027259c4
+#: cf5d09ce4896453e80777f171bf57867 d3a5cff9b1c7401388d4eb7b8a3d6902
+#: edfe1a4cdb904e848e62efd363412c25 fa955025036c4bdea1ac19c64a3214eb
+msgid "**Return**: success (1) for match, fail (0) otherwise"
+msgstr "**返回值**: 匹配时成功 (1)，否则失败 (0)。"
+
+#: ../../modules/collection.md:233 3d5a5cea676e43d0a931463c2f1968ec
+msgid "*Example: find the first element equal to \"b\"*"
+msgstr "*示例：找到第一个等于 \"b\" 的元素*。"
+
+#: ../../modules/collection.md f9eeda18ade747bb8de1c54100dd45ba
+msgid "Find Last"
+msgstr "查找最后一个"
+
+#: ../../modules/collection.md:249 245fc8ec4b9a4c26880bf3f1d829563f
+msgid "Find the last element that satisfies a predicate condition."
+msgstr "查找最后一个满足谓词条件的元素。"
+
+#: ../../modules/collection.md:264 735707037b4e4a62bdc12f2bdea170e2
+#, python-brace-format
+msgid "{nbt}`any` **value**: the last matching element (removed if not found)"
+msgstr "{nbt}`any` **值**: 最后一个匹配的元素（如果未找到则移除）。"
+
+#: ../../modules/collection.md:281 5565842f8a8a44039e33cfdc549008be
+msgid "*Example: find the last element equal to 3*"
+msgstr "*示例：查找最后一个等于3的元素*。"
+
+#: ../../modules/collection.md 91b55527ccd245f2baedadfe4cf8a917
+msgid "Index Of"
+msgstr "索引查找"
+
+#: ../../modules/collection.md:297 b49aec8cde91497a8224274f91ab08a2
+msgid "Find the index of the first element matching a predicate."
+msgstr "查找第一个匹配谓词的元素索引。"
+
+#: ../../modules/collection.md:309 ebcfc1000d2548878ce07ef243e7b74d
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`int` the zero-based index of the first matching element, or -1"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`int` 第一个匹配元素的零基索引，如果不存在则为 -1。"
+
+#: ../../modules/collection.md:324 2daad707fe2142f490bdbc9f5102513c
+msgid "*Example: find the index of value 3*"
+msgstr "*示例：查找值3的索引*。"
+
+#: ../../modules/collection.md c490c1a937e143dfaf29b5a9ef4cfa81
+msgid "Last Index Of"
+msgstr "最后索引查找"
+
+#: ../../modules/collection.md:339 cf849a99e71149feaf8b2ec15989c71f
+msgid "Find the index of the last element matching a predicate."
+msgstr "查找最后一个匹配谓词的元素索引。"
+
+#: ../../modules/collection.md:351 1ece76aeba8c40a18eb1661957539a20
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`int` the zero-based index of the last matching element, or -1"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`int` 最后一个匹配元素的零基索引，如果不存在则为 -1。"
+
+#: ../../modules/collection.md:366 8509f145f05241acb68e2595f848034c
+msgid "*Example: find the last index of value 3*"
+msgstr "*示例：查找值3的最后一个索引*。"
+
+#: ../../modules/collection.md:380 2f00579e8bb24384a377dec0247540a4
+msgid "Flattening"
+msgstr "展平"
+
+#: ../../modules/collection.md:382 19356e08ed3b4306822220525a75aacc
+msgid "Operations that flatten nested collections."
+msgstr "将嵌套集合展平的操作。"
+
+#: ../../modules/collection.md 31ce0057dba44f32b5155ead58211774
+msgid "Concat"
+msgstr "连接"
+
+#: ../../modules/collection.md:390 a6f0c12d2de042759ab708f6d9c300ae
+msgid "Concatenate a list of lists into a single list. Functionally equivalent to `flatten`, provided as a semantic alias for when you think of the operation as concatenation rather than flattening."
+msgstr "将列表组成的列表连接为一个列表。功能上等同于 `flatten`；当需要强调“连接”而不是“展平”时，可使用这个语义别名。"
+
+#: ../../modules/collection.md:393 8ad8ebc2bdca473ba91a50d65d32ee42
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` a list of lists to concatenate"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 要连接的列表的列表。"
+
+#: ../../modules/collection.md:396 97b643f01a194aafb1c4221baa7526f9
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the flattened list containing all elements from the sub-lists in order"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 展平后的列表，包含所有子列表中的元素，按顺序排列。"
+
+#: ../../modules/collection.md:399 0dd5db4eff4d4defb0f2a51c22be159e
+msgid "*Example: concatenate lists*"
+msgstr "*示例：连接列表*。"
+
+#: ../../modules/collection.md 76495ab83bbc448888e21430092f9c75
+msgid "Flatten"
+msgstr "展平"
+
+#: ../../modules/collection.md:414 e24d3923449b4907a37ade81b5e8a23e
+msgid "Flatten a nested collection by one level."
+msgstr "将嵌套集合展平一级。"
+
+#: ../../modules/collection.md:417 ../../modules/collection.md:441
+#: 13cf1bcc04de47fa93f5188028fb0bee d01dfb7b65f843879a3b171245384b5b
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the nested collection to flatten"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 要展平的嵌套集合。"
+
+#: ../../modules/collection.md:420 3e427cc74dde4a33a0abcc0a895da9bf
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the flattened collection"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 展平后的集合。"
+
+#: ../../modules/collection.md:423 723e6f5fa9304c77b6ca48a10dccb200
+msgid "*Example: flatten a 2D array*"
+msgstr "*示例：展平二维数组*。"
+
+#: ../../modules/collection.md 2b27c592a3bb4f329e0123ebed3661c5
+msgid "Flatten Deep"
+msgstr "深度展平"
+
+#: ../../modules/collection.md:438 c3daac3524ac4605a547b818c1395ca6
+msgid "Recursively flatten a nested collection of arbitrary depth. Preserves non-list elements."
+msgstr "递归地将任意深度的嵌套集合展平。保留非列表元素。"
+
+#: ../../modules/collection.md:444 ef309764009848bd8946c99202f53f11
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the deeply flattened collection"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 深度展平后的集合。"
+
+#: ../../modules/collection.md:447 736c8bf896f54f3691b8f6dfed3f45be
+msgid "*Example: flatten a deeply nested structure*"
+msgstr "*示例：展平深度嵌套结构*。"
+
+#: ../../modules/collection.md ../../modules/collection.md:461
+#: 4e28bf687daa4e09bd1d94b8c16ae08a b0669aedf51d48d081088c4acc24a8fd
+msgid "Fold"
+msgstr "折叠"
+
+#: ../../modules/collection.md:463 203743070be74fd5af0606c540d93163
+msgid "Reduce a collection to a single value using an explicit initial accumulator."
+msgstr "使用显式初始累加器将集合归约为单个值。"
+
+#: ../../modules/collection.md:471 292da9206f3443489e4bef9d92482923
+msgid "Reduce a collection to a single value by applying a function that combines the accumulator with each element, starting with a provided initial value."
+msgstr "从指定的初始值开始，依次用函数把当前结果与下一个元素合并，最终得到一个值。"
+
+#: ../../modules/collection.md:474 ../../modules/collection.md:517
+#: 525e39d2cb1d4457a688827cd4cc0650 75d7c9f7b3c14730959b4751ca38f92f
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to fold"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 要折叠的集合。"
+
+#: ../../modules/collection.md:479 ../../modules/collection.md:522
+#: ../../modules/collection.md:1215 ../../modules/collection.md:1257
+#: 37524253bebc4a9d8bec8554ecf71625 66b33eed2f034120a3f0da714a5586b6
+#: af2f2a47a06c493294fc3a6e94027593 da69df79ce9c41388149d5098fed0c95
+#, python-brace-format
+msgid "{nbt}`string` **run**: lambda function that combines accumulator and value"
+msgstr "{nbt}`string` **run**：组合累加器和值的 lambda 函数。"
+
+#: ../../modules/collection.md:480 ../../modules/collection.md:523
+#: 3a23dc6a055641d8bef5b033f82cc581 f55c2f45a9a94ed39fa83906a1d9d98c
+#, python-brace-format
+msgid "{nbt}`any` **initial**: initial value for the accumulator, must be a valid NBT value"
+msgstr "{nbt}`any` **initial**：累加器的初始值，必须是有效的 NBT 值。"
+
+#: ../../modules/collection.md:484 ../../modules/collection.md:527
+#: ../../modules/collection.md:1219 ../../modules/collection.md:1261
+#: 06854d9081ea4efeba179a796f3f62f1 84fa7926fdff454d89fa71a700799e1a
+#: d6cf5b9c0c564c3394cc9de51c419d85 f76ed31797754cfdaaade4102be9a590
+msgid "**Storage `bs:out collection.value`**: the final accumulated value"
+msgstr "**存储 `bs:out collection.value`**：最终累加的值。"
+
+#: ../../modules/collection.md:486 ../../modules/collection.md:529
+#: 9b323e6e5b124d0cb8d8c024d6acc029 e2d4d7e34f2344838f68ed2b294580cd
+msgid "**Return**: 0 on success"
+msgstr "**返回**：成功时为 0。"
+
+#: ../../modules/collection.md:492 ../../modules/collection.md:535
+#: ../../modules/collection.md:1227 ../../modules/collection.md:1269
+#: ../../modules/collection.md:1389 ../../modules/collection.md:1422
+#: ../../modules/collection.md:1454 ../../modules/collection.md:1486
+#: 1121ee7e991e491c9fdc536b3f9c04b8 1d16d2d65ea34512b3aec8de2fce1b5f
+#: 5554161f4bd1454c80c0fd4236b7eea8 5764f22d62be441687aaa74a8150810d
+#: a7f9caa1f6bb4093b69ea60380e17d54 be5d05ce2c8b4382826c6a5d01761222
+#: c8a6d8472c8044be8cf7edd0f92ef405 e6cdaad9e78049eb95a772c907e5133c
+#, python-brace-format
+msgid "{nbt}`any` **accumulator**: (input) the current accumulated value"
+msgstr "{nbt}`any` **accumulator**：（输入）当前累加的值。"
+
+#: ../../modules/collection.md:493 ../../modules/collection.md:536
+#: ../../modules/collection.md:1228 ../../modules/collection.md:1270
+#: ../../modules/collection.md:1390 ../../modules/collection.md:1423
+#: ../../modules/collection.md:1455 ../../modules/collection.md:1487
+#: 160e69dcea984e24898fcfb381715346 39dfe82e22004c1f9f3d95f7b901c994
+#: 4fa852c1adb74afb8aac509aba269ba8 55ae26d48a5c4a82a272a52ed32e5354
+#: 801edce952d9479ba653c6ca9577a0b0 814059579a534a8abd863da97ea2e3a3
+#: c23050c736a340d18deb056ee99617ba f02a58aba75e4f3d9da457cb026fcae3
+#, python-brace-format
+msgid "{nbt}`any` **value**: (input) the current element being processed"
+msgstr "{nbt}`any` **value**：（输入）当前正在处理的元素。"
+
+#: ../../modules/collection.md:494 ../../modules/collection.md:537
+#: ../../modules/collection.md:1229 ../../modules/collection.md:1271
+#: ../../modules/collection.md:1391 ../../modules/collection.md:1424
+#: ../../modules/collection.md:1456 ../../modules/collection.md:1488
+#: 389cc9f03ac44bc189aa1f5006e2f3dc 53107b04172642229c9e0c4052c4709d
+#: 6e5fbdf4db57474493f6a496fcd5010c 75c4d02d114847cb91be231a508af497
+#: 8c6497c0de7041d4905917c93e78899c b197e2a00ec64789ac91fd77bdbc9737
+#: dbebf87392864a6ba6da1e384f72fcc3 fbf241a19fe4469ab836a680db115960
+#, python-brace-format
+msgid "{nbt}`int` **index**: (input) the zero-based index of the current element"
+msgstr "{nbt}`int` **index**：（输入）当前元素的从零开始的索引。"
+
+#: ../../modules/collection.md:495 ../../modules/collection.md:538
+#: ../../modules/collection.md:1230 ../../modules/collection.md:1272
+#: ../../modules/collection.md:1392 ../../modules/collection.md:1425
+#: ../../modules/collection.md:1457 ../../modules/collection.md:1489
+#: 21f061ebdc1e42749373db91662b6d26 27ef2a99590448458bf17ebb2abd4cc2
+#: 448696c0bfac480187cccdd0b7b8669e 912e1537e7c54a2d96cef2903c9ac8f7
+#: b3c9c52fa6de4ce697b6fdd06e05d5e3 cd7fedbc99274d7f8532e7c3a67d4aed
+#: e4115dac6a0c4248a695119fe4239612 ea8f2f9884c34f2198946c4e023eec83
+#, python-brace-format
+msgid "{nbt}`any` **result**: (output) the new accumulated value"
+msgstr "{nbt}`any` **result**：（输出）新的累加值。"
+
+#: ../../modules/collection.md:499 cc9a6ac5c3034382be5c0a1ab3869adc
+msgid "*Example: fold with a custom function (see reduce for lambda details)*"
+msgstr "*示例：使用自定义函数进行 fold（有关 lambda 的详细信息，请参见 reduce）*。"
+
+#: ../../modules/collection.md 70d9fbbd834b43cbb5efb0429fa93c3a
+msgid "Fold Right"
+msgstr "右折叠"
+
+#: ../../modules/collection.md:514 b5dc8fa048a5460dbc366ac797ed8110
+msgid "Reduce a collection to a single value by applying a function from right to left with a provided initial value."
+msgstr "从右向左应用函数，并使用指定的初始值将集合归约为单个值。"
+
+#: ../../modules/collection.md:548 d61462a5b8334c8a9d4f6ad8d2165ea8
+msgid "Generation"
+msgstr "生成"
+
+#: ../../modules/collection.md:550 ccabd35380fd4e37823c519538269a45
+msgid "Operations that create new collections."
+msgstr "创建新集合的操作。"
+
+#: ../../modules/collection.md db4cede854be4e4492e83ab75040cde2
+msgid "Generate"
+msgstr "生成"
+
+#: ../../modules/collection.md:558 7d562961c43f421993cfbc8730f16c5c
+msgid "Generate a collection by repeatedly calling a generator function up to a limit."
+msgstr "反复调用生成器函数，直至达到限制值，从而生成一个集合。"
+
+#: ../../modules/collection.md:564 ../../modules/collection.md:600
+#: 399b4d098c23436caa11d33914a7af42 7d20a7aaafed46b4be6b47f0a2812087
+#, python-brace-format
+msgid "{nbt}`string` **run**: the command to execute to generate a value"
+msgstr "{nbt}`string` **run**：用于生成值的要执行的命令。"
+
+#: ../../modules/collection.md:565 b2ad6160d6714236944efc9790e207d3
+#, python-brace-format
+msgid "{nbt}`int` **limit**: the number of values to generate"
+msgstr "{nbt}`int` **limit**：要生成的值的数量。"
+
+#: ../../modules/collection.md:569 ../../modules/collection.md:605
+#: ../../modules/collection.md:683 424d39a6ff1645a79bd6b94ddd4ef279
+#: 6501ac3995c14728a76d49398215ff2e 6fa442919c4644ac87bf56186791b835
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the generated list"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 生成的列表。"
+
+#: ../../modules/collection.md:575 ../../modules/collection.md:611
+#: ../../modules/collection.md:620 96c6e065a31142bf963752243b0c54aa
+#: c437583aa19540f089108208329a2888 dc4274edb9904681af45500278164981
+#, python-brace-format
+msgid "{nbt}`int` **index**: the current index being generated (0-based)"
+msgstr "{nbt}`int` **index**：正在生成的当前索引（从零开始）。"
+
+#: ../../modules/collection.md:576 ../../modules/collection.md:612
+#: be1318b8448f41e884babfeb3c75132a d82e17506e5f47a68d24cc728ed06e8d
+#, python-brace-format
+msgid "{nbt}`any` **result**: (output) the value generated by `run`"
+msgstr "{nbt}`any` **result**: (output) the value generated by `run`"
+
+#: ../../modules/collection.md:580 fcf412d145b1483dabf64fed261bac37
+msgid "*Example: generate [0, 1, 2]*"
+msgstr "*示例：生成 [0, 1, 2]*。"
+
+#: ../../modules/collection.md d6c50a54b0ee42929d3e36ab1c7a2983
+msgid "Generate While"
+msgstr "条件生成"
+
+#: ../../modules/collection.md:594 76950b015967426690a5d4c0095e48e6
+msgid "Generate a collection by repeatedly calling a generator function while a predicate is met."
+msgstr "在谓词条件成立时反复调用生成器函数，以生成集合。"
+
+#: ../../modules/collection.md:601 4cfdc306139e47ec8f1767db3c6ac301
+#, python-brace-format
+msgid "{nbt}`string` **predicate**: the predicate to check on the generated value, returns success to continue, fail to stop"
+msgstr "{nbt}`string` **predicate**：对生成的值进行检查的谓词，返回成功则继续，失败则停止。"
+
+#: ../../modules/collection.md:615 871eb803bc7644cb9f9fc08cdebf7acd
+msgid "Lambda predicate"
+msgstr "Lambda 谓词"
+
+#: ../../modules/collection.md:619 7d959eb8e451499e8dfcbab7b5b625b4
+#, python-brace-format
+msgid "{nbt}`any` **value**: the value generated by `run`"
+msgstr "{nbt}`any` **value**: the value generated by `run`"
+
+#: ../../modules/collection.md:623 59ba2119f1294c579b762ee4a176fcf7
+msgid "**Return**: success to continue, fail to stop"
+msgstr "**返回**: 成功继续，失败停止。"
+
+#: ../../modules/collection.md:626 2537cd1d6eca455ab9d8899231d71845
+msgid "*Example: generate values equal to index while the result is not 3*"
+msgstr "*示例：在结果不等于3时生成与索引相等的值*。"
+
+#: ../../modules/collection.md 088bd15d52fc4d5abc81813c5874c852
+msgid "Range"
+msgstr "范围"
+
+#: ../../modules/collection.md:640 4eade628ba3040fe8a2e064a46138323
+msgid "Generate a sequence of numbers from `min` (inclusive) to `max` (exclusive) with a specified `step`."
+msgstr "从 `min`（包含）到 `max`（不包含）按指定 `step` 生成数字序列。"
+
+#: ../../modules/collection.md:646 bcf68f79f22c408c9763481058010a12
+#, python-brace-format
+msgid "{nbt}`int` **min**: the starting value (inclusive)"
+msgstr "{nbt}`int` **min**: 起始值（包含）。"
+
+#: ../../modules/collection.md:647 a14efabe06f347299279f75a863b3e7f
+#, python-brace-format
+msgid "{nbt}`int` **max**: the ending value (exclusive)"
+msgstr "{nbt}`int` **max**: 结束值（不包含）。"
+
+#: ../../modules/collection.md:648 ad9af17fabce498f955c22640feb667b
+#, python-brace-format
+msgid "{nbt}`int` **step**: the step between each value"
+msgstr "{nbt}`int` **step**: 每个值之间的步长。"
+
+#: ../../modules/collection.md:652 cd1db6be5612466aacf16ad4347beb1d
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the generated list of integers"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 生成的整数列表。"
+
+#: ../../modules/collection.md:655 973fe65beed0452ea6aaf892d713c12e
+msgid "*Example: generate 0, 1, 2, 3, 4*"
+msgstr "*示例：生成 0, 1, 2, 3, 4*。"
+
+#: ../../modules/collection.md 7ad8226484534d77a2e161a3db252908
+msgid "Repeat"
+msgstr "重复"
+
+#: ../../modules/collection.md:672 4110a481a966450db46dc62c54bbde9e
+msgid "Create a collection containing `count` copies of `value`."
+msgstr "创建一个由 `count` 个 `value` 副本组成的集合。"
+
+#: ../../modules/collection.md:678 b9e1c6aa7b9d419ea0ee3c4c8f2faa16
+#, python-brace-format
+msgid "{nbt}`any` **value**: the value to repeat (must be a valid NBT value)"
+msgstr "{nbt}`any` **value**: 要重复的值（必须是有效的NBT值）。"
+
+#: ../../modules/collection.md:679 9a32e8e9aa1046af9deaa4f7a71b38b9
+#, python-brace-format
+msgid "{nbt}`int` **count**: the number of times to repeat the value"
+msgstr "{nbt}`int` **count**: 重复值的次数。"
+
+#: ../../modules/collection.md:686 063627d234bf4b4a8777803aff2fb4bf
+msgid "*Example: repeat a value 3 times*"
+msgstr "*示例：重复一个值3次*。"
+
+#: ../../modules/collection.md:693 dec28f2257aa419b9ba013ca7ac3b019
+msgid "Repeat Strings"
+msgstr "重复字符串"
+
+#: ../../modules/collection.md:696 b4707b56e0cf453fae778332b224e62b
+msgid "To repeat a string, the value must be double quoted (e.g. \"'Hello'\")."
+msgstr "要重复字符串，值必须用双引号括起来（例如 \"'Hello'\"）。"
+
+#: ../../modules/collection.md:705 c838ff2eabfe4b51a9077af3e4439264
+msgid "Iteration"
+msgstr "遍历"
+
+#: ../../modules/collection.md:707 51d092a6f5114573821d131f3668f9b5
+msgid "Run a lambda over each element for its side effects."
+msgstr "依次对集合中的每个元素执行 Lambda 函数。"
+
+#: ../../modules/collection.md 144600250b25483a9af6f8df1a6dc704
+msgid "For Each"
+msgstr "对于每个"
+
+#: ../../modules/collection.md:715 56eaed4c06b3467893990cd4ce7c3699
+msgid "Execute an operation on each element of a collection."
+msgstr "对集合中的每个元素执行操作。"
+
+#: ../../modules/collection.md:718 ../../modules/collection.md:1019
+#: 4e6c26b9f40844e385f7219db05538f2 b76e52f41c4845fc85e9a1e02c6b3837
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to iterate over"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 要迭代的集合。"
+
+#: ../../modules/collection.md:723 ../../modules/collection.md:770
+#: ../../modules/collection.md:810 ../../modules/collection.md:1024
+#: 2a15b5c14e9b4dccb9cb140f1883956f 576126d8af904c74906b73e98e79fdf1
+#: 86be6deb891f4aeb847c7676293237a0 fcc1b5c153b2450fb1676ce7c09dff97
+#, python-brace-format
+msgid "{nbt}`string` **run**: lambda function to execute on each element"
+msgstr "{nbt}`string` **run**: 在每个元素上执行的lambda函数。"
+
+#: ../../modules/collection.md:727 e08d7deaf3c743a38fd39577b500a868
+msgid "None. This function is used for side effects only."
+msgstr "无返回值。该函数用于逐项执行操作，不会生成新的集合。"
+
+#: ../../modules/collection.md:738 f573eb60687242fc9b78c5199ca56799
+msgid "*Example: display each element*"
+msgstr "*示例：显示每个元素*。"
+
+#: ../../modules/collection.md:752 e121098f183e49b5ba7e2daa61c0b851
+msgid "Mapping"
+msgstr "映射"
+
+#: ../../modules/collection.md:754 7f564530d6aa449b900a73ba08cc6a56
+msgid "Operations that transform each element."
+msgstr "用于转换集合中各元素的操作。"
+
+#: ../../modules/collection.md ee46f475d84244e6ae1f72e570708130
+msgid "Flat Map"
+msgstr "扁平映射"
+
+#: ../../modules/collection.md:762 06526586b70f46ffb3bca395b95ea94d
+msgid "Transform each element into a collection and flatten the results into a single collection."
+msgstr "将每个元素转换为一个集合，再将所有结果展平为一个集合。"
+
+#: ../../modules/collection.md:765 ../../modules/collection.md:805
+#: 33d5d22e94334e46aa52fa96d1ced691 878236ba0d1e42d8b8a4ee79f7761ba5
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to transform"
+msgstr "**存储器 `bs:out collection.value`**：{nbt}`list` 要转换的集合。"
+
+#: ../../modules/collection.md:774 c1805db5074c4451a2c5f8fd320b7e24
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the flattened transformed collection"
+msgstr "**存储器 `bs:out collection.value`**：{nbt}`list` 扁平化后的转换集合。"
+
+#: ../../modules/collection.md:782 c7172d1f0cfc47f1875f5b1c40d31bd3
+#, python-brace-format
+msgid "{nbt}`list` **result**: (output) the list of values to flatten into the result"
+msgstr "{nbt}`list` **结果**：（输出）要扁平化到结果中的值列表。"
+
+#: ../../modules/collection.md:786 f4cb8e9156d14ae3bd4c298c64093038
+msgid "*Example: transform each number into a list of its multiples and flatten*"
+msgstr "*示例：将每个数字转换为其倍数的列表并扁平化*。"
+
+#: ../../modules/collection.md cd204897281b478a982e8614d5fca151
+msgid "Map"
+msgstr "映射"
+
+#: ../../modules/collection.md:802 e90fca78a24d43878b739fe4d6656cb4
+msgid "Transform each element of a collection using a lambda function."
+msgstr "使用lambda函数转换集合中的每个元素。"
+
+#: ../../modules/collection.md:814 c0efcd57b23e43fe816554aa3d918948
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the transformed collection"
+msgstr "**存储器 `bs:out collection.value`**：{nbt}`list` 转换后的集合。"
+
+#: ../../modules/collection.md:822 cc4c35fac67a48fdac89df5ad11c0ad6
+#, python-brace-format
+msgid "{nbt}`any` **result**: (output) the transformed value for the element"
+msgstr "{nbt}`any` **结果**：（输出）该元素的转换值。"
+
+#: ../../modules/collection.md:826 e36310ee868840aa8c68df6be05a7f81
+msgid "*Example: double each number in a list*"
+msgstr "*示例：将列表中的每个数字加倍*。"
+
+#: ../../modules/collection.md:840 1bd79d24a64345ea8064f2225689df18
+msgid "Numeric Aggregation"
+msgstr "数值聚合"
+
+#: ../../modules/collection.md:842 136c5638a551404d8b90dbaecb65ec9c
+msgid "Operations that compute a single numeric result from a collection."
+msgstr "从集合计算单个数值结果的操作。"
+
+#: ../../modules/collection.md ce345e6fff0747aa90be9f503f502c1a
+msgid "Average"
+msgstr "平均值"
+
+#: ../../modules/collection.md:850 3a74e399e12147f098e653ddc3c3729e
+msgid "Calculate the average (mean) of a collection of numbers (integers)."
+msgstr "计算数字集合（整数）的平均值（均值）。"
+
+#: ../../modules/collection.md:853 ../../modules/collection.md:944
+#: 1b834d474b36448080bf9118bd449629 cb8c85a3d411419faede22b273028210
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection of numbers"
+msgstr "**存储器 `bs:out collection.value`**：{nbt}`list` 数字集合。"
+
+#: ../../modules/collection.md:858 c36dfdb8c51547e980a91be4b221c21f
+#, python-brace-format
+msgid "{nbt}`int` **scale**: scale factor applied to the return value (e.g. 1000 to get 3 decimal places of precision)"
+msgstr "{nbt}`int` **尺度**：应用于返回值的缩放因子（例如 1000 以获得 3 位小数精度）。"
+
+#: ../../modules/collection.md:862 1122aee1dc4d445fb0214a7c20116934
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`double` the average (unscaled)"
+msgstr "**存储器 `bs:out collection.value`**：{nbt}`double` 平均值（未缩放）。"
+
+#: ../../modules/collection.md:864 3adb492861c74e79be41c1b965592089
+msgid "**Return**: the average multiplied by `scale` as an integer"
+msgstr "**返回值**：平均值乘以 `scale` 后的整数。"
+
+#: ../../modules/collection.md:867 14e718d7be9a4cd4bb134e820d1f4b68
+msgid "*Example: average of [1, 2, 3, 4, 5]*"
+msgstr "*示例：[1, 2, 3, 4, 5] 的平均值*。"
+
+#: ../../modules/collection.md b96e8b82383c47fc80b3d5c8d5ccc852
+msgid "Count"
+msgstr "计数"
+
+#: ../../modules/collection.md:883 7dba320f42484b50a7c028ca32e2a5c5
+msgid "Count the number of elements in a collection."
+msgstr "计算集合中元素的数量。"
+
+#: ../../modules/collection.md:886 58dbba96f29248ab8ee1224025e5d016
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to count"
+msgstr "**存储器 `bs:out collection.value`**：{nbt}`list` 要计数的集合。"
+
+#: ../../modules/collection.md:889 a43c0e9ea2194ae3990795f6cd2fd8d4
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`int` the number of elements"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`int` 元素数量。"
+
+#: ../../modules/collection.md:891 87a541ec8746488cba449074a6e09db4
+msgid "**Return**: integer count of elements in the collection"
+msgstr "**返回**: 集合中元素的整数计数。"
+
+#: ../../modules/collection.md:894 7e583cc4bff64c6cbe13da52afd695a5
+msgid "*Example: count elements*"
+msgstr "*示例: 计数元素*。"
+
+#: ../../modules/collection.md c811281baf304c45a461dea986ec61bd
+msgid "Max"
+msgstr "最大值"
+
+#: ../../modules/collection.md:909 f208384b87e4487cb9eefe5009740a4d
+msgid "Find the maximum value in a collection of integers."
+msgstr "在一组整数集合中找到最大值。"
+
+#: ../../modules/collection.md:912 ../../modules/collection.md:928
+#: 0e052cdf97eb44baabf6f41987cd4554 4b1f7c185c664a3fb6a5d7da36bcb91f
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection of integers"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 整数集合。"
+
+#: ../../modules/collection.md:915 fcb8e484cd824142b680b62ac66d79df
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`int` the maximum value"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`int` 最大值。"
+
+#: ../../modules/collection.md e2fcfbf78ebe40ceb8847e631aa335c3
+msgid "Min"
+msgstr "最小值"
+
+#: ../../modules/collection.md:925 a4b02e04ca3a4f36bb4eb1fbfff41db8
+msgid "Find the minimum value in a collection of integers."
+msgstr "在一组整数集合中找到最小值。"
+
+#: ../../modules/collection.md:931 7c71148e2454472786f5109f941236eb
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`int` the minimum value"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`int` 最小值。"
+
+#: ../../modules/collection.md c46ae32f87004aafb33a7c35a13334f5
+msgid "Sum"
+msgstr "求和"
+
+#: ../../modules/collection.md:941 565d97e10d234600b8bf12b19ce20234
+msgid "Calculate the sum of all numbers in a collection (integers)."
+msgstr "计算集合中所有数字的总和（整数）。"
+
+#: ../../modules/collection.md:947 affcc0704c394fcdbe66bf7d266f49ec
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`int` the sum"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`int` 总和。"
+
+#: ../../modules/collection.md ../../modules/collection.md:956
+#: 0db18e95e5f149d1a8d5312f75b5bbec 21e9c2d49b70472ca3caa2dd45be5957
+msgid "Partition"
+msgstr "分区"
+
+#: ../../modules/collection.md:958 27241d7b909740869cacc95c4a5e13e1
+msgid "Split a collection into two based on a predicate."
+msgstr "根据谓词将集合分成两个。"
+
+#: ../../modules/collection.md:966 03854de5c38641af864ee7270122e18b
+msgid "Split a collection into two collections based on a predicate: one containing elements that match the predicate, and one containing elements that don't."
+msgstr "根据谓词将集合分成两个集合：一个包含匹配谓词的元素，另一个包含不匹配的元素。"
+
+#: ../../modules/collection.md:969 4574524ffa0c4c1b802eb4fe83c051be
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to partition"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 要分区的集合。"
+
+#: ../../modules/collection.md:978 591fb73d52cd4ab9868a87d81106bbe6
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` a list containing two lists: `[matches, non_matches]`"
+msgstr "**Storage `bs:out collection.value`**: {nbt}`list` a list containing two lists: `[matches, non_matches]`"
+
+#: ../../modules/collection.md:991 5903675391274465b4b5a7d48fc9236c
+msgid "*Example: partition even and odd numbers*"
+msgstr "*示例: 将偶数和奇数分区*。"
+
+#: ../../modules/collection.md ../../modules/collection.md:1006
+#: 36d2b7224695422db6bd4c9037532c6b baf1f564d0504a4e8cba573130c4e64c
+msgid "Peek"
+msgstr "查看"
+
+#: ../../modules/collection.md:1008 ef3362ca434340fcb551f6be1944f361
+msgid "Run a lambda on each element while passing the collection through unchanged."
+msgstr "对集合中的每个元素执行 Lambda 函数，同时保持集合不变。"
+
+#: ../../modules/collection.md:1016 3b57d9130dc34c99afab607ccb156717
+msgid "Execute an operation on each element of a collection and return the original collection. Useful for debugging or side effects in a chain of operations."
+msgstr "逐个执行操作，但不改变集合内容。适合在调试时查看中间数据，或在链式调用中添加额外操作。"
+
+#: ../../modules/collection.md:1028 ../../modules/collection.md:1819
+#: 18ca6fabcf4344a095e5aea76930551f 6bd86ab42d5143e4848f571ffdb2a4ff
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the original collection, unchanged"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 原始集合，未改变。"
+
+#: ../../modules/collection.md:1039 173e503fbf10402e8ec072e8491d18c0
+msgid "*Example: log elements while processing*"
+msgstr "*示例: 处理时记录元素*。"
+
+#: ../../modules/collection.md:1054 2dfd54f98c4d42b9888f4b2baee2b018
+msgid "Predicates"
+msgstr "谓词"
+
+#: ../../modules/collection.md:1056 91cba7666ec14f7f91e3e181e818aee3
+msgid "Operations that test a collection and return success or failure."
+msgstr "测试集合并返回成功或失败状态的操作。"
+
+#: ../../modules/collection.md cd96fc16596d41db9e761fb5a1ed2340
+msgid "All"
+msgstr "所有"
+
+#: ../../modules/collection.md:1064 7b812026c8ad44239e987b7562c2925e
+msgid "Test if all elements satisfy a predicate condition."
+msgstr "测试所有元素是否满足谓词条件。"
+
+#: ../../modules/collection.md:1067 ../../modules/collection.md:1099
+#: ../../modules/collection.md:1153 ../../modules/collection.md:1169
+#: 73bcd8c83c0a4102b6c851edf1bb001e 9e38f83b37e94a0688d7e36099de6784
+#: ed8d5a68de3048cabbcdee40480aeece fe9241c7e1734eba81b7e290c5d1d7a8
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to test"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 要测试的集合。"
+
+#: ../../modules/collection.md:1076 4c742fe5b8d74e198f64fe69da2dcf9a
+msgid "**Return**: success (1) if all elements match"
+msgstr "**返回**：如果所有元素匹配则成功 (1)。"
+
+#: ../../modules/collection.md b9a14c2952ff4e4ba137c60efcf72f41
+msgid "Any"
+msgstr "任意"
+
+#: ../../modules/collection.md:1096 ee92f3e4e395429bac8bfebbc9b6896b
+msgid "Test if at least one element satisfies a predicate condition."
+msgstr "测试是否至少有一个元素满足谓词条件。"
+
+#: ../../modules/collection.md:1108 b720c6414496418f8a706616d4509672
+msgid "**Return**: success (1) if any element matches"
+msgstr "**返回**：如果任一元素匹配则成功 (1)。"
+
+#: ../../modules/collection.md d064bb474810431ebc4f812b771cfb0a
+msgid "Contains"
+msgstr "包含"
+
+#: ../../modules/collection.md:1128 255835ce73574c5a9067e099dbdc1d93
+msgid "Check if a collection contains a specific value."
+msgstr "检查集合是否包含特定值。"
+
+#: ../../modules/collection.md:1136 50cbfc3ee1944ed385e58f2a730ae6f7
+#, python-brace-format
+msgid "{nbt}`any` **searched**: the value to search for"
+msgstr "{nbt}`any` **搜索**：要搜索的值。"
+
+#: ../../modules/collection.md:1140 b5e794ef441940cda5b81a3f4c697d25
+msgid "**Return**: success (1) if found, fail (0) otherwise"
+msgstr "**返回**：如果找到则成功 (1)，否则失败 (0)。"
+
+#: ../../modules/collection.md 964a9a4fc1f34e9b96958ebe6af9dc62
+msgid "Is Empty"
+msgstr "为空"
+
+#: ../../modules/collection.md:1150 e5785c8d2d48453c91a57d8f1e672db5
+msgid "Test if a collection is empty."
+msgstr "测试集合是否为空。"
+
+#: ../../modules/collection.md:1156 45453e7f43bf4162b32ecce84fe49a92
+msgid "**Return**: success (1) if empty"
+msgstr "**返回**：如果为空则成功 (1)。"
+
+#: ../../modules/collection.md 5f667316f37c4c10bfcc26e73b4929e2
+msgid "None"
+msgstr "没有"
+
+#: ../../modules/collection.md:1166 d01845263f6949dcb6a214256f83406f
+msgid "Test if no elements satisfy a predicate condition."
+msgstr "测试是否没有元素满足谓词条件。"
+
+#: ../../modules/collection.md:1178 464f282b00ca43e4951e97ab7fac500f
+msgid "**Return**: success (1) if no elements match"
+msgstr "**返回**：如果没有元素匹配则成功 (1)。"
+
+#: ../../modules/collection.md ../../modules/collection.md:1197
+#: 723fd08875de435c9bf4da9517f8f011 b0daa99d9c7440fdb79fc645626e2214
+msgid "Reduce"
+msgstr "归约"
+
+#: ../../modules/collection.md:1199 ae47c68fa6624bce801262611a23a3b4
+msgid "Reduce a collection to a single value, using the first element as the initial accumulator."
+msgstr "将集合归约为单一值，使用第一个元素作为初始累加器。"
+
+#: ../../modules/collection.md:1207 fd70ed91df58451a9dc9040a27b019f7
+msgid "Reduce a collection to a single value by applying a function that combines the accumulator with each element."
+msgstr "通过应用将累加器与每个元素组合的函数，将集合归约为单一值。"
+
+#: ../../modules/collection.md:1210 ../../modules/collection.md:1252
+#: 5b9a9f5898f44381b51367e22f16eb40 950a2c9612404d02a98f890ad0e7cee4
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to reduce"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 要归约的集合。"
+
+#: ../../modules/collection.md:1221 ../../modules/collection.md:1263
+#: 9f9fb470d2754928a9e04ae390620adc c10b8d71e1a347c3a3966cdf2952e0a5
+msgid "**Return**: 0 on success, fail if the collection is empty"
+msgstr "**返回**：成功时返回 0，如果集合为空则失败。"
+
+#: ../../modules/collection.md:1234 c2541acb33ff4c53b0abef7f1ec1dd3b
+msgid "*Example: get the last element using reduce*"
+msgstr "*示例：使用归约获取最后一个元素*。"
+
+#: ../../modules/collection.md cfed517b8e0641bf9e322cf72e723cdc
+msgid "Reduce Right"
+msgstr "右归约"
+
+#: ../../modules/collection.md:1249 3e5ed9b7d750463caba0238b2e7b1dd6
+msgid "Reduce a collection to a single value by applying a function from right to left, starting with the last element as the initial accumulator."
+msgstr "通过从右向左应用函数将集合缩减为单个值，从最后一个元素作为初始累加器开始。"
+
+#: ../../modules/collection.md ../../modules/collection.md:1282
+#: 22173dda7b16425c8ea44f417530545d cb545e53b5e64fed962df56e69828c42
+msgid "Reverse"
+msgstr "反转"
+
+#: ../../modules/collection.md:1284 aaabd67350744469981b2b8b339ff1c5
+msgid "Reverse the order of elements."
+msgstr "反转元素的顺序。"
+
+#: ../../modules/collection.md:1292 c0b5167b18a0442290f236c3ecdab8c1
+msgid "Reverse the order of elements in a collection."
+msgstr "反转集合中元素的顺序。"
+
+#: ../../modules/collection.md:1295 4ac31f3761ef41cbb260fe8c43940645
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to reverse"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 要反转的集合。"
+
+#: ../../modules/collection.md:1298 0ee8374aafd34afcae2e8b1dfc142c01
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection with elements in reversed order"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 元素顺序反转后的集合。"
+
+#: ../../modules/collection.md:1301 08d725f20175443294971fb289665efc
+msgid "*Example: reverse a list*"
+msgstr "*示例：反转列表*。"
+
+#: ../../modules/collection.md ../../modules/collection.md:1315
+#: 233623a0efb74e3186c849f8f02f2b3a fd0b93f5f1624ea68d53313b3c0d86e6
+msgid "Scale"
+msgstr "缩放"
+
+#: ../../modules/collection.md:1317 db1261a324a3454984761b03f922a449
+msgid "Multiply every number in a collection by a factor."
+msgstr "将集合中的每个数字乘以一个因子。"
+
+#: ../../modules/collection.md:1325 134675647561473084d2bd1b13edcd42
+msgid "Multiply all numbers in a collection by a scaling factor."
+msgstr "将集合中的所有数字乘以一个缩放因子。"
+
+#: ../../modules/collection.md:1328 124d32801ecb45c3911bab07cc04b801
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection of numbers to scale"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 要缩放的数字集合。"
+
+#: ../../modules/collection.md:1333 c03106153e584181aeca26ad9acc87f6
+#, python-brace-format
+msgid "{nbt}`float` **scale**: the scaling factor (multiplier)"
+msgstr "{nbt}`float` **缩放**：缩放因子（乘数）。"
+
+#: ../../modules/collection.md:1337 631446f867f847eeb218c32cc1b025c7
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection with all values multiplied by the scale"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 所有值乘以缩放后的集合。"
+
+#: ../../modules/collection.md:1340 910c8cad615548cba8a95e55cd696411
+msgid "*Example: multiply all elements by 10*"
+msgstr "*示例：将所有元素乘以10*。"
+
+#: ../../modules/collection.md:1354 671a9eef8cba4f2d9d9fd2248750cdc0
+msgid "Scan"
+msgstr "扫描"
+
+#: ../../modules/collection.md:1356 67749905ba764a0f9960b9db153158de
+msgid "Naming Convention"
+msgstr "命名约定"
+
+#: ../../modules/collection.md:1359 2e183705e32345f3a4087269711a793f
+msgid "`scan_reduce` and `scan_fold` mirror `reduce` and `fold`, but return every intermediate accumulator value instead of only the final one. The `_right` suffix indicates right-to-left processing."
+msgstr "`scan_reduce` 和 `scan_fold` 镜像了 `reduce` 和 `fold`，但返回每个中间累加器值而不是仅返回最终值。`_right` 后缀表示从右到左处理。"
+
+#: ../../modules/collection.md 60d227b81c6a40faafc91b524b6528d6
+msgid "Scan Fold"
+msgstr "扫描折叠"
+
+#: ../../modules/collection.md:1370 1807dcb6ecfc4826b29d406e54876389
+msgid "Similar to `fold`, but returns a list of all intermediate accumulator values."
+msgstr "类似于 `fold`，但返回所有中间累加器值的列表。"
+
+#: ../../modules/collection.md:1373 ../../modules/collection.md:1406
+#: ../../modules/collection.md:1439 ../../modules/collection.md:1471
+#: 27a3e022d55242aca112d61d89036059 3bdd4bdc5d474153ba7dd0f1037c4e29
+#: af94b061a0ee4f6d813882e4538acadb c7ce34bec40444fbb75e4c3a881dd42c
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to scan"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 要扫描的集合。"
+
+#: ../../modules/collection.md:1378 ../../modules/collection.md:1411
+#: ../../modules/collection.md:1444 ../../modules/collection.md:1476
+#: 0060495133704f54b6fea7ad4860ffe8 bad2cdf8e3e7438daa4decb61d026fd2
+#: bf43d0fb022a401a83da8fb6e488a6bf f96e8ef3170049f4aa0130fd180028da
+#, python-brace-format
+msgid "{nbt}`string` **run**: lambda function"
+msgstr "{nbt}`string` **运行**：lambda 函数。"
+
+#: ../../modules/collection.md:1379 ../../modules/collection.md:1412
+#: d1b41e0c28194425a6614ae424217ec2 d81e402117594bb586080c795a8d88ea
+#, python-brace-format
+msgid "{nbt}`any` **initial**: initial value, must be a valid NBT value"
+msgstr "{nbt}`any` **初始值**：初始值，必须是一个有效的NBT值。"
+
+#: ../../modules/collection.md:1383 ../../modules/collection.md:1416
+#: ../../modules/collection.md:1448 ../../modules/collection.md:1480
+#: 58e559e258354fc4bb76650f8ac5a115 5e1323db131e4087923b93a89226b2c9
+#: 6a88518c12af408babe93b7c77b60ac1 892f026217cd44e8892c8c7a79b27864
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the list of intermediate results"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 中间结果列表。"
+
+#: ../../modules/collection.md b66ccd754c1e4450bb06e0531562cc91
+msgid "Scan Fold Right"
+msgstr "扫描右折叠"
+
+#: ../../modules/collection.md:1403 f4b6144fa9b8460786938ea719eae3ee
+msgid "Similar to `fold_right`, but returns a list of all intermediate accumulator values."
+msgstr "类似于 `fold_right`，但返回所有中间累加器值的列表。"
+
+#: ../../modules/collection.md 79728a97258544d19c1781615aeb9a40
+msgid "Scan Reduce"
+msgstr "扫描归约"
+
+#: ../../modules/collection.md:1436 e559fb5ffcff498eb4a97fe1a1ba5aa6
+msgid "Similar to `reduce`, but returns a list of all intermediate accumulator values."
+msgstr "类似于 `reduce`，但返回所有中间累加器值的列表。"
+
+#: ../../modules/collection.md ec06906be44449658dd525bdc1b8ab81
+msgid "Scan Reduce Right"
+msgstr "右扫描归约"
+
+#: ../../modules/collection.md:1468 19dad0c94630477ca13c389f3004fb14
+msgid "Similar to `reduce_right`, but returns a list of all intermediate accumulator values."
+msgstr "类似于 `reduce_right`，但返回所有中间累加器值的列表。"
+
+#: ../../modules/collection.md:1499 3701f249d9d44fa4ac90b764ac74a97b
+msgid "Set Operations"
+msgstr "集合操作"
+
+#: ../../modules/collection.md:1501 d81669a2efbc4fbf86f247b38713962b
+msgid "Operations treating collections as sets."
+msgstr "将集合按集合（set）语义处理的操作。"
+
+#: ../../modules/collection.md 630b23468a1842b19a9295490b9420b3
+msgid "Difference"
+msgstr "差集"
+
+#: ../../modules/collection.md:1509 3f89dd3d357d431ea0bc5076f704831c
+msgid "Compute the difference of two collections (elements present in the first collection but not in the second, without duplicates)."
+msgstr "计算两个集合的差集（存在于第一个集合但不在第二个中的元素，无重复）。"
+
+#: ../../modules/collection.md:1512 ../../modules/collection.md:1539
+#: ../../modules/collection.md:1566 ../../modules/collection.md:1593
+#: ../../modules/collection.md:1856 071e403fbec146199dd215d05cbea7b4
+#: 1c0562ba0d7e48ccbfb81cf8593c28c8 6984646fb66e45a385e7225562e1b150
+#: 7d83d268d91b4f40b02ec3536d3b5b48 829e2e07522545e68ff776dd20bd24ab
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the first collection"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 第一个集合。"
+
+#: ../../modules/collection.md:1514 ../../modules/collection.md:1541
+#: ../../modules/collection.md:1568 ../../modules/collection.md:1595
+#: ../../modules/collection.md:1858 31af83c484bc4631a6f1ebe6ca789819
+#: 3ba1334fdca04130b4f53093e354fcbd 73919e37506e43b69997d8bbd055f76e
+#: caaa4500a2c1447ab956ac0c7052c13b e91718154c29439e9cf7608eb6c1bb3e
+#, python-brace-format
+msgid "**Storage `bs:in collection`**: {nbt}`list` the second collection"
+msgstr "**存储 `bs:in collection`**：{nbt}`list` 第二个集合。"
+
+#: ../../modules/collection.md:1517 4640a74702f74b58b9b4236c1b52fbbb
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the difference of the two collections"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 两个集合的差集。"
+
+#: ../../modules/collection.md:1520 9197871704844f729b04e50362f4dd74
+msgid "*Example: difference of [1, 2, 3] and [2, 3, 4]*"
+msgstr "*示例：[1, 2, 3] 与 [2, 3, 4] 的差集*。"
+
+#: ../../modules/collection.md 9bfffe5c79d64dc0beae5811f8a55042
+msgid "Intersect"
+msgstr "交集"
+
+#: ../../modules/collection.md:1536 4257d632daea429cbecf9a31064c749b
+msgid "Compute the intersection of two collections (elements present in both collections, without duplicates)."
+msgstr "计算两个集合的交集（同时存在于两个集合中的元素，无重复）。"
+
+#: ../../modules/collection.md:1544 534820438b58429f9be76f10dc9cc848
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the intersection of the two collections"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 两个集合的交集。"
+
+#: ../../modules/collection.md:1547 8f5dde5539ff4262a16fe2f8a594ea9a
+msgid "*Example: intersect [1, 2, 3] and [2, 3, 4]*"
+msgstr "*示例：[1, 2, 3] 与 [2, 3, 4] 的交集*。"
+
+#: ../../modules/collection.md 24bb3e15eeac4874b30e7a7358df19e9
+msgid "Symmetric Difference"
+msgstr "对称差集"
+
+#: ../../modules/collection.md:1563 88be49de78a24f47a8d94f301689c788
+msgid "Compute the symmetric difference of two collections (elements present in either collection, but not in both, without duplicates)."
+msgstr "计算两个集合的对称差集（存在于任一个集合但不同时存在于两个中的元素，无重复）。"
+
+#: ../../modules/collection.md:1571 9f38d15103c04d679f27cfe2e3a6ef52
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the symmetric difference of the two collections"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 两个集合的对称差集。"
+
+#: ../../modules/collection.md:1574 61e2cb7d172347b9b6bec1497e01b4be
+msgid "*Example: symmetric difference of [1, 2, 3] and [2, 3, 4]*"
+msgstr "*示例：[1, 2, 3] 与 [2, 3, 4] 的对称差集*。"
+
+#: ../../modules/collection.md 64047c0c92b24ebc9f327de53c6e7319
+msgid "Union"
+msgstr "并集"
+
+#: ../../modules/collection.md:1590 ce511f9e3bc54100a58abe00e38ab3ee
+msgid "Compute the union of two collections (elements present in either collection, without duplicates)."
+msgstr "计算两个集合的并集（存在于任一个集合中的元素，无重复）。"
+
+#: ../../modules/collection.md:1598 d7e344050ed941fc95e84c453bc3eaf4
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the union of the two collections"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 两个集合的并集。"
+
+#: ../../modules/collection.md:1601 f2f618e20e2941a593d0b8f48271d0d6
+msgid "*Example: union of [1, 2] and [2, 3]*"
+msgstr "*示例：[1, 2] 与 [2, 3] 的并集*。"
+
+#: ../../modules/collection.md:1616 dcfb0edf86a249b38562c7c59d61f757
+msgid "Slicing"
+msgstr "切片"
+
+#: ../../modules/collection.md:1618 48bb49e5ecb849048741e16a97642d9c
+msgid "Operations that split a collection into sub-collections or windows."
+msgstr "将集合拆分为子集合或窗口的操作。"
+
+#: ../../modules/collection.md 2973144ad541457595d01385e92f6701
+msgid "Chunk"
+msgstr "分块"
+
+#: ../../modules/collection.md:1626 5d0210cc0b624e5cb73f848ac68e0c56
+msgid "Split a collection into chunks of size N. If the collection size is not divisible by N, the last chunk will contain the remaining elements."
+msgstr "将一个集合拆分为大小为 N 的块。如果集合大小不能被 N 整除，最后一个块将包含剩余的元素。"
+
+#: ../../modules/collection.md:1629 ea2f4103df7c42a988cc0f9de38efdff
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to split"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 要拆分的集合。"
+
+#: ../../modules/collection.md:1634 2b0e513294ab48df8dfbb3d7b6e40daa
+#, python-brace-format
+msgid "{nbt}`int` **size**: the size of each chunk"
+msgstr "{nbt}`int` **size**：每个块的大小。"
+
+#: ../../modules/collection.md:1638 3d377f18c7d54fc5834c76192b6ff85c
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the list of chunks (list of lists)"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 块列表（列表的列表）。"
+
+#: ../../modules/collection.md:1641 b3ede2e059794c388b5d2460a85addc9
+msgid "*Example: chunk a list into pairs*"
+msgstr "*示例：将列表分块成对*。"
+
+#: ../../modules/collection.md a18da4ad8624455d82168527106c1120
+msgid "Slice"
+msgstr "切片"
+
+#: ../../modules/collection.md:1656 e80fc17ebadf4489853fb6408aa0ca51
+msgid "Extract a portion of a collection from `min` (inclusive) to `max` (exclusive). Supports negative indices (counted from the end). The function fails if `min >= max`, or if indices are out of bounds (after negative index resolution)."
+msgstr "从集合中提取从 `min`（包含）到 `max`（不包含）的部分。支持负索引（从末尾计数）。如果 `min >= max` 或索引超出范围（在解析负索引后），函数将失败。"
+
+#: ../../modules/collection.md:1660 8014935428744d12be636ef0510b1f94
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to slice"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 要切片的集合。"
+
+#: ../../modules/collection.md:1665 1ee91c9d1dd94309aecac82b66534467
+#, python-brace-format
+msgid "{nbt}`int` **min**: the start index (inclusive)"
+msgstr "{nbt}`int` **min**：起始索引（包含）。"
+
+#: ../../modules/collection.md:1666 bf9987b7c95545a189f2b48460e047c5
+#, python-brace-format
+msgid "{nbt}`int` **max**: the end index (exclusive)"
+msgstr "{nbt}`int` **max**：结束索引（不包含）。"
+
+#: ../../modules/collection.md:1670 71df918e039b4415b75a4c08de2dd95f
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the sliced collection"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 切片后的集合。"
+
+#: ../../modules/collection.md:1673 26a7859e8ad047fb9dd775bd291aa0a8
+msgid "*Example: get elements from index 1 to 3*"
+msgstr "*示例：获取索引 1 到 3 的元素*。"
+
+#: ../../modules/collection.md 0736442d94b0458f8bcd8f4630f68ead
+msgid "Sliding"
+msgstr "滑动"
+
+#: ../../modules/collection.md:1688 081f99667d064dd5919ce1b1eb03a201
+msgid "Create sliding windows of elements from the collection."
+msgstr "从集合中创建元素的滑动窗口。"
+
+#: ../../modules/collection.md:1696 09ab9b7c2f5140ee94a6b2e3b71485ad
+#, python-brace-format
+msgid "{nbt}`int` **size**: the number of elements in each window"
+msgstr "{nbt}`int` **size**：每个窗口中的元素数量。"
+
+#: ../../modules/collection.md:1697 d8b187d9d8a443e6bc8eb55380187b9d
+#, python-brace-format
+msgid "{nbt}`int` **step**: the number of elements to shift the window by"
+msgstr "{nbt}`int` **step**：窗口移动的元素数量。"
+
+#: ../../modules/collection.md:1701 d3dcec3ad94f4355b9b3b7594c485357
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` a list of windows (list of lists)"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 窗口列表（列表的列表）。"
+
+#: ../../modules/collection.md:1704 82a89487e0de41088de7f6a8553d5366
+msgid "*Example: sliding window of size 2 with step 1*"
+msgstr "*示例：大小为 2、步长为 1 的滑动窗口*。"
+
+#: ../../modules/collection.md ../../modules/collection.md:1718
+#: 5d29f40dcb914d2dae9c76c79970dfc5 7e10dc0eddb743a0b355ab01acf8b924
+msgid "Take"
+msgstr "保留"
+
+#: ../../modules/collection.md:1720 259d64c75e4a4d29ac3c1d279bae1ed6
+msgid "Operations that keep elements from the start of a collection."
+msgstr "保留集合开头元素的操作。"
+
+#: ../../modules/collection.md:1728 bd12ffd08bd6491aafaac99b5cbf618f
+msgid "Take the first N elements from a collection."
+msgstr "从集合中取出前 N 个元素。"
+
+#: ../../modules/collection.md:1731 ../../modules/collection.md:1761
+#: 0106986e4f534c9bb61feab16a09e1a1 e857c023e9de428a8d1d1627465e6b5b
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection to take from"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 要取出的集合。"
+
+#: ../../modules/collection.md:1736 17f2a85b0a3c4bc6bcad83672991ef1f
+#, python-brace-format
+msgid "{nbt}`int` **number**: the number of elements to take"
+msgstr "{nbt}`int` **number**：要取出的元素数量。"
+
+#: ../../modules/collection.md:1740 9d90c0f82f20410e8fec3f5b139a70a5
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the collection containing only the first N elements"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 仅包含前 N 个元素的集合。"
+
+#: ../../modules/collection.md:1743 3a28f67b52ac4cbab5440fd38356c3ee
+msgid "*Example: take first 3 elements*"
+msgstr "*示例：取前 3 个元素*。"
+
+#: ../../modules/collection.md da8fb52c370e41cb935b8a0618228e35
+msgid "Take While"
+msgstr "条件取"
+
+#: ../../modules/collection.md:1758 ff681405ddf241e581b5e64d7d59a50e
+msgid "Take elements from the beginning of a collection as long as a predicate is true."
+msgstr "从集合开头取元素，只要谓词为真。"
+
+#: ../../modules/collection.md:1770 648ccefeb1ef4176a5ebe0a1949c1066
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` the elements taken"
+msgstr "**存储 `bs:out collection.value`**: {nbt}`list` 取出的元素。"
+
+#: ../../modules/collection.md:1780 9ccb1abd67c9469c883a98953ca71e6b
+msgid "**Return**: success (1) to continue taking, fail (0) otherwise"
+msgstr "**返回**：成功 (1) 继续取，失败 (0) 停止。"
+
+#: ../../modules/collection.md:1783 b588a73e27e8481097d3053e1aeb0636
+msgid "*Example: take elements until value is 4*"
+msgstr "*示例：取元素直到值为 4*。"
+
+#: ../../modules/collection.md ../../modules/collection.md:1797
+#: 14077301c4904010a25582cdef65f11c 34610101f84947b2921e9f9fa1805dd6
+msgid "Tap"
+msgstr "监听"
+
+#: ../../modules/collection.md:1799 eecaf1a81e5a47239e24c8909d4b947a
+msgid "Run a lambda on the whole collection, passing it through unchanged."
+msgstr "对整个集合运行 lambda，原样传递。"
+
+#: ../../modules/collection.md:1807 3bbbc4e200c343aa87345cb3032bde46
+msgid "Execute an operation on the entire collection. Useful for side effects or logging the collection state."
+msgstr "对整个集合执行操作。适用于副作用或记录集合状态。"
+
+#: ../../modules/collection.md:1815 c2f0099862454e71b98ffce48a3c77f0
+#, python-brace-format
+msgid "{nbt}`string` **run**: lambda function to execute"
+msgstr "{nbt}`string` **run**：要执行的 lambda 函数。"
+
+#: ../../modules/collection.md:1825 d30e56b833104bcbb58490e3d1b5bdb5
+#, python-brace-format
+msgid "{nbt}`list` **value**: the entire collection"
+msgstr "{nbt}`list` **value**：整个集合。"
+
+#: ../../modules/collection.md:1829 bc9f5e5292e64905bb2cc31828d871da
+msgid "*Example: log the size of the collection*"
+msgstr "*示例：记录集合的大小*。"
+
+#: ../../modules/collection.md ../../modules/collection.md:1843
+#: 5bcbb7592ed3401d9172d20858e68fb6 ceb7397c5355479597dff5a1ee7dab58
+msgid "Zip"
+msgstr "配对"
+
+#: ../../modules/collection.md:1845 333513d63b99400d90ca32635a4dd94e
+msgid "Combine two collections element-wise."
+msgstr "按对应位置将两个集合配对。"
+
+#: ../../modules/collection.md:1853 9d8c53cdd60647bfac92cb38b7c05b0b
+msgid "Combine two collections into a list of pairs."
+msgstr "将两个集合按对应位置配对，得到一个元素对列表。"
+
+#: ../../modules/collection.md:1861 03eb6888168b458b988aca6877ae305b
+#, python-brace-format
+msgid "**Storage `bs:out collection.value`**: {nbt}`list` a list of pairs `[[a1, b1], [a2, b2], ...]`, truncated to the length of the shorter collection"
+msgstr "**存储 `bs:out collection.value`**：{nbt}`list` 由元素对 `[[a1, b1], [a2, b2], ...]` 组成的列表，长度与较短的集合一致。"
+
+#: ../../modules/collection.md:1864 88112654a1bd4806b6057c000b99b018
+msgid "*Example: zip two lists*"
+msgstr "*示例：压缩两个列表*。"
+
+#: ../../_templates/comments.md:4 2a2549e871644e928a4866e8eb693ea6
+msgid "**💬 Did it help you?**"
+msgstr "**💬 这对你有帮助吗？**"
+
+#: ../../_templates/comments.md:6 4b2f0906be854034b53876f82646c001
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "欢迎在下方留下你的问题和反馈！"

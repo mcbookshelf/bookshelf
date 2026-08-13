@@ -13,21 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# A - B
-data modify storage bs:ctx _.sym_diff.a set from storage bs:out collection.value
-data modify storage bs:ctx _.sym_diff.b set from storage bs:in collection
-
-function #bs.collection:difference
-data modify storage bs:ctx _.sym_diff.res1 set from storage bs:out collection.value
-
-# B - A
-data modify storage bs:out collection.value set from storage bs:ctx _.sym_diff.b
-data modify storage bs:in collection set from storage bs:ctx _.sym_diff.a
-
-function #bs.collection:difference
-data modify storage bs:ctx _.sym_diff.res2 set from storage bs:out collection.value
-
-# Combine
-data modify storage bs:out collection.value set value []
-data modify storage bs:out collection.value append from storage bs:ctx _.sym_diff.res1[]
-data modify storage bs:out collection.value append from storage bs:ctx _.sym_diff.res2[]
+data modify storage bs:ctx _ set from storage bs:out collection
+data modify storage bs:out collection set value { value: [] }
+execute if data storage bs:ctx _.value[0] run function bs.collection:symmetric_difference/symmetric_difference_rec
+data modify storage bs:ctx _.value set from storage bs:in collection
+execute if data storage bs:ctx _.value[0] run function bs.collection:symmetric_difference/symmetric_difference_rec2

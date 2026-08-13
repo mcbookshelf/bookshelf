@@ -14,9 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 scoreboard players set $bitwise.two_complement.n bs.in 123456
-function #bs.bitwise:two_complement
-assert score $bitwise.two_complement bs.out matches 123456
+assert result 123456 run function #bs.bitwise:two_complement
 
 scoreboard players set $bitwise.two_complement.n bs.in -197364158
-function #bs.bitwise:two_complement
-assert score $bitwise.two_complement bs.out matches 1950119490
+assert result 1950119490 run function #bs.bitwise:two_complement

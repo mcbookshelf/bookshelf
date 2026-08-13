@@ -1339,9 +1339,9 @@ Multiply all numbers in a collection by a scaling factor.
 *Example: multiply all elements by 10*
 
 ```mcfunction
-data modify storage bs:out collection.value set value [1.5d, 2.5d]
+data modify storage bs:out collection.value set value [1, 2]
 function #bs.collection:scale {scale: 10}
-# bs:out collection.value = [15.0d, 25.0d]
+# bs:out collection.value = [10, 20]
 ```
 
 > **Credits**: theogiraudet

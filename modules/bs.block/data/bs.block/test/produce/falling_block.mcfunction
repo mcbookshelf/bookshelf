@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:in block.spawn_falling_block.type set value "minecraft:bookshelf"
-data modify storage bs:in block.spawn_falling_block.extra_nbt set value {Tags:["bs.packtest"]}
+data modify storage bs:in block.spawn_falling_block.extra_nbt set value {Tags:["bs.ward"]}
 function #bs.block:spawn_falling_block
 
-assert entity @e[type=minecraft:falling_block,tag=bs.packtest] inside
+assert entity @e[type=minecraft:falling_block,tag=bs.ward] inside

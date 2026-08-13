@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v3.2.0.md:1 d60a7bd0c97845ad848246dba8747a95
+msgid "📦 [Bookshelf - 3.2.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.2.0)"
+msgstr "📦 [Bookshelf - 3.2.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.2.0)"
+
+#: ../../../changelog/v3.2.0.md:3 d36848a8e5d441878bc9049edb25d1f3
+msgid "**🧱 The Block Update!**"
+msgstr "**🧱 方块更新！**"
+
+#: ../../../changelog/v3.2.0.md:5 e1eb96f591cd4634b0d1053077665b7e
+msgid "*Introduces new block data and deprecates several older features in preparation for the future.*"
+msgstr "*引入新的方块数据，并弃用若干旧功能，为未来做准备。*"
+
+#: ../../../changelog/v3.2.0.md:7 349f3b46ec9e4c8599c317a57c4cfda8
+msgid "Bookshelf is now based on **Minecraft 1.21.9-1.21.11**."
+msgstr "Bookshelf 现在基于 **Minecraft 1.21.9-1.21.11**。"
+
+#: ../../../changelog/v3.2.0.md:9 001fba39dbb84e4d9ef878bcdbf814db
+msgid "<abbr title=\"New Features\">✨</abbr> **[#403](https://github.com/mcbookshelf/bookshelf/issues/403)** - Added the `#bs.load:status` function to view loaded modules."
+msgstr "<abbr title=\"新特性\">✨</abbr> **[#403](https://github.com/mcbookshelf/bookshelf/issues/403)** - 添加了 `#bs.load:status` 函数以查看已加载的模块。"
+
+#: ../../../changelog/v3.2.0.md:10 cb24b51438de414c8fb67e2987e15e07
+msgid "<abbr title=\"Enhancements\">⚡</abbr> **[#501](https://github.com/mcbookshelf/bookshelf/pull/501)** - Optimized tp commands used in macros."
+msgstr "<abbr title=\"增强\">⚡</abbr> **[#501](https://github.com/mcbookshelf/bookshelf/pull/501)** - 优化了宏中使用的 tp 命令。"
+
+#: ../../../changelog/v3.2.0.md:11 5fc9db6ad29a4117b54795490aa1bf99
+msgid "<abbr title=\"Enhancements\">⚡</abbr> **[#501](https://github.com/mcbookshelf/bookshelf/pull/506)** - Reduce NBT writing and remove a few macros."
+msgstr "<abbr title=\"增强\">⚡</abbr> **[#501](https://github.com/mcbookshelf/bookshelf/pull/506)** - 减少 NBT 写入并移除少量宏。"
+
+#: ../../../changelog/v3.2.0.md:12 763183bcce014897ba65a1605dad4d27
+msgid "<abbr title=\"Bug Fix\">🐛</abbr> **[#501](https://github.com/mcbookshelf/bookshelf/pull/501)** - Ensure sculk sensors are not triggered when markers are killed."
+msgstr "<abbr title=\"错误修复\">🐛</abbr> **[#501](https://github.com/mcbookshelf/bookshelf/pull/501)** - 确保标记被杀死时不会触发 sculk 传感器。"
+
+#: ../../../changelog/v3.2.0.md:14 4572bd18cfc742e5a144b8b45af8bf14
+msgid "`🧱 bs.block`"
+msgstr "`🧱 bs.block`"
+
+#: ../../../changelog/v3.2.0.md:16 6647e12e87ad49ee8378b8bcabf14072
+msgid "<abbr title=\"Deprecations\">🗑️</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - Deprecated `play_block_sound` in favor of more granular functions (`play_break_sound`, etc.)."
+msgstr "<abbr title=\"弃用\">🗑️</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - 已弃用 `play_block_sound`，改用更细粒度的函数（`play_break_sound` 等）。"
+
+#: ../../../changelog/v3.2.0.md:17 65b4414f1fd7427e8c2a541f1c063933
+msgid "<abbr title=\"New Features\">✨</abbr> **[#496](https://github.com/mcbookshelf/bookshelf/issues/496)** - Added new predicates: `is_conductive`, `is_powered`, `is_spawnable`, `is_strongly_powered`, and `is_weakly_powered`."
+msgstr "<abbr title=\"新功能\">✨</abbr> **[#496](https://github.com/mcbookshelf/bookshelf/issues/496)** - 新增谓词：`is_conductive`、`is_powered`、`is_spawnable`、`is_strongly_powered` 和 `is_weakly_powered`。"
+
+#: ../../../changelog/v3.2.0.md:18 eb5f49bead8d4799a0b465c38ef475f2
+msgid "<abbr title=\"New Features\">✨</abbr> **[#496](https://github.com/mcbookshelf/bookshelf/issues/496)** - Added new functions: `is_touching_power`, `is_touching_strong_power`, and `is_touching_weak_power`."
+msgstr "<abbr title=\"新功能\">✨</abbr> **[#496](https://github.com/mcbookshelf/bookshelf/issues/496)** - 新增函数：`is_touching_power`、`is_touching_strong_power` 和 `is_touching_weak_power`。"
+
+#: ../../../changelog/v3.2.0.md:19 0255d2d83a624d429d8e4934411144a1
+msgid "<abbr title=\"New Features\">✨</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - Added new block property functions: `get_blast_resistance`, `get_friction`, `get_hardness`, `get_instrument`, `get_jump_factor`, `get_luminance`, `get_sounds`, and `get_speed_factor`."
+msgstr "<abbr title=\"新功能\">✨</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - 新增方块属性函数：`get_blast_resistance`、`get_friction`、`get_hardness`、`get_instrument`、`get_jump_factor`、`get_luminance`、`get_sounds` 和 `get_speed_factor`。"
+
+#: ../../../changelog/v3.2.0.md:20 61fff529ec2640f886a73944d1bde6c8
+msgid "<abbr title=\"New Features\">✨</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - Added new block sound functions: `play_break_sound`, `play_hit_sound`, `play_fall_sound`, `play_place_sound`, and `play_step_sound`."
+msgstr "<abbr title=\"新功能\">✨</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - 新增方块音效函数：`play_break_sound`、`play_hit_sound`、`play_fall_sound`、`play_place_sound` 和 `play_step_sound`。"
+
+#: ../../../changelog/v3.2.0.md:21 20306f2e59624397ad000979c93aded8
+msgid "<abbr title=\"New Features\">✨</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - Added new block tags: `can_occlude` and `ignited_by_lava`."
+msgstr "<abbr title=\"新功能\">✨</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - 新增块标签：`can_occlude` 和 `ignited_by_lava`。"
+
+#: ../../../changelog/v3.2.0.md:22 98a4fe7c226a4c92a4876c5c03f89e12
+msgid "<abbr title=\"Enhancements\">⚡</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - Modified `emit_block_particle` to support a default `type`, aligning it with the new block sound function behavior."
+msgstr "<abbr title=\"改进\">⚡</abbr> **[#489](https://github.com/mcbookshelf/bookshelf/pull/489)** - 修改了 `emit_block_particle`，以支持默认的 `type`，使其与新的方块音效函数行为保持一致。"
+
+#: ../../../changelog/v3.2.0.md:25 181266b1a49f4ab3b2727bf3b79780d9
+msgid "`🎯 bs.environment`"
+msgstr "`🎯 bs.environment`"
+
+#: ../../../changelog/v3.2.0.md:27 8b37411fa2b1415597c82708ed769075
+msgid "<abbr title=\"Bug Fix\">🐛</abbr> **[#501](https://github.com/mcbookshelf/bookshelf/pull/501)** - Fixed `look_at` functions teleporting the player to the current execution position."
+msgstr "<abbr title=\"Bug Fix\">🐛</abbr> **[#501](https://github.com/mcbookshelf/bookshelf/pull/501)** - 修复了 `look_at` 函数将玩家传送至当前执行位置的问题。"
+
+#: ../../../changelog/v3.2.0.md:30 52cb5cfbb48c43b5aff8601171e1c915
+msgid "`🎯 bs.hitbox`"
+msgstr "`🎯 bs.hitbox`"
+
+#: ../../../changelog/v3.2.0.md:32 21b8c27e02144102812048489612a12d
+msgid "<abbr title=\"Deprecations\">🗑️</abbr> **[#484](https://github.com/mcbookshelf/bookshelf/pull/484)** - Block tag `has_offset` has been **deprecated** and will be removed in a v4.0.0. Please use `has_shape_offset` instead."
+msgstr "<abbr title=\"Deprecations\">🗑️</abbr> **[#484](https://github.com/mcbookshelf/bookshelf/pull/484)** - 方块标签 `has_offset` 已被**弃用**，将在 v4.0.0 中移除。请改用 `has_shape_offset`。"
+
+#: ../../../changelog/v3.2.0.md:33 7e85df02e7db4cf4804a5fad6cb20e89
+msgid "<abbr title=\"Deprecations\">🗑️</abbr> **[#484](https://github.com/mcbookshelf/bookshelf/pull/484)** - Function `#bs.hitbox:get_block` has been **deprecated** and will be removed in a v4.0.0. Please use `#bs.hitbox:get_block_shape` or `#bs.hitbox:get_block_collision` instead."
+msgstr "<abbr title=\"Deprecations\">🗑️</abbr> **[#484](https://github.com/mcbookshelf/bookshelf/pull/484)** - 函数 `#bs.hitbox:get_block` 已被**弃用**，将在 v4.0.0 中移除。请改用 `#bs.hitbox:get_block_shape` 或 `#bs.hitbox:get_block_collision`。"
+
+#: ../../../changelog/v3.2.0.md:34 dc2ef408284d4e11a0d119e6190c8549
+msgid "<abbr title=\"Deprecations\">🗑️</abbr> **[#484](https://github.com/mcbookshelf/bookshelf/pull/484)** - Functions `#bs.hitbox:is_entity_in_block_interaction`, `#bs.hitbox:is_entity_in_blocks_interaction`, and `#bs.hitbox:is_in_block_interaction` have been **deprecated** and will be removed in a v4.0.0. Please use `#bs.hitbox:is_entity_in_block_shape`, `#bs.hitbox:is_entity_in_blocks_shape`, or `#bs.hitbox:is_in_block_shape` instead."
+msgstr "<abbr title=\"Deprecations\">🗑️</abbr> **[#484](https://github.com/mcbookshelf/bookshelf/pull/484)** - 函数 `#bs.hitbox:is_entity_in_block_interaction`、`#bs.hitbox:is_entity_in_blocks_interaction` 和 `#bs.hitbox:is_in_block_interaction` 已被**弃用**，将在 v4.0.0 中移除。请改用 `#bs.hitbox:is_entity_in_block_shape`、`#bs.hitbox:is_entity_in_blocks_shape` 或 `#bs.hitbox:is_in_block_shape`。"
+
+#: ../../../changelog/v3.2.0.md:35 d3137d930dca48f0ab24b0cf1778c608
+msgid "<abbr title=\"New Features\">✨</abbr> **[#502](https://github.com/mcbookshelf/bookshelf/pull/502)** - Added new 1.21.11 entities."
+msgstr "<abbr title=\"New Features\">✨</abbr> **[#502](https://github.com/mcbookshelf/bookshelf/pull/502)** - 新增了 1.21.11 版本的实体。"
+
+#: ../../../changelog/v3.2.0.md:38 94906391098a4d11a84538d231360b25
+msgid "`🏃 bs.move`"
+msgstr "`🏃 bs.move`"
+
+#: ../../../changelog/v3.2.0.md:40 e68517a0eb864710bf6924352d59b019
+msgid "<abbr title=\"New Features\">✨</abbr> **[#473](https://github.com/mcbookshelf/bookshelf/issues/473)** - Added custom block hitboxes and soft collisions."
+msgstr "<abbr title=\"新功能\">✨</abbr> **[#473](https://github.com/mcbookshelf/bookshelf/issues/473)** - 添加了自定义方块碰撞箱和软碰撞。"
+
+#: ../../../changelog/v3.2.0.md:41 5f11df2278c84bc68f989638cfbf68aa
+msgid "<abbr title=\"Bug Fix\">🐛</abbr> **[#487](https://github.com/mcbookshelf/bookshelf/issues/487)** - Prevented false collisions on zero-velocity axes with partial blocks such as slabs."
+msgstr "<abbr title=\"漏洞修复\">🐛</abbr> **[#487](https://github.com/mcbookshelf/bookshelf/issues/487)** - 修复了在使用台阶等部分方块时，零速度轴上的错误碰撞。"
+
+#: ../../../changelog/v3.2.0.md:44 d134e18c2a744fcc8797e927a177984b
+msgid "`🔦 bs.raycast`"
+msgstr "`🔦 bs.raycast`"
+
+#: ../../../changelog/v3.2.0.md:46 378968af5e1541b783115f9df9bb5eea
+msgid "<abbr title=\"New Features\">✨</abbr> **[#473](https://github.com/mcbookshelf/bookshelf/issues/473)** - Added custom block hitboxes and improved multi-layer piercing."
+msgstr "<abbr title=\"新功能\">✨</abbr> **[#473](https://github.com/mcbookshelf/bookshelf/issues/473)** - 添加了自定义方块碰撞箱并改进了多层穿透。"
+
+#: ../../../changelog/v3.2.0.md:49 4b13bf6e432c4d4b833a1a8767569616
+msgid "`👀 bs.view`"
+msgstr "`👀 bs.view`"
+
+#: ../../../changelog/v3.2.0.md:51 71e7632e0e19416388dd17a8d6b8a176
+msgid "<abbr title=\"Bug Fix\">🐛</abbr> **[#498](https://github.com/mcbookshelf/bookshelf/issues/498)** - Fixed `#bs.view:at_block_placement` to match vanilla placement behavior for special blocks such as cauldrons, hoppers, composters, and scaffolding."
+msgstr "<abbr title=\"漏洞修复\">🐛</abbr> **[#498](https://github.com/mcbookshelf/bookshelf/issues/498)** - 修复了`#bs.view:at_block_placement`，使其与炼药锅、漏斗、堆肥桶和脚手架等特殊方块的原版放置行为一致。"

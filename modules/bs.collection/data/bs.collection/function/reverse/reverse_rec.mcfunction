@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ append from storage bs:out collection.value[-1]
-data remove storage bs:out collection.value[-1]
+data modify storage bs:out collection.value append from storage bs:ctx _[-1]
+data remove storage bs:ctx _[-1]
 
 # Recurse if there are more elements
-execute if data storage bs:out collection.value[0] run function bs.collection:reverse/reverse_rec
+execute if data storage bs:ctx _[0] run function bs.collection:reverse/reverse_rec

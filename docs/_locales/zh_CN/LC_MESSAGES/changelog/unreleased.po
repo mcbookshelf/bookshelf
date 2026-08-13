@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -21,34 +20,20 @@ msgstr ""
 
 #: ../../changelog/unreleased.md:1 aa9c73f86e5940329f76f504feee5309
 msgid "📦 Bookshelf - Unreleased"
-msgstr ""
+msgstr "📦 Bookshelf - 未发布"
 
 #: ../../changelog/unreleased.md:4 3399b5bbf8364574884abd661e58d80c
 msgid "`🎯 bs.hitbox`"
-msgstr ""
+msgstr "`🎯 bs.hitbox`"
 
 #: ../../changelog/unreleased.md:6 6e5a07292d1547c19eb5dd9c1ca85e55
-msgid ""
-"<abbr title=\"Deprecations\">🗑️</abbr> - Block tag `has_offset` has been "
-"**deprecated** and will be removed in a v4.0.0. Please use "
-"`has_shape_offset` instead."
-msgstr ""
+msgid "<abbr title=\"Deprecations\">🗑️</abbr> - Block tag `has_offset` has been **deprecated** and will be removed in a v4.0.0. Please use `has_shape_offset` instead."
+msgstr "<abbr title=\"Deprecations\">🗑️</abbr> - 方块标签 `has_offset` 已**弃用**，将在 v4.0.0 中移除。请改用 `has_shape_offset`。"
 
 #: ../../changelog/unreleased.md:7 d365a23079d8450ab9224e214ad41ac7
-msgid ""
-"<abbr title=\"Deprecations\">🗑️</abbr> - Function `#bs.hitbox:get_block` "
-"has been **deprecated** and will be removed in a v4.0.0. Please use "
-"`#bs.hitbox:get_block_shape` or `#bs.hitbox:get_block_collision` instead."
-msgstr ""
+msgid "<abbr title=\"Deprecations\">🗑️</abbr> - Function `#bs.hitbox:get_block` has been **deprecated** and will be removed in a v4.0.0. Please use `#bs.hitbox:get_block_shape` or `#bs.hitbox:get_block_collision` instead."
+msgstr "<abbr title=\"Deprecations\">🗑️</abbr> - 函数 `#bs.hitbox:get_block` 已**弃用**，将在 v4.0.0 中移除。请改用 `#bs.hitbox:get_block_shape` 或 `#bs.hitbox:get_block_collision`。"
 
 #: ../../changelog/unreleased.md:8 930b382cdb954321a76bd47fa17f73a1
-msgid ""
-"<abbr title=\"Deprecations\">🗑️</abbr> - Functions "
-"`#bs.hitbox:is_entity_in_block_interaction`, "
-"`#bs.hitbox:is_entity_in_blocks_interaction`, and "
-"`#bs.hitbox:is_in_block_interaction` have been **deprecated** and will be"
-" removed in a v4.0.0. Please use `#bs.hitbox:is_entity_in_block_shape`, "
-"`#bs.hitbox:is_entity_in_blocks_shape`, or `#bs.hitbox:is_in_block_shape`"
-" instead."
-msgstr ""
-
+msgid "<abbr title=\"Deprecations\">🗑️</abbr> - Functions `#bs.hitbox:is_entity_in_block_interaction`, `#bs.hitbox:is_entity_in_blocks_interaction`, and `#bs.hitbox:is_in_block_interaction` have been **deprecated** and will be removed in a v4.0.0. Please use `#bs.hitbox:is_entity_in_block_shape`, `#bs.hitbox:is_entity_in_blocks_shape`, or `#bs.hitbox:is_in_block_shape` instead."
+msgstr "<abbr title=\"Deprecations\">🗑️</abbr> - 函数 `#bs.hitbox:is_entity_in_block_interaction`、`#bs.hitbox:is_entity_in_blocks_interaction` 和 `#bs.hitbox:is_in_block_interaction` 已**弃用**，将在 v4.0.0 中移除。请改用 `#bs.hitbox:is_entity_in_block_shape`、`#bs.hitbox:is_entity_in_blocks_shape` 或 `#bs.hitbox:is_in_block_shape`。"

@@ -14,11 +14,11 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute unless data storage bs:out collection.value[0] run return 0
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", i: -1, input: [] }
+$data modify storage bs:data collection.stack append value { value: [], run: "$(run)", i: -1, input: [] }
 
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
-data modify storage bs:data collection.stack[0].input set from storage bs:out collection.value
-execute if data storage bs:data collection.stack[0].value[0] run function bs.collection:for_each/for_each_rec
+data modify storage bs:data collection.stack[-1].value set from storage bs:out collection.value
+data modify storage bs:data collection.stack[-1].input set from storage bs:out collection.value
+execute if data storage bs:data collection.stack[-1].value[0] run function bs.collection:for_each/for_each_rec
 
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].input
-data remove storage bs:data collection.stack[0]
+data modify storage bs:out collection.value set from storage bs:data collection.stack[-1].input
+data remove storage bs:data collection.stack[-1]

@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 
 from pathlib import Path  # noqa: TC003
@@ -23,7 +22,7 @@ class BuildOptions(PluginOptions):
 def beet_default(ctx: Context, opts: BuildOptions) -> Generator:
     """Plugin that outputs the data pack and the resource pack in a local directory."""
     if opts.tests:
-        ctx.require("bookshelf.plugins.include_tests")
+        ctx.require("mcward.beet.plugin")
     yield
 
     link = ctx.inject(LinkManager)

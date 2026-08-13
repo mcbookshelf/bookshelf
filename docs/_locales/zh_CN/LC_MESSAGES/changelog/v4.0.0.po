@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v4.0.0.md:1 e491e7f0e72c443392324c10fc30de44
+msgid "📦 [Bookshelf - 4.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v4.0.0)"
+msgstr "📦 [Bookshelf - 4.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v4.0.0)"
+
+#: ../../../changelog/v4.0.0.md:3 c1f98b8bfd3049ed95ca5787e8eeb9da
+msgid "**🧹 The Tiny Sweep Update!**"
+msgstr "**🧹 清理更新！**"
+
+#: ../../../changelog/v4.0.0.md:5 88b4202faea1435cb40843680587aad5
+msgid "*First release for Minecraft's new date-based versioning, dropping support for previous versions.*"
+msgstr "*首个针对Minecraft新日期版本号的发布，放弃对旧版本的支持。*"
+
+#: ../../../changelog/v4.0.0.md:7 ef59c89591684d6ea2a508e7724bc48d
+msgid "**⚠️ BREAKING CHANGES**: This version has breaking changes!"
+msgstr "**⚠️ 破坏性变更**：此版本包含破坏性变更！"
+
+#: ../../../changelog/v4.0.0.md:9 f77570384f5b468aaebe27e55b595f36
+msgid "Bookshelf is now based on **Minecraft 26.1**."
+msgstr "Bookshelf 现已基于 **Minecraft 26.1**。"
+
+#: ../../../changelog/v4.0.0.md:12 2c70032bc6844ac9ab95985ae46a9024
+msgid "`🧱 bs.block`"
+msgstr "`🧱 bs.block`"
+
+#: ../../../changelog/v4.0.0.md:14 725f16a73c5045f09d0ed44d1b202da6
+msgid "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - Removed multi-tick fill operations (`fill_block`, `fill_type`, `fill_random`). Use the new `bs.generation` module for async iteration with callbacks."
+msgstr "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - 移除多刻填充操作（`fill_block`、`fill_type`、`fill_random`）。请使用新的 `bs.generation` 模块进行带回调的异步迭代。"
+
+#: ../../../changelog/v4.0.0.md:15 ../../changelog/v4.0.0.md:43
+#: 16fa8d1ab69843dca87b8ca96fa559bb ea52a7e3d6f749d8b053d2bc6184aa8a
+msgid "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#523](https://github.com/mcbookshelf/bookshelf/issues/523)** - Removed deprecated functions and tags from previous versions."
+msgstr "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#523](https://github.com/mcbookshelf/bookshelf/issues/523)** - 移除先前版本中已弃用的函数和标签。"
+
+#: ../../../changelog/v4.0.0.md:16 92a03272a29242c49494f1146937f85e
+msgid "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#525](https://github.com/mcbookshelf/bookshelf/issues/525)** - Removed NBT concatenation from block output. State and NBT are now returned as separate fields."
+msgstr "<abbr title=\"破坏性变更\">⚠️</abbr> **[#525](https://github.com/mcbookshelf/bookshelf/issues/525)** - 从方块输出中移除了 NBT 拼接。状态和 NBT 现在分别作为独立字段返回。"
+
+#: ../../../changelog/v4.0.0.md:17 b83b69321c60410d87b594e2815529b9
+msgid "<abbr title=\"Enhancements\">⚡</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - Simplified `fill_block` to use the vanilla `fill` command (single-tick execution)."
+msgstr "<abbr title=\"增强\">⚡</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - 简化了`fill_block`，使其使用原版`fill`命令（单刻执行）。"
+
+#: ../../../changelog/v4.0.0.md:18 54e51fd7b20146baae991b811d55a57e
+msgid "<abbr title=\"Enhancements\">⚡</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - Simplified `fill_type` with a cleaner recursion model (single-tick execution)."
+msgstr "<abbr title=\"增强\">⚡</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - 使用更清晰的递归模型简化了`fill_type`（单刻执行）。"
+
+#: ../../../changelog/v4.0.0.md:21 7df571d2698d491b95ad37fcb09fe54d
+msgid "`🔬 bs.dump`"
+msgstr "`🔬 bs.dump`"
+
+#: ../../../changelog/v4.0.0.md:23 4e356cdedef547169300c0012f253b68
+msgid "<abbr title=\"Bug Fix\">🐛</abbr> **[#524](https://github.com/mcbookshelf/bookshelf/issues/524)** - Updated `#bs.dump:var` for compatibility with Minecraft 26.1."
+msgstr "<abbr title=\"错误修复\">🐛</abbr> **[#524](https://github.com/mcbookshelf/bookshelf/issues/524)** - 更新了`#bs.dump:var`以兼容Minecraft 26.1。"
+
+#: ../../../changelog/v4.0.0.md:26 546e1f43387041ffb764d7a401caa2bf
+msgid "`⛰️ bs.environment`"
+msgstr "`⛰️ bs.environment`"
+
+#: ../../../changelog/v4.0.0.md:28 8d116082b72b41adb4c624bbb84e9e0c
+msgid "<abbr title=\"Bug Fix\">🐛</abbr> **[#527](https://github.com/mcbookshelf/bookshelf/issues/527)** - Fixed the different features of the module for Minecraft 26.1. Please, note that between previous Minecraft version and this one, the number of elapsed days has been reset to 0."
+msgstr "<abbr title=\"错误修复\">🐛</abbr> **[#527](https://github.com/mcbookshelf/bookshelf/issues/527)** - 修复了模块中针对Minecraft 26.1的不同特性。请注意，在之前的Minecraft版本与本版本之间，经过的天数已重置为0。"
+
+#: ../../../changelog/v4.0.0.md:32 9280deace46a43f0bb8f6589a154543e
+msgid "`🌱 bs.generation`"
+msgstr "`🌱 bs.generation`"
+
+#: ../../../changelog/v4.0.0.md:34 fd29f8d90cde43e497ab8871b39e762a
+msgid "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - Complete module rework. Replaced `gen_shape_2d`, `gen_fractal_shape_2d`, and `gen_simplex_shape_2d` with a generic iteration system."
+msgstr "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - 模块完全重写。用通用迭代系统替换了 `gen_shape_2d`、`gen_fractal_shape_2d` 和 `gen_simplex_shape_2d`。"
+
+#: ../../../changelog/v4.0.0.md:35 69f067659ee5404f86bee22f15ffdb66
+msgid "<abbr title=\"New Features\">✨</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - Added `on_cuboid` for 3D iteration over a cubic region with configurable direction, spacing, and tick limit."
+msgstr "<abbr title=\"New Features\">✨</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - 新增 `on_cuboid`，用于在立方体区域上进行3D迭代，支持方向、间距和刻数限制配置。"
+
+#: ../../../changelog/v4.0.0.md:36 2134dcc63c494f1998270e005d3fe017
+msgid "<abbr title=\"New Features\">✨</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - Added `on_rectangle` for 2D iteration over a rectangular region with configurable direction, spacing, and tick limit."
+msgstr "<abbr title=\"New Features\">✨</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - 新增 `on_rectangle`，用于在矩形区域上进行2D迭代，支持方向、间距和刻数限制配置。"
+
+#: ../../../changelog/v4.0.0.md:37 d22b163aa2674134b2bbfb89c619805e
+msgid "<abbr title=\"New Features\">✨</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - Added predefined callbacks: `set_block`, `set_block_type`, `set_random_block`, `fractal_noise_2d`, and `simplex_noise_2d`."
+msgstr "<abbr title=\"New Features\">✨</abbr> **[#509](https://github.com/mcbookshelf/bookshelf/issues/509)** - 新增预定义回调：`set_block`、`set_block_type`、`set_random_block`、`fractal_noise_2d` 和 `simplex_noise_2d`。"
+
+#: ../../../changelog/v4.0.0.md:38 77b287ee621f467cbab0d48a93699571
+msgid "<abbr title=\"Bug Fix\">🐛</abbr> **[#435](https://github.com/mcbookshelf/bookshelf/issues/435)** - Configurable iteration direction now allows accommodating mask offsets when blocks are updated during iteration."
+msgstr "<abbr title=\"Bug Fix\">🐛</abbr> **[#435](https://github.com/mcbookshelf/bookshelf/issues/435)** - 可配置的迭代方向现在能够在迭代过程中更新方块时适应遮罩偏移。"
+
+#: ../../../changelog/v4.0.0.md:41 84964126c235488b83d00fb8ebc93a1a
+msgid "`🎯 bs.hitbox`"
+msgstr "`🎯 bs.hitbox`"
+
+#: ../../../changelog/v4.0.0.md:44 1c7322cfb1cc42b89995f2ede69ad822
+msgid "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#532](https://github.com/mcbookshelf/bookshelf/pull/532)** - Removed fluids from the `intangible` block tag to simplify the use of hitbox providers."
+msgstr "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#532](https://github.com/mcbookshelf/bookshelf/pull/532)** - 从 `intangible` 方块标签中移除了流体，以简化碰撞箱提供者的使用。"
+
+#: ../../../changelog/v4.0.0.md:45 97af56b370cf47518920947dfaa7ba5d
+msgid "<abbr title=\"New Features\">✨</abbr> **[#532](https://github.com/mcbookshelf/bookshelf/pull/532)** - Updated entity hitboxes for Minecraft 26.1."
+msgstr "<abbr title=\"New Features\">✨</abbr> **[#532](https://github.com/mcbookshelf/bookshelf/pull/532)** - 更新了 Minecraft 26.1 的实体碰撞箱。"
+
+#: ../../../changelog/v4.0.0.md:48 fde59438af24427694408a432b4c4fd0
+msgid "`🏃 bs.move`"
+msgstr "`🏃 bs.move`"
+
+#: ../../../changelog/v4.0.0.md:50 1d9c38b445a545b2a1afd609ca303a7c
+msgid "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#523](https://github.com/mcbookshelf/bookshelf/issues/523)** - Removed deprecated arguments from previous versions."
+msgstr "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#523](https://github.com/mcbookshelf/bookshelf/issues/523)** - 移除了先前版本中已弃用的参数。"
+
+#: ../../../changelog/v4.0.0.md:53 40cb7a05d9d3403eabf6c73cbc2938af
+msgid "`🔦 bs.raycast`"
+msgstr "`🔦 bs.raycast`"
+
+#: ../../../changelog/v4.0.0.md:55 3eee457eb1614b3389e942db119696a7
+msgid "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - Removed deprecated `bs:out raycast` and `bs:lambda raycast` storage data."
+msgstr "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - 移除了已弃用的 `bs:out raycast` 和 `bs:lambda raycast` 存储数据。"
+
+#: ../../../changelog/v4.0.0.md:56 a35700ca972b44bba4d04af112a73bfb
+msgid "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - Renamed `on_hit_point` callback to `on_entry_point`. Added new `on_exit_point` callback."
+msgstr "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - 将 `on_hit_point` 回调重命名为 `on_entry_point`。新增了 `on_exit_point` 回调。"
+
+#: ../../../changelog/v4.0.0.md:57 7e30dc1d8fde4b7ea1424603f0594578
+msgid "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - Renamed `$raycast.distance` to `$raycast.entry_distance`. Added `$raycast.exit_distance`."
+msgstr "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - 将 `$raycast.distance` 重命名为 `$raycast.entry_distance`。新增了 `$raycast.exit_distance`。"
+
+#: ../../../changelog/v4.0.0.md:58 fc18b27c13bb49e891004e85a7f32ea3
+msgid "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - Replaced `$raycast.pierce_distance` (delta) with `$raycast.prev_entry_distance` and `$raycast.prev_exit_distance` (absolute values). Compute deltas manually for more flexibility (e.g., `entry - prev_entry`)."
+msgstr "<abbr title=\"Breaking Changes\">⚠️</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - 将 `$raycast.pierce_distance`（增量）替换为 `$raycast.prev_entry_distance` 和 `$raycast.prev_exit_distance`（绝对值）。手动计算增量以获得更大灵活性（例如，`entry - prev_entry`）。"
+
+#: ../../../changelog/v4.0.0.md:59 496ccfdcc3a54369a1e2d308beaa4ca8
+msgid "<abbr title=\"New Features\">✨</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - Added `$raycast.entry_point.[x,y,z]` and `$raycast.exit_point.[x,y,z]` lambda scores for precise hit positions relative to the target."
+msgstr "<abbr title=\"New Features\">✨</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - 新增了 `$raycast.entry_point.[x,y,z]` 和 `$raycast.exit_point.[x,y,z]` lambda 分数，用于精确确定相对于目标的命中位置。"
+
+#: ../../../changelog/v4.0.0.md:60 459cae44ead84ef98e10ca40fea134e8
+msgid "<abbr title=\"New Features\">✨</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - Added `$raycast.targeted_block.[x,y,z]` lambda scores for targeted block coordinates."
+msgstr "<abbr title=\"新功能\">✨</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - 为目标方块坐标添加了`$raycast.targeted_block.[x,y,z]` lambda 分数。"
+
+#: ../../../changelog/v4.0.0.md:61 5eda5dcb46024b768ac3d907435bd0c1
+msgid "<abbr title=\"Documentation\">📝</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - Improved documentation with comprehensive \"How to use\" section including examples for callbacks, filtering, piercing, and hitbox providers."
+msgstr "<abbr title=\"文档\">📝</abbr> **[#531](https://github.com/mcbookshelf/bookshelf/pull/531)** - 改进了文档，添加了全面的\"How to use\"部分，包含回调、过滤、穿透和碰撞箱提供者的示例。"

@@ -15,30 +15,18 @@
 
 # Minimum of positive numbers - check success channel
 data modify storage bs:out collection.value set value [5, 2, 8, 1, 9]
-execute store success score #s bs.ctx run function #bs.collection:imin
-assert score #s bs.ctx matches 1
+assert run function #bs.collection:imin
 
-# Minimum of positive numbers - check return channel
+# Minimum of positive numbers
 data modify storage bs:out collection.value set value [5, 2, 8, 1, 9]
-execute store result score #r bs.ctx run function #bs.collection:imin
-assert score #r bs.ctx matches 1
-
-# Minimum of positive numbers - check storage output
-data modify storage bs:out collection.value set value [5, 2, 8, 1, 9]
-function #bs.collection:imin
+assert result 1 run function #bs.collection:imin
 assert data storage bs:out {collection: {value: 1}}
 
-# Minimum with negative numbers - check return channel
-data modify storage bs:out collection.value set value [5, -3, 8, 1, -10]
-execute store result score #r bs.ctx run function #bs.collection:imin
-assert score #r bs.ctx matches -10
+# Minimum with negative numbers
+data modify storage bs:out collection.value set value [-5, -2, -7, -3, -1]
+assert result -7 run function #bs.collection:imin
+assert data storage bs:out {collection: {value: -7}}
 
-# Minimum with negative numbers - check storage output
-data modify storage bs:out collection.value set value [5, -3, 8, 1, -10]
-function #bs.collection:imin
-assert data storage bs:out {collection: {value: -10}}
-
-# Minimum with negative numbers - check storage output
+# Minimum with empty collection - check success channel
 data modify storage bs:out collection.value set value []
-execute store success score #s bs.ctx run function #bs.collection:imin
-assert score #s bs.ctx matches 0
+assert not run function #bs.collection:imin

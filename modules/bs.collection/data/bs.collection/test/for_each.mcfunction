@@ -14,22 +14,19 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Empty
+data modify storage bs:ward collection.for_each set value []
 data modify storage bs:out collection.value set value []
-function #bs.collection:for_each {run: "tellraw @a 'value'"}
-assert not chat "value"
+function #bs.collection:for_each {run: "data modify storage bs:ward collection.for_each append value 1"}
+assert not data storage bs:ward collection{for_each: [1]}
 
-# Print
-data modify storage bs:out collection.value set value [0, 1, 2, 3]
-function #bs.collection:for_each {run: "tellraw @a {nbt:'collection.value',storage:'bs:lambda'}"}
-assert chat "0"
-assert chat "1"
-assert chat "2"
-assert chat "3"
+# Values
+data modify storage bs:ward collection.for_each set value []
+data modify storage bs:out collection.value set value [10, 11, 12, 13]
+function #bs.collection:for_each {run: "data modify storage bs:ward collection.for_each append from storage bs:lambda collection.value"}
+assert data storage bs:ward collection{for_each: [10, 11, 12, 13]}
 
 # Index
+data modify storage bs:ward collection.for_each set value []
 data modify storage bs:out collection.value set value [10, 11, 12, 13]
-function #bs.collection:for_each {run: "tellraw @a {nbt:'collection.index',storage:'bs:lambda'}"}
-assert chat "0"
-assert chat "1"
-assert chat "2"
-assert chat "3"
+function #bs.collection:for_each {run: "data modify storage bs:ward collection.for_each append from storage bs:lambda collection.index"}
+assert data storage bs:ward collection{for_each: [0, 1, 2, 3]}

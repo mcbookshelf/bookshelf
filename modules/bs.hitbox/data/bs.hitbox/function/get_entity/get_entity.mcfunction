@@ -24,9 +24,9 @@ execute if entity @s[type=#bs.hitbox:internal/group_16] run scoreboard players a
 execute if entity @s[type=#bs.hitbox:internal/group_32] run scoreboard players add #i bs.ctx 32
 execute if entity @s[type=#bs.hitbox:internal/group_64] run scoreboard players add #i bs.ctx 64
 execute store result storage bs:ctx y short 1 run scoreboard players get #i bs.ctx
-execute store success score #s bs.ctx store result score #z bs.ctx run attribute @s minecraft:scale get 100000
-execute if score #s bs.ctx matches 0 run scoreboard players set #z bs.ctx 100000
+execute store success score #s bs.ctx store result score #z bs.ctx run attribute @s minecraft:scale get 1000000
+execute if score #s bs.ctx matches 0 run scoreboard players set #z bs.ctx 1000000
 function bs.hitbox:get_entity/registry/_ with storage bs:ctx
 
 execute unless data storage bs:out hitbox.depth run data modify storage bs:out hitbox.depth set from storage bs:out hitbox.width
-execute store result storage bs:out hitbox.scale double .00001 run scoreboard players get #z bs.ctx
+execute store result storage bs:out hitbox.scale double .000001 run scoreboard players get #z bs.ctx

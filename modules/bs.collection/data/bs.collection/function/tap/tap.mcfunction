@@ -14,14 +14,14 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute unless data storage bs:out collection.value[0] run return 0
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)" }
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
+$data modify storage bs:data collection.stack append value { value: [], run: "$(run)" }
+data modify storage bs:data collection.stack[-1].value set from storage bs:out collection.value
 
 # Prepare args for the lambda function
-data modify storage bs:lambda collection.value set from storage bs:data collection.stack[0].value
+data modify storage bs:lambda collection.value set from storage bs:data collection.stack[-1].value
 # Call the lambda function on the input
-function bs.collection:tap/call with storage bs:data collection.stack[0]
+function bs.collection:tap/call with storage bs:data collection.stack[-1]
 
 # Restore the input to the output
-data modify storage bs:out collection.value set from storage bs:data collection.stack[0].value
-data remove storage bs:data collection.stack[0]
+data modify storage bs:out collection.value set from storage bs:data collection.stack[-1].value
+data remove storage bs:data collection.stack[-1]

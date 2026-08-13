@@ -29,6 +29,7 @@ execute store result storage bs:data generation[-1].h int 1 store result score #
 execute store result storage bs:data generation[-1].d int 1 store result score #generation.d bs.data run data get storage bs:in generation.on_cuboid.depth
 execute store result storage bs:data generation[-1].n int 1 store result score #generation.i bs.data run data get storage bs:in generation.on_cuboid.limit
 execute store result score $generation.i bs.lambda store result score $generation.j bs.lambda run scoreboard players set $generation.k bs.lambda 0
+execute store result score #generation.s bs.data run data get storage bs:in generation.on_cuboid.spacing
 
 data modify storage bs:ctx _ set string storage bs:in generation.on_cuboid.direction 0 1
 function bs.generation:utils/get_direction with storage bs:ctx

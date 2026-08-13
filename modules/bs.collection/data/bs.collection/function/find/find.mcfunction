@@ -15,17 +15,16 @@
 
 # Set the default result index to -1
 data modify storage bs:out collection.index set value -1
-execute unless data storage bs:out collection.value[0] run data remove storage bs:out collection.value
-execute unless data storage bs:out collection.value[0] run return fail
+execute unless data storage bs:out collection.value[0] run return run function bs.collection:find/fail
 
-$data modify storage bs:data collection.stack prepend value { value: [], run: "$(run)", i: -1 }
+$data modify storage bs:data collection.stack append value { run: "$(run)", i: -1 }
 
-data modify storage bs:data collection.stack[0].value set from storage bs:out collection.value
+data modify storage bs:data collection.stack[-1].value set from storage bs:out collection.value
 # Clear the output collection
 data remove storage bs:out collection.value
 
 function bs.collection:find/find_rec
 
-data remove storage bs:data collection.stack[0]
+data remove storage bs:data collection.stack[-1]
 
 return run execute if data storage bs:out collection.value

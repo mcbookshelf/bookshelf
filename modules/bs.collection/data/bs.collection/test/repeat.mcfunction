@@ -35,6 +35,5 @@ assert data storage bs:out {collection: {value: []}}
 
 # Repeat error: negative count
 data modify storage bs:out collection.value set value ["untouched"]
-execute store success score #success bs.ctx run function #bs.collection:repeat {value: 5, count: -1}
-assert score #success bs.ctx matches 0
+assert not run function #bs.collection:repeat {value: 5, count: -1}
 assert data storage bs:out {collection: {value: ["untouched"]}}

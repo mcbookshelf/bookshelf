@@ -14,9 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 scoreboard players set $bitwise.bit_count.n bs.in -1568
-function #bs.bitwise:bit_count
-assert score $bitwise.bit_count bs.out matches 3
+assert result 3 run function #bs.bitwise:bit_count
 
 scoreboard players set $bitwise.bit_count.n bs.in 174653179
-function #bs.bitwise:bit_count
-assert score $bitwise.bit_count bs.out matches 19
+assert result 19 run function #bs.bitwise:bit_count

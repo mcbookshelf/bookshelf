@@ -14,20 +14,15 @@
 # ------------------------------------------------------------------------------------------------------------
 
 function #bs.random:white_noise_mat_2d {width:0,height:8,with:{}}
-execute store result score #n bs.ctx if data storage bs:out random.white_noise_mat_2d[]
-assert score #n bs.ctx matches 0
+assert result 0 run data get storage bs:out random.white_noise_mat_2d
 
 function #bs.random:white_noise_mat_2d {width:8,height:0,with:{}}
-execute store result score #n bs.ctx if data storage bs:out random.white_noise_mat_2d[]
-assert score #n bs.ctx matches 0
+assert result 0 run data get storage bs:out random.white_noise_mat_2d
 
 function #bs.random:white_noise_mat_2d {width:3,height:2,with:{}}
-execute store result score #n bs.ctx if data storage bs:out random.white_noise_mat_2d[]
-assert score #n bs.ctx matches 2
-execute store result score #n bs.ctx if data storage bs:out random.white_noise_mat_2d[0][]
-assert score #n bs.ctx matches 3
-execute store result score #n bs.ctx if data storage bs:out random.white_noise_mat_2d[1][]
-assert score #n bs.ctx matches 3
+assert result 2 run data get storage bs:out random.white_noise_mat_2d
+assert result 3 run data get storage bs:out random.white_noise_mat_2d[0]
+assert result 3 run data get storage bs:out random.white_noise_mat_2d[1]
 
 execute store result score #0 bs.ctx run data get storage bs:out random.white_noise_mat_2d[0][0] 1000
 execute store result score #1 bs.ctx run data get storage bs:out random.white_noise_mat_2d[0][1] 1000

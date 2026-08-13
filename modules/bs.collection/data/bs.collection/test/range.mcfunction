@@ -21,14 +21,21 @@ assert data storage bs:out {collection: {value: [0, 1, 2, 3, 4]}}
 function #bs.collection:range {min: 0, max: 5, step: 2}
 assert data storage bs:out {collection: {value: [0, 2, 4]}}
 
+# Range 5 to 0 step -1 -> [5, 4, 3, 2, 1]
+function #bs.collection:range {min: 5, max: 0, step: -1}
+assert data storage bs:out {collection: {value: [5, 4, 3, 2, 1]}}
+
 # Range error: min > max
 data modify storage bs:out collection.value set value ["untouched"]
-execute store success score #success bs.ctx run function #bs.collection:range {min: 5, max: 0, step: -1}
-assert score #success bs.ctx matches 0
+assert not run function #bs.collection:range {min: 5, max: 0, step: 1}
+assert data storage bs:out {collection: {value: ["untouched"]}}
+
+# Range error: min < max (negative step)
+data modify storage bs:out collection.value set value ["untouched"]
+assert not run function #bs.collection:range {min: 0, max: 5, step: -1}
 assert data storage bs:out {collection: {value: ["untouched"]}}
 
 # Range error: min == max
 data modify storage bs:out collection.value set value ["untouched"]
-execute store success score #success bs.ctx run function #bs.collection:range {min: 0, max: 0, step: 1}
-assert score #success bs.ctx matches 0
+assert not run function #bs.collection:range {min: 0, max: 0, step: 1}
 assert data storage bs:out {collection: {value: ["untouched"]}}
