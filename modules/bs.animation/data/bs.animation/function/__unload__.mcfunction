@@ -15,6 +15,7 @@
 
 scoreboard objectives remove bs.ctx
 scoreboard objectives remove bs.const
+scoreboard objectives remove bs.lambda
 
 scoreboard objectives remove bs.animation.tick
 

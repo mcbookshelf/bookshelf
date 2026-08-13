@@ -16,16 +16,17 @@
 # Push the current entity animation onto the stack
 data modify storage bs:data animation append value {}
 data modify storage bs:data animation[-1].nbt.data set from entity @s data
-$data modify storage bs:data animation[-1].def append from storage bs:data animation[-1].nbt.data."bs.animation"[{id:"$(id)"}]
-execute unless data storage bs:data animation[-1].def[-1] run return run function bs.animation:utils/fail
+$data modify storage bs:data animation[-1].defs append from storage bs:data animation[-1].nbt.data."bs.animation"[{id:"$(id)"}]
+execute unless data storage bs:data animation[-1].defs[0] run return run function bs.animation:utils/fail
+$data remove storage bs:data animation[-1].nbt.data."bs.animation"[{id:"$(id)"}]
 
-# Reset the animation and evaluate it at time 0
-data modify storage bs:data animation[-1].def[-1].step set value 0
-function bs.animation:reset/any
-function bs.animation:step/any
-function bs.animation:utils/stop
+# Stop the animation and evaluate it at time 0
+data remove storage bs:data animation[-1].defs[].tick
+data remove storage bs:data animation[-1].defs[].loop
+data remove storage bs:data animation[-1].defs[].step
+data remove storage bs:data animation[-1].defs[].interval
+function bs.animation:reset/many with storage bs:data animation[-1].defs[0]
 
 # Apply the evaluated animation to the entity and pop the stack
-$data modify storage bs:data animation[-1].nbt.data."bs.animation"[{id:"$(id)"}] set from storage bs:data animation[-1].def[-1]
 data modify entity @s {} merge from storage bs:data animation[-1].nbt
 data remove storage bs:data animation[-1]

@@ -13,7 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx def set from storage $(uses)
-function bs.animation:bake/any
-$data modify storage $(uses) set from storage bs:ctx def
-data remove storage bs:ctx def
+$data modify storage bs:ctx @.i set from storage $(uses)
+execute if data storage bs:ctx @.i[0] run function bs.animation:bake/many
+execute if data storage bs:ctx @.i{} run function bs.animation:bake/one
+$data modify storage $(uses) set from storage bs:ctx @.o
+data remove storage bs:ctx @

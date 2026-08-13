@@ -13,11 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# For each animated part:
-# 1. If the animation uses keyframes, convert them to a spline
-# 2. Bake the spline polynomials and store them in _
-
-execute if data storage bs:ctx def.pose run function bs.animation:bake/pose/any
-execute if data storage bs:ctx def.transformation run function bs.animation:bake/transformation/any
-execute if data storage bs:ctx def.position run function bs.animation:bake/position
-execute if data storage bs:ctx def.rotation run function bs.animation:bake/rotation
+data modify storage bs:ctx _.basis set from storage bs:ctx _.interpolation
+execute store result score #t bs.ctx run data get storage bs:ctx _.duration 1
+function bs.animation:bake/run with storage bs:ctx _
+execute unless score #t bs.ctx matches 0 store result score #n bs.ctx run data get storage bs:ctx _._
+execute unless score #t bs.ctx matches 0 store result storage bs:ctx _._[].d int 1 run scoreboard players operation #t bs.ctx /= #n bs.ctx

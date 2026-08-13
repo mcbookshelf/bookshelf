@@ -15,6 +15,7 @@
 
 scoreboard objectives add bs.ctx dummy [{text:"BS ",color:"dark_gray"},{text:"Context",color:"aqua"}]
 scoreboard objectives add bs.const dummy [{text:"BS ",color:"dark_gray"},{text:"Constants",color:"aqua"}]
+scoreboard objectives add bs.lambda dummy [{text:"BS ",color:"dark_gray"},{text:"Lambda",color:"aqua"}]
 
 scoreboard objectives add bs.animation.tick dummy [{text:"BS ",color:"dark_gray"},{text:"Animation Tick",color:"aqua"}]
 
