@@ -14,12 +14,11 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _[0].t set value 0
+execute unless data storage bs:ctx _[1] run return run function bs.animation:step/time/end/right
 execute store result score #s bs.ctx run data get storage bs:ctx _[-1].t
-execute if score #s bs.ctx matches 0 run return fail
-
+execute if score #s bs.ctx matches 0 run return run function bs.animation:step/time/end/right
 data modify storage bs:ctx _ prepend from storage bs:ctx _[-1]
 data remove storage bs:ctx _[-1]
 execute store result score #d bs.ctx run data get storage bs:ctx _[0].d 1000
 execute store result storage bs:ctx _[0].t int 1 run scoreboard players operation #t bs.ctx += #d bs.ctx
 execute if score #t bs.ctx matches ..-1 run return run function bs.animation:step/time/rotate/right
-return 1

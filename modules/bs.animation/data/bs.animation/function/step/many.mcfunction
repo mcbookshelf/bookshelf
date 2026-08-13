@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set from storage bs:data animation[-1].defs[0]._
-execute unless function bs.animation:step/time/next run data remove storage bs:data animation[-1].defs[0].tick
+function bs.animation:step/time/next
 function bs.animation:step/eval with storage bs:ctx _[0]
 
 $$(run)

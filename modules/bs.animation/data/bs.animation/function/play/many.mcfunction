@@ -21,7 +21,7 @@ $$(run)
 execute unless data storage bs:data animation[-1].defs[0].loop \
   run data modify storage bs:data animation[-1].defs[0].loop set from storage bs:data animation[-1].loop
 execute unless data storage bs:data animation[-1].defs[0].step \
-run data modify storage bs:data animation[-1].defs[0].step set from storage bs:data animation[-1].step
+  run data modify storage bs:data animation[-1].defs[0].step set from storage bs:data animation[-1].step
 execute unless data storage bs:data animation[-1].defs[0].interval \
   run data modify storage bs:data animation[-1].defs[0].interval set from storage bs:data animation[-1].interval
 

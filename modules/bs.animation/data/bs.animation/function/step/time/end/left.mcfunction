@@ -12,3 +12,12 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+
+execute store result score #s bs.ctx run data get storage bs:data animation[-1].defs[0].loop
+execute if score #s bs.ctx matches 0 run return run data remove storage bs:data animation[-1].defs[0].tick
+data modify storage bs:ctx _[].t set value 0
+data modify storage bs:ctx _ append from storage bs:ctx _[0]
+data remove storage bs:ctx _[0]
+execute store result storage bs:ctx _[0].t int 1 run scoreboard players operation #t bs.ctx -= #d bs.ctx
+execute store result score #d bs.ctx run data get storage bs:ctx _[0].d 1000
+execute if score #t bs.ctx >= #d bs.ctx run return run function bs.animation:step/time/rotate/left

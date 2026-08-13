@@ -20,8 +20,8 @@ scoreboard players operation #v bs.ctx -= #u bs.ctx
 execute store result storage bs:ctx _.points[0][0] double .001 run scoreboard players operation #u bs.ctx -= #v bs.ctx
 
 data modify storage bs:ctx _.points append value [0d]
-execute store result score #u bs.ctx run data get storage bs:ctx _.points[-3][0]
-execute store result score #v bs.ctx run data get storage bs:ctx _.points[-2][0]
+execute store result score #u bs.ctx run data get storage bs:ctx _.points[-2][0] 1000
+execute store result score #v bs.ctx run data get storage bs:ctx _.points[-3][0] 1000
 scoreboard players operation #v bs.ctx -= #u bs.ctx
 execute store result storage bs:ctx _.points[-1][0] double .001 run scoreboard players operation #u bs.ctx -= #v bs.ctx
 

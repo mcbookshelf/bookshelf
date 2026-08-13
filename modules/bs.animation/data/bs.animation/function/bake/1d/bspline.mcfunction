@@ -33,6 +33,7 @@ scoreboard players operation #d bs.ctx -= #b bs.ctx
 scoreboard players operation #c bs.ctx += #b bs.ctx
 scoreboard players operation #u bs.ctx *= -2 bs.const
 scoreboard players operation #u bs.ctx += #b bs.ctx
+scoreboard players remove #u bs.ctx 9
 scoreboard players operation #u bs.ctx /= -18 bs.const
 execute store result storage bs:ctx _._[-1].p[0] int 1 run scoreboard players operation #a bs.ctx -= #u bs.ctx
 execute store result storage bs:ctx _._[-1].p[1] int 1 run scoreboard players operation #b bs.ctx /= 6 bs.const

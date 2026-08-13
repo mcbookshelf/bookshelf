@@ -13,8 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx @ set from storage {i:$(uses),k:{id:$(id)}}
+$data modify storage bs:ctx @.i set from storage $(uses)
 execute if data storage bs:ctx @.i[0] run function bs.animation:create/many
 execute if data storage bs:ctx @.i{} run function bs.animation:create/one
+$data modify storage bs:ctx @.o[].id set value "$(id)"
 data modify entity @s data."bs.animation" append from storage bs:ctx @.o[]
 data remove storage bs:ctx @

@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set from storage bs:ctx @.i[0]
-data modify storage bs:ctx @.o append from storage bs.ctx d.k
+data modify storage bs:ctx @.o append value {}
 execute unless data storage bs:ctx _._ run function bs.animation:bake/any
 data modify storage bs:ctx @.o[-1].run set from storage bs:ctx @.i[0].run
 data modify storage bs:ctx @.o[-1]._ set from storage bs:ctx _._
