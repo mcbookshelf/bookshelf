@@ -14,7 +14,8 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # camel group
-execute at @s positioned ~ ~1 ~ if entity @s[dx=0] run return run data modify storage bs:out hitbox set value {width:1.7,height:2.375}
-execute unless predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:1.7,height:0.945}
-execute at @s positioned ~ ~1 ~ if entity @s[dx=0] run return run data modify storage bs:out hitbox set value {width:1.02,height:1.425}
-data modify storage bs:out hitbox set value {width:1.02,height:0.567}
+execute store success score #s bs.ctx if predicate bs.hitbox:internal/is_baby
+execute if score #s bs.ctx matches 0 run data modify storage bs:out hitbox set value {width:1.7,height:2.375}
+execute if score #s bs.ctx matches 0 if function bs.hitbox:get_entity/pose/is_sitting run data modify storage bs:out hitbox set value {width:1.7,height:0.945}
+execute if score #s bs.ctx matches 1 run data modify storage bs:out hitbox set value {width:0.95,height:1.4}
+execute if score #s bs.ctx matches 1 if function bs.hitbox:get_entity/pose/is_sitting run data modify storage bs:out hitbox set value {width:0.95,height:0.425}

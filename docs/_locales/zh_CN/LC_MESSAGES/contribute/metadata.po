@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -63,7 +62,6 @@ msgid "feature"
 msgstr "feature"
 
 #: ../../contribute/metadata.md:11 af9adb8ec4e7497f93ded91460424bf6
-#, fuzzy
 msgid "Indicates whether the file is the endpoint of a feature"
 msgstr "指示当前函数标签是否为功能的端点"
 
@@ -77,13 +75,12 @@ msgid "yes"
 msgstr "是"
 
 #: ../../contribute/metadata.md:11 af4820d5a23348499197661b1ac9c532
-#, fuzzy
 msgid "deprecated"
-msgstr "created"
+msgstr "deprecated"
 
 #: ../../contribute/metadata.md:11 2840592262b44a6c8d2f9225997f1d45
 msgid "Indicates whether the feature has been deprecated"
-msgstr ""
+msgstr "表示该功能是否已弃用"
 
 #: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
 #: 3caea657ec034e2686ceb5a07be6280e 41432e64ff9d4027a58a22697674eb7e
@@ -231,4 +228,3 @@ msgstr "清单整合了 Bookshelf 所有模块和功能的元数据，自动生�
 #: ../../contribute/metadata.md:101 7691e3936f384ac7aa81fb9e44bdb5cf
 msgid "The generated file is located at `meta/manifest.json`."
 msgstr "生成的文件位于 `meta/manifest.json`。"
-

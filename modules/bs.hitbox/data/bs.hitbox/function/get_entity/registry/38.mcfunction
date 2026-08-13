@@ -14,4 +14,4 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # painting group
-function bs.hitbox:get_entity/registry/painting/dispatch with entity @s
+function bs.hitbox:get_entity/registry/painting/_ with entity @s

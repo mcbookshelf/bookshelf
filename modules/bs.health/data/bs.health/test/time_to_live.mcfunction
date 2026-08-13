@@ -14,10 +14,10 @@
 # ------------------------------------------------------------------------------------------------------------
 
 scoreboard players set #t bs.ctx 0
-summon minecraft:armor_stand ~ ~ ~ {Tags:["bs.packtest"]}
-execute as @e[type=minecraft:armor_stand,tag=bs.packtest] run function #bs.health:time_to_live {with:{time:5,on_death:"scoreboard players set #t bs.ctx 1"}}
+summon minecraft:armor_stand ~ ~ ~ {Tags:["bs.ward"]}
+execute as @e[type=minecraft:armor_stand,tag=bs.ward] run function #bs.health:time_to_live {with:{time:5,on_death:"scoreboard players set #t bs.ctx 1"}}
 await delay 4t
-assert entity @n[type=minecraft:armor_stand,tag=bs.packtest,distance=..1] inside
+assert entity @n[type=minecraft:armor_stand,tag=bs.ward,distance=..1] inside
 
 await score #t bs.ctx matches 1
-assert not entity @n[type=minecraft:armor_stand,tag=bs.packtest,distance=..1] inside
+assert not entity @n[type=minecraft:armor_stand,tag=bs.ward,distance=..1] inside

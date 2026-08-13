@@ -29,6 +29,7 @@ Bookshelf is designed with modularity in mind. Features that serve a common purp
 animation
 bitwise
 block
+collection
 color
 environment
 generation

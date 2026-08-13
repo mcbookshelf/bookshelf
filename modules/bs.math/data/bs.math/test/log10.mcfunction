@@ -15,15 +15,12 @@
 
 data modify storage bs:in math.log10.x set value 28.0
 function #bs.math:log10
-execute store result score #r bs.ctx run data get storage bs:out math.log10 100000
-assert score #r bs.ctx matches 144714..144716
+assert result 144714..144716 run data get storage bs:out math.log10 100000
 
 data modify storage bs:in math.log10.x set value 123456789.0
 function #bs.math:log10
-execute store result score #r bs.ctx run data get storage bs:out math.log10 100000
-assert score #r bs.ctx matches 809150..809152
+assert result 809150..809152 run data get storage bs:out math.log10 100000
 
 data modify storage bs:in math.log10.x set value 1234.4321
 function #bs.math:log10
-execute store result score #r bs.ctx run data get storage bs:out math.log10 100000
-assert score #r bs.ctx matches 309145..309147
+assert result 309145..309147 run data get storage bs:out math.log10 100000

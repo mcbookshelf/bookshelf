@@ -15,5 +15,5 @@
 
 data modify storage bs:out hitbox set value {width:0.0625,height:0.0,depth:0.0}
 execute store result score #d bs.ctx run scoreboard players set #h bs.ctx 0
-execute at @s run function bs.hitbox:get_entity/registry/painting/depth4
-execute at @s run function bs.hitbox:get_entity/registry/painting/height4
+execute at @s run function bs.hitbox:get_entity/registry/painting/d4
+execute at @s run function bs.hitbox:get_entity/registry/painting/h4

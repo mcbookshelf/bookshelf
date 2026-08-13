@@ -1,6 +1,7 @@
 __pycache__/
 .AppleDouble
 .beet_cache/
+.claude/
 .DS_Store
 .env
 .idea/
@@ -22,6 +23,9 @@ __pycache__/
 build/
 dist/
 docs/_build/
+# Sphinx/Babel temporary gettext output
+docs/_locales/**/LC_MESSAGES/gettext/
+locales/
 env.bak/
 env/
 ENV/

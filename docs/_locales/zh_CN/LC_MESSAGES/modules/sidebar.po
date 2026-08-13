@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -28,9 +27,7 @@ msgid "**`#bs.sidebar:help`**"
 msgstr "**`#bs.sidebar:help`**"
 
 #: ../../modules/sidebar.md:5 03bb652b2e80442089cd5d4072390eaf
-msgid ""
-"Create visually appealing and dynamic sidebars using the scoreboard "
-"system."
+msgid "Create visually appealing and dynamic sidebars using the scoreboard system."
 msgstr "使用记分板系统创建视觉吸引力和动态的侧边栏。"
 
 #: ../../modules/sidebar.md:9 207885c48ef848d0880d3805707d4392
@@ -70,7 +67,7 @@ msgstr "*示例：创建并显示一个右对齐文本的新侧边栏：*"
 #: ../../modules/sidebar.md:70 ../../modules/sidebar.md:94
 #: 97d55fa624f1493fb2ccc585ec3ad35a f6bbf1f94fa2472199bee8cdcb627a0e
 msgid "**Credits**: Aksiome"
-msgstr "**制作人员**：Aksiome"
+msgstr "**贡献者**：Aksiome"
 
 #: ../../modules/sidebar.md:74 2caf9866b68d435d86fe005c27cf3b2a
 msgid "Refresh"
@@ -101,10 +98,7 @@ msgid "{nbt}`string` **objective**: An objective used for the sidebar."
 msgstr "{nbt}`string` **objective**: 用于侧边栏的计分项。"
 
 #, python-brace-format
-msgid ""
-"{nbt}`string` **display_name**: Displayed objective"
-" name. Must be a valid SNBT "
-"text component."
+msgid "{nbt}`string` **display_name**: Displayed objective name. Must be a valid SNBT text component."
 msgstr "{nbt}`string` **display_name**: 显示的计分项名称。必须是有效的 SNBT 文本组件。"
 
 #, python-brace-format
@@ -112,11 +106,7 @@ msgid "{nbt}`list` **contents**: Lines displayed on the sidebar."
 msgstr "{nbt}`list` **contents**: 侧边栏上显示的行内容。"
 
 #, python-brace-format
-msgid ""
-"{nbt}`list` {nbt}`string`: Must either be "
-"a valid SNBT text component or an"
-" array with two SNBT text components"
-" for the left and right sides."
+msgid "{nbt}`list` {nbt}`string`: Must either be a valid SNBT text component or an array with two SNBT text components for the left and right sides."
 msgstr "{nbt}`list` {nbt}`string`: 必须是有效的 SNBT 文本组件，或是包含左右两侧 SNBT 文本组件的数组。"
 
 #, python-brace-format

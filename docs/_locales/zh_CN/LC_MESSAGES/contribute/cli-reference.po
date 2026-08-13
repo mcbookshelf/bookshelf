@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -43,12 +42,10 @@ msgid "**Arguments/Options**"
 msgstr "**参数/选项**"
 
 #: ../../contribute/cli-reference.md 8a3bbbdd4a5e43cf8fe2e6d0dc32f525
-#, fuzzy
 msgid "**🔍 `check`**"
-msgstr "**🧩 `modules check`**"
+msgstr "**🔍 `check`**"
 
 #: ../../contribute/cli-reference.md 02137157136f44a7bc529d8999e744b4
-#, fuzzy
 msgid "Check project requirements and metadata."
 msgstr "校验模块需求及元数据。"
 
@@ -58,19 +55,16 @@ msgid "No arguments."
 msgstr "无参数。"
 
 #: ../../contribute/cli-reference.md a4a5510ae667422eb70a1611849de615
-#, fuzzy
 msgid "**📑 `update`**"
-msgstr "**🧩 `modules update`**"
+msgstr "**📑 `update`**"
 
 #: ../../contribute/cli-reference.md b9e2cfd8058d40ed8a25a9df7b40e661
-#, fuzzy
 msgid "Update project metadata changes."
 msgstr "更新元数据变更。"
 
 #: ../../contribute/cli-reference.md 42929e2d24254de3993fcb00028431a3
-#, fuzzy
 msgid "**🔗 `link`**"
-msgstr "**🧩 `modules link`**"
+msgstr "**🔗 `link`**"
 
 #: ../../contribute/cli-reference.md 25dc828bb3a64eaaa85fca851443a759
 msgid ""
@@ -176,12 +170,11 @@ msgid "`[modules...]` - List of modules to watch (optional)."
 msgstr "`[modules...]` - 需监听的模块列表（可选）"
 
 #: ../../contribute/cli-reference.md:25 fb393aa74d064497a413d39ac942adab
-#, fuzzy
 msgid ""
 "To run any command, type `uv run` before the command itself. "
 "Alternatively, you can activate the virtual environment (venv) manually "
 "and run the command directly. Some commands also have aliases:"
-msgstr "执行任何命令前需添加 `pdm run` 前缀。也可手动激活虚拟环境（venv）后直接运行命令。部分命令设有别名："
+msgstr "执行命令时，在命令前加上 `uv run`。也可以手动激活虚拟环境（venv）后直接运行命令。部分命令还提供了别名："
 
 #: ../../contribute/cli-reference.md 4cd905fb56e24641bbdc240ac8ffec05
 msgid "**Alias**"
@@ -192,22 +185,17 @@ msgid "**Command**"
 msgstr "**等效命令**"
 
 #: ../../contribute/cli-reference.md 92b77c7a1df8479c9f958b0d87c33fa5
-#, fuzzy
 msgid "`uv run build`"
-msgstr "`pdm run build`"
+msgstr "`uv run build`"
 
 #: ../../contribute/cli-reference.md 4bf5eed353ef47bf8f53461999bd9ffd
-#, fuzzy
 msgid "`uv run modules build`"
-msgstr "`pdm run modules build`"
+msgstr "`uv run modules build`"
 
 #: ../../contribute/cli-reference.md 3d31c13ad6bc4aa997a5c164602da028
-#, fuzzy
 msgid "`uv run watch`"
-msgstr "`pdm run watch`"
+msgstr "`uv run watch`"
 
 #: ../../contribute/cli-reference.md cc76e25b806141a0852a4555dce3edc4
-#, fuzzy
 msgid "`uv run modules watch`"
-msgstr "`pdm run modules watch`"
-
+msgstr "`uv run modules watch`"

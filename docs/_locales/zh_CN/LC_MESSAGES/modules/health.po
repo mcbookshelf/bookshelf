@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -44,31 +43,16 @@ msgid "About NBTs"
 msgstr "关于 NBT"
 
 #: ../../modules/health.md:16 f0abcb8ea2ea467684c1e7bca80e035c
-msgid ""
-"When using this module, do not rely on NBTs to retrieve health "
-"information. Instead, use `get_health` to get the player's health and "
-"`get_max_health_total` for the max health, rather than using `attribute "
-"@s minecraft:max_health get`. NBTs may not always reflect the actual "
-"values, and this approach was chosen to bypass certain limitations."
-msgstr ""
-"使用此模块时，不要依赖 NBT 来获取生命值信息。请使用 `get_health` 获取玩家的生命值，使用 "
-"`get_max_health_total` 获取最大生命值，而不是使用 `attribute @s minecraft:max_health "
-"get`。NBT 可能并不总是反映实际值，选择这种方法是为了绕过某些限制。"
+msgid "When using this module, do not rely on NBTs to retrieve health information. Instead, use `get_health` to get the player's health and `get_max_health_total` for the max health, rather than using `attribute @s minecraft:max_health get`. NBTs may not always reflect the actual values, and this approach was chosen to bypass certain limitations."
+msgstr "使用此模块时，不要依赖 NBT 来获取生命值信息。请使用 `get_health` 获取玩家的生命值，使用 `get_max_health_total` 获取最大生命值，而不是使用 `attribute @s minecraft:max_health get`。NBT 可能并不总是反映实际值，选择这种方法是为了绕过某些限制。"
 
 #: ../../modules/health.md:19 162a444be8f84760bc5ea7930cb22169
 msgid "Effects Incompatibility"
 msgstr "效果不兼容"
 
 #: ../../modules/health.md:22 2b0222da0a2940b8988b291bc3ee5930
-msgid ""
-"This system uses the `instant_health` effect to heal the player and force"
-" an update to their health. Using amplifier values higher than 28 may "
-"cause issues. Additionally, any pending healing command will take "
-"precedence over the effect for the current tick, potentially overriding "
-"it."
-msgstr ""
-"此系统通过 `instant_health` 效果来治疗玩家并强制更新其生命值。若效果等级大于 28 "
-"可能会导致问题。此外，当前刻内任何待处理的治疗命令会优先于该效果，可能会覆盖它。"
+msgid "This system uses the `instant_health` effect to heal the player and force an update to their health. Using amplifier values higher than 28 may cause issues. Additionally, any pending healing command will take precedence over the effect for the current tick, potentially overriding it."
+msgstr "此系统通过 `instant_health` 效果来治疗玩家并强制更新其生命值。若效果等级大于 28 可能会导致问题。此外，当前刻内任何待处理的治疗命令会优先于该效果，可能会覆盖它。"
 
 #: ../../modules/health.md:27 df8cd54471534cfc8e93487ca0f98d66
 msgid "🔧 Functions"
@@ -175,7 +159,7 @@ msgstr "你可以使用负数来移除玩家的最大生命值。"
 #: ../../modules/health.md:230 0c5b43ca22554ac08db543bbe2b47a1a
 #: 449a32048ab44c1f86e3fb4facb67d29 547cbc4afad44f6b846f6b953db0a23e
 msgid "**Credits**: Aksiome"
-msgstr "**制作人员**：Aksiome"
+msgstr "**贡献者**：Aksiome"
 
 #: ../../modules/health.md:108 bdd7613e676e4b608f1094d1cf9d44f1
 msgid "Get"
@@ -186,16 +170,12 @@ msgid "Get a player's health points."
 msgstr "获取玩家的生命值点数。"
 
 #: ../../modules/health.md:119 12998084bcd14ad296ebaba04726fd82
-msgid ""
-"**Execution `as <players>`**: Players from which you want to get health "
-"points."
+msgid "**Execution `as <players>`**: Players from which you want to get health points."
 msgstr "**执行 `as <玩家>`**：你想要获取生命值点数的玩家。"
 
 #: ../../modules/health.md:128 ec49ca231ff742119687f03cb77d5d45
 #, python-brace-format
-msgid ""
-"**Return | Storage `bs:out health.get_health`**: {nbt}`double` Player's "
-"health points."
+msgid "**Return | Storage `bs:out health.get_health`**: {nbt}`double` Player's health points."
 msgstr "**返回值 | 命令存储 `bs:out health.get_health`**：{nbt}`double` 玩家的生命值点数。"
 
 #: ../../modules/health.md:131 874bd275451a4942b9e277184f4cb4e3
@@ -207,16 +187,12 @@ msgid "Get a player's base maximum health points."
 msgstr "获取玩家的基础最大生命值点数。"
 
 #: ../../modules/health.md:146 3fc2182abab64f95a2edcdaff3212194
-msgid ""
-"**Execution `as <players>`**: Players from which you want to get max "
-"health points."
+msgid "**Execution `as <players>`**: Players from which you want to get max health points."
 msgstr "**执行 `as <玩家>`**：你想要获取最大生命值点数的玩家。"
 
 #: ../../modules/health.md:155 b9c345e291b84c538a30b26102f15fd2
 #, python-brace-format
-msgid ""
-"**Return | Storage `bs:out health.get_max_health`**: {nbt}`double` "
-"Player's max health points."
+msgid "**Return | Storage `bs:out health.get_max_health`**: {nbt}`double` Player's max health points."
 msgstr "**返回值 | 命令存储 `bs:out health.get_max_health`**：{nbt}`double` 玩家的最大生命值点数。"
 
 #: ../../modules/health.md:158 c85e2599878a4bdaa4f76bbfbcf0d9ec
@@ -273,7 +249,7 @@ msgstr "*示例：在任意时间更新死亡回调：*"
 
 #: ../../modules/health.md:280 9d1df0259fbc4201b8c0d5c3ba05198a
 msgid "**Credits**: Aksiome, Leirof"
-msgstr "**制作人员**：Aksiome、Leirof"
+msgstr "**贡献者**：Aksiome、Leirof"
 
 #: ../../_templates/comments.md:4 5f45c5ee6e63478a8401609aa66d264c
 msgid "**💬 Did it help you?**"
@@ -312,22 +288,13 @@ msgid "{nbt}`compound` **with**: Lifetime data."
 msgstr "{nbt}`compound` **with**: 存活时间数据。"
 
 #, python-brace-format
-msgid ""
-"{nbt}`int` **time**: Time to live. In"
-" ticks by default if unit is "
-"not defined."
+msgid "{nbt}`int` **time**: Time to live. In ticks by default if unit is not defined."
 msgstr "{nbt}`int` **time**: 存活时间，如果没有指定单位（unit）则单位默认为游戏刻时间。"
 
 #, python-brace-format
-msgid ""
-"{nbt}`string` **unit**: Unit of the "
-"specified time (tick, second, minute, "
-"hour, t, s, m, h)."
+msgid "{nbt}`string` **unit**: Unit of the specified time (tick, second, minute, hour, t, s, m, h)."
 msgstr "{nbt}`string` **unit**: 时间单位（tick, second, minute, hour, t, s, m, h）。"
 
 #, python-brace-format
-msgid ""
-"{nbt}`string` **on_death**: Command that will"
-" be run as the entity on its"
-" death."
+msgid "{nbt}`string` **on_death**: Command that will be run as the entity on its death."
 msgstr "{nbt}`string` **on_death**: 实体死亡时对其运行的函数。"

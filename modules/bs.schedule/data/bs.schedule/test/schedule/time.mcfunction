@@ -13,20 +13,20 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-function #bs.schedule:schedule {run:"scoreboard players set #packtest.schedule.time bs.data 1",with:{time:5}}
-assert not score #packtest.schedule.time bs.data matches 1
+function #bs.schedule:schedule {run:"scoreboard players set #ward.schedule.time bs.data 1",with:{time:5}}
+assert not score #ward.schedule.time bs.data matches 1
 await delay 1t
-assert not score #packtest.schedule.time bs.data matches 1
+assert not score #ward.schedule.time bs.data matches 1
 await delay 1t
-assert not score #packtest.schedule.time bs.data matches 1
+assert not score #ward.schedule.time bs.data matches 1
 await delay 1t
-assert not score #packtest.schedule.time bs.data matches 1
+assert not score #ward.schedule.time bs.data matches 1
 await delay 1t
-assert not score #packtest.schedule.time bs.data matches 1
-await score #packtest.schedule.time bs.data matches 1
+assert not score #ward.schedule.time bs.data matches 1
+await score #ward.schedule.time bs.data matches 1
 
-function #bs.schedule:schedule {run:"scoreboard players set #packtest.schedule.time bs.data 2",with:{time:1,unit:"s"}}
-assert not score #packtest.schedule.time bs.data matches 2
+function #bs.schedule:schedule {run:"scoreboard players set #ward.schedule.time bs.data 2",with:{time:1,unit:"s"}}
+assert not score #ward.schedule.time bs.data matches 2
 await delay 19t
-assert not score #packtest.schedule.time bs.data matches 2
-await score #packtest.schedule.time bs.data matches 2
+assert not score #ward.schedule.time bs.data matches 2
+await score #ward.schedule.time bs.data matches 2

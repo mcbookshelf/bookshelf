@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v3.2.1.md:1 7c776d3b69d9414e977ecf811f68082d
+msgid "📦 [Bookshelf - 3.2.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.2.1)"
+msgstr "📦 [Bookshelf - 3.2.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.2.1)"
+
+#: ../../../changelog/v3.2.1.md:3 caca845a577649deae9dbcf1c79a7e5d
+msgid "**🩹 Hotfix!**"
+msgstr "**🩹 热修复！**"
+
+#: ../../../changelog/v3.2.1.md:5 acd9699c137341e1987da56fc901cb9d
+msgid "*This is a hotfix for version 3.2.0.*"
+msgstr "*这是版本3.2.0的热修复。*"
+
+#: ../../../changelog/v3.2.1.md:8 9d65bbccafc544ba8ff2a05e42601c67
+msgid "`🎲 bs.random`"
+msgstr "`🎲 bs.random`"
+
+#: ../../../changelog/v3.2.1.md:10 1b67633abf5d487bb025e2f7168363b0
+msgid "🐛 **[#514](https://github.com/mcbookshelf/bookshelf/issues/514)** - Fixed `#bs.random:choice` rarely selecting the last option."
+msgstr "🐛 **[#514](https://github.com/mcbookshelf/bookshelf/issues/514)** - 修复了 `#bs.random:choice` 极少情况下选择最后一个选项的问题。"

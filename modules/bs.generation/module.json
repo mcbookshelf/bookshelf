@@ -7,7 +7,7 @@
   "meta": {
     "name": "Generation",
     "slug": "bookshelf-generation",
-    "description": "Bookshelf world manipulation module, useful for iterating over blocks and creating shapes.",
+    "description": "Apply functions across world regions in Minecraft datapacks. Iterate over 2D/3D shapes with lag-free tick spreading and custom callbacks.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/generation.html",
     "tags": ["runtime"],
     "weak_dependencies": [

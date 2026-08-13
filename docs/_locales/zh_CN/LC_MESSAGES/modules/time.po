@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -18,78 +17,70 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
-
-#: ../../../modules/time.md:1 8c061d5d3ae04a68bc5e79be9e2770aa
+#: ../../modules/time.md:1 d0995a3b66fe4859b7a4d78a3da295de
 msgid "⌚ Time"
 msgstr "⌚ 时间（Time）"
 
-#: ../../../modules/time.md:3 a0b1fbc29f4c46a892cd6d387122846a
+#: ../../modules/time.md:3 d0ba2995a2ed4a41bd0104b92062fb89
 msgid "**`#bs.time:help`**"
 msgstr "**`#bs.time:help`**"
 
-#: ../../../modules/time.md:5 04c64fd2caae4a0bb1214f5b46fdafd4
+#: ../../modules/time.md:5 566aab09fa9e4252bae06ba72c995a4a
 msgid "Get system time information effortlessly."
 msgstr "轻松获取系统时间信息。"
 
-#: ../../../modules/time.md:7 26f5eac9c5ec4c59a6ff11f6ef1df2a5
+#: ../../modules/time.md:7 59933c1054004b1eb657eecd0959adef
 msgid "Enable Command Blocks"
 msgstr "启用命令方块"
 
-#: ../../../modules/time.md:10 f4c05557f51a4be6ad567925b3f9b90c
-msgid ""
-"This module uses a command block to get the system time. For the time to "
-"be displayed as intended, ensure that `enable-command-block` is set to "
-"`true` in your `server.properties` file and that the "
-"`sendCommandFeedback` gamerule is enabled."
-msgstr ""
-"此模块使用命令方块获取系统时间。为了按预期显示时间，请确保在 "
-"`server.properties` 文件中将 `enable-command-block` 设置为 `true`，并且启用 "
-"`sendCommandFeedback` 游戏规则。"
+#: ../../modules/time.md:10 391cee5467c8480bb98209d57990a951
+msgid "This module uses a command block to get the system time. For the time to be displayed as intended, be sure that both the `command_blocks_work` and `send_command_feedback` game rules are set to `true`."
+msgstr "此模块使用命令方块获取系统时间。为使时间按预期显示，请确保将 `command_blocks_work` 和 `send_command_feedback` 这两个游戏规则均设置为 `true`。"
 
-#: ../../../modules/time.md:13 bff5bfff3876487cb209cacddbc4f1f3
+#: ../../modules/time.md:13 8f800d9bdb1d4daeb0f2f580f949218a
 msgid "🔧 Functions"
 msgstr "🔧 函数"
 
-#: ../../../modules/time.md:15 7d09c8ef5add478d8a9e6ef829ba6bb7
+#: ../../modules/time.md:15 dc40471fe1eb4dc9ad053256d3591793
 msgid "You can find below all functions available in this module."
 msgstr "你可以在下方找到此模块中的所有可用函数。"
 
-#: ../../../modules/time.md:19 70f65b3105f1425881179e3a2f614aa4
+#: ../../modules/time.md:19 1ea36fc6d6aa425994edd46b1c269ae4
 msgid "System Time"
 msgstr "系统时间"
 
-#: ../../../modules/time.md:23 b857a7e796e249e8acc5cbeefdd25f61
+#: ../../modules/time.md:23 998b2d73b42b4e81a6618f0cb256b304
 msgid "Get the system time corresponding to the real hours, minutes, and seconds."
 msgstr "获取对应于实际小时、分钟和秒的系统时间。"
 
-#: ../../../modules/time.md:25 4014771f09d24273975394bbf2c9e3fa
+#: ../../modules/time.md:25 60c9f97e9fd245f5893c1f874a92252c
 msgid "Outputs"
 msgstr "输出"
 
-#: ../../../modules/time.md:26 c32b0e11a9e3405ebb91d439ce338cf6
+#: ../../modules/time.md:26 295e7efd66f64ecfba57257ff479692f
 msgid "**Score `$time.hours bs.out`**: System time hours."
 msgstr "**分数 `$time.hours bs.out`**：系统时间小时。"
 
-#: ../../../modules/time.md:28 be777dcef5a8422182d2bb6465833297
+#: ../../modules/time.md:28 44bb5ca3197b45d99473efcfb6708468
 msgid "**Score `$time.minutes bs.out`**: System time minutes."
 msgstr "**分数 `$time.minutes bs.out`**：系统时间分钟。"
 
-#: ../../../modules/time.md:30 cde2d570ae954c1a8b6845d159eb7e0b
+#: ../../modules/time.md:30 59bb36e47d32431ba1c5daaf9dc7f494
 msgid "**Score `$time.seconds bs.out`**: System time seconds."
 msgstr "**分数 `$time.seconds bs.out`**：系统时间秒。"
 
-#: ../../../modules/time.md:33 830e6f7da1ea4a96ae485489885c2c10
+#: ../../modules/time.md:33 76b50c0e129c42a19aea943d45e1eb87
 msgid "*Example: The moment we all dread:*"
 msgstr "*示例：每个人都畏惧的时刻：*"
 
-#: ../../../modules/time.md:41 3efb9365037f4b5fb71942690a774c2a
+#: ../../modules/time.md:41 4c3a6fa795964deaa0dbe2d1a949c064
 msgid "**Credits**: Aksiome"
-msgstr "**制作人员**：Aksiome"
+msgstr "**贡献者**：Aksiome"
 
-#: ../../../_templates/comments.md:4 04b1ae8261704813a32b40aba4fd36ec
+#: ../../_templates/comments.md:4 e2594693c20f491eb730c62e5db1f0f5
 msgid "**💬 Did it help you?**"
 msgstr "**💬 这对你有帮助吗？**"
 
-#: ../../../_templates/comments.md:6 3f6be7901e7947c8b0201867efea3042
+#: ../../_templates/comments.md:6 89e32be66cf9443bb4868a7315e8ca22
 msgid "Feel free to leave your questions and feedback below!"
 msgstr "欢迎在下方留下你的问题和反馈！"

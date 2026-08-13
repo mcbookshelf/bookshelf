@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -28,21 +27,18 @@ msgstr ""
 "3.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.1.0)"
 
 #: ../../changelog/v3.1.0.md:3 d3a40ec7465e436baf338389d0ad8a84
-#, fuzzy
 msgid "**💫 The Spatial Update!**"
-msgstr "**🧱 边界更新！**"
+msgstr "**💫 空间更新！**"
 
 #: ../../changelog/v3.1.0.md:5 44ec0c915dd0468cb24753dedafc8402
-#, fuzzy
 msgid ""
 "*Introduces Moon and Sun position features, as well as fully customizable"
 " hitboxes that integrate across the entire Bookshelf ecosystem.*"
-msgstr "*引入全自定义碰撞箱系统，深度整合至Bookshelf生态各模块。*"
+msgstr "*新增月亮和太阳的位置功能，以及可在整个 Bookshelf 生态中使用的完全可自定义碰撞箱。*"
 
 #: ../../changelog/v3.1.0.md:7 aaecfd463bd947c882460db0934b6b29
-#, fuzzy
 msgid "Bookshelf is now based on **Minecraft 1.21.8**."
-msgstr "Bookshelf 现基于 **Minecraft 1.21.7** 构建。"
+msgstr "Bookshelf 现基于 **Minecraft 1.21.8** 构建。"
 
 #: ../../changelog/v3.1.0.md:10 c2480d14914b45f4a51443ec5b7c40cd
 msgid "`🧱 bs.block`"
@@ -76,10 +72,9 @@ msgstr ""
 
 #: ../../changelog/v3.1.0.md:19 17f6204cee5b4b82831010a12bb1c0dc
 msgid "`⛰️ bs.environment`"
-msgstr ""
+msgstr "`⛰️ bs.environment`"
 
 #: ../../changelog/v3.1.0.md:21 10df5d5f45a140e2852d2b9e4d8f5a77
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
@@ -87,11 +82,10 @@ msgid ""
 " on the Y axis relative to the horizon, in degrees."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
-"新增完整**线性样条曲线**支持。"
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - 新增 "
+"`#bs.environment:get_sun_angle`，用于获取指定时间太阳相对于地平线的 Y 轴角度（单位：度）。"
 
 #: ../../changelog/v3.1.0.md:22 b4209e4bcd494725bc600c0a96d74963
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
@@ -99,11 +93,10 @@ msgid ""
 "time on the Y axis relative to the horizon, in degrees."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
-"新增完整**线性样条曲线**支持。"
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - 新增 "
+"`#bs.environment:get_moon_angle`，用于获取指定时间月亮相对于地平线的 Y 轴角度（单位：度）。"
 
 #: ../../changelog/v3.1.0.md:23 cb60eaa1fff94197bf112947c6165ee4
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
@@ -111,11 +104,10 @@ msgid ""
 " the Y axis relative to the horizon, in degrees."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#445](https://github.com/mcbookshelf/bookshelf/issues/445)** - "
-"`#bs.raycast:run` 现在调用回调前计算所有lambda数据。"
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - 新增 "
+"`#bs.environment:get_current_sun_angle`，用于获取当前太阳相对于地平线的 Y 轴角度（单位：度）。"
 
 #: ../../changelog/v3.1.0.md:24 e92c088d900449faa27429454ebde2f5
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
@@ -123,11 +115,10 @@ msgid ""
 "on the Y axis relative to the horizon, in degrees."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#445](https://github.com/mcbookshelf/bookshelf/issues/445)** - "
-"`#bs.raycast:run` 现在调用回调前计算所有lambda数据。"
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - 新增 "
+"`#bs.environment:get_current_moon_angle`，用于获取当前月亮相对于地平线的 Y 轴角度（单位：度）。"
 
 #: ../../changelog/v3.1.0.md:25 231b072965884ae9af881ee6b2686d82
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
@@ -135,11 +126,10 @@ msgid ""
 "string identifier following Minecraft's 8-day lunar cycle."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
-"新增完整**线性样条曲线**支持。"
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - 新增 "
+"`#bs.environment:get_moon_phase`，按照 Minecraft 的 8 天月相周期，以字符串标识返回当前月相。"
 
 #: ../../changelog/v3.1.0.md:26 d06abeb4d82c4575ad07e9d576634c3d
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
@@ -147,11 +137,10 @@ msgid ""
 "the sun."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - "
-"新增烘焙和自定义实体碰撞箱支持。"
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - 新增 "
+"`#bs.environment:look_at_sun`，让执行实体朝向太阳。"
 
 #: ../../changelog/v3.1.0.md:27 23a7cef2327a4a46b49534f11ec166e3
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - Added "
@@ -159,11 +148,10 @@ msgid ""
 "the moon."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
-"新增完整**线性样条曲线**支持。"
+"**[#14](https://github.com/mcbookshelf/bookshelf/issues/14)** - 新增 "
+"`#bs.environment:look_at_moon`，让执行实体朝向月亮。"
 
 #: ../../changelog/v3.1.0.md:28 fb2f2192241a4b098bebcb869c8a9644
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - Added "
@@ -171,11 +159,10 @@ msgid ""
 " `is_sunset_time` for determining current time of day."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
-"新增完整**线性样条曲线**支持。"
+"**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - 新增基于时间的谓词："
+"`is_day_time`、`is_night_time`、`is_sunrise_time` 和 `is_sunset_time`，用于判断当前时间段。"
 
 #: ../../changelog/v3.1.0.md:29 bf445031f4024d0a9b4225587f08d778
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - Added "
@@ -184,11 +171,10 @@ msgid ""
 " villager activity phases."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
-"新增完整**线性样条曲线**支持。"
+"**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - 新增村民行为谓词："
+"`is_villager_working_time`、`is_villager_socializing_time` 和 `is_villager_sleeping_time`，用于判断村民所处的活动阶段。"
 
 #: ../../changelog/v3.1.0.md:30 52dabf13aa074bea984171d0883af685
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - Added "
@@ -196,11 +182,10 @@ msgid ""
 "beds based on weather and time conditions."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#465](https://github.com/mcbookshelf/bookshelf/pull/465)** - "
-"新增烘焙和自定义实体碰撞箱支持。"
+"**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - 新增床铺使用谓词 "
+"`is_bed_time`，用于根据天气和时间判断玩家何时可以使用床。"
 
 #: ../../changelog/v3.1.0.md:31 4d6c5e5e0b2744d1b293a586343a9147
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - Added "
@@ -209,11 +194,10 @@ msgid ""
 " to weather and time."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
-"新增完整**线性样条曲线**支持。"
+"**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - 新增生物行为谓词 "
+"`is_undead_burning_time` 和 `is_monster_spawning_time`，用于根据天气和时间判断生物行为。"
 
 #: ../../changelog/v3.1.0.md:32 06916a0353bf4c718fff83e043463c95
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - Added "
@@ -221,11 +205,10 @@ msgid ""
 "bees are in their nests/hives."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
-"新增完整**线性样条曲线**支持。"
+"**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - 新增蜜蜂行为谓词 "
+"`is_bee_sleeping_time`，用于判断蜜蜂在蜂巢或蜂箱中的休息时间。"
 
 #: ../../changelog/v3.1.0.md:33 7730fd5b3fcb4df4a1b7fc0139d02731
-#, fuzzy
 msgid ""
 "<abbr title=\"New Feature\">✨</abbr> "
 "**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - Added "
@@ -233,8 +216,8 @@ msgid ""
 " when creakings can spawn."
 msgstr ""
 "<abbr title=\"New Feature\">✨</abbr> "
-"**[#417](https://github.com/mcbookshelf/bookshelf/issues/417)** - "
-"新增完整**线性样条曲线**支持。"
+"**[#475](https://github.com/mcbookshelf/bookshelf/issues/475)** - 新增嘎枝生成谓词 "
+"`is_creaking_spawn_time`，用于判断嘎枝何时可以生成。"
 
 #: ../../changelog/v3.1.0.md:36 f895722c2b1049c88856c32b6a632318
 msgid "`❤️ bs.health`"
@@ -379,7 +362,5 @@ msgstr ""
 
 #~ msgid "**[Update Name]**"
 #~ msgstr ""
-
 #~ msgid "*[Update Description]*"
 #~ msgstr ""
-

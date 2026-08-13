@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players set #packtest.schedule.ca bs.data 0
-function #bs.schedule:schedule {run:"scoreboard players add #packtest.schedule.ca bs.data 1",with:{}}
-function #bs.schedule:schedule {run:"scoreboard players add #packtest.schedule.ca bs.data 1",with:{id:{cancel:"all"}}}
-function #bs.schedule:schedule {run:"scoreboard players add #packtest.schedule.ca bs.data 1",with:{id:{cancel:"all"}}}
+scoreboard players set #ward.schedule.ca bs.data 0
+function #bs.schedule:schedule {run:"scoreboard players add #ward.schedule.ca bs.data 1",with:{}}
+function #bs.schedule:schedule {run:"scoreboard players add #ward.schedule.ca bs.data 1",with:{id:{cancel:"all"}}}
+function #bs.schedule:schedule {run:"scoreboard players add #ward.schedule.ca bs.data 1",with:{id:{cancel:"all"}}}
 function #bs.schedule:cancel_all {with:{id:{cancel:"all"}}}
 
-await score #packtest.schedule.ca bs.data matches 1
+await score #ward.schedule.ca bs.data matches 1

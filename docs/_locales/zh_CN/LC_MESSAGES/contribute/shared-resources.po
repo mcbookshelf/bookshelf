@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -24,10 +23,7 @@ msgid "🌐 Shared Resources"
 msgstr "🌐 共享资源"
 
 #: ../../../contribute/shared-resources.md:7 524949c453454c49aa6f9a7a9c8ebe9f
-msgid ""
-"To minimize redundancy and enhance efficiency, the library provides "
-"shared objectives, storages, blocks, and entities that modules can "
-"leverage."
+msgid "To minimize redundancy and enhance efficiency, the library provides shared objectives, storages, blocks, and entities that modules can leverage."
 msgstr "为减少冗余并提高效率，该库提供共享的记分项、命令存储、方块和实体供模块使用。"
 
 #: ../../../contribute/shared-resources.md
@@ -53,9 +49,7 @@ msgid "`bs.out`"
 msgstr "`bs.out`"
 
 #: ../../../contribute/shared-resources.md:11 923ad4ce44394ca296bd9ec597aaa0de
-msgid ""
-"Stores output values. Format: `$<module>.<feature>` or "
-"`$<module>.<feature>.<output_key>`"
+msgid "Stores output values. Format: `$<module>.<feature>` or `$<module>.<feature>.<output_key>`"
 msgstr "存储输出值。格式：`$<模块>.<特性>` 或 `$<模块>.<特性>.<输出键>`"
 
 #: ../../../contribute/shared-resources.md:11 eafec60be17c47df9e1b54e42af6ae22
@@ -63,9 +57,7 @@ msgid "`bs.ctx`"
 msgstr "`bs.ctx`"
 
 #: ../../../contribute/shared-resources.md:11 296c033c182a42d1a7d9c88a2c29964a
-msgid ""
-"Temporary contextual objective for fast computations. Format: "
-"`#<single_letter>`"
+msgid "Temporary contextual objective for fast computations. Format: `#<single_letter>`"
 msgstr "用于快速计算的临时上下文记分项。格式：`#<单个字母>`"
 
 #: ../../../contribute/shared-resources.md:11 86d761f98f584604bb8f14870c82113b
@@ -113,9 +105,7 @@ msgid "`bs:out`"
 msgstr "`bs:out`"
 
 #: ../../../contribute/shared-resources.md:24 274cbd556c11499b913dccc62be00132
-msgid ""
-"Stores output data. Path: `<module>.<feature>` or "
-"`<module>.<feature>.<output_key>`"
+msgid "Stores output data. Path: `<module>.<feature>` or `<module>.<feature>.<output_key>`"
 msgstr "存储输出数据。路径：`<模块>.<特性>` 或 `<模块>.<特性>.<输出键>`"
 
 #: ../../../contribute/shared-resources.md:24 570b37da9fab45299a3683b42570f613
@@ -123,9 +113,7 @@ msgid "`bs:ctx`"
 msgstr "`bs:ctx`"
 
 #: ../../../contribute/shared-resources.md:24 29197ffa843e4e8c89bf9da6b817c880
-msgid ""
-"Fast contextual storage. Uses `x`, `y`, `z` for numeric values (i.e., "
-"execute store) and `_` for other data"
+msgid "Fast contextual storage. Uses `x`, `y`, `z` for numeric values (i.e., execute store) and `_` for other data"
 msgstr "快速上下文存储。使用 `x`、`y`、`z` 存储数值（即 execute store），`_` 存储其他数据"
 
 #: ../../../contribute/shared-resources.md:24 925eaf9f6f304e9d973e83aac9e87906
@@ -157,9 +145,7 @@ msgid "Blocks"
 msgstr "方块"
 
 #: ../../../contribute/shared-resources.md:39 9a67fe56c5964def9734e9acf054345d
-msgid ""
-"These commands can be used at load time to create blocks that can be used"
-" anywhere. These blocks must be kept in loaded chunks (`-30000000 1600`)."
+msgid "These commands can be used at load time to create blocks that can be used anywhere. These blocks must be kept in loaded chunks (`-30000000 1600`)."
 msgstr "这些命令可在加载时创建随处可用的方块。这些方块必须保存在常加载区块（`-30000000 1600`）中。"
 
 #: ../../../contribute/shared-resources.md:51 c704b2371881443a83c50c11068fbf61
@@ -167,10 +153,5 @@ msgid "Entities"
 msgstr "实体"
 
 #: ../../../contribute/shared-resources.md:53 45627988df5946c39cb17b70168382d3
-msgid ""
-"Global entities are summoned with specific UUIDs, ensuring they remain "
-"accessible and avoid selector conflicts. They must persist in always-"
-"loaded chunks (`-30000000 1600`) at the end of each tick. The UUID "
-"`B5-0-0-0-0` is reserved for temporary contextual entities that must not "
-"persist beyond the current tick."
+msgid "Global entities are summoned with specific UUIDs, ensuring they remain accessible and avoid selector conflicts. They must persist in always-loaded chunks (`-30000000 1600`) at the end of each tick. The UUID `B5-0-0-0-0` is reserved for temporary contextual entities that must not persist beyond the current tick."
 msgstr "全局实体使用特定 UUID 召唤，确保其可访问且避免选择器冲突。它们必须在每刻结束时保持在常加载区块（`-30000000 1600`）中。UUID `B5-0-0-0-0` 保留给临时上下文实体使用，这些实体不得在当前刻之外持续存在。"

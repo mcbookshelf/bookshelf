@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -20,21 +19,15 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../../changelog/v2.2.1.md:1 495b91f9159f443cac731ba6aabeffa4
-msgid ""
-"📦 [Bookshelf - "
-"2.2.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.1)"
-msgstr ""
-"📦 [Bookshelf - "
-"2.2.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.1)"
+msgid "📦 [Bookshelf - 2.2.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.1)"
+msgstr "📦 [Bookshelf - 2.2.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.1)"
 
 #: ../../../changelog/v2.2.1.md:3 01bf83c9d9184cffa349808464478fb9
 msgid "**⬆️ A Minecraft Update!**"
 msgstr "**⬆️ Minecraft更新!**"
 
 #: ../../../changelog/v2.2.1.md:5 b67161657f2a413fb12db8ed4f19798a
-msgid ""
-"*This release fixes several issues and bumps the Minecraft version to "
-"1.21.4.*"
+msgid "*This release fixes several issues and bumps the Minecraft version to 1.21.4.*"
 msgstr "*这个版本修复了若干问题，并将 Minecraft 版本升级至 1.21.4。*"
 
 #: ../../../changelog/v2.2.1.md:7 40954584fe824ae38eed8ff52a114f98
@@ -46,21 +39,13 @@ msgid "`🧱 bs.block`"
 msgstr "`🧱 bs.block`"
 
 #: ../../../changelog/v2.2.1.md:12 0af0204d93b04afaa2f38eb723539eea
-msgid ""
-"🐛 **[#290](https://github.com/mcbookshelf/bookshelf/issues/290)** - Added"
-" missing blocks in registries."
-msgstr ""
-"🐛 ​**​[#290](https://github.com/mcbookshelf/bookshelf/issues/290)​**​ "
-"- 在方块注册表中补全缺失条目。"
+msgid "🐛 **[#290](https://github.com/mcbookshelf/bookshelf/issues/290)** - Added missing blocks in registries."
+msgstr "🐛 ​**​[#290](https://github.com/mcbookshelf/bookshelf/issues/290)​**​ - 在方块注册表中补全缺失条目。"
 
 #: ../../../changelog/v2.2.1.md:14 b7a7ae8830ae4e2295b3558bdc145f7e
 msgid "`🏃 bs.move`"
 msgstr "🏃 bs.move`"
 
 #: ../../../changelog/v2.2.1.md:16 4fb112de599642ee92910b70538d12ee
-msgid ""
-"🐛 **[#288](https://github.com/mcbookshelf/bookshelf/issues/288)** - Fixed"
-" collision resolutions."
-msgstr ""
-"🐛 ​**​[#288](https://github.com/mcbookshelf/bookshelf/issues/288)​**​ "
-"- 修复碰撞响应处理逻辑。"
+msgid "🐛 **[#288](https://github.com/mcbookshelf/bookshelf/issues/288)** - Fixed collision resolutions."
+msgstr "🐛 ​**​[#288](https://github.com/mcbookshelf/bookshelf/issues/288)​**​ - 修复碰撞响应处理逻辑。"

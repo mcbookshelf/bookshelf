@@ -23,12 +23,9 @@ execute summon minecraft:marker run function #bs.id:give_cuid
 kill @e[type=minecraft:armor_stand,distance=..1]
 
 function #bs.id:update_cuids
-scoreboard players set #packtest.i bs.cid 0
-execute store result score #packtest bs.cid run scoreboard players operation #packtest.i bs.cid > @e bs.cid
-execute as @e[type=minecraft:marker] if score @s bs.cid = #packtest.i bs.cid run scoreboard players remove #packtest.i bs.cid 1
-execute as @e[type=minecraft:marker] if score @s bs.cid = #packtest.i bs.cid run scoreboard players remove #packtest.i bs.cid 1
-execute as @e[type=minecraft:marker] if score @s bs.cid = #packtest.i bs.cid run scoreboard players remove #packtest.i bs.cid 1
-execute as @e[type=minecraft:marker] if score @s bs.cid = #packtest.i bs.cid run scoreboard players remove #packtest.i bs.cid 1
-scoreboard players operation #packtest bs.cid -= #packtest.i bs.cid
+
+assert entity @e[type=minecraft:marker,scores={bs.cid=1}] inside
+assert entity @e[type=minecraft:marker,scores={bs.cid=2}] inside
+assert entity @e[type=minecraft:marker,scores={bs.cid=3}] inside
+assert entity @e[type=minecraft:marker,scores={bs.cid=4}] inside
 kill @e[type=minecraft:marker,distance=..1]
-assert score #packtest bs.cid matches 4

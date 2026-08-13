@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:14+0200\n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,133 +18,118 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: ../../index.md:8 b4a29e18b24840769564c13b6c92ac04
-msgid "Bookshelf"
-msgstr "Bookshelf"
+#: ../../index.md:11 34830bbd899b4aea899509eb6e24e3f8
+msgid "Bookshelf Library"
+msgstr "Bookshelf 库"
 
-#: ../../index.md:22 fc3d06c05e644c9e85efa7d1ab73334b
-msgid "🕵️ What is Bookshelf?"
-msgstr "🕵️‍♂️ Bookshelf是什么？"
+#: ../../index.md:23 ab591b53fbd1421d9d59a2173aaf03c2
+msgid "🚀 Get Started"
+msgstr "🚀 开始使用"
 
-#: ../../index.md:24 38fa1b2ae4104d26b6f378e5c44354fe
-msgid ""
-"Bookshelf (formerly known as Gunivers Libs) is a modular library datapack"
-" designed to simplify complex systems in Minecraft maps. It is ideal for "
-"mapmakers seeking easy-to-implement tools."
-msgstr ""
-"Bookshelf (前身为 Gunivers Libs) 是一个模块化的数据包库，旨在简化 Minecraft "
-"地图中的复杂系统。它非常适合寻求易于实现工具的地图制作者。"
+#: ../../index.md:34 94cc03cf0f394ccf83e53a9b287c3849
+msgid "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-octicon-mark-github\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z\"></path></svg> View on GitHub"
+msgstr "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-octicon-mark-github\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z\"></path></svg> 在 GitHub 上查看"
 
-#: ../../index.md:31 6b572b5e0c8f4712bf9fcec714eeebb0
-msgid "🚀 Quickstart!"
-msgstr "🚀 快速开始！"
+#: ../../index.md:45 e643a8570619429c8cbcd930cfd4b11d
+msgid "🌟 Featured modules"
+msgstr "🌟 精选模块"
 
-#: ../../index.md:42 f4ecad124af2480ea955d033e0a45158
-msgid "🎬 Watch trailer"
-msgstr "🎬 观看预告片"
-
-#: ../../index.md:55 ac6ed03eb26d45e299a2692e04a3fa58
-msgid "🌟 Featured Modules"
-msgstr "🌟 功能模块"
-
-#: ../../_templates/featured-modules.md:5 d02718a9cb1e4b1991f63c409ef47973
+#: ../../_templates/featured-modules.md:5 96d9673ecbb84ae6bae511d2945d465a
 msgid "🧱 Block"
 msgstr "🧱 方块"
 
-#: ../../_templates/featured-modules.md:10 a6167ecf447c4f17b45e69f95ff12d17
-msgid "Get and manipulate blocks (supports BlockStates and NBT)."
-msgstr "获取和操作方块（支持方块状态和 NBT）。"
+#: ../../_templates/featured-modules.md:10 f4cad98a53f44a8a8e84b15abfae2d04
+msgid "Get and manipulate blocks (supports block states and NBTs)."
+msgstr "获取并操作方块（支持方块状态与 NBT）。"
 
-#: ../../_templates/featured-modules.md:13 3214e76d878b491da80dc60189020a17
+#: ../../_templates/featured-modules.md:13 8aff2e303d6145199d4dad0ef912e923
 msgid "🔦 Raycast"
 msgstr "🔦 光线投射"
 
-#: ../../_templates/featured-modules.md:18 7b68f2cf0f9846efad96c9cb8629bd5b
+#: ../../_templates/featured-modules.md:18 efc8407bae924cc99d8b211bdd62641b
 msgid "Cast rays and see if they collide with blocks or entities."
 msgstr "投射光线并检查它们是否与方块或实体产生碰撞。"
 
-#: ../../_templates/featured-modules.md:21 17407d9a3e2d4ca28a6a03e15493a205
+#: ../../_templates/featured-modules.md:21 19ef43d002df4e3eb9f3f1dad630385f
 msgid "🧮 Math"
 msgstr "🧮 数学"
 
-#: ../../_templates/featured-modules.md:26 46bd68f3cc6e4068acd9aa7b7b4f1243
+#: ../../_templates/featured-modules.md:26 e92c41a6b40242f2bc6b9b98a0f5e5d7
 msgid "Mathematical functions: sin, cos, exp, log, sqrt, and much more!"
 msgstr "数学函数：sin、cos、exp、log、sqrt 等等！"
 
-#: ../../_templates/featured-modules.md:29 0ae92eb54c404df0ad8154f67a685741
+#: ../../_templates/featured-modules.md:29 960f2aa40cda45738c634a6619d9101f
 msgid "🏗️ Generation"
 msgstr "🏗️ 生成"
 
-#: ../../_templates/featured-modules.md:34 b29f3dd2353346b28570da83d89d9c40
-msgid "Generate terrains and landscapes, incorporating natural features."
-msgstr "生成地形和景观，包含自然特征。"
+#: ../../_templates/featured-modules.md:34 e643bfb6de3f4027a3f0a30771bcbdb6
+msgid "Iterate efficiently over the world to generate terrains and landscapes."
+msgstr "高效遍历世界以生成地形和景观。"
 
-#: ../../_templates/featured-modules.md:37 3c490e54f3bb4a618e0930e8515ff08a
+#: ../../_templates/featured-modules.md:37 35d9aeb57c5b4b3a8cef2ac58d2d724f
 msgid "🎲 Random"
-msgstr "🎲 随机数"
+msgstr "🎲 随机"
 
-#: ../../_templates/featured-modules.md:42 50b3b781905f4a3eb354bb3bf3a2725d
+#: ../../_templates/featured-modules.md:42 ae1df6d1e19e4dc2bdce0c5ca45abb46
 msgid "Random functions for different distributions and noise patterns."
 msgstr "用于不同分布和噪声模式的随机函数。"
 
-#: ../../_templates/featured-modules.md:45 b46ad4d8f35b4238b67bcb49e4bf6f9c
+#: ../../_templates/featured-modules.md:45 5dad22aff1034971b4bb088756ca5b74
 msgid "❤️ Health"
 msgstr "❤️ 生命"
 
-#: ../../_templates/featured-modules.md:50 f3062be1775d4b77b4aa854d5cc68747
+#: ../../_templates/featured-modules.md:50 ec62856f109b46d3ad6dc7b82d749ba4
 msgid "Easily manage the health of a player or the lifetime of an entity!"
 msgstr "轻松管理玩家的生命值或实体的存活时间！"
 
-#: ../../index.md:62 bbc800791cc14ca7a709df81baa3ec1f
+#: ../../index.md:52 678741e26a404f7d84a8f154614b1956
 msgid "🔥 Motivation"
-msgstr "🔥 开发动机"
+msgstr "🔥 为什么开发 Bookshelf？"
 
-#: ../../index.md:64 a008b4bcd3c74e70a2db19f079fabe88
-msgid ""
-"As developers, we understand the value of libraries: they save time, "
-"streamline workflows, and eliminate the need to reinvent the wheel. "
-"However, we have noticed that many mapmakers in the Minecraft community "
-"are less familiar with this concept."
-msgstr ""
-"作为开发者，我们理解库的价值：它们能节省时间、优化工作流程，并避免重复造轮子。然而，我们注意到 Minecraft "
-"社区中的许多地图制作者对这个概念并不太熟悉。"
+#: ../../index.md:54 61f9e8993a374b1887e18311c8e37f05
+msgid "Libraries save time and make systems easier to create. But many Minecraft mapmakers aren't used to them. Bookshelf exists to change that. Bookshelf focuses on ease of use. Each module is simple, works for any skill level, and keeps performance in mind."
+msgstr "库可以节省时间并使系统更易于创建。但许多 Minecraft 地图制作者不习惯使用它们。Bookshelf 的存在就是为了改变这一点。Bookshelf 专注于易用性。每个模块都很简单，适用于任何技能水平，并注重性能。"
 
-#: ../../index.md:66 3c60f7b90f374ca28b57455f80a7c3b4
-msgid ""
-"That is why we started this project: to provide a variety of reusable "
-"tools and encourage mapmakers to embrace the use of libraries."
-msgstr "这就是我们开始这个项目的原因：提供各种可重用的工具，并鼓励地图制作者使用库。"
-
-#: ../../index.md:68 65c75eaade4342c995c5f659bd146d9f
-msgid ""
-"While we strive to keep our modules as optimized as possible, our top "
-"priority is accessibility. We focus on creating features that are easy to"
-" use and simple to install, ensuring they are practical for everyone."
-msgstr "虽然我们努力使模块尽可能优化，但我们的首要任务是易用性。我们专注于创建易于使用和安装的功能，确保每个人都可以上手。"
-
-#: ../../index.md:71 f461e42034df4c88a030a789e9054168
-msgid ""
-"\"I have seen further than others because I have stood on the shoulders "
-"of giants.\""
+#: ../../index.md:58 61bad861bbb54689a72769cb83cfc6d7
+msgid "\"I have seen further than others because I have stood on the shoulders of giants.\""
 msgstr "“如果说我看得比别人更远些，那是因为我站在巨人的肩膀上。”"
 
-#: ../../index.md:72 aa5e1a91429d4c278721891b9a14b2cf
+#: ../../index.md:59 3ababb2216fd4d58a84f5ef3830d69d0
 msgid "Isaac Newton"
 msgstr "艾萨克·牛顿"
 
-#: ../../index.md:76 0f0612345f7a4afc8fa8603c488f9be6
+#: ../../index.md:63 c6d5822c86a1493188c7a4b4913dae8d
 msgid "🤝 Contribution"
 msgstr "🤝 贡献"
 
-#: ../../index.md:78 8cf472de39f543eaaa145b6000d321bb
-msgid ""
-"If you have any questions about the project or want to discuss something,"
-" join [our Discord](https://discord.gg/MkXytNjmBt) server."
-msgstr "如果你对项目有任何疑问或想讨论某些内容，请加入[我们的 Discord](https://discord.gg/MkXytNjmBt)服务器。"
+#: ../../index.md:65 4fa0ee6839bd4cdfb3b16dca54bb2755
+msgid "Have questions or want to talk about the project? Join the [Discord](https://discord.gg/MkXytNjmBt) server."
+msgstr "有疑问或想讨论项目？加入 [Discord](https://discord.gg/MkXytNjmBt) 服务器。"
 
-#: ../../index.md:80 2f1549b254e9472bbdfa4591364957d1
-msgid ""
-"If you want to contribute, please refer to the [contribution "
-"docs](https://docs.mcbookshelf.dev/en/latest/contribute/index.html) for "
-"more information."
-msgstr "如果你想贡献，请参考[贡献文档](https://docs.mcbookshelf.dev/en/latest/contribute/index.html)以获取更多信息。"
+#: ../../index.md:67 78c29f3c4fcc4556a2e607aab33d87a1
+msgid "Want to help? See the [contribution](https://docs.mcbookshelf.dev/en/latest/contribute/index.html) section."
+msgstr "想贡献力量？请查看 [贡献](https://docs.mcbookshelf.dev/en/latest/contribute/index.html) 部分。"
+
+#~ msgid "🕵️ What is Bookshelf?"
+#~ msgstr "🕵️‍♂️ Bookshelf是什么？"
+
+#~ msgid "Bookshelf (formerly known as Gunivers Libs) is a modular library datapack designed to simplify complex systems in Minecraft maps. It is ideal for mapmakers seeking easy-to-implement tools."
+#~ msgstr "Bookshelf (前身为 Gunivers Libs) 是一个模块化的数据包库，旨在简化 Minecraft 地图中的复杂系统。它非常适合寻求易于实现工具的地图制作者。"
+
+#~ msgid "🚀 Quickstart!"
+#~ msgstr "🚀 快速开始！"
+
+#~ msgid "🎬 Watch trailer"
+#~ msgstr "🎬 观看预告片"
+
+#~ msgid "Generate terrains and landscapes, incorporating natural features."
+#~ msgstr "生成地形和景观，包含自然特征。"
+
+#~ msgid "As developers, we understand the value of libraries: they save time, streamline workflows, and eliminate the need to reinvent the wheel. However, we have noticed that many mapmakers in the Minecraft community are less familiar with this concept."
+#~ msgstr "作为开发者，我们理解库的价值：它们能节省时间、优化工作流程，并避免重复造轮子。然而，我们注意到 Minecraft 社区中的许多地图制作者对这个概念并不太熟悉。"
+
+#~ msgid "That is why we started this project: to provide a variety of reusable tools and encourage mapmakers to embrace the use of libraries."
+#~ msgstr "这就是我们开始这个项目的原因：提供各种可重用的工具，并鼓励地图制作者使用库。"
+
+#~ msgid "While we strive to keep our modules as optimized as possible, our top priority is accessibility. We focus on creating features that are easy to use and simple to install, ensuring they are practical for everyone."
+#~ msgstr "虽然我们努力使模块尽可能优化，但我们的首要任务是易用性。我们专注于创建易于使用和安装的功能，确保每个人都可以上手。"

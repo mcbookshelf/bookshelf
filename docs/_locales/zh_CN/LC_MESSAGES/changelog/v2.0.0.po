@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -20,33 +19,20 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../../changelog/v2.0.0.md:1 10d9879269b44822877d8b8ab8867369
-msgid ""
-"📦 [Bookshelf - "
-"2.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.0.0)"
-msgstr ""
-"📦 [Bookshelf - "
-"2.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.0.0)"
+msgid "📦 [Bookshelf - 2.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.0.0)"
+msgstr "📦 [Bookshelf - 2.0.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.0.0)"
 
 #: ../../../changelog/v2.0.0.md:3 6a733f26a13d45d0b66e12958c453fc9
 msgid "**🌱 The Flourishing Update!**"
 msgstr "**🌱 繁盛更新！**"
 
 #: ../../../changelog/v2.0.0.md:5 9df0c97f30574bfe899c4eeb2a9f328a
-msgid ""
-"*This release replants the foundation of the Gunivers Library, growing "
-"into something entirely new.*"
-msgstr ""
-"*这个版本重构了Gunivers库的基础架构，使其焕然新生。*"
+msgid "*This release replants the foundation of the Gunivers Library, growing into something entirely new.*"
+msgstr "*这个版本重构了Gunivers库的基础架构，使其焕然新生。*"
 
 #: ../../../changelog/v2.0.0.md:7 e60c837a1d414849959fa3b07ec97f30
-msgid ""
-"**⚠️ BREAKING CHANGES**: This new version is filled with breaking "
-"changes. Since maintaining a list of those became unrealistic, the "
-"following changelog only highlights a selection of tweaks and new "
-"functionalities."
-msgstr ""
-"**⚠️ 破坏性变更**：这次新版本包含大量破坏性变更。因为完整列举所有变更不"
-"太现实，以下更新日志仅挑选部分优化与新功能进行说明。"
+msgid "**⚠️ BREAKING CHANGES**: This new version is filled with breaking changes. Since maintaining a list of those became unrealistic, the following changelog only highlights a selection of tweaks and new functionalities."
+msgstr "**⚠️ 破坏性变更**：这次新版本包含大量破坏性变更。因为完整列举所有变更不太现实，以下更新日志仅挑选部分优化与新功能进行说明。"
 
 #: ../../../changelog/v2.0.0.md:10 32b840f8884042ba942b5ead6846241b
 msgid "🎉 Addition"
@@ -89,9 +75,7 @@ msgid "The project has a new fresh identity: Bookshelf."
 msgstr "本项目现已全新升级为：Bookshelf。"
 
 #: ../../../changelog/v2.0.0.md:23 cebd53a9fb7743e598ef5a0489f38967
-msgid ""
-"Every module has been reworked for improved accuracy, performance, and/or"
-" simplicity."
+msgid "Every module has been reworked for improved accuracy, performance, and/or simplicity."
 msgstr "所有模块均已完成重构，在精确性、性能和/或简洁性方面均有提升。"
 
 #: ../../../changelog/v2.0.0.md:24 3471dff010694e91ad2ac9d085f7db5f
@@ -99,9 +83,7 @@ msgid "Renamed almost everything (scores, objectives, functions, ...)."
 msgstr "全面更新命名（分数、记分项、函数……）。"
 
 #: ../../../changelog/v2.0.0.md:25 24ab5e3beedc4e609f24f0c6bf33ab67
-msgid ""
-"Many functions now utilize macros, storage, or fake scores instead of "
-"objectives."
+msgid "Many functions now utilize macros, storage, or fake scores instead of objectives."
 msgstr "许多函数现在改用宏、命令存储或虚拟分数，而不再使用记分项。"
 
 #: ../../../changelog/v2.0.0.md:26 05d91c2bc2294217bc896903cf0ca0da
@@ -117,15 +99,11 @@ msgid "Merged the location and orientation modules into a new position module."
 msgstr "合并location和orientation模块为新的position模块。"
 
 #: ../../../changelog/v2.0.0.md:29 ef672a52a5884ab9b9a4baa76de59767
-msgid ""
-"Bitwise operations have been moved out of the math module into a separate"
-" module."
+msgid "Bitwise operations have been moved out of the math module into a separate module."
 msgstr "位运算被从math模块独立出来，成为单独的模块。"
 
 #: ../../../changelog/v2.0.0.md:30 f17ad3d041b341428d32a1729a3062ec
-msgid ""
-"Enhanced the accuracy of the move and view modules due to their rework "
-"and the addition of the new hitbox module."
+msgid "Enhanced the accuracy of the move and view modules due to their rework and the addition of the new hitbox module."
 msgstr "得益于重构工作与新增的hitbox模块，move和view模块的精确性显著提升。"
 
 #: ../../../changelog/v2.0.0.md:31 026939a38b0245acb0caeadc5dc7c7be

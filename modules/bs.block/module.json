@@ -7,7 +7,7 @@
   "meta": {
     "name": "Block",
     "slug": "bookshelf-block",
-    "description": "Bookshelf block management module, enabling id and state transformations.",
+    "description": "Get and set block IDs and states in Minecraft datapacks. Mix block properties and produce sounds, particles, display blocks, and more from stored data.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html",
     "tags": ["runtime"],
     "weak_dependencies": [

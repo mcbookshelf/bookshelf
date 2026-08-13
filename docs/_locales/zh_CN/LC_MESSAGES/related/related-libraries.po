@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Bookshelf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
@@ -24,11 +23,8 @@ msgid "📚 Related Libraries"
 msgstr "📚 相关库"
 
 #: ../../../related/related-libraries.md:7 2ee85c15117a4ff78178ea23ca69cd6a
-msgid ""
-"This page lists some interesting datapack libraries you can use instead "
-"of or in addition to Bookshelf."
-msgstr ""
-"本页面列出了一些有趣的数据包库，可作为Bookshelf的替代或补充使用。"
+msgid "This page lists some interesting datapack libraries you can use instead of or in addition to Bookshelf."
+msgstr "本页面列出了一些有趣的数据包库，可作为Bookshelf的替代或补充使用。"
 
 #: ../../../related/related-libraries.md:12 bbf30af78a8d486a80ef9191ca8e778e
 msgid "🧠 A Neural Network Deployment Library for Minecraft Mapmaking"
@@ -40,29 +36,23 @@ msgstr "该数据包允许地图制作者在Minecraft中部署神经网络。"
 
 #: ../../../related/related-libraries.md:19 ed8200108aed407591cfb8f4a007e7a6
 msgid "🟦 BlockState"
-msgstr "🟦 BlockState"
+msgstr "🟦 方块状态"
 
 #: ../../../related/related-libraries.md:23 7c71f0bb1f3549cab6095dfccc559976
-msgid ""
-"This pack provides a giant loot-table that extracts the BlockState data "
-"of the block at the called location."
-msgstr ""
-"该库提供庞大的战利品表系统，用于提取指定位置的方块状态数据。"
+msgid "This pack provides a giant loot-table that extracts the BlockState data of the block at the called location."
+msgstr "该库提供庞大的战利品表系统，用于提取指定位置的方块状态数据。"
 
 #: ../../../related/related-libraries.md:26 f03587c38fb74266a38c594f6414b89b
 msgid "⏱️ Callback Scheduler"
-msgstr "⏱️ Callback Scheduler"
+msgstr "⏱️ 回调调度器"
 
 #: ../../../related/related-libraries.md:30 da3cf4701d774952bf0a602cfad87e8d
-msgid ""
-"This datapack allows you to easily run commands at a later time as one or"
-" more entities!"
-msgstr ""
-"该数据包允许你轻松地以一个或多个实体身份在稍后时间执行命令！"
+msgid "This datapack allows you to easily run commands at a later time as one or more entities!"
+msgstr "该数据包允许你轻松地以一个或多个实体身份在稍后时间执行命令！"
 
 #: ../../../related/related-libraries.md:33 1c583388fb8c4de298d873c438dcf182
 msgid "📙 Data API"
-msgstr "📙 Data API"
+msgstr "📙 数据 API"
 
 #: ../../../related/related-libraries.md:37 b9ad190dda2a463fbaffabe455257c09
 msgid "A multi-purpose datapack, more focused on Minecraft object manipulation."
@@ -73,22 +63,16 @@ msgid "🔻 Delta"
 msgstr "🔻 Delta"
 
 #: ../../../related/related-libraries.md:44 25b08151e2924519a7c2df5ddaf3fe84
-msgid ""
-"Delta is an explosion-based player motion library that uses subtick "
-"timing to ensure that only one player is pushed by the blast."
-msgstr ""
-"Delta是基于爆炸的玩家运动库，使用亚刻时序确保只有一名玩家被冲击波推动。"
+msgid "Delta is an explosion-based player motion library that uses subtick timing to ensure that only one player is pushed by the blast."
+msgstr "Delta是基于爆炸的玩家运动库，使用亚刻时序确保只有一名玩家被冲击波推动。"
 
 #: ../../../related/related-libraries.md:47 7ed9f69eaac34825abebd753317d24b6
 msgid "📕 DPlib"
 msgstr "📕 DPlib"
 
 #: ../../../related/related-libraries.md:51 08bc1312fffe446ab94ad2885a04c82a
-msgid ""
-"DPlib is a library for datapack developed in mcfunction including math "
-"functions, time computation, threading and benchmarking."
-msgstr ""
-"DPlib是使用mcfunction开发的数据包库，包含数学函数、时间计算、线程和基准测试功能。"
+msgid "DPlib is a library for datapack developed in mcfunction including math functions, time computation, threading and benchmarking."
+msgstr "DPlib是使用mcfunction开发的数据包库，包含数学函数、时间计算、线程和基准测试功能。"
 
 #: ../../../related/related-libraries.md:54 4fac6ca59e5241f1abaa1450e87edb06
 msgid "📕 Duralib"
@@ -96,22 +80,16 @@ msgstr "📕 Duralib"
 
 #: ../../../related/related-libraries.md:58 8da7489681394320a9e42c6fc8714d9f
 #, python-format
-msgid ""
-"This library helps you manage durability of your items while being 100% "
-"data based and not requiring any tweaking of functions on your part."
-msgstr ""
-"该库帮助管理物品耐久度，完全基于数据驱动，无需修改函数。"
+msgid "This library helps you manage durability of your items while being 100% data based and not requiring any tweaking of functions on your part."
+msgstr "该库帮助管理物品耐久度，100% data（数据驱动），无需修改函数。"
 
 #: ../../../related/related-libraries.md:61 0005b6fb78044ea8a135d5caa659852b
 msgid "🔢 Flop"
 msgstr "🔢 Flop"
 
 #: ../../../related/related-libraries.md:65 c83ee28362874be6adca438b794844f7
-msgid ""
-"This datapack is a library for handling floating-point operations using "
-"scoreboards."
-msgstr ""
-"该数据包是使用记分板处理浮点运算的库。"
+msgid "This datapack is a library for handling floating-point operations using scoreboards."
+msgstr "该数据包是使用记分板处理浮点运算的库。"
 
 #: ../../../related/related-libraries.md:68 4e452f9d7792441c87181e05aa578055
 msgid "🖥️ GUI Detector"
@@ -126,27 +104,20 @@ msgid "👁️ Iris"
 msgstr "👁️ Iris"
 
 #: ../../../related/related-libraries.md:79 690d1b45e41440eaa665c8e67d110339
-msgid ""
-"Iris is a utility datapack designed to determine what block or entity a "
-"player is looking at, with micrometric precision and taking into account "
-"individual block geometries."
-msgstr ""
-"Iris是实用数据包，用于精确确定玩家注视的方块或实体，考虑单个方块的几何形状。"
+msgid "Iris is a utility datapack designed to determine what block or entity a player is looking at, with micrometric precision and taking into account individual block geometries."
+msgstr "Iris是实用数据包，用于精确确定玩家注视的方块或实体，考虑单个方块的几何形状。"
 
 #: ../../../related/related-libraries.md:82 4343a5717a274bf1beca5f13ed0bfe9d
 msgid "🔢 Large Number"
-msgstr "🔢 Large Number"
+msgstr "🔢 大数"
 
 #: ../../../related/related-libraries.md:86 b7a5f0e56dc441c2a7784244de4d93bd
-msgid ""
-"Datapack providing functionalities for handling large numbers, "
-"trigonometric functions, and various mathematical operations."
-msgstr ""
-"提供大数处理、三角函数和各种数学运算功能的数据包。"
+msgid "Datapack providing functionalities for handling large numbers, trigonometric functions, and various mathematical operations."
+msgstr "提供大数处理、三角函数和各种数学运算功能的数据包。"
 
 #: ../../../related/related-libraries.md:89 cb8310c838ca4a53bf0c0742a79e48f9
 msgid "➡️ MCF Raycast Raymarch"
-msgstr "➡️ MCF Raycast Raymarch"
+msgstr "➡️ MCF 射线投射 射线行进"
 
 #: ../../../related/related-libraries.md:93 0d09bcae909f413c873bb39fd66d3bc1
 msgid "Usage of raymarching to optimize mcfunction raycasts."
@@ -157,11 +128,8 @@ msgid "🔨 Moxlib"
 msgstr "🔨 Moxlib"
 
 #: ../../../related/related-libraries.md:100 dda5be29866a42bc80a858a02e207857
-msgid ""
-"Moxlib aims to make Datapack creation fun and enjoyable. This is a multi-"
-"purpose datapack."
-msgstr ""
-"Moxlib旨在使数据包创作变得有趣。这是一个多功能数据包。"
+msgid "Moxlib aims to make Datapack creation fun and enjoyable. This is a multi-purpose datapack."
+msgstr "Moxlib旨在使数据包创作变得有趣。这是一个多功能数据包。"
 
 #: ../../../related/related-libraries.md:103 cf93cfcc1dfa4e5984cd67db114b8057
 msgid "🔢 Minecraft Floating Point Arithmetic"
@@ -176,11 +144,8 @@ msgid "💥 Minecraft Ray Collision Detector"
 msgstr "💥 Minecraft射线碰撞检测器"
 
 #: ../../../related/related-libraries.md:114 1d78e808e123458b8264d2a9a312c4fa
-msgid ""
-"Minecraft Ray Collision Detector is a super precise raycast system in "
-"vanilla Minecraft!"
-msgstr ""
-"Minecraft射线碰撞检测器是原版Minecraft中超精确的射线投射系统！"
+msgid "Minecraft Ray Collision Detector is a super precise raycast system in vanilla Minecraft!"
+msgstr "Minecraft射线碰撞检测器是原版Minecraft中超精确的射线投射系统！"
 
 #: ../../../related/related-libraries.md:117 310710c637e24f5087b684df124d9a2b
 msgid "❤️ Minecraft-Simple-Custom-Heal"
@@ -192,16 +157,11 @@ msgstr "适用于Minecraft数据包的极简自定义治疗库。"
 
 #: ../../../related/related-libraries.md:124 f90fd2749a1945a9898c90327cf3b1b6
 msgid "🏃 Player Motion"
-msgstr "🏃 Player Motion"
+msgstr "🏃 玩家运动"
 
 #: ../../../related/related-libraries.md:128 b0d801976590429db80586149d0fbbe3
-msgid ""
-"Player Motion is an explosion-based library that uses subtick timing to "
-"ensure that only one player is pushed by the blast without any side "
-"effects. Player Motion is a fork of Delta."
-msgstr ""
-"Player Motion是基于爆炸的运动库，使用亚刻时序确保只有一名玩家被冲击波推动且无副作用。"
-"该库是Delta的分支项目。"
+msgid "Player Motion is an explosion-based library that uses subtick timing to ensure that only one player is pushed by the blast without any side effects. Player Motion is a fork of Delta."
+msgstr "Player Motion是基于爆炸的运动库，使用亚刻时序确保只有一名玩家被冲击波推动且无副作用。该库是Delta的分支项目。"
 
 #: ../../../related/related-libraries.md:132 9eb1717dc74f459db84ee61fbed9961f
 msgid "👁️ Retina 2.0"
@@ -224,22 +184,16 @@ msgid "⏲️ TimeLib"
 msgstr "⏲️ TimeLib"
 
 #: ../../../related/related-libraries.md:150 15216d6c4f644bdaa3e73c5856235df9
-msgid ""
-"A Minecraft datapack library that lets you get the real life date & time "
-"ingame, including year, month and day."
-msgstr ""
-"Minecraft数据包库，可在游戏中获取真实世界的日期和时间，包括年、月、日。"
+msgid "A Minecraft datapack library that lets you get the real life date & time ingame, including year, month and day."
+msgstr "Minecraft数据包库，可在游戏中获取真实世界的日期和时间，包括年、月、日。"
 
 #: ../../../related/related-libraries.md:153 2af3b3d530d143dbacca936735a9e7ff
 msgid "🪖 Tungsten"
 msgstr "🪖 Tungsten"
 
 #: ../../../related/related-libraries.md:157 beedb1b22d084077a6329558580e8274
-msgid ""
-"This library allows for easy and highly efficient checking for the "
-"swapping of equipment"
-msgstr ""
-"该库支持轻松高效地检测装备更换操作"
+msgid "This library allows for easy and highly efficient checking for the swapping of equipment"
+msgstr "该库支持轻松高效地检测装备更换操作"
 
 #: ../../../related/related-libraries.md:160 798e518e163546d79d26bf6b40a95e1c
 msgid "📝 UniF-Logger"

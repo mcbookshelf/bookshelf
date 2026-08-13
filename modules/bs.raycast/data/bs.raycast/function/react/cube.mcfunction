@@ -86,8 +86,8 @@ execute if data storage bs:data raycast.on_exit_point positioned as @s run funct
 
 execute if score $raycast.piercing bs.lambda matches 0 run return run scoreboard players set #raycast.dm bs.data -2147483648
 
-execute store result score $raycast.prev_entry_distance bs.lambda run data get storage bs:data raycast.tmin
-execute store result score $raycast.prev_exit_distance bs.lambda run data get storage bs:data raycast.tmax
+execute store result score $raycast.prev_entry_distance bs.lambda run data get storage bs:data raycast.tmin 1000
+execute store result score $raycast.prev_exit_distance bs.lambda run data get storage bs:data raycast.tmax 1000
 
 scoreboard players operation #raycast.tm bs.data = #raycast.te bs.data
 scoreboard players operation #raycast.pb bs.data = $raycast.piercing bs.lambda

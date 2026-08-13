@@ -13,5 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# tadpole group
-data modify storage bs:out hitbox set value {width:0.4,height:0.3}
+# fox group
+execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.36,height:0.42}
+data modify storage bs:out hitbox set value {width:0.6,height:0.7}

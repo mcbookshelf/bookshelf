@@ -14,4 +14,4 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set value "x"
-execute store result storage bs:data generation[-1].x int -1 run data get storage bs:in generation.on_cuboid.spacing
+execute store result storage bs:data generation[-1].x int -1 run scoreboard players get #generation.s bs.data

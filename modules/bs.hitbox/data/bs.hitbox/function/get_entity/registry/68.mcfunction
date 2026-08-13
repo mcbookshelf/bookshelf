@@ -15,6 +15,7 @@
 
 # player group
 execute if entity @s[gamemode=spectator] run return run data modify storage bs:out hitbox set value {width:0.0,height:0.0}
+execute if function bs.hitbox:get_entity/pose/is_sleeping run return run data modify storage bs:out hitbox set value {width:0.2,height:0.2}
 execute if predicate bs.hitbox:internal/is_sneaking run return run data modify storage bs:out hitbox set value {width:0.6,height:1.5}
 execute if predicate bs.hitbox:internal/is_swimming run return run data modify storage bs:out hitbox set value {width:0.6,height:0.6}
 execute if predicate bs.hitbox:internal/is_gliding run return run data modify storage bs:out hitbox set value {width:0.6,height:0.6}

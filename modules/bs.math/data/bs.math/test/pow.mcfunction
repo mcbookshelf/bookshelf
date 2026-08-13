@@ -15,15 +15,12 @@
 
 data modify storage bs:in math.pow set value {x:3.5,y:5}
 function #bs.math:pow
-execute store result score #r bs.ctx run data get storage bs:out math.pow 1000
-assert score #r bs.ctx matches 525217..525219
+assert result 525217..525219 run data get storage bs:out math.pow 1000
 
 data modify storage bs:in math.pow set value {x:18.125,y:2.5}
 function #bs.math:pow
-execute store result score #r bs.ctx run data get storage bs:out math.pow 1000
-assert score #r bs.ctx matches 1398603..1398605
+assert result 1398603..1398605 run data get storage bs:out math.pow 1000
 
 data modify storage bs:in math.pow set value {x:49,y:.5}
 function #bs.math:pow
-execute store result score #r bs.ctx run data get storage bs:out math.pow 1000
-assert score #r bs.ctx matches 6999..7001
+assert result 6999..7001 run data get storage bs:out math.pow 1000

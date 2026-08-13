@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="300" height="120" xmlns="http://www.w3.org/2000/svg">
-    <!-- Fond de la tuile avec coins arrondis -->
+<svg width="300" height="100" xmlns="http://www.w3.org/2000/svg">
     <rect
         x="0"
         y="0"
@@ -13,7 +12,6 @@
         stroke-width="1"
     />
 
-    <!-- Titre -->
     <text
         x="30"
         y="30"
@@ -23,7 +21,6 @@
         fill="#ffffff"
     >🧮 Math</text>
 
-    <!-- Description -->
     <text
         x="30"
         y="60"

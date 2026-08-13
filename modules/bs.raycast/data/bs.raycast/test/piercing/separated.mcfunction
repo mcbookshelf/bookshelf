@@ -19,19 +19,19 @@ summon minecraft:armor_stand ~.6 ~ ~.5
 summon minecraft:armor_stand ~.5 ~ ~.5
 summon minecraft:armor_stand ~.4 ~ ~.5
 
-execute store result score #packtest.on_entry_point bs.data store result score #packtest.on_exit_point bs.data store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~1.5 ~.5 ~.5 facing ~-.5 ~ ~ run function #bs.raycast:run {with:{entities:true,piercing:{blocks:2,entities:0},max_distance:3,on_entry_point:"scoreboard players add #packtest.on_entry_point bs.data 1",on_exit_point:"scoreboard players add #packtest.on_exit_point bs.data 1",on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
+execute store result score #ward.on_entry_point bs.data store result score #ward.on_exit_point bs.data store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~1.5 ~.5 ~.5 facing ~-.5 ~ ~ run function #bs.raycast:run {with:{entities:true,piercing:{blocks:2,entities:0},max_distance:3,on_entry_point:"scoreboard players add #ward.on_entry_point bs.data 1",on_exit_point:"scoreboard players add #ward.on_exit_point bs.data 1",on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
 
-assert score #packtest.on_entry_point bs.data matches 3
-assert score #packtest.on_exit_point bs.data matches 3
-assert score #packtest.on_targeted_block bs.data matches 2
-assert score #packtest.on_targeted_entity bs.data matches 1
+assert score #ward.on_entry_point bs.data matches 3
+assert score #ward.on_exit_point bs.data matches 3
+assert score #ward.on_targeted_block bs.data matches 2
+assert score #ward.on_targeted_entity bs.data matches 1
 
 fill ~ ~ ~ ~1 ~ ~ minecraft:air
-execute store result score #packtest.on_entry_point bs.data store result score #packtest.on_exit_point bs.data store result score #packtest.on_targeted_block bs.data run scoreboard players set #packtest.on_targeted_entity bs.data 0
-execute positioned ~1.5 ~.5 ~.5 facing ~-.5 ~ ~ run function #bs.raycast:run {with:{entities:true,piercing:{blocks:0,entities:-1},max_distance:3,on_entry_point:"scoreboard players add #packtest.on_entry_point bs.data 1",on_exit_point:"scoreboard players add #packtest.on_exit_point bs.data 1",on_targeted_block:"scoreboard players add #packtest.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #packtest.on_targeted_entity bs.data 1"}}
+execute store result score #ward.on_entry_point bs.data store result score #ward.on_exit_point bs.data store result score #ward.on_targeted_block bs.data run scoreboard players set #ward.on_targeted_entity bs.data 0
+execute positioned ~1.5 ~.5 ~.5 facing ~-.5 ~ ~ run function #bs.raycast:run {with:{entities:true,piercing:{blocks:0,entities:-1},max_distance:3,on_entry_point:"scoreboard players add #ward.on_entry_point bs.data 1",on_exit_point:"scoreboard players add #ward.on_exit_point bs.data 1",on_targeted_block:"scoreboard players add #ward.on_targeted_block bs.data 1",on_targeted_entity:"scoreboard players add #ward.on_targeted_entity bs.data 1"}}
 
-assert score #packtest.on_entry_point bs.data matches 4
-assert score #packtest.on_exit_point bs.data matches 4
-assert score #packtest.on_targeted_block bs.data matches 1
-assert score #packtest.on_targeted_entity bs.data matches 3
+assert score #ward.on_entry_point bs.data matches 4
+assert score #ward.on_exit_point bs.data matches 4
+assert score #ward.on_targeted_block bs.data matches 1
+assert score #ward.on_targeted_entity bs.data matches 3
