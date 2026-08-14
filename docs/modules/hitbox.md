@@ -18,69 +18,69 @@ You can find below all functions available in this module.
 
 ---
 
-### Bake Entity
+### Bake entity
 
 ```{function} #bs.hitbox:bake_entity
 
 Bake an [entity's hitbox](#entity-types) to improve performance when its size never changes. If the entity has passengers, they are also baked, and the base entity's hitbox is expanded to include the full bounding box of the entire stack.
 
 :Inputs:
-  **Execution `as <entities>`**: The entity or entities whose hitbox should be baked.
+  **Execution `as <entities>`**: entities whose hitbox should be baked
 
 :Outputs:
-  **State**: The entity's hitbox is saved in a baked state for later use.
+  **State**: the entity's hitbox is saved as a baked hitbox for later use
 ```
 
 ```{warning}
-Only use baked hitboxes when you are sure the entity's size will not change, for example: no growth (babies), no scaling, no new passengers, and no equipment that could affect size.
+Only use baked hitboxes when you are sure the entity's size will not change, such as when it cannot grow, scale, gain passengers, or equip items that affect its size.
 
 If the hitbox changes after baking, **it may lead to incorrect collisions or broken logic**.
 ```
 
-```{dropdown} What is a Bounding Box?
+```{dropdown} What is a bounding box?
 :color: info
 :icon: question
 
-A bounding box is a simple rectangular box that surrounds an object—or part of it—to help the game figure out where it is and what it touches. For example, a set of stairs in Minecraft uses two bounding boxes: one for the lower step and one for the upper step.
+A bounding box is a simple rectangular box that surrounds an object, or part of it, to help the game figure out where it is and what it touches. For example, a set of stairs in Minecraft uses two bounding boxes: one for the lower step and one for the upper step.
 ```
 
-```{dropdown} What is a Baked Hitbox?
+```{dropdown} What is a baked hitbox?
 :color: info
 :icon: question
 
 Baking captures a snapshot of the entity's hitbox at a specific moment. It does not update after that. If the entity has passengers, the baked result includes a bounding box that encapsulates both the base entity and all passengers.
 
-See [Hitbox Types](#hitbox-types) for full details on block and entity hitboxes.
+See [Hitbox types](#hitbox-types) for full details on block and entity hitboxes.
 ```
 
 > **Credits**: Aksiome
 
 ---
 
-### Get Block
+### Get block
 
 :::::{tab-set}
-::::{tab-item} Block Shape
+::::{tab-item} Block shape
 
 ```{function} #bs.hitbox:get_block_shape
 
-Get the `default` shape of a block, represented by a list of box coordinates. This shape defines the area where the player can interact with or aim at the block. Coordinates range from `0` to `16` within a block space, as in block models.
+Get the `default` shape of a block, represented by a list of box coordinates. This shape defines the area where the player can target or interact with the block. Coordinates range from `0` to `16` within a block space, as in block models.
 
 :Inputs:
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from which to get the block hitbox.
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: position from which to get the block hitbox
 
 :Outputs:
   **Storage `bs:out hitbox`**:
   :::{treeview}
-  - {nbt}`compound` Block collision box
-    - {nbt}`list` **shape**: A list of cube coordinates (`[[min_x, min_y, min_z, max_x, max_y, max_z]]`).
-    - {nbt}`compound` **offset**: Hitbox offset (used for example by flowers).
-      - {nbt}`double` **x**: Number describing the X coordinate offset.
-      - {nbt}`double` **z**: Number describing the Z coordinate offset.
+  - {nbt}`compound` block hitbox
+    - {nbt}`list` **shape**: list of cube coordinates (`[[min_x, min_y, min_z, max_x, max_y, max_z]]`)
+    - {nbt}`compound` **offset**: hitbox offset (used by flowers, for example)
+      - {nbt}`double` **x**: number describing the X coordinate offset
+      - {nbt}`double` **z**: number describing the Z coordinate offset
   :::
 ```
 
-*Example: Get the shape of an open fence gate (can be targeted, even though you can walk through it):*
+*Example: get the shape of an open fence gate (can be targeted, even though you can walk through it)*
 
 ```mcfunction
 setblock 0 0 0 minecraft:oak_fence_gate[open=true]
@@ -89,27 +89,27 @@ data get storage bs:out hitbox
 ```
 
 ::::
-::::{tab-item} Block Collision Shape
+::::{tab-item} Block collision shape
 
 ```{function} #bs.hitbox:get_block_collision
 
 Get the `collision` shape of a block, represented by a list of box coordinates. This shape defines the solid boundaries of the block that entities cannot pass through. Coordinates range from `0` to `16` within a block space, as in block models.
 
 :Inputs:
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from which to get the block hitbox.
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: position from which to get the block hitbox
 
 :Outputs:
   **Storage `bs:out hitbox`**:
   :::{treeview}
-  - {nbt}`compound` Block collision box
-    - {nbt}`list` **shape**: A list of cube coordinates (`[[min_x, min_y, min_z, max_x, max_y, max_z]]`).
-    - {nbt}`compound` **offset**: Hitbox offset (used for example by flowers).
-      - {nbt}`double` **x**: Number describing the X coordinate offset.
-      - {nbt}`double` **z**: Number describing the Z coordinate offset.
+  - {nbt}`compound` block hitbox
+    - {nbt}`list` **shape**: list of cube coordinates (`[[min_x, min_y, min_z, max_x, max_y, max_z]]`)
+    - {nbt}`compound` **offset**: hitbox offset (used by flowers, for example)
+      - {nbt}`double` **x**: number describing the X coordinate offset
+      - {nbt}`double` **z**: number describing the Z coordinate offset
   :::
 ```
 
-*Example: Get the collision of an open fence gate (no collision, entities can pass through):*
+*Example: get the collision of an open fence gate (no collision, entities can pass through)*
 
 ```mcfunction
 setblock 0 0 0 minecraft:oak_fence_gate[open=true]
@@ -124,23 +124,23 @@ data get storage bs:out hitbox
 
 ---
 
-### Get Entity
+### Get entity
 
 ```{function} #bs.hitbox:get_entity
 
 Get the width and height of an entity.
 
 :Inputs:
-  **Execution `as <entities>`**: Entity to get the hitbox from.
+  **Execution `as <entities>`**: entity to get the hitbox from
 
 :Outputs:
   **Storage `bs:out hitbox`**:
   :::{treeview}
-  - {nbt}`compound` Entity hitbox data
-    - {nbt}`double` **width**: Width of the entity (X axis).
-    - {nbt}`double` **height**: Height of the entity (Y axis).
-    - {nbt}`double` **depth**: Depth of the entity (Z axis).
-    - {nbt}`double` **scale**: Scaling of the hitbox.
+  - {nbt}`compound` entity hitbox
+    - {nbt}`double` **width**: width of the entity (X axis)
+    - {nbt}`double` **height**: height of the entity (Y axis)
+    - {nbt}`double` **depth**: depth of the entity (Z axis)
+    - {nbt}`double` **scale**: scaling of the hitbox
   :::
 ```
 
@@ -149,7 +149,7 @@ For most entities without a custom hitbox, `depth` is equal to `width`.
 However, some entities like paintings and item frames return more complex dimensions.
 ```
 
-*Example: Get the hitbox of an armor stand:*
+*Example: get the hitbox of an armor stand*
 
 ```mcfunction
 execute summon minecraft:armor_stand run function #bs.hitbox:get_entity
@@ -160,27 +160,27 @@ data get storage bs:out hitbox
 
 ---
 
-### Is Entity Inside
+### Is entity inside
 
 :::::{tab-set}
-::::{tab-item} Any Block Shape
+::::{tab-item} Any block shape
 
 ```{function} #bs.hitbox:is_entity_in_blocks_shape
 
 Check if the specified entity is within the `default` shape of any block.
 
 :Inputs:
-  **Execution `as <entity>`**: Entity to check.
+  **Execution `as <entity>`**: entity to check
 
 :Outputs:
-  **Return**: Success or failure.
+  **Return**: success or failure
 ```
 
 ```{note}
 Since an entity's bounding box can extend across multiple blocks, this function checks all blocks the entity might be in contact with.
 ```
 
-*Example: Check if a summoned cow is inside a block:*
+*Example: check if a summoned cow is inside a block*
 
 ```mcfunction
 # Move to the edge of a block, then run
@@ -189,24 +189,24 @@ execute summon minecraft:cow if function #bs.hitbox:is_entity_in_blocks_shape ru
 ```
 
 ::::
-::::{tab-item} Any Block Collision Shape
+::::{tab-item} Any block collision shape
 
 ```{function} #bs.hitbox:is_entity_in_blocks_collision
 
 Check if the specified entity is within the `collision` shape of any block.
 
 :Inputs:
-  **Execution `as <entity>`**: Entity to check.
+  **Execution `as <entity>`**: entity to check
 
 :Outputs:
-  **Return**: Success or failure.
+  **Return**: success or failure
 ```
 
 ```{note}
 Since an entity's bounding box can extend across multiple blocks, this function checks all blocks the entity might be in contact with.
 ```
 
-*Example: Check if a summoned cow is inside a block:*
+*Example: check if a summoned cow is inside a block*
 
 ```mcfunction
 # Move to the edge of a block, then run
@@ -215,26 +215,26 @@ execute summon minecraft:cow if function #bs.hitbox:is_entity_in_blocks_collisio
 ```
 
 ::::
-::::{tab-item} Block Shape
+::::{tab-item} Block shape
 
 ```{function} #bs.hitbox:is_entity_in_block_shape
 
 Check if the specified entity is within the `default` shape of the block at the execution position.
 
 :Inputs:
-  **Execution `as <entity>`**: Entity to check.
+  **Execution `as <entity>`**: entity to check
 
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to check.
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: position to check
 
 :Outputs:
-  **Return**: Success or failure.
+  **Return**: success or failure
 ```
 
 ```{note}
 This function checks whether the entity's bounding box intersects with the block at the execution position. It does *not* consider other blocks the entity might be touching.
 ```
 
-*Example: Check if a summoned cow is inside the fence at your position:*
+*Example: check if a summoned cow is inside the fence at your position*
 
 ```mcfunction
 setblock ~ ~ ~ minecraft:oak_fence
@@ -244,26 +244,26 @@ execute summon minecraft:cow if function #bs.hitbox:is_entity_in_block_shape run
 ```
 
 ::::
-::::{tab-item} Block Collision Shape
+::::{tab-item} Block collision shape
 
 ```{function} #bs.hitbox:is_entity_in_block_collision
 
 Check if the specified entity is within the `collision` shape of the block at the execution position.
 
 :Inputs:
-  **Execution `as <entity>`**: Entity to check.
+  **Execution `as <entity>`**: entity to check
 
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to check.
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: position to check
 
 :Outputs:
-  **Return**: Success or failure.
+  **Return**: success or failure
 ```
 
 ```{note}
 This function checks whether the entity's bounding box intersects with the block at the execution position. It does *not* consider other blocks the entity might be touching.
 ```
 
-*Example: Check if a summoned cow is inside the fence at your position:*
+*Example: check if a summoned cow is inside the fence at your position*
 
 ```mcfunction
 setblock ~ ~ ~ minecraft:oak_fence
@@ -279,43 +279,43 @@ execute summon minecraft:cow if function #bs.hitbox:is_entity_in_block_collision
 
 ---
 
-### Is Inside
+### Is inside
 
 ::::{tab-set}
-:::{tab-item} Block Shape
+:::{tab-item} Block shape
 
 ```{function} #bs.hitbox:is_in_block_shape
 
 Check if the execution position is within the `default` shape of a block.
 
 :Inputs:
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to check.
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: position to check
 
 :Outputs:
-  **Return**: Success or failure.
+  **Return**: success or failure
 ```
 
-*Example: Say "My name is Pavel" if you are inside a block:*
+*Example: say "My name is Pavel" if you are inside a block*
 
 ```mcfunction
 execute if function #bs.hitbox:is_in_block_shape run say My name is Pavel
 ```
 
 :::
-:::{tab-item} Block Collision Shape
+:::{tab-item} Block collision shape
 
 ```{function} #bs.hitbox:is_in_block_collision
 
 Check if the execution position is within the `collision` shape of a block.
 
 :Inputs:
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to check.
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: position to check
 
 :Outputs:
-  **Return**: Success or failure.
+  **Return**: success or failure
 ```
 
-*Example: Say "My name is Pavel" if you are inside a block:*
+*Example: say "My name is Pavel" if you are inside a block*
 
 ```mcfunction
 execute if function #bs.hitbox:is_in_block_collision run say My name is Pavel
@@ -326,18 +326,18 @@ execute if function #bs.hitbox:is_in_block_collision run say My name is Pavel
 
 ```{function} #bs.hitbox:is_in_entity
 
-Check if the execution position is inside the entity executing the command.
+Check if the execution position is within the entity executing the command.
 
 :Inputs:
-  **Execution `as <entities>`**: Entity to check.
+  **Execution `as <entities>`**: entity to check
 
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: Position to check.
+  **Execution `at <entity>` or `positioned <x> <y> <z>`**: position to check
 
 :Outputs:
-  **Return**: Success or failure.
+  **Return**: success or failure
 ```
 
-*Example: Check if you are inside an entity:*
+*Example: check if you are inside an entity*
 
 ```mcfunction
 execute summon minecraft:cow if function #bs.hitbox:is_in_entity run say Oh no...
@@ -350,67 +350,67 @@ execute summon minecraft:cow if function #bs.hitbox:is_in_entity run say Oh no..
 
 ---
 
-### Reset Entity
+### Reset entity
 
 ```{function} #bs.hitbox:reset_entity
 
-Reset an [entity's hitbox](#entity-types) to its default **dynamic** form, removing any previously applied **baked** or **custom** hitbox.
+Reset an [entity's hitbox](#entity-types) to its **dynamic** form, removing any previously applied **baked** or **custom** hitbox.
 
 :Inputs:
-  **Execution `as <entities>`**: The entity or entities whose hitbox should be reset.
+  **Execution `as <entities>`**: entities whose hitbox should be reset
 
 :Outputs:
-  **State**: The entity's hitbox is now dynamic again and will automatically update with scaling, growth, or other changes.
+  **State**: the entity's hitbox is now dynamic again and will automatically update with scaling, growth, or other changes
 ```
 
 > **Credits**: Aksiome
 
 ---
 
-### Set Entity
+### Set entity
 
-```{function} #bs.hitbox:set_entity
+```{function} #bs.hitbox:set_entity {with:{}}
 
 Define a [custom hitbox](#entity-types) for an entity with full control over its dimensions. This allows setting a hitbox not constrained by Minecraft's built-in width/height system and can be used on entities that normally have no hitbox.
 
 :Inputs:
-  **Execution `as <entities>`**: The entity or entities whose hitbox should be set with custom dimensions.
+  **Execution `as <entities>`**: entities whose hitbox should be set to custom dimensions
 
   **Function macro**:
   :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`compound` **with**: Hitbox data.
-      - {nbt}`double` **width**: The total horizontal size along the X axis.
-      - {nbt}`double` **height**: The total vertical size along the Y axis.
-      - {nbt}`double` **depth**: The total size along the Z axis. Defaults to the same value as **width** if not provided.
-      - {nbt}`bool` **centered**: Whether the hitbox should be vertically centered on the Y axis. Defaults to `false`, meaning the hitbox starts at the entity's feet (like in vanilla).
+  - {nbt}`compound` arguments
+    - {nbt}`compound` **with**:
+      - {nbt}`double` **width**: total horizontal size along the X axis
+      - {nbt}`double` **height**: total vertical size along the Y axis
+      - {nbt}`double` **depth**: total size along the Z axis. Defaults to the same value as **width** if not provided
+      - {nbt}`bool` **centered**: whether the hitbox should be vertically centered on the Y axis. Defaults to `false`, meaning the hitbox starts at the entity's feet (like in vanilla)
   :::
 :Outputs:
-  **State**: The entity now has a custom axis-aligned bounding box (AABB) hitbox.
+  **State**: the entity now has a custom axis-aligned bounding box (AABB) hitbox
 ```
 
 ```{warning}
-Custom hitboxes come with a **small performance cost**. Use them when you need precise control over shape and position, but avoid using too many of them in the same area.
+Custom hitboxes come with a **slight performance cost**. Use them when you need precise control over shape and position, but avoid using too many of them in the same area.
 ```
 
-```{dropdown} What is a Bounding Box?
+```{dropdown} What is a bounding box?
 :color: info
 :icon: question
 
-A bounding box is a simple rectangular box that surrounds an object—or part of it—to help the game figure out where it is and what it touches. For example, a set of stairs in Minecraft uses two bounding boxes: one for the lower step and one for the upper step.
+A bounding box is a simple rectangular box that surrounds an object, or part of it, to help the game figure out where it is and what it touches. For example, a set of stairs in Minecraft uses two bounding boxes: one for the lower step and one for the upper step.
 ```
 
-```{dropdown} What is a Custom Hitbox?
+```{dropdown} What is a custom hitbox?
 :color: info
 :icon: question
 
 A custom hitbox lets you override Minecraft's default hitbox system and define your own shape using width, height, and depth. Unlike dynamic or baked hitboxes, custom hitboxes:
 
-- Can be **freely shaped**, including along the Z axis (depth).
-- Are not tied to Minecraft's internal collision model.
-- Work on entities **without a native hitbox**, such as display entities.
+- Can have independent width, height, and depth
+- Are not tied to Minecraft's internal collision model
+- Work on entities **without a native hitbox**, such as display entities
 
-See [Hitbox Types](#hitbox-types) for full details on block and entity hitboxes.
+See [Hitbox types](#hitbox-types) for full details on block and entity hitboxes.
 ```
 
 > **Credits**: Aksiome
@@ -419,46 +419,84 @@ See [Hitbox Types](#hitbox-types) for full details on block and entity hitboxes.
 
 ## 🏷️ Tags
 
-You can find below below all tags available in this module.
+You can find below all tags available in this module.
 
 ---
 
 ### Blocks
 
+#### Physical
+
 :::::{tab-set}
-::::{tab-item} Can Pass Through
+::::{tab-item} Can pass through
 
 **`#bs.hitbox:can_pass_through`**
 
-Blocks without a collision box.
+Blocks without a collision box
 
 ::::
-:::: {tab-item} Has Shape Offset
+::::{tab-item} Has shape offset
 
 **`#bs.hitbox:has_shape_offset`**
 
-Blocks with a physical random offset.
+Blocks with a physical random offset
 
 ::::
-:::: {tab-item} Has Visual Offset
+::::{tab-item} Has visual offset
 
 **`#bs.hitbox:has_visual_offset`**
 
-Blocks with a purely visual random offset.
+Blocks with a purely visual random offset
 
 ::::
 ::::{tab-item} Intangible
 
 **`#bs.hitbox:intangible`**
 
-Blocks that cannot be physically interacted with, such as air variants, light blocks, and structure void.
+Blocks that cannot be physically interacted with, such as air variants, light blocks, and structure void
 
 ::::
-::::{tab-item} Is Full Cube
+::::{tab-item} Is full cube
 
 **`#bs.hitbox:is_full_cube`**
 
-Blocks that are full 16×16×16 cubes.
+Blocks whose `default` and `collision` shapes are both full 16×16×16 cubes
+
+For shape-specific checks, use:
+- `#bs.hitbox:is_full_cube_shape`
+- `#bs.hitbox:is_full_cube_collision`
+::::
+:::::
+
+#### Fluid
+
+:::::{tab-set}
+::::{tab-item} Is fluid
+
+**`#bs.hitbox:is_fluid`**
+
+Blocks whose fluid occupies the block space, such as water and lava
+
+::::
+::::{tab-item} Is water
+
+**`#bs.hitbox:is_water`**
+
+Blocks that represent water itself, such as water and bubble columns
+
+::::
+::::{tab-item} Is waterloggable
+
+**`#bs.hitbox:is_waterloggable`**
+
+Blocks that can contain water through a `waterlogged` block state
+
+::::
+::::{tab-item} Is waterlogged
+
+**`#bs.hitbox:is_waterlogged`**
+
+Blocks that contain water by default without having a `waterlogged` block state, such as kelp and seagrass
 
 ::::
 :::::
@@ -474,21 +512,21 @@ Blocks that are full 16×16×16 cubes.
 
 **`#bs.hitbox:intangible`**
 
-Entities that don't act as physical obstacles, such as projectiles, markers, and displays.
+Entities that don't act as physical obstacles, such as projectiles, markers, and displays
 
 :::
-:::{tab-item} Is Shaped
+:::{tab-item} Is shaped
 
 **`#bs.hitbox:is_shaped`**
 
-Entities with different width and depth, such as paintings and item frames.
+Entities with different width and depth, such as paintings and item frames
 
 :::
-:::{tab-item} Is Sized
+:::{tab-item} Is sized
 
 **`#bs.hitbox:is_sized`**
 
-Entities with equal width and depth.
+Entities with equal width and depth
 
 :::
 ::::
@@ -498,7 +536,7 @@ Entities with equal width and depth.
 ---
 
 (hitbox-types)=
-## 🎓 Hitbox Types
+## 🎓 Hitbox types
 
 Bookshelf provides multiple hitbox types, each suited to different use cases. Understanding the differences helps you choose the right one.
 
@@ -513,8 +551,8 @@ Bookshelf provides multiple hitbox types, each suited to different use cases. Un
 
 The `default` shape defines the area where players can interact with or break the block:
 
-- Specifies the zone where right-clicks, mining, or other interactions register.
-- Can differ from the collision shape, for example, fence gates keep the same default shape whether open or closed.
+- Specifies the zone where right-clicks, mining, or other interactions register
+- Can differ from the collision shape, for example, fence gates keep the same default shape whether open or closed
 
 ➔ Returned by [#bs.hitbox:get_block_shape](#get-block)
 
@@ -523,8 +561,8 @@ The `default` shape defines the area where players can interact with or break th
 
 The `collision` shape defines the physical boundaries of a block that entities cannot pass through. It determines where an entity will stop when moving towards the block:
 
-- Matches the block's solid parts and prevents entities from moving through.
-- Can change dynamically depending on block state (e.g., a fence gate's collision shape differs when open vs closed).
+- Matches the block's solid parts and prevents entities from moving through
+- Can change dynamically depending on block state (e.g., a fence gate's collision shape differs when open vs closed)
 
 ➔ Returned by [#bs.hitbox:get_block_collision](#get-block)
 
@@ -539,11 +577,11 @@ The `collision` shape defines the physical boundaries of a block that entities c
 ::::{tab-set}
 :::{tab-item} 🔄 Dynamic
 
-This is the native Minecraft hitbox, which updates automatically:
+The native Minecraft hitbox, which updates automatically:
 
-- Adjusts in real time with entity changes like scaling, baby growth, equipment, or new passengers.
-- No setup required, this is the default behavior.
-- Use when the entity's shape is expected to change.
+- Adjusts in real time with entity changes like scaling, baby growth, equipment, or new passengers
+- No setup required, this is the default
+- Use when the entity's shape is expected to change
 
 ➔ Restored using [#bs.hitbox:reset_entity](#reset-entity)
 
@@ -552,9 +590,9 @@ This is the native Minecraft hitbox, which updates automatically:
 
 A snapshot of the entity's hitbox at a specific moment:
 
-- Improves performance when the entity's size will never change.
-- Includes the base entity and all passengers in one combined box. When baking a pile of passengers, the base entity bakes all passengers and sets its hitbox to encompass the entire stack.
-- Does not update dynamically, collisions may break if the entity changes later.
+- Improves performance when the entity's size will never change
+- Includes the base entity and all passengers in one combined box. When baking a pile of passengers, the base entity bakes all passengers and sets its hitbox to encompass the entire stack
+- Does not update dynamically, collisions may break if the entity changes later
 
 ➔ Set using [#bs.hitbox:bake_entity](#bake-entity)
 
@@ -563,11 +601,11 @@ A snapshot of the entity's hitbox at a specific moment:
 
 A fully user-defined hitbox:
 
-- Set exact `width`, `height`, and optional `depth`.
-- Works on entities with no native hitbox (e.g. display entities).
-- Independent from Minecraft's internal hitbox system.
-- Only applies to the base entity. When used with modules that process entity stacks, only the base entity's hitbox is considered, passengers are ignored.
-- Slight performance cost, avoid overuse in the same area.
+- Set exact `width`, `height`, and optional `depth`
+- Works on entities with no native hitbox (e.g. display entities)
+- Independent from Minecraft's internal hitbox system
+- Only applies to the base entity. When used with modules that process entity stacks, only the base entity's hitbox is considered, passengers are ignored
+- Slight performance cost, avoid using too many of them in the same area
 
 ➔ Set using [#bs.hitbox:set_entity](#set-entity)
 
@@ -577,7 +615,7 @@ A fully user-defined hitbox:
 ---
 
 (providers)=
-## 🔌 Hitbox Providers
+## 🔌 Hitbox providers
 
 A hitbox provider is a callback that returns a block's shape for consumers such as [`bs.raycast`](raycast.md) or [`bs.move`](move.md).
 
@@ -590,11 +628,11 @@ A provider can return one of two forms:
    ```
    Each bounding box uses coordinates from 0 to 16, and may include a flag (defaults to `1` if omitted).
 
-```{dropdown} What is a Bounding Box?
+```{dropdown} What is a bounding box?
 :color: info
 :icon: question
 
-A bounding box is a simple rectangular box that surrounds an object—or part of it—to help the game figure out where it is and what it touches. For example, a set of stairs in Minecraft uses two bounding boxes: one for the lower step and one for the upper step.
+A bounding box is a simple rectangular box that surrounds an object, or part of it, to help the game figure out where it is and what it touches. For example, a set of stairs in Minecraft uses two bounding boxes: one for the lower step and one for the upper step.
 ```
 
 ```{admonition} Flags
@@ -602,25 +640,25 @@ A bounding box is a simple rectangular box that surrounds an object—or part of
 Flags do not have inherent meaning. They are numeric labels used by providers and consumers to classify bounding boxes.
 You may use any of the following flags: `1`, `2`, `4`, or `8`.
 
-For example the Bookshelf built-in providers use `1` for solid and `2` for fluids.
+For example, the Bookshelf built-in providers use `1` for solid and `2` for fluids.
 ```
 
 ---
 
-### Available Providers
+### Available providers
 
-All built-in providers include a fluid variant, where `1` represents the solid part and `2` represents the fluid part.
+All built-in providers have a fluid variant, where `1` represents the solid part and `2` represents the fluid part.
 
 ::::{tab-set}
 
 :::{tab-item} 🖱 Default
-These providers return the block's **default** shape as defined in [block types](#block-types).
+These providers return the block's **default** shape as defined in [Blocks](#block-types).
 - `#bs.hitbox:callback/get_block_shape`  
 - `#bs.hitbox:callback/get_block_shape_with_fluid`  
 :::
 
 :::{tab-item} 🧊 Collision
-These providers return the block's **collision** shape as defined in [block types](#block-types).
+These providers return the block's **collision** shape as defined in [Blocks](#block-types).
 - `#bs.hitbox:callback/get_block_collision`  
 - `#bs.hitbox:callback/get_block_collision_with_fluid`  
 :::
@@ -635,15 +673,15 @@ Returns the block's default shape and adds a placement-only bounding box (flag `
 
 ---
 
-### Custom Providers
+### Custom providers
 
 A common pattern for custom providers is either to directly return a custom shape or to:
 
-1. Copy a built-in shape.
-2. Modify it.
-3. Return it.
+1. Copy a built-in shape
+2. Modify it
+3. Return it
 
-*Example: Defining a custom shape with a custom flag:*
+*Example: defining a custom shape with a custom flag*
 
 ```mcfunction
 # Custom shape for <my_custom_block>. You can add multiple bounding boxes, each with its own flag, if your block has a complex shape

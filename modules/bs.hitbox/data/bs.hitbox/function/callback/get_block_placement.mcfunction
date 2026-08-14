@@ -13,10 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if block ~ ~ ~ #bs.hitbox:is_fluid run return 0
-execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return 1
-function #bs.hitbox:get_block_shape
-data modify storage bs:lambda hitbox set from storage bs:out hitbox
+execute store result score #r bs.ctx run function #bs.hitbox:callback/get_block_shape
+execute unless data storage bs:lambda hitbox.shape run return run scoreboard players get #r bs.ctx
 execute if block ~ ~ ~ #bs.hitbox:internal/placement_full run data modify storage bs:lambda hitbox.shape append value [0,0,0,16,16,16,4]
 execute if block ~ ~ ~ #bs.hitbox:internal/placement_cauldrons run data modify storage bs:lambda hitbox.shape append value [0,3,0,16,16,16,4]
 execute if block ~ ~ ~ minecraft:hopper run data modify storage bs:lambda hitbox.shape append value [0,10,0,16,16,16,4]

@@ -59,6 +59,9 @@ def get_blocks(version: str) -> Collection[Block]:
             "luminance": _make_state_value("luminance", states),
             "is_conductive": _make_state_value("is_conductive", states),
             "is_spawnable": _make_state_value("is_spawnable", states),
+            "fluid": _make_state_value_from(
+                "fluid", lambda s: s.get("fluid").get("id"), states,
+            ),
         })
 
     blocks.sort(key=lambda b: b["type"])
