@@ -20,7 +20,7 @@ def beet_default(ctx: Context, version: str) -> Iterable[tuple[str, PackFile]]:
     """Generate files used by the bs.hitbox module."""
     ns = ctx.directory.name
     blocks = minecraft.get_blocks(ctx.cache, version)
-    water = ctx.data.block_tags[location := f"{ns}:is_water"].data["values"]
+    water = ctx.data.block_tags[f"{ns}:is_water"].data["values"]
 
     groups = {"shape": defaultdict(list), "collision": defaultdict(list)}
     seen = set()
