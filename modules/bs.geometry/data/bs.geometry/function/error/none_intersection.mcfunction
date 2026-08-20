@@ -13,6 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out geometry.error set value ""
-
-return run data modify storage bs:out geometry.error set value "None intersection found"
+return run data modify storage bs:out geometry.error set value "No intersection found"

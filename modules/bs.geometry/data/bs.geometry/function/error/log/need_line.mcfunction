@@ -13,13 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-#Plane is also a cartesian space
+data modify storage bs:data geometry.log.namespace set value "bs.geometry"
+data modify storage bs:data geometry.log.tag set value "input"
+data modify storage bs:data geometry.log.message set value '"Should have at least 1 line input"'
 
-data modify storage bs:out geometry.shape set value {type:"plane",coord_type:"cartesian"}
-data modify storage bs:data geometry.log.path set value "bs.geometry:get_plane"
-
-function bs.geometry:shape/get_origin
-
-function bs.geometry:shape/get_ijk
-
-tp B5-0-0-0-1 -30000000 1000 1600
+function #bs.log:error with storage bs:data geometry.log
+return 1

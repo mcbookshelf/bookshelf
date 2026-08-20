@@ -32,6 +32,7 @@ collection
 color
 environment
 generation
+geometry
 health
 hitbox
 id

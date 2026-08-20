@@ -13,8 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out geometry.error set value ""
-
-execute unless data storage bs:in geometry.shapes[{type:"coord_space"}] run return run data modify storage bs:out geometry.error set value "Need a coord space"
-
-
+execute unless data storage bs:in geometry.shapes[{type:"coord_space"}] run return run function bs.geometry:error/log/need_coord_space

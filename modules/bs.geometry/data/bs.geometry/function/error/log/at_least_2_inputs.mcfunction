@@ -13,4 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$particle dust{color:16711680,scale:1} $(a) $(b) $(c)
+data modify storage bs:data geometry.log.namespace set value "bs.geometry"
+data modify storage bs:data geometry.log.tag set value "input"
+data modify storage bs:data geometry.log.message set value '"Should at least have 2 shapes input"'
+
+function #bs.log:error with storage bs:data geometry.log
+return 1

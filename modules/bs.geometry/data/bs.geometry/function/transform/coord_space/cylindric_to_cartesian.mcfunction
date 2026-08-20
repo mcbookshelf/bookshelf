@@ -1,5 +1,3 @@
-
-
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2026 Gunivers
 #
@@ -15,12 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify entity B5-0-0-0-9 Rotation[0] set from storage bs:in geometry.shapes[{type:"point"}].origin[0]
+data modify entity B5-0-0-0-1 Rotation[0] set from storage bs:in geometry.shapes[{type:"point"}].origin[0]
 
-execute positioned 0.0 0 0.0 rotated as B5-0-0-0-9 rotated ~ 0 positioned ^ ^ ^1 run function bs.geometry:shape/get_pos
+execute positioned 0.0 0 0.0 rotated as B5-0-0-0-1 rotated ~ 0 positioned ^ ^ ^1 run function bs.geometry:shape/get_pos
 
-execute store result score #a bs.ctx run data get storage bs:out geometry.Pos[0] 1000
-execute store result score #c bs.ctx run data get storage bs:out geometry.Pos[2] 1000
+execute store result score #a bs.ctx run data get storage bs:out geometry.pos[0] 1000
+execute store result score #c bs.ctx run data get storage bs:out geometry.pos[2] 1000
 
 #r = radius
 execute store result score #r bs.ctx run data get storage bs:in geometry.shapes[{type:"point"}].origin[2] 1000

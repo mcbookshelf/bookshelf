@@ -1,5 +1,3 @@
-
-
 # ------------------------------------------------------------------------------------------------------------
 # Copyright (c) 2026 Gunivers
 #
@@ -15,14 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify entity B5-0-0-0-9 Rotation[0] set from storage bs:in geometry.shapes[{type:"point"}].origin[0]
-data modify entity B5-0-0-0-9 Rotation[1] set from storage bs:in geometry.shapes[{type:"point"}].origin[1]
+data modify entity B5-0-0-0-1 Rotation[0] set from storage bs:in geometry.shapes[{type:"point"}].origin[0]
+data modify entity B5-0-0-0-1 Rotation[1] set from storage bs:in geometry.shapes[{type:"point"}].origin[1]
 
-execute positioned 0.0 0 0.0 rotated as B5-0-0-0-9 positioned ^ ^ ^1 run function bs.geometry:shape/get_pos
+execute positioned 0.0 0 0.0 rotated as B5-0-0-0-1 positioned ^ ^ ^1 run function bs.geometry:shape/get_pos
 
-execute store result score #a bs.ctx run data get storage bs:out geometry.Pos[0] 1000
-execute store result score #b bs.ctx run data get storage bs:out geometry.Pos[1] 1000
-execute store result score #c bs.ctx run data get storage bs:out geometry.Pos[2] 1000
+execute store result score #a bs.ctx run data get storage bs:out geometry.pos[0] 1000
+execute store result score #b bs.ctx run data get storage bs:out geometry.pos[1] 1000
+execute store result score #c bs.ctx run data get storage bs:out geometry.pos[2] 1000
 
 #r = radius
 execute store result score #r bs.ctx run data get storage bs:in geometry.shapes[{type:"point"}].origin[2] 1000
@@ -33,5 +31,3 @@ data modify storage bs:out geometry.coord_space set value {type:"point",coord_ty
 execute store result storage bs:out geometry.coord_space.origin[0] double 0.000001 run scoreboard players operation #a bs.ctx *= #r bs.ctx
 execute store result storage bs:out geometry.coord_space.origin[1] double 0.000001 run scoreboard players operation #b bs.ctx *= #r bs.ctx
 execute store result storage bs:out geometry.coord_space.origin[2] double 0.000001 run scoreboard players operation #c bs.ctx *= #r bs.ctx
-
-

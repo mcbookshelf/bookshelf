@@ -13,9 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out geometry.error set value ""
-
-execute unless loaded ~ ~ ~ run return run data modify storage bs:out geometry.error set value "Context position should be loaded"
-
-
-
+execute unless loaded ~ ~ ~ run return run function bs.geometry:error/log/unloaded

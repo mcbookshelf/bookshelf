@@ -26,7 +26,7 @@ execute if function bs.geometry:error/need_coord_space run return fail
 data modify storage bs:ctx temp set from storage bs:in geometry.shapes
 
 execute if data storage bs:in geometry.shapes[{type:"point",coord_type:"cylindric"}] run function bs.geometry:transform/coord_space/cylindric_to_cartesian
-execute if data storage bs:in geometry.shapes[{type:"point",coord_type:"spheric"}] run function bs.geometry:transform/coord_space/spheric_to_cartesian
+execute if data storage bs:in geometry.shapes[{type:"point",coord_type:"spherical"}] run function bs.geometry:transform/coord_space/spheric_to_cartesian
 
 execute unless data storage bs:in geometry.shapes[{type:"point",coord_type:"cartesian"}] run data modify storage bs:in geometry.shapes[{type:"point"}] set from storage bs:out geometry.coord_space
 
@@ -34,7 +34,6 @@ function bs.geometry:transform/rot_axis
 data modify storage bs:in geometry.shapes[{type:"point"}] set from storage bs:out geometry.rot_axis
 
 execute if data storage bs:in geometry.shapes[{type:"coord_space",coord_type:"cylindric"}] run function bs.geometry:transform/coord_space/cartesian_to_cylindric
-execute if data storage bs:in geometry.shapes[{type:"coord_space",coord_type:"spheric"}] run function bs.geometry:transform/coord_space/cartesian_to_spheric
+execute if data storage bs:in geometry.shapes[{type:"coord_space",coord_type:"spherical"}] run function bs.geometry:transform/coord_space/cartesian_to_spheric
 
 data modify storage bs:in geometry.shapes set from storage bs:ctx temp
-

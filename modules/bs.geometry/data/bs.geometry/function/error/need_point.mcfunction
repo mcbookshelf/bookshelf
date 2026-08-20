@@ -13,8 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out geometry.error set value ""
-
-execute unless data storage bs:in geometry.shapes[{type:"point"}] run return run data modify storage bs:out geometry.error set value "Should have at least 1 point input"
-
-
+execute unless data storage bs:in geometry.shapes[{type:"point"}] run return run function bs.geometry:error/log/need_point

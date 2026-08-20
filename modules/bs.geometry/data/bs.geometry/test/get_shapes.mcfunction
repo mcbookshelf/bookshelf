@@ -13,13 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-#Plane is also a cartesian space
+execute positioned 0.0 0 0.0 rotated 0.0 0.0 run function #bs.geometry:get_plane
+assert not data storage bs:out geometry.shape{coord_type:"cartesian",i:[1.0d,9.38876977589949E-41d,-1.2246468525851679E-16d],j:[0.0d,1.0d,1.2246468525851679E-16d],k:[1.2246468525851679E-16d,0.0d,1.0d],origin:[0.0d,0.0d,0.0d],type:"plane"}
 
-data modify storage bs:out geometry.shape set value {type:"plane",coord_type:"cartesian"}
-data modify storage bs:data geometry.log.path set value "bs.geometry:get_plane"
-
-function bs.geometry:shape/get_origin
-
-function bs.geometry:shape/get_ijk
-
-tp B5-0-0-0-1 -30000000 1000 1600
+execute positioned 0.0 0 0.0 rotated 0.0 0.0 run function #bs.geometry:get_line
+assert not data storage bs:out geometry.shape{coord_type:"cartesian",k:[1.2246468525851679E-16d,0.0d,1.0d],origin:[0.0d,0.0d,0.0d],type:"line"}

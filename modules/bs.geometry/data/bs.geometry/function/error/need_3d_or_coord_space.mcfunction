@@ -14,5 +14,4 @@
 # ------------------------------------------------------------------------------------------------------------
 
 
-execute if function bs.geometry:error/need_3d if function bs.geometry:error/need_coord_space run return run data modify storage bs:out geometry.error set value "Need a 3d shape a coord space input"
-
+execute if function bs.geometry:error/need_3d if function bs.geometry:error/need_coord_space run return 1

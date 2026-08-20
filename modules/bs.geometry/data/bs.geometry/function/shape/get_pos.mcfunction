@@ -13,5 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-tp B5-0-0-0-9 ~ ~ ~
-data modify storage bs:out geometry.Pos set from entity B5-0-0-0-9 Pos
+execute if function bs.geometry:error/unloaded run return fail
+
+tp B5-0-0-0-1 ~ ~ ~
+data modify storage bs:out geometry.pos set from entity B5-0-0-0-1 Pos

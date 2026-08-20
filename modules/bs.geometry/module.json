@@ -12,6 +12,9 @@
     "tags": ["runtime"],
     "dependencies": [
       "bs.math"
+    ],
+    "weak_dependencies": [
+      "bs.log"
     ]
   }
 }

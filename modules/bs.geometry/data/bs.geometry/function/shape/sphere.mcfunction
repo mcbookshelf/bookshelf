@@ -13,9 +13,13 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-function bs.geometry:shape/plane
+data modify storage bs:out geometry.shape set value {type:"plane",coord_type:"cartesian"}
+data modify storage bs:data geometry.log.path set value "bs.geometry:get_sphere"
 
-data modify storage bs:out geometry.shape.type set value "sphere"
-data modify storage bs:out geometry.shape.parameters set value [0]
-execute store result storage bs:out geometry.shape.parameters[0] double 0.001 run scoreboard players get $geometry.shape.sphere.r bs.in
+function bs.geometry:shape/get_origin
 
+function bs.geometry:shape/get_ijk
+
+$data modify storage bs:out geometry.shape.parameters set value [$(radius)d]
+
+tp B5-0-0-0-1 -30000000 1000 1600

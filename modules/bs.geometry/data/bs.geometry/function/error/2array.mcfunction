@@ -13,8 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out geometry.error set value ""
-
-execute if data storage bs:in geometry.shapes[2] run return run data modify storage bs:out geometry.error set value "Too many shapes input"
-execute unless data storage bs:in geometry.shapes[1] run return run data modify storage bs:out geometry.error set value "Should at least have 2 shapes input"
-
+execute if data storage bs:in geometry.shapes[2] run return run function bs.geometry:error/log/too_many_inputs
+execute unless data storage bs:in geometry.shapes[1] run return run function bs.geometry:error/log/at_least_2_inputs

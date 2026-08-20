@@ -14,13 +14,10 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:out geometry.shape set value {type:"line",coord_type:"cartesian"}
+data modify storage bs:data geometry.log.path set value "bs.geometry:get_line"
 
-execute if function bs.geometry:error/unloaded run return fail
+function bs.geometry:shape/get_origin
 
-function bs.geometry:shape/get_pos
-data modify storage bs:out geometry.shape.origin set from storage bs:out geometry.Pos
+function bs.geometry:shape/get_k
 
-execute positioned 0.0 0 0.0 positioned ^ ^ ^1 run function bs.geometry:shape/get_pos
-data modify storage bs:out geometry.shape.k set from storage bs:out geometry.Pos
-
-tp B5-0-0-0-9 -30000000 1000 1600
+tp B5-0-0-0-1 -30000000 1000 1600

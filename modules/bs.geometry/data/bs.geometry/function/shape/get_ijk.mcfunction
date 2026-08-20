@@ -13,13 +13,13 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-#Plane is also a cartesian space
+#Get Directors vectors
 
-data modify storage bs:out geometry.shape set value {type:"plane",coord_type:"cartesian"}
-data modify storage bs:data geometry.log.path set value "bs.geometry:get_plane"
+execute positioned 0.0 0 0.0 positioned ^1.0 ^ ^ run function bs.geometry:shape/get_pos
+data modify storage bs:out geometry.shape.i set from storage bs:out geometry.pos
 
-function bs.geometry:shape/get_origin
+execute positioned 0.0 0 0.0 positioned ^ ^1.0 ^ run function bs.geometry:shape/get_pos
+data modify storage bs:out geometry.shape.j set from storage bs:out geometry.pos
 
-function bs.geometry:shape/get_ijk
-
-tp B5-0-0-0-1 -30000000 1000 1600
+execute positioned 0.0 0 0.0 positioned ^ ^ ^1.0 run function bs.geometry:shape/get_pos
+data modify storage bs:out geometry.shape.k set from storage bs:out geometry.pos

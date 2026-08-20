@@ -13,15 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx a set from storage bs:in geometry.shapes[0].origin[0]
-data modify storage bs:ctx b set from storage bs:in geometry.shapes[0].origin[1]
-data modify storage bs:ctx c set from storage bs:in geometry.shapes[0].origin[2]
+data modify storage bs:data geometry.log.namespace set value "bs.geometry"
+data modify storage bs:data geometry.log.tag set value "input"
+data modify storage bs:data geometry.log.message set value '"Need a coord space"'
 
-function bs.geometry:particle_macro with storage bs:ctx
-
-data modify storage bs:ctx a set from storage bs:in geometry.shapes[1].origin[0]
-data modify storage bs:ctx b set from storage bs:in geometry.shapes[1].origin[1]
-data modify storage bs:ctx c set from storage bs:in geometry.shapes[1].origin[2]
-
-function bs.geometry:particle_macro with storage bs:ctx
-
+function #bs.log:error with storage bs:data geometry.log
+return 1
