@@ -2,7 +2,7 @@
 
 **`#bs.environment:help`**
 
-Comprehensive information and tools related to weather and biome properties.
+Access biome, weather, and time-based conditions.
 
 ```{image} /_imgs/modules/environment.png
 :width: 100%

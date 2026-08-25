@@ -2,7 +2,7 @@
 
 **`#bs.interaction:help`**
 
-Create and manage Graphical User Interfaces (GUIs) in Minecraft.
+Attach click and hover events to Interaction entities.
 
 ```{pull-quote}
 "As far as the customer is concerned, the interface is the product."

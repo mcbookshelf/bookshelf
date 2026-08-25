@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🏗️ Bookshelf Generation Module
 
-Apply functions across world regions in Minecraft datapacks. Iterate over 2D/3D shapes with lag-free tick spreading and custom callbacks.
+Run a function over every position in a shaped region, spread across ticks.
 
 > *"Nature's beauty is a reflection of the harmony of numbers and patterns."*
 >
@@ -36,20 +36,20 @@ Apply functions across world regions in Minecraft datapacks. Iterate over 2D/3D 
 
 ### ✨ Features
 
-- **🌄 Terrain generation**: create complex 2D shapes and terrains using various algorithms
-- **🎨 Noise algorithms**: utilize Simplex and Fractal noise for natural-looking terrain generation
-- **🔄 Custom generation**: execute custom callbacks at each generation step for flexible terrain creation
+- Iterate over 2D or 3D shapes, with tick spreading to avoid lag
+- Generate natural-looking terrain with builtin noise algorithms
+- Transform blocks across a region with builtin block algorithms
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/generation.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/generation.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

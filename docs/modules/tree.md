@@ -2,7 +2,7 @@
 
 **`#bs.tree:help`**
 
-Simplicity meets utility in this bank of trees.
+Pre-built tree structures with multiple variations.
 
 ---
 

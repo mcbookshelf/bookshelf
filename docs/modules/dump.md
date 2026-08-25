@@ -2,7 +2,7 @@
 
 **`#bs.dump:help`**
 
-The dump module provides mechanisms for printing the state of any "variables".
+Combine scores and NBT data into a single structured dump.
 
 ```{warning}
 Since version 26.1, Minecraft now pretty-prints NBT data in text components. As a result, this module has become less useful. The update also introduced new constraints that broke several features.

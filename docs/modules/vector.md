@@ -2,7 +2,7 @@
 
 **`#bs.vector:help`**
 
-Vectors are fundamental and incredibly powerful tools to manage motions, forces and... well... do physics!
+Vector math for datapacks, including rotations and coordinate conversions.
 
 ```{image} /_imgs/modules/vector-light.png
 :width: 100%

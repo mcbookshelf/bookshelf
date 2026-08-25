@@ -2,7 +2,7 @@
 
 **`#bs.id:help`**
 
-Manage entity IDs, essential in scenarios like shooting games where you need to track who is targeting whom.
+Assign unique numeric IDs to entities.
 
 ```{pull-quote}
 "We know what we are, but know not what we may be."

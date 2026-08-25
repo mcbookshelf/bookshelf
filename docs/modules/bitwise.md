@@ -2,7 +2,7 @@
 
 **`#bs.bitwise:help`**
 
-A collection of various bitwise operations, providing versatile tools for manipulating binary data.
+Manipulate integers as sequences of bits.
 
 ```{image} /_imgs/modules/bitwise-light.png
 :align: center

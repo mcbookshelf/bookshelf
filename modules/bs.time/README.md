@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,22 +28,22 @@
 
 ## ⌚ Bookshelf Time Module
 
-Access the real-world system time from Minecraft datapacks. Get hours, minutes, and seconds for time-based events.
+Access the real-world system time from inside a datapack.
 
 ### ✨ Features
 
-- **⏰ System time**: get real-world hours, minutes, and seconds
+- Get real-world hours, minutes, and seconds
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/time.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/time.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

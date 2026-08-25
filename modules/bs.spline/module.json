@@ -7,7 +7,7 @@
   "meta": {
     "name": "Spline",
     "slug": "bookshelf-spline",
-    "description": "Create smooth curves from control points in Minecraft datapacks. Supports Bézier, Catmull-Rom, B-Spline, Hermite, and Linear interpolation.",
+    "description": "Create smooth curves from control points, with Bézier, Catmull-Rom, B-Spline, and Hermite interpolation.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html",
     "tags": ["runtime"]
   }

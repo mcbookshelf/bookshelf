@@ -2,7 +2,7 @@
 
 **`#bs.block:help`**
 
-Manage blocks, including states and NBTs, while offering advanced tools for seamless transformations.
+Manipulate blocks with their states and NBT, and combine block properties.
 
 ```{pull-quote}
 "Architecture is the thoughtful making of space."

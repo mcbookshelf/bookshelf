@@ -2,7 +2,7 @@
 
 **`#bs.sidebar:help`**
 
-Create visually appealing and dynamic sidebars using the scoreboard system.
+Build scoreboard sidebars with formatted, updatable content.
 
 ---
 

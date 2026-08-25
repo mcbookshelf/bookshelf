@@ -2,7 +2,7 @@
 
 **`#bs.color:help`**
 
-Facilitate color conversion between various formats.
+Manipulate colors and convert them between formats.
 
 ```{image} /_imgs/modules/color.png
 :width: 100%

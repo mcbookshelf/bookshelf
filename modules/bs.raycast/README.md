@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🔦 Bookshelf Raycast Module
 
-Cast rays in Minecraft datapacks to detect block and entity hits. Voxel-accurate collision detection with customizable callbacks.
+Cast rays to detect block and entity hits, with voxel-accurate collisions.
 
 > *"Reality only reveals itself when it is illuminated by a ray of poetry."*
 >
@@ -36,20 +36,20 @@ Cast rays in Minecraft datapacks to detect block and entity hits. Voxel-accurate
 
 ### ✨ Features
 
-- **🎯 Precise detection**: use voxel traversal algorithm for accurate collision detection
-- **🔄 Multi-target support**: detect collisions with both blocks and entities
-- **⚡ Custom callbacks**: execute commands at collision points
+- Use voxel traversal algorithm for accurate collision detection
+- Detect collisions with both blocks and entities
+- Execute commands at collision points
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/raycast.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/raycast.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

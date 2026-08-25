@@ -2,7 +2,7 @@
 
 **`#bs.hitbox:help`**
 
-Get and check the hitboxes of blocks or entities.
+Work with the hitboxes of blocks and entities.
 
 ```{pull-quote}
 "Talent hits a target no one else can hit; Genius hits a target no one else can see."

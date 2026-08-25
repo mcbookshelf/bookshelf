@@ -7,7 +7,7 @@
   "meta": {
     "name": "String",
     "slug": "bookshelf-string",
-    "description": "Manipulate strings in Minecraft datapacks: concatenate, change case, search, replace, and count.",
+    "description": "Manipulate strings, which vanilla commands barely support.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/string.html",
     "tags": ["runtime"],
     "weak_dependencies": [

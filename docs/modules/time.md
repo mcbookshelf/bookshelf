@@ -2,7 +2,7 @@
 
 **`#bs.time:help`**
 
-Get system time information effortlessly.
+Access the real-world system time from inside a datapack.
 
 ```{admonition} Enable Command Blocks
 :class: warning

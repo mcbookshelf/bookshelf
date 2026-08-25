@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🏷️ Bookshelf ID Module
 
-Assign unique numeric IDs to entities in Minecraft datapacks. Create continuous ID chains and query entities by ID.
+Assign unique numeric IDs to entities.
 
 > *"We know what we are, but know not what we may be."*
 >
@@ -36,20 +36,20 @@ Assign unique numeric IDs to entities in Minecraft datapacks. Create continuous 
 
 ### ✨ Features
 
-- **🏷️ Unique IDs**: assign and manage unique identifiers for entities
-- **⛓️ Chain IDs**: create continuous chains of IDs without gaps
-- **🔍 ID queries**: find entities by their ID using various comparison methods
+- Assign unique IDs to entities
+- Find entities by their ID
+- Create chains of IDs with no gaps
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/id.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/id.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

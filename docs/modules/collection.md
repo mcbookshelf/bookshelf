@@ -2,7 +2,7 @@
 
 **`#bs.collection:help`**
 
-Functional programming operations for working with collections in Minecraft.
+Manipulate collections with a full set of functional operations.
 This module is NOT a stream module, features are not lazy.
 
 ```{image} /_imgs/modules/collection-light.png

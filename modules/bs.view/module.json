@@ -7,7 +7,7 @@
   "meta": {
     "name": "View",
     "slug": "bookshelf-view",
-    "description": "Execute commands based on where entities look in Minecraft. Detect aimed blocks, entities, and more.",
+    "description": "Execute commands based on what an entity is looking at.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/view.html",
     "tags": ["runtime"],
     "dependencies": [

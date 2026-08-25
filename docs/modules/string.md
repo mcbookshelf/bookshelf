@@ -2,7 +2,7 @@
 
 **`#bs.string:help`**
 
-Manage and transform strings with a versatile set of manipulation and search functions.
+Manipulate strings, which vanilla commands barely support.
 
 ```{image} /_imgs/modules/string.png
 :align: center

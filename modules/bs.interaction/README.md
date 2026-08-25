@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🖱️ Bookshelf Interaction Module
 
-Build in-world GUIs in Minecraft using Interaction entities. Bind click events, detect hover, and create interactive 3D menus.
+Attach click and hover events to Interaction entities.
 
 > *"As far as the customer is concerned, the interface is the product."*
 >
@@ -36,20 +36,19 @@ Build in-world GUIs in Minecraft using Interaction entities. Bind click events, 
 
 ### ✨ Features
 
-- **🖱️ Click events**: register commands for left and right clicks on interactions
-- **👆 Hover detection**: track when players hover over or leave interactions
-- **⚡ Event management**: clear and manage multiple events per interaction
+- Register commands for left and right clicks
+- Track when players start or stop hovering
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/interaction.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/interaction.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

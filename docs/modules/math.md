@@ -2,7 +2,7 @@
 
 **`#bs.math:help`**
 
-The beautiful world of mathematics... **in Minecraft!**
+Mathematical operations beyond what vanilla commands offer.
 
 ```{image} /_imgs/modules/math-light.png
 :width: 100%

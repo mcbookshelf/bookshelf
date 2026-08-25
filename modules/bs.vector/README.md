@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## ➡️ Bookshelf Vector Module
 
-Vector math for Minecraft datapacks: rotations, coordinate conversions, and 3D operations. Essential for physics and movement.
+Vector math for datapacks, including rotations and coordinate conversions.
 
 > *"With vectors, physics has found a magnificent language."*
 >
@@ -36,19 +36,19 @@ Vector math for Minecraft datapacks: rotations, coordinate conversions, and 3D o
 
 ### ✨ Features
 
-- **📐 Vector operations**: find absolute max/min components and perform basis rotations in 3D space
-- **🔄 Coordinate conversion**: convert between Cartesian and spherical coordinate systems
+- Find absolute max/min components and perform basis rotations
+- Convert between Cartesian and spherical coordinate systems
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/vector.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/vector.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

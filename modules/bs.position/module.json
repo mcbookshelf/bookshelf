@@ -7,7 +7,7 @@
   "meta": {
     "name": "Position",
     "slug": "bookshelf-position",
-    "description": "Manage entity positions and rotations via scoreboard values in Minecraft datapacks. Set precise coordinates on any axis.",
+    "description": "Read and write entity positions and rotations as scoreboard values.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/position.html",
     "tags": ["runtime"]
   }

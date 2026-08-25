@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🏃 Bookshelf Move Module
 
-Control entity movement in Minecraft datapacks with velocity vectors and collision handling. Build physics-based projectiles and motion systems.
+Move entities along a velocity vector, with collision handling.
 
 > *"There is nothing permanent except change."*
 >
@@ -36,20 +36,19 @@ Control entity movement in Minecraft datapacks with velocity vectors and collisi
 
 ### ✨ Features
 
-- **🎯 Velocity control**: apply precise velocity vectors to entities
-- **🔄 Collision handling**: manage entity collisions with blocks and other entities
-- **🎮 Motion control**: set and manage entity motion with customizable behaviors
+- Move entities using a velocity vector
+- Detect and resolve collisions with blocks and other entities
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/move.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/move.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

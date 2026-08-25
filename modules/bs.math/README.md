@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🧮 Bookshelf Math Module
 
-Advanced math for Minecraft datapacks: trigonometry, exponentials, factorials, GCD, and float operations beyond vanilla commands.
+Mathematical operations beyond what vanilla commands offer.
 
 > *"Mathematics has very subtle inventions that can be of great service, both to satisfy the curious and to facilitate all arts and reduce the labor of men."*
 >
@@ -36,22 +36,23 @@ Advanced math for Minecraft datapacks: trigonometry, exponentials, factorials, G
 
 ### ✨ Features
 
-- **🧮 Combinatorics**: calculate combinations and factorials for probability and statistics
-- **📈 Exponential functions**: compute natural and base-2 exponential values
-- **⏺️ Float analysis**: decompose and build floating-point numbers with precision
-- **🔢 Arithmetic**: find greatest common denominators and perform modular arithmetic
-- **📐 Trigonometry**: calculate sine, cosine, and tangent values
+- Combinations and factorials
+- Natural and base-2 exponentials
+- Sin, cos, tan, asin, acos, atan, atan2
+- Decompose and rebuild floating-point numbers
+- Greatest common divisors and modular arithmetic
+- and more...
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/math.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/math.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

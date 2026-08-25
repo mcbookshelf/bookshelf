@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🧣 Bookshelf Spline Module
 
-Create smooth curves from control points in Minecraft datapacks. Supports Bézier, Catmull-Rom, B-Spline, Hermite, and Linear interpolation.
+Create smooth curves from control points, with Bézier, Catmull-Rom, B-Spline, and Hermite interpolation.
 
 > *"Do not go where the path may lead, go instead where there is no path and leave a trail."*
 >
@@ -36,20 +36,20 @@ Create smooth curves from control points in Minecraft datapacks. Supports Bézie
 
 ### ✨ Features
 
-- **🔄 Spline types**: support for Bézier, B-Spline, Catmull-Rom, Hermite, and Linear splines
-- **🎯 Flexible control**: variable number of control points for custom curve shapes
-- **📐 Multi-dimensional**: create curves in 1D, 2D, or 3D space
+- Support Bézier, B-Spline, Catmull-Rom, Hermite, and Linear splines
+- Variable number of control points for custom curve shapes
+- Create curves in 1D, 2D, or 3D space
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/spline.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/spline.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)
