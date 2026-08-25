@@ -6,7 +6,7 @@
 </h1>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>

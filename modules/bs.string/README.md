@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🔠 Bookshelf String Module
 
-Manipulate strings in Minecraft datapacks: concatenate, change case, search, replace, and count.
+Manipulate strings, which vanilla commands barely support.
 
 > *"Words are the most powerful drug used by mankind."*
 >
@@ -36,20 +36,20 @@ Manipulate strings in Minecraft datapacks: concatenate, change case, search, rep
 
 ### ✨ Features
 
-- **🔄 String operations**: concatenate strings and convert case (uppercase/lowercase)
-- **✏️ Text replacement**: replace text with precise control over positions
-- **🔍 Text search**: find substrings and count occurrences
+- Concatenate strings and convert case (uppercase/lowercase)
+- Replace text with precise control over positions
+- Find substrings and count occurrences
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/string.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/string.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

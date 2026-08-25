@@ -2,7 +2,7 @@
 
 **`#bs.random:help`**
 
-Contains many random functions for different distributions and noise patterns.
+Generate random values, weighted picks, and noise patterns.
 
 ```{image} /_imgs/modules/random.png
 :align: center

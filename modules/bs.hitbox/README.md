@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🎯 Bookshelf Hitbox Module
 
-Get precise hitbox data for blocks and entities in Minecraft datapacks. Check collisions and access both collision and interaction shapes.
+Work with the hitboxes of blocks and entities.
 
 > *"Talent hits a target no one else can hit; Genius hits a target no one else can see."*
 >
@@ -36,20 +36,21 @@ Get precise hitbox data for blocks and entities in Minecraft datapacks. Check co
 
 ### ✨ Features
 
-- **📏 Hitbox detection**: get precise hitbox information for both blocks and entities
-- **🎯 Collision checking**: check if entities are within block collision or interaction boxes
-- **🔍 Detailed analysis**: access both collision and interaction shapes for blocks
+- Get the exact hitbox of any block or entity
+- Check if entities are within block collision or interaction boxes
+- Fluid and non-fluid block hitbox providers for other modules
+- Override an entity's dimensions with a custom size
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

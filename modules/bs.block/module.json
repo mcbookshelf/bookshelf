@@ -7,7 +7,7 @@
   "meta": {
     "name": "Block",
     "slug": "bookshelf-block",
-    "description": "Get and set block IDs and states in Minecraft datapacks. Mix block properties and produce sounds, particles, display blocks, and more from stored data.",
+    "description": "Manipulate blocks with their states and NBT, and combine block properties.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/block.html",
     "tags": ["runtime"],
     "weak_dependencies": [

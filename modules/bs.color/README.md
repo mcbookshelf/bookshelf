@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🎨 Bookshelf Color Module
 
-Convert colors between RGB, hexadecimal, and integer formats in Minecraft datapacks. Useful for dynamic text colors and visual effects.
+Manipulate colors and convert them between formats.
 
 > *"Color helps to express light—not the physical phenomenon, but the only light that really exists, that in the artist's brain."*
 >
@@ -36,20 +36,20 @@ Convert colors between RGB, hexadecimal, and integer formats in Minecraft datapa
 
 ### ✨ Features
 
-- **#️⃣ Hexadecimal**: convert a color to its hexadecimal representation
-- **🔢 Integer**: convert a color to its integer representation
-- **🎨 RGB**: convert a color to its RGB representation
+- Convert a color to its hexadecimal representation
+- Convert a color to its integer representation
+- Convert a color to its RGB representation
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/color.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/color.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

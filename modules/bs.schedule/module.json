@@ -7,7 +7,7 @@
   "meta": {
     "name": "Schedule",
     "slug": "bookshelf-schedule",
-    "description": "Schedule commands in Minecraft datapacks with cancellation and context preservation. Remember which entity and location triggered it.",
+    "description": "Schedule commands that remember which entity and location triggered them, and can be cancelled.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/schedule.html",
     "tags": ["runtime"],
     "weak_dependencies": [

@@ -2,7 +2,7 @@
 
 **`#bs.move:help`**
 
-Make your entity move exactly the way you want it to!
+Move entities along a velocity vector, with collision handling.
 
 ```{image} /_imgs/modules/move.png
 :align: center

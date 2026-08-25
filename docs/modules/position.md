@@ -2,7 +2,7 @@
 
 **`#bs.position:help`**
 
-Manage entity positions and rotations using scores.
+Read and write entity positions and rotations as scoreboard values.
 
 ```{image} /_imgs/modules/position.png
 :align: center

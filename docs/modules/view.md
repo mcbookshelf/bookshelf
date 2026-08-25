@@ -2,7 +2,7 @@
 
 **`#bs.view:help`**
 
-Execute commands based on what an entity sees.
+Execute commands based on what an entity is looking at.
 
 ```{image} /_imgs/modules/view.png
 :align: center

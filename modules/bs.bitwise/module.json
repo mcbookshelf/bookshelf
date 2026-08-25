@@ -7,7 +7,7 @@
   "meta": {
     "name": "Bitwise",
     "slug": "bookshelf-bitwise",
-    "description": "Perform bitwise AND, OR, XOR, and NOT operations in Minecraft datapacks. Useful for flags, permissions, and compact data storage.",
+    "description": "Manipulate integers as sequences of bits.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html",
     "tags": ["runtime"]
   }

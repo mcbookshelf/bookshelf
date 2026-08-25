@@ -2,7 +2,7 @@
 
 **`#bs.schedule:help`**
 
-Enhance command scheduling with this module, providing flexibility beyond vanilla capabilities. Cancel commands and maintain execution context (entity & location).
+Schedule commands that remember which entity and location triggered them, and can be cancelled.
 
 ---
 

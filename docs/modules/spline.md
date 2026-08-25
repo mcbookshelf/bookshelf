@@ -2,7 +2,7 @@
 
 **`#bs.spline:help`**
 
-Create and manipulate smooth curves from control points.
+Create smooth curves from control points, with Bézier, Catmull-Rom, B-Spline, and Hermite interpolation.
 
 ```{image} /_imgs/modules/spline.png
 :align: center

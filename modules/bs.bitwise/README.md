@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🖥️ Bookshelf Bitwise Module
 
-Perform bitwise AND, OR, XOR, and NOT operations in Minecraft datapacks. Useful for flags, permissions, and compact data storage.
+Manipulate integers as sequences of bits.
 
 > *"Binary is a very simple numbering system, but it is incredibly powerful when used correctly."*
 >
@@ -36,20 +36,20 @@ Perform bitwise AND, OR, XOR, and NOT operations in Minecraft datapacks. Useful 
 
 ### ✨ Features
 
-- **🔄 Operations**: perform bitwise AND, OR, XOR, and NOT operations on integers
-- **🔢 Counting**: count the number of positive bits in an integer
-- **📏 Length**: get the number of bits in an integer
+- Bitwise AND, OR, XOR, and NOT operations on integers
+- Count the number of positive bits in an integer
+- Get the number of bits in an integer
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/bitwise.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

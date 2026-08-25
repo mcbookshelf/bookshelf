@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -25,36 +25,33 @@
 
 <br/>
 
-> We are searching for builders to contribute to this bundle. If you are interested, please contact us on [Discord](https://discord.gg/MkXytNjmBt) or check the dedicated [GitHub issue](https://github.com/mcbookshelf/bookshelf/issues/303)
+> We are searching for builders to contribute to this bundle. If you are interested, please contact us on [Discord](https://discord.gg/MkXytNjmBt) or check the dedicated [GitHub issue](https://github.com/mcbookshelf/bookshelf/issues/303).
 
 
 <br/>
 
 ## 🏗️ Bookshelf Prefabs Bundle
 
-Ready-to-use structures from the Bookshelf modular datapack library: trees and templates to speed up world creation.
+A collection of modules with structure files to use in your world.
 
 > *"The mother art is architecture. Without an architecture of our own we have no soul of our own civilization."*
 > 
 > — Frank Lloyd Wright
 
-### ✨ Features
+### Features
 
-- **🌳 Tree collection**: various tree types including Birch, Cypress, and Dark Oak with multiple variations
-- **🎨 Tree variations**: each tree type comes in 5 different styles for variety
-- **🌲 Natural look**: trees designed to blend naturally with Minecraft's environment
-- **🔄 Future expansion**: more structure types planned for future updates
+- Various tree types with multiple variations
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/index.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/index.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This bundle is part of the Bookshelf Library:
+This bundle is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

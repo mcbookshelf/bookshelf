@@ -2,7 +2,7 @@
 
 **`#bs.raycast:help`**
 
-Cast rays and detect collisions with blocks or entities.
+Cast rays to detect block and entity hits, with voxel-accurate collisions.
 
 ```{pull-quote}
 "Reality only reveals itself when it is illuminated by a ray of poetry."

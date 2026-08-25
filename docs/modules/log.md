@@ -2,7 +2,7 @@
 
 **`#bs.log:help`**
 
-Log messages in the chat with varying levels of severity.
+Log messages to chat with varying levels of severity.
 
 ```{admonition} Enable Command Blocks
 :class: warning
