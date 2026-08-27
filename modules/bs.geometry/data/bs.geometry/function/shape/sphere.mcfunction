@@ -18,8 +18,4 @@ data modify storage bs:data geometry.log.path set value "bs.geometry:get_sphere"
 
 function bs.geometry:shape/get_origin
 
-function bs.geometry:shape/get_ijk
-
 $data modify storage bs:out geometry.shape.parameters set value [$(radius)d]
-
-tp B5-0-0-0-1 -30000000 1000 1600

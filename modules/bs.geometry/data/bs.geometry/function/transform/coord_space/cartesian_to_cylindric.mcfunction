@@ -13,22 +13,23 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-#transform cartesian (x,y,z) into cylindric (yaw,y,r)
-data modify storage bs:ctx temp set value [7,0,4,0, 0,1,0,0, -4,0,7,0, 0,0,0,1]
+#set output
+data modify storage bs:out geometry.coord_space set value {type:"point",coord_type:"cylindric",origin:[0d,0d,0d]}
 
+#transform cartesian (x,y,z) into cylindric (yaw,y,r)
+
+#matrix manipulation
+data modify storage bs:ctx temp set value [7,0,4,0, 0,1,0,0, -4,0,7,0, 0,0,0,1]
 data modify storage bs:ctx temp[0] set from storage bs:in geometry.shapes[{type:"point"}].origin[2]
 data modify storage bs:ctx temp[2] set from storage bs:in geometry.shapes[{type:"point"}].origin[0]
 execute store result storage bs:ctx temp[8] float -0.0001 run data get storage bs:in geometry.shapes[{type:"point"}].origin[0] 10000
 data modify storage bs:ctx temp[10] set from storage bs:in geometry.shapes[{type:"point"}].origin[2]
-
-#scale[0] = r
-#left_rotation[1] = sin(yaw/2)
-#left_rotation[3] = cos(yaw/2)
 data modify entity B5-0-0-0-7 transformation set from storage bs:ctx temp
 
-data modify storage bs:out geometry.coord_space set value {type:"point",coord_type:"cylindric",origin:[0d,0d,0d]}
-
+#left_rotation[1] = sin(yaw/2) so yaw = 2*asin(left_rotation[1])
 execute store result score $math.asin.x bs.in run data get entity B5-0-0-0-7 transformation.left_rotation[1] 1000
 execute store result storage bs:out geometry.coord_space.origin[0] double -0.02 run function #bs.math:asin
+#y = y
 data modify storage bs:out geometry.coord_space.origin[1] set from storage bs:in geometry.shapes[{type:"point"}].origin[1]
-execute store result storage bs:out geometry.coord_space.origin[2] double 0.0001 run data get entity B5-0-0-0-7 transformation.scale[0] 10000
+#scale[0] = r
+data modify storage bs:out geometry.coord_space.origin[2] set from entity B5-0-0-0-7 transformation.scale[0]

@@ -17,5 +17,3 @@ data modify storage bs:out geometry.shape set value {type:"point",coord_type:"ca
 data modify storage bs:data geometry.log.path set value "bs.geometry:get_point"
 
 function bs.geometry:shape/get_origin
-
-tp B5-0-0-0-1 -30000000 1000 1600

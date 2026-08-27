@@ -123,6 +123,7 @@ Get the intersection of two shapes
   **Storage bs:in geometry.shapes , and array of 2 shape
 :Outputs:
   **Storage bs:out geometry.intersect
+  **Return the number of intersection
 ```
 
 

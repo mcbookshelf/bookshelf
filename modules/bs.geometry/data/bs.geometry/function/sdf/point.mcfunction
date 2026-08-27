@@ -14,27 +14,31 @@
 # ------------------------------------------------------------------------------------------------------------
 
 #get point0 origin
+#p
 execute store result score #l bs.ctx run data get storage bs:in geometry.shapes[0].origin[0] 1000
 execute store result score #m bs.ctx run data get storage bs:in geometry.shapes[0].origin[1] 1000
 execute store result score #n bs.ctx run data get storage bs:in geometry.shapes[0].origin[2] 1000
 
 #get point1 origin
+#p'
 execute store result score $math.isqrt.x bs.in run data get storage bs:in geometry.shapes[1].origin[0] 1000
 execute store result score #y bs.ctx run data get storage bs:in geometry.shapes[1].origin[1] 1000
 execute store result score #z bs.ctx run data get storage bs:in geometry.shapes[1].origin[2] 1000
 
+#compute dist
 
-#compute length
+#p'-p
 scoreboard players operation $math.isqrt.x bs.in -= #l bs.ctx
 scoreboard players operation #y bs.ctx -= #m bs.ctx
 scoreboard players operation #z bs.ctx -= #n bs.ctx
 
+#norm(p'-p)²
 scoreboard players operation $math.isqrt.x bs.in *= $math.isqrt.x bs.in
 scoreboard players operation #y bs.ctx *= #y bs.ctx
 scoreboard players operation #z bs.ctx *= #z bs.ctx
-
 scoreboard players operation $math.isqrt.x bs.in += #y bs.ctx
 scoreboard players operation $math.isqrt.x bs.in += #z bs.ctx
 
+#norm(p'-p)
 execute store result score $geometry.sdf bs.out run function #bs.math:isqrt
 return run scoreboard players get $geometry.sdf bs.out

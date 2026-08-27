@@ -13,9 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out geometry.shape set value {type:"line",coord_type:"cartesian"}
-data modify storage bs:data geometry.log.path set value "bs.geometry:get_line"
+data modify storage bs:out geometry.pos set from entity @s Pos
 
-function bs.geometry:shape/get_origin
-
-function bs.geometry:shape/get_k
+kill @s

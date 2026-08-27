@@ -14,25 +14,30 @@
 # ------------------------------------------------------------------------------------------------------------
 
 #get plane parameters
+#o
 execute store result score #l bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].origin[0] 1000
 execute store result score #m bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].origin[1] 1000
 execute store result score #n bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].origin[2] 1000
-
+#n
 execute store result score $geometry.sdf bs.out run data get storage bs:in geometry.shapes[{type:"plane"}].k[0] 1000
 execute store result score #p bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].k[1] 1000
 execute store result score #q bs.ctx run data get storage bs:in geometry.shapes[{type:"plane"}].k[2] 1000
 
 #get point parameters
+#p
 execute store result score #x bs.ctx run data get storage bs:in geometry.shapes[{type:"point"}].origin[0] 1000
 execute store result score #y bs.ctx run data get storage bs:in geometry.shapes[{type:"point"}].origin[1] 1000
 execute store result score #z bs.ctx run data get storage bs:in geometry.shapes[{type:"point"}].origin[2] 1000
 
 
 #compute n.(p-o)
+
+#(p-o)
 scoreboard players operation #x bs.ctx -= #l bs.ctx
 scoreboard players operation #y bs.ctx -= #m bs.ctx
 scoreboard players operation #z bs.ctx -= #n bs.ctx
 
+#n.(p-o)
 scoreboard players operation $geometry.sdf bs.out *= #x bs.ctx
 scoreboard players operation #p bs.ctx *= #y bs.ctx
 scoreboard players operation #q bs.ctx *= #z bs.ctx

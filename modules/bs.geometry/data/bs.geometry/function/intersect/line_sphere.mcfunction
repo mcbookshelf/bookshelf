@@ -15,27 +15,29 @@
 
 
 #get sphere parameters
+#c
 execute store result score #l bs.ctx run data get storage bs:in geometry.shapes[{type:"sphere"}].origin[0] 1000
 execute store result score #m bs.ctx run data get storage bs:in geometry.shapes[{type:"sphere"}].origin[1] 1000
 execute store result score #n bs.ctx run data get storage bs:in geometry.shapes[{type:"sphere"}].origin[2] 1000
-
+#r
 execute store result score #r bs.ctx run data get storage bs:in geometry.shapes[{type:"sphere"}].parameters[0] 1000
 
 #get line parameters
+#o
 execute store result score #x bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].origin[0] 1000
 execute store result score #y bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].origin[1] 1000
 execute store result score #z bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].origin[2] 1000
-
+#v
 execute store result score #o bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].k[0] 1000
 execute store result score #p bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].k[1] 1000
 execute store result score #q bs.ctx run data get storage bs:in geometry.shapes[{type:"line"}].k[2] 1000
 
-# L = (c-o) = (1,1)
+# L = (c-o)
 scoreboard players operation #l bs.ctx -= #x bs.ctx 
 scoreboard players operation #m bs.ctx -= #y bs.ctx 
 scoreboard players operation #n bs.ctx -= #z bs.ctx 
 
-# tca = (L.D) = sqrt(2)
+# tca = (L.D)
 scoreboard players operation #d bs.ctx = #l bs.ctx
 scoreboard players operation #e bs.ctx = #m bs.ctx
 scoreboard players operation #f bs.ctx = #n bs.ctx
@@ -46,7 +48,7 @@ scoreboard players operation #d bs.ctx += #e bs.ctx
 scoreboard players operation #d bs.ctx += #f bs.ctx
 scoreboard players operation #d bs.ctx /= 1000 bs.const
 
-#d² = ||L - D*tca||² = (1+sqrt(2),1+sqrt(2))
+#d² = ||L - D*tca||²
 scoreboard players operation #g bs.ctx = #o bs.ctx
 scoreboard players operation #h bs.ctx = #p bs.ctx
 scoreboard players operation #i bs.ctx = #q bs.ctx
@@ -69,16 +71,18 @@ scoreboard players operation #g bs.ctx += #i bs.ctx
 scoreboard players operation $math.isqrt.x bs.in = #r bs.ctx
 scoreboard players operation $math.isqrt.x bs.in *= #r bs.ctx
 scoreboard players operation $math.isqrt.x bs.in -= #g bs.ctx
-
-#tellraw @a {score:{name:"#d0",objective:"bs.ctx"}}
-
+#check if there is none intersection
 execute if score $math.isqrt.x bs.in matches ..-1 run return run function bs.geometry:error/none_intersection
 execute store result score #j bs.ctx run function #bs.math:isqrt
 
+#set output
 execute if score $math.isqrt.x bs.in matches 0.. run data modify storage bs:out geometry.intersect append value {type:"point",coord_type:"cartesian",origin:[0d,0d,0d]}
+
+#line parameter tca + thc
 scoreboard players operation #k bs.ctx = #d bs.ctx
 scoreboard players operation #k bs.ctx += #j bs.ctx
 
+#v(tca+thc)
 scoreboard players operation #a bs.ctx = #o bs.ctx
 scoreboard players operation #b bs.ctx = #p bs.ctx
 scoreboard players operation #c bs.ctx = #q bs.ctx
@@ -88,23 +92,30 @@ scoreboard players operation #c bs.ctx *= #k bs.ctx
 scoreboard players operation #a bs.ctx /= 1000 bs.const
 scoreboard players operation #b bs.ctx /= 1000 bs.const
 scoreboard players operation #c bs.ctx /= 1000 bs.const
+
+#o+ v(tca+thc)
 execute store result storage bs:out geometry.intersect[-1].origin[0] double 0.001 run scoreboard players operation #a bs.ctx += #x bs.ctx
 execute store result storage bs:out geometry.intersect[-1].origin[1] double 0.001 run scoreboard players operation #b bs.ctx += #y bs.ctx
 execute store result storage bs:out geometry.intersect[-1].origin[2] double 0.001 run scoreboard players operation #c bs.ctx += #z bs.ctx
 
+#check if there is only one intersection
 execute if score $math.isqrt.x bs.in matches 0..999 run return 1
 
 execute if score $math.isqrt.x bs.in matches 1000.. run data modify storage bs:out geometry.intersect append value {type:"point",coord_type:"cartesian",origin:[0d,0d,0d]}
+
+#line parameter tca - thc
 scoreboard players operation #d bs.ctx -= #j bs.ctx
 
+#v(tca+thc)
 scoreboard players operation #o bs.ctx *= #d bs.ctx
 scoreboard players operation #p bs.ctx *= #d bs.ctx
 scoreboard players operation #q bs.ctx *= #d bs.ctx
 scoreboard players operation #o bs.ctx /= 1000 bs.const
 scoreboard players operation #p bs.ctx /= 1000 bs.const
 scoreboard players operation #q bs.ctx /= 1000 bs.const
+#o+v(tca+thc)
 execute store result storage bs:out geometry.intersect[-1].origin[0] double 0.001 run scoreboard players operation #x bs.ctx += #o bs.ctx
 execute store result storage bs:out geometry.intersect[-1].origin[1] double 0.001 run scoreboard players operation #y bs.ctx += #p bs.ctx
 execute store result storage bs:out geometry.intersect[-1].origin[2] double 0.001 run scoreboard players operation #z bs.ctx += #q bs.ctx
 
-
+return 2

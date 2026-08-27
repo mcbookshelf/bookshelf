@@ -19,5 +19,3 @@ data modify storage bs:data geometry.log.path set value "bs.geometry:get_spheric
 function bs.geometry:shape/get_origin
 
 function bs.geometry:shape/get_ijk
-
-tp B5-0-0-0-1 -30000000 1000 1600

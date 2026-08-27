@@ -15,5 +15,4 @@
 
 execute if function bs.geometry:error/unloaded run return fail
 
-tp B5-0-0-0-1 ~ ~ ~
-data modify storage bs:out geometry.pos set from entity B5-0-0-0-1 Pos
+execute summon marker run function bs.geometry:shape/get_pos_final

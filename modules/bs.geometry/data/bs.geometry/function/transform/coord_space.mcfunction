@@ -17,8 +17,8 @@ data modify storage bs:out geometry.coord_space set value {}
 
 #this function accept an array of 2shapes as input
 execute if function bs.geometry:error/2array run return fail
-#a point and a plane/cylinder/sphere
 
+#a point and a coord space
 execute if function bs.geometry:error/need_point run return fail
 execute if function bs.geometry:error/need_coord_space run return fail
 
