@@ -26,12 +26,11 @@ If there is not the conditions for a function to run, an error is raise in logs
 Get a point (determined by an origin)
 
 :Inputs:
-  **Context position, position will be the origin of the plane
-  The position should be loaded
-:Outputs:
-  **Storage bs:out geometry.shape {type:"point",coord_type:"cartesian",origin} origin are arrays of 3 doubles, origin is the context's position
-```
+  **Execution `at <entity>` or `positioned <x> <y> <z>` and `rotated`**: Position of the **origin** and direction of the unit director vectors **i j k**.
+  **The position have to be loaded**
 
+:Outputs:
+  **Storage `bs:out geometry.shape`**: shape returned
 
 *Example: Get the position of a player (here FooBar):*
 
@@ -49,12 +48,12 @@ execute at FooBar run function #bs.geometry:get_point
 Get a line (determined by an origin and a unit director vector)
 
 :Inputs:
-  **Context position and rotation, position will be the origin of the plane and rotation the direction of the line
-  The position should be loaded
-:Outputs:
-  **Storage bs:out geometry.shape {type:"line",coord_type:"cartesian",origin,k} origin and k are arrays of 3 doubles, origin is the context's position and k is the unit director vector
-```
+  **Execution `at <entity>` or `positioned <x> <y> <z>` and `rotated`**: Position of the **origin** and direction of the unit  director vectors **i j k**.
+  **The position have to be loaded**
 
+:Outputs:
+  **Storage `bs:out geometry.shape`**: shape returned
+```
 
 *Example: Get the line sight of a player (here FooBar):*
 
@@ -72,12 +71,12 @@ execute as FooBar at @s anchored eyes positioned ^ ^ ^ run function #bs.geometry
 Get a plane (determined by an origin and a unit normal vector and two orthogonals units directors vectors)
 
 :Inputs:
-  **Context position and rotation, position will be the origin of the plane and rotation the direction of the normal
-  The position should be loaded
-:Outputs:
-  **Storage bs:out geometry.shape {type:"line",coord_type:"cartesian",origin,i,j,k} origin, i,j,k are arrays of 3 doubles, origin is the context's position, k is the normal vector and i,j the horizontal,vertical director vectors
-```
+  **Execution `at <entity>` or `positioned <x> <y> <z>` and `rotated`**: Position of the **origin** and direction of the unit  director vectors **i j k**.
+  **The position have to be loaded**
 
+:Outputs:
+  **Storage `bs:out geometry.shape`**: shape returned
+```
 
 *Example: Get the plane centered at 0 0 0 and facing south :*
 
@@ -95,13 +94,18 @@ execute positioned 0 0 0 rotated 0 0 run function #bs.geometry:get_plane
 Get a sphere (determined by an origin and a radius)
 
 :Inputs:
-  **Context position and rotation, position will be the origin of the plane and rotation the direction
-  The position should be loaded
-  **macro `radius` double
-:Outputs:
-  **Storage bs:out geometry.shape {type:"sphere",coord_type:"cartesian",origin,i,j,k} origin, i,j,k are arrays of 3 doubles, origin is the context's position, i,j,k the horizontal,vertical,depths director vectors
-```
+  **Execution `at <entity>` or `positioned <x> <y> <z>` and `rotated`**: Position of the **origin** and direction of the unit  director vectors **i j k**.
+  **The position have to be loaded**
+  
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` Arguments
+    - {nbt}`double`**radius**: radius of the sphere.
+  :::
 
+:Outputs:
+  **Storage `bs:out geometry.shape`**: shape returned
+```
 
 *Example: Get the sphere centered at 0 0 0 and facing south  with a radius of 1block :*
 
@@ -120,12 +124,11 @@ execute positioned 0 0 0 rotated 0 0 run function #bs.geometry:get_sphere
 Get the intersection of two shapes
 
 :Inputs:
-  **Storage bs:in geometry.shapes , and array of 2 shape
-:Outputs:
-  **Storage bs:out geometry.intersect
-  **Return the number of intersection
-```
+  **Storage `bs:in geometry.shapes`**: list of shapes to intersect
 
+:Outputs:
+  **Storage `bs:out geometry.intersect`**: intersection points
+```
 
 *Example: Get the intersection of the plane centered at 0 0 0 facing south-west and the line sight of a player (here FooBar) :*
 
@@ -149,11 +152,11 @@ function #bs.geometry:intersect
 Get the coordinates of the orthogonal projection of a point/line and a plane 
 
 :Inputs:
-  **Storage bs:in geometry.shapes , and array of 2 shape, a point/line and a plane
-:Outputs:
-  **Storage bs:out geometry.orth_proj, a point/line
-```
+  **Storage `bs:in geometry.shapes`**: list of shapes to project (e.g. a line/plane point/line point/plane)
 
+:Outputs:
+  **Storage `bs:out geometry.orth_proj`**: projected shape
+```
 
 *Example: Get the orthogonal projection of the player position and a plane centered at 0 0 0 facing south-west:*
 
@@ -173,12 +176,13 @@ function #bs.geometry:project_ortho
 
 ```{function} #bs.geometry:rotate_axis
 
-Get the coordinates of a point with a 3d shapes as reference point (cartesian coord_type only) 
+Get the coordinates of a point with a coord space as reference point (cartesian coord_type only) 
 
 :Inputs:
-  **Storage bs:in geometry.shapes , and array of 2 shape, a point and a 3d shape
+  **Storage `bs:in geometry.shapes`**: A point and a coord space
+
 :Outputs:
-  **Storage bs:out geometry.rot_axis, a point
+  **Storage `bs:out geometry.rot_axis`**: rotated point
 ```
 
 
@@ -205,10 +209,11 @@ function #bs.geometry:rotate_axis
 Get a cartesian coord space (point's origin [x,y,z])
 
 :Inputs:
-  **Context position and rotation, position will be the origin of the coord space and rotation its z-axis (depths)
-  The position should be loaded
+  **Execution `at <entity>` or `positioned <x> <y> <z>` and `rotated`**: Position of the **origin** and direction of the unit director vectors **i j k**.
+  **The position have to be loaded**
+
 :Outputs:
-  **Storage bs:out geometry.coord_space {type:"coord_space",coord_type:"cartesian",origin,i,j,k} origin, i,j,k are arrays of 3 doubles, origin is the context's position and i,j,k the horizontal,vertical,depths director vectors
+  **Storage `bs:out geometry.shape`**: coord space returned
 ```
 
 
@@ -228,12 +233,12 @@ execute positioned 0 0 0 rotated 0 0 run function #bs.geometry:get_cartesian_spa
 Get a cylindric coord space (point's origin [yaw,y,r])
 
 :Inputs:
-  **Context position and rotation, position will be the origin of the coord space and rotation its z-axis (depths)
-  The position should be loaded
-:Outputs:
-  **Storage bs:out geometry.coord_space {type:"coord_space",coord_type:"cylindric",origin,i,j,k} origin, i,j,k are arrays of 3 doubles, origin is the context's position and i,j,k the horizontal,vertical,depths director vectors
-```
+  **Execution `at <entity>` or `positioned <x> <y> <z>` and `rotated`**: Position of the **origin** and direction of the unit director vectors **i j k**.
+  **The position have to be loaded**
 
+:Outputs:
+  **Storage `bs:out geometry.shape`**: coord space returned
+```
 
 *Example: Get the cartesian coord space of a minecraft world:*
 
@@ -251,12 +256,12 @@ execute positioned 0 0 0 rotated 0 0 run function #bs.geometry:get_cartesian_spa
 Get a spherical coord space (point's origin [yaw,pitch,r])
 
 :Inputs:
-  **Context position and rotation, position will be the origin of the coord space and rotation its z-axis (depths)
-  The position should be loaded
-:Outputs:
-  **Storage bs:out geometry.coord_space {type:"coord_space",coord_type:"spherical",origin,i,j,k} origin, i,j,k are arrays of 3 doubles, origin is the context's position and i,j,k the horizontal,vertical,depths director vectors
-```
+  **Execution `at <entity>` or `positioned <x> <y> <z>` and `rotated`**: Position of the **origin** and direction of the unit director vectors **i j k**.
+  **The position have to be loaded**
 
+:Outputs:
+  **Storage `bs:out geometry.shape`**: coord space returned
+```
 
 *Example: Get the cartesian coord space of a minecraft world:*
 
@@ -274,11 +279,11 @@ execute positioned 0 0 0 rotated 0 0 run function #bs.geometry:get_spherical_spa
 Get the coordinates of a point in a coord space
 
 :Inputs:
-  **Storage bs:in geometry.shapes , and array of 2 shape, a point and a coord space
-:Outputs:
-  **Storage bs:out geometry.coord_space, a point with the targeted coord space
-```
+  **Storage `bs:in geometry.shapes`**: A point and a coord space
 
+:Outputs:
+  **Storage `bs:out geometry.coord_space`**: converted point
+```
 
 *Example: Transform a point of the world into is spheric coord :*
 
@@ -301,11 +306,10 @@ function #bs.geometry:convert_space
 Get the signed distance of a point and a shape
 
 :Inputs:
-  **Storage bs:in geometry.shapes , and array of 2 shape, a point and a shape
+  **Storage `bs:in geometry.shapes`**: An array of 2 shape, a point and a shape
 :Outputs:
-  **Return and $geometry.sdf bs.out , the signed distance shifted by 3digits (1.234 become 1234)
+  **Return and Scoreboard `$geometry.sdf bs.out`**: The signed distance shifted by 3digits (1.234 become 1234)
 ```
-
 
 *Example: get the signed distance of a player (here FooBar) from a line :*
 
@@ -319,17 +323,26 @@ data modify storage bs:in geometry.shapes append from storage bs:out geometry.sh
 function #bs.geometry:get_signed_distance
 ```
 
-### Signed Distance
+---
 
-Shape definition:
+### Shape Definition
+:::{treeview}
+  - {nbt}`compound` shape data
+    - {nbt}`string`**type**: shape type (e.g. `line` , `point`).
+    - {nbt}`string`**coord_type**: the coordinate system used (e.g. `cartesian` , `cylindric`).
 
-A shape is defined by
-
-- `origin` (coordinate of the center of the shape)
-- directors vectors (`i` `j` `k` arrays of double, store the vectors that define the rotation of the shape) (similar to `^i ^j ^k` )
-- `coord_type` (string: "cartesian","cylindric","spherical")
-- `type` (string: "point","line","plane","coord_space",...)
-- `parameters` (array of doubles, the meaning change with the shape)
+    - {nbt}`list`**origin**: X Y Z or YAW Y R or YAW PITCH R coordinates, the origin (e.g. [0d,0d,0d]).
+      - {nbt}`double`
+    - {nbt}`list`**i**: X Y Z coordinates (support only cartesian), the director unit vector along the x relative axis of the rotation (e.g. [1d,0d,0d]).
+      - {nbt}`double`
+    - {nbt}`list`**j**: X Y Z coordinates (support only cartesian), the director unit vector along the y relative axis of the rotation (e.g. [0d,1d,0d]).
+      - {nbt}`double`
+    - {nbt}`list`**k**: X Y Z coordinates (support only cartesian), the director unit vector along the z relative axis of the rotation (e.g. [0d,0d,1d]).
+      - {nbt}`double`
+      
+    - {nbt}`list`**parameters**: parameters of the shape that change with the shape type (e.g. [1d] for the radius of a sphere).
+      - {nbt}`double`
+  :::
 
 ---
 > **Credits**:  RacoonJohn
