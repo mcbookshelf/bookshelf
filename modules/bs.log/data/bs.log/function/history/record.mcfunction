@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:data log.history append value {}
-loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:data",nbt:"log.message",interpret:true}}]}]}]}
+loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",modifier:[{type:"set_name",entity:"this",name:{storage:"bs:data",nbt:"log.message",interpret:true}}]}]}]}
 data modify storage bs:data log.history[-1].severity set from storage bs:in log.severity
 data modify storage bs:data log.history[-1].namespace set from storage bs:in log.namespace
 data modify storage bs:data log.history[-1].tag set from storage bs:in log.tag

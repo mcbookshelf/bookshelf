@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _.pools[0].entries append value {type:"item",name:"cod",weight:1,functions:[{function:"set_custom_data",tag:{}}]}
+data modify storage bs:ctx _.pools[0].entries append value {type:"item",name:"cod",weight:1,modifier:[{type:"set_custom_data",tag:{}}]}
 data modify storage bs:ctx _.pools[0].entries[-1].weight set from storage bs:ctx _.weights[0]
-data modify storage bs:ctx _.pools[0].entries[-1].functions[0].tag.v set from storage bs:ctx _.options[0]
-execute store result storage bs:ctx _.pools[0].entries[-1].functions[0].tag.i int 1 run scoreboard players add #i bs.ctx 1
+data modify storage bs:ctx _.pools[0].entries[-1].modifier[0].tag.v set from storage bs:ctx _.options[0]
+execute store result storage bs:ctx _.pools[0].entries[-1].modifier[0].tag.i int 1 run scoreboard players add #i bs.ctx 1
 data remove storage bs:ctx _.options[0]
 data remove storage bs:ctx _.weights[0]
 execute if data storage bs:ctx _.options[-1] run function bs.random:weighted_choice/loop

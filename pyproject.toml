@@ -14,7 +14,7 @@ dependencies = [
   "frozendict>=2.4.7",
   "httpx[http2]>=0.28.1",
   "mcward[beet]>=1.1.0",
-  "orjson>=3.11.9",
+  "orjson>=3.12.0",
   "pydantic>=2.13.4",
   "semver>=3.0.4",
 ]

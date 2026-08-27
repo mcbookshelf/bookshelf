@@ -35,7 +35,7 @@ def make_has_precipitation_predicate(
     """Create a predicate to determine biomes with precipitation."""
     return Predicate({
         **base.data,
-        "condition": "minecraft:location_check",
+        "type": "minecraft:location_check",
         "predicate": {"biomes": [b.type for b in biomes if b.has_precipitation]},
     })
 
@@ -56,9 +56,9 @@ def make_can_snow_predicate(
 
     return Predicate({
         **base.data,
-        "condition":"minecraft:any_of",
+        "type":"minecraft:any_of",
         "terms": [{
-            "condition": "minecraft:location_check",
+            "type": "minecraft:location_check",
             "predicate": {
                 "position": { "y": { "min": int(y) } },
                 "biomes": biomes,
@@ -72,12 +72,12 @@ def make_biome_loot_table(biomes: Sequence[Biome]) -> LootTable:
     return minecraft.make_loot_table_binary(biomes, lambda biome: {
             "type": "item",
             "name": "egg",
-            "functions": [{
-                "function": "set_custom_data",
+            "modifier": [{
+                "type": "set_custom_data",
                 "tag": minecraft.render_snbt(biome),
             }],
-        }, lambda biomes: [{
-            "condition": "minecraft:location_check",
+        }, lambda biomes: {
+            "type": "minecraft:location_check",
             "predicate": {"biomes": [biome.type[10:] for biome in biomes]},
-        }],
+        },
     )

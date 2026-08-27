@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:[{text:" ",color:"#999999"},{score:{name:"#dump.count",objective:"bs.data"}},{text:" entries "}]}]}]}]}
+loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",modifier:[{type:"set_name",entity:"this",name:[{text:" ",color:"#999999"},{score:{name:"#dump.count",objective:"bs.data"}},{text:" entries "}]}]}]}]}
 data modify storage bs:dump output append from entity B5-0-0-0-3 item.components.minecraft:custom_name
 function bs.dump:format/collapse/events with storage bs:dump stack[-1]

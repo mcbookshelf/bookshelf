@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:[{storage:"bs:dump",nbt:"stack[-1].qkey",interpret:true},{storage:"bs:dump",nbt:"stack[-1].key",color:"$(key)",interpret:true},{storage:"bs:dump",nbt:"stack[-1].qkey",interpret:true},{text:": "}]}]}]}]}
+$loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",modifier:[{type:"set_name",entity:"this",name:[{storage:"bs:dump",nbt:"stack[-1].qkey",interpret:true},{storage:"bs:dump",nbt:"stack[-1].key",color:"$(key)",interpret:true},{storage:"bs:dump",nbt:"stack[-1].qkey",interpret:true},{text:": "}]}]}]}]}
 data modify storage bs:dump output append from entity B5-0-0-0-3 item.components.minecraft:custom_name
