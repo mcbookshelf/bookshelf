@@ -14,9 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Get input points and base max_health
-$execute store result score #p bs.ctx run data get storage bs:const health.point $(points)
-execute store result score #m bs.ctx run attribute @s minecraft:max_health base get 100000
+data modify storage bs:ctx m set from entity @s attributes[{id:"minecraft:max_health"}].base
 
-# Add points to base max_health and apply the result
-execute store result storage bs:ctx y double .00001 run scoreboard players operation #m bs.ctx += #p bs.ctx
+$data modify storage bs:ctx y set compute default {type:"minecraft:sum",operands:[$(points),{type:"minecraft:storage",storage:"bs:ctx",path:"m"}]}
 function bs.health:utils/set_max_health with storage bs:ctx

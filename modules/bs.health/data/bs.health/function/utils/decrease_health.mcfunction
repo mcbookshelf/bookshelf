@@ -13,13 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players operation #h bs.ctx += @s bs.hmod
-execute if score #h bs.ctx matches ..0 unless predicate {condition:"entity_properties",entity:"this",predicate:{"type_specific/player":{gamemode:["creative","spectator"]}}} run kill @s
+data modify storage bs:ctx h set compute default {type:"sum",operands:[{type:"storage",storage:"bs:ctx",path:"h"},{type:"storage",storage:"bs:ctx",path:"f"}]}
+execute store result score #h bs.ctx run data get storage bs:ctx h
+execute if score #h bs.ctx matches ..-1 unless predicate {type:"entity_properties",entity:"this",predicate:{"type_specific/player":{gamemode:["creative","spectator"]}}} run return run kill @s
 
 # Get add_multiplied_total to reduce health to the target value, it's applied last, so it won't mess with other modifiers
-execute store result storage bs:data health.div[0] float 1 run scoreboard players operation #h bs.ctx -= #m bs.ctx
-execute store result storage bs:data health.div[-1] float 1 run scoreboard players add #m bs.ctx 1
+data modify storage bs:data health.div[0] set compute default {type:"sum",operands:[{type:"storage",storage:"bs:ctx",path:"h"},{type:"product",operands:[-1,{type:"storage",storage:"bs:ctx",path:"m"}]}]}
+data modify storage bs:data health.div[-1] set from storage bs:ctx m
 data modify entity B5-0-0-0-2 transformation set from storage bs:data health.div
-execute store result storage bs:ctx y double .000001 run data get entity B5-0-0-0-2 transformation.scale[0] -1000000
+data modify storage bs:ctx y set from entity B5-0-0-0-2 transformation.scale[0]
+data modify storage bs:ctx y set compute default {type:"product",operands:[-1,{type:"storage",storage:"bs:ctx",path:"y"}]}
 
 function bs.health:utils/apply_health with storage bs:ctx

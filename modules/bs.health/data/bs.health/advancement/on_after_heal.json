@@ -3,22 +3,20 @@
     "_": {
       "trigger": "minecraft:effects_changed",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "effects": {
-                  "minecraft:instant_health": {
-                    "amplifier": 255
-                  }
+        "player": {
+          "type": "minecraft:inverted",
+          "term": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "effects": {
+                "minecraft:instant_health": {
+                  "amplifier": 255
                 }
               }
             }
           }
-        ]
+        }
       }
     }
   },
