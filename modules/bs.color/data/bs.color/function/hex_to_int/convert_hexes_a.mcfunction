@@ -13,12 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set value '$(color)'
-data modify storage bs:ctx x set string storage bs:ctx _ 1 3
-data modify storage bs:ctx y set string storage bs:ctx _ 3 5
-data modify storage bs:ctx z set string storage bs:ctx _ 5 7
-data remove storage bs:ctx w
-data modify storage bs:ctx w set string storage bs:ctx _ 7 9
+$execute store result score #c bs.ctx run compute default {type:"minecraft:sum",operands:[{type:"minecraft:storage",storage:"bs:const",path:"color.hex_values.$(z)"},{type:"minecraft:product",operands:[256,{type:"minecraft:storage",storage:"bs:const",path:"color.hex_values.$(y)"}]},{type:"minecraft:product",operands:[65536,{type:"minecraft:storage",storage:"bs:const",path:"color.hex_values.$(x)"}]}]} integer
 
-execute unless data storage bs:ctx w run return run function bs.color:hex_to_int/convert_hexes with storage bs:ctx
-return run function bs.color:hex_to_int/convert_hexes_a with storage bs:ctx
+$execute store result score #a bs.ctx run data get storage bs:const color.hex_values.$(w)
+scoreboard players operation #a bs.ctx *= 16777216 bs.const
+
+return run execute store result storage bs:out color.hex_to_int int 1 run scoreboard players operation #c bs.ctx += #a bs.ctx
