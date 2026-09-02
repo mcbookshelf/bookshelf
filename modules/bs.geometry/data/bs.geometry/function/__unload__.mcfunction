@@ -13,5 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx h set from entity @s Health
-$return run data modify storage bs:out health.get_helth set compute default {type:"mul",inputs:[$(scale),{type:"add",inputs:[{type:"storage",storage:"bs:ctx",path:"h"},{type:"mul",inputs:[0.00001,{type:"from_int",input:{type:"score",target:"this",score:"bs.hmod"}}]}]}]}
+kill B5-0-0-0-1
+kill B5-0-0-0-7
+
+forceload remove -1 -1 0 0
+forceload remove -30000000 1600
+
+scoreboard objectives remove bs.const
+scoreboard objectives remove bs.ctx
+scoreboard objectives remove bs.out

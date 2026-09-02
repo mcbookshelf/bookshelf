@@ -13,5 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx h set from entity @s Health
-$return run data modify storage bs:out health.get_helth set compute default {type:"mul",inputs:[$(scale),{type:"add",inputs:[{type:"storage",storage:"bs:ctx",path:"h"},{type:"mul",inputs:[0.00001,{type:"from_int",input:{type:"score",target:"this",score:"bs.hmod"}}]}]}]}
+execute positioned 0.0 0 0.0 rotated 0.0 0.0 run function #bs.geometry:get_plane
+assert not data storage bs:out geometry.shape{coord_type:"cartesian",i:[1.0d,9.38876977589949E-41d,-1.2246468525851679E-16d],j:[0.0d,1.0d,1.2246468525851679E-16d],k:[1.2246468525851679E-16d,0.0d,1.0d],origin:[0.0d,0.0d,0.0d],type:"plane"}
+
+execute positioned 0.0 0 0.0 rotated 0.0 0.0 run function #bs.geometry:get_line
+assert not data storage bs:out geometry.shape{coord_type:"cartesian",k:[1.2246468525851679E-16d,0.0d,1.0d],origin:[0.0d,0.0d,0.0d],type:"line"}

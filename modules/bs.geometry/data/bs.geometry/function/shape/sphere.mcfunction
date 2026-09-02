@@ -13,5 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx h set from entity @s Health
-$return run data modify storage bs:out health.get_helth set compute default {type:"mul",inputs:[$(scale),{type:"add",inputs:[{type:"storage",storage:"bs:ctx",path:"h"},{type:"mul",inputs:[0.00001,{type:"from_int",input:{type:"score",target:"this",score:"bs.hmod"}}]}]}]}
+data modify storage bs:out geometry.shape set value {type:"sphere",coord_type:"cartesian"}
+data modify storage bs:data geometry.log.path set value "bs.geometry:get_sphere"
+
+function bs.geometry:shape/get_origin
+
+$data modify storage bs:out geometry.shape.parameters set value [$(radius)d]

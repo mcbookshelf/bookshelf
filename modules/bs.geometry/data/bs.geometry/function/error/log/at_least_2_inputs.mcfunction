@@ -13,5 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx h set from entity @s Health
-$return run data modify storage bs:out health.get_helth set compute default {type:"mul",inputs:[$(scale),{type:"add",inputs:[{type:"storage",storage:"bs:ctx",path:"h"},{type:"mul",inputs:[0.00001,{type:"from_int",input:{type:"score",target:"this",score:"bs.hmod"}}]}]}]}
+data modify storage bs:data geometry.log.namespace set value "bs.geometry"
+data modify storage bs:data geometry.log.tag set value "input"
+data modify storage bs:data geometry.log.message set value '"Should at least have 2 shapes input"'
+
+function #bs.log:error with storage bs:data geometry.log
+return 1

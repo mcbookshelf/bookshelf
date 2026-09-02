@@ -17,13 +17,12 @@
 
 # Get current health, max_health
 data modify storage bs:ctx h set from entity @s Health
-data modify storage bs:ctx h set compute default {type:"sum",operands:[{type:"storage",storage:"bs:ctx",path:"h"},-0.0001]}
 data modify storage bs:ctx m set from entity @s attributes[{id:"minecraft:max_health"}].base
 
 # Add incoming points to the healing modifier and clamp to max possible healing
-$data modify storage bs:ctx f set compute default {type:"minimum",operands:[{type:"sum",operands:[$(points),{type:"score",target:"this",score:"bs.hmod",scale:0.00001}]},{type:"sum",operands:[{type:"storage",storage:"bs:ctx",path:"m"},{type:"product",operands:[-1,{type:"storage",storage:"bs:ctx",path:"h"}]}]}]}
+$data modify storage bs:ctx f set compute default float {type:"min",inputs:[{type:"add",inputs:[$(points)f,{type:"mul",inputs:[0.00001,{type:"from_int",input:{type:"score",target:"this",score:"bs.hmod"}}]}]},{type:"add",inputs:[{type:"storage",storage:"bs:ctx",path:"m"},{type:"negate",input:{type:"storage",storage:"bs:ctx",path:"h"}}]}]}
 execute store result score @s bs.hmod run data get storage bs:ctx f 100000
 
 # Apply health change: reduction is instant, increase waits for instant_health to take effect
 execute if score @s bs.hmod matches ..-1 run return run function bs.health:utils/decrease_health
-execute if score @s bs.hmod matches 1.. run return run function bs.health:utils/increase_health
+execute if score @s bs.hmod matches 0.. run return run function bs.health:utils/increase_health

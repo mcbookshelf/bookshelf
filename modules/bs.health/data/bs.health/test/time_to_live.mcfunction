@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 scoreboard players set #t bs.ctx 0
-summon minecraft:armor_stand ~ ~ ~ {Tags:["bs.ward"]}
+addmon minecraft:armor_stand ~ ~ ~ {Tags:["bs.ward"]}
 execute as @e[type=minecraft:armor_stand,tag=bs.ward] run function #bs.health:time_to_live {with:{time:5,on_death:"scoreboard players set #t bs.ctx 1"}}
 await delay 4t
 assert entity @n[type=minecraft:armor_stand,tag=bs.ward,distance=..1] inside
