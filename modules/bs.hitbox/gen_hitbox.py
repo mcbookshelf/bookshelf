@@ -74,18 +74,18 @@ def make_shape_loot_table(
         } if isinstance(entry[0], StatePredicate) else {
             "type": "item",
             "name": "egg",
-            "functions": [{
-                "function": "set_custom_data",
+            "modifier": [{
+                "type": "set_custom_data",
                 "tag": minecraft.render_snbt({"shape": entry[0]}),
             }],
         },
-        lambda entries: [{
-            "condition": "location_check",
+        lambda entries: {
+            "type": "location_check",
             "predicate": {"block": {"blocks": [
                 block.type[10:]
                 for _, blocks in entries for block in blocks
             ]}},
-        }],
+        },
     )
 
 
@@ -96,8 +96,8 @@ def make_loot_table_state(entry: StatePredicate) -> LootTable:
         lambda shape: {
             "type": "item",
             "name": "egg",
-            "functions": [{
-                "function": "set_custom_data",
+            "modifier": [{
+                "type": "set_custom_data",
                 "tag": minecraft.render_snbt({"shape": shape}),
             }],
         },
