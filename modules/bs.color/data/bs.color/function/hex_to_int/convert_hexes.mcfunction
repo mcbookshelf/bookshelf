@@ -13,10 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result score $color.hex_to_int bs.out run data get storage bs:const color.hex_values.$(z)
-$execute store result score #r bs.ctx run data get storage bs:const color.hex_values.$(y)
-scoreboard players operation #r bs.ctx *= 256 bs.const
-scoreboard players operation $color.hex_to_int bs.out += #r bs.ctx
-$execute store result score #r bs.ctx run data get storage bs:const color.hex_values.$(x)
-scoreboard players operation #r bs.ctx *= 65536 bs.const
-execute store result storage bs:out color.hex_to_int int 1 run return run scoreboard players operation $color.hex_to_int bs.out += #r bs.ctx
+$return run data modify storage bs:out color.hex_to_int set compute default {type:"minecraft:sum",operands:[{type:"minecraft:storage",storage:"bs:const",path:"color.hex_values.$(z)"},{type:"minecraft:product",operands:[256,{type:"minecraft:storage",storage:"bs:const",path:"color.hex_values.$(y)"}]},{type:"minecraft:product",operands:[65536,{type:"minecraft:storage",storage:"bs:const",path:"color.hex_values.$(x)"}]}]} integer

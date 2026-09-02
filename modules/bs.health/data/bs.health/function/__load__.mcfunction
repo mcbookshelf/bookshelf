@@ -24,8 +24,6 @@ scoreboard objectives add bs.ttl dummy [{text:"BS ",color:"dark_gray"},{text:"Ti
 
 scoreboard players set 10 bs.const 10
 
-data modify storage bs:data health.div set value [0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f]
-
 data modify storage bs:const health.point set value 100000
 data modify storage bs:const health.units set value [ \
   {name:"t",scale:1}, \

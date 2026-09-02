@@ -1,8 +1,8 @@
 {
-  "condition": "any_of",
+  "type": "any_of",
   "terms": [
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetY": 1,
       "predicate": {
         "block": {
@@ -16,7 +16,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetX": 1,
       "predicate": {
         "block": {
@@ -31,7 +31,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetX": -1,
       "predicate": {
         "block": {
@@ -46,7 +46,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetZ": 1,
       "predicate": {
         "block": {
@@ -61,7 +61,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetZ": -1,
       "predicate": {
         "block": {
@@ -76,7 +76,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetX": 1,
       "predicate": {
         "block": {
@@ -91,7 +91,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetX": -1,
       "predicate": {
         "block": {
@@ -106,7 +106,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetZ": 1,
       "predicate": {
         "block": {
@@ -121,7 +121,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetZ": -1,
       "predicate": {
         "block": {

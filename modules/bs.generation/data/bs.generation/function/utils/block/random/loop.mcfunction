@@ -13,11 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _.pools[0].entries append value {type:"item",name:"cod",weight:1,functions:[{function:"set_custom_data",tag:{}}]}
+data modify storage bs:ctx _.pools[0].entries append value {type:"item",name:"cod",weight:1,modifier:[{type:"set_custom_data",tag:{}}]}
 
 data modify storage bs:ctx _.pools[0].entries[-1].weight set from storage bs:data generation[-1].blocks[-1].weight
-data modify storage bs:ctx _.pools[0].entries[-1].functions[0].tag.block set from storage bs:data generation[-1].blocks[-1].block
-data modify storage bs:ctx _.pools[0].entries[-1].functions[0].tag.type set from storage bs:data generation[-1].blocks[-1].type
+data modify storage bs:ctx _.pools[0].entries[-1].modifier[0].tag.block set from storage bs:data generation[-1].blocks[-1].block
+data modify storage bs:ctx _.pools[0].entries[-1].modifier[0].tag.type set from storage bs:data generation[-1].blocks[-1].type
 
 data remove storage bs:data generation[-1].blocks[-1]
 execute if data storage bs:data generation[-1].blocks[-1] run function bs.generation:utils/block/random/loop

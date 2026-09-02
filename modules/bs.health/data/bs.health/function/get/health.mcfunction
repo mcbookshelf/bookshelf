@@ -13,8 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #h bs.ctx run data get entity @s Health 1000000
-scoreboard players add #h bs.ctx 5
-scoreboard players operation #h bs.ctx /= 10 bs.const
-execute store result storage bs:out health.get_health double 0.00001 run scoreboard players operation #h bs.ctx += @s bs.hmod
-$return run data get storage bs:out health.get_health $(scale)
+data modify storage bs:ctx h set from entity @s Health
+$return run data modify storage bs:out health.get_helth set compute default {type:"mul",inputs:[$(scale),{type:"add",inputs:[{type:"storage",storage:"bs:ctx",path:"h"},{type:"mul",inputs:[0.00001,{type:"from_int",input:{type:"score",target:"this",score:"bs.hmod"}}]}]}]}
