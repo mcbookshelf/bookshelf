@@ -13,8 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in block.spawn_block_display.type set value "minecraft:bookshelf"
+data modify storage bs:in block.spawn_block_display.type set value "minecraft:oak_stairs"
+data modify storage bs:in block.spawn_block_display.properties set value {waterlogged:"true"}
 data modify storage bs:in block.spawn_block_display.extra_nbt set value {Tags:["bs.ward"]}
 function #bs.block:spawn_block_display
 
-assert entity @e[type=minecraft:block_display,tag=bs.ward] inside
+assert entity @n[type=minecraft:block_display,tag=bs.ward] inside
+assert data entity @n[type=minecraft:block_display,tag=bs.ward] {block_state:{id:"minecraft:oak_stairs",properties:{waterlogged:"true"}}}

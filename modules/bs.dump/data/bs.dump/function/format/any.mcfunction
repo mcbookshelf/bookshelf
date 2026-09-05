@@ -21,7 +21,7 @@ execute if data storage bs:dump ctx.value{} run return run function bs.dump:form
 execute store success score #dump.success bs.data run data modify storage bs:dump ctx.value set string storage bs:dump stack[-1].var
 execute if score #dump.success bs.data matches 1 run return run function bs.dump:format/number with storage bs:const dump
 
-loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",functions:[{function:"set_name",entity:"this",name:{storage:"bs:dump",nbt:"ctx.value"}}]}]}]}
+loot replace entity B5-0-0-0-3 contents loot {pools:[{rolls:1,entries:[{type:"item",name:"egg",modifier:[{type:"set_name",entity:"this",name:{storage:"bs:dump",nbt:"ctx.value"}}]}]}]}
 data modify storage bs:dump ctx.value set from entity B5-0-0-0-3 item.components.minecraft:custom_name.extra
 data modify storage bs:dump ctx.value[1].color set from storage bs:const dump.string
 data modify storage bs:dump output append from storage bs:dump ctx.value

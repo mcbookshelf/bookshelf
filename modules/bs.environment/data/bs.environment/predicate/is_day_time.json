@@ -10,11 +10,11 @@
       "minecraft_version": "1.21.7"
     },
     "updated": {
-      "date": "2026/02/27",
-      "minecraft_version": "26.1"
+      "date": "2026/08/27",
+      "minecraft_version": "26.3"
     }
   },
-  "condition": "minecraft:time_check",
+  "type": "minecraft:time_check",
   "clock": "minecraft:overworld",
   "value": {
     "min": 0,

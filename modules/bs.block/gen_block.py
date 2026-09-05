@@ -129,8 +129,8 @@ def format_groups_table(blocks: Sequence[Block]) -> dict:
 
 def format_block_loot_entry(entry: dict, block: Block) -> dict:
     """Attach block data to a loot entry."""
-    return {**entry, "functions": [{
-        "function": "set_custom_data",
+    return {**entry, "modifier": [{
+        "type": "set_custom_data",
         "tag": minecraft.render_snbt(block.model_dump(
             include=LOOT_TABLE_INCLUDE,
         )),
@@ -139,8 +139,8 @@ def format_block_loot_entry(entry: dict, block: Block) -> dict:
 
 def format_state_loot_entry(entry: dict, state: StateProperty, option: str) -> dict:
     """Attach state data to a loot entry."""
-    return {**entry, "functions": [{
-        "function": "set_custom_data",
+    return {**entry, "modifier": [{
+        "type": "set_custom_data",
         "tag": minecraft.render_snbt({
             "properties": {state.name: option},
             "_": {state.sequence_index: f"{state.name}={option},"},
@@ -162,10 +162,10 @@ def make_block_loot_table(
             "type": "item",
             "name": "egg",
         }, block),
-        lambda blocks: [{
-            "condition": "location_check",
+        lambda blocks: {
+            "type": "location_check",
             "predicate": {"block": {"blocks": [b.type[10:] for b in blocks]}},
-        }],
+        },
     )
 
 
@@ -200,18 +200,18 @@ def make_attr_loot_table[T](
         } if isinstance(entry[0], StatePredicate) else {
             "type": "item",
             "name": "egg",
-            "functions": [{
-                "function": "set_custom_data",
+            "modifier": [{
+                "type": "set_custom_data",
                 "tag": minecraft.render_snbt({attr: entry[0]}),
             }],
         },
-        lambda entries: [{
-            "condition": "location_check",
+        lambda entries: {
+            "type": "location_check",
             "predicate": {"block": {"blocks": [
                 block.type[10:]
                 for _, blocks in entries for block in blocks
             ]}},
-        }],
+        },
     )
 
 
@@ -220,8 +220,8 @@ def make_attr_state_loot_table(attr: str, entry: StatePredicate) -> LootTable:
     return minecraft.make_loot_table_state(entry, lambda value: {
         "type": "item",
         "name": "egg",
-        "functions": [{
-            "function": "set_custom_data",
+        "modifier": [{
+            "type": "set_custom_data",
             "tag": minecraft.render_snbt({attr: value}),
         }],
     })
@@ -250,25 +250,25 @@ def make_attr_predicate(
             entry = build_node(child)
             if entry is not None:
                 terms.append(optimize_entry({
-                    "condition": "all_of",
+                    "type": "all_of",
                     "terms": [entry, {
-                        "condition": "location_check",
+                        "type": "location_check",
                         "predicate": {"block": {"state": {node.name: value}}},
                     }],
                 }))
 
-        return optimize_entry({"condition":"any_of","terms":terms})
+        return optimize_entry({"type":"any_of","terms":terms})
 
     return Predicate({
         **base.data,
-        "condition": "any_of",
+        "type": "any_of",
         "terms": [optimize_entry({
-            "condition": "all_of", "terms":[{
-                "condition": "location_check",
+            "type": "all_of", "terms":[{
+                "type": "location_check",
                 "predicate": {"block": {"blocks": [b.type[10:] for b in blocks]}},
             }, build_node(group.tree)],
         }) if isinstance(group, StatePredicate) else {
-            "condition": "location_check",
+            "type": "location_check",
             "predicate": {"block": {"blocks": [b.type[10:] for b in blocks]}},
         } for group, blocks in groups.items() if group],
     })

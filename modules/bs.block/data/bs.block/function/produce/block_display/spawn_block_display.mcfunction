@@ -15,7 +15,7 @@
 
 data modify storage bs:ctx _ set value {}
 data modify storage bs:ctx _ set from storage bs:in block.spawn_block_display.extra_nbt
-data modify storage bs:ctx _.block_state.Name set from storage bs:in block.spawn_block_display.type
-data modify storage bs:ctx _.block_state.Properties set from storage bs:in block.spawn_block_display.properties
+data modify storage bs:ctx _.block_state.id set from storage bs:in block.spawn_block_display.type
+data modify storage bs:ctx _.block_state.properties set from storage bs:in block.spawn_block_display.properties
 
 function bs.block:produce/block_display/run with storage bs:ctx
