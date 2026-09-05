@@ -15,9 +15,11 @@
 
 $data modify storage bs:ctx c set value $(color)
 
+data modify storage bs:ctx w set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"c",storage:"bs:ctx"},right:16777216}}
 data modify storage bs:ctx x set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"c",storage:"bs:ctx"},right:65536}}
 data modify storage bs:ctx y set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"c",storage:"bs:ctx"},right:256}}
 data modify storage bs:ctx z set compute default integer {type:"mod",right:256,left:{type:"storage",path:"c",storage:"bs:ctx"}}
 
-function bs.color:int_to_hex/get_hexes with storage bs:ctx
-function bs.color:int_to_hex/concat_hexes with storage bs:ctx _
+
+function bs.color:argb_int_to_hex/get_hexes with storage bs:ctx
+function bs.color:argb_int_to_hex/concat_hexes with storage bs:ctx _

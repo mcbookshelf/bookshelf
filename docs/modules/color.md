@@ -32,7 +32,7 @@ You can find below all functions available in this module.
 ### Convert to Hexadecimal
 
 :::::{tab-set}
-::::{tab-item} RGB to Hexadecimal
+::::{tab-item} RGB(A) to Hexadecimal
 
 ```{function} #bs.color:rgb_to_hex {color:[]}
 
@@ -42,7 +42,7 @@ Convert a color from RGB to hexadecimal.
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **color**: Vector representing the RGB color (example: [0,255,128]).
+    - {nbt}`list` **color**: Vector representing the RGB(A) color (example: [0,255,128] , [0,128,0,100]).
   :::
 
 :Outputs:
@@ -81,16 +81,44 @@ Convert a color from integer to hexadecimal.
 
 ```mcfunction
 # Get the hexadecimal color
-function #bs.color:int_to_hex with entity @e[type=minecraft:zombie,sort=nearest,limit=1] ArmorItems[3].tag.display
+data modify storage macro color set from entity @n[type=minecraft:zombie] equipment.head.components."minecraft:dyed_color"
+function #bs.color:int_to_hex with storage macro
 
 # Show the result
 data get storage bs:out color.int_to_hex
 ```
 
 ::::
+::::{tab-item} RGBA Integer to Hexadecimal
+
+```{function} #bs.color:int_to_hex_rgba {color:<value>}
+
+Convert a rgba color from integer to hexadecimal.
+
+:Inputs:
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` Arguments
+    - {nbt}`int` **color**: Color as an rgba integer.
+  :::
+
+:Outputs:
+  **Storage `bs:out color.int_to_hex_rgba`**: {nbt}`string` Color as a hexadecimal string.
+```
+*Example: Get the hexadecimal color of the nearest text display background:*
+
+```mcfunction
+# Get the hexadecimal color
+data modify storage macro color set from entity @n[type=text_display] background
+function #bs.color:int_to_hex_rgba with storage macro
+
+# Show the result
+data get storage bs:out color.int_to_hex_rgba
+```
+::::
 :::::
 
-> **Credits**: Aksiome, theogiraudet
+> **Credits**: Aksiome, theogiraudet, RacoonJohn
 
 ---
 
@@ -101,13 +129,13 @@ data get storage bs:out color.int_to_hex
 
 ```{function} #bs.color:hex_to_int {color:<value>}
 
-Convert a color from hexadecimal to integer.
+Convert a color from RGB(A) hexadecimal to integer.
 
 :Inputs:
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`string` **color**: Color as a hexadecimal string (example: #ffffff).
+    - {nbt}`string` **color**: Color as a RGBA(A) hexadecimal string (example: #ffffff #00ff00a0).
   :::
 
 :Outputs:
@@ -120,24 +148,24 @@ Convert a color from hexadecimal to integer.
 
 ```mcfunction
 # Summon a test subject
-summon minecraft:zombie ~ ~ ~ {ArmorItems:[{},{},{},{id:"minecraft:leather_helmet",Count:1b}]}
+summon minecraft:zombie ~ ~ ~ {equipment:{chest:{id:"minecraft:leather_helmet",count:1}}}
 
 # Set the helmet color
-execute as @e[type=minecraft:zombie,sort=nearest,limit=1] store result entity @s ArmorItems[3].tag.display.color int 1 run function #bs.color:hex_to_int {color:"#ffffff"}
+execute as @n[type=minecraft:zombie] store result entity @s equipment.head.components."minecraft:dyed_color" int 1 run function #bs.color:hex_to_int {color:"#ffffff"}
 ```
 
 ::::
-::::{tab-item} RGB to Integer
+::::{tab-item} RGB(A) to Integer
 
 ```{function} #bs.color:rgb_to_int {color:[]}
 
-Convert a color from RGB to integer.
+Convert a color from RGB(A) to integer.
 
 :Inputs:
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`list` **color**: Vector representing the RGB color (example: [0,255,128]).
+    - {nbt}`list` **color**: Vector representing the RGB color (example: [0,255,128], [0,128,0,100]).
   :::
 
 :Outputs:
@@ -150,33 +178,33 @@ Convert a color from RGB to integer.
 
 ```mcfunction
 # Summon a test subject
-summon minecraft:zombie ~ ~ ~ {ArmorItems:[{},{},{},{id:"minecraft:leather_helmet",Count:1b}]}
+summon minecraft:zombie ~ ~ ~ {equipment:{chest:{id:"minecraft:leather_helmet",count:1}}}
 
 # Set the helmet color
-execute as @e[type=minecraft:zombie,sort=nearest,limit=1] store result entity @s ArmorItems[3].tag.display.color int 1 run function #bs.color:rgb_to_int {color:[255,0,0]}
+execute as @n[type=minecraft:zombie] store result entity @s equipment.head.components."minecraft:dyed_color" int 1 run function #bs.color:rgb_to_int {color:[255,0,0]}
 ```
 
 ::::
 :::::
 
-> **Credits**: Aksiome, theogiraudet
+> **Credits**: Aksiome, theogiraudet, RacoonJohn
 
 ---
 
 ### Convert to RGB
 
 :::::{tab-set}
-::::{tab-item} Hexadecimal to RGB
+::::{tab-item} Hexadecimal to RGB(A)
 
 ```{function} #bs.color:hex_to_rgb {color:<value>}
 
-Convert a color from hexadecimal to RGB.
+Convert a color from hexadecimal to RGB(A).
 
 :Inputs:
   **Function macro**:
   :::{treeview}
   - {nbt}`compound` Arguments
-    - {nbt}`string` **color**: Color as a hexadecimal string (example: #ffffff).
+    - {nbt}`string` **color**: Color as a hexadecimal string (example: #ffffff, #00ff00a0).
   :::
 
 :Outputs:
@@ -219,16 +247,48 @@ Convert a color from integer to RGB.
 
 ```mcfunction
 # Get the RGB color
-function #bs.color:int_to_rgb with entity @e[type=minecraft:zombie,sort=nearest,limit=1] ArmorItems[3].tag.display
+
+data modify storage macro color set from entity @n[type=minecraft:zombie] equipment.head.components."minecraft:dyed_color"
+function #bs.color:int_to_rgb with storage macro
 
 # Show the result
 data get storage bs:out color.int_to_rgb
 ```
 
 ::::
+
+::::{tab-item} Integer to RGBA
+
+```{function} #bs.color:int_to_rgba {color:<value>}
+
+Convert a color from integer to RGBA.
+
+:Inputs:
+  **Function macro**:
+  :::{treeview}
+  - {nbt}`compound` Arguments
+    - {nbt}`int` **color**: Color as an rgba integer.
+  :::
+
+:Outputs:
+  **Storage `bs:out color.int_to_rgba`**: {nbt}`list` Vector representing the RGBA color.
+```
+
+*Example: Get the RGBA color of the nearest text display background:*
+
+```mcfunction
+# Get the RGBA color
+data modify storage macro color set from entity @n[type=text_display] background
+function #bs.color:int_to_rgba with storage macro
+
+# Show the result
+data get storage bs:out color.int_to_rgba
+```
+
+::::
 :::::
 
-> **Credits**: Aksiome, theogiraudet
+> **Credits**: Aksiome, theogiraudet, RacoonJohn
 
 ---
 

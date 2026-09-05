@@ -18,6 +18,11 @@ $data modify storage bs:ctx _ set value {rgb:$(color)}
 data modify storage bs:ctx x set from storage bs:ctx _.rgb[0]
 data modify storage bs:ctx y set from storage bs:ctx _.rgb[1]
 data modify storage bs:ctx z set from storage bs:ctx _.rgb[2]
+data remove storage bs:ctx w
+data modify storage bs:ctx w set from storage bs:ctx _.rgb[3]
 
-function bs.color:rgb_to_hex/get_hexes with storage bs:ctx
-function bs.color:rgb_to_hex/concat_hexes with storage bs:ctx _
+execute unless data storage bs:ctx w run function bs.color:rgb_to_hex/get_hexes with storage bs:ctx
+execute unless data storage bs:ctx w run return run function bs.color:rgb_to_hex/concat_hexes with storage bs:ctx _
+
+function bs.color:rgb_to_hex/get_hexes_a with storage bs:ctx
+function bs.color:rgb_to_hex/concat_hexes_a with storage bs:ctx _
