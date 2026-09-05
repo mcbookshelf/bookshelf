@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx h set compute default float {type:"add",inputs:[{type:"storage",storage:"bs:ctx",path:"h"},{type:"storage",storage:"bs:ctx",path:"f"}]}
+data modify storage bs:ctx x set compute default float {type:"add",inputs:[{type:"storage",storage:"bs:ctx",path:"h"},{type:"storage",storage:"bs:ctx",path:"f"}]}
 execute if predicate {type:"float_value_check",value:{type:"storage",storage:"bs:ctx",path:"h"},test:{max:0}} unless predicate {type:"entity_properties",entity:"this",predicate:{"type_specific/player":{gamemode:["creative","spectator"]}}} run return run kill @s
 
 # Get add_multiplied_total to reduce health to the target value, it's applied last, so it won't mess with other modifiers

@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # Get input points and base max_health
-data modify storage bs:ctx m set from entity @s attributes[{id:"minecraft:max_health"}].base
+execute store result storage bs:ctx z float 0.00001 run attribute @s max_health base get 100000
 
 $data modify storage bs:ctx y set compute default float {type:"minecraft:add",inputs:[$(points),{type:"minecraft:storage",storage:"bs:ctx",path:"m"}]}
 function bs.health:utils/set_max_health with storage bs:ctx

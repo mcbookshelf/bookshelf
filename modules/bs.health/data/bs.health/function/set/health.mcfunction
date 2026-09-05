@@ -16,12 +16,12 @@
 # Note: Thanks to XanBelOr for the idea of using the effects_changed trigger advancement
 
 # Get current health, max_health
-data modify storage bs:ctx h set from entity @s Health
-data modify storage bs:ctx m set from entity @s attributes[{id:"minecraft:max_health"}].base
+data modify storage bs:ctx x set from entity @s Health
+execute store result storage bs:ctx z float 0.00001 run attribute @s max_health base get 100000
 
 # Clamp input points to max possible healing, and convert the set operation to an additive one
-$data modify storage bs:ctx f set compute default float {type:"min",inputs:[{type:"add",inputs:[$(points)f,{type:"mul",inputs:[0.00001,{type:"from_int",input:{type:"score",target:"this",score:"bs.hmod"}}]}]},{type:"add",inputs:[{type:"storage",storage:"bs:ctx",path:"m"},{type:"mul",inputs:[-1f,{type:"storage",storage:"bs:ctx",path:"h"}]}]}]}
-execute store result score @s bs.hmod run data get storage bs:ctx f 100000
+$data modify storage bs:ctx w set compute default float {type:"min",inputs:[{type:"add",inputs:[$(points)f,{type:"mul",inputs:[0.00001,{type:"from_int",input:{type:"score",target:"this",score:"bs.hmod"}}]}]},{type:"add",inputs:[{type:"storage",storage:"bs:ctx",path:"m"},{type:"mul",inputs:[-1f,{type:"storage",storage:"bs:ctx",path:"h"}]}]}]}
+execute store result score @s bs.hmod run data get storage bs:ctx w 100000
 
 # Apply health change: reduction is instant, increase waits for instant_health to take effect
 execute if score @s bs.hmod matches ..-1 run return run function bs.health:utils/decrease_health

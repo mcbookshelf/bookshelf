@@ -20,7 +20,7 @@ scoreboard players operation @s bs.hmod += @s bs.hval
 
 
 # Get add_multiplied_total to reduce health to the target value, it's applied last, so it won't mess with other modifiers
-data modify storage bs:ctx m set from entity @s attributes[{id:"minecraft:max_health"}].base
+execute store result storage bs:ctx z float 0.00001 run attribute @s max_health base get 100000
 data modify storage bs:ctx y set compute entity @s float {\
     type:"add",\
     inputs:[\

@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx m set from entity @s attributes[{id:"minecraft:max_health"}].base
+execute store result storage bs:ctx z float 0.00001 run attribute @s max_health base get 100000
 $return run data modify storage bs:out health.get_max_health set compute default float {type:"mul",inputs:[$(scale),{type:"storage",storage:"bs:ctx",path:"m"}]}
