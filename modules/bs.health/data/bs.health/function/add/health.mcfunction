@@ -25,4 +25,4 @@ execute store result score @s bs.hmod run data get storage bs:ctx f 100000
 
 # Apply health change: reduction is instant, increase waits for instant_health to take effect
 execute if score @s bs.hmod matches ..-1 run return run function bs.health:utils/decrease_health
-execute if score @s bs.hmod matches 0.. run return run function bs.health:utils/increase_health
+execute if score @s bs.hmod matches 1.. run return run function bs.health:utils/increase_health

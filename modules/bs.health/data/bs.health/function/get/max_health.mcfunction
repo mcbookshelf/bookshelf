@@ -14,5 +14,4 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx m set from entity @s attributes[{id:"minecraft:max_health"}].base
-
-$return run data modify storage bs:out health.get_max_health set compute default {type:"mul",inputs:[$(scale),{type:"storage",storage:"bs:ctx",path:"m"}]}
+$return run data modify storage bs:out health.get_max_health set compute default float {type:"mul",inputs:[$(scale),{type:"storage",storage:"bs:ctx",path:"m"}]}
