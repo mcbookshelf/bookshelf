@@ -9,7 +9,7 @@ from typing import TYPE_CHECKING
 import click
 from mcward import WardError
 from mcward.cli.datapacks import discover_datapacks, pack_resolver
-from mcward.cli.environments import get_environments, manager, start_environments
+from mcward.cli.environments import get_environment, manager, start_environments
 from mcward.cli.reporters import github, live
 from rich import get_console
 
@@ -136,7 +136,7 @@ def test(
 
         selected = resolve_versions(datapacks, all_versions=versions)
         try:
-            envs = start_environments(get_environments(selected))
+            envs = start_environments([get_environment(v.name) for v in selected])
             run = github.run if reporter == "github" else live.run
             resolve = pack_resolver([MODULES_DIR / m for m in modules])
             paths = [datapack.path for datapack in datapacks]

@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$particle block{block_state: { Name: "$(type)", Properties: $(properties) }} $(pos) $(delta) $(speed) $(count) $(mode) $(viewers)
+$particle block{block_state: { id: "$(type)", properties: $(properties) }} $(pos) $(delta) $(speed) $(count) $(mode) $(viewers)
