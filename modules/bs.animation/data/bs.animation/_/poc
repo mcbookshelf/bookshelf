@@ -1,0 +1,94 @@
+def = {
+  "position": {
+    "basis": "catmull_rom|bezier|bspline|hermite",
+    "duration": 100,
+    "points": [
+      [0, 0, 0],
+      [1, 1, 1],
+      [2, 0, 2],
+      [3, 1, 3]
+    ]
+  },
+  "transformation": {
+    "left_rotation": {},
+    "translation": {
+      "interpolation": "smooth|linear|step",
+      "duration": 100,
+      "points": [
+        [0, 0, 0],
+        [1, 1, 1],
+        [2, 0, 2],
+        [3, 1, 3]
+      ]
+    }
+  }
+}
+
+
+
+defalt = {
+  "run": "function #bs.animation:callback/relative_position",
+  "basis": "catmull_rom|bezier|bspline|hermite",
+  "duration": 100,
+  "points": [
+    [0, 0, 0],
+    [1, 1, 1],
+    [2, 0, 2],
+    [3, 1, 3],
+  ],
+  "_": "<BAKED DATA>"
+}
+
+// what we can do is have relative x and first point x (only int part), if int part too big (overflow at 1000) we use
+// an entity to first store pos then tp using int part then move that to storage, if not necessary use only scoreboard math?
+// maybe instead of using int part we can preset some premade coordinates to avoid overflow and avoid a dynamic macro?
+// basically some fixed tp for big values?
+
+
+// when baking only check first point x,y,z then if over 10 000 or under 10 000 all points are gonna be baked using teleport
+// relative
+
+
+// 10 000,
+// 2999 9984
+
+
+// bs:lambda animation.nbt
+// bs:lambda animation.x
+// bs:lambda animation.y
+// bs:lambda animation.z
+
+orother = {
+  "run": "function #bs.animation:callback/transformation/left_rotation",
+  "interpolation": "smooth|linear|step",
+  "duration": [100, 50, 10],
+  "points": [
+    [0, 0, 0],
+    [1, 1, 1],
+    [2, 0, 2],
+    [3, 1, 3]
+  ]
+}
+
+
+// global
+bake = { uses: "storage path (can be a list or a single object)" }
+
+// on entity
+create = {
+  id: "walk",
+  uses: "storage path (can be a list or a single object)"
+}
+
+// if storage is a list basically append all those under the same id so play and pause or other functions will all affect the filtered data list
+// loop back only when all of an id are at the end
+
+play = { id: "walk", with: { step: 1, interval: 1, loop: false } }
+pause = { id: "walk" }
+step = { id: "walk", with: { step: 1 } }
+
+instead of storing f type to bake store directly e (eval function with the dimension)
+
+
+TODO:
+loop control
