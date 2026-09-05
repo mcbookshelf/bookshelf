@@ -16,6 +16,6 @@
 # Give healing effect and revoke advancements that track when the effect is actually applied
 execute if predicate {type:"entity_properties",entity:"this",predicate:{effects:{instant_health:{amplifier:{min:29}}}}} run effect clear @s minecraft:instant_health
 effect give @s minecraft:instant_health 1 28 true
-scoreboard players operation @s bs.hval = #h bs.ctx
+execute store result score @s bs.hval run data get storage bs:ctx h 100000
 advancement revoke @s only bs.health:on_before_heal
 advancement revoke @s only bs.health:on_heal

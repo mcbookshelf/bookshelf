@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result storage bs:ctx _.time int $(scale) run data get storage bs:ctx _.time
+data modify storage bs:ctx _.time set compute default int {type:"mul",inputs:[$(scale),{type:"storage",storage:"bs:ctx",path:"_.time"}]}
 return 1
