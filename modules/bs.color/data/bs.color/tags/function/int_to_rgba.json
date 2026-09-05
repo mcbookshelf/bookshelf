@@ -1,7 +1,7 @@
 {
   "__bookshelf__": {
     "feature": true,
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html#convert-to-int",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/color.html#convert-to-rgb",
     "authors": [
       "theogiraudet",
       "RacoonJohn"
@@ -19,6 +19,6 @@
     }
   },
   "values": [
-    "bs.color:rgb_to_int"
+    "bs.color:int_to_rgba"
   ]
 }

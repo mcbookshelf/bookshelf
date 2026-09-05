@@ -13,15 +13,17 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set value $(color)
+$data modify storage bs:ctx _ set value {rgb:$(color)}
 
-execute store result score #r bs.ctx run data get storage bs:ctx _[0]
-execute store result score #g bs.ctx run data get storage bs:ctx _[1]
-execute store result score #b bs.ctx run data get storage bs:ctx _[2]
+data modify storage bs:ctx x set from storage bs:ctx _.rgb[0]
+data modify storage bs:ctx y set from storage bs:ctx _.rgb[1]
+data modify storage bs:ctx z set from storage bs:ctx _.rgb[2]
+data remove storage bs:ctx w
+data modify storage bs:ctx w set from storage bs:ctx _.rgb[3]
 
-scoreboard players operation $color.rgb_to_int bs.out = #r bs.ctx
-scoreboard players operation $color.rgb_to_int bs.out *= 65536 bs.const
-scoreboard players operation #c bs.ctx = #g bs.ctx
-scoreboard players operation #c bs.ctx *= 256 bs.const
-scoreboard players operation $color.rgb_to_int bs.out += #c bs.ctx
-return run execute store result storage bs:out color.rgb_to_int int 1 run scoreboard players operation $color.rgb_to_int bs.out += #b bs.ctx
+execute store result score #c bs.ctx run compute default {type:"minecraft:add",inputs:[{type:"minecraft:storage",storage:"bs:ctx",path:"z"},{type:"minecraft:mul",inputs:[256,{type:"minecraft:storage",storage:"bs:ctx",path:"y"}]},{type:"minecraft:mul",inputs:[65536,{type:"minecraft:storage",storage:"bs:ctx",path:"x"}]}]} integer
+
+execute store result score #a bs.ctx run data get storage bs:ctx w
+scoreboard players operation #a bs.ctx *= 16777216 bs.const
+
+return run execute store result storage bs:out color.rgb_to_int int 1 run scoreboard players operation #c bs.ctx += #a bs.ctx
