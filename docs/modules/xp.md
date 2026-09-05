@@ -2,7 +2,7 @@
 
 **`#bs.xp:help`**
 
-Efficiently manage the experience points and levels of players.
+Read and modify player XP levels, and set the progress bar by percentage rather than by points.
 
 ```{image} /_imgs/modules/xp.png
 :class: dark-light p-2

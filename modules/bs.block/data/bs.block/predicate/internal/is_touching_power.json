@@ -1,16 +1,10 @@
 {
-  "condition": "any_of",
+  "type": "any_of",
   "terms": [
+    "bs.block:internal/is_strongly_powered",
+    "bs.block:internal/is_weakly_powered",
     {
-      "condition": "reference",
-      "name": "bs.block:internal/is_strongly_powered"
-    },
-    {
-      "condition": "reference",
-      "name": "bs.block:internal/is_weakly_powered"
-    },
-    {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetY": 1,
       "predicate": {
         "block": {
@@ -22,10 +16,10 @@
       }
     },
     {
-      "condition": "all_of",
+      "type": "all_of",
       "terms": [
         {
-          "condition": "location_check",
+          "type": "location_check",
           "offsetX": 1,
           "predicate": {
             "block": {
@@ -37,9 +31,9 @@
           }
         },
         {
-          "condition": "minecraft:inverted",
+          "type": "minecraft:inverted",
           "term": {
-            "condition": "location_check",
+            "type": "location_check",
             "offsetX": 1,
             "predicate": {
               "block": {
@@ -53,10 +47,10 @@
       ]
     },
     {
-      "condition": "all_of",
+      "type": "all_of",
       "terms": [
         {
-          "condition": "location_check",
+          "type": "location_check",
           "offsetX": -1,
           "predicate": {
             "block": {
@@ -68,9 +62,9 @@
           }
         },
         {
-          "condition": "minecraft:inverted",
+          "type": "minecraft:inverted",
           "term": {
-            "condition": "location_check",
+            "type": "location_check",
             "offsetX": -1,
             "predicate": {
               "block": {
@@ -84,10 +78,10 @@
       ]
     },
     {
-      "condition": "all_of",
+      "type": "all_of",
       "terms": [
         {
-          "condition": "location_check",
+          "type": "location_check",
           "offsetZ": 1,
           "predicate": {
             "block": {
@@ -99,9 +93,9 @@
           }
         },
         {
-          "condition": "minecraft:inverted",
+          "type": "minecraft:inverted",
           "term": {
-            "condition": "location_check",
+            "type": "location_check",
             "offsetZ": 1,
             "predicate": {
               "block": {
@@ -115,10 +109,10 @@
       ]
     },
     {
-      "condition": "all_of",
+      "type": "all_of",
       "terms": [
         {
-          "condition": "location_check",
+          "type": "location_check",
           "offsetZ": -1,
           "predicate": {
             "block": {
@@ -130,9 +124,9 @@
           }
         },
         {
-          "condition": "minecraft:inverted",
+          "type": "minecraft:inverted",
           "term": {
-            "condition": "location_check",
+            "type": "location_check",
             "offsetZ": -1,
             "predicate": {
               "block": {
@@ -146,7 +140,7 @@
       ]
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetX": 1,
       "predicate": {
         "block": {
@@ -155,7 +149,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetX": -1,
       "predicate": {
         "block": {
@@ -164,7 +158,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetY": 1,
       "predicate": {
         "block": {
@@ -173,7 +167,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetY": -1,
       "predicate": {
         "block": {
@@ -182,7 +176,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetZ": 1,
       "predicate": {
         "block": {
@@ -191,7 +185,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetZ": -1,
       "predicate": {
         "block": {
@@ -200,7 +194,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetX": 1,
       "predicate": {
         "block": {
@@ -212,7 +206,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetX": -1,
       "predicate": {
         "block": {
@@ -224,7 +218,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetY": 1,
       "predicate": {
         "block": {
@@ -236,7 +230,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetY": -1,
       "predicate": {
         "block": {
@@ -248,7 +242,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetZ": 1,
       "predicate": {
         "block": {
@@ -260,7 +254,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetZ": -1,
       "predicate": {
         "block": {
@@ -272,7 +266,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetX": 1,
       "predicate": {
         "block": {
@@ -291,7 +285,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetX": -1,
       "predicate": {
         "block": {
@@ -310,7 +304,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetY": 1,
       "predicate": {
         "block": {
@@ -329,7 +323,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetY": -1,
       "predicate": {
         "block": {
@@ -348,7 +342,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetZ": 1,
       "predicate": {
         "block": {
@@ -367,7 +361,7 @@
       }
     },
     {
-      "condition": "location_check",
+      "type": "location_check",
       "offsetZ": -1,
       "predicate": {
         "block": {

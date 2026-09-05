@@ -2,7 +2,7 @@
 
 **`#bs.generation:help`**
 
-Iterate over the world in various shapes, executing callbacks at each position. Processes can spread across multiple ticks to avoid lag.
+Run a function over every position in a shaped region, spread across ticks.
 
 ```{image} /_imgs/modules/generation-light.png
 :width: 100%

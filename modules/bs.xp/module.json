@@ -7,7 +7,7 @@
   "meta": {
     "name": "XP",
     "slug": "bookshelf-xp",
-    "description": "Manage player XP in Minecraft datapacks. Control the XP bar with precision, query status, and manipulate levels programmatically.",
+    "description": "Read and modify player XP levels, and set the progress bar by percentage rather than by points.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/xp.html",
     "tags": ["runtime"]
   }

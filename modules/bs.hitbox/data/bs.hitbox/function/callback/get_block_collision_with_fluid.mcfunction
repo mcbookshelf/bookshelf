@@ -13,8 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return 1
-execute if block ~ ~ ~ #bs.hitbox:is_fluid run return run function bs.hitbox:callback/get_fluid_shape
+execute if block ~ ~ ~ #bs.hitbox:is_full_cube_collision run return run function bs.hitbox:callback/utils/full_cube
+execute if block ~ ~ ~ #bs.hitbox:is_fluid run return run function bs.hitbox:callback/utils/fluid_shape
 function #bs.hitbox:get_block_collision
 data modify storage bs:lambda hitbox set from storage bs:out hitbox
-execute if block ~ ~ ~ #bs.hitbox:is_waterloggable[waterlogged=true] run data modify storage bs:lambda hitbox.shape append value [0,0,0,16,14.2222222,16,2]
+execute if block ~ ~ ~ #bs.hitbox:is_waterloggable[waterlogged=true] run return run function bs.hitbox:callback/utils/waterlogged_shape
+execute if block ~ ~ ~ #bs.hitbox:is_waterlogged run return run function bs.hitbox:callback/utils/waterlogged_shape

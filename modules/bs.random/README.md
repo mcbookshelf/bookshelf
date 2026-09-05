@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🎲 Bookshelf Random Module
 
-Generate random numbers in Minecraft datapacks. Supports various distributions, weighted choices, and noise functions like Simplex and Fractal.
+Generate random values, weighted picks, and noise patterns.
 
 > *"Creativity is the ability to introduce order into the randomness of nature."*
 >
@@ -36,20 +36,20 @@ Generate random numbers in Minecraft datapacks. Supports various distributions, 
 
 ### ✨ Features
 
-- **🎯 Random choice**: select random values from lists with optional weights
-- **📊 Probability distributions**: generate numbers using various distributions
-- **🎨 Noise patterns**: create various noise patterns for procedural generation
+- Select random values from a list, with optional weights
+- Generate numbers from various distributions
+- Generate various noise patterns
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/random.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/random.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

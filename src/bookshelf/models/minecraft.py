@@ -55,6 +55,7 @@ class Block(BaseModel, frozen=True):
     luminance: StateValue[int] = 0
     is_conductive: StateValue[bool] = False
     is_spawnable: StateValue[bool] = False
+    fluid: StateValue[str | None] = None
 
     def __hash__(self) -> int:
         """Hash based on the block ID."""

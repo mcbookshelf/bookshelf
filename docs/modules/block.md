@@ -2,7 +2,7 @@
 
 **`#bs.block:help`**
 
-Manage blocks, including states and NBTs, while offering advanced tools for seamless transformations.
+Manipulate blocks with their states and NBT, and combine block properties.
 
 ```{pull-quote}
 "Architecture is the thoughtful making of space."
@@ -1453,7 +1453,7 @@ A block becomes weakly powered when it is powered only by redstone dust.
 
 ## 🏷️ Tags
 
-You can find below below all tags available in this module.
+You can find below all tags available in this module.
 
 ---
 

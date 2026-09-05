@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 🗂️ Bookshelf Collection Module
 
-Work with collections in Minecraft datapacks. Map, filter, reduce, find, and transform elements with functional operations.
+Manipulate collections with a full set of functional operations.
 
 > *"Simplicity is the ultimate sophistication."*
 >
@@ -36,23 +36,22 @@ Work with collections in Minecraft datapacks. Map, filter, reduce, find, and tra
 
 ### ✨ Features
 
-- **🔄 Transformation**: map and flat_map operations to transform collection elements
-- **🔍 Filtering**: filter and find operations to select specific elements
-- **✅ Validation**: any, all, and none predicates to test collection conditions
-- **📊 Aggregation**: count, min, max, and average to compute collection statistics
-- **📋 Iteration**: forEach to execute operations on every element
-- **📦 Utilities**: flatten nested collections into single-level arrays
+- Filter a collection, or find matching elements
+- Test whether any, all, or none of the elements match
+- Iterate over a collection and run operations on each element
+- Get the min, max, or average of a numeric collection
+- Flatten nested collections into single-level arrays
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/modules/collection.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/collection.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This module is part of the Bookshelf Library:
+This module is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

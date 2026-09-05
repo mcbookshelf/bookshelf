@@ -2,7 +2,7 @@
 
 **`#bs.link:help`**
 
-Construct coherent entity structures by linking entities' positions and rotations.
+Link entities together so their positions and rotations stay synchronized.
 
 ```{image} /_imgs/modules/link.png
 :align: center

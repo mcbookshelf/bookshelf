@@ -2,13 +2,13 @@
 
 **`#bs.tree:help`**
 
-Simplicity meets utility in this bank of trees.
+Pre-built tree structures with multiple variations.
 
 ---
 
 ## 🗿 Structures
 
-You can find below below all structures available in this module.
+You can find below all structures available in this module.
 
 ---
 

@@ -5,7 +5,7 @@
   "meta": {
     "name": "Runtime",
     "slug": "bookshelf-runtime",
-    "description": "Core utilities from the Bookshelf modular datapack library: math, vectors, raycasting, entity control, blocks, health, and more.",
+    "description": "A collection of all core modules, meant to ship with your datapack.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
   },
   "pipeline": [

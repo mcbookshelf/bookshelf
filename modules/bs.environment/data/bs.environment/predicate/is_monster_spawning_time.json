@@ -10,21 +10,21 @@
       "minecraft_version": "1.21.7"
     },
     "updated": {
-      "date": "2026/02/27",
-      "minecraft_version": "26.1"
+      "date": "2026/08/27",
+      "minecraft_version": "26.3"
     }
   },
-  "condition": "minecraft:any_of",
+  "type": "minecraft:any_of",
   "terms": [
     {
-      "condition": "minecraft:all_of",
+      "type": "minecraft:all_of",
       "terms": [
         {
-          "condition": "minecraft:weather_check",
+          "type": "minecraft:weather_check",
           "raining": true
         },
         {
-          "condition": "minecraft:time_check",
+          "type": "minecraft:time_check",
           "clock": "minecraft:overworld",
           "value": {
             "min": 12969,
@@ -35,14 +35,14 @@
       ]
     },
     {
-      "condition": "minecraft:all_of",
+      "type": "minecraft:all_of",
       "terms": [
         {
-          "condition": "minecraft:weather_check",
+          "type": "minecraft:weather_check",
           "raining": false
         },
         {
-          "condition": "minecraft:time_check",
+          "type": "minecraft:time_check",
           "clock": "minecraft:overworld",
           "value": {
             "min": 13188,

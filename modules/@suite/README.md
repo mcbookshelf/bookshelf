@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <i>Bookshelf is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.</i>
+  <i>Bookshelf is a Minecraft datapack library. It provides performant modules that help you create complex systems more easily.</i>
 </div>
 
 <br/>
@@ -28,7 +28,7 @@
 
 ## 📚 Bookshelf Suite Bundle
 
-A modular datapack library for Minecraft with 25+ modules covering math, raycasting, hitboxes, blocks, entity control, and more.
+The complete Bookshelf library in a single datapack: dozens of modules covering blocks, hitboxes, math, raycast, and more.
 
 > *"The whole is greater than the sum of its parts."*
 >
@@ -77,16 +77,16 @@ A modular datapack library for Minecraft with 25+ modules covering math, raycast
 </div>
 <p align="center">And much more!</p>
 
-📚 [Read the full documentation](https://docs.mcbookshelf.dev/en/latest/index.html)
+📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/index.html)
 
-## 📖 About Bookshelf
+## About Bookshelf
 
-This bundle is part of the Bookshelf Library:
+This bundle is part of the Bookshelf library:
 
-🧩 Find more modules in the [Bookshelf organization](https://modrinth.com/organization/mcbookshelf) \
+🧩 Find more in the [Bookshelf Organization](https://modrinth.com/organization/mcbookshelf) \
 📦 Get the full [Bookshelf Suite](https://modrinth.com/datapack/bookshelf-suite)
 
-## 🤝 Get involved
+## Get involved
 
-💬 Join our [Discord community](https://discord.gg/MkXytNjmBt) \
-🛠 Contribute via the [contribution guide](https://docs.mcbookshelf.dev/en/latest/contribute/)
+💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

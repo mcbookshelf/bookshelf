@@ -5,7 +5,7 @@
   "meta": {
     "name": "Development",
     "slug": "bookshelf-dev",
-    "description": "Debug and logging tools from the Bookshelf modular datapack library. Inspect variables, log with severity levels, and track issues.",
+    "description": "A collection of modules to help you debug your datapack while you build it.",
     "documentation": "https://docs.mcbookshelf.dev/en/latest/index.html"
   },
   "pipeline": [

@@ -126,13 +126,14 @@ def make_block_tag(
 ) -> BlockTag:
     """Create or update a block tag for blocks that match the predicate."""
     values = sorted(block.type for block in blocks if predicate(block))
+    base.data.pop("__generated__", None)
     return BlockTag({**base.data, "values": values})
 
 
 def make_loot_table_binary[T](
     entries: Sequence[T],
     entry_factory: Callable[[T], dict],
-    conditions_factory: Callable[[Sequence[T]], list],
+    condition_factory: Callable[[Sequence[T]], dict],
 ) -> LootTable:
     """Build a binary loot table tree from a sequence of entries."""
     def build_node(entries: Sequence[T]) -> dict:
@@ -143,15 +144,15 @@ def make_loot_table_binary[T](
         left = build_node(entries[:mid])
         right = build_node(entries[mid:])
 
-        left["conditions"] = conditions_factory(entries[:mid])
-        right["conditions"] = conditions_factory(entries[mid:])
+        left["condition"] = condition_factory(entries[:mid])
+        right["condition"] = condition_factory(entries[mid:])
 
-        left_size = len(orjson.dumps(left["conditions"]))
-        right_size = len(orjson.dumps(right["conditions"]))
+        left_size = len(orjson.dumps(left["condition"]))
+        right_size = len(orjson.dumps(right["condition"]))
         if left_size > right_size:
             left, right = right, left
 
-        right.pop("conditions")
+        right.pop("condition")
         return {"type":"alternatives","children":[left, right]}
 
     return LootTable({"pools":[{"rolls":1,"entries":[build_node(entries)]}]})
@@ -160,10 +161,10 @@ def make_loot_table_binary[T](
 def make_loot_table_state[T](
     entry: StatePredicate[T],
     entry_factory: Callable[[T], dict],
-    conditions_factory: Callable[[str, str], list] = lambda name, value: [{
-        "condition": "location_check",
+    condition_factory: Callable[[str, str], dict] = lambda name, value: {
+        "type": "location_check",
         "predicate": {"block": {"state": {name: value}}},
-    }],
+    },
 ) -> LootTable:
     """Build a state loot table tree from a node entry."""
     def build_node(node: StateNode[T] | T) -> dict:
@@ -174,7 +175,7 @@ def make_loot_table_state[T](
         branches = tuple(node.children.items())
         for value, child in branches[:-1]:
             entry = build_node(child)
-            entry["conditions"] = conditions_factory(node.name, value)
+            entry["condition"] = condition_factory(node.name, value)
             children.append(entry)
         children.append(build_node(branches[-1][1]))
 

@@ -2,7 +2,7 @@
 
 **`#bs.health:help`**
 
-Efficiently manage the lifecycle and vital aspects of an entity.
+Read and modify player health, and give entities a lifetime.
 
 ```{pull-quote}
 "He who has a why to live can bear almost any how."
