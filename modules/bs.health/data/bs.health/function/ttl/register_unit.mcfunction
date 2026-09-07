@@ -13,8 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store success score #s bs.ctx run function bs.health:ttl/normalize_unit with storage bs:const health.units[{name:'$(unit)'}]
-execute if score #s bs.ctx matches 0 run function #bs.log:error { \
+$execute store result score #s bs.ctx run data get storage bs:const health.units[{name:'$(unit)'}].scale 1
+execute if score #s bs.ctx matches 1.. run return run data modify storage bs:ctx _.time set compute default integer {type:mul,inputs:[{type:storage,storage:"bs:ctx",path:"_.time"},{type:score,target:{type:fixed,name:"#s"},score:"bs.ctx"}]}
+
+function #bs.log:error { \
   namespace:"bs.health", \
   tag:"time_to_live", \
   message:'"The unit provided is not supported."', \

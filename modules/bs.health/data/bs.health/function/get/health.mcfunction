@@ -13,5 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx x set from entity @s Health
-$return run data modify storage bs:out health.get_helth set compute default float {type:"mul",inputs:[$(scale),{type:"add",inputs:[{type:"storage",storage:"bs:ctx",path:"h"},{type:"mul",inputs:[0.00001,{type:"from_int",input:{type:"score",target:"this",score:"bs.hmod"}}]}]}]}
+execute store result score #h bs.ctx run data get entity @s Health 1000000
+execute store result storage bs:out health.get_health float 0.000001 run scoreboard players operation #h bs.ctx += @s bs.hmod
+$return run data get storage bs:out health.get_health $(scale)

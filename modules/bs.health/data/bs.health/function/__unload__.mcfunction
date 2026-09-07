@@ -17,7 +17,6 @@ kill B5-0-0-0-2
 forceload remove -30000000 1600
 
 scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.const
 scoreboard objectives remove bs.hmod
 scoreboard objectives remove bs.hval
 scoreboard objectives remove bs.ttl

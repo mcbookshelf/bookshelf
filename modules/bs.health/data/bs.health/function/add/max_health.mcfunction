@@ -13,8 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# Get input points and base max_health
-execute store result storage bs:ctx z float 0.00001 run attribute @s max_health base get 100000
-
-$data modify storage bs:ctx y set compute default float {type:"minecraft:add",inputs:[$(points),{type:"minecraft:storage",storage:"bs:ctx",path:"m"}]}
+# Add input points and base max_health
+execute store result storage bs:ctx y float 0.000001 run attribute @s max_health base get 1000000
+$data modify storage bs:ctx y set compute default float {type:"minecraft:add",inputs:[$(points),{type:"minecraft:storage",storage:"bs:ctx",path:"y"}]}
 function bs.health:utils/set_max_health with storage bs:ctx
