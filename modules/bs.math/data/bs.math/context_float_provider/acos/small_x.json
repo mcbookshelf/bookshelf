@@ -1,0 +1,14 @@
+{
+    "type": "sqrt",
+    "input": {
+        "type": "mul",
+        "inputs": [
+            0.5,
+            {
+                "type": "sub",
+                "left": 1,
+                "right": {"type": "abs","input": {"type": "storage","storage": "bs:in","path": "math.acos.x"}}
+            }
+        ]
+    }
+}
