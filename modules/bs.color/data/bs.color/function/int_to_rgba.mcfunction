@@ -13,12 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set value '$(color)'
-data modify storage bs:ctx x set string storage bs:ctx _ 1 3
-data modify storage bs:ctx y set string storage bs:ctx _ 3 5
-data modify storage bs:ctx z set string storage bs:ctx _ 5 7
-data remove storage bs:ctx w
-data modify storage bs:ctx w set string storage bs:ctx _ 7 9
+$data modify storage bs:ctx c set value $(color)
 
-execute unless data storage bs:ctx w run return run function bs.color:hex_to_int/convert_hexes with storage bs:ctx
-return run function bs.color:hex_to_int/convert_hexes_a with storage bs:ctx
+data modify storage bs:out color.int_to_rgb[3] set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"c",storage:"bs:ctx"},right:16777216}}
+data modify storage bs:out color.int_to_rgb[0] set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"c",storage:"bs:ctx"},right:65536}}
+data modify storage bs:out color.int_to_rgb[1] set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"c",storage:"bs:ctx"},right:256}}
+data modify storage bs:out color.int_to_rgb[2] set compute default integer {type:"mod",right:256,left:{type:"storage",path:"c",storage:"bs:ctx"}}

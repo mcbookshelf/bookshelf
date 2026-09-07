@@ -13,14 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$scoreboard players set #c bs.ctx $(color)
+$data modify storage bs:ctx c set value $(color)
 
-scoreboard players operation $color.int_to_rgb.r bs.out = #c bs.ctx
-scoreboard players operation $color.int_to_rgb.r bs.out /= 65536 bs.const
-scoreboard players operation $color.int_to_rgb.g bs.out = #c bs.ctx
-scoreboard players operation $color.int_to_rgb.g bs.out /= 256 bs.const
-scoreboard players operation $color.int_to_rgb.b bs.out = #c bs.ctx
-
-execute store result storage bs:out color.int_to_rgb[0] int 1 run scoreboard players operation $color.int_to_rgb.r bs.out %= 256 bs.const
-execute store result storage bs:out color.int_to_rgb[1] int 1 run scoreboard players operation $color.int_to_rgb.g bs.out %= 256 bs.const
-execute store result storage bs:out color.int_to_rgb[2] int 1 run scoreboard players operation $color.int_to_rgb.b bs.out %= 256 bs.const
+data modify storage bs:out color.int_to_rgb[0] set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"c",storage:"bs:ctx"},right:65536}}
+data modify storage bs:out color.int_to_rgb[1] set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"c",storage:"bs:ctx"},right:256}}
+data modify storage bs:out color.int_to_rgb[2] set compute default integer {type:"mod",right:256,left:{type:"storage",path:"c",storage:"bs:ctx"}}
