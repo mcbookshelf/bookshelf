@@ -20,16 +20,16 @@ __pycache__/
 *.swp
 *~
 *$py.class
-build/
+/build/
+/release/
 dist/
 docs/_build/
-# Sphinx/Babel temporary gettext output
 docs/_locales/**/LC_MESSAGES/gettext/
-locales/
+docs/_static/switcher.json
 env.bak/
 env/
 ENV/
+locales/
 poetry.lock
-release/
 venv.bak/
 venv/

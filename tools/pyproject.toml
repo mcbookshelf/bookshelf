@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcbookshelf-tools"
+version = "0"
+description = "Commands to work on the Bookshelf repository."
+requires-python = ">=3.14"
+dependencies = [
+  "mcbookshelf",
+  "click>=8.4.2",
+  "httpx[http2]>=0.28.1",
+  "lectern>=0.35.0",
+  "linkify-it-py>=2.1.0",
+  "mcward[beet]>=1.2.0",
+  "myst-parser>=5.1.0",
+  "orjson>=3.12.0",
+  "pydantic>=2.13.5",
+  "pytest>=8.4",
+  "rich>=15.0.0",
+  "sphinx>=9.1.0",
+  "sphinx-autobuild>=2025.8.25",
+  "sphinx-breeze-theme>=0.13.2",
+  "sphinx-copybutton>=0.5.2",
+  "sphinx-design>=0.7.0",
+  "sphinx-intl>=2.3.2",
+  "sphinx-minecraft>=1.0.5",
+  "watchfiles>=1.2.0",
+  "lark>=1.2",
+  "jinja2>=3.1",
+]
+
+[project.scripts]
+build = "mcbookshelf.cli.build:build"
+bump = "mcbookshelf.cli.bump:bump"
+check = "mcbookshelf.cli.check:check"
+docs = "mcbookshelf.cli.docs:docs"
+info = "mcbookshelf.cli.info:info"
+link = "mcbookshelf.cli.link:link"
+notes = "mcbookshelf.cli.notes:notes"
+publish = "mcbookshelf.cli.publish:publish"
+release = "mcbookshelf.cli.release:release"
+test = "mcbookshelf.cli.test:test"
+watch = "mcbookshelf.cli.build:watch"
+
+[tool.uv.sources]
+mcbookshelf = { workspace = true }
+
+[tool.hatch.build.targets.wheel]
+packages = ["mcbookshelf"]

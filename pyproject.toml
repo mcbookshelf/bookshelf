@@ -4,80 +4,73 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mcbookshelf"
-dynamic = ["version"]
-description = "Scripts for Bookshelf and the GitHub pipeline."
+version = "5.0.0"
+description = "A modular library datapack for Minecraft mapmakers."
+readme = "README.md"
 authors = [{ name = "Bookshelf Contributors", email = "contact@gunivers.net" }]
 license = { text = "MPL-2.0" }
 requires-python = ">=3.14"
-dependencies = [
-  "beet>=0.117.0",
-  "frozendict>=2.4.7",
-  "httpx[http2]>=0.28.1",
-  "mcward[beet]>=1.2.0",
-  "orjson>=3.12.0",
-  "pydantic>=2.13.5",
-  "semver>=3.0.4",
-]
+dependencies = ["beet>=0.118.0"]
 
-[project.scripts]
-check = "bookshelf.commands.project:check"
-update = "bookshelf.commands.project:update"
-link = "bookshelf.commands.project:link"
-docs = "bookshelf.commands.docs:docs"
-build = "bookshelf.commands.modules:build"
-watch = "bookshelf.commands.modules:watch"
-modules = "bookshelf.commands.modules:modules"
-examples = "bookshelf.commands.examples:examples"
+[project.urls]
+Homepage = "https://mcbookshelf.dev"
+Documentation = "https://docs.mcbookshelf.dev"
+Repository = "https://github.com/mcbookshelf/bookshelf"
 
 [dependency-groups]
-dev = [
-  "click>=8.4.2",
-  "lectern>=0.35.0",
-  "platformdirs>=4.11.7",
-  "rich>=15.0.0",
-  "watchfiles>=1.2.0",
-]
-docs = [
-  "linkify-it-py>=2.1.0",
-  "myst-parser>=5.1.0",
-  "sphinx-autobuild>=2025.8.25",
-  "sphinx-breeze-theme>=0.13.2",
-  "sphinx-copybutton>=0.5.2",
-  "sphinx-design>=0.7.0",
-  "sphinx-intl>=2.3.2",
-  "sphinx-minecraft>=1.0.5",
-  "sphinx>=9.1.0",
-]
-
-[tool.hatch.version]
-path = "src/bookshelf/definitions.py"
-
-[tool.hatch.build.targets.sdist]
-only-include = ["src/bookshelf", "modules", "examples"]
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/bookshelf"]
-
-[tool.hatch.build.targets.wheel.force-include]
-modules = "bookshelf/data/modules"
-examples = "bookshelf/data/examples"
+dev = ["mcbookshelf-tools"]
 
 [tool.uv]
 package = true
 default-groups = "all"
 
-[tool.mypy]
-files = ["src", "modules"]
+[tool.uv.workspace]
+members = ["tools"]
+
+[tool.uv.sources]
+mcbookshelf-tools = { workspace = true }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcbookshelf"]
 
 [tool.ruff]
-lint.select = ["ALL"]
-lint.ignore = [
+src = ["src", "tools", "."]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
   "CPY001",
   "D100",
+  "D101",
+  "D102",
+  "D103",
+  "D104",
+  "D105",
+  "D107",
   "D203",
   "D213",
+  "D401",
+  "EM101",
+  "EM102",
   "INP001",
   "S603",
+  "TC001",
+  "TC002",
+  "TC003",
+  "TRY003",
   "TRY400",
   "UP017",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["E501", "PLR0913", "PLR2004", "S101"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "--import-mode=importlib"
+filterwarnings = [
+  "ignore::DeprecationWarning:pathspec",
+  "ignore::DeprecationWarning:click_help_colors",
 ]

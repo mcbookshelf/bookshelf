@@ -1,61 +1,54 @@
-name: 🐛 Bug Report
+name: 🐛 Bug report
 description: Report a reproducible bug to help us investigate and fix it.
 type: 🐛 Bug
+labels:
+  - 🐛 Bug
+
 body:
   - type: input
     attributes:
-      label: 🔢 Version
-      description: |
-        What version of Bookshelf are you using? (e.g., `v3.0.0`).
+      label: 🧩 Module
+      description: The affected module.
+      placeholder: bs.example
     validations:
       required: true
 
   - type: input
     attributes:
-      label: 🔍 Related Feature
-      description: |
-        What feature is affected? (e.g., `#bs.block:get_block`, `#bs.health:set_max_health`).
+      label: 🔢 Version
+      description: The module version where the bug occurs.
+      placeholder: v5.0.0+26.3
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: ⭐ Feature
+      description: The affected feature, if applicable.
+      placeholder: "#bs.example:function"
+
+  - type: textarea
+    attributes:
+      label: ❌ Current behavior
     validations:
       required: true
 
   - type: textarea
     attributes:
-      label: ✅ Expected Behavior
-      description: |
-        What should happen under normal conditions? Describe the expected behavior.
-      placeholder: |
-        Example: The command returns a message in the chat.
+      label: ✅ Expected behavior
     validations:
       required: true
 
   - type: textarea
     attributes:
-      label: ❌ Actual Behavior
-      description: |
-        What actually happens instead of the expected behavior? Is there an error or malfunction?
+      label: 🔁 Steps to reproduce
+      description: The steps needed to reproduce the issue.
       placeholder: |
-        Example: The command returns nothing in the chat.
-    validations:
-      required: true
+        1. /function #bs.xp:set_levels {levels: 5}
+        2. /function #bs.xp:add_levels {levels: -10}
+        3. The level shows 5 instead of 0.
 
   - type: textarea
     attributes:
-      label: 🔁 Steps to Reproduce
-      description: |
-        Provide a step-by-step guide to help us replicate the issue.
-      placeholder: |
-        Example:
-        1. Call feature A with parameter X.
-        2. Call feature B and observe behavior Y.
-    validations:
-      required: false
-
-  - type: textarea
-    attributes:
-      label: 💡 Possible Fix
-      description: |
-        Do you have a suggestion for a fix, or an idea of what may be causing the issue?
-      placeholder: |
-        Example: The issue may be due to a missing dependency.
-    validations:
-      required: false
+      label: 💡 Notes
+      description: Anything else that may help, such as a suspected cause or workaround.

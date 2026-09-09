@@ -1,49 +1,27 @@
-name: 🔍 Release Check
+name: 🔎 Check release
 
 on:
-  workflow_call:
-    outputs:
-      release_tag:
-        value: ${{ jobs.check.outputs.release_tag }}
-      release_name:
-        value: ${{ jobs.check.outputs.release_name }}
-      version_exists:
-        value: ${{ jobs.check.outputs.version_exists }}
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   check:
-    name: 🔍 Check Release
+    name: 🔎 Check master
+    if: startsWith(github.head_ref, 'release/')
     runs-on: ubuntu-latest
-    outputs:
-      release_tag: ${{ steps.check.outputs.release_tag }}
-      release_name: ${{ steps.check.outputs.release_name }}
-      version_exists: ${{ steps.check.outputs.version_exists }}
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v7
+      - uses: actions/checkout@v7
         with:
-          fetch-tags: true
-      - name: Fetch Tags from origin
-        run: git fetch --tags
-      - name: Check Versions
-        id: check
+          fetch-depth: 0
+      - name: Check master
         run: |
-          export PYTHONPATH="$GITHUB_WORKSPACE/src:$PYTHONPATH"
-
-          VERSION=$(python -c "from bookshelf import version; print(version())")
-          MC_VERSIONS=$(python -c "from bookshelf import mc_versions; print(mc_versions())")
-
-          echo "release_tag=v$VERSION" >> $GITHUB_OUTPUT
-          echo "release_name=v$VERSION (Minecraft $MC_VERSIONS)" >> $GITHUB_OUTPUT
-
-          if [ -n "$(git tag -l "v$VERSION")" ]; then
-            echo "version_exists=true" >> $GITHUB_OUTPUT
-          else
-            echo "version_exists=false" >> $GITHUB_OUTPUT
+          if ! git merge-base --is-ancestor origin/master ${{ github.event.pull_request.head.sha }}; then
+            echo "::error::master moved since this release was prepared: dispatch the release again"
+            exit 1
           fi
-      - name: Debug Outputs
-        run: |
-          echo "release_tag=${{ steps.check.outputs.release_tag }}"
-          echo "release_name=${{ steps.check.outputs.release_name }}"
-          echo "version_exists=${{ steps.check.outputs.version_exists }}"
-          echo "version=${{ steps.check.outputs.version }}"

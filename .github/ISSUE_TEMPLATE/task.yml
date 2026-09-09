@@ -1,32 +1,11 @@
-name: 🛠️ Task or Improvement
-description: Request a specific task or improvement to be done.
+name: 🛠️ Task
+description: Something else that needs to be done.
 type: 🛠️ Task
-body:
-  - type: dropdown
-    attributes:
-      label: 🗂️ Task Type
-      description: |
-        What kind of task is this?
-      options:
-        - 📖 Example
-        - ⚡ Enhancement
-        - 📚 Documentation
-        - ⚙️ Automation
-        - 🏷️ Metadata
-    validations:
-      required: true
 
+body:
   - type: textarea
     attributes:
-      label: 📝 Description
-      description: |
-        What needs to be done? Be as specific as possible:
-        - What is the goal of the task?
-        - Why is it needed?
-        - Any relevant context?
-      placeholder: |
-        Examples:
-        - Add examples for the new `get_block` feature.
-        - Improve CI by caching dependencies.
+      label: 📝 Task
+      description: What needs to be done and why.
     validations:
       required: true
