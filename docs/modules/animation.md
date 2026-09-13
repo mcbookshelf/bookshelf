@@ -341,7 +341,7 @@ The module ships callbacks for the common cases. Use them as the `run` value.
 
 ### Duration
 
-Durations are in ticks. A single number is the total duration, spread evenly across the segments. A list gives one duration per segment. When the list is shorter than the number of segments, the animation ends after the last listed segment.
+Durations are in ticks. A single number is the total duration, spread evenly across the segments. A list gives one duration per segment. When the list is shorter than the number of segments, the animation ends after the last listed segment that has a valid duration.
 
 
 ### Points
@@ -384,6 +384,8 @@ How points are read depends on the curve type:
 
 The module completes `catmull_rom` and `bspline` curves so they start on the first point and end on the last. Points beyond what a type can use are ignored, for example the 5th point of a `bezier` spline.
 
+To better understand how each spline works, check out the spline module, where you can [visualize the curve](spline.md#about-splines)
+
 ---
 
 ## 🎥 Example
@@ -392,20 +394,20 @@ A camera on a `block_display` entity, ridden or spectated by a player. The path 
 
 ```mcfunction
 # Summon the camera entity
-summon minecraft:block_display ~ ~ ~ {teleport_duration:4}
+summon minecraft:block_display ~ ~ ~ {teleport_duration:4,block_state:"bookshelf"}
 
 # Attach the animation
 data modify storage bs.animation:attach in set value { \
   id: "camera", \
-  run: "function #bs.animation:apply/position", \
+  run: "function #bs.animation:apply/rel_position", \
   type: "bspline", \
   duration: 100, \
   points: [ \
-    [13.0, -15.0, 1.0], \
-    [12.0, -15.0, -4.0], \
-    [9.0, -14.0, -10.0], \
-    [2.0, -12.0, -10.0], \
-    [-1.0, -9.0, -14.0], \
+    [0.0, 0.0, 0.0], \
+    [-1.0, 0.0, -5.0], \
+    [-4.0, 1.0, -11.0], \
+    [-11.0, 3.0, -11.0], \
+    [-14.0, 6.0, -15.0], \
   ], \
 }
 execute as @n[type=block_display] run function #bs.animation:attach
