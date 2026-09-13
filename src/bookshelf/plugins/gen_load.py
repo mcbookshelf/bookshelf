@@ -9,6 +9,7 @@ from semver import Version
 from bookshelf.definitions import MODULES, VERSION
 
 PERSISTENT_ENTITY_UUID = re.compile(r"B5-0-0-0-\d+")
+OWN_ENVIRONMENT = re.compile(r"^# @environment (\S+)$", re.MULTILINE)
 
 
 def beet_default(ctx: Context) -> None:
@@ -62,9 +63,16 @@ def beet_default(ctx: Context) -> None:
     count = 0
 
     # Insert environment tag after header for all test files
+    # A test declaring its own environment runs in a separate, isolated batch
     for _, file in ctx.data.all(extend=TestFunction):
         count += 1
-        file.set_content(f"{file.text[:offset]}{environment}{file.text[offset:]}")
+        if match := OWN_ENVIRONMENT.search(file.text):
+            ctx.data.test_environments[match[1]] = TestEnvironment({
+                "type": "minecraft:all_of",
+                "definitions": [f"bs.load:{module}"],
+            })
+        else:
+            file.set_content(f"{file.text[:offset]}{environment}{file.text[offset:]}")
 
     if count > 0:
         load = ctx.data.functions.get(f"{ctx.data.name}:__load__")

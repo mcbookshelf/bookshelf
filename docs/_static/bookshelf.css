@@ -62,3 +62,8 @@ li div:where([class*=highlight-]:last-child,.literal-block-wrapper:last-child) {
   margin-left: 0;
   margin-right: 3px;
 }
+
+.mermaid {
+  background-color: var(--pst-color-background);
+  border: none;
+}

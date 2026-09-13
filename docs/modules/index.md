@@ -32,6 +32,7 @@ block
 collection
 color
 environment
+fsm
 generation
 health
 hitbox

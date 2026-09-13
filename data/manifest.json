@@ -2431,6 +2431,107 @@
       ]
     },
     {
+      "id": "bs.fsm",
+      "name": "Finite State Machine",
+      "slug": "bookshelf-fsm",
+      "icon": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.2.0/modules/bs.fsm/pack.png",
+      "readme": "https://raw.githubusercontent.com/mcbookshelf/bookshelf/refs/tags/v4.2.0/modules/bs.fsm/README.md",
+      "description": "Describe behaviors as states and transitions, and run them on entities or globally.",
+      "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/fsm.html",
+      "kind": "data_pack",
+      "tags": [
+        "runtime"
+      ],
+      "dependencies": [
+        "bs.collection"
+      ],
+      "weak_dependencies": [
+        "bs.log"
+      ],
+      "features": [
+        {
+          "id": "#bs.fsm:cancel",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/fsm.html#cancel",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/16",
+            "minecraft_version": "1.21.7"
+          },
+          "updated": {
+            "date": "2026/09/13",
+            "minecraft_version": "26.3"
+          }
+        },
+        {
+          "id": "#bs.fsm:emit",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/fsm.html#emit",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2026/09/03",
+            "minecraft_version": "26.2"
+          },
+          "updated": {
+            "date": "2026/09/13",
+            "minecraft_version": "26.3"
+          }
+        },
+        {
+          "id": "#bs.fsm:init",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/fsm.html#init",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/20",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2026/09/13",
+            "minecraft_version": "26.3"
+          }
+        },
+        {
+          "id": "#bs.fsm:init_as",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/fsm.html#init",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2025/07/20",
+            "minecraft_version": "1.21.8"
+          },
+          "updated": {
+            "date": "2026/09/13",
+            "minecraft_version": "26.3"
+          }
+        },
+        {
+          "id": "#bs.fsm:validate",
+          "kind": "function_tag",
+          "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/fsm.html#validate",
+          "authors": [
+            "theogiraudet"
+          ],
+          "created": {
+            "date": "2026/09/02",
+            "minecraft_version": "26.2"
+          },
+          "updated": {
+            "date": "2026/09/13",
+            "minecraft_version": "26.3"
+          }
+        }
+      ]
+    },
+    {
       "id": "bs.generation",
       "name": "Generation",
       "slug": "bookshelf-generation",
