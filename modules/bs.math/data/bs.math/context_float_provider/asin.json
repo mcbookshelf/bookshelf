@@ -1,0 +1,21 @@
+
+{
+    "Note":"This algorithm is taken from https://16bpp.net/blog/post/faster-asin-was-hiding-in-plain-sight/)",
+    "type": "conditional",
+    "condition": {
+        "type": "float_value_check",
+        "value": {"type": "abs","input": {"type": "storage","storage": "bs:in","path": "math.asin.x"} },
+        "test": {"max": 0.85}
+    },
+    "on_true": "bs.math:asin/pade",
+    "on_false": {
+        "type": "conditional",
+        "condition": {
+            "type": "float_value_check",
+            "value": {"type": "storage","storage": "bs:in","path": "math.asin.x"},
+            "test": {"min": 0}
+        },
+        "on_true": "bs.math:asin/pade_half",
+        "on_false": {"type": "negate","input":"bs.math:asin/pade_half"}
+    }
+}
