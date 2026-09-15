@@ -1,0 +1,76 @@
+{
+    "type": "sub",
+    "left": "bs.math:halfpi",
+    "right": {
+        "type": "mul",
+        "inputs": [
+            2,
+            {
+                "type": "div",
+                "left": {
+                    "type": "mul",
+                    "inputs": [
+                        "bs.math:asin/small_x",
+                        {
+                        "type": "add",
+                        "inputs": [
+                            1,
+                            {
+                                "type": "mul",
+                                "inputs": [
+                                    -0.77823315118,
+                                    {
+                                        "type": "pow",
+                                        "base": "bs.math:asin/small_x",
+                                        "exponent": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "mul",
+                                "inputs": [
+                                    0.0748644722,
+                                    {
+                                        "type": "pow",
+                                        "base": "bs.math:asin/small_x",
+                                        "exponent": 4
+                                    }
+                                ]
+                            }
+                        ]
+                        }
+                    ]
+                },
+
+                "right": {
+                    "type": "add",
+                    "inputs": [
+                        1,
+                        {
+                            "type": "mul",
+                            "inputs": [
+                                -0.9448998179,
+                                {
+                                    "type": "pow",
+                                    "base": "bs.math:asin/small_x",
+                                    "exponent": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mul",
+                            "inputs": [
+                                0.1573477752,
+                                {
+                                    "type": "pow",
+                                    "base": "bs.math:asin/small_x",
+                                    "exponent": 4
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    } 
+}

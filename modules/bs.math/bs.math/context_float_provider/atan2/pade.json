@@ -1,0 +1,28 @@
+{
+    "type": "sub",
+    "left": "bs.math:halfpi",
+    "right": {
+        "type": "div",
+        "left": {
+            "type": "mul",
+            "inputs": [
+                "bs.math:atan2/abs_x",
+                {
+                    "type": "add",
+                    "inputs": [
+                        0.422625,
+                        {"type": "mul","inputs": [0.999954,{"type": "pow","base": "bs.math:atan2/abs_x","exponent": 2}]}
+                    ]
+                }
+            ]
+        },
+        "right": {
+            "type": "add",
+            "inputs": [
+                0.056194,
+                {"type": "mul","inputs": [0.755100,{"type": "pow","base": "bs.math:atan2/abs_x","exponent": 2}]},
+                {"type": "pow","base": "bs.math:atan2/abs_x","exponent": 4}
+            ]
+        }
+    }
+}

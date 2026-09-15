@@ -1,0 +1,11 @@
+{
+    "type": "div",
+    "left": {
+        "type": "sin",
+        "input": {"type": "storage","storage": "bs:in","path": "math.tan.x"}
+    },
+    "right": {
+        "type": "cos",
+        "input": {"type": "storage","storage": "bs:in","path": "math.tan.x"}
+    }
+}
