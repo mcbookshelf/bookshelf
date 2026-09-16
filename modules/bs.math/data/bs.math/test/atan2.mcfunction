@@ -13,12 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players set $math.atan2.y bs.in 420
-scoreboard players set $math.atan2.x bs.in -700
-function #bs.math:atan2
-assert score $math.atan2 bs.out matches 14902..14904
+data modify storage bs:in math.atan2.y set value 0.42
+data modify storage bs:in math.atan2.x set value -0.7
+assert result 26010..26012 run compute default float bs.math:atan2 10000
+assert result 149033..149035 run compute default float bs.math:atan2 57295
 
-scoreboard players set $math.atan2.y bs.in -826
-scoreboard players set $math.atan2.x bs.in 200
-function #bs.math:atan2
-assert score $math.atan2 bs.out matches -7639..-7637
+data modify storage bs:in math.atan2.y set value -0.826
+data modify storage bs:in math.atan2.x set value -0.7
+assert result -13333..-13331 run compute default float bs.math:atan2 10000
+assert result -76389..-76386 run compute default float bs.math:atan2 57295

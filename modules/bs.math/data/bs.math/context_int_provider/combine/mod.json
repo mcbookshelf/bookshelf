@@ -1,0 +1,33 @@
+{
+    "type":"add",
+    "inputs":[
+        {
+            "type": "mul",
+            "inputs": [
+                {
+                    "type": "div",
+                    "left": {"type":"score","score":"bs.out","target":{"type":"fixed","name":"$math.combine"}},
+                    "right":  {"type":"score","score":"bs.ctx","target":{"type":"fixed","name":"#i"}}
+                },
+                        {"type":"score","score":"bs.ctx","target":{"type":"fixed","name":"#k"}}
+            ]
+        },
+        {
+            "type":"div",
+            "left":{
+                "type":"mul",
+                "inputs":[
+                    
+                            {"type":"score","score":"bs.ctx","target":{"type":"fixed","name":"#k"}},
+                        
+                    {
+                        "type":"mod",
+                        "left": {"type":"score","score":"bs.ctx","target":{"type":"fixed","name":"#m"}},
+                        "right":{"type":"score","score":"bs.ctx","target":{"type":"fixed","name":"#i"}}
+                    }
+                ]
+            }
+            ,"right":{"type":"score","score":"bs.ctx","target":{"type":"fixed","name":"#i"}}
+        }
+    ]
+}

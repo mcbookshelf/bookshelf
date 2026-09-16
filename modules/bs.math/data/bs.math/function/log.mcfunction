@@ -12,7 +12,11 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-
+data modify storage bs:ctx y set value 0
 data modify storage bs:ctx x set from storage bs:in math.log.x
-function bs.math:log2/run
-execute store result storage bs:out math.log float .000000059604644775390625 run data get storage bs:ctx x 11629079.96804520301520824432373046875
+
+execute unless predicate {type:"float_value_check",value:{type:"storage","storage":"bs:in",path:"math.log.x"},test:{min:1}} run function bs.math:log/loop_exp_neg
+execute if predicate {type:"float_value_check",value:{type:"storage","storage":"bs:in",path:"math.log.x"},test:{min:1}} run function bs.math:log/loop_exp
+
+data modify storage bs:ctx x set compute default float {type:"mul",inputs:["bs.math:log",{type:"pow",base:2,exponent:{type:"storage",storage:"bs:ctx",path:"y"}}]}
+data modify storage bs:out math.log set compute default float {type:"pow",base:"bs.math:e",exponent:"bs.math:log"}

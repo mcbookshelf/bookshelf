@@ -1,15 +1,13 @@
 {
   "__bookshelf__": {
     "feature": true,
-    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#logarithm",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#inverse-trigonometry",
     "authors": [
-      "Aksiome",
-      "KubbyDev",
       "RacoonJohn"
     ],
     "created": {
-      "date": "2019/01/06",
-      "minecraft_version": "1.13.2"
+      "date": "2026/09/16",
+      "minecraft_version": "26.3"
     },
     "updated": {
       "date": "2026/09/16",
@@ -17,6 +15,6 @@
     }
   },
   "values": [
-    "bs.math:log"
+    "bs.math:atan2"
   ]
 }

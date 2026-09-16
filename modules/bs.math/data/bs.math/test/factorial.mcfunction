@@ -13,10 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players set $math.factorial.n bs.in 3
-function #bs.math:factorial
-assert score $math.factorial bs.out matches 6
+data modify storage bs:in math.factorial.n set value 2
+assert result 6 run compute default integer bs.math:factorial
 
-scoreboard players set $math.factorial.n bs.in 11
-function #bs.math:factorial
-assert score $math.factorial bs.out matches 39916800
+data modify storage bs:in math.factorial.n set value 11
+assert result 39916800 run compute default integer bs.math:factorial

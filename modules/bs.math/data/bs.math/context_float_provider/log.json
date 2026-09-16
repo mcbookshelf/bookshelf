@@ -1,0 +1,17 @@
+
+{
+    "Note":"Newton method, really good in [1,10]",
+    "type": "add",
+    "inputs": [
+        "bs.math:log/newton5",
+        -1,
+        {
+            "type": "mul",
+            "inputs": [
+                {"type": "storage","storage": "bs:ctx","path": "x"},
+                {"type": "pow","base": "bs.math:e","exponent": {"type": "negate","input": "bs.math:log/newton5"}}
+            ]
+        }
+    ]
+}
+

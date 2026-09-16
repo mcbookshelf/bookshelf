@@ -1,0 +1,36 @@
+{
+    "Note":"This algorithm is taken from https://web.mae.ufl.edu/uhk/ARCTAN-APPROX-PAPER.pdf with coefficient approximation, Use of the tangent half-angle formula to compute atan2 without more conditions",
+    "type": "mul",
+    "inputs": [
+        2,
+        {
+            "type": "conditional",
+            "condition": {
+                "type": "float_value_check",
+                "value": "bs.math:atan2/abs_x",
+                "test": {"max": 1}
+            },
+            "on_true": {
+                "type": "conditional",
+                "condition": {
+                    "type": "float_value_check",
+                    "value": "bs.math:atan2/x",
+                    "test": {"min": 0}
+                },
+                "on_true": "bs.math:atan2/pade_inv",
+                "on_false": {"type": "negate","input":"bs.math:atan2/pade_inv"}
+            },
+            "on_false": {
+                "type": "conditional",
+                "condition": {
+                    "type": "float_value_check",
+                    "value": "bs.math:atan2/x",
+                    "test": {"min": 0}
+                },
+                "on_true": "bs.math:atan2/pade",
+                "on_false": {"type": "negate","input":"bs.math:atan2/pade"}
+            }
+        }
+
+    ]
+}

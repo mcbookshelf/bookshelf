@@ -1,0 +1,14 @@
+{
+    "type": "add",
+    "inputs": [
+        "bs.math:log/newton0",
+        -1,
+        {
+            "type": "mul",
+            "inputs": [
+                {"type": "storage","storage": "bs:ctx","path": "x"},
+                {"type": "pow","base": "bs.math:e","exponent": {"type": "negate","input": "bs.math:log/newton0"}}
+            ]
+        }
+    ]
+}
