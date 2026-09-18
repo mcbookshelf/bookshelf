@@ -4,11 +4,11 @@ from typing import TYPE_CHECKING
 
 from beet import Context, JsonFile, NamespaceFileScope
 
-from bookshelf.services.minecraft.math import (
+from mcbookshelf.minecraft.math import (
     Expression,
     Operand,
-    istorage,
-    storage,
+    float_storage,
+    int_storage,
     switch,
 )
 
@@ -60,11 +60,11 @@ def beet_default(ctx: Context) -> None:
     def read(
         key: str,
         fallback: Operand | None = None,
-        fn: Callable[[str, str, Operand | None], Expression] = storage,
+        fn: Callable[[str, str, Operand | None], Expression] = float_storage,
     ) -> Expression:
         return fn(f"{ns}:", f"stack[-1].{key}", fallback)
 
-    k = read("_[0].k", fn=istorage)
+    k = read("_[0].k", fn=int_storage)
     t = read("_[0].t", fallback=0.0)
 
     n = read("_[0].n")

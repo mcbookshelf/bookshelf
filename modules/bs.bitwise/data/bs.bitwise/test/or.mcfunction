@@ -13,10 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players set $bitwise.or.a bs.in -9
-scoreboard players set $bitwise.or.b bs.in 57
-assert result -1 run function #bs.bitwise:or
+data modify storage bs.bitwise:or in set value {a:-9,b:57}
+assert result -1 run compute default integer bs.bitwise:or
 
-scoreboard players set $bitwise.or.a bs.in 1234567890
-scoreboard players set $bitwise.or.b bs.in 123456
-assert result 1234690770 run function #bs.bitwise:or
+data modify storage bs.bitwise:or in set value {a:1234567890,b:123456}
+assert result 1234690770 run compute default integer bs.bitwise:or
+
+data modify storage bs.bitwise:or in set value {a:-2147483648,b:1}
+assert result -2147483647 run compute default integer bs.bitwise:or
+
+data modify storage bs.bitwise:or in set value {a:2147483647,b:-2147483648}
+assert result -1 run compute default integer bs.bitwise:or

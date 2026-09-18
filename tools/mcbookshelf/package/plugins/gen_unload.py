@@ -14,4 +14,4 @@ def beet_default(ctx: Context) -> None:
         for storage in module.storages.values()
         for entry in storage.struct.entries
     }
-    function.lines.extend(sorted(lines - present))
+    function.lines.extend(("", *sorted(lines - present)))
