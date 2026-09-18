@@ -19,7 +19,7 @@
     "nameOfNbtKey": "^[a-z0-9_]+$",
     "nameOfObjective": "^bs\\.[a-z0-9_.]+$",
     "nameOfScoreHolder": "^[#$\\-]?[a-z0-9_.]+$",
-    "nameOfTag": "^(?:bs|smithed)\\.[a-z0-9_.]+$",
+    "nameOfTag": "^(?:bs|smithed|ward)\\.[a-z0-9_.]+$",
     "nameOfTeam": "^bs\\.[a-z0-9_.]+$",
     "nbtArrayLengthCheck": true,
     "nbtListLengthCheck": true,

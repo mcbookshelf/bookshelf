@@ -71,6 +71,37 @@
                 }
               }
             },
+            "blocks": {
+              "type": "literal",
+              "children": {
+                "start": {
+                  "type": "argument",
+                  "parser": "minecraft:block_pos",
+                  "children": {
+                    "end": {
+                      "type": "argument",
+                      "parser": "minecraft:block_pos",
+                      "children": {
+                        "destination": {
+                          "type": "argument",
+                          "parser": "minecraft:block_pos",
+                          "children": {
+                            "all": {
+                              "type": "literal",
+                              "executable": true
+                            },
+                            "masked": {
+                              "type": "literal",
+                              "executable": true
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "chat": {
               "type": "literal",
               "children": {
@@ -149,6 +180,16 @@
                       }
                     }
                   }
+                }
+              }
+            },
+            "dimension": {
+              "type": "literal",
+              "children": {
+                "dimension": {
+                  "type": "argument",
+                  "parser": "minecraft:dimension",
+                  "executable": true
                 }
               }
             },
@@ -235,6 +276,16 @@
                 }
               }
             },
+            "loaded": {
+              "type": "literal",
+              "children": {
+                "pos": {
+                  "type": "argument",
+                  "parser": "minecraft:block_pos",
+                  "executable": true
+                }
+              }
+            },
             "predicate": {
               "type": "literal",
               "children": {
@@ -244,9 +295,6 @@
                   "executable": true
                 }
               }
-            },
-            "run": {
-              "type": "literal"
             },
             "result": {
               "type": "literal",
@@ -261,6 +309,9 @@
                   }
                 }
               }
+            },
+            "run": {
+              "type": "literal"
             },
             "score": {
               "type": "literal",
@@ -386,6 +437,63 @@
                   }
                 }
               }
+            },
+            "slots": {
+              "type": "literal",
+              "children": {
+                "entity": {
+                  "type": "literal",
+                  "children": {
+                    "entities": {
+                      "type": "argument",
+                      "parser": "minecraft:entity",
+                      "properties": {
+                        "amount": "multiple",
+                        "type": "entities"
+                      },
+                      "children": {
+                        "slots": {
+                          "type": "argument",
+                          "parser": "minecraft:item_slots",
+                          "executable": true
+                        }
+                      }
+                    }
+                  }
+                },
+                "block": {
+                  "type": "literal",
+                  "children": {
+                    "pos": {
+                      "type": "argument",
+                      "parser": "minecraft:block_pos",
+                      "children": {
+                        "slots": {
+                          "type": "argument",
+                          "parser": "minecraft:item_slots",
+                          "executable": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "stopwatch": {
+              "type": "literal",
+              "children": {
+                "id": {
+                  "type": "argument",
+                  "parser": "minecraft:resource_location",
+                  "children": {
+                    "range": {
+                      "type": "argument",
+                      "parser": "minecraft:float_range",
+                      "executable": true
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -419,6 +527,37 @@
                   "type": "argument",
                   "parser": "minecraft:block_predicate",
                   "executable": true
+                }
+              }
+            }
+          }
+        },
+        "blocks": {
+          "type": "literal",
+          "children": {
+            "start": {
+              "type": "argument",
+              "parser": "minecraft:block_pos",
+              "children": {
+                "end": {
+                  "type": "argument",
+                  "parser": "minecraft:block_pos",
+                  "children": {
+                    "destination": {
+                      "type": "argument",
+                      "parser": "minecraft:block_pos",
+                      "children": {
+                        "all": {
+                          "type": "literal",
+                          "executable": true
+                        },
+                        "masked": {
+                          "type": "literal",
+                          "executable": true
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -505,6 +644,16 @@
             }
           }
         },
+        "dimension": {
+          "type": "literal",
+          "children": {
+            "dimension": {
+              "type": "argument",
+              "parser": "minecraft:dimension",
+              "executable": true
+            }
+          }
+        },
         "entity": {
           "type": "literal",
           "children": {
@@ -588,6 +737,16 @@
             }
           }
         },
+        "loaded": {
+          "type": "literal",
+          "children": {
+            "pos": {
+              "type": "argument",
+              "parser": "minecraft:block_pos",
+              "executable": true
+            }
+          }
+        },
         "predicate": {
           "type": "literal",
           "children": {
@@ -597,9 +756,6 @@
               "executable": true
             }
           }
-        },
-        "run": {
-          "type": "literal"
         },
         "result": {
           "type": "literal",
@@ -614,6 +770,9 @@
               }
             }
           }
+        },
+        "run": {
+          "type": "literal"
         },
         "score": {
           "type": "literal",
@@ -735,6 +894,63 @@
                       }
                     }
                   }
+                }
+              }
+            }
+          }
+        },
+        "slots": {
+          "type": "literal",
+          "children": {
+            "entity": {
+              "type": "literal",
+              "children": {
+                "entities": {
+                  "type": "argument",
+                  "parser": "minecraft:entity",
+                  "properties": {
+                    "amount": "multiple",
+                    "type": "entities"
+                  },
+                  "children": {
+                    "slots": {
+                      "type": "argument",
+                      "parser": "minecraft:item_slots",
+                      "executable": true
+                    }
+                  }
+                }
+              }
+            },
+            "block": {
+              "type": "literal",
+              "children": {
+                "pos": {
+                  "type": "argument",
+                  "parser": "minecraft:block_pos",
+                  "children": {
+                    "slots": {
+                      "type": "argument",
+                      "parser": "minecraft:item_slots",
+                      "executable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "stopwatch": {
+          "type": "literal",
+          "children": {
+            "id": {
+              "type": "argument",
+              "parser": "minecraft:resource_location",
+              "children": {
+                "range": {
+                  "type": "argument",
+                  "parser": "minecraft:float_range",
+                  "executable": true
                 }
               }
             }
@@ -790,6 +1006,37 @@
                 }
               }
             },
+            "blocks": {
+              "type": "literal",
+              "children": {
+                "start": {
+                  "type": "argument",
+                  "parser": "minecraft:block_pos",
+                  "children": {
+                    "end": {
+                      "type": "argument",
+                      "parser": "minecraft:block_pos",
+                      "children": {
+                        "destination": {
+                          "type": "argument",
+                          "parser": "minecraft:block_pos",
+                          "children": {
+                            "all": {
+                              "type": "literal",
+                              "executable": true
+                            },
+                            "masked": {
+                              "type": "literal",
+                              "executable": true
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "chat": {
               "type": "literal",
               "children": {
@@ -868,6 +1115,16 @@
                       }
                     }
                   }
+                }
+              }
+            },
+            "dimension": {
+              "type": "literal",
+              "children": {
+                "dimension": {
+                  "type": "argument",
+                  "parser": "minecraft:dimension",
+                  "executable": true
                 }
               }
             },
@@ -954,6 +1211,16 @@
                 }
               }
             },
+            "loaded": {
+              "type": "literal",
+              "children": {
+                "pos": {
+                  "type": "argument",
+                  "parser": "minecraft:block_pos",
+                  "executable": true
+                }
+              }
+            },
             "predicate": {
               "type": "literal",
               "children": {
@@ -963,9 +1230,6 @@
                   "executable": true
                 }
               }
-            },
-            "run": {
-              "type": "literal"
             },
             "result": {
               "type": "literal",
@@ -980,6 +1244,9 @@
                   }
                 }
               }
+            },
+            "run": {
+              "type": "literal"
             },
             "score": {
               "type": "literal",
@@ -1105,6 +1372,63 @@
                   }
                 }
               }
+            },
+            "slots": {
+              "type": "literal",
+              "children": {
+                "entity": {
+                  "type": "literal",
+                  "children": {
+                    "entities": {
+                      "type": "argument",
+                      "parser": "minecraft:entity",
+                      "properties": {
+                        "amount": "multiple",
+                        "type": "entities"
+                      },
+                      "children": {
+                        "slots": {
+                          "type": "argument",
+                          "parser": "minecraft:item_slots",
+                          "executable": true
+                        }
+                      }
+                    }
+                  }
+                },
+                "block": {
+                  "type": "literal",
+                  "children": {
+                    "pos": {
+                      "type": "argument",
+                      "parser": "minecraft:block_pos",
+                      "children": {
+                        "slots": {
+                          "type": "argument",
+                          "parser": "minecraft:item_slots",
+                          "executable": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "stopwatch": {
+              "type": "literal",
+              "children": {
+                "id": {
+                  "type": "argument",
+                  "parser": "minecraft:resource_location",
+                  "children": {
+                    "range": {
+                      "type": "argument",
+                      "parser": "minecraft:float_range",
+                      "executable": true
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -1151,6 +1475,37 @@
                   "type": "argument",
                   "parser": "minecraft:block_predicate",
                   "executable": true
+                }
+              }
+            }
+          }
+        },
+        "blocks": {
+          "type": "literal",
+          "children": {
+            "start": {
+              "type": "argument",
+              "parser": "minecraft:block_pos",
+              "children": {
+                "end": {
+                  "type": "argument",
+                  "parser": "minecraft:block_pos",
+                  "children": {
+                    "destination": {
+                      "type": "argument",
+                      "parser": "minecraft:block_pos",
+                      "children": {
+                        "all": {
+                          "type": "literal",
+                          "executable": true
+                        },
+                        "masked": {
+                          "type": "literal",
+                          "executable": true
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -1237,6 +1592,16 @@
             }
           }
         },
+        "dimension": {
+          "type": "literal",
+          "children": {
+            "dimension": {
+              "type": "argument",
+              "parser": "minecraft:dimension",
+              "executable": true
+            }
+          }
+        },
         "entity": {
           "type": "literal",
           "children": {
@@ -1320,6 +1685,16 @@
             }
           }
         },
+        "loaded": {
+          "type": "literal",
+          "children": {
+            "pos": {
+              "type": "argument",
+              "parser": "minecraft:block_pos",
+              "executable": true
+            }
+          }
+        },
         "predicate": {
           "type": "literal",
           "children": {
@@ -1329,9 +1704,6 @@
               "executable": true
             }
           }
-        },
-        "run": {
-          "type": "literal"
         },
         "result": {
           "type": "literal",
@@ -1346,6 +1718,9 @@
               }
             }
           }
+        },
+        "run": {
+          "type": "literal"
         },
         "score": {
           "type": "literal",
@@ -1467,6 +1842,63 @@
                       }
                     }
                   }
+                }
+              }
+            }
+          }
+        },
+        "slots": {
+          "type": "literal",
+          "children": {
+            "entity": {
+              "type": "literal",
+              "children": {
+                "entities": {
+                  "type": "argument",
+                  "parser": "minecraft:entity",
+                  "properties": {
+                    "amount": "multiple",
+                    "type": "entities"
+                  },
+                  "children": {
+                    "slots": {
+                      "type": "argument",
+                      "parser": "minecraft:item_slots",
+                      "executable": true
+                    }
+                  }
+                }
+              }
+            },
+            "block": {
+              "type": "literal",
+              "children": {
+                "pos": {
+                  "type": "argument",
+                  "parser": "minecraft:block_pos",
+                  "children": {
+                    "slots": {
+                      "type": "argument",
+                      "parser": "minecraft:item_slots",
+                      "executable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "stopwatch": {
+          "type": "literal",
+          "children": {
+            "id": {
+              "type": "argument",
+              "parser": "minecraft:resource_location",
+              "children": {
+                "range": {
+                  "type": "argument",
+                  "parser": "minecraft:float_range",
+                  "executable": true
                 }
               }
             }
