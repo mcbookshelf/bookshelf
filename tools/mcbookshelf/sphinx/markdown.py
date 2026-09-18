@@ -2,8 +2,24 @@ import re
 from collections.abc import Iterator, Sequence
 
 from mcbookshelf.meta import Feature, Slot, models, syntax
+from mcbookshelf.meta.syntax import PrimitiveKind
 
 STORAGE, MACRO = "storage", "macro"
+
+ROOTS = {models.Role.INPUT: "arguments", models.Role.OUTPUT: "result"}
+
+EXECUTION = {
+    syntax.Kind.EXECUTOR: "as",
+    syntax.Kind.POSITION: "at",
+    syntax.Kind.ROTATION: "rotated as",
+    syntax.Kind.DIMENSION: "in",
+}
+
+PLACES = {
+    syntax.Kind.POSITION: "positioned <x> <y> <z>",
+    syntax.Kind.ROTATION: "rotated <x> <y>",
+    syntax.Kind.DIMENSION: "in <dimension>",
+}
 
 ICONS = {
     syntax.PrimitiveKind.BOOLEAN: "bool",
@@ -38,23 +54,20 @@ def feature(feature: Feature, *, macro: bool = False) -> str:
         note = "still in the making: it ships in the nightly only, and may change"
         lines += [f"{{bdg-warning}}`experimental` {note}", ""]
     lines += [feature.description or "", ""]
+    arguments = feature.macro_struct if macro else None
     for role in models.Role:
-        slots = feature.of(role)
-        if role is models.Role.INPUT and macro and feature.macro_struct is not None:
-            lines.append(":Inputs:")
-            lines.extend(
-                f"  {line}"
-                for line in _treeview("**arguments**", feature.macro_struct)
-            )
-            lines.append("")
-            continue
-        if not slots:
+        slots = [s for s in feature.of(role) if s.kind is not syntax.Kind.MACRO]
+        if role is models.Role.INPUT and arguments is not None:
+            slots = [s for s in slots if s.target is None]
+        if not slots and not (role is models.Role.INPUT and arguments is not None):
             continue
         lines.append(f":{_heading(role)}:")
         for slot in slots:
-            if slot.kind is syntax.Kind.MACRO:
-                continue
-            lines.extend(f"  {line}" for line in _slot(slot))
+            lines.extend(f"  {line}" for line in _slot(slot, role))
+        if role is models.Role.INPUT and arguments is not None:
+            described = feature.input_macro.description if feature.input_macro else None
+            lines.append("  **Macro**:")
+            lines.extend(f"  {line}" for line in _treeview(described or "arguments", arguments))
         lines.append("")
     return "\n".join(lines)
 
@@ -63,22 +76,40 @@ def _heading(role: models.Role) -> str:
     return "Context" if role is models.Role.CONTEXT else f"{role.capitalize()}s"
 
 
-def _slot(slot: Slot) -> Iterator[str]:
+def _slot(slot: Slot, role: models.Role) -> Iterator[str]:
     doc = f": {slot.description}" if slot.description else ""
-    if slot.target is None:
-        code = f" `{slot.type}`" if slot.type is not None else ""
-        yield f"**{str(slot.kind).capitalize()}**{code}{doc}"
+    if slot.target is not None:
+        label = f"**Storage `{slot.target.display}`**"
+        if isinstance(slot.type, syntax.Struct):
+            yield f"{label}:"
+            yield from _treeview(slot.description or ROOTS[role], slot.type)
+        elif slot.type is not None:
+            yield f"{label}: {{nbt}}`{_icon(slot.type)}` {slot.description or ''}".rstrip()
         return
-    label = f"**`{slot.target.display}`**"
-    if isinstance(slot.type, syntax.Struct):
-        yield from _treeview(label, slot.type)
-    elif slot.type is not None:
-        yield f"{{nbt}}`{_icon(slot.type)}` {label}{doc}"
+    if slot.kind in EXECUTION and slot.type is not None:
+        yield f"**Execution `{_execution(slot.kind, slot.type)}`**{doc}"
+        return
+    code = f" `{slot.type}`" if slot.type is not None else ""
+    yield f"**{str(slot.kind).capitalize()}**{code}{doc}"
+
+
+def _execution(kind: syntax.Kind, value: syntax.Type) -> str:
+    """The execute subcommand a context is read as, such as `as <players>`."""
+    match value:
+        case syntax.Union(members=members):
+            return "` or `".join(_execution(kind, member) for member in members)
+        case syntax.Array(element=syntax.Primitive(kind=element)) if kind is syntax.Kind.EXECUTOR:
+            return f"as <{element}s>"
+        case syntax.Array(element=element):
+            return _execution(kind, element)
+        case syntax.Primitive(kind=who) if who in (PrimitiveKind.PLAYER, PrimitiveKind.ENTITY):
+            return f"{EXECUTION[kind]} <{who}>"
+    return PLACES[kind]
 
 
 def _treeview(root: str, struct: syntax.Struct) -> Iterator[str]:
     yield ":::{treeview}"
-    yield f"- [+] {{nbt}}`compound` {root}"
+    yield f"- {{nbt}}`compound` {root}"
     yield from _entries(struct, "  ")
     yield ":::"
 
