@@ -24,6 +24,10 @@ li div:where([class*=highlight-]:last-child,.literal-block-wrapper:last-child) {
   margin-bottom: 1rem;
 }
 
+.bs.feature {
+  margin-bottom: 1.5rem;
+}
+
 .bz-footer > * {
   flex-grow: 1;
 }

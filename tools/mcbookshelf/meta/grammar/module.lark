@@ -1,0 +1,27 @@
+module: _NL? (DOC _NL)? (variable | property)* feature*
+
+feature: "feature" REGISTRY feature_id ":" DOC? _NL (DOC _NL)? slot*
+
+?slot: input | context | output | variable | property
+
+input: "input" (reference | declaration) _NL
+context: "context" (reference | declaration) _NL
+output: "output" (reference | declaration) _NL
+variable: "var" ID "=" declaration _NL
+property: ID ":" TEXT _NL
+
+reference: "ref" ID DOC?
+declaration: kind (":" type)? DOC?
+
+?kind: storage | KIND
+storage: "storage" RESOURCE_LOCATION? path?
+path: ID ("/" ID)*
+
+?feature_id: RESOURCE_LOCATION | ID
+
+KIND: "executor" | "rotation" | "position" | "dimension"
+    | "state" | "result" | "success" | "macro"
+
+REGISTRY: "context_float_provider" | "context_int_provider"
+        | "function" | "loot_table" | "predicate"
+        | "block_tag" | "entity_type_tag" | "function_tag"

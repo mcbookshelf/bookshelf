@@ -4,7 +4,6 @@ from collections import defaultdict
 from typing import TYPE_CHECKING
 
 from beet import Context, Function, LootTable, PackFile, Predicate
-
 from bookshelf.models import Block, StateNode, StatePredicate, StateProperty, StateValue
 from bookshelf.services import minecraft
 

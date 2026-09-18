@@ -1,34 +1,29 @@
-name: ✨ Feature Request
-description: Suggest a new feature or improvement.
+name: ✨ Feature request
+description: A new feature, or a change to one.
 type: ✨ Feature
+labels:
+  - ✨ Feature
+
 body:
-  - type: dropdown
+  - type: input
     attributes:
-      label: 🗂️ Request Type
-      description: |
-        Are you requesting a new feature or a new module?
-      options:
-        - Feature
-        - Module
+      label: 🧩 Module
+      description: The module the feature belongs to.
+      placeholder: bs.example
     validations:
       required: true
 
   - type: input
     attributes:
-      label: 🧩 Feature or Module Name
-      description: |
-        Enter the name for the feature or module (e.g., `#bs.block:get_block`, `bs.health`).
+      label: ⭐ Feature
+      description: The feature to add or change, named as you would call it.
+      placeholder: "#bs.example:function"
     validations:
       required: true
 
   - type: textarea
     attributes:
       label: 📝 Description
-      description: |
-        Provide a clear explanation of what the feature or module should do and why it's useful.
-      placeholder: |
-        Examples:
-        - Adds support for managing block states more easily.
-        - Enhances performance when checking player status.
+      description: A clear explanation of what the feature does.
     validations:
       required: true

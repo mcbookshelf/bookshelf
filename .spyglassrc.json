@@ -2,11 +2,11 @@
   "env": {
     "exclude": [
       ".*/**",
-      "build/**",
-      "data/**",
       "docs/**",
-      "release/**",
-      "src/**"
+      "src/**",
+      "tools/**",
+      "build/**",
+      "release/**"
     ],
     "mcmetaSummaryOverrides": {
       "commands": {

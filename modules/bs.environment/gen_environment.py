@@ -4,7 +4,6 @@ from collections import defaultdict
 from typing import TYPE_CHECKING
 
 from beet import Context, LootTable, PackFile, Predicate
-
 from bookshelf.services import minecraft
 
 if TYPE_CHECKING:

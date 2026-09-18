@@ -10,13 +10,6 @@ from bookshelf.definitions import DOC_URL, VERSION
 from .collection import Collection
 
 
-class VersionsEntry(BaseModel, frozen=True):
-    """A project version with supported MC versions and manifest URL."""
-
-    version: str
-    minecraft_versions: list[str]
-    manifest: str
-
 
 class SwitcherEntry(BaseModel, frozen=True):
     """A single version used in the documentation switcher."""
@@ -26,9 +19,6 @@ class SwitcherEntry(BaseModel, frozen=True):
     url: str = Field(pattern=rf"^{escape(DOC_URL)}/.+$")
     preferred: bool = False
 
-
-class Versions(Collection[VersionsEntry]):
-    """A list of all available project versions as represented in versions.json."""
 
 
 class Switcher(Collection[SwitcherEntry]):

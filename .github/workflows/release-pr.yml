@@ -1,37 +1,48 @@
-name: 🕹️ Release Trigger
+name: 🔖 Prepare release
 
 on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 
 jobs:
-  check:
-    uses: ./.github/workflows/release-check.yml
-
   prepare:
-    name: 🔖 Create Release PR
-    needs: check
-    if: ${{ needs.check.outputs.version_exists == 'false' }}
+    name: 🔖 Open pull request
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v7
-      - name: Setup Git User
-        uses: fregante/setup-git-user@v2
-      - name: Install uv
-        uses: astral-sh/setup-uv@v9.0.0
-      - name: Update Metadata for Release
-        run: uv run update --versions
-      - name: Create Pull Request
+      - name: Bot token
+        id: bot
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ secrets.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+      - uses: actions/checkout@v7
+        with:
+          token: ${{ steps.bot.outputs.token }}
+          fetch-depth: 0
+          fetch-tags: true
+      - uses: astral-sh/setup-uv@v9.0.0
+      - name: Bump versions
+        run: uv run bump
+      - name: Write release notes
+        run: uv run notes --output build/NOTES.md
+      - name: Read release info
+        id: info
+        run: uv run info
+      - name: Open pull request
         uses: peter-evans/create-pull-request@v7
         with:
-          branch: release/${{ needs.check.outputs.release_tag }}
-          title: |
-            🛠️ chore: release ${{ needs.check.outputs.release_name }}
-          commit-message: |
-            🛠️ chore: release ${{ needs.check.outputs.release_name }}
+          token: ${{ steps.bot.outputs.token }}
+          branch: release/${{ steps.info.outputs.tag }}
+          title: "🛠️ chore: release v${{ steps.info.outputs.version }} (Minecraft ${{ steps.info.outputs.game_version }})"
+          commit-message: "🛠️ chore: release v${{ steps.info.outputs.version }} (Minecraft ${{ steps.info.outputs.game_version }})"
+          body-path: build/NOTES.md
+          labels: release
           delete-branch: true
           sign-commits: true
+
