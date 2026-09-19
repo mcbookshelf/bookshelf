@@ -18,7 +18,6 @@ execute if score #x bs.ctx > #raycast.te bs.data run function bs.raycast:record/
 scoreboard players operation #raycast.te bs.data < #x bs.ctx
 scoreboard players operation #raycast.tm bs.data < #raycast.te bs.data
 
-execute unless score @s bs.raycast.id matches 1.. store result score @s bs.raycast.id run scoreboard players add #count bs.raycast.id 1
 execute if entity @s[type=!#bs.hitbox:is_shaped,tag=!bs.hitbox.centered] run scoreboard players operation #b bs.ctx -= #h bs.ctx
 execute store result storage bs:ctx _.e.id int 1 run scoreboard players get @s bs.raycast.id
 execute store result storage bs:ctx _.e.tmin int 1 run scoreboard players get #x bs.ctx
