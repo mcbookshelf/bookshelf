@@ -5,7 +5,7 @@ from pathlib import Path
 
 # ─── Project Info ────────────────────────────────────────────────────────────
 
-VERSION = "4.2.0"
+VERSION = "4.2.1"
 MC_VERSIONS = ["26.3"]
 GITHUB_REPO = "mcbookshelf/bookshelf"
 
