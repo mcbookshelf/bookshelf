@@ -22,9 +22,9 @@ Manipulate integers as sequences of bits.
 
 ---
 
-## Number providers
+## Integer providers
 
-The following number providers are available in this module. Each one reads its operands from a storage and computes an integer, which any command taking a number provider can use.
+The following integer providers are available in this module.
 
 ---
 
