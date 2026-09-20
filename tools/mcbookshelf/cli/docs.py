@@ -61,4 +61,6 @@ def run(command: str, *args: str) -> None:
     executable = which(command)
     if executable is None:
         raise click.ClickException(f"'{command}' was not found in PATH.")
-    subprocess.run((executable, *args), check=True, cwd=constants.DOCS_DIR)
+    result = subprocess.run((executable, *args), check=False, cwd=constants.DOCS_DIR)
+    if result.returncode:
+        raise SystemExit(result.returncode)

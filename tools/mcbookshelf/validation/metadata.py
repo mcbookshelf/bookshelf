@@ -21,7 +21,8 @@ def check_stamps(name: str) -> Iterator[validation.Issue]:
 
 def check_changelog(name: str) -> Iterator[validation.Issue]:
     """The changelog keeps `Unreleased` open, and notes the changes made since the release."""
-    module = workspace.load_module(name)
+    if not (workspace.directory(name) / "CHANGELOG.md").is_file():
+        return
     if changelog.UNRELEASED not in changelog.sections(name):
         yield validation.Issue("no '## Unreleased' section: open one at the top", "CHANGELOG.md")
         return
@@ -31,9 +32,7 @@ def check_changelog(name: str) -> Iterator[validation.Issue]:
     if (released := _released(name)) is None:
         return
     tag, _ = released
-    changed = ownership.changed_owners(tag, name)
-    shipped = any(owner.feature not in module.experimental for owner in changed)
-    if shipped and not changelog.unreleased(name):
+    if ownership.shipped_changes(tag, name) and not changelog.unreleased(name):
         message = f"sources changed since {tag}: add a line under '## Unreleased'"
         yield validation.Issue(message, "CHANGELOG.md")
 

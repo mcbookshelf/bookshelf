@@ -1,42 +1,14 @@
 from dataclasses import dataclass, field
-from enum import StrEnum
 from pathlib import Path
 
 from mcbookshelf import constants
 
 
-class Severity(StrEnum):
-
-    ERROR = "error"
-    WARNING = "warning"
-
-
-class MetadataWarning(UserWarning):
-    """Something suspicious in a metadata file."""
-
-
-class MetadataError(Exception):
-    """A metadata file that does not load: every error found in it."""
-
-    def __init__(self, diagnostics: Diagnostic | list[Diagnostic]) -> None:
-        items = [diagnostics] if isinstance(diagnostics, Diagnostic) else list(diagnostics)
-        self.diagnostics = items
-        first = items[0]
-        self.message = first.message
-        self.file = first.file
-        self.line = first.line
-        self.column = first.column
-        super().__init__(str(self))
-
-    def __str__(self) -> str:
-        return "\n".join(str(d) for d in self.diagnostics)
-
-
 @dataclass(frozen=True, slots=True)
 class Diagnostic:
+    """One thing wrong in a metadata file, at a place."""
 
     message: str
-    severity: Severity = Severity.ERROR
     file: Path | None = None
     line: int | None = None
     column: int | None = None
@@ -48,23 +20,26 @@ class Diagnostic:
 
 @dataclass(slots=True)
 class Diagnostics:
+    """Everything found wrong in a file, collected in one pass."""
 
     file: Path | None = None
     items: list[Diagnostic] = field(default_factory=list)
 
-    def error(self, message: str, line: int | None = None, column: int | None = None) -> None:
-        self.items.append(Diagnostic(message, Severity.ERROR, self.file, line, column))
+    def error(self, message: str, line: int | None = None) -> None:
+        self.items.append(Diagnostic(message, self.file, line))
 
-    def warning(self, message: str, line: int | None = None) -> None:
-        self.items.append(Diagnostic(message, Severity.WARNING, self.file, line))
 
-    @property
-    def errors(self) -> list[Diagnostic]:
-        return [d for d in self.items if d.severity is Severity.ERROR]
+class MetadataError(Exception):
+    """A metadata file that does not load: every error found in it."""
 
-    @property
-    def warnings(self) -> list[Diagnostic]:
-        return [d for d in self.items if d.severity is Severity.WARNING]
+    def __init__(self, diagnostics: Diagnostic | list[Diagnostic]) -> None:
+        items = [diagnostics] if isinstance(diagnostics, Diagnostic) else list(diagnostics)
+        self.diagnostics = items
+        self.message = items[0].message
+        super().__init__(str(self))
+
+    def __str__(self) -> str:
+        return "\n".join(str(d) for d in self.diagnostics)
 
 
 def locate(file: Path | str | None, line: int | None, column: int | None = None) -> str:

@@ -51,5 +51,5 @@ def render_type(value: syntax.Type, depth: int = 0) -> str:
             return f"({' | '.join(render_type(m, depth) for m in members)})"
         case syntax.Struct():
             return render_struct(value, depth)
-        case syntax.Reference():
+        case _:
             raise ValueError(f"unresolved type '{value}'")

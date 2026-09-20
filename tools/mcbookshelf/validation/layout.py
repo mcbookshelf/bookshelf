@@ -53,10 +53,14 @@ def check_entries(name: str) -> Iterator[validation.Issue]:
         if entry not in ("__main__", "__macro__"):
             continue
         feature = "/".join(location.parts[:-1])
-        if location.feature != feature:
-            yield validation.Issue(f"'{entry}' of a feature not declared in module.bs", path)
-            continue
-        if entry == "__macro__" and module.find(feature, "function").macro_struct is None:
+        try:
+            declared = module.find(feature, "function") if location.feature == feature else None
+        except LookupError:
+            declared = None
+        if declared is None:
+            message = f"'{entry}' of a feature not declared as a function in module.bs"
+            yield validation.Issue(message, path)
+        elif entry == "__macro__" and declared.macro_struct is None:
             message = "'__macro__' of a feature with no 'input arguments' or 'input macro'"
             yield validation.Issue(message, path)
 
@@ -64,8 +68,4 @@ def check_entries(name: str) -> Iterator[validation.Issue]:
 def check_references(name: str) -> Iterator[validation.Issue]:
     """Every reference can be attributed to a feature or a module."""
     for problem in ownership.sources(name).problems:
-        yield validation.Issue(
-            f"'{problem.reference.id}' cannot be attributed: {problem.resolution}",
-            problem.path,
-            problem.reference.line,
-        )
+        yield validation.Issue(problem.reason, problem.path, problem.reference.line)

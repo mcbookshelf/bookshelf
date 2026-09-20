@@ -20,6 +20,9 @@ PLACES = {
     syntax.Kind.DIMENSION: "in <dimension>",
 }
 
+# the arrays with an icon of their own: `entity[]` and `player[]` are context types
+ARRAYS = (syntax.PrimitiveKind.INT, syntax.PrimitiveKind.BYTE, syntax.PrimitiveKind.LONG)
+
 ICONS = {
     syntax.PrimitiveKind.BOOLEAN: "bool",
     syntax.PrimitiveKind.BYTE: "byte",
@@ -94,6 +97,12 @@ def _execution(kind: syntax.Kind, value: syntax.Type) -> str:
             syntax.PrimitiveKind.ENTITY,
         ):
             return f"{EXECUTION[kind]} <{who}>"
+        case syntax.Primitive(kind=where) if where in (
+            syntax.PrimitiveKind.OVERWORLD,
+            syntax.PrimitiveKind.NETHER,
+            syntax.PrimitiveKind.END,
+        ):
+            return f"{EXECUTION[kind]} <{where}>"
     return PLACES[kind]
 
 
@@ -138,7 +147,7 @@ def _icon(value: syntax.Type) -> str:
     match value:
         case syntax.Struct():
             return "compound"
-        case syntax.Array(element=syntax.Primitive(kind=kind)) if kind in ICONS:
+        case syntax.Array(element=syntax.Primitive(kind=kind)) if kind in ARRAYS:
             return f"{ICONS[kind]}-array"
         case syntax.Array() | syntax.List() | syntax.Tuple():
             return "list"

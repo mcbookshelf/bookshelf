@@ -14,7 +14,7 @@ from . import ui
     help="Include experimental features and modules under 1.0.0.",
 )
 def release(*, everything: bool) -> None:
-    """Build every module and bundle as minified zips, each with its stub."""
+    """Build every released module and bundle as minified zips, each with its stub."""
     ui.heading("📦 RELEASING…")
     options = Build(tests=False, minify=True, zipped=True, versioned=True, experimental=everything)
     names = workspace.modules() if everything else workspace.released()

@@ -97,13 +97,6 @@ REGISTRIES = {
         outputs=OUTPUTS,
         result=PrimitiveKind.INT,
     ),
-    "function_tag": Registry(
-        "tags/function",
-        contexts=CONTEXTS,
-        inputs=INPUTS,
-        outputs=OUTPUTS,
-        result=PrimitiveKind.INT,
-    ),
     "predicate": Registry(
         "predicate",
         contexts=CONTEXTS,

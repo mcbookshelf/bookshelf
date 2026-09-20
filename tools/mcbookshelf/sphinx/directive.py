@@ -27,9 +27,11 @@ class FeatureDirective(SphinxDirective):
     def run(self) -> list[nodes.Node]:
         *kind, reference = self.arguments
         namespace, _, name = reference.lstrip("#").partition(":")
-        module = workspace.load_module(namespace)
         try:
+            module = workspace.load_module(namespace)
             feature = module.find(name, kind[0] if kind else None)
+        except KeyError:
+            raise self.error(f"unknown module '{namespace}'") from None
         except LookupError as error:
             raise self.error(str(error)) from error
         if feature.experimental and released_build():

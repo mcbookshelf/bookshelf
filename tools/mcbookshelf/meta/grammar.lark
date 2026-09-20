@@ -23,11 +23,11 @@ path: name ("/" name)*
 _end: DOC? _NL | _NL DOC _NL
 
 // a role wins over a property name at the start of a feature line
-ROLE.2: /(context|input|output)\b/
+ROLE.2: /(context|input|output)(?![A-Za-z0-9_-])/
 
 KIND: /(executor|position|rotation|dimension|state|result|success|macro|storage|arguments)\b/
 
-REGISTRY: /(context_float_provider|context_int_provider|function_tag|function|loot_table|predicate|block_tag|entity_type_tag)\b/
+REGISTRY: /(context_float_provider|context_int_provider|function|loot_table|predicate|block_tag|entity_type_tag)\b/
 
 // --- types ------------------------------------------------------------- -----
 
@@ -55,7 +55,7 @@ array_element: array_int_type ("@" int_range)?
 list_type: "[" type "]" ("@" int_range)?
 tuple_type: "[" type "," (type ("," type)*)? "]"
 
-struct: "{" _NL entry+ "}"
+struct: "{" _NL entry* "}"
       | "{" "}"
 entry: name OPTIONAL? ":" type ","? _end
 

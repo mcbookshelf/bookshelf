@@ -1,6 +1,3 @@
-import warnings
-from collections.abc import Generator
-from contextlib import contextmanager
 from dataclasses import dataclass, field, replace
 from datetime import datetime
 from pathlib import Path
@@ -8,46 +5,28 @@ from pathlib import Path
 from mcbookshelf import constants
 
 from . import model, rules, syntax
-from .diagnostics import Diagnostics, MetadataError, MetadataWarning
+from .diagnostics import Diagnostics, MetadataError
 from .syntax import Kind, PrimitiveKind, Role
 
 INDEX_URL = f"{constants.DOCS_PAGES_URL}/index.html"
 
 
-def build_module(
-    document: syntax.Module,
-    directory: str,
-    file: Path | None = None,
-    report: Diagnostics | None = None,
-) -> model.Module:
-    """Build a module model from a parsed document."""
-    with _reporting(report, file) as diagnostics:
-        return _Builder(directory, diagnostics).module(document)
-
-
-def build_bundle(
-    document: syntax.Module,
-    directory: str,
-    file: Path | None = None,
-    report: Diagnostics | None = None,
-) -> model.Bundle:
-    """Build a bundle model from a parsed document."""
-    with _reporting(report, file) as diagnostics:
-        return _Builder(directory, diagnostics).bundle(document)
-
-
-@contextmanager
-def _reporting(report: Diagnostics | None, file: Path | None) -> Generator[Diagnostics]:
-    """Collect into the caller's diagnostics, or warn and raise once the build is done."""
-    if report is not None:
-        yield report
-        return
+def build_module(document: syntax.Module, directory: str, file: Path | None = None) -> model.Module:
+    """Build a module model from a parsed document, raising every error found at once."""
     report = Diagnostics(file)
-    yield report
-    for warning in report.warnings:
-        warnings.warn(MetadataWarning(str(warning)), stacklevel=3)
-    if report.errors:
-        raise MetadataError(report.errors)
+    module = _Builder(directory, report).module(document)
+    if report.items:
+        raise MetadataError(report.items)
+    return module
+
+
+def build_bundle(document: syntax.Module, directory: str, file: Path | None = None) -> model.Bundle:
+    """Build a bundle model from a parsed document, raising every error found at once."""
+    report = Diagnostics(file)
+    bundle = _Builder(directory, report).bundle(document)
+    if report.items:
+        raise MetadataError(report.items)
+    return bundle
 
 
 def _anchor(name: str, kind: str, *, shared: bool) -> str:
@@ -383,8 +362,6 @@ class _Builder:
             case syntax.Struct(entries=entries):
                 for entry in entries:
                     self.validate_data_type(entry.type, entry.line)
-            case syntax.Reference():
-                self.report.error(f"unresolved type '{value}'", line)
 
     # --- slots -------------------------------------------------------------- --
 

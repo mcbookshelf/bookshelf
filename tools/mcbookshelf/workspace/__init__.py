@@ -96,6 +96,7 @@ def forget() -> None:
         history.bundle_at,
         history.modules_at,
         history.members_at,
+        history.previous_tag,
         ownership.index,
         ownership.sources,
         dependencies.strong,

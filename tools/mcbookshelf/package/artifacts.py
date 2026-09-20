@@ -1,3 +1,4 @@
+import copy
 import zipfile
 from collections.abc import Mapping
 from pathlib import Path
@@ -43,7 +44,7 @@ def write_manifest(
 
 
 def write_stub(name: str, ctx: Context, output: Path) -> Path:
-    data = dict(ctx.data.mcmeta.data)
+    data = copy.deepcopy(ctx.data.mcmeta.data)
     data.setdefault("pack", {})["description"] = STUB_DESCRIPTION
     data.pop("id")
     files = {"pack.mcmeta": orjson.dumps(data)}
