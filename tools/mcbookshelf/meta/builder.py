@@ -83,41 +83,40 @@ class _Builder:
 
         return model.Bundle(
             id=self.id,
-            name=properties["name"],
-            slug=properties["slug"],
-            version=properties["version"],
+            name=properties["name"].value,
+            slug=properties["slug"].value,
+            version=properties["version"].value,
             description=self.description(document),
-            documentation=properties.get("documentation", INDEX_URL),
-            tags=_split(properties["tags"]),
+            documentation=properties["documentation"].value or INDEX_URL,
+            tags=_split(properties["tags"].value),
         )
 
     def module(self, document: syntax.Module) -> model.Module:
         properties = self.properties(document.properties, rules.MODULE_PROPERTIES, 1)
-        documentation = properties.get("documentation", _module_url(self.id))
+        documentation = properties["documentation"].value or _module_url(self.id)
         self.define(document.variables)
 
         features = {}
         names = [self.feature_name(node) for node in document.features]
         for node, name in zip(document.features, names, strict=True):
-            shared = names.count(name) > 1
-            feature = self.feature(node, name, documentation, shared=shared)
-            key = (feature.kind, feature.name)
+            key = (rules.REGISTRIES[node.registry].kind, name)
             if key in features:
                 first = features[key].line
-                message = f"{feature.kind} {name} is already declared on line {first}"
+                message = f"{key[0]} {name} is already declared on line {first}"
                 self.report.error(message, node.line)
                 continue
-            features[key] = feature
+            shared = names.count(name) > 1
+            features[key] = self.feature(node, name, documentation, shared=shared)
 
         return model.Module(
             id=self.id,
-            name=properties["name"],
-            slug=properties["slug"],
-            version=properties["version"],
+            name=properties["name"].value,
+            slug=properties["slug"].value,
+            version=properties["version"].value,
             description=self.description(document),
             documentation=documentation,
-            tags=_split(properties.get("tags", "")),
-            weak_dependencies=_split(properties.get("weak_dependencies", "")),
+            tags=_split(properties["tags"].value),
+            weak_dependencies=_split(properties["weak_dependencies"].value),
             features=tuple(features.values()),
             storages=dict(sorted(self.storages.items())),
         )
@@ -130,22 +129,27 @@ class _Builder:
 
     def properties(
         self,
-        nodes: dict[str, syntax.Property],
+        nodes: tuple[syntax.Property, ...],
         requirements: dict[str, bool],
         line: int,
-    ) -> dict[str, str]:
-        properties = {}
-        for key, required in requirements.items():
-            if required and key not in nodes:
-                self.report.error(f"missing property '{key}'", line)
-                properties[key] = ""
+    ) -> dict[str, syntax.Property]:
+        """Map every known property to its line; a missing one gets an empty value."""
+        properties: dict[str, syntax.Property] = {}
+        for node in nodes:
+            if node.key not in requirements:
+                self.report.error(f"unknown property '{node.key}'", node.line)
+            elif node.key in properties:
+                first = properties[node.key].line
+                self.report.error(f"'{node.key}' is already declared on line {first}", node.line)
+            else:
+                properties[node.key] = node
+                self.validate_property(node.key, node.value, node.line)
 
-        for key, node in nodes.items():
-            if key not in requirements:
-                self.report.error(f"unknown property '{key}'", node.line)
-                continue
-            properties[key] = node.value
-            self.validate_property(key, node.value, node.line)
+        for key, required in requirements.items():
+            if key not in properties:
+                if required:
+                    self.report.error(f"missing property '{key}'", line)
+                properties[key] = syntax.Property(key=key, value="", line=line)
 
         return properties
 
@@ -185,10 +189,9 @@ class _Builder:
         *,
         shared: bool,
     ) -> model.Feature:
-        properties = node.properties
-        values = self.properties(properties, rules.FEATURE_PROPERTIES, node.line)
-        created = self.stamp(values, properties, "created", node.line)
-        updated = self.stamp(values, properties, "updated", node.line)
+        properties = self.properties(node.properties, rules.FEATURE_PROPERTIES, node.line)
+        created = self.stamp(properties["created"])
+        updated = self.stamp(properties["updated"])
         if created.minecraft_version and updated.minecraft_version and updated.date < created.date:
             message = f"updated on {updated.date}, before created on {created.date}"
             self.report.error(message, properties["updated"].line)
@@ -211,27 +214,20 @@ class _Builder:
             description=node.description,
             documentation=f"{documentation}#{anchor}",
             anchor=anchor,
-            authors=_split(values["authors"]),
+            authors=_split(properties["authors"].value),
             created=created,
             updated=updated,
             slots=tuple(slots),
             line=node.line,
-            deprecated=values.get("deprecated") == "true",
-            experimental=values.get("experimental") == "true",
+            deprecated=properties["deprecated"].value == "true",
+            experimental=properties["experimental"].value == "true",
         )
 
-    def stamp(
-        self,
-        values: dict[str, str],
-        nodes: dict[str, syntax.Property],
-        key: str,
-        line: int,
-    ) -> model.Stamp:
-        value = values[key]
+    def stamp(self, node: syntax.Property) -> model.Stamp:
+        value, line = node.value, node.line
         if not value:
             return model.Stamp(date="", minecraft_version="")
 
-        line = nodes[key].line
         match = rules.STAMP.match(value)
         if match is None:
             expected = "a date and a Minecraft version, '2022/04/14 1.18.2'"
@@ -402,7 +398,8 @@ class _Builder:
         description = description or self.alias_description(declaration.type)
         slot_type = self.resolve(declaration.type, slot.line) if declaration.type else None
 
-        self.validate_allowed(kind, slot.role, slot.line)
+        if not self.validate_allowed(kind, slot.role, slot.line):
+            return None
         if declaration.storage is not None and kind not in rules.STORAGES:
             self.report.error(f"a {kind} writes nowhere, it takes no storage target", slot.line)
 
@@ -446,14 +443,17 @@ class _Builder:
             keys = tuple(storage.path.split("/"))
         return model.Target(id=id_, keys=keys)
 
-    def validate_allowed(self, kind: Kind, role: Role, line: int) -> None:
+    def validate_allowed(self, kind: Kind, role: Role, line: int) -> bool:
         kinds = rules.REGISTRIES[self.registry].allowed(role)
+        if kind in kinds:
+            return True
         if not kinds:
             self.report.error(f"a {self.registry} declares no {role}", line)
-        elif kind not in kinds:
+        else:
             accepted = ", ".join(sorted(str(k) for k in kinds))
             message = f"a {self.registry} takes no {kind} as {role}, only {accepted}"
             self.report.error(message, line)
+        return False
 
     # --- storages ----------------------------------------------------------- --
 
@@ -497,4 +497,4 @@ class _Builder:
                     entry.line,
                 )
 
-        return syntax.Struct(entries=tuple(entries), line=first.line)
+        return replace(first, entries=tuple(entries))

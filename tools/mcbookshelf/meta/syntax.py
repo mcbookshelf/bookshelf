@@ -219,8 +219,8 @@ class Feature(Node):
         return tuple(s for s in self.lines if isinstance(s, Slot))
 
     @property
-    def properties(self) -> dict[str, Property]:
-        return {s.key: s for s in self.lines if isinstance(s, Property)}
+    def properties(self) -> tuple[Property, ...]:
+        return tuple(s for s in self.lines if isinstance(s, Property))
 
 
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -230,8 +230,8 @@ class Module(Node):
     lines: tuple[Feature | Variable | Property, ...] = ()
 
     @property
-    def properties(self) -> dict[str, Property]:
-        return {s.key: s for s in self.lines if isinstance(s, Property)}
+    def properties(self) -> tuple[Property, ...]:
+        return tuple(s for s in self.lines if isinstance(s, Property))
 
     @property
     def variables(self) -> tuple[Variable, ...]:

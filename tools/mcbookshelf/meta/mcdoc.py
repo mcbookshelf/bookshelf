@@ -1,7 +1,7 @@
 from . import syntax
 from .model import Module, Storage
 
-NUMBER_TYPE = "(byte | short | int | long | float | double)"
+NUMBER_TYPES = ("byte", "short", "int", "long", "float", "double")
 
 
 def render_module(module: Module) -> str:
@@ -28,11 +28,16 @@ def render_struct(struct: syntax.Struct, depth: int) -> str:
     return "\n".join(lines)
 
 
+def render_primitive(kind: syntax.PrimitiveKind, bounds: syntax.Range | None) -> str:
+    if kind is syntax.PrimitiveKind.NUMBER:
+        return f"({' | '.join(f'{n}{syntax.bounded(bounds)}' for n in NUMBER_TYPES)})"
+    return f"{kind}{syntax.bounded(bounds)}"
+
+
 def render_type(value: syntax.Type, depth: int = 0) -> str:
     match value:
         case syntax.Primitive(kind=kind, range=bounds, attributes=attributes):
-            name = NUMBER_TYPE if kind is syntax.PrimitiveKind.NUMBER else kind
-            return f"{syntax.attributed(attributes)}{name}{syntax.bounded(bounds)}"
+            return f"{syntax.attributed(attributes)}{render_primitive(kind, bounds)}"
         case syntax.Array(element=element, size=size, attributes=attributes):
             prefix = syntax.attributed(attributes)
             return f"{prefix}{render_type(element, depth)}[]{syntax.bounded(size)}"

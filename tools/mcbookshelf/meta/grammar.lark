@@ -101,7 +101,7 @@ ID: /[_A-Za-z][_A-Za-z0-9-]*/
 VARIABLE: /\$[_A-Za-z][_A-Za-z0-9-]*/
 
 // a resource location wins over an identifier
-RESOURCE_LOCATION.2: /[a-z0-9_.-]+:[a-z0-9_.\/-]+/
+RESOURCE_LOCATION.2: /[a-z0-9_-]+(\.[a-z0-9_-]+)+:[a-z0-9_.\/-]+/
 
 // an mcdoc attribute, passed through as written
 ATTRIBUTE: /#\[(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*\]/
