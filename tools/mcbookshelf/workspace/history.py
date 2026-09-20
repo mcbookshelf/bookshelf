@@ -60,6 +60,26 @@ def file_at(tag: str, path: str) -> str | None:
     return result.stdout if result.returncode == 0 else None
 
 
+def release_version() -> str:
+    """Read the version of the release, the one of the suite bundle."""
+    return workspace.suite().version
+
+
+def release_tag() -> str:
+    """Name the release tag: the suite version and the game version it targets."""
+    return f"v{release_version()}+{constants.GAME_VERSION}"
+
+
+def raw_file(name: str, file: str) -> str:
+    """Link a file of a module or bundle directory at the release tag."""
+    return f"{constants.RAW_URL.format(release_tag())}/modules/{name}/{file}"
+
+
+def download_url() -> str:
+    """Link the assets of the release on GitHub."""
+    return constants.DOWNLOAD_URL.format(release_tag())
+
+
 def previous_tag() -> str | None:
     """The newest release tag, if any: docs and nightly tags do not count."""
     tags = _git("tag", "-l", "v*", "--sort=-creatordate").split()

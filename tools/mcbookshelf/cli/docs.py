@@ -34,10 +34,11 @@ def build(output_dir: str, builder: str, lang: str) -> None:
 def watch(output_dir: str, builder: str, lang: str) -> None:
     """Build and serve live documentation."""
     args = ["-b", builder, "-D", f"language={lang}"]
+    ignored = ["--ignore", "**/*.mo", "--ignore", "**/_static/switcher.json"]
     watched = ["--watch", str(constants.EXAMPLES_DIR)]
     for name in (*workspace.modules(), *workspace.bundles()):
         watched.extend(("--watch", str(workspace.file(name))))
-    run("sphinx-autobuild", ".", *args, output_dir, *watched, "--ignore", "**/*.mo")
+    run("sphinx-autobuild", ".", *args, output_dir, *watched, *ignored)
 
 
 @locales.command()

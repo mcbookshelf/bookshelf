@@ -1,7 +1,6 @@
 import click
 
-from mcbookshelf import workspace
-from mcbookshelf.workspace import validation
+from mcbookshelf import validation, workspace
 
 from . import ui
 

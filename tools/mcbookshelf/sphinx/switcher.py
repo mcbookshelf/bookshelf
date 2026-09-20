@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 from mcbookshelf import constants
-from mcbookshelf.meta import parse_version
+from mcbookshelf.version import parse_version
 from mcbookshelf.workspace import history
 
 DOCS = f"{constants.DOCS_URL}/en"
@@ -23,7 +23,11 @@ def write(target: Path) -> None:
         seen.add(minor)
         url = f"{DOCS}/v{version}/"
         entries.append({"name": version, "version": f"v{version}", "url": url})
-    target.write_text(json.dumps(entries, indent=2) + "\n", "utf-8", newline="\n")
+    content = json.dumps(entries, indent=2) + "\n"
+    # written only when it changes: a rewrite would retrigger a watching sphinx-autobuild
+    if target.is_file() and target.read_text("utf-8") == content:
+        return
+    target.write_text(content, "utf-8", newline="\n")
 
 
 def _key(tag: str) -> tuple[tuple[int, int, int], str]:

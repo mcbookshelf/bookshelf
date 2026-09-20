@@ -4,7 +4,7 @@ from enum import IntEnum
 from pathlib import Path
 
 from mcbookshelf import workspace
-from mcbookshelf.meta import parse_version
+from mcbookshelf.version import parse_version
 from mcbookshelf.workspace import changelog, dependencies, history, ownership
 from mcbookshelf.workspace.changelog import write_text
 

@@ -6,43 +6,45 @@ version: 5.0.0
 tags: runtime
 
 
-feature context_int_provider and: > Compute the bitwise AND of two numbers.
+$operands = storage: {
+  a: int > first operand
+  b: int > second operand
+}
+
+$shift = storage: {
+  n: int > number to shift
+  by: int @ 0..31 > number of positions to shift by
+}
+
+
+feature context_int_provider and > Compute the bitwise AND of two numbers.
   authors: Aksiome, theogiraudet
   created: 2018/02/27 1.13
   updated: 2026/09/18 26.3
 
-  input storage: {
-    a: int > first operand
-    b: int > second operand
-  }
+  input $operands
   output result: int > a AND b, each bit set when it is set in both
 
 
-feature context_int_provider or: > Compute the bitwise OR of two numbers.
+feature context_int_provider or > Compute the bitwise OR of two numbers.
   authors: Aksiome, theogiraudet
   created: 2018/02/27 1.13
   updated: 2026/09/18 26.3
 
-  input storage: {
-    a: int > first operand
-    b: int > second operand
-  }
+  input $operands
   output result: int > a OR b, each bit set when it is set in either
 
 
-feature context_int_provider xor: > Compute the bitwise XOR of two numbers.
+feature context_int_provider xor > Compute the bitwise XOR of two numbers.
   authors: Aksiome, theogiraudet
   created: 2018/02/27 1.13
   updated: 2026/09/18 26.3
 
-  input storage: {
-    a: int > first operand
-    b: int > second operand
-  }
+  input $operands
   output result: int > a XOR b, each bit set when it is set in exactly one
 
 
-feature context_int_provider not: > Invert every bit of a number.
+feature context_int_provider not > Invert every bit of a number.
   authors: Aksiome, theogiraudet
   created: 2018/08/27 1.13
   updated: 2026/09/18 26.3
@@ -53,7 +55,7 @@ feature context_int_provider not: > Invert every bit of a number.
   output result: int > NOT n, which is -n - 1
 
 
-feature context_int_provider bit_count: > Count the bits set to 1 in a number.
+feature context_int_provider bit_count > Count the bits set to 1 in a number.
   authors: Aksiome
   created: 2024/02/27 1.20.4
   updated: 2026/09/18 26.3
@@ -64,7 +66,7 @@ feature context_int_provider bit_count: > Count the bits set to 1 in a number.
   output result: int @ 0..32 > number of bits set to 1, 32 for -1
 
 
-feature context_int_provider bit_length: > Count the bits needed to represent a number.
+feature context_int_provider bit_length > Count the bits needed to represent a number.
   authors: Aksiome, theogiraudet
   created: 2020/09/06 1.16
   updated: 2026/09/18 26.3
@@ -75,25 +77,19 @@ feature context_int_provider bit_length: > Count the bits needed to represent a 
   output result: int @ 0..32 > position of the highest bit set plus one, 0 for 0 and 32 for a negative number
 
 
-feature context_int_provider shift_left: > Shift the bits of a number to the left.
+feature context_int_provider shift_left > Shift the bits of a number to the left.
   authors: Aksiome
   created: 2026/09/18 26.3
   updated: 2026/09/18 26.3
 
-  input storage: {
-    n: int > number to shift
-    by: int @ 0..31 > number of positions to shift by
-  }
+  input $shift
   output result: int > n shifted left, the bits pushed out of the integer dropped
 
 
-feature context_int_provider shift_right: > Shift the bits of a number to the right, keeping its sign.
+feature context_int_provider shift_right > Shift the bits of a number to the right, keeping its sign.
   authors: Aksiome
   created: 2026/09/18 26.3
   updated: 2026/09/18 26.3
 
-  input storage: {
-    n: int > number to shift
-    by: int @ 0..31 > number of positions to shift by
-  }
+  input $shift
   output result: int > n shifted right, the sign bit filling the freed positions

@@ -3,7 +3,7 @@ from collections.abc import Iterator
 from pathlib import Path
 
 from mcbookshelf import constants, workspace
-from mcbookshelf.meta import parse_version
+from mcbookshelf.version import parse_version
 from mcbookshelf.workspace import history
 
 UNRELEASED = "Unreleased"

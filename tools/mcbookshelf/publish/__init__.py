@@ -9,7 +9,7 @@ from httpx import Response
 
 from mcbookshelf import constants, workspace
 from mcbookshelf.assets import BundleEntry, Manifest, ModuleEntry
-from mcbookshelf.workspace import changelog
+from mcbookshelf.workspace import changelog, history
 
 
 @dataclass(frozen=True)
@@ -76,7 +76,7 @@ async def gather_errors(tasks: Iterable[Awaitable[None]]) -> list[Exception]:
 
 def get_packs() -> list[Pack]:
     manifest = _manifest()
-    expected = workspace.release_version()
+    expected = history.release_version()
     if manifest["release"] != expected:
         raise ValueError(
             f"release directory is v{manifest['release']}, sources are v{expected}: "
