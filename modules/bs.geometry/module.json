@@ -1,0 +1,20 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.geometry",
+    "load": "."
+  },
+  "meta": {
+    "name": "Geometry",
+    "slug": "bookshelf-geometry",
+    "description": "Get shapes and do geometric operations",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/geometry.html",
+    "tags": ["runtime"],
+    "dependencies": [
+      "bs.math"
+    ],
+    "weak_dependencies": [
+      "bs.log"
+    ]
+  }
+}

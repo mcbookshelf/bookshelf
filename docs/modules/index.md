@@ -34,6 +34,7 @@ color
 environment
 fsm
 generation
+geometry
 health
 hitbox
 id
