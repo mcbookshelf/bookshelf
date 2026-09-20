@@ -36,5 +36,5 @@ def required(name: str) -> dict[str, set[Owner]]:
         owner = pending.pop()
         if owner not in used[owner.module]:
             used[owner.module].add(owner)
-            pending.extend(o for o in used_by_owner(owner) if o.module == owner.module)
+            pending.extend(o for o in used_by_owner(owner) if o.module != name)
     return dict(used)

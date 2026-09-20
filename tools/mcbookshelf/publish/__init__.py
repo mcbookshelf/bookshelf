@@ -9,7 +9,7 @@ from httpx import Response
 
 from mcbookshelf import constants, workspace
 from mcbookshelf.assets import BundleEntry, Manifest, ModuleEntry
-from mcbookshelf.workspace import changelog
+from mcbookshelf.workspace import changelog, history
 
 
 @dataclass(frozen=True)
@@ -33,6 +33,9 @@ class Pack:
     def from_entry(cls, name: str, entry: ModuleEntry | BundleEntry) -> Pack:
         directory = workspace.directory(name)
         kind = "Bundle" if name in workspace.bundles() else "Module"
+        for file in ("pack.png", "README.md"):
+            if not (directory / file).is_file():
+                raise ValueError(f"{name} has no {file}, every published pack needs one")
         return cls(
             id=entry["id"],
             name=f"Bookshelf {entry['name']} {kind}",
@@ -76,7 +79,7 @@ async def gather_errors(tasks: Iterable[Awaitable[None]]) -> list[Exception]:
 
 def get_packs() -> list[Pack]:
     manifest = _manifest()
-    expected = workspace.release_version()
+    expected = history.release_version()
     if manifest["release"] != expected:
         raise ValueError(
             f"release directory is v{manifest['release']}, sources are v{expected}: "

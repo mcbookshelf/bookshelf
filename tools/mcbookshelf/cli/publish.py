@@ -14,7 +14,7 @@ from . import ui
 class Platform:
 
     token: str
-    publish: Callable[[list[Pack], str, None], Awaitable[list[Exception]]]
+    publish: Callable[[list[Pack], str], Awaitable[list[Exception]]]
 
 
 PLATFORMS = {
@@ -56,7 +56,7 @@ def publish(platforms: tuple[str, ...], *, dry_run: bool) -> None:
     failures = []
     with ui.tracking(selected) as tracker:
         for name in selected:
-            errors = run(PLATFORMS[name].publish(packs, tokens[name], None))
+            errors = run(PLATFORMS[name].publish(packs, tokens[name]))
             failures.extend(errors)
             tracker.done(name, f"{len(errors)} failed" if errors else None)
     for error in failures:

@@ -14,13 +14,12 @@ type Target = dict[str, Json]
 
 class Expression:
 
-    __slots__ = ("kind", "node", "op")
+    __slots__ = ("kind", "node")
     __hash__ = None
 
-    def __init__(self, node: Node, kind: Kind = "float", op: str | None = None) -> None:
+    def __init__(self, node: Node, kind: Kind = "float") -> None:
         self.node: Node = node
         self.kind: Kind = kind
-        self.op: str | None = op
 
     def json(self, indent: int = 2) -> str:
         return json.dumps(self.node, indent=indent)
@@ -118,6 +117,9 @@ class Expression:
     def __eq__(self, other: object) -> Predicate:  # ty: ignore[invalid-method-override]
         return self.eq(_operand(other))
 
+    def __ne__(self, other: object) -> Predicate:  # ty: ignore[invalid-method-override]
+        return ~self.eq(_operand(other))
+
     def __ge__(self, other: Operand) -> Predicate:
         return self.ge(other)
 
@@ -172,7 +174,12 @@ def _lit(value: Operand, kind: Kind) -> Node:
     if isinstance(value, bool):
         msg = "bool is not a number provider value"
         raise TypeError(msg)
-    return float(value) if kind == "float" else int(value)
+    if kind == "float":
+        return float(value)
+    if isinstance(value, float) and not value.is_integer():
+        msg = f"{value!r} is not a whole number, this is an int expression"
+        raise TypeError(msg)
+    return int(value)
 
 
 def _kind_of(*operands: Operand | None) -> Kind:
@@ -189,27 +196,16 @@ def _fields(op: str, kind: Kind, **fields: Operand) -> Expression:
     node: dict[str, Json] = {"type": op}
     for name, value in fields.items():
         node[name] = _lit(value, kind)
-    return Expression(node, kind, op)
-
-
-def _fold(op: str, left: float, right: float, kind: Kind) -> Expression:
-    if op == "sub":
-        result = left - right
-    elif op == "div":
-        result = left / right if kind == "float" else int(left / right)
-    elif op == "floor_div":
-        result = left // right
-    elif op == "mod":
-        result = left - right * int(left / right)
-    else:
-        result = left % right
-    return const(float(result) if kind == "float" else int(result))
+    return Expression(node, kind)
 
 
 def _binary(op: str, left: Operand, right: Operand) -> Expression:
     kind = _kind_of(left, right)
     if isinstance(left, int | float) and isinstance(right, int | float):
-        return _fold(op, left, right, kind)
+        # two numbers only meet here through `lerp`, which subtracts them
+        assert op == "sub", op  # noqa: S101
+        result = left - right
+        return const(float(result) if kind == "float" else int(result))
     return _fields(op, kind, left=left, right=right)
 
 
@@ -218,18 +214,11 @@ def _nary(op: str, *operands: Operand) -> Expression:
     inputs: list[Json] = []
     literals: list[float] = []
     for operand in operands:
-        if isinstance(operand, Expression) and operand.op == op:
-            nested = operand.node
-            if isinstance(nested, dict) and isinstance(nested["inputs"], list):
-                for item in nested["inputs"]:
-                    if isinstance(item, int | float) and not isinstance(item, bool):
-                        literals.append(item)
-                    else:
-                        inputs.append(item)
-        elif isinstance(operand, int | float):
-            literals.append(operand)
-        else:
-            inputs.append(_lit(operand, kind))
+        for item in _flattened(op, operand, kind):
+            if isinstance(item, int | float) and not isinstance(item, bool):
+                literals.append(item)
+            else:
+                inputs.append(item)
     if literals:
         folded = sum(literals) if op == "add" else math.prod(literals)
         identity = 0 if op == "add" else 1
@@ -237,34 +226,43 @@ def _nary(op: str, *operands: Operand) -> Expression:
             inputs.insert(0, _lit(folded, kind))
     if len(inputs) == 1 and isinstance(inputs[0], int | float):
         return const(inputs[0])
-    return Expression({"type": op, "inputs": inputs}, kind, op)
+    if len(inputs) == 1 and isinstance(inputs[0], dict):
+        return Expression(inputs[0], kind)
+    return Expression({"type": op, "inputs": inputs}, kind)
+
+
+def _flattened(op: str, operand: Operand, kind: Kind) -> list[Json]:
+    nested = operand.node if isinstance(operand, Expression) else None
+    if isinstance(nested, dict) and nested.get("type") == op and isinstance(nested["inputs"], list):
+        return nested["inputs"]
+    return [operand if isinstance(operand, int | float) else _lit(operand, kind)]
 
 
 def _inputs(op: str, kind: Kind, operands: Sequence[Operand]) -> Expression:
-    return Expression({"type": op, "inputs": [_lit(x, kind) for x in operands]}, kind, op)
+    return Expression({"type": op, "inputs": [_lit(x, kind) for x in operands]}, kind)
 
 
 def const(value: float) -> Expression:
     kind: Kind = "float" if isinstance(value, float) else "int"
-    return Expression(_lit(value, kind), kind, "const")
+    return Expression(_lit(value, kind), kind)
 
 
 def ref(provider_id: str, kind: Kind = "float") -> Expression:
-    return Expression(provider_id, kind, "ref")
+    return Expression(provider_id, kind)
 
 
 def float_storage(storage_id: str, path: str, fallback: Operand | None = None) -> Expression:
     node: dict[str, Json] = {"type": "storage", "storage": storage_id, "path": path}
     if fallback is not None:
         node["fallback"] = _lit(fallback, "float")
-    return Expression(node, "float", "storage")
+    return Expression(node, "float")
 
 
 def int_storage(storage_id: str, path: str, fallback: Operand | None = None) -> Expression:
     node: dict[str, Json] = {"type": "storage", "storage": storage_id, "path": path}
     if fallback is not None:
         node["fallback"] = _lit(fallback, "int")
-    return Expression(node, "int", "storage")
+    return Expression(node, "int")
 
 
 def score(
@@ -275,7 +273,7 @@ def score(
     node: dict[str, Json] = {"type": "score", "score": objective, "target": target}
     if fallback is not None:
         node["fallback"] = _lit(fallback, "int")
-    return Expression(node, "int", "score")
+    return Expression(node, "int")
 
 
 def fixed_target(name: str) -> Target:
@@ -300,7 +298,7 @@ def binomial(n: Operand, p: Operand) -> Expression:
         "n": _lit(n, "int"),
         "p": _lit(p, "float"),
     }
-    return Expression(node, "int", "binomial")
+    return Expression(node, "int")
 
 
 def environment_attribute(attribute: str, kind: Kind = "float") -> Expression:
@@ -361,7 +359,7 @@ def cond(
     }
     if on_false is not None:
         node["on_false"] = _lit(on_false, kind)
-    return Expression(node, kind, "conditional")
+    return Expression(node, kind)
 
 
 def dispatch(
@@ -379,7 +377,7 @@ def dispatch(
     }
     if default is not None:
         node["default"] = _lit(default, kind)
-    return Expression(node, kind, "dispatch")
+    return Expression(node, kind)
 
 
 def switch[K: (int, float)](

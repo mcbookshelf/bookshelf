@@ -3,11 +3,11 @@ from collections.abc import Iterator
 from pathlib import Path
 
 from mcbookshelf import constants, workspace
-from mcbookshelf.meta import parse_version
+from mcbookshelf.version import parse_version
 from mcbookshelf.workspace import history
 
 UNRELEASED = "Unreleased"
-HEADING = re.compile(r"^#{1,3}[ \t]+(?P<title>.*?)[ \t]*$", re.MULTILINE)
+HEADING = re.compile(r"^##[ \t]+(?P<title>.*?)[ \t]*$", re.MULTILINE)
 VERSION = re.compile(r"^`v(?P<version>\d+\.\d+\.\d+)`$")
 
 
@@ -19,7 +19,7 @@ def unreleased(name: str) -> str:
 def promote(name: str, version: str) -> None:
     """Rename `Unreleased` to a version and open a fresh one above."""
     lines = _lines(name)
-    lines[_heading(lines, UNRELEASED)] = f"## `v{version}`"
+    lines[_unreleased_heading(lines)] = f"## `v{version}`"
     top = 1 if lines[0].startswith("# ") else 0
     lines[top:top] = ["", f"## {UNRELEASED}"]
     write_text(_file(name), "\n".join(lines))
@@ -28,7 +28,7 @@ def promote(name: str, version: str) -> None:
 def note(name: str, line: str) -> None:
     """Add a line under `Unreleased`."""
     lines = _lines(name)
-    at = _heading(lines, UNRELEASED) + 1
+    at = _unreleased_heading(lines) + 1
     while at < len(lines) and lines[at] == "":
         del lines[at]
     joins_list = at < len(lines) and lines[at].startswith("- ")
@@ -73,7 +73,7 @@ def strays(name: str) -> Iterator[tuple[int, str]]:
     """Yield the line and title of `##` headings that are not a section."""
     for index, line in enumerate(_lines(name), 1):
         match = HEADING.match(line)
-        if match and line.startswith("## ") and _key(match["title"]) is None:
+        if match and _key(match["title"]) is None:
             yield index, match["title"]
 
 
@@ -87,7 +87,17 @@ def _file(name: str) -> Path:
 
 
 def _lines(name: str) -> list[str]:
-    return _file(name).read_text("utf-8").splitlines()
+    path = _file(name)
+    return path.read_text("utf-8").splitlines() if path.is_file() else []
+
+
+def _unreleased_heading(lines: list[str]) -> int:
+    try:
+        return _heading(lines, UNRELEASED)
+    except LookupError:
+        top = 1 if lines and lines[0].startswith("# ") else 0
+        lines[top:top] = ["", f"## {UNRELEASED}"] if top else [f"## {UNRELEASED}"]
+        return top + 1 if top else 0
 
 
 def _title(name: str) -> str:

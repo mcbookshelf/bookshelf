@@ -34,14 +34,12 @@ class Location:
 
     @property
     def public(self) -> bool:
-        """Whether the file is part of the API: a tag, predicate or loot table, not private."""
         if self.registry == "function" or not self.parts:
             return False
         return not any(part.startswith(constants.PRIVATE_PREFIX) for part in self.parts)
 
     @property
     def hook(self) -> bool:
-        """Whether the file is `__load__` or `__unload__`, generated and not analyzed."""
         if self.registry != "function" or len(self.parts) != 1:
             return False
         return self.parts[0].partition(".")[0] in HOOKS
@@ -56,9 +54,12 @@ class Occurrence:
     resolution: Resolution
 
     @property
+    def reason(self) -> str:
+        return f"'{self.reference.id}' cannot be attributed: {self.resolution}"
+
+    @property
     def message(self) -> str:
-        where = f"{self.path}:{self.reference.line}"
-        return f"{where}: '{self.reference.id}' cannot be attributed: {self.resolution}"
+        return f"{self.path}:{self.reference.line}: {self.reason}"
 
 
 @dataclass
@@ -75,6 +76,11 @@ class Ownership:
         return Owner(self.module.id)
 
     @property
+    def targets(self) -> set[Owner]:
+        """Every owner the module references, in any of its files."""
+        return {target for owner in self.references for target in self.dependencies(owner)}
+
+    @property
     def problems(self) -> list[Occurrence]:
         """The references that could not be attributed to an owner."""
         return [
@@ -83,11 +89,6 @@ class Ownership:
             for occurrence in occurrences
             if isinstance(occurrence.resolution, Reason)
         ]
-
-    @property
-    def targets(self) -> set[Owner]:
-        """Every owner the module references, in any of its files."""
-        return {target for owner in self.references for target in self.dependencies(owner)}
 
     def dependencies(self, owner: Owner) -> set[Owner]:
         """The owners one owner references, itself and the shared part left out."""
@@ -181,8 +182,9 @@ def locate(path: str, features: Collection[str] = ()) -> Location:
         return Location(registry, (), None)
     if registry == "function":
         feature = longest_prefix(features, "/".join(rest[:-1]))
-    elif rest[0].startswith(constants.PRIVATE_PREFIX):
-        feature = longest_prefix(features, "/".join([rest[0][1:], *rest[1:]]))
+    elif any(part.startswith(constants.PRIVATE_PREFIX) for part in rest):
+        stripped = (part.removeprefix(constants.PRIVATE_PREFIX) for part in rest)
+        feature = longest_prefix(features, "/".join(stripped))
     else:
         name = "/".join(rest)
         name = name.rsplit(".", 1)[0] if "." in rest[-1] else name
@@ -219,3 +221,10 @@ def changed_owners(tag: str, name: str) -> dict[Owner, list[str]]:
         if location is not None:
             changed[Owner(name, location.feature)].append(path)
     return dict(changed)
+
+
+def shipped_changes(tag: str, name: str) -> dict[Owner, list[str]]:
+    """The changed owners a release ships: the experimental features left out."""
+    experimental = workspace.load_module(name).experimental
+    changed = changed_owners(tag, name)
+    return {owner: paths for owner, paths in changed.items() if owner.feature not in experimental}

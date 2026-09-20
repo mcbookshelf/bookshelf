@@ -16,6 +16,8 @@ The following functions are available in this module.
 
 ---
 
+### Add levels
+
 ````{feature} bs.xp:add_levels
 ```{admonition} How to Remove?
 :class: tip
@@ -35,6 +37,8 @@ function #bs.xp:add_levels.in {levels:42}
 ```
 
 ---
+
+### Add points
 
 ````{feature} bs.xp:add_points
 ```{admonition} How to Remove?
@@ -56,6 +60,8 @@ function #bs.xp:add_points.in {points:42}
 
 ---
 
+### Add progress
+
 ````{feature} bs.xp:add_progress
 ```{admonition} How to Remove?
 :class: tip
@@ -76,6 +82,8 @@ function #bs.xp:add_progress.in {progress:0.25}
 
 ---
 
+### Get required points
+
 ```{feature} bs.xp:get_required_points
 ```
 
@@ -90,6 +98,8 @@ tellraw @a [{"text":"I need a total of "},{"score":{"name":"$xp.get_max_points",
 ```
 
 ---
+
+### Get remaining points
 
 ```{feature} bs.xp:get_remaining_points
 ```
@@ -106,6 +116,8 @@ tellraw @a [{"text":"I need "},{"score":{"name":"$xp.get_remaining_points","obje
 
 ---
 
+### Get total points
+
 ```{feature} bs.xp:get_total_points
 ```
 
@@ -120,6 +132,8 @@ tellraw @a [{"text":"I have "},{"score":{"name":"$xp.get_total_points","objectiv
 ```
 
 ---
+
+### Get progress
 
 ```{feature} bs.xp:get_progress
 ```
@@ -136,6 +150,8 @@ tellraw @a [{"text":"My experience bar is filled at "},{"score":{"name":"$xp.get
 
 ---
 
+### Set levels
+
 ```{feature} bs.xp:set_levels
 ```
 
@@ -150,6 +166,8 @@ function #bs.xp:set_levels {levels:42}
 ```
 
 ---
+
+### Set points
 
 ```{feature} bs.xp:set_points
 ```
@@ -166,6 +184,8 @@ function #bs.xp:set_points {points:42}
 
 ---
 
+### Set total points
+
 ```{feature} bs.xp:set_total_points
 ```
 
@@ -180,6 +200,8 @@ function #bs.xp:set_total_points {points:42}
 ```
 
 ---
+
+### Set progress
 
 ```{feature} bs.xp:set_progress
 ```

@@ -4,9 +4,8 @@ from enum import IntEnum
 from pathlib import Path
 
 from mcbookshelf import workspace
-from mcbookshelf.meta import parse_version
+from mcbookshelf.version import parse_version
 from mcbookshelf.workspace import changelog, dependencies, history, ownership
-from mcbookshelf.workspace.changelog import write_text
 
 type Plan = dict[str, Expectation | None]
 
@@ -135,10 +134,8 @@ def _dependency_moves(tag: str, name: str, plan: Plan) -> Iterator[Move]:
 
 
 def _sources_move(tag: str, name: str) -> Move:
-    experimental = workspace.load_module(name).experimental
-    for owner, paths in ownership.changed_owners(tag, name).items():
-        if owner.feature not in experimental:
-            return Move(Bump.PATCH, f"{paths[0]} changed")
+    for paths in ownership.shipped_changes(tag, name).values():
+        return Move(Bump.PATCH, f"{paths[0]} changed")
     return Move.unchanged()
 
 
@@ -183,4 +180,4 @@ def _write_version(file: Path, version: str) -> None:
         if line.startswith("version:"):
             lines[index] = f"version: {version}"
             break
-    write_text(file, "\n".join(lines))
+    changelog.write_text(file, "\n".join(lines))

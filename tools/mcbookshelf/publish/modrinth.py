@@ -8,6 +8,7 @@ from mcbookshelf import assets, constants
 from . import Pack, PublishError, gather_errors
 
 API = "https://api.modrinth.com/v2"
+NOT_FOUND = 404
 PLATFORM = "Modrinth"
 ORGANIZATION = "CeDKAOAS"
 LOADERS = {"datapack": "datapack", "resourcepack": "minecraft"}
@@ -45,11 +46,15 @@ async def publish(
 
 
 async def _update(client: AsyncClient, pack: Pack, project_id: str) -> None:
-    await gather(
+    results = await gather(
         _update_project(client, pack, project_id),
         _update_icon(client, pack, project_id),
         _create_version(client, pack, project_id),
+        return_exceptions=True,
     )
+    for result in results:
+        if isinstance(result, BaseException):
+            raise result
 
 
 async def _update_project(client: AsyncClient, pack: Pack, project_id: str) -> None:
@@ -74,7 +79,8 @@ async def _update_icon(client: AsyncClient, pack: Pack, project_id: str) -> None
 
 async def _create_version(client: AsyncClient, pack: Pack, project_id: str) -> None:
     existing = await client.get(f"project/{project_id}/version/{pack.version}")
-    if existing.is_success:
+    if existing.status_code != NOT_FOUND:
+        PublishError.check(existing, PLATFORM, pack.slug, "read version")
         return
 
     data = {

@@ -28,6 +28,8 @@ The following integer providers are available in this module.
 
 ---
 
+### And
+
 ```{feature} bs.bitwise:and
 ```
 
@@ -43,6 +45,8 @@ tellraw @a [{"text":"-9 & 57 = "},{"nbt":"out","storage":"bs.bitwise:and"}]
 ```
 
 ---
+
+### Bit count
 
 ```{feature} bs.bitwise:bit_count
 ```
@@ -60,6 +64,8 @@ tellraw @a [{"text":"12 has "},{"nbt":"out","storage":"bs.bitwise:bit_count"},{"
 
 ---
 
+### Bit length
+
 ```{feature} bs.bitwise:bit_length
 ```
 
@@ -75,6 +81,8 @@ tellraw @a [{"text":"12 fits in "},{"nbt":"out","storage":"bs.bitwise:bit_length
 ```
 
 ---
+
+### Not
 
 ```{feature} bs.bitwise:not
 ```
@@ -92,6 +100,8 @@ tellraw @a [{"text":"~452 = "},{"nbt":"out","storage":"bs.bitwise:not"}]
 
 ---
 
+### Or
+
 ```{feature} bs.bitwise:or
 ```
 
@@ -108,6 +118,8 @@ tellraw @a [{"text":"-9 | 57 = "},{"nbt":"out","storage":"bs.bitwise:or"}]
 
 ---
 
+### Shift left
+
 ```{feature} bs.bitwise:shift_left
 ```
 
@@ -123,6 +135,8 @@ tellraw @a [{"text":"5 << 3 = "},{"nbt":"out","storage":"bs.bitwise:shift_left"}
 ```
 
 ---
+
+### Shift right
 
 ````{feature} bs.bitwise:shift_right
 ```{admonition} Negative numbers
@@ -144,6 +158,8 @@ tellraw @a [{"text":"-8 >> 1 = "},{"nbt":"out","storage":"bs.bitwise:shift_right
 ```
 
 ---
+
+### Xor
 
 ```{feature} bs.bitwise:xor
 ```
