@@ -1,3 +1,4 @@
+import copy
 import zipfile
 from collections.abc import Mapping
 from pathlib import Path
@@ -7,10 +8,11 @@ from beet import Context
 
 from mcbookshelf import constants, workspace
 from mcbookshelf.assets import BundleEntry, FeatureEntry, Manifest, ModuleEntry, VersionStamp
-from mcbookshelf.meta import Feature, Module, Stamp, feature_id
+from mcbookshelf.meta import Feature, Module, Stamp
 from mcbookshelf.meta.mcdoc import render_module
 from mcbookshelf.package.config import Build
 from mcbookshelf.references import Owner
+from mcbookshelf.workspace import history
 from mcbookshelf.workspace.ownership import Ownership, OwnershipError, analyze, pack_files
 
 MANIFEST_VERSION = 3
@@ -33,7 +35,7 @@ def write_manifest(
     file = output / "manifest.json"
     file.write_bytes(orjson.dumps(Manifest(
         version=MANIFEST_VERSION,
-        release=workspace.release_version(),
+        release=history.release_version(),
         minecraft=constants.GAME_VERSION,
         bundles={name: _bundle(name, ctx) for name, ctx in bundles.items()},
         modules={name: _module(a, modules[name]) for name, a in analyses.items()},
@@ -42,7 +44,7 @@ def write_manifest(
 
 
 def write_stub(name: str, ctx: Context, output: Path) -> Path:
-    data = dict(ctx.data.mcmeta.data)
+    data = copy.deepcopy(ctx.data.mcmeta.data)
     data.setdefault("pack", {})["description"] = STUB_DESCRIPTION
     data.pop("id")
     files = {"pack.mcmeta": orjson.dumps(data)}
@@ -52,7 +54,7 @@ def write_stub(name: str, ctx: Context, output: Path) -> Path:
         module = workspace.load_module(member)
         files[f"mcdoc/{module.short}.mcdoc"] = render_module(module).encode()
         for feature in _shipped(module, ctx):
-            content = b'{"values":[]}' if feature.is_tag else b"{}"
+            content = b'{"values":[]}' if feature.tag else b"{}"
             entry = f"data/{member}/{feature.kind}/{feature.name}"
             files[f"{entry}.json"] = content
             if feature.macro_struct:
@@ -97,8 +99,8 @@ def _bundle(name: str, ctx: Context) -> BundleEntry:
         version=bundle.version,
         description=bundle.description,
         documentation=bundle.documentation,
-        icon=workspace.raw_file(name, "pack.png"),
-        readme=workspace.raw_file(name, "README.md"),
+        icon=history.raw_file(name, "pack.png"),
+        readme=history.raw_file(name, "README.md"),
         file=f"{ctx.data.name}.zip",
         stub=_stub(ctx),
         tags=list(bundle.tags),
@@ -116,8 +118,8 @@ def _module(analysis: Ownership, ctx: Context) -> ModuleEntry:
         version=module.version,
         description=module.description,
         documentation=module.documentation,
-        icon=workspace.raw_file(module.id, "pack.png"),
-        readme=workspace.raw_file(module.id, "README.md"),
+        icon=history.raw_file(module.id, "pack.png"),
+        readme=history.raw_file(module.id, "README.md"),
         file=f"{ctx.data.name}.zip",
         stub=_stub(ctx),
         tags=list(module.tags),
@@ -130,12 +132,11 @@ def _module(analysis: Ownership, ctx: Context) -> ModuleEntry:
 
 def _feature(analysis: Ownership, feature: Feature) -> FeatureEntry:
     owner = Owner(analysis.module.id, feature.name)
-    entry = feature_id(analysis.module, feature)
     return FeatureEntry(
-        id=entry,
+        id=feature.id,
         kind=feature.kind,
         documentation=feature.documentation,
-        aliases=[f"{entry}{constants.MACRO_SUFFIX}"] if feature.macro_struct else [],
+        aliases=[feature.macro_id] if feature.macro_struct else [],
         authors=list(feature.authors),
         created=_stamp(feature.created),
         updated=_stamp(feature.updated),

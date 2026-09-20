@@ -20,7 +20,7 @@ def ensure_function_tag(ctx: Context, key: str, values: Sequence[str] = ()) -> F
 
 
 def include(ctx: Context, config: ProjectConfig) -> None:
-    """Build another project into this one, keeping our `pack.mcmeta` and icon."""
+    """Build another project into this one, keeping our icon; `update_mcmeta` rewrites the rest."""
     extra = dict(ctx.data.extra)
     ctx.require(subproject(config))
     ctx.data.extra.update(extra)

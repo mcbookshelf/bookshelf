@@ -29,26 +29,6 @@ def examples() -> tuple[str, ...]:
     return tuple(sorted(f.stem for f in constants.EXAMPLES_DIR.glob("*.md")))
 
 
-def release_version() -> str:
-    """Read the version of the release, the one of the suite bundle."""
-    return suite().version
-
-
-def release_tag() -> str:
-    """Name the release tag: the suite version and the game version it targets."""
-    return f"v{release_version()}+{constants.GAME_VERSION}"
-
-
-def raw_file(name: str, file: str) -> str:
-    """Link a file of a module or bundle directory at the release tag."""
-    return f"{constants.RAW_URL.format(release_tag())}/modules/{name}/{file}"
-
-
-def download_url() -> str:
-    """Link the assets of the release on GitHub."""
-    return constants.DOWNLOAD_URL.format(release_tag())
-
-
 def directory(name: str) -> Path:
     """Locate the sources of a module or bundle by its id."""
     directory = _modules().get(name) or _bundles().get(name)
@@ -88,7 +68,7 @@ def members(name: str) -> tuple[str, ...]:
     bundle = load_bundle(name)
     selected = select(bundle, (load_module(m) for m in modules()))
     if not selected:
-        where = meta.errors.locate(directory(name) / constants.BUNDLE_FILE, None)
+        where = meta.diagnostics.locate(directory(name) / constants.BUNDLE_FILE, None)
         raise ValueError(f"{where}: no module carries the tags {', '.join(bundle.tags)}")
     return tuple(m.id for m in selected)
 
@@ -116,6 +96,7 @@ def forget() -> None:
         history.bundle_at,
         history.modules_at,
         history.members_at,
+        history.previous_tag,
         ownership.index,
         ownership.sources,
         dependencies.strong,

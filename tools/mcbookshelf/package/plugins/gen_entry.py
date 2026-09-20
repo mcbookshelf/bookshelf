@@ -1,7 +1,7 @@
 from beet import Context
 
 from mcbookshelf import constants
-from mcbookshelf.meta import Module, models, syntax
+from mcbookshelf.meta import Module, model, syntax
 
 from . import ensure_function, ensure_function_tag
 
@@ -13,14 +13,15 @@ def beet_default(ctx: Context) -> None:
         key = f"{module.id}:{feature.name}"
         ensure_function_tag(ctx, key, [f"{key}/__main__"])
 
-        slot = feature.input_macro or feature.input_storage
+        # arguments have their macro generated, a declared 'input macro' is hand-written
+        slot = feature.arguments
         if slot and slot.target and isinstance(slot.type, syntax.Struct):
             ensure_function(ctx, f"{key}/__macro__", commands(key, slot.target, slot.type))
             ensure_function_tag(ctx, f"{key}{constants.MACRO_SUFFIX}", [f"{key}/__macro__"])
 
 
 def argument(entry: syntax.Entry) -> str:
-    value = f'"$({entry.name})"' if models.is_string(entry.type) else f"$({entry.name})"
+    value = f'"$({entry.name})"' if syntax.is_string(entry.type) else f"$({entry.name})"
     return f"{entry.name}:{value}"
 
 
@@ -29,7 +30,7 @@ def required(struct: syntax.Struct) -> str | None:
     return f"{{{ ",".join(fields)}}}" if fields else None
 
 
-def commands(key: str, target: models.Target, struct: syntax.Struct) -> list[str]:
+def commands(key: str, target: model.Target, struct: syntax.Struct) -> list[str]:
     start = f"$data modify storage {target.display}"
     value = required(struct)
     lines = [f"{start} set value {value}"] if value else []

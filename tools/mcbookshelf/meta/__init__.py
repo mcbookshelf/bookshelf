@@ -1,16 +1,18 @@
 from pathlib import Path
 
-from . import errors, models, syntax
-from .build import build_bundle, build_module
-from .errors import MetadataError, MetadataWarning
-from .models import Bundle, Feature, Module, Role, Slot, Stamp, Target, feature_id, parse_version
+from . import diagnostics, model, rules, syntax
+from .builder import build_bundle, build_module
+from .diagnostics import Diagnostic, Diagnostics, MetadataError
+from .model import Bundle, Feature, Module, Slot, Stamp, Target
 from .parser import parse
+from .syntax import Role
 
 __all__ = [
     "Bundle",
+    "Diagnostic",
+    "Diagnostics",
     "Feature",
     "MetadataError",
-    "MetadataWarning",
     "Module",
     "Role",
     "Slot",
@@ -18,24 +20,24 @@ __all__ = [
     "Target",
     "build_bundle",
     "build_module",
-    "errors",
-    "feature_id",
+    "diagnostics",
     "load_bundle",
     "load_module",
-    "models",
+    "model",
     "parse",
-    "parse_version",
+    "rules",
     "syntax",
 ]
 
 
-def load_module(file: Path) -> models.Module:
+def load_module(file: Path) -> model.Module:
     """Load a `module.bs` file."""
     document = parse(file.read_text("utf-8"), file)
     return build_module(document, file.parent.name, file)
 
 
-def load_bundle(file: Path) -> models.Bundle:
+def load_bundle(file: Path) -> model.Bundle:
     """Load a `bundle.bs` file."""
     document = parse(file.read_text("utf-8"), file)
     return build_bundle(document, file.parent.name, file)
+

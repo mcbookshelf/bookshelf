@@ -1,5 +1,6 @@
 import re
 import subprocess
+from collections.abc import Callable
 from functools import cache
 
 from mcbookshelf import constants, meta, workspace
@@ -22,7 +23,7 @@ def bundle_at(tag: str, name: str) -> Bundle | None:
     """A bundle as it was at the tag, or None if it did not exist."""
     path = f"modules/{name}/{constants.BUNDLE_FILE}"
     text = file_at(tag, path)
-    return None if text is None else meta.build_bundle(_parse(tag, path, text), name)
+    return None if text is None else _load(tag, path, text, meta.build_bundle, name)
 
 
 def module_at(tag: str, name: str) -> Module | None:
@@ -38,7 +39,7 @@ def modules_at(tag: str) -> dict[str, Module]:
     files = {d: f"modules/{d}/{constants.MODULE_FILE}" for d in directories}
     texts = _files_at(tag, list(files.values()))
     return {
-        directory: meta.build_module(_parse(tag, path, texts[path]), directory)
+        directory: _load(tag, path, texts[path], meta.build_module, directory)
         for directory, path in files.items()
         if path in texts
     }
@@ -60,6 +61,27 @@ def file_at(tag: str, path: str) -> str | None:
     return result.stdout if result.returncode == 0 else None
 
 
+def release_version() -> str:
+    """Read the version of the release, the one of the suite bundle."""
+    return workspace.suite().version
+
+
+def release_tag() -> str:
+    """Name the release tag: the suite version and the game version it targets."""
+    return f"v{release_version()}+{constants.GAME_VERSION}"
+
+
+def raw_file(name: str, file: str) -> str:
+    """Link a file of a module or bundle directory at the release tag."""
+    return f"{constants.RAW_URL.format(release_tag())}/modules/{name}/{file}"
+
+
+def download_url() -> str:
+    """Link the assets of the release on GitHub."""
+    return constants.DOWNLOAD_URL.format(release_tag())
+
+
+@cache
 def previous_tag() -> str | None:
     """The newest release tag, if any: docs and nightly tags do not count."""
     tags = _git("tag", "-l", "v*", "--sort=-creatordate").split()
@@ -81,11 +103,17 @@ def _git(*args: str) -> str:
     return _run(*args).stdout
 
 
-def _parse(tag: str, path: str, text: str) -> meta.syntax.Module:
+def _load[T](
+    tag: str,
+    path: str,
+    text: str,
+    build: Callable[[meta.syntax.Module, str], T],
+    name: str,
+) -> T:
     try:
-        return meta.parse(text)
+        return build(meta.parse(text), name)
     except meta.MetadataError as error:
-        raise ValueError(f"{path} at {tag} no longer parses: {error.message}") from None
+        raise ValueError(f"{path} at {tag} no longer loads: {error.message}") from None
 
 
 def _run(*args: str, check: bool = True) -> subprocess.CompletedProcess[str]:

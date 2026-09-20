@@ -6,6 +6,7 @@ from typing import Any
 from beet import PackConfig, ProjectConfig
 
 from mcbookshelf import constants, workspace
+from mcbookshelf.workspace import history
 
 PLUGINS = f"{__package__}.plugins"
 
@@ -71,7 +72,7 @@ def example_config(name: str, options: Build, *, output: Path | None = None) -> 
         name,
         pack=f"example-{name}",
         directory=constants.EXAMPLES_DIR,
-        version=workspace.release_version(),
+        version=history.release_version(),
         build=options,
         output=output,
         pipeline=("lectern",),
@@ -86,7 +87,7 @@ def ward_config(names: Iterable[str]) -> ProjectConfig:
         "bookshelf",
         pack="bookshelf",
         directory=constants.MODULES_DIR,
-        version=workspace.release_version(),
+        version=history.release_version(),
         build=Build(),
         members=tuple(names),
         pipeline=(f"{PLUGINS}.make_bundle", f"{PLUGINS}.update_mcmeta"),

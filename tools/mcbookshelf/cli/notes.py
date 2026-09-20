@@ -3,7 +3,6 @@ from pathlib import Path
 import click
 
 from mcbookshelf.workspace import changelog
-from mcbookshelf.workspace.changelog import write_text
 
 
 @click.command()
@@ -24,4 +23,4 @@ def notes(*, unreleased: bool, output: Path | None) -> None:
     if output is None:
         click.echo(text)
         return
-    write_text(output, text)
+    changelog.write_text(output, text)

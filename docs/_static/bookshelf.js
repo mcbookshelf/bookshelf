@@ -50,3 +50,29 @@ if (document.readyState === 'complete') {
 } else {
   window.addEventListener('load', initGiscus);
 }
+
+const FORM_KEY = 'bs-form';
+
+function showForm(wrapper, form) {
+  wrapper.classList.remove('bs-show-storage', 'bs-show-macro');
+  wrapper.classList.add(`bs-show-${form}`);
+  wrapper.querySelectorAll('.bs-switch button').forEach((button) => {
+    button.setAttribute('aria-pressed', button.dataset.form === form);
+  });
+}
+
+function initForms() {
+  const saved = localStorage.getItem(FORM_KEY);
+  if (saved) {
+    document.querySelectorAll('.bs-forms').forEach((wrapper) => showForm(wrapper, saved));
+  }
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('.bs-switch button');
+    if (!button) return;
+    const form = button.dataset.form;
+    localStorage.setItem(FORM_KEY, form);
+    document.querySelectorAll('.bs-forms').forEach((wrapper) => showForm(wrapper, form));
+  });
+}
+
+initForms();

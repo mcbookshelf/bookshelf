@@ -1,7 +1,8 @@
 from beet import Context, Function, FunctionTag
 
 from mcbookshelf import constants, workspace
-from mcbookshelf.meta import Module, parse_version
+from mcbookshelf.meta import Module
+from mcbookshelf.version import parse_version
 from mcbookshelf.workspace import dependencies
 
 from . import ensure_function, ensure_function_tag
