@@ -13,6 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #x bs.ctx run data get storage bs:data raycast.rb[-1].tmin
+data modify storage bs:ctx x set from storage bs:data raycast.rb[-1].tmin
 execute store result score #n bs.ctx run data get storage bs:data raycast.rb[-1].norm
 data remove storage bs:data raycast.rb[-1]

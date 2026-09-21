@@ -14,20 +14,34 @@
 # ------------------------------------------------------------------------------------------------------------
 
 data modify storage bs:ctx _ set value {r:[],e:{norm:1}}
-execute if score #x bs.ctx > #raycast.te bs.data run function bs.raycast:record/entity/slice
-scoreboard players operation #raycast.te bs.data < #x bs.ctx
-scoreboard players operation #raycast.tm bs.data < #raycast.te bs.data
+execute unless predicate {type:"float_value_check",test:{max:{type:"storage",storage:"bs:data",path:"raycast.te"}},value:{type:"storage",storage:"bs:ctx",path:"x"}} run function bs.raycast:record/entity/slice
 
-execute if entity @s[type=!#bs.hitbox:is_shaped,tag=!bs.hitbox.centered] run scoreboard players operation #b bs.ctx -= #h bs.ctx
+data modify storage bs:data raycast.te set compute default float {type:"min",inputs:[{type:"storage",storage:"bs:data",path:"raycast.te"},{type:"storage",storage:"bs:ctx",path:"x"}]}
+data modify storage bs:data raycast.tm set compute default float {type:"min",inputs:[{type:"storage",storage:"bs:data",path:"raycast.tm"},{type:"storage",storage:"bs:data",path:"raycast.te"}]}
+
+execute unless score @s bs.raycast.id matches 1.. store result score @s bs.raycast.id run scoreboard players add #count bs.raycast.id 1
+execute if entity @s[type=!#bs.hitbox:is_shaped,tag=!bs.hitbox.centered] run data modify storage bs:ctx b set compute default float {type:"sub",left:{type:"storage",storage:"bs:ctx",path:"b"},right:{type:"storage",storage:"bs:ctx",path:"h"}}
+
 execute store result storage bs:ctx _.e.id int 1 run scoreboard players get @s bs.raycast.id
-execute store result storage bs:ctx _.e.tmin int 1 run scoreboard players get #x bs.ctx
-execute store result storage bs:ctx _.e.tmax int 1 run scoreboard players get #i bs.ctx
-execute store result storage bs:ctx _.e.x int 1 run scoreboard players get #a bs.ctx
-execute store result storage bs:ctx _.e.y int 1 run scoreboard players get #b bs.ctx
-execute store result storage bs:ctx _.e.z int 1 run scoreboard players get #c bs.ctx
-execute if score #z bs.ctx = #x bs.ctx run data modify storage bs:ctx _.e.norm set value 2
-execute if score #y bs.ctx = #x bs.ctx run data modify storage bs:ctx _.e.norm set value 3
+data modify storage bs:ctx _.e.tmin set from storage bs:ctx x
+data modify storage bs:ctx _.e.tmax set from storage bs:ctx i
+data modify storage bs:ctx _.e.x set from storage bs:ctx a
+data modify storage bs:ctx _.e.y set from storage bs:ctx b
+data modify storage bs:ctx _.e.z set from storage bs:ctx c
+
+data modify storage bs:ctx _.e.norm set compute default integer {\
+  type:"conditional",\
+  condition:{type:"float_value_check",test:{type:"storage",storage:"bs:ctx",path:"z"},value:{type:"storage",storage:"bs:ctx",path:"x"}},\
+  on_true:2,\
+  on_false:{\
+    type:"conditional",\
+    condition:{type:"float_value_check",test:{type:"storage",storage:"bs:ctx",path:"y"},value:{type:"storage",storage:"bs:ctx",path:"x"}},\
+    on_true:3\
+  }\
+}
 
 data modify storage bs:data raycast.re append from storage bs:ctx _.e
 data modify storage bs:data raycast.re append from storage bs:ctx _.r[]
+
 execute store result score #raycast.id bs.data run data get storage bs:data raycast.re[-1].id
+

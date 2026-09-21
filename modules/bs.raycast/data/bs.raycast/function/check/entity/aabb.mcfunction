@@ -15,44 +15,24 @@
 
 # get position relative to ray origin
 execute in minecraft:overworld positioned as @s as B5-0-0-0-1 run function bs.raycast:utils/get_entity_pos with storage bs:data raycast
-execute store result score #x bs.ctx run data get storage bs:ctx _[0] 10000000
-execute store result score #y bs.ctx run data get storage bs:ctx _[1] 10000000
-execute store result score #z bs.ctx run data get storage bs:ctx _[2] 10000000
-execute store result score #a bs.ctx store result score #i bs.ctx run scoreboard players operation #x bs.ctx += #raycast.rx bs.data
-execute store result score #b bs.ctx store result score #j bs.ctx run scoreboard players operation #y bs.ctx += #raycast.ry bs.data
-execute store result score #c bs.ctx store result score #k bs.ctx run scoreboard players operation #z bs.ctx += #raycast.rz bs.data
 
-# apply hitbox dimensions to get AABB corners
-scoreboard players operation #x bs.ctx -= #w bs.ctx
-scoreboard players operation #y bs.ctx -= #h bs.ctx
-scoreboard players operation #z bs.ctx -= #d bs.ctx
-scoreboard players operation #i bs.ctx += #w bs.ctx
-scoreboard players operation #j bs.ctx += #h bs.ctx
-scoreboard players operation #k bs.ctx += #d bs.ctx
-
-# normalize coordinates (always absolute)
-scoreboard players operation #x bs.ctx /= #raycast.ux bs.data
-scoreboard players operation #i bs.ctx /= #raycast.ux bs.data
-scoreboard players operation #y bs.ctx /= #raycast.uy bs.data
-scoreboard players operation #j bs.ctx /= #raycast.uy bs.data
-scoreboard players operation #z bs.ctx /= #raycast.uz bs.data
-scoreboard players operation #k bs.ctx /= #raycast.uz bs.data
-
-# swap near/far values if ray step is negative
-execute if score #raycast.ux bs.data matches ..-1 run scoreboard players operation #x bs.ctx >< #i bs.ctx
-execute if score #raycast.uy bs.data matches ..-1 run scoreboard players operation #y bs.ctx >< #j bs.ctx
-execute if score #raycast.uz bs.data matches ..-1 run scoreboard players operation #z bs.ctx >< #k bs.ctx
-
-# compute near and far intersection points
-scoreboard players operation #x bs.ctx > #y bs.ctx
-scoreboard players operation #x bs.ctx > #z bs.ctx
-scoreboard players operation #i bs.ctx < #j bs.ctx
-scoreboard players operation #i bs.ctx < #k bs.ctx
+data modify storage bs:ctx a set compute default float {type:"add",inputs:[{type:"storage","storage":"bs:ctx",path:"_[0]"},{type:"storage","storage":"bs:data",path:"raycast.rx"}]}
+data modify storage bs:ctx b set compute default float {type:"add",inputs:[{type:"storage","storage":"bs:ctx",path:"_[1]"},{type:"storage","storage":"bs:data",path:"raycast.ry"}]}
+data modify storage bs:ctx c set compute default float {type:"add",inputs:[{type:"storage","storage":"bs:ctx",path:"_[2]"},{type:"storage","storage":"bs:data",path:"raycast.rz"}]}
+data modify storage bs:ctx x set compute default float bs.raycast:internal/e_aabb/x
+data modify storage bs:ctx y set compute default float bs.raycast:internal/e_aabb/y
+data modify storage bs:ctx z set compute default float bs.raycast:internal/e_aabb/z
+data modify storage bs:ctx i set compute default float bs.raycast:internal/e_aabb/i
+data modify storage bs:ctx x set compute default float {\
+    "type":"max",\
+    "inputs": [\
+        {"type": "storage","storage": "bs:ctx","path": "x"},\
+        {"type": "storage","storage": "bs:ctx","path": "y"},\
+        {"type": "storage","storage": "bs:ctx","path": "z"}\
+    ] \
+}
 
 # check for valid intersection: near ≤ far and within ray bounds
-execute if score #x bs.ctx matches 0.. \
-  if score #x bs.ctx <= #i bs.ctx \
-  if score #x bs.ctx <= #raycast.dm bs.data \
-  run return run function bs.raycast:record/entity/add
+execute if predicate bs.raycast:aabb run return run function bs.raycast:record/entity/add
 
 scoreboard players reset @s bs.raycast.id

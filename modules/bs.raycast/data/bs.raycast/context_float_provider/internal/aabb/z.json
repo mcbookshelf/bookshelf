@@ -1,0 +1,29 @@
+{
+    "type": "add",
+    "inputs": [
+        {
+            "type":"div",
+            "left":{
+                "type": "add",
+                "inputs": [
+                    {"type":"storage","storage":"bs:lambda","path":"hitbox.offset.z"},
+                    {
+                        "type":"mul",
+                        "inputs":[
+                            0.0625,
+                            {
+                                "type":"conditional",
+                                "condition":"bs.raycast:internal/positive_uz",
+                                "on_true":{"type":"storage","storage":"bs:lambda","path":"hitbox.shape[-1][2]"},
+                                "on_false":{"type":"storage","storage":"bs:lambda","path":"hitbox.shape[-1][5]"}
+                            }
+                        ]
+                    }
+                ]
+            },
+            "right":{"type":"storage","storage":"bs:data","path":"raycast.uz"}
+        },
+        {"type":"storage","storage":"bs:data","path":"raycast.lz"}
+
+    ]
+}

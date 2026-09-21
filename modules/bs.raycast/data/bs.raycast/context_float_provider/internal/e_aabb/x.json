@@ -1,0 +1,19 @@
+{
+    "type":"div",
+    "left":
+        {
+            "type":"add",
+            "inputs":[
+                {"type":"storage","storage":"bs:ctx","path":"_[0]"},
+                {"type":"storage","storage":"bs:data","path":"raycast.rx"},
+                {
+                    "type":"conditional",
+                    "condition":"bs.raycast:internal/positive_ux",
+                    "on_true":{"type": "negate","input": {"type":"storage","storage":"bs:ctx","path":"w"}},
+                    "on_false": {"type":"storage","storage":"bs:ctx","path":"w"}
+                }
+                
+            ]
+        },
+    "right":"bs.raycast:internal/ux"
+}

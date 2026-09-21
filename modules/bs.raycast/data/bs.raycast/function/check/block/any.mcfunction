@@ -17,13 +17,11 @@ data remove storage bs:lambda hitbox
 $execute store result score $raycast.hit_flag bs.lambda run $(blocks)
 execute unless data storage bs:lambda hitbox run return run execute if score $raycast.hit_flag bs.lambda matches 1.. run function bs.raycast:react/cube
 
-execute store result score #p bs.ctx run data get storage bs:lambda hitbox.offset.x 10000000
-execute store result score #q bs.ctx run data get storage bs:lambda hitbox.offset.z 10000000
 
-execute if score #raycast.ux bs.data matches 0.. run scoreboard players operation #raycast.lx bs.data -= #raycast.dx bs.data
-execute if score #raycast.uy bs.data matches 0.. run scoreboard players operation #raycast.ly bs.data -= #raycast.dy bs.data
-execute if score #raycast.uz bs.data matches 0.. run scoreboard players operation #raycast.lz bs.data -= #raycast.dz bs.data
+execute if predicate bs.raycast:internal/positive_ux run data modify storage bs:data raycast.lx set compute default float bs.raycast:internal/decrement_lx
+execute if predicate bs.raycast:internal/positive_uy run data modify storage bs:data raycast.ly set compute default float bs.raycast:internal/decrement_ly
+execute if predicate bs.raycast:internal/positive_uz run data modify storage bs:data raycast.lz set compute default float bs.raycast:internal/decrement_lz
 execute if data storage bs:lambda hitbox.shape[-1] run function bs.raycast:check/block/aabb
-execute if score #raycast.ux bs.data matches 0.. run scoreboard players operation #raycast.lx bs.data += #raycast.dx bs.data
-execute if score #raycast.uy bs.data matches 0.. run scoreboard players operation #raycast.ly bs.data += #raycast.dy bs.data
-execute if score #raycast.uz bs.data matches 0.. run scoreboard players operation #raycast.lz bs.data += #raycast.dz bs.data
+execute if predicate bs.raycast:internal/positive_ux run data modify storage bs:data raycast.lx set compute default float bs.raycast:internal/increment_lx
+execute if predicate bs.raycast:internal/positive_uy run data modify storage bs:data raycast.ly set compute default float bs.raycast:internal/increment_ly
+execute if predicate bs.raycast:internal/positive_uz run data modify storage bs:data raycast.lz set compute default float bs.raycast:internal/increment_lz

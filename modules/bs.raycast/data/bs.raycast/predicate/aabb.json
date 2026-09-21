@@ -1,0 +1,14 @@
+{
+    "type": "float_value_check",
+    "value": {"type": "storage","storage": "bs:ctx","path": "x"},
+    "test": {
+        "min": 0,
+        "max": {
+            "type":"min",
+            "inputs": [
+                {"type": "storage","storage": "bs:ctx","path": "i"},
+                {"type": "storage","storage": "bs:data","path": "raycast.dm"}
+            ] 
+        }
+    }
+}

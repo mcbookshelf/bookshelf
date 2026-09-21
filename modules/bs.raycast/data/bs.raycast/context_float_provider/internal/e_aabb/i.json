@@ -1,0 +1,62 @@
+{
+    "type": "min",
+    "inputs": [
+        {
+            "type":"div",
+            "left":
+                {
+                    "type":"add",
+                    "inputs":[
+                        {"type":"storage","storage":"bs:ctx","path":"_[0]"},
+                        {"type":"storage","storage":"bs:data","path":"raycast.rx"},
+                        {
+                            "type":"conditional",
+                            "condition":"bs.raycast:internal/positive_ux",
+                            "on_false":{"type": "negate","input": {"type":"storage","storage":"bs:ctx","path":"w"}},
+                            "on_true": {"type":"storage","storage":"bs:ctx","path":"w"}
+                        }
+
+                    ]
+                },
+            "right":"bs.raycast:internal/ux"
+        },
+        {
+            "type":"div",
+            "left":
+                {
+                    "type":"add",
+                    "inputs":[
+                        {"type":"storage","storage":"bs:ctx","path":"_[1]"},
+                        {"type":"storage","storage":"bs:data","path":"raycast.ry"},
+                        {
+                            "type":"conditional",
+                            "condition":"bs.raycast:internal/positive_uy",
+                            "on_false":{"type": "negate","input": {"type":"storage","storage":"bs:ctx","path":"h"}},
+                            "on_true": {"type":"storage","storage":"bs:ctx","path":"h"}
+                        }
+
+                    ]
+                },
+            "right":"bs.raycast:internal/uy"
+        },
+        {
+            "type":"div",
+            "left":
+                {
+                    "type":"add",
+                    "inputs":[
+                        {"type":"storage","storage":"bs:ctx","path":"_[2]"},
+                        {"type":"storage","storage":"bs:data","path":"raycast.rz"},
+                        {
+                            "type":"conditional",
+                            "condition":"bs.raycast:internal/positive_uz",
+                            "on_false":{"type": "negate","input": {"type":"storage","storage":"bs:ctx","path":"d"}},
+                            "on_true": {"type":"storage","storage":"bs:ctx","path":"d"}
+                        }
+
+                    ]
+                },
+            "right":"bs.raycast:internal/uz"
+        }
+    ]
+}
