@@ -1,0 +1,13 @@
+{
+    "type":"float_value_check",
+    "test":{
+        "type":"min",
+        "inputs": [
+            {"type":"storage","storage":"bs:data","path":"raycast.lx"},
+            {"type":"storage","storage":"bs:data","path":"raycast.ly"},
+            {"type":"storage","storage":"bs:data","path":"raycast.lz"},
+            {"type":"storage","storage":"bs:data","path":"raycast.tm"}
+        ]
+    },
+    "value":{"type":"storage","storage":"bs:data","path":"raycast.tm"}
+}

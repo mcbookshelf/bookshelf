@@ -1,0 +1,9 @@
+{
+    "type":"conditional",
+    "condition":{
+        "type": "float_value_check",
+        "test": 0,
+        "value": {"type":"storage","storage":"bs:data","path":"raycast.ux"}
+    },
+    "on_true":1e-16,
+    "on_false":{"type":"storage","storage":"bs:data","path":"raycast.ux"}}

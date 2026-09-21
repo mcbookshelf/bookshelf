@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #i bs.ctx run data get storage bs:data raycast.rb[-1].tmax
+data modify storage bs:ctx i set from storage bs:data raycast.rb[-1].tmax
 data remove storage bs:data raycast.rb[-1]

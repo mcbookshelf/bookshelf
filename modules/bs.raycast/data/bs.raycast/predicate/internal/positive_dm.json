@@ -1,0 +1,7 @@
+{
+    "type":"float_value_check",
+    "test":{
+        "min":0
+    },
+    "value":{"type":"storage","storage":"bs:data","path":"raycast.dm"}
+}

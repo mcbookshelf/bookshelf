@@ -1,0 +1,24 @@
+{
+    "type":"all_of",
+    "terms":[
+        {
+            "type":"float_value_check",
+            "test":{
+                "type":"min",
+                "inputs": [
+                    {"type":"storage","storage":"bs:data","path":"raycast.lx"},
+                    {"type":"storage","storage":"bs:data","path":"raycast.ly"},
+                    {"type":"storage","storage":"bs:data","path":"raycast.lz"}
+                ]
+            },
+            "value":{"type":"storage","storage":"bs:data","path":"raycast.lx"}
+        },
+        {
+            "type":"float_value_check",
+            "test":{
+                "max":{"type":"storage","storage":"bs:data","path":"raycast.dm"}
+            },
+            "value":{"type":"storage","storage":"bs:data","path":"raycast.lx"}
+        }
+    ]
+}

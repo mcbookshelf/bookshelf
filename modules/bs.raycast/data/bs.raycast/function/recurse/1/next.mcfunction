@@ -15,9 +15,9 @@
 
 # check block collisions
 $execute unless block ~ ~ ~ $(ignored_blocks) run function bs.raycast:check/block/any with storage bs:data raycast
-execute if score #raycast.dm bs.data matches 1.. if score #raycast.tm bs.data <= #raycast.lx bs.data if score #raycast.tm bs.data <= #raycast.ly bs.data if score #raycast.tm bs.data <= #raycast.lz bs.data run function bs.raycast:react/any
+execute if predicate bs.raycast:internal/shortest_tm run function bs.raycast:react/any
 
 # advance on the grid by the shortest length
-execute if score #raycast.lx bs.data <= #raycast.ly bs.data if score #raycast.lx bs.data <= #raycast.lz bs.data if score #raycast.lx bs.data <= #raycast.dm bs.data run return run function bs.raycast:recurse/1/x with storage bs:data raycast
-execute if score #raycast.ly bs.data <= #raycast.lz bs.data if score #raycast.ly bs.data <= #raycast.dm bs.data run return run function bs.raycast:recurse/1/y with storage bs:data raycast
-execute if score #raycast.lz bs.data <= #raycast.dm bs.data run return run function bs.raycast:recurse/1/z with storage bs:data raycast
+execute if predicate bs.raycast:internal/shortest_x run return run function bs.raycast:recurse/1/x with storage bs:data raycast
+execute if predicate bs.raycast:internal/shortest_y run return run function bs.raycast:recurse/1/y with storage bs:data raycast
+execute if predicate bs.raycast:internal/shortest_z run return run function bs.raycast:recurse/1/z with storage bs:data raycast

@@ -24,43 +24,146 @@ execute if data storage bs:data raycast.rb[{flag:4}] run scoreboard players add 
 execute if data storage bs:data raycast.rb[{flag:8}] run scoreboard players add $raycast.hit_flag bs.lambda 8
 execute unless data storage bs:data raycast.on_entry_point unless data storage bs:data raycast.on_exit_point run data remove storage bs:data raycast.rb
 
-scoreboard players operation $raycast.targeted_block.x bs.lambda = #raycast.lx bs.data
-scoreboard players operation $raycast.targeted_block.x bs.lambda /= #raycast.dx bs.data
-scoreboard players operation $raycast.targeted_block.y bs.lambda = #raycast.ly bs.data
-scoreboard players operation $raycast.targeted_block.y bs.lambda /= #raycast.dy bs.data
-scoreboard players operation $raycast.targeted_block.z bs.lambda = #raycast.lz bs.data
-scoreboard players operation $raycast.targeted_block.z bs.lambda /= #raycast.dz bs.data
-execute if score #raycast.ux bs.data matches ..-1 run scoreboard players operation $raycast.targeted_block.x bs.lambda *= -1 bs.const
-execute if score #raycast.uy bs.data matches ..-1 run scoreboard players operation $raycast.targeted_block.y bs.lambda *= -1 bs.const
-execute if score #raycast.uz bs.data matches ..-1 run scoreboard players operation $raycast.targeted_block.z bs.lambda *= -1 bs.const
-execute store result score #raycast.bx bs.data store result score #raycast.by bs.data run scoreboard players set #raycast.bz bs.data 10000000
-scoreboard players operation #raycast.bx bs.data *= $raycast.targeted_block.x bs.lambda
-scoreboard players operation #raycast.by bs.data *= $raycast.targeted_block.y bs.lambda
-scoreboard players operation #raycast.bz bs.data *= $raycast.targeted_block.z bs.lambda
-scoreboard players operation #raycast.bx bs.data += #raycast.rx bs.data
-scoreboard players operation #raycast.by bs.data += #raycast.ry bs.data
-scoreboard players operation #raycast.bz bs.data += #raycast.rz bs.data
-scoreboard players operation $raycast.targeted_block.x bs.lambda += #raycast.x bs.data
-scoreboard players operation $raycast.targeted_block.y bs.lambda += #raycast.y bs.data
-scoreboard players operation $raycast.targeted_block.z bs.lambda += #raycast.z bs.data
-scoreboard players operation $raycast.entry_point.x bs.lambda *= #raycast.ux bs.data
-scoreboard players operation $raycast.entry_point.y bs.lambda *= #raycast.uy bs.data
-scoreboard players operation $raycast.entry_point.z bs.lambda *= #raycast.uz bs.data
-scoreboard players operation $raycast.exit_point.x bs.lambda *= #raycast.ux bs.data
-scoreboard players operation $raycast.exit_point.y bs.lambda *= #raycast.uy bs.data
-scoreboard players operation $raycast.exit_point.z bs.lambda *= #raycast.uz bs.data
-scoreboard players operation $raycast.entry_point.x bs.lambda -= #raycast.bx bs.data
-scoreboard players operation $raycast.entry_point.y bs.lambda -= #raycast.by bs.data
-scoreboard players operation $raycast.entry_point.z bs.lambda -= #raycast.bz bs.data
-scoreboard players operation $raycast.exit_point.x bs.lambda -= #raycast.bx bs.data
-scoreboard players operation $raycast.exit_point.y bs.lambda -= #raycast.by bs.data
-scoreboard players operation $raycast.exit_point.z bs.lambda -= #raycast.bz bs.data
-scoreboard players operation $raycast.entry_point.x bs.lambda /= 10000 bs.const
-scoreboard players operation $raycast.entry_point.y bs.lambda /= 10000 bs.const
-scoreboard players operation $raycast.entry_point.z bs.lambda /= 10000 bs.const
-scoreboard players operation $raycast.exit_point.x bs.lambda /= 10000 bs.const
-scoreboard players operation $raycast.exit_point.y bs.lambda /= 10000 bs.const
-scoreboard players operation $raycast.exit_point.z bs.lambda /= 10000 bs.const
+data modify storage bs:lambda raycast.targeted_block.x set compute default float {\
+  "type":"mul",\
+  "inputs":[\
+    {"type":"conditional",condition:"bs.raycast:internal/positive_ux",on_false:-1,on_true:1},\
+    {\
+      "type":"div",\
+      "left":{type:"storage",storage:"bs:data",path:"raycast.lx"},\
+      "right":{type:"storage",storage:"bs:data",path:"raycast.dx"}\
+    }\
+  ]\
+}
+data modify storage bs:lambda raycast.targeted_block.y set compute default float {\
+  "type":"mul",\
+  "inputs":[\
+    {"type":"conditional",condition:"bs.raycast:internal/positive_uy",on_false:-1,on_true:1},\
+    {\
+      "type":"div",\
+      "left":{type:"storage",storage:"bs:data",path:"raycast.ly"},\
+      "right":{type:"storage",storage:"bs:data",path:"raycast.dy"}\
+    }\
+  ]\
+}
+data modify storage bs:lambda raycast.targeted_block.z set compute default float {\
+  "type":"mul",\
+  "inputs":[\
+    {"type":"conditional",condition:"bs.raycast:internal/positive_uz",on_false:-1,on_true:1},\
+    {\
+      "type":"div",\
+      "left":{type:"storage",storage:"bs:data",path:"raycast.lz"},\
+      "right":{type:"storage",storage:"bs:data",path:"raycast.dz"}\
+    }\
+  ]\
+}
+
+data modify storage bs:data raycast.bx set compute default float {\
+  type:"add",\
+  inputs:[\
+    {\
+      "type":"mul",\
+      "inputs":[\
+        {type:"storage",storage:"bs:lambda",path:"raycast.targeted_block.x"}\
+      ]\
+    },\
+    {type:"storage",storage:"bs:data",path:"raycast.rx"}\
+  ]\
+}
+data modify storage bs:data raycast.by set compute default float {\
+  type:"add",\
+  inputs:[\
+    {\
+      "type":"mul",\
+      "inputs":[\
+        {type:"storage",storage:"bs:lambda",path:"raycast.targeted_block.y"}\
+      ]\
+    },\
+    {type:"storage",storage:"bs:data",path:"raycast.ry"}\
+  ]\
+}
+data modify storage bs:data raycast.bz set compute default float {\
+  type:"add",\
+  inputs:[\
+    {\
+      "type":"mul",\
+      "inputs":[\
+        {type:"storage",storage:"bs:lambda",path:"raycast.targeted_block.z"}\
+      ]\
+    },\
+    {type:"storage",storage:"bs:data",path:"raycast.rz"}\
+  ]\
+}
+
+
+
+data modify storage bs:lambda raycast.exit_point.x set compute default float {\
+  type:"sub",\
+  left:{\
+    "type":"mul",\
+    "inputs":[\
+      {type:"storage",storage:"bs:lambda",path:"raycast.exit_distance"},\
+      {type:"storage",storage:"bs:data",path:"raycast.ux"}\
+    ]\
+  },\
+  right:{type:"storage",storage:"bs:data",path:"raycast.bx"}\
+}
+data modify storage bs:lambda raycast.exit_point.y set compute default float {\
+  type:"sub",\
+  left:{\
+    "type":"mul",\
+    "inputs":[\
+      {type:"storage",storage:"bs:lambda",path:"raycast.exit_distance"},\
+      {type:"storage",storage:"bs:data",path:"raycast.uy"}\
+    ]\
+  },\
+  right:{type:"storage",storage:"bs:data",path:"raycast.by"}\
+}
+data modify storage bs:lambda raycast.exit_point.z set compute default float {\
+  type:"sub",\
+  left:{\
+    "type":"mul",\
+    "inputs":[\
+      {type:"storage",storage:"bs:lambda",path:"raycast.exit_distance"},\
+      {type:"storage",storage:"bs:data",path:"raycast.uz"}\
+    ]\
+  },\
+  right:{type:"storage",storage:"bs:data",path:"raycast.bz"}\
+}
+
+data modify storage bs:lambda raycast.entry_point.x set compute default float {\
+  type:"sub",\
+  left:{\
+    "type":"mul",\
+    "inputs":[\
+      {type:"storage",storage:"bs:lambda",path:"raycast.entry_distance"},\
+      {type:"storage",storage:"bs:data",path:"raycast.ux"}\
+    ]\
+  },\
+  right:{type:"storage",storage:"bs:data",path:"raycast.bx"}\
+}
+data modify storage bs:lambda raycast.entry_point.y set compute default float {\
+  type:"sub",\
+  left:{\
+    "type":"mul",\
+    "inputs":[\
+      {type:"storage",storage:"bs:lambda",path:"raycast.entry_distance"},\
+      {type:"storage",storage:"bs:data",path:"raycast.uy"}\
+    ]\
+  },\
+  right:{type:"storage",storage:"bs:data",path:"raycast.by"}\
+}
+data modify storage bs:lambda raycast.entry_point.z set compute default float {\
+  type:"sub",\
+  left:{\
+    "type":"mul",\
+    "inputs":[\
+      {type:"storage",storage:"bs:lambda",path:"raycast.entry_distance"},\
+      {type:"storage",storage:"bs:data",path:"raycast.uz"}\
+    ]\
+  },\
+  right:{type:"storage",storage:"bs:data",path:"raycast.bz"}\
+}
 
 execute if data storage bs:data raycast.on_targeted_block run function bs.raycast:utils/on_targeted_block with storage bs:data raycast
 execute store result score $raycast.hit_flag bs.lambda run data get storage bs:data raycast.rb[-1].flag
@@ -71,5 +174,5 @@ scoreboard players operation #raycast.pb bs.data = $raycast.piercing bs.lambda
 execute unless data storage bs:data raycast.piercing{} run scoreboard players operation #raycast.pe bs.data = #raycast.pb bs.data
 
 data remove storage bs:data raycast.rb[-1]
-execute unless data storage bs:data raycast.rb[-1] run return run scoreboard players set #raycast.tb bs.data 2147483647
-execute store result score #raycast.tb bs.data run data get storage bs:data raycast.rb[-1].tmin
+execute unless data storage bs:data raycast.rb[-1] run return run data modify storage bs:data raycast.tb set value 2147483647f
+data modify storage bs:data raycast.tb set from storage bs:data raycast.rb[-1].tmin

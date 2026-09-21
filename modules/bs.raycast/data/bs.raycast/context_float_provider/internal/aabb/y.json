@@ -1,0 +1,23 @@
+{
+    "type": "add",
+    "inputs": [
+        {
+            "type":"div",
+            "left":{
+                "type":"mul",
+                "inputs":[
+                    0.0625,
+                    {
+                        "type":"conditional",
+                        "condition":"bs.raycast:internal/positive_uy",
+                        "on_true":{"type":"storage","storage":"bs:lambda","path":"hitbox.shape[-1][1]"},
+                        "on_false":{"type":"storage","storage":"bs:lambda","path":"hitbox.shape[-1][4]"}
+                    }
+                ]
+            },
+            "right":{"type":"storage","storage":"bs:data","path":"raycast.uy"}
+        },
+        {"type":"storage","storage":"bs:data","path":"raycast.ly"}
+
+    ]
+}

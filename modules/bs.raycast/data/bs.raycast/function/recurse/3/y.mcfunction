@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # increment length by delta on y then move to the next block on the grid
-scoreboard players operation #raycast.ly bs.data += #raycast.dy bs.data
+data modify storage bs:data raycast.ly set compute default float bs.raycast:internal/increment_ly
 $execute positioned ~ ~$(sy) ~ run return run function bs.raycast:recurse/3/next with storage bs:data raycast

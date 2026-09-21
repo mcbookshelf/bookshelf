@@ -13,20 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if score #raycast.tm bs.data = #raycast.tb bs.data run function bs.raycast:react/block
-execute if score #raycast.tm bs.data = #raycast.te bs.data positioned as @s as @e[tag=bs.raycast.checked,predicate=bs.raycast:internal/id,distance=..255,limit=1] run function bs.raycast:react/entity
+execute if predicate {type:"float_value_check",test:{type:"storage",storage:"bs:data",path:"raycast.tb"},value:{type:"storage",storage:"bs:data",path:"raycast.tm"}} run function bs.raycast:react/block
+execute if predicate {type:"float_value_check",test:{type:"storage",storage:"bs:data",path:"raycast.te"},value:{type:"storage",storage:"bs:data",path:"raycast.tm"}} positioned as @s as @e[tag=bs.raycast.checked,predicate=bs.raycast:internal/id,distance=..255,limit=1] run function bs.raycast:react/entity
 
 # stop the recursion if piercing is 0
-execute if score $raycast.piercing bs.lambda matches 0 run return run scoreboard players set #raycast.dm bs.data -2147483648
+execute if score $raycast.piercing bs.lambda matches 0 run return run data modify storage bs:data raycast.dm set value -2147483648f
 
-execute store result score $raycast.prev_entry_distance bs.lambda run data get storage bs:data raycast.tmin 1000
-execute store result score $raycast.prev_exit_distance bs.lambda run data get storage bs:data raycast.tmax 1000
+data modify storage bs:lambda raycast.prev_entry_distance set from storage bs:data raycast.tm
+data modify storage bs:lambda raycast.prev_exit_distance set from storage bs:lambda raycast.exit_distance
 
-scoreboard players set #raycast.tm bs.data 2147483647
-scoreboard players operation #raycast.tm bs.data < #raycast.tb bs.data
-scoreboard players operation #raycast.tm bs.data < #raycast.te bs.data
+data modify storage bs:data raycast.tm set compute default float {type:"min",inputs:[2147483647f,{type:"storage",storage:"bs:data",path:"raycast.tb"},{type:"storage",storage:"bs:data",path:"raycast.te"}]}
 
-execute if score #raycast.tm bs.data <= #raycast.lx bs.data \
-  if score #raycast.tm bs.data <= #raycast.ly bs.data \
-  if score #raycast.tm bs.data <= #raycast.lz bs.data \
-  run function bs.raycast:react/any
+execute if predicate bs.raycast:internal/shortest_tm run function bs.raycast:react/any

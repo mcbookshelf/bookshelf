@@ -1,0 +1,19 @@
+{
+    "type":"all_of",
+    "terms":[
+        {
+            "type":"float_value_check",
+            "test":{
+                "max":{"type":"storage","storage":"bs:data","path":"raycast.lz"}
+            },
+            "value":{"type":"storage","storage":"bs:data","path":"raycast.ly"}
+        },
+        {
+            "type":"float_value_check",
+            "test":{
+                "max":{"type":"storage","storage":"bs:data","path":"raycast.dm"}
+            },
+            "value":{"type":"storage","storage":"bs:data","path":"raycast.ly"}
+        }
+    ]
+}

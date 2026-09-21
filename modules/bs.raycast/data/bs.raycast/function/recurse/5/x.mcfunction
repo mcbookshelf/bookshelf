@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # increment length by delta on x then move to the next block on the grid
-scoreboard players operation #raycast.lx bs.data += #raycast.dx bs.data
+data modify storage bs:data raycast.lx set compute default float bs.raycast:internal/increment_lx
 $execute positioned ~$(sx) ~ ~ run return run function bs.raycast:recurse/5/next with storage bs:data raycast

@@ -16,12 +16,12 @@
 execute unless entity @s[scores={bs.width=1..,bs.height=1..,bs.depth=1..}] run return 0
 
 # get hitbox dimensions (width, depth, height)
-scoreboard players operation #w bs.ctx = @s bs.width
-scoreboard players operation #h bs.ctx = @s bs.height
-scoreboard players operation #d bs.ctx = @s bs.depth
+execute store result storage bs:ctx w float 0.0001 run scoreboard players get @s bs.width
+execute store result storage bs:ctx h float 0.0001 run scoreboard players get @s bs.height
+execute store result storage bs:ctx d float 0.0001 run scoreboard players get @s bs.depth
 
 # run size-based collision check
 execute if entity @s[tag=bs.hitbox.centered] run return run function bs.raycast:check/entity/aabb
-scoreboard players operation #raycast.ry bs.data += #h bs.ctx
+data modify storage bs:data raycast.ry set compute default float {type:"add",inputs:[{type:"storage",storage:"bs:data",path:"raycast.ry"},{type:"storage",storage:"bs:ctx",path:"h"}]}
 function bs.raycast:check/entity/aabb
-scoreboard players operation #raycast.ry bs.data -= #h bs.ctx
+data modify storage bs:data raycast.ry set compute default float {type:"sub",left:{type:"storage",storage:"bs:data",path:"raycast.ry"},right:{type:"storage",storage:"bs:ctx",path:"h"}}

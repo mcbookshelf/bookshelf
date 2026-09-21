@@ -13,9 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #u bs.ctx run data get storage bs:data raycast.rb[-1].tmin
 execute store result score #v bs.ctx run data get storage bs:data raycast.rb[-1].flag
-execute if score #v bs.ctx = #f bs.ctx if score #i bs.ctx >= #u bs.ctx run return run function bs.raycast:record/block/merge_left
+execute if score #v bs.ctx = #f bs.ctx if predicate {type:"float_value_check",test:{min:{type:"storage",storage:"bs:data",path:"raycast.rb[-1].tmin"}},value:{type:"storage",storage:"bs:ctx",path:"i"}} run return run function bs.raycast:record/block/merge_left
 data modify storage bs:ctx _.l prepend from storage bs:data raycast.rb[-1]
 data remove storage bs:data raycast.rb[-1]
 execute if data storage bs:data raycast.rb[-1] unless score #v bs.ctx = #f bs.ctx run function bs.raycast:record/block/slice_left
