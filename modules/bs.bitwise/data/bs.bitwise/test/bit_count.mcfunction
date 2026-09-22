@@ -13,8 +13,20 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players set $bitwise.bit_count.n bs.in -1568
-assert result 3 run function #bs.bitwise:bit_count
+data modify storage bs.bitwise:bit_count in set value {n:-1568}
+assert result 25 run compute default integer bs.bitwise:bit_count
 
-scoreboard players set $bitwise.bit_count.n bs.in 174653179
-assert result 19 run function #bs.bitwise:bit_count
+data modify storage bs.bitwise:bit_count in set value {n:174653179}
+assert result 19 run compute default integer bs.bitwise:bit_count
+
+data modify storage bs.bitwise:bit_count in set value {n:0}
+assert result 0 run compute default integer bs.bitwise:bit_count
+
+data modify storage bs.bitwise:bit_count in set value {n:-1}
+assert result 32 run compute default integer bs.bitwise:bit_count
+
+data modify storage bs.bitwise:bit_count in set value {n:2147483647}
+assert result 31 run compute default integer bs.bitwise:bit_count
+
+data modify storage bs.bitwise:bit_count in set value {n:-2147483648}
+assert result 1 run compute default integer bs.bitwise:bit_count

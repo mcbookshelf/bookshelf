@@ -1,0 +1,18 @@
+#!tag "bs.load:status"
+
+{% include 'bs/header.jinja' %}
+# Return early to ensure code runs only on the latest available version
+execute unless score $bs.load.major load.status matches {{ major }} run return 0
+execute unless score $bs.load.minor load.status matches {{ minor }} run return 0
+execute unless score $bs.load.patch load.status matches {{ patch }} run return 0
+
+execute unless function #bs.load:process/validate run return fail
+
+data modify storage bs.load: _ set value []
+data modify storage bs.load: _ append from storage bs.load: modules[{enabled:1b}]
+data modify storage bs.load: status set value []
+function bs.load:load/v{{ loader }}/status/module
+
+tellraw @a [{text:"\n✔ ",color:"#4CCB5E",underlined:true},{text:"BOOKSHELF",bold:true},{text:" • Modules Loaded Successfully\n"}]
+tellraw @a [{text:"◇ Loaded Modules: ",color:"#F3B512"},{text:"\n • ",color:"#CCCCCC"},{type:"nbt",storage:"bs.load:status",nbt:"out[]",color:"#CCCCCC",separator:"\n • ",interpret:true},"\n"]
+return 1

@@ -1,4 +1,9 @@
 import os
+from pathlib import Path
+
+from mcbookshelf.sphinx import switcher
+
+switcher.write(Path(__file__).parent / "_static" / "switcher.json")
 
 # -- Project information -----------------------------------------------------
 
@@ -9,11 +14,13 @@ author = "Gunivers"
 # -- General configuration ---------------------------------------------------
 
 extensions = [
+    "mcbookshelf.sphinx",
     "myst_parser",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_minecraft",
     "sphinx_treeview",
+    "sphinxcontrib.mermaid",
 ]
 
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]

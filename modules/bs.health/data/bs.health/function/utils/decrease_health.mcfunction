@@ -17,9 +17,5 @@ scoreboard players operation #h bs.ctx += @s bs.hmod
 execute if score #h bs.ctx matches ..0 unless predicate {type:"entity_properties",entity:"this",predicate:{"type_specific/player":{gamemode:["creative","spectator"]}}} run kill @s
 
 # Get add_multiplied_total to reduce health to the target value, it's applied last, so it won't mess with other modifiers
-execute store result storage bs:data health.div[0] float 1 run scoreboard players operation #h bs.ctx -= #m bs.ctx
-execute store result storage bs:data health.div[-1] float 1 run scoreboard players add #m bs.ctx 1
-data modify entity B5-0-0-0-2 transformation set from storage bs:data health.div
-execute store result storage bs:ctx y double .000001 run data get entity B5-0-0-0-2 transformation.scale[0] -1000000
-
-function bs.health:utils/apply_health with storage bs:ctx
+data modify storage bs.health: points set compute default float {type:sub,left:{type:div,left:{type:from_int,input:{type:score,score:"bs.ctx",target:{type:fixed,name:"#h"}}},right:{type:from_int,input:{type:score,score:"bs.ctx",target:{type:fixed,name:"#m"}}}},right:1}
+function bs.health:utils/apply_health with storage bs.health:

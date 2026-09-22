@@ -22,211 +22,158 @@ Manipulate integers as sequences of bits.
 
 ---
 
-## 🔧 Functions
+## Integer providers
 
-You can find below all functions available in this module.
-
----
-
-### Bit Count
-
-```{function} #bs.bitwise:bit_count
-
-Get the number of ones in the binary representation of a number.
-
-:Inputs:
-  **Score `$bitwise.bit_count.n bs.in`**: Number to get the bit_count of.
-
-:Outputs:
-  **Return | Score `$bitwise.bit_count bs.out`**: Number of positive bits needed to represent the number.
-```
-
-*Example: Compute and display the number of positive bits in 12:*
-
-```mcfunction
-# Once
-scoreboard players set $bitwise.bit_count.n bs.in 12
-function #bs.bitwise:bit_count
-
-# See the result
-tellraw @a [{"text":"Number of bits for 12 = ","color":"#e0c7ff"},{"score":{"name":"$bitwise.bit_count","objective":"bs.out"}}]
-```
-
-> **Credits**: Aksiome
+The following integer providers are available in this module.
 
 ---
 
-### Bit Length
+### And
 
-```{function} #bs.bitwise:bit_length
-
-Get the number of bits necessary to represent a number.
-
-:Inputs:
-  **Score `$bitwise.bit_length.n bs.in`**: Number to get the bit_length of.
-
-:Outputs:
-  **Return | Score `$bitwise.bit_length bs.out`**: Number of bits needed to represent the number.
+```{feature} bs.bitwise:and
 ```
 
-*Example: Compute and display the number of bits needed to represent 12:*
+*Example: compute $-9 \land 57$*
 
 ```mcfunction
 # Once
-scoreboard players set $bitwise.bit_length.n bs.in 12
-function #bs.bitwise:bit_length
+data modify storage bs.bitwise:and in set value {a:-9,b:57}
+data modify storage bs.bitwise:and out set compute default integer bs.bitwise:and
 
 # See the result
-tellraw @a [{"text":"Number of bits for 12 = ","color":"#e0c7ff"},{"score":{"name":"$bitwise.bit_length","objective":"bs.out"}}]
+tellraw @a [{"text":"-9 & 57 = "},{"nbt":"out","storage":"bs.bitwise:and"}]
 ```
-
-> **Credits**: Aksiome, theogiraudet
 
 ---
 
-### Complement to 2
+### Bit count
 
-```{function} #bs.bitwise:two_complement
-
-Compute the two's complement of a number.
-
-:Inputs:
-  **Score `$bitwise.two_complement.n bs.in`**: Number to compute the two's complement of.
-
-:Outputs:
-  **Return | Score `$bitwise.two_complement bs.out`**: The two's complement of the number.
+```{feature} bs.bitwise:bit_count
 ```
 
-*Example: Compute and display the two's complement of -12:*
+*Example: count the bits set in 12*
 
 ```mcfunction
 # Once
-scoreboard players set $bitwise.two_complement.n bs.in -12
-function #bs.bitwise:two_complement
+data modify storage bs.bitwise:bit_count in set value {n:12}
+data modify storage bs.bitwise:bit_count out set compute default integer bs.bitwise:bit_count
 
 # See the result
-tellraw @a [{"text":"Two's complement of -12 = ","color":"#e0c7ff"},{"score":{"name":"$bitwise.two_complement","objective":"bs.out"}}]
+tellraw @a [{"text":"12 has "},{"nbt":"out","storage":"bs.bitwise:bit_count"},{"text":" bits set"}]
 ```
-
-> **Credits**: Aksiome, theogiraudet
 
 ---
 
-### Logical Operators
+### Bit length
 
-::::{tab-set}
-:::{tab-item} And
-
-```{function} #bs.bitwise:and
-
-Compute the bitwise conjunction of two numbers.
-
-:Inputs:
-  **Score `$bitwise.and.a bs.in`**: First operand $=a$.
-
-  **Score `$bitwise.and.b bs.in`**: Second operand $=b$.
-
-:Outputs:
-  **Return | Score `$bitwise.and bs.out`**: Result of the operation $=a \land b$.
+```{feature} bs.bitwise:bit_length
 ```
 
-*Example: Compute and display $-9 \land 57$:*
+*Example: count the bits needed to represent 12*
 
 ```mcfunction
 # Once
-scoreboard players set $bitwise.and.a bs.in -9
-scoreboard players set $bitwise.and.b bs.in 57
-function #bs.bitwise:and
+data modify storage bs.bitwise:bit_length in set value {n:12}
+data modify storage bs.bitwise:bit_length out set compute default integer bs.bitwise:bit_length
 
 # See the result
-tellraw @a [{"text":"-9 & 57 = ","color":"#e0c7ff"},{"score":{"name":"$bitwise.and","objective":"bs.out"}}]
+tellraw @a [{"text":"12 fits in "},{"nbt":"out","storage":"bs.bitwise:bit_length"},{"text":" bits"}]
 ```
 
-:::
-:::{tab-item} Or
+---
 
-```{function} #bs.bitwise:or
+### Not
 
-Compute the bitwise disjunction of two numbers.
-
-:Inputs:
-  **Score `$bitwise.or.a bs.in`**: First operand $=a$.
-
-  **Score `$bitwise.or.b bs.in`**: Second operand $=b$.
-
-:Outputs:
-  **Return | Score `$bitwise.or bs.out`**: Result of the operation $=a \lor b$.
+```{feature} bs.bitwise:not
 ```
 
-*Example: Compute and display $-9 \lor 57$:*
+*Example: compute $\lnot 452$*
 
 ```mcfunction
 # Once
-scoreboard players set $bitwise.or.a bs.in -9
-scoreboard players set $bitwise.or.b bs.in 57
-function #bs.bitwise:or
+data modify storage bs.bitwise:not in set value {n:452}
+data modify storage bs.bitwise:not out set compute default integer bs.bitwise:not
 
 # See the result
-tellraw @a [{"text":"-9 | 57 = ","color":"#e0c7ff"},{"score":{"name":"$bitwise.or","objective":"bs.out"}}]
+tellraw @a [{"text":"~452 = "},{"nbt":"out","storage":"bs.bitwise:not"}]
 ```
 
-:::
-:::{tab-item} Xor
+---
 
-```{function} #bs.bitwise:xor
+### Or
 
-Compute the exclusive bitwise disjunction of two numbers.
-
-:Inputs:
-  **Score `$bitwise.xor.a bs.in`**: First operand $=a$.
-
-  **Score `$bitwise.xor.b bs.in`**: Second operand $=b$.
-
-:Outputs:
-  **Return | Score `$bitwise.xor bs.out`**: Result of the operation $=a \oplus b$.
+```{feature} bs.bitwise:or
 ```
 
-*Example: Compute and display $-9 \oplus 57$:*
+*Example: compute $-9 \lor 57$*
 
 ```mcfunction
 # Once
-scoreboard players set $bitwise.xor.a bs.in -9
-scoreboard players set $bitwise.xor.b bs.in 57
-function #bs.bitwise:xor
+data modify storage bs.bitwise:or in set value {a:-9,b:57}
+data modify storage bs.bitwise:or out set compute default integer bs.bitwise:or
 
 # See the result
-tellraw @a [{"text":"-9 ^ 57 = ","color":"#e0c7ff"},{"score":{"name":"$bitwise.xor","objective":"bs.out"}}]
+tellraw @a [{"text":"-9 | 57 = "},{"nbt":"out","storage":"bs.bitwise:or"}]
 ```
 
-:::
-:::{tab-item} Not
+---
 
-```{function} #bs.bitwise:not
+### Shift left
 
-Compute the bitwise negation of a number.
-
-:Inputs:
-  **Score `$bitwise.not.n bs.in`**: Number to negate.
-
-:Outputs:
-  **Return | Score `$bitwise.not bs.out`**: Result of the not operation.
+```{feature} bs.bitwise:shift_left
 ```
 
-*Example: Compute and display $\lnot 452$:*
+*Example: compute $5 \ll 3$*
 
 ```mcfunction
 # Once
-scoreboard players set $bitwise.not.n bs.in 452
-function #bs.bitwise:not
+data modify storage bs.bitwise:shift_left in set value {n:5,by:3}
+data modify storage bs.bitwise:shift_left out set compute default integer bs.bitwise:shift_left
 
 # See the result
-tellraw @a [{"text":"~452 = ","color":"#e0c7ff"},{"score":{"name":"$bitwise.not","objective":"bs.out"}}]
+tellraw @a [{"text":"5 << 3 = "},{"nbt":"out","storage":"bs.bitwise:shift_left"}]
 ```
 
-:::
-::::
+---
 
-> **Credits**: Aksiome, theogiraudet
+### Shift right
+
+````{feature} bs.bitwise:shift_right
+```{admonition} Negative numbers
+:class: tip
+
+The sign is kept: shifting `-8` right by `1` gives `-4`, as `>>` does in most languages.
+```
+````
+
+*Example: compute $-8 \gg 1$*
+
+```mcfunction
+# Once
+data modify storage bs.bitwise:shift_right in set value {n:-8,by:1}
+data modify storage bs.bitwise:shift_right out set compute default integer bs.bitwise:shift_right
+
+# See the result
+tellraw @a [{"text":"-8 >> 1 = "},{"nbt":"out","storage":"bs.bitwise:shift_right"}]
+```
+
+---
+
+### Xor
+
+```{feature} bs.bitwise:xor
+```
+
+*Example: compute $-9 \oplus 57$*
+
+```mcfunction
+# Once
+data modify storage bs.bitwise:xor in set value {a:-9,b:57}
+data modify storage bs.bitwise:xor out set compute default integer bs.bitwise:xor
+
+# See the result
+tellraw @a [{"text":"-9 ^ 57 = "},{"nbt":"out","storage":"bs.bitwise:xor"}]
+```
 
 ---
 

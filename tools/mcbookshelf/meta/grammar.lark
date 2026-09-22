@@ -1,0 +1,121 @@
+// --- document ------------------------------------------------------------- --
+
+document: (_LEAD | _NL)? (DOC _NL)? (variable | property)* feature*
+
+feature: "feature" REGISTRY feature_id _end line*
+
+?line: slot | property
+
+slot: ROLE (reference | declaration) _end
+property: ID ":" TEXT _NL
+
+variable: VARIABLE "=" (declaration | type) _end
+
+reference: VARIABLE
+
+declaration: KIND RESOURCE_LOCATION? path? (":" type)?
+path: name ("/" name)*
+
+?feature_id: RESOURCE_LOCATION | name
+
+?name: ID | REGISTRY | ROLE | KIND | int_type | float_type | plain_type
+
+_end: DOC? _NL | _NL DOC _NL
+
+// a role wins over a property name at the start of a feature line
+ROLE.2: /(context|input|output)(?![A-Za-z0-9_-])/
+
+KIND: /(executor|position|rotation|dimension|state|result|success|macro|storage|arguments)\b/
+
+REGISTRY: /(context_float_provider|context_int_provider|function|loot_table|predicate|block_tag|entity_type_tag)\b/
+
+// --- types ------------------------------------------------------------- -----
+
+type: member ("|" member)*
+
+member: ATTRIBUTE* base
+
+?base: primitive | array | list_type | tuple_type | struct | reference
+
+// the array words are named here directly, not through int_type: after `int @ 0..1` the
+// parser must still be able to go either way, and an extra reduction would force it to choose
+primitive: (array_int_type | SHORT_TYPE | STRING_TYPE) ("@" int_range)?
+         | float_type ("@" float_range)?
+         | plain_type
+array: array_element "[" "]" ("@" int_range)?
+array_element: array_int_type ("@" int_range)?
+             | array_plain_type
+
+?int_type: array_int_type | SHORT_TYPE | STRING_TYPE
+?array_int_type: INT_TYPE | BYTE_TYPE | LONG_TYPE
+?float_type: FLOAT_TYPE | DOUBLE_TYPE | NUMBER_TYPE
+?plain_type: array_plain_type | BOOLEAN_TYPE | ANY_TYPE | XYZ_TYPE | XY_TYPE
+           | OVERWORLD_TYPE | NETHER_TYPE | END_TYPE
+?array_plain_type: ENTITY_TYPE | PLAYER_TYPE
+list_type: "[" type "]" ("@" int_range)?
+tuple_type: "[" type "," (type ("," type)*)? "]"
+
+struct: "{" _NL entry* "}"
+      | "{" "}"
+entry: name OPTIONAL? ":" type ","? _end
+
+?int_range: INT _RANGE INT  -> full_range
+          | INT _RANGE      -> min_range
+          | _RANGE INT      -> max_range
+          | INT              -> exact_range
+
+?float_range: number _RANGE number  -> full_range
+            | number _RANGE         -> min_range
+            | _RANGE number         -> max_range
+            | number                 -> exact_range
+
+?number: INT | FLOAT
+
+// one terminal per type word, composed by the rules above
+INT_TYPE: /int\b/
+BYTE_TYPE: /byte\b/
+LONG_TYPE: /long\b/
+SHORT_TYPE: /short\b/
+STRING_TYPE: /string\b/
+FLOAT_TYPE: /float\b/
+DOUBLE_TYPE: /double\b/
+NUMBER_TYPE: /number\b/
+BOOLEAN_TYPE: /boolean\b/
+ANY_TYPE: /any\b/
+ENTITY_TYPE: /entity\b/
+PLAYER_TYPE: /player\b/
+XYZ_TYPE: /xyz\b/
+XY_TYPE: /xy\b/
+OVERWORLD_TYPE: /overworld\b/
+NETHER_TYPE: /nether\b/
+END_TYPE: /end\b/
+
+OPTIONAL: "?"
+_RANGE: ".."
+
+// --- terminals ------------------------------------------------------------- -
+
+ID: /[_A-Za-z][_A-Za-z0-9-]*/
+
+// a '$' name: defined once at the top of the file, referenced anywhere as a slot or a type
+VARIABLE: /\$[_A-Za-z][_A-Za-z0-9-]*/
+
+// a resource location wins over an identifier
+RESOURCE_LOCATION.2: /[a-z0-9_-]+(\.[a-z0-9_-]+)+:[a-z0-9_.\/-]+/
+
+// an mcdoc attribute, passed through as written
+ATTRIBUTE: /#\[(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*\]/
+
+// a documentation continues on every following line that starts with '>'
+DOC: />[^\r\n]*(\r?\n[ \t]*>[^\r\n]*)*/
+
+INT: /-?(0|[1-9][0-9]*)/
+FLOAT: /-?((0|[1-9][0-9]*)\.(?!\.)[0-9]*|\.[0-9]+)/
+TEXT.1: /[^ \t\r\n][^\r\n]*/
+
+_NL: /(\r?\n[ \t]*(#[^\r\n]*)?)+/
+_LEAD: /#[^\r\n]*(\r?\n[ \t]*(#[^\r\n]*)?)*/
+
+WS: /[ \t]+/
+
+%ignore WS

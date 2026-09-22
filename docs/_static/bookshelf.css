@@ -24,6 +24,68 @@ li div:where([class*=highlight-]:last-child,.literal-block-wrapper:last-child) {
   margin-bottom: 1rem;
 }
 
+.bs.feature {
+  margin-bottom: 1.5rem;
+}
+
+/* a feature with a macro: two forms, the switch on the signature picks the one shown */
+.bs-forms.bs-show-storage > .bs-form-macro,
+.bs-forms.bs-show-macro > .bs-form-storage {
+  display: none;
+}
+
+/* the switch closes the signature, one full-height segment per form after the name */
+.bs-forms .sig {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+
+  .sig-name {
+    flex: 1;
+    padding: 0.3rem 0.5rem 0.4rem;
+  }
+}
+
+article .sd-tab-set .sd-tab-content > .bs-forms > *,
+article .sd-tab-set .sd-tab-content > .bs-forms > * > :first-child {
+  margin-top: 0!important;
+}
+
+.bs-switch {
+  display: flex;
+  font-family: var(--bz-font-sans);
+  font-size: var(--bz-size-md);
+  font-weight: normal;
+  color: var(--bz-color-muted);
+  border-radius: .5rem;
+  overflow: hidden;
+  border: 1px solid var(--bz-color-outline);
+  margin-right: .25rem;
+
+  button {
+    padding: 0 .85em;
+    border: 0;
+    background: var(--bz-color-surface-4);
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+  }
+
+  button:first-child {
+    border-left: 0;
+  }
+
+  button:hover {
+    background: var(--bz-color-surface-3);
+  }
+
+  button[aria-pressed="true"] {
+    background: var(--bz-color-primary);
+    color: white;
+  }
+}
+
 .bz-footer > * {
   flex-grow: 1;
 }
@@ -61,4 +123,9 @@ li div:where([class*=highlight-]:last-child,.literal-block-wrapper:last-child) {
   filter: hue-rotate(-16deg);
   margin-left: 0;
   margin-right: 3px;
+}
+
+.mermaid {
+  background-color: var(--pst-color-background);
+  border: none;
 }

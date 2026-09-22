@@ -13,9 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.out
-scoreboard objectives remove bs.const
-
-data remove storage bs:in xp
-data remove storage bs:const xp
+data remove storage bs.xp: levels
+data remove storage bs.xp: points

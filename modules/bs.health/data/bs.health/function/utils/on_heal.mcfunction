@@ -18,10 +18,6 @@ execute unless score @s bs.hmod matches 1.. run return 0
 scoreboard players operation @s bs.hmod += @s bs.hval
 
 # Get add_multiplied_total to reduce health to the target value, it's applied last, so it won't mess with other modifiers
-execute store result score #m bs.ctx run attribute @s minecraft:max_health get 100000
-execute store result storage bs:data health.div[0] float 1 run scoreboard players operation @s bs.hmod -= #m bs.ctx
-execute store result storage bs:data health.div[-1] float 1 run scoreboard players add #m bs.ctx 1
-data modify entity B5-0-0-0-2 transformation set from storage bs:data health.div
-execute store result storage bs:ctx y double .000001 run data get entity B5-0-0-0-2 transformation.scale[0] -1000000
-
-function bs.health:utils/apply_health with storage bs:ctx
+execute store result score #m bs.ctx run attribute @s minecraft:max_health get 1000000
+data modify storage bs.health: points set compute default float {type:sub,left:{type:div,left:{type:from_int,input:{type:score,score:"bs.hmod",target:"this"}},right:{type:from_int,input:{type:score,score:"bs.ctx",target:{type:fixed,name:"#m"}}}},right:1}
+function bs.health:utils/apply_health with storage bs.health:

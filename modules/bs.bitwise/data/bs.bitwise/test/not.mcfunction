@@ -13,8 +13,17 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players set $bitwise.not.n bs.in 123456
-assert result -123457 run function #bs.bitwise:not
+data modify storage bs.bitwise:not in set value {n:123456}
+assert result -123457 run compute default integer bs.bitwise:not
 
-scoreboard players set $bitwise.not.n bs.in -197364158
-assert result 197364157 run function #bs.bitwise:not
+data modify storage bs.bitwise:not in set value {n:-197364158}
+assert result 197364157 run compute default integer bs.bitwise:not
+
+data modify storage bs.bitwise:not in set value {n:0}
+assert result -1 run compute default integer bs.bitwise:not
+
+data modify storage bs.bitwise:not in set value {n:-2147483648}
+assert result 2147483647 run compute default integer bs.bitwise:not
+
+data modify storage bs.bitwise:not in set value {n:2147483647}
+assert result -2147483648 run compute default integer bs.bitwise:not

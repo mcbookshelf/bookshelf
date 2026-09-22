@@ -26,11 +26,13 @@ Bookshelf is designed with modularity in mind. Features that serve a common purp
 :hidden:
 :caption: Runtime
 
+animation
 bitwise
 block
 collection
 color
 environment
+fsm
 generation
 health
 hitbox

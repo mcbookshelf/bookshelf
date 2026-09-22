@@ -1,55 +1,107 @@
-name: 🏷️ Release Build
+name: 🏷️ Release
 
 on:
-  pull_request_target:
-    types: [closed]
+  push:
     branches: [master]
-    paths: [data/versions.json]
-  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
 
 jobs:
-  check:
-    uses: ./.github/workflows/release-check.yml
+  info:
+    name: 🔎 Release info
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.info.outputs.version }}
+      tag: ${{ steps.info.outputs.tag }}
+      tag_exists: ${{ steps.info.outputs.tag_exists }}
+      game_version: ${{ steps.info.outputs.game_version }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-tags: true
+      - uses: astral-sh/setup-uv@v9.0.0
+      - name: Read release info
+        id: info
+        run: uv run info
 
   release:
-    name: 📦 Create Release
-    needs: check
-    if: ${{ needs.check.outputs.version_exists == 'false' }}
+    name: 📦 Stable release
+    needs: info
+    if: needs.info.outputs.tag_exists == 'false'
     runs-on: ubuntu-latest
     environment: release
+    permissions:
+      contents: write
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v7
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - name: Setup Git User
-        uses: fregante/setup-git-user@v2
-      - name: Install uv
-        uses: astral-sh/setup-uv@v9.0.0
-      - name: Cache Beet Content
-        uses: actions/cache@v6
+          fetch-tags: true
+      - uses: astral-sh/setup-uv@v9.0.0
+      - uses: actions/cache@v6
         with:
           path: .beet_cache
           key: ${{ runner.os }}-beet-cache
-      - name: Build Release Files
-        run: uv run modules release
+      - name: Check versions
+        run: uv run bump --check
+      - name: Build packs
+        run: uv run release
+      - name: Write release notes
+        run: uv run notes --output build/NOTES.md
+      - name: Push tags
+        run: |
+          git tag "${{ needs.info.outputs.tag }}"
+          git tag -f "v${{ needs.info.outputs.version }}"
+          git push origin "${{ needs.info.outputs.tag }}"
+          git push -f origin "v${{ needs.info.outputs.version }}"
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ needs.info.outputs.tag }}" \
+            --title "Release v${{ needs.info.outputs.version }} (Minecraft ${{ needs.info.outputs.game_version }})" \
+            --notes-file build/NOTES.md \
+            --latest \
+            release/*.zip release/manifest.json
+      - name: Publish to stores
         env:
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
-      - name: Create New Stable Release
-        uses: softprops/action-gh-release@v2
+        run: uv run publish
+      - name: Move latest branch
+        run: git push -f origin "$GITHUB_SHA:refs/heads/latest"
+
+  nightly:
+    name: 🌙 Nightly release
+    needs: info
+    if: needs.info.outputs.tag_exists == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v9.0.0
+      - uses: actions/cache@v6
         with:
-          body_path: docs/changelog/${{ needs.check.outputs.release_tag }}.md
-          name: Release ${{ needs.check.outputs.release_name }}
-          tag_name: ${{ needs.check.outputs.release_tag }}
-          make_latest: true
-          files: release/*.zip
-      - name: Update Tag
+          path: .beet_cache
+          key: ${{ runner.os }}-beet-cache
+      - name: Build packs
+        run: uv run release --all
+      - name: Write release notes
+        run: uv run notes --unreleased --output build/NOTES.md
+      - name: Replace release
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          git fetch --tags --force
-          git push --delete origin latest || true
-          git tag -f latest ${{ needs.check.outputs.release_tag }}
-          git push origin latest
+          gh release delete nightly --yes --cleanup-tag || true
+          gh release create nightly \
+            --prerelease \
+            --target "$GITHUB_SHA" \
+            --title "Nightly (Minecraft ${{ needs.info.outputs.game_version }})" \
+            --notes-file build/NOTES.md \
+            release/*.zip release/manifest.json

@@ -1,0 +1,21 @@
+name: 📦 Module request
+description: A new module.
+type: ✨ Feature
+labels:
+  - ✨ Module
+
+body:
+  - type: input
+    attributes:
+      label: 🧩 Module
+      description: A name for the module.
+      placeholder: bs.example
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 📝 Description
+      description: A clear explanation of the module and the features it would provide.
+    validations:
+      required: true

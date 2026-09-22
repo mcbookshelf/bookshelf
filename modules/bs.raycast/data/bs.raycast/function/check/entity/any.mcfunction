@@ -15,6 +15,9 @@
 
 tag @s add bs.raycast.checked
 
+# assign a fresh cast-local ID before hitbox checks can return early
+execute store result score @s bs.raycast.id run scoreboard players add #count bs.raycast.id 1
+
 execute if entity @s[scores={bs.width=0..,bs.height=0..,bs.depth=0..}] run return run function bs.raycast:check/entity/custom
 
 # get hitbox dimensions (width, depth, height)
