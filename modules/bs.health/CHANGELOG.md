@@ -2,10 +2,10 @@
 
 ## Unreleased
 
-- ⚠️ Inputs and outputs were completely reworked to follow new conventions ([#XXX](https://github.com/mcbookshelf/bookshelf/pull/XXX))
-- ⚠️ `#bs.health:get_health` and `#bs.health:get_max_health` no longer take a `scale` and return the value: they write it to storage instead ([#XXX](https://github.com/mcbookshelf/bookshelf/pull/XXX))
-- ⚠️ `#bs.health:time_to_live` is split into `#bs.health:set_ttl` and `#bs.health:set_ttl_on_death`, each with one required argument ([#XXX](https://github.com/mcbookshelf/bookshelf/pull/XXX))
-- ⚠️ The lifetime is a [minecraft:time](https://minecraft.wiki/w/Argument_types#time) such as `10s`, or ticks: the `unit` argument is gone ([#XXX](https://github.com/mcbookshelf/bookshelf/pull/XXX))
+- ⚠️ Inputs and outputs were completely reworked to follow new conventions ([#597](https://github.com/mcbookshelf/bookshelf/pull/597))
+- ⚠️ `#bs.health:get_health` and `#bs.health:get_max_health` no longer take a `scale` and return the value: they write it to storage instead ([#597](https://github.com/mcbookshelf/bookshelf/pull/597))
+- ⚠️ `#bs.health:time_to_live` is split into `#bs.health:set_ttl` and `#bs.health:set_ttl_on_death`, each with one required argument ([#597](https://github.com/mcbookshelf/bookshelf/pull/597))
+- ⚠️ The lifetime is a [minecraft:time](https://minecraft.wiki/w/Argument_types#time) such as `10s`, or ticks: the `unit` argument is gone ([#597](https://github.com/mcbookshelf/bookshelf/pull/597))
 
 ## `v4.2.0`
 
