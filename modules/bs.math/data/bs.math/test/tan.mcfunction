@@ -13,10 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players set $math.tan.x bs.in 4250
-function #bs.math:tan
-assert score $math.tan bs.out matches 915..917
+data modify storage bs:in math.tan.x set value 0.7417649321
+assert result 915..917 run compute default float bs.math:tan 1000
 
-scoreboard players set $math.tan.x bs.in -21513
-function #bs.math:tan
-assert score $math.tan bs.out matches -704..-702
+data modify storage bs:in math.tan.x set value -3.75472682
+assert result -704..-702 run compute default float bs.math:tan 1000

@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players set $math.asin.x bs.in 420
-function #bs.math:asin
-assert score $math.asin bs.out matches 2482..2484
+data modify storage bs:in math.asin.x set value 0.42
+assert result 4333..4335 run compute default float bs.math:asin 10000
+assert result 24833..24835 run compute default float bs.math:asin 57295
 
-scoreboard players set $math.asin.x bs.in -826
-function #bs.math:asin
-assert score $math.asin bs.out matches -5570..-5568
+data modify storage bs:in math.asin.x set value -0.826
+assert result -9720..-9718 run compute default float bs.math:asin 10000
+assert result -55690..-55688 run compute default float bs.math:asin 57295

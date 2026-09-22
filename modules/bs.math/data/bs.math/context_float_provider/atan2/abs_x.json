@@ -1,0 +1,16 @@
+{
+    "type": "abs",
+    "input": {
+        "type": "div",
+        "left": {"type": "storage","storage": "bs:in","path": "math.atan2.y"},
+        "right": {
+            "type": "add",
+            "inputs": [
+                {"type": "storage","storage": "bs:in","path": "math.atan2.x"},
+                {"type": "length","inputs": [{"type": "storage","storage": "bs:in","path": "math.atan2.y"},{"type": "storage","storage": "bs:in","path": "math.atan2.x"}]}
+            ]
+        }
+    }
+}
+
+

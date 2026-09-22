@@ -1,0 +1,20 @@
+{
+    "type": "from_float",
+    "input": 
+    {
+        "type": "round",
+        "input": {
+            "type": "div",
+            "left": {
+                "type": "storage",
+                "storage": "bs:in",
+                "path": "math.divide.x"
+            },
+            "right": {
+                "type": "storage",
+                "storage": "bs:in",
+                "path": "math.divide.y"
+            }
+        }
+    }
+}

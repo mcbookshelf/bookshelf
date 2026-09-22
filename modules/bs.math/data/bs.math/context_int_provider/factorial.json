@@ -1,0 +1,133 @@
+{
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": {
+            "min": 0
+        }
+    },
+    "on_true": {
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": {
+            "min": 0,
+            "max": 1
+        }
+    },
+    "on_true": 1,
+    "on_false": 
+{
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": 2
+    },
+    "on_true": 2,
+    "on_false": 
+{
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": 3
+    },
+    "on_true": 6,
+    "on_false": 
+{
+
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": 4
+    },
+    "on_true": 24,
+    "on_false": 
+{
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": 5
+    },
+    "on_true": 120,
+    "on_false": 
+{
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": 6
+    },
+    "on_true": 720,
+    "on_false": 
+{
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": 7
+    },
+    "on_true": 5040,
+    "on_false": 
+{
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": 8
+    },
+    "on_true": 40320,
+    "on_false": 
+{
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": 9
+    },
+    "on_true": 362880,
+    "on_false": 
+{
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": 10
+    },
+    "on_true": 3628800,
+    "on_false": 
+{
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": 11
+    },
+    "on_true": 39916800,
+    "on_false": 
+{
+    "type": "conditional",
+    "condition": {
+        "type": "int_value_check",
+        "value": {"type": "storage","storage": "bs:in","path": "math.factorial.n"},
+        "test": 12
+    },
+    "on_true": 479001600
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

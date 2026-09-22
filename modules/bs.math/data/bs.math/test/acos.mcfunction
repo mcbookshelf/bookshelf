@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players set $math.acos.x bs.in 420
-function #bs.math:acos
-assert score $math.acos bs.out matches 6515..6517
+data modify storage bs:in math.acos.x set value 0.42
+assert result 11372..11374 run compute default float bs.math:acos 10000
+assert result 65163..65165 run compute default float bs.math:acos 57295
 
-scoreboard players set $math.acos.x bs.in -826
-function #bs.math:acos
-assert score $math.acos bs.out matches 14568..14570
+data modify storage bs:in math.acos.x set value -0.826
+assert result 25426..25428 run compute default float bs.math:acos 10000
+assert result 14567..14569 run compute default float bs.math:acos 57295

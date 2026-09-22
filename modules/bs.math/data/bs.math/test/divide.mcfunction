@@ -13,12 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players set $math.divide.x bs.in 9
-scoreboard players set $math.divide.y bs.in 5
-function #bs.math:divide
-assert score $math.divide bs.out matches 2
+data modify storage bs:in math.divide.x set value 9
+data modify storage bs:in math.divide.y set value 5
+assert result 2 run compute default integer bs.math:divide
 
-scoreboard players set $math.divide.x bs.in 11
-scoreboard players set $math.divide.y bs.in 5
-function #bs.math:divide
-assert score $math.divide bs.out matches 2
+data modify storage bs:in math.divide.x set value 11
+data modify storage bs:in math.divide.y set value 5
+assert result 2 run compute default integer bs.math:divide
