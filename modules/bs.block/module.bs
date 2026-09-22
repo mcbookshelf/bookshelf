@@ -1,0 +1,662 @@
+> Manipulate blocks with their states and NBT, and combine block properties.
+
+name: Block
+slug: bookshelf-block
+version: 5.0.0
+tags: runtime
+weak_dependencies: bs.log
+
+
+$block_state = {
+  id: #[id="block"] string > block id, such as minecraft:bookshelf
+  properties?: #[as=mcdoc:block_states[[id]]] {} > block properties, omitted ones take their default
+} | #[id="block"] string
+
+$full_block_state = {
+  id: #[id="block"] string > block id, such as minecraft:bookshelf
+  properties: #[as=mcdoc:block_states[[id]]] {} > every property of the block and its value
+}
+
+$sounds = {
+  break: #[id="sound_event"] string > sound played when the block is broken
+  fall: #[id="sound_event"] string > sound played when falling onto the block
+  hit: #[id="sound_event"] string > sound played when the block is hit
+  place: #[id="sound_event"] string > sound played when the block is placed
+  step: #[id="sound_event"] string > sound played when stepping on the block
+}
+
+$placed = state > blocks are placed in the world
+$played = state > the sound is played
+$summoned = state > the entity is summoned
+$virtual = state > a block is loaded in the virtual storage
+
+$play_sound = arguments: {
+  block: #[id="block"] string > block whose sound to play
+  source?: string > sound source, defaults to master
+  targets?: string > players who will hear the sound, defaults to @a
+  position?: string > position of the sound, defaults to ~ ~ ~
+  pitch?: double > pitch of the sound, defaults to 1.0
+  volume?: double > volume of the sound, defaults to 1.0
+  min_volume?: double > minimum volume of the sound, defaults to 0.0
+}
+
+
+feature function load_from_item > Load the block that drops the given item.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  input arguments: {
+    item: #[id="item"] string > item, such as minecraft:bookshelf
+  }
+  output $virtual
+
+
+feature function load_block > Load the whole block at the current position, id and properties.
+  authors: Aksiome, theogiraudet
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to load
+  output $virtual
+
+
+feature function load_id > Load the block at the current position, with default properties.
+  authors: Aksiome, theogiraudet
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to load
+  output $virtual
+
+
+feature function load_from_state > Load a block from a block id and its properties.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  input arguments: {
+    block: $block_state > block to load
+  }
+  output $virtual
+
+
+feature function replace_id > Replace the block id, preserving the state when possible.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  input $virtual
+  input arguments: {
+    block: #[id="block"] string > block to switch to
+  }
+  output $virtual
+  output success > whether the block id exists and the replacement occurred
+
+
+feature function map_id > Swap the block id for the one of its set matching the given block.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  input $virtual
+  input arguments: {
+    block: #[id="block"] string > block to take the traits from, such as spruce_planks
+    traits: [string] > traits to transfer, such as color, first ones taking priority
+  }
+  output $virtual
+  output success > whether a matching block id was found
+
+
+feature function mix_id > Swap the block id for the one of its set combining both blocks.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  input $virtual
+  input arguments: {
+    block: #[id="block"] string > block to take the traits from, such as bricks
+    traits: [string] > traits to combine, such as material, first ones taking priority
+  }
+  output $virtual
+  output success > whether a matching block id was found
+
+
+feature function replace_properties > Set property values, ignoring the ones the block does not have.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  input $virtual
+  input arguments: {
+    properties: #[as=mcdoc:block_states[%unknown]] {} > property values to set, such as {facing:"east"}
+  }
+  output $virtual
+
+
+feature function reset_properties > Reset properties to their default value, by name.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  input $virtual
+  input arguments: {
+    properties: [#[as=mcdoc:block_state_keys[%unknown]] string] > names of the properties to reset, such as facing
+  }
+  output $virtual
+
+
+feature function shift_properties > Cycle properties through their values, by any amount.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  input $virtual
+  input arguments: {
+    properties: [{
+      name: #[as=mcdoc:block_state_keys[%unknown]] string > property name, such as facing
+      by?: int > number of values to shift by, defaults to 1
+    }] > properties to shift
+  }
+  output $virtual
+
+
+feature function merge_properties > Copy properties from the block at the current position, by name.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to copy the properties from
+  input $virtual
+  input arguments: {
+    properties: [#[as=mcdoc:block_state_keys[%unknown]] string] > names of the properties to copy, such as facing
+  }
+  output $virtual
+
+
+feature function read_id > Get the block id of the virtual block.
+  authors: Aksiome
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+  input $virtual
+  output storage: #[id="block"] string > block id, such as minecraft:bookshelf
+
+
+feature function read_item > Get the item id of the virtual block.
+  authors: Aksiome
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+  input $virtual
+  output storage: #[id="item"] string > item id, such as minecraft:bookshelf
+
+
+feature function read_state > Get the block id and properties of the virtual block.
+  authors: Aksiome
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+  input $virtual
+  output storage: $full_block_state > the block and its properties
+
+
+feature function read_block > Get the virtual block as a block argument.
+  authors: Aksiome
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+  input $virtual
+  output storage: string > block argument of the block
+
+
+feature function get_blast_resistance > Get how well the block at the current position resists explosions.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to read
+  output storage: double @ 0.. > blast resistance of the block
+
+
+feature function get_friction > Get how slippery the block at the current position is.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to read
+  output storage: double @ 0..1 > friction of the block, 0.6 for most blocks
+
+
+feature function get_hardness > Get how long the block at the current position takes to break.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to read
+  output storage: double @ -1.. > hardness of the block, -1 when unbreakable
+
+
+feature function get_id > Get the block id at the current position.
+  authors: Aksiome, theogiraudet
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to read
+  output storage: #[id="block"] string > block id, such as minecraft:bookshelf
+
+
+feature function get_instrument > Get the note block instrument of the block at the current position.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to read
+  output storage: #[id="sound_event"] string > instrument sound id, such as minecraft:block.note_block.harp
+
+
+feature function get_jump_factor > Get the jump factor of the block at the current position.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to read
+  output storage: double @ 0.. > jump factor of the block, 1.0 for most blocks
+
+
+feature function get_luminance > Get the light level emitted by the block at the current position.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to read
+  output storage: int @ 0..15 > light level emitted by the block
+
+
+feature function get_sounds > Get the sounds of the block at the current position.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to read
+  output storage: $sounds > sounds of the block
+
+
+feature function get_speed_factor > Get the speed factor of the block at the current position.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to read
+  output storage: double @ 0.. > speed factor of the block, 1.0 for most blocks
+
+
+feature function get_state > Get the block id and properties at the current position.
+  authors: Aksiome, theogiraudet
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to read
+  output storage: $full_block_state > the block and its properties
+
+
+feature function get_block > Get the block at the current position as a block argument.
+  authors: Aksiome, theogiraudet
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to read
+  output storage: string > block argument of the block
+
+
+feature function match > Check whether the block at the current position matches a predicate.
+  authors: Aksiome, theogiraudet
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to check
+  input storage: {
+    block: string > block predicate, omitted properties match any value
+  }
+  output success > whether the block matches
+
+
+feature function lookup_blast_resistance > Get how well the given block resists explosions.
+  authors: Aksiome
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+  input arguments: {
+    block: #[id="block"] string > block to look up
+  }
+  output storage: double @ 0.. > blast resistance of the block
+
+
+feature function lookup_friction > Get how slippery the given block is.
+  authors: Aksiome
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+  input arguments: {
+    block: #[id="block"] string > block to look up
+  }
+  output storage: double @ 0..1 > friction of the block, 0.6 for most blocks
+
+
+feature function lookup_hardness > Get how long the given block takes to break.
+  authors: Aksiome
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+  input arguments: {
+    block: #[id="block"] string > block to look up
+  }
+  output storage: double @ -1.. > hardness of the block, -1 when unbreakable
+
+
+feature function lookup_instrument > Get the note block instrument of the given block.
+  authors: Aksiome
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+  input arguments: {
+    block: #[id="block"] string > block to look up
+  }
+  output storage: #[id="sound_event"] string > instrument sound id, such as minecraft:block.note_block.harp
+
+
+feature function lookup_jump_factor > Get the jump factor of the given block.
+  authors: Aksiome
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+  input arguments: {
+    block: #[id="block"] string > block to look up
+  }
+  output storage: double @ 0.. > jump factor of the block, 1.0 for most blocks
+
+
+feature function lookup_luminance > Get the light level emitted by the given block.
+  authors: Aksiome
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+  input arguments: {
+    block: $block_state > block to look up
+  }
+  output storage: int @ 0..15 > light level emitted by the block
+
+
+feature function lookup_sounds > Get the sounds of the given block.
+  authors: Aksiome
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+  input arguments: {
+    block: #[id="block"] string > block to look up
+  }
+  output storage: $sounds > sounds of the block
+
+
+feature function lookup_speed_factor > Get the speed factor of the given block.
+  authors: Aksiome
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+  input arguments: {
+    block: #[id="block"] string > block to look up
+  }
+  output storage: double @ 0.. > speed factor of the block, 1.0 for most blocks
+
+
+feature function set_block > Place the given block at the current position.
+  authors: Aksiome, theogiraudet
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position to place the block at
+  input arguments: {
+    block: string > block to place
+    mode?: string > destroy, keep, replace or strict, defaults to replace
+  }
+  output $placed
+
+
+feature function set_id > Replace the block id at the current position, preserving its state and NBT.
+  authors: Aksiome, theogiraudet
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position to place the block at
+  input arguments: {
+    block: #[id="block"] string > block to place
+    mode?: string > destroy, keep, replace or strict, defaults to replace
+  }
+  output $placed
+
+
+feature function fill_block > Fill a region with the given block.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  input arguments: {
+    block: string > block to fill the region with
+    from: string > starting position, as a position string
+    to: string > ending position, as a position string
+    mode?: string > outline, hollow, destroy, keep, replace or strict, defaults to replace
+    filter?: string > block predicate the replaced blocks must match, defaults to any
+  }
+  output $placed
+
+
+feature function fill_id > Fill a region with the given block id, preserving each block state.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  input arguments: {
+    block: #[id="block"] string > block to fill the region with
+    from: string > starting position, as a position string
+    to: string > ending position, as a position string
+    mode?: string > outline, hollow, destroy, keep, replace or strict, defaults to replace
+    filter?: string > block predicate the replaced blocks must match, defaults to any
+  }
+  output $placed
+
+
+feature function is_touching_power > Check whether the current position is touching a powered block.
+  authors: Aksiome
+  created: 2025/11/17 1.21.10
+  updated: 2026/09/19 26.3
+
+  context position > position to check around
+  output success > whether the position is touching power
+
+
+feature function is_touching_strong_power > Check whether the current position is touching a strongly powered block.
+  authors: Aksiome
+  created: 2025/11/17 1.21.10
+  updated: 2026/09/19 26.3
+
+  context position > position to check around
+  output success > whether the position is touching strong power
+
+
+feature function is_touching_weak_power > Check whether the current position is touching a weakly powered block.
+  authors: Aksiome
+  created: 2025/11/17 1.21.10
+  updated: 2026/09/19 26.3
+
+  context position > position to check around
+  output success > whether the position is touching weak power
+
+
+feature function emit_particle > Emit the block particle of the given block.
+  authors: Aksiome, theogiraudet
+  created: 2025/10/06 1.21.9
+  updated: 2026/09/19 26.3
+
+  context position > reference position
+  input arguments: {
+    block: $block_state > block whose particle to emit
+    position?: string > position to create the particle at, defaults to ~ ~ ~
+    delta?: string > random spread in blocks, defaults to 0 0 0
+    speed?: double > speed of the particle, defaults to 1
+    count?: int @ 0.. > number of particles to spawn, defaults to 1
+    mode?: string > normal or force, defaults to normal
+    viewers?: string > players who should see the particle, defaults to @a
+  }
+  output state > the particle is emitted
+
+
+feature function play_break_sound > Play the break sound of the given block.
+  authors: Aksiome, theogiraudet
+  created: 2025/10/06 1.21.9
+  updated: 2026/09/19 26.3
+
+  context position > reference position for position
+  input $play_sound
+  output $played
+
+
+feature function play_fall_sound > Play the fall sound of the given block.
+  authors: Aksiome, theogiraudet
+  created: 2025/10/06 1.21.9
+  updated: 2026/09/19 26.3
+
+  context position > reference position for position
+  input $play_sound
+  output $played
+
+
+feature function play_hit_sound > Play the hit sound of the given block.
+  authors: Aksiome, theogiraudet
+  created: 2025/10/06 1.21.9
+  updated: 2026/09/19 26.3
+
+  context position > reference position for position
+  input $play_sound
+  output $played
+
+
+feature function play_place_sound > Play the place sound of the given block.
+  authors: Aksiome, theogiraudet
+  created: 2025/10/06 1.21.9
+  updated: 2026/09/19 26.3
+
+  context position > reference position for position
+  input $play_sound
+  output $played
+
+
+feature function play_step_sound > Play the step sound of the given block.
+  authors: Aksiome, theogiraudet
+  created: 2025/10/06 1.21.9
+  updated: 2026/09/19 26.3
+
+  context position > reference position for position
+  input $play_sound
+  output $played
+
+
+feature function spawn_block_display > Spawn a block display showing the given block.
+  authors: Aksiome, theogiraudet
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position to summon the entity at
+  input arguments: {
+    block: $block_state > block to display
+    nbt?: {} > additional NBT to summon the entity with
+  }
+  output $summoned
+
+
+feature function spawn_falling_block > Spawn a falling block of the given block.
+  authors: Aksiome, theogiraudet
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position to summon the entity at
+  input arguments: {
+    block: $block_state > block to fall
+    nbt?: {} > additional NBT to summon the entity with
+  }
+  output $summoned
+
+
+feature function spawn_solid_block_display > Spawn a block display with a hitbox showing the given block.
+  authors: Aksiome, theogiraudet
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position to summon the entity at
+  input arguments: {
+    block: $block_state > block to display
+    nbt?: {} > additional NBT to summon the entity with
+  }
+  output $summoned
+
+
+feature predicate is_conductive > Check if the block can conduct redstone.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to check
+  output success > whether the block conducts redstone
+
+
+feature predicate is_powered > Check if the block is conductive and powered by redstone.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to check
+  output success > whether the block is conductive and powered
+
+
+feature predicate is_spawnable > Check if the block can serve as a valid spawn surface.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to check
+  output success > whether the block is a valid spawn surface
+
+
+feature predicate is_strongly_powered > Check if the block is conductive and strongly powered by redstone.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to check
+  output success > whether the block is conductive and strongly powered
+
+
+feature predicate is_weakly_powered > Check if the block is conductive and weakly powered by redstone.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+  context position > position of the block to check
+  output success > whether the block is conductive and weakly powered
+
+
+feature block_tag can_occlude > Blocks that occlude neighboring faces.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+
+feature block_tag has_state > Blocks that can have state properties.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
+
+
+feature block_tag ignited_by_lava > Blocks that catch fire when exposed to lava.
+  authors: Aksiome
+  created: 2024/12/30 1.21.4
+  updated: 2026/09/19 26.3
