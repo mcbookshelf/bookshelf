@@ -13,10 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players reset @s bs.hmod
-# Evil hack to force the attribute to instantly apply
-effect give @s minecraft:instant_health 1 255 true
-$attribute @s minecraft:max_health modifier add bs.health:limit $(points) add_multiplied_total
-# What the fuck? Remove the attribute only after the effect is cleared, to work around Paper bug
-advancement revoke @s only bs.health:_on_after_heal
-effect clear @s minecraft:instant_health
+# Add input points and base max_health
+execute store result storage bs.health: points float 0.000001 run attribute @s minecraft:max_health base get 1000000
+data modify storage bs.health: points set compute default float {type:"add",inputs:[{type:"storage",storage:"bs.health:add_max_health",path:"in.points"},{type:"storage",storage:"bs.health:",path:"points"}]}
+function bs.health:add_max_health/run with storage bs.health:

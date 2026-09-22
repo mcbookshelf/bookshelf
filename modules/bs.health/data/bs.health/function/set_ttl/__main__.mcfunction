@@ -13,10 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players reset @s bs.hmod
-# Evil hack to force the attribute to instantly apply
-effect give @s minecraft:instant_health 1 255 true
-$attribute @s minecraft:max_health modifier add bs.health:limit $(points) add_multiplied_total
-# What the fuck? Remove the attribute only after the effect is cleared, to work around Paper bug
-advancement revoke @s only bs.health:_on_after_heal
-effect clear @s minecraft:instant_health
+function bs.health:set_ttl/__macro__ with storage bs.health:set_ttl in

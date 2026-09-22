@@ -1,6 +1,4 @@
-from typing import Any, ClassVar, cast
-
-from beet import Context, JsonFile, NamespaceFileScope
+from beet import Context, ContextIntProvider
 
 from mcbookshelf.meta import Module
 from mcbookshelf.minecraft.math import Expression, add, btree, cond, int_storage, max_, min_, mul
@@ -8,19 +6,8 @@ from mcbookshelf.minecraft.math import Expression, add, btree, cond, int_storage
 INT_MIN = -(2**31)
 
 
-# TODO: DROP ON 26.3 BEET UPDATE
-class ContextIntProvider(JsonFile):
-    """Class representing a context int provider."""
-
-    scope: ClassVar[NamespaceFileScope] = ("context_int_provider",)
-    extension: ClassVar[str] = ".json"
-
-
 def beet_default(ctx: Context) -> None:
     """Generate the number providers of the bitwise module."""
-    if ContextIntProvider not in ctx.data.extend_namespace:
-        ctx.data.extend_namespace.append(ContextIntProvider)
-
     module: Module = ctx.meta["module"]
 
     def read(feature: str, key: str) -> Expression:
@@ -36,7 +23,7 @@ def beet_default(ctx: Context) -> None:
         "shift_left": shift_left(read("shift_left", "n"), read("shift_left", "by")),
         "shift_right": shift_right(read("shift_right", "n"), read("shift_right", "by")),
     }.items():
-        ctx.data[f"{module.id}:{name}"] = ContextIntProvider(cast("dict[str, Any]", provider.node))
+        ctx.data[f"{module.id}:{name}"] = ContextIntProvider(provider.json())
 
 
 def bit(x: Expression, i: int) -> Expression:

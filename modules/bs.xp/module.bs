@@ -9,52 +9,57 @@ tags: runtime
 $out = state > the experience bar is updated
 
 
-feature function add_levels > Add levels to players.
+feature function add_levels
+  > Add levels to players.
   authors: Aksiome, Leirof
   created: 2022/04/14 1.18.2
   updated: 2026/09/09 26.3
 
   context executor: player[] > players to add levels to
   input arguments: {
-    levels: int > number of levels to add or remove
+    levels: int > levels to add, negative to remove
   }
   output $out
 
 
-feature function add_points > Add experience points to players.
+feature function add_points
+  > Add experience points to players.
   authors: Aksiome, Leirof
   created: 2022/04/14 1.18.2
   updated: 2026/09/09 26.3
 
   context executor: player[] > players to add points to
   input arguments: {
-    points: int > number of points to add or remove
+    points: int > points to add, negative to remove
   }
   output $out
 
 
-feature function add_progress > Add progress to the experience bar.
+feature function add_progress
+  > Add progress to the experience bar.
   authors: Aksiome, Leirof
   created: 2023/08/31 1.20.1
   updated: 2026/09/09 26.3
 
   context executor: player[] > players to add bar progress to
   input arguments: {
-    progress: float @ -1..1 > fraction of the bar to add or remove, in range [-1,1]
+    progress: float @ -1..1 > fraction of the bar to add, negative to remove
   }
   output $out
 
 
-feature function get_progress > Get the fill progress of the experience bar.
+feature function get_progress
+  > Get the fill progress of the experience bar.
   authors: Aksiome, Leirof
   created: 2022/04/14 1.18.2
   updated: 2026/09/09 26.3
 
   context executor: player > player to get the bar progress from
-  output storage: float @ 0..1 > filled fraction of the bar, in range [0,1]
+  output storage: float @ 0..1 > fraction of the bar filled
 
 
-feature function get_remaining_points > Get the number of points missing to reach the next level.
+feature function get_remaining_points
+  > Get the number of points missing to reach the next level.
   authors: Aksiome, Leirof
   created: 2023/08/31 1.20.1
   updated: 2026/09/09 26.3
@@ -63,16 +68,18 @@ feature function get_remaining_points > Get the number of points missing to reac
   output storage: int @ 0.. > points still needed to reach the next level
 
 
-feature function get_required_points > Get the number of points required by the current level.
+feature function get_required_points
+  > Get the number of points the current level holds.
   authors: Aksiome, Leirof
   created: 2023/08/31 1.20.1
   updated: 2026/09/09 26.3
 
   context executor: player > player to get the required points from
-  output storage: int @ 0.. > total number of points the current level can holds
+  output storage: int @ 0.. > points needed to fill the current level
 
 
-feature function get_total_points > Get the total number of points a player has, levels included.
+feature function get_total_points
+  > Get the total number of points a player has, levels included.
   authors: Aksiome, Leirof
   created: 2022/04/14 1.18.2
   updated: 2026/09/09 26.3
@@ -81,7 +88,8 @@ feature function get_total_points > Get the total number of points a player has,
   output storage: int @ 0.. > total number of points, levels included
 
 
-feature function set_levels > Set the level of players.
+feature function set_levels
+  > Set the level of players.
   authors: Aksiome, Leirof
   created: 2022/04/14 1.18.2
   updated: 2026/09/09 26.3
@@ -93,7 +101,8 @@ feature function set_levels > Set the level of players.
   output $out
 
 
-feature function set_points > Set the experience points of players.
+feature function set_points
+  > Set the experience points of players.
   authors: Aksiome, Leirof
   created: 2022/04/14 1.18.2
   updated: 2026/09/09 26.3
@@ -105,19 +114,21 @@ feature function set_points > Set the experience points of players.
   output $out
 
 
-feature function set_progress > Set the fill progress of the experience bar.
+feature function set_progress
+  > Set the fill progress of the experience bar.
   authors: Aksiome, Leirof
   created: 2022/04/14 1.18.2
   updated: 2026/09/09 26.3
 
   context executor: player[] > players to set the bar progress of
   input arguments: {
-    progress: float @ 0..1 > fraction of the bar to fill, in range [0,1]
+    progress: float @ 0..1 > fraction of the bar to fill
   }
   output $out
 
 
-feature function set_total_points > Set the total experience points of players
+feature function set_total_points
+  > Set the total experience points of players.
   authors: Aksiome, Leirof
   created: 2022/04/14 1.18.2
   updated: 2026/09/09 26.3

@@ -194,6 +194,7 @@ class _Builder:
             documentation=f"{documentation}#{anchor}",
             anchor=anchor,
             authors=_split(properties["authors"].value),
+            contributors=_split(properties["contributors"].value),
             created=created,
             updated=updated,
             slots=tuple(slots),

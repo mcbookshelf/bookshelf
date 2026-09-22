@@ -28,6 +28,7 @@ FEATURE_PROPERTIES = {
     "authors": True,
     "created": True,
     "updated": True,
+    "contributors": False,
     "deprecated": False,
     "experimental": False,
 }

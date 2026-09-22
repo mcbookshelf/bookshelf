@@ -41,6 +41,7 @@ class FeatureEntry(TypedDict):
     documentation: str
     aliases: list[str]
     authors: list[str]
+    contributors: list[str]
     created: VersionStamp
     updated: VersionStamp
     files: list[str]

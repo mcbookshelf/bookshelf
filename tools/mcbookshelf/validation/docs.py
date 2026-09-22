@@ -4,10 +4,11 @@ from collections.abc import Iterator
 from mcbookshelf import constants, validation, workspace
 
 DIRECTIVE = re.compile(r"^`{3,}\{feature\}[ \t]+(?:(\S+)[ \t]+)?#?(\S+)[ \t]*$", re.MULTILINE)
+HEADING = re.compile(r"^#{1,6}[ \t]+\S")
 
 
 def check_documentation(name: str) -> Iterator[validation.Issue]:
-    """The docs page exists, and every feature has a directive that names it."""
+    """The docs page exists, and every feature has a directive right under a heading."""
     module = workspace.load_module(name)
     if not module.documentation.startswith(f"{constants.DOCS_PAGES_URL}/"):
         return
@@ -32,9 +33,21 @@ def check_documentation(name: str) -> Iterator[validation.Issue]:
             yield validation.Issue(str(error), shown, line)
             continue
         documented.add(feature)
+        if not _under_heading(text, match.start()):
+            where = f"#{feature.anchor} lands below the title"
+            message = f"'{feature.name}' directive is not right under a heading: {where}"
+            yield validation.Issue(message, shown, line)
 
     for feature in module.features:
         if feature not in documented:
             anchor = f"#{feature.anchor} resolves to nothing"
             message = f"'{feature.name}' has no {{feature}} directive: {anchor}"
             yield validation.Issue(message, shown)
+
+
+def _under_heading(text: str, position: int) -> bool:
+    """Whether the nearest line above a position, blank lines skipped, is a heading."""
+    for line in reversed(text[:position].splitlines()):
+        if line.strip():
+            return HEADING.match(line) is not None
+    return False

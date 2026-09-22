@@ -128,6 +128,7 @@ class Feature:
     documentation: str
     anchor: str
     authors: tuple[str, ...]
+    contributors: tuple[str, ...]
     created: Stamp
     updated: Stamp
     slots: tuple[Slot, ...]

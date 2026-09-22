@@ -13,7 +13,6 @@ def beet_default(ctx: Context) -> None:
         key = f"{module.id}:{feature.name}"
         ensure_function_tag(ctx, key, [f"{key}/__main__"])
 
-        # arguments have their macro generated, a declared 'input macro' is hand-written
         slot = feature.arguments
         if slot and slot.target and isinstance(slot.type, syntax.Struct):
             ensure_function(ctx, f"{key}/__macro__", commands(key, slot.target, slot.type))
@@ -36,4 +35,4 @@ def commands(key: str, target: model.Target, struct: syntax.Struct) -> list[str]
     lines = [f"{start} set value {value}"] if value else []
     if any(e.optional for e in struct.entries):
         lines.append(f"{start} merge value $(with)")
-    return [*lines, f"function #{key}"]
+    return ["", *lines, f"return run function #{key}"]

@@ -138,6 +138,7 @@ def _feature(analysis: Ownership, feature: Feature) -> FeatureEntry:
         documentation=feature.documentation,
         aliases=[feature.macro_id] if feature.macro_struct else [],
         authors=list(feature.authors),
+        contributors=list(feature.contributors),
         created=_stamp(feature.created),
         updated=_stamp(feature.updated),
         dependencies=_ids(analysis.dependencies(owner)),

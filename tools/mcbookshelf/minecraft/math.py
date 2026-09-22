@@ -2,6 +2,8 @@ import json
 import math
 from typing import TYPE_CHECKING, Literal, Self
 
+import orjson
+
 if TYPE_CHECKING:
     from collections.abc import Mapping, Sequence
 
@@ -21,11 +23,11 @@ class Expression:
         self.node: Node = node
         self.kind: Kind = kind
 
-    def json(self, indent: int = 2) -> str:
-        return json.dumps(self.node, indent=indent)
+    def json(self) -> str:
+        return orjson.dumps(self.node, option=orjson.OPT_INDENT_2).decode()
 
     def inline(self) -> str:
-        return json.dumps(self.node, separators=(",", ":"))
+        return orjson.dumps(self.node).decode()
 
     def __repr__(self) -> str:
         return f"Expression<{self.kind}>({self.inline()})"

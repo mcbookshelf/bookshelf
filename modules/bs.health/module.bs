@@ -1,0 +1,112 @@
+> Read and modify player health, and give entities a lifetime.
+
+name: Health
+slug: bookshelf-health
+version: 5.0.0
+tags: runtime
+
+
+feature function add_health
+  > Add or remove health points from players.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2023/09/15 1.20.2
+  updated: 2026/09/20 26.3
+
+  context executor: player[] > players to heal or damage
+  input arguments: {
+    points: float @ -2048..2048 > health points to add, negative to remove
+  }
+  output state > the health is scheduled for update
+
+
+feature function add_max_health
+  > Add or remove base maximum health points from players.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2023/09/15 1.20.2
+  updated: 2026/09/20 26.3
+
+  context executor: player[] > players to change the base max health of
+  input arguments: {
+    points: float @ -2048..2048 > max health points to add, negative to remove
+  }
+  output state > the base max health is updated
+
+
+feature function get_health
+  > Get a player's health points.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2023/10/23 1.20.2
+  updated: 2026/09/20 26.3
+
+  context executor: player > player to get the health from
+  output storage: float @ 0..1024 > player's health points
+
+
+feature function get_max_health
+  > Get a player's base maximum health points.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2023/10/23 1.20.2
+  updated: 2026/09/20 26.3
+
+  context executor: player > player to get the base max health from
+  output storage: float @ 0..1024 > player's base max health points
+
+
+feature function set_health
+  > Set players' health points.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2023/09/15 1.20.2
+  updated: 2026/09/20 26.3
+
+  context executor: player[] > players to set the health of
+  input arguments: {
+    points: float @ 0..1024 > health points to set
+  }
+  output state > the health is scheduled for update
+
+
+feature function set_max_health
+  > Set players' base maximum health points.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2023/09/15 1.20.2
+  updated: 2026/09/20 26.3
+
+  context executor: player[] > players to set the base max health of
+  input arguments: {
+    points: float @ 0..1024 > max health points to set
+  }
+  output state > the base max health is updated
+
+
+feature function set_ttl
+  > Give entities a lifetime, they die when it runs out.
+  authors: Aksiome, Leirof
+  created: 2018/07/08 1.13
+  updated: 2026/09/21 26.3
+
+  context executor > entities to give a lifetime to
+  input arguments: {
+    time: #[match_regex="^(?:\d+(?:\.\d*)?|\.\d+)(?:[dst])?$"] string | int
+    > time to live in ticks, or as a [minecraft:time](https://minecraft.wiki/w/Argument_types#time) string such as `10s`, at least one tick
+  }
+  output state > the lifetime is set, replacing any previous one
+
+
+feature function set_ttl_on_death
+  > Run a command when the lifetime of entities runs out.
+  authors: Aksiome, Leirof
+  created: 2018/07/08 1.13
+  updated: 2026/09/21 26.3
+
+  context executor > entities with a lifetime to run the command for
+  input arguments: {
+    run: #[command(slash="forbidden",empty="forbidden")] string
+    > command run as the entity when its lifetime runs out, replacing any previous one
+  }
+  output state > the command is registered

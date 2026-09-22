@@ -36,14 +36,27 @@ class FeatureDirective(SphinxDirective):
             raise self.error(str(error)) from error
         if feature.experimental and released_build():
             return []
-        # the page writes the heading: the anchor still lands on the feature, through
-        # the heading when it carries the id, through a target of its own otherwise
         targets: list[nodes.Node] = []
         if feature.anchor not in self.state.document.ids:
-            target = nodes.target(ids=[feature.anchor], names=[feature.anchor])
-            self.state.document.note_explicit_target(target)
-            targets.append(target)
+            section = self.state_machine.node
+            if isinstance(section, nodes.section):
+                self.rename(section, feature.anchor)
+            else:
+                target = nodes.target(ids=[feature.anchor], names=[feature.anchor])
+                self.state.document.note_explicit_target(target)
+                targets.append(target)
         return [*targets, self.forms(feature)]
+
+    def rename(self, section: nodes.section, anchor: str) -> None:
+        """Give a section the anchor as its one id, in place of the ones its title produced."""
+        document = self.state.document
+        for old in section["ids"]:
+            document.ids.pop(old, None)
+            for name, ref in document.nameids.items():
+                if ref == old:
+                    document.nameids[name] = anchor
+        section["ids"] = [anchor]
+        document.ids[anchor] = section
 
     def forms(self, feature: Feature) -> nodes.Node:
         """The description of a feature: one, or a storage and a macro form with a switch."""
