@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-assert result 15886907 run function #bs.color:rgb_to_int {color:[242,106,59]}
-assert data storage bs:out color{rgb_to_int:15886907}
+assert result 15886907 run function bs.color:rgb_to_int/__main__ {color:[242,106,59]}
+assert data storage bs.color:rgb_to_int {out:15886907}
 assert score $color.rgb_to_int bs.out matches 15886907
 
-assert result 2803797 run function #bs.color:rgb_to_int {color:[42,200,85]}
+assert result 2803797 run function bs.color:rgb_to_int/__main__ {color:[42,200,85]}
 
-assert result 5839296 run function #bs.color:rgb_to_int {color:[89,25,192]}
+assert result 5839296 run function bs.color:rgb_to_int/__main__ {color:[89,25,192]}

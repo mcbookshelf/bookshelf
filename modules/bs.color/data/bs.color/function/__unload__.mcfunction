@@ -17,5 +17,22 @@ scoreboard objectives remove bs.const
 scoreboard objectives remove bs.ctx
 scoreboard objectives remove bs.out
 
-data remove storage bs:const color
-data remove storage bs:out color
+data remove storage bs.color: hex_chars
+data remove storage bs.color: hex_values
+data remove storage bs.color: channel
+data remove storage bs.color: channel_h
+data remove storage bs.color: color
+data remove storage bs.color: int
+data remove storage bs.color: rgb
+data remove storage bs.color: hex
+
+data remove storage bs.color:int_to_hex out
+data remove storage bs.color:int_to_hex_rgba out
+data remove storage bs.color:int_to_rgb out
+data remove storage bs.color:int_to_rgba out
+
+data remove storage bs.color:hex_to_int out
+data remove storage bs.color:hex_to_rgb out
+
+data remove storage bs.color:rgb_to_hex out
+data remove storage bs.color:rgb_to_int out

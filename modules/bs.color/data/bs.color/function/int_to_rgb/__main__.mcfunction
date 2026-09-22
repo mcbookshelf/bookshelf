@@ -13,4 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:out color.int_to_hex set value "#$(r)$(g)$(b)"
+$data modify storage bs.color: color set value $(color)
+
+data modify storage bs.color:int_to_rgb out[0] set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"color",storage:"bs.color:"},right:65536}}
+data modify storage bs.color:int_to_rgb out[1] set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"color",storage:"bs.color:"},right:256}}
+data modify storage bs.color:int_to_rgb out[2] set compute default integer {type:"mod",right:256,left:{type:"storage",path:"color",storage:"bs.color:"}}

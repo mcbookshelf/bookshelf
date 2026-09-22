@@ -13,9 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result score #c bs.ctx run compute default {type:"minecraft:add",inputs:[{type:"minecraft:storage",storage:"bs:const",path:"color.hex_values.$(z)"},{type:"minecraft:mul",inputs:[256,{type:"minecraft:storage",storage:"bs:const",path:"color.hex_values.$(y)"}]},{type:"minecraft:mul",inputs:[65536,{type:"minecraft:storage",storage:"bs:const",path:"color.hex_values.$(x)"}]}]} integer
+$data modify storage bs.color: color set value $(color)
 
-$execute store result score #a bs.ctx run data get storage bs:const color.hex_values.$(w)
+data modify storage bs.color:rgb_to_int out set compute default integer {type:"add",inputs:[{type:"mul",inputs:[65536,{type:"storage",storage:"bs.color:",path:"color[0]"}]},{type:"mul",inputs:[256,{type:"storage",storage:"bs.color:",path:"color[1]"}]},{type:"storage",storage:"bs.color:",path:"color[2]"}]}
+
+execute unless data storage bs.color: color[3] run return 1
+
+execute store result score #c bs.ctx run data get storage bs.color:rgb_to_int out
+execute store result score #a bs.ctx run data get storage bs.color: color[3]
 scoreboard players operation #a bs.ctx *= 16777216 bs.const
+execute store result storage bs.color:rgb_to_int out int 1 run scoreboard players operation #c bs.ctx += #a bs.ctx
 
-return run execute store result storage bs:out color.hex_to_int int 1 run scoreboard players operation #c bs.ctx += #a bs.ctx
+return run data get storage bs.color:rgb_to_int out

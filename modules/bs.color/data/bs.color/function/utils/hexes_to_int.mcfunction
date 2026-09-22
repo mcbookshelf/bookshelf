@@ -13,7 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set value {r:"",g:"",b:""}
-$data modify storage bs:ctx _.r set from storage bs:const color.hex_chars[$(x)]
-$data modify storage bs:ctx _.g set from storage bs:const color.hex_chars[$(y)]
-$data modify storage bs:ctx _.b set from storage bs:const color.hex_chars[$(z)]
+$return run data modify storage bs.color: int set compute default integer {type:"minecraft:add",inputs:[{type:"minecraft:storage",storage:"bs.color:",path:"hex_values.$(b)"},{type:"minecraft:mul",inputs:[256,{type:"minecraft:storage",storage:"bs.color:",path:"hex_values.$(g)"}]},{type:"minecraft:mul",inputs:[65536,{type:"minecraft:storage",storage:"bs.color:",path:"hex_values.$(r)"}]}]}

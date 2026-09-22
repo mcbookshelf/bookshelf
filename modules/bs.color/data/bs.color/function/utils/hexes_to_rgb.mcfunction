@@ -13,7 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result storage bs:out color.hex_to_rgba[0] int 1 store result score $color.hex_to_rgb.r bs.out run data get storage bs:const color.hex_values.$(x)
-$execute store result storage bs:out color.hex_to_rgba[1] int 1 store result score $color.hex_to_rgb.g bs.out run data get storage bs:const color.hex_values.$(y)
-$execute store result storage bs:out color.hex_to_rgba[2] int 1 store result score $color.hex_to_rgb.b bs.out run data get storage bs:const color.hex_values.$(z)
-$execute store result storage bs:out color.hex_to_rgba[3] int 1 store result score $color.hex_to_rgb.a bs.out run data get storage bs:const color.hex_values.$(w)
+$execute store result storage bs.color rgb[0] int 1 store result score $color.hex_to_rgb.r bs.out run data get storage bs.color: hex_values.$(r)
+$execute store result storage bs.color rgb[1] int 1 store result score $color.hex_to_rgb.g bs.out run data get storage bs.color: hex_values.$(g)
+$execute store result storage bs.color rgb[2] int 1 store result score $color.hex_to_rgb.b bs.out run data get storage bs.color: hex_values.$(b)
