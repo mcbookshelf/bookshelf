@@ -14,7 +14,7 @@ def write(target: Path) -> None:
     try:
         tags = history.remote_tags()
     except (OSError, subprocess.CalledProcessError):
-        return  # offline or no origin: the last written switcher stays
+        return
     entries = [
         {"name": "dev", "version": "master", "url": f"{DOCS}/master/"},
         {"name": "latest", "version": "latest", "url": f"{DOCS}/latest/", "preferred": True},
@@ -29,7 +29,6 @@ def write(target: Path) -> None:
         url = f"{DOCS}/v{version}/"
         entries.append({"name": version, "version": f"v{version}", "url": url})
     content = json.dumps(entries, indent=2) + "\n"
-    # written only when it changes: a rewrite would retrigger a watching sphinx-autobuild
     if target.is_file() and target.read_text("utf-8") == content:
         return
     target.write_text(content, "utf-8", newline="\n")

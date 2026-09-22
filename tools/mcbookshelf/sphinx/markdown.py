@@ -20,7 +20,6 @@ PLACES = {
     syntax.Kind.DIMENSION: "in <dimension>",
 }
 
-# the arrays with an icon of their own: `entity[]` and `player[]` are context types
 ARRAYS = (syntax.PrimitiveKind.INT, syntax.PrimitiveKind.BYTE, syntax.PrimitiveKind.LONG)
 
 ICONS = {

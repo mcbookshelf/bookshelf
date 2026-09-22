@@ -18,4 +18,4 @@
 execute unless score @s bs.hmod matches 1.. run return 0
 
 execute store result score @s bs.hval run data get entity @s Health 1000000
-advancement revoke @s only bs.health:on_before_heal
+advancement revoke @s only bs.health:_on_before_heal
