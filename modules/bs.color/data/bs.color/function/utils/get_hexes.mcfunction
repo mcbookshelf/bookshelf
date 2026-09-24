@@ -13,7 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs.color: channel_h set value {r:"",g:"",b:""}
 $data modify storage bs.color: channel_h.r set from storage bs:const color.hex_chars[$(r)]
 $data modify storage bs.color: channel_h.g set from storage bs:const color.hex_chars[$(g)]
 $data modify storage bs.color: channel_h.b set from storage bs:const color.hex_chars[$(b)]

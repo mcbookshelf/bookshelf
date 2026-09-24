@@ -25,14 +25,3 @@ data remove storage bs.color: color
 data remove storage bs.color: int
 data remove storage bs.color: rgb
 data remove storage bs.color: hex
-
-data remove storage bs.color:int_to_hex out
-data remove storage bs.color:int_to_hex_rgba out
-data remove storage bs.color:int_to_rgb out
-data remove storage bs.color:int_to_rgba out
-
-data remove storage bs.color:hex_to_int out
-data remove storage bs.color:hex_to_rgb out
-
-data remove storage bs.color:rgb_to_hex out
-data remove storage bs.color:rgb_to_int out

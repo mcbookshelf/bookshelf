@@ -13,11 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-function bs.color:int_to_hex/__main__ {color:15886907}
+function #bs.color:int_to_hex.in {color:15886907}
 assert data storage bs.color:int_to_hex {out:"#f26a3b"}
 
-function bs.color:int_to_hex/__main__ {color:2803797}
+function #bs.color:int_to_hex.in {color:2803797}
 assert data storage bs.color:int_to_hex {out:"#2ac855"}
 
-function bs.color:int_to_hex/__main__ {color:5839296}
+function #bs.color:int_to_hex.in {color:5839296}
 assert data storage bs.color:int_to_hex {out:"#5919c0"}

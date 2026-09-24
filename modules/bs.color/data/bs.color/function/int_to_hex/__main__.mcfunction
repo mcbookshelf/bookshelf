@@ -13,12 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs.color: color set value $(color)
-
-data modify storage bs.color: channel.r set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"color",storage:"bs.color:"},right:65536}}
-data modify storage bs.color: channel.g set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"color",storage:"bs.color:"},right:256}}
-data modify storage bs.color: channel.b set compute default integer {type:"mod",right:256,left:{type:"storage",path:"color",storage:"bs.color:"}}
+data modify storage bs.color: channel.r set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"in.color",storage:"bs.color:int_to_hex"},right:65536}}
+data modify storage bs.color: channel.g set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"in.color",storage:"bs.color:int_to_hex"},right:256}}
+data modify storage bs.color: channel.b set compute default integer {type:"mod",right:256,left:{type:"storage",path:"in.color",storage:"bs.color:int_to_hex"}}
 
 function bs.color:utils/get_hexes with storage bs.color: channel
-function bs.color:utils/concat_hexes with storage bs:ctx channel_h
+function bs.color:utils/concat_hexes with storage bs.color: channel_h
 data modify storage bs.color:int_to_hex out set from storage bs.color: hex

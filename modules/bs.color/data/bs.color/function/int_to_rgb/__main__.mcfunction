@@ -13,8 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs.color: color set value $(color)
-
-data modify storage bs.color:int_to_rgb out[0] set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"color",storage:"bs.color:"},right:65536}}
-data modify storage bs.color:int_to_rgb out[1] set compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"color",storage:"bs.color:"},right:256}}
-data modify storage bs.color:int_to_rgb out[2] set compute default integer {type:"mod",right:256,left:{type:"storage",path:"color",storage:"bs.color:"}}
+execute store result storage bs.color:int_to_rgb out[0] float 0.00392156862 store result score $color.int_to_rgb.r bs.out run compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"in.color",storage:"bs.color:int_to_rgb"},right:65536}}
+execute store result storage bs.color:int_to_rgb out[1] float 0.00392156862 store result score $color.int_to_rgb.g bs.out run compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"in.color",storage:"bs.color:int_to_rgb"},right:256}}
+execute store result storage bs.color:int_to_rgb out[2] float 0.00392156862 store result score $color.int_to_rgb.b bs.out run compute default integer {type:"mod",right:256,left:{type:"storage",path:"in.color",storage:"bs.color:int_to_rgb"}}

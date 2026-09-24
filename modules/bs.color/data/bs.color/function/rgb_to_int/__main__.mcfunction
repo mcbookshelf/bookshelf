@@ -12,15 +12,11 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-
-$data modify storage bs.color: color set value $(color)
-
-data modify storage bs.color:rgb_to_int out set compute default integer {type:"add",inputs:[{type:"mul",inputs:[65536,{type:"storage",storage:"bs.color:",path:"color[0]"}]},{type:"mul",inputs:[256,{type:"storage",storage:"bs.color:",path:"color[1]"}]},{type:"storage",storage:"bs.color:",path:"color[2]"}]}
-
-execute unless data storage bs.color: color[3] run return 1
+data modify storage bs.color:rgb_to_int out set compute default integer {type:"add",inputs:[{type:"mul",inputs:[65536,{type:"from_float",input:{type:"mul",inputs:[{type:"storage",storage:"bs.color:rgb_to_int",path:"in.color[0]"},255]}}]},{type:"mul",inputs:[256,{type:"from_float",input:{type:"mul",inputs:[{type:"storage",storage:"bs.color:rgb_to_int",path:"in.color[1]"},255]}}]},{type:"from_float",input:{type:"mul",inputs:[{type:"storage",storage:"bs.color:rgb_to_int",path:"in.color[2]"},255]}}]}
+execute unless data storage bs.color:rgb_to_int in.color[3] run return run data get storage bs.color:rgb_to_int out
 
 execute store result score #c bs.ctx run data get storage bs.color:rgb_to_int out
-execute store result score #a bs.ctx run data get storage bs.color: color[3]
+execute store result score #a bs.ctx run data get storage bs.color:rgb_to_int in.color[3] 255
 scoreboard players operation #a bs.ctx *= 16777216 bs.const
 execute store result storage bs.color:rgb_to_int out int 1 run scoreboard players operation #c bs.ctx += #a bs.ctx
 

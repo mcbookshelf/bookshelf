@@ -13,17 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs.color: color set value $(color)
+data modify storage bs.color: channel.r set compute default integer {type:"from_float",input:{type:"mul",inputs:[{type:"storage","storage":"bs.color:rgb_to_hex",path:"in.color[0]"},255]}}
+data modify storage bs.color: channel.g set compute default integer {type:"from_float",input:{type:"mul",inputs:[{type:"storage","storage":"bs.color:rgb_to_hex",path:"in.color[1]"},255]}}
+data modify storage bs.color: channel.b set compute default integer {type:"from_float",input:{type:"mul",inputs:[{type:"storage","storage":"bs.color:rgb_to_hex",path:"in.color[2]"},255]}}
+data modify storage bs.color: channel.a set compute default integer {type:"from_float",input:{type:"mul",inputs:[{type:"storage","storage":"bs.color:rgb_to_hex",path:"in.color[3]"},255]}}
 
-data modify storage bs.color: channel.r set from storage bs.color: color[0]
-data modify storage bs.color: channel.g set from storage bs.color: color[1]
-data modify storage bs.color: channel.b set from storage bs.color: color[2]
-data remove storage bs.color: channel.a
-data modify storage bs.color: channel.a set from storage bs.color: color[3]
-
-execute unless data storage bs.color: channel.a run function bs.color:utils/get_hexes with storage bs.color: channel
-execute unless data storage bs.color: channel.a run function bs.color:utils/concat_hexes with storage bs.color: channel
-execute if data storage bs.color: channel.a run function bs.color:utils/get_hexes_a with storage bs.color: channel
-execute if data storage bs.color: channel.a run function bs.color:utils/concat_hexes_a with storage bs.color: channel
+execute unless data storage bs.color:rgb_to_hex in.color[3] run function bs.color:utils/get_hexes with storage bs.color: channel
+execute unless data storage bs.color:rgb_to_hex in.color[3] run function bs.color:utils/concat_hexes with storage bs.color: channel_h
+execute if data storage bs.color:rgb_to_hex in.color[3] run function bs.color:utils/get_hexes_a with storage bs.color: channel
+execute if data storage bs.color:rgb_to_hex in.color[3] run function bs.color:utils/concat_hexes_a with storage bs.color: channel_h
 
 data modify storage bs.color:rgb_to_hex out set from storage bs.color: hex

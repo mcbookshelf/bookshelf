@@ -13,6 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result storage bs.color rgb[0] float 0.00392156862 store result score $color.hex_to_rgb.r bs.out run data get storage bs.color: hex_values.$(r)
-$execute store result storage bs.color rgb[1] float 0.00392156862 store result score $color.hex_to_rgb.g bs.out run data get storage bs.color: hex_values.$(g)
-$execute store result storage bs.color rgb[2] float 0.00392156862 store result score $color.hex_to_rgb.b bs.out run data get storage bs.color: hex_values.$(b)
+function #bs.color:int_to_rgba.in {color:-1829606853}
+assert score $color.int_to_rgb.r bs.out matches 242
+assert score $color.int_to_rgb.g bs.out matches 106
+assert score $color.int_to_rgb.b bs.out matches 59
+assert score $color.int_to_rgb.a bs.out matches 146
+assert data storage bs.color:int_to_rgba {out:[0.9490196078f,0.4156862745f,0.231372549f,0.5725490196f]}
+
+function #bs.color:int_to_rgba.in {color:975882325}
+assert data storage bs.color:int_to_rgba {out:[0.1647058824f,0.7843137255f,0.3333333333f,0.2274509804f]}
+
+function #bs.color:int_to_rgba.in {color:-849798720}
+assert data storage bs.color:int_to_rgba {out:[0.3490196078f,0.09803921569f,0.7529411765f,0.8039215686f]}

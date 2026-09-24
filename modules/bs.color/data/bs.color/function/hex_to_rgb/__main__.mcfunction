@@ -13,12 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs.color: color set value '$(color)'
-data modify storage bs.color: channel_h.r set string storage bs.color: color 1 3
-data modify storage bs.color: channel_h.g set string storage bs.color: color 3 5
-data modify storage bs.color: channel_h.b set string storage bs.color: color 5 7
+data modify storage bs.color: channel_h.r set string storage bs.color:hex_to_rgb in.color 1 3
+data modify storage bs.color: channel_h.g set string storage bs.color:hex_to_rgb in.color 3 5
+data modify storage bs.color: channel_h.b set string storage bs.color:hex_to_rgb in.color 5 7
 data remove storage bs.color: channel_h.a
-data modify storage bs.color: channel_h.a set string storage bs.color: color 7 9
+data modify storage bs.color: channel_h.a set string storage bs.color:hex_to_rgb in.color 7 9
 
 execute unless data storage bs.color: channel_h.a run function bs.color:utils/hexes_to_rgb with storage bs.color: channel_h
 execute if data storage bs.color: channel_h.a run function bs.color:utils/hexes_a_to_rgba with storage bs.color: channel_h
