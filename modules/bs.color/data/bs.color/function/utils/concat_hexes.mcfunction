@@ -13,11 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set value {rgb:$(color)}
+$data modify storage bs.color: hex set value "#$(r)$(g)$(b)"
 
-data modify storage bs:ctx x set from storage bs:ctx _.rgb[0]
-data modify storage bs:ctx y set from storage bs:ctx _.rgb[1]
-data modify storage bs:ctx z set from storage bs:ctx _.rgb[2]
-
-function bs.color:rgb_to_hex/get_hexes with storage bs:ctx
-function bs.color:rgb_to_hex/concat_hexes with storage bs:ctx _

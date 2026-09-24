@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-assert result 15886907 run function #bs.color:hex_to_int {color:"#F26A3B"}
-assert data storage bs:out color{hex_to_int:15886907}
+assert result 15886907 run function #bs.color:hex_to_int.in {color:"#F26A3B"}
+assert data storage bs.color:hex_to_int {out:15886907}
 assert score $color.hex_to_int bs.out matches 15886907
 
-assert result 2803797 run function #bs.color:hex_to_int {color:"#2AC855"}
+assert result 2803797 run function #bs.color:hex_to_int.in {color:"#2AC855"}
 
-assert result 5839296 run function #bs.color:hex_to_int {color:"#5919C0"}
+assert result 5839296 run function #bs.color:hex_to_int.in {color:"#5919C0"}

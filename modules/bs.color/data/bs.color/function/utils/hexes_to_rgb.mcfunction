@@ -13,9 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set value '$(color)'
-data modify storage bs:ctx x set string storage bs:ctx _ 1 3
-data modify storage bs:ctx y set string storage bs:ctx _ 3 5
-data modify storage bs:ctx z set string storage bs:ctx _ 5 7
-
-return run function bs.color:hex_to_rgb/convert_hexes with storage bs:ctx
+$execute store result storage bs.color rgb[0] float 0.00392156862 store result score $color.hex_to_rgb.r bs.out run data get storage bs.color: hex_values.$(r)
+$execute store result storage bs.color rgb[1] float 0.00392156862 store result score $color.hex_to_rgb.g bs.out run data get storage bs.color: hex_values.$(g)
+$execute store result storage bs.color rgb[2] float 0.00392156862 store result score $color.hex_to_rgb.b bs.out run data get storage bs.color: hex_values.$(b)

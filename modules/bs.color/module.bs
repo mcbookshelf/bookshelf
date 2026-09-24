@@ -1,0 +1,103 @@
+> Read and modify player health, and give entities a lifetime.
+
+name: Color
+slug: bookshelf-color
+version: 5.0.0
+tags: runtime
+
+
+feature function hex_to_int
+  > Convert hex #RGB(A) to int color.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2024/04/22 1.20.5
+  updated: 2026/09/24 26.3
+
+  input arguments: {
+    color: #[color="hex_rgb"] string > #RGB(A) hexadecimal color to convert
+  }
+  output storage: int > rgb(a) int color converted
+  output result: int > rgb(a) int color converted
+
+feature function hex_to_rgb
+  > Convert hex #RGB(A) to rgb(a) color.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2024/01/20 1.20.4
+  updated: 2026/09/24 26.3
+
+  input arguments: {
+    color: #[color="hex_rgb"] string > #RGB(A) hexadecimal color to convert
+  }
+  output storage: [float] @ 3 | [float] @ 4 > rgb(a) color converted
+
+feature function int_to_hex
+  > Convert rgb int to hex color.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2024/01/20 1.20.4
+  updated: 2026/09/24 26.3
+
+  input arguments: {
+    color: #[color="composite_rgb"] int > rgb int color to convert
+  }
+  output storage: string > #RGB hex color converted
+
+feature function int_to_hex_rgba
+  > Convert rgba int to hex color.
+  authors: RacoonJohn
+  created: 2026/09/24 26.3
+  updated: 2026/09/24 26.3
+
+  input arguments: {
+    color: #[color="composite_rgb"] int > rgba int color to convert
+  }
+  output storage: string > #RGBA hex color converted
+
+feature function int_to_rgb
+  > Convert rgb int to rgb color.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2019/08/12 1.14
+  updated: 2026/09/24 26.3
+
+  input arguments: {
+    color: #[color="composite_rgb"] int > rgb int color to convert
+  }
+  output storage: [float] @ 3 > rgb color converted
+
+feature function int_to_rgba
+  > Convert rgba int to rgba color.
+  authors: RacoonJohn
+  created: 2026/09/24 26.3
+  updated: 2026/09/24 26.3
+
+  input arguments: {
+    color: #[color="composite_rgb"] int > rgba int color to convert
+  }
+  output storage: [float] @ 4 > rgba color converted
+
+feature function rgb_to_hex
+  > Convert rgb(a) to hex color.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2024/01/20 1.20.4
+  updated: 2026/09/24 26.3
+
+  input arguments: {
+    color: #[color="dec_rgb"] [float] @ 3 | #[color="dec_rgb"] [float] @ 4 > rgb(a) color to convert
+  }
+  output storage: string > #RGB(A) hex color converted
+
+feature function rgb_to_int
+  > Convert rgb(a) to int color.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2019/08/12 1.14
+  updated: 2026/09/24 26.3
+
+  input arguments: {
+    color: #[color="dec_rgb"] [float] @ 3 | #[color="dec_rgb"] [float] @ 4 > rgb(a) color to convert
+  }
+  output storage: int > rgb(a) int color converted
+  output result: int > rgb(a) int color converted

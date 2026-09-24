@@ -13,14 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-function #bs.color:hex_to_rgb {color:"#F26A3B"}
+function #bs.color:hex_to_rgb.in {color:"#F26A3B"}
 assert score $color.hex_to_rgb.r bs.out matches 242
 assert score $color.hex_to_rgb.g bs.out matches 106
 assert score $color.hex_to_rgb.b bs.out matches 59
-assert data storage bs:out color{hex_to_rgb:[242,106,59]}
+assert data storage bs.color:hex_to_rgb {out:[0.9490196078f,0.4156862745f,0.231372549f]}
 
-function #bs.color:hex_to_rgb {color:"#2AC855"}
-assert data storage bs:out color{hex_to_rgb:[42,200,85]}
+function #bs.color:hex_to_rgb.in {color:"#2AC855"}
+assert data storage bs.color:hex_to_rgb {out:[0.1647058824f,0.7843137255f,0.3333333333f]}
 
-function #bs.color:hex_to_rgb {color:"#5919C0"}
-assert data storage bs:out color{hex_to_rgb:[89,25,192]}
+function #bs.color:hex_to_rgb.in {color:"#5919C0"}
+assert data storage bs.color:hex_to_rgb {out:[0.3490196078f,0.09803921569f,0.7529411765f]}

@@ -13,9 +13,15 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set value '$(color)'
-data modify storage bs:ctx x set string storage bs:ctx _ 1 3
-data modify storage bs:ctx y set string storage bs:ctx _ 3 5
-data modify storage bs:ctx z set string storage bs:ctx _ 5 7
+function #bs.color:int_to_rgba.in {color:-1829606853}
+assert score $color.int_to_rgb.r bs.out matches 242
+assert score $color.int_to_rgb.g bs.out matches 106
+assert score $color.int_to_rgb.b bs.out matches 59
+assert score $color.int_to_rgb.a bs.out matches 146
+assert data storage bs.color:int_to_rgba {out:[0.9490196078f,0.4156862745f,0.231372549f,0.5725490196f]}
 
-return run function bs.color:hex_to_int/convert_hexes with storage bs:ctx
+function #bs.color:int_to_rgba.in {color:975882325}
+assert data storage bs.color:int_to_rgba {out:[0.1647058824f,0.7843137255f,0.3333333333f,0.2274509804f]}
+
+function #bs.color:int_to_rgba.in {color:-849798720}
+assert data storage bs.color:int_to_rgba {out:[0.3490196078f,0.09803921569f,0.7529411765f,0.8039215686f]}

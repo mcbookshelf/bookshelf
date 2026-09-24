@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set value {r:"",g:"",b:""}
-$data modify storage bs:ctx _.r set from storage bs:const color.hex_chars[$(x)]
-$data modify storage bs:ctx _.g set from storage bs:const color.hex_chars[$(y)]
-$data modify storage bs:ctx _.b set from storage bs:const color.hex_chars[$(z)]
+$execute store result storage bs.color rgb[0] float 0.00392156862 store result score $color.hex_to_rgba.r bs.out run data get storage bs.color: hex_values.$(r)
+$execute store result storage bs.color rgb[1] float 0.00392156862 store result score $color.hex_to_rgba.g bs.out run data get storage bs.color: hex_values.$(g)
+$execute store result storage bs.color rgb[2] float 0.00392156862 store result score $color.hex_to_rgba.b bs.out run data get storage bs.color: hex_values.$(b)
+$execute store result storage bs.color rgb[3] float 0.00392156862 store result score $color.hex_to_rgba.a bs.out run data get storage bs.color: hex_values.$(a)

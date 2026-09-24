@@ -13,11 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-function #bs.color:rgb_to_hex {color:[242,106,59]}
-assert data storage bs:out color{rgb_to_hex:"#f26a3b"}
+function #bs.color:rgb_to_hex.in {color:[0.9490196078f,0.4156862745f,0.231372549f]}
+assert data storage bs.color:rgb_to_hex {out:"#f26a3b"}
 
-function #bs.color:rgb_to_hex {color:[42,200,85]}
-assert data storage bs:out color{rgb_to_hex:"#2ac855"}
+function #bs.color:rgb_to_hex.in {color:[0.1647058824f,0.7843137255f,0.3333333333f]}
+assert data storage bs.color:rgb_to_hex {out:"#2ac855"}
 
-function #bs.color:rgb_to_hex {color:[89,25,192]}
-assert data storage bs:out color{rgb_to_hex:"#5919c0"}
+function #bs.color:rgb_to_hex.in {color:[0.3490196078f,0.09803921569f,0.7529411765f]}
+assert data storage bs.color:rgb_to_hex {out:"#5919c0"}
