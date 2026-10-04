@@ -4,22 +4,15 @@ hide-sidebar-secondary: true
 
 # 🤝 Contribute
 
-Welcome to the Contribute section of our documentation! Whether you're fixing bugs, adding features, or writing new modules, this guide will help you get started and align with our project's standards.
+Thank you for your interest in Bookshelf. This section explains how to fix a bug, add a feature, or write a module.
 
-To contribute to this project, you must:
+Before you start, you need to:
 
-- Know the structure of a Minecraft datapack (5-10 min to learn on internet)
-- Know the basic usage of git projects (20-30 min to learn on internet)
-- Be accessible to answer questions about your work
+- Know how a Minecraft datapack works.
+- Know the basics of Git and GitHub.
+- Be available to answer questions about your work.
 
-If you're not familiar with GitHub pull requests or open-source collaboration, we recommend this guide to help you get started quickly: [First Contributions Guide](https://github.com/firstcontributions/first-contributions/blob/main/README.md).
-
-:::{admonition} **For French speakers**
-:class: note
-Ce projet est réalisé principalement par des membres francophones mais à destination d'un public international. C'est pourquoi toute la lib ainsi que la documentation est en anglais.
-
-Si vous souhaitez contribuer mais que votre anglais n'est pas au niveau, vous pouvez utiliser des outils comme [DeepL](https://DeepL.com) puis demander une vérification.
-:::
+If you're new to pull requests, read the [First Contributions guide](https://github.com/firstcontributions/first-contributions/blob/main/README.md).
 
 
 ```{toctree}
@@ -27,37 +20,35 @@ Si vous souhaitez contribuer mais que votre anglais n'est pas au niveau, vous po
 :maxdepth: 1
 :caption: Fundamentals
 getting-started
-conventions
 tree-structure
-file-format
-```
-
-```{toctree}
-:hidden:
-:maxdepth: 1
-:caption: Key Concepts
-debug-tools
-documentation
 metadata
-generated-files
-contribution-validation
-commit-guidelines
-special-functions
-good-practices
+api-design
+code-style
+plugins
 ```
 
 ```{toctree}
 :hidden:
 :maxdepth: 1
-:caption: Quick References
-definitions
-cli-reference
-shared-resources
+:caption: Quality
+testing
+validation
+documentation
+changelog
 ```
 
 ```{toctree}
 :hidden:
-:caption: Contributors
 :maxdepth: 1
+:caption: Reference
+commands
+glossary
+```
+
+```{toctree}
+:hidden:
+:maxdepth: 1
+:caption: Project
+maintainers
 special-thanks
 ```

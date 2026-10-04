@@ -15,6 +15,13 @@ body:
 
   - type: textarea
     attributes:
+      label: 🎯 Use case
+      description: What you are trying to do in your project, and why no existing module covers it.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
       label: 📝 Description
       description: A clear explanation of the module and the features it would provide.
     validations:

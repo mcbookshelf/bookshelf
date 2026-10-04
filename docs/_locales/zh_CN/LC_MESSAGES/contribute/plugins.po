@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../contribute/plugins.md:1 f1ad6ad90a4d4a889e170137b64ee641
+msgid "🧩 Module plugins"
+msgstr "🧩 模块插件"
+
+#: ../../contribute/plugins.md:3 ccc09265339b46e7ad7fde6aab925920
+msgid ""
+"A module can generate some of its files when you build it. You write "
+"these generators as Python plugins for "
+"[Beet](https://github.com/mcbeet/beet). Bookshelf provides a few helpers."
+msgstr ""
+"模块可以在构建时生成部分文件。这些生成器以 [Beet](https://github.com/mcbeet/beet) 的 Python "
+"插件形式编写。Bookshelf 提供了一些辅助工具。"
+
+#: ../../contribute/plugins.md:7 e54d92570b45407da2fdac03845027b3
+msgid "When to write a plugin"
+msgstr "何时编写插件"
+
+#: ../../contribute/plugins.md:9 b209c5440809499994bdc35141038349
+msgid ""
+"Write a plugin when the files come from the game data, or when they "
+"repeat too much to write yourself. For example:"
+msgstr "当文件源自游戏数据，或过于重复而不适合手写时，请编写插件。例如："
+
+#: ../../contribute/plugins.md:11 085ef98a7b2d4800819b651635d22e6f
+msgid "A tag that lists every block with a given property."
+msgstr "列出具有某一属性的所有方块的标签。"
+
+#: ../../contribute/plugins.md:12 9dd505fe565f45c1bb2f20dd1a52c765
+msgid "A number provider with one branch per block or entity."
+msgstr "每种方块或实体对应一个分支的数值提供器。"
+
+#: ../../contribute/plugins.md:13 9599cd8dd843488b9e3b9ab2bfa2ad2e
+msgid "A table of values to load in a storage."
+msgstr "要加载到存储中的数值表。"
+
+#: ../../contribute/plugins.md:15 777b2441a3a34679903ce59c4615aca9
+msgid ""
+"If the data doesn't come from the game and fits in one file, write the "
+"file yourself."
+msgstr "如果数据并非来自游戏，并且能放进一个文件，请自己编写该文件。"
+
+#: ../../contribute/plugins.md:19 171b6e742f104270873935a9e6178e82
+msgid "Write a generator"
+msgstr "编写生成器"
+
+#: ../../contribute/plugins.md:21 7e8d3f0bb0764589a2e3544915a1c1ff
+msgid ""
+"A plugin is a Python file at the root of the module that defines a "
+"`beet_default` function. Add the `@generator` decorator. Then yield each "
+"file that you create, with its ID:"
+msgstr ""
+"插件是位于模块根目录、定义了 `beet_default` 函数的 Python 文件。添加 `@generator` 装饰器，然后 yield "
+"你创建的每个文件及其 ID："
+
+#: ../../contribute/plugins.md:23 c63cd292c1ed4ab891eaaaacbe89cc24
+msgid "modules/bs.bitwise/plugin.py"
+msgstr "modules/bs.bitwise/plugin.py"
+
+#: ../../contribute/plugins.md:39 ede85e4c108e4946a879d118ea1e833f
+msgid "To read the content of `module.bs`, use `ctx.meta[\"module\"]`."
+msgstr "要读取 `module.bs` 的内容，请使用 `ctx.meta[\"module\"]`。"
+
+#: ../../contribute/plugins.md:43 a66cbb4f83fb4e1882dfa1c3967c3fe2
+msgid "Helpers"
+msgstr "辅助工具"
+
+#: ../../contribute/plugins.md:45 205a25177629457cbb64e7640fd48629
+msgid ""
+"The `mcbookshelf.minecraft` package holds the code that plugins share. "
+"Put any logic that isn't specific to one module there."
+msgstr "`mcbookshelf.minecraft` 包存放各插件共用的代码。不特定于某个模块的逻辑都放在那里。"
+
+#: ../../contribute/plugins.md:48 c2a2f91f406c477aab30b64b8da94a2a
+msgid "`block`"
+msgstr "`block`"
+
+#: ../../contribute/plugins.md:49 455e34b58e594b1cac890c9aa38dfc40
+msgid ""
+"Gets the blocks of the Minecraft version and their states. Builds lookup "
+"tables by block state"
+msgstr "获取该 Minecraft 版本的方块及其状态。构建按方块状态索引的查找表"
+
+#: ../../contribute/plugins.md:50 2b6f6420bf3143c988e1dc254b95449e
+msgid "`entity`"
+msgstr "`entity`"
+
+#: ../../contribute/plugins.md:51 c42f4796f7fb43478161952f332c0daa
+msgid "Gets the entities of the Minecraft version and their dimensions"
+msgstr "获取该 Minecraft 版本的实体及其尺寸"
+
+#: ../../contribute/plugins.md:52 5fef4532d622451cb1915764dbcadae1
+msgid "`data`"
+msgstr "`data`"
+
+#: ../../contribute/plugins.md:53 d6a86243c1b54a7389d5831fb587dece
+msgid "Downloads any other data file of the Minecraft version"
+msgstr "下载该 Minecraft 版本的任何其他数据文件"
+
+#: ../../contribute/plugins.md:54 f97378d68c164cc8bd6aac10906c0386
+msgid "`math`"
+msgstr "`math`"
+
+#: ../../contribute/plugins.md:55 3759fb5b0e494db88a6076461c119734
+msgid "Builds number providers from Python expressions"
+msgstr "根据 Python 表达式构建数值提供器"
+
+#: ../../contribute/plugins.md:56 693898ea77ba4f0181a3999f83644a7d
+msgid "`condition`"
+msgstr "`condition`"
+
+#: ../../contribute/plugins.md:57 c9f788daa91e4ed5b1dc663180decb44
+msgid "Builds predicates that you combine with `&`, `|`, and `~`"
+msgstr "构建谓词，你可以用 `&`、`|` 和 `~` 组合它们"
+
+#: ../../contribute/plugins.md:58 27c790810cc44d07a45fdd4bca7ecf6e
+msgid "`snbt`"
+msgstr "`snbt`"
+
+#: ../../contribute/plugins.md:59 daacf0b0565e4daaa9b31a922bab49a7
+msgid "Writes a value as compact SNBT for commands"
+msgstr "将值写成命令使用的紧凑 SNBT"
+

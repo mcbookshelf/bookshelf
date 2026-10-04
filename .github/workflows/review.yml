@@ -1,4 +1,4 @@
-name: 📋 CI
+name: 📋 Review
 
 on:
   pull_request:
@@ -36,9 +36,5 @@ jobs:
         with:
           distribution: temurin
           java-version: "25"
-      - uses: actions/cache@v6
-        with:
-          path: .beet_cache
-          key: ${{ runner.os }}-beet-cache
       - name: Test modules
         run: uv run test --reporter github

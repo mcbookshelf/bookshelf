@@ -9,4 +9,4 @@
 - [ ] If this pull request adds or modifies a feature:
   - [ ] I have documented my changes in the `/docs` folder.
   - [ ] Its [metadata](https://docs.mcbookshelf.dev/en/master/contribute/metadata.html) in `module.bs` is up to date, `updated` stamp included.
-  - [ ] It has [tests](https://docs.mcbookshelf.dev/en/master/contribute/debug-tools.html#unit-tests), and `uv run test` passes.
+  - [ ] It has [tests](https://docs.mcbookshelf.dev/en/master/contribute/testing.html), and `uv run test` passes.

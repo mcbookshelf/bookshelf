@@ -1,14 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, Gunivers
 # This file is distributed under the same license as the Bookshelf package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-15 01:06+0200\n"
-"PO-Revision-Date: 2025-07-19 22:05+0800\n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
 "Language-Team: zh_CN <LL@li.org>\n"
@@ -16,135 +17,303 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
-#: ../../contribute/tree-structure.md:5 5479a4ec57724328b2d63e506db790d7
-msgid "🌳 Tree Structure"
-msgstr "🌳 树状结构"
+#: ../../contribute/tree-structure.md:1 823392c6a50c4268a50068befcc82246
+msgid "🌳 Tree structure"
+msgstr "🌳 目录结构"
 
-#: ../../contribute/tree-structure.md:7 3adb7e38a5d845deb17d6a49f0b56e37
-msgid "Bookshelf respects a certain tree structure which can be similar to Java packages, called \"modules\" in this project. The added features must therefore be positioned in these various modules according to their usefulness."
-msgstr "Bookshelf 遵循特定的树状结构，类似于 Java 包，在本项目中称为\"模块\"。因此，添加的功能必须根据其用途放置在这些不同的模块中。"
+#: ../../contribute/tree-structure.md:3 90bf592d984943e384b24170b1311f44
+msgid ""
+"A module is a folder in `modules/`. Its name is its namespace, for "
+"example `bs.health`. This page explains what goes in that folder and how "
+"to name the files."
+msgstr "模块是 `modules/` 中的一个文件夹。它的名称就是它的命名空间，例如 `bs.health`。本页介绍该文件夹中包含什么，以及如何命名文件。"
 
-#: ../../contribute/tree-structure.md:16 0971af1a4b8543868dce2b4a3030a018
-msgid "**Module Requirements:**"
+#: ../../contribute/tree-structure.md:12 bedc2eb3f6104be6874b82b2e376d5bf
+msgid "**Module requirements:**"
 msgstr "**模块要求：**"
 
-#: ../../contribute/tree-structure.md:18 a4132c9a903e4770a8decc3d63401a57
-msgid "Each module must include a `module.json`, as described in the [metadata page](project:metadata.md)"
-msgstr "每个模块必须包含一个 `module.json`，如[元数据页面](project:metadata.md)所述"
+#: ../../contribute/tree-structure.md:14 68234c2756e34e7aa769a49b32491eab
+msgid "A `module.bs` file. See the [metadata page](project:metadata.md)."
+msgstr "一个 `module.bs` 文件。参见[元数据页面](project:metadata.md)。"
 
-#: ../../contribute/tree-structure.md:20 b7dbdaef384a49da8319d54e8aabe1ff
-msgid "Each module must also include a `pack.png` and a `README.md`"
-msgstr "每个模块还必须包含一个 `pack.png` 和一个 `README.md`"
+#: ../../contribute/tree-structure.md:15 0e0b3069298c49789768451713f3484d
+msgid "A `CHANGELOG.md` file. See the [changelog page](project:changelog.md)."
+msgstr "一个 `CHANGELOG.md` 文件。参见[更新日志页面](project:changelog.md)。"
 
-#: ../../contribute/tree-structure.md:22 6a6e5c4b806d4ba2bae996777eec28e7
-msgid "The `__load__` and `__unload__` functions are required to manage the module's loading and unloading. This includes resetting objectives, storages, and any other necessary elements"
-msgstr "需要 `__load__` 和 `__unload__` 函数来管理模块的加载和卸载。这包括重置记分项、命令存储和任何其他必要元素"
+#: ../../contribute/tree-structure.md:16 b9e8aec7c39b4cd2878c9365fcca3d0a
+msgid "A `README.md` file and a `pack.png` image."
+msgstr "一个 `README.md` 文件和一张 `pack.png` 图像。"
 
-#: ../../contribute/tree-structure.md:25 020876dc07004cf2942b0cf2afaacb79
-msgid "**Feature Requirements:**"
-msgstr "**功能要求：**"
+#: ../../contribute/tree-structure.md:18 8cfbca99f61e40a1ae33ec6ce35f08b9
+msgid "**Feature requirements:**"
+msgstr "**特性要求：**"
 
-#: ../../contribute/tree-structure.md:27 e7a45be75a81412587ffd94cf1ff3e37
-msgid "Each feature function should have a dedicated function tag that declares metadata, as detailed in the [metadata page](project:metadata.md)"
-msgstr "每个功能函数应有一个专用的函数标签来声明元数据，如[元数据页面](project:metadata.md)详细描述"
+#: ../../contribute/tree-structure.md:20 c9c5784e067047609ecaf34eac59b0ec
+msgid "Declare each feature in `module.bs`."
+msgstr "在 `module.bs` 中声明每个特性。"
 
-#: ../../contribute/tree-structure.md:29 0bcee519f1d9426fa05b0f9501004dcd
-msgid "Each feature should declare metadata, as detailed in the [metadata page](project:metadata.md)"
-msgstr "每个功能应声明元数据，如[元数据页面](project:metadata.md)详细描述"
+#: ../../contribute/tree-structure.md:21 4dd1c6648f7343ff8f5bf557f738a50c
+msgid "Give each function feature its own folder, with a `__main__` function."
+msgstr "为每个函数特性建立单独的文件夹，其中包含一个 `__main__` 函数。"
 
-#: ../../contribute/tree-structure.md:31 98355ef37fd04608a6d608bc6d3940fd
-msgid "A feature is equal to a unique utility, so we should not hesitate to decompose its features in order to make it more readable and to promote reusability"
-msgstr "一个功能等同于一个独特的实用工具，因此我们不应犹豫将其功能分解，以使其更易读并提高可重用性"
+#: ../../contribute/tree-structure.md:22 e7290ab7d3204ebfa8a07dc9f7e38123
+msgid ""
+"Name any other feature file after the feature. This applies to "
+"predicates, tags, and number providers."
+msgstr "其他特性文件以特性命名。这适用于谓词、标签和数值提供器。"
 
-#: ../../contribute/tree-structure.md:33 89d6361dfd504b1e9d4aa022232fea7b
-msgid "In addition to these few constraints, contributors are free to organize their files as they wish as long as it remains coherent and respects the global structure."
-msgstr "除了这些少量约束外，贡献者可以自由组织他们的文件，只要保持连贯并尊重全局结构。"
+#: ../../contribute/tree-structure.md:23 79708912c7044f80b531a6f8d34752ae
+msgid "Keep each feature small. Split a feature that does several things."
+msgstr "保持每个特性小巧。做多件事的特性应当拆分。"
 
-#: ../../contribute/tree-structure.md:39 797a1f9c410d4aa28ae316d11bacbf65
-#, python-brace-format
-msgid "{mcdir}`folder` modules"
-msgstr "{mcdir}`folder` 模块"
+#: ../../contribute/tree-structure.md:25 118b7df38ea04582aa732fc75f4a5e2e
+msgid ""
+"Apart from these rules, organize your files as you like. Keep the result "
+"consistent."
+msgstr "除这些规则外，你可以按自己的方式组织文件。请保持整体一致。"
 
-#: ../../contribute/tree-structure.md:40 8332287da18a450c82ec1c9738324ca9
+#: ../../contribute/tree-structure.md:31 454885bfb7a240cf8e35db1b2c42ff88
 #, python-brace-format
 msgid "{mcdir}`folder` \\<module\\>"
 msgstr "{mcdir}`folder` \\<module\\>"
 
-#: ../../contribute/tree-structure.md:41 cdefe58d0ed843e1867ddcca773dcc65
+#: ../../contribute/tree-structure.md:32 dcb812e88f814ed1b7e6c212fdbbef87
 #, python-brace-format
 msgid "{mcdir}`folder` data/\\<module\\>"
 msgstr "{mcdir}`folder` data/\\<module\\>"
 
-#: ../../contribute/tree-structure.md:42 b17c8c0ca196451eb7cd1ab4f2411988
+#: ../../contribute/tree-structure.md:33 43e21dee2ad14078b3fcf99195b94e68
 #, python-brace-format
-msgid "{mcdir}`folder` function"
-msgstr "{mcdir}`folder` 函数"
+msgid "[+] {mcdir}`folder` function"
+msgstr "[+] {mcdir}`folder` function"
 
-#: ../../contribute/tree-structure.md:43 e46c65d7de0d48029f3d4143817af895
+#: ../../contribute/tree-structure.md:34 a53b5fa839194ce7a179a0cca4ea30a2
 #, python-brace-format
-msgid "{mcdir}`folder` \\<feature1\\>"
-msgstr "{mcdir}`folder` \\<feature1\\>"
+msgid "[+] {mcdir}`folder` \\<feature\\>"
+msgstr "[+] {mcdir}`folder` \\<feature\\>"
 
-#: ../../contribute/tree-structure.md:44 36147ea286564c298a475a16080c9cfe
+#: ../../contribute/tree-structure.md:35 ../../contribute/tree-structure.md:40
+#: d78aafc1cc2444a4b62973ac258e2cce
+#, python-brace-format
+msgid "{mcdir}`mcfunction` \\_\\_main\\_\\_.mcfunction"
+msgstr "{mcdir}`mcfunction` \\_\\_main\\_\\_.mcfunction"
+
+#: ../../contribute/tree-structure.md:36 a499a54393a1445d94e45cfa41464874
+#, python-brace-format
+msgid "{mcdir}`mcfunction` \\_\\_macro\\_\\_.mcfunction"
+msgstr "{mcdir}`mcfunction` \\_\\_macro\\_\\_.mcfunction"
+
+#: ../../contribute/tree-structure.md:37 ../../contribute/tree-structure.md:41
+#: eef607842e354587852016919651da49
 #, python-brace-format
 msgid "{mcdir}`mcfunction` ..."
 msgstr "{mcdir}`mcfunction` ..."
 
-#: ../../contribute/tree-structure.md:45 e2f8b96f50054d499615b1f97fc5fd6c
+#: ../../contribute/tree-structure.md:38 0aef1b21794640738910a34d1a57b8c5
 #, python-brace-format
-msgid "{mcdir}`mcfunction` \\<feature2\\>.mcfunction"
-msgstr "{mcdir}`mcfunction` \\<feature2\\>.mcfunction"
+msgid "[-] {mcdir}`folder` \\<group\\>"
+msgstr "[-] {mcdir}`folder` \\<group\\>"
 
-#: ../../contribute/tree-structure.md:46 3c8bb676bc25446b9d2ededcf81b46a6
+#: ../../contribute/tree-structure.md:39 3f2dfaceef144428b108c57c070b4d7b
+#, python-brace-format
+msgid "{mcdir}`folder` \\<feature\\>"
+msgstr "{mcdir}`folder` \\<feature\\>"
+
+#: ../../contribute/tree-structure.md:42 b334ee34ad2f4da0a641a23a4cbed2b8
 #, python-brace-format
 msgid "{mcdir}`mcfunction` \\_\\_load\\_\\_.mcfunction"
 msgstr "{mcdir}`mcfunction` \\_\\_load\\_\\_.mcfunction"
 
-#: ../../contribute/tree-structure.md:47 a3acb61f6edd4d32a9a96990806ae069
+#: ../../contribute/tree-structure.md:43 15bc80ad521d4c0881f448692860abcc
 #, python-brace-format
 msgid "{mcdir}`mcfunction` \\_\\_unload\\_\\_.mcfunction"
 msgstr "{mcdir}`mcfunction` \\_\\_unload\\_\\_.mcfunction"
 
-#: ../../contribute/tree-structure.md:48 80584be79f984a66a2a771eac1b26124
+#: ../../contribute/tree-structure.md:44 0acca3d5277d484fa7878ad34d996843
 #, python-brace-format
-msgid "{mcdir}`folder` \\<predicate|loot_table|...\\>"
-msgstr "{mcdir}`folder` \\<predicate|loot_table|...\\>"
+msgid "[-] {mcdir}`folder` \\<predicate|loot_table|...\\>"
+msgstr "[-] {mcdir}`folder` \\<predicate|loot_table|...\\>"
 
-#: ../../contribute/tree-structure.md:49 ../../contribute/tree-structure.md:52
-#: 856de036a3264659b5cc000e97778e49 ca28729cccb5429a90f52e123dcc96bf
+#: ../../contribute/tree-structure.md:45 1f692f88c1614ee29ab373b4c2e8d928
 #, python-brace-format
-msgid "{mcdir}`json` \\<feature1\\>.json"
-msgstr "{mcdir}`json` \\<feature1\\>.json"
+msgid "{mcdir}`folder` \\_\\<feature\\>"
+msgstr "{mcdir}`folder` \\_\\<feature\\>"
 
-#: ../../contribute/tree-structure.md:50 ../../contribute/tree-structure.md:53
-#: 2b9f1b885807448c977cac2ae37bf1d8 b4759dfa615a4f0eab9b013766219413
+#: ../../contribute/tree-structure.md:46 c7cc59997a28428b9196ecde138ffcf8
 #, python-brace-format
 msgid "{mcdir}`json` ..."
 msgstr "{mcdir}`json` ..."
 
-#: ../../contribute/tree-structure.md:51 aeb8567ad9364691b5a4ae7c95a25100
+#: ../../contribute/tree-structure.md:47 589271b15f914fc7bf1431055a9ad742
 #, python-brace-format
-msgid "{mcdir}`folder` tags/function"
-msgstr "{mcdir}`folder` tags/function"
+msgid "{mcdir}`json` \\<feature\\>.json"
+msgstr "{mcdir}`json` \\<feature\\>.json"
 
-#: ../../contribute/tree-structure.md:54 c593747156e34720a1b749f4d4f23b3e
+#: ../../contribute/tree-structure.md:48 3c4c9dfc9bae45348896c904c6364d30
 #, python-brace-format
-msgid "{mcdir}`json` module.json"
-msgstr "{mcdir}`json` module.json"
+msgid "[-] {mcdir}`folder` test"
+msgstr "[-] {mcdir}`folder` test"
 
-#: ../../contribute/tree-structure.md:55 bd9007c7edf1471db7ee139597d8e9a5
+#: ../../contribute/tree-structure.md:49 784d2e8505624776afa260699b85908e
 #, python-brace-format
-msgid "{mcdir}`image` pack.png"
-msgstr "{mcdir}`image` pack.png"
+msgid "{mcdir}`mcfunction` \\<feature\\>.mcfunction"
+msgstr "{mcdir}`mcfunction` \\<feature\\>.mcfunction"
 
-#: ../../contribute/tree-structure.md:56 785397bd58244a4fac3d575e0b9050c1
+#: ../../contribute/tree-structure.md:50 68ee96f5696645ea8ba788a1e4292954
+#, python-brace-format
+msgid "{mcdir}`file` module\\.bs"
+msgstr "{mcdir}`file` module\\.bs"
+
+#: ../../contribute/tree-structure.md:51 e169573bba1c49c489c1ef6b45799c87
+#, python-brace-format
+msgid "{mcdir}`file` CHANGELOG\\.md"
+msgstr "{mcdir}`file` CHANGELOG\\.md"
+
+#: ../../contribute/tree-structure.md:52 06913d9a67bd4f4caf9483166bf54c17
 #, python-brace-format
 msgid "{mcdir}`file` README\\.md"
 msgstr "{mcdir}`file` README\\.md"
 
-#: ../../contribute/tree-structure.md:57 a7f8308a97de49139b33e2cc6d380dbb
+#: ../../contribute/tree-structure.md:53 c8d7f87b0f0a4cdab3b01a025860b3b8
 #, python-brace-format
-msgid "{mcdir}`folder` ..."
-msgstr "{mcdir}`folder` ..."
+msgid "{mcdir}`image` pack.png"
+msgstr "{mcdir}`image` pack.png"
+
+#: ../../contribute/tree-structure.md:59 c2db15e0cb1046269e032f8ede23bebe
+msgid "Features and groups"
+msgstr "特性与分组"
+
+#: ../../contribute/tree-structure.md:61 09cce4e83cd6416a9e56e1d074cb675b
+msgid ""
+"A function feature is a folder. Put every file that only this feature "
+"uses in its folder:"
+msgstr "函数特性是一个文件夹。把只有该特性使用的文件都放在它的文件夹中："
+
+#: ../../contribute/tree-structure.md:69 0f7d04c756474eb6be7578723d12afae
+msgid ""
+"The build generates the function tags from `module.bs`. Don't write "
+"`tags/function/<feature>.json` yourself."
+msgstr "构建会根据 `module.bs` 生成函数标签。不要自己编写 `tags/function/<feature>.json`。"
+
+#: ../../contribute/tree-structure.md:71 28c3d4bcafe547eb8790eed73ae8dec1
+msgid ""
+"A **group** is a folder that contains several features. In `bs.hitbox`, "
+"`get_block` is a group. It holds `get_block/collision`, "
+"`get_block/outline`, and other features. Put the files that only these "
+"features use in the group folder. A feature can't also be a group."
+msgstr ""
+"**分组**是包含多个特性的文件夹。在 `bs.hitbox` 中，`get_block` 是一个分组。它包含 "
+"`get_block/collision`、`get_block/outline` "
+"等特性。把只有这些特性使用的文件放在分组文件夹中。一个特性不能同时是分组。"
+
+#: ../../contribute/tree-structure.md:73 0f98f07348ba48b3bb518a486d91cd16
+msgid ""
+"Any file outside a feature folder or a group folder is shared. The whole "
+"module can use it."
+msgstr "特性文件夹和分组文件夹之外的文件都是共享的。整个模块都可以使用它。"
+
+#: ../../contribute/tree-structure.md:78 9e6c5cb75aec4015889bea71d1bf6399
+msgid "Reserved names"
+msgstr "保留名称"
+
+#: ../../contribute/tree-structure.md:80 50375a295f7a4f1a9943fa9f1ba39b1f
+msgid ""
+"A function name with double underscores on each side has a special "
+"meaning. You can't give such a name to a feature."
+msgstr "两侧带有双下划线的函数名具有特殊含义。你不能给特性起这样的名称。"
+
+#: ../../contribute/tree-structure.md:83 6d774ec7ea2249c7b3a5a2b2bf26b9c5
+msgid "`__main__`"
+msgstr "`__main__`"
+
+#: ../../contribute/tree-structure.md:84 7b6884651d034798a7bac9cc34252f0a
+msgid "The function that the feature tag runs: `#<module>:<feature>`"
+msgstr "特性标签运行的函数：`#<module>:<feature>`"
+
+#: ../../contribute/tree-structure.md:85 06f2a0ae4c344d839af43a5978184302
+msgid "`__macro__`"
+msgstr "`__macro__`"
+
+#: ../../contribute/tree-structure.md:86 11a4bad7206a4b7d9af3c44ac98d1814
+msgid ""
+"The function that the `.in` tag runs: `#<module>:<feature>.in`. The build"
+" generates it for `input arguments`, unless you write it"
+msgstr "`.in` 标签运行的函数：`#<module>:<feature>.in`。构建会为 `input arguments` 生成它，除非你自己编写"
+
+#: ../../contribute/tree-structure.md:87 5bfd251829dc46b9b6f2dbaf9dceb660
+msgid "`__load__`"
+msgstr "`__load__`"
+
+#: ../../contribute/tree-structure.md:88 2a4e76d7dc1b4b5fa65d82b8ba313ccc
+msgid ""
+"The function that runs when the module loads. The build generates it if "
+"it's missing"
+msgstr "模块加载时运行的函数。缺失时构建会生成它"
+
+#: ../../contribute/tree-structure.md:89 fff0966156d140eda83124a702092abc
+msgid "`__unload__`"
+msgstr "`__unload__`"
+
+#: ../../contribute/tree-structure.md:90 2a4e76d7dc1b4b5fa65d82b8ba313ccc
+msgid ""
+"The function that runs when the module unloads. The build generates it if"
+" it's missing"
+msgstr "模块卸载时运行的函数。缺失时构建会生成它"
+
+#: ../../contribute/tree-structure.md:91 c17954c9fbb44d13b344706f10ec5537
+msgid "`__help__`"
+msgstr "`__help__`"
+
+#: ../../contribute/tree-structure.md:92 b29f28391f254f0bab253047c42badf8
+msgid ""
+"The function that links to the module documentation. The build always "
+"generates it"
+msgstr "链接到模块文档的函数。构建总是会生成它"
+
+#: ../../contribute/tree-structure.md:96 7336333b3cc54b70ab1e79f48513c5c1
+msgid "Load and unload"
+msgstr "加载与卸载"
+
+#: ../../contribute/tree-structure.md:98 8fe7e00bc620436aa90aa49356819430
+msgid ""
+"The build removes the storages that you declare in `module.bs`. Remove "
+"any other data yourself."
+msgstr "构建会移除你在 `module.bs` 中声明的存储。其他数据请自己移除。"
+
+#: ../../contribute/tree-structure.md:100 3359caa667e3413b94cb930b1a1c18e4
+msgid ""
+"A feature or a group can have its own `__load__` and `__unload__` "
+"functions in its folder. They run after the functions of the module."
+msgstr "特性或分组可以在其文件夹中拥有自己的 `__load__` 和 `__unload__` 函数。它们在模块的函数之后运行。"
+
+#: ../../contribute/tree-structure.md:105 adab787b257c407d8f5397846cdc7467
+msgid "Public and private files"
+msgstr "公共文件与私有文件"
+
+#: ../../contribute/tree-structure.md:107 50e717ef75414c5796b8b54c41a6d4da
+msgid ""
+"Users call a function through the function tag of its feature. A function"
+" needs no marker. Never add a `_` prefix to a function."
+msgstr "用户通过特性的函数标签调用函数。函数不需要任何标记。绝不要给函数加 `_` 前缀。"
+
+#: ../../contribute/tree-structure.md:109 783e5e20bdcd497cbff46b4132c45a17
+msgid ""
+"Users can call any other file by its ID. This applies to predicates, "
+"tags, number providers, and advancements. Each of these files is either "
+"public or private:"
+msgstr "用户可以通过 ID 调用其他任何文件。这适用于谓词、标签、数值提供器和进度。这些文件要么是公共的，要么是私有的："
+
+#: ../../contribute/tree-structure.md:111 5ff5307dab8749768a1c9a2b5322e7a8
+msgid "**Public**: declare the file as a feature in `module.bs`."
+msgstr "**公共**：在 `module.bs` 中将文件声明为特性。"
+
+#: ../../contribute/tree-structure.md:112 acc7dadc4c494e9dad98d054474ed1bb
+msgid "**Private**: add a `_` prefix to the file name or to one of its folders."
+msgstr "**私有**：为文件名或其某一级文件夹添加 `_` 前缀。"
+
+#: ../../contribute/tree-structure.md:114 0220759de285428f9078b051b8267c05
+msgid "For example:"
+msgstr "例如："
+
