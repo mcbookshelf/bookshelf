@@ -1,0 +1,304 @@
+> Work with the hitboxes of blocks and entities.
+
+name: Hitbox
+slug: bookshelf-hitbox
+version: 5.0.0
+tags: runtime
+
+$block = storage bs.hitbox:get_block out: int @ 1..15 | [[double] @ 6..7]
+> the flags of a full block, or its boxes as `[[x1,y1,z1,x2,y2,z2,flag],...]`, from the min corner to the max corner
+>
+> Bookshelf providers flag the block `1` and its fluid `2`
+
+$entity = storage bs.hitbox:get_entity out: [[float] @ 6]
+> the boxes of the entity as `[[x1,y1,z1,x2,y2,z2],...]`, from the min corner to the max corner, from its position and scaled
+
+
+feature function get_block/collision
+  > Get the collision of a block: the boxes entities can't pass through.
+  authors: Aksiome
+  created: 2025/08/27 1.21.8
+  updated: 2026/09/28 26.3
+
+  context position > position of the block
+  output result: int @ 0..1 > `1` if the block has a shape, `0` otherwise
+  output $block
+
+
+feature function get_block/collision_with_fluid
+  > Get the collision of a block and of its fluid.
+  authors: Aksiome
+  created: 2025/10/07 1.21.10
+  updated: 2026/09/28 26.3
+
+  context position > position of the block
+  output result: int @ 0..1 > `1` if the block has a shape, `0` otherwise
+  output $block
+
+
+feature function get_block/interaction
+  > Get the outline of a block as the game uses it to place blocks: a hollow block such as a cauldron or a hopper counts as full, so aiming into it places against it.
+  authors: Aksiome
+  created: 2025/11/11 1.21.10
+  updated: 2026/09/28 26.3
+
+  context position > position of the block
+  output result: int @ 0..1 > `1` if the block has a shape, `0` otherwise
+  output $block
+
+
+feature function get_block/interaction_with_fluid
+  > Get the outline of a block as the game uses it to place blocks, and its fluid.
+  authors: Aksiome
+  created: 2025/11/11 1.21.10
+  updated: 2026/09/28 26.3
+
+  context position > position of the block
+  output result: int @ 0..1 > `1` if the block has a shape, `0` otherwise
+  output $block
+
+
+feature function get_block/outline
+  > Get the outline of a block: the boxes where it can be targeted.
+  authors: Aksiome
+  created: 2025/08/27 1.21.8
+  updated: 2026/09/28 26.3
+
+  context position > position of the block
+  output result: int @ 0..1 > `1` if the block has a shape, `0` otherwise
+  output $block
+
+
+feature function get_block/outline_with_fluid
+  > Get the outline of a block and of its fluid.
+  authors: Aksiome
+  created: 2025/10/07 1.21.10
+  updated: 2026/09/28 26.3
+
+  context position > position of the block
+  output result: int @ 0..1 > `1` if the block has a shape, `0` otherwise
+  output $block
+
+
+feature function get_entity/living
+  > Get the box of an entity that has health, such as mobs, players and armor stands.
+  authors: Aksiome
+  created: 2026/09/29 26.3
+  updated: 2026/09/29 26.3
+
+  context executor > entity to get the box of
+  output result: int @ 0..1 > `1` if the entity is living, `0` otherwise
+  output $entity
+
+
+feature function get_entity/pushable
+  > Get the box of an entity others bump into or push, such as boats and mobs.
+  authors: Aksiome
+  created: 2026/09/28 26.3
+  updated: 2026/09/28 26.3
+
+  context executor > entity to get the box of
+  output result: int @ 0..1 > `1` if the entity is pushable, `0` otherwise
+  output $entity
+
+
+feature function get_entity/sized
+  > Get the box of any entity that has one.
+  authors: Aksiome
+  created: 2023/11/21 1.20.3
+  updated: 2026/09/28 26.3
+
+  context executor > entity to get the box of
+  output result: int @ 0..1 > `1` if the entity has a box, `0` otherwise
+  output $entity
+
+
+feature function get_entity/solid
+  > Get the box of an entity others can't pass through, such as boats and shulkers.
+  authors: Aksiome
+  created: 2026/09/28 26.3
+  updated: 2026/09/28 26.3
+
+  context executor > entity to get the box of
+  output result: int @ 0..1 > `1` if the entity is solid, `0` otherwise
+  output $entity
+
+
+feature function get_entity/targetable
+  > Get the box of an entity a player can target, such as mobs and item frames.
+  authors: Aksiome
+  created: 2026/09/28 26.3
+  updated: 2026/09/28 26.3
+
+  context executor > entity to get the box of
+  output result: int @ 0..1 > `1` if the entity can be targeted, `0` otherwise
+  output $entity
+
+
+feature function is_inside/block
+  > Check if a position is inside a block.
+  authors: Aksiome
+  created: 2023/11/21 1.20.3
+  updated: 2026/09/29 26.3
+
+  context position > position to check
+  input storage: {
+    blocks: #[id(registry="function",tags="allowed")] string > [block provider](#block-providers), such as `#bs.hitbox:get_block/collision`
+  }
+  output success > whether the position is inside the block
+
+
+feature function is_inside/entity
+  > Check if a position is inside an entity.
+  authors: Aksiome
+  created: 2023/11/21 1.20.3
+  updated: 2026/09/29 26.3
+
+  context executor > entity to check
+  context position > position to check
+  input storage: {
+    entities: #[id(registry="function",tags="allowed")] string > [entity provider](#entity-providers), such as `#bs.hitbox:get_entity/sized`
+  }
+  output success > whether the position is inside the entity
+
+
+feature function overlaps/block
+  > Check if an entity overlaps the block at a position.
+  authors: Aksiome
+  created: 2024/09/28 1.21
+  updated: 2026/09/30 26.3
+
+  context executor > entity to check
+  context position > position of the block
+  input storage: {
+    blocks: #[id(registry="function",tags="allowed")] string > [block provider](#block-providers), such as `#bs.hitbox:get_block/collision`
+    entities: #[id(registry="function",tags="allowed")] string > [entity provider](#entity-providers), such as `#bs.hitbox:get_entity/sized`
+  }
+  output success > whether the entity overlaps a block
+
+
+feature function overlaps/blocks
+  > Check if an entity overlaps any block around it.
+  authors: Aksiome
+  created: 2025/03/10 1.21.4
+  updated: 2026/10/04 26.3
+
+  context executor > entity to check
+  input storage: {
+    blocks: #[id(registry="function",tags="allowed")] string > [block provider](#block-providers), such as `#bs.hitbox:get_block/collision`
+    entities: #[id(registry="function",tags="allowed")] string > [entity provider](#entity-providers), such as `#bs.hitbox:get_entity/sized`
+  }
+  output success > whether the entity overlaps a block
+
+
+feature block_tag has_fluid
+  > Blocks that hold a fluid in every state, such as water, lava and kelp; waterloggable blocks hold one when their waterlogged state is true.
+  authors: Aksiome
+  created: 2026/09/29 26.3
+  updated: 2026/09/29 26.3
+
+
+feature block_tag has_no_collision
+  > Blocks with no collision in any of their states, such as flowers and buttons.
+  authors: Aksiome
+  created: 2025/01/24 1.21.4
+  updated: 2026/09/28 26.3
+
+
+feature block_tag has_no_outline
+  > Blocks with no outline to target, such as air, light blocks and fluids.
+  authors: Aksiome
+  created: 2024/09/28 1.21
+  updated: 2026/09/28 26.3
+
+
+feature block_tag has_shape_offset
+  > Blocks whose outline and collision move with their position, such as flowers, bamboo and pointed dripstone.
+  authors: Aksiome
+  created: 2025/08/27 1.21.8
+  updated: 2026/09/29 26.3
+
+
+feature block_tag has_visual_offset
+  > Blocks whose model moves with their position, such as flowers, grass and ferns.
+  authors: Aksiome
+  created: 2025/08/27 1.21.8
+  updated: 2026/09/28 26.3
+
+
+feature block_tag is_full_cube_collision
+  > Blocks whose collision is a full cube in every state.
+  authors: Aksiome
+  created: 2026/08/11 26.2
+  updated: 2026/09/28 26.3
+
+
+feature block_tag is_full_cube_outline
+  > Blocks whose outline is a full cube in every state.
+  authors: Aksiome
+  created: 2026/08/11 26.2
+  updated: 2026/09/28 26.3
+
+
+feature block_tag is_liquid
+  > Liquid blocks, whose level sets the height of their fluid: water and lava.
+  authors: Aksiome
+  created: 2026/09/29 26.3
+  updated: 2026/09/29 26.3
+
+
+feature block_tag is_waterloggable
+  > Blocks that can be waterlogged, holding water when their waterlogged state is true, such as slabs and stairs.
+  authors: Aksiome
+  created: 2025/11/11 1.21.10
+  updated: 2026/09/29 26.3
+
+
+feature predicate get_entity/living
+  > Entities that have health, such as mobs, players and armor stands.
+  authors: Aksiome
+  created: 2026/09/29 26.3
+  updated: 2026/09/29 26.3
+
+  context executor > entity to test
+  output success > whether the provider may return a box for it
+
+
+feature predicate get_entity/pushable
+  > Entities others bump into or push, such as boats and mobs.
+  authors: Aksiome
+  created: 2026/09/29 26.3
+  updated: 2026/09/29 26.3
+
+  context executor > entity to test
+  output success > whether the provider may return a box for it
+
+
+feature predicate get_entity/sized
+  > Entities that have a box, such as mobs, items and projectiles.
+  authors: Aksiome
+  created: 2026/09/29 26.3
+  updated: 2026/09/29 26.3
+
+  context executor > entity to test
+  output success > whether the provider may return a box for it
+
+
+feature predicate get_entity/solid
+  > Entities others can't pass through, such as boats and shulkers.
+  authors: Aksiome
+  created: 2026/09/29 26.3
+  updated: 2026/09/29 26.3
+
+  context executor > entity to test
+  output success > whether the provider may return a box for it
+
+
+feature predicate get_entity/targetable
+  > Entities a player can target, such as mobs and item frames.
+  authors: Aksiome
+  created: 2026/09/29 26.3
+  updated: 2026/09/29 26.3
+
+  context executor > entity to test
+  output success > whether the provider may return a box for it

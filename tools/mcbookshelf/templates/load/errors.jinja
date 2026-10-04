@@ -1,4 +1,4 @@
-#!tag "bs.load:process/errors/" + module[3:]
+#!tag "bs.load:process/errors/" + short
 
 {% include 'bs/header.jinja' %}
 # Return early to ensure code runs only on the latest available loader
@@ -14,4 +14,4 @@ execute if score #{{ module }}.major_versions load.status matches 2.. run return
 
 # Mark the error as non major and create a downloadable bundle to resolve the issue
 data modify storage bs.load: errors[-1].major set value 0b
-function bs.load:load/v{{ loader }}/bundle/append {module:"{{ module }}"}
+function bs.load:v{{ loader }}/bundle/append {module:"{{ module }}"}

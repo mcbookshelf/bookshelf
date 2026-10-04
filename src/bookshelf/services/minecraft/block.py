@@ -7,9 +7,9 @@ from logging import getLogger
 from typing import TYPE_CHECKING, Any
 
 import httpx
+from bookshelf.common import json
 from frozendict import frozendict
 
-from bookshelf.common import json
 from bookshelf.models import (
     Block,
     Collection,

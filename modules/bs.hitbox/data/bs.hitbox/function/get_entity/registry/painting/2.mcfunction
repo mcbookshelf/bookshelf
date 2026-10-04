@@ -13,7 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:out hitbox set value {width:0.0,height:0.0,depth:0.0625}
-execute store result score #w bs.ctx run scoreboard players set #h bs.ctx 0
-execute at @s run function bs.hitbox:get_entity/registry/painting/w4
-execute at @s run function bs.hitbox:get_entity/registry/painting/h4
+execute positioned ^ ^ ^1.25 unless entity @s[dx=0] positioned ^ ^ ^-1.25 run return run function bs.hitbox:get_entity/registry/painting/1
+scoreboard players add #d bs.ctx 2
+execute positioned ^ ^ ^1 run return run function bs.hitbox:get_entity/registry/painting/1

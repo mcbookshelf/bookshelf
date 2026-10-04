@@ -3,7 +3,7 @@ from asyncio import gather
 
 from httpx import AsyncBaseTransport, AsyncClient
 
-from mcbookshelf import assets, constants
+from mcbookshelf import constants, releases
 
 from . import Pack, PublishError, gather_errors
 
@@ -25,7 +25,7 @@ async def publish(
     token: str,
     transport: AsyncBaseTransport | None = None,
 ) -> list[Exception]:
-    headers = {"Authorization": token, "User-Agent": assets.USER_AGENT}
+    headers = {"Authorization": token, "User-Agent": releases.USER_AGENT}
     async with AsyncClient(
         base_url=API,
         headers=headers,
@@ -90,7 +90,7 @@ async def _create_version(client: AsyncClient, pack: Pack, project_id: str) -> N
         "dependencies": [],
         "game_versions": [constants.GAME_VERSION],
         "version_type": "release",
-        "loaders": [LOADERS[pack.kind]],
+        "loaders": [LOADERS[pack.pack_type]],
         "featured": True,
         "project_id": project_id,
         "file_parts": [pack.file.name],

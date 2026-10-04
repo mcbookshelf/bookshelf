@@ -13,8 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:ctx _ set from entity @s Pos
-execute store result storage bs:ctx x int -1 run data get storage bs:ctx _[0]
-execute store result storage bs:ctx y int -1 run data get storage bs:ctx _[1]
-execute store result storage bs:ctx z int -1 run data get storage bs:ctx _[2]
-function bs.hitbox:utils/get_relative_pos with storage bs:ctx
+data modify storage bs.hitbox: pos set from entity @s Pos
+execute store result score #x bs.ctx run data get storage bs.hitbox: pos[0] 16384
+execute store result score #y bs.ctx run data get storage bs.hitbox: pos[1] 16384
+execute store result score #z bs.ctx run data get storage bs.hitbox: pos[2] 16384
+execute unless score #x bs.ctx matches -2147483647..2147483646 run return run function bs.hitbox:utils/shift_fract_pos
+execute unless score #y bs.ctx matches -2147483647..2147483646 run return run function bs.hitbox:utils/shift_fract_pos
+execute unless score #z bs.ctx matches -2147483647..2147483646 run return run function bs.hitbox:utils/shift_fract_pos
+tp @s ~ -1000000 ~
+kill @s

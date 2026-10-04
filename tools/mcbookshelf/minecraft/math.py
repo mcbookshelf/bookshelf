@@ -1,14 +1,14 @@
-import json
 import math
-from typing import TYPE_CHECKING, Literal, Self
+from typing import TYPE_CHECKING, Literal, cast
 
 import orjson
 
+from mcbookshelf.minecraft.condition import Condition, Json
+
 if TYPE_CHECKING:
-    from collections.abc import Mapping, Sequence
+    from collections.abc import Callable, Iterable, Mapping, Sequence
 
 type Kind = Literal["int", "float"]
-type Json = dict[str, Json] | list[Json] | str | float | bool | None
 type Node = dict[str, Json] | str | float
 type Operand = Expression | float | str
 type Target = dict[str, Json]
@@ -17,20 +17,16 @@ type Target = dict[str, Json]
 class Expression:
 
     __slots__ = ("kind", "node")
-    __hash__ = None
 
     def __init__(self, node: Node, kind: Kind = "float") -> None:
         self.node: Node = node
         self.kind: Kind = kind
 
     def json(self) -> str:
-        return orjson.dumps(self.node, option=orjson.OPT_INDENT_2).decode()
-
-    def inline(self) -> str:
         return orjson.dumps(self.node).decode()
 
     def __repr__(self) -> str:
-        return f"Expression<{self.kind}>({self.inline()})"
+        return f"Expression<{self.kind}>({self.json()})"
 
     def __add__(self, other: Operand) -> Expression:
         return _nary("add", self, other)
@@ -69,6 +65,17 @@ class Expression:
         return _fields("pow", self.kind, base=other, exponent=self)
 
     def __neg__(self) -> Expression:
+        """Negate: a number folds, and a conditional negates its branches instead."""
+        node = self.node
+        if isinstance(node, int | float) and not isinstance(node, bool):
+            return Expression(-node, self.kind)
+        if isinstance(node, dict) and node.get("type") == "conditional":
+            branches = {
+                key: (-Expression(cast("Node", node[key]), self.kind)).node
+                for key in ("on_true", "on_false")
+                if key in node
+            }
+            return Expression({**node, **branches}, self.kind)
         return _fields("negate", self.kind, input=self)
 
     def __abs__(self) -> Expression:
@@ -104,68 +111,23 @@ class Expression:
     def to_float(self) -> Expression:
         return _fields("from_int", "float", input=self)
 
-    def eq(self, value: Operand) -> Predicate:
+    def eq(self, value: Operand) -> Condition:
         return self._check(_lit(value, self.kind))
 
-    def between(self, low: Operand, high: Operand) -> Predicate:
+    def between(self, low: Operand, high: Operand) -> Condition:
         return self._check({"min": _lit(low, self.kind), "max": _lit(high, self.kind)})
 
-    def ge(self, value: Operand) -> Predicate:
+    def ge(self, value: Operand) -> Condition:
         return self._check({"min": _lit(value, self.kind)})
 
-    def le(self, value: Operand) -> Predicate:
+    def le(self, value: Operand) -> Condition:
         return self._check({"max": _lit(value, self.kind)})
 
-    def __eq__(self, other: object) -> Predicate:  # ty: ignore[invalid-method-override]
-        return self.eq(_operand(other))
-
-    def __ne__(self, other: object) -> Predicate:  # ty: ignore[invalid-method-override]
-        return ~self.eq(_operand(other))
-
-    def __ge__(self, other: Operand) -> Predicate:
-        return self.ge(other)
-
-    def __le__(self, other: Operand) -> Predicate:
-        return self.le(other)
-
-    def _check(self, value_range: Node) -> Predicate:
+    def _check(self, value_range: Node) -> Condition:
         condition = "int_value_check" if self.kind == "int" else "float_value_check"
-        return Predicate(
+        return Condition(
             {"type": condition, "value": self.node, "test": value_range},
         )
-
-
-class Predicate:
-    """A loot-table style predicate. Combine with ``&``, ``|`` and ``~``."""
-
-    __slots__ = ("node",)
-
-    def __init__(self, node: dict[str, Json] | str) -> None:
-        self.node: dict[str, Json] | str = node
-
-    def __and__(self, other: Self) -> Predicate:
-        return Predicate({"type": "all_of", "terms": [self.node, other.node]})
-
-    def __or__(self, other: Self) -> Predicate:
-        return Predicate({"type": "any_of", "terms": [self.node, other.node]})
-
-    def __invert__(self) -> Predicate:
-        return Predicate({"type": "inverted", "term": self.node})
-
-    def json(self, indent: int = 2) -> str:
-        return json.dumps(self.node, indent=indent)
-
-    def inline(self) -> str:
-        return json.dumps(self.node, separators=(",", ":"))
-
-
-def _operand(value: object) -> Operand:
-    if isinstance(value, Expression | str) or (
-        isinstance(value, int | float) and not isinstance(value, bool)
-    ):
-        return value
-    msg = f"cannot use {value!r} as a number provider"
-    raise TypeError(msg)
 
 
 def _lit(value: Operand, kind: Kind) -> Node:
@@ -202,13 +164,7 @@ def _fields(op: str, kind: Kind, **fields: Operand) -> Expression:
 
 
 def _binary(op: str, left: Operand, right: Operand) -> Expression:
-    kind = _kind_of(left, right)
-    if isinstance(left, int | float) and isinstance(right, int | float):
-        # two numbers only meet here through `lerp`, which subtracts them
-        assert op == "sub", op  # noqa: S101
-        result = left - right
-        return const(float(result) if kind == "float" else int(result))
-    return _fields(op, kind, left=left, right=right)
+    return _fields(op, _kind_of(left, right), left=left, right=right)
 
 
 def _nary(op: str, *operands: Operand) -> Expression:
@@ -226,10 +182,8 @@ def _nary(op: str, *operands: Operand) -> Expression:
         identity = 0 if op == "add" else 1
         if folded != identity or not inputs:
             inputs.insert(0, _lit(folded, kind))
-    if len(inputs) == 1 and isinstance(inputs[0], int | float):
-        return const(inputs[0])
-    if len(inputs) == 1 and isinstance(inputs[0], dict):
-        return Expression(inputs[0], kind)
+    if len(inputs) == 1:
+        return Expression(cast("Node", inputs[0]), kind)
     return Expression({"type": op, "inputs": inputs}, kind)
 
 
@@ -254,17 +208,18 @@ def ref(provider_id: str, kind: Kind = "float") -> Expression:
 
 
 def float_storage(storage_id: str, path: str, fallback: Operand | None = None) -> Expression:
-    node: dict[str, Json] = {"type": "storage", "storage": storage_id, "path": path}
-    if fallback is not None:
-        node["fallback"] = _lit(fallback, "float")
-    return Expression(node, "float")
+    return _storage("float", storage_id, path, fallback)
 
 
 def int_storage(storage_id: str, path: str, fallback: Operand | None = None) -> Expression:
+    return _storage("int", storage_id, path, fallback)
+
+
+def _storage(kind: Kind, storage_id: str, path: str, fallback: Operand | None) -> Expression:
     node: dict[str, Json] = {"type": "storage", "storage": storage_id, "path": path}
     if fallback is not None:
-        node["fallback"] = _lit(fallback, "int")
-    return Expression(node, "int")
+        node["fallback"] = _lit(fallback, kind)
+    return Expression(node, kind)
 
 
 def score(
@@ -340,23 +295,19 @@ def length(*operands: Operand) -> Expression:
     return _inputs("length", "float", operands)
 
 
-def lerp(a: Operand, b: Operand, t: Operand) -> Expression:
-    return add(a, mul(t, _binary("sub", b, a)))
-
-
 def clamp(value: Operand, low: Operand, high: Operand) -> Expression:
     return min_(max_(value, low), high)
 
 
 def cond(
-    predicate: Predicate,
+    condition: Condition,
     on_true: Operand,
     on_false: Operand | None = None,
 ) -> Expression:
     kind = _kind_of(on_true, on_false)
     node: dict[str, Json] = {
         "type": "conditional",
-        "condition": predicate.node,
+        "condition": condition.node,
         "on_true": _lit(on_true, kind),
     }
     if on_false is not None:
@@ -364,17 +315,25 @@ def cond(
     return Expression(node, kind)
 
 
+def first(*cases: tuple[Condition, Operand], default: Operand) -> Expression:
+    """The value of the first case whose condition passes, in nested conditionals."""
+    value = default if isinstance(default, Expression) else Expression(default, _kind_of(default))
+    for condition, on_true in reversed(cases):
+        value = cond(condition, on_true, value)
+    return value
+
+
 def dispatch(
-    *cases: tuple[Predicate, Operand],
+    *cases: tuple[Condition, Operand],
     default: Operand | None = None,
 ) -> Expression:
-    """First-match dispatcher over ``(predicate, provider)`` pairs."""
+    """First-match dispatcher over ``(condition, provider)`` pairs."""
     kind = _kind_of(*(value for _, value in cases), default)
     node: dict[str, Json] = {
         "type": "number_dispatcher",
         "cases": [
-            {"condition": predicate.node, "value": _lit(value, kind)}
-            for predicate, value in cases
+            {"condition": condition.node, "value": _lit(value, kind)}
+            for condition, value in cases
         ],
     }
     if default is not None:
@@ -394,23 +353,54 @@ def switch[K: (int, float)](
     )
 
 
-def btree(
-    key: Expression,
-    pieces: Sequence[tuple[float, Operand]],
-    last: Operand,
+def btree[T](
+    items: Iterable[T],
+    value: Callable[[T], Expression],
+    test: Callable[[list[T]], Condition],
+    weight: Callable[[T], float] | None = None,
 ) -> Expression:
-    """`key <= b0 -> e0`, `key <= b1 -> e1`, ..., else `last`, in log2(n) tests."""
-    if not pieces:
-        return last if isinstance(last, Expression) else _as_expression(last)
-    mid = len(pieces) // 2
-    bound, provider = pieces[mid]
-    left = btree(key, pieces[:mid], provider)
-    right = btree(key, pieces[mid + 1 :], last)
-    return cond(key.le(bound), left, right)
+    """Pick the value of each item in a binary tree, in log2(n) tests."""
+    leaves: dict[str, tuple[Expression, list[T]]] = {}
+    problems = []
+    for item in items:
+        try:
+            found = value(item)
+        except ValueError as error:
+            problems.append(f"{getattr(item, 'id', item)}: {error}")
+            continue
+        leaves.setdefault(found.json(), (found, []))[1].append(item)
+    if problems:
+        listed = "\n".join(f"  {problem}" for problem in sorted(problems))
+        raise ValueError(f"no value for:\n{listed}")
+    leaf_weight = None if weight is None else lambda leaf: sum(map(weight, leaf[1]))
+    return _tree(list(leaves.values()), test, leaf_weight)
 
 
-def _as_expression(value: float | str) -> Expression:
-    return ref(value) if isinstance(value, str) else const(value)
+def _tree[T](
+    leaves: list[tuple[Expression, list[T]]],
+    test: Callable[[list[T]], Condition],
+    weight: Callable[[tuple[Expression, list[T]]], float] | None,
+) -> Expression:
+    if len(leaves) == 1:
+        return leaves[0][0]
+    mid = len(leaves) // 2 if weight is None else _balance(leaves, weight)
+    first, second = leaves[:mid], leaves[mid:]
+    return cond(
+        test([item for _, found in first for item in found]),
+        _tree(first, test, weight),
+        _tree(second, test, weight),
+    )
+
+
+def _balance[T](entries: Sequence[T], weight: Callable[[T], float]) -> int:
+    """The split whose two sides weigh the closest, keeping both sides filled."""
+    total = sum(map(weight, entries))
+    best, best_gap, before = 1, math.inf, 0.0
+    for index, entry in enumerate(entries[:-1], 1):
+        before += weight(entry)
+        if (gap := abs(total - 2 * before)) < best_gap:
+            best, best_gap = index, gap
+    return best
 
 
 __all__ = [
@@ -419,7 +409,6 @@ __all__ = [
     "Kind",
     "Node",
     "Operand",
-    "Predicate",
     "Target",
     "add",
     "avg",
@@ -431,11 +420,11 @@ __all__ = [
     "context_target",
     "dispatch",
     "environment_attribute",
+    "first",
     "fixed_target",
     "float_storage",
     "int_storage",
     "length",
-    "lerp",
     "max_",
     "min_",
     "mul",

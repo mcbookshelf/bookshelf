@@ -2,6 +2,7 @@ from pathlib import Path
 
 import click
 
+from mcbookshelf import workspace
 from mcbookshelf.workspace import changelog
 
 
@@ -19,8 +20,9 @@ from mcbookshelf.workspace import changelog
 )
 def notes(*, unreleased: bool, output: Path | None) -> None:
     """Write release notes from module changelogs."""
-    text = changelog.notes(unreleased=unreleased)
+    text = changelog.notes(workspace.current(), unreleased=unreleased)
     if output is None:
         click.echo(text)
         return
-    changelog.write_text(output, text)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(text + "\n", "utf-8", newline="\n")

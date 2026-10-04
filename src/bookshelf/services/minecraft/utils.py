@@ -7,12 +7,12 @@ from typing import TYPE_CHECKING
 
 import orjson
 from beet import BlockTag, Context, JsonFileBase, LootTable, PackFile
-from pydantic import BaseModel
-
 from bookshelf.common import json
 from bookshelf.definitions import MC_VERSIONS
-from bookshelf.models import Block, StateNode, StatePredicate
 from bookshelf.plugins.update_mcmeta import get_supported_formats
+from pydantic import BaseModel
+
+from bookshelf.models import Block, StateNode, StatePredicate
 
 if TYPE_CHECKING:
     from collections.abc import Iterable
