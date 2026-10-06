@@ -13,16 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-kill B5-0-0-0-7
+data modify storage bs.geometry:get_shape out set value {type:"coord_space",coord_type:"cylindric"}
+data modify storage bs:data geometry.log.path set value "bs.geometry:get_cylindric_space"
 
-forceload remove -1 -1 0 0
-forceload remove -30000000 1600
+function bs.geometry:__internal__/get_origin
 
-scoreboard objectives remove bs.const
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.out
-
-data remove storage bs.geometry: ctx
-data remove storage bs.geometry: pos
-data remove storage bs.geometry: shapes
+function bs.geometry:__internal__/get_ijk

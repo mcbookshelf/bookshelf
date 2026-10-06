@@ -13,16 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-kill B5-0-0-0-7
+data modify storage bs.geometry: shapes set from storage bs.geometry:intersect in
 
-forceload remove -1 -1 0 0
-forceload remove -30000000 1600
+data modify storage bs.geometry:intersect out set value []
 
-scoreboard objectives remove bs.const
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.out
+#this function accept an array of 2shapes as input
+execute if function bs.geometry:__internal__/error/2array run return fail
 
-data remove storage bs.geometry: ctx
-data remove storage bs.geometry: pos
-data remove storage bs.geometry: shapes
+execute if data storage bs.geometry: shapes[{type:"line"}] if data storage bs.geometry: shapes[{type:"plane"}] run return run function bs.geometry:intersect/shapes/line_plane
+
+execute if data storage bs.geometry: shapes[{type:"line"}] if data storage bs.geometry: shapes[{type:"sphere"}] run return run function bs.geometry:intersect/shapes/line_sphere
+

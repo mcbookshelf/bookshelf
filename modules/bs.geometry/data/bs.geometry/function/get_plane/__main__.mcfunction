@@ -13,16 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-kill B5-0-0-0-7
+#Plane is also a cartesian space
 
-forceload remove -1 -1 0 0
-forceload remove -30000000 1600
+data modify storage bs.geometry:get_shape out set value {type:"plane",coord_type:"cartesian"}
+data modify storage bs:data geometry.log.path set value "bs.geometry:get_plane"
 
-scoreboard objectives remove bs.const
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.out
+function bs.geometry:__internal__/get_origin
 
-data remove storage bs.geometry: ctx
-data remove storage bs.geometry: pos
-data remove storage bs.geometry: shapes
+function bs.geometry:__internal__/get_k

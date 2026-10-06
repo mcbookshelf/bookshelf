@@ -13,16 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-kill B5-0-0-0-7
-
-forceload remove -1 -1 0 0
-forceload remove -30000000 1600
-
-scoreboard objectives remove bs.const
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.out
-
-data remove storage bs.geometry: ctx
-data remove storage bs.geometry: pos
-data remove storage bs.geometry: shapes
+execute unless data storage bs.geometry: shapes[{type:"line"}] run return run function bs.geometry:__internal__/error/log/need_line

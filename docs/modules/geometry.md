@@ -30,7 +30,7 @@ Get a point (determined by an origin)
   **The position have to be loaded**
 
 :Outputs:
-  **Storage `bs:out geometry.shape`**: shape returned
+  **Storage `bs.geometry:get_shape out`**: shape returned
 
 *Example: Get the position of a player (here FooBar):*
 
@@ -52,7 +52,7 @@ Get a line (determined by an origin and a unit director vector)
   **The position have to be loaded**
 
 :Outputs:
-  **Storage `bs:out geometry.shape`**: shape returned
+  **Storage `bs.geometry:get_shape out`**: shape returned
 ```
 
 *Example: Get the line sight of a player (here FooBar):*
@@ -75,7 +75,7 @@ Get a plane (determined by an origin and a unit normal vector and two orthogonal
   **The position have to be loaded**
 
 :Outputs:
-  **Storage `bs:out geometry.shape`**: shape returned
+  **Storage `bs.geometry:get_shape out`**: shape returned
 ```
 
 *Example: Get the plane centered at 0 0 0 and facing south :*
@@ -104,7 +104,7 @@ Get a sphere (determined by an origin and a radius)
   :::
 
 :Outputs:
-  **Storage `bs:out geometry.shape`**: shape returned
+  **Storage `bs.geometry:get_shape out`**: shape returned
 ```
 
 *Example: Get the sphere centered at 0 0 0 and facing south  with a radius of 1block :*
@@ -124,21 +124,21 @@ execute positioned 0 0 0 rotated 0 0 run function #bs.geometry:get_sphere
 Get the intersection of two shapes
 
 :Inputs:
-  **Storage `bs:in geometry.shapes`**: list of shapes to intersect
+  **Storage `bs.geometry:intersect in`**: list of shapes to intersect
 
 :Outputs:
-  **Storage `bs:out geometry.intersect`**: intersection points
+  **Storage `bs.geometry:intersect out`**: intersection points
 ```
 
 *Example: Get the intersection of the plane centered at 0 0 0 facing south-west and the line sight of a player (here FooBar) :*
 
 ```mcfunction
 # Once
-data modify storage bs:in geometry.shapes set value []
+data modify storage bs.geometry:intersect in set value []
 execute positioned 0 0 0 rotated 0 45 run function #bs.geometry:get_plane
-data modify storage bs:in geometry.shapes append from storage bs:out geometry.shape
+data modify storage bs.geometry:intersect in append from storage bs.geometry:get_shape out
 execute as FooBar at @s anchored eyes positioned ^ ^ ^ run function #bs.geometry:get_line
-data modify storage bs:in geometry.shapes append from storage bs:out geometry.shape
+data modify storage bs.geometry:intersect in append from storage bs.geometry:get_shape out
 function #bs.geometry:intersect
 
 ```
@@ -152,21 +152,21 @@ function #bs.geometry:intersect
 Get the coordinates of the orthogonal projection of a point/line and a plane 
 
 :Inputs:
-  **Storage `bs:in geometry.shapes`**: list of shapes to project (e.g. a line/plane point/line point/plane)
+  **Storage `bs.geometry:project_ortho in`**: list of shapes to project (e.g. a line/plane point/line point/plane)
 
 :Outputs:
-  **Storage `bs:out geometry.orth_proj`**: projected shape
+  **Storage `bs.geometry:project_ortho out`**: projected shape
 ```
 
 *Example: Get the orthogonal projection of the player position and a plane centered at 0 0 0 facing south-west:*
 
 ```mcfunction
 # Once
-data modify storage bs:in geometry.shapes set value []
+data modify storage bs.geometry:project_ortho in set value []
 execute positioned 0 0 0 rotated 0 45 run function #bs.geometry:get_plane
-data modify storage bs:in geometry.shapes append from storage bs:out geometry.shape
+data modify storage bs.geometry:project_ortho in append from storage bs.geometry:get_shape out
 execute at FooBar run function #bs.geometry:get_point
-data modify storage bs:in geometry.shapes append from storage bs:out geometry.shape
+data modify storage bs.geometry:project_ortho in append from storage bs.geometry:get_shape out
 function #bs.geometry:project_ortho
 ```
 
@@ -179,10 +179,10 @@ function #bs.geometry:project_ortho
 Get the coordinates of a point with a coord space as reference point (cartesian coord_type only) 
 
 :Inputs:
-  **Storage `bs:in geometry.shapes`**: A point and a coord space
+  **Storage `bs.geometry:rotate_axis in`**: A point and a coord space
 
 :Outputs:
-  **Storage `bs:out geometry.rot_axis`**: rotated point
+  **Storage `bs.geometry:rotate_axis out`**: rotated point
 ```
 
 
@@ -190,13 +190,15 @@ Get the coordinates of a point with a coord space as reference point (cartesian 
 
 ```mcfunction
 # Once
-data modify storage bs:in geometry.shapes set value []
+data modify storage bs.geometry:intersect in set value []
 execute positioned 0 0 0 rotated 0 45 run function #bs.geometry:get_plane
-data modify storage bs:in geometry.shapes append from storage bs:out geometry.shape
+data modify storage bs.geometry:intersect in append from storage bs.geometry:get_shape out
 execute as FooBar at @s anchored eyes positioned ^ ^ ^ run function #bs.geometry:get_line
-data modify storage bs:in geometry.shapes append from storage bs:out geometry.shape
+data modify storage bs.geometry:intersect in append from storage bs.geometry:get_shape out
 function #bs.geometry:intersect
-data modify storage bs:in geometry.shapes[1] set from storage bs:out geometry.shape
+
+data modify storage bs.geometry:rotate_axis in set from storage bs.geometry:intersect in
+data modify storage bs.geometry:rotate_axis in[1] set from storage bs.geometry:intersect out
 function #bs.geometry:rotate_axis
 ```
 
@@ -213,7 +215,7 @@ Get a cartesian coord space (point's origin [x,y,z])
   **The position have to be loaded**
 
 :Outputs:
-  **Storage `bs:out geometry.shape`**: coord space returned
+  **Storage `bs.geometry:get_shape out`**: coord space returned
 ```
 
 
@@ -237,7 +239,7 @@ Get a cylindric coord space (point's origin [yaw,y,r])
   **The position have to be loaded**
 
 :Outputs:
-  **Storage `bs:out geometry.shape`**: coord space returned
+  **Storage `bs.geometry:get_shape out`**: coord space returned
 ```
 
 *Example: Get the cartesian coord space of a minecraft world:*
@@ -260,7 +262,7 @@ Get a spherical coord space (point's origin [yaw,pitch,r])
   **The position have to be loaded**
 
 :Outputs:
-  **Storage `bs:out geometry.shape`**: coord space returned
+  **Storage `bs.geometry:get_shape out`**: coord space returned
 ```
 
 *Example: Get the cartesian coord space of a minecraft world:*
@@ -279,21 +281,21 @@ execute positioned 0 0 0 rotated 0 0 run function #bs.geometry:get_spherical_spa
 Get the coordinates of a point in a coord space
 
 :Inputs:
-  **Storage `bs:in geometry.shapes`**: A point and a coord space
+  **Storage `bs.geometry:convert_space in`**: A point and a coord space
 
 :Outputs:
-  **Storage `bs:out geometry.coord_space`**: converted point
+  **Storage `bs.geometry:convert_space out`**: converted point
 ```
 
 *Example: Transform a point of the world into is spheric coord :*
 
 ```mcfunction
 # Once
-data modify storage bs:in geometry.shapes set value []
+data modify storage bs.geometry:convert_space in set value []
 execute positioned 100 6 -33.2 run function #bs.geometry:get_point
-data modify storage bs:in geometry.shapes append from storage bs:out geometry.shape
+data modify storage bs.geometry:convert_space in append from storage bs.geometry:get_shape out
 execute positioned 0 0 0 rotated 0 0 run function #bs.geometry:get_spherical_space
-data modify storage bs:in geometry.shapes append from storage bs:out geometry.shape
+data modify storage bs.geometry:convert_space in append from storage bs.geometry:get_shape out
 function #bs.geometry:convert_space
 ```
 
@@ -306,20 +308,20 @@ function #bs.geometry:convert_space
 Get the signed distance of a point and a shape
 
 :Inputs:
-  **Storage `bs:in geometry.shapes`**: An array of 2 shape, a point and a shape
+  **Storage `bs.geometry:get_signed_distance in`**: An array of 2 shape, a point and a shape
 :Outputs:
-  **Return and Scoreboard `$geometry.sdf bs.out`**: The signed distance shifted by 3digits (1.234 become 1234)
+  **Return and Storage `bs.geometry:get_signed_distance out`**: The signed distance shifted by 3digits (1.234 become 1234)
 ```
 
 *Example: get the signed distance of a player (here FooBar) from a line :*
 
 ```mcfunction
 # Once
-data modify storage bs:in geometry.shapes set value []
+data modify storage bs.geometry:get_signed_distance in set value []
 execute at FooBar run function #bs.geometry:get_point
-data modify storage bs:in geometry.shapes append from storage bs:out geometry.shape
+data modify storage bs.geometry:get_signed_distance in append from storage bs.geometry:get_shape out
 execute positioned 0 0 0 rotated 30 0 run function #bs.geometry:get_line
-data modify storage bs:in geometry.shapes append from storage bs:out geometry.shape
+data modify storage bs.geometry:get_signed_distance in append from storage bs.geometry:get_shape out
 function #bs.geometry:get_signed_distance
 ```
 
@@ -332,16 +334,16 @@ function #bs.geometry:get_signed_distance
     - {nbt}`string`**coord_type**: the coordinate system used (e.g. `cartesian` , `cylindric`).
 
     - {nbt}`list`**origin**: X Y Z or YAW Y R or YAW PITCH R coordinates, the origin (e.g. [0d,0d,0d]).
-      - {nbt}`double`
+      - {nbt}`float`
     - {nbt}`list`**i**: X Y Z coordinates (support only cartesian), the director unit vector along the x relative axis of the rotation (e.g. [1d,0d,0d]).
-      - {nbt}`double`
+      - {nbt}`float`
     - {nbt}`list`**j**: X Y Z coordinates (support only cartesian), the director unit vector along the y relative axis of the rotation (e.g. [0d,1d,0d]).
-      - {nbt}`double`
+      - {nbt}`float`
     - {nbt}`list`**k**: X Y Z coordinates (support only cartesian), the director unit vector along the z relative axis of the rotation (e.g. [0d,0d,1d]).
-      - {nbt}`double`
+      - {nbt}`float`
       
     - {nbt}`list`**parameters**: parameters of the shape that change with the shape type (e.g. [1d] for the radius of a sphere).
-      - {nbt}`double`
+      - {nbt}`float`
   :::
 
 ---

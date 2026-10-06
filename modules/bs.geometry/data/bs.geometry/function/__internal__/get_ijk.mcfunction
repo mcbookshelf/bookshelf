@@ -13,16 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-kill B5-0-0-0-7
-
-forceload remove -1 -1 0 0
-forceload remove -30000000 1600
-
-scoreboard objectives remove bs.const
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.out
-
-data remove storage bs.geometry: ctx
-data remove storage bs.geometry: pos
-data remove storage bs.geometry: shapes
+#Get Directors vectors
+execute positioned 0.0 0.0 0.0 positioned ^1 ^ ^ run function bs.geometry:__internal__/get_pos
+data modify storage bs.geometry:get_shape out.i set from storage bs.geometry: pos
+execute positioned 0.0 0.0 0.0 positioned ^ ^1 ^ run function bs.geometry:__internal__/get_pos
+data modify storage bs.geometry:get_shape out.j set from storage bs.geometry: pos
+execute positioned 0.0 0.0 0.0 positioned ^ ^ ^1 run function bs.geometry:__internal__/get_pos
+data modify storage bs.geometry:get_shape out.k set from storage bs.geometry: pos
