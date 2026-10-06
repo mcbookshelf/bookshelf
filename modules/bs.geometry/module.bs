@@ -1,0 +1,137 @@
+> Manipulate blocks with their states and NBT, and combine block properties.
+
+name: Geometry
+slug: bookshelf-geometry
+version: 5.0.0
+tags: runtime
+weak_dependencies: bs.log
+
+
+$shape_type = string > shape's type
+
+$coord_type = string > shape's coord type
+
+$unit_vector = [float @ -1..1] @ 3 > shape's unit vector
+
+$origin = [float] @ 3 > shape's position
+
+$shape = {
+  type: $shape_type
+  coord_type?: $coord_type
+  origin: $origin
+  i: $unit_vector
+  j: $unit_vector
+  k: $unit_vector
+}
+
+
+feature function get_line > Get a line based on context position & rotation
+  authors: RacoonJohn
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+	context position > line's origin
+	context rotation > line's direction
+
+	output storage: $shape
+
+feature function get_plane > Get a plane based on context position & rotation
+  authors: RacoonJohn
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+	context position > plane's origin
+	context rotation > plane's normal direction
+
+	output storage: $shape
+
+feature function get_point > Get a point based on context position
+  authors: RacoonJohn
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+	context position > point's position
+
+	output storage: $shape
+
+feature function get_sphere > Get a sphere based on context position
+  authors: RacoonJohn
+  created: 22026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+	context position > sphere's origin
+
+  input arguments: {
+    radius: float @ 0.. > sphere's radius
+  }
+	output storage: $shape
+
+feature function get_cartesian_space > Get a cartesian space based on context position & rotation
+  authors: RacoonJohn
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+	context position > space's origin
+	context rotation > space's orientation
+
+	output storage: $shape
+
+feature function get_cylindric_space > Get a cylindric space based on context position & rotation
+  authors: RacoonJohn
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+	context position > space's origin
+	context rotation > space's orientation
+
+	output storage: $shape
+
+feature function get_spherical_space > Get a spherical space based on context position & rotation
+  authors: RacoonJohn
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+	context position > space's origin
+	context rotation > space's orientation
+
+	output storage: $shape
+
+feature function get_signed_distance > Get the signed distance beeetween a point and a shapes
+  authors: RacoonJohn
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+	input storage: [$shape] @ 2 >sh
+	output storage: float
+
+feature function convert_space > Convert a point to the space type
+  authors: RacoonJohn
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+	input storage: [$shape] @ 2 >sh
+	output storage: $shape
+
+feature function intersect > Get the intersection beetween two shapes
+  authors: RacoonJohn
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+	input storage: [$shape] @ 2 >sh
+	output storage: $shape
+
+feature function project_ortho > Get the orthogonal projection of a shape on another
+  authors: RacoonJohn
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+	input storage: [$shape] @ 2 >sh
+	output storage: $shape
+
+feature function rotate_axis > Rotate a point by the coord space's orientation
+  authors: RacoonJohn
+  created: 2026/09/19 26.3
+  updated: 2026/09/19 26.3
+
+	input storage: [$shape] @ 2 >sh
+	output storage: $shape
