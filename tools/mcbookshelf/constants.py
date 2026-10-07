@@ -1,6 +1,6 @@
 from pathlib import Path
 
-GAME_VERSION = "26.4-snapshot-3"
+GAME_VERSION = "26.3"
 LOADER_VERSION = "5.0.0"
 
 MACRO_SUFFIX = ".in"
