@@ -1,57 +1,58 @@
 import re
 import subprocess
 from collections.abc import Callable
-from functools import cache
 
-from mcbookshelf import constants, meta, workspace
+from mcbookshelf import constants, meta
 from mcbookshelf.meta import Bundle, Module
+from mcbookshelf.workspace import Workspace, cached, select
 
 RELEASE_TAG = re.compile(r"^v\d+\.\d+\.\d+\+\S+$")
 DOCS_OR_RELEASE_TAG = re.compile(r"^v\d+\.\d+\.\d+(\+\S+)?$")
 
 
-@cache
-def changed_files(tag: str, name: str) -> tuple[str, ...]:
+@cached
+def changed_files(_ws: Workspace, tag: str, name: str) -> tuple[str, ...]:
     """The files of a module changed or added since the tag, relative to its directory."""
-    paths = _git("diff", "--name-only", tag, "--", f"modules/{name}").split()
-    paths += _git("ls-files", "--others", "--exclude-standard", f"modules/{name}").split()
-    return tuple(p.removeprefix(f"modules/{name}/") for p in sorted(paths))
+    directory = f"modules/{name}"
+    paths = _paths("diff", "--name-only", "-z", tag, "--", directory)
+    paths += _paths("ls-files", "-z", "--others", "--exclude-standard", directory)
+    return tuple(p.removeprefix(f"{directory}/") for p in sorted(paths))
 
 
-@cache
-def bundle_at(tag: str, name: str) -> Bundle | None:
+@cached
+def bundle_at(_ws: Workspace, tag: str, name: str) -> Bundle | None:
     """A bundle as it was at the tag, or None if it did not exist."""
     path = f"modules/{name}/{constants.BUNDLE_FILE}"
     text = file_at(tag, path)
     return None if text is None else _load(tag, path, text, meta.build_bundle, name)
 
 
-def module_at(tag: str, name: str) -> Module | None:
+def module_at(ws: Workspace, tag: str, name: str) -> Module | None:
     """A module as it was at the tag, or None if it did not exist."""
-    return modules_at(tag).get(name)
+    return modules_at(ws, tag).get(name)
 
 
-@cache
-def modules_at(tag: str) -> dict[str, Module]:
+@cached
+def modules_at(_ws: Workspace, tag: str) -> dict[str, Module]:
     """Every module as it was at the tag, by directory name, read in one git call."""
     listing = _run("ls-tree", "--name-only", f"{tag}:modules", check=False)
     directories = listing.stdout.split() if listing.returncode == 0 else []
-    files = {d: f"modules/{d}/{constants.MODULE_FILE}" for d in directories}
+    files = {name: f"modules/{name}/{constants.MODULE_FILE}" for name in directories}
     texts = _files_at(tag, list(files.values()))
     return {
-        directory: _load(tag, path, texts[path], meta.build_module, directory)
-        for directory, path in files.items()
+        name: _load(tag, path, texts[path], meta.build_module, name)
+        for name, path in files.items()
         if path in texts
     }
 
 
-@cache
-def members_at(tag: str, name: str) -> dict[str, str]:
+@cached
+def members_at(ws: Workspace, tag: str, name: str) -> dict[str, str]:
     """The members a bundle had at the tag, with their versions then."""
-    bundle = bundle_at(tag, name)
+    bundle = bundle_at(ws, tag, name)
     if bundle is None:
         return {}
-    members = workspace.select(bundle, modules_at(tag).values())
+    members = select(bundle, modules_at(ws, tag).values())
     return {m.id: m.version for m in members}
 
 
@@ -61,28 +62,8 @@ def file_at(tag: str, path: str) -> str | None:
     return result.stdout if result.returncode == 0 else None
 
 
-def release_version() -> str:
-    """Read the version of the release, the one of the suite bundle."""
-    return workspace.suite().version
-
-
-def release_tag() -> str:
-    """Name the release tag: the suite version and the game version it targets."""
-    return f"v{release_version()}+{constants.GAME_VERSION}"
-
-
-def raw_file(name: str, file: str) -> str:
-    """Link a file of a module or bundle directory at the release tag."""
-    return f"{constants.RAW_URL.format(release_tag())}/modules/{name}/{file}"
-
-
-def download_url() -> str:
-    """Link the assets of the release on GitHub."""
-    return constants.DOWNLOAD_URL.format(release_tag())
-
-
-@cache
-def previous_tag() -> str | None:
+@cached
+def previous_tag(_ws: Workspace) -> str | None:
     """The newest release tag, if any: docs and nightly tags do not count."""
     tags = _git("tag", "-l", "v*", "--sort=-creatordate").split()
     return next((t for t in tags if RELEASE_TAG.match(t)), None)
@@ -95,12 +76,13 @@ def remote_tags() -> list[str]:
     return [tag for tag in tags if DOCS_OR_RELEASE_TAG.match(tag)]
 
 
-def tag_exists(tag: str) -> bool:
-    return bool(_git("tag", "-l", tag).strip())
-
-
 def _git(*args: str) -> str:
     return _run(*args).stdout
+
+
+def _paths(*args: str) -> list[str]:
+    """Run a git command that lists paths with `-z`, so any path survives."""
+    return [path for path in _git(*args).split("\0") if path]
 
 
 def _load[T](
@@ -113,7 +95,7 @@ def _load[T](
     try:
         return build(meta.parse(text), name)
     except meta.MetadataError as error:
-        raise ValueError(f"{path} at {tag} no longer loads: {error.message}") from None
+        raise ValueError(f"{path} at {tag} no longer loads:\n{error}") from None
 
 
 def _run(*args: str, check: bool = True) -> subprocess.CompletedProcess[str]:

@@ -1,25 +1,15 @@
 from collections.abc import Iterable, Iterator
 from dataclasses import dataclass
-from enum import IntEnum
 from pathlib import Path
 
-from mcbookshelf import workspace
-from mcbookshelf.version import parse_version
-from mcbookshelf.workspace import changelog, dependencies, history, ownership
+from mcbookshelf.version import Bump, Version
+from mcbookshelf.workspace import Workspace, changelog, dependencies, history, ownership
 
 type Plan = dict[str, Expectation | None]
 
 BREAKING = "⚠️"
 FEATURE = "✨"
 DEPENDENCY_NOTE = "🛠️ Bumped as {}"
-
-
-class Bump(IntEnum):
-
-    NONE = 0
-    PATCH = 1
-    MINOR = 2
-    MAJOR = 3
 
 
 @dataclass(frozen=True, slots=True)
@@ -38,105 +28,105 @@ class Move:
     bump: Bump
     reason: str
 
-    @staticmethod
-    def unchanged() -> Move:
-        return Move(Bump.NONE, "unchanged")
+
+UNCHANGED = Move(Bump.NONE, "unchanged")
 
 
-def expectations(tag: str) -> Iterator[Expectation]:
+def expectations(ws: Workspace, tag: str) -> Iterator[Expectation]:
     """Yield the version changes required since a tag, dependencies first."""
     plan: Plan = {}
-    for name in workspace.released():
-        _plan_module(tag, name, plan)
+    for name in ws.released():
+        _plan_module(ws, tag, name, plan)
     yield from (expectation for expectation in plan.values() if expectation)
-    for name in workspace.bundles():
-        yield from _plan_bundle(tag, name, plan)
+    for name in ws.bundles():
+        yield from _plan_bundle(ws, tag, name, plan)
 
 
-def apply(expectation: Expectation) -> None:
+def apply(ws: Workspace, expectation: Expectation) -> None:
     """Apply a version expectation to the workspace."""
     name, version = expectation.name, expectation.expected
-    _write_version(workspace.file(name), version)
-    if name in workspace.bundles():
+    _write_version(ws.file(name), version)
+    if name in ws.bundles():
         return
     if expectation.note:
-        changelog.note(name, expectation.note)
-    changelog.promote(name, version)
+        changelog.note(ws, name, expectation.note)
+    changelog.promote(ws, name, version)
 
 
-def problems(tag: str) -> Iterator[str]:
+def problems(ws: Workspace, tag: str) -> Iterator[str]:
     """Yield release problems that need manual fixes."""
-    for name in workspace.released():
-        module = workspace.load_module(name)
-        before = history.module_at(tag, name)
+    for name in ws.released():
+        module = ws.load_module(name)
+        before = history.module_at(ws, tag, name)
         if before is None or module.version == before.version:
             continue
-        if changelog.unreleased(name):
+        if changelog.unreleased(ws, name):
             yield f"{name}: rename the 'Unreleased' section to v{module.version}"
-        elif not changelog.section(name, module.version):
+        elif not changelog.section(ws, name, module.version):
             yield f"{name}: the changelog has no notes for v{module.version}"
 
 
-def _plan_module(tag: str, name: str, plan: Plan) -> None:
+def _plan_module(ws: Workspace, tag: str, name: str, plan: Plan) -> None:
     if name in plan:
         return
     plan[name] = None
-    module = workspace.load_module(name)
-    before = history.module_at(tag, name)
+    module = ws.load_module(name)
+    before = history.module_at(ws, tag, name)
     if before is None or not module.released:
         return
-    dependency = _strongest(_dependency_moves(tag, name, plan))
-    strongest = _strongest([_changelog_move(name), dependency, _sources_move(tag, name)])
-    expected = _bumped(before.version, strongest.bump)
-    if parse_version(module.version) < parse_version(expected):
+    dependency = _strongest(_dependency_moves(ws, tag, name, plan))
+    moves = [_changelog_move(ws, name), dependency, _sources_move(ws, tag, name)]
+    strongest = _strongest(moves)
+    expected = str(Version.parse(before.version).bump(strongest.bump))
+    if Version.parse(module.version) < Version.parse(expected):
         note = None
-        if strongest.bump == dependency.bump and not changelog.unreleased(name):
+        if strongest.bump == dependency.bump and not changelog.unreleased(ws, name):
             note = DEPENDENCY_NOTE.format(dependency.reason)
         plan[name] = Expectation(name, module.version, expected, strongest.reason, note)
 
 
-def _plan_bundle(tag: str, name: str, plan: Plan) -> Iterator[Expectation]:
-    before = history.bundle_at(tag, name)
+def _plan_bundle(ws: Workspace, tag: str, name: str, plan: Plan) -> Iterator[Expectation]:
+    before = history.bundle_at(ws, tag, name)
     if before is None:
         return
-    bundle = workspace.load_bundle(name)
-    was = history.members_at(tag, name)
-    now = {member: _planned_version(member, plan) for member in workspace.members(name)}
+    bundle = ws.load_bundle(name)
+    was = history.members_at(ws, tag, name)
+    now = {member: _planned_version(ws, member, plan) for member in ws.members(name)}
     strongest = _strongest(_member_moves(was, now))
-    expected = _bumped(before.version, strongest.bump)
-    if parse_version(bundle.version) < parse_version(expected):
+    expected = str(Version.parse(before.version).bump(strongest.bump))
+    if Version.parse(bundle.version) < Version.parse(expected):
         yield Expectation(name, bundle.version, expected, strongest.reason)
 
 
-def _planned_version(name: str, plan: Plan) -> str:
+def _planned_version(ws: Workspace, name: str, plan: Plan) -> str:
     expectation = plan.get(name)
-    return expectation.expected if expectation else workspace.load_module(name).version
+    return expectation.expected if expectation else ws.load_module(name).version
 
 
-def _changelog_move(name: str) -> Move:
-    notes = changelog.unreleased(name)
+def _changelog_move(ws: Workspace, name: str) -> Move:
+    notes = changelog.unreleased(ws, name)
     if BREAKING in notes:
         return Move(Bump.MAJOR, "the changelog notes a breaking change")
     if FEATURE in notes:
         return Move(Bump.MINOR, "the changelog notes a new feature")
     if notes:
         return Move(Bump.PATCH, "the changelog notes a change")
-    return Move.unchanged()
+    return UNCHANGED
 
 
-def _dependency_moves(tag: str, name: str, plan: Plan) -> Iterator[Move]:
-    for dependency in dependencies.strong(name):
-        _plan_module(tag, dependency, plan)
-        before = history.module_at(tag, dependency)
+def _dependency_moves(ws: Workspace, tag: str, name: str, plan: Plan) -> Iterator[Move]:
+    for dependency in dependencies.strong(ws, name):
+        _plan_module(ws, tag, dependency, plan)
+        before = history.module_at(ws, tag, dependency)
         if before is not None:
-            target = _planned_version(dependency, plan)
-            yield Move(_compare(before.version, target), f"`{dependency}` moved to `v{target}`")
+            target = _planned_version(ws, dependency, plan)
+            level = Version.parse(before.version).change(Version.parse(target))
+            yield Move(level, f"`{dependency}` moved to `v{target}`")
 
 
-def _sources_move(tag: str, name: str) -> Move:
-    for paths in ownership.shipped_changes(tag, name).values():
-        return Move(Bump.PATCH, f"{paths[0]} changed")
-    return Move.unchanged()
+def _sources_move(ws: Workspace, tag: str, name: str) -> Move:
+    paths = next(iter(ownership.shipped_changes(ws, tag, name).values()), None)
+    return Move(Bump.PATCH, f"{paths[0]} changed") if paths else UNCHANGED
 
 
 def _member_moves(was: dict[str, str], now: dict[str, str]) -> Iterator[Move]:
@@ -146,32 +136,12 @@ def _member_moves(was: dict[str, str], now: dict[str, str]) -> Iterator[Move]:
         elif member not in was:
             yield Move(Bump.MINOR, f"{member} joined the bundle")
         else:
-            level = _compare(was[member], now[member])
+            level = Version.parse(was[member]).change(Version.parse(now[member]))
             yield Move(level, f"`{member}` moved to `v{now[member]}`")
 
 
-def _bumped(version: str, bump: Bump) -> str:
-    major, minor, patch = parse_version(version)
-    match bump:
-        case Bump.MAJOR:
-            return f"{major + 1}.0.0"
-        case Bump.MINOR:
-            return f"{major}.{minor + 1}.0"
-        case Bump.PATCH:
-            return f"{major}.{minor}.{patch + 1}"
-    return version
-
-
-def _compare(before: str, after: str) -> Bump:
-    levels = (Bump.MAJOR, Bump.MINOR, Bump.PATCH)
-    for level, old, new in zip(levels, parse_version(before), parse_version(after), strict=True):
-        if old != new:
-            return level
-    return Bump.NONE
-
-
 def _strongest(moves: Iterable[Move]) -> Move:
-    return max(moves, key=lambda move: move.bump, default=Move.unchanged())
+    return max(moves, key=lambda move: move.bump, default=UNCHANGED)
 
 
 def _write_version(file: Path, version: str) -> None:
@@ -180,4 +150,4 @@ def _write_version(file: Path, version: str) -> None:
         if line.startswith("version:"):
             lines[index] = f"version: {version}"
             break
-    changelog.write_text(file, "\n".join(lines))
+    file.write_text("\n".join(lines).rstrip("\n") + "\n", "utf-8", newline="\n")

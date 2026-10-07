@@ -1,5 +1,8 @@
 import re
+from collections.abc import Callable
 from dataclasses import dataclass
+from datetime import datetime
+from typing import Any
 
 from .syntax import Array, Kind, Primitive, PrimitiveKind, Role
 
@@ -7,37 +10,91 @@ STAMP = re.compile(r"^(\d{4}/\d{2}/\d{2}) (\S+)$")
 SLUG = re.compile(r"^[a-z][a-z0-9-]*$")
 VERSION = re.compile(r"^\d+\.\d+\.\d+$")
 
+
+@dataclass(frozen=True, slots=True)
+class Field:
+    """How a property reads: `parse` raises a ValueError on a bad value, which gets the default."""
+
+    parse: Callable[[str], Any]
+    required: bool = False
+    default: Any = ""
+
+
+def names(value: str) -> tuple[str, ...]:
+    return tuple(part.strip() for part in value.split(",") if part.strip())
+
+
+def slug(value: str) -> str:
+    if not SLUG.match(value):
+        raise ValueError(f"'{value}' is not a slug: lowercase, digits, dashes")
+    return value
+
+
+def version(value: str) -> str:
+    if not VERSION.match(value):
+        raise ValueError(f"'{value}' is not a version, as in '5.0.0'")
+    return value
+
+
+def tags(value: str) -> tuple[str, ...]:
+    found = names(value)
+    if bad := [tag for tag in found if tag != "*" and not SLUG.match(tag)]:
+        listed = ", ".join(f"'{tag}'" for tag in bad)
+        verb = "is not a tag" if len(bad) == 1 else "are not tags"
+        raise ValueError(f"{listed} {verb}: lowercase, digits, dashes")
+    return found
+
+
+def boolean(value: str) -> bool:
+    if value not in ("true", "false"):
+        raise ValueError(f"'{value}' is not 'true' or 'false'")
+    return value == "true"
+
+
+def stamp(value: str) -> tuple[str, str]:
+    """A date and the Minecraft version of that day, as in `2022/04/14 1.18.2`."""
+    match = STAMP.match(value)
+    if match is None:
+        expected = "a date and a Minecraft version, '2022/04/14 1.18.2'"
+        raise ValueError(f"'{value}' is not {expected}")
+    try:
+        datetime.strptime(match[1], "%Y/%m/%d")  # noqa: DTZ007
+    except ValueError:
+        raise ValueError(f"'{match[1]}' is not an existing date") from None
+    return match[1], match[2]
+
+
 BUNDLE_PROPERTIES = {
-    "name": True,
-    "slug": True,
-    "version": True,
-    "tags": True,
-    "documentation": False,
+    "name": Field(str, required=True),
+    "slug": Field(slug, required=True),
+    "version": Field(version, required=True),
+    "tags": Field(tags, required=True, default=()),
+    "documentation": Field(str),
 }
 
 MODULE_PROPERTIES = {
-    "name": True,
-    "slug": True,
-    "version": True,
-    "documentation": False,
-    "tags": False,
-    "weak_dependencies": False,
+    "name": Field(str, required=True),
+    "slug": Field(slug, required=True),
+    "version": Field(version, required=True),
+    "documentation": Field(str),
+    "tags": Field(tags, default=()),
+    "weak_dependencies": Field(names, default=()),
 }
 
 FEATURE_PROPERTIES = {
-    "authors": True,
-    "created": True,
-    "updated": True,
-    "contributors": False,
-    "deprecated": False,
-    "experimental": False,
+    "authors": Field(names, required=True, default=()),
+    "created": Field(stamp, required=True, default=("", "")),
+    "updated": Field(stamp, required=True, default=("", "")),
+    "contributors": Field(names, default=()),
+    "deprecated": Field(boolean, default=False),
+    "experimental": Field(boolean, default=False),
 }
 
 
 @dataclass(frozen=True, slots=True)
 class Registry:
 
-    kind: str
+    resource: str
     contexts: frozenset[Kind] = frozenset()
     inputs: frozenset[Kind] = frozenset()
     outputs: frozenset[Kind] = frozenset()

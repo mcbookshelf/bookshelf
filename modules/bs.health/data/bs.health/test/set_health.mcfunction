@@ -12,6 +12,7 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+# @skyaccess
 # @dummy
 
 function #bs.health:set_health.in {points:10}

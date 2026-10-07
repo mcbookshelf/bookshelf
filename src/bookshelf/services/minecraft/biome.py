@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import httpx
-
 from bookshelf.common import json
+
 from bookshelf.models import Biome, Collection
 
 from .utils import cache_version

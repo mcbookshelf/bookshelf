@@ -25,11 +25,12 @@ class FeatureDirective(SphinxDirective):
     has_content = True
 
     def run(self) -> list[nodes.Node]:
-        *kind, reference = self.arguments
+        *resource, reference = self.arguments
         namespace, _, name = reference.lstrip("#").partition(":")
         try:
-            module = workspace.load_module(namespace)
-            feature = module.find(name, kind[0] if kind else None)
+            self.env.note_dependency(str(workspace.current().file(namespace)))
+            module = workspace.current().load_module(namespace)
+            feature = module.find(name, resource[0] if resource else None)
         except KeyError:
             raise self.error(f"unknown module '{namespace}'") from None
         except LookupError as error:
@@ -39,7 +40,8 @@ class FeatureDirective(SphinxDirective):
         targets: list[nodes.Node] = []
         if feature.anchor not in self.state.document.ids:
             section = self.state_machine.node
-            if isinstance(section, nodes.section):
+            claimed = {f.anchor for f in module.features}
+            if isinstance(section, nodes.section) and claimed.isdisjoint(section["ids"]):
                 self.rename(section, feature.anchor)
             else:
                 target = nodes.target(ids=[feature.anchor], names=[feature.anchor])
@@ -77,7 +79,7 @@ class FeatureDirective(SphinxDirective):
         if switch:
             signature += nodes.raw("", self.switch(form), format="html")
         content = addnodes.desc_content()
-        content += self.parse(markdown.feature(feature, macro=macro))
+        content += self.parse(markdown.render(feature, macro=macro))
         content += self.extra()
         desc += signature
         desc += content

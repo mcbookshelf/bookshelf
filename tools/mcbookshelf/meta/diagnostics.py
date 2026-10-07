@@ -35,7 +35,6 @@ class MetadataError(Exception):
     def __init__(self, diagnostics: Diagnostic | list[Diagnostic]) -> None:
         items = [diagnostics] if isinstance(diagnostics, Diagnostic) else list(diagnostics)
         self.diagnostics = items
-        self.message = items[0].message
         super().__init__(str(self))
 
     def __str__(self) -> str:

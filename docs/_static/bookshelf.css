@@ -13,11 +13,12 @@
   src: url("fonts/tossface.otf");
 }
 
-html {
+:root {
   --bz-font-sans: "Nunito", "TossFace";
   --bz-header-brand-font-family: "Itim";
   --bz-header-brand-color: var(--bz-color-muted);
   --bz-header-brand-color-hover: var(--bz-color-gray-5);
+  --treeview-spacing: .1rem;
 }
 
 li div:where([class*=highlight-]:last-child,.literal-block-wrapper:last-child) {
@@ -26,15 +27,69 @@ li div:where([class*=highlight-]:last-child,.literal-block-wrapper:last-child) {
 
 .bs.feature {
   margin-bottom: 1.5rem;
+
+  dl.field-list > dd:has(> .bs-entry) {
+    padding-block: 0 .4rem;
+  }
+
+  .bs-entry {
+    margin: 0;
+    padding-block: .125rem .175rem;
+    color: var(--bz-color-muted);
+
+    + .bs-entry {
+      margin-top: .25rem;
+    }
+
+    .sd-badge,
+    strong > code {
+      display: inline-block;
+      padding: .125rem .4rem;
+      border-radius: .25rem;
+      font-size: .875rem;
+      line-height: 1.3;
+      vertical-align: middle;
+    }
+
+    .sd-badge {
+      border: 1px solid var(--bz-color-outline);
+      background: var(--bz-color-surface-5) !important;
+      color: var(--bz-color-text) !important;
+      font-weight: 600;
+    }
+
+    strong {
+      color: var(--bz-color-text);
+    }
+
+    :not(strong) > code {
+      padding: 0 .125rem;
+      border: 0;
+      background: none;
+    }
+
+    p,
+    ul {
+      margin: 0 0 .3rem;
+      line-height: 1.6;
+    }
+
+    > .treeview {
+      margin-top: .25rem;
+      padding-left: .5rem;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
-/* a feature with a macro: two forms, the switch on the signature picks the one shown */
 .bs-forms.bs-show-storage > .bs-form-macro,
 .bs-forms.bs-show-macro > .bs-form-storage {
   display: none;
 }
 
-/* the switch closes the signature, one full-height segment per form after the name */
 .bs-forms .sig {
   display: flex;
   align-items: center;

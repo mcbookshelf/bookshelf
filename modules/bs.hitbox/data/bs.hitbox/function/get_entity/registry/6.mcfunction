@@ -13,5 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# bat_like group
-data modify storage bs:out hitbox set value {width:0.5,height:0.9}
+# minecraft:item_frame, minecraft:glow_item_frame
+execute at @s positioned ~.25 ~ ~ unless entity @s[dx=0] run return run function bs.hitbox:get_entity/registry/item_frame/x
+execute at @s positioned ~ ~ ~.25 unless entity @s[dx=0] run return run function bs.hitbox:get_entity/registry/item_frame/z
+data modify storage bs.hitbox:get_entity out set value [[-.375f,-.03125f,-.375f,.375f,.03125f,.375f]]
+return 1

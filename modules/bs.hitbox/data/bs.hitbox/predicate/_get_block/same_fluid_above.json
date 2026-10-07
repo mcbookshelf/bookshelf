@@ -1,0 +1,49 @@
+{
+  "type": "any_of",
+  "terms": [
+    {
+      "type": "all_of",
+      "terms": [
+        {
+          "type": "location_check",
+          "predicate": {
+            "fluid": {
+              "fluids": "#minecraft:water"
+            }
+          }
+        },
+        {
+          "type": "location_check",
+          "predicate": {
+            "fluid": {
+              "fluids": "#minecraft:water"
+            }
+          },
+          "offsetY": 1
+        }
+      ]
+    },
+    {
+      "type": "all_of",
+      "terms": [
+        {
+          "type": "location_check",
+          "predicate": {
+            "fluid": {
+              "fluids": "#minecraft:lava"
+            }
+          }
+        },
+        {
+          "type": "location_check",
+          "predicate": {
+            "fluid": {
+              "fluids": "#minecraft:lava"
+            }
+          },
+          "offsetY": 1
+        }
+      ]
+    }
+  ]
+}
