@@ -6,9 +6,9 @@ Schedule commands that remember which entity and location triggered them, and ca
 
 ---
 
-## 🔧 Functions
+## Functions
 
-You can find below all functions available in this module.
+The following functions are available in this module.
 
 ---
 
@@ -17,107 +17,111 @@ You can find below all functions available in this module.
 :::::{tab-set}
 ::::{tab-item} All
 
-```{function} #bs.schedule:cancel_all {with:{}}
-
-Cancel all scheduled commands that match the given ID.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`compound` **with**: Cancel filters.
-      - {nbt}`any` **id**: Scheduled command parameter to match against.
-  :::
+```{feature} bs.schedule:cancel/all
 ```
 
-*Example: Cancel all commands with an `id` parameter set to "foo":*
+*Example: cancel the commands scheduled with an id, whoever scheduled them*
 
 ```mcfunction
-function #bs.schedule:cancel_all {with:{id:"foo"}}
+# Once
+execute as @e[type=minecraft:cow] run function #bs.schedule:schedule/append.in {id:"my_pack:greet",run:"say Hello",time:"5s"}
+function #bs.schedule:cancel/all.in {id:"my_pack:greet"}
+
+# See the result
+# wait 5 seconds, no cow says hello
 ```
 
 ::::
-::::{tab-item} Single One
+::::{tab-item} One
 
-```{function} #bs.schedule:cancel_one {with:{}}
-
-Cancel the first scheduled command that matches the given ID.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`compound` **with**: Cancel filters.
-      - {nbt}`any` **id**: Scheduled command parameter to match against.
-  :::
+```{feature} bs.schedule:cancel/one
 ```
 
-*Example: Cancel the next command with an `id` parameter set to "foo":*
+*Example: cancel the commands the nearest cow scheduled with an id*
 
 ```mcfunction
-function #bs.schedule:cancel_one {with:{id:"foo"}}
+# Once
+execute as @e[type=minecraft:cow] run function #bs.schedule:schedule/append.in {id:"my_pack:greet",run:"say Hello",time:"5s"}
+execute as @n[type=minecraft:cow] run function #bs.schedule:cancel/one.in {id:"my_pack:greet"}
+
+# See the result
+# wait 5 seconds, every cow says hello but the nearest one
 ```
+
 ::::
 :::::
-
-> **Credits**: Aksiome, theogiraudet
 
 ---
 
 ### Clear
 
-```{function} #bs.schedule:clear
-
-Clear all scheduled commands.
+```{feature} bs.schedule:clear
 ```
 
-*Example: Remove all scheduled commands:*
+*Example: cancel every scheduled command*
 
 ```mcfunction
+# Once
 function #bs.schedule:clear
 ```
-
-> **Credits**: Aksiome, theogiraudet
 
 ---
 
 ### Schedule
 
-```{function} #bs.schedule:schedule {run:<command>,with:{}}
+:::::{tab-set}
+::::{tab-item} Append
 
-Schedule a command for execution.
-If a command is registered during a tick where other commands are already scheduled, it is added after those previously registered.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`string` **run**: The command to schedule.
-    - {nbt}`compound` **with**: Optional scheduling parameters.
-      - {nbt}`any` **id**: Optional identifier for the scheduled command.
-      - {nbt}`int` **time**: Delay before execution. Defaults to `1` if not specified.
-      - {nbt}`string` **unit**: Time unit (`tick`, `second`, `minute`, `hour`, `t`, `s`, `m`, `h`). Defaults to `tick`.
-  :::
-
-:Outputs:
-  **Return**: A unique identifier for the scheduled command.
+```{feature} bs.schedule:schedule/append
 ```
 
-*Example: Execute `say foo` in 2 seconds:*
+*Example: say hello twice in 2 seconds*
 
 ```mcfunction
-function #bs.schedule:schedule {run:"say foo",with:{time:2,unit:"s"}}
+# Once
+function #bs.schedule:schedule/append.in {id:"my_pack:greet",run:"say Hello",time:"2s"}
+function #bs.schedule:schedule/append.in {id:"my_pack:greet",run:"say Hello",time:"2s"}
+
+# See the result
+# wait 2 seconds and look at the chat
 ```
 
-*Example: Schedule then cancel commands that match a complex ID:*
+::::
+::::{tab-item} Replace
+
+```{feature} bs.schedule:schedule/replace
+```
+
+*Example: say hello once, 2 seconds after the last call*
 
 ```mcfunction
-function #bs.schedule:schedule {run:"say failure",with:{id:{foo:"bar",fails:true},time:10,unit:"s"}}
-function #bs.schedule:schedule {run:"say success",with:{id:{foo:"bar"},time:10,unit:"s"}}
-function #bs.schedule:cancel_all {with:{id:{fails:true}}}
+# Once
+function #bs.schedule:schedule/replace.in {id:"my_pack:greet",run:"say Hello",time:"5s"}
+function #bs.schedule:schedule/replace.in {id:"my_pack:greet",run:"say Hello",time:"2s"}
+
+# See the result
+# wait 2 seconds and look at the chat, nothing more is said after 5 seconds
 ```
 
-> **Credits**: Aksiome, theogiraudet
+::::
+::::{tab-item} Unique
+
+```{feature} bs.schedule:schedule/unique
+```
+
+*Example: say hello once in 2 seconds, however many times it is scheduled for that tick*
+
+```mcfunction
+# Once
+function #bs.schedule:schedule/unique.in {id:"my_pack:greet",run:"say Hello",time:"2s"}
+function #bs.schedule:schedule/unique.in {id:"my_pack:greet",run:"say Hello",time:"2s"}
+
+# See the result
+# wait 2 seconds and look at the chat
+```
+
+::::
+:::::
 
 ---
 

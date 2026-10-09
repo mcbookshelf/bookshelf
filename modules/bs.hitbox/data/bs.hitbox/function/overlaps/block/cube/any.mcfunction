@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if data storage bs.hitbox:overlaps/block in{entities:"#bs.hitbox:get_entity/living"} run return run execute if predicate bs.hitbox:get_entity/living align xyz if entity @s[dx=0] at @s if entity @s[dx=0]
-execute if data storage bs.hitbox:overlaps/block in{entities:"#bs.hitbox:get_entity/pushable"} run return run execute if predicate bs.hitbox:get_entity/pushable align xyz if entity @s[dx=0] at @s if entity @s[dx=0]
-execute if data storage bs.hitbox:overlaps/block in{entities:"#bs.hitbox:get_entity/sized"} run return run execute if predicate bs.hitbox:get_entity/sized align xyz if entity @s[dx=0] at @s if entity @s[dx=0]
-execute if data storage bs.hitbox:overlaps/block in{entities:"#bs.hitbox:get_entity/solid"} run return run execute if predicate bs.hitbox:get_entity/solid align xyz if entity @s[dx=0] at @s if entity @s[dx=0]
-execute if data storage bs.hitbox:overlaps/block in{entities:"#bs.hitbox:get_entity/targetable"} run return run execute if predicate bs.hitbox:get_entity/targetable align xyz if entity @s[dx=0] at @s if entity @s[dx=0]
+execute if data storage bs.hitbox:overlaps in{entities:"#bs.hitbox:get_entity/living"} run return run execute if predicate bs.hitbox:get_entity/living align xyz if entity @s[dx=0] at @s if entity @s[dx=0]
+execute if data storage bs.hitbox:overlaps in{entities:"#bs.hitbox:get_entity/pushable"} run return run execute if predicate bs.hitbox:get_entity/pushable align xyz if entity @s[dx=0] at @s if entity @s[dx=0]
+execute if data storage bs.hitbox:overlaps in{entities:"#bs.hitbox:get_entity/sized"} run return run execute if predicate bs.hitbox:get_entity/sized align xyz if entity @s[dx=0] at @s if entity @s[dx=0]
+execute if data storage bs.hitbox:overlaps in{entities:"#bs.hitbox:get_entity/solid"} run return run execute if predicate bs.hitbox:get_entity/solid align xyz if entity @s[dx=0] at @s if entity @s[dx=0]
+execute if data storage bs.hitbox:overlaps in{entities:"#bs.hitbox:get_entity/targetable"} run return run execute if predicate bs.hitbox:get_entity/targetable align xyz if entity @s[dx=0] at @s if entity @s[dx=0]
 
 return run function bs.hitbox:overlaps/block/cube/custom

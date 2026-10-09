@@ -16,7 +16,7 @@
 execute at @s[type=#bs.hitbox:_get_entity/living] positioned ~.1000001 ~ ~ unless entity @s[dx=0] positioned ~-.1000001 ~.2000001 ~ unless entity @s[dx=0] positioned ~.0999999 ~-.0000002 ~.0999999 if entity @s[dx=0] run return run function bs.hitbox:get_entity/sleeping
 execute store result score #s bs.ctx run attribute @s[type=#bs.hitbox:_get_entity/living] minecraft:scale get 1000000
 
-data modify storage bs.hitbox:get_entity out set value [[0f,0f,0f,0f,0f,0f]]
+data modify storage bs.hitbox:get_entity out set value [[0f,0f,0f,0f,0f,0f,1f]]
 execute store result storage bs.hitbox:get_entity out[0][0] float -.0000005 store result storage bs.hitbox:get_entity out[0][2] float -.0000005 store result storage bs.hitbox:get_entity out[0][3] float .0000005 store result storage bs.hitbox:get_entity out[0][5] float .0000005 run compute entity @s integer bs.hitbox:_get_entity/width
 execute store result storage bs.hitbox:get_entity out[0][4] float .000001 run compute entity @s integer bs.hitbox:_get_entity/height
 return 1

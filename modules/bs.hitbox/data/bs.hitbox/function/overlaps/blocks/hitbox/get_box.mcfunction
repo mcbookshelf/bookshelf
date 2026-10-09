@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-function bs.hitbox:utils/provide_entities with storage bs.hitbox:overlaps/blocks in
+function bs.hitbox:utils/provide_entities with storage bs.hitbox:overlaps in
 execute at @s run summon minecraft:marker ~ ~ ~ {UUID:[I;181,0,0,0]}
 execute at @s align xyz as B5-0-0-0-0 run function bs.hitbox:utils/get_relative_pos
 execute store result score #m bs.ctx run data get storage bs.hitbox:get_entity out
