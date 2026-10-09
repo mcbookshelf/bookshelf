@@ -13,5 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs.hitbox:get_entity out set value [[-.1f,0f,-.1f,.1f,.2f,.1f]]
+data modify storage bs.hitbox:get_entity out set value [[-.1f,0f,-.1f,.1f,.2f,.1f,1f]]
 return 1

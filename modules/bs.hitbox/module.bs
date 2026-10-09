@@ -5,13 +5,15 @@ slug: bookshelf-hitbox
 version: 5.0.0
 tags: runtime
 
-$block = storage bs.hitbox:get_block out: int @ 1..15 | [[double] @ 6..7]
-> the flags of a full block, or its boxes as `[[x1,y1,z1,x2,y2,z2,flag],...]`, from the min corner to the max corner
+$block = storage: int @ 1..15 | [[double] @ 7]
+> the flags of a full block, or its boxes as `[[x1,y1,z1,x2,y2,z2,flag],...]`, from the min corner to the max corner, measured in blocks from the lowest corner of the block
 >
 > Bookshelf providers flag the block `1` and its fluid `2`
 
-$entity = storage bs.hitbox:get_entity out: [[float] @ 6]
-> the boxes of the entity as `[[x1,y1,z1,x2,y2,z2],...]`, from the min corner to the max corner, from its position and scaled
+$entity = storage: [[float] @ 7]
+> the boxes of the entity as `[[x1,y1,z1,x2,y2,z2,flag],...]`, from the min corner to the max corner, measured in blocks from the position of the entity, with its scale applied
+>
+> Bookshelf providers flag every box `1`
 
 
 feature function get_block/collision
@@ -84,7 +86,7 @@ feature function get_entity/living
   > Get the box of an entity that has health, such as mobs, players and armor stands.
   authors: Aksiome
   created: 2026/09/29 26.3
-  updated: 2026/09/29 26.3
+  updated: 2026/10/09 26.3
 
   context executor > entity to get the box of
   output result: int @ 0..1 > `1` if the entity is living, `0` otherwise
@@ -95,7 +97,7 @@ feature function get_entity/pushable
   > Get the box of an entity others bump into or push, such as boats and mobs.
   authors: Aksiome
   created: 2026/09/28 26.3
-  updated: 2026/09/28 26.3
+  updated: 2026/10/09 26.3
 
   context executor > entity to get the box of
   output result: int @ 0..1 > `1` if the entity is pushable, `0` otherwise
@@ -106,7 +108,7 @@ feature function get_entity/sized
   > Get the box of any entity that has one.
   authors: Aksiome
   created: 2023/11/21 1.20.3
-  updated: 2026/09/28 26.3
+  updated: 2026/10/09 26.3
 
   context executor > entity to get the box of
   output result: int @ 0..1 > `1` if the entity has a box, `0` otherwise
@@ -117,7 +119,7 @@ feature function get_entity/solid
   > Get the box of an entity others can't pass through, such as boats and shulkers.
   authors: Aksiome
   created: 2026/09/28 26.3
-  updated: 2026/09/28 26.3
+  updated: 2026/10/09 26.3
 
   context executor > entity to get the box of
   output result: int @ 0..1 > `1` if the entity is solid, `0` otherwise
@@ -128,18 +130,18 @@ feature function get_entity/targetable
   > Get the box of an entity a player can target, such as mobs and item frames.
   authors: Aksiome
   created: 2026/09/28 26.3
-  updated: 2026/09/28 26.3
+  updated: 2026/10/09 26.3
 
   context executor > entity to get the box of
   output result: int @ 0..1 > `1` if the entity can be targeted, `0` otherwise
   output $entity
 
 
-feature function is_inside/block
+feature function is_in_block
   > Check if a position is inside a block.
   authors: Aksiome
   created: 2023/11/21 1.20.3
-  updated: 2026/09/29 26.3
+  updated: 2026/10/09 26.3
 
   context position > position to check
   input storage: {
@@ -148,11 +150,11 @@ feature function is_inside/block
   output success > whether the position is inside the block
 
 
-feature function is_inside/entity
+feature function is_in_entity
   > Check if a position is inside an entity.
   authors: Aksiome
   created: 2023/11/21 1.20.3
-  updated: 2026/09/29 26.3
+  updated: 2026/10/09 26.3
 
   context executor > entity to check
   context position > position to check
@@ -166,7 +168,7 @@ feature function overlaps/block
   > Check if an entity overlaps the block at a position.
   authors: Aksiome
   created: 2024/09/28 1.21
-  updated: 2026/09/30 26.3
+  updated: 2026/10/09 26.3
 
   context executor > entity to check
   context position > position of the block
@@ -181,7 +183,7 @@ feature function overlaps/blocks
   > Check if an entity overlaps any block around it.
   authors: Aksiome
   created: 2025/03/10 1.21.4
-  updated: 2026/10/04 26.3
+  updated: 2026/10/09 26.3
 
   context executor > entity to check
   input storage: {

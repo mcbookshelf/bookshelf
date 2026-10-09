@@ -210,38 +210,31 @@ data get storage bs.hitbox:get_entity out
 ::::
 :::::
 
-### Is inside
+### Is in block
 
-:::::{tab-set}
-::::{tab-item} Block
-
-```{feature} bs.hitbox:is_inside/block
+```{feature} bs.hitbox:is_in_block
 ```
 
 *Example: check if your eyes are inside the collision of a block*
 
 ```mcfunction
 # Once
-data modify storage bs.hitbox:is_inside/block in set value {blocks:"#bs.hitbox:get_block/collision"}
-execute anchored eyes positioned ^ ^ ^ if function #bs.hitbox:is_inside/block run say I can't see
+data modify storage bs.hitbox:is_in_block in set value {blocks:"#bs.hitbox:get_block/collision"}
+execute anchored eyes positioned ^ ^ ^ if function #bs.hitbox:is_in_block run say I can't see
 ```
 
-::::
-::::{tab-item} Entity
+### Is in entity
 
-```{feature} bs.hitbox:is_inside/entity
+```{feature} bs.hitbox:is_in_entity
 ```
 
 *Example: check if your position is inside the nearest cow*
 
 ```mcfunction
 # Once
-data modify storage bs.hitbox:is_inside/entity in set value {entities:"#bs.hitbox:get_entity/sized"}
-execute as @n[type=minecraft:cow] if function #bs.hitbox:is_inside/entity run say Oh no...
+data modify storage bs.hitbox:is_in_entity in set value {entities:"#bs.hitbox:get_entity/sized"}
+execute as @n[type=minecraft:cow] if function #bs.hitbox:is_in_entity run say Oh no...
 ```
-
-::::
-:::::
 
 ### Overlaps
 
@@ -250,7 +243,7 @@ execute as @n[type=minecraft:cow] if function #bs.hitbox:is_inside/entity run sa
 
 ````{feature} bs.hitbox:overlaps/block
 ```{admonition} Touching is not overlapping
-:class: note
+:class: important
 
 An entity that stands on a block, or leans against it, does not overlap it.
 ```
@@ -260,7 +253,7 @@ An entity that stands on a block, or leans against it, does not overlap it.
 
 ```mcfunction
 # Once
-data modify storage bs.hitbox:overlaps/block in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
+data modify storage bs.hitbox:overlaps in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
 execute as @n[type=minecraft:cow] if function #bs.hitbox:overlaps/block run say I'm in your block
 ```
 
@@ -269,7 +262,7 @@ execute as @n[type=minecraft:cow] if function #bs.hitbox:overlaps/block run say 
 
 ````{feature} bs.hitbox:overlaps/blocks
 ```{admonition} Touching is not overlapping
-:class: note
+:class: important
 
 An entity that stands on a block, or leans against it, does not overlap it.
 ```
@@ -279,7 +272,7 @@ An entity that stands on a block, or leans against it, does not overlap it.
 
 ```mcfunction
 # Once
-data modify storage bs.hitbox:overlaps/blocks in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
+data modify storage bs.hitbox:overlaps in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
 execute as @n[type=minecraft:cow] if function #bs.hitbox:overlaps/blocks run say I'm stuck
 ```
 
@@ -426,10 +419,17 @@ A block provider is a function, such as `#bs.hitbox:get_block/collision`. It ret
     - The storage holds a list of `[x1,y1,z1,x2,y2,z2,flag]`, with at least one box
 :::
 
-Coordinates are measured from the corner of the block, where `1` is the length of one block: a full block goes from `0` to `1` on each axis. The random offset of blocks such as flowers and bamboo is already applied.
+Coordinates are measured from the lowest corner of the block, the one `align xyz` gives, where `1` is the length of one block. A box therefore stays between `0` and `1` on each axis, apart from a few blocks such as fences, whose collision is taller. The random offset of blocks such as flowers and bamboo is already applied.
+
+:::{list-table}
+*   - A full block
+    - `[0,0,0,1,1,1,1]`
+*   - A bottom slab
+    - `[0,0,0,1,0.5,1,1]`
+:::
 
 ```{admonition} Flags
-:class: info
+:class: note
 
 A flag is a number that tells what a box is. Each provider chooses what its flags mean, and says so in its description. Flags are bits, so a full cube can combine several.
 
@@ -471,8 +471,8 @@ return 1
 
 ```mcfunction
 # Use it
-data modify storage bs.hitbox:is_inside/block in set value {blocks:"my_pack:blocks"}
-execute if function #bs.hitbox:is_inside/block run say I'm in a block
+data modify storage bs.hitbox:is_in_block in set value {blocks:"my_pack:blocks"}
+execute if function #bs.hitbox:is_in_block run say I'm in a block
 ```
 
 ---
@@ -484,9 +484,24 @@ An entity provider gives the boxes of an entity. Some functions take one as an i
 
 ---
 
-An entity provider is a function, such as `#bs.hitbox:get_entity/sized`. It returns `0` when the executing entity has no box. Otherwise it returns `1`, and `bs.hitbox:get_entity out` holds a list of `[x1,y1,z1,x2,y2,z2]`, with at least one box.
+An entity provider is a function, such as `#bs.hitbox:get_entity/sized`. It returns `0` when the executing entity has no box. Otherwise it returns `1`, and `bs.hitbox:get_entity out` holds a list of `[x1,y1,z1,x2,y2,z2,flag]`, with at least one box.
 
-Coordinates are measured from the position of the entity, where `1` is the length of one block, with its scale already applied. Bookshelf providers give one box. Your own providers may give several.
+Coordinates are measured from the position of the entity, where `1` is the length of one block, with its scale already applied. Unlike a block box, an entity box is not aligned to the grid: most entities stand at the center of their feet, so their box is centered on `x` and `z`, with negative values, and starts at `0` on `y`.
+
+:::{list-table}
+*   - A player, 0.6 wide and 1.8 high
+    - `[-0.3,0,-0.3,0.3,1.8,0.3,1]`
+*   - A sheep, 0.9 wide and 1.3 high
+    - `[-0.45,0,-0.45,0.45,1.3,0.45,1]`
+:::
+
+Bookshelf providers give one box. Your own providers may give several.
+
+```{admonition} Flags
+:class: note
+
+A flag is a number that tells what a box is, as for [block providers](#block-providers). Bookshelf providers use `1` for every box. Your own providers can use any convention, to tell the head of an entity from its body for example.
+```
 
 ```{admonition} Limit of 8 boxes
 :class: warning
@@ -511,19 +526,19 @@ Bookshelf has the following entity providers:
 
 Each of them comes with a predicate of the same ID, which passes for the entities it may give a box for. A predicate is how entities are filtered: use the one of a provider, or your own to narrow them further.
 
-*Example: a provider that gives block displays a box of one block*
+*Example: a provider that gives block displays a box of one block, with a custom flag. A block display is drawn from its corner, so its box goes from `0` to `1`*
 
 ```mcfunction
 # In the function my_pack:entities
 execute unless entity @s[type=minecraft:block_display] run return 0
-data modify storage bs.hitbox:get_entity out set value [[0f,0f,0f,1f,1f,1f]]
+data modify storage bs.hitbox:get_entity out set value [[0f,0f,0f,1f,1f,1f,2f]]
 return 1
 ```
 
 ```mcfunction
 # Use it
-data modify storage bs.hitbox:is_inside/entity in set value {entities:"my_pack:entities"}
-execute as @n[type=minecraft:block_display] if function #bs.hitbox:is_inside/entity run say You are inside me
+data modify storage bs.hitbox:is_in_entity in set value {entities:"my_pack:entities"}
+execute as @n[type=minecraft:block_display] if function #bs.hitbox:is_in_entity run say You are inside me
 ```
 
 *Example: a predicate that only keeps the entities you tagged*
@@ -540,8 +555,8 @@ execute as @n[type=minecraft:block_display] if function #bs.hitbox:is_inside/ent
 
 ```mcfunction
 # Use it, as the predicate my_pack:tagged, with a Bookshelf provider
-data modify storage bs.hitbox:is_inside/entity in set value {entities:"#bs.hitbox:get_entity/sized"}
-execute as @e[predicate=my_pack:tagged] if function #bs.hitbox:is_inside/entity run say You are inside me
+data modify storage bs.hitbox:is_in_entity in set value {entities:"#bs.hitbox:get_entity/sized"}
+execute as @e[predicate=my_pack:tagged] if function #bs.hitbox:is_in_entity run say You are inside me
 ```
 
 ---

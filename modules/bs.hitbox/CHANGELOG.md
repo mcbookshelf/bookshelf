@@ -4,8 +4,9 @@
 
 - ⚠️ Inputs and outputs were completely reworked to follow new conventions ([#600](https://github.com/mcbookshelf/bookshelf/pull/600))
 - ⚠️ `get_block_shape`, `get_block_collision` and the `callback/get_block_*` providers are replaced by `#bs.hitbox:get_block/<collision|outline|interaction>`, each with a `_with_fluid` variant ([#600](https://github.com/mcbookshelf/bookshelf/pull/600))
+- ⚠️ Block boxes are measured in blocks, no longer in sixteenths of a block: a full block goes from `0` to `1`, not from `0` to `16` ([#600](https://github.com/mcbookshelf/bookshelf/pull/600))
 - ⚠️ `#bs.hitbox:get_entity` is replaced by `#bs.hitbox:get_entity/<sized|living|pushable|solid|targetable>`, each with a predicate of the same name ([#600](https://github.com/mcbookshelf/bookshelf/pull/600))
-- ⚠️ The `is_in_*` and `is_entity_in_*` functions are replaced by `#bs.hitbox:is_inside/<block|entity>` and `#bs.hitbox:overlaps/<block|blocks>`, which take the providers to use as inputs ([#600](https://github.com/mcbookshelf/bookshelf/pull/600))
+- ⚠️ `is_in_block_<shape|collision>` are merged into `#bs.hitbox:is_in_block`, and `is_entity_in_<block|blocks>_<shape|collision>` are replaced by `#bs.hitbox:overlaps/<block|blocks>`. Along with `#bs.hitbox:is_in_entity`, they take the providers to use as inputs ([#600](https://github.com/mcbookshelf/bookshelf/pull/600))
 - ⚠️ Removed `#bs.hitbox:set_entity`, `#bs.hitbox:bake_entity` and `#bs.hitbox:reset_entity` in favor of custom entity providers ([#600](https://github.com/mcbookshelf/bookshelf/pull/600))
 - ⚠️ Replaced the block tags `can_pass_through`, `intangible`, `is_full_cube`, `is_full_cube_shape`, `is_fluid`, `is_water` and `is_waterlogged` with `has_no_collision`, `has_no_outline`, `is_full_cube_outline`, `has_fluid` and `is_liquid` ([#600](https://github.com/mcbookshelf/bookshelf/pull/600))
 - ⚠️ Removed the entity type tags `intangible`, `is_shaped` and `is_sized` in favor of the `bs.hitbox:get_entity/*` predicates ([#600](https://github.com/mcbookshelf/bookshelf/pull/600))

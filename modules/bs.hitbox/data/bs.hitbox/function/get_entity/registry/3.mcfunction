@@ -17,7 +17,7 @@
 execute at @s positioned ~.1000001 ~ ~ unless entity @s[dx=0] positioned ~-.1000001 ~.2000001 ~ unless entity @s[dx=0] positioned ~.0999999 ~-.0000002 ~.0999999 if entity @s[dx=0] run return run function bs.hitbox:get_entity/sleeping
 execute store result score #s bs.ctx run attribute @s minecraft:scale get 1000000
 execute store result score #d bs.ctx run data get entity @s LastPoseTick .0000000001
-data modify storage bs.hitbox:get_entity out set value [[0f,0f,0f,0f,0f,0f]]
+data modify storage bs.hitbox:get_entity out set value [[0f,0f,0f,0f,0f,0f,1f]]
 execute store result storage bs.hitbox:get_entity out[0][0] float -.0000005 store result storage bs.hitbox:get_entity out[0][2] float -.0000005 store result storage bs.hitbox:get_entity out[0][3] float .0000005 store result storage bs.hitbox:get_entity out[0][5] float .0000005 run compute entity @s integer {type:"from_float",input:{type:"round",input:{type:"mul",inputs:[{type:"conditional",condition:"bs.hitbox:_get_entity/is_baby",on_true:950000,on_false:1700000},{type:"div",left:{type:"from_int",input:{type:"score",target:{type:"fixed",name:"#s"},score:"bs.ctx"}},right:1000000.0}]}}}
 data modify storage bs.hitbox:get_entity out[0][4] set compute entity @s float {type:"mul",inputs:[{type:"conditional",condition:{type:"int_value_check",value:{type:"score",target:{type:"fixed",name:"#d"},score:"bs.ctx"},test:{max:-1}},on_true:{type:"conditional",condition:"bs.hitbox:_get_entity/is_baby",on_true:0.425,on_false:0.94500005},on_false:{type:"conditional",condition:"bs.hitbox:_get_entity/is_baby",on_true:1.4,on_false:2.375}},{type:"div",left:{type:"from_int",input:{type:"score",target:{type:"fixed",name:"#s"},score:"bs.ctx"}},right:1000000.0}]}
 return 1

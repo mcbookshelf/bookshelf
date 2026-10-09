@@ -18,45 +18,45 @@
 
 # Players
 function #bs.hitbox:get_entity/sized
-assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.3f,0f,-0.3f,0.3f,1.8f,0.3f]
+assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.3f,0f,-0.3f,0.3f,1.8f,0.3f,1f]
 dummy @s sneak true
 await delay 1t
 function #bs.hitbox:get_entity/sized
-assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.3f,0f,-0.3f,0.3f,1.5f,0.3f]
+assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.3f,0f,-0.3f,0.3f,1.5f,0.3f,1f]
 dummy @s sneak false
 await delay 1t
 
 # Scaled by the scale attribute
 attribute @s minecraft:scale base set 2
 function #bs.hitbox:get_entity/sized
-assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.6f,0f,-0.6f,0.6f,3.6f,0.6f]
+assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.6f,0f,-0.6f,0.6f,3.6f,0.6f,1f]
 
 # Babies
 summon minecraft:cow ~ ~ ~ {Tags:["ward.hitbox.cow.baby"],Age:-24000}
 execute as @n[tag=ward.hitbox.cow.baby] run function #bs.hitbox:get_entity/sized
-assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.225f,0f,-0.225f,0.225f,0.7f,0.225f]
+assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.225f,0f,-0.225f,0.225f,0.7f,0.225f,1f]
 
 # Scale changes are seen right away
 summon minecraft:creeper ~ ~ ~ {Tags:["ward.hitbox.creeper"],attributes:[{id:"minecraft:scale",base:0.5d}]}
 execute as @n[tag=ward.hitbox.creeper] run function #bs.hitbox:get_entity/sized
-assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.15f,0f,-0.15f,0.15f,0.85f,0.15f]
+assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.15f,0f,-0.15f,0.15f,0.85f,0.15f,1f]
 attribute @n[tag=ward.hitbox.creeper] minecraft:scale base set 1
 execute as @n[tag=ward.hitbox.creeper] run function #bs.hitbox:get_entity/sized
-assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.3f,0f,-0.3f,0.3f,1.7f,0.3f]
+assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.3f,0f,-0.3f,0.3f,1.7f,0.3f,1f]
 
 # Entities without attributes
 execute summon minecraft:oak_boat run function #bs.hitbox:get_entity/sized
-assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.6875f,0f,-0.6875f,0.6875f,0.5625f,0.6875f]
+assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.6875f,0f,-0.6875f,0.6875f,0.5625f,0.6875f,1f]
 
 # Cubes by their size
 summon minecraft:slime ~ ~ ~ {Tags:["ward.hitbox.slime"],Size:3}
 execute as @n[tag=ward.hitbox.slime] run function #bs.hitbox:get_entity/sized
-assert not run data modify storage bs.hitbox:get_entity out[0] set value [-1.04f,0f,-1.04f,1.04f,2.08f,1.04f]
+assert not run data modify storage bs.hitbox:get_entity out[0] set value [-1.04f,0f,-1.04f,1.04f,2.08f,1.04f,1f]
 
 # Entities sharing a single side with a sleeping one are not asleep
 summon minecraft:salmon ~ ~ ~ {Tags:["ward.hitbox.salmon.small"],type:"small"}
 execute as @n[tag=ward.hitbox.salmon.small] run function #bs.hitbox:get_entity/sized
-assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.175f,0f,-0.175f,0.175f,0.2f,0.175f]
+assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.175f,0f,-0.175f,0.175f,0.2f,0.175f,1f]
 
 # Sleeping entities, whatever their scale
 setblock ~ ~ ~3 minecraft:red_bed[part=head,facing=south]
@@ -68,7 +68,7 @@ execute store result storage bs.hitbox: pos[2] int 1 run data get entity @n[tag=
 data modify entity @n[tag=ward.hitbox.villager.sleeping] sleeping_pos set from storage bs.hitbox: pos
 attribute @n[tag=ward.hitbox.villager.sleeping] minecraft:scale base set 2
 execute as @n[tag=ward.hitbox.villager.sleeping] run function #bs.hitbox:get_entity/sized
-assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.1f,0f,-0.1f,0.1f,0.2f,0.1f]
+assert not run data modify storage bs.hitbox:get_entity out[0] set value [-0.1f,0f,-0.1f,0.1f,0.2f,0.1f,1f]
 
 # Providers keep only the entities of their set: boats are solid, pushable and targetable
 summon minecraft:oak_boat ~ ~ ~ {Tags:["ward.hitbox.oak_boat.set"]}

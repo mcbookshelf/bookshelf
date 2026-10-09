@@ -13,11 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #r bs.ctx run function bs.hitbox:utils/provide_blocks with storage bs.hitbox:overlaps/block in
+execute store result score #r bs.ctx run function bs.hitbox:utils/provide_blocks with storage bs.hitbox:overlaps in
 execute if score #r bs.ctx matches 0 run return fail
 execute unless data storage bs.hitbox:get_block out[0] run return run function bs.hitbox:overlaps/block/cube/any
 
-execute store result score #s bs.ctx run function bs.hitbox:utils/provide_entities with storage bs.hitbox:overlaps/block in
+execute store result score #s bs.ctx run function bs.hitbox:utils/provide_entities with storage bs.hitbox:overlaps in
 execute if score #s bs.ctx matches 0 run return fail
 
 execute at @s run summon minecraft:marker ~ ~ ~ {UUID:[I;181,0,0,0]}

@@ -23,8 +23,8 @@ MARGIN = 2**-16
 @generator
 def beet_default(_: Context) -> Generated:
     overlap = blocks(lambda box: entities(lambda entity: overlaps(entity, box)))
-    yield "bs.hitbox:_is_inside/block/inside", Predicate(blocks(contains).json())
-    yield "bs.hitbox:_is_inside/entity/inside", Predicate(entities(holds).json())
+    yield "bs.hitbox:_is_in_block/inside", Predicate(blocks(contains).json())
+    yield "bs.hitbox:_is_in_entity/inside", Predicate(entities(holds).json())
     yield "bs.hitbox:_overlaps/cube", Predicate(entities(in_cube).json())
     yield "bs.hitbox:_overlaps/overlap", Predicate(overlap.json())
     for axis, name in enumerate("xyz"):

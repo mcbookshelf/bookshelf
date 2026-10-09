@@ -13,10 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if data storage bs.hitbox:overlaps/blocks in{entities:"#bs.hitbox:get_entity/living"} run return run execute if predicate bs.hitbox:get_entity/living at @s run function bs.hitbox:overlaps/blocks/hitbox
-execute if data storage bs.hitbox:overlaps/blocks in{entities:"#bs.hitbox:get_entity/pushable"} run return run execute if predicate bs.hitbox:get_entity/pushable at @s run function bs.hitbox:overlaps/blocks/hitbox
-execute if data storage bs.hitbox:overlaps/blocks in{entities:"#bs.hitbox:get_entity/sized"} run return run execute if predicate bs.hitbox:get_entity/sized at @s run function bs.hitbox:overlaps/blocks/hitbox
-execute if data storage bs.hitbox:overlaps/blocks in{entities:"#bs.hitbox:get_entity/solid"} run return run execute if predicate bs.hitbox:get_entity/solid at @s run function bs.hitbox:overlaps/blocks/hitbox
-execute if data storage bs.hitbox:overlaps/blocks in{entities:"#bs.hitbox:get_entity/targetable"} run return run execute if predicate bs.hitbox:get_entity/targetable at @s run function bs.hitbox:overlaps/blocks/hitbox
+execute if data storage bs.hitbox:overlaps in{entities:"#bs.hitbox:get_entity/living"} run return run execute if predicate bs.hitbox:get_entity/living at @s run function bs.hitbox:overlaps/blocks/hitbox
+execute if data storage bs.hitbox:overlaps in{entities:"#bs.hitbox:get_entity/pushable"} run return run execute if predicate bs.hitbox:get_entity/pushable at @s run function bs.hitbox:overlaps/blocks/hitbox
+execute if data storage bs.hitbox:overlaps in{entities:"#bs.hitbox:get_entity/sized"} run return run execute if predicate bs.hitbox:get_entity/sized at @s run function bs.hitbox:overlaps/blocks/hitbox
+execute if data storage bs.hitbox:overlaps in{entities:"#bs.hitbox:get_entity/solid"} run return run execute if predicate bs.hitbox:get_entity/solid at @s run function bs.hitbox:overlaps/blocks/hitbox
+execute if data storage bs.hitbox:overlaps in{entities:"#bs.hitbox:get_entity/targetable"} run return run execute if predicate bs.hitbox:get_entity/targetable at @s run function bs.hitbox:overlaps/blocks/hitbox
 
 execute at @s run return run function bs.hitbox:overlaps/blocks/custom
