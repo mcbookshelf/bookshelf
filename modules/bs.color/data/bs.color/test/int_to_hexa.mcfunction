@@ -13,6 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs.color: channel_h.r set from storage bs:const color.hex_chars[$(r)]
-$data modify storage bs.color: channel_h.g set from storage bs:const color.hex_chars[$(g)]
-$data modify storage bs.color: channel_h.b set from storage bs:const color.hex_chars[$(b)]
+function #bs.color:int_to_hexa.in {color:-1829606853}
+assert data storage bs.color:int_to_hexa {out:"#f26a3b92"}
+
+function #bs.color:int_to_hexa.in {color:975882325}
+assert data storage bs.color:int_to_hexa {out:"#2ac8553a"}
+
+function #bs.color:int_to_hexa.in {color:-849798720}
+assert data storage bs.color:int_to_hexa {out:"#5919c0cd"}

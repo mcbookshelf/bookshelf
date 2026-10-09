@@ -13,5 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs.color: hex set value "#$(r)$(g)$(b)"
-
+$execute store result storage bs.color:hex_to_rgb out[0] float 0.00392156862745098 run data get storage bs.color: byte.$(r)
+$execute store result storage bs.color:hex_to_rgb out[1] float 0.00392156862745098 run data get storage bs.color: byte.$(g)
+$execute store result storage bs.color:hex_to_rgb out[2] float 0.00392156862745098 run data get storage bs.color: byte.$(b)

@@ -15,8 +15,12 @@
 
 assert result 15886907 run function #bs.color:rgb_to_int.in {color:[0.9490196078f,0.4156862745f,0.231372549f]}
 assert data storage bs.color:rgb_to_int {out:15886907}
-assert score $color.rgb_to_int bs.out matches 15886907
 
 assert result 2803797 run function #bs.color:rgb_to_int.in {color:[0.1647058824f,0.7843137255f,0.3333333333f]}
 
 assert result 5839296 run function #bs.color:rgb_to_int.in {color:[0.3490196078f,0.09803921569f,0.7529411765f]}
+
+# A color with alpha gives an ARGB integer
+assert result -1829606853 run function #bs.color:rgb_to_int.in {color:[0.9490196078f,0.4156862745f,0.231372549f,0.5725490196f]}
+assert data storage bs.color:rgb_to_int {out:-1829606853}
+assert result 15886907 run function #bs.color:rgb_to_int.in {color:[0.9490196078f,0.4156862745f,0.231372549f]}

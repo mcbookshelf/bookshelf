@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs.color: hex set value "#$(r)$(g)$(b)$(a)"
+$data modify storage bs.color:rgb_to_hex out set value "#$(r)$(g)$(b)$(a)"

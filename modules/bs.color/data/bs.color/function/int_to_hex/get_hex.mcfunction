@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs.color: channel_h.r set from storage bs:const color.hex_chars[$(r)]
-$data modify storage bs.color: channel_h.g set from storage bs:const color.hex_chars[$(g)]
-$data modify storage bs.color: channel_h.b set from storage bs:const color.hex_chars[$(b)]
-$data modify storage bs.color: channel_h.a set from storage bs:const color.hex_chars[$(a)]
+$data modify storage bs.color: r set from storage bs.color: hex[$(r)]
+$data modify storage bs.color: g set from storage bs.color: hex[$(g)]
+$data modify storage bs.color: b set from storage bs.color: hex[$(b)]
+function bs.color:int_to_hex/concat_hex with storage bs.color:

@@ -13,12 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs.color: channel_h.r set string storage bs.color:hex_to_rgb in.color 1 3
-data modify storage bs.color: channel_h.g set string storage bs.color:hex_to_rgb in.color 3 5
-data modify storage bs.color: channel_h.b set string storage bs.color:hex_to_rgb in.color 5 7
-data remove storage bs.color: channel_h.a
-data modify storage bs.color: channel_h.a set string storage bs.color:hex_to_rgb in.color 7 9
-
-execute unless data storage bs.color: channel_h.a run function bs.color:utils/hexes_to_rgb with storage bs.color: channel_h
-execute if data storage bs.color: channel_h.a run function bs.color:utils/hexes_a_to_rgba with storage bs.color: channel_h
-data modify storage bs.color:hex_to_rgb out set from storage bs.color: rgb
+data remove storage bs.color: a
+data modify storage bs.color: r set string storage bs.color:hex_to_rgb in.color 1 3
+data modify storage bs.color: g set string storage bs.color:hex_to_rgb in.color 3 5
+data modify storage bs.color: b set string storage bs.color:hex_to_rgb in.color 5 7
+data modify storage bs.color: a set string storage bs.color:hex_to_rgb in.color 7 9
+data modify storage bs.color:hex_to_rgb out set value [0f,0f,0f]
+function bs.color:hex_to_rgb/channels with storage bs.color:
+execute if data storage bs.color: a run function bs.color:hex_to_rgb/alpha with storage bs.color:

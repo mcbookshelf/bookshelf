@@ -13,9 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result score #c bs.ctx run compute default integer {type:"minecraft:add",inputs:[{type:"minecraft:storage",storage:"bs.color:",path:"hex_values.$(b)"},{type:"minecraft:mul",inputs:[256,{type:"minecraft:storage",storage:"bs.color:",path:"hex_values.$(g)"}]},{type:"minecraft:mul",inputs:[65536,{type:"minecraft:storage",storage:"bs.color:",path:"hex_values.$(r)"}]}]}
-
-$execute store result score #a bs.ctx run data get storage bs.color: hex_values.$(a)
-scoreboard players operation #a bs.ctx *= 16777216 bs.const
-
-return run execute store result storage bs.color: int int 1 run scoreboard players operation #c bs.ctx += #a bs.ctx
+$data modify storage bs.color: r set from storage bs.color: hex[$(r)]
+$data modify storage bs.color: g set from storage bs.color: hex[$(g)]
+$data modify storage bs.color: b set from storage bs.color: hex[$(b)]
+$data modify storage bs.color: a set from storage bs.color: hex[$(a)]
+function bs.color:int_to_hexa/concat_hexa with storage bs.color:

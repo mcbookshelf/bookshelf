@@ -14,10 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 function #bs.color:int_to_rgba.in {color:-1829606853}
-assert score $color.int_to_rgb.r bs.out matches 242
-assert score $color.int_to_rgb.g bs.out matches 106
-assert score $color.int_to_rgb.b bs.out matches 59
-assert score $color.int_to_rgb.a bs.out matches 146
 assert data storage bs.color:int_to_rgba {out:[0.9490196078f,0.4156862745f,0.231372549f,0.5725490196f]}
 
 function #bs.color:int_to_rgba.in {color:975882325}

@@ -13,11 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-function #bs.color:int_to_hex_rgba.in {color:-1829606853}
-assert data storage bs.color:int_to_hex_rgba {out:"#f26a3b92"}
-
-function #bs.color:int_to_hex_rgba.in {color:975882325}
-assert data storage bs.color:int_to_hex_rgba {out:"#2ac8553a"}
-
-function #bs.color:int_to_hex_rgba.in {color:-849798720}
-assert data storage bs.color:int_to_hex_rgba {out:"#5919c0cd"}
+$data modify storage bs.color: r set from storage bs.color: hex[$(r)]
+$data modify storage bs.color: g set from storage bs.color: hex[$(g)]
+$data modify storage bs.color: b set from storage bs.color: hex[$(b)]
+$data modify storage bs.color: a set from storage bs.color: hex[$(a)]
+function bs.color:rgb_to_hex/concat_hexa with storage bs.color:

@@ -13,6 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result storage bs.color:int_to_rgb out[0] float 0.00392156862 store result score $color.int_to_rgb.r bs.out run compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"in.color",storage:"bs.color:int_to_rgb"},right:65536}}
-execute store result storage bs.color:int_to_rgb out[1] float 0.00392156862 store result score $color.int_to_rgb.g bs.out run compute default integer {type:"mod",right:256,left:{type:"div",left:{type:"storage",path:"in.color",storage:"bs.color:int_to_rgb"},right:256}}
-execute store result storage bs.color:int_to_rgb out[2] float 0.00392156862 store result score $color.int_to_rgb.b bs.out run compute default integer {type:"mod",right:256,left:{type:"storage",path:"in.color",storage:"bs.color:int_to_rgb"}}
+data modify storage bs.color:int_to_rgb out set value [0f,0f,0f]
+data modify storage bs.color:int_to_rgb out[0] set compute default float {type:"div",left:{type:"from_int",input:{type:"floor_mod",left:{type:"floor_div",left:{type:"storage",storage:"bs.color:int_to_rgb",path:"in.color"},right:65536},right:256}},right:255}
+data modify storage bs.color:int_to_rgb out[1] set compute default float {type:"div",left:{type:"from_int",input:{type:"floor_mod",left:{type:"floor_div",left:{type:"storage",storage:"bs.color:int_to_rgb",path:"in.color"},right:256},right:256}},right:255}
+data modify storage bs.color:int_to_rgb out[2] set compute default float {type:"div",left:{type:"from_int",input:{type:"floor_mod",left:{type:"storage",storage:"bs.color:int_to_rgb",path:"in.color"},right:256}},right:255}

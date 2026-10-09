@@ -13,14 +13,10 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs.color: channel_h.r set string storage bs.color:hex_to_int in.color 1 3
-data modify storage bs.color: channel_h.g set string storage bs.color:hex_to_int in.color 3 5
-data modify storage bs.color: channel_h.b set string storage bs.color:hex_to_int in.color 5 7
-data remove storage bs.color: channel_h.a
-data modify storage bs.color: channel_h.a set string storage bs.color:hex_to_int in.color 7 9
-
-execute unless data storage bs.color: channel_h.a run function bs.color:utils/hexes_to_int with storage bs.color: channel_h
-execute if data storage bs.color: channel_h.a run function bs.color:utils/hexes_a_to_int with storage bs:ctx
-data modify storage bs.color:hex_to_int out set from storage bs.color: int
-
-return run data get storage bs.color:hex_to_int out
+data modify storage bs.color: a set value "00"
+data modify storage bs.color: r set string storage bs.color:hex_to_int in.color 1 3
+data modify storage bs.color: g set string storage bs.color:hex_to_int in.color 3 5
+data modify storage bs.color: b set string storage bs.color:hex_to_int in.color 5 7
+data modify storage bs.color: a set string storage bs.color:hex_to_int in.color 7 9
+function bs.color:hex_to_int/get_bytes with storage bs.color:
+return run execute store result storage bs.color:hex_to_int out int 1 run compute default integer {type:"add",inputs:[{type:"storage",storage:"bs.color:",path:"b"},{type:"mul",inputs:[{type:"storage",storage:"bs.color:",path:"g"},256]},{type:"mul",inputs:[{type:"storage",storage:"bs.color:",path:"r"},65536]},{type:"mul",inputs:[{type:"add",inputs:[{type:"floor_mod",left:{type:"add",inputs:[{type:"storage",storage:"bs.color:",path:"a"},128]},right:256},-128]},16777216]}]}

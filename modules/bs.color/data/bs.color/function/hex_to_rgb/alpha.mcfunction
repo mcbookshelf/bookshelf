@@ -13,4 +13,5 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$return run data modify storage bs.color: int set compute default integer {type:"minecraft:add",inputs:[{type:"minecraft:storage",storage:"bs.color:",path:"hex_values.$(b)"},{type:"minecraft:mul",inputs:[256,{type:"minecraft:storage",storage:"bs.color:",path:"hex_values.$(g)"}]},{type:"minecraft:mul",inputs:[65536,{type:"minecraft:storage",storage:"bs.color:",path:"hex_values.$(r)"}]}]}
+data modify storage bs.color:hex_to_rgb out append value 0f
+$execute store result storage bs.color:hex_to_rgb out[3] float 0.00392156862745098 run data get storage bs.color: byte.$(a)

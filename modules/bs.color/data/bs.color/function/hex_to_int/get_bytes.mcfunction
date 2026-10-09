@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result storage bs.color rgb[0] float 0.00392156862 store result score $color.hex_to_rgba.r bs.out run data get storage bs.color: hex_values.$(r)
-$execute store result storage bs.color rgb[1] float 0.00392156862 store result score $color.hex_to_rgba.g bs.out run data get storage bs.color: hex_values.$(g)
-$execute store result storage bs.color rgb[2] float 0.00392156862 store result score $color.hex_to_rgba.b bs.out run data get storage bs.color: hex_values.$(b)
-$execute store result storage bs.color rgb[3] float 0.00392156862 store result score $color.hex_to_rgba.a bs.out run data get storage bs.color: hex_values.$(a)
+$data modify storage bs.color: r set from storage bs.color: byte.$(r)
+$data modify storage bs.color: g set from storage bs.color: byte.$(g)
+$data modify storage bs.color: b set from storage bs.color: byte.$(b)
+$data modify storage bs.color: a set from storage bs.color: byte.$(a)
