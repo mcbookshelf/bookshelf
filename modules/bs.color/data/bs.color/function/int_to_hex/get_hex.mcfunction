@@ -13,4 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:out color.rgb_to_hex set value "#$(r)$(g)$(b)"
+$data modify storage bs.color: r set from storage bs.color: hex[$(r)]
+$data modify storage bs.color: g set from storage bs.color: hex[$(g)]
+$data modify storage bs.color: b set from storage bs.color: hex[$(b)]
+function bs.color:int_to_hex/concat_hex with storage bs.color:

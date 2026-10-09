@@ -13,9 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard objectives remove bs.const
-scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.out
-
-data remove storage bs:const color
-data remove storage bs:out color
+data remove storage bs.color: hex
+data remove storage bs.color: byte
+data remove storage bs.color: r
+data remove storage bs.color: g
+data remove storage bs.color: b
+data remove storage bs.color: a

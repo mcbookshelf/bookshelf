@@ -13,15 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-function #bs.color:int_to_hex.in {color:15886907}
-assert data storage bs.color:int_to_hex {out:"#f26a3b"}
-
-function #bs.color:int_to_hex.in {color:2803797}
-assert data storage bs.color:int_to_hex {out:"#2ac855"}
-
-function #bs.color:int_to_hex.in {color:5839296}
-assert data storage bs.color:int_to_hex {out:"#5919c0"}
-
-# The alpha of an ARGB integer is ignored
-function #bs.color:int_to_hex.in {color:-1829606853}
-assert data storage bs.color:int_to_hex {out:"#f26a3b"}
+$data modify storage bs.color: r set from storage bs.color: hex[$(r)]
+$data modify storage bs.color: g set from storage bs.color: hex[$(g)]
+$data modify storage bs.color: b set from storage bs.color: hex[$(b)]
+function bs.color:rgb_to_hex/concat_hex with storage bs.color:

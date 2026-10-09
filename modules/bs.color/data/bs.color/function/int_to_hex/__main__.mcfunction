@@ -13,4 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:out color.int_to_hex set value "#$(r)$(g)$(b)"
+data modify storage bs.color: r set compute default integer {type:"floor_mod",left:{type:"floor_div",left:{type:"storage",storage:"bs.color:int_to_hex",path:"in.color"},right:65536},right:256}
+data modify storage bs.color: g set compute default integer {type:"floor_mod",left:{type:"floor_div",left:{type:"storage",storage:"bs.color:int_to_hex",path:"in.color"},right:256},right:256}
+data modify storage bs.color: b set compute default integer {type:"floor_mod",left:{type:"storage",storage:"bs.color:int_to_hex",path:"in.color"},right:256}
+function bs.color:int_to_hex/get_hex with storage bs.color:

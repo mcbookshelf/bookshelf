@@ -15,220 +15,213 @@ Manipulate colors and convert them between formats.
 -- Henri Matisse
 ```
 
-```{admonition} Minecraft Color Format
-:class: info
+```{admonition} Colors with an alpha
+:class: note
 
-The internal color format for Minecraft is decimal. This module facilitates the conversion between this integer (decimal) format and other commonly used formats.
+An integer that holds an alpha is an ARGB integer, as the game uses for the background of a text display: the alpha is its highest byte. A hexadecimal color holds its alpha last, as in `#rrggbbaa`, a form also called hexa, and an RGBA color too, as in `[r,g,b,a]`.
 ```
 
 ---
 
-## 🔧 Functions
+## Functions
 
-You can find below all functions available in this module.
+The following functions are available in this module. A color must be valid: the result of a conversion is undefined otherwise.
 
 ---
 
-### Convert to Hexadecimal
+### Convert to hexadecimal
 
 :::::{tab-set}
-::::{tab-item} RGB to Hexadecimal
+::::{tab-item} RGB to hex
 
-```{function} #bs.color:rgb_to_hex {color:[]}
-
-Convert a color from RGB to hexadecimal.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`list` **color**: Vector representing the RGB color (example: [0,255,128]).
-  :::
-
-:Outputs:
-  **Storage `bs:out color.rgb_to_hex`**: {nbt}`string` Color as a hexadecimal string.
+```{feature} bs.color:rgb_to_hex
 ```
 
-*Example: Convert an RGB color to hexadecimal:*
+*Example: convert an RGB color to a hexadecimal color*
 
 ```mcfunction
-# Get the RGB color
-function #bs.color:rgb_to_hex {color:[0,255,128]}
+# Once
+function #bs.color:rgb_to_hex.in {color:[0.0,1.0,0.5]}
 
-# Show the result
-data get storage bs:out color.rgb_to_hex
+# See the result
+data get storage bs.color:rgb_to_hex out
 ```
 
 ::::
-::::{tab-item} Integer to Hexadecimal
+::::{tab-item} Int to hex
 
-```{function} #bs.color:int_to_hex {color:<value>}
-
-Convert a color from integer to hexadecimal.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`int` **color**: Color as an integer.
-  :::
-
-:Outputs:
-  **Storage `bs:out color.int_to_hex`**: {nbt}`string` Color as a hexadecimal string.
+```{feature} bs.color:int_to_hex
 ```
 
-*Example: Get the hexadecimal color of the nearest zombie's leather helmet:*
+*Example: get the hexadecimal color of the leather helmet of the nearest zombie*
 
 ```mcfunction
-# Get the hexadecimal color
-function #bs.color:int_to_hex with entity @e[type=minecraft:zombie,sort=nearest,limit=1] ArmorItems[3].tag.display
+# Once
+data modify storage bs.color:int_to_hex in.color set from entity @n[type=minecraft:zombie] equipment.head.components."minecraft:dyed_color"
+function #bs.color:int_to_hex
 
-# Show the result
-data get storage bs:out color.int_to_hex
+# See the result
+data get storage bs.color:int_to_hex out
+```
+
+::::
+::::{tab-item} Int to hexa
+
+```{feature} bs.color:int_to_hexa
+```
+
+*Example: get the hexadecimal color of the background of the nearest text display*
+
+```mcfunction
+# Once
+data modify storage bs.color:int_to_hexa in.color set from entity @n[type=minecraft:text_display] background
+function #bs.color:int_to_hexa
+
+# See the result
+data get storage bs.color:int_to_hexa out
 ```
 
 ::::
 :::::
 
-> **Credits**: Aksiome, theogiraudet
-
 ---
 
-### Convert to Integer
+### Convert to integer
 
 :::::{tab-set}
-::::{tab-item} Hexadecimal to Integer
+::::{tab-item} Hex to int
 
-```{function} #bs.color:hex_to_int {color:<value>}
-
-Convert a color from hexadecimal to integer.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`string` **color**: Color as a hexadecimal string (example: #ffffff).
-  :::
-
-:Outputs:
-  **Return | Score `$color.hex_to_int bs.out`**: Color as an integer.
-
-  **Storage `bs:out color.hex_to_int`**: {nbt}`int` Color as an integer.
+```{feature} bs.color:hex_to_int
 ```
 
-*Example: Change the color of the nearest zombie's leather helmet using the hexadecimal format:*
+*Example: dye the leather helmet of the nearest zombie with a hexadecimal color*
 
 ```mcfunction
-# Summon a test subject
-summon minecraft:zombie ~ ~ ~ {ArmorItems:[{},{},{},{id:"minecraft:leather_helmet",Count:1b}]}
-
-# Set the helmet color
-execute as @e[type=minecraft:zombie,sort=nearest,limit=1] store result entity @s ArmorItems[3].tag.display.color int 1 run function #bs.color:hex_to_int {color:"#ffffff"}
+# Once
+summon minecraft:zombie ~ ~ ~ {equipment:{head:{id:"minecraft:leather_helmet",count:1}}}
+execute as @n[type=minecraft:zombie] store result entity @s equipment.head.components."minecraft:dyed_color" int 1 run function #bs.color:hex_to_int.in {color:"#ff0000"}
 ```
 
 ::::
-::::{tab-item} RGB to Integer
+::::{tab-item} RGB to int
 
-```{function} #bs.color:rgb_to_int {color:[]}
-
-Convert a color from RGB to integer.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`list` **color**: Vector representing the RGB color (example: [0,255,128]).
-  :::
-
-:Outputs:
-  **Return | Score `$color.rgb_to_int bs.out`**: Color as an integer.
-
-  **Storage `bs:out color.rgb_to_int`**: {nbt}`int` Color as an integer.
+```{feature} bs.color:rgb_to_int
 ```
 
-*Example: Change the color of the nearest zombie's leather helmet using the RGB format:*
+*Example: dye the leather helmet of the nearest zombie with an RGB color*
 
 ```mcfunction
-# Summon a test subject
-summon minecraft:zombie ~ ~ ~ {ArmorItems:[{},{},{},{id:"minecraft:leather_helmet",Count:1b}]}
-
-# Set the helmet color
-execute as @e[type=minecraft:zombie,sort=nearest,limit=1] store result entity @s ArmorItems[3].tag.display.color int 1 run function #bs.color:rgb_to_int {color:[255,0,0]}
+# Once
+summon minecraft:zombie ~ ~ ~ {equipment:{head:{id:"minecraft:leather_helmet",count:1}}}
+execute as @n[type=minecraft:zombie] store result entity @s equipment.head.components."minecraft:dyed_color" int 1 run function #bs.color:rgb_to_int.in {color:[1.0,0.0,0.0]}
 ```
 
 ::::
 :::::
-
-> **Credits**: Aksiome, theogiraudet
 
 ---
 
 ### Convert to RGB
 
 :::::{tab-set}
-::::{tab-item} Hexadecimal to RGB
+::::{tab-item} Hex to RGB
 
-```{function} #bs.color:hex_to_rgb {color:<value>}
-
-Convert a color from hexadecimal to RGB.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`string` **color**: Color as a hexadecimal string (example: #ffffff).
-  :::
-
-:Outputs:
-  **Storage `bs:out color.hex_to_rgb`**: {nbt}`list` Vector representing the RGB color.
-
-  **Scores `$color.hex_to_rgb.[r,g,b] bs.out`**: Vector components representing the RGB color.
+```{feature} bs.color:hex_to_rgb
 ```
 
-*Example: Convert a hexadecimal color to RGB:*
+*Example: convert a hexadecimal color to an RGB color*
 
 ```mcfunction
-# Get the RGB color
-function #bs.color:hex_to_rgb {color:"#ffffff"}
+# Once
+function #bs.color:hex_to_rgb.in {color:"#00ff80"}
 
-# Show the result
-data get storage bs:out color.hex_to_rgb
+# See the result
+data get storage bs.color:hex_to_rgb out
 ```
 
 ::::
-::::{tab-item} Integer to RGB
+::::{tab-item} Int to RGB
 
-```{function} #bs.color:int_to_rgb {color:<value>}
-
-Convert a color from integer to RGB.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`int` **color**: Color as an integer.
-  :::
-
-:Outputs:
-  **Storage `bs:out color.int_to_rgb`**: {nbt}`list` Vector representing the RGB color.
-
-  **Scores `$color.int_to_rgb.[r,g,b] bs.out`**: Vector components representing the RGB color.
+```{feature} bs.color:int_to_rgb
 ```
 
-*Example: Get the RGB color of the nearest zombie's leather helmet:*
+*Example: get the RGB color of the leather helmet of the nearest zombie*
 
 ```mcfunction
-# Get the RGB color
-function #bs.color:int_to_rgb with entity @e[type=minecraft:zombie,sort=nearest,limit=1] ArmorItems[3].tag.display
+# Once
+data modify storage bs.color:int_to_rgb in.color set from entity @n[type=minecraft:zombie] equipment.head.components."minecraft:dyed_color"
+function #bs.color:int_to_rgb
 
-# Show the result
-data get storage bs:out color.int_to_rgb
+# See the result
+data get storage bs.color:int_to_rgb out
+```
+
+::::
+::::{tab-item} Int to RGBA
+
+```{feature} bs.color:int_to_rgba
+```
+
+*Example: get the RGBA color of the background of the nearest text display*
+
+```mcfunction
+# Once
+data modify storage bs.color:int_to_rgba in.color set from entity @n[type=minecraft:text_display] background
+function #bs.color:int_to_rgba
+
+# See the result
+data get storage bs.color:int_to_rgba out
 ```
 
 ::::
 :::::
 
-> **Credits**: Aksiome, theogiraudet
+---
+
+## Integer providers
+
+The following integer providers are available in this module.
+
+---
+
+### Mix
+
+```{feature} bs.color:mix
+```
+
+*Example: get the color halfway between red and blue*
+
+```mcfunction
+# Once
+data modify storage bs.color:mix in set value {from:16711680,to:255,ratio:0.5f}
+data modify storage bs.color:mix out set compute default integer bs.color:mix
+
+# See the result
+data get storage bs.color:mix out
+```
+
+---
+
+### Mix Oklab
+
+````{feature} bs.color:mix_oklab
+```{admonition} Heavier than the simple mix
+:class: warning
+
+This provider costs more than `bs.color:mix`. Use it only when you need a better-looking gradient.
+```
+````
+
+*Example: get the color halfway between red and blue, as the eye sees it*
+
+```mcfunction
+# Once
+data modify storage bs.color:mix_oklab in set value {from:16711680,to:255,ratio:0.5f}
+data modify storage bs.color:mix_oklab out set compute default integer bs.color:mix_oklab
+
+# See the result
+data get storage bs.color:mix_oklab out
+```
 
 ---
 

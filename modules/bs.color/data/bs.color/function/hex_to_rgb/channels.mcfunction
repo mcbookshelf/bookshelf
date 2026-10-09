@@ -13,10 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute store result score $color.hex_to_int bs.out run data get storage bs:const color.hex_values.$(z)
-$execute store result score #r bs.ctx run data get storage bs:const color.hex_values.$(y)
-scoreboard players operation #r bs.ctx *= 256 bs.const
-scoreboard players operation $color.hex_to_int bs.out += #r bs.ctx
-$execute store result score #r bs.ctx run data get storage bs:const color.hex_values.$(x)
-scoreboard players operation #r bs.ctx *= 65536 bs.const
-execute store result storage bs:out color.hex_to_int int 1 run return run scoreboard players operation $color.hex_to_int bs.out += #r bs.ctx
+$execute store result storage bs.color:hex_to_rgb out[0] float 0.00392156862745098 run data get storage bs.color: byte.$(r)
+$execute store result storage bs.color:hex_to_rgb out[1] float 0.00392156862745098 run data get storage bs.color: byte.$(g)
+$execute store result storage bs.color:hex_to_rgb out[2] float 0.00392156862745098 run data get storage bs.color: byte.$(b)

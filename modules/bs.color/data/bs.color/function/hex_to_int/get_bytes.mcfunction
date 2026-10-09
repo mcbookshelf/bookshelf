@@ -13,9 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set value '$(color)'
-data modify storage bs:ctx x set string storage bs:ctx _ 1 3
-data modify storage bs:ctx y set string storage bs:ctx _ 3 5
-data modify storage bs:ctx z set string storage bs:ctx _ 5 7
-
-return run function bs.color:hex_to_int/convert_hexes with storage bs:ctx
+$data modify storage bs.color: r set from storage bs.color: byte.$(r)
+$data modify storage bs.color: g set from storage bs.color: byte.$(g)
+$data modify storage bs.color: b set from storage bs.color: byte.$(b)
+$data modify storage bs.color: a set from storage bs.color: byte.$(a)

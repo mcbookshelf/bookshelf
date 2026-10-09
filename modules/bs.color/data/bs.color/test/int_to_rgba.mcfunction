@@ -13,15 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:ctx _ set value $(color)
+function #bs.color:int_to_rgba.in {color:-1829606853}
+assert data storage bs.color:int_to_rgba {out:[0.9490196078f,0.4156862745f,0.231372549f,0.5725490196f]}
 
-execute store result score #r bs.ctx run data get storage bs:ctx _[0]
-execute store result score #g bs.ctx run data get storage bs:ctx _[1]
-execute store result score #b bs.ctx run data get storage bs:ctx _[2]
+function #bs.color:int_to_rgba.in {color:975882325}
+assert data storage bs.color:int_to_rgba {out:[0.1647058824f,0.7843137255f,0.3333333333f,0.2274509804f]}
 
-scoreboard players operation $color.rgb_to_int bs.out = #r bs.ctx
-scoreboard players operation $color.rgb_to_int bs.out *= 65536 bs.const
-scoreboard players operation #c bs.ctx = #g bs.ctx
-scoreboard players operation #c bs.ctx *= 256 bs.const
-scoreboard players operation $color.rgb_to_int bs.out += #c bs.ctx
-return run execute store result storage bs:out color.rgb_to_int int 1 run scoreboard players operation $color.rgb_to_int bs.out += #b bs.ctx
+function #bs.color:int_to_rgba.in {color:-849798720}
+assert data storage bs.color:int_to_rgba {out:[0.3490196078f,0.09803921569f,0.7529411765f,0.8039215686f]}
