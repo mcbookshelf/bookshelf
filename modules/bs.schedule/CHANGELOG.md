@@ -2,12 +2,12 @@
 
 ## Unreleased
 
-- ⚠️ Inputs and outputs were completely reworked to follow new conventions
-- ⚠️ `#bs.schedule:schedule` is split into `#bs.schedule:schedule/<append|replace|unique>`, which differ in what happens to the commands already scheduled with the same id
-- ⚠️ `#bs.schedule:schedule` no longer returns a unique identifier: commands are cancelled with their `id`
-- ⚠️ `#bs.schedule:cancel_all` and `#bs.schedule:cancel_one` are replaced by `#bs.schedule:cancel/all` and `#bs.schedule:cancel/one`, the latter cancelling every command the executing entity scheduled with the id instead of a single command
-- ⚠️ The `id` is required and is a string, it no longer matches any NBT
-- ⚠️ The delay is a [minecraft:time](https://minecraft.wiki/w/Argument_types#time) such as `10s`, or ticks: the `unit` argument is gone
+- ⚠️ Inputs and outputs were completely reworked to follow new conventions ([#601](https://github.com/mcbookshelf/bookshelf/pull/601))
+- ⚠️ `#bs.schedule:schedule` is split into `#bs.schedule:schedule/<append|replace|unique>`, which differ in what happens to the commands already scheduled with the same id ([#601](https://github.com/mcbookshelf/bookshelf/pull/601))
+- ⚠️ `#bs.schedule:schedule` no longer returns a unique identifier: commands are cancelled with their `id` ([#601](https://github.com/mcbookshelf/bookshelf/pull/601))
+- ⚠️ `#bs.schedule:cancel_all` and `#bs.schedule:cancel_one` are replaced by `#bs.schedule:cancel/all` and `#bs.schedule:cancel/one`, the latter cancelling every command the executing entity scheduled with the id instead of a single command ([#601](https://github.com/mcbookshelf/bookshelf/pull/601))
+- ⚠️ The `id` is required and is a string, it no longer matches any NBT ([#601](https://github.com/mcbookshelf/bookshelf/pull/601))
+- ⚠️ The delay is a [minecraft:time](https://minecraft.wiki/w/Argument_types#time) such as `10s`, or ticks: the `unit` argument is gone ([#601](https://github.com/mcbookshelf/bookshelf/pull/601))
 
 ## `v3.0.0`
 
