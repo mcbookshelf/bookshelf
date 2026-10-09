@@ -12,9 +12,9 @@ Bookshelf follows a few conventions. They make the code easier to read and under
 
       *Example: `function/<feature>/<my_function>.mcfunction`*
 *   - **Data storage**
-    - Use snake_case. Inputs and outputs go in the storage of their feature. Other data goes in the storage of the module
+    - Use snake_case. Inputs and outputs go in the storage of their feature, or of their [group](#contribute-groups). Other data goes in the storage of the module
 
-      *Example: `bs.<module>:<feature> in` or `bs.<module>: <my_key>`*
+      *Example: `bs.<module>:<feature> in`, `bs.<module>:<group> in`, or `bs.<module>: <my_key>`*
 *   - **Objectives**
     - Use snake_case and the `bs.` prefix. Create an objective only if no [shared objective](#contribute-shared-resources) fits
 

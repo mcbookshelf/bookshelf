@@ -70,6 +70,8 @@ The build generates the function tags from `module.bs`. Don't write `tags/functi
 
 A **group** is a folder that contains several features. In `bs.hitbox`, `get_block` is a group. It holds `get_block/collision`, `get_block/outline`, and other features. Put the files that only these features use in the group folder. A feature can't also be a group.
 
+The features of a group must take the same inputs and write the same outputs. They [share the storage of the group](#contribute-groups). Don't use a group only to sort features that have close names.
+
 Any file outside a feature folder or a group folder is shared. The whole module can use it.
 
 ---

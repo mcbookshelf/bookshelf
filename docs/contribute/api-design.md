@@ -18,6 +18,8 @@ execute store result score #r bs.ctx run compute default integer bs.bitwise:and
 - Keep the arguments few and required. If a feature does two things, split it into two features.
 - When an argument is a command, name it `run` and make it a string.
 
+The features of a [group](#contribute-groups) read their inputs from the storage of the group: `<module>:<group>`.
+
 ---
 
 ## Outputs
@@ -26,7 +28,7 @@ A feature returns its outputs in one or more of these ways. Don't use scores as 
 
 :::{list-table}
 *   - **`storage`**
-    - Data in the storage `<module>:<feature>`, at the path `out`
+    - Data in the storage `<module>:<feature>`, at the path `out`. The features of a [group](#contribute-groups) write to the storage of the group: `<module>:<group>`
 
       *Example: `data get storage bs.xp:get_progress out`*
 *   - **`result`**
@@ -45,6 +47,23 @@ If a function declares a `success` or a `result`, end every path with a `return`
 
 - Use `return fail` when the function fails. `return 0` is a success that returns 0.
 - A function that ends without a `return` gives no result.
+
+---
+
+(contribute-groups)=
+## Groups
+
+A group is a set of features that take the same inputs and write the same outputs. The storage belongs to the group, not to each feature. Users set the inputs once, then call any feature of the group:
+
+```mcfunction
+data modify storage bs.hitbox:overlaps in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
+execute as @n[type=minecraft:cow] if function #bs.hitbox:overlaps/block run say In this block
+execute as @n[type=minecraft:cow] if function #bs.hitbox:overlaps/blocks run say In a block
+```
+
+- Every feature of a group declares the same `input` and `output` storages. The build reports a feature that doesn't.
+- Only the storages count. The features of a group can use a different context, and return a different `result`, `success`, or `state`.
+- Don't group features that take different inputs or write different outputs, even when their names are close. Keep them as separate features: `is_in_block` and `is_in_entity`, not `is_in/block` and `is_in/entity`.
 
 ---
 

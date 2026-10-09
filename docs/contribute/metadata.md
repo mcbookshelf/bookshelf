@@ -101,13 +101,13 @@ The lines that start with `context`, `input`, and `output` describe how to use t
 *   - `context`
     - How the feature must run: `executor`, `position`, `rotation`, or `dimension`
 *   - `input arguments`
-    - Data that the feature reads from the storage `<module>:<feature>`, at the path `in`. Users can also [call the feature with a macro](#contribute-calling-a-feature). Optional entries, marked with `?`, go in a `with` argument
+    - Data that the feature reads from the storage `<module>:<feature>`, or `<module>:<group>` in a [group](#contribute-groups), at the path `in`. Users can also [call the feature with a macro](#contribute-calling-a-feature). Optional entries, marked with `?`, go in a `with` argument
 *   - `input storage`
     - Same as `input arguments`, without the macro
 *   - `input macro`
     - The arguments of a `__macro__` function that you write
 *   - `output storage`
-    - Data that the feature writes to the storage `<module>:<feature>`, at the path `out`
+    - Data that the feature writes to the storage `<module>:<feature>`, or `<module>:<group>` in a [group](#contribute-groups), at the path `out`
 *   - `output result`
     - The number that the feature returns
 *   - `output success`
@@ -116,8 +116,10 @@ The lines that start with `context`, `input`, and `output` describe how to use t
     - Anything else, in plain words. Use it after `context`, `input`, or `output`
 :::
 
-To share a storage between several features, name it:
+The features of a group share their storage without a name. The build reports a group whose features declare different input or output storages.
+
+To use another storage, name it:
 
 ```text
-output storage bs.hitbox:get_block out: [[double] @ 6..7]
+output storage bs.<module>:<name> out: [[double] @ 7]
 ```
