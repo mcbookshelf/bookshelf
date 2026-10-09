@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #r bs.ctx run function bs.hitbox:utils/provide_blocks with storage bs.hitbox:overlaps/blocks in
+execute store result score #r bs.ctx run function bs.hitbox:utils/provide_blocks with storage bs.hitbox:overlaps in
 execute if score #r bs.ctx matches 1 if function bs.hitbox:overlaps/blocks/custom/block run return 1
 scoreboard players add #k bs.ctx 1
 execute if score #k bs.ctx <= #w bs.ctx positioned ~ ~ ~1 run return run function bs.hitbox:overlaps/blocks/custom/z

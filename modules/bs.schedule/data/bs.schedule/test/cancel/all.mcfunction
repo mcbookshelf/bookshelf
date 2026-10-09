@@ -13,10 +13,24 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players set #ward.schedule.ca bs.data 0
-function #bs.schedule:schedule {run:"scoreboard players add #ward.schedule.ca bs.data 1",with:{}}
-function #bs.schedule:schedule {run:"scoreboard players add #ward.schedule.ca bs.data 1",with:{id:{cancel:"all"}}}
-function #bs.schedule:schedule {run:"scoreboard players add #ward.schedule.ca bs.data 1",with:{id:{cancel:"all"}}}
-function #bs.schedule:cancel_all {with:{id:{cancel:"all"}}}
+data remove storage ward.schedule:cancel_all out
 
-await score #ward.schedule.ca bs.data matches 1
+# Commands with the id are cancelled for every entity, the others are kept
+summon minecraft:armor_stand ~ ~ ~ {Tags:["ward.schedule.cancel_all"]}
+data modify storage bs.schedule:schedule in set value {run:"data modify storage ward.schedule:cancel_all out.cancelled set value 1b",time:2,id:"ward.schedule.cancel_all"}
+function #bs.schedule:schedule/append
+execute as @n[type=minecraft:armor_stand,tag=ward.schedule.cancel_all] run function #bs.schedule:schedule/append
+data modify storage bs.schedule:schedule in set value {run:"data modify storage ward.schedule:cancel_all out.kept set value 1b",time:3,id:"ward.schedule.cancel_all.kept"}
+function #bs.schedule:schedule/append
+data modify storage bs.schedule:cancel in set value {id:"ward.schedule.cancel_all"}
+function #bs.schedule:cancel/all
+await data storage ward.schedule:cancel_all out.kept
+assert not data storage ward.schedule:cancel_all out.cancelled
+
+# The id can be given as an argument
+data modify storage bs.schedule:schedule in set value {run:"data modify storage ward.schedule:cancel_all out.cancelled set value 1b",time:2,id:"ward.schedule.cancel_all.in"}
+function #bs.schedule:schedule/append
+function #bs.schedule:cancel/all.in {id:"ward.schedule.cancel_all.in"}
+await delay 3t
+assert not data storage ward.schedule:cancel_all out.cancelled
+kill @e[type=minecraft:armor_stand,tag=ward.schedule.cancel_all]

@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 
 # minecraft:painting
-data modify storage bs.hitbox:get_entity out set value [[-.03125f,0f,-.03125f,.03125f,0f,.03125f]]
+data modify storage bs.hitbox:get_entity out set value [[-.03125f,0f,-.03125f,.03125f,0f,.03125f,1f]]
 execute at @s rotated 0 -90 store result storage bs.hitbox:get_entity out[0][1] float -.5 store result storage bs.hitbox:get_entity out[0][4] float .5 run function bs.hitbox:get_entity/registry/painting/8
 execute at @s positioned ~.25 ~ ~ if entity @s[dx=0] at @s rotated -90 0 store result storage bs.hitbox:get_entity out[0][0] float -.5 store result storage bs.hitbox:get_entity out[0][3] float .5 run function bs.hitbox:get_entity/registry/painting/8
 execute at @s positioned ~.25 ~ ~ unless entity @s[dx=0] at @s rotated 0 0 store result storage bs.hitbox:get_entity out[0][2] float -.5 store result storage bs.hitbox:get_entity out[0][5] float .5 run function bs.hitbox:get_entity/registry/painting/8

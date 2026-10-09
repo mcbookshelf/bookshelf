@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs.hitbox:overlaps/blocks in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
+data modify storage bs.hitbox:overlaps in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
 
 # A cow is 0.9 wide and 1.4 high: it reaches the blocks around its own, touching faces left out
 # Each check runs both ways: from the real hitbox, then from the boxes of the provider
@@ -70,17 +70,17 @@ fill ~-2 ~-1 ~-2 ~2 ~3 ~2 minecraft:air strict
 setblock ~ ~1 ~ minecraft:water strict
 execute as @n[tag=ward.hitbox.cow] run assert result 0 run function #bs.hitbox:overlaps/blocks
 execute as @n[tag=ward.hitbox.cow] at @s run assert result 0 run function bs.hitbox:overlaps/blocks/custom
-data modify storage bs.hitbox:overlaps/blocks in.blocks set value "#bs.hitbox:get_block/collision_with_fluid"
+data modify storage bs.hitbox:overlaps in.blocks set value "#bs.hitbox:get_block/collision_with_fluid"
 execute as @n[tag=ward.hitbox.cow] run assert result 1 run function #bs.hitbox:overlaps/blocks
 execute as @n[tag=ward.hitbox.cow] at @s run assert result 1 run function bs.hitbox:overlaps/blocks/custom
-data modify storage bs.hitbox:overlaps/blocks in.entities set value "#bs.hitbox:get_entity/solid"
+data modify storage bs.hitbox:overlaps in.entities set value "#bs.hitbox:get_entity/solid"
 execute as @n[tag=ward.hitbox.cow] run assert result 0 run function #bs.hitbox:overlaps/blocks
 execute as @n[tag=ward.hitbox.cow] at @s run assert result 0 run function bs.hitbox:overlaps/blocks/custom
-data modify storage bs.hitbox:overlaps/blocks in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
+data modify storage bs.hitbox:overlaps in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
 
 # The cells to check enclose every box of the entity, counted from its own cell
 data modify storage bs.hitbox: rel set value [-.5d,-.5d,-.5d]
-data modify storage bs.hitbox:get_entity out set value [[-.25f,0f,-.25f,.25f,.5f,.25f],[-.25f,2.2f,-1.25f,.25f,2.7f,.25f]]
+data modify storage bs.hitbox:get_entity out set value [[-.25f,0f,-.25f,.25f,.5f,.25f,1f],[-.25f,2.2f,-1.25f,.25f,2.7f,.25f,1f]]
 scoreboard players set #m bs.ctx 2
 assert result 0 run compute default integer bs.hitbox:_overlaps/blocks/min_x
 assert result 0 run compute default integer bs.hitbox:_overlaps/blocks/min_y
@@ -102,7 +102,7 @@ assert result 0 run function bs.hitbox:overlaps/blocks/custom/block
 scoreboard players set #i bs.ctx 1
 scoreboard players set #j bs.ctx 0
 scoreboard players set #m bs.ctx 1
-data modify storage bs.hitbox:get_entity out set value [[1.25f,.25f,.25f,1.75f,.75f,.75f]]
+data modify storage bs.hitbox:get_entity out set value [[1.25f,.25f,.25f,1.75f,.75f,.75f,1f]]
 data modify storage bs.hitbox:get_block out set value [[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[0d,0d,0d,1d,1d,1d,1d]]
 assert result 1 run function bs.hitbox:overlaps/blocks/custom/block
 assert result 1 run function bs.hitbox:overlaps/blocks/hitbox/block
@@ -111,7 +111,7 @@ assert result 0 run function bs.hitbox:overlaps/blocks/custom/block
 assert result 0 run function bs.hitbox:overlaps/blocks/hitbox/block
 
 # An entity with no hitbox is in no block
-data modify storage bs.hitbox:overlaps/blocks in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
+data modify storage bs.hitbox:overlaps in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
 setblock ~ ~ ~ minecraft:stone strict
 summon minecraft:armor_stand ~.5 ~.5 ~.5 {Tags:["ward.hitbox.armor_stand.marker"],Marker:1b}
 execute as @n[tag=ward.hitbox.armor_stand.marker] run assert result 0 run function #bs.hitbox:overlaps/blocks

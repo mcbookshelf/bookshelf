@@ -35,6 +35,19 @@ def _anchor(name: str, resource: str, *, shared: bool) -> str:
     return f"{anchor}-{resource.replace('/', '-')}" if shared else anchor
 
 
+def _group(name: str) -> str:
+    """The group of a feature: the folder it lies in, empty for a feature on its own."""
+    return name.rpartition("/")[0]
+
+
+def _interface(feature: model.Feature, role: Role) -> frozenset[tuple[str, str]]:
+    return frozenset(
+        (slot.target.display, str(slot.type))
+        for slot in feature.of(role)
+        if slot.target is not None
+    )
+
+
 def _module_url(namespace: str) -> str:
     return f"{constants.DOCS_PAGES_URL}/modules/{model.short(namespace)}.html"
 
@@ -106,7 +119,7 @@ class _FeatureBuilder:
 
     def target(self, storage: syntax.Storage | None, role: Role, line: int) -> model.Target:
         namespace = self.module.id
-        id_ = f"{namespace}:{self.name}"
+        id_ = f"{namespace}:{_group(self.name) or self.name}"
         keys: tuple[str, ...] = ("in" if role is Role.INPUT else "out",)
         if storage is not None and storage.id:
             id_ = storage.id
@@ -227,6 +240,7 @@ class _Builder:
                 continue
             shared = names.count(name) > 1
             features[key] = self.feature(node, name, documentation, shared=shared)
+        self.validate_groups(tuple(features.values()))
 
         return model.Module(
             id=self.id,
@@ -325,6 +339,21 @@ class _Builder:
             deprecated=properties["deprecated"].value,
             experimental=properties["experimental"].value,
         )
+
+    def validate_groups(self, features: tuple[model.Feature, ...]) -> None:
+        """The features of a group share one input and one output."""
+        firsts: dict[tuple[str, str], model.Feature] = {}
+        for feature in features:
+            if not (group := _group(feature.name)):
+                continue
+            first = firsts.setdefault((feature.resource, group), feature)
+            for role in (Role.INPUT, Role.OUTPUT):
+                if _interface(feature, role) != _interface(first, role):
+                    message = (
+                        f"'{feature.name}' does not have the {role} of '{first.name}': "
+                        "the features of a group share it, move it out of the group otherwise"
+                    )
+                    self.report.error(message, feature.line)
 
     # --- variables ---------------------------------------------------------- --
 

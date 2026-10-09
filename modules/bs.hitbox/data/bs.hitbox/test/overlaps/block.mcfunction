@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs.hitbox:overlaps/block in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
+data modify storage bs.hitbox:overlaps in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
 
 # A cow is 0.9 wide and 1.4 high: in a full block when it sinks in, not when it stands on it
 setblock ~ ~ ~ minecraft:stone strict
@@ -51,7 +51,7 @@ kill @e[tag=ward.hitbox.cow.slab_in]
 setblock ~ ~ ~ minecraft:water strict
 summon minecraft:cow ~.5 ~.5 ~.5 {Tags:["ward.hitbox.cow.water"],NoAI:1b,NoGravity:1b}
 execute as @n[tag=ward.hitbox.cow.water] run assert result 0 run function #bs.hitbox:overlaps/block
-data modify storage bs.hitbox:overlaps/block in.blocks set value "#bs.hitbox:get_block/collision_with_fluid"
+data modify storage bs.hitbox:overlaps in.blocks set value "#bs.hitbox:get_block/collision_with_fluid"
 execute as @n[tag=ward.hitbox.cow.water] run assert result 1 run function #bs.hitbox:overlaps/block
 setblock ~ ~ ~ minecraft:air strict
 execute as @n[tag=ward.hitbox.cow.water] run assert result 0 run function #bs.hitbox:overlaps/block
@@ -64,7 +64,7 @@ execute as @n[tag=ward.hitbox.cow.water] run assert result 1 run function #bs.hi
 
 # An entity provider giving no box leaves the entity out
 setblock ~ ~ ~ minecraft:stone strict
-data modify storage bs.hitbox:overlaps/block in.entities set value "#bs.hitbox:get_entity/solid"
+data modify storage bs.hitbox:overlaps in.entities set value "#bs.hitbox:get_entity/solid"
 execute as @n[tag=ward.hitbox.cow.water] run assert result 0 run function #bs.hitbox:overlaps/block
 execute as @n[tag=ward.hitbox.cow.water] run assert result 0 run function bs.hitbox:overlaps/block/cube/custom
 
@@ -75,17 +75,17 @@ scoreboard players set #j bs.ctx 0
 scoreboard players set #k bs.ctx 0
 scoreboard players set #m bs.ctx 8
 scoreboard players set #n bs.ctx 24
-data modify storage bs.hitbox:get_entity out set value [[10f,10f,10f,11f,11f,11f],[10f,10f,10f,11f,11f,11f],[10f,10f,10f,11f,11f,11f],[10f,10f,10f,11f,11f,11f],[10f,10f,10f,11f,11f,11f],[10f,10f,10f,11f,11f,11f],[10f,10f,10f,11f,11f,11f],[-.25f,-.25f,-.25f,.25f,.25f,.25f]]
+data modify storage bs.hitbox:get_entity out set value [[10f,10f,10f,11f,11f,11f,1f],[10f,10f,10f,11f,11f,11f,1f],[10f,10f,10f,11f,11f,11f,1f],[10f,10f,10f,11f,11f,11f,1f],[10f,10f,10f,11f,11f,11f,1f],[10f,10f,10f,11f,11f,11f,1f],[10f,10f,10f,11f,11f,11f,1f],[-.25f,-.25f,-.25f,.25f,.25f,.25f,1f]]
 data modify storage bs.hitbox:get_block out set value [[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[5d,5d,5d,6d,6d,6d,1d],[0d,0d,0d,1d,1d,1d,1d]]
 assert predicate bs.hitbox:_overlaps/overlap
 assert predicate bs.hitbox:_overlaps/cube
 data modify storage bs.hitbox:get_block out[23] set value [5d,5d,5d,6d,6d,6d,1d]
 execute if predicate bs.hitbox:_overlaps/overlap run fail "no block box overlaps the entity"
-data modify storage bs.hitbox:get_entity out[7] set value [10f,10f,10f,11f,11f,11f]
+data modify storage bs.hitbox:get_entity out[7] set value [10f,10f,10f,11f,11f,11f,1f]
 execute if predicate bs.hitbox:_overlaps/cube run fail "no entity box overlaps the full block"
 
 # Boxes past the ones a provider gave are left out
-data modify storage bs.hitbox:get_entity out set value [[10f,10f,10f,11f,11f,11f],[-.25f,-.25f,-.25f,.25f,.25f,.25f]]
+data modify storage bs.hitbox:get_entity out set value [[10f,10f,10f,11f,11f,11f,1f],[-.25f,-.25f,-.25f,.25f,.25f,.25f,1f]]
 data modify storage bs.hitbox:get_block out set value [[5d,5d,5d,6d,6d,6d,1d],[0d,0d,0d,1d,1d,1d,1d]]
 scoreboard players set #m bs.ctx 1
 scoreboard players set #n bs.ctx 2
@@ -95,7 +95,7 @@ scoreboard players set #n bs.ctx 1
 execute if predicate bs.hitbox:_overlaps/overlap run fail "a box past the count of the block is checked"
 
 # An entity with no hitbox is in no block
-data modify storage bs.hitbox:overlaps/block in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
+data modify storage bs.hitbox:overlaps in set value {blocks:"#bs.hitbox:get_block/collision",entities:"#bs.hitbox:get_entity/sized"}
 setblock ~ ~ ~ minecraft:stone strict
 summon minecraft:armor_stand ~.5 ~.5 ~.5 {Tags:["ward.hitbox.armor_stand.marker"],Marker:1b}
 execute as @n[tag=ward.hitbox.armor_stand.marker] run assert result 0 run function #bs.hitbox:overlaps/block
