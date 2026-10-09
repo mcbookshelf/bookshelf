@@ -1,0 +1,360 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../contribute/maintainers.md:1 a394a668d74a4bd5962332f5423214da
+msgid "🛡️ Maintainer guide"
+msgstr "🛡️ 维护者指南"
+
+#: ../../contribute/maintainers.md:3 7b5f6c25c61a4739b514eb7063562a40
+msgid ""
+"This page is for maintainers. It explains how to write commit messages "
+"and how to version, release, and publish modules and bundles."
+msgstr "本页面向维护者。它介绍如何编写提交信息，以及如何为模块和捆绑包设置版本号、创建发布并发布到各平台。"
+
+#: ../../contribute/maintainers.md:7 11c23504f62b4c55a13b2c034341b370
+msgid "Commit messages"
+msgstr "提交信息"
+
+#: ../../contribute/maintainers.md:9 3032f870169c4a66a366c4c0aa00f296
+msgid ""
+"Contributors don't need to follow these rules: maintainers squash each "
+"pull request into one commit when they merge it."
+msgstr "贡献者无需遵循这些规则：维护者在合并时会把每个拉取请求压缩为一次提交。"
+
+#: ../../contribute/maintainers.md:11 664d2a9d4a434e7da6679810252caba4
+msgid ""
+"Commit messages follow [Conventional "
+"Commits](https://www.conventionalcommits.org). Start each message with an"
+" emoji that shows the type of change:"
+msgstr "提交消息遵循[约定式提交](https://www.conventionalcommits.org)。每条消息以一个表示变更类型的表情符号开头："
+
+#: ../../contribute/maintainers.md:18 ad74a639ceb14b9996031b3f94fb9966
+msgid "`✨ feat`"
+msgstr "`✨ feat`"
+
+#: ../../contribute/maintainers.md:19 1dda6f0367774c32b2323e9f2cd81c17
+msgid "Adds a feature"
+msgstr "添加新特性"
+
+#: ../../contribute/maintainers.md:20 7b76eb0b32224ecc8fb4ca5750813ce6
+msgid "`🐛 fix`"
+msgstr "`🐛 fix`"
+
+#: ../../contribute/maintainers.md:21 f1fb85afedae42938dd259e6114bd2e2
+msgid "Fixes a bug"
+msgstr "修复错误"
+
+#: ../../contribute/maintainers.md:22 fc78fbb5e23d4dbeadbbed711cefe68a
+msgid "`⚡️ perf`"
+msgstr "`⚡️ perf`"
+
+#: ../../contribute/maintainers.md:23 aa335171006849d5a86621165e8f1980
+msgid "Makes the code faster"
+msgstr "让代码运行更快"
+
+#: ../../contribute/maintainers.md:24 f30fbba40b284a4e826181f102e3ee9b
+msgid "`♻️ refactor`"
+msgstr "`♻️ refactor`"
+
+#: ../../contribute/maintainers.md:25 186bb5e703f148bab380db3d15e908c9
+msgid "Changes the code but not its behavior"
+msgstr "修改代码但不改变其行为"
+
+#: ../../contribute/maintainers.md:26 d7455065253f48b4a87215535d5305e3
+msgid "`🎨 style`"
+msgstr "`🎨 style`"
+
+#: ../../contribute/maintainers.md:27 6f13652c6e0d42e7ad22564cb6ef7ce4
+msgid ""
+"Changes the code style but not its behavior, for example formatting or "
+"spacing"
+msgstr "修改代码风格但不改变其行为，例如格式或空格"
+
+#: ../../contribute/maintainers.md:28 00d8bd522f6d45fd8fadf05e2fbc2efa
+msgid "`📝 docs`"
+msgstr "`📝 docs`"
+
+#: ../../contribute/maintainers.md:29 72c347ea4b514116a5a5a6e2241d5a59
+msgid "Changes the documentation"
+msgstr "修改文档"
+
+#: ../../contribute/maintainers.md:30 68737a3b88214a61802f3b69bd40f12c
+msgid "`🧪 test`"
+msgstr "`🧪 test`"
+
+#: ../../contribute/maintainers.md:31 3ff1826e91e24007b0e4b85f3fff8c20
+msgid "Adds or changes tests"
+msgstr "添加或修改测试"
+
+#: ../../contribute/maintainers.md:32 33996028e1e342b89b18acba6a317af6
+msgid "`🔨 build`"
+msgstr "`🔨 build`"
+
+#: ../../contribute/maintainers.md:33 5376518fde754d1b8f468ec13cd48c11
+msgid "Changes the scripts that build the project"
+msgstr "修改构建项目的脚本"
+
+#: ../../contribute/maintainers.md:34 3718066c117542008d0663f496a7fdf2
+msgid "`⚙️ ci`"
+msgstr "`⚙️ ci`"
+
+#: ../../contribute/maintainers.md:35 02225e47f9af4c30bbf0262a222d4c07
+msgid "Changes the continuous integration workflows or scripts"
+msgstr "修改持续集成工作流或脚本"
+
+#: ../../contribute/maintainers.md:36 7bd6b30196c343339b6a9b85173a813f
+msgid "`🛠️ chore`"
+msgstr "`🛠️ chore`"
+
+#: ../../contribute/maintainers.md:37 a54075c10909439a889bd8c6d4981654
+msgid "Routine work, such as version bumps, metadata updates, or asset changes"
+msgstr "日常维护，例如版本号更新、元数据更新或资源变更"
+
+#: ../../contribute/maintainers.md:40 bb2a0e56c1fe41f793f40a627aacea10
+msgid ""
+"Add a **scope** to show which part of the project changes. For a breaking"
+" change, add a `!` after the type or the scope:"
+msgstr "添加 **作用域**（scope）来说明项目的哪一部分发生了变化。对于破坏性变更，在类型或作用域之后添加 `!`："
+
+#: ../../contribute/maintainers.md:49 43f64af4984e4fbb8990a74d1620be05
+msgid "Versioning"
+msgstr "版本管理"
+
+#: ../../contribute/maintainers.md:51 87e0bcf94db54678b1961b4f5a925e1a
+msgid ""
+"Each module and each bundle has its own version. You find it in the "
+"`module.bs` or `bundle.bs` file."
+msgstr "每个模块和每个捆绑包都有自己的版本号。你可以在 `module.bs` 或 `bundle.bs` 文件中找到它。"
+
+#: ../../contribute/maintainers.md:53 6e59335b70ed478c9c72b27cc8349e75
+msgid ""
+"A module is **released** when its version reaches `1.0.0`. Before that, "
+"only nightly builds include it."
+msgstr "模块的版本达到 `1.0.0` 后即为 **已发布**。在此之前，只有每夜构建包含它。"
+
+#: ../../contribute/maintainers.md:54 8f142ad9a39a40d89a4c9a97f7eee760
+msgid ""
+"The version of a bundle follows its modules. A module that leaves the "
+"bundle is a major change. A module that joins it is a minor change. "
+"Otherwise, the bundle takes the highest change of its modules."
+msgstr "捆绑包的版本跟随其模块。模块离开捆绑包属于主版本变更。模块加入捆绑包属于次版本变更。其他情况下，捆绑包采用其模块中最高级别的变更。"
+
+#: ../../contribute/maintainers.md:55 2d0eac76277649d5857e02856ad4c0ac
+msgid ""
+"The version of a release is the version of the bundle that contains every"
+" module. The release tag adds the supported Minecraft version: "
+"`v5.0.0+26.3`."
+msgstr "发布的版本号就是包含所有模块的捆绑包的版本号。发布标签还会加上所支持的 Minecraft 版本：`v5.0.0+26.3`。"
+
+#: ../../contribute/maintainers.md:58 2b7aa2c42fc0437e98a1eac76ddd35e3
+msgid "Version bumps"
+msgstr "版本升级"
+
+#: ../../contribute/maintainers.md:60 0c621f70932647ccbb9507ee68d3c156
+msgid ""
+"Modules follow [semantic versioning](https://semver.org). The "
+"`Unreleased` section of the [changelog](project:changelog.md) sets the "
+"next version of the module:"
+msgstr ""
+"模块遵循[语义化版本](https://semver.org)。[更新日志](project:changelog.md)的 "
+"`Unreleased` 章节决定模块的下一个版本："
+
+#: ../../contribute/maintainers.md:63 fe5590e7036f414aae7c7130db543167
+msgid "**Major**"
+msgstr "**主版本（Major）**"
+
+#: ../../contribute/maintainers.md:64 582cd39d633c4e56bd819e9261ab7ddf
+msgid "At least one line has a `⚠️`"
+msgstr "至少有一行带有 `⚠️`"
+
+#: ../../contribute/maintainers.md:65 fa642145f1724350a4f76450de8f549a
+msgid "**Minor**"
+msgstr "**次版本（Minor）**"
+
+#: ../../contribute/maintainers.md:66 b219850e4fd946d68c475f4fe318c08b
+msgid "At least one line has a `✨`"
+msgstr "至少有一行带有 `✨`"
+
+#: ../../contribute/maintainers.md:67 c638d294f9394e86861f1aff192b59e0
+msgid "**Patch**"
+msgstr "**修订版本（Patch）**"
+
+#: ../../contribute/maintainers.md:68 e27f3444577646669ddf8f300828abc0
+msgid "Any other line"
+msgstr "任何其他行"
+
+#: ../../contribute/maintainers.md:71 0ea965b55f214025a059d573c6e3e4d3
+msgid ""
+"The release process then renames the section to the new version and adds "
+"an empty `Unreleased` section."
+msgstr "随后发布流程会将该部分重命名为新版本，并添加一个空的 `Unreleased` 部分。"
+
+#: ../../contribute/maintainers.md:73 c3c229366dfb401b9b16cd2a4a9dc8f6
+msgid ""
+"When a dependency of the module gets a new version, the module gets one "
+"too, of the same level. If the module has no change of its own, the "
+"release process adds a `🛠️ Bumped as ...` line."
+msgstr "当模块的某个依赖项获得新版本时，模块也会获得一个相同级别的新版本。如果模块自身没有变更，发布流程会添加一行 `🛠️ Bumped as ...`。"
+
+#: ../../contribute/maintainers.md:77 0e2748b1c1d34bc8b436cbf5e6d70094
+msgid "Release flow"
+msgstr "发布流程"
+
+#: ../../contribute/maintainers.md:79 79406640590a4df283181f4837ebfc34
+msgid ""
+"**Prepare**: run the `release-pr.yml` workflow. It sets the new "
+"versions and renames the `Unreleased` sections of the changelogs. Then it"
+" opens a pull request from a `release/<tag>` branch, with the release "
+"notes."
+msgstr ""
+"**准备**：运行 `release-pr.yml` 工作流。它会设置新版本号，并重命名各更新日志的 `Unreleased` 部分。然后它从"
+" `release/<tag>` 分支创建一个附带发布说明的拉取请求。"
+
+#: ../../contribute/maintainers.md:80 1a6482c7801347289d2c57299fb147eb
+msgid ""
+"**Check**: the pull request checks the versions. It also checks that "
+"`master` didn't change in the meantime. If it did, run the workflow "
+"again."
+msgstr "**检查**：拉取请求会检查版本号。它还会检查 `master` 在此期间是否没有变动。如果有变动，请重新运行工作流。"
+
+#: ../../contribute/maintainers.md:81 d360abb2fc4548338116d711f6d9bb7a
+msgid ""
+"**Merge**: merge the pull request. This creates the GitHub release with "
+"the packs. It moves the `v<version>` tag and the `latest` branch. Then it"
+" publishes the packs."
+msgstr ""
+"**合并**：合并拉取请求。这会创建包含各个包的 GitHub 发布，并移动 `v<version>` 标签和 `latest` "
+"分支，然后发布这些包。"
+
+#: ../../contribute/maintainers.md:83 03ff309242f24b98b7dde9382aee1897
+msgid ""
+"A push to `master` that isn't a release replaces the `nightly` pre-"
+"release. A nightly build contains every module. This includes the modules"
+" under `1.0.0` and the experimental features."
+msgstr ""
+"向 `master` 的推送如果不是发布，就会替换 `nightly` 预发布。每夜构建包含所有模块，其中包括低于 `1.0.0` "
+"的模块和实验性特性。"
+
+#: ../../contribute/maintainers.md:85 04b12e53af9f4dd39f62382ebe330053
+msgid "You can run the same steps on your computer:"
+msgstr "你可以在自己的电脑上运行相同的步骤："
+
+#: ../../contribute/maintainers.md:88 dad616ebd2ae481f81d010b90e370cff
+msgid "`uv run bump`"
+msgstr "`uv run bump`"
+
+#: ../../contribute/maintainers.md:89 54fef21f0c784f95beb0b4086502b3a6
+msgid "Set the versions that the changes since the last release require"
+msgstr "设置自上一次发布以来的变更所需的版本号"
+
+#: ../../contribute/maintainers.md:90 e5bbc42371b04e738257df1068b2cafd
+msgid "`uv run bump --check`"
+msgstr "`uv run bump --check`"
+
+#: ../../contribute/maintainers.md:91 1f12434d9c5e4226a58bbcb829595b5d
+msgid "List the versions that are wrong. Change nothing"
+msgstr "列出错误的版本号。不做任何更改"
+
+#: ../../contribute/maintainers.md:92 018bbc58fef14b028a78338ded7b0252
+msgid "`uv run notes`"
+msgstr "`uv run notes`"
+
+#: ../../contribute/maintainers.md:93 425aa49ce6a147b59b8c9aa673e2e03f
+msgid "Write the release notes from the changelogs"
+msgstr "根据更新日志编写发布说明"
+
+#: ../../contribute/maintainers.md:94 46d5fdcad7b0472584056d494b7ab79b
+msgid "`uv run release`"
+msgstr "`uv run release`"
+
+#: ../../contribute/maintainers.md:95 7a4e715a25a2404a82b151a184a60e12
+msgid "Build the packs in the `release` folder"
+msgstr "在 `release` 文件夹中构建各个包"
+
+#: ../../contribute/maintainers.md:96 3effd1a4686c496aacf9995948652084
+msgid "`uv run publish`"
+msgstr "`uv run publish`"
+
+#: ../../contribute/maintainers.md:97 5dae97c02cc84fae9f18dba214ff857a
+msgid ""
+"Send the packs of the `release` folder to Modrinth and Smithed. The "
+"command reads the `MODRINTH_TOKEN` and `SMITHED_TOKEN` environment "
+"variables"
+msgstr ""
+"将 `release` 文件夹中的包发送到 Modrinth 和 Smithed。该命令读取 `MODRINTH_TOKEN` 和 "
+"`SMITHED_TOKEN` 环境变量"
+
+#: ../../contribute/maintainers.md:102 1b58b66eaecc4c67a9e45fe9a8a3258e
+msgid "Workflows"
+msgstr "工作流"
+
+#: ../../contribute/maintainers.md:105 8727367d91d44613bb72bdfa44634e05
+msgid "`review.yml`"
+msgstr "`review.yml`"
+
+#: ../../contribute/maintainers.md:106 7e25f4190d454b368de1750eb9485ec6
+msgid "Runs `check` and `test` on every pull request and on `master`"
+msgstr "在每个拉取请求和 `master` 上运行 `check` 和 `test`"
+
+#: ../../contribute/maintainers.md:107 ef00b683687a43f3870a2817728fc5cf
+msgid "`release-pr.yml`"
+msgstr "`release-pr.yml`"
+
+#: ../../contribute/maintainers.md:108 83cf39ca77c746a78f1601b2151a895b
+msgid "Opens the release pull request. A maintainer starts it"
+msgstr "创建发布拉取请求。由维护者启动"
+
+#: ../../contribute/maintainers.md:109 a0d1be45608c4bf49bb2131933539d72
+msgid "`release-check.yml`"
+msgstr "`release-check.yml`"
+
+#: ../../contribute/maintainers.md:110 18fb720da5a34333b699e95a0afbb20b
+msgid "Checks a release pull request"
+msgstr "检查发布拉取请求"
+
+#: ../../contribute/maintainers.md:111 33e266cf4f10453b89d550e8c21ac299
+msgid "`release.yml`"
+msgstr "`release.yml`"
+
+#: ../../contribute/maintainers.md:112 9093c7fd95bf4a7ab39cf5f69ff00e4f
+msgid ""
+"Runs on each push to `master`. Creates the release if its tag has no "
+"release yet. Otherwise, replaces the nightly build"
+msgstr "每次向 `master` 推送时运行。如果其标签尚无对应的发布，则创建发布。否则替换每夜构建"
+
+#: ../../contribute/maintainers.md:113 e4317e938634495fad118fa80cb0f28f
+msgid "`publish-packs.yml`"
+msgstr "`publish-packs.yml`"
+
+#: ../../contribute/maintainers.md:114 43ed0ab38dd54f84b8ef15efdf9a2754
+msgid ""
+"Publishes a release to the platforms. The release starts it. A maintainer"
+" can also start it for a given tag"
+msgstr "将发布版本发布到各平台。由发布启动。维护者也可以针对指定标签启动它"
+
+#: ../../contribute/maintainers.md:115 4b5b116342934f038a406ec74723fde2
+msgid "`publish-pypi.yml`"
+msgstr "`publish-pypi.yml`"
+
+#: ../../contribute/maintainers.md:116 b0631a7a1f5c4038a575dac133b06cf8
+msgid "Publishes the `mcbookshelf` Python package when its version changes"
+msgstr "当 `mcbookshelf` Python 包的版本发生变化时发布该包"
+

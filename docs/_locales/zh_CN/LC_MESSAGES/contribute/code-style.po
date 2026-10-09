@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../contribute/code-style.md:1 20da2f560fa14d29918bb56266596fa6
+msgid "📖 Code style"
+msgstr "📖 代码风格"
+
+#: ../../contribute/code-style.md:3 4e564aa5a04446aca1711aaad1b36009
+msgid ""
+"Bookshelf follows a few conventions. They make the code easier to read "
+"and understand."
+msgstr "Bookshelf 遵循一些规范。它们让代码更容易阅读和理解。"
+
+#: ../../contribute/code-style.md:7 e0aceeca559342c5b79b00bf8db6006a
+msgid "Naming"
+msgstr "命名"
+
+#: ../../contribute/code-style.md:10 f07938762e6648b4aa191b0e2c3b5dfa
+msgid "**Files**"
+msgstr "**文件**"
+
+#: ../../contribute/code-style.md:11 70e09587bc724fd18928dbd64c3fea08
+msgid ""
+"Use snake_case. Names with double underscores are [reserved](#contribute-"
+"reserved-names). A `_` prefix marks a [private file](#contribute-public-"
+"and-private-files)"
+msgstr ""
+"使用 snake_case。带双下划线的名称是[保留名称](#contribute-reserved-names)。`_` 前缀表示[私有文件"
+"](#contribute-public-and-private-files)"
+
+#: ../../contribute/code-style.md:13 09816b280d404b57acff5025ce98c913
+msgid "*Example: `function/<feature>/<my_function>.mcfunction`*"
+msgstr "*示例：`function/<feature>/<my_function>.mcfunction`*"
+
+#: ../../contribute/code-style.md:14 1b664cf578f64d0e8e38a73ab37b13e3
+msgid "**Data storage**"
+msgstr "**数据存储**"
+
+#: ../../contribute/code-style.md:15 d092473532ed4bed8494ff435fa62938
+msgid ""
+"Use snake_case. Inputs and outputs go in the storage of their feature. "
+"Other data goes in the storage of the module"
+msgstr "使用 snake_case。输入和输出放在其特性的存储中。其他数据放在模块的存储中"
+
+#: ../../contribute/code-style.md:17 d218adebed88461cbade1b98645483eb
+msgid "*Example: `bs.<module>:<feature> in` or `bs.<module>: <my_key>`*"
+msgstr "*示例：`bs.<module>:<feature> in` 或 `bs.<module>: <my_key>`*"
+
+#: ../../contribute/code-style.md:18 5837258b5e0944149df91b088a75a24d
+msgid "**Objectives**"
+msgstr "**记分项**"
+
+#: ../../contribute/code-style.md:19 a27637d3ae6146e2aa22e860f875f3f0
+msgid ""
+"Use snake_case and the `bs.` prefix. Create an objective only if no "
+"[shared objective](#contribute-shared-resources) fits"
+msgstr ""
+"使用 snake_case 和 `bs.` 前缀。仅当没有合适的[共享记分项](#contribute-shared-"
+"resources)时才创建记分项"
+
+#: ../../contribute/code-style.md:21 1895f0692ee24b96947818fba0b262fa
+msgid "*Example: `bs.my_objective`*"
+msgstr "*示例：`bs.my_objective`*"
+
+#: ../../contribute/code-style.md:22 870c464349ac40398746e508b0ea7940
+msgid "**Scoreholders**"
+msgstr "**分数持有者**"
+
+#: ../../contribute/code-style.md:23 3d86aabd2f514550ba5743e26150c81d
+msgid ""
+"Start with `#`. Use a single letter for a temporary score. Add the module"
+" name for a global score"
+msgstr "以 `#` 开头。临时分数使用单个字母。全局分数加上模块名称"
+
+#: ../../contribute/code-style.md:25 e0d3efb9f31d459e89addbf8a4eca380
+msgid "*Example: `#x bs.ctx` or `#<module>.<my_key> bs.data`*"
+msgstr "*示例：`#x bs.ctx` 或 `#<module>.<my_key> bs.data`*"
+
+#: ../../contribute/code-style.md:26 cdc4e376dace412b98187647ee97a50b
+msgid "**Functions**"
+msgstr "**函数**"
+
+#: ../../contribute/code-style.md:27 1e6e7cd7404b444899a07b15773e2797
+msgid ""
+"Use snake_case. Add the `_ata` suffix (\"as to at\") to a function that "
+"needs two positions. It uses the position of the executor and the "
+"position of the execution"
+msgstr "使用 snake_case。需要两个位置的函数请添加 `_ata` 后缀（即“as to at”）。它使用执行者的位置和执行的位置"
+
+#: ../../contribute/code-style.md:29 d401af14587f4ceaba85537d806261c2
+msgid "*Example: `get_distance_ata`*"
+msgstr "*示例：`get_distance_ata`*"
+
+#: ../../contribute/code-style.md:30 cdc4e376dace412b98187647ee97a50b
+msgid "**Entity tags**"
+msgstr "**实体标签**"
+
+#: ../../contribute/code-style.md:31 20d6a22c088d4435ae28a0aa73fc42f1
+msgid "Use snake_case. Start with `bs.` and the module name"
+msgstr "使用 snake_case。以 `bs.` 和模块名称开头"
+
+#: ../../contribute/code-style.md:33 d401af14587f4ceaba85537d806261c2
+msgid "*Example: `bs.<module>.my_tag`*"
+msgstr "*示例：`bs.<module>.my_tag`*"
+
+#: ../../contribute/code-style.md:39 82d6770741bc41cd829ed85212e1734e
+msgid "License header"
+msgstr "许可证头"
+
+#: ../../contribute/code-style.md:41 ea489b4650fb40dd9a19a6a1bf368f7b
+msgid "Start every function with the license header. This includes tests."
+msgstr "每个函数都以许可证头开头，测试也不例外。"
+
+#: ../../contribute/code-style.md:60 7c2b5102f2444ee3b415044801616262
+msgid ""
+"Replace `<YEAR>` with the current year. The `uv run check` command checks"
+" the header. See the [validation page](project:validation.md)."
+msgstr ""
+"将 `<YEAR>` 替换为当前年份。`uv run check` "
+"命令会检查许可证头。参见[验证页面](project:validation.md)。"
+
+#: ../../contribute/code-style.md:65 442bfce7cfb74e41bdaf4bd67634fba5
+msgid "Shared resources"
+msgstr "共享资源"
+
+#: ../../contribute/code-style.md:67 2cece656727047f7ac3cff88c8225525
+msgid ""
+"Modules share a few objectives, blocks, and entities. A module creates "
+"the ones it uses in its `__load__` function."
+msgstr "模块之间共享一些记分项、方块和实体。模块在其 `__load__` 函数中创建自己用到的资源。"
+
+#: ../../contribute/code-style.md:9 ../../contribute/code-style.md:69
+#: c66cd49bdb124f148ecef58eb6b1adf7
+msgid "Objectives"
+msgstr "记分项"
+
+#: ../../contribute/code-style.md:9 fa7fb18f5f1d411691f72b62729000f7
+msgid "Description"
+msgstr "描述"
+
+#: ../../contribute/code-style.md:9 65c4618cc6f9448db7ed20219aa63d3e
+msgid "`bs.ctx`"
+msgstr "`bs.ctx`"
+
+#: ../../contribute/code-style.md:9 4216a0cdbdec4720bacf19c3982f24c7
+msgid ""
+"Temporary scores for fast computations. Don't rely on them after the "
+"function ends. Format: `#<single_letter>`"
+msgstr "用于快速计算的临时分数。函数结束后不要依赖它们。格式：`#<single_letter>`"
+
+#: ../../contribute/code-style.md:9 95e58358a7f44334a35b9b6e7a12a519
+msgid "`bs.data`"
+msgstr "`bs.data`"
+
+#: ../../contribute/code-style.md:9 713ebdc2badf41c5bf00e88f5f3fe140
+msgid "Global scores. Format: `#<module>.<my_key>`"
+msgstr "全局分数。格式：`#<module>.<my_key>`"
+
+#: ../../contribute/code-style.md:76 5f6c403cc9154e61bef6f90bc9895598
+msgid "Blocks"
+msgstr "方块"
+
+#: ../../contribute/code-style.md:78 fe22716c564642ae9f662475806a45b4
+msgid ""
+"These blocks stay in a chunk that is always loaded, at `-30000000 1600`. "
+"You can use them from anywhere."
+msgstr "这些方块位于一个始终加载的区块中，坐标为 `-30000000 1600`。你可以在任何地方使用它们。"
+
+#: ../../contribute/code-style.md:88 1c70db5d401a475eadf49492bb401f2c
+msgid "Entities"
+msgstr "实体"
+
+#: ../../contribute/code-style.md:90 44ee6428ae5a48f5a096ea05307eae71
+msgid ""
+"Global entities have fixed UUIDs. You can always select them, and no "
+"selector matches them by mistake. Move them back to the always-loaded "
+"chunk at `-30000000 1600` before the tick ends."
+msgstr ""
+"全局实体拥有固定的 UUID。你随时可以选中它们，选择器也不会误选它们。请在当前刻结束前将它们移回位于 `-30000000 1600` "
+"的常加载区块。"
+
+#: ../../contribute/code-style.md:104 a8e6d3aeb1ad4f0fa4db799e30c0609a
+msgid ""
+"Add these tags to the entities that Bookshelf creates. They follow the "
+"[Smithed conventions](https://docs.smithed.dev/conventions/):"
+msgstr ""
+"请为 Bookshelf 创建的实体添加这些标签。它们遵循 [Smithed "
+"规范](https://docs.smithed.dev/conventions/)："
+
+#: ../../contribute/code-style.md:107 b94a868584de46a99880a244d46e74a5
+msgid "**smithed.entity**"
+msgstr "**smithed.entity**"
+
+#: ../../contribute/code-style.md:108 138763936db14700802e7bcd8e466cc4
+msgid ""
+"A datapack created this entity. Datapacks that target vanilla entities "
+"must not change it"
+msgstr "该实体由数据包创建。针对原版实体的数据包不得修改它"
+
+#: ../../contribute/code-style.md:110 32ad55c71941449699868ede8eed2b71
+msgid "**smithed.strict**"
+msgstr "**smithed.strict**"
+
+#: ../../contribute/code-style.md:111 fea06db7be4341e98e319ea8c66bd05e
+msgid "A datapack created this entity. Other datapacks must not change it"
+msgstr "该实体由数据包创建。其他数据包不得修改它"
+
+#: ../../contribute/code-style.md:113 aba63dbe016b43c1a4b1e20e2205e984
+msgid "**bs.persistent**"
+msgstr "**bs.persistent**"
+
+#: ../../contribute/code-style.md:114 9815fb721d194faeaacc982930819668
+msgid ""
+"This Bookshelf entity must stay in the world. Don't kill it or let it "
+"despawn"
+msgstr "该 Bookshelf 实体必须留在世界中。不要杀死它，也不要让它消失"
+
+#: ../../contribute/code-style.md:116 79d0600dd29c48ad9adf02f8c28ac258
+msgid "**bs.entity**"
+msgstr "**bs.entity**"
+
+#: ../../contribute/code-style.md:117 437ba526a8dc46e896354ff77b8df227
+msgid "Bookshelf created this entity"
+msgstr "该实体由 Bookshelf 创建"
+
+#: ../../contribute/code-style.md:122 d680cc8fa9704359b526c5817e4100ee
+msgid "Temporary entities"
+msgstr "临时实体"
+
+#: ../../contribute/code-style.md:124 503670c08a084d558a68ca71d402b9fa
+msgid ""
+"When a function needs an entity for a short time, summon a marker and run"
+" as it:"
+msgstr "当函数需要短暂使用一个实体时，请召唤一个标记实体（marker）并以它的身份运行："
+
+#: ../../contribute/code-style.md:130 717a1224f91f41c18e3ab45cbbd2674f
+msgid ""
+"Before you kill a temporary entity, move it out of the world. Otherwise, "
+"sculk sensors can detect its death. Do this on every path that ends the "
+"function:"
+msgstr "杀死临时实体之前，先将它移出世界。否则幽匿感测体会检测到它的死亡。函数的每条结束路径都要这样做："
+
+#: ../../contribute/code-style.md:137 52c4d628afd54150be812bd06713d1f5
+msgid ""
+"If you must select a temporary entity from another place, give it the "
+"UUID `B5-0-0-0-0`. Use this UUID only when both conditions are true:"
+msgstr "如果必须从其他地方选中临时实体，请为它指定 UUID `B5-0-0-0-0`。仅当以下两个条件都成立时才使用该 UUID："
+
+#: ../../contribute/code-style.md:139 5194207454f5416d854dabb6c5449445
+msgid "You kill the entity right after you use it."
+msgstr "你在使用实体后立即杀死它。"
+
+#: ../../contribute/code-style.md:140 1eaf7b512bef4721a1f1cacff3bbff59
+msgid ""
+"No user command runs while the entity exists. A `run` argument could call"
+" a feature that uses the same UUID."
+msgstr "实体存在期间不会运行任何用户命令。`run` 参数可能会调用使用同一 UUID 的特性。"
+

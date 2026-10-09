@@ -184,3 +184,8 @@ article .sd-tab-set .sd-tab-content > .bs-forms > * > :first-child {
   background-color: var(--pst-color-background);
   border: none;
 }
+
+table.docutils td:first-child code.literal,
+table.docutils td:first-child strong {
+  white-space: nowrap;
+}
