@@ -2,14 +2,16 @@ from collections.abc import Generator, Iterable
 from contextlib import contextmanager
 from dataclasses import dataclass, field
 
-from rich.console import Console
-from rich.progress import Progress, SpinnerColumn, TaskID, TextColumn, TimeElapsedColumn
+from rich.console import Console, RenderableType
+from rich.markup import escape
+from rich.progress import Progress, SpinnerColumn, Task, TaskID, TextColumn, TimeElapsedColumn
+from rich.text import Text
 
-console = Console(highlight=False)
+console = Console(highlight=False, emoji=False)
 
 
 def dim(text: str) -> None:
-    console.print(text, style="bright_black", soft_wrap=True)
+    console.print(text, style="bright_black", soft_wrap=True, markup=False)
 
 
 def heading(text: str) -> None:
@@ -31,18 +33,40 @@ def summary(errors: int) -> None:
 class Tracker:
 
     progress: Progress
-    errors: int = field(default=0, init=False)
     tasks: dict[str, TaskID]
+    errors: int = field(default=0, init=False)
+    details: dict[str, str] = field(default_factory=dict, init=False)
 
     def done(self, name: str, error: str | None) -> None:
-        if error is not None:
+        """Mark a task done; an error shows its first line, the rest is printed at the end."""
+        task = self.tasks[name]
+        if error is None:
+            self.progress.update(task, mark="[green]✓")
+        else:
             self.errors += 1
-            self.progress.update(self.tasks[name], description=f"[red]{name}: {error}")
-        self.progress.advance(self.tasks[name])
+            first, _, rest = error.partition("\n")
+            description = f"[red]{escape(f'{name}: {first}')}"
+            self.progress.update(task, mark="[red]✗", description=description)
+            if rest:
+                self.details[name] = rest
+        self.progress.advance(task)
+
+
+class StatusColumn(SpinnerColumn):
+    """A spinner while the task runs, then the mark its outcome left."""
+
+    def render(self, task: Task) -> RenderableType:
+        if task.finished:
+            return Text.from_markup(task.fields.get("mark", ""))
+        return super().render(task)
 
 
 @contextmanager
 def tracking(names: Iterable[str]) -> Generator[Tracker]:
-    columns = (SpinnerColumn(finished_text="[green]✓"), TextColumn("{task.description}"))
+    columns = (StatusColumn(), TextColumn("{task.description}"))
     with Progress(*columns, TimeElapsedColumn(), console=console) as progress:
-        yield Tracker(progress, {name: progress.add_task(name, total=1) for name in names})
+        tracker = Tracker(progress, {name: progress.add_task(name, total=1) for name in names})
+        yield tracker
+    for name, details in tracker.details.items():
+        console.print(f"\n[bold]{escape(name)}[/]")
+        dim(details)

@@ -2,13 +2,11 @@ from __future__ import annotations
 
 from re import escape
 
+from bookshelf.definitions import DOC_URL, VERSION
 from pydantic import BaseModel, Field
 from semver import Version
 
-from bookshelf.definitions import DOC_URL, VERSION
-
 from .collection import Collection
-
 
 
 class SwitcherEntry(BaseModel, frozen=True):

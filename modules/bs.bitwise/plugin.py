@@ -1,13 +1,24 @@
 from beet import Context, ContextIntProvider
 
 from mcbookshelf.meta import Module
-from mcbookshelf.minecraft.math import Expression, add, btree, cond, int_storage, max_, min_, mul
+from mcbookshelf.minecraft.math import (
+    Expression,
+    add,
+    btree,
+    cond,
+    const,
+    int_storage,
+    max_,
+    min_,
+    mul,
+)
+from mcbookshelf.pipeline.plugins import Generated, generator
 
 INT_MIN = -(2**31)
 
 
-def beet_default(ctx: Context) -> None:
-    """Generate the number providers of the bitwise module."""
+@generator
+def beet_default(ctx: Context) -> Generated:
     module: Module = ctx.meta["module"]
 
     def read(feature: str, key: str) -> Expression:
@@ -23,7 +34,7 @@ def beet_default(ctx: Context) -> None:
         "shift_left": shift_left(read("shift_left", "n"), read("shift_left", "by")),
         "shift_right": shift_right(read("shift_right", "n"), read("shift_right", "by")),
     }.items():
-        ctx.data[f"{module.id}:{name}"] = ContextIntProvider(provider.json())
+        yield f"{module.id}:{name}", ContextIntProvider(provider.json())
 
 
 def bit(x: Expression, i: int) -> Expression:
@@ -64,7 +75,9 @@ def bit_count(n: Expression) -> Expression:
 
 
 def bit_length(n: Expression) -> Expression:
-    return cond(n.le(-1), 32, btree(n, [(2**k - 1, k) for k in range(31)], 31))
+    bounds = [(2**k - 1, k) for k in range(32)]
+    by_length = btree(bounds, lambda entry: const(entry[1]), lambda half: n.le(half[-1][0]))
+    return cond(n.le(-1), 32, by_length)
 
 
 def shift_left(n: Expression, by: Expression) -> Expression:

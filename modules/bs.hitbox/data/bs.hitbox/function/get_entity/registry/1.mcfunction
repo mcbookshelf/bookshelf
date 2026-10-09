@@ -13,5 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# allay group
-data modify storage bs:out hitbox set value {width:0.35,height:0.6}
+# minecraft:area_effect_cloud
+execute at @s unless entity @s[dx=0] run return 0
+data modify storage bs.hitbox:get_entity out set value [[0f,0f,0f,0f,.5f,0f,1f]]
+execute store result storage bs.hitbox:get_entity out[0][0] float -.000001 store result storage bs.hitbox:get_entity out[0][2] float -.000001 store result storage bs.hitbox:get_entity out[0][3] float .000001 store result storage bs.hitbox:get_entity out[0][5] float .000001 run data get entity @s Radius 1000000
+return 1

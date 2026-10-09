@@ -76,3 +76,16 @@ function initForms() {
 }
 
 initForms();
+
+function showTarget() {
+  const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  const content = target && target.closest('.sd-tab-content');
+  if (!content) return;
+  for (let tab = content; tab; tab = tab.parentElement.closest('.sd-tab-content')) {
+    tab.previousElementSibling.previousElementSibling.checked = true;
+  }
+  target.scrollIntoView();
+}
+
+window.addEventListener('hashchange', showTarget);
+showTarget();

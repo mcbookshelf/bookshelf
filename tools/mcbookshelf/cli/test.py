@@ -5,14 +5,14 @@ import click
 from mcward.beet import test_project
 from mcward.cli.reports import parse_coverage_report
 
-from mcbookshelf import constants, package, workspace
-from mcbookshelf.package.config import ward_config
+from mcbookshelf import constants, pipeline, workspace
+from mcbookshelf.pipeline.config import ward_config
 
 from . import ui
 
 
 @click.command()
-@click.argument("modules", default=workspace.modules(), nargs=-1)
+@click.argument("modules", default=lambda: workspace.current().modules(), nargs=-1)
 @click.option(
     "--coverage",
     is_flag=True,
@@ -42,7 +42,7 @@ from . import ui
     is_flag=True,
     help="List every test and coverage row instead of collapsing large runs.",
 )
-def test( # noqa: PLR0913
+def test(  # noqa: PLR0913
     modules: tuple[str, ...],
     *,
     reporter: str,
@@ -54,7 +54,7 @@ def test( # noqa: PLR0913
     """Build the modules as one pack and run their tests."""
     specs = [parse_coverage_report(value) for value in coverage_reports]
     ui.heading("🔬 TESTING…")
-    project = package.project(ward_config(modules))
+    project = pipeline.project(ward_config(modules))
 
     if test_project(
         project,

@@ -13,10 +13,10 @@ variable: VARIABLE "=" (declaration | type) _end
 
 reference: VARIABLE
 
-declaration: KIND RESOURCE_LOCATION? path? (":" type)?
+declaration: KIND [RESOURCE_LOCATION] [path] [":" type]
 path: name ("/" name)*
 
-?feature_id: RESOURCE_LOCATION | name
+?feature_id: RESOURCE_LOCATION | path
 
 ?name: ID | REGISTRY | ROLE | KIND | int_type | float_type | plain_type
 

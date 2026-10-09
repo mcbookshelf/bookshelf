@@ -27,6 +27,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 gettext_compact = False
 gettext_uuid = True
 locale_dirs = ["_locales"]
+python_maximum_signature_line_length = 60
 suppress_warnings = ["misc.highlighting_failure"]
 templates_path = ["_templates"]
 

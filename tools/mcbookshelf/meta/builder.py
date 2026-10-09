@@ -1,8 +1,9 @@
 from dataclasses import dataclass, field, replace
-from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 from mcbookshelf import constants
+from mcbookshelf.references import groups
 
 from . import model, rules, syntax
 from .diagnostics import Diagnostics, MetadataError
@@ -11,35 +12,185 @@ from .syntax import Kind, PrimitiveKind, Role
 INDEX_URL = f"{constants.DOCS_PAGES_URL}/index.html"
 
 
-def build_module(document: syntax.Module, directory: str, file: Path | None = None) -> model.Module:
+def build_module(document: syntax.Module, name: str, file: Path | None = None) -> model.Module:
     """Build a module model from a parsed document, raising every error found at once."""
     report = Diagnostics(file)
-    module = _Builder(directory, report).module(document)
+    module = _Builder(name, report).module(document)
     if report.items:
         raise MetadataError(report.items)
     return module
 
 
-def build_bundle(document: syntax.Module, directory: str, file: Path | None = None) -> model.Bundle:
+def build_bundle(document: syntax.Module, name: str, file: Path | None = None) -> model.Bundle:
     """Build a bundle model from a parsed document, raising every error found at once."""
     report = Diagnostics(file)
-    bundle = _Builder(directory, report).bundle(document)
+    bundle = _Builder(name, report).bundle(document)
     if report.items:
         raise MetadataError(report.items)
     return bundle
 
 
-def _anchor(name: str, kind: str, *, shared: bool) -> str:
+def _anchor(name: str, resource: str, *, shared: bool) -> str:
     anchor = name.replace("/", "-").replace("_", "-")
-    return f"{anchor}-{kind.replace('/', '-')}" if shared else anchor
+    return f"{anchor}-{resource.replace('/', '-')}" if shared else anchor
+
+
+def _group(name: str) -> str:
+    """The group of a feature: the folder it lies in, empty for a feature on its own."""
+    return name.rpartition("/")[0]
+
+
+def _interface(feature: model.Feature, role: Role) -> frozenset[tuple[str, str]]:
+    return frozenset(
+        (slot.target.display, str(slot.type))
+        for slot in feature.of(role)
+        if slot.target is not None
+    )
 
 
 def _module_url(namespace: str) -> str:
-    return f"{constants.DOCS_PAGES_URL}/modules/{namespace[3:]}.html"
+    return f"{constants.DOCS_PAGES_URL}/modules/{model.short(namespace)}.html"
 
 
-def _split(value: str) -> tuple[str, ...]:
-    return tuple(part.strip() for part in value.split(",") if part.strip())
+@dataclass(frozen=True, slots=True)
+class _Value:
+
+    value: Any
+    line: int
+
+
+@dataclass
+class _FeatureBuilder:
+
+    module: _Builder
+    registry: str
+    name: str
+
+    @property
+    def report(self) -> Diagnostics:
+        return self.module.report
+
+    @property
+    def definition(self) -> rules.Registry:
+        return rules.REGISTRIES[self.registry]
+
+    def slots(self, node: syntax.Feature) -> tuple[model.Slot, ...]:
+        slots = tuple(slot for line in node.slots if (slot := self.slot(line)) is not None)
+        self.validate_slots(slots, node.line)
+        return slots
+
+    def slot(self, slot: syntax.Slot) -> model.Slot | None:
+        resolved = self.declaration(slot)
+        if resolved is None:
+            return None
+
+        declaration, description = resolved
+        kind = declaration.kind
+        description = description or self.module.alias_description(declaration.type)
+        slot_type = self.module.resolve(declaration.type, slot.line) if declaration.type else None
+
+        if not self.validate_allowed(kind, slot.role, slot.line):
+            return None
+        if declaration.storage is not None and kind not in rules.STORAGES:
+            self.report.error(f"a {kind} writes nowhere, it takes no storage target", slot.line)
+
+        if kind in rules.STORAGES:
+            target = self.target(declaration.storage, slot.role, slot.line)
+            self.module.validate_data_type(slot_type, slot.line)
+            self.module.add_storage(target, slot_type, slot.line)
+            if kind is Kind.ARGUMENTS and not isinstance(slot_type, syntax.Struct):
+                self.report.error(
+                    f"'{slot_type}' is not a type arguments take, they need a struct",
+                    slot.line,
+                )
+            return model.Slot(slot.role, kind, target, slot_type, description, slot.line)
+
+        slot_type = slot_type or self.default_type(kind, slot.line)
+        self.validate_kind_type(kind, slot_type, slot.line)
+        return model.Slot(slot.role, kind, None, slot_type, description, slot.line)
+
+    def declaration(self, slot: syntax.Slot) -> tuple[syntax.Declaration, str | None] | None:
+        if isinstance(slot.value, syntax.Declaration):
+            return slot.value, slot.value.description
+        variable = self.module.lookup(slot.value.name, slot.value.line, slot=True)
+        if variable is None or not isinstance(variable.value, syntax.Declaration):
+            return None
+        return variable.value, slot.value.description or variable.description
+
+    def target(self, storage: syntax.Storage | None, role: Role, line: int) -> model.Target:
+        namespace = self.module.id
+        id_ = f"{namespace}:{_group(self.name) or self.name}"
+        keys: tuple[str, ...] = ("in" if role is Role.INPUT else "out",)
+        if storage is not None and storage.id:
+            id_ = storage.id
+            if id_.partition(":")[0] != namespace:
+                self.report.error(f"'{id_}' does not have the same namespace as the module", line)
+        if storage is not None and storage.path:
+            keys = tuple(storage.path.split("/"))
+        return model.Target(id=id_, keys=keys)
+
+    def validate_allowed(self, kind: Kind, role: Role, line: int) -> bool:
+        kinds = self.definition.allowed(role)
+        if kind in kinds:
+            return True
+        if not kinds:
+            self.report.error(f"a {self.registry} declares no {role}", line)
+        else:
+            accepted = ", ".join(sorted(str(k) for k in kinds))
+            message = f"a {self.registry} takes no {kind} as {role}, only {accepted}"
+            self.report.error(message, line)
+        return False
+
+    def validate_slots(self, slots: tuple[model.Slot, ...], line: int) -> None:
+        requires = self.definition.requires
+        outputs = [s.kind for s in slots if s.role is Role.OUTPUT]
+        macros = [s for s in slots if s.kind in rules.MACROS]
+
+        if requires is not None and requires not in outputs:
+            self.report.error(f"a {self.registry} must declare 'output {requires}'", line)
+
+        if len(macros) > 1:
+            self.report.error(
+                "a feature takes one macro: declared, or derived from one arguments slot",
+                macros[1].line,
+            )
+
+    def result_type(self, line: int) -> PrimitiveKind:
+        result = self.definition.result
+        if result is None:
+            self.report.error(f"a {self.registry} returns no result", line)
+            return PrimitiveKind.INT
+        return result
+
+    def default_type(self, kind: Kind, line: int) -> syntax.Type | None:
+        if kind is Kind.RESULT:
+            return syntax.Primitive(kind=self.result_type(line))
+        if kind in rules.CONTEXT_TYPES:
+            return rules.CONTEXT_TYPES[kind][0]
+        return None
+
+    def validate_kind_type(self, kind: Kind, value: syntax.Type | None, line: int) -> None:
+        if kind in rules.UNTYPED:
+            if value is not None:
+                always = ", it is always 0 or 1" if kind is Kind.SUCCESS else ""
+                self.report.error(f"a {kind} carries no type{always}", line)
+
+        elif value is None:
+            self.report.error(f"'{kind}' needs a type", line)
+
+        elif kind is Kind.MACRO:
+            if not isinstance(value, syntax.Struct):
+                self.report.error(f"'{value}' is not a type a macro takes", line)
+            self.module.validate_data_type(value, line)
+
+        elif kind is Kind.RESULT:
+            result = self.result_type(line)
+            if not (isinstance(value, syntax.Primitive) and value.kind is result):
+                message = f"'{value}' is not a type this result takes, it is a {result}"
+                self.report.error(message, line)
+
+        elif not syntax.accepts(value, rules.CONTEXT_TYPES[kind]):
+            self.report.error(f"'{value}' is not a type a {kind} takes", line)
 
 
 @dataclass
@@ -47,7 +198,6 @@ class _Builder:
 
     id: str
     report: Diagnostics
-    registry: str = "function"
     variables: dict[str, syntax.Variable] = field(default_factory=dict)
     storages: dict[str, model.Storage] = field(default_factory=dict)
 
@@ -67,7 +217,7 @@ class _Builder:
             version=properties["version"].value,
             description=self.description(document),
             documentation=properties["documentation"].value or INDEX_URL,
-            tags=_split(properties["tags"].value),
+            tags=properties["tags"].value,
         )
 
     def module(self, document: syntax.Module) -> model.Module:
@@ -77,8 +227,12 @@ class _Builder:
 
         features = {}
         names = [self.feature_name(node) for node in document.features]
+        folders = groups(names)
         for node, name in zip(document.features, names, strict=True):
-            key = (rules.REGISTRIES[node.registry].kind, name)
+            if name in folders:
+                message = f"'{name}' is also the folder of other features, which share its files"
+                self.report.error(message, node.line)
+            key = (rules.REGISTRIES[node.registry].resource, name)
             if key in features:
                 first = features[key].line
                 message = f"{key[0]} {name} is already declared on line {first}"
@@ -86,6 +240,7 @@ class _Builder:
                 continue
             shared = names.count(name) > 1
             features[key] = self.feature(node, name, documentation, shared=shared)
+        self.validate_groups(tuple(features.values()))
 
         return model.Module(
             id=self.id,
@@ -94,8 +249,8 @@ class _Builder:
             version=properties["version"].value,
             description=self.description(document),
             documentation=documentation,
-            tags=_split(properties["tags"].value),
-            weak_dependencies=_split(properties["weak_dependencies"].value),
+            tags=properties["tags"].value,
+            weak_dependencies=properties["weak_dependencies"].value,
             features=tuple(features.values()),
             storages=dict(sorted(self.storages.items())),
         )
@@ -109,44 +264,33 @@ class _Builder:
     def properties(
         self,
         nodes: tuple[syntax.Property, ...],
-        requirements: dict[str, bool],
+        fields: dict[str, rules.Field],
         line: int,
-    ) -> dict[str, syntax.Property]:
-        """Map every known property to its line; a missing one gets an empty value."""
-        properties: dict[str, syntax.Property] = {}
+    ) -> dict[str, _Value]:
+        """Read every known property; a missing or invalid one gets its default."""
+        values: dict[str, _Value] = {}
         for node in nodes:
-            if node.key not in requirements:
+            spec = fields.get(node.key)
+            if spec is None:
                 self.report.error(f"unknown property '{node.key}'", node.line)
-            elif node.key in properties:
-                first = properties[node.key].line
+            elif node.key in values:
+                first = values[node.key].line
                 self.report.error(f"'{node.key}' is already declared on line {first}", node.line)
             else:
-                properties[node.key] = node
-                self.validate_property(node.key, node.value, node.line)
+                try:
+                    value = spec.parse(node.value)
+                except ValueError as error:
+                    self.report.error(str(error), node.line)
+                    value = spec.default
+                values[node.key] = _Value(value, node.line)
 
-        for key, required in requirements.items():
-            if key not in properties:
-                if required:
+        for key, spec in fields.items():
+            if key not in values:
+                if spec.required:
                     self.report.error(f"missing property '{key}'", line)
-                properties[key] = syntax.Property(key=key, value="", line=line)
+                values[key] = _Value(spec.default, line)
 
-        return properties
-
-    def validate_property(self, key: str, value: str, line: int) -> None:
-        match key:
-            case "slug":
-                if not rules.SLUG.match(value):
-                    self.report.error(f"'{value}' is not a slug: lowercase, digits, dashes", line)
-            case "version":
-                if not rules.VERSION.match(value):
-                    self.report.error(f"'{value}' is not a version, as in '5.0.0'", line)
-            case "deprecated" | "experimental":
-                if value not in ("true", "false"):
-                    self.report.error(f"'{value}' is not 'true' or 'false'", line)
-            case "tags":
-                for tag in map(str.strip, value.split(",")):
-                    if tag and tag != "*" and not rules.SLUG.match(tag):
-                        self.report.error(f"'{tag}' is not a tag: lowercase, digits, dashes", line)
+        return values
 
     # --- features ----------------------------------------------------------- --
 
@@ -169,72 +313,47 @@ class _Builder:
         shared: bool,
     ) -> model.Feature:
         properties = self.properties(node.properties, rules.FEATURE_PROPERTIES, node.line)
-        created = self.stamp(properties["created"])
-        updated = self.stamp(properties["updated"])
+        created = model.Stamp(*properties["created"].value)
+        updated = model.Stamp(*properties["updated"].value)
         if created.minecraft_version and updated.minecraft_version and updated.date < created.date:
             message = f"updated on {updated.date}, before created on {created.date}"
             self.report.error(message, properties["updated"].line)
 
-        self.registry = node.registry
-        slots: list[model.Slot] = []
-        for line in node.slots:
-            slot = self.slot(line, name)
-            if slot is not None:
-                slots.append(slot)
-        self.validate_slots(slots, node.line)
-
-        kind = rules.REGISTRIES[self.registry].kind
-        anchor = _anchor(name, kind, shared=shared)
+        slots = _FeatureBuilder(self, node.registry, name).slots(node)
+        resource = rules.REGISTRIES[node.registry].resource
+        anchor = _anchor(name, resource, shared=shared)
 
         return model.Feature(
             module=self.id,
-            kind=kind,
+            resource=resource,
             name=name,
             description=node.description,
             documentation=f"{documentation}#{anchor}",
             anchor=anchor,
-            authors=_split(properties["authors"].value),
-            contributors=_split(properties["contributors"].value),
+            authors=properties["authors"].value,
+            contributors=properties["contributors"].value,
             created=created,
             updated=updated,
-            slots=tuple(slots),
+            slots=slots,
             line=node.line,
-            deprecated=properties["deprecated"].value == "true",
-            experimental=properties["experimental"].value == "true",
+            deprecated=properties["deprecated"].value,
+            experimental=properties["experimental"].value,
         )
 
-    def stamp(self, node: syntax.Property) -> model.Stamp:
-        value, line = node.value, node.line
-        if not value:
-            return model.Stamp(date="", minecraft_version="")
-
-        match = rules.STAMP.match(value)
-        if match is None:
-            expected = "a date and a Minecraft version, '2022/04/14 1.18.2'"
-            self.report.error(f"'{value}' is not {expected}", line)
-            return model.Stamp(date=value, minecraft_version="")
-
-        try:
-            datetime.strptime(match[1], "%Y/%m/%d")  # noqa: DTZ007
-        except ValueError:
-            self.report.error(f"'{match[1]}' is not an existing date", line)
-            return model.Stamp(date=value, minecraft_version="")
-
-        return model.Stamp(date=match[1], minecraft_version=match[2])
-
-    def validate_slots(self, slots: list[model.Slot], line: int) -> None:
-        requires = rules.REGISTRIES[self.registry].requires
-        outputs = [s.kind for s in slots if s.role is Role.OUTPUT]
-        macros = [s for s in slots if s.kind in rules.MACROS]
-
-        if requires is not None and requires not in outputs:
-            self.report.error(f"a {self.registry} must declare 'output {requires}'", line)
-
-        if len(macros) > 1:
-            self.report.error(
-                "a feature takes one macro: declared, or derived from one arguments slot",
-                macros[1].line,
-            )
+    def validate_groups(self, features: tuple[model.Feature, ...]) -> None:
+        """The features of a group share one input and one output."""
+        firsts: dict[tuple[str, str], model.Feature] = {}
+        for feature in features:
+            if not (group := _group(feature.name)):
+                continue
+            first = firsts.setdefault((feature.resource, group), feature)
+            for role in (Role.INPUT, Role.OUTPUT):
+                if _interface(feature, role) != _interface(first, role):
+                    message = (
+                        f"'{feature.name}' does not have the {role} of '{first.name}': "
+                        "the features of a group share it, move it out of the group otherwise"
+                    )
+                    self.report.error(message, feature.line)
 
     # --- variables ---------------------------------------------------------- --
 
@@ -314,43 +433,6 @@ class _Builder:
 
         return replace(resolved, attributes=(*reference.attributes, *resolved.attributes))
 
-    def result_type(self, line: int) -> PrimitiveKind:
-        result = rules.REGISTRIES[self.registry].result
-        if result is None:
-            self.report.error(f"a {self.registry} returns no result", line)
-            return PrimitiveKind.INT
-        return result
-
-    def default_type(self, kind: Kind, line: int) -> syntax.Type | None:
-        if kind is Kind.RESULT:
-            return syntax.Primitive(kind=self.result_type(line))
-        if kind in rules.CONTEXT_TYPES:
-            return rules.CONTEXT_TYPES[kind][0]
-        return None
-
-    def validate_kind_type(self, kind: Kind, value: syntax.Type | None, line: int) -> None:
-        if kind in rules.UNTYPED:
-            if value is not None:
-                always = ", it is always 0 or 1" if kind is Kind.SUCCESS else ""
-                self.report.error(f"a {kind} carries no type{always}", line)
-
-        elif value is None:
-            self.report.error(f"'{kind}' needs a type", line)
-
-        elif kind is Kind.MACRO:
-            if not isinstance(value, syntax.Struct):
-                self.report.error(f"'{value}' is not a type a macro takes", line)
-            self.validate_data_type(value, line)
-
-        elif kind is Kind.RESULT:
-            result = self.result_type(line)
-            if not (isinstance(value, syntax.Primitive) and value.kind is result):
-                message = f"'{value}' is not a type this result takes, it is a {result}"
-                self.report.error(message, line)
-
-        elif not syntax.accepts(value, rules.CONTEXT_TYPES[kind]):
-            self.report.error(f"'{value}' is not a type a {kind} takes", line)
-
     def validate_data_type(self, value: syntax.Type | None, line: int) -> None:
         match value:
             case syntax.Primitive(kind=kind) if kind in rules.CONTEXT_ONLY:
@@ -363,75 +445,6 @@ class _Builder:
             case syntax.Struct(entries=entries):
                 for entry in entries:
                     self.validate_data_type(entry.type, entry.line)
-
-    # --- slots -------------------------------------------------------------- --
-
-    def slot(self, slot: syntax.Slot, feature: str) -> model.Slot | None:
-        resolved = self.declaration(slot)
-        if resolved is None:
-            return None
-
-        declaration, description = resolved
-        kind = declaration.kind
-        description = description or self.alias_description(declaration.type)
-        slot_type = self.resolve(declaration.type, slot.line) if declaration.type else None
-
-        if not self.validate_allowed(kind, slot.role, slot.line):
-            return None
-        if declaration.storage is not None and kind not in rules.STORAGES:
-            self.report.error(f"a {kind} writes nowhere, it takes no storage target", slot.line)
-
-        if kind in rules.STORAGES:
-            target = self.target(declaration.storage, feature, slot.role, slot.line)
-            self.validate_data_type(slot_type, slot.line)
-            self.add_storage(target, slot_type, slot.line)
-            if kind is Kind.ARGUMENTS and not isinstance(slot_type, syntax.Struct):
-                self.report.error(
-                    f"'{slot_type}' is not a type arguments take, they need a struct",
-                    slot.line,
-                )
-            return model.Slot(slot.role, kind, target, slot_type, description, slot.line)
-
-        slot_type = slot_type or self.default_type(kind, slot.line)
-        self.validate_kind_type(kind, slot_type, slot.line)
-        return model.Slot(slot.role, kind, None, slot_type, description, slot.line)
-
-    def declaration(self, slot: syntax.Slot) -> tuple[syntax.Declaration, str | None] | None:
-        if isinstance(slot.value, syntax.Declaration):
-            return slot.value, slot.value.description
-        variable = self.lookup(slot.value.name, slot.value.line, slot=True)
-        if variable is None or not isinstance(variable.value, syntax.Declaration):
-            return None
-        return variable.value, slot.value.description or variable.description
-
-    def target(
-        self,
-        storage: syntax.Storage | None,
-        feature: str,
-        role: Role,
-        line: int,
-    ) -> model.Target:
-        id_ = f"{self.id}:{feature}"
-        keys: tuple[str, ...] = ("in" if role is Role.INPUT else "out",)
-        if storage is not None and storage.id:
-            id_ = storage.id
-            if id_.partition(":")[0] != self.id:
-                self.report.error(f"'{id_}' does not have the same namespace as the module", line)
-        if storage is not None and storage.path:
-            keys = tuple(storage.path.split("/"))
-        return model.Target(id=id_, keys=keys)
-
-    def validate_allowed(self, kind: Kind, role: Role, line: int) -> bool:
-        kinds = rules.REGISTRIES[self.registry].allowed(role)
-        if kind in kinds:
-            return True
-        if not kinds:
-            self.report.error(f"a {self.registry} declares no {role}", line)
-        else:
-            accepted = ", ".join(sorted(str(k) for k in kinds))
-            message = f"a {self.registry} takes no {kind} as {role}, only {accepted}"
-            self.report.error(message, line)
-        return False
 
     # --- storages ----------------------------------------------------------- --
 

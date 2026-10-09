@@ -1,7 +1,7 @@
 import click
 
-from mcbookshelf import constants, package, workspace
-from mcbookshelf.package import Build
+from mcbookshelf import constants, pipeline, workspace
+from mcbookshelf.pipeline import Build
 
 from . import ui
 
@@ -17,7 +17,8 @@ def release(*, everything: bool) -> None:
     """Build every released module and bundle as minified zips, each with its stub."""
     ui.heading("📦 RELEASING…")
     options = Build(tests=False, minify=True, zipped=True, versioned=True, experimental=everything)
-    names = workspace.modules() if everything else workspace.released()
-    with ui.tracking((*names, *workspace.bundles())) as tracker:
-        package.release(names, options, tracker.done, constants.RELEASE_DIR)
+    ws = workspace.current()
+    names = ws.modules() if everything else ws.released()
+    with ui.tracking((*names, *ws.bundles())) as tracker:
+        pipeline.release(names, options, tracker.done, constants.RELEASE_DIR)
     ui.summary(tracker.errors)

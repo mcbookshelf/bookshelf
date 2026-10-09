@@ -1,11 +1,10 @@
 from collections import defaultdict
 from collections.abc import Collection, Iterable, Iterator
 from dataclasses import dataclass, field
-from functools import cache
 
 from beet import Context
 
-from mcbookshelf import constants, workspace
+from mcbookshelf import constants
 from mcbookshelf.meta import Feature, MetadataError, Module
 from mcbookshelf.references import (
     Index,
@@ -13,34 +12,41 @@ from mcbookshelf.references import (
     Reason,
     Reference,
     Resolution,
+    groups,
     longest_prefix,
+    parents,
     parse,
 )
-from mcbookshelf.workspace import history
+from mcbookshelf.workspace import Workspace, cached, history
 
 type FileText = tuple[str, str | None]
 
 HOOKS = frozenset({"__load__", "__unload__"})
+ENTRIES = frozenset({"__main__", "__macro__"})
 SOURCE_SUFFIXES = frozenset({".mcfunction", ".json"})
-TEST_REGISTRIES = frozenset({"test", "test_environment", "test_instance"})
+TEST_RESOURCES = frozenset({"test", "test_environment", "test_instance"})
 
 
 @dataclass(frozen=True, slots=True)
 class Location:
 
-    registry: str
+    resource: str
     parts: tuple[str, ...]
     feature: str | None
 
     @property
-    def public(self) -> bool:
-        if self.registry == "function" or not self.parts:
+    def requires_feature(self) -> bool:
+        """Whether others reach the file by its own id, so a feature must declare it.
+
+        Functions are left out: they are reached through the tag of their feature.
+        """
+        if self.resource == "function" or not self.parts:
             return False
         return not any(part.startswith(constants.PRIVATE_PREFIX) for part in self.parts)
 
     @property
     def hook(self) -> bool:
-        if self.registry != "function" or len(self.parts) != 1:
+        if self.resource != "function" or len(self.parts) != 1:
             return False
         return self.parts[0].partition(".")[0] in HOOKS
 
@@ -72,8 +78,50 @@ class Ownership:
 
     @property
     def shared(self) -> Owner:
-        """The owner of the files that belong to no feature."""
+        """The owner of the files that belong to no feature and to no group."""
         return Owner(self.module.id)
+
+    @property
+    def leaks(self) -> list[Occurrence]:
+        """The references to private files of another feature, group or module.
+
+        A feature that calls the entry of another feature of the module depends on it, and may
+        use its private files as well.
+        """
+        return [
+            occurrence
+            for owner, occurrences in self.references.items()
+            for occurrence in occurrences
+            if isinstance(target := occurrence.resolution, Owner)
+            and _private(occurrence.reference, entries=target.module == self.module.id)
+            and target not in {owner, self.shared, *self.parents(owner), *self.called(owner)}
+        ]
+
+    def called(self, owner: Owner) -> set[Owner]:
+        """The features of the module whose entry an owner calls."""
+        return {
+            target
+            for occurrence in self.references.get(owner, ())
+            if isinstance(target := occurrence.resolution, Owner)
+            and target.module == self.module.id
+            and occurrence.reference.static.rsplit("/", 1)[-1] in ENTRIES
+        }
+
+    def parents(self, owner: Owner) -> set[Owner]:
+        """The groups of the module an owner lies in."""
+        if owner.module != self.module.id:
+            return set()
+        return parents(owner, groups(self.module.names))
+
+    def shipped(self, owner: Owner) -> list[str]:
+        """The files an owner ships: its own and those of its groups."""
+        owners = {owner, *self.parents(owner)}
+        return sorted(path for o in owners for path in self.files.get(o, ()))
+
+    def needs(self, owner: Owner) -> set[Owner]:
+        """What an owner and its groups reference, for the files it ships."""
+        owners = {owner, *self.parents(owner)}
+        return {target for o in owners for target in self.dependencies(o)} - owners
 
     @property
     def targets(self) -> set[Owner]:
@@ -91,21 +139,13 @@ class Ownership:
         ]
 
     def dependencies(self, owner: Owner) -> set[Owner]:
-        """The owners one owner references, itself and the shared part left out."""
+        """The owners one owner references, itself, its groups and the shared part left out."""
         targets = {
             occurrence.resolution
             for occurrence in self.references.get(owner, ())
             if isinstance(occurrence.resolution, Owner)
         }
-        return targets - {owner, self.shared}
-
-    def without(self, paths: Collection[str]) -> Ownership:
-        """The same ownership once the given files are removed from the pack."""
-        return Ownership(
-            self.module,
-            {o: [p for p in files if p not in paths] for o, files in self.files.items()},
-            {o: [r for r in refs if r.path not in paths] for o, refs in self.references.items()},
-        )
+        return targets - {owner, self.shared, *self.parents(owner)}
 
 
 class OwnershipError(ValueError):
@@ -115,20 +155,20 @@ class OwnershipError(ValueError):
         super().__init__("\n".join(p.message for p in problems))
 
 
-@cache
-def sources(name: str) -> Ownership:
+@cached
+def sources(ws: Workspace, name: str) -> Ownership:
     """Ownership of a module's sources, analyzed once."""
-    return analyze(name)
+    return analyze(ws, name)
 
 
-def analyze(name: str, files: Iterable[FileText] | None = None) -> Ownership:
+def analyze(ws: Workspace, name: str, files: Iterable[FileText] | None = None) -> Ownership:
     """Attribute files to owners and resolve their references; sources by default."""
-    module = workspace.load_module(name)
-    known = index()
+    module = ws.load_module(name)
+    known = index(ws)
     owned: dict[Owner, list[str]] = defaultdict(list)
     occurrences: dict[Owner, list[Occurrence]] = defaultdict(list)
-    for path, text in source_files(name) if files is None else files:
-        location = locate_in(name, path)
+    for path, text in source_files(ws, name) if files is None else files:
+        location = locate_in(ws, name, path)
         if location is None:
             continue
         owner = Owner(name, location.feature)
@@ -142,56 +182,62 @@ def analyze(name: str, files: Iterable[FileText] | None = None) -> Ownership:
     return Ownership(module, files_by_owner, dict(occurrences))
 
 
-@cache
-def index() -> Index:
+@cached
+def index(ws: Workspace) -> Index:
     """Index the features of every module, with their macro aliases."""
-    suffix = constants.MACRO_SUFFIX
-    features = {name: _features(name) for name in workspace.modules()}
-    return Index(
-        {name: frozenset(f.name for f in declared) for name, declared in features.items()},
-        {
-            name: {f"{f.name}{suffix}": f.name for f in declared if f.macro_struct}
-            for name, declared in features.items()
-        },
-    )
+    return Index.from_ids({
+        name: [(f.id, f.aliases) for f in _features(ws, name)] for name in ws.modules()
+    })
 
 
-def _features(name: str) -> tuple[Feature, ...]:
+def _features(ws: Workspace, name: str) -> tuple[Feature, ...]:
     """Features of a module, none when it does not load: it is still a known module."""
     try:
-        return workspace.load_module(name).features
+        return ws.load_module(name).features
     except MetadataError:
         return ()
 
 
-def locate_in(name: str, path: str) -> Location | None:
+def locate_in(ws: Workspace, name: str, path: str) -> Location | None:
     """Locate a path of the module, unless it is a test or lies outside its data."""
     prefix = f"data/{name}/"
     if not path.startswith(prefix):
         return None
-    location = locate(path.removeprefix(prefix), workspace.load_module(name).names)
-    return None if location.registry in TEST_REGISTRIES else location
+    location = locate(path.removeprefix(prefix), ws.load_module(name).names)
+    return None if location.resource in TEST_RESOURCES else location
 
 
 def locate(path: str, features: Collection[str] = ()) -> Location:
-    """Locate a path under `data/<module>/`: functions by folder, other files by name."""
+    """Locate a path under `data/<module>/`: functions by folder, other files by name.
+
+    Functions and private files go to the deepest feature or group of features they lie in.
+    """
     parts = path.replace("\\", "/").strip("/").split("/")
     width = 2 if parts[0] == "tags" else 1
-    registry, rest = "/".join(parts[:width]), parts[width:]
+    resource, rest = "/".join(parts[:width]), parts[width:]
     if not rest:
-        return Location(registry, (), None)
-    if registry == "function":
-        feature = longest_prefix(features, "/".join(rest[:-1]))
+        return Location(resource, (), None)
+    owners = {*features, *groups(features)}
+    if resource == "function":
+        feature = longest_prefix(owners, "/".join(rest[:-1]))
     elif any(part.startswith(constants.PRIVATE_PREFIX) for part in rest):
-        stripped = (part.removeprefix(constants.PRIVATE_PREFIX) for part in rest)
-        feature = longest_prefix(features, "/".join(stripped))
+        folder = (part.removeprefix(constants.PRIVATE_PREFIX) for part in rest[:-1])
+        feature = longest_prefix(owners, "/".join(folder))
     else:
         name = "/".join(rest)
         name = name.rsplit(".", 1)[0] if "." in rest[-1] else name
-        if registry == "tags/function":
+        if resource == "tags/function":
             name = name.removesuffix(constants.MACRO_SUFFIX)
         feature = name if name in features else None
-    return Location(registry, tuple(rest), feature)
+    return Location(resource, tuple(rest), feature)
+
+
+def _private(reference: Reference, *, entries: bool) -> bool:
+    """Whether a reference reaches a private file: entries of features are public in `entries`."""
+    *folders, name = reference.static.split("/")
+    if entries and name in ENTRIES:
+        return any(part.startswith(constants.PRIVATE_PREFIX) for part in folders)
+    return any(part.startswith(constants.PRIVATE_PREFIX) for part in (*folders, name))
 
 
 def pack_files(ctx: Context, name: str) -> Iterator[FileText]:
@@ -203,28 +249,29 @@ def pack_files(ctx: Context, name: str) -> Iterator[FileText]:
             yield path, text if isinstance(text, str) else None
 
 
-def source_files(name: str) -> Iterator[FileText]:
-    """The source files of a module, with their text."""
-    base = workspace.directory(name)
-    root = base / "data" / name
-    for file in sorted(root.rglob("*")):
-        if file.is_file() and file.suffix in SOURCE_SUFFIXES:
-            path = file.relative_to(base).as_posix()
-            yield path, file.read_text("utf-8", "replace")
+@cached
+def source_files(ws: Workspace, name: str) -> tuple[tuple[str, str], ...]:
+    """The source files of a module with their text, read once."""
+    base = ws.directory(name)
+    return tuple(
+        (file.relative_to(base).as_posix(), file.read_text("utf-8", "replace"))
+        for file in sorted((base / "data" / name).rglob("*"))
+        if file.is_file() and file.suffix in SOURCE_SUFFIXES
+    )
 
 
-def changed_owners(tag: str, name: str) -> dict[Owner, list[str]]:
+def changed_owners(ws: Workspace, tag: str, name: str) -> dict[Owner, list[str]]:
     """The owners whose files changed since a tag, with those files."""
     changed: dict[Owner, list[str]] = defaultdict(list)
-    for path in history.changed_files(tag, name):
-        location = locate_in(name, path)
+    for path in history.changed_files(ws, tag, name):
+        location = locate_in(ws, name, path)
         if location is not None:
             changed[Owner(name, location.feature)].append(path)
     return dict(changed)
 
 
-def shipped_changes(tag: str, name: str) -> dict[Owner, list[str]]:
+def shipped_changes(ws: Workspace, tag: str, name: str) -> dict[Owner, list[str]]:
     """The changed owners a release ships: the experimental features left out."""
-    experimental = workspace.load_module(name).experimental
-    changed = changed_owners(tag, name)
+    experimental = ws.load_module(name).experimental
+    changed = changed_owners(ws, tag, name)
     return {owner: paths for owner, paths in changed.items() if owner.feature not in experimental}
