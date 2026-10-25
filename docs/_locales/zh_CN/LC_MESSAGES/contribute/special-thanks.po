@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-26 01:39+0800\n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -16,84 +16,89 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
-#: ../../../contribute/special-thanks.md:5 f8fd7e45e14e44c09b1332cd9d884c8b
-msgid "❤️ Special Thanks"
+#: ../../contribute/special-thanks.md:5 8fbdfbf61f804398b0f25b32daf78be7
+msgid "❤️ Special thanks"
 msgstr "❤️ 特别鸣谢"
 
-#: ../../../contribute/special-thanks.md:7 f6ff731101784bc89c3d3e51ab56526e
-msgid "Bookshelf is a collaborative project, made possible by the dedication and contributions of numerous individuals. We extend special thanks to those who have made significant contributions to this project, without whom it would not be what it is today."
-msgstr "Bookshelf 是一个协作项目，得益于众多个人的奉献与贡献才得以实现。我们特别感谢那些为该项目做出重大贡献的人，没有他们，它就不会有今天的成就。"
+#: ../../contribute/special-thanks.md:7 008918d0e6bc49dd8e89d4074126c0f8
+msgid ""
+"Many people build Bookshelf together. This page thanks the people who "
+"contributed the most to the project."
+msgstr "Bookshelf 由许多人共同构建。本页感谢对项目贡献最多的人。"
 
-#: ../../../contribute/special-thanks.md:11 a8d211096e8541abad62d83c092f43c6
-msgid "🌟 Direct Contributors"
-msgstr "🌟 主要贡献者"
+#: ../../contribute/special-thanks.md:11 725671e075f94762af2a084191a1df0f
+msgid "Direct contributors"
+msgstr "主要贡献者"
 
-#: ../../../contribute/special-thanks.md:16 9572fc971d7b4184ae5524566f8883db
+#: ../../contribute/special-thanks.md:16 7f1f3be964e145679c068f1473c2b972
 msgid "Vincent Foriel (aka Leirof)"
 msgstr "Vincent Foriel（又称 Leirof）"
 
-#: ../../../contribute/special-thanks.md:28 9403e295134d4dd1a8440f126c618d0c
+#: ../../contribute/special-thanks.md:28 83f54dcc81b449778feb146124e1b3ff
 msgid "Creator of the original Gunivers Libs."
 msgstr "原始 Gunivers Libs 的创建者。"
 
-#: ../../../contribute/special-thanks.md:31 f1294d8e659b4ede88ed43549f9a8885
+#: ../../contribute/special-thanks.md:31 3add4c8975e44aac8b670a77bb058069
 msgid "Aksiome"
 msgstr "Aksiome"
 
-#: ../../../contribute/special-thanks.md:43 f193653fdf2b4e8f833f17d1ef0ae16f
+#: ../../contribute/special-thanks.md:43 8c353dde5c484ec08e13e3ee6c898786
 msgid "Contributor and lead maintainer of Bookshelf."
 msgstr "Bookshelf 的贡献者和主要维护者。"
 
-#: ../../../contribute/special-thanks.md:46 d42686087dab4bbdaaa21de066343aa3
+#: ../../contribute/special-thanks.md:46 e0325de543224e7f99e3dfd07517bfbc
 msgid "Théo Giraudet (aka Oromis)"
 msgstr "Théo Giraudet（又称 Oromis）"
 
-#: ../../../contribute/special-thanks.md:58 62813c94aa1141a59c6d882bf3fdb4ee
+#: ../../contribute/special-thanks.md:58 f7eaf11fae0f48e891dc6883d7709321
 msgid "Contributor and maintainer of Bookshelf and the Gunivers Libs."
 msgstr "Bookshelf 和 Gunivers Libs 的贡献者与维护者。"
 
-#: ../../../contribute/special-thanks.md:62 57fb10ea64604c72a50222936b0868ec
-msgid "✨ Other Contributors"
-msgstr "✨ 其他贡献者"
+#: ../../contribute/special-thanks.md:62 c64dccf03de24e8a8ad73cbe74b71620
+msgid "Other contributors"
+msgstr "其他贡献者"
 
-#: ../../../contribute/special-thanks.md:67 b2427ff4fc284e679dcb9ef9f2974a14
+#: ../../contribute/special-thanks.md:67 3efa6342cb5d440db6c577e26184c3f4
 msgid "Lukas Scheuerle (aka Plagiatus)"
 msgstr "Lukas Scheuerle（又名 Plagiatus）"
 
-#: ../../../contribute/special-thanks.md:79 02298f62f30e4e468d38bce2bf709a09
+#: ../../contribute/special-thanks.md:79 ac541bf54b5243dbb1114cbab0595262
 msgid "Main developer of the Bookshelf Manager."
 msgstr "Bookshelf Manager 的主要开发者。"
 
-#: ../../../contribute/special-thanks.md:81 4a08eb308e4a4716875dad68d3f22364
+#: ../../contribute/special-thanks.md:81 09d601b529f74f93973caf13818b1e4c
 msgid "Charles P. (aka Aeris)"
 msgstr "Charles P.（又名 Aeris）"
 
-#: ../../../contribute/special-thanks.md:93 240aa6bb1f4240c28ebf7e51e591d960
+#: ../../contribute/special-thanks.md:93 009a7d06e157437597edb0de8f67c58a
 msgid "Sysadmin and legal referent."
 msgstr "系统管理员与法律顾问。"
 
-#: ../../../contribute/special-thanks.md:98 eb609e09a24a46b3b6effe5ece9c4c15
-msgid "🌍 Translators"
-msgstr "🌍 翻译者"
+#: ../../contribute/special-thanks.md:98 2055d90a3be24b5992186eef4137d85b
+msgid "Translators"
+msgstr "翻译者"
 
-#: ../../../contribute/special-thanks.md:103 fa89f5da582a4c098ad07ca128247740
+#: ../../contribute/special-thanks.md:103 f8a60158d5734f44b616bc6c02fdcbdb
 msgid "Ethanout"
 msgstr "Ethanout"
 
-#: ../../../contribute/special-thanks.md:114 2964ae0a8a3f4a38a6e43cab525fc38d
+#: ../../contribute/special-thanks.md:114 8d4c95dafde64999b03f1d8cf390ce6a
 msgid "Lead translator for the Chinese version of this documentation."
 msgstr "负责维护本文档中文版的译者。"
 
-#: ../../../contribute/special-thanks.md:120 b12b4e69b54843658ff2a12870027676
+#: ../../contribute/special-thanks.md:120 c09049b5e9204e749406ee139e75a9a4
 msgid "See all contributors"
 msgstr "查看所有贡献者"
 
-#: ../../../contribute/special-thanks.md:130 45edd23529494681a5a8896a92315135
-msgid "🫶 Acknowledgements"
-msgstr "🫶 致谢"
+#: ../../contribute/special-thanks.md:130 8d68d58b5b7e4a18a6f2372122815084
+msgid "Acknowledgements"
+msgstr "致谢"
 
-#: ../../../contribute/special-thanks.md:132 d1f3d168dfc846cb9ff55b920e7cb171
-msgid "This website uses the Tossface font, a freely available typeface designed and provided by the [Toss Team](https://toss.im)."
+#: ../../contribute/special-thanks.md:132 4d04eaf2d9504d14af5d5ddf53e0fe5f
+msgid ""
+"This website uses the Tossface font, a freely available typeface designed"
+" and provided by the [Toss Team](https://toss.im)."
 msgstr "本网站使用 Tossface 字体，这是一款由 [Toss Team](https://toss.im) 设计并提供免费使用的字体。"
+

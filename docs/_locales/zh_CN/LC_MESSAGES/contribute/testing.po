@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../contribute/testing.md:1 20afe1df1f2a43058513a401dc34afa6
+msgid "🧪 Testing"
+msgstr "🧪 测试"
+
+#: ../../contribute/testing.md:3 a61568b741c34042bdca2d2ed9bf75d1
+msgid ""
+"Tests check that your code works and keeps working. Bookshelf uses "
+"[Ward](https://github.com/mcbookshelf/ward). Ward runs tests on a real "
+"Minecraft server. You write each test as a function."
+msgstr ""
+"测试用来检查你的代码能正常工作，并且之后一直正常工作。Bookshelf 使用 "
+"[Ward](https://github.com/mcbookshelf/ward)。Ward 在真实的 Minecraft "
+"服务器上运行测试。每个测试都写成一个函数。"
+
+#: ../../contribute/testing.md:8 0a94fba4c1fc41e0904b88c0087b2e43
+msgid "Run the tests"
+msgstr "运行测试"
+
+#: ../../contribute/testing.md:18 299aea341b7a4e1395fce9ddf2852e70
+msgid ""
+"The command builds the modules and runs their tests. You don't need to "
+"open the game. The first run downloads the server."
+msgstr "该命令会构建模块并运行其测试。你无需打开游戏。首次运行时会下载服务器。"
+
+#: ../../contribute/testing.md:21 0f07a6aed7ef4bfab27925105e21d594
+msgid "`--coverage`"
+msgstr "`--coverage`"
+
+#: ../../contribute/testing.md:22 8124b294301f43988dd5aae8c12021e3
+msgid "Report which lines of the modules the tests ran"
+msgstr "报告测试运行了模块中的哪些行"
+
+#: ../../contribute/testing.md:23 25558a5f6055440881ce670b1df97080
+msgid "`--coverage-report <FORMAT[:PATH]>`"
+msgstr "`--coverage-report <FORMAT[:PATH]>`"
+
+#: ../../contribute/testing.md:24 b2c1965318c849a3a26aa26e28c9c75f
+msgid "Write the coverage as `lcov` or `html`. The path is optional"
+msgstr "以 `lcov` 或 `html` 格式写出覆盖率。路径是可选的"
+
+#: ../../contribute/testing.md:25 82a5d9895f2344529de48a87dbb38858
+msgid "`--verbose`"
+msgstr "`--verbose`"
+
+#: ../../contribute/testing.md:26 4db03cb91ff74cca9030cb69653df947
+msgid "List every test, even in a large run"
+msgstr "列出每个测试，即使运行的测试很多"
+
+#: ../../contribute/testing.md:27 333d53a33b0743b48734145feb1652bb
+msgid "`--reporter <live|github>`"
+msgstr "`--reporter <live|github>`"
+
+#: ../../contribute/testing.md:28 e31b377e3f9841c78a9f512c2efb047b
+msgid "Choose how to show the results. Use `github` in GitHub Actions"
+msgstr "选择结果的显示方式。在 GitHub Actions 中使用 `github`"
+
+#: ../../contribute/testing.md:29 b35b7af183c04687be6e2bcbd8a8c9ec
+msgid "`--junit-xml <PATH>`"
+msgstr "`--junit-xml <PATH>`"
+
+#: ../../contribute/testing.md:30 dcbe59e54fe746728d5642e0c9f40dc9
+msgid "Write the results as JUnit XML"
+msgstr "以 JUnit XML 格式写出结果"
+
+#: ../../contribute/testing.md:35 60c4ab1756204861b723eafb944b1fb2
+msgid "Where tests live"
+msgstr "测试的位置"
+
+#: ../../contribute/testing.md:37 671732143ba842e5a1ae0357c6cd40a4
+msgid ""
+"A test is a `.mcfunction` file in the `test` folder of the module. Name "
+"it after the feature that it tests:"
+msgstr "测试是模块 `test` 文件夹中的一个 `.mcfunction` 文件。请以它所测试的特性为它命名："
+
+#: ../../contribute/testing.md:44 a0e8b2f8f00a44ed968a30748a8358f4
+msgid ""
+"Start a test with the [license header](#contribute-license-header), like "
+"any function."
+msgstr "与任何函数一样，测试以[许可证头](#contribute-license-header)开头。"
+
+#: ../../contribute/testing.md:45 76143eaa36de43709ab32ea0fc59ac6b
+msgid "A test can call anything in its module, including private functions."
+msgstr "测试可以调用其模块中的任何内容，包括私有函数。"
+
+#: ../../contribute/testing.md:49 b4e215277d534f3c9663e0b0b7752129
+msgid "Write a test"
+msgstr "编写测试"
+
+#: ../../contribute/testing.md:51 498eade18c4f4c57b2cf35210ec965f9
+msgid ""
+"A test runs its commands in order. It fails as soon as one check fails. "
+"It passes when it reaches the end."
+msgstr "测试按顺序运行其命令。只要有一项检查失败，测试就立即失败。执行到末尾则测试通过。"
+
+#: ../../contribute/testing.md:64 cb7e0ef08e9041888777bcc4fa2e6852
+msgid "Ward adds commands that work only in tests:"
+msgstr "Ward 添加了仅在测试中可用的命令："
+
+#: ../../contribute/testing.md:67 d2c3e3d98593490bb93a94981445959d
+msgid "`assert <condition>`"
+msgstr "`assert <condition>`"
+
+#: ../../contribute/testing.md:68 d67e0a4e1ddb46d89dcf30d8dacfad33
+msgid "Fail the test if the condition is false"
+msgstr "若条件为假则测试失败"
+
+#: ../../contribute/testing.md:69 bb1e379f2e0e4a67aa7c0dc1da68a028
+msgid "`await <condition>`"
+msgstr "`await <condition>`"
+
+#: ../../contribute/testing.md:70 040173c76bd941cabdb1e967e7917469
+msgid "Wait until the condition is true. Fail if the test runs out of time"
+msgstr "等待直到条件为真。测试超时则失败"
+
+#: ../../contribute/testing.md:71 f2dbe7958cbe472aae3f1869e04a9c70
+msgid "`await delay <time>`"
+msgstr "`await delay <time>`"
+
+#: ../../contribute/testing.md:72 d11eb4524da74b99a479348549f68e97
+msgid "Wait for the given time"
+msgstr "等待指定的时长"
+
+#: ../../contribute/testing.md:73 255cae2c46434a0195f0196782038f1e
+msgid "`fail <message>`"
+msgstr "`fail <message>`"
+
+#: ../../contribute/testing.md:74 a18ae8a749eb47139acc78a241b81d3e
+msgid "Fail the test"
+msgstr "使测试失败"
+
+#: ../../contribute/testing.md:75 f4d399c24421447188d55864ad48c006
+msgid "`succeed`"
+msgstr "`succeed`"
+
+#: ../../contribute/testing.md:76 724afc26e8fa45c2b7b576033eece5b9
+msgid "Pass the test"
+msgstr "使测试通过"
+
+#: ../../contribute/testing.md:77 b1cd61a814ee4ecb8252c41f330440cc
+msgid "`dummy <name> <action>`"
+msgstr "`dummy <name> <action>`"
+
+#: ../../contribute/testing.md:78 0e7a100958434a4cb421b2fadbebe5fc
+msgid "Control a fake player"
+msgstr "控制一个模拟玩家"
+
+#: ../../contribute/testing.md:81 5022ca685e2147df895d13e6d11273db
+msgid ""
+"A comment that starts with `@` at the top of the test is a directive. It "
+"configures the test:"
+msgstr "测试顶部以 `@` 开头的注释是指令。它用于配置测试："
+
+#: ../../contribute/testing.md:84 6e55a20694444c70a617f088aa26e548
+msgid "`# @dummy`"
+msgstr "`# @dummy`"
+
+#: ../../contribute/testing.md:85 59339de1eb144de48cf1d0033c1a7710
+msgid "Spawn a fake player and run the test as this player"
+msgstr "生成一个模拟玩家，并以该玩家的身份运行测试"
+
+#: ../../contribute/testing.md:86 f9feaaf8ad474c1eb2307d5ccd1c0e24
+msgid "`# @skyaccess true`"
+msgstr "`# @skyaccess true`"
+
+#: ../../contribute/testing.md:87 a8bebe4e01084867bc800c11d9a25766
+msgid "Remove the barrier blocks that Ward places above the test"
+msgstr "移除 Ward 放置在测试上方的屏障方块"
+
+#: ../../contribute/testing.md:88 8c0b1baf5e2d48c7bec72ff49b5b44af
+msgid "`# @environment <id>`"
+msgstr "`# @environment <id>`"
+
+#: ../../contribute/testing.md:89 a4e2bf8934fa42a19add3cdf204b40b6
+msgid ""
+"Use another test environment. The default is the generated "
+"`<module>:default` environment"
+msgstr "使用另一个测试环境。默认为生成的 `<module>:default` 环境"
+
+#: ../../contribute/testing.md:92 8b2cfb77cc7f476cba2fc3c7dbda80ee
+msgid "Learn more"
+msgstr "了解更多"
+
+#: ../../contribute/testing.md:95 89936fa8a1f74590af9898ea67fe4155
+msgid ""
+"The Ward documentation lists every "
+"[command](https://github.com/mcbookshelf/ward/blob/HEAD/docs/commands.md),"
+" "
+"[directive](https://github.com/mcbookshelf/ward/blob/HEAD/docs/directives.md),"
+" and [dummy "
+"action](https://github.com/mcbookshelf/ward/blob/HEAD/docs/dummies.md)."
+msgstr ""
+"Ward "
+"文档列出了所有的[命令](https://github.com/mcbookshelf/ward/blob/HEAD/docs/commands.md)、[指令](https://github.com/mcbookshelf/ward/blob/HEAD/docs/directives.md)和[模拟玩家动作](https://github.com/mcbookshelf/ward/blob/HEAD/docs/dummies.md)。"
+

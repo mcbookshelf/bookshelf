@@ -2,13 +2,13 @@
 hide-sidebar-secondary: true
 ---
 
-# ❤️ Special Thanks
+# ❤️ Special thanks
 
-Bookshelf is a collaborative project, made possible by the dedication and contributions of numerous individuals. We extend special thanks to those who have made significant contributions to this project, without whom it would not be what it is today.
+Many people build Bookshelf together. This page thanks the people who contributed the most to the project.
 
 ---
 
-## 🌟 Direct Contributors
+## Direct contributors
 
 ::::{grid} 1 2 2 3
 :gutter: 3
@@ -59,7 +59,7 @@ Contributor and maintainer of Bookshelf and the Gunivers Libs.
 :::
 ::::
 
-## ✨ Other Contributors
+## Other contributors
 
 ::::{grid} 1 2 2 3
 :gutter: 3
@@ -95,7 +95,7 @@ Sysadmin and legal referent.
 ::::
 
 
-## 🌍 Translators
+## Translators
 
 ::::{grid} 1 2 2 3
 :gutter: 3
@@ -127,6 +127,6 @@ See all contributors
 
 ---
 
-## 🫶 Acknowledgements
+## Acknowledgements
 
 This website uses the Tossface font, a freely available typeface designed and provided by the [Toss Team](https://toss.im).

@@ -1,4 +1,11 @@
+blank_issues_enabled: false
 contact_links:
   - name: ❓ Question
-    url:  https://github.com/mcbookshelf/bookshelf/discussions
+    url: https://github.com/mcbookshelf/bookshelf/discussions
     about: Please ask questions here.
+  - name: 💬 Discord
+    url: https://discord.gg/aV5SF3JsAZ
+    about: Chat with the community and the maintainers.
+  - name: 📖 Documentation
+    url: https://docs.mcbookshelf.dev
+    about: Guides and the reference of every module.

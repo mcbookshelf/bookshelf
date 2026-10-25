@@ -1,101 +1,125 @@
 # 🔖 Metadata
 
-To support automation by tools like the Bookshelf Manager, modules must declare specific metadata. All metadata are verified during the CI/CD process (see the [contribution validation page](project:../contribute/contribution-validation.md)).
+Each module has a `module.bs` file, and each bundle has a `bundle.bs` file. These files describe the bundle, the module, and its features. The build uses them to generate the function tags, the documentation, and the editor completion. The `uv run check` command checks them. See the [validation page](project:validation.md).
 
----
+This page covers the basics. To learn more of the syntax, read the `module.bs` files of other modules.
 
-## ⭐ Feature Metadata
+```{admonition} Editor support
+:class: tip
 
-Feature metadata are defined directly within each `.json` file, as shown below:
-
-```{code-block} json
-:force:
-{
-  "__bookshelf__": {
-    "feature": true,
-    "deprecated": false,
-    "documentation": "<DOCUMENTATION>",
-    "authors": [
-      "<AUTHOR1>"
-    ],
-    "contributors": [
-      "<CONTRIBUTOR1>"
-    ],
-    "created": {
-      "date": "<YYYY/MM/DD>",
-      "minecraft_version": "<VERSION>"
-    },
-    "updated": {
-      "date": "<YYYY/MM/DD>",
-      "minecraft_version": "<VERSION>"
-    }
-  },
-  ...
-}
+The `mcbookshelf.vscode-bsdoc` extension for VS Code highlights and checks `.bs` files.
 ```
 
-| Field | Description | Mandatory |
-|-------|-------------|---------- |
-| feature | Indicates whether the file is the endpoint of a feature | yes |
-| deprecated | Indicates whether the feature has been deprecated | no |
-| documentation | A link to the feature's documentation | yes |
-| authors | A list of feature authors. Cannot be empty | yes |
-| contributors | A list of contributors (e.g., those who provided insights, fixes, or indirect help) | no |
-| created | The creation date and Minecraft version for historical purposes | yes |
-| updated | The date and Minecraft version of the most recent update | yes |
+---
+
+## Bundle metadata
+
+A bundle is a set of modules in one pack. Its folder name starts with `@`, for example `modules/@bs.runtime`. Its `bundle.bs` file starts with a description of the bundle. The properties follow:
+
+```text
+> A collection of all core modules, meant to ship with your datapack.
+
+name: Runtime
+slug: bookshelf-runtime
+version: 5.0.0
+tags: runtime
+```
+
+| Property | Description | Required |
+|----------|-------------|----------|
+| name | The display name of the bundle, for example `Runtime` | yes |
+| slug | The name used to publish the bundle, for example `bookshelf-runtime` | yes |
+| version | The version of the bundle, for example `5.0.0` | yes |
+| tags | A list of tags. The bundle includes every released module that has one of them | yes |
+| documentation | A link to the bundle documentation | no |
 
 ---
 
-## 🧩 Module Metadata
+## Module metadata
 
-Module metadata are defined in `modules/<module>/module.json`. Below is an example:
+The `module.bs` file starts with a description of the module. The properties follow:
 
-```{code-block} json
-:force:
-{
-  ...
-  "meta": {
-    "name": "<NAME>",
-    "slug": "<SLUG>",
-    "description": "<DESCRIPTION>",
-    "documentation": "<DOCUMENTATION>",
-    "tags": [
-      "<TAG1>"
-    ],
-    "authors": [
-      "<AUTHOR1>"
-    ],
-    "contributors": [
-      "<CONTRIBUTOR1>"
-    ],
-    "dependencies": [
-      "<MODULE1>"
-    ],
-    "weak_dependencies": [
-      "<MODULE1>"
-    ]
+```text
+> Read and modify player health, and give entities a lifetime.
+
+name: Health
+slug: bookshelf-health
+version: 5.0.0
+tags: runtime
+```
+
+| Property | Description | Required |
+|----------|-------------|----------|
+| name | The display name of the module, for example `Health` | yes |
+| slug | The name used to publish the module, for example `bookshelf-health` | yes |
+| version | The version of the module, for example `5.0.0`. See the [changelog page](project:changelog.md) | yes |
+| tags | A list of tags. Bundles use them to select modules, for example `runtime` or `dev` | no |
+| documentation | A link to the module documentation. The default is its page in `docs/modules` | no |
+| weak_dependencies | Modules that improve this one but that it can work without, for example `bs.log` | no |
+
+You don't declare dependencies. The build finds them in the module files. For example, a call to `#bs.hitbox:get_block/collision` makes the module depend on `bs.hitbox`.
+
+---
+
+## Feature metadata
+
+The features come after the module properties. Declare each feature with its type, its name, and a description:
+
+```text
+feature function set_health
+  > Set players' health points.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2023/09/15 1.20.2
+  updated: 2026/09/20 26.3
+
+  context executor: player[] > players to set the health of
+  input arguments: {
+    points: float @ 0..1024 > health points to set
   }
-}
+  output state > the health is scheduled for update
 ```
 
-| Field | Description | Mandatory |
-|-------|-------------|---------- |
-| name | The module's display name (e.g., `Foo`) | yes |
-| slug | The module's slug used to publish to platforms (e.g., `bookshelf-foo`) | yes |
-| description | A description of the module's purpose | yes |
-| documentation | A link to the module's documentation | yes |
-| tags | A list of tags for categorizing or identifying modules. Tags are also used to generate bundles (e.g., `default` and `dev`) | no (but trigger warnings) |
-| authors | A list of module authors (supplements authors from features). Cannot be empty | no |
-| contributors | A list of contributors (supplements contributors from features) | no |
-| dependencies | Essential modules required for this module to function (e.g., `bs.hitbox`) | no |
-| weak dependencies | Optional modules that enhance functionality but are not essential (e.g., `bs.log`) | no |
+The type is one of `function`, `predicate`, `loot_table`, `context_int_provider`, `context_float_provider`, `block_tag`, or `entity_type_tag`.
 
----
+| Property | Description | Required |
+|----------|-------------|----------|
+| authors | A list of the feature authors | yes |
+| contributors | A list of people who helped, for example with ideas or fixes | no |
+| created | The date and Minecraft version when the feature was created | yes |
+| updated | The date and Minecraft version of the last change | yes |
+| deprecated | Set to `true` when users should stop using the feature | no |
+| experimental | Set to `true` when the feature isn't ready. Only nightly builds include it | no |
 
-## 📜 Manifest
+A description starts with `>`. Describe only what this feature does. Explain ideas that several features share on the documentation page of the module.
 
-The manifest consolidates metadata for all modules and features in Bookshelf. It is automatically generated and can be updated using the following command:
-```sh
-uv run update
+### Context, inputs, and outputs
+
+The lines that start with `context`, `input`, and `output` describe how to use the feature. They appear in the documentation, and editors use them for completion.
+
+:::{list-table}
+*   - `context`
+    - How the feature must run: `executor`, `position`, `rotation`, or `dimension`
+*   - `input arguments`
+    - Data that the feature reads from the storage `<module>:<feature>`, or `<module>:<group>` in a [group](#contribute-groups), at the path `in`. Users can also [call the feature with a macro](#contribute-calling-a-feature). Optional entries, marked with `?`, go in a `with` argument
+*   - `input storage`
+    - Same as `input arguments`, without the macro
+*   - `input macro`
+    - The arguments of a `__macro__` function that you write
+*   - `output storage`
+    - Data that the feature writes to the storage `<module>:<feature>`, or `<module>:<group>` in a [group](#contribute-groups), at the path `out`
+*   - `output result`
+    - The number that the feature returns
+*   - `output success`
+    - The feature either succeeds or fails
+*   - `state`
+    - Anything else, in plain words. Use it after `context`, `input`, or `output`
+:::
+
+The features of a group share their storage without a name. The build reports a group whose features declare different input or output storages.
+
+To use another storage, name it:
+
+```text
+output storage bs.<module>:<name> out: [[double] @ 7]
 ```
-The generated file is located at `meta/manifest.json`.

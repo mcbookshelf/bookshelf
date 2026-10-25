@@ -1,4 +1,4 @@
-name: 🔖 Check release
+name: "🔖 Release: check"
 
 on:
   pull_request:
@@ -12,16 +12,20 @@ concurrency:
 
 jobs:
   check:
-    name: 🔎 Check master
+    name: 🔎 Check release
     if: startsWith(github.head_ref, 'release/')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
+          fetch-tags: true
       - name: Check master
         run: |
           if ! git merge-base --is-ancestor origin/master ${{ github.event.pull_request.head.sha }}; then
             echo "::error::master moved since this release was prepared: dispatch the release again"
             exit 1
           fi
+      - uses: astral-sh/setup-uv@v9.0.0
+      - name: Check versions
+        run: uv run bump --check

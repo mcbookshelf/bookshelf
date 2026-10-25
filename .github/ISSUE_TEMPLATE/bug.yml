@@ -7,25 +7,37 @@ labels:
 body:
   - type: input
     attributes:
-      label: 🧩 Module
-      description: The affected module.
-      placeholder: bs.example
+      label: 🧩 Module or feature
+      description: The affected feature, or its module if you cannot tell which feature.
+      placeholder: "#bs.example:function"
     validations:
       required: true
 
   - type: input
     attributes:
       label: 🔢 Version
-      description: The module version where the bug occurs.
-      placeholder: v5.0.0+26.3
+      description: The version of the module, listed in game by `/function #bs.load:status`.
+      placeholder: 5.0.0
     validations:
       required: true
 
   - type: input
     attributes:
-      label: ⭐ Feature
-      description: The affected feature, if applicable.
-      placeholder: "#bs.example:function"
+      label: 🎮 Minecraft version
+      placeholder: "26.3"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 🔁 Steps to reproduce
+      description: The steps needed to reproduce the issue.
+      placeholder: |
+        1. /function #bs.xp:set_levels.in {levels: 5}
+        2. /function #bs.xp:add_levels.in {levels: -10}
+        3. The level shows 5 instead of 0.
+    validations:
+      required: true
 
   - type: textarea
     attributes:
@@ -38,15 +50,6 @@ body:
       label: ✅ Expected behavior
     validations:
       required: true
-
-  - type: textarea
-    attributes:
-      label: 🔁 Steps to reproduce
-      description: The steps needed to reproduce the issue.
-      placeholder: |
-        1. /function #bs.xp:set_levels {levels: 5}
-        2. /function #bs.xp:add_levels {levels: -10}
-        3. The level shows 5 instead of 0.
 
   - type: textarea
     attributes:

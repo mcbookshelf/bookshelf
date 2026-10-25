@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../contribute/validation.md:1 854535926a2f497bbccb39150d71ebf7
+msgid "✅ Validation"
+msgstr "✅ 验证"
+
+#: ../../contribute/validation.md:3 8ba9a86f391e4fbdb9c644f6e7cd606d
+msgid ""
+"A contribution is more than code. The `check` command checks that a "
+"module follows the project rules:"
+msgstr "贡献不只是代码。`check` 命令会检查模块是否遵循项目的规则："
+
+#: ../../contribute/validation.md:13 d4270e174fcb45b7acf9582614d983cb
+msgid ""
+"The command shows each issue with its file and line. Most messages tell "
+"you how to fix the issue. The command also runs on every pull request, "
+"with the [tests](project:testing.md)."
+msgstr "该命令会显示每个问题及其文件和行号。大多数消息会告诉你如何修复问题。它还会与[测试](project:testing.md)一起在每个拉取请求上运行。"
+
+#: ../../contribute/validation.md:17 aceeebe3c2204768b2fb67a84be469b4
+msgid "What the command checks"
+msgstr "该命令检查的内容"
+
+#: ../../contribute/validation.md:20 700f61b81df94227a1b9d7dd789b75c2
+msgid "**Metadata**"
+msgstr "**元数据**"
+
+#: ../../contribute/validation.md:21 664a5081b73c49ebbfd8e2c69d1d712e
+msgid ""
+"The `module.bs` file is valid. If it has errors, the command shows only "
+"these errors. See the [metadata page](project:metadata.md)"
+msgstr "`module.bs` 文件有效。如果文件有错误，该命令只显示这些错误。参见[元数据页面](project:metadata.md)"
+
+#: ../../contribute/validation.md:22 3fa12c9b10384041bb908849e62abc86
+msgid "**Layout**"
+msgstr "**文件布局**"
+
+#: ../../contribute/validation.md:23 3f6c492ece0f447aa515a858f4804ef3
+msgid ""
+"The module has its required files. Each function starts with the [license"
+" header](#contribute-license-header). Each file is a declared feature or "
+"a [private file](#contribute-public-and-private-files)"
+msgstr ""
+"模块包含必需的文件。每个函数都以[许可证头](#contribute-license-"
+"header)开头。每个文件要么是已声明的特性，要么是[私有文件](#contribute-public-and-private-files)"
+
+#: ../../contribute/validation.md:24 9edfff0a4beb443287b2c509541f44e6
+msgid "**References**"
+msgstr "**引用**"
+
+#: ../../contribute/validation.md:25 78a213c7120a497d8ce16d1a366816a1
+msgid ""
+"Each Bookshelf ID in a file belongs to a known feature. No feature uses "
+"the private files of another feature"
+msgstr "文件中的每个 Bookshelf ID 都属于一个已知的特性。任何特性都不使用其他特性的私有文件"
+
+#: ../../contribute/validation.md:26 09375d8fcebd4f31ae8dea41ee06e6a3
+msgid "**Changelog**"
+msgstr "**更新日志**"
+
+#: ../../contribute/validation.md:27 63c9c99646ca444294736631f4bfb041
+msgid ""
+"The [changelog](project:changelog.md) has an `Unreleased` section. It has"
+" a line for each change since the last release"
+msgstr "[更新日志](project:changelog.md)包含 `Unreleased` 章节。自上次发布以来的每项更改都有一行记录"
+
+#: ../../contribute/validation.md:28 e318b6215f2c4515a083115949e04fc6
+msgid "**Documentation**"
+msgstr "**文档**"
+
+#: ../../contribute/validation.md:29 3b37ca433798469797f988ab2799cdb2
+msgid ""
+"The module has a documentation page. Each feature has its [feature "
+"directive](#contribute-feature-directive)"
+msgstr "模块有文档页面。每个特性都有对应的[特性指令](#contribute-feature-directive)"
+
+#: ../../contribute/validation.md:34 4c08d46bbabb45cabc2ac6d60dde4289
+msgid "Messages that need more detail"
+msgstr "需要进一步说明的消息"
+
+#: ../../contribute/validation.md:19 752153135b4c469ca746e52271371cc9
+msgid "Message"
+msgstr "消息"
+
+#: ../../contribute/validation.md:19 03d118935ee04acaa0a27fc2ce48eefa
+msgid "Fix"
+msgstr "修复方法"
+
+#: ../../contribute/validation.md:19 5ad475e3ae87487382ece1941022e8ce
+msgid "'x' cannot be attributed: the feature part is dynamic"
+msgstr "'x' cannot be attributed: the feature part is dynamic"
+
+#: ../../contribute/validation.md:19 d57ccccbf25e4426a93702cbc8a1bd93
+msgid "A macro builds the ID. Write enough of the ID to identify the feature"
+msgstr "该 ID 由宏构建。请写出足够的部分以确定特性"
+
+#: ../../contribute/validation.md:19 c8b368e2edae4a58a35c5bc1d145652e
+msgid ""
+"'x' cannot be attributed: the static part could name a feature or a "
+"shared path"
+msgstr ""
+"'x' cannot be attributed: the static part could name a feature or a "
+"shared path"
+
+#: ../../contribute/validation.md:19 a8a01a2faeca4e518f4c0ba8d414d00c
+msgid "Same as the previous message. The written part matches several features"
+msgstr "与上一条消息相同。已写出的部分与多个特性匹配"
+
+#: ../../contribute/validation.md:19 48dd8a4269f046ee96c0f76e5c542f45
+msgid "'x' changed since v1.0.0: update its 'updated' stamp"
+msgstr "'x' changed since v1.0.0: update its 'updated' stamp"
+
+#: ../../contribute/validation.md:19 748e411ddaf14c77981042801250418f
+msgid ""
+"Set the `updated` property of the feature to today's date and the current"
+" Minecraft version"
+msgstr "将该特性的 `updated` 属性设置为今天的日期和当前的 Minecraft 版本"
+

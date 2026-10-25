@@ -16,8 +16,13 @@ body:
   - type: input
     attributes:
       label: ⭐ Feature
-      description: The feature to add or change, named as you would call it.
+      description: The feature to change, or a name for a new one, if you have one in mind.
       placeholder: "#bs.example:function"
+
+  - type: textarea
+    attributes:
+      label: 🎯 Use case
+      description: What you are trying to do in your project, and why the current features fall short.
     validations:
       required: true
 
