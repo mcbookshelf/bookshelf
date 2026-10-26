@@ -1,0 +1,312 @@
+{
+  "type": "add",
+  "inputs": [
+    {
+      "type": "sub",
+      "left": {
+        "type": "floor_div",
+        "left": {
+          "type": "score",
+          "score": "bs.data",
+          "target": {
+            "type": "fixed",
+            "name": "#raycast.z"
+          }
+        },
+        "right": 16384
+      },
+      "right": {
+        "type": "storage",
+        "storage": "bs.raycast:",
+        "path": "ray._shift_z"
+      }
+    },
+    {
+      "type": "conditional",
+      "condition": {
+        "type": "int_value_check",
+        "value": {
+          "type": "sub",
+          "left": {
+            "type": "add",
+            "inputs": [
+              8191,
+              {
+                "type": "mul",
+                "inputs": [
+                  16384,
+                  {
+                    "type": "score",
+                    "score": "bs.data",
+                    "target": {
+                      "type": "fixed",
+                      "name": "#raycast.uz"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "right": {
+            "type": "floor_mod",
+            "left": {
+              "type": "score",
+              "score": "bs.data",
+              "target": {
+                "type": "fixed",
+                "name": "#raycast.z"
+              }
+            },
+            "right": 16384
+          }
+        },
+        "test": {
+          "min": 0
+        }
+      },
+      "on_true": {
+        "type": "floor_div",
+        "left": {
+          "type": "sub",
+          "left": {
+            "type": "score",
+            "score": "bs.data",
+            "target": {
+              "type": "fixed",
+              "name": "#raycast.lz"
+            }
+          },
+          "right": {
+            "type": "floor_div",
+            "left": {
+              "type": "mul",
+              "inputs": [
+                65536,
+                {
+                  "type": "conditional",
+                  "condition": {
+                    "type": "int_value_check",
+                    "value": {
+                      "type": "sub",
+                      "left": {
+                        "type": "add",
+                        "inputs": [
+                          8191,
+                          {
+                            "type": "mul",
+                            "inputs": [
+                              16384,
+                              {
+                                "type": "score",
+                                "score": "bs.data",
+                                "target": {
+                                  "type": "fixed",
+                                  "name": "#raycast.uz"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "right": {
+                        "type": "floor_mod",
+                        "left": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#raycast.z"
+                          }
+                        },
+                        "right": 16384
+                      }
+                    },
+                    "test": {
+                      "min": 0
+                    }
+                  },
+                  "on_true": {
+                    "type": "sub",
+                    "left": 16384,
+                    "right": {
+                      "type": "floor_mod",
+                      "left": {
+                        "type": "score",
+                        "score": "bs.data",
+                        "target": {
+                          "type": "fixed",
+                          "name": "#raycast.z"
+                        }
+                      },
+                      "right": 16384
+                    }
+                  },
+                  "on_false": {
+                    "type": "floor_mod",
+                    "left": {
+                      "type": "score",
+                      "score": "bs.data",
+                      "target": {
+                        "type": "fixed",
+                        "name": "#raycast.z"
+                      }
+                    },
+                    "right": 16384
+                  }
+                }
+              ]
+            },
+            "right": {
+              "type": "max",
+              "inputs": [
+                {
+                  "type": "abs",
+                  "input": {
+                    "type": "score",
+                    "score": "bs.data",
+                    "target": {
+                      "type": "fixed",
+                      "name": "#raycast.uz"
+                    }
+                  }
+                },
+                1
+              ]
+            }
+          }
+        },
+        "right": {
+          "type": "score",
+          "score": "bs.data",
+          "target": {
+            "type": "fixed",
+            "name": "#raycast.dz"
+          }
+        }
+      },
+      "on_false": {
+        "type": "negate",
+        "input": {
+          "type": "floor_div",
+          "left": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.data",
+              "target": {
+                "type": "fixed",
+                "name": "#raycast.lz"
+              }
+            },
+            "right": {
+              "type": "floor_div",
+              "left": {
+                "type": "mul",
+                "inputs": [
+                  65536,
+                  {
+                    "type": "conditional",
+                    "condition": {
+                      "type": "int_value_check",
+                      "value": {
+                        "type": "sub",
+                        "left": {
+                          "type": "add",
+                          "inputs": [
+                            8191,
+                            {
+                              "type": "mul",
+                              "inputs": [
+                                16384,
+                                {
+                                  "type": "score",
+                                  "score": "bs.data",
+                                  "target": {
+                                    "type": "fixed",
+                                    "name": "#raycast.uz"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "right": {
+                          "type": "floor_mod",
+                          "left": {
+                            "type": "score",
+                            "score": "bs.data",
+                            "target": {
+                              "type": "fixed",
+                              "name": "#raycast.z"
+                            }
+                          },
+                          "right": 16384
+                        }
+                      },
+                      "test": {
+                        "min": 0
+                      }
+                    },
+                    "on_true": {
+                      "type": "sub",
+                      "left": 16384,
+                      "right": {
+                        "type": "floor_mod",
+                        "left": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#raycast.z"
+                          }
+                        },
+                        "right": 16384
+                      }
+                    },
+                    "on_false": {
+                      "type": "floor_mod",
+                      "left": {
+                        "type": "score",
+                        "score": "bs.data",
+                        "target": {
+                          "type": "fixed",
+                          "name": "#raycast.z"
+                        }
+                      },
+                      "right": 16384
+                    }
+                  }
+                ]
+              },
+              "right": {
+                "type": "max",
+                "inputs": [
+                  {
+                    "type": "abs",
+                    "input": {
+                      "type": "score",
+                      "score": "bs.data",
+                      "target": {
+                        "type": "fixed",
+                        "name": "#raycast.uz"
+                      }
+                    }
+                  },
+                  1
+                ]
+              }
+            }
+          },
+          "right": {
+            "type": "score",
+            "score": "bs.data",
+            "target": {
+              "type": "fixed",
+              "name": "#raycast.dz"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

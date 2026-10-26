@@ -36,3 +36,6 @@ execute as @n[type=minecraft:armor_stand,tag=ward.schedule.replace.b] run functi
 await entity @n[type=minecraft:armor_stand,tag=ward.schedule.replace.a,tag=ward.schedule.replace.ran]
 assert entity @n[type=minecraft:armor_stand,tag=ward.schedule.replace.b,tag=ward.schedule.replace.ran]
 kill @e[type=minecraft:armor_stand,tag=ward.schedule.replace]
+
+# A delay under one tick schedules nothing
+assert not run function #bs.schedule:schedule/replace.in {run:"say ward.schedule.replace",time:0,id:"ward.schedule.replace.zero"}

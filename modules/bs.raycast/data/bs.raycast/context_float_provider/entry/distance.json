@@ -1,0 +1,19 @@
+{
+  "type": "div",
+  "left": {
+    "type": "from_int",
+    "input": {
+      "type": "floor_div",
+      "left": {
+        "type": "score",
+        "score": "bs.data",
+        "target": {
+          "type": "fixed",
+          "name": "#raycast.hit"
+        }
+      },
+      "right": 64
+    }
+  },
+  "right": 16384.0
+}

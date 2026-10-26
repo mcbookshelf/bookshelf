@@ -1,0 +1,56 @@
+# ------------------------------------------------------------------------------------------------------------
+# Copyright (c) 2026 Gunivers
+#
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
+#
+# This source code is subject to the terms of the Mozilla Public License, v. 2.0.
+# If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#
+# Conditions:
+# - You may use this file in compliance with the MPL v2.0
+# - Any modifications must be documented and disclosed under the same license
+#
+# For more details, refer to the MPL v2.0.
+# ------------------------------------------------------------------------------------------------------------
+
+# @template ward:empty/9x9x9
+
+# an entity in each block, pierced towards each octant with a ray mostly along each axis: 24 rays of 12 blocks, on_entity for each block
+summon minecraft:interaction ~1.5 ~1 ~1.5 {Tags:["bs.raycast.test.custom.entity"],width:1f,height:1f}
+execute at @e[type=minecraft:interaction,tag=bs.raycast.test.custom.entity,dx=8,dy=8,dz=8] run summon minecraft:interaction ~1 ~ ~ {Tags:["bs.raycast.test.custom.entity"],width:1f,height:1f}
+execute at @e[type=minecraft:interaction,tag=bs.raycast.test.custom.entity,dx=8,dy=8,dz=8] run summon minecraft:interaction ~2 ~ ~ {Tags:["bs.raycast.test.custom.entity"],width:1f,height:1f}
+execute at @e[type=minecraft:interaction,tag=bs.raycast.test.custom.entity,dx=8,dy=8,dz=8] run summon minecraft:interaction ~4 ~ ~ {Tags:["bs.raycast.test.custom.entity"],width:1f,height:1f}
+execute at @e[type=minecraft:interaction,tag=bs.raycast.test.custom.entity,dx=8,dy=8,dz=8] run summon minecraft:interaction ~ ~1 ~ {Tags:["bs.raycast.test.custom.entity"],width:1f,height:1f}
+execute at @e[type=minecraft:interaction,tag=bs.raycast.test.custom.entity,dx=8,dy=8,dz=8] run summon minecraft:interaction ~ ~2 ~ {Tags:["bs.raycast.test.custom.entity"],width:1f,height:1f}
+execute at @e[type=minecraft:interaction,tag=bs.raycast.test.custom.entity,dx=8,dy=8,dz=8] run summon minecraft:interaction ~ ~4 ~ {Tags:["bs.raycast.test.custom.entity"],width:1f,height:1f}
+execute at @e[type=minecraft:interaction,tag=bs.raycast.test.custom.entity,dx=8,dy=8,dz=8] run summon minecraft:interaction ~ ~ ~1 {Tags:["bs.raycast.test.custom.entity"],width:1f,height:1f}
+execute at @e[type=minecraft:interaction,tag=bs.raycast.test.custom.entity,dx=8,dy=8,dz=8] run summon minecraft:interaction ~ ~ ~2 {Tags:["bs.raycast.test.custom.entity"],width:1f,height:1f}
+execute at @e[type=minecraft:interaction,tag=bs.raycast.test.custom.entity,dx=8,dy=8,dz=8] run summon minecraft:interaction ~ ~ ~4 {Tags:["bs.raycast.test.custom.entity"],width:1f,height:1f}
+data modify storage bs.hitbox:get_entity out set value [[-.5f,0f,-.5f,.5f,1f,.5f,1f]]
+data modify storage bs.raycast:test log set value []
+assert not run execute positioned ~1.2 ~1.2 ~1.2 facing ~6 ~3 ~2 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~1.2 ~1.2 ~1.2 facing ~2 ~6 ~3 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~1.2 ~1.2 ~1.2 facing ~3 ~2 ~6 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~1.2 ~1.2 ~7.8 facing ~6 ~3 ~-2 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~1.2 ~1.2 ~7.8 facing ~2 ~6 ~-3 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~1.2 ~1.2 ~7.8 facing ~3 ~2 ~-6 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~1.2 ~7.8 ~1.2 facing ~6 ~-3 ~2 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~1.2 ~7.8 ~1.2 facing ~2 ~-6 ~3 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~1.2 ~7.8 ~1.2 facing ~3 ~-2 ~6 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~1.2 ~7.8 ~7.8 facing ~6 ~-3 ~-2 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~1.2 ~7.8 ~7.8 facing ~2 ~-6 ~-3 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~1.2 ~7.8 ~7.8 facing ~3 ~-2 ~-6 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~7.8 ~1.2 ~1.2 facing ~-6 ~3 ~2 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~7.8 ~1.2 ~1.2 facing ~-2 ~6 ~3 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~7.8 ~1.2 ~1.2 facing ~-3 ~2 ~6 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~7.8 ~1.2 ~7.8 facing ~-6 ~3 ~-2 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~7.8 ~1.2 ~7.8 facing ~-2 ~6 ~-3 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~7.8 ~1.2 ~7.8 facing ~-3 ~2 ~-6 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~7.8 ~7.8 ~1.2 facing ~-6 ~-3 ~2 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~7.8 ~7.8 ~1.2 facing ~-2 ~-6 ~3 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~7.8 ~7.8 ~1.2 facing ~-3 ~-2 ~6 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~7.8 ~7.8 ~7.8 facing ~-6 ~-3 ~-2 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~7.8 ~7.8 ~7.8 facing ~-2 ~-6 ~-3 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert not run execute positioned ~7.8 ~7.8 ~7.8 facing ~-3 ~-2 ~-6 run function #bs.raycast:pierce.in {with:{entities:"bs.raycast:test/none",selector:"tag=bs.raycast.test.custom.entity",on_entity:'data modify storage bs.raycast:test log append value 1b',max_distance:7.5}}
+assert result 288 run data get storage bs.raycast:test log
+kill @e[type=minecraft:interaction,tag=bs.raycast.test.custom.entity]

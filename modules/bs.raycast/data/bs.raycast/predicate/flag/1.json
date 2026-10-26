@@ -1,0 +1,24 @@
+{
+  "type": "int_value_check",
+  "value": {
+    "type": "floor_mod",
+    "left": {
+      "type": "floor_div",
+      "left": {
+        "type": "floor_mod",
+        "left": {
+          "type": "score",
+          "score": "bs.data",
+          "target": {
+            "type": "fixed",
+            "name": "#raycast.hit"
+          }
+        },
+        "right": 16
+      },
+      "right": 1
+    },
+    "right": 2
+  },
+  "test": 1
+}

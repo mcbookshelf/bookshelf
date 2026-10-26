@@ -41,4 +41,4 @@ jobs:
           path: .beet_cache
           key: ${{ runner.os }}-beet-cache
       - name: Test modules
-        run: uv run test --reporter github
+        run: uv run test --reporter github --coverage

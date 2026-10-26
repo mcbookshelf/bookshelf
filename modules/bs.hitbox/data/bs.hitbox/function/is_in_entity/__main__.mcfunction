@@ -19,4 +19,5 @@ execute if data storage bs.hitbox:is_in_entity in{entities:"#bs.hitbox:get_entit
 execute if data storage bs.hitbox:is_in_entity in{entities:"#bs.hitbox:get_entity/solid"} run return run execute if predicate bs.hitbox:get_entity/solid if entity @s[dx=0] positioned ~-.99999999999999 ~-.99999999999999 ~-.99999999999999 if entity @s[dx=0]
 execute if data storage bs.hitbox:is_in_entity in{entities:"#bs.hitbox:get_entity/targetable"} run return run execute if predicate bs.hitbox:get_entity/targetable if entity @s[dx=0] positioned ~-.99999999999999 ~-.99999999999999 ~-.99999999999999 if entity @s[dx=0]
 
-return run function bs.hitbox:is_in_entity/custom
+execute if entity @s[tag=bs.hitbox.unbounded] run return run function bs.hitbox:is_in_entity/custom
+return run execute if entity @s[dx=0] positioned ~-.99999999999999 ~-.99999999999999 ~-.99999999999999 if entity @s[dx=0] positioned ~.99999999999999 ~.99999999999999 ~.99999999999999 run function bs.hitbox:is_in_entity/custom

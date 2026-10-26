@@ -26,16 +26,27 @@ def required(name: str) -> dict[str, set[Owner]]:
     """The owners of other modules the module needs, and what those need in turn, by module."""
     ws = workspace.current()
 
+    def whole(owner: Owner) -> set[Owner]:
+        """The owner, and every feature of the group it is or lies in."""
+        names = ws.load_module(owner.module).names
+        folders = references.groups(names)
+        path = owner.feature or ""
+        group = path if path in folders else path.rpartition("/")[0]
+        if group not in folders:
+            return {owner}
+        return {owner} | {Owner(owner.module, n) for n in names if n.startswith(f"{group}/")}
+
     def requires(owner: Owner) -> set[Owner]:
         analysis = ownership.sources(ws, owner.module)
         found = analysis.dependencies(owner)
         weak = analysis.module.weak_dependencies
         shared = {analysis.shared, *analysis.parents(owner)} if owner.feature else set()
-        return {o for o in shared | references.strong(found, weak) if o.module != name}
+        targets = {o for o in references.strong(found, weak) if o.module != name}
+        return {o for o in shared if o.module != name} | {o for t in targets for o in whole(t)}
 
     analysis = ownership.sources(ws, name)
     targets = references.strong(analysis.targets, analysis.module.weak_dependencies)
-    start = {owner for owner in targets if owner.module != name}
+    start = {o for owner in targets if owner.module != name for o in whole(owner)}
     used: dict[str, set[Owner]] = defaultdict(set)
     for owner in references.required(start, requires):
         used[owner.module].add(owner)

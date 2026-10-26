@@ -509,6 +509,12 @@ A flag is a number that tells what a box is, as for [block providers](#block-pro
 Only the first 8 boxes of an entity are read. Bookshelf providers stay well under this limit.
 ```
 
+```{admonition} Boxes outside the entity
+:class: warning
+
+Bookshelf expects the boxes of a provider to stay inside the entity's own hitbox, so it can find the entity cheaply. An entity whose boxes go beyond it, or that has no hitbox of its own, such as a display entity, must be tagged `bs.hitbox.unbounded`. Otherwise it can be missed.
+```
+
 Bookshelf has the following entity providers:
 
 :::{list-table}
@@ -536,6 +542,9 @@ return 1
 ```
 
 ```mcfunction
+# Tag the block displays once, since they have no hitbox of their own
+tag @e[type=minecraft:block_display] add bs.hitbox.unbounded
+
 # Use it
 data modify storage bs.hitbox:is_in_entity in set value {entities:"my_pack:entities"}
 execute as @n[type=minecraft:block_display] if function #bs.hitbox:is_in_entity run say You are inside me
