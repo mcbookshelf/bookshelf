@@ -1,3 +1,0 @@
-
-execute unless data storage bs:const log.messages[{namespaces:["{{ module }}"]}] run \
-  data modify storage bs:const log.messages[{namespaces:["bs"]}].namespaces append value "{{ module }}"
