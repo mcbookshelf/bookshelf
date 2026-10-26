@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: https://github.com/mcbookshelf/bookshelf/issues\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-01-19 12:00+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v2.1.1.md:1 c0fd8018af0f4adcbad501e5f7b6b2d1
+msgid ""
+"📦 [Bookshelf - "
+"2.1.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.1.1)"
+msgstr ""
+"📦 [Bookshelf - "
+"2.1.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.1.1)"
+
+#: ../../../changelog/v2.1.1.md:3 c0d7328d595a49b2a26f90a09816aa44
+msgid "**⚡ A Performance Update!**"
+msgstr "**⚡ Une mise à jour de Performance !**"
+
+#: ../../../changelog/v2.1.1.md:5 440876fb3f24498cbbfe6d0268d994e5
+msgid ""
+"*This release improves the performance of the block module, fixes several"
+" bugs, and introduces the new concept of loading modules in isolation.*"
+msgstr "*Cette version améliore les performances du module block, corrige plusieurs bugs, et introduit le nouveau concept de chargement des modules en isolation.*"
+
+
+#: ../../../changelog/v2.1.1.md:8 ef0ab7a9a55c4393b31a00c5b201bb6a
+msgid ""
+"⚡ **[#238](https://github.com/mcbookshelf/bookshelf/pull/238)** - Load "
+"tags now load modules in isolation."
+msgstr ""
+"⚡ **[#238](https://github.com/mcbookshelf/bookshelf/pull/238)** - Les tags de chargement "
+"chargent maintenant les modules en isolation."
+
+#: ../../../changelog/v2.1.1.md:9 02d1ee029093432a974b366eabd76cf3
+msgid ""
+"📝 **[#215](https://github.com/mcbookshelf/bookshelf/issues/215)** - Added"
+" documentation about documentation (meta-documentation)."
+msgstr ""
+"📝 **[#215](https://github.com/mcbookshelf/bookshelf/issues/215)** - Ajout de documentation "
+"sur la documentation (méta-documentation)."
+
+#: ../../../changelog/v2.1.1.md:12 18f8041a7b0b4f94b40c189dc945dbc8
+msgid "`🧱 bs.block`"
+msgstr "`🧱 bs.block`"
+
+#: ../../../changelog/v2.1.1.md:14 b3f43c7d328c4dd7b280605d8703b4c8
+msgid ""
+"⚡ **[#237](https://github.com/mcbookshelf/bookshelf/pull/237)** - "
+"Enhanced the speed of the module."
+msgstr ""
+"⚡ **[#237](https://github.com/mcbookshelf/bookshelf/pull/237)** - "
+"Amélioration de la vitesse du module."
+
+#: ../../../changelog/v2.1.1.md:15 c10f63cf0667450d80b130c2c840d09c
+msgid ""
+"⚡ **[#218](https://github.com/mcbookshelf/bookshelf/pull/218)** - "
+"Enhanced the speed of the factorial function."
+msgstr ""
+"⚡ **[#218](https://github.com/mcbookshelf/bookshelf/pull/218)** - "
+"Amélioration de la vitesse de la fonction factorielle."
+
+#: ../../../changelog/v2.1.1.md:16 14baf1c8b68744668bd05a9383f2cedd
+msgid ""
+"🐛 **[#235](https://github.com/mcbookshelf/bookshelf/issues/235)** - Fixed"
+" inputs that required extra escaping."
+msgstr ""
+"🐛 **[#235](https://github.com/mcbookshelf/bookshelf/issues/235)** - Correction des "
+"entrées qui nécessitaient un échappement supplémentaire."
+
+#: ../../../changelog/v2.1.1.md:17 ../../../changelog/v2.1.1.md:22
+#: ../../../changelog/v2.1.1.md:27 282fe18ae2d94536bb6cfe5d94ee0607
+#: 38deb8054fba4c9b8ab4466dde3e5b93 5e5ca9be6f5e4aadbb2804f4032591db
+msgid ""
+"🐛 **[#236](https://github.com/mcbookshelf/bookshelf/issues/236)** - Fixed"
+" load function."
+msgstr ""
+"🐛 **[#236](https://github.com/mcbookshelf/bookshelf/issues/236)** - "
+"Correction de la fonction de chargement."
+
+#: ../../../changelog/v2.1.1.md:20 6b16aa55124948b4ab6937434ce49c38
+msgid "`🏷️ bs.id`"
+msgstr "`🏷️ bs.id`"
+
+#: ../../../changelog/v2.1.1.md:25 d61d9a90343f419f85f9acc2ebd6924b
+msgid "`🧮 bs.math`"
+msgstr "`🧮 bs.math`"

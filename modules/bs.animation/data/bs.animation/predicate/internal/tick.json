@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:entity_scores",
+  "entity": "this",
+  "scores": {
+    "bs.anim": {
+      "max": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "#this"
+        },
+        "score": "bs.anim"
+      }
+    }
+  }
+}

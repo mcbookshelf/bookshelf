@@ -1,0 +1,28 @@
+name: 🐍 PyPI
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - pyproject.toml
+      - src/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    name: 🐍 Publish package
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v9.0.0
+      - name: Publish to PyPI
+        run: |
+          uv build
+          uv publish

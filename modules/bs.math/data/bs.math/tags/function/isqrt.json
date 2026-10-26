@@ -1,0 +1,22 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/math.html#square-root",
+    "authors": [
+      "Triton365",
+      "Ethanout",
+      "xiaodou123"
+    ],
+    "created": {
+      "date": "2017/05/14",
+      "minecraft_version": "1.12"
+    },
+    "updated": {
+      "date": "2023/01/26",
+      "minecraft_version": "1.20.4"
+    }
+  },
+  "values": [
+    "bs.math:isqrt"
+  ]
+}

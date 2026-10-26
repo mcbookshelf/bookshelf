@@ -1,0 +1,43 @@
+# ------------------------------------------------------------------------------------------------------------
+# Copyright (c) 2026 Gunivers
+#
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
+#
+# This source code is subject to the terms of the Mozilla Public License, v. 2.0.
+# If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#
+# Conditions:
+# - You may use this file in compliance with the MPL v2.0
+# - Any modifications must be documented and disclosed under the same license
+#
+# For more details, refer to the MPL v2.0.
+# ------------------------------------------------------------------------------------------------------------
+# @dummy
+
+tp @s 0.0 0.0 0.0 90.0 0.0
+
+execute store result score #ward.x_min bs.data store result score #ward.x_max bs.data store result score @s bs.vel.x run random value -1000..1000
+execute store result score #ward.y_min bs.data store result score #ward.y_max bs.data store result score @s bs.vel.y run random value -1000..1000
+execute store result score #ward.z_min bs.data store result score #ward.z_max bs.data store result score @s bs.vel.z run random value -1000..1000
+
+function #bs.move:apply_local_vel {scale:0.001,with:{blocks:0b,entities:0b}}
+
+execute store result score #ward.x bs.data run data get entity @s Pos[2] 1000
+execute store result score #ward.y bs.data run data get entity @s Pos[1] 1000
+execute store result score #ward.z bs.data run data get entity @s Pos[0] -1000
+
+dummy @s leave
+
+scoreboard players remove #ward.x_min bs.data 2
+scoreboard players remove #ward.y_min bs.data 2
+scoreboard players remove #ward.z_min bs.data 2
+scoreboard players add #ward.x_max bs.data 2
+scoreboard players add #ward.y_max bs.data 2
+scoreboard players add #ward.z_max bs.data 2
+
+assert score #ward.x_min bs.data < #ward.x bs.data
+assert score #ward.y_min bs.data < #ward.y bs.data
+assert score #ward.z_min bs.data < #ward.z bs.data
+assert score #ward.x_max bs.data > #ward.x bs.data
+assert score #ward.y_max bs.data > #ward.y bs.data
+assert score #ward.z_max bs.data > #ward.z bs.data

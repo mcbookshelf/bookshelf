@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"PO-Revision-Date: 2025-01-17 10:00+0100\n"
+"Last-Translator: Claude <claude@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/dump.md:1 601a57c5515c4156bdc8e03885094c5c
+msgid "🔬 Dump"
+msgstr "🔬 Déversement"
+
+#: ../../modules/dump.md:3 863d49e9366c4257ad22616027bfa780
+msgid "**`#bs.dump:help`**"
+msgstr "**`#bs.dump:help`**"
+
+#: ../../modules/dump.md:5 951791e299b34b828cd4b4962b2b1834
+msgid ""
+"The dump module provides mechanisms for printing the state of any "
+"\"variables\"."
+msgstr "Le module de déversement fournit des mécanismes pour afficher l'état de toutes \"variables\"."
+
+#: ../../modules/dump.md:9 619cf755a39d4067b41e8ca00574ea94
+msgid "🔧 Functions"
+msgstr "🔧 Fonctions"
+
+#: ../../modules/dump.md:11 9cf99844df214ff7a39379e440d644f4
+msgid "You can find below all functions available in this module."
+msgstr "Vous pouvez trouver ci-dessous toutes les fonctions disponibles dans ce module."
+
+#: ../../modules/dump.md:15 90913ca4b525492d9edad71c8c4a7434
+msgid "Dump Var"
+msgstr "Déverser une variable"
+
+#: ../../modules/dump.md:19 551623ead22e4a2fb00668bd19fd0eb7
+msgid "Dump the content of given variables to the chat."
+msgstr "Déverse le contenu des variables données dans le chat."
+
+#: ../../modules/dump.md:21 bcaa5696ae454b75b9a02c3bce7848d4
+msgid "Inputs"
+msgstr "Entrées"
+
+#: ../../modules/dump.md:22 54398fec72ff46988916e77ac5f89088
+msgid "**Function macro**:"
+msgstr "**Macro de fonction** :"
+
+#: ../../modules/dump.md:31 ea9af3d17abf4b7b98df42c3eb32f4d6
+msgid "*Example: View position scores as an array:*"
+msgstr "*Exemple : Afficher les scores de position sous forme de tableau :*"
+
+#: ../../modules/dump.md:39 b7b389c9f4bb455c8299b2979e3c91ca
+msgid "![](/_imgs/modules/dump/example-1.png)"
+msgstr "![](/_imgs/modules/dump/example-1.png)"
+
+#: ../../modules/dump.md:41 37711badbfc14da890f3472b0a6f5b7f
+msgid ""
+"*Example: View an undefined score and the player recipe book (with a "
+"depth of 1):*"
+msgstr "*Exemple : Afficher un score non défini et le livre de recettes du joueur (avec une profondeur de 1) :*"
+
+#: ../../modules/dump.md:47 13b70c0869104654b6f357a97f982868
+msgid "![](/_imgs/modules/dump/example-2.png)"
+msgstr "![](/_imgs/modules/dump/example-2.png)"
+
+#: ../../modules/dump.md:50 4ca18e08cb454f1798edce5a96024079
+msgid ""
+"Due to the implementation and its inherent constraints, it is necessary "
+"to escape values at the top level."
+msgstr "En raison de l'implémentation et de ses contraintes inhérentes, il est nécessaire d'échapper les valeurs au niveau supérieur."
+
+#: ../../modules/dump.md:57 379a89a95b3e46a8b453d58850dcae54
+msgid "**Credits**: Aksiome"
+msgstr "**Crédits** : Aksiome"
+
+#: ../../_templates/comments.md:4 0122386e0c1946559ae298bb04b89204
+msgid "**💬 Did it help you?**"
+msgstr "**💬 Cela vous a-t-il aidé ?**"
+
+#: ../../_templates/comments.md:6 e6274e35dafe4b25b67b6436b598e864
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "N'hésitez pas à laisser vos questions et commentaires ci-dessous !"
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "Arguments {nbt}`compound`"
+
+#, python-brace-format
+msgid ""
+"{nbt}`compound` {nbt}`list` {nbt}`string` **var**:"
+" Can be any structured data. The "
+"only requirement is that all values "
+"must be valid string paths to data"
+" or scores:"
+msgstr ""
+"{nbt}`compound` {nbt}`list` {nbt}`string` **var** :"
+" Peut être n'importe quelle donnée structurée. La "
+"seule exigence est que toutes les valeurs "
+"doivent être des chemins de chaînes valides vers des données"
+" ou des scores :"
+
+msgid "[data]: `<entity|block|storage> <target> [<path>] [<depth>]`"
+msgstr "[données] : `<entity|block|storage> <cible> [<chemin>] [<profondeur>]`"
+
+msgid "[score]: `<target> <objective>`"
+msgstr "[score] : `<cible> <objectif>`"

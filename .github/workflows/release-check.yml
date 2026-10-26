@@ -1,0 +1,27 @@
+name: 🔖 Check release
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: 🔎 Check master
+    if: startsWith(github.head_ref, 'release/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Check master
+        run: |
+          if ! git merge-base --is-ancestor origin/master ${{ github.event.pull_request.head.sha }}; then
+            echo "::error::master moved since this release was prepared: dispatch the release again"
+            exit 1
+          fi

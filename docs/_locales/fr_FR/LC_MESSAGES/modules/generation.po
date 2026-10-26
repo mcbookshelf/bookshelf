@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"PO-Revision-Date: 2025-01-01 12:00+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/generation.md:1 644d87fa084a44d29442810f4c9feeb2
+msgid "🏗️ Generation"
+msgstr "🏗️ Génération"
+
+#: ../../modules/generation.md:3 48c958b3adb8470db85eccc490291d7d
+msgid "**`#bs.generation:help`**"
+msgstr "**`#bs.generation:help`**"
+
+#: ../../modules/generation.md:5 8f1b6ca833c9419db3a70429ca8eaea6
+msgid "Generate diverse terrains and landscapes, incorporating natural features."
+msgstr "Génère des terrains et paysages diversifiés, incluant des caractéristiques naturelles."
+
+#: ../../modules/generation.md:18 e60ae7b8c93147eb8431f69ffb371d9e
+msgid ""
+"\"Nature's beauty is a reflection of the harmony of numbers and "
+"patterns.\""
+msgstr "\"La beauté de la nature est le reflet de l'harmonie des nombres et des motifs.\""
+
+#: ../../modules/generation.md:19 af10a0ab56384624908e1ed2b058c318
+msgid "Anonymous"
+msgstr "Anonyme"
+
+#: ../../modules/generation.md:23 390d175204d94537b2939e799ac65523
+msgid ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
+"sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
+"hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 "
+"10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 "
+"3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 "
+"0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
+" .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
+"2.1v-5.85l-3.5 2.1Z\"></path></svg> Watch a demo"
+msgstr ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon "
+"sd-octicon-device-camera-video\" viewBox=\"0 0 16 16\" aria-"
+"hidden=\"true\"><path d=\"M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 "
+"10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 "
+"3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 "
+"0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0"
+" .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 "
+"2.1v-5.85l-3.5 2.1Z\"></path></svg> Regarder une démo"
+
+#: ../../modules/generation.md:33 fc757c97c95f422dbed8f5291f644c67
+msgid "🔧 Functions"
+msgstr "🔧 Fonctions"
+
+#: ../../modules/generation.md:35 f2ff79483f304f0988a1bf6b9d6aba44
+msgid "You can find below all functions available in this module."
+msgstr "Vous pouvez trouver ci-dessous toutes les fonctions disponibles dans ce module."
+
+#: ../../modules/generation.md ../../modules/generation.md:39
+#: 5faea2a30ca640d4a88845920e5a73ac 76a98a4879fb432d9c3a8afed96c4d22
+msgid "Shape 2D"
+msgstr "Forme 2D"
+
+#: ../../modules/generation.md:47 740216fa22374cc08de63a87c6cf2ff3
+msgid ""
+"Generate a shape in 2D space at the specified origin, with the callback "
+"executed at each step, allowing the user to handle the X and Y "
+"coordinates directly."
+msgstr "Génère une forme dans l'espace 2D à l'origine spécifiée, avec le callback exécuté à chaque étape, permettant à l'utilisateur de gérer directement les coordonnées X et Y."
+
+#: ../../modules/generation.md:49 ../../modules/generation.md:77
+#: ../../modules/generation.md:108 10345cdf82984e28aacb71349f126c12
+#: 284c9763a72b4e2787bfe7dded0eec21 593f379edcc94a1a98eeb2c323eeb897
+msgid "Inputs"
+msgstr "Entrées"
+
+#: ../../modules/generation.md:50 ../../modules/generation.md:78
+#: ../../modules/generation.md:109 75ad2989011545d9a1408f15af0b3bb8
+#: b6f133a11f5d4bb695bde21647872282 d7802d8ad6d349d592eb5d59813c7fc3
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z> rotated <rot>`**: "
+"Origin of the shape."
+msgstr "**Exécution `at <entity>` ou `positioned <x> <y> <z> rotated <rot>`** : Origine de la forme."
+
+#: ../../modules/generation.md:52 ../../modules/generation.md:80
+#: ../../modules/generation.md:111 2299e3d4d1f14894b26e809a86860a43
+#: 540c2748bbff469f8ac127e601db4d03 d6ba993d5c3342758190afec7d76862a
+msgid "**Function macro**:"
+msgstr "**Macro de fonction** :"
+
+#: ../../modules/generation.md:66 ../../modules/generation.md:97
+#: ../../modules/generation.md:131 701a51629a004a068bce1546627ea296
+#: 9e3d4799f98b4b1082ec1451695d2c5a b0e85785cd2146979c4581afaf66cc65
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../modules/generation.md:67 ../../modules/generation.md:98
+#: ../../modules/generation.md:132 49e0ce470c574c00b1ac6e64532bc52b
+#: 89f2f08f37ff4093aebbad68ae1c00ba d72c2239811345848ed7a2274b2c5b0d
+msgid ""
+"**State**: The callback gets executed at the appropriate coordinates in "
+"the world."
+msgstr "**État** : Le callback est exécuté aux coordonnées appropriées dans le monde."
+
+#: ../../modules/generation.md 7edf370ab4734daa99feba2cae301c5f
+msgid "Simplex Shape 2D"
+msgstr "Forme 2D Simplex"
+
+#: ../../modules/generation.md:75 a963f6df81f54caeb95c00b5307cb4bd
+msgid ""
+"Generate a shape in 2D space using a Simplex noise algorithm. The shape "
+"is generated at the specified origin, with the callback executed at each "
+"step to facilitate custom behavior during the generation process."
+msgstr "Génère une forme dans l'espace 2D en utilisant un algorithme de bruit Simplex. La forme est générée à l'origine spécifiée, avec le callback exécuté à chaque étape pour faciliter un comportement personnalisé pendant le processus de génération."
+
+#: ../../modules/generation.md 417882f0f3c04ee49b94d6ff93a82720
+msgid "Fractal Shape 2D"
+msgstr "Forme 2D Fractale"
+
+#: ../../modules/generation.md:106 dc4346a82d3f446a992e9f278d04f278
+msgid ""
+"Generate a shape in 2D space using a Fractal noise algorithm. The shape "
+"is generated at the specified origin, with the callback executed at each "
+"step to facilitate custom behavior during the generation process."
+msgstr "Génère une forme dans l'espace 2D en utilisant un algorithme de bruit fractal. La forme est générée à l'origine spécifiée, avec le callback exécuté à chaque étape pour faciliter un comportement personnalisé pendant le processus de génération."
+
+#: ../../modules/generation.md:137 2ed42182be8d42699422f012d7fc9cdf
+msgid ""
+"*Example: Generate a 3D terrain using a heightmap. This function employs "
+"a linear approach; for more interesting terrain, consider scaling the "
+"noise values differently according to various ranges. Check out [this "
+"video](https://www.youtube.com/watch?v=CSa5O6knuwI) for more insights on "
+"terrain generation:*"
+msgstr "*Exemple : Générer un terrain 3D en utilisant une heightmap. Cette fonction utilise une approche linéaire ; pour un terrain plus intéressant, considérez mettre à l'échelle les valeurs de bruit différemment selon diverses plages. Consultez [cette vidéo](https://www.youtube.com/watch?v=CSa5O6knuwI) pour plus d'informations sur la génération de terrain :*"
+
+#: ../../modules/generation.md:152 45e91d34958a40179e396de7a26bd0c2
+msgid "**Credits**: Aksiome"
+msgstr "**Crédits** : Aksiome"
+
+#: ../../_templates/comments.md:4 2b2668589f2944cb916fe7dfd1afca19
+msgid "**💬 Did it help you?**"
+msgstr "**💬 Cela vous a-t-il aidé ?**"
+
+#: ../../_templates/comments.md:6 e570b60eb2ed490e9bf707a938e3bb9c
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "N'hésitez pas à laisser vos questions et commentaires ci-dessous !"
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` Arguments"
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **run**: Callback to run "
+"at each step. For each step, the"
+" following scores can be used:"
+msgstr "{nbt}`string` **run** : Callback à exécuter à chaque étape. Pour chaque étape, les scores suivants peuvent être utilisés :"
+
+
+msgid "**`$generation.x bs.lambda`**: The X coordinate of the current step."
+msgstr "**`$generation.x bs.lambda`** : La coordonnée X de l'étape actuelle."
+
+msgid "**`$generation.y bs.lambda`**: The Y coordinate of the current step."
+msgstr "**`$generation.y bs.lambda`** : La coordonnée Y de l'étape actuelle."
+
+#, python-brace-format
+msgid "{nbt}`int` **width**: Width of the shape to generate."
+msgstr "{nbt}`int` **width** : Largeur de la forme à générer."
+
+#, python-brace-format
+msgid "{nbt}`int` **height**: Height of the shape to generate."
+msgstr "{nbt}`int` **height** : Hauteur de la forme à générer."
+
+#, python-brace-format
+msgid "{nbt}`compound` **with**: Shape settings."
+msgstr "{nbt}`compound` **with** : Paramètres de la forme."
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **direction**: Plane used to "
+"generate the shape (`xz`, `xy`, or "
+"`zy`, default: `xz`)."
+msgstr "{nbt}`string` **direction** : Plan utilisé pour générer la forme (`xz`, `xy`, ou `zy`, par défaut : `xz`)."
+
+#, python-brace-format
+msgid ""
+"{nbt}`int` **spacing**: Distance between "
+"blocks in the generated shape (default:"
+" 1)."
+msgstr "{nbt}`int` **spacing** : Distance entre les blocs dans la forme générée (par défaut : 1)."
+
+#, python-brace-format
+msgid ""
+"{nbt}`int` **limit**: Limit how many "
+"steps are executed in a single "
+"tick (default: 256)."
+msgstr "{nbt}`int` **limit** : Limite le nombre d'étapes exécutées en un seul tick (par défaut : 256)."
+
+#, python-brace-format
+msgid ""
+"{nbt}`int` **size**: Granularity of the "
+"noise. Lower values increase detail "
+"(default: 32)."
+msgstr "{nbt}`int` **size** : Granularité du bruit. Des valeurs plus faibles augmentent les détails (par défaut : 32)."
+
+#, python-brace-format
+msgid ""
+"{nbt}`int` **seed**: Seed for the noise"
+" generation, allowing for reproducibility "
+"(default: random)."
+msgstr "{nbt}`int` **seed** : Graine pour la génération de bruit, permettant la reproductibilité (par défaut : aléatoire)."
+
+#, python-brace-format
+msgid ""
+"{nbt}`int` **octaves**: Number of noise "
+"layers; more octaves enhance detail "
+"(default: 2)."
+msgstr "{nbt}`int` **octaves** : Nombre de couches de bruit ; plus d'octaves améliorent les détails (par défaut : 2)."
+
+#, python-brace-format
+msgid ""
+"{nbt}`double` **persistence**: Contribution of "
+"each octave. Higher means more detail"
+" (default: 0.5)."
+msgstr "{nbt}`double` **persistence** : Contribution de chaque octave. Une valeur plus élevée signifie plus de détails (par défaut : 0.5)."
+
+#, python-brace-format
+msgid ""
+"{nbt}`double` **lacunarity**: Frequency increase "
+"for each octave. Higher means more "
+"rapid frequency increase (default: 2.0)."
+msgstr "{nbt}`double` **lacunarity** : Augmentation de fréquence pour chaque octave. Une valeur plus élevée signifie une augmentation de fréquence plus rapide (par défaut : 2.0)."
+
+msgid ""
+"**`$generation.noise bs.lambda`**: The noise "
+"value in the range [-1000, 1000]."
+msgstr "**`$generation.noise bs.lambda`** : La valeur de bruit dans la plage [-1000, 1000]."

@@ -1,0 +1,627 @@
+> Run a command over every position in a shaped region, spread across ticks.
+
+name: Generation
+slug: bookshelf-generation
+version: 5.0.0
+tags: runtime
+
+$run = #[command(slash="forbidden",empty="forbidden")] string
+
+$cuboid = arguments: {
+  run: $run > command to run at each position
+  size: [int] @ 3 > number of positions on each axis, in the order of the function name: a negative number goes west, down or north
+  batch?: int @ 1.. > positions done each tick, 256 by default
+  on_finished?: $run > command to run once every position is done
+}
+
+$rectangle = arguments: {
+  run: $run > command to run at each position
+  size: [int] @ 2 > number of positions on each axis, in the order of the function name: a negative number goes west, down or north
+  batch?: int @ 1.. > positions done each tick, 256 by default
+  on_finished?: $run > command to run once every position is done
+}
+
+$out = state > the command runs at each position, over several ticks when there are more than `batch`
+
+
+feature function on_cuboid/xyz
+  > Run a command at each position of a cuboid, along x, then y, then z.
+  authors: Aksiome
+  created: 2026/02/15 26.1
+  updated: 2026/10/13 26.3
+
+  context position > corner the cuboid starts from
+  context dimension > dimension of the cuboid
+  input $cuboid
+  output $out
+
+
+feature function on_cuboid/xzy
+  > Run a command at each position of a cuboid, along x, then z, then y.
+  authors: Aksiome
+  created: 2026/02/15 26.1
+  updated: 2026/10/13 26.3
+
+  context position > corner the cuboid starts from
+  context dimension > dimension of the cuboid
+  input $cuboid
+  output $out
+
+
+feature function on_cuboid/yxz
+  > Run a command at each position of a cuboid, along y, then x, then z.
+  authors: Aksiome
+  created: 2026/02/15 26.1
+  updated: 2026/10/13 26.3
+
+  context position > corner the cuboid starts from
+  context dimension > dimension of the cuboid
+  input $cuboid
+  output $out
+
+
+feature function on_cuboid/yzx
+  > Run a command at each position of a cuboid, along y, then z, then x.
+  authors: Aksiome
+  created: 2026/02/15 26.1
+  updated: 2026/10/13 26.3
+
+  context position > corner the cuboid starts from
+  context dimension > dimension of the cuboid
+  input $cuboid
+  output $out
+
+
+feature function on_cuboid/zxy
+  > Run a command at each position of a cuboid, along z, then x, then y.
+  authors: Aksiome
+  created: 2026/02/15 26.1
+  updated: 2026/10/13 26.3
+
+  context position > corner the cuboid starts from
+  context dimension > dimension of the cuboid
+  input $cuboid
+  output $out
+
+
+feature function on_cuboid/zyx
+  > Run a command at each position of a cuboid, along z, then y, then x.
+  authors: Aksiome
+  created: 2026/02/15 26.1
+  updated: 2026/10/13 26.3
+
+  context position > corner the cuboid starts from
+  context dimension > dimension of the cuboid
+  input $cuboid
+  output $out
+
+
+feature function on_cuboid_outline/xyz
+  > Run a command at each position on the outside of a cuboid sized along x, y and z, one layer along z at a time.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner the cuboid starts from
+  context dimension > dimension of the cuboid
+  input $cuboid
+  output $out
+
+
+feature function on_cuboid_outline/xzy
+  > Run a command at each position on the outside of a cuboid sized along x, z and y, one layer along y at a time.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner the cuboid starts from
+  context dimension > dimension of the cuboid
+  input $cuboid
+  output $out
+
+
+feature function on_cuboid_outline/yxz
+  > Run a command at each position on the outside of a cuboid sized along y, x and z, one layer along z at a time.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner the cuboid starts from
+  context dimension > dimension of the cuboid
+  input $cuboid
+  output $out
+
+
+feature function on_cuboid_outline/yzx
+  > Run a command at each position on the outside of a cuboid sized along y, z and x, one layer along x at a time.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner the cuboid starts from
+  context dimension > dimension of the cuboid
+  input $cuboid
+  output $out
+
+
+feature function on_cuboid_outline/zxy
+  > Run a command at each position on the outside of a cuboid sized along z, x and y, one layer along y at a time.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner the cuboid starts from
+  context dimension > dimension of the cuboid
+  input $cuboid
+  output $out
+
+
+feature function on_cuboid_outline/zyx
+  > Run a command at each position on the outside of a cuboid sized along z, y and x, one layer along x at a time.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner the cuboid starts from
+  context dimension > dimension of the cuboid
+  input $cuboid
+  output $out
+
+
+feature function on_ellipse/xy
+  > Run a command at each position inside an ellipse, the size being the one of the rectangle it fits in, along x, then y.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the rectangle the ellipse fits in
+  context dimension > dimension of the ellipse
+  input $rectangle
+  output $out
+
+
+feature function on_ellipse/xz
+  > Run a command at each position inside an ellipse, the size being the one of the rectangle it fits in, along x, then z.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the rectangle the ellipse fits in
+  context dimension > dimension of the ellipse
+  input $rectangle
+  output $out
+
+
+feature function on_ellipse/yx
+  > Run a command at each position inside an ellipse, the size being the one of the rectangle it fits in, along y, then x.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the rectangle the ellipse fits in
+  context dimension > dimension of the ellipse
+  input $rectangle
+  output $out
+
+
+feature function on_ellipse/yz
+  > Run a command at each position inside an ellipse, the size being the one of the rectangle it fits in, along y, then z.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the rectangle the ellipse fits in
+  context dimension > dimension of the ellipse
+  input $rectangle
+  output $out
+
+
+feature function on_ellipse/zx
+  > Run a command at each position inside an ellipse, the size being the one of the rectangle it fits in, along z, then x.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the rectangle the ellipse fits in
+  context dimension > dimension of the ellipse
+  input $rectangle
+  output $out
+
+
+feature function on_ellipse/zy
+  > Run a command at each position inside an ellipse, the size being the one of the rectangle it fits in, along z, then y.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the rectangle the ellipse fits in
+  context dimension > dimension of the ellipse
+  input $rectangle
+  output $out
+
+
+feature function on_ellipse_outline/xy
+  > Run a command at each position on the edge of an ellipse, the size being the one of the rectangle it fits in, along x, then y.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the rectangle the ellipse fits in
+  context dimension > dimension of the ellipse
+  input $rectangle
+  output $out
+
+
+feature function on_ellipse_outline/xz
+  > Run a command at each position on the edge of an ellipse, the size being the one of the rectangle it fits in, along x, then z.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the rectangle the ellipse fits in
+  context dimension > dimension of the ellipse
+  input $rectangle
+  output $out
+
+
+feature function on_ellipse_outline/yx
+  > Run a command at each position on the edge of an ellipse, the size being the one of the rectangle it fits in, along y, then x.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the rectangle the ellipse fits in
+  context dimension > dimension of the ellipse
+  input $rectangle
+  output $out
+
+
+feature function on_ellipse_outline/yz
+  > Run a command at each position on the edge of an ellipse, the size being the one of the rectangle it fits in, along y, then z.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the rectangle the ellipse fits in
+  context dimension > dimension of the ellipse
+  input $rectangle
+  output $out
+
+
+feature function on_ellipse_outline/zx
+  > Run a command at each position on the edge of an ellipse, the size being the one of the rectangle it fits in, along z, then x.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the rectangle the ellipse fits in
+  context dimension > dimension of the ellipse
+  input $rectangle
+  output $out
+
+
+feature function on_ellipse_outline/zy
+  > Run a command at each position on the edge of an ellipse, the size being the one of the rectangle it fits in, along z, then y.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the rectangle the ellipse fits in
+  context dimension > dimension of the ellipse
+  input $rectangle
+  output $out
+
+
+feature function on_ellipsoid/xyz
+  > Run a command at each position inside an ellipsoid, the size being the one of the cuboid it fits in, along x, then y, then z.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the cuboid the ellipsoid fits in
+  context dimension > dimension of the ellipsoid
+  input $cuboid
+  output $out
+
+
+feature function on_ellipsoid/xzy
+  > Run a command at each position inside an ellipsoid, the size being the one of the cuboid it fits in, along x, then z, then y.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the cuboid the ellipsoid fits in
+  context dimension > dimension of the ellipsoid
+  input $cuboid
+  output $out
+
+
+feature function on_ellipsoid/yxz
+  > Run a command at each position inside an ellipsoid, the size being the one of the cuboid it fits in, along y, then x, then z.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the cuboid the ellipsoid fits in
+  context dimension > dimension of the ellipsoid
+  input $cuboid
+  output $out
+
+
+feature function on_ellipsoid/yzx
+  > Run a command at each position inside an ellipsoid, the size being the one of the cuboid it fits in, along y, then z, then x.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the cuboid the ellipsoid fits in
+  context dimension > dimension of the ellipsoid
+  input $cuboid
+  output $out
+
+
+feature function on_ellipsoid/zxy
+  > Run a command at each position inside an ellipsoid, the size being the one of the cuboid it fits in, along z, then x, then y.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the cuboid the ellipsoid fits in
+  context dimension > dimension of the ellipsoid
+  input $cuboid
+  output $out
+
+
+feature function on_ellipsoid/zyx
+  > Run a command at each position inside an ellipsoid, the size being the one of the cuboid it fits in, along z, then y, then x.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the cuboid the ellipsoid fits in
+  context dimension > dimension of the ellipsoid
+  input $cuboid
+  output $out
+
+
+feature function on_ellipsoid_outline/xyz
+  > Run a command at each position on the outside of an ellipsoid, the size being the one of the cuboid it fits in, along x, then y, then z.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the cuboid the ellipsoid fits in
+  context dimension > dimension of the ellipsoid
+  input $cuboid
+  output $out
+
+
+feature function on_ellipsoid_outline/xzy
+  > Run a command at each position on the outside of an ellipsoid, the size being the one of the cuboid it fits in, along x, then z, then y.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the cuboid the ellipsoid fits in
+  context dimension > dimension of the ellipsoid
+  input $cuboid
+  output $out
+
+
+feature function on_ellipsoid_outline/yxz
+  > Run a command at each position on the outside of an ellipsoid, the size being the one of the cuboid it fits in, along y, then x, then z.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the cuboid the ellipsoid fits in
+  context dimension > dimension of the ellipsoid
+  input $cuboid
+  output $out
+
+
+feature function on_ellipsoid_outline/yzx
+  > Run a command at each position on the outside of an ellipsoid, the size being the one of the cuboid it fits in, along y, then z, then x.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the cuboid the ellipsoid fits in
+  context dimension > dimension of the ellipsoid
+  input $cuboid
+  output $out
+
+
+feature function on_ellipsoid_outline/zxy
+  > Run a command at each position on the outside of an ellipsoid, the size being the one of the cuboid it fits in, along z, then x, then y.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the cuboid the ellipsoid fits in
+  context dimension > dimension of the ellipsoid
+  input $cuboid
+  output $out
+
+
+feature function on_ellipsoid_outline/zyx
+  > Run a command at each position on the outside of an ellipsoid, the size being the one of the cuboid it fits in, along z, then y, then x.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner of the cuboid the ellipsoid fits in
+  context dimension > dimension of the ellipsoid
+  input $cuboid
+  output $out
+
+
+feature function on_rectangle/xy
+  > Run a command at each position of a rectangle, along x, then y.
+  authors: Aksiome
+  created: 2026/02/15 26.1
+  updated: 2026/10/13 26.3
+
+  context position > corner the rectangle starts from
+  context dimension > dimension of the rectangle
+  input $rectangle
+  output $out
+
+
+feature function on_rectangle/xz
+  > Run a command at each position of a rectangle, along x, then z.
+  authors: Aksiome
+  created: 2026/02/15 26.1
+  updated: 2026/10/13 26.3
+
+  context position > corner the rectangle starts from
+  context dimension > dimension of the rectangle
+  input $rectangle
+  output $out
+
+
+feature function on_rectangle/yx
+  > Run a command at each position of a rectangle, along y, then x.
+  authors: Aksiome
+  created: 2026/02/15 26.1
+  updated: 2026/10/13 26.3
+
+  context position > corner the rectangle starts from
+  context dimension > dimension of the rectangle
+  input $rectangle
+  output $out
+
+
+feature function on_rectangle/yz
+  > Run a command at each position of a rectangle, along y, then z.
+  authors: Aksiome
+  created: 2026/02/15 26.1
+  updated: 2026/10/13 26.3
+
+  context position > corner the rectangle starts from
+  context dimension > dimension of the rectangle
+  input $rectangle
+  output $out
+
+
+feature function on_rectangle/zx
+  > Run a command at each position of a rectangle, along z, then x.
+  authors: Aksiome
+  created: 2026/02/15 26.1
+  updated: 2026/10/13 26.3
+
+  context position > corner the rectangle starts from
+  context dimension > dimension of the rectangle
+  input $rectangle
+  output $out
+
+
+feature function on_rectangle/zy
+  > Run a command at each position of a rectangle, along z, then y.
+  authors: Aksiome
+  created: 2026/02/15 26.1
+  updated: 2026/10/13 26.3
+
+  context position > corner the rectangle starts from
+  context dimension > dimension of the rectangle
+  input $rectangle
+  output $out
+
+
+feature function on_rectangle_outline/xy
+  > Run a command at each position on the edge of a rectangle sized along x and y, in no set order.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner the rectangle starts from
+  context dimension > dimension of the rectangle
+  input $rectangle
+  output $out
+
+
+feature function on_rectangle_outline/xz
+  > Run a command at each position on the edge of a rectangle sized along x and z, in no set order.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner the rectangle starts from
+  context dimension > dimension of the rectangle
+  input $rectangle
+  output $out
+
+
+feature function on_rectangle_outline/yx
+  > Run a command at each position on the edge of a rectangle sized along y and x, in no set order.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner the rectangle starts from
+  context dimension > dimension of the rectangle
+  input $rectangle
+  output $out
+
+
+feature function on_rectangle_outline/yz
+  > Run a command at each position on the edge of a rectangle sized along y and z, in no set order.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner the rectangle starts from
+  context dimension > dimension of the rectangle
+  input $rectangle
+  output $out
+
+
+feature function on_rectangle_outline/zx
+  > Run a command at each position on the edge of a rectangle sized along z and x, in no set order.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner the rectangle starts from
+  context dimension > dimension of the rectangle
+  input $rectangle
+  output $out
+
+
+feature function on_rectangle_outline/zy
+  > Run a command at each position on the edge of a rectangle sized along z and y, in no set order.
+  authors: Aksiome
+  created: 2026/10/11 26.3
+  updated: 2026/10/13 26.3
+
+  context position > corner the rectangle starts from
+  context dimension > dimension of the rectangle
+  input $rectangle
+  output $out
+
+
+feature context_int_provider i
+  > Get the index of the position a command runs at, on the first axis of the order.
+  authors: Aksiome
+  created: 2026/10/09 26.3
+  updated: 2026/10/09 26.3
+
+  output result: int @ 0.. > index on the first axis, from 0
+
+
+feature context_int_provider j
+  > Get the index of the position a command runs at, on the second axis of the order.
+  authors: Aksiome
+  created: 2026/10/09 26.3
+  updated: 2026/10/09 26.3
+
+  output result: int @ 0.. > index on the second axis, from 0
+
+
+feature context_int_provider k
+  > Get the index of the position a command runs at, on the third axis of the order, in a cuboid.
+  authors: Aksiome
+  created: 2026/10/09 26.3
+  updated: 2026/10/09 26.3
+
+  output result: int @ 0.. > index on the third axis, from 0

@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v2.1.0.md:1 33da4cb8111b4eb3acb3fc50125dfcdb
+msgid ""
+"📦 [Bookshelf - "
+"2.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.1.0)"
+msgstr ""
+"📦 [Bookshelf - "
+"2.1.0](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.1.0)"
+
+#: ../../../changelog/v2.1.0.md:3 938737e18a944f12b67296732d42713d
+msgid "**⚙️ The MetaData Update!**"
+msgstr "**⚙️ 元数据更新!**"
+
+#: ../../../changelog/v2.1.0.md:5 c052f3c535354e528dcb212d3f4ea99c
+msgid ""
+"*This release enhances documentation and automated tools, and introduces "
+"new block manipulation features.*"
+msgstr "*这个版本增强了文档和自动化工具，并引入了新的方块操作特性。*"
+
+#: ../../../changelog/v2.1.0.md:7 8bfac9ddf4c343cf905dcac44dc80bfc
+msgid "Bookshelf is now based on **Minecraft 1.21**."
+msgstr "Bookshelf 现在适配 **Minecraft 1.21**。"
+
+#: ../../../changelog/v2.1.0.md:10 b283c6653dae40549cb567e387717332
+msgid ""
+"📝 **[#206](https://github.com/mcbookshelf/bookshelf/issues/206)** - Added"
+" new related datapacks and mods."
+msgstr ""
+"📝 **[#206](https://github.com/mcbookshelf/bookshelf/issues/206)** - "
+"新增相关数据包与模组。"
+
+#: ../../../changelog/v2.1.0.md:11 4a3e3541c2314446ba9266907ea1ba31
+msgid ""
+"📝 **[#200](https://github.com/mcbookshelf/bookshelf/issues/200)** - "
+"Replaced the old function header with a new license-only header, now "
+"mandatory for all functions. Metadata has been moved to the feature "
+"function tag."
+msgstr ""
+"📝 **[#200](https://github.com/mcbookshelf/bookshelf/issues/200)** - "
+"用新的纯许可证文件头取代旧的函数文件头，现在所有函数都必须使用新的文件头。"
+"元数据已被移动到特性函数标签中。"
+
+#: ../../../changelog/v2.1.0.md:12 ff62725035cb4317b22d3e7efb87618c
+msgid ""
+"📝 **[#52](https://github.com/mcbookshelf/bookshelf/issues/52)** / "
+"**[#175](https://github.com/mcbookshelf/bookshelf/issues/175)** - Each "
+"module now includes its own manual metadata, aiding in dependency "
+"management and supporting tools like the upcoming Bookshelf Manager. More"
+" info [here](project:/contribute/metadata.md)."
+msgstr ""
+"📝 **[#52](https://github.com/mcbookshelf/bookshelf/issues/52)** / "
+"**[#175](https://github.com/mcbookshelf/bookshelf/issues/175)** - "
+"各模块现需独立维护元数据文件，此举有助于管理各项依赖，并为 Bookshelf Manager "
+"等新工具提供底层支持。详见[此处](project:/contribute/metadata.md)。"
+
+#: ../../../changelog/v2.1.0.md:13 5cfc7d1cecb741ccae94263b10f0e912
+msgid ""
+"⚙️ **[#199](https://github.com/mcbookshelf/bookshelf/pull/199)** - "
+"Automated metadata verification during pull requests to ensure no data is"
+" missed. More info [here](project:/contribute/contribution-"
+"validation.md)."
+msgstr ""
+"⚙️ **[#199](https://github.com/mcbookshelf/bookshelf/pull/199)** - "
+"在拉取请求中自动验证元数据，确保数据完整性。详见[此处](project:/contribute/contribution-"
+"validation.md)。"
+
+#: ../../../changelog/v2.1.0.md:14 d4986d6de6cd448aa328654d21340f7e
+msgid "⚙️ Added templates for pull requests and issues."
+msgstr "⚙️ 新增拉取请求模板与议题模板。"
+
+#: ../../../changelog/v2.1.0.md:17 ac0f152870d94b788e929af8bbf39c97
+msgid "`🧱 bs.block`"
+msgstr "`🧱 bs.block`"
+
+#: ../../../changelog/v2.1.0.md:19 07de3c041fe6417a90a71d579e8afc17
+msgid ""
+"✨ **[#187](https://github.com/mcbookshelf/bookshelf/issues/187)** - Added"
+" `#bs.block:map_type` and `#bs.block:mix_type` functions."
+msgstr ""
+"✨ **[#187](https://github.com/mcbookshelf/bookshelf/issues/187)** - "
+"新增 `#bs.block:map_type` 和 `#bs.block:mix_type` 函数。"
+
+#: ../../../changelog/v2.1.0.md:22 dc71c46de4324b3fae524a1f73b0bc1f
+msgid "`🔗 bs.link`"
+msgstr "`🔗 bs.link`"
+
+#: ../../../changelog/v2.1.0.md:24 ../../../changelog/v2.1.0.md:34
+#: ../../../changelog/v2.1.0.md:39 8ce7b9fcfdd24407b594fd164517d6df
+#: b951641218a44e6e96b4aea38ef4a706 ce036a8c58754c72bcbeaf36dd6148f6
+msgid ""
+"🐛 **[#211](https://github.com/mcbookshelf/bookshelf/pull/211)** - Fixed "
+"missing help function tag."
+msgstr ""
+"🐛 **[#211](https://github.com/mcbookshelf/bookshelf/pull/211)** - "
+"修复缺失的帮助函数标签。"
+
+#: ../../../changelog/v2.1.0.md:27 16eb5dd3f38c42528958f5d989b33040
+msgid "`🧭 bs.position`"
+msgstr "`🧭 bs.position`"
+
+#: ../../../changelog/v2.1.0.md:29 81f9af59baa643a498f427c28f4f41dc
+msgid ""
+"📝 **[#208](https://github.com/mcbookshelf/bookshelf/issues/208)** - "
+"Updated documentation for `#bs.position:<add|get|set>_pos_and_rot`."
+msgstr ""
+"📝 **[#208](https://github.com/mcbookshelf/bookshelf/issues/208)** - "
+"更新 `#bs.position:<add|get|set>_pos_and_rot` 的文档。"
+
+#: ../../../changelog/v2.1.0.md:32 5679f412bbf441388b557af6c4509674
+msgid "`➡️ bs.vector`"
+msgstr "`➡️ bs.vector`"
+
+#: ../../../changelog/v2.1.0.md:37 26bddacc68134bfb90fe05a4490ba5d1
+msgid "`🏅 bs.xp`"
+msgstr "`🏅 bs.xp`"

@@ -1,0 +1,17 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.environment",
+    "load": "."
+  },
+  "meta": {
+    "name": "Environment",
+    "slug": "bookshelf-environment",
+    "description": "Access biome, weather, and time-based conditions.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/environment.html",
+    "tags": ["runtime"]
+  },
+  "pipeline": [
+    "gen_environment"
+  ]
+}

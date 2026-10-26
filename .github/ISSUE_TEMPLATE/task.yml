@@ -1,0 +1,11 @@
+name: 🛠️ Task
+description: Something else that needs to be done.
+type: 🛠️ Task
+
+body:
+  - type: textarea
+    attributes:
+      label: 📝 Task
+      description: What needs to be done and why.
+    validations:
+      required: true

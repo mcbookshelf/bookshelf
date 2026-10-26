@@ -1,0 +1,676 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"PO-Revision-Date: 2025-09-17 12:00+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/environment.md:1 6d48dc61a7b042b7985bcb20910497a6
+msgid "⛰️ Environment"
+msgstr "⛰️ Environnement"
+
+#: ../../modules/environment.md:3 78d080b29a5e4f52ba16a2e913bf1039
+msgid "**`#bs.environment:help`**"
+msgstr "**`#bs.environment:help`**"
+
+#: ../../modules/environment.md:5 69681c68b9e64337a898aedbda7eac8e
+msgid ""
+"Comprehensive information and tools related to weather and biome "
+"properties."
+msgstr "Informations complètes et outils relatifs aux propriétés météorologiques et des biomes."
+
+#: ../../modules/environment.md:13 5182579a99324b3fad31115d4f21fb21
+msgid ""
+"\"The most dangerous worldview is the worldview of those who have not "
+"viewed the world.\""
+msgstr "\"La vision du monde la plus dangereuse est celle de ceux qui n'ont jamais observé le monde.\""
+
+#: ../../modules/environment.md:14 d0b2856dc36a432f854e7e9aecd84e3c
+msgid "Alexander von Humboldt"
+msgstr "Alexander von Humboldt"
+
+#: ../../modules/environment.md:20 9246e8697d324db38823c48c49288c17
+msgid "🔧 Functions"
+msgstr "🔧 Fonctions"
+
+#: ../../modules/environment.md:22 f39dc47076694daaa7d2a93b1f08219d
+msgid "You can find below all functions available in this module."
+msgstr "Vous pouvez trouver ci-dessous toutes les fonctions disponibles dans ce module."
+
+#: ../../modules/environment.md:26 854d0fa97268422f85651137d3d47203
+msgid "Get Biome"
+msgstr "Obtenir le Biome"
+
+#: ../../modules/environment.md:30 c7ee55feb246449ead4d3233a9cbe5db
+msgid "Get biome data at the execution position of the function."
+msgstr "Obtenir les données du biome à la position d'exécution de la fonction."
+
+#: ../../modules/environment.md:32 ../../modules/environment.md:63
+#: ../../modules/environment.md:97 ../../modules/environment.md:132
+#: ../../modules/environment.md:167 ../../modules/environment.md:201
+#: ../../modules/environment.md:236 ../../modules/environment.md:257
+#: 2538e8e2255d4505bfbe0bbcdc5ee0ac 393466f4434d489f9a4807339efcbc68
+#: 3db5a45b907945f0a88b54c4aff9b42e 4f73708a31604a5e9d65020a6bd4d20c
+#: 876aa20c538b43b2adfce66456afd120 ad18ba73a4bd474bb09003d8237aff02
+#: d997a77000ba47b9b1f3975dbf776800 de6377c43f82449b9971033372946079
+msgid "Inputs"
+msgstr "Entrées"
+
+#: ../../modules/environment.md:33 764090bba45d420c959f1236bb6f28c1
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from "
+"which you want to get biome data."
+msgstr "**Exécution `at <entity>` ou `positioned <x> <y> <z>`** : Position depuis laquelle vous souhaitez obtenir les données du biome."
+
+#: ../../modules/environment.md:35 ../../modules/environment.md:72
+#: ../../modules/environment.md:104 ../../modules/environment.md:139
+#: ../../modules/environment.md:178 ../../modules/environment.md:212
+#: ../../modules/environment.md:239 ../../modules/environment.md:260
+#: ../../modules/environment.md:283 240a5990ec9d4224b9142bea57978cc1
+#: 2c3e2ec7bff449418584ad42fc5d8a2c 2dd3dd6239e746ab9d892b96cb66c4c5
+#: 54adb56aee8f44e18453cd6f974f3e20 5a0b935ee3f1435abb792e84299d562a
+#: 606ac40ef6754c68b18ad88c2f17ac4a ce18fa99ddef473a9f322ab1bccc80e4
+#: daf308116dd7476baa39e03c3ee606ce e8059e79618f42e8abd72f623bd64d72
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../modules/environment.md:36 190dac36404b47bcbccc1d477a2056b4
+msgid "**Storage `bs:out environment.get_biome`**:"
+msgstr "**Stockage `bs:out environment.get_biome`** :"
+
+#: ../../modules/environment.md:38 6ad9bd950a4242d5ac5a4af47c7fa9fd
+#, python-brace-format
+msgid "{nbt}`compound` Biome data"
+msgstr "{nbt}`compound` Données du biome"
+
+#: ../../modules/environment.md:39 3e056ce40b224ba7913605ae0a0ae20e
+#, python-brace-format
+msgid ""
+"{nbt}`string` **type**: String representation of the biome ID (e.g., "
+"`minecraft:plains`)."
+msgstr "{nbt}`string` **type** : Représentation textuelle complète de l'ID du biome (ex : `minecraft:plains`)."
+
+#: ../../modules/environment.md:40 32c5b9022c56438fa4a24b076b4b49a6
+#, python-brace-format
+msgid "{nbt}`double` **temperature**: The base temperature of the biome."
+msgstr "{nbt}`double` **temperature** : La température de base du biome."
+
+#: ../../modules/environment.md:41 479be7b2482c4391b1abb6540fdef13a
+#, python-brace-format
+msgid ""
+"{nbt}`bool` **has_precipitation**: Whether the biome has precipitation or"
+" not."
+msgstr "{nbt}`bool` **has_precipitation** : Si le biome peut avoir des précipitations ou non."
+
+#: ../../modules/environment.md:45 20c8a43c62c34cf490471078f9a49b0c
+msgid "*Example: Get biome data at the current location:*"
+msgstr "*Exemple : Obtenir les données du biome à la position actuelle :*"
+
+#: ../../modules/environment.md:53 ../../modules/environment.md:329
+#: ../../modules/environment.md:339 ../../modules/environment.md:349
+#: 56c4358f9e4a43fa9f74252665e166da 6f925422bab2433483e6a7034891d819
+#: 88906f0974494a04ad512561a74436d8 c94207bc7c8f46189a0941d32f5bbaa7
+msgid "**Credits**: Aksiome"
+msgstr "**Crédits** : Aksiome"
+
+#: ../../modules/environment.md:57 30f6ddb2db9a43978e9d5813738d341c
+msgid "Get Temperature"
+msgstr "Obtenir la Température"
+
+#: ../../modules/environment.md:61 e7c5054de0a44894b331c91ecdc05091
+msgid ""
+"Get the temperature at the execution position of the function, taking the"
+" altitude into account."
+msgstr "Obtenir la température à la position d'exécution de la fonction, en tenant compte de l'influence de l'altitude."
+
+#: ../../modules/environment.md:64 6db7a967d336497c93b0bd7c647cf7ff
+msgid ""
+"**Execution `at <entity>` or `positioned <x> <y> <z>`**: Position from "
+"which you want to get the temperature."
+msgstr "**Exécution `at <entity>` ou `positioned <x> <y> <z>`** : Position depuis laquelle vous souhaitez obtenir la température."
+
+#: ../../modules/environment.md:66 ../../modules/environment.md:98
+#: ../../modules/environment.md:133 ../../modules/environment.md:172
+#: ../../modules/environment.md:206 176684340c214a4e89916d78a5188240
+#: 46ec75e51eef4849ab712c928961826d 5df257450d2b4498961e6b2d3e6827c1
+#: 79c000b01f4840f8a6d45131f47e89c0 d0652e4c9068465bb9a5bd747a471ea9
+msgid "**Function macro**:"
+msgstr "**Macro de fonction** :"
+
+#: ../../modules/environment.md:68 ../../modules/environment.md:100
+#: ../../modules/environment.md:135 ../../modules/environment.md:174
+#: ../../modules/environment.md:208 149ba69f7896459192c3b851503e50f3
+#: 199a9550e910426ea806ea54d562564c 3fb501f54d964f5b847355a10b41f137
+#: a4ae48ae09ef4c638a36c3e09e5b36d2 e34caf9e8c9140cb91ae6cc3bd12e30d
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` Arguments"
+
+#: ../../modules/environment.md:69 c4794e2533c8483f9edfa17c1126eeab
+#, python-brace-format
+msgid "{nbt}`number` **scale**: Scalar for the function's output."
+msgstr "{nbt}`number` **scale** : Facteur d'échelle appliqué à la sortie de la fonction."
+
+#: ../../modules/environment.md:73 45b48609277942b0a3161b340396552b
+msgid ""
+"**Return | Score `$environment.get_temperature bs.out`**: Temperature at "
+"the given position."
+msgstr "**Retour | Score `$environment.get_temperature bs.out`** : Température à la position donnée."
+
+#: ../../modules/environment.md:76 557e2abf508144579bc84df126bbde84
+msgid "*Example: Get the temperature at the current altitude:*"
+msgstr "*Exemple : Obtenir la température à l'altitude actuelle :*"
+
+#: ../../modules/environment.md:83 ../../modules/environment.md:359
+#: ../../modules/environment.md:369 88f6cb8a01bd43e4adfffc3b12476052
+#: a31e2bf33d5944dd85f8a358ad0b7649 dc0df05acc604ddf9036fc5f7817a5d8
+msgid "**Credits**: Aksiome, theogiraudet"
+msgstr "**Crédits** : Aksiome, theogiraudet"
+
+#: ../../modules/environment.md:87 956d5655f27849eca9d0b073a7f5c2aa
+msgid "Celestial Movement"
+msgstr "Mouvement Céleste"
+
+#: ../../modules/environment.md 09a68ba77106406f8e22d2261d0fb622
+msgid "Get Current Sun Angle"
+msgstr "Obtenir l'Angle Actuel du Soleil"
+
+#: ../../modules/environment.md:95 4985c52da9f54d71beda504b8549963c
+msgid ""
+"Get the current sun's angle on the Y axis relative to the horizon, in "
+"degrees."
+msgstr "Obtenir l'angle actuel du soleil sur l'axe Y par rapport à l'horizon, en degrés."
+
+#: ../../modules/environment.md:101 ../../modules/environment.md:136
+#: ../../modules/environment.md:175 ../../modules/environment.md:209
+#: 3d66c93e67df4ff98a4e5613fdc6ef7f 4e0fb11eca83446dbe4b95535736eaa1
+#: a0aff98fc99d49c1bf81591ea9ddfdfe c49804103ac64f2ca75a8243ecbdc222
+#, python-brace-format
+msgid "{nbt}`number` **scale**: A scalar applied to the output."
+msgstr "{nbt}`number` **scale** : Facteur d'échelle appliqué à la sortie de la fonction."
+
+#: ../../modules/environment.md:105 5fec1817cbe24842a78ae2188c05e292
+msgid "**Return**: Sun's angle in degrees (scaled by `scale`)."
+msgstr "**Retour** : Angle du soleil en degrés (multiplié par `scale`)."
+
+#: ../../modules/environment.md:107 ../../modules/environment.md:181
+#: 09478336bbfd4faebb773549a7e87b15 e9cf9ac6e90e4097aba27e865d302c7f
+#, python-brace-format
+msgid ""
+"**Storage `bs:out environment.celestial_angle`** {nbt}`double`: Sun's "
+"angle in degrees."
+msgstr "**Stockage `bs:out environment.celestial_angle`** {nbt}`double` : Angle du soleil en degrés."
+
+#: ../../modules/environment.md:110 b12b66decd0e4fecad06b5f34d19d60c
+msgid "*Example: Get the sun's current angle:*"
+msgstr "*Exemple : Obtenir l'angle actuel du soleil :*"
+
+#: ../../modules/environment.md:118 ../../modules/environment.md:153
+#: 3b520864550d41eb87d404f5c3090607 58a24bbc89884bd6a6d4128ac999c922
+msgid "doDaylightCycle gamerule"
+msgstr "Règle de jeu doDaylightCycle"
+
+#: ../../modules/environment.md:121 ad490ef12de64c7eb9635b52497df6de
+msgid ""
+"This feature also works when the doDaylightCycle gamerule is set to "
+"false. In such situation, the returned value is the sun's angle at the "
+"time of daylight cycle freeze."
+msgstr "Cette fonctionnalité fonctionne également lorsque la règle de jeu doDaylightCycle est définie sur false. Dans cette situation, la valeur retournée est l'angle du soleil au moment du gel du cycle jour/nuit."
+
+#: ../../modules/environment.md 3682f4860c7240378227130c2de19720
+msgid "Get Current Moon Angle"
+msgstr "Obtenir l'Angle Actuel de la Lune"
+
+#: ../../modules/environment.md:130 d043acc276d94de685a7502f71ec9d78
+msgid ""
+"Get the current moon's angle on the Y axis relative to the horizon, in "
+"degrees."
+msgstr "Obtenir l'angle actuel de la lune sur l'axe Y par rapport à l'horizon, en degrés."
+
+#: ../../modules/environment.md:140 1fa52437892241f9bd46d6a9b93a5b9e
+msgid "**Return**: Moon's angle in degrees (scaled by `scale`)."
+msgstr "**Retour** : Angle de la lune en degrés (multiplié par `scale`)."
+
+#: ../../modules/environment.md:142 ../../modules/environment.md:215
+#: 667ab57fdee14295818be543890cfbc3 73925edd7fb54a0e940934477c033614
+#, python-brace-format
+msgid ""
+"**Storage `bs:out environment.celestial_angle`** {nbt}`double`: Moon's "
+"angle in degrees."
+msgstr "**Stockage `bs:out environment.celestial_angle`** {nbt}`double` : Angle de la lune en degrés."
+
+#: ../../modules/environment.md:145 04589455b35942f0a0560b71d0aacfe2
+msgid "*Example: Get the moon's current angle:*"
+msgstr "*Exemple : Obtenir la température à l'altitude actuelle :*"
+
+#: ../../modules/environment.md:156 3f670fe316814c37abd6f53ec467415a
+msgid ""
+"This feature also works when the doDaylightCycle gamerule is set to "
+"false. In such situation, the returned value is the moon's angle at the "
+"time of daylight cycle freeze."
+msgstr "Cette fonctionnalité fonctionne également lorsque la règle de jeu doDaylightCycle est définie sur false. Dans cette situation, la valeur retournée est l'angle de la lune au moment du gel du cycle jour/nuit."
+
+#: ../../modules/environment.md 75e03391d0194535a595cd6c29a3c819
+msgid "Get Sun Angle"
+msgstr "Obtenir l'Angle du Soleil"
+
+#: ../../modules/environment.md:165 d4443ccd8f0b4078a519c8fdc2fc57f2
+msgid ""
+"Get the sun's angle on the Y axis relative to the horizon at a specific "
+"time."
+msgstr "Obtenir l'angle du soleil sur l'axe Y par rapport à l'horizon à un moment donné."
+
+#: ../../modules/environment.md:168 ../../modules/environment.md:202
+#: 9175a2d67c5144ffb30d82e13298f23d ba92b030daf44d07bdbf0674aec04996
+msgid "**Scores `$environment.celestial_angle.day bs.in`**: The day number."
+msgstr "**Scores `$environment.celestial_angle.day bs.in`** : Le numéro du jour."
+
+#: ../../modules/environment.md:170 ../../modules/environment.md:204
+#: 9d7a6ac523f348658b30a8e3bb9f24b2 9f926523382f46fbad69c38013dcdb85
+msgid ""
+"**Scores `$environment.celestial_angle.daytime bs.in`**: The time of day "
+"in ticks (0-24000)."
+msgstr "**Scores `$environment.celestial_angle.daytime bs.in`** : L'heure de la journée en ticks (0-24000)."
+
+#: ../../modules/environment.md:179 178f64d8c6ad407ca2722950beff6eca
+msgid "**Return**: Sun's angle at the given time, in degrees (scaled by `scale`)."
+msgstr "**Retour** : Angle du soleil au moment donné, en degrés (multiplié par `scale`)."
+
+#: ../../modules/environment.md:184 55418344fffa445fbab15a1172e7b41f
+msgid "*Example: Get the sun's angle on day 100 at noon (6000 ticks):*"
+msgstr "*Exemple : Obtenir l'angle du soleil au jour 100 à midi (6000 ticks) :*"
+
+#: ../../modules/environment.md 524ab4754d34458fb0c5b95fe9d470fb
+msgid "Get Moon Angle"
+msgstr "Obtenir l'Angle de la Lune"
+
+#: ../../modules/environment.md:199 7d4e358ae72046b187b203ca049a6c06
+msgid ""
+"Get the moon's angle on the Y axis relative to the horizon at a specific "
+"time."
+msgstr "Obtenir l'angle de la lune sur l'axe Y par rapport à l'horizon à un moment donné."
+
+#: ../../modules/environment.md:213 892bda0de7634a40a3f72f9c1040e4ed
+msgid ""
+"**Return**: Moon's angle at the given time, in degrees (scaled by "
+"`scale`)."
+msgstr "**Retour** : Angle de la lune au moment donné, en degrés (multiplié par `scale`)."
+
+#: ../../modules/environment.md:218 dec345ccd44b46f89d11331b68d5a25f
+msgid "*Example: Get the moon's angle on day 100 at midnight (18000 ticks):*"
+msgstr "*Exemple : Obtenir l'angle de la lune au jour 100 à minuit (18000 ticks) :*"
+
+#: ../../modules/environment.md 8a58a466c33749658938fb742a7bfb6f
+msgid "Look at Sun"
+msgstr "Regarder le Soleil"
+
+#: ../../modules/environment.md:234 0b82c83a91a44a638b495923ca3fe915
+msgid "Orient the executing entity to look at the sun."
+msgstr "Orienter l'entité d'exécution pour regarder le soleil."
+
+#: ../../modules/environment.md:237 ../../modules/environment.md:258
+#: d6eb1319a93f4b19bdb8046e9be69e63 f1aac85b710d4f6584668822bd1315be
+msgid "**Execution `as <entity>`**: The entity to orient."
+msgstr "**Exécution `as <entity>`** : L'entité à orienter."
+
+#: ../../modules/environment.md:240 8a6f4cf1059f49138ed84bb6c1bd749f
+msgid "**State**: The entity's rotation is modified to face the sun."
+msgstr "**État** : La rotation de l'entité est modifiée pour faire face au soleil."
+
+#: ../../modules/environment.md:243 f057f197c34f4077859c7ddafdac59b3
+msgid "*Example: Make the current entity look at the sun:*"
+msgstr "*Exemple : Obtenir les données du biome à la position actuelle :*"
+
+#: ../../modules/environment.md 03030b323c1848fe93d0a8ad735ac9a1
+msgid "Look at Moon"
+msgstr "Regarder la Lune"
+
+#: ../../modules/environment.md:255 c8fca7ff2d7e44c5aed036006f5c6364
+msgid "Orient the executing entity to look at the moon."
+msgstr "Orienter l'entité d'exécution pour regarder la lune."
+
+#: ../../modules/environment.md:261 b6a88528b5de4ba0b25540e081880d87
+msgid "**State**: The entity's rotation is modified to face the moon."
+msgstr "**État** : La rotation de l'entité est modifiée pour faire face à la lune."
+
+#: ../../modules/environment.md:264 a405615cec9b4ec18bc56ce808440f1e
+msgid "*Example: Make the current entity look at the moon:*"
+msgstr "*Exemple : Obtenir les données du biome à la position actuelle :*"
+
+#: ../../modules/environment.md:273 ../../modules/environment.md:313
+#: ../../modules/environment.md:383 ../../modules/environment.md:392
+#: ../../modules/environment.md:401 ../../modules/environment.md:410
+#: ../../modules/environment.md:426 ../../modules/environment.md:435
+#: ../../modules/environment.md:444 ../../modules/environment.md:456
+#: ../../modules/environment.md:466 ../../modules/environment.md:476
+#: ../../modules/environment.md:486 ../../modules/environment.md:496
+#: 32f8319a7ff2437baa6e77b5833838dd 5eb8e613a7ea466e98d0ab484a89cd27
+#: 636c66f77c8540179cdc799c40bb1684 6e01e5e94bca48aca2768bb6d2eddef3
+#: 7b55b912f0e94e0bb710edddb6405715 7d11c6cd0348489eb91b89cd33b52eea
+#: 7d9d1436f73f4ef990587415a9199f1a 7f7329df7134460990c910cb904cbab6
+#: 87c16e6dc9694d2e87444d894a3fbe9d 98b9ea4e77b04e709a8c8ba4101127e9
+#: b63675f0963141ba8b930d1ac3f3a4bb bee91ecab9b14059baa926856a00b6ed
+#: d4e9bc5255c0458189028abb9b1b0901 e54497f8df74453d873d50215510cf62
+msgid "**Credits**: theogiraudet"
+msgstr "**Crédits** : Aksiome, theogiraudet"
+
+#: ../../modules/environment.md:277 41b5517bb76c4e9eb47bbb85ecf07646
+msgid "Get Moon Phase"
+msgstr "Obtenir la Phase de la Lune"
+
+#: ../../modules/environment.md:281 2fdb0065675347f389f98433a9f49982
+msgid "Get the current moon phase as a string identifier."
+msgstr "Obtenir la phase de la lune actuelle sous forme d'identifiant textuel."
+
+#: ../../modules/environment.md:284 71ea606dff414195a5a57f7cdc36824e
+#, python-brace-format
+msgid ""
+"**Storage `bs:out environment.get_moon_phase`**: {nbt}`string` Moon phase"
+" identifier."
+msgstr "**Stockage `bs:out environment.get_moon_phase`** : {nbt}`string` Identifiant de la phase de la lune."
+
+#: ../../modules/environment.md:286 a107df5163a84d5a87d611c3f67f2f90
+msgid "**Return**: Moon phase identifier (see the note below)."
+msgstr "**Retour** : Identifiant de la phase de la lune (voir la note ci-dessous)."
+
+#: ../../modules/environment.md:289 8b7f30e4be954ba2b8ca064246a21f5c
+msgid "*Example: Get the current moon phase:*"
+msgstr "*Exemple : Obtenir les données du biome à la position actuelle :*"
+
+#: ../../modules/environment.md:297 2062147d26614530bbcc5710105dcd56
+msgid "Moon Phase Values"
+msgstr "Valeurs des Phases de la Lune"
+
+#: ../../modules/environment.md:300 af471407e0ad4319be2f2e568433041c
+msgid "The function returns one of the following string values:"
+msgstr "La fonction retourne l'une des valeurs textuelles suivantes :"
+
+#: ../../modules/environment.md:301 78be90cf562047cd86661106cad9c10d
+msgid "`\"full_moon\"` (id: 0)"
+msgstr "`\"full_moon\"` (id : 0)"
+
+#: ../../modules/environment.md:302 75312fb89d4b4c45a36a15091935e1c4
+msgid "`\"waning_gibbous\"` (id: 1)"
+msgstr "`\"waning_gibbous\"` (id : 1)"
+
+#: ../../modules/environment.md:303 f09094ce8f154af4b1c8078165689b9b
+msgid "`\"third_quarter\"` (id: 2)"
+msgstr "`\"third_quarter\"` (id : 2)"
+
+#: ../../modules/environment.md:304 124e5e0536ac4207bae98253073973f3
+msgid "`\"waning_crescent\"` (id: 3)"
+msgstr "`\"waning_crescent\"` (id : 3)"
+
+#: ../../modules/environment.md:305 5466a919fd6648779f659d8462fbb20e
+msgid "`\"new_moon\"` (id: 4)"
+msgstr "`\"new_moon\"` (id : 4)"
+
+#: ../../modules/environment.md:306 060a8264d2f74740b4086febfe16f1ef
+msgid "`\"waxing_crescent\"` (id: 5)"
+msgstr "`\"waxing_crescent\"` (id : 5)"
+
+#: ../../modules/environment.md:307 879fe1f867df46bf8cda463669f6e326
+msgid "`\"first_quarter\"` (id: 6)"
+msgstr "`\"first_quarter\"` (id : 6)"
+
+#: ../../modules/environment.md:308 c0c748316c554b878fc975d6b6fd09aa
+msgid "`\"waxing_gibbous\"` (id: 7)"
+msgstr "`\"waxing_gibbous\"` (id : 7)"
+
+#: ../../modules/environment.md:310 309581d364944d408bbdf6afa94d4611
+msgid "The moon phase cycle follows Minecraft's 8-day lunar cycle."
+msgstr "Le cycle des phases de la lune suit le cycle lunaire de 8 jours de Minecraft."
+
+#: ../../modules/environment.md:317 b9303457eb91470391687ca1f2b450d8
+msgid "👁️ Predicates"
+msgstr "👁️ Prédicats"
+
+#: ../../modules/environment.md:319 253f124e35a44d8494585299e1717b07
+msgid "You can find below all predicates available in this module."
+msgstr "Vous pouvez trouver ci-dessous tous les prédicats disponibles dans ce module."
+
+#: ../../modules/environment.md:323 9d2b85e91d334d029566c8277e4523b1
+msgid "Can It Rain?"
+msgstr "Peut-il Pleuvoir ?"
+
+#: ../../modules/environment.md:325 5657eb0efa924c729fa6bbca07a1bb7d
+msgid "**`bs.environment:can_rain`**"
+msgstr "**`bs.environment:can_rain`**"
+
+#: ../../modules/environment.md:327 2f7cd6976e164945817d124ac110495b
+msgid "Determine if it can rain or not."
+msgstr "Détermine s'il peut pleuvoir ou non."
+
+#: ../../modules/environment.md:333 b49b6b6d7c324a9287d63ab3ae262cf6
+msgid "Can It Snow?"
+msgstr "Peut-il Neiger ?"
+
+#: ../../modules/environment.md:335 d86d43ebb4194e3886d1d5bba61d8255
+msgid "**`bs.environment:can_snow`**"
+msgstr "**`bs.environment:can_snow`**"
+
+#: ../../modules/environment.md:337 ce4b137180ae4f83adb170791ccf6881
+msgid "Determine if it can snow or not."
+msgstr "Détermine s'il peut neiger ou non."
+
+#: ../../modules/environment.md:343 38122f03966c486da888248b050a807d
+msgid "Can It Rain or Snow?"
+msgstr "Peut-il y avoir des Précipitations ?"
+
+#: ../../modules/environment.md:345 952197f2995340f7bf4d50a68843cd89
+msgid "**`bs.environment:has_precipitation`**"
+msgstr "**`bs.environment:has_precipitation`**"
+
+#: ../../modules/environment.md:347 280acfb25a7e4dfa964e1afff6e57d46
+msgid "Determine if the biome has precipitation or not."
+msgstr "Détermine si le biome peut avoir des précipitations ou non."
+
+#: ../../modules/environment.md:353 d065ca80ca114d9f8a13c956318943fe
+msgid "Is It Raining?"
+msgstr "Pleut-il ?"
+
+#: ../../modules/environment.md:355 21c1733c5ee1486fbe88f9756b0b3ef4
+msgid "**`bs.environment:is_raining`**"
+msgstr "**`bs.environment:is_raining`**"
+
+#: ../../modules/environment.md:357 7d7d992fa76f4a1daa70b393017917f5
+msgid "Determine if it is currently raining or not."
+msgstr "Détermine s'il pleut actuellement ou non."
+
+#: ../../modules/environment.md:363 79b26103c62d4587b93e4a6fb8777297
+msgid "Is It Thundering?"
+msgstr "Y a-t-il de l'Orage ?"
+
+#: ../../modules/environment.md:365 2606b47dd0024b8ca6ab2977aed3410d
+msgid "**`bs.environment:is_thundering`**"
+msgstr "**`bs.environment:is_thundering`**"
+
+#: ../../modules/environment.md:367 caebe8d1ea1b4319bffbcfcb5ee3627e
+msgid "Determine if it is currently thundering or not."
+msgstr "Détermine s'il y a actuellement de l'orage ou non."
+
+#: ../../modules/environment.md:373 1b397d7b756c4b48bf076f4bc1ccfeb5
+msgid "Time Predicates"
+msgstr "👁️ Prédicats"
+
+#: ../../modules/environment.md 4e1668981c7e46e490108922f005f5eb
+msgid "Day Time"
+msgstr "Jour"
+
+#: ../../modules/environment.md:379 7ae161059b2e44df93c549f44a2cb13e
+msgid "**`bs.environment:is_day_time`**"
+msgstr "**`bs.environment:is_raining`**"
+
+#: ../../modules/environment.md:381 bb2a766e949a4fccb2fc1f2cdfbc1cf8
+msgid "Determine if it is currently daytime (between 07:00 and 18:00)."
+msgstr "Détermine s'il pleut actuellement ou non."
+
+#: ../../modules/environment.md 78b324d190e641cd861250ae48323392
+msgid "Night Time"
+msgstr "Nuit"
+
+#: ../../modules/environment.md:388 d6a387cdd8cf4355a2e18344936a2e27
+msgid "**`bs.environment:is_night_time`**"
+msgstr "**`bs.environment:is_raining`**"
+
+#: ../../modules/environment.md:390 dfeaad4bdc2347ab8c77617b6762a68b
+msgid "Determine if it is currently nighttime (between 19:00 and 06:00)."
+msgstr "Détermine s'il pleut actuellement ou non."
+
+#: ../../modules/environment.md 2d74c1d0984442278892e6ed58ca5ceb
+msgid "Sunrise"
+msgstr "Lever du Soleil"
+
+#: ../../modules/environment.md:397 2c9ce6046dd5415197967522dc7b3f80
+msgid "**`bs.environment:is_sunrise_time`**"
+msgstr "**`bs.environment:is_raining`**"
+
+#: ../../modules/environment.md:399 b79c42c1cf25403fad763007d0b89ba2
+msgid "Determine if it is currently sunrise (between 06:00 and 07:00)."
+msgstr "Détermine s'il y a actuellement de l'orage ou non."
+
+#: ../../modules/environment.md dc7c380e6af6467ca5ca866107da0263
+msgid "Sunset"
+msgstr "Coucher du Soleil"
+
+#: ../../modules/environment.md:406 5eb57e8a0cff45d4911814c9338e37ff
+msgid "**`bs.environment:is_sunset_time`**"
+msgstr "**`bs.environment:is_thundering`**"
+
+#: ../../modules/environment.md:408 f22c716e333a4574b104d16cb4ec19d1
+msgid "Determine if it is currently sunset (between 18:00 and 19:00)."
+msgstr "Détermine s'il y a actuellement de l'orage ou non."
+
+#: ../../modules/environment.md:416 6f5cb20e0b3f4b7c9fd2484a7a90b84a
+msgid "Villager Behavior"
+msgstr "Comportement des Villageois"
+
+#: ../../modules/environment.md ba09d68fe514485dbc13c4a9c84e8380
+msgid "Working"
+msgstr "Travail"
+
+#: ../../modules/environment.md:422 ../../modules/environment.md:440
+#: 6f1e032fe4474deeafa2d11677f46b12 d445b7c25e7c428a949486f601799e3e
+msgid "**`bs.environment:is_villager_sleeping_time`**"
+msgstr "**`bs.environment:is_raining`**"
+
+#: ../../modules/environment.md:424 5754bcab8461405fbc3a53d742e6c738
+msgid ""
+"Determine if villagers are currently in their working phase (between "
+"08:00 and 15:00)."
+msgstr "Détermine si les villageois sont actuellement en phase de travail (entre 08:00 et 15:00)."
+
+#: ../../modules/environment.md 84196eb0b9504b24b18e8323bf19b7df
+msgid "Socializing"
+msgstr "Socialisation"
+
+#: ../../modules/environment.md:431 630de4f627ce4f978ace60943020769d
+msgid "**`bs.environment:is_villager_socializing_time`**"
+msgstr "**`bs.environment:is_raining`**"
+
+#: ../../modules/environment.md:433 cde9a541726c481caf58c3db87abd117
+msgid ""
+"Determine if villagers are currently in their socializing phase (between "
+"15:00 and 18:00)."
+msgstr "Détermine si les villageois sont actuellement en phase de socialisation (entre 15:00 et 18:00)."
+
+#: ../../modules/environment.md 4d7f04e864da42b381151afa45d87acd
+msgid "Sleeping"
+msgstr "Sommeil"
+
+#: ../../modules/environment.md:442 0747acc29543466486f76e62172b4b8b
+msgid ""
+"Determine if villagers are currently in their sleeping phase (between "
+"18:00 and 07:00)."
+msgstr "Détermine si les villageois sont actuellement en phase de sommeil (entre 18:00 et 07:00)."
+
+#: ../../modules/environment.md:450 e89fa4d822bd4aa6aeea60234dd7059b
+msgid "Is It Bed Time?"
+msgstr "Est-ce l'Heure de Dormir ?"
+
+#: ../../modules/environment.md:452 3215c1bdd58d4e5a8b0e93524f6a6240
+msgid "**`bs.environment:is_bed_time`**"
+msgstr "**`bs.environment:is_raining`**"
+
+#: ../../modules/environment.md:454 c2e563f2f1754492850c3109f99eb459
+msgid ""
+"Determine if beds can currently be used by players (between 18:32 and "
+"05:27 in clear weather, or 18:00 and 05:59 in rainy weather)."
+msgstr "Détermine si les lits peuvent actuellement être utilisés par les joueurs (entre 18:32 et 05:27 par temps clair, ou 18:00 et 05:59 par temps pluvieux)."
+
+#: ../../modules/environment.md:460 7312cefb69774da7a556db5fa03bc447
+msgid "Is It Undead Burning Time?"
+msgstr "Y a-t-il de l'Orage ?"
+
+#: ../../modules/environment.md:462 5a2b97db347542db9576e6971c81a1fc
+msgid "**`bs.environment:is_undead_burning_time`**"
+msgstr "**`bs.environment:is_thundering`**"
+
+#: ../../modules/environment.md:464 b5acc867f61d44279d57a8a6be355b2a
+msgid ""
+"Determine if undead mobs (zombies, skeletons, etc.) can currently burn in"
+" sunlight (between 05:27 and 18:32 in clear weather)."
+msgstr "Détermine si les créatures mortes-vivantes (zombies, squelettes, etc.) peuvent actuellement brûler à la lumière du soleil (entre 05:27 et 18:32 par temps clair)."
+
+#: ../../modules/environment.md:470 2cc725775165477094ed1aeec65fb2aa
+msgid "Is It Monster Spawning Time?"
+msgstr "Pleut-il ?"
+
+#: ../../modules/environment.md:472 59a500bc725748e097b30559ca0ab9f0
+msgid "**`bs.environment:is_monster_spawning_time`**"
+msgstr "**`bs.environment:is_raining`**"
+
+#: ../../modules/environment.md:474 c5df48e1392b4f2fb66e8f0d1a837940
+msgid ""
+"Determine if hostile monsters can currently spawn outdoors (between 19:11"
+" and 04:48 in clear weather, or 18:58 and 05:01 in rainy weather)."
+msgstr "Détermine si les monstres hostiles peuvent actuellement apparaître en extérieur (entre 19:11 et 04:48 par temps clair, ou 18:58 et 05:01 par temps pluvieux)."
+
+#: ../../modules/environment.md:480 9e08fb64089c476fbeba32ff9c885f3d
+msgid "Is It Bee Sleeping Time?"
+msgstr "Est-ce l'Heure de Sommeil des Abeilles ?"
+
+#: ../../modules/environment.md:482 7231f744a36d4b4ea0f3f40fc3ce992f
+msgid "**`bs.environment:is_bee_sleeping_time`**"
+msgstr "**`bs.environment:is_raining`**"
+
+#: ../../modules/environment.md:484 2725a1820a3b4056877af5a3757fbb7f
+msgid ""
+"Determine if bees are currently in their sleeping phase (between 18:32 "
+"and 05:27 in clear weather)."
+msgstr "Détermine si les abeilles sont actuellement en phase de sommeil (entre 18:32 et 05:27 par temps clair)."
+
+#: ../../modules/environment.md:490 5c6bda01e60e4b57878e9306e7958cf2
+msgid "Is It Creaking Spawning Time?"
+msgstr "Pleut-il ?"
+
+#: ../../modules/environment.md:492 495768435c1349e2a2c137687a2375e8
+msgid "**`bs.environment:is_creaking_spawning_time`**"
+msgstr "**`bs.environment:is_raining`**"
+
+#: ../../modules/environment.md:494 0f7987e2a80a409f9bc3bfa586a5daec
+msgid ""
+"Determine if creakings can currently spawn (between 18:32 and 05:27 in "
+"clear weather, or 18:00 and 05:59 in rainy weather)."
+msgstr "Détermine si les creakings peuvent actuellement apparaître (entre 18:32 et 05:27 par temps clair, ou 18:00 et 05:59 par temps pluvieux)."
+
+#: ../../_templates/comments.md:4 144d32745a15405d97327ea0e7b07c3a
+msgid "**💬 Did it help you?**"
+msgstr "**💬 Cela vous a-t-il aidé ?**"
+
+#: ../../_templates/comments.md:6 ba244c6ee0f84edba2b694fda4275fe3
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "N'hésitez pas à laisser vos questions et commentaires ci-dessous !"

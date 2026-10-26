@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-26 01:39+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v3.2.2.md:1 77c4daba952c4beca1d3ff9b078ab935
+msgid "📦 [Bookshelf - 3.2.2](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.2.2)"
+msgstr "📦 [Bookshelf - 3.2.2](https://github.com/mcbookshelf/bookshelf/releases/tag/v3.2.2)"
+
+#: ../../../changelog/v3.2.2.md:3 66cd5515ddc94824a503c6d9bd72e178
+msgid "**🩹 Hotfix!**"
+msgstr "**🩹 热修复！**"
+
+#: ../../../changelog/v3.2.2.md:5 bf786c2e0d7f4fedbe8f6109e87086db
+msgid "*This is a hotfix for version 3.2.1.*"
+msgstr "*这是针对版本 3.2.1 的热修复。*"
+
+#: ../../../changelog/v3.2.2.md:8 2f0adfafa13345e582a3081b4ab45e53
+msgid "`🎯 bs.hitbox`"
+msgstr "`🎯 bs.hitbox`"
+
+#: ../../../changelog/v3.2.2.md:10 fda01a12f3aa4bfebcc64c175b17fa9c
+msgid "🐛 **[#520](https://github.com/mcbookshelf/bookshelf/pull/520)** - Fixed Nautilus entities hitboxes."
+msgstr "🐛 **[#520](https://github.com/mcbookshelf/bookshelf/pull/520)** - 修复了鹦鹉螺实体的碰撞箱。"
+
+#: ../../../changelog/v3.2.2.md:11 13bde6d24c374bb4a0650909ab5d96a8
+msgid "🐛 **[#519](https://github.com/mcbookshelf/bookshelf/pull/519)** - Fixed fluid hitbox providers for full liquid blocks."
+msgstr "🐛 **[#519](https://github.com/mcbookshelf/bookshelf/pull/519)** - 修复了完整液体方块的流体碰撞箱提供者。"

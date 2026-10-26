@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: https://github.com/mcbookshelf/bookshelf/issues\n"
+"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"PO-Revision-Date: 2025-01-19 12:00+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../changelog/v2.2.1.md:1 495b91f9159f443cac731ba6aabeffa4
+msgid ""
+"📦 [Bookshelf - "
+"2.2.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.1)"
+msgstr ""
+"📦 [Bookshelf - "
+"2.2.1](https://github.com/mcbookshelf/bookshelf/releases/tag/v2.2.1)"
+
+#: ../../../changelog/v2.2.1.md:3 01bf83c9d9184cffa349808464478fb9
+msgid "**⬆️ A Minecraft Update!**"
+msgstr "**⬆️ Une mise à jour Minecraft !**"
+
+#: ../../../changelog/v2.2.1.md:5 b67161657f2a413fb12db8ed4f19798a
+msgid ""
+"*This release fixes several issues and bumps the Minecraft version to "
+"1.21.4.*"
+msgstr "*Cette version corrige plusieurs problèmes et met à jour la version de Minecraft vers 1.21.4.*"
+
+#: ../../../changelog/v2.2.1.md:7 40954584fe824ae38eed8ff52a114f98
+msgid "Bookshelf is now based on **Minecraft 1.21.4**."
+msgstr "Bookshelf est maintenant basé sur **Minecraft 1.21.4**."
+
+#: ../../../changelog/v2.2.1.md:10 9d39e8701b334ded9b845210e4c2b151
+msgid "`🧱 bs.block`"
+msgstr "`🧱 bs.block`"
+
+#: ../../../changelog/v2.2.1.md:12 0af0204d93b04afaa2f38eb723539eea
+msgid ""
+"🐛 **[#290](https://github.com/mcbookshelf/bookshelf/issues/290)** - Added"
+" missing blocks in registries."
+msgstr ""
+"🐛 **[#290](https://github.com/mcbookshelf/bookshelf/issues/290)** - "
+"Ajout des blocs manquants dans les registres."
+
+#: ../../../changelog/v2.2.1.md:14 b7a7ae8830ae4e2295b3558bdc145f7e
+msgid "`🏃 bs.move`"
+msgstr "`🏃 bs.move`"
+
+#: ../../../changelog/v2.2.1.md:16 4fb112de599642ee92910b70538d12ee
+msgid ""
+"🐛 **[#288](https://github.com/mcbookshelf/bookshelf/issues/288)** - Fixed"
+" collision resolutions."
+msgstr ""
+"🐛 **[#288](https://github.com/mcbookshelf/bookshelf/issues/288)** - "
+"Correction des résolutions de collision."

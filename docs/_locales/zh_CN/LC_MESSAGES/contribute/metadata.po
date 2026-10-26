@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 01:06+0200\n"
+"PO-Revision-Date: 2025-07-19 19:55+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contribute/metadata.md:1 173dd17441604c6faf981aecec49bc9b
+msgid "🔖 Metadata"
+msgstr "🔖 元数据"
+
+#: ../../contribute/metadata.md:3 3f14546f9670411ebf7154ebea2d7be9
+msgid ""
+"To support automation by tools like the Bookshelf Manager, modules must "
+"declare specific metadata. All metadata are verified during the CI/CD "
+"process (see the [contribution validation page](project:../contribute"
+"/contribution-validation.md))."
+msgstr ""
+"为支持 Bookshelf Manager 等工具的自动化操作，模块必须声明特定元数据。所有元数据均在 CI/CD "
+"流程中验证（参见[贡献验证页面](project:../contribute/contribution-validation.md)）。"
+
+#: ../../contribute/metadata.md:7 fcbbc5c274a245ee91b8f6f6ebf18907
+msgid "⭐ Feature Metadata"
+msgstr "⭐ 功能元数据"
+
+#: ../../contribute/metadata.md:9 a833685af2a9408b9ba363e106eec49b
+msgid ""
+"Feature metadata are defined directly within each `.json` file, as shown "
+"below:"
+msgstr "功能元数据直接定义在每个 `.json` 文件中，如下所示："
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 303b4fb70a5b4281809382fed9957d95 3556475e987f46f9b383f89211331bae
+msgid "Field"
+msgstr "字段"
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 05382a061e4c462a85ecf6165d546385 47f7d445837b428ebc1897f54c3c6503
+msgid "Description"
+msgstr "描述"
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 01077e0d582641e79d6e7e9abb838bd9 bb795b1541ae491d8a3709089974bfb3
+msgid "Mandatory"
+msgstr "必需"
+
+#: ../../contribute/metadata.md:11 cbace52bc5cf460b94fb0291386cef96
+msgid "feature"
+msgstr "feature"
+
+#: ../../contribute/metadata.md:11 af9adb8ec4e7497f93ded91460424bf6
+msgid "Indicates whether the file is the endpoint of a feature"
+msgstr "指示当前函数标签是否为功能的端点"
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 5e86f9c29333404a95b9a95efbc25a14 5e9549b74e554c09b644471447fd59f7
+#: 62363e66baf34bab85f10555568bc2b4 6acb98b6873c4a3db424f34b067e36f9
+#: 6e50eb42789f49df86de1213b16636f0 7e1262edf61242759932c694ddb500df
+#: 937098ed842c4946af82c04326bf5c96 9b0a8b015f5346e28e831ca646df3ba2
+#: f6068e67f49e4f96b5f6552956d9ae74
+msgid "yes"
+msgstr "是"
+
+#: ../../contribute/metadata.md:11 af4820d5a23348499197661b1ac9c532
+msgid "deprecated"
+msgstr "deprecated"
+
+#: ../../contribute/metadata.md:11 2840592262b44a6c8d2f9225997f1d45
+msgid "Indicates whether the feature has been deprecated"
+msgstr "表示该功能是否已弃用"
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 3caea657ec034e2686ceb5a07be6280e 41432e64ff9d4027a58a22697674eb7e
+#: 9a7303ad2fce48d7a86886557108e191 d5739f31587349b59def57e97d4ee34b
+#: e107b796a177464db7c7f2faa12d9199 fca60076f61e4ff8ba8f18cc713c8d25
+msgid "no"
+msgstr "否"
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 2550127dd1c540fb9e06120b3c21f1dd d39194c4c6e6438981f6c46e1fbb126c
+msgid "documentation"
+msgstr "documentation"
+
+#: ../../contribute/metadata.md:11 dd3e1bd55de44072a7e30d04d940b766
+msgid "A link to the feature's documentation"
+msgstr "功能文档的链接"
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 49c9a27d35b549b899103d1e47e92221 d71808cd47a8408ab56899f3821c2d05
+msgid "authors"
+msgstr "authors"
+
+#: ../../contribute/metadata.md:11 422cfdc2f574401fb5734bece89bafe4
+msgid "A list of feature authors. Cannot be empty"
+msgstr "功能作者列表（不可为空）"
+
+#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
+#: 4e4c69785b244415ad3d5618fad067cf b0d644dbd0f542c59df65a5bcb45c2c3
+msgid "contributors"
+msgstr "contributors"
+
+#: ../../contribute/metadata.md:11 d1322adb28dc479888ed557b78dd4096
+msgid ""
+"A list of contributors (e.g., those who provided insights, fixes, or "
+"indirect help)"
+msgstr "贡献者列表（如提供见解、修复或间接帮助的人员）"
+
+#: ../../contribute/metadata.md:11 10a06150494943f4b5c049163e553458
+msgid "created"
+msgstr "created"
+
+#: ../../contribute/metadata.md:11 c32a0326c0764cc3a3c5a92cfe87b543
+msgid "The creation date and Minecraft version for historical purposes"
+msgstr "创建日期和 Minecraft 版本（用于历史记录）"
+
+#: ../../contribute/metadata.md:11 178e66d4681c4bdfbc0e3640614ea2e4
+msgid "updated"
+msgstr "updated"
+
+#: ../../contribute/metadata.md:11 1bcfd66d590c428fb913e290d360128d
+msgid "The date and Minecraft version of the most recent update"
+msgstr "最近更新的日期和 Minecraft 版本"
+
+#: ../../contribute/metadata.md:49 7bab91f80f224950bee81b9d0f721eb5
+msgid "🧩 Module Metadata"
+msgstr "🧩 模块元数据"
+
+#: ../../contribute/metadata.md:51 13bda0dab854453e82c8b820e84bcd20
+msgid ""
+"Module metadata are defined in `modules/<module>/module.json`. Below is "
+"an example:"
+msgstr "模块元数据定义在 `modules/<module>/module.json` 中。示例如下："
+
+#: ../../contribute/metadata.md:53 e71ca31eb43f46d59091cecb8ef2cf4d
+msgid "name"
+msgstr "name"
+
+#: ../../contribute/metadata.md:53 c918f47c358546bf87da547c71d0f3f4
+msgid "The module's display name (e.g., `Foo`)"
+msgstr "模块显示名称（如 `Foo`）"
+
+#: ../../contribute/metadata.md:53 8230e219453f45d3875164876592d592
+msgid "slug"
+msgstr "slug"
+
+#: ../../contribute/metadata.md:53 4736368cabdf4b57870335ea6b56c022
+msgid "The module's slug used to publish to platforms (e.g., `bookshelf-foo`)"
+msgstr "模块的 slug（用于发布到平台，如 `bookshelf-foo`）"
+
+#: ../../contribute/metadata.md:53 0a82f4b25c1942ba816cba9e20385491
+msgid "description"
+msgstr "description"
+
+#: ../../contribute/metadata.md:53 2340adae61914709b03fca826b4d268a
+msgid "A description of the module's purpose"
+msgstr "模块用途的描述"
+
+#: ../../contribute/metadata.md:53 1714c5becddd4ed491e89d7d5ec56a86
+msgid "A link to the module's documentation"
+msgstr "模块文档的链接"
+
+#: ../../contribute/metadata.md:53 df10f741e82d413283dfea2053c7d618
+msgid "tags"
+msgstr "tags"
+
+#: ../../contribute/metadata.md:53 a49a1fcb3a274436b734903371192d34
+msgid ""
+"A list of tags for categorizing or identifying modules. Tags are also "
+"used to generate bundles (e.g., `default` and `dev`)"
+msgstr "用于分类或标识模块的标签列表，也用于生成捆绑包（如 `default` 和 `dev`）"
+
+#: ../../contribute/metadata.md:53 b39a6899bdc1491680d9f7ea6c526645
+msgid "no (but trigger warnings)"
+msgstr "否（但会触发警告）"
+
+#: ../../contribute/metadata.md:53 4734eaacb7fd4b938f947581d059c23d
+msgid ""
+"A list of module authors (supplements authors from features). Cannot be "
+"empty"
+msgstr "模块作者列表（补充功能中的作者），不可为空"
+
+#: ../../contribute/metadata.md:53 07b291319d0b444889ae6bda7ccda3c8
+msgid "A list of contributors (supplements contributors from features)"
+msgstr "贡献者列表（补充功能中的贡献者）"
+
+#: ../../contribute/metadata.md:53 9b6f0e8f29cd466c8c1924f49928e77a
+msgid "dependencies"
+msgstr "dependencies"
+
+#: ../../contribute/metadata.md:53 6a675244dc5c45a6b35454d239018974
+msgid "Essential modules required for this module to function (e.g., `bs.hitbox`)"
+msgstr "模块运行必需的依赖模块（如 `bs.hitbox`）"
+
+#: ../../contribute/metadata.md:53 fdfd8a52385643e8986d668ae31c6732
+msgid "weak dependencies"
+msgstr "weak dependencies"
+
+#: ../../contribute/metadata.md:53 34ebbd4e1fa744059f736a8175e241b0
+msgid ""
+"Optional modules that enhance functionality but are not essential (e.g., "
+"`bs.log`)"
+msgstr "增强功能但非必需的模块（如 `bs.log`）"
+
+#: ../../contribute/metadata.md:95 fb68342310cc45c0a275ef7693fdca2a
+msgid "📜 Manifest"
+msgstr "📜 清单"
+
+#: ../../contribute/metadata.md:97 7130c6a841e2417481689ac1e1550bc8
+msgid ""
+"The manifest consolidates metadata for all modules and features in "
+"Bookshelf. It is automatically generated and can be updated using the "
+"following command:"
+msgstr "清单整合了 Bookshelf 所有模块和功能的元数据，自动生成并可通过以下命令更新："
+
+#: ../../contribute/metadata.md:101 7691e3936f384ac7aa81fb9e44bdb5cf
+msgid "The generated file is located at `meta/manifest.json`."
+msgstr "生成的文件位于 `meta/manifest.json`。"

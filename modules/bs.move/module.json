@@ -1,0 +1,17 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.move",
+    "load": "."
+  },
+  "meta": {
+    "name": "Move",
+    "slug": "bookshelf-move",
+    "description": "Move entities along a velocity vector, with collision handling.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html",
+    "tags": ["runtime"],
+    "dependencies": [
+      "bs.hitbox"
+    ]
+  }
+}

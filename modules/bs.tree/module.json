@@ -1,0 +1,14 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.tree",
+    "load": "."
+  },
+  "meta": {
+    "name": "Tree",
+    "slug": "bookshelf-tree",
+    "description": "Pre-built tree structures with multiple variations.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/tree.html",
+    "tags": ["prefabs"]
+  }
+}

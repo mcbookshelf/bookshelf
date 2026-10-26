@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-28 11:19+0800\n"
+"PO-Revision-Date: 2025-09-19 15:00+0100\n"
+"Last-Translator: Théo Giraudet <theo.giraudet@altearn.xyz>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../modules/index.md:25
+msgid "Runtime"
+msgstr "Runtime"
+
+#: ../../../modules/index.md:54
+msgid "Development"
+msgstr "Développement"
+
+#: ../../../modules/index.md:62
+msgid "Prefabs"
+msgstr "Prefabs"
+
+#: ../../../modules/index.md:5 f03f51979a0b4126bb34274d7d64635b
+msgid "🧩 Modules"
+msgstr "🧩 Modules"
+
+#: ../../../modules/index.md:7 363d29553e5a407f94cabfc6db6b808f
+msgid ""
+"Bookshelf is designed with modularity in mind. Features that serve a "
+"common purpose are organized into distinct, standalone, namespaced "
+"modules."
+msgstr "Bookshelf est conçu avec la modularité à l'esprit. Les fonctionnalités qui servent un objectif commun sont organisées en modules distincts, autonomes et avec espaces de noms."
+
+#: ../../../modules/index.md:11 5d1f0ba54dd44dd9922e8dabb49188db
+msgid "🌟 Featured Modules"
+msgstr "🌟 Modules en vedette"
+
+#: ../../../_templates/featured-modules.md:5 ebe31ffaa5c443e5a2425cf3a7d39b93
+msgid "🧱 Block"
+msgstr "🧱 Block"
+
+#: ../../../_templates/featured-modules.md:10 5b558f8cbe014b8da573a02a975ea337
+msgid "Get and manipulate blocks (supports BlockStates and NBT)."
+msgstr "Obtenir et manipuler des blocs (prend en charge BlockStates et NBT)."
+
+#: ../../../_templates/featured-modules.md:13 053b8fd643ba459b992b47f305e69e49
+msgid "🔦 Raycast"
+msgstr "🔦 Raycast"
+
+#: ../../../_templates/featured-modules.md:18 4f714c0e481441738dda9044e652887a
+msgid "Cast rays and see if they collide with blocks or entities."
+msgstr "Lancer des rayons et voir s'ils entrent en collision avec des blocs ou des entités."
+
+#: ../../../_templates/featured-modules.md:21 4cb02984ca1a467eb775af8a1c98b3c2
+msgid "🧮 Math"
+msgstr "🧮 Math"
+
+#: ../../../_templates/featured-modules.md:26 b7bfed0f3281444a9ae731ed928c02cc
+msgid "Mathematical functions: sin, cos, exp, log, sqrt, and much more!"
+msgstr "Fonctions mathématiques : sin, cos, exp, log, sqrt, et bien plus !"
+
+#: ../../../_templates/featured-modules.md:29 1fc273de6bb34f658611f03c13e76eb9
+msgid "🏗️ Generation"
+msgstr "🏗️ Génération"
+
+#: ../../../_templates/featured-modules.md:34 cc698c4bfc1b4f87975ed1568cab827b
+msgid "Generate terrains and landscapes, incorporating natural features."
+msgstr "Générer des terrains et paysages, incorporant des caractéristiques naturelles."
+
+#: ../../../_templates/featured-modules.md:37 8314fa5205554fc1a2e8fec469f0e823
+msgid "🎲 Random"
+msgstr "🎲 Random"
+
+#: ../../../_templates/featured-modules.md:42 5f7c9b015d6c4d5f9f6aa5c245804088
+msgid "Random functions for different distributions and noise patterns."
+msgstr "Fonctions aléatoires pour différentes distributions et motifs de bruit."
+
+#: ../../../_templates/featured-modules.md:45 732f7744b67c416998c9f7b289be65ea
+msgid "❤️ Health"
+msgstr "❤️ Santé"
+
+#: ../../../_templates/featured-modules.md:50 be6ed3a727fe477ebc66960337ee7a7c
+msgid "Easily manage the health of a player or the lifetime of an entity!"
+msgstr "Gérez facilement la santé d'un joueur ou la durée de vie d'une entité !"
+
+#: ../../../modules/index.md:18 178198199e9644a189a3f04a17b97f1b
+msgid "📖 Key Definitions"
+msgstr "📖 Définitions clés"
+
+#: ../../../_templates/definitions.md:2 e9209cce87704f88affc72b6e2a21d5a
+msgid "General Concepts"
+msgstr "Concepts généraux"
+
+#: ../../../_templates/definitions.md:3 e8456400c971486eaba9bb7a57de6390
+msgid "**Bundle**"
+msgstr "**Bundle**"
+
+#: ../../../_templates/definitions.md:4 adcc7152c1b148548af1ab452b85eaff
+msgid "A set of modules packaged together for distribution."
+msgstr "Un ensemble de modules empaquetés ensemble pour la distribution."
+
+#: ../../../_templates/definitions.md:5 881de22f4b5243a2abdce3e96a704fb3
+msgid "**Dependency**"
+msgstr "**Dépendance**"
+
+#: ../../../_templates/definitions.md:6 d326b1a734744dfe88ed85870c6ec585
+msgid ""
+"A module that another module relies on to function properly. It must be "
+"loaded for the dependent module to work."
+msgstr "Un module sur lequel un autre module s'appuie pour fonctionner correctement. Il doit être chargé pour que le module dépendant fonctionne."
+
+#: ../../../_templates/definitions.md:7 9b946c96f3894e5caa18ff6eceee9f2b
+msgid "**Feature**"
+msgstr "**Feature**"
+
+#: ../../../_templates/definitions.md:8 250a838be8cc4da6b3dfcb73087e3705
+msgid ""
+"A user-facing element designed to accomplish a task. Features are often "
+"represented as function tags, but can also include loot tables, "
+"structures, predicates, and more."
+msgstr "Un élément orienté utilisateur conçu pour accomplir une tâche. Les features sont souvent représentées comme des tags de fonction, mais peuvent aussi inclure des loot tables, structures, prédicats, et plus."
+
+#: ../../../_templates/definitions.md:9 4a84b402313b43c38e7926e6c4b491db
+msgid "**Module**"
+msgstr "**Module**"
+
+#: ../../../_templates/definitions.md:10 ab0d77a15e3a4fa0bfb501bcebb07aac
+msgid ""
+"A collection of related features within a namespace, serving a specific "
+"purpose."
+msgstr "Une collection de features liées au sein d'un espace de noms, servant un objectif spécifique."
+
+#: ../../../_templates/definitions.md:11 40f0f9120b1e466089827544dcb47628
+msgid "**Weak Dependency**"
+msgstr "**Dépendance faible**"
+
+#: ../../../_templates/definitions.md:12 5fd3d6518cb3464a94f687504635f96a
+msgid ""
+"An optional dependency that enhances functionality if present, but is not"
+" essential for the main module to function correctly."
+msgstr "Une dépendance optionnelle qui améliore les fonctionnalités si présente, mais n'est pas essentielle pour que le module principal fonctionne correctement."
+
+#: ../../../_templates/definitions.md:15 324b4df910914d718b2abbe28ea6b52d
+msgid "Special Arguments"
+msgstr "Arguments spéciaux"
+
+#: ../../../_templates/definitions.md:16 ad43b4e783b74f3ab5d45a2149dc4378
+msgid "**`on_*`**"
+msgstr "**`on_*`**"
+
+#: ../../../_templates/definitions.md:17 db408e37c0214023977ee079da304abe
+msgid ""
+"Specifies a command to be executed by a feature when a particular event "
+"occurs."
+msgstr "Spécifie une commande à exécuter par une feature lorsqu'un événement particulier se produit."
+
+#: ../../../_templates/definitions.md:18 357b7bbdeeb1410682ecbb193ccabaa7
+msgid "**`run`**"
+msgstr "**`run`**"
+
+#: ../../../_templates/definitions.md:19 e2c736abc5a04b29aedd9bbbfb1958c1
+msgid "Specifies a command to be executed by a feature, often immediately."
+msgstr "Spécifie une commande à exécuter par une feature, souvent immédiatement."
+
+#: ../../../_templates/definitions.md:20 fd24c8e9368c4378aca9ab7434b5a3e7
+msgid "**`with`**"
+msgstr "**`with`**"
+
+#: ../../../_templates/definitions.md:21 04bee169374c40169a7cb694f5deb870
+msgid "Specifies optional arguments."
+msgstr "Spécifie des arguments optionnels."
+
+#: ../../../_templates/definitions.md:24 f0a657c3ef9d44f59b17165cf9b569d9
+msgid "Special Functions"
+msgstr "Fonctions spéciales"
+
+#: ../../../_templates/definitions.md:25 39aac842ec294705b04caac3037801a1
+msgid "**`*_ata`**"
+msgstr "**`*_ata`**"
+
+#: ../../../_templates/definitions.md:26 e547e212c8f243dd92166cc9b24b0810
+msgid ""
+"Shortened from \"as to at.\" These functions take two positions: one "
+"given through a positional argument (e.g., `positioned`, `at`), and the "
+"other from the executor's position."
+msgstr "Abrégé de \"as to at\". Ces fonctions prennent deux positions : une donnée par un argument positionnel (ex. `positioned`, `at`), et l'autre depuis la position de l'exécuteur."

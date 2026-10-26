@@ -1,0 +1,15 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.collection",
+    "load": "."
+  },
+  "meta": {
+    "name": "Collection",
+    "slug": "bookshelf-collection",
+    "description": "Manipulate collections with a full set of functional operations.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/collection.html",
+    "tags": ["runtime"],
+    "dependencies": []
+  }
+}

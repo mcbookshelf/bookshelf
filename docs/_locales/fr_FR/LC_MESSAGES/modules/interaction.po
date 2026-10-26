@@ -1,0 +1,479 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-31 16:15+0800\n"
+"PO-Revision-Date: 2025-01-17 12:00+0100\n"
+"Last-Translator: Claude Code Assistant <claude@anthropic.com>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../modules/interaction.md:1 010a29f67a7e4571b658b671e9b4de6d
+msgid "🖱️ Interaction"
+msgstr "🖱️ Interaction"
+
+#: ../../modules/interaction.md:3 3f8c19ad7d694087ac9dd6eb27b4f544
+msgid "**`#bs.interaction:help`**"
+msgstr "**`#bs.interaction:help`**"
+
+#: ../../modules/interaction.md:5 fea86675c1e840388b5ce73765e23ac7
+msgid "Create and manage Graphical User Interfaces (GUIs) in Minecraft."
+msgstr "Créer et gérer des interfaces graphiques utilisateur (GUI) dans Minecraft."
+
+#: ../../modules/interaction.md:8 db42b24cab4145169661b606ac192896
+msgid "\"As far as the customer is concerned, the interface is the product.\""
+msgstr "\"En ce qui concerne le client, l'interface est le produit.\""
+
+#: ../../modules/interaction.md:9 b938ba6e774d43a2a203131c3d1882fc
+msgid "Jef Raskin"
+msgstr "Jef Raskin"
+
+#: ../../modules/interaction.md:13 143bf78861fd4dcb94d60b6d3db555f8
+msgid ""
+"The Interaction API is a low-level API to create GUIs based on the "
+"[Interaction](https://minecraft.wiki/w/Interaction) entity. This API is "
+"low level since the possible events are directly and manually bound to "
+"the interaction."
+msgstr ""
+"L'API Interaction est une API de bas niveau pour créer des GUI basées sur "
+"l'entité [Interaction](https://minecraft.wiki/w/Interaction). Cette API est "
+"de bas niveau car les événements possibles sont directement et manuellement "
+"liés à l'interaction."
+
+#: ../../modules/interaction.md:18 e03ee1fbc9ea49f5b88d97f77e9a27f3
+msgid "🔧 Functions"
+msgstr "🔧 Fonctions"
+
+#: ../../modules/interaction.md:20 ac3c103d59c04d68839e8e7b620d4142
+msgid "You can find below below all functions available in this API."
+msgstr "Vous pouvez trouver ci-dessous toutes les fonctions disponibles dans cette API."
+
+#: ../../modules/interaction.md:24 4c3bdd16c82f41b3877e34d17804f623
+msgid "Clear Events"
+msgstr "Effacer les événements"
+
+#: ../../modules/interaction.md:28 b7817319f38849bfa5faf0f7e4a8d85c
+msgid "Clear events registered for the specified interaction entity."
+msgstr "Effacer les événements enregistrés pour l'entité interaction spécifiée."
+
+#: ../../modules/interaction.md:30 ../../modules/interaction.md:74
+#: ../../modules/interaction.md:99 ../../modules/interaction.md:124
+#: ../../modules/interaction.md:149 ../../modules/interaction.md:174
+#: 0792240fc86c43f0a33bda16cab9d67f 28fb37b9cbeb41b6ac02cb7eba2a2b30
+#: 3fdb448429bf497bbc8a0fbad53c0507 9e93982402394a2e9bebafc037a7a2e3
+#: c00a87a4772f4c22bbbcdae84000ad00 e26eeab210734cf7bcfb6f596832485a
+msgid "Inputs"
+msgstr "Entrées"
+
+#: ../../modules/interaction.md:31 3746159e635f4249938e4a0aeef29778
+msgid ""
+"**Execution `as <entity>`** : Interaction entity for which the events will"
+" be cleared."
+msgstr "**Exécution `as <entité>`** : Entité interaction pour laquelle les événements seront effacés."
+
+#: ../../modules/interaction.md:33 ../../modules/interaction.md:77
+#: ../../modules/interaction.md:102 ../../modules/interaction.md:127
+#: ../../modules/interaction.md:152 ../../modules/interaction.md:177
+#: 2dbfcf5bc50f4cfa92a86df757308b5c 7aa16f72f78649f78466ea431fb47cc0
+#: ad7e45123e7d47e6bcc3fccf7ba7fb63 c45005c4835b4e6b9cc469df531b4599
+#: ce01432df7a04f788c4ac0cbd7d5dfa8 f80a091fbe634b12a4692732e28d0eaa
+msgid "**Function macro** :"
+msgstr "**Macro de fonction** :"
+
+#: ../../modules/interaction.md:41 ../../modules/interaction.md:86
+#: ../../modules/interaction.md:111 ../../modules/interaction.md:136
+#: ../../modules/interaction.md:161 ../../modules/interaction.md:186
+#: 037dcf2668934fdcba50b34f83ee18fa 2f844ff2cd13410c92f2d8f25c1c906a
+#: 7139be3f20ab4222b215bf0e01b87fa3 7df8adf7e75e47668e3dcfa3f8565a51
+#: a1e92be6cf814b40bbd724bb49773c15 b19c9e11c5c34acb8f94c78847f9ff68
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../modules/interaction.md:42 9c361dfcf6564141841dd1366d73e090
+msgid "**Return** : The number of events removed."
+msgstr "**Retour** : Le nombre d'événements supprimés."
+
+#: ../../modules/interaction.md:44 9828c457b9944c649af4a8706cfbfe58
+msgid ""
+"**State** : The specified events for the interaction entity will be "
+"removed."
+msgstr "**État** : Les événements spécifiés pour l'entité interaction seront supprimés."
+
+#: ../../modules/interaction.md:47 4a1f26fab7b44f79b4506eed7329db59
+msgid "*Example: Clear hover events for the interaction entity:*"
+msgstr "*Exemple : Effacer les événements de survol pour l'entité interaction :*"
+
+#: ../../modules/interaction.md:59 ../../modules/interaction.md:212
+#: 36a410c1a8b34ce583792035c8d8b75f df6843b10c2748b4b5bde9e3d4898b54
+msgid "**Credits** : Aksiome, theogiraudet"
+msgstr "**Crédits** :Aksiome, theogiraudet"
+
+#: ../../modules/interaction.md:63 316db84a3a8644f591cc2d2c3e768f74
+msgid "On Event"
+msgstr "Sur événement"
+
+#: ../../modules/interaction.md 6be33576700e4dee9b9f0e354d79e16c
+#: ebbb1fb974504b7381aba98e87eea789
+msgid "Left Click"
+msgstr "Clic gauche"
+
+#: ../../modules/interaction.md:71 ea19f9b702fc4396868ab8ed456cc8bc
+msgid ""
+"Register a command to run when the left click is pressed on the current "
+"interaction. Each interaction can respond to multiple events."
+msgstr "Enregistrer une commande à exécuter quand le clic gauche est pressé sur l'interaction actuelle. Chaque interaction peut répondre à plusieurs événements."
+
+#: ../../modules/interaction.md:75 ../../modules/interaction.md:100
+#: ../../modules/interaction.md:125 ../../modules/interaction.md:150
+#: ../../modules/interaction.md:175 2ce5806d2e614cd3a503215c09ed2569
+#: 6f2f4ad7bde94ed6919b8af9d8dbf03e bb454e23f8f441fb9bf1eb85b3063c9a
+#: defde6af6486489ea0bf5095218bb45d f550c0daf71e4c3d978af6bab5457918
+msgid ""
+"**Execution `as <entity>`** : Interaction entity for which the event is "
+"registered."
+msgstr "**Exécution `as <entité>`** :Entité interaction pour laquelle l'événement est enregistré."
+
+#: ../../modules/interaction.md:87 ../../modules/interaction.md:112
+#: ../../modules/interaction.md:137 ../../modules/interaction.md:162
+#: ../../modules/interaction.md:187 3be2ced44a87447eaf3d7d92e56862cd
+#: 41ed8a5cf9714b839280ad077eb01468 63abd9e836df4c8a8725f6156a04e4b8
+#: e14fcd367977402d9664faa45deb7ab7 ea84da055e2a48968132b767999b9ecf
+msgid "**Return** : The ID of the created event."
+msgstr "**Retour** :L'ID de l'événement créé."
+
+#: ../../modules/interaction.md:89 ee55598e84c1443a82e1651318b843c5
+msgid "**State** : The interaction will trigger the event when left clicked."
+msgstr "**État** :L'interaction déclenchera l'événement quand elle sera cliquée à gauche."
+
+#: ../../modules/interaction.md 87d280b0ce40425abe58c01f44f33357
+#: cc85ddba544d4a91b8dde00372dd42bd
+msgid "Right Click"
+msgstr "Clic droit"
+
+#: ../../modules/interaction.md:96 c4321b34e32f4171a40c4673d7005e1a
+msgid ""
+"Register a command to run when the right click is pressed on the current "
+"interaction. Each interaction can respond to multiple events."
+msgstr "Enregistrer une commande à exécuter quand le clic droit est pressé sur l'interaction actuelle. Chaque interaction peut répondre à plusieurs événements."
+
+#: ../../modules/interaction.md:114 bb93eb8a469840c8bdc475dcbf80bbbf
+msgid "**State** : The interaction will trigger the event when right clicked."
+msgstr "**État** :L'interaction déclenchera l'événement quand elle sera cliquée à droite."
+
+#: ../../modules/interaction.md 0387652f69f54ef691b6293ebd669415
+#: 5a57060d77994ef5b975fd66a8feb6a2
+msgid "Hover"
+msgstr "Survol"
+
+#: ../../modules/interaction.md:121 09de0d889fe54c7fb5b49c165d87e795
+msgid ""
+"Register a command to run continuously while the player is hovering over "
+"the interaction. Each interaction can respond to multiple events."
+msgstr "Enregistrer une commande à exécuter en continu pendant que le joueur survole l'interaction. Chaque interaction peut répondre à plusieurs événements."
+
+#: ../../modules/interaction.md:139 6a1f60e06b85401bb9f8fba46439511c
+msgid ""
+"**State** : The interaction will trigger the event continuously while "
+"hovered over."
+msgstr "**État** :L'interaction déclenchera l'événement continuellement pendant qu'elle est survolée."
+
+#: ../../modules/interaction.md f152475e638f402e8b47aac99152fcfa
+#: fe703f1ec681452c82a3f31e3e0c8f52
+msgid "Enter Hover"
+msgstr "Entrer en survol"
+
+#: ../../modules/interaction.md:146 5d048ecf883a40048b665011cb1cf22d
+msgid ""
+"Register a command to run once when the player begins hovering over the "
+"interaction. Each interaction can respond to multiple events."
+msgstr "Enregistrer une commande à exécuter une fois quand le joueur commence à survoler l'interaction. Chaque interaction peut répondre à plusieurs événements."
+
+#: ../../modules/interaction.md:164 3670a9b70e3e49cea03cbd6900533feb
+msgid "**State** : The interaction will trigger the event once upon hover entry."
+msgstr "**État** :L'interaction déclenchera l'événement une fois à l'entrée du survol."
+
+#: ../../modules/interaction.md 85c449c37fc24cdbb922c29cfc4dff12
+#: ce9fa131f00044dc84812100c03a1121
+msgid "Leave Hover"
+msgstr "Quitter le survol"
+
+#: ../../modules/interaction.md:171 1356f9e09aff4cdd8ee43a67196b6bbf
+msgid ""
+"Register a command to run once when the player stops hovering over the "
+"interaction. Each interaction can respond to multiple events."
+msgstr "Enregistrer une commande à exécuter une fois quand le joueur arrête de survoler l'interaction. Chaque interaction peut répondre à plusieurs événements."
+
+#: ../../modules/interaction.md:189 cdaac0d241724c86aee43135cba7404b
+msgid "**State** : The interaction will trigger the event once upon hover exit."
+msgstr "**État** :L'interaction déclenchera l'événement une fois à la sortie du survol."
+
+#: ../../modules/interaction.md:192 193ad8d57e75460e995fa5d459ac3b09
+msgid "Edge Case"
+msgstr "Cas limite"
+
+#: ../../modules/interaction.md:195 6248caa9e3604166bad3fac2444a291c
+msgid ""
+"If a player logs out while hovering over the interaction, the hover leave"
+" event will trigger on the executor. If the executor is the player, the "
+"event won't be triggered again when they log back in. Be sure to account "
+"for this edge case and handle it appropriately when the player returns."
+msgstr "Si un joueur se déconnecte en survolant l'interaction, l'événement de sortie de survol se déclenchera sur l'exécuteur. Si l'exécuteur est le joueur, l'événement ne se déclenchera pas à nouveau quand il se reconnectera. Assurez-vous de prendre en compte ce cas limite et de le gérer appropriément quand le joueur revient."
+
+#: ../../modules/interaction.md:200 30b343558a6049e7a97c681cee76e539
+msgid ""
+"*Example: Glow the interaction's icon while the interaction is hovered "
+"and unglow it when it is not hovered anymore:*"
+msgstr "*Exemple:Faire briller l'icône de l'interaction pendant qu'elle est survolée et arrêter de la faire briller quand elle ne l'est plus :*"
+
+#: ../../modules/interaction.md:216 594e196f52844d7c8cdbeb5a43a4e197
+msgid "Predefined Callbacks"
+msgstr "Callbacks prédéfinis"
+
+#: ../../modules/interaction.md 0ee96d91e47d4a088c4aa0816eb43c3e
+msgid "Glow"
+msgstr "Brillance"
+
+#: ../../modules/interaction.md:221 ae79b82bb4b54651b3caee542714767f
+msgid "**`#bs.interaction:callback/glow`**"
+msgstr "**`#bs.interaction:callback/glow`**"
+
+#: ../../modules/interaction.md:223 10bcccf6504146e583adfd4ef547717e
+msgid "Makes the target entity glow."
+msgstr "Faire briller l'entité cible."
+
+#: ../../modules/interaction.md 37753046483c4f4cbc887f221956a4b5
+msgid "Unglow"
+msgstr "Arrêter la brillance"
+
+#: ../../modules/interaction.md:227 823aaa9aed0a438d992f99f2a1f7bd2a
+msgid "**`#bs.interaction:callback/unglow`**"
+msgstr "**`#bs.interaction:callback/unglow`**"
+
+#: ../../modules/interaction.md:229 713b478a566e4fcda71edf3a46e7ac48
+msgid "Removes the glow effect from the target entity."
+msgstr "Supprimer l'effet de brillance de l'entité cible."
+
+#: ../../modules/interaction.md 6b656519f902474b94cd71ab7825e123
+msgid "None"
+msgstr "Aucun"
+
+#: ../../modules/interaction.md:233 579893de0ae9453db2398f16813a9f2d
+msgid "**`#bs.interaction:callback/none`**"
+msgstr "**`#bs.interaction:callback/none`**"
+
+#: ../../modules/interaction.md:235 d14559f695814d38bbfb6866e23cb264
+msgid ""
+"An empty callback that does nothing. May be used as a placeholder or to "
+"explicitly indicate that no action should occur."
+msgstr "Un callback vide qui ne fait rien. Peut être utilisé comme espace réservé ou pour indiquer explicitement qu'aucune action ne doit se produire."
+
+#: ../../modules/interaction.md:240 72c93e99eeec45bda8ed261aeb859cd9
+msgid "🏷️ Entity Tags"
+msgstr "🏷️ Tags d'entité"
+
+#: ../../modules/interaction.md:242 a5e0276a5b4a4e15af2efd0ff0e9bc73
+msgid "You can find below below all tags available in this API."
+msgstr "Vous pouvez trouver ci-dessous tous les tags disponibles dans cette API."
+
+#: ../../modules/interaction.md:246 f6f5e68b3bb24a61b17f269fcdc9f5af
+msgid "Is Hovered?"
+msgstr "Est survolé ?"
+
+#: ../../modules/interaction.md:248 d979667117464556a332b0d2729b8095
+msgid "**`bs.interaction.hovered`**"
+msgstr "**`bs.interaction.hovered`**"
+
+#: ../../modules/interaction.md:250 f676719aa4344244974eb324203fb43e
+msgid "Determine if an interaction is currently hovered by a player."
+msgstr "Déterminer si une interaction est actuellement survolée par un joueur."
+
+#: ../../modules/interaction.md:253 ee44b32d4ff54bd088c4988b97c9fec9
+msgid ""
+"This is useful in `hover_enter` and `hover_leave` events, which are per "
+"player. Since `hover_leave` triggers when a player stops hovering but "
+"doesn't check if all players have stopped, this tag can be used to "
+"determine when every player has left the interaction."
+msgstr ""
+"Ceci est utile dans les événements `hover_enter` et `hover_leave`, qui sont "
+"par joueur. Puisque `hover_leave` se déclenche quand un joueur arrête de "
+"survoler mais ne vérifie pas si tous les joueurs ont arrêté, ce tag peut "
+"être utilisé pour déterminer quand tous les joueurs ont quitté l'interaction."
+
+#: ../../modules/interaction.md:256 7cc83d20ed614a20ba0f369bef9286ec
+msgid "**Credits** : Aksiome"
+msgstr "**Crédits** :Aksiome"
+
+#: ../../modules/interaction.md:260 727fca05f8a84f30ab944dfc738f08f8
+msgid "Is Source?"
+msgstr "Est la source ?"
+
+#: ../../modules/interaction.md:262 0cf973345b1d46d1863cba8a253943f3
+msgid "**`bs.interaction.source`**"
+msgstr "**`bs.interaction.source`**"
+
+#: ../../modules/interaction.md:264 6f237ac4e36441ac8f0df48956d96d5e
+msgid ""
+"Usable only in the callback of an event. Determine if the current entity "
+"is the source of the event."
+msgstr "Utilisable uniquement dans le callback d'un événement. Déterminer si l'entité actuelle est la source de l'événement."
+
+#: ../../modules/interaction.md:267 ../../modules/interaction.md:278
+#: ../../modules/interaction.md:322 2fb71a98c94d442e83d6d5ac2309134b
+#: c701154e296d4369b777a89692bd6a83 e9c745f4cddd4ab295fb1e3fa3c2bd3b
+msgid "**Credits** : theogiraudet"
+msgstr "**Crédits** :theogiraudet"
+
+#: ../../modules/interaction.md:271 9fddccdaba79401ab20cdf96fcb1faac
+msgid "Is Target?"
+msgstr "Est la cible ?"
+
+#: ../../modules/interaction.md:273 ed6bed48ec21451693b13f004de3956a
+msgid "**`bs.interaction.target`**"
+msgstr "**`bs.interaction.target`**"
+
+#: ../../modules/interaction.md:275 c6718c11f69c402ea955efee032b0597
+msgid ""
+"Usable only in the callback of an event. Determine if the current entity "
+"is the target of the event."
+msgstr "Utilisable uniquement dans le callback d'un événement. Déterminer si l'entité actuelle est la cible de l'événement."
+
+#: ../../modules/interaction.md:282 a0077ff862fd4de9892d31b37d6f7053
+msgid "Listen to a Specific Event?"
+msgstr "Écoute un événement spécifique ?"
+
+#: ../../modules/interaction.md:288 47bc07b4370e44199d81527601ee54d9
+msgid "**`bs.interaction.listen_right_click`**"
+msgstr "**`bs.interaction.listen_right_click`**"
+
+#: ../../modules/interaction.md:290 1f8a100ab0a04d418802097e68178e27
+msgid "Determine if the current interaction listens to right-click interactions."
+msgstr "Déterminer si l'interaction actuelle écoute les interactions de clic droit."
+
+#: ../../modules/interaction.md:295 13104a0686824f6780bbfc529153f036
+msgid "**`bs.interaction.listen_left_click`**"
+msgstr "**`bs.interaction.listen_left_click`**"
+
+#: ../../modules/interaction.md:297 1e298c8505b445b8845c46f159a636a2
+msgid "Determine if the current interaction listens to left-click interactions."
+msgstr "Déterminer si l'interaction actuelle écoute les interactions de clic gauche."
+
+#: ../../modules/interaction.md:302 63ea73dd977b4a839a75a31a8e6c1ac2
+msgid "**`bs.interaction.listen_hover`**"
+msgstr "**`bs.interaction.listen_hover`**"
+
+#: ../../modules/interaction.md:304 69aa811ee48f49e290b7cf35c9aafad9
+msgid "Determine if the current interaction listens to hover interactions."
+msgstr "Déterminer si l'interaction actuelle écoute les interactions de survol."
+
+#: ../../modules/interaction.md:309 d9fab210d1b946bf8d2ae130390af148
+msgid "**`bs.interaction.listen_hover_enter`**"
+msgstr "**`bs.interaction.listen_hover_enter`**"
+
+#: ../../modules/interaction.md:311 37be2379807f4a5aae21315210fd266b
+msgid "Determine if the current interaction listens to enter hover interactions."
+msgstr "Déterminer si l'interaction actuelle écoute les interactions d'entrée de survol."
+
+#: ../../modules/interaction.md:316 02d384468b8f4621bbf463557bbd9710
+msgid "**`bs.interaction.listen_hover_leave`**"
+msgstr "**`bs.interaction.listen_hover_leave`**"
+
+#: ../../modules/interaction.md:318 795be02e7cdb43faa3ce6dc0893a7dd6
+msgid "Determine if the current interaction listens to leave hover interactions."
+msgstr "Déterminer si l'interaction actuelle écoute les interactions de sortie de survol."
+
+#: ../../_templates/comments.md:4 f6dc1fb0ace445afb5f4b286f8df6f74
+msgid "**💬 Did it help you?**"
+msgstr "**💬 Cela vous a-t-il aidé ?**"
+
+#: ../../_templates/comments.md:6 b06e1471372240acbd2e1f68f695920f
+msgid "Feel free to leave your questions and feedback below!"
+msgstr "N'hésitez pas à laisser vos questions et commentaires ci-dessous !"
+
+#, python-brace-format
+msgid "{nbt}`compound` Arguments"
+msgstr "{nbt}`compound` Arguments"
+
+#, python-brace-format
+msgid ""
+"{nbt}`compound` **with** : Parameters to filter"
+" which events to clear. Clear all "
+"events if empty."
+msgstr "{nbt}`compound` **with** : Paramètres pour filtrer quels événements effacer. Effacer tous les événements si vide."
+
+#, python-brace-format
+msgid "{nbt}`string` **type** : Specify the type of events to clear."
+msgstr "{nbt}`string` **type** : Spécifier le type d'événements à effacer."
+
+#, python-brace-format
+msgid "{nbt}`int` **id** : Specify the ID of events to clear."
+msgstr "{nbt}`int` **id** : Spécifier l'ID des événements à effacer."
+
+#, python-brace-format
+msgid "{nbt}`string` **run** : Command to execute upon left-click."
+msgstr "{nbt}`string` **run** : Commande à exécuter lors du clic gauche."
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` {nbt}`compound` **executor** : Defines"
+" the entity on which the command "
+"will be executed. Can be either "
+"**\"source\"** for the player who "
+"performed the action or **\"target\"** "
+"for the interaction entity itself. A "
+"compound can also be used to "
+"target other entities:"
+msgstr ""
+"{nbt}`string` {nbt}`compound` **executor** : "
+"Définit l'entité sur laquelle la commande sera exécutée. Peut être soit **\"source\"**pour le joueur qui a effectué l'action ou "
+"**\"target\"**pour l'entité interaction elle-même. Un compound peut aussi être utilisé pour cibler d'autres entités :"
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **selector** : Specifies entities "
+"for the command execution (`execute as"
+" <entity>`)."
+msgstr "{nbt}`string` **selector** : Spécifie les entités pour l'exécution de la commande (`execute as <entité>`)."
+
+#, python-brace-format
+msgid ""
+"{nbt}`bool` **lazy** : Determines whether to"
+" resolve the selector immediately (`false`)"
+" or at runtime (`true`, default). If"
+" `false`, the selector must target "
+"only one entity, replacing the selector"
+" with that entity's UUID. Useful for"
+" optimizing execution, especially when "
+"targeting graphical representations. If "
+"multiple entities are targeted, the "
+"first one is selected."
+msgstr ""
+"{nbt}`bool` **lazy** : "
+"Détermine s'il faut résoudre le sélecteur immédiatement (`false`) ou à l'exécution (`true`, par défaut). Si `false`, le sélecteur doit cibler une seule entité, remplaçant le sélecteur par l'UUID de cette entité. Utile pour optimiser l'exécution, surtout lors du ciblage de représentations graphiques. Si plusieurs entités sont ciblées, la première est sélectionnée."
+
+#, python-brace-format
+msgid "{nbt}`string` **run** : Command to execute upon right-click."
+msgstr "{nbt}`string` **run** : Commande à exécuter lors du clic droit."
+
+#, python-brace-format
+msgid ""
+"{nbt}`string` **run** : Command to execute "
+"while hovering over the interaction."
+msgstr "{nbt}`string` **run** : Commande à exécuter en survolant l'interaction."
+
+#, python-brace-format
+msgid "{nbt}`string` **run** : Command to execute when hovering begins."
+msgstr "{nbt}`string` **run** : Commande à exécuter quand le survol commence."
+
+#, python-brace-format
+msgid "{nbt}`string` **run** : Command to execute when hovering ends."
+msgstr "{nbt}`string` **run** : Commande à exécuter quand le survol se termine."

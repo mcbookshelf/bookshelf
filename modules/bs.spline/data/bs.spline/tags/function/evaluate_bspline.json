@@ -1,0 +1,20 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/spline.html#evaluate",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2025/01/25",
+      "minecraft_version": "1.21.4"
+    },
+    "updated": {
+      "date": "2025/04/21",
+      "minecraft_version": "1.21.5"
+    }
+  },
+  "values": [
+    "bs.spline:evaluate/evaluate_bspline"
+  ]
+}

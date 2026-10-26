@@ -1,0 +1,9 @@
+[coverage]
+minimum = { namespace = 85 }
+ignore = [
+  "*:__help__",
+  "*:__load__",
+  "*:__unload__",
+  "bs.load:*",
+  "load:*",
+]

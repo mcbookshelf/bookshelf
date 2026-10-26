@@ -1,0 +1,29 @@
+name: ✨ Feature request
+description: A new feature, or a change to one.
+type: ✨ Feature
+labels:
+  - ✨ Feature
+
+body:
+  - type: input
+    attributes:
+      label: 🧩 Module
+      description: The module the feature belongs to.
+      placeholder: bs.example
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: ⭐ Feature
+      description: The feature to add or change, named as you would call it.
+      placeholder: "#bs.example:function"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 📝 Description
+      description: A clear explanation of what the feature does.
+    validations:
+      required: true

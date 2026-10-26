@@ -1,0 +1,20 @@
+{
+  "extend": "../config.json",
+  "data_pack": {
+    "name": "bs.fsm",
+    "load": "."
+  },
+  "meta": {
+    "name": "Finite State Machine",
+    "slug": "bookshelf-fsm",
+    "description": "Describe behaviors as states and transitions, and run them on entities or globally.",
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/fsm.html",
+    "tags": ["runtime"],
+    "dependencies": [
+      "bs.collection"
+    ],
+    "weak_dependencies": [
+      "bs.log"
+    ]
+  }
+}

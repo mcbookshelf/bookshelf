@@ -1,0 +1,730 @@
+{
+  "type": "sub",
+  "left": {
+    "type": "max",
+    "inputs": [
+      {
+        "type": "add",
+        "inputs": [
+          1,
+          {
+            "type": "score",
+            "score": "bs.data",
+            "target": {
+              "type": "fixed",
+              "name": "#generation.skip"
+            }
+          }
+        ]
+      },
+      {
+        "type": "conditional",
+        "condition": {
+          "type": "float_value_check",
+          "value": {
+            "type": "sub",
+            "left": 1.0,
+            "right": {
+              "type": "add",
+              "inputs": [
+                {
+                  "type": "div",
+                  "left": {
+                    "type": "mul",
+                    "inputs": [
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "add",
+                          "inputs": [
+                            2,
+                            {
+                              "type": "abs",
+                              "input": {
+                                "type": "score",
+                                "score": "bs.data",
+                                "target": {
+                                  "type": "fixed",
+                                  "name": "#generation.mid_j"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "add",
+                          "inputs": [
+                            2,
+                            {
+                              "type": "abs",
+                              "input": {
+                                "type": "score",
+                                "score": "bs.data",
+                                "target": {
+                                  "type": "fixed",
+                                  "name": "#generation.mid_j"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "mul",
+                    "inputs": [
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.nj"
+                          }
+                        }
+                      },
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.nj"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "div",
+                  "left": {
+                    "type": "mul",
+                    "inputs": [
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.mid_k"
+                          }
+                        }
+                      },
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.mid_k"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "mul",
+                    "inputs": [
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.nk"
+                          }
+                        }
+                      },
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.nk"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "test": {
+            "min": 0.0
+          }
+        },
+        "on_true": {
+          "type": "from_float",
+          "input": {
+            "type": "ceil",
+            "input": {
+              "type": "sub",
+              "left": {
+                "type": "div",
+                "left": {
+                  "type": "sub",
+                  "left": {
+                    "type": "sub",
+                    "left": {
+                      "type": "from_int",
+                      "input": {
+                        "type": "score",
+                        "score": "bs.data",
+                        "target": {
+                          "type": "fixed",
+                          "name": "#generation.ni"
+                        }
+                      }
+                    },
+                    "right": 1.0
+                  },
+                  "right": {
+                    "type": "mul",
+                    "inputs": [
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.ni"
+                          }
+                        }
+                      },
+                      {
+                        "type": "sqrt",
+                        "input": {
+                          "type": "sub",
+                          "left": 1.0,
+                          "right": {
+                            "type": "add",
+                            "inputs": [
+                              {
+                                "type": "div",
+                                "left": {
+                                  "type": "mul",
+                                  "inputs": [
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "add",
+                                        "inputs": [
+                                          2,
+                                          {
+                                            "type": "abs",
+                                            "input": {
+                                              "type": "score",
+                                              "score": "bs.data",
+                                              "target": {
+                                                "type": "fixed",
+                                                "name": "#generation.mid_j"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "add",
+                                        "inputs": [
+                                          2,
+                                          {
+                                            "type": "abs",
+                                            "input": {
+                                              "type": "score",
+                                              "score": "bs.data",
+                                              "target": {
+                                                "type": "fixed",
+                                                "name": "#generation.mid_j"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "right": {
+                                  "type": "mul",
+                                  "inputs": [
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "score",
+                                        "score": "bs.data",
+                                        "target": {
+                                          "type": "fixed",
+                                          "name": "#generation.nj"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "score",
+                                        "score": "bs.data",
+                                        "target": {
+                                          "type": "fixed",
+                                          "name": "#generation.nj"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "type": "div",
+                                "left": {
+                                  "type": "mul",
+                                  "inputs": [
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "score",
+                                        "score": "bs.data",
+                                        "target": {
+                                          "type": "fixed",
+                                          "name": "#generation.mid_k"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "score",
+                                        "score": "bs.data",
+                                        "target": {
+                                          "type": "fixed",
+                                          "name": "#generation.mid_k"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "right": {
+                                  "type": "mul",
+                                  "inputs": [
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "score",
+                                        "score": "bs.data",
+                                        "target": {
+                                          "type": "fixed",
+                                          "name": "#generation.nk"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "score",
+                                        "score": "bs.data",
+                                        "target": {
+                                          "type": "fixed",
+                                          "name": "#generation.nk"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "right": 2.0
+              },
+              "right": 0.0005
+            }
+          }
+        },
+        "on_false": {
+          "type": "score",
+          "score": "bs.data",
+          "target": {
+            "type": "fixed",
+            "name": "#generation.ni"
+          }
+        }
+      },
+      {
+        "type": "conditional",
+        "condition": {
+          "type": "float_value_check",
+          "value": {
+            "type": "sub",
+            "left": 1.0,
+            "right": {
+              "type": "add",
+              "inputs": [
+                {
+                  "type": "div",
+                  "left": {
+                    "type": "mul",
+                    "inputs": [
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.mid_j"
+                          }
+                        }
+                      },
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.mid_j"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "mul",
+                    "inputs": [
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.nj"
+                          }
+                        }
+                      },
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.nj"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "div",
+                  "left": {
+                    "type": "mul",
+                    "inputs": [
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "add",
+                          "inputs": [
+                            2,
+                            {
+                              "type": "abs",
+                              "input": {
+                                "type": "score",
+                                "score": "bs.data",
+                                "target": {
+                                  "type": "fixed",
+                                  "name": "#generation.mid_k"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "add",
+                          "inputs": [
+                            2,
+                            {
+                              "type": "abs",
+                              "input": {
+                                "type": "score",
+                                "score": "bs.data",
+                                "target": {
+                                  "type": "fixed",
+                                  "name": "#generation.mid_k"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "right": {
+                    "type": "mul",
+                    "inputs": [
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.nk"
+                          }
+                        }
+                      },
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.nk"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "test": {
+            "min": 0.0
+          }
+        },
+        "on_true": {
+          "type": "from_float",
+          "input": {
+            "type": "ceil",
+            "input": {
+              "type": "sub",
+              "left": {
+                "type": "div",
+                "left": {
+                  "type": "sub",
+                  "left": {
+                    "type": "sub",
+                    "left": {
+                      "type": "from_int",
+                      "input": {
+                        "type": "score",
+                        "score": "bs.data",
+                        "target": {
+                          "type": "fixed",
+                          "name": "#generation.ni"
+                        }
+                      }
+                    },
+                    "right": 1.0
+                  },
+                  "right": {
+                    "type": "mul",
+                    "inputs": [
+                      {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.data",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#generation.ni"
+                          }
+                        }
+                      },
+                      {
+                        "type": "sqrt",
+                        "input": {
+                          "type": "sub",
+                          "left": 1.0,
+                          "right": {
+                            "type": "add",
+                            "inputs": [
+                              {
+                                "type": "div",
+                                "left": {
+                                  "type": "mul",
+                                  "inputs": [
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "score",
+                                        "score": "bs.data",
+                                        "target": {
+                                          "type": "fixed",
+                                          "name": "#generation.mid_j"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "score",
+                                        "score": "bs.data",
+                                        "target": {
+                                          "type": "fixed",
+                                          "name": "#generation.mid_j"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "right": {
+                                  "type": "mul",
+                                  "inputs": [
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "score",
+                                        "score": "bs.data",
+                                        "target": {
+                                          "type": "fixed",
+                                          "name": "#generation.nj"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "score",
+                                        "score": "bs.data",
+                                        "target": {
+                                          "type": "fixed",
+                                          "name": "#generation.nj"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "type": "div",
+                                "left": {
+                                  "type": "mul",
+                                  "inputs": [
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "add",
+                                        "inputs": [
+                                          2,
+                                          {
+                                            "type": "abs",
+                                            "input": {
+                                              "type": "score",
+                                              "score": "bs.data",
+                                              "target": {
+                                                "type": "fixed",
+                                                "name": "#generation.mid_k"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "add",
+                                        "inputs": [
+                                          2,
+                                          {
+                                            "type": "abs",
+                                            "input": {
+                                              "type": "score",
+                                              "score": "bs.data",
+                                              "target": {
+                                                "type": "fixed",
+                                                "name": "#generation.mid_k"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "right": {
+                                  "type": "mul",
+                                  "inputs": [
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "score",
+                                        "score": "bs.data",
+                                        "target": {
+                                          "type": "fixed",
+                                          "name": "#generation.nk"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "from_int",
+                                      "input": {
+                                        "type": "score",
+                                        "score": "bs.data",
+                                        "target": {
+                                          "type": "fixed",
+                                          "name": "#generation.nk"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "right": 2.0
+              },
+              "right": 0.0005
+            }
+          }
+        },
+        "on_false": {
+          "type": "score",
+          "score": "bs.data",
+          "target": {
+            "type": "fixed",
+            "name": "#generation.ni"
+          }
+        }
+      }
+    ]
+  },
+  "right": {
+    "type": "score",
+    "score": "bs.data",
+    "target": {
+      "type": "fixed",
+      "name": "#generation.skip"
+    }
+  }
+}

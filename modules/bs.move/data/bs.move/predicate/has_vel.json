@@ -1,0 +1,74 @@
+{
+  "__bookshelf__": {
+    "feature": true,
+    "documentation": "https://docs.mcbookshelf.dev/en/latest/modules/move.html#has-velocity",
+    "authors": [
+      "Aksiome"
+    ],
+    "created": {
+      "date": "2025/01/03",
+      "minecraft_version": "1.21.4"
+    },
+    "updated": {
+      "date": "2026/08/27",
+      "minecraft_version": "26.3"
+    }
+  },
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "bs.vel.x": {
+          "min": 1
+        }
+      }
+    },
+    {
+      "type": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "bs.vel.x": {
+          "max": -1
+        }
+      }
+    },
+    {
+      "type": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "bs.vel.y": {
+          "min": 1
+        }
+      }
+    },
+    {
+      "type": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "bs.vel.y": {
+          "max": -1
+        }
+      }
+    },
+    {
+      "type": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "bs.vel.z": {
+          "min": 1
+        }
+      }
+    },
+    {
+      "type": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "bs.vel.z": {
+          "max": -1
+        }
+      }
+    }
+  ]
+}

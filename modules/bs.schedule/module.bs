@@ -1,0 +1,118 @@
+> Schedule commands that remember which entity and location triggered them, and can be cancelled.
+
+name: Schedule
+slug: bookshelf-schedule
+version: 5.0.0
+tags: runtime
+
+$executor = executor > entity to run the command as, if any
+$position = position > position to run the command at
+$rotation = rotation > rotation to run the command with
+$dimension = dimension > dimension to run the command in
+$scheduled = success > whether the command is scheduled
+$out = state > the command is added to the queue
+
+$in = arguments: {
+  id: string
+  > id to cancel the command with
+  run: #[command(slash="forbidden",empty="forbidden")] string
+  > command to schedule
+  time: #[match_regex="^(?:\d+(?:\.\d*)?|\.\d+)(?:[dst])?$"] string | int
+  > delay in ticks, or as a [minecraft:time](https://minecraft.wiki/w/Argument_types#time) string such as `10s`, at least one tick
+}
+
+
+feature function cancel/all
+  > Cancel the scheduled commands with an id, for every entity.
+  authors: Aksiome, theogiraudet
+  created: 2023/09/10 1.20.2
+  updated: 2026/10/09 26.3
+
+  input arguments: {
+    id: string > id of the commands to cancel
+  }
+  output state > the matching commands are removed from the queue
+  output success > whether a command was cancelled
+
+
+feature function cancel/one
+  > Cancel the scheduled commands with an id, for one entity.
+  authors: Aksiome, theogiraudet
+  created: 2019/07/31 1.14
+  updated: 2026/10/09 26.3
+
+  context executor > entity to cancel the commands of
+  input arguments: {
+    id: string > id of the commands to cancel
+  }
+  output state > the matching commands are removed from the queue
+  output success > whether a command was cancelled
+
+
+feature function clear
+  > Cancel every scheduled command.
+  authors: Aksiome, theogiraudet
+  created: 2019/07/31 1.14
+  updated: 2026/10/09 26.3
+
+  output state > the queue is emptied
+
+
+feature function schedule/append
+  > Schedule a command, alongside the ones already scheduled.
+  authors: Aksiome, theogiraudet
+  created: 2019/07/31 1.14
+  updated: 2026/10/09 26.3
+
+  context $executor
+  context $position
+  context $rotation
+  context $dimension
+  input $in
+  output $out
+  output $scheduled
+
+
+feature function schedule/replace
+  > Schedule a command, cancelling the ones the entity scheduled with the same id.
+  authors: Aksiome, theogiraudet
+  created: 2019/07/31 1.14
+  updated: 2026/10/09 26.3
+
+  context $executor
+  context $position
+  context $rotation
+  context $dimension
+  input $in
+  output $out
+  output $scheduled
+
+
+feature function schedule/replace_tick
+  > Schedule a command, replacing the one the entity scheduled with the same id for the same tick.
+  authors: Aksiome, theogiraudet
+  created: 2019/07/31 1.14
+  updated: 2026/10/09 26.3
+
+  context $executor
+  context $position
+  context $rotation
+  context $dimension
+  input $in
+  output $out
+  output $scheduled
+
+
+feature function schedule/unique
+  > Schedule a command, unless the entity already scheduled one with the same id.
+  authors: Aksiome
+  created: 2026/10/09 26.3
+  updated: 2026/10/09 26.3
+
+  context $executor
+  context $position
+  context $rotation
+  context $dimension
+  input $in
+  output $out
+  output $scheduled
