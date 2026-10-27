@@ -10,7 +10,10 @@ readme = "README.md"
 authors = [{ name = "Bookshelf Contributors", email = "contact@gunivers.net" }]
 license = { text = "MPL-2.0" }
 requires-python = ">=3.14"
-dependencies = ["beet>=0.119.1"]
+dependencies = [
+    "beet>=0.119.1",
+    "mcward[cli]>=1.4.0",
+]
 
 [project.urls]
 Homepage = "https://mcbookshelf.dev"
