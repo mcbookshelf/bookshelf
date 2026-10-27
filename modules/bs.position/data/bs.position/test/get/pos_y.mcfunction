@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-execute at @s positioned ~1 ~1 ~1 run function #bs.position:get_pos_y {scale:10}
+execute at @s positioned ~1 ~1 ~1 run function #bs.position:get/pos_y.in {scale:10}
 
 execute store result score #y bs.ctx run data get entity @s Pos[1] 10
 scoreboard players operation #y bs.ctx -= @s bs.pos.y

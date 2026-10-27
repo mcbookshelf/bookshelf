@@ -17,7 +17,7 @@ summon minecraft:marker ~ ~ ~ {Tags:["bs.ward"]}
 
 execute store result score @n[type=minecraft:marker,tag=bs.ward] bs.rot.h run random value -10000..10000
 execute store result score @n[type=minecraft:marker,tag=bs.ward] bs.rot.v run random value -10000..10000
-execute as @n[type=minecraft:marker,tag=bs.ward] run function #bs.position:set_rot {scale:.001}
+execute as @n[type=minecraft:marker,tag=bs.ward] run function #bs.position:set/rot.in {scale:.001}
 
 execute store result score #h bs.ctx run data get entity @n[type=minecraft:marker,tag=bs.ward] Rotation[0] 1000
 execute store result score #v bs.ctx run data get entity @n[type=minecraft:marker,tag=bs.ward] Rotation[1] 1000

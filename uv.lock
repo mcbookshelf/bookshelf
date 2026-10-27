@@ -702,6 +702,7 @@ version = "5.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "beet" },
+    { name = "mcward", extra = ["cli"] },
 ]
 
 [package.dev-dependencies]
@@ -721,7 +722,10 @@ docs = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "beet", specifier = ">=0.119.1" }]
+requires-dist = [
+    { name = "beet", specifier = ">=0.119.1" },
+    { name = "mcward", extras = ["cli"], specifier = ">=1.4.0" },
+]
 
 [package.metadata.requires-dev]
 dev = [{ name = "mcbookshelf-tools", editable = "tools" }]
@@ -783,6 +787,9 @@ wheels = [
 [package.optional-dependencies]
 beet = [
     { name = "mcward-beet" },
+]
+cli = [
+    { name = "mcward-cli" },
 ]
 
 [[package]]

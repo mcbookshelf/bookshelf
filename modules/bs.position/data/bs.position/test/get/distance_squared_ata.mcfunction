@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-execute at @s positioned ^ ^ ^7.5 store result score #r bs.ctx run function #bs.position:get_distance_squared_ata {scale:10}
+execute at @s positioned ^ ^ ^7.5 store result score #r bs.ctx run function #bs.position:get/distance_squared_ata.in {scale:10}
 assert score #r bs.ctx matches 5624..5626

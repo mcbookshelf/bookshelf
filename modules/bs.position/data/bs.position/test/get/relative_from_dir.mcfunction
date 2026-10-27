@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-execute at @s rotated 35 -18 run function #bs.position:get_relative_from_dir {scale:1000}
+execute at @s rotated 35 -18 run function #bs.position:get/relative_from_dir.in {scale:1000}
 
 assert score @s bs.pos.x matches -546..-544
 assert score @s bs.pos.y matches 307..309
