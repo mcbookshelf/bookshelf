@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-execute at @s rotated ~1 ~1 run function #bs.position:get_rot.in {scale:10}
+execute at @s rotated ~1 ~1 run function #bs.position:get/rot.in {scale:10}
 
 execute store result score #h bs.ctx run data get entity @s Rotation[0] 10
 execute store result score #v bs.ctx run data get entity @s Rotation[1] 10

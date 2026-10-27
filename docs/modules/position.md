@@ -28,7 +28,7 @@ You can find below all functions available in this module.
 :::::{tab-set}
 ::::{tab-item} x,y,z
 
-```{function} #bs.position:add_pos {scale:<scaling>}
+```{function} #bs.position:add/pos {scale:<scaling>}
 
 Add position scores to the entity's coordinates.
 
@@ -54,13 +54,13 @@ Add position scores to the entity's coordinates.
 scoreboard players set @s bs.pos.x 4885
 scoreboard players set @s bs.pos.y 0
 scoreboard players set @s bs.pos.z 229
-function #bs.position:add_pos {scale:0.001}
+function #bs.position:add/pos.in {scale:0.001}
 ```
 
 ::::
 ::::{tab-item} x only
 
-```{function} #bs.position:add_pos_x {scale:<scaling>}
+```{function} #bs.position:add/pos_x {scale:<scaling>}
 
 Add the x axis position score to the entity's coordinates.
 
@@ -84,13 +84,13 @@ Add the x axis position score to the entity's coordinates.
 ```mcfunction
 # Once
 scoreboard players set @s bs.pos.x 70
-function #bs.position:add_pos_x {scale:1}
+function #bs.position:add/pos_x.in {scale:1}
 ```
 
 ::::
 ::::{tab-item} y only
 
-```{function} #bs.position:add_pos_y {scale:<scaling>}
+```{function} #bs.position:add/pos_y {scale:<scaling>}
 
 Add the y axis position score to the entity's coordinates.
 
@@ -114,13 +114,13 @@ Add the y axis position score to the entity's coordinates.
 ```mcfunction
 # Once
 scoreboard players set @s bs.pos.y 82
-function #bs.position:add_pos_y {scale:1}
+function #bs.position:add/pos_y.in {scale:1}
 ```
 ::::
 ::::{tab-item} z only
 
 
-```{function} #bs.position:add_pos_z {scale:<scaling>}
+```{function} #bs.position:add/pos_z {scale:<scaling>}
 
 Add the z axis position score to the entity's coordinates.
 
@@ -144,12 +144,12 @@ Add the z axis position score to the entity's coordinates.
 ```mcfunction
 # Once
 scoreboard players set @s bs.pos.z 65
-function #bs.position:add_pos_z {scale:1}
+function #bs.position:add/pos_z.in {scale:1}
 ```
 ::::
 ::::{tab-item} h,v
 
-```{function} #bs.position:add_rot {scale:<scaling>}
+```{function} #bs.position:add/rot {scale:<scaling>}
 
 Rotate an entity according to its scores.
 
@@ -172,7 +172,7 @@ Rotate an entity according to its scores.
 ::::{tab-item} h only
 
 
-```{function} #bs.position:add_rot_h {scale:<scaling>}
+```{function} #bs.position:add/rot_h {scale:<scaling>}
 
 Rotate an entity according to its horizontal rotation score.
 
@@ -194,7 +194,7 @@ Rotate an entity according to its horizontal rotation score.
 ::::
 ::::{tab-item} v only
 
-```{function} #bs.position:add_rot_v {scale:<scaling>}
+```{function} #bs.position:add/rot_v {scale:<scaling>}
 
 Rotate an entity according to its vertical rotation score.
 
@@ -216,7 +216,7 @@ Rotate an entity according to its vertical rotation score.
 ::::
 ::::{tab-item} x,y,z,h,v
 
-```{function} #bs.position:add_pos_and_rot {scale:<scaling>}
+```{function} #bs.position:add/pos_and_rot {scale:<scaling>}
 
 Add position scores to the entity's coordinates and rotate it according to its rotation score.
 
@@ -249,7 +249,7 @@ Add position scores to the entity's coordinates and rotate it according to its r
 
 ### Canonical to Local
 
-```{function} #bs.position:canonical_to_local
+```{function} #bs.position:convert/canonical_to_local
 
 Convert a canonical position (using the relative reference frame) into a local position (using the local reference frame).
 
@@ -278,7 +278,7 @@ Unlike relative position (canonical), this reference frame considers the entity'
 :::::{tab-set}
 ::::{tab-item} Normal
 
-```{function} #bs.position:get_distance_ata {scale:<scaling>}
+```{function} #bs.position:get/distance_ata {scale:<scaling>}
 
 Compute the distance between the source entity and the execution position of the function.
 
@@ -294,17 +294,17 @@ Compute the distance between the source entity and the execution position of the
   :::
 
 :Outputs:
-  **Return | Score `$position.get_distance_ata bs.out`**: Distance between the two positions.
+  **Return | Score `$position.get/distance_ata bs.out`**: Distance between the two positions.
 ```
 
 *Calculate the distance between you and the nearest sheep (in blocks, without scaling):*
 
 ```Example: mcfunction
 # Once
-execute at @e[type=sheep,limit=1,sort=nearest] run function #bs.position:get_distance_ata {scale:1}
+execute at @e[type=sheep,limit=1,sort=nearest] run function #bs.position:get/distance_ata.in {scale:1}
 
 # See the result
-tellraw @a [{"text": "Distance: ", "color": "dark_gray"},{"score":{"name":"$position.get_distance_ata", "objective": "bs.out"}, "color": "gold"}]
+tellraw @a [{"text": "Distance: ", "color": "dark_gray"},{"score":{"name":"$position.get/distance_ata", "objective": "bs.out"}, "color": "gold"}]
 ```
 
 ```{admonition} Performance Tip
@@ -316,7 +316,7 @@ For several applications such as comparing distances, using the squared distance
 ::::
 ::::{tab-item} Squared
 
-```{function} #bs.position:get_distance_squared_ata {scale:<scaling>}
+```{function} #bs.position:get/distance_squared_ata {scale:<scaling>}
 
 Compute the squared distance between the source entity and the execution position of the function.
 
@@ -332,17 +332,17 @@ Compute the squared distance between the source entity and the execution positio
   :::
 
 :Outputs:
-  **Return | Score `$position.get_distance_squared_ata bs.out`**: Squared distance between the two positions.
+  **Return | Score `$position.get/distance_squared_ata bs.out`**: Squared distance between the two positions.
 ```
 
 *Example: Calculate the squared distance between you and the nearest sheep (in blocks, without scaling):*
 
 ```mcfunction
 # Once
-execute at @e[type=sheep,limit=1,sort=nearest] run function #bs.position:get_distance_squared_ata {scale:1}
+execute at @e[type=sheep,limit=1,sort=nearest] run function #bs.position:get/distance_squared_ata.in {scale:1}
 
 # See the result
-tellraw @a [{"text": "Distance^2: ", "color": "dark_gray"},{"score":{"name":"$position.get_distance_squared_ata", "objective": "bs.out"}, "color": "gold"}]
+tellraw @a [{"text": "Distance^2: ", "color": "dark_gray"},{"score":{"name":"$position.get/distance_squared_ata", "objective": "bs.out"}, "color": "gold"}]
 ```
 
 ```{admonition} Score Limitation
@@ -363,7 +363,7 @@ Scores in Minecraft have a limited size similar to a signed integer variable. Wh
 :::::{tab-set}
 ::::{tab-item} x,y,z
 
-```{function} #bs.position:get_pos {scale:<scaling>}
+```{function} #bs.position:get/pos {scale:<scaling>}
 
 Get the execution position of the function and store the coordinates in 3 scores.
 
@@ -386,7 +386,7 @@ Get the execution position of the function and store the coordinates in 3 scores
 
 ```mcfunction
 # Once
-execute as @e[type=spider,limit=1,sort=nearest] run function #bs.position:get_pos {scale:1}
+execute as @e[type=spider,limit=1,sort=nearest] run function #bs.position:get/pos.in {scale:1}
 
 # See the results
 tellraw @a [{"text": "X = ", "color": "dark_gray"},{"score":{"name":"@e[type=spider,limit=1,sort=nearest]", "objective": "bs.pos.x"}, "color": "gold"},{"text":", Y = ", "color": "dark_gray"},{"score":{"name":"@e[type=spider,limit=1,sort=nearest]", "objective": "bs.pos.y"}, "color": "gold"},{"text":", Z = ", "color": "dark_gray"},{"score":{"name":"@e[type=spider,limit=1,sort=nearest]", "objective": "bs.pos.z"}, "color": "gold"}]
@@ -395,7 +395,7 @@ tellraw @a [{"text": "X = ", "color": "dark_gray"},{"score":{"name":"@e[type=spi
 ::::
 ::::{tab-item} x only
 
-```{function} #bs.position:get_pos_x {scale:<scaling>}
+```{function} #bs.position:get/pos_x {scale:<scaling>}
 
 Get the execution x position of the function and store the coordinate in a score.
 
@@ -418,7 +418,7 @@ Get the execution x position of the function and store the coordinate in a score
 
 ```mcfunction
 # Once
-execute as @e[type=spider,limit=1,sort=nearest] run function #bs.position:get_pos_x {scale:1}
+execute as @e[type=spider,limit=1,sort=nearest] run function #bs.position:get/pos_x.in {scale:1}
 
 # See the resluts
 tellraw @a [{"text": "X = ", "color": "dark_gray"},{"score":{"name":"@e[type=spider,limit=1,sort=nearest]", "objective": "bs.pos.x"}, "color": "gold"}]
@@ -427,7 +427,7 @@ tellraw @a [{"text": "X = ", "color": "dark_gray"},{"score":{"name":"@e[type=spi
 ::::
 ::::{tab-item} y only
 
-```{function} #bs.position:get_pos_y {scale:<scaling>}
+```{function} #bs.position:get/pos_y {scale:<scaling>}
 
 Get the execution y position of the function and store the coordinate in a score.
 
@@ -450,7 +450,7 @@ Get the execution y position of the function and store the coordinate in a score
 
 ```mcfunction
 # Once
-execute as @e[type=spider,limit=1,sort=nearest] run function #bs.position:get_pos_y {scale:1}
+execute as @e[type=spider,limit=1,sort=nearest] run function #bs.position:get/pos_y.in {scale:1}
 
 # See the resluts
 tellraw @a [{"text": "Y = ", "color": "dark_gray"},{"score":{"name":"@e[type=spider,limit=1,sort=nearest]", "objective": "bs.pos.y"}, "color": "gold"}]
@@ -459,7 +459,7 @@ tellraw @a [{"text": "Y = ", "color": "dark_gray"},{"score":{"name":"@e[type=spi
 ::::
 ::::{tab-item} z only
 
-```{function} #bs.position:get_pos_z {scale:<scaling>}
+```{function} #bs.position:get/pos_z {scale:<scaling>}
 
 Get the execution z position of the function and store the coordinate in a score.
 
@@ -482,7 +482,7 @@ Get the execution z position of the function and store the coordinate in a score
 
 ```mcfunction
 # Once
-execute as @e[type=spider,limit=1,sort=nearest] run function #bs.position:get_pos_z {scale:1}
+execute as @e[type=spider,limit=1,sort=nearest] run function #bs.position:get/pos_z.in {scale:1}
 
 # See the resluts
 tellraw @a [{"text": "Z = ", "color": "dark_gray"},{"score":{"name":"@e[type=spider,limit=1,sort=nearest]", "objective": "bs.pos.z"}, "color": "gold"}]
@@ -491,7 +491,7 @@ tellraw @a [{"text": "Z = ", "color": "dark_gray"},{"score":{"name":"@e[type=spi
 ::::
 ::::{tab-item} h,v
 
-```{function} #bs.position:get_rot {scale:<scaling>}
+```{function} #bs.position:get/rot {scale:<scaling>}
 
 Get the execution rotation of the function and store it in 2 scores.
 
@@ -513,7 +513,7 @@ Get the execution rotation of the function and store it in 2 scores.
 ::::
 ::::{tab-item} h only
 
-```{function} #bs.position:get_rot_h {scale:<scaling>}
+```{function} #bs.position:get/rot_h {scale:<scaling>}
 
 Get the execution horizontal rotation of the function.
 
@@ -535,7 +535,7 @@ Get the execution horizontal rotation of the function.
 ::::
 ::::{tab-item} v only
 
-```{function} #bs.position:get_rot_v {scale:<scaling>}
+```{function} #bs.position:get/rot_v {scale:<scaling>}
 
 Get the execution vertical rotation of the function.
 
@@ -557,7 +557,7 @@ Get the execution vertical rotation of the function.
 ::::
 ::::{tab-item} x,y,z,h,v
 
-```{function} #bs.position:get_pos_and_rot {scale:<scaling>}
+```{function} #bs.position:get/pos_and_rot {scale:<scaling>}
 
 Get the execution position and rotation of the function and store the coordinates and rotation in 5 scores.
 
@@ -590,7 +590,7 @@ Get the execution position and rotation of the function and store the coordinate
 :::::{tab-set}
 ::::{tab-item} As to at
 
-```{function} #bs.position:get_relative_ata {scale:<scaling>}
+```{function} #bs.position:get/relative_ata {scale:<scaling>}
 
 Get the execution position of the function relatively to the position of the executing entity.
 
@@ -613,7 +613,7 @@ Get the execution position of the function relatively to the position of the exe
 
 ```mcfunction
 # Once
-execute as @s at @e[type=creeper,limit=1,sort=nearest] run function #bs.position:get_relative_ata {scale:1}
+execute as @s at @e[type=creeper,limit=1,sort=nearest] run function #bs.position:get/relative_ata.in {scale:1}
 
 # See the result
 tellraw @a [{"text": "Relative position : X=", "color": "dark_gray"},{"score":{"name":"@s", "objective": "bs.pos.x"}, "color": "gold"},{"text":", Y=", "color": "dark_gray"},{"score":{"name":"@s", "objective": "bs.pos.y"},"color":"gold"},{"text":", Z=","color":"dark_gray"},{"score":{"name":"@s","objective":"bs.pos.z"},"color":"gold"}]
@@ -622,7 +622,7 @@ tellraw @a [{"text": "Relative position : X=", "color": "dark_gray"},{"score":{"
 ::::
 ::::{tab-item} From Direction
 
-```{function} #bs.position:get_relative_from_dir {scale:<scaling>}
+```{function} #bs.position:get/relative_from_dir {scale:<scaling>}
 
 Get a direction vector based on the execution position and rotation. Scale is used as the norm/length.
 
@@ -645,7 +645,7 @@ Get a direction vector based on the execution position and rotation. Scale is us
 
 ```mcfunction
 # Once
-execute at @s run function #bs.position:get_relative_from_dir {scale:2000}
+execute at @s run function #bs.position:get/relative_from_dir.in {scale:2000}
 
 # See the result
 tellraw @a [{"text": "Relative position : X=", "color": "dark_gray"},{"score":{"name":"@s", "objective": "bs.pos.x"}, "color": "gold"},{"text":", Y=", "color": "dark_gray"},{"score":{"name":"@s", "objective": "bs.pos.y"},"color":"gold"},{"text":", Z=","color":"dark_gray"},{"score":{"name":"@s","objective":"bs.pos.z"},"color":"gold"}]
@@ -660,7 +660,7 @@ tellraw @a [{"text": "Relative position : X=", "color": "dark_gray"},{"score":{"
 
 ### Local to Canonical
 
-```{function} #bs.position:local_to_canonical
+```{function} #bs.position:convert/local_to_canonical
 
 Convert a local position (using the local reference frame) into a canonical position (using the relative reference frame).
 
@@ -689,7 +689,7 @@ Unlike relative position (canonical), this reference frame considers the entity'
 :::::{tab-set}
 ::::{tab-item} x,y,z
 
-```{function} #bs.position:set_pos {scale:<scaling>}
+```{function} #bs.position:set/pos {scale:<scaling>}
 
 Place an entity at coordinates given by scores.
 
@@ -715,12 +715,12 @@ Place an entity at coordinates given by scores.
 scoreboard players set @s bs.pos.x 4885
 scoreboard players set @s bs.pos.y 0
 scoreboard players set @s bs.pos.z 229
-function #bs.position:set_pos {scale:0.001}
+function #bs.position:set/pos.in {scale:0.001}
 ```
 ::::
 ::::{tab-item} x only
 
-```{function} #bs.position:set_pos_x {scale:<scaling>}
+```{function} #bs.position:set/pos_x {scale:<scaling>}
 
 Place an entity at a precise x coordinate given by scores.
 
@@ -744,13 +744,13 @@ Place an entity at a precise x coordinate given by scores.
 ```mcfunction
 # Once
 scoreboard players set @s bs.pos.x 70
-function #bs.position:set_pos_x {scale:1}
+function #bs.position:set/pos_x.in {scale:1}
 ```
 
 ::::
 ::::{tab-item} y only
 
-```{function} #bs.position:set_pos_y {scale:<scaling>}
+```{function} #bs.position:set/pos_y {scale:<scaling>}
 
 Place an entity at a precise y coordinate given by scores.
 
@@ -774,13 +774,13 @@ Place an entity at a precise y coordinate given by scores.
 ```mcfunction
 # Once
 scoreboard players set @s bs.pos.y 82
-function #bs.position:set_pos_y {scale:1}
+function #bs.position:set/pos_y.in {scale:1}
 ```
 ::::
 ::::{tab-item} z only
 
 
-```{function} #bs.position:set_pos_z {scale:<scaling>}
+```{function} #bs.position:set/pos_z {scale:<scaling>}
 
 Place an entity at a precise z coordinate given by scores.
 
@@ -804,12 +804,12 @@ Place an entity at a precise z coordinate given by scores.
 ```mcfunction
 # Once
 scoreboard players set @s bs.pos.z 65
-function #bs.position:set_pos_z {scale:1}
+function #bs.position:set/pos_z.in {scale:1}
 ```
 ::::
 ::::{tab-item} h,v
 
-```{function} #bs.position:set_rot {scale:<scaling>}
+```{function} #bs.position:set/rot {scale:<scaling>}
 
 Rotate an entity according to its scores.
 
@@ -832,7 +832,7 @@ Rotate an entity according to its scores.
 ::::{tab-item} h only
 
 
-```{function} #bs.position:set_rot_h {scale:<scaling>}
+```{function} #bs.position:set/rot_h {scale:<scaling>}
 
 Rotate an entity according to its horizontal rotation score.
 
@@ -854,7 +854,7 @@ Rotate an entity according to its horizontal rotation score.
 ::::
 ::::{tab-item} v only
 
-```{function} #bs.position:set_rot_v {scale:<scaling>}
+```{function} #bs.position:set/rot_v {scale:<scaling>}
 
 Rotate an entity according to its vertical rotation score.
 
@@ -876,7 +876,7 @@ Rotate an entity according to its vertical rotation score.
 ::::
 ::::{tab-item} x,y,z,h,v
 
-```{function} #bs.position:set_pos_and_rot {scale:<scaling>}
+```{function} #bs.position:set/pos_and_rot {scale:<scaling>}
 
 Place and rotate an entity according to its position and rotation scores.
 

@@ -19,7 +19,7 @@ tp @s 0.0 0.0 0.0 0.0 0.0
 execute store result score @s bs.pos.x run random value -10000..10000
 execute store result score @s bs.pos.y run random value -10000..10000
 execute store result score @s bs.pos.z run random value -10000..10000
-function #bs.position:add_pos.in {scale:.001}
+function #bs.position:add/pos.in {scale:.001}
 
 execute store result score #x bs.ctx run data get entity @s Pos[0] 1000
 execute store result score #y bs.ctx run data get entity @s Pos[1] 1000

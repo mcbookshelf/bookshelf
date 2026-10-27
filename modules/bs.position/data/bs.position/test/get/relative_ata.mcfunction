@@ -14,7 +14,7 @@
 # ------------------------------------------------------------------------------------------------------------
 # @dummy
 
-execute at @s positioned ~-2.7 ~-5.2 ~-3.4 run function #bs.position:get_relative_ata.in {scale:10}
+execute at @s positioned ~-2.7 ~-5.2 ~-3.4 run function #bs.position:get/relative_ata.in {scale:10}
 
 assert score @s bs.pos.x matches 27
 assert score @s bs.pos.y matches 52
