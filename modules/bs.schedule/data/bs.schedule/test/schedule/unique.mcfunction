@@ -45,3 +45,6 @@ execute as @n[type=minecraft:armor_stand,tag=ward.schedule.unique.b] run functio
 await entity @n[type=minecraft:armor_stand,tag=ward.schedule.unique.a,tag=ward.schedule.unique.ran]
 assert entity @n[type=minecraft:armor_stand,tag=ward.schedule.unique.b,tag=ward.schedule.unique.ran]
 kill @e[type=minecraft:armor_stand,tag=ward.schedule.unique]
+
+# A delay under one tick schedules nothing
+assert not run function #bs.schedule:schedule/unique.in {run:"say ward.schedule.unique",time:0,id:"ward.schedule.unique.zero"}

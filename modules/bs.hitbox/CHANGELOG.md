@@ -10,6 +10,8 @@
 - ⚠️ Removed `#bs.hitbox:set_entity`, `#bs.hitbox:bake_entity` and `#bs.hitbox:reset_entity` in favor of custom entity providers ([#600](https://github.com/mcbookshelf/bookshelf/pull/600))
 - ⚠️ Replaced the block tags `can_pass_through`, `intangible`, `is_full_cube`, `is_full_cube_shape`, `is_fluid`, `is_water` and `is_waterlogged` with `has_no_collision`, `has_no_outline`, `is_full_cube_outline`, `has_fluid` and `is_liquid` ([#600](https://github.com/mcbookshelf/bookshelf/pull/600))
 - ⚠️ Removed the entity type tags `intangible`, `is_shaped` and `is_sized` in favor of the `bs.hitbox:get_entity/*` predicates ([#600](https://github.com/mcbookshelf/bookshelf/pull/600))
+- ⚠️ The boxes of an entity provider must stay inside the entity's own hitbox, unless the entity is tagged `bs.hitbox.unbounded`, such as a display entity with a custom box
+- ⚡ `#bs.hitbox:is_in_entity` rejects a position outside the entity's own hitbox before running a custom provider
 
 ## `v4.1.1`
 

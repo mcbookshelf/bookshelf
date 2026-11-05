@@ -1,0 +1,207 @@
+{
+  "type": "conditional",
+  "condition": {
+    "type": "int_value_check",
+    "value": {
+      "type": "score",
+      "score": "bs.data",
+      "target": {
+        "type": "fixed",
+        "name": "#raycast.kind"
+      }
+    },
+    "test": 1
+  },
+  "on_true": {
+    "type": "div",
+    "left": {
+      "type": "sub",
+      "left": {
+        "type": "div",
+        "left": {
+          "type": "mul",
+          "inputs": [
+            {
+              "type": "from_int",
+              "input": {
+                "type": "floor_div",
+                "left": {
+                  "type": "score",
+                  "score": "bs.data",
+                  "target": {
+                    "type": "fixed",
+                    "name": "#raycast.hit"
+                  }
+                },
+                "right": 64
+              }
+            },
+            {
+              "type": "from_int",
+              "input": {
+                "type": "score",
+                "score": "bs.data",
+                "target": {
+                  "type": "fixed",
+                  "name": "#raycast.uz"
+                }
+              }
+            }
+          ]
+        },
+        "right": 65536.0
+      },
+      "right": {
+        "type": "from_int",
+        "input": {
+          "type": "sub",
+          "left": {
+            "type": "score",
+            "score": "bs.data",
+            "target": {
+              "type": "fixed",
+              "name": "#raycast.ez"
+            }
+          },
+          "right": {
+            "type": "score",
+            "score": "bs.data",
+            "target": {
+              "type": "fixed",
+              "name": "#raycast.z"
+            }
+          }
+        }
+      }
+    },
+    "right": 16384.0
+  },
+  "on_false": {
+    "type": "conditional",
+    "condition": {
+      "type": "int_value_check",
+      "value": {
+        "type": "sub",
+        "left": {
+          "type": "add",
+          "inputs": [
+            8191,
+            {
+              "type": "mul",
+              "inputs": [
+                16384,
+                {
+                  "type": "score",
+                  "score": "bs.data",
+                  "target": {
+                    "type": "fixed",
+                    "name": "#raycast.uz"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "right": {
+          "type": "floor_mod",
+          "left": {
+            "type": "score",
+            "score": "bs.data",
+            "target": {
+              "type": "fixed",
+              "name": "#raycast.z"
+            }
+          },
+          "right": 16384
+        }
+      },
+      "test": {
+        "min": 0
+      }
+    },
+    "on_true": {
+      "type": "sub",
+      "left": 1.0,
+      "right": {
+        "type": "div",
+        "left": {
+          "type": "from_int",
+          "input": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.data",
+              "target": {
+                "type": "fixed",
+                "name": "#raycast.lz"
+              }
+            },
+            "right": {
+              "type": "floor_div",
+              "left": {
+                "type": "score",
+                "score": "bs.data",
+                "target": {
+                  "type": "fixed",
+                  "name": "#raycast.hit"
+                }
+              },
+              "right": 64
+            }
+          }
+        },
+        "right": {
+          "type": "from_int",
+          "input": {
+            "type": "score",
+            "score": "bs.data",
+            "target": {
+              "type": "fixed",
+              "name": "#raycast.dz"
+            }
+          }
+        }
+      }
+    },
+    "on_false": {
+      "type": "div",
+      "left": {
+        "type": "from_int",
+        "input": {
+          "type": "sub",
+          "left": {
+            "type": "score",
+            "score": "bs.data",
+            "target": {
+              "type": "fixed",
+              "name": "#raycast.lz"
+            }
+          },
+          "right": {
+            "type": "floor_div",
+            "left": {
+              "type": "score",
+              "score": "bs.data",
+              "target": {
+                "type": "fixed",
+                "name": "#raycast.hit"
+              }
+            },
+            "right": 64
+          }
+        }
+      },
+      "right": {
+        "type": "from_int",
+        "input": {
+          "type": "score",
+          "score": "bs.data",
+          "target": {
+            "type": "fixed",
+            "name": "#raycast.dz"
+          }
+        }
+      }
+    }
+  }
+}

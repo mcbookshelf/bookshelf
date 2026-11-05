@@ -43,6 +43,15 @@ data modify storage bs.hitbox:is_in_entity in.entities set value "#bs.hitbox:get
 execute as @n[tag=ward.hitbox.cow] positioned ~ ~.7 ~ if function #bs.hitbox:is_in_entity run fail "a cow has a solid box"
 execute as @n[tag=ward.hitbox.cow] positioned ~ ~.7 ~ if function bs.hitbox:is_in_entity/custom run fail "custom path: a cow has a solid box"
 
+# A custom provider is first checked against the entity's own hitbox, unless the entity is unbounded
+data modify storage bs.hitbox:is_in_entity in.entities set value "bs.hitbox:get_entity/sized/__main__"
+execute as @n[tag=ward.hitbox.cow] positioned ~.4 ~.1 ~.4 unless function #bs.hitbox:is_in_entity run fail "custom provider: a corner of a cow is outside"
+execute as @n[tag=ward.hitbox.cow] positioned ~.5 ~.7 ~ if function #bs.hitbox:is_in_entity run fail "custom provider: a position beside a cow is inside"
+execute as @n[tag=ward.hitbox.cow] positioned ~ ~1.5 ~ if function #bs.hitbox:is_in_entity run fail "custom provider: a position above a cow is inside"
+tag @n[tag=ward.hitbox.cow] add bs.hitbox.unbounded
+execute as @n[tag=ward.hitbox.cow] positioned ~-.4 ~1.3 ~-.4 unless function #bs.hitbox:is_in_entity run fail "unbounded: the other corner of a cow is outside"
+execute as @n[tag=ward.hitbox.cow] positioned ~.5 ~.7 ~ if function #bs.hitbox:is_in_entity run fail "unbounded: a position beside a cow is inside"
+
 # Every box counts, up to 8
 data modify storage bs.hitbox: rel set value [.5d,.5d,.5d]
 data modify storage bs.hitbox:get_entity out set value [[10f,10f,10f,11f,11f,11f,1f],[10f,10f,10f,11f,11f,11f,1f],[10f,10f,10f,11f,11f,11f,1f],[10f,10f,10f,11f,11f,11f,1f],[10f,10f,10f,11f,11f,11f,1f],[10f,10f,10f,11f,11f,11f,1f],[10f,10f,10f,11f,11f,11f,1f],[0f,0f,0f,1f,1f,1f,1f]]

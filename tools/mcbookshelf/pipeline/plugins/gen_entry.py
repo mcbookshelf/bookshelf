@@ -35,5 +35,5 @@ def commands(key: str, target: model.Target, struct: syntax.Struct) -> list[str]
     value = required(struct)
     lines = [f"{start} set value {value}"] if value else []
     if any(e.optional for e in struct.entries):
-        lines.append(f"{start} merge value $(with)")
+        lines.append(f"{start} {'merge' if value else 'set'} value $(with)")
     return ["", *lines, f"return run function #{key}"]

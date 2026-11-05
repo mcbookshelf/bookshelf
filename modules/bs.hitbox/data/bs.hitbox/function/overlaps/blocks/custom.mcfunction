@@ -15,8 +15,8 @@
 
 execute store result score #s bs.ctx run function bs.hitbox:utils/provide_entities with storage bs.hitbox:overlaps in
 execute if score #s bs.ctx matches 0 run return fail
-summon minecraft:marker ~ ~ ~ {UUID:[I;181,0,0,0]}
-execute align xyz as B5-0-0-0-0 run function bs.hitbox:utils/get_relative_pos
+summon minecraft:marker ~ ~ ~ {UUID:[I;181,0,0,192]}
+execute align xyz as B5-0-0-0-C0 run function bs.hitbox:utils/get_relative_pos
 execute store result score #m bs.ctx run data get storage bs.hitbox:get_entity out
 execute store result score #a bs.ctx store result storage bs.hitbox: x int 1 run compute default integer bs.hitbox:_overlaps/blocks/min_x
 execute store result score #b bs.ctx store result storage bs.hitbox: y int 1 run compute default integer bs.hitbox:_overlaps/blocks/min_y

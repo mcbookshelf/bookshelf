@@ -13,14 +13,14 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-forceload remove -30000000 1600
-
 scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.const
-scoreboard objectives remove bs.lambda
 scoreboard objectives remove bs.data
+scoreboard objectives remove bs.const
 
-scoreboard objectives remove bs.raycast.id
+scoreboard objectives remove bs.raycast.x
+scoreboard objectives remove bs.raycast.y
+scoreboard objectives remove bs.raycast.z
+scoreboard objectives remove bs.raycast.hit
 
-data remove storage bs:data raycast
+data remove storage bs.raycast: ray
+data remove storage bs.raycast: pos

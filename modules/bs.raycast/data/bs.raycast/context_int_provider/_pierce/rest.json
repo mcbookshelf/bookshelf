@@ -1,0 +1,679 @@
+{
+  "type": "conditional",
+  "condition": {
+    "type": "int_value_check",
+    "value": {
+      "type": "score",
+      "score": "bs.ctx",
+      "target": {
+        "type": "fixed",
+        "name": "#m"
+      }
+    },
+    "test": {
+      "max": 4095
+    }
+  },
+  "on_true": {
+    "type": "conditional",
+    "condition": {
+      "type": "int_value_check",
+      "value": {
+        "type": "score",
+        "score": "bs.ctx",
+        "target": {
+          "type": "fixed",
+          "name": "#m"
+        }
+      },
+      "test": {
+        "max": 63
+      }
+    },
+    "on_true": {
+      "type": "conditional",
+      "condition": {
+        "type": "int_value_check",
+        "value": {
+          "type": "score",
+          "score": "bs.ctx",
+          "target": {
+            "type": "fixed",
+            "name": "#m"
+          }
+        },
+        "test": {
+          "max": 7
+        }
+      },
+      "on_true": {
+        "type": "conditional",
+        "condition": {
+          "type": "int_value_check",
+          "value": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "test": {
+            "max": 1
+          }
+        },
+        "on_true": {
+          "type": "sub",
+          "left": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "right": 1
+        },
+        "on_false": {
+          "type": "conditional",
+          "condition": {
+            "type": "int_value_check",
+            "value": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "test": {
+              "max": 3
+            }
+          },
+          "on_true": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 2
+          },
+          "on_false": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 4
+          }
+        }
+      },
+      "on_false": {
+        "type": "conditional",
+        "condition": {
+          "type": "int_value_check",
+          "value": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "test": {
+            "max": 15
+          }
+        },
+        "on_true": {
+          "type": "sub",
+          "left": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "right": 8
+        },
+        "on_false": {
+          "type": "conditional",
+          "condition": {
+            "type": "int_value_check",
+            "value": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "test": {
+              "max": 31
+            }
+          },
+          "on_true": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 16
+          },
+          "on_false": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 32
+          }
+        }
+      }
+    },
+    "on_false": {
+      "type": "conditional",
+      "condition": {
+        "type": "int_value_check",
+        "value": {
+          "type": "score",
+          "score": "bs.ctx",
+          "target": {
+            "type": "fixed",
+            "name": "#m"
+          }
+        },
+        "test": {
+          "max": 511
+        }
+      },
+      "on_true": {
+        "type": "conditional",
+        "condition": {
+          "type": "int_value_check",
+          "value": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "test": {
+            "max": 127
+          }
+        },
+        "on_true": {
+          "type": "sub",
+          "left": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "right": 64
+        },
+        "on_false": {
+          "type": "conditional",
+          "condition": {
+            "type": "int_value_check",
+            "value": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "test": {
+              "max": 255
+            }
+          },
+          "on_true": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 128
+          },
+          "on_false": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 256
+          }
+        }
+      },
+      "on_false": {
+        "type": "conditional",
+        "condition": {
+          "type": "int_value_check",
+          "value": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "test": {
+            "max": 1023
+          }
+        },
+        "on_true": {
+          "type": "sub",
+          "left": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "right": 512
+        },
+        "on_false": {
+          "type": "conditional",
+          "condition": {
+            "type": "int_value_check",
+            "value": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "test": {
+              "max": 2047
+            }
+          },
+          "on_true": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 1024
+          },
+          "on_false": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 2048
+          }
+        }
+      }
+    }
+  },
+  "on_false": {
+    "type": "conditional",
+    "condition": {
+      "type": "int_value_check",
+      "value": {
+        "type": "score",
+        "score": "bs.ctx",
+        "target": {
+          "type": "fixed",
+          "name": "#m"
+        }
+      },
+      "test": {
+        "max": 262143
+      }
+    },
+    "on_true": {
+      "type": "conditional",
+      "condition": {
+        "type": "int_value_check",
+        "value": {
+          "type": "score",
+          "score": "bs.ctx",
+          "target": {
+            "type": "fixed",
+            "name": "#m"
+          }
+        },
+        "test": {
+          "max": 32767
+        }
+      },
+      "on_true": {
+        "type": "conditional",
+        "condition": {
+          "type": "int_value_check",
+          "value": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "test": {
+            "max": 8191
+          }
+        },
+        "on_true": {
+          "type": "sub",
+          "left": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "right": 4096
+        },
+        "on_false": {
+          "type": "conditional",
+          "condition": {
+            "type": "int_value_check",
+            "value": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "test": {
+              "max": 16383
+            }
+          },
+          "on_true": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 8192
+          },
+          "on_false": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 16384
+          }
+        }
+      },
+      "on_false": {
+        "type": "conditional",
+        "condition": {
+          "type": "int_value_check",
+          "value": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "test": {
+            "max": 65535
+          }
+        },
+        "on_true": {
+          "type": "sub",
+          "left": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "right": 32768
+        },
+        "on_false": {
+          "type": "conditional",
+          "condition": {
+            "type": "int_value_check",
+            "value": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "test": {
+              "max": 131071
+            }
+          },
+          "on_true": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 65536
+          },
+          "on_false": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 131072
+          }
+        }
+      }
+    },
+    "on_false": {
+      "type": "conditional",
+      "condition": {
+        "type": "int_value_check",
+        "value": {
+          "type": "score",
+          "score": "bs.ctx",
+          "target": {
+            "type": "fixed",
+            "name": "#m"
+          }
+        },
+        "test": {
+          "max": 2097151
+        }
+      },
+      "on_true": {
+        "type": "conditional",
+        "condition": {
+          "type": "int_value_check",
+          "value": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "test": {
+            "max": 524287
+          }
+        },
+        "on_true": {
+          "type": "sub",
+          "left": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "right": 262144
+        },
+        "on_false": {
+          "type": "conditional",
+          "condition": {
+            "type": "int_value_check",
+            "value": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "test": {
+              "max": 1048575
+            }
+          },
+          "on_true": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 524288
+          },
+          "on_false": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 1048576
+          }
+        }
+      },
+      "on_false": {
+        "type": "conditional",
+        "condition": {
+          "type": "int_value_check",
+          "value": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "test": {
+            "max": 4194303
+          }
+        },
+        "on_true": {
+          "type": "sub",
+          "left": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#m"
+            }
+          },
+          "right": 2097152
+        },
+        "on_false": {
+          "type": "conditional",
+          "condition": {
+            "type": "int_value_check",
+            "value": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "test": {
+              "max": 8388607
+            }
+          },
+          "on_true": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 4194304
+          },
+          "on_false": {
+            "type": "sub",
+            "left": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#m"
+              }
+            },
+            "right": 8388608
+          }
+        }
+      }
+    }
+  }
+}

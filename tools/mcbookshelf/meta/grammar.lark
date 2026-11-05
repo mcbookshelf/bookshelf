@@ -18,7 +18,7 @@ path: name ("/" name)*
 
 ?feature_id: RESOURCE_LOCATION | path
 
-?name: ID | REGISTRY | ROLE | KIND | int_type | float_type | plain_type
+?name: ID | INT | REGISTRY | ROLE | KIND | int_type | float_type | plain_type
 
 _end: DOC? _NL | _NL DOC _NL
 
