@@ -1,0 +1,153 @@
+> Run commands based on what an entity is looking at.
+
+name: View
+slug: bookshelf-view
+version: 5.0.0
+tags: runtime
+
+$run = #[command(slash="forbidden",empty="forbidden")] string
+$provider = #[id(registry="function",tags="allowed")] string
+$aimed = $provider > [block provider](hitbox.md#block-providers) of the blocks that stop the view, `#bs.hitbox:get_block/outline` by default
+$placed = $provider > [block provider](hitbox.md#block-providers) of the blocks to place against, `#bs.hitbox:get_block/interaction` by default
+$hiding = $provider > [block provider](hitbox.md#block-providers) of the blocks that hide the position, `#bs.hitbox:get_block/collision` by default, as the line of sight of mobs
+$entities = $provider > [entity provider](hitbox.md#entity-providers) of the entities that stop the view, `#bs.hitbox:get_entity/targetable` by default
+$selector = string > selector arguments the entities must match, such as `tag=my_pack.target`
+$max_distance = number @ 0..2047 > distance the entity sees at most, 16 by default
+$viewer = executor > entity that looks, from its eyes
+
+
+feature function at_aimed_block
+  > Run a command as an entity, at the block it aims at.
+  authors: Aksiome
+  created: 2023/11/30 1.20.3
+  updated: 2026/11/05 26.4
+
+  context $viewer
+  input arguments: {
+    run: $run > command to run as the entity, at the block, aligned to the grid
+    blocks?: $aimed
+    max_distance?: $max_distance
+  }
+  output success > whether the entity aims at a block
+
+
+feature function as_aimed_entity
+  > Run a command as and at the entity an entity aims at.
+  authors: Aksiome
+  created: 2023/11/30 1.20.3
+  updated: 2026/11/05 26.4
+
+  context $viewer
+  input arguments: {
+    run: $run > command to run as and at the aimed entity
+    blocks?: $aimed
+    entities?: $entities
+    selector?: $selector
+    max_distance?: $max_distance
+  }
+  output success > whether the entity aims at an entity
+
+
+feature function at_aimed_entity
+  > Run a command as an entity, at the entity it aims at.
+  authors: Aksiome
+  created: 2023/11/30 1.20.3
+  updated: 2026/11/05 26.4
+
+  context $viewer
+  input arguments: {
+    run: $run > command to run as the entity that aims, at the aimed entity
+    blocks?: $aimed
+    entities?: $entities
+    selector?: $selector
+    max_distance?: $max_distance
+  }
+  output success > whether the entity aims at an entity
+
+
+feature function at_aimed_point
+  > Run a command as an entity, at the point where its view hits a block or an entity.
+  authors: Aksiome
+  created: 2024/01/25 1.20.3
+  updated: 2026/11/05 26.4
+
+  context $viewer
+  input arguments: {
+    run: $run > command to run as the entity, at the point
+    blocks?: $aimed
+    entities?: $entities
+    selector?: $selector
+    max_distance?: $max_distance
+  }
+  output success > whether the entity aims at a block or an entity
+
+
+feature function at_block_placement
+  > Run a command as an entity, where a block it places would go: against the face of the block it aims at.
+  authors: Aksiome
+  created: 2024/01/24 1.20.4
+  updated: 2026/11/05 26.4
+
+  context $viewer
+  input arguments: {
+    run: $run > command to run as the entity, at the block where a block would be placed, aligned to the grid
+    blocks?: $placed
+    max_distance?: $max_distance
+  }
+  output success > whether the entity aims at a block
+
+
+feature function as_looked_entity
+  > Run a command as the entity a player looks at, where the function runs. Only entities tagged `bs.view.is_lookable` can be looked at.
+  authors: Aksiome
+  created: 2023/12/06 1.20.3
+  updated: 2026/11/05 26.4
+
+  context executor > player that looks
+  input arguments: {
+    run: $run > command to run as the looked entity, at the position of the function
+  }
+  output result > result of the command
+  output success > whether the player looks at an entity
+
+
+feature function at_looked_entity
+  > Run a command as a player, at the entity it looks at. Only entities tagged `bs.view.is_lookable` can be looked at.
+  authors: Aksiome
+  created: 2023/12/06 1.20.3
+  updated: 2026/11/05 26.4
+
+  context executor > player that looks
+  input arguments: {
+    run: $run > command to run as the player, at the looked entity
+  }
+  output result > result of the command
+  output success > whether the player looks at an entity
+
+
+feature function can_see
+  > Check if an entity can see a position: no block stands between its eyes and the position.
+  authors: Aksiome, Leirof
+  created: 2019/05/20 1.20.3
+  updated: 2026/11/05 26.4
+
+  context $viewer
+  context position > position to see
+  input arguments: {
+    blocks?: $hiding
+  }
+  output success > whether the entity can see the position
+
+
+feature function in_view
+  > Check if a position is in the field of view of an entity: a cone around the direction it looks at.
+  authors: Aksiome, Leirof
+  created: 2019/05/20 1.20.3
+  updated: 2026/11/05 26.4
+
+  context $viewer
+  context position > position to check
+  input arguments: {
+    angle: number @ 0..180 > angle of the cone in degrees, in the world rather than on screen
+  }
+  output success > whether the position is in the field of view

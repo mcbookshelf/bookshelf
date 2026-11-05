@@ -16,7 +16,7 @@ These functions use the `run` callback to specify an action that will often be e
 
 For example:
 ```mcfunction
-function #bs.view:at_aimed_block {run: "<command>", with: {}}
+function #bs.view:at_aimed_block.in {run: "<command>", with: {}}
 ```
 
 ---

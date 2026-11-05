@@ -70,6 +70,7 @@ Temporary entities are summoned where a feature needs them and killed before it 
 |---|---|---|
 | `B5-0-0-0-C0` | `[I;181,0,0,192]` | `bs.hitbox` |
 | `B5-0-0-0-C1` | `[I;181,0,0,193]` | `bs.raycast` |
+| `B5-0-0-0-C2` | `[I;181,0,0,194]` | `bs.view` |
 
 A temporary entity summoned in a chunk whose entities are not loaded yet cannot be selected, but it still takes its UUID. Summon it in a loaded chunk (`execute if loaded`), and kill any leftover from a call cut short by the command limit before summoning it again.
 
