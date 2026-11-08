@@ -13,79 +13,33 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-## === SETUP ===
+summon minecraft:interaction ~.5 ~ ~.5 {Tags:["ward.interaction.clear"],width:1f,height:2f}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.clear] run function #bs.interaction:on_left_click.in {run:"say ward",executor:"target",with:{id:"ward.a"}}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.clear] run function #bs.interaction:on_left_click.in {run:"say ward",executor:"target",with:{id:"ward.b"}}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.clear] run function #bs.interaction:on_left_click.in {run:"say ward",executor:"target",with:{}}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.clear] run function #bs.interaction:on_right_click.in {run:"say ward",executor:"target",with:{id:"ward.a"}}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.clear] run function #bs.interaction:on_hover.in {run:"say ward",executor:"target",with:{id:"ward.a"}}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.clear] run function #bs.interaction:on_hover_enter.in {run:"say ward",executor:"target",with:{id:"ward.b"}}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.clear] run function #bs.interaction:on_hover_leave.in {run:"say ward",executor:"target",with:{id:"ward.b"}}
 
-summon minecraft:interaction ~.5 ~ ~.5 {Tags: ["bs.ward","bs.ward.executor"], width: 1.0, height: 2.0}
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_left_click { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_left_click { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_right_click { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_right_click { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_hover_enter { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_hover_enter { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_hover_leave { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_hover_leave { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_hover { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_hover { run: "help", executor: "target" }
-data modify storage bs:ward interaction.clear_events set value {with:{}}
+# A type and an id clear the matching events only
+assert result 1 run execute as @n[type=minecraft:interaction,tag=ward.interaction.clear] run function #bs.interaction:clear_events.in {with:{type:"left_click",id:"ward.a"}}
+assert result 0 run execute as @n[type=minecraft:interaction,tag=ward.interaction.clear] run function #bs.interaction:clear_events.in {with:{type:"left_click",id:"ward.a"}}
+assert entity @n[type=minecraft:interaction,tag=ward.interaction.clear,tag=bs.interaction.listen_left_click]
 
-## === EXPECTED BEHAVIORS (CLEAR LEFT CLICK) ===
+# An id clears its events of every type
+assert result 2 run execute as @n[type=minecraft:interaction,tag=ward.interaction.clear] run function #bs.interaction:clear_events.in {with:{id:"ward.a"}}
+assert not entity @n[type=minecraft:interaction,tag=ward.interaction.clear,tag=bs.interaction.listen_right_click]
+assert not entity @n[type=minecraft:interaction,tag=ward.interaction.clear,tag=bs.interaction.listen_hover]
+assert entity @n[type=minecraft:interaction,tag=ward.interaction.clear,tag=bs.interaction.is_hoverable]
 
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result storage bs:ward interaction.clear_events.with.id int 1 run function #bs.interaction:on_left_click { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result score #i bs.ctx run function #bs.interaction:clear_events with storage bs:ward interaction.clear_events
-execute unless score #i bs.ctx matches 1 run fail "Clear events should clear a single event when using the id"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result score #i bs.ctx run function #bs.interaction:clear_events { with: { type: "left_click" } }
-execute unless score #i bs.ctx matches 2 run fail "Clear events should clear all events when using the type"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] if entity @s[tag=bs.interaction.listen_left_click] run fail "Interaction should stop listening to left_click events when they are cleared"
+# A type clears its events of every id
+assert result 2 run execute as @n[type=minecraft:interaction,tag=ward.interaction.clear] run function #bs.interaction:clear_events.in {with:{type:"left_click"}}
+assert not entity @n[type=minecraft:interaction,tag=ward.interaction.clear,tag=bs.interaction.listen_left_click]
 
-## === EXPECTED BEHAVIORS (CLEAR RIGHT CLICK) ===
-
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result storage bs:ward interaction.clear_events.with.id int 1 run function #bs.interaction:on_right_click { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result score #i bs.ctx run function #bs.interaction:clear_events with storage bs:ward interaction.clear_events
-execute unless score #i bs.ctx matches 1 run fail "Clear events should clear a single event when using the id"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result score #i bs.ctx run function #bs.interaction:clear_events { with: { type: "right_click" } }
-execute unless score #i bs.ctx matches 2 run fail "Clear events should clear all events when using the type"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] if entity @s[tag=bs.interaction.listen_right_click] run fail "Interaction should stop listening to right_click events when they are cleared"
-
-## === EXPECTED BEHAVIORS (CLEAR HOVER ENTER) ===
-
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result storage bs:ward interaction.clear_events.with.id int 1 run function #bs.interaction:on_hover_enter { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result score #i bs.ctx run function #bs.interaction:clear_events with storage bs:ward interaction.clear_events
-execute unless score #i bs.ctx matches 1 run fail "Clear events should clear a single event when using the id"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result score #i bs.ctx run function #bs.interaction:clear_events { with: { type: "hover_enter" } }
-execute unless score #i bs.ctx matches 2 run fail "Clear events should clear all events when using the type"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] if entity @s[tag=bs.interaction.listen_hover_enter] run fail "Interaction should stop listening to hover_enter events when they are cleared"
-
-## === EXPECTED BEHAVIORS (CLEAR HOVER LEAVE) ===
-
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result storage bs:ward interaction.clear_events.with.id int 1 run function #bs.interaction:on_hover_leave { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result score #i bs.ctx run function #bs.interaction:clear_events with storage bs:ward interaction.clear_events
-execute unless score #i bs.ctx matches 1 run fail "Clear events should clear a single event when using the id"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result score #i bs.ctx run function #bs.interaction:clear_events { with: { type: "hover_leave" } }
-execute unless score #i bs.ctx matches 2 run fail "Clear events should clear all events when using the type"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] if entity @s[tag=bs.interaction.listen_hover_leave] run fail "Interaction should stop listening to hover_leave events when they are cleared"
-
-## === EXPECTED BEHAVIORS (CLEAR HOVER) ===
-
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result storage bs:ward interaction.clear_events.with.id int 1 run function #bs.interaction:on_hover { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result score #i bs.ctx run function #bs.interaction:clear_events with storage bs:ward interaction.clear_events
-execute unless score #i bs.ctx matches 1 run fail "Clear events should clear a single event when using the id"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result score #i bs.ctx run function #bs.interaction:clear_events { with: { type: "hover" } }
-execute unless score #i bs.ctx matches 2 run fail "Clear events should clear all events when using the type"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] if entity @s[tag=bs.interaction.listen_hover] run fail "Interaction should stop listening to hover events when they are cleared"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] if entity @s[tag=bs.interaction.is_hoverable] run fail "Interaction should stop listening to all hover events when they are cleared"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] if score @s bs.interaction.hover matches 1.. run fail "Clear events should reset the interaction id when all events are cleared"
-
-## === EXPECTED BEHAVIORS (CLEAR ALL) ===
-
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_left_click { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_right_click { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_hover_enter { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_hover_leave { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_hover { run: "help", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result score #i bs.ctx run function #bs.interaction:clear_events { with: {} }
-execute unless score #i bs.ctx matches 5 run fail "Clear events should clear all events when using an empty object"
-
-## === EXPECTED BEHAVIORS (CLEAR NONE) ===
-
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store result score #i bs.ctx run function #bs.interaction:clear_events { with: {} }
-execute unless score #i bs.ctx matches 0 run fail "Clear events should return 0 when no events are registered"
+# Nothing clears every event, and the interaction is no longer hoverable
+assert result 2 run execute as @n[type=minecraft:interaction,tag=ward.interaction.clear] run function #bs.interaction:clear_events.in {with:{}}
+assert not entity @n[type=minecraft:interaction,tag=ward.interaction.clear,tag=bs.interaction.listen_hover_enter]
+assert not entity @n[type=minecraft:interaction,tag=ward.interaction.clear,tag=bs.interaction.listen_hover_leave]
+assert not entity @n[type=minecraft:interaction,tag=ward.interaction.clear,tag=bs.interaction.is_hoverable]
+assert not score @n[type=minecraft:interaction,tag=ward.interaction.clear] bs.interaction.hover matches -2147483648..

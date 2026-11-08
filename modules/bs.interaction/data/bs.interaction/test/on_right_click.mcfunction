@@ -12,42 +12,37 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+# @template ward:empty/9x9x9
 # @dummy
 
-## === SETUP ===
+summon minecraft:interaction ~4.5 ~1 ~4.5 {Tags:["ward.interaction.right_click","ward.interaction.right_click.executor"],width:1f,height:2f}
+tp @s ~4.5 ~1 ~4.5
+execute as @n[type=minecraft:interaction,tag=ward.interaction.right_click] run function #bs.interaction:on_right_click.in {run:"tag @s add ward.interaction.right_click.source",executor:"source",with:{}}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.right_click] run function #bs.interaction:on_right_click.in {run:"tag @s add ward.interaction.right_click.target",executor:"target",with:{}}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.right_click] run function #bs.interaction:on_right_click.in {run:"tag @s add ward.interaction.right_click.interpreted",executor:"@n[tag=ward.interaction.right_click.executor]",with:{lazy:false}}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.right_click] run function #bs.interaction:on_right_click.in {run:"tag @s add ward.interaction.right_click.lazy",executor:"@n[tag=ward.interaction.right_click.executor]",with:{}}
 
-summon minecraft:interaction ~.5 ~ ~.5 {Tags: ["bs.ward","bs.ward.executor"], width: 1.0, height: 2.0}
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_right_click { run: "tag @s add bs.ward.source", executor: "source" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_right_click { run: "tag @s add bs.ward.target", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_right_click { run: "tag @s add bs.ward.interpreted", executor: { selector: "@n[tag=bs.ward.executor,distance=..2]", lazy: false } }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_right_click { run: "tag @s add bs.ward.lazy", executor: { selector: "@n[tag=bs.ward.executor,distance=..2]", lazy: true } }
+# The command runs as the source, the target, a resolved selector and a lazy selector
+dummy @s use entity @n[type=minecraft:interaction,tag=ward.interaction.right_click]
+advancement grant @s only bs.interaction:_right_click
+assert entity @s[tag=ward.interaction.right_click.source]
+assert entity @n[type=minecraft:interaction,tag=ward.interaction.right_click,tag=ward.interaction.right_click.target]
+assert entity @n[type=minecraft:interaction,tag=ward.interaction.right_click,tag=ward.interaction.right_click.interpreted]
+assert entity @n[type=minecraft:interaction,tag=ward.interaction.right_click,tag=ward.interaction.right_click.lazy]
 
-## === EXPECTED BEHAVIORS ===
+# A resolved selector keeps its entity, a lazy one finds the new one
+tag @e remove ward.interaction.right_click.source
+tag @e remove ward.interaction.right_click.target
+tag @e remove ward.interaction.right_click.interpreted
+tag @e remove ward.interaction.right_click.lazy
+tag @e remove ward.interaction.right_click.executor
+tag @s add ward.interaction.right_click.executor
+dummy @s use entity @n[type=minecraft:interaction,tag=ward.interaction.right_click]
+advancement grant @s only bs.interaction:_right_click
+assert entity @n[type=minecraft:interaction,tag=ward.interaction.right_click,tag=ward.interaction.right_click.interpreted]
+assert not entity @n[type=minecraft:interaction,tag=ward.interaction.right_click,tag=ward.interaction.right_click.lazy]
+assert entity @s[tag=ward.interaction.right_click.lazy]
 
-dummy @s use entity @n[type=minecraft:interaction,tag=bs.ward,distance=..2]
-advancement grant @s only bs.interaction:right_click
-execute unless entity @s[tag=bs.ward.source] run fail "Failed to run callback on source entity"
-execute unless entity @n[type=minecraft:interaction,tag=bs.ward,tag=bs.ward.target,distance=..2] run fail "Failed to run callback on target entity"
-execute unless entity @n[type=minecraft:interaction,tag=bs.ward,tag=bs.ward.interpreted,distance=..2] run fail "Failed to run callback using an interpreted selector"
-execute unless entity @n[type=minecraft:interaction,tag=bs.ward,tag=bs.ward.lazy,distance=..2] run fail "Failed to run callback using a lazy selector"
-
-tag @e[distance=..2] remove bs.ward.lazy
-tag @e[distance=..2] remove bs.ward.interpreted
-tag @e[distance=..2] remove bs.ward.executor
-tag @s add bs.ward.executor
-dummy @s use entity @n[type=minecraft:interaction,tag=bs.ward,distance=..2]
-advancement grant @s only bs.interaction:right_click
-execute unless entity @n[type=minecraft:interaction,tag=bs.ward,tag=bs.ward.interpreted,distance=..2] run fail "Failed to run callback using an interpreted selector"
-execute if entity @n[type=minecraft:interaction,tag=bs.ward,tag=bs.ward.lazy,distance=..2] run fail "Failed to run callback using a lazy selector"
-execute unless entity @s[tag=bs.ward.lazy] run fail "Failed to run callback using a lazy selector"
-
-## === INPUT ERRORS ===
-
-execute store success score #s bs.ctx run function #bs.interaction:on_right_click { run: "", executor: "source" }
-execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when function is called on a non interaction entity"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store success score #s bs.ctx run function #bs.interaction:on_right_click { run: "", executor: "target" }
-execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when the command is invalid"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store success score #s bs.ctx run function #bs.interaction:on_right_click { run: "help", executor: { selector: "¯\\_(ツ)_/¯" } }
-execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when the selector is invalid"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store success score #s bs.ctx run function #bs.interaction:on_right_click { run: "help", executor: { selector: "@n[type=minecraft:allay,tag=bs.is_never_gonna_be_released]", lazy: false } }
-execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when the selector is interpreted and points to no entity"
+# The current entity must be an interaction, and a resolved selector must find an entity
+assert not run function #bs.interaction:on_right_click.in {run:"say ward",executor:"source",with:{}}
+assert not run execute as @n[type=minecraft:interaction,tag=ward.interaction.right_click] run function #bs.interaction:on_right_click.in {run:"say ward",executor:"@n[type=minecraft:allay,tag=ward.interaction.right_click.none]",with:{lazy:false}}

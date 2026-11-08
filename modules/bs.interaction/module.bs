@@ -1,0 +1,92 @@
+> Attach click and hover events to interaction entities.
+
+name: Interaction
+slug: bookshelf-interaction
+version: 5.0.0
+tags: runtime
+
+$event = arguments: {
+  run: #[command(slash="forbidden",empty="forbidden")] string > command to run when the event triggers
+  executor: string > entity to run the command as: `"source"` for the player, `"target"` for the interaction, or a valid selector
+  lazy?: boolean > `false` to resolve the selector to the UUID of its first entity once, when the event is registered, instead of each time the event triggers: faster, for an entity that stays
+  id?: string > id to clear the event with
+}
+
+$interaction = executor > interaction to listen on
+$state = state > the interaction listens to the event
+$success = success > whether the event is registered
+
+
+feature function on_left_click
+  > Run a command when a player left clicks the interaction.
+  authors: Aksiome, theogiraudet
+  created: 2024/03/30 24w13a
+  updated: 2026/11/05 26.4
+
+  context $interaction
+  input $event
+  output $state
+  output $success
+
+
+feature function on_right_click
+  > Run a command when a player right clicks the interaction.
+  authors: Aksiome, theogiraudet
+  created: 2024/03/30 24w13a
+  updated: 2026/11/05 26.4
+
+  context $interaction
+  input $event
+  output $state
+  output $success
+
+
+feature function on_hover
+  > Run a command every tick while a player looks at the interaction.
+  authors: Aksiome, theogiraudet
+  created: 2024/03/30 24w13a
+  updated: 2026/11/05 26.4
+
+  context $interaction
+  input $event
+  output $state
+  output $success
+
+
+feature function on_hover_enter
+  > Run a command when a player starts looking at the interaction.
+  authors: Aksiome, theogiraudet
+  created: 2024/03/30 24w13a
+  updated: 2026/11/05 26.4
+
+  context $interaction
+  input $event
+  output $state
+  output $success
+
+
+feature function on_hover_leave
+  > Run a command when a player stops looking at the interaction, or logs out while looking at it.
+  authors: Aksiome, theogiraudet
+  created: 2024/03/30 24w13a
+  updated: 2026/11/05 26.4
+
+  context $interaction
+  input $event
+  output $state
+  output $success
+
+
+feature function clear_events
+  > Clear the events of an interaction.
+  authors: Aksiome
+  created: 2024/11/01 1.21.3
+  updated: 2026/11/05 26.4
+
+  context executor > interaction to clear the events of
+  input arguments: {
+    type?: string > type of the events to clear, such as `hover_enter`: every type by default
+    id?: string > id of the events to clear: every id by default
+  }
+  output state > the matching events are removed
+  output result: int @ 0.. > number of events removed

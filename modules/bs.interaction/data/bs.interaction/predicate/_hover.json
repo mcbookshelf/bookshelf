@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:entity_scores",
+  "entity": "this",
+  "scores": {
+    "bs.interaction.hover": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "#h"
+      },
+      "score": "bs.ctx"
+    }
+  }
+}
