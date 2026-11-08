@@ -2,12 +2,12 @@
 
 ## Unreleased
 
-- ⚠️ Inputs and outputs were completely reworked to follow new conventions
-- ⚠️ Events no longer return a generated id: give them a string `id` to clear them with, and they succeed when registered
-- ⚠️ `executor` takes a selector directly, such as `executor:"@n[tag=my_pack.icon]"`, and `lazy` moved to the optional arguments: `with:{lazy:false}`
-- ⚠️ `#bs.interaction:clear_events` takes the `type` and `id` to clear as optional arguments: `{with:{type:"hover",id:"my_pack:menu"}}`
-- ⚠️ Removed `#bs.interaction:callback/<glow|unglow|none>`: run the command directly, such as `data modify entity @s Glowing set value true`
-- 🐛 An interaction keeps its `bs.interaction.hovered` tag when one of the players looking at it logs out
+- ⚠️ Inputs and outputs were completely reworked to follow new conventions ([#609](https://github.com/mcbookshelf/bookshelf/pull/609))
+- ⚠️ Events no longer return a generated id: give them a string `id` to clear them with, and they succeed when registered ([#609](https://github.com/mcbookshelf/bookshelf/pull/609))
+- ⚠️ `executor` takes a selector directly, such as `executor:"@n[tag=my_pack.icon]"`, and `lazy` moved to the optional arguments: `with:{lazy:false}` ([#609](https://github.com/mcbookshelf/bookshelf/pull/609))
+- ⚠️ `#bs.interaction:clear_events` takes the `type` and `id` to clear as optional arguments: `{with:{type:"hover",id:"my_pack:menu"}}` ([#609](https://github.com/mcbookshelf/bookshelf/pull/609))
+- ⚠️ Removed `#bs.interaction:callback/<glow|unglow|none>`: run the command directly, such as `data modify entity @s Glowing set value true` ([#609](https://github.com/mcbookshelf/bookshelf/pull/609))
+- 🐛 An interaction keeps its `bs.interaction.hovered` tag when one of the players looking at it logs out ([#609](https://github.com/mcbookshelf/bookshelf/pull/609))
 
 ## `v3.1.0`
 
