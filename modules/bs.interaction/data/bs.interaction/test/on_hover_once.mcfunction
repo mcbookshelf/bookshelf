@@ -12,22 +12,23 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+# @template ward:empty/9x9x9
 
-## === SETUP ===
+summon minecraft:interaction ~4.5 ~1 ~5.5 {Tags:["ward.interaction.once"],width:1f,height:2f}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.once] run function #bs.interaction:on_hover_enter.in {run:"execute unless entity @s[tag=bs.interaction.hovered] run scoreboard players add #ward.interaction.once bs.data 1",executor:"target",with:{}}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.once] run function #bs.interaction:on_hover_leave.in {run:"execute unless entity @s[tag=bs.interaction.hovered] run scoreboard players remove #ward.interaction.once bs.data 1",executor:"target",with:{}}
+scoreboard players set #ward.interaction.once bs.data 0
 
-fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:air replace minecraft:barrier
-summon minecraft:interaction ~.5 ~ ~1.5 {Tags: ["bs.ward","bs.ward.1"], width: 1.0, height: 2.0}
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..3] run function #bs.interaction:on_hover_enter { run: "execute unless entity @s[tag=bs.interaction.hovered] run scoreboard players add #ward.interaction_hover_once bs.data 1", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..3] run function #bs.interaction:on_hover_leave { run: "execute unless entity @s[tag=bs.interaction.hovered] run scoreboard players remove #ward.interaction_hover_once bs.data 1", executor: "target" }
-scoreboard players set #ward.interaction_hover_once bs.data 0
-
-## === EXPECTED BEHAVIORS ===
-
-execute positioned ~.5 ~ ~.5 run dummy on_hover_once_1 spawn
-await score #ward.interaction_hover_once bs.data matches 1
-execute positioned ~.5 ~ ~.5 run dummy on_hover_once_2 spawn
-await score #ward.interaction_hover_once bs.data matches 1
-dummy on_hover_once_2 leave
-await score #ward.interaction_hover_once bs.data matches 1
-dummy on_hover_once_1 leave
-await score #ward.interaction_hover_once bs.data matches 0
+# The interaction is hovered until the last player looks away
+execute positioned ~4.2 ~1 ~4.5 rotated 0 0 run dummy ward_once_1 spawn
+await score #ward.interaction.once bs.data matches 1
+execute positioned ~4.8 ~1 ~4.5 rotated 0 0 run dummy ward_once_2 spawn
+await delay 2t
+assert score #ward.interaction.once bs.data matches 1
+dummy ward_once_2 leave
+await delay 2t
+assert score #ward.interaction.once bs.data matches 1
+assert entity @n[type=minecraft:interaction,tag=ward.interaction.once,tag=bs.interaction.hovered]
+dummy ward_once_1 leave
+await score #ward.interaction.once bs.data matches 0
+assert not entity @n[type=minecraft:interaction,tag=ward.interaction.once,tag=bs.interaction.hovered]

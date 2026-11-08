@@ -39,7 +39,6 @@ These functions are intended to be executed exclusively as part of a callback, a
 For example:
 - `#bs.move:callback/bounce`
 - `#bs.move:callback/slide`
-- `#bs.interaction:callback/glow`
 
 ---
 

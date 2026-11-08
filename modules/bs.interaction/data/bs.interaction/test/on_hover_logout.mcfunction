@@ -12,19 +12,15 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
-# @dummy
+# @template ward:empty/9x9x9
 
-## === SETUP ===
+summon minecraft:interaction ~4.5 ~1 ~5.5 {Tags:["ward.interaction.logout"],width:1f,height:2f}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.logout] run function #bs.interaction:on_hover_enter.in {run:"scoreboard players add #ward.interaction.logout bs.data 1",executor:"target",with:{}}
+execute as @n[type=minecraft:interaction,tag=ward.interaction.logout] run function #bs.interaction:on_hover_leave.in {run:"scoreboard players remove #ward.interaction.logout bs.data 1",executor:"target",with:{}}
+scoreboard players set #ward.interaction.logout bs.data 0
 
-fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:air replace minecraft:barrier
-summon minecraft:interaction ~.5 ~ ~1.5 {Tags: ["bs.ward"], width: 1.0, height: 2.0}
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_hover_enter { run: "scoreboard players add #ward.interaction_hover_count bs.data 1", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] run function #bs.interaction:on_hover_leave { run: "scoreboard players remove #ward.interaction_hover_count bs.data 1", executor: "target" }
-scoreboard players set #ward.interaction_hover_count bs.data 0
-
-## === EXPECTED BEHAVIORS ===
-
-execute positioned ~.5 ~ ~.5 run dummy on_hover_logout spawn
-await score #ward.interaction_hover_count bs.data matches 2
-dummy on_hover_logout leave
-await score #ward.interaction_hover_count bs.data matches 1
+# The leave command runs when a player logs out while looking at the interaction
+execute positioned ~4.5 ~1 ~4.5 rotated 0 0 run dummy ward_logout spawn
+await score #ward.interaction.logout bs.data matches 1
+dummy ward_logout leave
+await score #ward.interaction.logout bs.data matches 0

@@ -2,15 +2,15 @@
 
 ## Unreleased
 
-- ⚠️ Inputs and outputs were completely reworked to follow new conventions
-- ⚠️ `#bs.raycast:run` is renamed to `#bs.raycast:cast`
-- ⚠️ `blocks` and `entities` take a hitbox block provider and entity provider instead of `true` or `false`: without one, the ray goes through blocks or entities. `selector` filters the entities the ray checks: by default, the ones the provider gives a box to
-- ⚠️ `ignored_blocks` and `ignored_entities` are removed: use a provider that skips them, or a `selector`
-- ⚠️ `piercing` is removed in favor of `#bs.raycast:pierce`, which runs the commands of the ray for every block and entity it goes through, nearest first. The ray stops at a command unless it returns a non-zero value, so a function must end with `return 1` to keep piercing
-- ⚠️ `on_targeted_block`, `on_targeted_entity`, `on_entry_point` and `on_exit_point` are renamed to `on_block`, `on_entity`, `on_entry` and `on_exit`. `on_exit` is only available in `#bs.raycast:pierce`
-- ⚠️ The `$raycast.*` lambda scores are replaced by the `bs.raycast:face/<face>` and `bs.raycast:flag/<flag>` predicates, the `bs.raycast:entry/<distance|x|y|z>` and `bs.raycast:exit/<distance|x|y|z>` float providers, and the `bs.raycast:block/<x|y|z>` int providers. `prev_entry_distance` and `prev_exit_distance` are removed: keep them in a command of the ray
-- ✨ A ray never hits an entity tagged `bs.raycast.omit`, such as the entity that casts it
-- ✨ Custom entity providers are supported: an entity whose boxes go beyond its own hitbox, or that has none, must be tagged `bs.hitbox.unbounded`
+- ⚠️ Inputs and outputs were completely reworked to follow new conventions ([#607](https://github.com/mcbookshelf/bookshelf/pull/607))
+- ⚠️ `#bs.raycast:run` is renamed to `#bs.raycast:cast` ([#607](https://github.com/mcbookshelf/bookshelf/pull/607))
+- ⚠️ `blocks` and `entities` take a hitbox block provider and entity provider instead of `true` or `false`: without one, the ray goes through blocks or entities. `selector` filters the entities the ray checks: by default, the ones the provider gives a box to ([#607](https://github.com/mcbookshelf/bookshelf/pull/607))
+- ⚠️ `ignored_blocks` and `ignored_entities` are removed: use a provider that skips them, or a `selector` ([#607](https://github.com/mcbookshelf/bookshelf/pull/607))
+- ⚠️ `piercing` is removed in favor of `#bs.raycast:pierce`, which runs the commands of the ray for every block and entity it goes through, nearest first. The ray stops at a command unless it returns a non-zero value, so a function must end with `return 1` to keep piercing ([#607](https://github.com/mcbookshelf/bookshelf/pull/607))
+- ⚠️ `on_targeted_block`, `on_targeted_entity`, `on_entry_point` and `on_exit_point` are renamed to `on_block`, `on_entity`, `on_entry` and `on_exit`. `on_exit` is only available in `#bs.raycast:pierce` ([#607](https://github.com/mcbookshelf/bookshelf/pull/607))
+- ⚠️ The `$raycast.*` lambda scores are replaced by the `bs.raycast:face/<face>` and `bs.raycast:flag/<flag>` predicates, the `bs.raycast:entry/<distance|x|y|z>` and `bs.raycast:exit/<distance|x|y|z>` float providers, and the `bs.raycast:block/<x|y|z>` int providers. `prev_entry_distance` and `prev_exit_distance` are removed: keep them in a command of the ray ([#607](https://github.com/mcbookshelf/bookshelf/pull/607))
+- ✨ A ray never hits an entity tagged `bs.raycast.omit`, such as the entity that casts it ([#607](https://github.com/mcbookshelf/bookshelf/pull/607))
+- ✨ Custom entity providers are supported: an entity whose boxes go beyond its own hitbox, or that has none, must be tagged `bs.hitbox.unbounded` ([#607](https://github.com/mcbookshelf/bookshelf/pull/607))
 
 ## `v4.2.1`
 

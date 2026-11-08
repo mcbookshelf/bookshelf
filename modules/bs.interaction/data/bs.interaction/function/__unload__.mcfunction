@@ -16,7 +16,9 @@
 kill B5-0-0-0-3
 forceload remove -30000000 1600
 
-execute as @e[type=minecraft:interaction] run function #bs.interaction:clear_events {with:{}}
+data modify storage bs.interaction:clear_events in set value {}
+execute as @e[type=minecraft:interaction] run function bs.interaction:clear_events/__main__
+schedule clear bs.interaction:utils/process
 
 scoreboard objectives remove bs.interaction.hover
 scoreboard objectives remove bs.interaction.logout
@@ -25,4 +27,6 @@ scoreboard objectives remove bs.ctx
 scoreboard objectives remove bs.data
 scoreboard objectives remove bs.const
 
-data remove storage bs:data interaction
+data remove storage bs.interaction: clear
+data remove storage bs.interaction: event
+data remove storage bs.interaction: events
