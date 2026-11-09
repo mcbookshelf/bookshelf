@@ -6,162 +6,97 @@ Pre-built tree structures with multiple variations.
 
 ---
 
-## 🗿 Structures
+## Structures
 
-You can find below all structures available in this module.
+The following structures are available in this module.
+
+*Example: grow an oak tree where you stand (structures are 15 blocks wide, so offset by 7 to center the trunk)*
+
+```mcfunction
+place template bs.tree:oak/1 ~-7 ~ ~-7
+```
 
 ---
 
 ### Birch
 
-::::{grid} 2 3 3 3
+::::{tab-set}
 
-:::{grid-item}
+:::{tab-item} Variant 1
 
-```{image} /_imgs/modules/tree/birch_1.png
-:class: dark-light p-2
-:align: center
+```{feature} bs.tree:birch/1
 ```
 
-<div align=center>
-
-`bs.tree:birch_1`
-
-</div>
-
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/birch_2.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 2
+
+```{feature} bs.tree:birch/2
 ```
 
-<div align=center>
-
-`bs.tree:birch_2`
-
-</div>
-
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/birch_3.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 3
+
+```{feature} bs.tree:birch/3
 ```
 
-<div align=center>
-
-`bs.tree:birch_3`
-
-</div>
-
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/birch_4.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 4
+
+```{feature} bs.tree:birch/4
 ```
 
-<div align=center>
-
-`bs.tree:birch_4`
-
-</div>
-
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/birch_5.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 5
+
+```{feature} bs.tree:birch/5
 ```
 
-<div align=center>
-
-`bs.tree:birch_5`
-
-</div>
-
 :::
+
 ::::
 
 ---
 
 ### Cypress
 
-::::{grid} 2 3 3 3
+::::{tab-set}
 
-:::{grid-item}
+:::{tab-item} Variant 1
 
-```{image} /_imgs/modules/tree/cypress_1.png
-:class: dark-light p-2
-:align: center
+```{feature} bs.tree:cypress/1
 ```
-
-<div align=center>
-
-`bs.tree:cypress_1`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/cypress_2.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 2
+
+```{feature} bs.tree:cypress/2
 ```
-
-<div align=center>
-
-`bs.tree:cypress_2`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/cypress_3.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 3
+
+```{feature} bs.tree:cypress/3
 ```
-
-<div align=center>
-
-`bs.tree:cypress_3`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/cypress_4.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 4
+
+```{feature} bs.tree:cypress/4
 ```
-
-<div align=center>
-
-`bs.tree:cypress_4`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/cypress_5.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 5
+
+```{feature} bs.tree:cypress/5
 ```
-
-<div align=center>
-
-`bs.tree:cypress_5`
-
-</div>
 
 :::
 
@@ -171,76 +106,40 @@ You can find below all structures available in this module.
 
 ### Dark Oak
 
-::::{grid} 2 3 3 3
+::::{tab-set}
 
-:::{grid-item}
+:::{tab-item} Variant 1
 
-```{image} /_imgs/modules/tree/dark_oak_1.png
-:class: dark-light p-2
-:align: center
+```{feature} bs.tree:dark_oak/1
 ```
-
-<div align=center>
-
-`bs.tree:dark_oak_1`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/dark_oak_2.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 2
+
+```{feature} bs.tree:dark_oak/2
 ```
-
-<div align=center>
-
-`bs.tree:dark_oak_2`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/dark_oak_3.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 3
+
+```{feature} bs.tree:dark_oak/3
 ```
-
-<div align=center>
-
-`bs.tree:dark_oak_3`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/dark_oak_4.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 4
+
+```{feature} bs.tree:dark_oak/4
 ```
-
-<div align=center>
-
-`bs.tree:dark_oak_4`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/dark_oak_5.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 5
+
+```{feature} bs.tree:dark_oak/5
 ```
-
-<div align=center>
-
-`bs.tree:dark_oak_5`
-
-</div>
 
 :::
 
@@ -250,76 +149,40 @@ You can find below all structures available in this module.
 
 ### Dead Spruce
 
-::::{grid} 2 3 3 3
+::::{tab-set}
 
-:::{grid-item}
+:::{tab-item} Variant 1
 
-```{image} /_imgs/modules/tree/dead_spruce_1.png
-:class: dark-light p-2
-:align: center
+```{feature} bs.tree:dead_spruce/1
 ```
-
-<div align=center>
-
-`bs.tree:dead_spruce_1`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/dead_spruce_2.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 2
+
+```{feature} bs.tree:dead_spruce/2
 ```
-
-<div align=center>
-
-`bs.tree:dead_spruce_2`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/dead_spruce_3.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 3
+
+```{feature} bs.tree:dead_spruce/3
 ```
-
-<div align=center>
-
-`bs.tree:dead_spruce_3`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/dead_spruce_4.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 4
+
+```{feature} bs.tree:dead_spruce/4
 ```
-
-<div align=center>
-
-`bs.tree:dead_spruce_4`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/dead_spruce_5.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 5
+
+```{feature} bs.tree:dead_spruce/5
 ```
-
-<div align=center>
-
-`bs.tree:dead_spruce_5`
-
-</div>
 
 :::
 
@@ -329,76 +192,40 @@ You can find below all structures available in this module.
 
 ### Exotic
 
-::::{grid} 2 3 3 3
+::::{tab-set}
 
-:::{grid-item}
+:::{tab-item} Variant 1
 
-```{image} /_imgs/modules/tree/exotic_1.png
-:class: dark-light p-2
-:align: center
+```{feature} bs.tree:exotic/1
 ```
-
-<div align=center>
-
-`bs.tree:exotic_1`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/exotic_2.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 2
+
+```{feature} bs.tree:exotic/2
 ```
-
-<div align=center>
-
-`bs.tree:exotic_2`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/exotic_3.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 3
+
+```{feature} bs.tree:exotic/3
 ```
-
-<div align=center>
-
-`bs.tree:exotic_3`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/exotic_4.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 4
+
+```{feature} bs.tree:exotic/4
 ```
-
-<div align=center>
-
-`bs.tree:exotic_4`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/exotic_5.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 5
+
+```{feature} bs.tree:exotic/5
 ```
-
-<div align=center>
-
-`bs.tree:exotic_5`
-
-</div>
 
 :::
 
@@ -408,76 +235,40 @@ You can find below all structures available in this module.
 
 ### Fir
 
-::::{grid} 2 3 3 3
+::::{tab-set}
 
-:::{grid-item}
+:::{tab-item} Variant 1
 
-```{image} /_imgs/modules/tree/fir_1.png
-:class: dark-light p-2
-:align: center
+```{feature} bs.tree:fir/1
 ```
-
-<div align=center>
-
-`bs.tree:fir_1`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/fir_2.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 2
+
+```{feature} bs.tree:fir/2
 ```
-
-<div align=center>
-
-`bs.tree:fir_2`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/fir_3.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 3
+
+```{feature} bs.tree:fir/3
 ```
-
-<div align=center>
-
-`bs.tree:fir_3`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/fir_4.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 4
+
+```{feature} bs.tree:fir/4
 ```
-
-<div align=center>
-
-`bs.tree:fir_4`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/fir_5.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 5
+
+```{feature} bs.tree:fir/5
 ```
-
-<div align=center>
-
-`bs.tree:fir_5`
-
-</div>
 
 :::
 
@@ -487,76 +278,40 @@ You can find below all structures available in this module.
 
 ### Jungle
 
-::::{grid} 2 3 3 3
+::::{tab-set}
 
-:::{grid-item}
+:::{tab-item} Variant 1
 
-```{image} /_imgs/modules/tree/jungle_1.png
-:class: dark-light p-2
-:align: center
+```{feature} bs.tree:jungle/1
 ```
-
-<div align=center>
-
-`bs.tree:jungle_1`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/jungle_2.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 2
+
+```{feature} bs.tree:jungle/2
 ```
-
-<div align=center>
-
-`bs.tree:jungle_2`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/jungle_3.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 3
+
+```{feature} bs.tree:jungle/3
 ```
-
-<div align=center>
-
-`bs.tree:jungle_3`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/jungle_4.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 4
+
+```{feature} bs.tree:jungle/4
 ```
-
-<div align=center>
-
-`bs.tree:jungle_4`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/jungle_5.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 5
+
+```{feature} bs.tree:jungle/5
 ```
-
-<div align=center>
-
-`bs.tree:jungle_5`
-
-</div>
 
 :::
 
@@ -566,76 +321,40 @@ You can find below all structures available in this module.
 
 ### Mushroom
 
-::::{grid} 2 3 3 3
+::::{tab-set}
 
-:::{grid-item}
+:::{tab-item} Variant 1
 
-```{image} /_imgs/modules/tree/mushroom_1.png
-:class: dark-light p-2
-:align: center
+```{feature} bs.tree:mushroom/1
 ```
-
-<div align=center>
-
-`bs.tree:mushroom_1`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/mushroom_2.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 2
+
+```{feature} bs.tree:mushroom/2
 ```
-
-<div align=center>
-
-`bs.tree:mushroom_2`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/mushroom_3.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 3
+
+```{feature} bs.tree:mushroom/3
 ```
-
-<div align=center>
-
-`bs.tree:mushroom_3`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/mushroom_4.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 4
+
+```{feature} bs.tree:mushroom/4
 ```
-
-<div align=center>
-
-`bs.tree:mushroom_4`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/mushroom_5.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 5
+
+```{feature} bs.tree:mushroom/5
 ```
-
-<div align=center>
-
-`bs.tree:mushroom_5`
-
-</div>
 
 :::
 
@@ -645,76 +364,40 @@ You can find below all structures available in this module.
 
 ### Oak
 
-::::{grid} 2 3 3 3
+::::{tab-set}
 
-:::{grid-item}
+:::{tab-item} Variant 1
 
-```{image} /_imgs/modules/tree/oak_1.png
-:class: dark-light p-2
-:align: center
+```{feature} bs.tree:oak/1
 ```
-
-<div align=center>
-
-`bs.tree:oak_1`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/oak_2.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 2
+
+```{feature} bs.tree:oak/2
 ```
-
-<div align=center>
-
-`bs.tree:oak_2`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/oak_3.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 3
+
+```{feature} bs.tree:oak/3
 ```
-
-<div align=center>
-
-`bs.tree:oak_3`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/oak_4.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 4
+
+```{feature} bs.tree:oak/4
 ```
-
-<div align=center>
-
-`bs.tree:oak_4`
-
-</div>
 
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/oak_5.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 5
+
+```{feature} bs.tree:oak/5
 ```
-
-<div align=center>
-
-`bs.tree:oak_5`
-
-</div>
 
 :::
 
@@ -724,78 +407,43 @@ You can find below all structures available in this module.
 
 ### Palm
 
-::::{grid} 2 3 3 3
+::::{tab-set}
 
-:::{grid-item}
+:::{tab-item} Variant 1
 
-```{image} /_imgs/modules/tree/palm_1.png
-:class: dark-light p-2
-:align: center
+```{feature} bs.tree:palm/1
 ```
 
-<div align=center>
-
-`bs.tree:palm_1`
-
-</div>
-
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/palm_2.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 2
+
+```{feature} bs.tree:palm/2
 ```
 
-<div align=center>
-
-`bs.tree:palm_2`
-
-</div>
-
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/palm_3.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 3
+
+```{feature} bs.tree:palm/3
 ```
 
-<div align=center>
-
-`bs.tree:palm_3`
-
-</div>
-
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/palm_4.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 4
+
+```{feature} bs.tree:palm/4
 ```
 
-<div align=center>
-
-`bs.tree:palm_4`
-
-</div>
-
 :::
-:::{grid-item}
 
-```{image} /_imgs/modules/tree/palm_5.png
-:class: dark-light p-2
-:align: center
+:::{tab-item} Variant 5
+
+```{feature} bs.tree:palm/5
 ```
 
-<div align=center>
-
-`bs.tree:palm_5`
-
-</div>
-
 :::
+
 ::::
 
 ---

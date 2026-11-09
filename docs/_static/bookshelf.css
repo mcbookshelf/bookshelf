@@ -184,3 +184,46 @@ article .sd-tab-set .sd-tab-content > .bs-forms > * > :first-child {
   background-color: var(--pst-color-background);
   border: none;
 }
+
+.bs-structure {
+  position: relative;
+  margin-block: .5rem 1rem;
+  border: 1px solid var(--bz-color-outline);
+  border-radius: .5rem;
+  background: var(--bz-color-surface-5);
+  aspect-ratio: 4 / 3;
+  max-height: 24rem;
+  width: 100%;
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    touch-action: none;
+    border-radius: inherit;
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--bz-color-primary, currentColor);
+    }
+  }
+
+  &:not(.bs-ready)::after {
+    content: "Loading the 3D view…";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--bz-color-muted);
+    font-size: .875rem;
+    pointer-events: none;
+  }
+
+  &.bs-failed::after {
+    content: "The 3D view could not load.";
+  }
+}

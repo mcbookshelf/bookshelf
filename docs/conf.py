@@ -60,7 +60,7 @@ html_favicon = "_static/logo-bookshelf.png"
 
 html_static_path = ["_static"]
 html_css_files = ["bookshelf.css"]
-html_js_files = ["bookshelf.js"]
+html_js_files = ["bookshelf.js", "structure.js"]
 
 version_id = os.environ.get("READTHEDOCS_VERSION", "latest")
 

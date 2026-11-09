@@ -27,7 +27,7 @@ ROLE.2: /(context|input|output)(?![A-Za-z0-9_-])/
 
 KIND: /(executor|position|rotation|dimension|state|result|success|macro|storage|arguments)\b/
 
-REGISTRY: /(context_float_provider|context_int_provider|function|loot_table|predicate|block_tag|entity_type_tag)\b/
+REGISTRY: /(context_float_provider|context_int_provider|function|loot_table|predicate|structure|block_tag|entity_type_tag)\b/
 
 // --- types ------------------------------------------------------------- -----
 

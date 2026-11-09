@@ -23,7 +23,8 @@ type FileText = tuple[str, str | None]
 
 HOOKS = frozenset({"__load__", "__unload__"})
 ENTRIES = frozenset({"__main__", "__macro__"})
-SOURCE_SUFFIXES = frozenset({".mcfunction", ".json"})
+TEXT_SUFFIXES = frozenset({".mcfunction", ".json"})
+SOURCE_SUFFIXES = TEXT_SUFFIXES | {".nbt"}
 TEST_RESOURCES = frozenset({"test", "test_environment", "test_instance"})
 
 
@@ -250,11 +251,14 @@ def pack_files(ctx: Context, name: str) -> Iterator[FileText]:
 
 
 @cached
-def source_files(ws: Workspace, name: str) -> tuple[tuple[str, str], ...]:
-    """The source files of a module with their text, read once."""
+def source_files(ws: Workspace, name: str) -> tuple[FileText, ...]:
+    """The source files of a module with their text, read once: binary files have none."""
     base = ws.directory(name)
     return tuple(
-        (file.relative_to(base).as_posix(), file.read_text("utf-8", "replace"))
+        (
+            file.relative_to(base).as_posix(),
+            file.read_text("utf-8", "replace") if file.suffix in TEXT_SUFFIXES else None,
+        )
         for file in sorted((base / "data" / name).rglob("*"))
         if file.is_file() and file.suffix in SOURCE_SUFFIXES
     )
