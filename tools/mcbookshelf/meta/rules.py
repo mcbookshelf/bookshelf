@@ -148,6 +148,7 @@ CONTEXT_TYPES = {
 REGISTRIES = {
     "block_tag": Registry("tags/block"),
     "entity_type_tag": Registry("tags/entity_type"),
+    "structure": Registry("structure"),
     "function": Registry(
         "tags/function",
         contexts=CONTEXTS,

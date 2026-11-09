@@ -1,4 +1,5 @@
 import copy
+import gzip
 import zipfile
 from collections.abc import Mapping
 from pathlib import Path
@@ -17,6 +18,7 @@ from mcbookshelf.workspace.ownership import Ownership, OwnershipError, analyze, 
 
 MANIFEST_VERSION = 3
 STUB_DESCRIPTION = "Bookshelf API, for editor completion only."
+EMPTY_STRUCTURE = gzip.compress(b"\x0a\x00\x00\x00", mtime=0)
 
 
 def write_manifest(
@@ -56,8 +58,11 @@ def write_stub(name: str, ctx: Context, output: Path) -> Path:
         module = ws.load_module(member)
         files[f"mcdoc/{module.short}.mcdoc"] = render_module(module).encode()
         for feature in _shipped(module, ctx):
-            content = b'{"values":[]}' if feature.tag else b"{}"
             entry = f"data/{member}/{feature.resource}/{feature.name}"
+            if feature.resource == "structure":
+                files[f"{entry}.nbt"] = EMPTY_STRUCTURE
+                continue
+            content = b'{"values":[]}' if feature.tag else b"{}"
             files[f"{entry}.json"] = content
             if feature.macro_struct:
                 files[f"{entry}{constants.MACRO_SUFFIX}.json"] = content

@@ -3,7 +3,7 @@ import os
 from docutils import nodes
 from docutils.statemachine import StringList
 
-from mcbookshelf import workspace
+from mcbookshelf import constants, workspace
 from mcbookshelf.meta import Feature
 from sphinx import addnodes
 from sphinx.util.docutils import SphinxDirective
@@ -11,6 +11,7 @@ from sphinx.util.docutils import SphinxDirective
 from . import markdown
 
 FORMS = ("storage", "macro")
+HINT = "Drag to turn, right-drag to move, click then scroll to zoom, double-click to reset"
 
 
 def released_build() -> bool:
@@ -80,10 +81,23 @@ class FeatureDirective(SphinxDirective):
             signature += nodes.raw("", self.switch(form), format="html")
         content = addnodes.desc_content()
         content += self.parse(markdown.render(feature, macro=macro))
+        if feature.resource == "structure":
+            content += self.viewer(feature)
         content += self.extra()
         desc += signature
         desc += content
         return desc
+
+    @staticmethod
+    def viewer(feature: Feature) -> nodes.Node:
+        """A 3D view of a structure, drawn by `structure.js` from its file in the static files."""
+        html = (
+            f'<div class="bs-structure" data-structure="{feature.module}/{feature.name}"'
+            f' data-version="{constants.GAME_VERSION}">'
+            f'<canvas tabindex="0" aria-label="{HINT}" title="{HINT}"></canvas>'
+            "</div>"
+        )
+        return nodes.raw("", html, format="html")
 
     @staticmethod
     def switch(selected: str) -> str:
