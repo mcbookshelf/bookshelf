@@ -1,0 +1,141 @@
+> Generate random values, weighted picks, and noise patterns.
+
+name: Random
+slug: bookshelf-random
+version: 5.0.0
+tags: runtime
+
+
+$x = int > x coordinate, as a block position
+$y = int > y coordinate, as a block position, such as the z of a block
+$size = int @ 1..2097152 > width of a noise cell, in blocks: a larger cell gives a smoother noise
+$seed = int > seed of the noise: the same seed gives the same noise
+$noise = float @ -1..1 > noise value at the coordinates
+
+
+feature function choice
+  > Select a random value from a list.
+  authors: SBtree
+  created: 2024/06/17 1.21
+  updated: 2026/11/10 26.4
+
+  input arguments: {
+    options: [any] @ 1.. > values to choose from
+  }
+  output storage: any > value chosen
+  output result: int > index of the value chosen
+
+
+feature function weighted_choice
+  > Select a random value from a list, each with its own weight.
+  authors: Aksiome
+  created: 2024/09/04 1.21
+  updated: 2026/11/10 26.4
+
+  input arguments: {
+    options: [any] @ 1.. > values to choose from
+    weights: [int @ 0..] > weight of each value, in the same order: a value of weight 2 is picked twice as often as one of weight 1
+  }
+  output storage: any > value chosen
+  output result: int > index of the value chosen
+
+
+feature context_int_provider uniform
+  > Get a random integer, every value in the range being equally likely.
+  authors: Aksiome
+  created: 2024/06/24 1.21
+  updated: 2026/11/10 26.4
+
+  input storage: {
+    min: int > lowest value
+    max: int > highest value
+  }
+  output result: int > random integer from min to max, both included
+
+
+feature context_int_provider binomial
+  > Count the successes out of a number of trials, each with the same probability.
+  authors: SBtree
+  contributors: Aeldrion
+  created: 2024/06/15 1.21
+  updated: 2026/11/10 26.4
+
+  input storage: {
+    trials: int @ 0.. > number of trials
+    probability: float @ 0..1 > probability of success of each trial
+  }
+  output result: int @ 0.. > number of successes, from 0 to trials
+
+
+feature context_int_provider geometric
+  > Count the trials until the first success, each with the same probability.
+  authors: SBtree
+  contributors: Aeldrion
+  created: 2024/06/16 1.21
+  updated: 2026/11/10 26.4
+
+  input storage: {
+    probability: float @ 0..1 > probability of success of each trial, above 0
+  }
+  output result: int @ 1..65536 > number of trials, the success included
+
+
+feature context_int_provider normal
+  > Get a random integer from a normal distribution, clustered around the mean.
+  authors: Aksiome
+  contributors: Leirof
+  created: 2025/05/15 1.21.5
+  updated: 2026/11/10 26.4
+
+  input storage: {
+    mean: float > value the results are centered on
+    spread: float @ 0.. > standard deviation: how far from the mean the results spread
+  }
+  output result: int > random integer, rounded
+
+
+feature context_int_provider poisson
+  > Count the events that happen in an interval, given how many happen on average.
+  authors: SBtree
+  contributors: Aeldrion
+  created: 2024/06/16 1.21
+  updated: 2026/11/10 26.4
+
+  input storage: {
+    lambda: float @ 0..10 > average number of events, by steps of 0.1
+  }
+  output result: int @ 0.. > number of events
+
+
+feature function simplex_noise_2d
+  > Get the simplex noise value at a position.
+  authors: Aksiome
+  contributors: SBtree
+  created: 2024/08/05 1.21
+  updated: 2026/11/10 26.4
+
+  input storage: {
+    x: $x
+    y: $y
+    size: $size
+    seed: $seed
+  }
+  output storage: $noise
+
+
+feature function fractal_noise_2d
+  > Get the fractal noise value at a position, layers of simplex noise added from coarse to fine.
+  authors: Aksiome
+  created: 2024/08/05 1.21
+  updated: 2026/11/10 26.4
+
+  input storage: {
+    x: $x
+    y: $y
+    size: $size
+    seed: $seed
+    octaves: int @ 1..16 > number of layers: more layers add finer details
+    persistence: float @ 0..1 > amplitude of each layer relative to the previous one, such as 0.5
+    lacunarity: float @ 1..8 > frequency of each layer relative to the previous one, such as 2.0
+  }
+  output storage: $noise

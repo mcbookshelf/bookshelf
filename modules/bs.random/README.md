@@ -37,8 +37,8 @@ Generate random values, weighted picks, and noise patterns.
 ### ✨ Features
 
 - Select random values from a list, with optional weights
-- Generate numbers from various distributions
-- Generate various noise patterns
+- Draw numbers from uniform, binomial, geometric, normal and Poisson distributions
+- Generate simplex and fractal noise
 
 📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/random.html)
 

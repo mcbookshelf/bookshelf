@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$data modify storage bs:out random.choice set from storage bs:in random.choice.options[$(y)]
+$data modify storage bs.random:choice out set from storage bs.random:choice in.options[$(_i)]

@@ -13,17 +13,20 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# return a value that match the index
-data modify storage bs:in random.weighted_choice.options set value [0,1,2,3,4]
-execute store result score #i bs.ctx run function #bs.random:weighted_choice
-execute if score #i bs.ctx matches 0 run assert data storage bs:out random{weighted_choice:0}
-execute if score #i bs.ctx matches 1 run assert data storage bs:out random{weighted_choice:1}
-execute if score #i bs.ctx matches 2 run assert data storage bs:out random{weighted_choice:2}
-execute if score #i bs.ctx matches 3 run assert data storage bs:out random{weighted_choice:3}
-execute if score #i bs.ctx matches 4 run assert data storage bs:out random{weighted_choice:4}
 
-# the weight has an impact on the returned value
-data modify storage bs:in random.weighted_choice.options set value [0,0,42,0,0,0,0]
-data modify storage bs:in random.weighted_choice.weights set value [0,0,1,0,0,0,0]
+# The index matches the value chosen
+function #bs.random:weighted_choice.in {options:[0,1,2,3,4],weights:[1,1,1,1,1]}
+execute store result score #i bs.ctx run function #bs.random:weighted_choice
+execute store result score #v bs.ctx run data get storage bs.random:weighted_choice out
+assert score #i bs.ctx = #v bs.ctx
+assert score #i bs.ctx matches 0..4
+
+# A value of weight 0 is never chosen
+function #bs.random:weighted_choice.in {options:[0,0,42,0,0,0,0],weights:[0,0,1,0,0,0,0]}
 assert result 2 run function #bs.random:weighted_choice
-assert data storage bs:out random{weighted_choice:42}
+assert data storage bs.random:weighted_choice {out:42}
+
+# Any value can be chosen
+function #bs.random:weighted_choice.in {options:[{id:"minecraft:stone"},"text"],weights:[1,0]}
+assert result 0 run function #bs.random:weighted_choice
+assert data storage bs.random:weighted_choice {out:{id:"minecraft:stone"}}
