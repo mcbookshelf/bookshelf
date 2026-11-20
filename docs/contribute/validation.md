@@ -37,4 +37,3 @@ The command shows each issue with its file and line. Most messages tell you how 
 |---------|-----|
 | 'x' cannot be attributed: the feature part is dynamic | A macro builds the ID. Write enough of the ID to identify the feature |
 | 'x' cannot be attributed: the static part could name a feature or a shared path | Same as the previous message. The written part matches several features |
-| 'x' changed since v1.0.0: update its 'updated' stamp | Set the `updated` property of the feature to today's date and the current Minecraft version |
