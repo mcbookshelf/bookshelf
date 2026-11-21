@@ -185,6 +185,11 @@ article .sd-tab-set .sd-tab-content > .bs-forms > * > :first-child {
   border: none;
 }
 
+table.docutils td:first-child code.literal,
+table.docutils td:first-child strong {
+  white-space: nowrap;
+}
+
 .bs-structure {
   position: relative;
   margin-block: .5rem 1rem;

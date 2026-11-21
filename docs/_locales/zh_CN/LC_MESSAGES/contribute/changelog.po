@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../contribute/changelog.md:1 50f77ac8e8f14311a5e4b1ecf10859b1
+msgid "📋 Changelog"
+msgstr "📋 更新日志"
+
+#: ../../contribute/changelog.md:3 a4f9fb298c9a405589bd0dddf2b78a82
+msgid ""
+"Each module has its own `CHANGELOG.md` file. It tells users what changed."
+" It also sets the next version of the module."
+msgstr "每个模块都有自己的 `CHANGELOG.md` 文件。它告诉用户发生了哪些变化，还决定模块的下一个版本号。"
+
+#: ../../contribute/changelog.md:7 19b9efb02a294022a0e3b19b9bf2940c
+msgid "Format"
+msgstr "格式"
+
+#: ../../contribute/changelog.md:21 8291f62c5bb94657a23a654abf322e5f
+msgid ""
+"Keep the `## Unreleased` section at the top. Add one line there for each "
+"change."
+msgstr "将 `## Unreleased` 部分保持在顶部。每项变更在其中添加一行。"
+
+#: ../../contribute/changelog.md:22 9ca90b3b0ccb4590a25f401a4bcc88ed
+msgid ""
+"Start each line with an emoji. Describe the change for users. Link the "
+"issue or the pull request."
+msgstr "每一行以一个表情符号开头。面向用户描述变更。链接到相应的议题或拉取请求。"
+
+#: ../../contribute/changelog.md:23 fc3a7d5879da42a599a5e0970b0ced5d
+msgid ""
+"Don't add version sections, such as `` ## `v1.0.0` ``. The release "
+"process creates them."
+msgstr "不要添加版本部分，例如 `` ## `v1.0.0` ``。发布流程会创建它们。"
+
+#: ../../contribute/changelog.md:27 1d1ad6373f9a4c97863e118cd4bb675e
+msgid "Entry types"
+msgstr "条目类型"
+
+#: ../../contribute/changelog.md:30 48da6316bc71486584e99263a0862c59
+msgid "`⚠️`"
+msgstr "`⚠️`"
+
+#: ../../contribute/changelog.md:31 dc1959ab31f04d11b5246b04cfe861c0
+msgid "A breaking change. Users must update their code"
+msgstr "重大变更。用户必须更新其代码"
+
+#: ../../contribute/changelog.md:32 5baa230a52644ac583e83328e3878766
+msgid "`✨`"
+msgstr "`✨`"
+
+#: ../../contribute/changelog.md:33 9309b4ecffe44792a1314b51e937fb3c
+msgid "A new feature"
+msgstr "新特性"
+
+#: ../../contribute/changelog.md:34 c7344273cf6e43698733686ca9553a4f
+msgid "`♻️`"
+msgstr "`♻️`"
+
+#: ../../contribute/changelog.md:35 0fff5b2636464f049cf952412b494c5f
+msgid "A change to an existing feature that breaks nothing"
+msgstr "对现有特性的更改，不会破坏任何内容"
+
+#: ../../contribute/changelog.md:36 c30f1a41f2654099ae2ef93395b1902b
+msgid "`🐛`"
+msgstr "`🐛`"
+
+#: ../../contribute/changelog.md:37 68dc9a558a984f969e805ca12675e960
+msgid "A bug fix"
+msgstr "缺陷修复"
+
+#: ../../contribute/changelog.md:38 fd41ba55b7e0443e86020ab36eba9807
+msgid "`⚡`"
+msgstr "`⚡`"
+
+#: ../../contribute/changelog.md:39 40c740c708524118ad528dceeaf32d67
+msgid "A performance improvement"
+msgstr "性能改进"
+
+#: ../../contribute/changelog.md:40 c7344273cf6e43698733686ca9553a4f
+msgid "`🗑️`"
+msgstr "`🗑️`"
+
+#: ../../contribute/changelog.md:41 31feb601dd7d4c03a4f13ab83ad3c067
+msgid "A deprecated feature"
+msgstr "已弃用的特性"
+
+#: ../../contribute/changelog.md:42 c30f1a41f2654099ae2ef93395b1902b
+msgid "`📝`"
+msgstr "`📝`"
+
+#: ../../contribute/changelog.md:43 d8790bd47c3d494caff95cad187d51a4
+msgid "A documentation change"
+msgstr "文档更改"
+
+#: ../../contribute/changelog.md:44 c7344273cf6e43698733686ca9553a4f
+msgid "`⚙️`"
+msgstr "`⚙️`"
+
+#: ../../contribute/changelog.md:45 17c71ed87b644e3cbd55ef9bda024832
+msgid "Any other change"
+msgstr "任何其他变更"
+
+#: ../../contribute/changelog.md:48 b19983ea24704e89aa82f4b228874538
+msgid ""
+"The emojis also set the next version of the module. See [version bumps"
+"](#contribute-version-bumps)."
+msgstr "这些表情符号还决定模块的下一个版本。参见[版本升级](#contribute-version-bumps)。"
+

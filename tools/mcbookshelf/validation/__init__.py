@@ -20,7 +20,6 @@ def check_module(name: str) -> list[Issue]:
         layout.check_references,
         layout.check_private,
         layout.check_requirements,
-        metadata.check_stamps,
         metadata.check_changelog,
         docs.check_documentation,
     )

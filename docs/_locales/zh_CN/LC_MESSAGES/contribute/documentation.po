@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-18 22:04+0800\n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
 "PO-Revision-Date: 2025-07-19 18:05+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -16,52 +16,133 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
-#: ../../../contribute/documentation.md:1 8978720f6ca4441080af441a34408e42
+#: ../../contribute/documentation.md:1 ad5cf2366f414911bf9f853607815420
 msgid "📝 Documentation"
 msgstr "📝 文档编写"
 
-#: ../../../contribute/documentation.md:3 1b2f90a460e042949de923ec33a6aeee
-msgid "Bookshelf aims to simplify map making and make it accessible. We've worked hard to create a comprehensive documentation website and ask that every new feature be documented properly."
-msgstr "Bookshelf 致力于简化地图制作并提高其可访问性。我们努力创建了全面的文档网站，要求所有新功能都需妥善记录。"
+#: ../../contribute/documentation.md:3 0b01fedad2f34338be445f4b378e75ac
+msgid ""
+"Bookshelf aims to make map making simple. Good documentation is part of "
+"that. Document every feature that you add."
+msgstr "Bookshelf 的目标是让地图制作变得简单。好的文档是其中的一部分。请为你添加的每个特性编写文档。"
 
-#: ../../../contribute/documentation.md:7 d34cac6a3a804d3f8ed1038ee3e87671
-msgid "✍️ Write the Documentation"
-msgstr "✍️ 撰写文档"
+#: ../../contribute/documentation.md:7 223cfb7e71374b588b7bcd0534aaf310
+msgid "Write the documentation"
+msgstr "撰写文档"
 
-#: ../../../contribute/documentation.md:9 809396fb303947aa88729edddfb4ca62
-msgid "The documentation is written in Markdown, extended with Myst Parser. You can view the [Myst Parser documentation here](https://myst-parser.readthedocs.io/en/latest/intro.html). To add or update documentation, simply follow the structure of existing pages and features. All images are stored in the `/docs/_imgs` folder."
-msgstr "文档使用 Markdown 格式编写，并通过 Myst Parser 扩展。你可查阅[Myst Parser 文档](https://myst-parser.readthedocs.io/en/latest/intro.html)。添加或更新文档时，遵循现有页面和功能的结构即可。所有图像存储在 `/docs/_imgs` 文件夹中。"
+#: ../../contribute/documentation.md:9 2e4b0f8b4fc443a9942b3b7f9f2dd281
+msgid ""
+"The documentation uses Markdown with the [MyST Parser](https://myst-"
+"parser.readthedocs.io/en/latest/intro.html) extensions. Images go in the "
+"`/docs/_imgs` folder."
+msgstr ""
+"文档使用 Markdown 编写，并带有 [MyST Parser](https://myst-"
+"parser.readthedocs.io/en/latest/intro.html) 扩展。图像放在 `/docs/_imgs` 文件夹中。"
 
-#: ../../../contribute/documentation.md:13 e1cdd9ead6de43f8824ffffcf1fdc9a7
-msgid "🔨 Build the Documentation"
-msgstr "🔨 构建文档"
+#: ../../contribute/documentation.md:11 f46bf234139e4aee91409287a64c9af9
+msgid ""
+"Each module has a page in `docs/modules`. The page name is the module "
+"name without the `bs.` prefix. For example, the page of `bs.health` is "
+"`docs/modules/health.md`. To add or change a page, follow the structure "
+"of the other pages."
+msgstr ""
+"每个模块在 `docs/modules` 中都有一个页面。页面名称是去掉 `bs.` 前缀的模块名。例如，`bs.health` 的页面是 "
+"`docs/modules/health.md`。添加或修改页面时，请遵循其他页面的结构。"
 
-#: ../../../contribute/documentation.md:15 f186b130f59542d0ade2f0209a494e33
-msgid "To verify that your documentation changes work as expected, you can build and view it locally on your computer:"
-msgstr "为验证文档更改是否符合预期，可在本地计算机构建并查看："
+#: ../../contribute/documentation.md:16 48b041c23ac646c39e2da3173b8edbd7
+msgid "Feature directive"
+msgstr "特性指令"
 
-#: ../../../contribute/documentation.md:17 6200af9ac5694572a70ab9c4a8ecbeb5
-msgid "Open a terminal (or PowerShell if you are on Windows)"
-msgstr "打开终端（Windows 系统请使用 PowerShell）"
+#: ../../contribute/documentation.md:18 434fe1412dfb4dbbafca3dd78b9f5482
+#, python-brace-format
+msgid ""
+"Don't write the description, inputs, and outputs of a feature on the "
+"page. They come from the [metadata](project:metadata.md). The `{feature}`"
+" directive shows them. Add one directive for each feature, on the first "
+"line after its heading:"
+msgstr ""
+"不要在页面中写特性的描述、输入和输出。它们来自[元数据](project:metadata.md)，由 `{feature}` "
+"指令显示。请为每个特性添加一个指令，放在其标题之后的第一行："
 
-#: ../../../contribute/documentation.md:18 4cd49092e18a4cc792292da956e8eda9
-msgid "Choose one of the following options to build and view the documentation:"
-msgstr "选择以下任一选项构建并查看文档："
+#: ../../contribute/documentation.md:38 7b03e35855734432a02cba082b4ffcc4
+msgid ""
+"The content of the directive is optional. It appears after the inputs and"
+" outputs."
+msgstr "指令的内容是可选的。它显示在输入和输出之后。"
 
-#: ../../../contribute/documentation.md:20 deb477d2d5204b0dbac8b82195695940
-msgid "Option 1: Build Documentation"
-msgstr "选项 1：构建文档"
+#: ../../contribute/documentation.md:39 9a24c6a6e4514c988f55086e4a787946
+#, python-brace-format
+msgid ""
+"If two features of different types have the same ID, write the type "
+"first: `` {feature} predicate bs.hitbox:get_entity/sized ``."
+msgstr ""
+"如果两个不同类型的特性拥有相同的 ID，请先写类型：`` {feature} predicate "
+"bs.hitbox:get_entity/sized ``。"
 
-#: ../../../contribute/documentation.md:26 eaebcf93e9f84f929708bfcfe702ae0c
-msgid "This command will generate the documentation, which you can find in the `/docs/_build` folder."
-msgstr "此命令将生成文档，结果位于 `/docs/_build` 文件夹中。"
+#: ../../contribute/documentation.md:41 696ec539916f48fca25b83c5b64032d7
+msgid ""
+"Use the rest of the page for what the metadata can't say: ideas that "
+"several features share, examples, and images."
+msgstr "页面的其余部分用来说明元数据无法表达的内容：多个特性共享的概念、示例和图像。"
 
-#: ../../../contribute/documentation.md:28 0cf695adfd7946fb8b89109be88c51ff
-msgid "Option 2: Build with Hot Reload"
+#: ../../contribute/documentation.md:45 f1cf0ae3b60e4e77a81698af8232ac4e
+msgid "Build the documentation"
+msgstr "构建文档"
+
+#: ../../contribute/documentation.md:47 5cf864a2b9ba4a95958f1edb4aceccbc
+msgid "To check your changes, build the documentation on your computer."
+msgstr "要检查你的更改，请在你的电脑上构建文档。"
+
+#: ../../contribute/documentation.md:49 3d6971183e0b4e409872e7637b9ddccf
+msgid "Option 1: Build once"
+msgstr "选项 1：构建一次"
+
+#: ../../contribute/documentation.md:55 3feada1fc8744d228e7914b1da4eefa3
+msgid "This command writes the documentation to the `/docs/_build` folder."
+msgstr "此命令将文档写入 `/docs/_build` 文件夹。"
+
+#: ../../contribute/documentation.md:57 0fe590d1ee884813bd0584ce567f46ba
+msgid "Option 2: Build with hot reload"
 msgstr "选项 2：支持热重载的构建"
 
-#: ../../../contribute/documentation.md:34 19616e75b9644a2395d8b9fb14deadd2
-msgid "This option will also generate the documentation but will allow you to view it in your browser at `http://127.0.0.1:8000` with hot reloading, so any changes you make will automatically update in the browser."
-msgstr "此选项同样生成文档，但支持通过浏览器访问 `http://127.0.0.1:8000` 并启用热重载功能，任何修改将自动在浏览器中更新。"
+#: ../../contribute/documentation.md:63 469c92a0aa294e18be80278d82d5cfa4
+msgid ""
+"This command builds the documentation and serves it at "
+"`http://127.0.0.1:8000`. The browser updates each time you change a page "
+"or a `module.bs` file."
+msgstr "此命令会构建文档，并在 `http://127.0.0.1:8000` 提供访问。每当你修改页面或 `module.bs` 文件时，浏览器都会更新。"
+
+#: ../../contribute/documentation.md:67 1dab9a7e35794a369d4a9f5e6f6ecb29
+msgid "Translations"
+msgstr "翻译"
+
+#: ../../contribute/documentation.md:69 d20f34a14a5b47dd8e2601f35e1d01a7
+msgid "The translations are `.po` files in the `/docs/_locales` folder."
+msgstr "翻译是 `/docs/_locales` 文件夹中的 `.po` 文件。"
+
+#: ../../contribute/documentation.md:72 c7b4b688df124e19ad9348d496ed96d1
+msgid "`uv run docs locales update`"
+msgstr "`uv run docs locales update`"
+
+#: ../../contribute/documentation.md:73 eb945c050f984f308164b0788fe2cd21
+msgid "Update the files of every language with the latest changes"
+msgstr "根据最新变更更新所有语言的文件"
+
+#: ../../contribute/documentation.md:74 1a2c4d5631fe437c8c7e1aa7c82c37f7
+msgid "`uv run docs locales add <lang>`"
+msgstr "`uv run docs locales add <lang>`"
+
+#: ../../contribute/documentation.md:75 3d5a4f5c43034c31a5a1c1c818ad8045
+msgid "Create the files of a new language"
+msgstr "创建新语言的文件"
+
+#: ../../contribute/documentation.md:76 426fd2965a0e41d7bd2231c61fd1ef3d
+msgid "`uv run docs build --lang <lang>`"
+msgstr "`uv run docs build --lang <lang>`"
+
+#: ../../contribute/documentation.md:77 73ddc482c1bc49348d22bd6b85f70ef0
+msgid "Build the documentation in one language"
+msgstr "以某一种语言构建文档"
+

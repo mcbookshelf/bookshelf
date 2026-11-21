@@ -33,4 +33,4 @@ execute if score #raycast.pending bs.data matches 1.. run function bs.raycast:pi
 scoreboard players operation #raycast.next bs.data = #raycast.block bs.data
 scoreboard players operation #raycast.next bs.data < #raycast.entity bs.data
 execute unless score #raycast.next bs.data matches 2147483647 run scoreboard players operation #raycast.next bs.data /= 64 bs.const
-execute unless score #raycast.lx bs.data <= #raycast.next bs.data unless score #raycast.ly bs.data <= #raycast.next bs.data unless score #raycast.lz bs.data <= #raycast.next bs.data as B5-0-0-0-C1 run function bs.raycast:pierce/react
+execute unless score #raycast.lx bs.data <= #raycast.next bs.data unless score #raycast.ly bs.data <= #raycast.next bs.data unless score #raycast.lz bs.data <= #raycast.next bs.data as B5-0-0-0-E9E9F78 run function bs.raycast:pierce/react

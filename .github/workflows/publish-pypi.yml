@@ -1,4 +1,4 @@
-name: 🐍 PyPI
+name: 🐍 Publish to PyPI
 
 on:
   push:
@@ -24,5 +24,10 @@ jobs:
       - uses: astral-sh/setup-uv@v9.0.0
       - name: Publish to PyPI
         run: |
+          version="$(uv version --short)"
+          if curl -sfo /dev/null "https://pypi.org/pypi/mcbookshelf/$version/json"; then
+            echo "mcbookshelf $version is already on PyPI"
+            exit 0
+          fi
           uv build
           uv publish

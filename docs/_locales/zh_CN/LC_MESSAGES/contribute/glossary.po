@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../contribute/glossary.md:5 1e29250d05474acb9fe72f136703ca80
+msgid "📘 Glossary"
+msgstr "📘 术语表"
+
+#: ../../contribute/glossary.md:7 e14c5b298b564fd586628374e155e1d3
+msgid "These words have a specific meaning in this project:"
+msgstr "以下词汇在本项目中有特定含义："
+
+#: ../../_templates/definitions.md:2 20adc705a45d4cc594ceb6444886681b
+msgid "General concepts"
+msgstr "通用概念"
+
+#: ../../_templates/definitions.md:3 2a27514395d54654986a55a1132fc19e
+msgid "**Bundle**"
+msgstr "**捆绑包**"
+
+#: ../../_templates/definitions.md:4 1b82216511b040e0bc60c3907026c13a
+msgid "A set of modules packaged together for distribution."
+msgstr "一组打包在一起用于分发的模块。"
+
+#: ../../_templates/definitions.md:5 e73d9974912e40549f9c8b7028acbf69
+msgid "**Dependency**"
+msgstr "**依赖项**"
+
+#: ../../_templates/definitions.md:6 8042e0474c394db9b48ca88d48c1cc04
+msgid ""
+"A module that another module relies on to function properly. It must be "
+"loaded for the dependent module to work."
+msgstr "另一个模块正常运行所依赖的模块。必须加载依赖项，依赖它的模块才能工作。"
+
+#: ../../_templates/definitions.md:7 9e713bfea8734c0886dd538743e60c73
+msgid "**Feature**"
+msgstr "**特性**"
+
+#: ../../_templates/definitions.md:8 514c5c9b90f24272a41adaa95007ae8b
+msgid ""
+"A user-facing element designed to accomplish a task. Features are often "
+"represented as function tags, but can also include predicates, number "
+"providers, loot tables, tags, and more."
+msgstr "一个面向用户的、用于完成特定任务的元素。特性通常表现为函数标签，但也可以包括谓词、数值提供器、战利品表、标签等。"
+
+#: ../../_templates/definitions.md:9 f9eeb70987924a05894f764ab616bbcf
+msgid "**Module**"
+msgstr "**模块**"
+
+#: ../../_templates/definitions.md:10 7404e5ff11794d34baf9b40e76d52d07
+msgid ""
+"A collection of related features within a namespace, serving a specific "
+"purpose."
+msgstr "命名空间内服务于特定目的的相关特性集合。"
+
+#: ../../_templates/definitions.md:11 a533384aa5cc4825adba02604dc4879f
+msgid "**Weak Dependency**"
+msgstr "**弱依赖项**"
+
+#: ../../_templates/definitions.md:12 75f403a6cb964b7aa27d15ed84aaf8c4
+msgid ""
+"An optional dependency that enhances functionality if present, but is not"
+" essential for the main module to function correctly."
+msgstr "可选的依赖项，存在时可增强功能，但并非主模块正常运行所必需。"
+
+#: ../../_templates/definitions.md:15 d61dc1c2d4c44dc787e71fa1422069c2
+msgid "Special arguments"
+msgstr "特殊参数"
+
+#: ../../_templates/definitions.md:16 de4c6c2a792145b99739621331d9d827
+msgid "**`run`**"
+msgstr "**`run`**"
+
+#: ../../_templates/definitions.md:17 70cf660d100d46c3baec408c3b72605f
+msgid "Specifies a command to be executed by a feature."
+msgstr "指定由特性执行的命令。"
+
+#: ../../_templates/definitions.md:18 35d34820b97d4907b60de66881adf56d
+msgid "**`with`**"
+msgstr "**`with`**"
+
+#: ../../_templates/definitions.md:19 e5a990d1f069473396ed6c5928e8081b
+msgid "Groups the optional arguments of a feature called with a macro."
+msgstr "将通过宏调用的特性的可选参数归为一组。"
+
+#: ../../_templates/definitions.md:22 486c4d1b74954caba4ea0c4ab3a6d25b
+msgid "Special functions"
+msgstr "特殊函数"
+
+#: ../../_templates/definitions.md:23 fde741bb1af1492eb73ec7c6198bc7e0
+msgid "**`*.in`**"
+msgstr "**`*.in`**"
+
+#: ../../_templates/definitions.md:24 f40d5343743d4c8693b9c811c1e433b0
+msgid ""
+"The function tag that takes the inputs of a feature as macro arguments, "
+"instead of reading them from its storage."
+msgstr "以宏参数的形式接收特性输入的函数标签，而不是从其存储中读取输入。"
+
+#: ../../_templates/definitions.md:25 2178bd2515104e208b97421678b0e05e
+msgid "**`*_ata`**"
+msgstr "**`*_ata`**"
+
+#: ../../_templates/definitions.md:26 8155ad6c62bb4454aeb42f346c93789a
+msgid ""
+"Shortened from \"as to at.\" These functions take two positions: one "
+"given through a positional argument (e.g., `positioned`, `at`), and the "
+"other from the executor's position."
+msgstr ""
+"源自 \"as to at\" 的缩写。这些函数接收两个位置：一个通过位置参数（如 "
+"`positioned`、`at`）提供，另一个来自执行者的位置。"
+
+#: ../../contribute/glossary.md:14 fc81fa04e5b4470183279190550a0b6a
+msgid "Contributor concepts"
+msgstr "贡献者概念"
+
+#: ../../contribute/glossary.md:15 9673c2f23a694596967134c8d71744fd
+msgid "**Experimental**"
+msgstr "**实验性**"
+
+#: ../../contribute/glossary.md:16 d7d91051778a4553807feaed3c606acd
+msgid "A feature that isn't ready. Only nightly builds include it."
+msgstr "尚未就绪的特性。只有每夜构建包含它。"
+
+#: ../../contribute/glossary.md:17 8175c220376e45c2ae9b51bdd0525b8a
+msgid "**Group**"
+msgstr "**分组**"
+
+#: ../../contribute/glossary.md:18 d0150a83d04f49e2bd73d94a23a38dec
+msgid "A folder that contains several features and the files that they share."
+msgstr "包含多个特性及其共享文件的文件夹。"
+
+#: ../../contribute/glossary.md:19 64abe0a8c59e4d5fba441cb7c5e63336
+msgid "**Private**"
+msgstr "**私有**"
+
+#: ../../contribute/glossary.md:20 41238f08ebab4b298d1e347dc71d67b0
+msgid ""
+"A file that only its feature or group can use. Functions are always "
+"private. Other files are private when they have a `_` prefix."
+msgstr "只有其所属的特性或分组可以使用的文件。函数始终是私有的。其他文件带有 `_` 前缀时为私有。"
+
+#: ../../contribute/glossary.md:21 cf460784dc7a400d9e859ff7331b31c5
+msgid "**Released**"
+msgstr "**已发布**"
+
+#: ../../contribute/glossary.md:22 ed77957622d74690b8296acd42529e54
+msgid "A module whose version reached `1.0.0`."
+msgstr "版本已达到 `1.0.0` 的模块。"
+

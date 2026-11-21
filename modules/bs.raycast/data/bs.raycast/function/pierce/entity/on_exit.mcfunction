@@ -16,6 +16,6 @@
 scoreboard players operation #raycast.hit bs.data = @s bs.raycast.hit
 execute if score @s bs.raycast.shapes matches 0 store result storage bs.raycast: ray._exit double 0.00006103515625 run scoreboard players operation #raycast.exit bs.data = @s bs.raycast.e0
 execute unless score @s bs.raycast.shapes matches 0 store result score #raycast.exit bs.data store result storage bs.raycast: ray._exit double 0.00006103515625 run compute default integer bs.raycast:_pierce/e/leave
-execute at B5-0-0-0-C1 store result score #p bs.ctx run function bs.raycast:utils/at_exit with storage bs.raycast: ray
+execute at B5-0-0-0-E9E9F78 store result score #p bs.ctx run function bs.raycast:utils/at_exit with storage bs.raycast: ray
 execute if score #p bs.ctx matches 0 run return run function bs.raycast:pierce/stop
 return 1

@@ -1,14 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, Gunivers
 # This file is distributed under the same license as the Bookshelf package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Bookshelf \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-15 01:06+0200\n"
-"PO-Revision-Date: 2025-07-19 19:55+0800\n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
 "Language-Team: zh_CN <LL@li.org>\n"
@@ -16,215 +17,333 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
-#: ../../contribute/metadata.md:1 173dd17441604c6faf981aecec49bc9b
+#: ../../contribute/metadata.md:1 2728ba7994c84049b04211b850a1de06
 msgid "🔖 Metadata"
 msgstr "🔖 元数据"
 
-#: ../../contribute/metadata.md:3 3f14546f9670411ebf7154ebea2d7be9
+#: ../../contribute/metadata.md:3 9d1c9ef0d4e94d4fbedbe8e5027c7e4b
 msgid ""
-"To support automation by tools like the Bookshelf Manager, modules must "
-"declare specific metadata. All metadata are verified during the CI/CD "
-"process (see the [contribution validation page](project:../contribute"
-"/contribution-validation.md))."
+"Each module has a `module.bs` file, and each bundle has a `bundle.bs` "
+"file. These files describe the bundle, the module, and its features. The "
+"build uses them to generate the function tags, the documentation, and the"
+" editor completion. The `uv run check` command checks them. See the "
+"[validation page](project:validation.md)."
 msgstr ""
-"为支持 Bookshelf Manager 等工具的自动化操作，模块必须声明特定元数据。所有元数据均在 CI/CD "
-"流程中验证（参见[贡献验证页面](project:../contribute/contribution-validation.md)）。"
+"每个模块都有一个 `module.bs` 文件，每个捆绑包都有一个 `bundle.bs` "
+"文件。这些文件描述捆绑包、模块及其特性。构建过程用它们生成函数标签、文档和编辑器补全。`uv run check` "
+"命令会检查它们。参见[验证页面](project:validation.md)。"
 
-#: ../../contribute/metadata.md:7 fcbbc5c274a245ee91b8f6f6ebf18907
-msgid "⭐ Feature Metadata"
-msgstr "⭐ 功能元数据"
-
-#: ../../contribute/metadata.md:9 a833685af2a9408b9ba363e106eec49b
+#: ../../contribute/metadata.md:5 b83b0fb1848d40f7aa204fbcf651dc37
 msgid ""
-"Feature metadata are defined directly within each `.json` file, as shown "
-"below:"
-msgstr "功能元数据直接定义在每个 `.json` 文件中，如下所示："
+"This page covers the basics. To learn more of the syntax, read the "
+"`module.bs` files of other modules."
+msgstr "本页只介绍基础内容。要了解更多语法，请阅读其他模块的 `module.bs` 文件。"
 
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 303b4fb70a5b4281809382fed9957d95 3556475e987f46f9b383f89211331bae
-msgid "Field"
-msgstr "字段"
+#: ../../contribute/metadata.md:7 92ed24a5ddc0499987c1516bdcf07de9
+msgid "Editor support"
+msgstr "编辑器支持"
 
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 05382a061e4c462a85ecf6165d546385 47f7d445837b428ebc1897f54c3c6503
+#: ../../contribute/metadata.md:10 d7e3e113d7ef48d69d2d4b4fca46927b
+msgid ""
+"The `mcbookshelf.vscode-bsdoc` extension for VS Code highlights and "
+"checks `.bs` files."
+msgstr "VS Code 的 `mcbookshelf.vscode-bsdoc` 扩展可以高亮并检查 `.bs` 文件。"
+
+#: ../../contribute/metadata.md:15 62d7eb4e772a4eb69b147b5d8f178add
+msgid "Bundle metadata"
+msgstr "捆绑包元数据"
+
+#: ../../contribute/metadata.md:17 3187b276a4b54de5a5d77c4b7c24eac7
+msgid ""
+"A bundle is a set of modules in one pack. Its folder name starts with "
+"`@`, for example `modules/@bs.runtime`. Its `bundle.bs` file starts with "
+"a description of the bundle. The properties follow:"
+msgstr ""
+"捆绑包是打包在一起的一组模块。它的文件夹名称以 `@` 开头，例如 `modules/@bs.runtime`。它的 `bundle.bs` "
+"文件以捆绑包的描述开头，随后是各项属性："
+
+#: ../../contribute/metadata.md:7 5b5f7f15ec254b15990329a77b6bf3f9
+msgid "Property"
+msgstr "属性"
+
+#: ../../contribute/metadata.md:7 bd7562db7e8742e6b8015c517130976f
 msgid "Description"
 msgstr "描述"
 
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 01077e0d582641e79d6e7e9abb838bd9 bb795b1541ae491d8a3709089974bfb3
-msgid "Mandatory"
+#: ../../contribute/metadata.md:7 4c11668d2b284f12869661b744d0681b
+msgid "Required"
 msgstr "必需"
 
-#: ../../contribute/metadata.md:11 cbace52bc5cf460b94fb0291386cef96
-msgid "feature"
-msgstr "feature"
-
-#: ../../contribute/metadata.md:11 af9adb8ec4e7497f93ded91460424bf6
-msgid "Indicates whether the file is the endpoint of a feature"
-msgstr "指示当前函数标签是否为功能的端点"
-
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 5e86f9c29333404a95b9a95efbc25a14 5e9549b74e554c09b644471447fd59f7
-#: 62363e66baf34bab85f10555568bc2b4 6acb98b6873c4a3db424f34b067e36f9
-#: 6e50eb42789f49df86de1213b16636f0 7e1262edf61242759932c694ddb500df
-#: 937098ed842c4946af82c04326bf5c96 9b0a8b015f5346e28e831ca646df3ba2
-#: f6068e67f49e4f96b5f6552956d9ae74
-msgid "yes"
-msgstr "是"
-
-#: ../../contribute/metadata.md:11 af4820d5a23348499197661b1ac9c532
-msgid "deprecated"
-msgstr "deprecated"
-
-#: ../../contribute/metadata.md:11 2840592262b44a6c8d2f9225997f1d45
-msgid "Indicates whether the feature has been deprecated"
-msgstr "表示该功能是否已弃用"
-
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 3caea657ec034e2686ceb5a07be6280e 41432e64ff9d4027a58a22697674eb7e
-#: 9a7303ad2fce48d7a86886557108e191 d5739f31587349b59def57e97d4ee34b
-#: e107b796a177464db7c7f2faa12d9199 fca60076f61e4ff8ba8f18cc713c8d25
-msgid "no"
-msgstr "否"
-
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 2550127dd1c540fb9e06120b3c21f1dd d39194c4c6e6438981f6c46e1fbb126c
-msgid "documentation"
-msgstr "documentation"
-
-#: ../../contribute/metadata.md:11 dd3e1bd55de44072a7e30d04d940b766
-msgid "A link to the feature's documentation"
-msgstr "功能文档的链接"
-
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 49c9a27d35b549b899103d1e47e92221 d71808cd47a8408ab56899f3821c2d05
-msgid "authors"
-msgstr "authors"
-
-#: ../../contribute/metadata.md:11 422cfdc2f574401fb5734bece89bafe4
-msgid "A list of feature authors. Cannot be empty"
-msgstr "功能作者列表（不可为空）"
-
-#: ../../contribute/metadata.md:11 ../../contribute/metadata.md:53
-#: 4e4c69785b244415ad3d5618fad067cf b0d644dbd0f542c59df65a5bcb45c2c3
-msgid "contributors"
-msgstr "contributors"
-
-#: ../../contribute/metadata.md:11 d1322adb28dc479888ed557b78dd4096
-msgid ""
-"A list of contributors (e.g., those who provided insights, fixes, or "
-"indirect help)"
-msgstr "贡献者列表（如提供见解、修复或间接帮助的人员）"
-
-#: ../../contribute/metadata.md:11 10a06150494943f4b5c049163e553458
-msgid "created"
-msgstr "created"
-
-#: ../../contribute/metadata.md:11 c32a0326c0764cc3a3c5a92cfe87b543
-msgid "The creation date and Minecraft version for historical purposes"
-msgstr "创建日期和 Minecraft 版本（用于历史记录）"
-
-#: ../../contribute/metadata.md:11 178e66d4681c4bdfbc0e3640614ea2e4
-msgid "updated"
-msgstr "updated"
-
-#: ../../contribute/metadata.md:11 1bcfd66d590c428fb913e290d360128d
-msgid "The date and Minecraft version of the most recent update"
-msgstr "最近更新的日期和 Minecraft 版本"
-
-#: ../../contribute/metadata.md:49 7bab91f80f224950bee81b9d0f721eb5
-msgid "🧩 Module Metadata"
-msgstr "🧩 模块元数据"
-
-#: ../../contribute/metadata.md:51 13bda0dab854453e82c8b820e84bcd20
-msgid ""
-"Module metadata are defined in `modules/<module>/module.json`. Below is "
-"an example:"
-msgstr "模块元数据定义在 `modules/<module>/module.json` 中。示例如下："
-
-#: ../../contribute/metadata.md:53 e71ca31eb43f46d59091cecb8ef2cf4d
+#: ../../contribute/metadata.md:7 489dac7cc782448a97c2acaf75e8a46e
 msgid "name"
 msgstr "name"
 
-#: ../../contribute/metadata.md:53 c918f47c358546bf87da547c71d0f3f4
-msgid "The module's display name (e.g., `Foo`)"
-msgstr "模块显示名称（如 `Foo`）"
+#: ../../contribute/metadata.md:7 46cc564bc4104b58ad7b70d24079b2cd
+msgid "The display name of the bundle, for example `Runtime`"
+msgstr "捆绑包的显示名称，例如 `Runtime`"
 
-#: ../../contribute/metadata.md:53 8230e219453f45d3875164876592d592
+#: ../../contribute/metadata.md:7 93267435c6454cb28525249626172fc8
+msgid "yes"
+msgstr "是"
+
+#: ../../contribute/metadata.md:7 fc734b2bd26842d4a73facec81288810
 msgid "slug"
 msgstr "slug"
 
-#: ../../contribute/metadata.md:53 4736368cabdf4b57870335ea6b56c022
-msgid "The module's slug used to publish to platforms (e.g., `bookshelf-foo`)"
-msgstr "模块的 slug（用于发布到平台，如 `bookshelf-foo`）"
+#: ../../contribute/metadata.md:7 16e2425b1985462fa0682f010047165f
+msgid "The name used to publish the bundle, for example `bookshelf-runtime`"
+msgstr "用于发布捆绑包的名称，例如 `bookshelf-runtime`"
 
-#: ../../contribute/metadata.md:53 0a82f4b25c1942ba816cba9e20385491
-msgid "description"
-msgstr "description"
+#: ../../contribute/metadata.md:7 5aa4a925c75349e59ed949b314807e2f
+msgid "version"
+msgstr "version"
 
-#: ../../contribute/metadata.md:53 2340adae61914709b03fca826b4d268a
-msgid "A description of the module's purpose"
-msgstr "模块用途的描述"
+#: ../../contribute/metadata.md:7 46cc564bc4104b58ad7b70d24079b2cd
+msgid "The version of the bundle, for example `5.0.0`"
+msgstr "捆绑包的版本，例如 `5.0.0`"
 
-#: ../../contribute/metadata.md:53 1714c5becddd4ed491e89d7d5ec56a86
-msgid "A link to the module's documentation"
-msgstr "模块文档的链接"
-
-#: ../../contribute/metadata.md:53 df10f741e82d413283dfea2053c7d618
+#: ../../contribute/metadata.md:7 19caecd777a2479d928922ac27e7b312
 msgid "tags"
 msgstr "tags"
 
-#: ../../contribute/metadata.md:53 a49a1fcb3a274436b734903371192d34
+#: ../../contribute/metadata.md:7 be8fd2de259d4678b1e2b7c2dd397d84
 msgid ""
-"A list of tags for categorizing or identifying modules. Tags are also "
-"used to generate bundles (e.g., `default` and `dev`)"
-msgstr "用于分类或标识模块的标签列表，也用于生成捆绑包（如 `default` 和 `dev`）"
+"A list of tags. The bundle includes every released module that has one of"
+" them"
+msgstr "标签列表。捆绑包会包含拥有其中某个标签的所有已发布模块"
 
-#: ../../contribute/metadata.md:53 b39a6899bdc1491680d9f7ea6c526645
-msgid "no (but trigger warnings)"
-msgstr "否（但会触发警告）"
+#: ../../contribute/metadata.md:7 4dcce364cb424f7489e803cf08f66139
+msgid "documentation"
+msgstr "documentation"
 
-#: ../../contribute/metadata.md:53 4734eaacb7fd4b938f947581d059c23d
+#: ../../contribute/metadata.md:7 342a9960f4c342f9839d49e6366c4202
+msgid "A link to the bundle documentation"
+msgstr "捆绑包文档的链接"
+
+#: ../../contribute/metadata.md:7 776d8d6598d143d4892472e63614ce07
+msgid "no"
+msgstr "否"
+
+#: ../../contribute/metadata.md:38 a4b1d296fc7a46ee92a6647b1ec3dcfc
+msgid "Module metadata"
+msgstr "模块元数据"
+
+#: ../../contribute/metadata.md:40 46cc564bc4104b58ad7b70d24079b2cd
 msgid ""
-"A list of module authors (supplements authors from features). Cannot be "
-"empty"
-msgstr "模块作者列表（补充功能中的作者），不可为空"
+"The `module.bs` file starts with a description of the module. The "
+"properties follow:"
+msgstr "`module.bs` 文件以模块的描述开头，随后是各项属性："
 
-#: ../../contribute/metadata.md:53 07b291319d0b444889ae6bda7ccda3c8
-msgid "A list of contributors (supplements contributors from features)"
-msgstr "贡献者列表（补充功能中的贡献者）"
+#: ../../contribute/metadata.md:7 46cc564bc4104b58ad7b70d24079b2cd
+msgid "The display name of the module, for example `Health`"
+msgstr "模块的显示名称，例如 `Health`"
 
-#: ../../contribute/metadata.md:53 9b6f0e8f29cd466c8c1924f49928e77a
-msgid "dependencies"
-msgstr "dependencies"
+#: ../../contribute/metadata.md:7 16e2425b1985462fa0682f010047165f
+msgid "The name used to publish the module, for example `bookshelf-health`"
+msgstr "用于发布模块的名称，例如 `bookshelf-health`"
 
-#: ../../contribute/metadata.md:53 6a675244dc5c45a6b35454d239018974
-msgid "Essential modules required for this module to function (e.g., `bs.hitbox`)"
-msgstr "模块运行必需的依赖模块（如 `bs.hitbox`）"
-
-#: ../../contribute/metadata.md:53 fdfd8a52385643e8986d668ae31c6732
-msgid "weak dependencies"
-msgstr "weak dependencies"
-
-#: ../../contribute/metadata.md:53 34ebbd4e1fa744059f736a8175e241b0
+#: ../../contribute/metadata.md:7 631d748d3a704ed6a9b85e2777eacfa3
 msgid ""
-"Optional modules that enhance functionality but are not essential (e.g., "
-"`bs.log`)"
-msgstr "增强功能但非必需的模块（如 `bs.log`）"
+"The version of the module, for example `5.0.0`. See the [changelog "
+"page](project:changelog.md)"
+msgstr "模块的版本号，例如 `5.0.0`。参见[更新日志页面](project:changelog.md)"
 
-#: ../../contribute/metadata.md:95 fb68342310cc45c0a275ef7693fdca2a
-msgid "📜 Manifest"
-msgstr "📜 清单"
-
-#: ../../contribute/metadata.md:97 7130c6a841e2417481689ac1e1550bc8
+#: ../../contribute/metadata.md:7 8e21520dac924d05be1f21f52d6f5a1a
 msgid ""
-"The manifest consolidates metadata for all modules and features in "
-"Bookshelf. It is automatically generated and can be updated using the "
-"following command:"
-msgstr "清单整合了 Bookshelf 所有模块和功能的元数据，自动生成并可通过以下命令更新："
+"A list of tags. Bundles use them to select modules, for example `runtime`"
+" or `dev`"
+msgstr "标签列表。捆绑包用它们来选择模块，例如 `runtime` 或 `dev`"
 
-#: ../../contribute/metadata.md:101 7691e3936f384ac7aa81fb9e44bdb5cf
-msgid "The generated file is located at `meta/manifest.json`."
-msgstr "生成的文件位于 `meta/manifest.json`。"
+#: ../../contribute/metadata.md:7 342a9960f4c342f9839d49e6366c4202
+msgid ""
+"A link to the module documentation. The default is its page in "
+"`docs/modules`"
+msgstr "模块文档的链接。默认为其在 `docs/modules` 中的页面"
+
+#: ../../contribute/metadata.md:7 a6f261ea391343eea419595ceed7ca91
+msgid "weak_dependencies"
+msgstr "weak_dependencies"
+
+#: ../../contribute/metadata.md:7 f932d4d5a53b4fdfa2d61f86e8313414
+msgid ""
+"Modules that improve this one but that it can work without, for example "
+"`bs.log`"
+msgstr "能增强本模块、但并非必需的模块，例如 `bs.log`"
+
+#: ../../contribute/metadata.md:60 981517bd6cfd4bf8a6bc521e6648e00e
+msgid ""
+"You don't declare dependencies. The build finds them in the module files."
+" For example, a call to `#bs.hitbox:get_block/collision` makes the module"
+" depend on `bs.hitbox`."
+msgstr ""
+"你无需声明依赖项。构建会在模块的文件中找到它们。例如，调用 `#bs.hitbox:get_block/collision` 会让模块依赖 "
+"`bs.hitbox`。"
+
+#: ../../contribute/metadata.md:64 c0528a3eabf24e65878d79f79fce139e
+msgid "Feature metadata"
+msgstr "特性元数据"
+
+#: ../../contribute/metadata.md:66 160883f6c02745b58514e92870eba9dc
+msgid ""
+"The features come after the module properties. Declare each feature with "
+"its type, its name, and a description:"
+msgstr "特性位于模块属性之后。声明每个特性时，写明它的类型、名称和描述："
+
+#: ../../contribute/metadata.md:83 37752470698147d0b6ce8fd8d23c9d6d
+msgid ""
+"The type is one of `function`, `predicate`, `loot_table`, "
+"`context_int_provider`, `context_float_provider`, `block_tag`, or "
+"`entity_type_tag`."
+msgstr ""
+"类型是 "
+"`function`、`predicate`、`loot_table`、`context_int_provider`、`context_float_provider`、`block_tag`"
+" 或 `entity_type_tag` 之一。"
+
+#: ../../contribute/metadata.md:7 3f1943d3e8c24604ae70608e6f00aea2
+msgid "authors"
+msgstr "authors"
+
+#: ../../contribute/metadata.md:7 5397a6fdc9d8428b843488821cd0105a
+msgid "A list of the feature authors"
+msgstr "特性的作者列表"
+
+#: ../../contribute/metadata.md:7 957662aab38447aea8af9bedff8e58bb
+msgid "contributors"
+msgstr "contributors"
+
+#: ../../contribute/metadata.md:7 b358672ee7f74cd3add3b4949d7f8fec
+msgid "A list of people who helped, for example with ideas or fixes"
+msgstr "提供过帮助的人员列表，例如提出想法或修复问题"
+
+#: ../../contribute/metadata.md:7 67a31fc244b444b180e677d759fe0dd8
+msgid "created"
+msgstr "created"
+
+#: ../../contribute/metadata.md:7 f340575907fb47a99b8b79ea28563bf6
+msgid "The date and Minecraft version when the feature was created"
+msgstr "特性创建时的日期和 Minecraft 版本"
+
+#: ../../contribute/metadata.md:7 8e986dfa2b774436af772024ed93cf84
+msgid "updated"
+msgstr "updated"
+
+#: ../../contribute/metadata.md:7 f340575907fb47a99b8b79ea28563bf6
+msgid "The date and Minecraft version of the last change"
+msgstr "最近一次修改的日期和 Minecraft 版本"
+
+#: ../../contribute/metadata.md:7 e79a82d7286d465c985cad4e0dccad93
+msgid "deprecated"
+msgstr "deprecated"
+
+#: ../../contribute/metadata.md:7 3363fe9fdf414e7a9e2455e5051c4bb2
+msgid "Set to `true` when users should stop using the feature"
+msgstr "当用户应停止使用该特性时设为 `true`"
+
+#: ../../contribute/metadata.md:7 8d720c58bfca4942929b74c4809edc3b
+msgid "experimental"
+msgstr "experimental"
+
+#: ../../contribute/metadata.md:7 523004d96fbb480ea5f8cf9e3402df7f
+msgid "Set to `true` when the feature isn't ready. Only nightly builds include it"
+msgstr "当特性尚未就绪时设为 `true`。只有每夜构建包含它"
+
+#: ../../contribute/metadata.md:94 35dd2dc5afe9497489a2e23ef4381adc
+msgid ""
+"A description starts with `>`. Describe only what this feature does. "
+"Explain ideas that several features share on the documentation page of "
+"the module."
+msgstr "描述以 `>` 开头。只描述该特性本身的作用。多个特性共享的概念请在模块的文档页面中说明。"
+
+#: ../../contribute/metadata.md:96 122374e2a5ea4fb5843aa64b6f865211
+msgid "Context, inputs, and outputs"
+msgstr "上下文、输入和输出"
+
+#: ../../contribute/metadata.md:98 3fa4a9f6af3a424f85d9d941958e3901
+msgid ""
+"The lines that start with `context`, `input`, and `output` describe how "
+"to use the feature. They appear in the documentation, and editors use "
+"them for completion."
+msgstr "以 `context`、`input` 和 `output` 开头的行描述如何使用特性。它们会显示在文档中，编辑器也用它们来提供补全。"
+
+#: ../../contribute/metadata.md:101 417ff6e099be41f8aa5c280e291d0340
+msgid "`context`"
+msgstr "`context`"
+
+#: ../../contribute/metadata.md:102 96a070579d814fb0b21421b10e8313d5
+msgid ""
+"How the feature must run: `executor`, `position`, `rotation`, or "
+"`dimension`"
+msgstr "特性必须以何种方式运行：`executor`、`position`、`rotation` 或 `dimension`"
+
+#: ../../contribute/metadata.md:103 115df7b16de5436abdc07622f34ed57a
+msgid "`input arguments`"
+msgstr "`input arguments`"
+
+#: ../../contribute/metadata.md:104 bb711dd9fd874bfca6e3290ea3022aeb
+msgid ""
+"Data that the feature reads from the storage `<module>:<feature>`, at the"
+" path `in`. Users can also [call the feature with a macro](#contribute-"
+"calling-a-feature). Optional entries, marked with `?`, go in a `with` "
+"argument"
+msgstr ""
+"特性从存储 `<module>:<feature>` 的 `in` 路径读取的数据。用户还可以[用宏调用该特性](#contribute-"
+"calling-a-feature)。带 `?` 标记的可选条目归入 `with` 参数"
+
+#: ../../contribute/metadata.md:105 e1dd68fd04554a65b4e40ffe3a379ad2
+msgid "`input storage`"
+msgstr "`input storage`"
+
+#: ../../contribute/metadata.md:106 63fe4030bace4826bfc9c70df313c21d
+msgid "Same as `input arguments`, without the macro"
+msgstr "与 `input arguments` 相同，但没有宏"
+
+#: ../../contribute/metadata.md:107 f181d897df2b4aaebcb16af9cf6bddd9
+msgid "`input macro`"
+msgstr "`input macro`"
+
+#: ../../contribute/metadata.md:108 ed1bdbd7851a40448b8a4bd68ef2b21c
+msgid "The arguments of a `__macro__` function that you write"
+msgstr "你自己编写的 `__macro__` 函数的参数"
+
+#: ../../contribute/metadata.md:109 46d184e4a4704a8bb6355104462784fc
+msgid "`output storage`"
+msgstr "`output storage`"
+
+#: ../../contribute/metadata.md:110 2e44332417f24426a1c980f6d4895271
+msgid ""
+"Data that the feature writes to the storage `<module>:<feature>`, at the "
+"path `out`"
+msgstr "特性写入存储 `<module>:<feature>` 的 `out` 路径的数据"
+
+#: ../../contribute/metadata.md:111 4521021360e94fa185bcd4e130617a2c
+msgid "`output result`"
+msgstr "`output result`"
+
+#: ../../contribute/metadata.md:112 73fbdee40ad249a2a8a7ea6b4e239240
+msgid "The number that the feature returns"
+msgstr "特性返回的数值"
+
+#: ../../contribute/metadata.md:113 8cb52873e9654f5aabc652df1abe2828
+msgid "`output success`"
+msgstr "`output success`"
+
+#: ../../contribute/metadata.md:114 d0c6f48ebad3419dae3d7b8daab3b475
+msgid "The feature either succeeds or fails"
+msgstr "特性成功或失败"
+
+#: ../../contribute/metadata.md:115 a4b3eddae3ae4966ae81fd01558366d1
+msgid "`state`"
+msgstr "`state`"
+
+#: ../../contribute/metadata.md:116 7949c62e4a8c44d887b652c41d85071d
+msgid ""
+"Anything else, in plain words. Use it after `context`, `input`, or "
+"`output`"
+msgstr "其他任何内容，用文字描述。可用在 `context`、`input` 或 `output` 之后"
+
+#: ../../contribute/metadata.md:119 75d60e12982143c78788e2a31529459a
+msgid "To share a storage between several features, name it:"
+msgstr "要在多个特性之间共享一个存储，请为它命名："
+

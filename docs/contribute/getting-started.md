@@ -1,71 +1,68 @@
----
-hide-sidebar-secondary: true
----
+# 🚀 Getting started
 
-# 🚀 Getting Started
-
-This guide will walk you through setting up a local development environment to build, test, and contribute to our modules.
+This page shows you how to build the modules on your computer and try them in Minecraft.
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
-Before you start, make sure your system is ready by completing the following steps:
+1. Install [uv](https://docs.astral.sh/uv/getting-started/installation/). It's a Python package and project manager. It installs Python and the project tools the first time you run a command.
+2. Clone the repository. If you're new to GitHub, follow the [First Contributions guide](https://github.com/firstcontributions/first-contributions/blob/main/README.md).
+3. Open the project folder in your code editor.
 
-1. **Install [UV](https://docs.astral.sh/uv/getting-started/installation/)**, a Python package and project manager.
-2. **Clone the repository**, if you haven’t done this before, follow this step-by-step tutorial: [First Contributions Guide](https://github.com/firstcontributions/first-contributions/blob/main/README.md). Once cloned, open the project folder in your preferred code editor.
-
----
-
-## 🔨 Building Modules
-
-The `modules` directory contains the source files for all modules. Use the following commands to manage and build them efficiently:
-
-:::{list-table}
-*   - `uv run modules build`
-    - Build all modules
-*   - `uv run modules watch`
-    - Monitor changes and rebuild modules automatically
-*   - `uv run modules <build|watch> <module1> ...`
-    - Build or watch only the specified modules
-*   - `uv run link [world]`
-    - Link the generated resource and data packs to a Minecraft world
-:::
-
-```{admonition} Watching Modules
+```{admonition} Editor support
 :class: tip
 
-Building modules can take some time. For a smoother experience, it's recommended to only watch the module you're currently working on: `uv run modules watch <module>`.
-```
-
-### Linking Modules to Minecraft
-
-The `link` command allows you to integrate generated packs directly into a Minecraft world. Below are the options available for this command:
-
-:::{list-table}
-*   - `world (optional)`
-    - The name of the Minecraft world to link
-*   - `--minecraft <DIRECTORY>`
-    - Path to the `.minecraft` directory (location of Minecraft files)
-*   - `--data-pack <DIRECTORY>`
-    - Path to the directory where data packs are stored
-*   - `--resource-pack <DIRECTORY>`
-    - Path to the directory where resource packs are stored
-:::
-
-This workflow demonstrates how to link and continuously test your modules directly in Minecraft:
-```sh
-# Link modules to a specific world
-uv run link <world> --minecraft </path/to/.minecraft>
-
-# Monitor changes and rebuild a module for the linked world
-uv run modules watch <module>
+If you use VS Code, install the recommended `mcbookshelf.vscode-bsdoc` extension. It helps you edit [module.bs files](project:metadata.md).
 ```
 
 ---
 
-## 🧪 Testing Modules
+## Build the modules
 
-Testing is a fundamental aspect of software development. It helps ensure the correctness of your code and can save you from potential bugs in the future.
+The `modules` folder contains the source files of every module. These commands build them into the `build` folder:
 
-To learn how to write and run tests for your modules, refer to the [Debug Section](project:debug-tools.md#-unit-tests).
+:::{list-table}
+*   - `uv run build`
+    - Build all modules
+*   - `uv run watch`
+    - Build all modules, then build them again each time a file changes
+*   - `uv run <build|watch> <name1> ...`
+    - Build or watch only the modules, bundles, or examples you name
+:::
+
+```{admonition} Watch one module
+:class: tip
+
+A full build takes time. Watch only the module you work on: `uv run watch <module>`.
+```
+
+---
+
+(contribute-linking-to-minecraft)=
+## Link to Minecraft
+
+The `link` command connects the `build` folder to a Minecraft world. Each build then copies the packs to that world.
+
+:::{list-table}
+*   - `world`
+    - The name of the Minecraft world to link
+*   - `--minecraft <DIRECTORY>`
+    - Path to the `.minecraft` directory
+*   - `--data-pack <DIRECTORY>`
+    - Path to the data packs directory
+*   - `--resource-pack <DIRECTORY>`
+    - Path to the resource packs directory
+:::
+
+To test a module while you work on it:
+
+```sh
+# Link the build folder to a world
+uv run link <world> --minecraft </path/to/.minecraft>
+
+# Build the module again each time a file changes
+uv run watch <module>
+```
+
+The `watch` command also reloads the world after each build.

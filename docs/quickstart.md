@@ -96,7 +96,7 @@ This lists loaded modules and checks for compatibility issues. If you need help 
 From there, you can explore the documentation for individual modules, try out examples, and start integrating their functionality into your own projects!
 
 :::{important}
-- Bookshelf uses persistent entities. Avoid `kill @e`, use `kill @e[tag=!bs.persistent]` instead. [Learn more](contribute/shared-resources.md#entities)
+- Bookshelf uses persistent entities. Avoid `kill @e`, use `kill @e[tag=!bs.persistent]` instead. [Learn more](#contribute-shared-resources)
 - Side effects are rare, but conflicts can occur if multiple datapacks use the same functions. Always set inputs before running a function.
 :::
 

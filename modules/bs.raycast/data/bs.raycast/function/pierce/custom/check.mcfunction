@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-return run execute at B5-0-0-0-C1 run function bs.raycast:pierce/custom/hit with storage bs.raycast: ray
+return run execute at B5-0-0-0-E9E9F78 run function bs.raycast:pierce/custom/hit with storage bs.raycast: ray

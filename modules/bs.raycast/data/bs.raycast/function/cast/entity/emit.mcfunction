@@ -20,6 +20,6 @@ scoreboard players operation #raycast.ey bs.data = @s bs.raycast.y
 scoreboard players operation #raycast.ez bs.data = @s bs.raycast.z
 execute if data storage bs.raycast: ray.on_entity at @s run function bs.raycast:utils/on_entity with storage bs.raycast: ray
 execute if data storage bs.raycast: ray.on_entry store result storage bs.raycast: ray._entry double 0.00000095367431640625 run scoreboard players get #raycast.hit bs.data
-execute if data storage bs.raycast: ray.on_entry at B5-0-0-0-C1 run function bs.raycast:utils/at_entry with storage bs.raycast: ray
+execute if data storage bs.raycast: ray.on_entry at B5-0-0-0-E9E9F78 run function bs.raycast:utils/at_entry with storage bs.raycast: ray
 scoreboard players set #raycast.max bs.data -2147483648
 scoreboard players set #raycast.kind bs.data 0
