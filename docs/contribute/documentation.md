@@ -1,34 +1,78 @@
 # 📝 Documentation
 
-Bookshelf aims to simplify map making and make it accessible. We've worked hard to create a comprehensive documentation website and ask that every new feature be documented properly.
+Bookshelf aims to make map making simple. Good documentation is part of that. Document every feature that you add.
 
 ---
 
-## ✍️ Write the Documentation
+## Write the documentation
 
-The documentation is written in Markdown, extended with Myst Parser. You can view the [Myst Parser documentation here](https://myst-parser.readthedocs.io/en/latest/intro.html). To add or update documentation, simply follow the structure of existing pages and features. All images are stored in the `/docs/_imgs` folder.
+The documentation uses Markdown with the [MyST Parser](https://myst-parser.readthedocs.io/en/latest/intro.html) extensions. Images go in the `/docs/_imgs` folder.
+
+Each module has a page in `docs/modules`. The page name is the module name without the `bs.` prefix. For example, the page of `bs.health` is `docs/modules/health.md`. To add or change a page, follow the structure of the other pages.
 
 ---
 
-## 🔨 Build the Documentation
+(contribute-feature-directive)=
+## Feature directive
 
-To verify that your documentation changes work as expected, you can build and view it locally on your computer:
+Don't write the description, inputs, and outputs of a feature on the page. They come from the [metadata](project:metadata.md). The `{feature}` directive shows them. Add one directive for each feature, on the first line after its heading:
 
-1. Open a terminal (or PowerShell if you are on Windows)
-2. Choose one of the following options to build and view the documentation:
+`````markdown
+### Add levels
 
-### Option 1: Build Documentation
+````{feature} bs.xp:add_levels
+```{admonition} How to Remove?
+:class: tip
+
+You can use negative numbers to remove experience from the player.
+```
+````
+
+*Example: add 42 levels*
+
+```mcfunction
+function #bs.xp:add_levels.in {levels:42}
+```
+`````
+
+- The content of the directive is optional. It appears after the inputs and outputs.
+- If two features of different types have the same ID, write the type first: `` {feature} predicate bs.hitbox:get_entity/sized ``.
+
+Use the rest of the page for what the metadata can't say: ideas that several features share, examples, and images.
+
+---
+
+## Build the documentation
+
+To check your changes, build the documentation on your computer.
+
+### Option 1: Build once
 
 ```shell
 uv run docs build
 ```
 
-This command will generate the documentation, which you can find in the `/docs/_build` folder.
+This command writes the documentation to the `/docs/_build` folder.
 
-### Option 2: Build with Hot Reload
+### Option 2: Build with hot reload
 
 ```shell
 uv run docs watch
 ```
 
-This option will also generate the documentation but will allow you to view it in your browser at `http://127.0.0.1:8000` with hot reloading, so any changes you make will automatically update in the browser.
+This command builds the documentation and serves it at `http://127.0.0.1:8000`. The browser updates each time you change a page or a `module.bs` file.
+
+---
+
+## Translations
+
+The translations are `.po` files in the `/docs/_locales` folder.
+
+:::{list-table}
+*   - `uv run docs locales update`
+    - Update the files of every language with the latest changes
+*   - `uv run docs locales add <lang>`
+    - Create the files of a new language
+*   - `uv run docs build --lang <lang>`
+    - Build the documentation in one language
+:::

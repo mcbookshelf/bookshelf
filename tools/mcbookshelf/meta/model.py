@@ -131,7 +131,6 @@ class Feature:
     authors: tuple[str, ...]
     contributors: tuple[str, ...]
     created: Stamp
-    updated: Stamp
     slots: tuple[Slot, ...]
     line: int
     deprecated: bool = False

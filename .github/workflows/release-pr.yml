@@ -1,4 +1,4 @@
-name: 🔖 Prepare release
+name: "🔖 Release: prepare"
 
 on:
   workflow_dispatch:
@@ -45,4 +45,3 @@ jobs:
           labels: release
           delete-branch: true
           sign-commits: true
-

@@ -13,4 +13,4 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute at B5-0-0-0-C1 positioned ^ ^ ^$(_middle) as @e[tag=bs.raycast.done,distance=..$(_reach),scores={bs.raycast.hit=..2147483646}] run function bs.raycast:pierce/entity/rank
+$execute at B5-0-0-0-E9E9F78 positioned ^ ^ ^$(_middle) as @e[tag=bs.raycast.done,distance=..$(_reach),scores={bs.raycast.hit=..2147483646}] run function bs.raycast:pierce/entity/rank

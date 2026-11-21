@@ -13,8 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute at @s anchored eyes positioned ^ ^ ^ run summon minecraft:marker ~ ~ ~ {UUID:[I;181,0,0,194]}
-execute as B5-0-0-0-C2 run function bs.view:can_see/get_relative_pos
+execute at @s anchored eyes positioned ^ ^ ^ run summon minecraft:marker ~ ~ ~ {UUID:[I;181,0,0,154507424]}
+execute as B5-0-0-0-93598A0 run function bs.view:can_see/get_relative_pos
 data modify storage bs.raycast:cast in set value {blocks:"#bs.hitbox:get_block/collision"}
 data modify storage bs.raycast:cast in merge from storage bs.view:can_see in
 data modify storage bs.raycast:cast in.max_distance set compute default float {type:"length",inputs:[{type:"storage",storage:"bs.view:",path:"rel[0]"},{type:"storage",storage:"bs.view:",path:"rel[1]"},{type:"storage",storage:"bs.view:",path:"rel[2]"}]}

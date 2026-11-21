@@ -1,0 +1,51 @@
+name: 🚀 Publish packs
+
+on:
+  workflow_call:
+    inputs:
+      tag:
+        required: true
+        type: string
+      platform:
+        default: all
+        type: string
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to publish, as in v5.0.0+26.3
+        required: true
+        type: string
+      platform:
+        description: Store to publish to
+        default: all
+        type: choice
+        options: [all, modrinth, smithed]
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    name: 🚀 Publish to ${{ matrix.platform }}
+    runs-on: ubuntu-latest
+    environment: release
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: ${{ fromJSON(inputs.platform == 'all' && '["modrinth", "smithed"]' || format('["{0}"]', inputs.platform)) }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.tag }}
+      - uses: astral-sh/setup-uv@v9.0.0
+      - name: Download packs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download "${{ inputs.tag }}" \
+            --dir release --pattern "*.zip" --pattern manifest.json
+      - name: Publish
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
+        run: uv run publish --platform ${{ matrix.platform }}

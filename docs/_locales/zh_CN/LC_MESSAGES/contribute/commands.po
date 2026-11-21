@@ -1,0 +1,239 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../contribute/commands.md:5 a677d1065d614d75adee4ed4dc873ee3
+msgid "📜 Commands"
+msgstr "📜 命令"
+
+#: ../../contribute/commands.md:7 56f43c3c34544dc39baeb9e2c0f1f768
+msgid ""
+"This page lists the commands of the project. Type `uv run` before each "
+"command."
+msgstr "本页列出项目的命令。请在每个命令前输入 `uv run`。"
+
+#: ../../contribute/commands.md:11 134aa0f2232a49778c10ac4014a96892
+msgid "Modules"
+msgstr "模块"
+
+#: ../../contribute/commands.md 15997e69053744caa176141eaaf24794
+#: 72d10d7c896645569d3afb1f44e34421 cc2b1a9f72184089a5ee505f161f4ddb
+msgid "**Command**"
+msgstr "**等效命令**"
+
+#: ../../contribute/commands.md 0b89acc2cefe46e7ba80c3aa9db277e6
+#: 940ec4c72ffa422f8990098d733627f8 b280957b0799488a9a4aba4cc2724580
+msgid "**Description**"
+msgstr "**描述**"
+
+#: ../../contribute/commands.md 42e386132bf94a429b02b0182c758f67
+#: 7650076eaf1f41fc983e1a9fc901fac5 c580cb4e0b3f433f86cee66263e71445
+msgid "**Arguments and options**"
+msgstr "**参数和选项**"
+
+#: ../../contribute/commands.md 5506ee7548e846a39106d9e01dfb81df
+msgid "**🔨 `build`**"
+msgstr "**🔨 `build`**"
+
+#: ../../contribute/commands.md 0c1a371c34f7453e84a87289ac8c1ef5
+msgid "Build modules, bundles, or examples."
+msgstr "构建模块、捆绑包或示例。"
+
+#: ../../contribute/commands.md 6a19c5959b3c4d0ca2d5b186275ab294
+#: bb2b71e91bf342caae1250f93343def3
+msgid "`[names...]`: what to build. The default is all modules."
+msgstr "`[names...]`：要构建的内容。默认为所有模块。"
+
+#: ../../contribute/commands.md 8cda647212934d5682461ffb9bb30465
+msgid "**👀 `watch`**"
+msgstr "**👀 `watch`**"
+
+#: ../../contribute/commands.md b71327b6b33542aa9d944c7640bae574
+msgid "Build, then build again when a file changes. Reload the linked world."
+msgstr "构建，并在文件发生变更时重新构建。重新加载已链接的世界。"
+
+#: ../../contribute/commands.md 8a0469e8a465463abe8db5b9643d6d4a
+msgid "**🔗 `link`**"
+msgstr "**🔗 `link`**"
+
+#: ../../contribute/commands.md b3433c1857a4454b9774083073d46c39
+msgid "[Link the packs to Minecraft](#contribute-linking-to-minecraft)."
+msgstr "[将包链接到 Minecraft](#contribute-linking-to-minecraft)。"
+
+#: ../../contribute/commands.md 80b581b20fbf4b5cb0bbc78b3d16bb5d
+msgid "`[world]`, `--minecraft`, `--data-pack`, `--resource-pack`"
+msgstr "`[world]`, `--minecraft`, `--data-pack`, `--resource-pack`"
+
+#: ../../contribute/commands.md e61b610d747b4429806d78f54e3fbb3c
+msgid "**🔍 `check`**"
+msgstr "**🔍 `check`**"
+
+#: ../../contribute/commands.md bbf8b223337e48979b972f4addc53dd3
+msgid "[Check modules](project:validation.md) and list every issue."
+msgstr "[检查模块](project:validation.md)并列出所有问题。"
+
+#: ../../contribute/commands.md f925fcee73434c60abc44e54dca9f56b
+msgid "`[modules...]`: the modules to check. The default is all modules."
+msgstr "`[modules...]`：要检查的模块。默认为所有模块。"
+
+#: ../../contribute/commands.md e3295aafddde4d77916263c2bda51ad3
+msgid "**🧪 `test`**"
+msgstr "**🧪 `test`**"
+
+#: ../../contribute/commands.md 2eacf1c6c7264c9f8f91a028dad7c779
+msgid "Build modules and [run their tests](#contribute-running-tests)."
+msgstr "构建模块并[运行其测试](#contribute-running-tests)。"
+
+#: ../../contribute/commands.md fabc9391db914ffdb30c5b4d24274a71
+msgid ""
+"`[modules...]`: the modules to test. The default is all "
+"modules.<br>`--coverage`, `--coverage-report`, `--verbose`, `--reporter`,"
+" `--junit-xml`"
+msgstr ""
+"`[modules...]`：要测试的模块。默认为所有模块。<br>`--coverage`, `--coverage-report`, "
+"`--verbose`, `--reporter`, `--junit-xml`"
+
+#: ../../contribute/commands.md:23 e1be264b530f46608fbb6e6f8aa98d62
+msgid "Documentation"
+msgstr "文档编写"
+
+#: ../../contribute/commands.md 394f6ae8f42d45feb51c227fb515f803
+msgid "**📝 `docs build`**"
+msgstr "**📝 `docs build`**"
+
+#: ../../contribute/commands.md ff64a2bdb7c94cc5ad13ff07cf4d89c6
+msgid "Build the documentation as static HTML."
+msgstr "将文档构建为静态 HTML。"
+
+#: ../../contribute/commands.md b2d6fe550a5f4826852071f9d0fbe26f
+msgid ""
+"`[output]`: the build directory. The default is `_build`.<br>`--builder`:"
+" the Sphinx builder. The default is `html`.<br>`--lang`: the language. "
+"The default is `en`."
+msgstr ""
+"`[output]`：构建目录。默认为 `_build`。<br>`--builder`：Sphinx 构建器。默认为 "
+"`html`。<br>`--lang`：语言。默认为 `en`。"
+
+#: ../../contribute/commands.md f093668a89cf47b0a446d4ad754fd024
+msgid "**📝 `docs watch`**"
+msgstr "**📝 `docs watch`**"
+
+#: ../../contribute/commands.md 23214f1d582048a3b3b2f1827dc963bf
+msgid "Build the documentation and serve it with hot reload."
+msgstr "构建文档，并启动带热重载的本地服务。"
+
+#: ../../contribute/commands.md 879f8d11ac7b4f7ab86b85c635b4c949
+msgid "Same as `docs build`."
+msgstr "与 `docs build` 相同。"
+
+#: ../../contribute/commands.md 839f45e23b454a609c44d4885cd413c0
+msgid "**🌍 `docs locales update`**"
+msgstr "**🌍 `docs locales update`**"
+
+#: ../../contribute/commands.md 337172c744e940e3ad1c2887ca030d25
+msgid "Update the translation files of every language."
+msgstr "更新所有语言的翻译文件。"
+
+#: ../../contribute/commands.md 20c0ee7a3a3d4f5b8da1c7c55ac80c7d
+#: bf74d257ddc7458d852181be3503f55a
+msgid "No arguments."
+msgstr "无参数。"
+
+#: ../../contribute/commands.md 40eaa905cb7f4b51a6000566198ee2d3
+msgid "**🌍 `docs locales add`**"
+msgstr "**🌍 `docs locales add`**"
+
+#: ../../contribute/commands.md 48f278b2331f4e69a0755afa79b22344
+msgid "Create the translation files of a new language."
+msgstr "创建新语言的翻译文件。"
+
+#: ../../contribute/commands.md 0f93b2ad2a384a7d8838c172653424fb
+msgid "`<lang>`: the language to add."
+msgstr "`<lang>`：要添加的语言。"
+
+#: ../../contribute/commands.md:34 98d57d08ede14efd924e581322438448
+msgid "Releases"
+msgstr "发布"
+
+#: ../../contribute/commands.md:36 cdc8d86324354637a34f462fb31a662e
+msgid ""
+"These commands are for maintainers. See the [maintainer "
+"guide](project:maintainers.md)."
+msgstr "这些命令面向维护者。参见[维护者指南](project:maintainers.md)。"
+
+#: ../../contribute/commands.md 897a35e3089644c68d88d0d48d4d9243
+msgid "**🔢 `bump`**"
+msgstr "**🔢 `bump`**"
+
+#: ../../contribute/commands.md 707c0696ccbb4ac58c27e910c0b5988e
+msgid "Set the versions that a release requires."
+msgstr "设置发布所需的版本号。"
+
+#: ../../contribute/commands.md 891f8780f284476db701516d82f64263
+msgid "`--check`: list the wrong versions and change nothing."
+msgstr "`--check`：列出错误的版本号，不做任何更改。"
+
+#: ../../contribute/commands.md ffd6153b2e0d49e2aa6f18e9ec8bd0f2
+msgid "**📋 `notes`**"
+msgstr "**📋 `notes`**"
+
+#: ../../contribute/commands.md 2bc1b76d41d84faf903db971e48da166
+msgid "Write the release notes from the module changelogs."
+msgstr "根据模块的更新日志编写发布说明。"
+
+#: ../../contribute/commands.md d7d847c5c8c84504a0a5aa59050771e5
+msgid ""
+"`--unreleased`: use the `Unreleased` sections.<br>`--output`: write to a "
+"file."
+msgstr "`--unreleased`：使用 `Unreleased` 部分。<br>`--output`：写入文件。"
+
+#: ../../contribute/commands.md a4aba0feb97245f2ae7d0114b2dcaf09
+msgid "**📦 `release`**"
+msgstr "**📦 `release`**"
+
+#: ../../contribute/commands.md 7dda12311fc54de28c80d220f08a78c6
+msgid "Build the released modules and bundles as zipped packs."
+msgstr "将已发布的模块和捆绑包构建为压缩包。"
+
+#: ../../contribute/commands.md eb01392f59db487e8e3b80327d39da16
+msgid "`--all`: include experimental features and modules under `1.0.0`."
+msgstr "`--all`：包含实验性特性和低于 `1.0.0` 的模块。"
+
+#: ../../contribute/commands.md 9633a147886c44bca0a0530aa336351c
+msgid "**🚀 `publish`**"
+msgstr "**🚀 `publish`**"
+
+#: ../../contribute/commands.md 963a401706a2423883532cb2c87c9e30
+msgid "Publish the release folder to the platforms."
+msgstr "将 release 文件夹发布到各平台。"
+
+#: ../../contribute/commands.md 87dcbe40a22f4af49117f40b5a689480
+msgid ""
+"`--platform`: `modrinth` or `smithed`. The default is both.<br>`--dry-"
+"run`: list the packs and stop."
+msgstr "`--platform`：`modrinth` 或 `smithed`。默认为两者。<br>`--dry-run`：列出包后停止。"
+
+#: ../../contribute/commands.md 21f7b3d60ea04021a7be0c423bf596e4
+msgid "**ℹ️ `info`**"
+msgstr "**ℹ️ `info`**"
+
+#: ../../contribute/commands.md 399b30c444d74908b09c8cfbf617a269
+msgid "Print the version, the tag, and the Minecraft version of the release."
+msgstr "打印发布版本的版本号、标签和 Minecraft 版本。"
+

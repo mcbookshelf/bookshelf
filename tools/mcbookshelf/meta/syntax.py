@@ -1,8 +1,9 @@
 from dataclasses import dataclass, field, replace
 from enum import StrEnum
 
-type Value = Declaration | Reference
 type Type = Primitive | Array | List | Tuple | Struct | Union | Reference
+type Line = Metadata | Slot | Paste
+type Member = Field | Paste
 
 
 def attributed(attributes: tuple[str, ...]) -> str:
@@ -16,7 +17,7 @@ def bounded(bounds: Range | None) -> str:
 
 
 class Role(StrEnum):
-    """The keyword a slot line starts with."""
+    """What a line of a feature is: a context is written `@executor`, the others by their role."""
 
     CONTEXT = "context"
     INPUT = "input"
@@ -72,20 +73,48 @@ class Property(Node):
 
 
 @dataclass(frozen=True, slots=True, kw_only=True)
-class Variable(Node):
+class Metadata(Node):
+    """A metadata line, in the head or in a feature: a flag has no value."""
 
-    name: str
-    value: Declaration | Type
-    description: str | None = None
+    key: str
+    value: str | None = None
 
 
 @dataclass(frozen=True, slots=True, kw_only=True)
-class Declaration(Node):
+class Paste(Node):
+    """A `$name` alone on its line: the lines or the fields of that definition."""
 
-    kind: Kind
-    type: Type | None = None
-    storage: Storage | None = None
+    name: str
+
+
+@dataclass(frozen=True, slots=True, kw_only=True)
+class Field(Node):
+    """A field as written: the fields under it are the ones of the `struct` in its type."""
+
+    name: str
+    type: Type
+    optional: bool = False
     description: str | None = None
+    fields: tuple[Member, ...] = ()
+
+
+@dataclass(frozen=True, slots=True, kw_only=True)
+class Definition(Node):
+    """A `$name`: a type, with the fields under it as its body, or feature lines."""
+
+    name: str
+    type: Type | None = None
+    description: str | None = None
+    body: tuple[Line | Member, ...] = ()
+
+
+@dataclass(frozen=True, slots=True, kw_only=True)
+class Items(Node):
+    """Some items of a list, `$name[a, b]`, with the properties they share."""
+
+    name: str
+    items: tuple[str, ...]
+    properties: tuple[Property, ...] = ()
 
 
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -93,7 +122,6 @@ class Reference(Node):
 
     name: str
     attributes: tuple[str, ...] = ()
-    description: str | None = None
 
     def __str__(self) -> str:
         return f"{attributed(self.attributes)}${self.name}"
@@ -101,9 +129,14 @@ class Reference(Node):
 
 @dataclass(frozen=True, slots=True, kw_only=True)
 class Slot(Node):
+    """A context, an input or an output as written."""
 
     role: Role
-    value: Value
+    kind: Kind
+    type: Type | None = None
+    storage: Storage | None = None
+    description: str | None = None
+    fields: tuple[Member, ...] = ()
 
 
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -158,17 +191,19 @@ class Tuple(Node):
 
 @dataclass(frozen=True, slots=True, kw_only=True)
 class Struct(Node):
+    """As written, the word `struct`: the builder gives it the fields under its line."""
 
-    entries: tuple[Entry, ...]
+    entries: tuple[Entry, ...] = ()
     attributes: tuple[str, ...] = ()
 
     def __str__(self) -> str:
-        inner = f" {', '.join(str(e) for e in self.entries)} " if self.entries else ""
-        return f"{attributed(self.attributes)}{{{inner}}}"
+        inner = f" {{ {', '.join(str(e) for e in self.entries)} }}" if self.entries else ""
+        return f"{attributed(self.attributes)}struct{inner}"
 
 
 @dataclass(frozen=True, slots=True, kw_only=True)
 class Entry(Node):
+    """A field of a built struct."""
 
     name: str
     type: Type
@@ -193,17 +228,18 @@ class Range(Node):
 
     min: int | float | None = None
     max: int | float | None = None
+    operator: str = ".."
 
     @property
     def exact(self) -> bool:
-        return self.min is not None and self.min == self.max
+        return self.operator == ".." and self.min is not None and self.min == self.max
 
     def __str__(self) -> str:
         if self.exact:
             return str(self.min)
         low = "" if self.min is None else self.min
         high = "" if self.max is None else self.max
-        return f"{low}..{high}"
+        return f"{low}{self.operator}{high}"
 
 
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -212,30 +248,26 @@ class Feature(Node):
     registry: str
     id: str
     description: str | None = None
-    lines: tuple[Slot | Property, ...] = ()
-
-    @property
-    def slots(self) -> tuple[Slot, ...]:
-        return tuple(s for s in self.lines if isinstance(s, Slot))
-
-    @property
-    def properties(self) -> tuple[Property, ...]:
-        return tuple(s for s in self.lines if isinstance(s, Property))
+    lines: tuple[Line, ...] = ()
 
 
 @dataclass(frozen=True, slots=True, kw_only=True)
 class Module(Node):
 
     description: str | None = None
-    lines: tuple[Feature | Variable | Property, ...] = ()
+    lines: tuple[Property | Metadata | Definition | Items | Feature, ...] = ()
 
     @property
     def properties(self) -> tuple[Property, ...]:
         return tuple(s for s in self.lines if isinstance(s, Property))
 
     @property
-    def variables(self) -> tuple[Variable, ...]:
-        return tuple(s for s in self.lines if isinstance(s, Variable))
+    def metadata(self) -> tuple[Metadata, ...]:
+        return tuple(s for s in self.lines if isinstance(s, Metadata))
+
+    @property
+    def definitions(self) -> tuple[Definition | Items, ...]:
+        return tuple(s for s in self.lines if isinstance(s, Definition | Items))
 
     @property
     def features(self) -> tuple[Feature, ...]:

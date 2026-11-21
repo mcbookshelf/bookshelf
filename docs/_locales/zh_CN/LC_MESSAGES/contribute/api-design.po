@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Gunivers
+# This file is distributed under the same license as the Bookshelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookshelf \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-04 16:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../contribute/api-design.md:1 95523c807fde4146a8a6b469dadef8e3
+msgid "🧠 API design"
+msgstr "🧠 API 设计"
+
+#: ../../contribute/api-design.md:3 4db683be902f47c793848b10129d639f
+msgid ""
+"All features take inputs and return outputs in the same way. A user who "
+"knows one module knows them all. You declare everything on this page in "
+"the [metadata](project:metadata.md)."
+msgstr "所有特性都用相同的方式接收输入和返回输出。用户了解一个模块，就了解了所有模块。本页的所有内容都要在[元数据](project:metadata.md)中声明。"
+
+#: ../../contribute/api-design.md:7 5dc0d798f6784c51b1508478ccb0439a
+msgid "Inputs"
+msgstr "输入"
+
+#: ../../contribute/api-design.md:9 8dd53b33fb90450e9b14838579a2a556
+msgid ""
+"A feature reads its inputs from a storage that has its name: "
+"`<module>:<feature>`, at the path `in`. This applies to every type of "
+"feature, such as functions, predicates, and number providers."
+msgstr "特性从以它命名的存储 `<module>:<feature>` 的 `in` 路径读取输入。这适用于所有类型的特性，例如函数、谓词和数值提供器。"
+
+#: ../../contribute/api-design.md:16 5080d7807da0409c8dad9d3e723b63a3
+msgid ""
+"Use the executor, position, rotation, and dimension as inputs when you "
+"can. `execute as <entity> at <position>` is simpler for users than an "
+"argument."
+msgstr "尽量把执行者、位置、旋转和维度用作输入。对用户来说，`execute as <entity> at <position>` 比参数更简单。"
+
+#: ../../contribute/api-design.md:17 6591125a1b29401f9752cdc21c6aa43a
+msgid "Don't change the inputs."
+msgstr "不要修改输入。"
+
+#: ../../contribute/api-design.md:18 1fe157b3b88840cb962d3b09412272ea
+msgid ""
+"Keep the arguments few and required. If a feature does two things, split "
+"it into two features."
+msgstr "参数要少，并且都是必需的。如果一个特性做两件事，请将它拆分为两个特性。"
+
+#: ../../contribute/api-design.md:19 a64e21238e3141e9863bd382b19a643a
+msgid "When an argument is a command, name it `run` and make it a string."
+msgstr "当参数是一条命令时，将它命名为 `run`，类型为字符串。"
+
+#: ../../contribute/api-design.md:23 088da622519f49ac86fc178e7dbbae2c
+msgid "Outputs"
+msgstr "输出"
+
+#: ../../contribute/api-design.md:25 a3afb87ff56c4708bc3a4685a3fe0d06
+msgid ""
+"A feature returns its outputs in one or more of these ways. Don't use "
+"scores as outputs."
+msgstr "特性通过以下一种或多种方式返回输出。不要用分数作为输出。"
+
+#: ../../contribute/api-design.md:28 6b1c3b68d2af45eb8b6443261b753b47
+msgid "**`storage`**"
+msgstr "**`storage`**"
+
+#: ../../contribute/api-design.md:29 3d5a8bbbcd1c4ea2bc445d67c2d39aa0
+msgid "Data in the storage `<module>:<feature>`, at the path `out`"
+msgstr "存储 `<module>:<feature>` 的 `out` 路径下的数据"
+
+#: ../../contribute/api-design.md:31 175fe24ca6aa4bf483f620c228d15cae
+msgid "*Example: `data get storage bs.xp:get_progress out`*"
+msgstr "*示例：`data get storage bs.xp:get_progress out`*"
+
+#: ../../contribute/api-design.md:32 ee0ca763d37a422abd0733c2aecb53d5
+msgid "**`result`**"
+msgstr "**`result`**"
+
+#: ../../contribute/api-design.md:33 0439c04299094d7f82d847e6139079cc
+msgid "The number that the feature returns"
+msgstr "特性返回的数值"
+
+#: ../../contribute/api-design.md:35 43fbab1ec59b4c4b8907d7430181fc13
+msgid ""
+"*Example: `execute store result score @s my_objective run function "
+"#bs.hitbox:get_block/collision`*"
+msgstr ""
+"*示例：`execute store result score @s my_objective run function "
+"#bs.hitbox:get_block/collision`*"
+
+#: ../../contribute/api-design.md:36 1533bae7b32e4e559e5e04e764c9f960
+msgid "**`success`**"
+msgstr "**`success`**"
+
+#: ../../contribute/api-design.md:37 0439c04299094d7f82d847e6139079cc
+msgid "The feature succeeds or fails"
+msgstr "特性成功或失败"
+
+#: ../../contribute/api-design.md:39 c228b670cb3d4fdb94ad7aeea00442b5
+msgid "*Example: `execute if function #bs.hitbox:is_in_block run say Inside`*"
+msgstr "*示例：`execute if function #bs.hitbox:is_in_block run say Inside`*"
+
+#: ../../contribute/api-design.md:40 5c0bf8134eea4231a9166dd9ed9c1134
+msgid "**`state`**"
+msgstr "**`state`**"
+
+#: ../../contribute/api-design.md:41 9d9e601651fe47c5b367119fbec25186
+msgid "A change in the world, such as a new block or a changed entity"
+msgstr "世界中的变化，例如新放置的方块或被修改的实体"
+
+#: ../../contribute/api-design.md:44 2d904216bef0421885f3cb5ec2120237
+msgid ""
+"If a function declares a `success` or a `result`, end every path with a "
+"`return`:"
+msgstr "如果函数声明了 `success` 或 `result`，请用 `return` 结束每条执行路径："
+
+#: ../../contribute/api-design.md:46 655c7d84251c4e2eacacc49bc732544c
+msgid ""
+"Use `return fail` when the function fails. `return 0` is a success that "
+"returns 0."
+msgstr "函数失败时使用 `return fail`。`return 0` 表示成功并返回 0。"
+
+#: ../../contribute/api-design.md:47 6adefa5c6bba4eecb3d3cc7e8d72f6ed
+msgid "A function that ends without a `return` gives no result."
+msgstr "没有 `return` 就结束的函数不会给出任何结果。"
+
+#: ../../contribute/api-design.md:52 eab6512bda0d44ba809d58e863b8bc82
+msgid "Functions"
+msgstr "函数"
+
+#: ../../contribute/api-design.md:54 1a5cd90033814d4d8cef04509e81b491
+msgid "Users call a function feature through its function tag:"
+msgstr "用户通过函数标签调用函数特性："
+
+#: ../../contribute/api-design.md:61 cea1d018a30043479902415f741ef4bb
+msgid "Macro call"
+msgstr "宏调用"
+
+#: ../../contribute/api-design.md:63 b792b3da6e97465abb0b6b11dd24e06e
+msgid ""
+"If you declare the function with `input arguments`, users can also call "
+"it with a macro. They use the `.in` tag. Both calls do the same thing:"
+msgstr "如果你使用 `input arguments` 声明函数，用户还可以用宏来调用它。这时使用 `.in` 标签。两种调用的效果相同："
+
+#: ../../contribute/api-design.md:69 9b6abf7aa9284c9a943f3bda1a253636
+msgid "Optional arguments go in a `with` argument:"
+msgstr "可选参数归入 `with` 参数："
+
+#: ../../contribute/api-design.md:75 32ec1d97788e439daef81a45d6579aee
+msgid ""
+"The build generates the `__macro__` function behind the `.in` tag. Write "
+"it yourself when a macro is faster than a storage read. Then make "
+"`__main__` call it:"
+msgstr "构建过程会生成 `.in` 标签背后的 `__macro__` 函数。当宏比读取存储更快时，请自己编写它，然后让 `__main__` 调用它："
+
+#: ../../contribute/api-design.md:77 cd7c1ca6821547998a089d2f9ad596c1
+msgid "add_levels/\\_\\_macro\\_\\_.mcfunction"
+msgstr "add_levels/\\_\\_macro\\_\\_.mcfunction"
+
+#: ../../contribute/api-design.md:82 1b0a8a0e684541e1acb6bde74994734f
+msgid "add_levels/\\_\\_main\\_\\_.mcfunction"
+msgstr "add_levels/\\_\\_main\\_\\_.mcfunction"
+

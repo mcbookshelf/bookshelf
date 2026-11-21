@@ -1,23 +1,8 @@
 from collections.abc import Iterator
 
-from mcbookshelf import constants
 from mcbookshelf.meta import Module
-from mcbookshelf.references import Owner
 from mcbookshelf.validation.issue import Issue
 from mcbookshelf.workspace import Workspace, changelog, history, ownership
-
-
-def check_stamps(ws: Workspace, name: str) -> Iterator[Issue]:
-    """A feature changed since the release carries a new `updated` stamp."""
-    if (released := _released(ws, name)) is None:
-        return
-    tag, before = released
-    stamps = {f.name: f.updated for f in before.features}
-    changed = ownership.changed_owners(ws, tag, name)
-    for feature in ws.load_module(name).features:
-        if Owner(name, feature.name) in changed and stamps.get(feature.name) == feature.updated:
-            message = f"'{feature.name}' changed since {tag}: update its 'updated' stamp"
-            yield Issue(message, constants.MODULE_FILE, feature.line)
 
 
 def check_changelog(ws: Workspace, name: str) -> Iterator[Issue]:

@@ -45,12 +45,6 @@ def tags(value: str) -> tuple[str, ...]:
     return found
 
 
-def boolean(value: str) -> bool:
-    if value not in ("true", "false"):
-        raise ValueError(f"'{value}' is not 'true' or 'false'")
-    return value == "true"
-
-
 def stamp(value: str) -> tuple[str, str]:
     """A date and the Minecraft version of that day, as in `2022/04/14 1.18.2`."""
     match = STAMP.match(value)
@@ -81,13 +75,10 @@ MODULE_PROPERTIES = {
     "weak_dependencies": Field(names, default=()),
 }
 
-FEATURE_PROPERTIES = {
+FEATURE_METADATA = {
     "authors": Field(names, required=True, default=()),
-    "created": Field(stamp, required=True, default=("", "")),
-    "updated": Field(stamp, required=True, default=("", "")),
+    "since": Field(stamp, required=True, default=("", "")),
     "contributors": Field(names, default=()),
-    "deprecated": Field(boolean, default=False),
-    "experimental": Field(boolean, default=False),
 }
 
 

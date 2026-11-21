@@ -19,7 +19,7 @@ data modify storage bs.raycast: ray set value {max_distance:16,_block:"bs.raycas
 data modify storage bs.raycast: ray merge from storage bs.raycast:pierce in
 execute unless data storage bs.raycast: ray.on_block unless data storage bs.raycast: ray.on_entry unless data storage bs.raycast: ray.on_exit run data remove storage bs.raycast: ray.blocks
 
-kill B5-0-0-0-C1
-summon minecraft:marker ~ ~ ~ {UUID:[I;181,0,0,193],Tags:["bs.raycast.omit"]}
-execute as B5-0-0-0-C1 run function bs.raycast:pierce/init
+kill B5-0-0-0-E9E9F78
+summon minecraft:marker ~ ~ ~ {UUID:[I;181,0,0,245276536],Tags:["bs.raycast.omit"]}
+execute as B5-0-0-0-E9E9F78 run function bs.raycast:pierce/init
 return run execute if score #raycast.max bs.data matches -2147483648
