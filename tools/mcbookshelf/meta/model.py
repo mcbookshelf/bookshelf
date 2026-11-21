@@ -1,7 +1,8 @@
 from dataclasses import dataclass
+from functools import cached_property
 
 from mcbookshelf import constants
-from mcbookshelf.version import parse_version
+from mcbookshelf.version import Version
 
 from . import syntax
 from .rules import REGISTRIES
@@ -64,7 +65,7 @@ class Bundle:
         return "*" in self.tags
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class Module:
 
     id: str
@@ -80,36 +81,36 @@ class Module:
 
     @property
     def short(self) -> str:
-        return self.id[3:]
+        return short(self.id)
 
-    @property
-    def names(self) -> set[str]:
-        return {f.name for f in self.features}
+    @cached_property
+    def names(self) -> frozenset[str]:
+        return frozenset(f.name for f in self.features)
 
-    @property
+    @cached_property
     def functions(self) -> tuple[Feature, ...]:
-        return tuple(f for f in self.features if f.kind == "tags/function")
+        return tuple(f for f in self.features if f.resource == "tags/function")
 
     @property
     def released(self) -> bool:
-        return parse_version(self.version) >= (1, 0, 0)
+        return Version.parse(self.version) >= (1, 0, 0)
 
-    @property
-    def experimental(self) -> set[str]:
-        return {f.name for f in self.features if f.experimental}
+    @cached_property
+    def experimental(self) -> frozenset[str]:
+        return frozenset(f.name for f in self.features if f.experimental)
 
-    def find(self, name: str, kind: str | None = None) -> Feature:
-        """Find a feature by name, and by kind when several share the same name."""
-        kind = REGISTRIES[kind].kind if kind in REGISTRIES else kind
-        found = [f for f in self.features if f.name == name and kind in (None, f.kind)]
+    def find(self, name: str, resource: str | None = None) -> Feature:
+        """Find a feature by name, and by resource when several share the same name."""
+        resource = REGISTRIES[resource].resource if resource in REGISTRIES else resource
+        found = [f for f in self.features if f.name == name and resource in (None, f.resource)]
 
         if len(found) == 1:
             return found[0]
 
-        kinds = ", ".join(f.kind for f in self.features if f.name == name)
+        kinds = ", ".join(f.resource for f in self.features if f.name == name)
 
         if not found:
-            declared = f" of kind '{kind}' (declared: {kinds})" if kinds else ""
+            declared = f" of kind '{resource}' (declared: {kinds})" if kinds else ""
             raise LookupError(f"No feature '{name}' in {self.id}/module.bs{declared}")
 
         raise LookupError(
@@ -122,7 +123,7 @@ class Module:
 class Feature:
 
     module: str
-    kind: str
+    resource: str
     name: str
     description: str | None
     documentation: str
@@ -141,7 +142,7 @@ class Feature:
 
     @property
     def tag(self) -> bool:
-        return self.kind.startswith("tags/")
+        return self.resource.startswith("tags/")
 
     @property
     def id(self) -> str:
@@ -150,6 +151,11 @@ class Feature:
     @property
     def macro_id(self) -> str:
         return f"{self.id}{constants.MACRO_SUFFIX}"
+
+    @property
+    def aliases(self) -> tuple[str, ...]:
+        """The other ids the feature answers to: its macro form, when it takes one."""
+        return (self.macro_id,) if self.macro_struct else ()
 
     @property
     def inputs(self) -> tuple[Slot, ...]:
@@ -172,6 +178,11 @@ class Feature:
         return None
 
 
+def short(module_id: str) -> str:
+    """A module id without its `bs.` namespace."""
+    return module_id[3:]
+
+
 def _derive_macro(struct: syntax.Struct) -> syntax.Struct:
     required = tuple(e for e in struct.entries if not e.optional)
     if optional := tuple(
@@ -179,11 +190,12 @@ def _derive_macro(struct: syntax.Struct) -> syntax.Struct:
         for e in struct.entries
         if e.optional
     ):
-        return syntax.Struct(entries=(*required, syntax.Entry(
+        with_ = syntax.Entry(
             name="with",
             type=syntax.Struct(entries=optional, line=struct.line),
             description="optional arguments, `{}` for none",
             line=struct.line,
-        )),line=struct.line)
+        )
+        return syntax.Struct(entries=(*required, with_), line=struct.line)
 
     return syntax.Struct(entries=required, line=struct.line)

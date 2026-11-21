@@ -3,7 +3,7 @@ import os
 from docutils import nodes
 from docutils.statemachine import StringList
 
-from mcbookshelf import workspace
+from mcbookshelf import constants, workspace
 from mcbookshelf.meta import Feature
 from sphinx import addnodes
 from sphinx.util.docutils import SphinxDirective
@@ -11,6 +11,7 @@ from sphinx.util.docutils import SphinxDirective
 from . import markdown
 
 FORMS = ("storage", "macro")
+HINT = "Drag to turn, right-drag to move, click then scroll to zoom, double-click to reset"
 
 
 def released_build() -> bool:
@@ -25,11 +26,12 @@ class FeatureDirective(SphinxDirective):
     has_content = True
 
     def run(self) -> list[nodes.Node]:
-        *kind, reference = self.arguments
+        *resource, reference = self.arguments
         namespace, _, name = reference.lstrip("#").partition(":")
         try:
-            module = workspace.load_module(namespace)
-            feature = module.find(name, kind[0] if kind else None)
+            self.env.note_dependency(str(workspace.current().file(namespace)))
+            module = workspace.current().load_module(namespace)
+            feature = module.find(name, resource[0] if resource else None)
         except KeyError:
             raise self.error(f"unknown module '{namespace}'") from None
         except LookupError as error:
@@ -39,7 +41,8 @@ class FeatureDirective(SphinxDirective):
         targets: list[nodes.Node] = []
         if feature.anchor not in self.state.document.ids:
             section = self.state_machine.node
-            if isinstance(section, nodes.section):
+            claimed = {f.anchor for f in module.features}
+            if isinstance(section, nodes.section) and claimed.isdisjoint(section["ids"]):
                 self.rename(section, feature.anchor)
             else:
                 target = nodes.target(ids=[feature.anchor], names=[feature.anchor])
@@ -77,11 +80,24 @@ class FeatureDirective(SphinxDirective):
         if switch:
             signature += nodes.raw("", self.switch(form), format="html")
         content = addnodes.desc_content()
-        content += self.parse(markdown.feature(feature, macro=macro))
+        content += self.parse(markdown.render(feature, macro=macro))
+        if feature.resource == "structure":
+            content += self.viewer(feature)
         content += self.extra()
         desc += signature
         desc += content
         return desc
+
+    @staticmethod
+    def viewer(feature: Feature) -> nodes.Node:
+        """A 3D view of a structure, drawn by `structure.js` from its file in the static files."""
+        html = (
+            f'<div class="bs-structure" data-structure="{feature.module}/{feature.name}"'
+            f' data-version="{constants.GAME_VERSION}">'
+            f'<canvas tabindex="0" aria-label="{HINT}" title="{HINT}"></canvas>'
+            "</div>"
+        )
+        return nodes.raw("", html, format="html")
 
     @staticmethod
     def switch(selected: str) -> str:

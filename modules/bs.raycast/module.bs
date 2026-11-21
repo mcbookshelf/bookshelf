@@ -1,0 +1,249 @@
+> Cast rays to detect block and entity hits, with voxel-accurate collisions.
+
+name: Raycast
+slug: bookshelf-raycast
+version: 5.0.0
+tags: runtime
+
+$run = #[command(slash="forbidden",empty="forbidden")] string
+$provider = #[id(registry="function",tags="allowed")] string
+
+$blocks = $provider > [block provider](hitbox.md#block-providers) of the blocks the ray hits, such as `#bs.hitbox:get_block/collision`: without it, the ray goes through blocks
+$entities = $provider > [entity provider](hitbox.md#entity-providers) of the entities the ray hits, such as `#bs.hitbox:get_entity/sized`: without it, the ray goes through entities
+$selector = string > selector arguments the entities must match, such as `tag=my_pack.target`
+
+$hit = success > whether a block or an entity stops the ray
+
+
+feature function cast
+  > Cast a ray and check if it hits a block or an entity.
+  authors: Aksiome
+  contributors: Bafy78
+  created: 2023/10/09 1.20.2
+  updated: 2026/10/13 26.3
+
+  context position > origin of the ray
+  context rotation > direction of the ray
+  context dimension > dimension of the ray
+  input arguments: {
+    blocks?: $blocks
+    entities?: $entities
+    selector?: $selector
+    max_distance?: number @ 0..2047 > distance the ray travels at most, 16 by default
+    on_block?: $run > command to run at the block the ray hits, aligned to the grid
+    on_entity?: $run > command to run as and at the entity the ray hits
+    on_entry?: $run > command to run at the point where the ray enters the nearest box it hits
+  }
+  output $hit
+
+
+feature function pierce
+  > Cast a ray that goes through every block and entity it hits, until a command stops it.
+  authors: Aksiome
+  contributors: Bafy78
+  created: 2026/10/25 26.3
+  updated: 2026/10/25 26.3
+
+  context position > origin of the ray
+  context rotation > direction of the ray
+  context dimension > dimension of the ray
+  input arguments: {
+    blocks?: $provider
+    entities?: $entities
+    selector?: $selector
+    max_distance?: number @ 0..2047 > distance the ray travels at most, 16 by default
+    on_block?: $run > command to run at each block the ray hits, aligned to the grid: the ray stops there unless it returns a non-zero value
+    on_entity?: $run > command to run as and at each entity the ray hits: the ray stops there unless it returns a non-zero value
+    on_entry?: $run > command to run at each point where the ray enters a box, nearest first: the ray stops there unless it returns a non-zero value
+    on_exit?: $run > command to run at each point where the ray leaves a box, right after its `on_entry`: the ray stops there unless it returns a non-zero value
+  }
+  output success > whether a command stops the ray
+
+
+feature predicate face/bottom
+  > Check if the ray enters the box it hits by its bottom face. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/13 26.3
+  updated: 2026/10/13 26.3
+
+  output success > whether the bottom face is hit
+
+
+feature predicate face/east
+  > Check if the ray enters the box it hits by its east face. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/13 26.3
+  updated: 2026/10/13 26.3
+
+  output success > whether the east face is hit
+
+
+feature predicate face/north
+  > Check if the ray enters the box it hits by its north face. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/13 26.3
+  updated: 2026/10/13 26.3
+
+  output success > whether the north face is hit
+
+
+feature predicate face/south
+  > Check if the ray enters the box it hits by its south face. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/13 26.3
+  updated: 2026/10/13 26.3
+
+  output success > whether the south face is hit
+
+
+feature predicate face/top
+  > Check if the ray enters the box it hits by its top face. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/13 26.3
+  updated: 2026/10/13 26.3
+
+  output success > whether the top face is hit
+
+
+feature predicate face/west
+  > Check if the ray enters the box it hits by its west face. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/13 26.3
+  updated: 2026/10/13 26.3
+
+  output success > whether the west face is hit
+
+
+feature predicate flag/1
+  > Check if the box the ray hits has the flag `1`, as its provider gives it. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/13 26.3
+  updated: 2026/10/13 26.3
+
+  output success > whether the box has the flag `1`
+
+
+feature predicate flag/2
+  > Check if the box the ray hits has the flag `2`, as its provider gives it. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/13 26.3
+  updated: 2026/10/13 26.3
+
+  output success > whether the box has the flag `2`
+
+
+feature predicate flag/4
+  > Check if the box the ray hits has the flag `4`, as its provider gives it. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/13 26.3
+  updated: 2026/10/13 26.3
+
+  output success > whether the box has the flag `4`
+
+
+feature predicate flag/8
+  > Check if the box the ray hits has the flag `8`, as its provider gives it. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/13 26.3
+  updated: 2026/10/13 26.3
+
+  output success > whether the box has the flag `8`
+
+
+feature context_float_provider entry/distance
+  > Get the distance from the origin of the ray to the point where it enters what it hits. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/13 26.3
+  updated: 2026/10/19 26.3
+
+  output result: float @ 0.. > distance in blocks
+
+
+feature context_float_provider exit/distance
+  > Get the distance from the origin of the ray to the point where it leaves what it hits. Use it in `on_exit`.
+  authors: Aksiome
+  created: 2026/10/13 26.3
+  updated: 2026/10/19 26.3
+
+  output result: float @ 0.. > distance in blocks
+
+
+feature context_float_provider entry/x
+  > Get the x coordinate of the point where the ray enters what it hits, relative to the block it hits, or to the feet of the entity it hits. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/19 26.3
+  updated: 2026/10/19 26.3
+
+  output result: float > x coordinate in blocks, from the west side of the block or from the feet of the entity
+
+
+feature context_float_provider entry/y
+  > Get the y coordinate of the point where the ray enters what it hits, relative to the block it hits, or to the feet of the entity it hits. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/19 26.3
+  updated: 2026/10/19 26.3
+
+  output result: float > y coordinate in blocks, from the bottom side of the block or from the feet of the entity
+
+
+feature context_float_provider entry/z
+  > Get the z coordinate of the point where the ray enters what it hits, relative to the block it hits, or to the feet of the entity it hits. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/19 26.3
+  updated: 2026/10/19 26.3
+
+  output result: float > z coordinate in blocks, from the north side of the block or from the feet of the entity
+
+
+feature context_float_provider exit/x
+  > Get the x coordinate of the point where the ray leaves what it hits, relative to the block it hits, or to the feet of the entity it hits. Use it in `on_exit`.
+  authors: Aksiome
+  created: 2026/10/19 26.3
+  updated: 2026/10/19 26.3
+
+  output result: float > x coordinate in blocks, from the west side of the block or from the feet of the entity
+
+
+feature context_float_provider exit/y
+  > Get the y coordinate of the point where the ray leaves what it hits, relative to the block it hits, or to the feet of the entity it hits. Use it in `on_exit`.
+  authors: Aksiome
+  created: 2026/10/19 26.3
+  updated: 2026/10/19 26.3
+
+  output result: float > y coordinate in blocks, from the bottom side of the block or from the feet of the entity
+
+
+feature context_float_provider exit/z
+  > Get the z coordinate of the point where the ray leaves what it hits, relative to the block it hits, or to the feet of the entity it hits. Use it in `on_exit`.
+  authors: Aksiome
+  created: 2026/10/19 26.3
+  updated: 2026/10/19 26.3
+
+  output result: float > z coordinate in blocks, from the north side of the block or from the feet of the entity
+
+
+feature context_int_provider block/x
+  > Get the x coordinate of the block the ray hits. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/19 26.3
+  updated: 2026/10/19 26.3
+
+  output result: int > x coordinate of the block
+
+
+feature context_int_provider block/y
+  > Get the y coordinate of the block the ray hits. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/19 26.3
+  updated: 2026/10/19 26.3
+
+  output result: int > y coordinate of the block
+
+
+feature context_int_provider block/z
+  > Get the z coordinate of the block the ray hits. Use it in a command of the ray.
+  authors: Aksiome
+  created: 2026/10/19 26.3
+  updated: 2026/10/19 26.3
+
+  output result: int > z coordinate of the block

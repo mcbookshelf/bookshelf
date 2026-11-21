@@ -27,6 +27,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 gettext_compact = False
 gettext_uuid = True
 locale_dirs = ["_locales"]
+python_maximum_signature_line_length = 60
 suppress_warnings = ["misc.highlighting_failure"]
 templates_path = ["_templates"]
 
@@ -59,7 +60,7 @@ html_favicon = "_static/logo-bookshelf.png"
 
 html_static_path = ["_static"]
 html_css_files = ["bookshelf.css"]
-html_js_files = ["bookshelf.js"]
+html_js_files = ["bookshelf.js", "structure.js"]
 
 version_id = os.environ.get("READTHEDOCS_VERSION", "latest")
 

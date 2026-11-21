@@ -1,0 +1,138 @@
+> Manipulate colors and convert them between formats.
+
+name: Color
+slug: bookshelf-color
+version: 5.0.0
+tags: runtime
+
+
+feature function hex_to_int
+  > Convert a hexadecimal color to an integer.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2024/04/22 1.20.5
+  updated: 2026/10/09 26.3
+
+  input arguments: {
+    color: #[color="hex_rgb"] string > color as `#RRGGBB` or `#RRGGBBAA`, in lowercase or uppercase
+  }
+  output storage: #[color="composite_rgb"] int | #[color="composite_argb"] int > color as an RGB integer, or as an ARGB integer when the color has an alpha
+  output result: int > same as the storage
+
+
+feature function hex_to_rgb
+  > Convert a hexadecimal color to an RGB color.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2024/01/20 1.20.4
+  updated: 2026/10/09 26.3
+
+  input arguments: {
+    color: #[color="hex_rgb"] string > color as `#RRGGBB` or `#RRGGBBAA`, in lowercase or uppercase
+  }
+  output storage: #[color="dec_rgb"] [float] @ 3 | #[color="dec_rgba"] [float] @ 4 > color as `[r,g,b]`, or `[r,g,b,a]` when the color has an alpha, each from `0` to `1`
+
+
+feature function int_to_hex
+  > Convert an integer color to a hexadecimal color, without its alpha.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2024/01/20 1.20.4
+  updated: 2026/10/09 26.3
+
+  input arguments: {
+    color: #[color="composite_rgb"] int > color as an RGB integer
+  }
+  output storage: #[color="hex_rgb"] string > color as `#rrggbb`
+
+
+feature function int_to_hexa
+  > Convert an integer color to a hexadecimal color, with its alpha.
+  authors: RacoonJohn
+  created: 2026/09/24 26.3
+  updated: 2026/10/09 26.3
+
+  input arguments: {
+    color: #[color="composite_argb"] int > color as an ARGB integer
+  }
+  output storage: string > color as `#rrggbbaa`
+
+
+feature function int_to_rgb
+  > Convert an integer color to an RGB color, without its alpha.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2019/08/12 1.14
+  updated: 2026/10/09 26.3
+
+  input arguments: {
+    color: #[color="composite_rgb"] int > color as an RGB integer
+  }
+  output storage: #[color="dec_rgb"] [float] @ 3 > color as `[r,g,b]`, each from `0` to `1`
+
+
+feature function int_to_rgba
+  > Convert an integer color to an RGBA color, with its alpha.
+  authors: RacoonJohn
+  created: 2026/09/24 26.3
+  updated: 2026/10/09 26.3
+
+  input arguments: {
+    color: #[color="composite_argb"] int > color as an ARGB integer
+  }
+  output storage: #[color="dec_rgba"] [float] @ 4 > color as `[r,g,b,a]`, each from `0` to `1`
+
+
+feature function rgb_to_hex
+  > Convert an RGB color to a hexadecimal color.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2024/01/20 1.20.4
+  updated: 2026/10/09 26.3
+
+  input arguments: {
+    color: #[color="dec_rgb"] [float] @ 3 | #[color="dec_rgba"] [float] @ 4 > color as `[r,g,b]` or `[r,g,b,a]`, each from `0` to `1`
+  }
+  output storage: string > color as `#rrggbb`, or `#rrggbbaa` when the color has an alpha
+
+
+feature function rgb_to_int
+  > Convert an RGB color to an integer.
+  authors: Aksiome
+  contributors: RacoonJohn
+  created: 2019/08/12 1.14
+  updated: 2026/10/09 26.3
+
+  input arguments: {
+    color: #[color="dec_rgb"] [float] @ 3 | #[color="dec_rgba"] [float] @ 4 > color as `[r,g,b]` or `[r,g,b,a]`, each from `0` to `1`
+  }
+  output storage: #[color="composite_rgb"] int | #[color="composite_argb"] int > color as an RGB integer, or as an ARGB integer when the color has an alpha
+  output result: int > same as the storage
+
+
+feature context_int_provider mix
+  > Mix two integer colors.
+  authors: Aksiome
+  created: 2026/10/09 26.3
+  updated: 2026/10/09 26.3
+
+  input storage: {
+    from: #[color="composite_argb"] int > color to start from, as an RGB or ARGB integer
+    to: #[color="composite_argb"] int > color to go to, as an RGB or ARGB integer
+    ratio: float @ 0..1 > how far to go from one to the other: `0` gives `from` and `1` gives `to`
+  }
+  output result: int > color between the two, each channel mixed on its own, alpha included
+
+
+feature context_int_provider mix_oklab
+  > Mix two integer colors in the Oklab color space, for a gradient that looks even.
+  authors: Aksiome
+  created: 2026/10/09 26.3
+  updated: 2026/10/09 26.3
+
+  input storage: {
+    from: #[color="composite_argb"] int > color to start from, as an RGB or ARGB integer
+    to: #[color="composite_argb"] int > color to go to, as an RGB or ARGB integer
+    ratio: float @ 0..1 > how far to go from one to the other: `0` gives `from` and `1` gives `to`
+  }
+  output result: int > color between the two, as seen by the eye, with the alpha mixed on its own

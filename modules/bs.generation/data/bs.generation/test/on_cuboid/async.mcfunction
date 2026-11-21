@@ -13,13 +13,33 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-data modify storage bs:in generation.on_cuboid set value {width:2,depth:2,limit:1,run:'function #bs.generation:callback/set_block {block:"minecraft:stone",with:{}}'}
-function #bs.generation:on_cuboid
+data remove storage ward.generation:cuboid out
 
+# Positions past the batch wait for the next ticks, and the last command runs at the end
+data modify storage bs.generation:on_cuboid in set value {run:"setblock ~ ~ ~ minecraft:stone",size:[2,1,2],batch:1,on_finished:"data modify storage ward.generation:cuboid out.finished set value 1b"}
+function #bs.generation:on_cuboid/xyz
 assert block ~ ~ ~ minecraft:stone
 assert not block ~1 ~ ~ minecraft:stone
 await block ~1 ~ ~ minecraft:stone
 assert not block ~ ~ ~1 minecraft:stone
 await block ~ ~ ~1 minecraft:stone
 assert not block ~1 ~ ~1 minecraft:stone
+assert not data storage ward.generation:cuboid out.finished
 await block ~1 ~ ~1 minecraft:stone
+await data storage ward.generation:cuboid out.finished
+
+# A command can start another generation: it starts at the next tick
+data modify storage bs.generation:on_rectangle in set value {run:"setblock ~ ~ ~ minecraft:gold_block",size:[2,1]}
+data modify storage bs.generation:on_cuboid in set value {run:"execute positioned ~ ~3 ~ run function #bs.generation:on_rectangle/xz",size:[2,1,1]}
+function #bs.generation:on_cuboid/xyz
+assert not block ~ ~3 ~ minecraft:gold_block
+await delay 1t
+assert block ~ ~3 ~ minecraft:gold_block
+assert block ~2 ~3 ~ minecraft:gold_block
+
+# A list left over from a tick the game interrupted does not block the next generation
+data modify storage bs.generation: tasks set value [{}]
+scoreboard players set #generation.tick bs.data 0
+data modify storage bs.generation:on_cuboid in set value {run:"setblock ~ ~ ~ minecraft:iron_block",size:[1,1,1]}
+execute positioned ~ ~5 ~ run function #bs.generation:on_cuboid/xyz
+assert block ~ ~5 ~ minecraft:iron_block

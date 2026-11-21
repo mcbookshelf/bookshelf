@@ -6,7 +6,7 @@ from . import ui
 
 
 @click.command()
-@click.argument("modules", default=workspace.modules(), nargs=-1)
+@click.argument("modules", default=lambda: workspace.current().modules(), nargs=-1)
 def check(modules: tuple[str, ...]) -> None:
     """Check modules and report every issue."""
     ui.heading("🔍 CHECKING…")

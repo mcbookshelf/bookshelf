@@ -2,7 +2,7 @@
 
 **`#bs.generation:help`**
 
-Run a function over every position in a shaped region, spread across ticks.
+Run a command over every position in a shaped region, spread across ticks.
 
 ```{image} /_imgs/modules/generation-light.png
 :width: 100%
@@ -20,315 +20,812 @@ Run a function over every position in a shaped region, spread across ticks.
 -- Anonymous
 ```
 
-```{button-link} https://youtu.be/uDenmF9l8a4
-:color: primary
-:align: center
-:shadow:
+---
 
-{octicon}`device-camera-video` Watch a demo
+## Functions
+
+The following functions are available in this module.
+
+---
+
+```{admonition} Command limit
+:class: warning
+
+By default, a tick that runs more than 65536 commands is stopped, and its generations are lost. If that happens, lower `batch` or raise the `max_command_sequence_length` gamerule.
 ```
-
----
-
-## 🔧 Functions
-
-You can find below all functions available in this module.
-
----
 
 ### On cuboid
 
-```{function} #bs.generation:on_cuboid
+:::::{tab-set}
+::::{tab-item} XYZ
 
-Iterate over a 3D cuboid, executing a callback at each position.
-
-:Inputs:
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: origin of the shape
-
-  **Storage `bs:in generation.on_cuboid`**:
-  :::{treeview}
-  - {nbt}`compound` iteration data
-    - {nbt}`string` **run**: callback to execute at each step
-    - {nbt}`string` **direction**: 3-letter string defining axis iteration order and direction
-
-      `e`/`w` for east/west, `s`/`n` for south/north, and `u`/`d` for up/down (default: `eus`, +x, +y, +z)
-    - {nbt}`string` **on_finished**: command executed at the end of the process, at the final block position
-    - {nbt}`int` **width**: size along the x axis (default: 1)
-    - {nbt}`int` **height**: size along the y axis (default: 1)
-    - {nbt}`int` **depth**: size along the z axis (default: 1)
-    - {nbt}`int` **spacing**: distance between positions (default: 1)
-    - {nbt}`int` **limit**: maximum steps per tick (default: 256)
-  :::
-
-:Lambdas:
-  **Score `$generation.i bs.lambda`**: first dimension index (0 to size-1, tied to 1st direction letter)
-
-  **Score `$generation.j bs.lambda`**: second dimension index (0 to size-1, tied to 2nd direction letter)
-
-  **Score `$generation.k bs.lambda`**: third dimension index (0 to size-1, tied to 3rd direction letter)
-
-:Outputs:
-  **State**: the callback is executed at each position
+```{feature} bs.generation:on_cuboid/xyz
 ```
 
-*Example: replace spruce stairs with oak stairs using the [`set_block_type`](#block-callbacks) callback*
+*Example: fill a cube of 5 blocks with stone, along x, then y, then z*
 
 ```mcfunction
-data modify storage bs:in generation.on_cuboid set value { \
-  width:5, height:5, depth:5, \
-  run:'function #bs.generation:callback/set_block_type {type:"minecraft:oak_stairs",with:{masks:[{block:"minecraft:spruce_stairs"}]}}' \
-}
-function #bs.generation:on_cuboid
+# Once
+function #bs.generation:on_cuboid/xyz.in {run:"setblock ~ ~ ~ minecraft:stone",size:[5,5,5],with:{}}
 ```
 
-> **Credits**: Aksiome
+::::
+::::{tab-item} XZY
+
+```{feature} bs.generation:on_cuboid/xzy
+```
+
+*Example: fill a cube of 5 blocks with stone, along x, then z, then y*
+
+```mcfunction
+# Once
+function #bs.generation:on_cuboid/xzy.in {run:"setblock ~ ~ ~ minecraft:stone",size:[5,5,5],with:{}}
+```
+
+::::
+::::{tab-item} YXZ
+
+```{feature} bs.generation:on_cuboid/yxz
+```
+
+*Example: fill a cube of 5 blocks with stone, along y, then x, then z*
+
+```mcfunction
+# Once
+function #bs.generation:on_cuboid/yxz.in {run:"setblock ~ ~ ~ minecraft:stone",size:[5,5,5],with:{}}
+```
+
+::::
+::::{tab-item} YZX
+
+```{feature} bs.generation:on_cuboid/yzx
+```
+
+*Example: fill a cube of 5 blocks with stone, along y, then z, then x*
+
+```mcfunction
+# Once
+function #bs.generation:on_cuboid/yzx.in {run:"setblock ~ ~ ~ minecraft:stone",size:[5,5,5],with:{}}
+```
+
+::::
+::::{tab-item} ZXY
+
+```{feature} bs.generation:on_cuboid/zxy
+```
+
+*Example: fill a cube of 5 blocks with stone, along z, then x, then y*
+
+```mcfunction
+# Once
+function #bs.generation:on_cuboid/zxy.in {run:"setblock ~ ~ ~ minecraft:stone",size:[5,5,5],with:{}}
+```
+
+::::
+::::{tab-item} ZYX
+
+```{feature} bs.generation:on_cuboid/zyx
+```
+
+*Example: fill a cube of 5 blocks with stone, along z, then y, then x*
+
+```mcfunction
+# Once
+function #bs.generation:on_cuboid/zyx.in {run:"setblock ~ ~ ~ minecraft:stone",size:[5,5,5],with:{}}
+```
+
+::::
+:::::
+
+---
+
+### On cuboid outline
+
+:::::{tab-set}
+::::{tab-item} XYZ
+
+````{feature} bs.generation:on_cuboid_outline/xyz
+```{admonition} Layer by layer along z
+:class: note
+
+All the positions with the same z are done before the next z. Among them, the order is not set.
+```
+````
+
+*Example: build the walls, the floor and the roof of a glass cube of 5 blocks, layer by layer along z*
+
+```mcfunction
+# Once
+function #bs.generation:on_cuboid_outline/xyz.in {run:"setblock ~ ~ ~ minecraft:glass",size:[5,5,5],with:{}}
+```
+
+::::
+::::{tab-item} XZY
+
+````{feature} bs.generation:on_cuboid_outline/xzy
+```{admonition} Layer by layer along y
+:class: note
+
+All the positions with the same y are done before the next y. Among them, the order is not set.
+```
+````
+
+*Example: build the walls, the floor and the roof of a glass cube of 5 blocks, layer by layer along y*
+
+```mcfunction
+# Once
+function #bs.generation:on_cuboid_outline/xzy.in {run:"setblock ~ ~ ~ minecraft:glass",size:[5,5,5],with:{}}
+```
+
+::::
+::::{tab-item} YXZ
+
+````{feature} bs.generation:on_cuboid_outline/yxz
+```{admonition} Layer by layer along z
+:class: note
+
+All the positions with the same z are done before the next z. Among them, the order is not set.
+```
+````
+
+*Example: build the walls, the floor and the roof of a glass cube of 5 blocks, layer by layer along z*
+
+```mcfunction
+# Once
+function #bs.generation:on_cuboid_outline/yxz.in {run:"setblock ~ ~ ~ minecraft:glass",size:[5,5,5],with:{}}
+```
+
+::::
+::::{tab-item} YZX
+
+````{feature} bs.generation:on_cuboid_outline/yzx
+```{admonition} Layer by layer along x
+:class: note
+
+All the positions with the same x are done before the next x. Among them, the order is not set.
+```
+````
+
+*Example: build the walls, the floor and the roof of a glass cube of 5 blocks, layer by layer along x*
+
+```mcfunction
+# Once
+function #bs.generation:on_cuboid_outline/yzx.in {run:"setblock ~ ~ ~ minecraft:glass",size:[5,5,5],with:{}}
+```
+
+::::
+::::{tab-item} ZXY
+
+````{feature} bs.generation:on_cuboid_outline/zxy
+```{admonition} Layer by layer along y
+:class: note
+
+All the positions with the same y are done before the next y. Among them, the order is not set.
+```
+````
+
+*Example: build the walls, the floor and the roof of a glass cube of 5 blocks, layer by layer along y*
+
+```mcfunction
+# Once
+function #bs.generation:on_cuboid_outline/zxy.in {run:"setblock ~ ~ ~ minecraft:glass",size:[5,5,5],with:{}}
+```
+
+::::
+::::{tab-item} ZYX
+
+````{feature} bs.generation:on_cuboid_outline/zyx
+```{admonition} Layer by layer along x
+:class: note
+
+All the positions with the same x are done before the next x. Among them, the order is not set.
+```
+````
+
+*Example: build the walls, the floor and the roof of a glass cube of 5 blocks, layer by layer along x*
+
+```mcfunction
+# Once
+function #bs.generation:on_cuboid_outline/zyx.in {run:"setblock ~ ~ ~ minecraft:glass",size:[5,5,5],with:{}}
+```
+
+::::
+:::::
+
+---
+
+### On ellipse
+
+:::::{tab-set}
+::::{tab-item} XY
+
+```{feature} bs.generation:on_ellipse/xy
+```
+
+*Example: build a stone disc of 9 blocks, flat on x and y, along x, then y*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipse/xy.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9],with:{}}
+```
+
+::::
+::::{tab-item} XZ
+
+```{feature} bs.generation:on_ellipse/xz
+```
+
+*Example: build a stone disc of 9 blocks, flat on x and z, along x, then z*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipse/xz.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9],with:{}}
+```
+
+::::
+::::{tab-item} YX
+
+```{feature} bs.generation:on_ellipse/yx
+```
+
+*Example: build a stone disc of 9 blocks, flat on y and x, along y, then x*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipse/yx.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9],with:{}}
+```
+
+::::
+::::{tab-item} YZ
+
+```{feature} bs.generation:on_ellipse/yz
+```
+
+*Example: build a stone disc of 9 blocks, flat on y and z, along y, then z*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipse/yz.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9],with:{}}
+```
+
+::::
+::::{tab-item} ZX
+
+```{feature} bs.generation:on_ellipse/zx
+```
+
+*Example: build a stone disc of 9 blocks, flat on z and x, along z, then x*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipse/zx.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9],with:{}}
+```
+
+::::
+::::{tab-item} ZY
+
+```{feature} bs.generation:on_ellipse/zy
+```
+
+*Example: build a stone disc of 9 blocks, flat on z and y, along z, then y*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipse/zy.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9],with:{}}
+```
+
+::::
+:::::
+
+---
+
+### On ellipse outline
+
+:::::{tab-set}
+::::{tab-item} XY
+
+```{feature} bs.generation:on_ellipse_outline/xy
+```
+
+*Example: build a stone ring of 9 blocks, flat on x and y, along x, then y*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipse_outline/xy.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9],with:{}}
+```
+
+::::
+::::{tab-item} XZ
+
+```{feature} bs.generation:on_ellipse_outline/xz
+```
+
+*Example: build a stone ring of 9 blocks, flat on x and z, along x, then z*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipse_outline/xz.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9],with:{}}
+```
+
+::::
+::::{tab-item} YX
+
+```{feature} bs.generation:on_ellipse_outline/yx
+```
+
+*Example: build a stone ring of 9 blocks, flat on y and x, along y, then x*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipse_outline/yx.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9],with:{}}
+```
+
+::::
+::::{tab-item} YZ
+
+```{feature} bs.generation:on_ellipse_outline/yz
+```
+
+*Example: build a stone ring of 9 blocks, flat on y and z, along y, then z*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipse_outline/yz.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9],with:{}}
+```
+
+::::
+::::{tab-item} ZX
+
+```{feature} bs.generation:on_ellipse_outline/zx
+```
+
+*Example: build a stone ring of 9 blocks, flat on z and x, along z, then x*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipse_outline/zx.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9],with:{}}
+```
+
+::::
+::::{tab-item} ZY
+
+```{feature} bs.generation:on_ellipse_outline/zy
+```
+
+*Example: build a stone ring of 9 blocks, flat on z and y, along z, then y*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipse_outline/zy.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9],with:{}}
+```
+
+::::
+:::::
+
+---
+
+### On ellipsoid
+
+:::::{tab-set}
+::::{tab-item} XYZ
+
+```{feature} bs.generation:on_ellipsoid/xyz
+```
+
+*Example: build a stone sphere of 9 blocks, along x, then y, then z*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipsoid/xyz.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9,9],with:{}}
+```
+
+::::
+::::{tab-item} XZY
+
+```{feature} bs.generation:on_ellipsoid/xzy
+```
+
+*Example: build a stone sphere of 9 blocks, along x, then z, then y*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipsoid/xzy.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9,9],with:{}}
+```
+
+::::
+::::{tab-item} YXZ
+
+```{feature} bs.generation:on_ellipsoid/yxz
+```
+
+*Example: build a stone sphere of 9 blocks, along y, then x, then z*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipsoid/yxz.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9,9],with:{}}
+```
+
+::::
+::::{tab-item} YZX
+
+```{feature} bs.generation:on_ellipsoid/yzx
+```
+
+*Example: build a stone sphere of 9 blocks, along y, then z, then x*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipsoid/yzx.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9,9],with:{}}
+```
+
+::::
+::::{tab-item} ZXY
+
+```{feature} bs.generation:on_ellipsoid/zxy
+```
+
+*Example: build a stone sphere of 9 blocks, along z, then x, then y*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipsoid/zxy.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9,9],with:{}}
+```
+
+::::
+::::{tab-item} ZYX
+
+```{feature} bs.generation:on_ellipsoid/zyx
+```
+
+*Example: build a stone sphere of 9 blocks, along z, then y, then x*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipsoid/zyx.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9,9],with:{}}
+```
+
+::::
+:::::
+
+---
+
+### On ellipsoid outline
+
+:::::{tab-set}
+::::{tab-item} XYZ
+
+```{feature} bs.generation:on_ellipsoid_outline/xyz
+```
+
+*Example: build a hollow stone sphere of 9 blocks, along x, then y, then z*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipsoid_outline/xyz.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9,9],with:{}}
+```
+
+::::
+::::{tab-item} XZY
+
+```{feature} bs.generation:on_ellipsoid_outline/xzy
+```
+
+*Example: build a hollow stone sphere of 9 blocks, along x, then z, then y*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipsoid_outline/xzy.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9,9],with:{}}
+```
+
+::::
+::::{tab-item} YXZ
+
+```{feature} bs.generation:on_ellipsoid_outline/yxz
+```
+
+*Example: build a hollow stone sphere of 9 blocks, along y, then x, then z*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipsoid_outline/yxz.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9,9],with:{}}
+```
+
+::::
+::::{tab-item} YZX
+
+```{feature} bs.generation:on_ellipsoid_outline/yzx
+```
+
+*Example: build a hollow stone sphere of 9 blocks, along y, then z, then x*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipsoid_outline/yzx.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9,9],with:{}}
+```
+
+::::
+::::{tab-item} ZXY
+
+```{feature} bs.generation:on_ellipsoid_outline/zxy
+```
+
+*Example: build a hollow stone sphere of 9 blocks, along z, then x, then y*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipsoid_outline/zxy.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9,9],with:{}}
+```
+
+::::
+::::{tab-item} ZYX
+
+```{feature} bs.generation:on_ellipsoid_outline/zyx
+```
+
+*Example: build a hollow stone sphere of 9 blocks, along z, then y, then x*
+
+```mcfunction
+# Once
+function #bs.generation:on_ellipsoid_outline/zyx.in {run:"setblock ~ ~ ~ minecraft:stone",size:[9,9,9],with:{}}
+```
+
+::::
+:::::
 
 ---
 
 ### On rectangle
 
-```{function} #bs.generation:on_rectangle
+:::::{tab-set}
+::::{tab-item} XY
 
-Iterate over a 2D rectangle, executing a callback at each position.
-
-:Inputs:
-  **Execution `at <entity>` or `positioned <x> <y> <z>`**: origin of the shape
-
-  **Storage `bs:in generation.on_rectangle`**:
-  :::{treeview}
-  - {nbt}`compound` iteration data
-    - {nbt}`string` **run**: callback to execute at each step
-    - {nbt}`string` **direction**: 2-letter string defining axis iteration order and direction
-
-      `e`/`w` for east/west, `s`/`n` for south/north, and `u`/`d` for up/down (default: `es`, +x, +z).
-    - {nbt}`string` **on_finished**: command executed at the end of the process, at the final block position
-    - {nbt}`int` **width**: size along the x axis (default: 1)
-    - {nbt}`int` **height**: size along the y axis (default: 1)
-    - {nbt}`int` **depth**: size along the z axis (default: 1)
-    - {nbt}`int` **spacing**: distance between positions (default: 1)
-    - {nbt}`int` **limit**: maximum steps per tick (default: 256)
-  :::
-
-:Lambdas:
-  **Score `$generation.i bs.lambda`**: first dimension index (0 to size-1, tied to 1st direction letter)
-
-  **Score `$generation.j bs.lambda`**: second dimension index (0 to size-1, tied to 2nd direction letter)
-
-:Outputs:
-  **State**: the callback is executed at each position
+```{feature} bs.generation:on_rectangle/xy
 ```
 
-*Example: generate terrain using fractal noise*
+*Example: fill a rectangle of 8 blocks on x and 4 on y with stone, along x, then y*
 
-```{code-block} mcfunction
-:force:
+```mcfunction
 # Once
-data modify storage bs:in generation.on_rectangle set value { \
-  width:64, depth:64, limit: 64, \
-  run:'function #bs.generation:callback/fractal_noise_2d {run:"function mypack:generate",with:{}}' \
-}
-function #bs.generation:on_rectangle
-
-# mypack:generate
-execute store result storage bs:ctx y int .01 run scoreboard players add $generation.noise bs.lambda 1000
-function mypack:fill with storage bs:ctx
-
-# mypack:fill
-$fill ~ ~ ~ ~ ~$(y) ~ stone
-```
-
-> **Credits**: Aksiome
-
----
-
-## ↩️ Callbacks
-
-You can find below all callbacks available in this module.
-
----
-
-```{admonition} Implementation note
-:class: tip
-
-These are not simple callbacks. They hook into internals to inject optimized sub-callbacks. Heavy initialization runs once, then lightweight callbacks handle the actual iteration.
-```
-
-### Block callbacks
-
-```{admonition} Dependency
-:class: warning
-
-The `set_block_type` and `set_random_block` callbacks require the **bs.block** module to be installed.
-```
-
-:::::{tab-set}
-::::{tab-item} Set block
-
-```{function} #bs.generation:callback/set_block {block:<value>,with:{}}
-
-Place a specific block at each position.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` arguments
-    - {nbt}`string` **block**: block to place (e.g., `minecraft:stone`)
-    - {nbt}`compound` **with**: additional settings
-      - {nbt}`string` **mode**: placement mode [destroy|keep|replace] (default: `replace`)
-      - {nbt}`list` **masks**: list of masks to filter positions (combine as AND)
-        - {nbt}`compound` mask entry
-          - {nbt}`string` **block**: block to check (e.g., `minecraft:stone`, `#minecraft:logs`)
-          - {nbt}`bool` **negate**: invert the condition (default: false)
-          - {nbt}`int` **x**: x offset (default: 0)
-          - {nbt}`int` **y**: y offset (default: 0)
-          - {nbt}`int` **z**: z offset (default: 0)
-  :::
-```
-
-*Example: fill with stone, replacing only air*
-
-```mcfunction
-run:'function #bs.generation:callback/set_block {block:"minecraft:stone",with:{masks:[{block:"minecraft:air"}]}}'
+function #bs.generation:on_rectangle/xy.in {run:"setblock ~ ~ ~ minecraft:stone",size:[8,4],with:{}}
 ```
 
 ::::
-::::{tab-item} Set block type
+::::{tab-item} XZ
 
-```{function} #bs.generation:callback/set_block_type {type:<value>,with:{}}
-
-Replace block types while preserving states and NBT data.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` arguments
-    - {nbt}`string` **type**: block type ID (e.g., `minecraft:oak_stairs`)
-    - {nbt}`compound` **with**: additional settings
-      - {nbt}`string` **mode**: placement mode [destroy|keep|replace] (default: `replace`)
-      - {nbt}`list` **masks**: list of masks to filter positions (combine as AND)
-        - {nbt}`compound` mask entry
-          - {nbt}`string` **block**: block to check (e.g., `minecraft:stone`, `#minecraft:logs`)
-          - {nbt}`bool` **negate**: invert the condition (default: false)
-          - {nbt}`int` **x**: x offset (default: 0)
-          - {nbt}`int` **y**: y offset (default: 0)
-          - {nbt}`int` **z**: z offset (default: 0)
-  :::
+```{feature} bs.generation:on_rectangle/xz
 ```
 
-*Example: convert spruce stairs to oak, preserving orientation*
+*Example: fill a rectangle of 8 blocks on x and 4 on z with stone, along x, then z*
 
 ```mcfunction
-run:'function #bs.generation:callback/set_block_type {type:"minecraft:oak_stairs",with:{masks:[{block:"minecraft:spruce_stairs"}]}}'
+# Once
+function #bs.generation:on_rectangle/xz.in {run:"setblock ~ ~ ~ minecraft:stone",size:[8,4],with:{}}
 ```
 
 ::::
-::::{tab-item} Set random block
+::::{tab-item} YX
 
-```{function} #bs.generation:callback/set_random_block {blocks:[],with:{}}
-
-Place a randomly selected block from a weighted list.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` arguments
-    - {nbt}`list` **blocks**: weighted block list
-      - {nbt}`compound` block entry
-        - {nbt}`string` **block** | **type**: full block string or type that preserves states
-        - {nbt}`int` **weight**: selection weight (default: 1)
-    - {nbt}`compound` **with**: additional settings
-      - {nbt}`string` **mode**: placement mode [destroy|keep|replace] (default: `replace`)
-      - {nbt}`list` **masks**: list of masks to filter positions (combine as AND)
-        - {nbt}`compound` mask entry
-          - {nbt}`string` **block**: block to check (e.g., `minecraft:stone`, `#minecraft:logs`)
-          - {nbt}`bool` **negate**: invert the condition (default: false)
-          - {nbt}`int` **x**: x offset (default: 0)
-          - {nbt}`int` **y**: y offset (default: 0)
-          - {nbt}`int` **z**: z offset (default: 0)
-  :::
+```{feature} bs.generation:on_rectangle/yx
 ```
 
-*Example: create a mixed ore vein*
+*Example: fill a rectangle of 8 blocks on y and 4 on x with stone, along y, then x*
 
 ```mcfunction
-run:'function #bs.generation:callback/set_random_block { \
-  blocks:[{block:"minecraft:stone",weight:10},{block:"minecraft:coal_ore",weight:5},{block:"minecraft:iron_ore",weight:2}], \
-  with:{masks:[{block:"minecraft:air",negate:1b}]} \
-}'
+# Once
+function #bs.generation:on_rectangle/yx.in {run:"setblock ~ ~ ~ minecraft:stone",size:[8,4],with:{}}
+```
+
+::::
+::::{tab-item} YZ
+
+```{feature} bs.generation:on_rectangle/yz
+```
+
+*Example: fill a rectangle of 8 blocks on y and 4 on z with stone, along y, then z*
+
+```mcfunction
+# Once
+function #bs.generation:on_rectangle/yz.in {run:"setblock ~ ~ ~ minecraft:stone",size:[8,4],with:{}}
+```
+
+::::
+::::{tab-item} ZX
+
+```{feature} bs.generation:on_rectangle/zx
+```
+
+*Example: fill a rectangle of 8 blocks on z and 4 on x with stone, along z, then x*
+
+```mcfunction
+# Once
+function #bs.generation:on_rectangle/zx.in {run:"setblock ~ ~ ~ minecraft:stone",size:[8,4],with:{}}
+```
+
+::::
+::::{tab-item} ZY
+
+```{feature} bs.generation:on_rectangle/zy
+```
+
+*Example: fill a rectangle of 8 blocks on z and 4 on y with stone, along z, then y*
+
+```mcfunction
+# Once
+function #bs.generation:on_rectangle/zy.in {run:"setblock ~ ~ ~ minecraft:stone",size:[8,4],with:{}}
 ```
 
 ::::
 :::::
 
-> **Credits**: Aksiome
-
 ---
 
-### Noise callbacks
-
-```{admonition} Dependency
-:class: warning
-
-Noise callbacks require the **bs.random** module to be installed.
-```
+### On rectangle outline
 
 :::::{tab-set}
-::::{tab-item} Fractal noise 2D
+::::{tab-item} XY
 
-```{function} #bs.generation:callback/fractal_noise_2d {run:<value>,with:{}}
+````{feature} bs.generation:on_rectangle_outline/xy
+```{admonition} No set order
+:class: note
 
-Compute fractal noise and execute a callback with the noise value. Combines multiple octaves of simplex noise for natural patterns.
+The order of the positions is not set: the name only tells which axis each number of `size` is for.
+```
+````
 
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` arguments
-    - {nbt}`string` **run**: callback to execute with the noise value
-    - {nbt}`compound` **with**: noise settings
-      - {nbt}`int` **size**: noise granularity, lower = more detail (default: 32)
-      - {nbt}`int` **seed**: seed for reproducibility (default: random)
-      - {nbt}`int` **octaves**: number of noise layers (default: 2)
-      - {nbt}`double` **persistence**: amplitude multiplier per octave (default: 0.5)
-      - {nbt}`double` **lacunarity**: frequency multiplier per octave (default: 2.0)
-  :::
+*Example: build the edge of a glass rectangle of 8 blocks on x and 4 on y*
 
-:Lambdas:
-  **Score `$generation.noise bs.lambda`**: noise value in range [-1000, 1000]
-
-  **Score `$generation.i bs.lambda`**: first dimension index (inherited from iterator)
-
-  **Score `$generation.j bs.lambda`**: second dimension index (inherited from iterator)
+```mcfunction
+# Once
+function #bs.generation:on_rectangle_outline/xy.in {run:"setblock ~ ~ ~ minecraft:glass",size:[8,4],with:{}}
 ```
 
 ::::
-::::{tab-item} Simplex noise 2D
+::::{tab-item} XZ
 
-```{function} #bs.generation:callback/simplex_noise_2d {run:<value>,with:{}}
+````{feature} bs.generation:on_rectangle_outline/xz
+```{admonition} No set order
+:class: note
 
-Compute simplex noise and execute a callback with the noise value.
+The order of the positions is not set: the name only tells which axis each number of `size` is for.
+```
+````
 
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` arguments
-    - {nbt}`string` **run**: callback to execute with the noise value
-    - {nbt}`compound` **with**: noise settings
-      - {nbt}`int` **size**: noise granularity, lower = more detail (default: 32)
-      - {nbt}`int` **seed**: seed for reproducibility (default: random)
-  :::
+*Example: build the edge of a glass rectangle of 8 blocks on x and 4 on z*
 
-:Lambdas:
-  **Score `$generation.noise bs.lambda`**: noise value in range [-1000, 1000]
+```mcfunction
+# Once
+function #bs.generation:on_rectangle_outline/xz.in {run:"setblock ~ ~ ~ minecraft:glass",size:[8,4],with:{}}
+```
 
-  **Score `$generation.i bs.lambda`**: first dimension index (inherited from iterator)
+::::
+::::{tab-item} YX
 
-  **Score `$generation.j bs.lambda`**: second dimension index (inherited from iterator)
+````{feature} bs.generation:on_rectangle_outline/yx
+```{admonition} No set order
+:class: note
+
+The order of the positions is not set: the name only tells which axis each number of `size` is for.
+```
+````
+
+*Example: build the edge of a glass rectangle of 8 blocks on y and 4 on x*
+
+```mcfunction
+# Once
+function #bs.generation:on_rectangle_outline/yx.in {run:"setblock ~ ~ ~ minecraft:glass",size:[8,4],with:{}}
+```
+
+::::
+::::{tab-item} YZ
+
+````{feature} bs.generation:on_rectangle_outline/yz
+```{admonition} No set order
+:class: note
+
+The order of the positions is not set: the name only tells which axis each number of `size` is for.
+```
+````
+
+*Example: build the edge of a glass rectangle of 8 blocks on y and 4 on z*
+
+```mcfunction
+# Once
+function #bs.generation:on_rectangle_outline/yz.in {run:"setblock ~ ~ ~ minecraft:glass",size:[8,4],with:{}}
+```
+
+::::
+::::{tab-item} ZX
+
+````{feature} bs.generation:on_rectangle_outline/zx
+```{admonition} No set order
+:class: note
+
+The order of the positions is not set: the name only tells which axis each number of `size` is for.
+```
+````
+
+*Example: build the edge of a glass rectangle of 8 blocks on z and 4 on x*
+
+```mcfunction
+# Once
+function #bs.generation:on_rectangle_outline/zx.in {run:"setblock ~ ~ ~ minecraft:glass",size:[8,4],with:{}}
+```
+
+::::
+::::{tab-item} ZY
+
+````{feature} bs.generation:on_rectangle_outline/zy
+```{admonition} No set order
+:class: note
+
+The order of the positions is not set: the name only tells which axis each number of `size` is for.
+```
+````
+
+*Example: build the edge of a glass rectangle of 8 blocks on z and 4 on y*
+
+```mcfunction
+# Once
+function #bs.generation:on_rectangle_outline/zy.in {run:"setblock ~ ~ ~ minecraft:glass",size:[8,4],with:{}}
 ```
 
 ::::
 :::::
 
-> **Credits**: Aksiome
+---
+
+## Integer providers
+
+The following integer providers are available in this module.
+
+---
+
+### Index
+
+:::::{tab-set}
+::::{tab-item} I
+
+```{feature} bs.generation:i
+```
+
+*Example: only place the first block of each line*
+
+```mcfunction
+# Once
+data modify storage bs.generation:on_cuboid in set value {run:'execute if predicate {type:"int_value_check",value:"bs.generation:i",test:0} run setblock ~ ~ ~ minecraft:stone',size:[5,5,5]}
+function #bs.generation:on_cuboid/xyz
+```
+
+::::
+::::{tab-item} J
+
+```{feature} bs.generation:j
+```
+
+*Example: only place the first line of each layer*
+
+```mcfunction
+# Once
+data modify storage bs.generation:on_cuboid in set value {run:'execute if predicate {type:"int_value_check",value:"bs.generation:j",test:0} run setblock ~ ~ ~ minecraft:stone',size:[5,5,5]}
+function #bs.generation:on_cuboid/xyz
+```
+
+::::
+::::{tab-item} K
+
+```{feature} bs.generation:k
+```
+
+*Example: only place the first layer*
+
+```mcfunction
+# Once
+data modify storage bs.generation:on_cuboid in set value {run:'execute if predicate {type:"int_value_check",value:"bs.generation:k",test:0} run setblock ~ ~ ~ minecraft:stone',size:[5,5,5]}
+function #bs.generation:on_cuboid/xyz
+```
+
+::::
+:::::
 
 ---
 

@@ -13,6 +13,9 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# axolotl group
-execute if predicate bs.hitbox:internal/is_baby run return run data modify storage bs:out hitbox set value {width:0.375,height:0.21}
-data modify storage bs:out hitbox set value {width:0.75,height:0.42}
+# minecraft:interaction
+execute at @s unless entity @s[dx=0] run return 0
+data modify storage bs.hitbox:get_entity out set value [[0f,0f,0f,0f,0f,0f,1f]]
+execute store result storage bs.hitbox:get_entity out[0][0] float -.0000005 store result storage bs.hitbox:get_entity out[0][2] float -.0000005 store result storage bs.hitbox:get_entity out[0][3] float .0000005 store result storage bs.hitbox:get_entity out[0][5] float .0000005 run data get entity @s width 1000000
+data modify storage bs.hitbox:get_entity out[0][4] set from entity @s height
+return 1

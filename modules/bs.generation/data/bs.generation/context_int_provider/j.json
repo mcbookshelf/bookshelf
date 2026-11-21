@@ -1,0 +1,19 @@
+{
+  "type": "sub",
+  "left": {
+    "type": "score",
+    "score": "bs.data",
+    "target": {
+      "type": "fixed",
+      "name": "#generation.nj"
+    }
+  },
+  "right": {
+    "type": "score",
+    "score": "bs.data",
+    "target": {
+      "type": "fixed",
+      "name": "#generation.j"
+    }
+  }
+}

@@ -8,8 +8,8 @@ import orjson
 from httpx import Response
 
 from mcbookshelf import constants, workspace
-from mcbookshelf.assets import BundleEntry, Manifest, ModuleEntry
-from mcbookshelf.workspace import changelog, history
+from mcbookshelf.releases import BundleEntry, Manifest, ModuleEntry
+from mcbookshelf.workspace import Workspace, changelog, release
 
 
 @dataclass(frozen=True)
@@ -18,38 +18,40 @@ class Pack:
     id: str
     name: str
     slug: str
-    kind: str
+    pack_type: str
     version: str
     file: Path
     icon: Path
     icon_url: str
     readme: Path
     readme_url: str
+    download_url: str
     description: str
     documentation: str
     changelog: str
 
     @classmethod
-    def from_entry(cls, name: str, entry: ModuleEntry | BundleEntry) -> Pack:
-        directory = workspace.directory(name)
-        kind = "Bundle" if name in workspace.bundles() else "Module"
+    def from_entry(cls, ws: Workspace, name: str, entry: ModuleEntry | BundleEntry) -> Pack:
+        directory = ws.directory(name)
+        category = "Bundle" if name in ws.bundles() else "Module"
         for file in ("pack.png", "README.md"):
             if not (directory / file).is_file():
                 raise ValueError(f"{name} has no {file}, every published pack needs one")
         return cls(
             id=entry["id"],
-            name=f"Bookshelf {entry['name']} {kind}",
+            name=f"Bookshelf {entry['name']} {category}",
             slug=entry["slug"],
-            kind=entry["kind"],
+            pack_type=entry["kind"],
             version=f"{entry['version']}+{constants.GAME_VERSION}",
             file=constants.RELEASE_DIR / entry["file"],
             icon=directory / "pack.png",
             icon_url=entry["icon"],
             readme=directory / "README.md",
             readme_url=entry["readme"],
+            download_url=f"{release.download_url(ws)}/{entry['file']}",
             description=entry["description"],
             documentation=entry["documentation"],
-            changelog=_changelog(name, entry),
+            changelog=_changelog(ws, name, entry),
         )
 
 
@@ -78,8 +80,9 @@ async def gather_errors(tasks: Iterable[Awaitable[None]]) -> list[Exception]:
 
 
 def get_packs() -> list[Pack]:
+    ws = workspace.current()
     manifest = _manifest()
-    expected = history.release_version()
+    expected = release.version(ws)
     if manifest["release"] != expected:
         raise ValueError(
             f"release directory is v{manifest['release']}, sources are v{expected}: "
@@ -91,7 +94,7 @@ def get_packs() -> list[Pack]:
             f"sources target {constants.GAME_VERSION}",
         )
     entries = {**manifest["modules"], **manifest["bundles"]}
-    return [Pack.from_entry(name, entry) for name, entry in entries.items()]
+    return [Pack.from_entry(ws, name, entry) for name, entry in entries.items()]
 
 
 def _manifest() -> Manifest:
@@ -101,12 +104,12 @@ def _manifest() -> Manifest:
     return orjson.loads(file.read_bytes())
 
 
-def _changelog(name: str, entry: BundleEntry | ModuleEntry) -> str:
-    if name not in workspace.bundles():
-        return changelog.section(name, entry["version"])
+def _changelog(ws: Workspace, name: str, entry: BundleEntry | ModuleEntry) -> str:
+    if name not in ws.bundles():
+        return changelog.section(ws, name, entry["version"])
     blocks = []
-    for member in workspace.members(name):
-        notes = changelog.section(member, workspace.load_module(member).version)
+    for member in ws.members(name):
+        notes = changelog.section(ws, member, ws.load_module(member).version)
         if notes:
             blocks.append(f"## {member}\n\n{notes}")
     return "\n\n".join(blocks)

@@ -1,0 +1,113 @@
+{
+  "type": "conditional",
+  "condition": {
+    "type": "location_check",
+    "predicate": {
+      "fluid": {
+        "state": {
+          "level": {
+            "max": "7"
+          }
+        }
+      }
+    }
+  },
+  "on_true": {
+    "type": "conditional",
+    "condition": {
+      "type": "location_check",
+      "predicate": {
+        "fluid": {
+          "state": {
+            "level": {
+              "max": "3"
+            }
+          }
+        }
+      }
+    },
+    "on_true": {
+      "type": "conditional",
+      "condition": {
+        "type": "location_check",
+        "predicate": {
+          "fluid": {
+            "state": {
+              "level": {
+                "max": "1"
+              }
+            }
+          }
+        }
+      },
+      "on_true": 14913081,
+      "on_false": {
+        "type": "conditional",
+        "condition": {
+          "type": "location_check",
+          "predicate": {
+            "fluid": {
+              "state": {
+                "level": {
+                  "max": "2"
+                }
+              }
+            }
+          }
+        },
+        "on_true": 29826162,
+        "on_false": 44739244
+      }
+    },
+    "on_false": {
+      "type": "conditional",
+      "condition": {
+        "type": "location_check",
+        "predicate": {
+          "fluid": {
+            "state": {
+              "level": {
+                "max": "5"
+              }
+            }
+          }
+        }
+      },
+      "on_true": {
+        "type": "conditional",
+        "condition": {
+          "type": "location_check",
+          "predicate": {
+            "fluid": {
+              "state": {
+                "level": {
+                  "max": "4"
+                }
+              }
+            }
+          }
+        },
+        "on_true": 59652324,
+        "on_false": 74565408
+      },
+      "on_false": {
+        "type": "conditional",
+        "condition": {
+          "type": "location_check",
+          "predicate": {
+            "fluid": {
+              "state": {
+                "level": {
+                  "max": "6"
+                }
+              }
+            }
+          }
+        },
+        "on_true": 89478488,
+        "on_false": 104391568
+      }
+    }
+  },
+  "on_false": 119304648
+}

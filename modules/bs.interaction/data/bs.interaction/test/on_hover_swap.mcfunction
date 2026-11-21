@@ -12,20 +12,17 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+# @template ward:empty/9x9x9
 # @dummy
 
-## === SETUP ===
+summon minecraft:interaction ~4 ~1 ~5.5 {Tags:["ward.interaction.swap","ward.interaction.swap.1"],width:1f,height:2f}
+summon minecraft:interaction ~5 ~1 ~5.5 {Tags:["ward.interaction.swap","ward.interaction.swap.2"],width:1f,height:2f}
+execute as @e[type=minecraft:interaction,tag=ward.interaction.swap] run function #bs.interaction:on_hover_enter.in {run:"tag @s add ward.interaction.swap.hovered",executor:"target",with:{}}
+execute as @e[type=minecraft:interaction,tag=ward.interaction.swap] run function #bs.interaction:on_hover_leave.in {run:"tag @s remove ward.interaction.swap.hovered",executor:"target",with:{}}
 
-fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:air replace minecraft:barrier
-summon minecraft:interaction ~ ~ ~1.5 {Tags: ["bs.ward","bs.ward.1"], width: 1.0, height: 2.0}
-summon minecraft:interaction ~1 ~ ~1.5 {Tags: ["bs.ward","bs.ward.2"], width: 1.0, height: 2.0}
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..3,limit=2] run function #bs.interaction:on_hover_enter { run: "tag @s add bs.ward.target", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..3,limit=2] run function #bs.interaction:on_hover_leave { run: "tag @s remove bs.ward.target", executor: "target" }
-
-## === EXPECTED BEHAVIORS ===
-
-tp @s ~.5 ~ ~.5 45 0
-await entity @n[type=minecraft:interaction,tag=bs.ward.1,tag=bs.ward.target,distance=..2]
-tp @s ~.5 ~ ~.5 -45 0
-await entity @n[type=minecraft:interaction,tag=bs.ward.2,tag=bs.ward.target,distance=..2]
-await not entity @n[type=minecraft:interaction,tag=bs.ward.1,tag=bs.ward.target,distance=..2]
+# Looking from one interaction to the next leaves the first and enters the second
+tp @s ~4.5 ~1 ~4.5 45 0
+await entity @n[type=minecraft:interaction,tag=ward.interaction.swap.1,tag=ward.interaction.swap.hovered]
+tp @s ~4.5 ~1 ~4.5 -45 0
+await entity @n[type=minecraft:interaction,tag=ward.interaction.swap.2,tag=ward.interaction.swap.hovered]
+await not entity @n[type=minecraft:interaction,tag=ward.interaction.swap.1,tag=ward.interaction.swap.hovered]

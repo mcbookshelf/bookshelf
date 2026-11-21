@@ -8,6 +8,6 @@ $data modify storage bs.load: bundle._module set value "$(module)"
 $execute store result storage bs.load: bundle._major int 1 run scoreboard players get $$(module).major load.status
 $execute store result storage bs.load: bundle._minor int 1 run scoreboard players get $$(module).minor load.status
 $execute store result storage bs.load: bundle._patch int 1 run scoreboard players get $$(module).patch load.status
-function bs.load:load/v{{ loader }}/bundle/concat with storage bs.load: bundle
+function bs.load:v{{ loader }}/bundle/concat with storage bs.load: bundle
 
 data modify storage bs.load: bundle.message.click_event.url set string storage bs.load: bundle.link 0 -1

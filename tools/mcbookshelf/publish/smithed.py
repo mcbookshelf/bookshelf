@@ -3,7 +3,6 @@ from typing import Any
 from httpx import AsyncBaseTransport, AsyncClient
 
 from mcbookshelf import constants
-from mcbookshelf.workspace import history
 
 from . import Pack, PublishError, gather_errors
 
@@ -39,7 +38,7 @@ def _version(pack: Pack) -> dict[str, Any]:
         "name": pack.version,
         "supports": [constants.GAME_VERSION],
         "dependencies": [],
-        "downloads": {pack.kind: f"{history.download_url()}/{pack.file.name}"},
+        "downloads": {pack.pack_type: pack.download_url},
     }
 
 

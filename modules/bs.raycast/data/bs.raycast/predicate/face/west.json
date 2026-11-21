@@ -1,0 +1,39 @@
+{
+  "type": "all_of",
+  "terms": [
+    {
+      "type": "int_value_check",
+      "value": {
+        "type": "floor_mod",
+        "left": {
+          "type": "floor_div",
+          "left": {
+            "type": "score",
+            "score": "bs.data",
+            "target": {
+              "type": "fixed",
+              "name": "#raycast.hit"
+            }
+          },
+          "right": 16
+        },
+        "right": 4
+      },
+      "test": 0
+    },
+    {
+      "type": "int_value_check",
+      "value": {
+        "type": "score",
+        "score": "bs.data",
+        "target": {
+          "type": "fixed",
+          "name": "#raycast.ux"
+        }
+      },
+      "test": {
+        "min": 0
+      }
+    }
+  ]
+}

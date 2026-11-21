@@ -3,18 +3,17 @@ from pathlib import Path
 
 import click
 
-from mcbookshelf import constants
-from mcbookshelf.workspace import history
+from mcbookshelf import constants, workspace
+from mcbookshelf.workspace import release
 
 
 @click.command()
 def info() -> None:
     """Export release information as GitHub outputs."""
-    tag = history.release_tag()
+    ws = workspace.current()
     lines = [
-        f"version={history.release_version()}",
-        f"tag={tag}",
-        f"tag_exists={str(history.tag_exists(tag)).lower()}",
+        f"version={release.version(ws)}",
+        f"tag={release.tag(ws)}",
         f"game_version={constants.GAME_VERSION}",
     ]
 

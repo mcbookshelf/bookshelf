@@ -39,6 +39,7 @@ Manipulate colors and convert them between formats.
 - Convert a color to its hexadecimal representation
 - Convert a color to its integer representation
 - Convert a color to its RGB representation
+- Mix two colors, channel by channel or in the Oklab color space
 
 📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/color.html)
 

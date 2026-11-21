@@ -35,7 +35,7 @@ ICONS = {
 }
 
 
-def feature(feature: Feature, *, macro: bool = False) -> str:
+def render(feature: Feature, *, macro: bool = False) -> str:
     lines = []
     if feature.experimental:
         note = "still in the making: it ships in the nightly only, and may change"
@@ -48,37 +48,51 @@ def feature(feature: Feature, *, macro: bool = False) -> str:
             slots = [s for s in slots if s.target is None]
         if not slots and not (role is Role.INPUT and arguments is not None):
             continue
-        lines.append(f":{_heading(role)}:")
-        for slot in slots:
-            lines.extend(f"  {line}" for line in _slot(slot, role))
+        # What a function returns reads last, after what it writes
+        entries = [_slot(slot, role) for slot in sorted(slots, key=lambda s: s.target is None)]
         if role is Role.INPUT and arguments is not None:
             described = feature.macro.description if feature.macro else None
-            lines.append("  **Macro**:")
             tree = _treeview(described or "arguments", arguments, macro=True)
-            lines.extend(f"  {line}" for line in tree)
-        lines.append("")
+            entries.append(("Macro", list(tree)))
+        lines.append(f":{_heading(role)}:")
+        for label, body in entries:
+            lines.extend(_entry(label, body))
     return "\n".join(lines)
+
+
+def _entry(label: str, body: list[str]) -> Iterator[str]:
+    """One entry of a section, in a block of its own: its kind as a badge, then what it holds."""
+    kind, _, name = label.partition(" ")
+    head = f"{{bdg-secondary}}`{kind}`" + (f" **{name}**:" if name else ":")
+    yield "  ::::{div} bs-entry"
+    if body and body[0].startswith(":::"):
+        yield f"  {head}"
+        yield from (f"  {line}" for line in body)
+    else:
+        first, *rest = body or [""]
+        yield f"  {head} {first}".rstrip()
+        yield from (f"  {line}" for line in rest)
+    yield "  ::::"
+    yield ""
 
 
 def _heading(role: Role) -> str:
     return "Context" if role is Role.CONTEXT else f"{role.capitalize()}s"
 
 
-def _slot(slot: Slot, role: Role) -> Iterator[str]:
-    doc = f": {slot.description}" if slot.description else ""
+def _slot(slot: Slot, role: Role) -> tuple[str, list[str]]:
+    """A slot as its label and the lines of its body: its description, or the tree of a struct."""
+    description = slot.description.splitlines() if slot.description else []
     if slot.target is not None:
-        label = f"**Storage `{slot.target.display}`**"
+        label = f"Storage `{slot.target.display}`"
         if isinstance(slot.type, syntax.Struct):
-            yield f"{label}:"
-            yield from _treeview(slot.description or TREEVIEW[role], slot.type)
-        elif slot.type is not None:
-            yield f"{label}: {{nbt}}`{_icon(slot.type)}` {slot.description or ''}".rstrip()
-        return
+            return label, list(_treeview(slot.description or TREEVIEW[role], slot.type))
+        if slot.type is not None:
+            first, *rest = description or [""]
+            return label, [f"{_badges(slot.type)} {first}".rstrip(), *rest]
     if slot.kind in EXECUTION and slot.type is not None:
-        yield f"**Execution `{_execution(slot.kind, slot.type)}`**{doc}"
-        return
-    code = f" `{slot.type}`" if slot.type is not None else ""
-    yield f"**{str(slot.kind).capitalize()}**{code}{doc}"
+        return f"Execution `{_execution(slot.kind, slot.type)}`", description
+    return str(slot.kind).capitalize(), description
 
 
 def _execution(kind: syntax.Kind, value: syntax.Type) -> str:

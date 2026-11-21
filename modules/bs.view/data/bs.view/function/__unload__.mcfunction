@@ -13,12 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-kill B5-0-0-0-1
-kill B5-0-0-0-2
-forceload remove -30000000 1600
-
-scoreboard objectives remove bs.const
 scoreboard objectives remove bs.data
 
-data remove storage bs:in view
-data remove storage bs:data view
+data remove storage bs.view: angle
+data remove storage bs.view: pos
+data remove storage bs.view: rel
+data remove storage bs.view: x
+data remove storage bs.view: y
+data remove storage bs.view: z

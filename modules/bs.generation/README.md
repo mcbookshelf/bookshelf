@@ -28,7 +28,7 @@
 
 ## 🏗️ Bookshelf Generation Module
 
-Run a function over every position in a shaped region, spread across ticks.
+Run a command over every position in a shaped region, spread across ticks.
 
 > *"Nature's beauty is a reflection of the harmony of numbers and patterns."*
 >
@@ -36,9 +36,9 @@ Run a function over every position in a shaped region, spread across ticks.
 
 ### ✨ Features
 
-- Iterate over 2D or 3D shapes, with tick spreading to avoid lag
-- Generate natural-looking terrain with builtin noise algorithms
-- Transform blocks across a region with builtin block algorithms
+- Run a command at every position of a cuboid, a rectangle, an ellipsoid or an ellipse
+- Spread the work over several ticks to avoid lag
+- Choose the order of the axes
 
 📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/generation.html)
 

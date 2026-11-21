@@ -13,7 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-$execute positioned ~$(x) ~$(y) ~$(z) run function bs.hitbox:utils/tp
-data modify storage bs:ctx _ set from entity @s Pos
+data modify storage bs.hitbox: pos set from entity @s Pos
+data modify storage bs.hitbox: x set from storage bs.hitbox: pos[0]
+data modify storage bs.hitbox: y set from storage bs.hitbox: pos[1]
+data modify storage bs.hitbox: z set from storage bs.hitbox: pos[2]
+function bs.hitbox:utils/move_relative with storage bs.hitbox:
+data modify storage bs.hitbox: rel set from entity @s Pos
 tp @s ~ -1000000 ~
 kill @s

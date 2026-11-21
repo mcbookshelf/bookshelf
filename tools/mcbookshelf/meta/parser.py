@@ -30,6 +30,7 @@ def _parser() -> Lark:
         lexer="contextual",
         propagate_positions=True,
         start="document",
+        cache=True,
     )
 
 
@@ -94,16 +95,14 @@ class _Transform(Transformer[Token, Any]):
         return syntax.Reference(name=_name(items[0]), line=meta.line)
 
     def declaration(self, meta: Meta, items: list[Any]) -> syntax.Declaration:
-        kind, *rest = items
-        id_ = next((str(i) for i in rest if isinstance(i, Token)), None)
-        path = next((i for i in rest if isinstance(i, str) and not isinstance(i, Token)), None)
+        kind, id_, path, type_ = items
         storage = None
         if id_ is not None or path is not None:
-            storage = syntax.Storage(id=id_, path=path, line=meta.line)
+            storage = syntax.Storage(id=id_ and str(id_), path=path, line=meta.line)
         return syntax.Declaration(
             kind=syntax.Kind(str(kind)),
             storage=storage,
-            type=next((i for i in rest if not isinstance(i, str)), None),
+            type=type_,
             line=meta.line,
         )
 

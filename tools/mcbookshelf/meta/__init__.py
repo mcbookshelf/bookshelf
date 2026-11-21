@@ -40,4 +40,3 @@ def load_bundle(file: Path) -> model.Bundle:
     """Load a `bundle.bs` file."""
     document = parse(file.read_text("utf-8"), file)
     return build_bundle(document, file.parent.name, file)
-

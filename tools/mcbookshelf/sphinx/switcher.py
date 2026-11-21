@@ -3,7 +3,7 @@ import subprocess
 from pathlib import Path
 
 from mcbookshelf import constants
-from mcbookshelf.version import parse_version
+from mcbookshelf.version import Version
 from mcbookshelf.workspace import history
 
 DOCS = f"{constants.DOCS_URL}/en"
@@ -22,7 +22,7 @@ def write(target: Path) -> None:
     seen = set()
     for tag in sorted(tags, key=_key, reverse=True):
         version = tag[1:].partition("+")[0]
-        minor = parse_version(version)[:2]
+        minor = Version.parse(version)[:2]
         if minor in seen:
             continue
         seen.add(minor)
@@ -34,6 +34,6 @@ def write(target: Path) -> None:
     target.write_text(content, "utf-8", newline="\n")
 
 
-def _key(tag: str) -> tuple[tuple[int, int, int], str]:
+def _key(tag: str) -> tuple[Version, str]:
     version, _, game = tag[1:].partition("+")
-    return parse_version(version), game
+    return Version.parse(version), game

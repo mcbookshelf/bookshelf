@@ -12,59 +12,51 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+# @template ward:empty/9x9x9
 # @dummy
 
-## === SETUP ===
+summon minecraft:interaction ~4.5 ~1 ~3.5 {Tags:["ward.interaction.hover_enter","ward.interaction.hover_enter.executor"],width:1f,height:2f}
+summon minecraft:interaction ~5.5 ~1 ~4.5 {Tags:["ward.interaction.hover_enter","ward.interaction.hover_enter.trap"],width:1f,height:2f}
+summon minecraft:interaction ~3.5 ~1 ~4.5 {Tags:["ward.interaction.hover_enter","ward.interaction.hover_enter.trap"],width:1f,height:2f}
+tp @s ~4.5 ~1 ~4.5 0 0
+execute as @e[type=minecraft:interaction,tag=ward.interaction.hover_enter] run function #bs.interaction:on_hover_enter.in {run:"tag @s add ward.interaction.hover_enter.source",executor:"source",with:{}}
+execute as @e[type=minecraft:interaction,tag=ward.interaction.hover_enter] run function #bs.interaction:on_hover_enter.in {run:"tag @s add ward.interaction.hover_enter.target",executor:"target",with:{}}
+execute as @e[type=minecraft:interaction,tag=ward.interaction.hover_enter] run function #bs.interaction:on_hover_enter.in {run:"tag @s add ward.interaction.hover_enter.interpreted",executor:"@n[tag=ward.interaction.hover_enter.executor]",with:{lazy:false}}
+execute as @e[type=minecraft:interaction,tag=ward.interaction.hover_enter] run function #bs.interaction:on_hover_enter.in {run:"tag @s add ward.interaction.hover_enter.lazy",executor:"@n[tag=ward.interaction.hover_enter.executor]",with:{}}
 
-fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:air replace minecraft:barrier
-summon minecraft:interaction ~.5 ~ ~-.5 {Tags: ["bs.ward","bs.ward.executor"], width: 1.0, height: 2.0}
-summon minecraft:interaction ~1.5 ~ ~.5 {Tags: ["bs.ward","bs.ward.trap"], width: 1.0, height: 2.0}
-summon minecraft:interaction ~-.5 ~ ~.5 {Tags: ["bs.ward","bs.ward.trap"], width: 1.0, height: 2.0}
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2,limit=4] run function #bs.interaction:on_hover_enter { run: "tag @s add bs.ward.source", executor: "source" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2,limit=4] run function #bs.interaction:on_hover_enter { run: "tag @s add bs.ward.target", executor: "target" }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2,limit=4] run function #bs.interaction:on_hover_enter { run: "tag @s add bs.ward.interpreted", executor: { selector: "@n[tag=bs.ward.executor,distance=..2]", lazy: false } }
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2,limit=4] run function #bs.interaction:on_hover_enter { run: "tag @s add bs.ward.lazy", executor: { selector: "@n[tag=bs.ward.executor,distance=..2]", lazy: true } }
-
-## === EXPECTED BEHAVIORS ===
-
+# The command does not run before the player starts looking at the interaction
 await delay 2t
-execute if entity @s[tag=bs.ward.source] run fail "Callback should not run before the interaction is hovered"
-tp @s ~.5 ~ ~.5 180 0
-await entity @s[tag=bs.ward.source]
-execute unless entity @n[type=minecraft:interaction,tag=bs.ward,tag=!bs.ward.trap,tag=bs.ward.target,distance=..2] run fail "Failed to run callback on target entity"
-execute unless entity @n[type=minecraft:interaction,tag=bs.ward,tag=!bs.ward.trap,tag=bs.ward.interpreted,distance=..2] run fail "Failed to run callback using an interpreted selector"
-execute unless entity @n[type=minecraft:interaction,tag=bs.ward,tag=!bs.ward.trap,tag=bs.ward.lazy,distance=..2] run fail "Failed to run callback using a lazy selector"
-execute if entity @n[type=minecraft:interaction,tag=bs.ward.trap,tag=bs.ward.target,distance=..2] run fail "Failed to run callback on the right interaction"
+assert not entity @s[tag=ward.interaction.hover_enter.source]
 
-tag @s remove bs.ward.source
-tag @e[distance=..2] remove bs.ward.target
-tag @e[distance=..2] remove bs.ward.interpreted
-tag @e[distance=..2] remove bs.ward.lazy
-
-await not entity @s[tag=bs.ward.source]
-execute if entity @n[type=minecraft:interaction,tag=bs.ward,tag=!bs.ward.trap,tag=bs.ward.target,distance=..2] run fail "Callback should run only once on enter"
-execute if entity @n[type=minecraft:interaction,tag=bs.ward,tag=!bs.ward.trap,tag=bs.ward.interpreted,distance=..2] run fail "Callback should run only once on enter"
-execute if entity @n[type=minecraft:interaction,tag=bs.ward,tag=!bs.ward.trap,tag=bs.ward.lazy,distance=..2] run fail "Callback should run only once on enter"
-
-tag @e[distance=..2] remove bs.ward.executor
-tag @s add bs.ward.executor
-
-tp @s ~.5 ~ ~.5 0 0
+# The command runs once, as the source, the target, a resolved selector and a lazy selector
+tp @s ~4.5 ~1 ~4.5 180 0
+await entity @s[tag=ward.interaction.hover_enter.source]
+assert entity @n[type=minecraft:interaction,tag=ward.interaction.hover_enter,tag=!ward.interaction.hover_enter.trap,tag=ward.interaction.hover_enter.target]
+assert entity @n[type=minecraft:interaction,tag=ward.interaction.hover_enter,tag=!ward.interaction.hover_enter.trap,tag=ward.interaction.hover_enter.interpreted]
+assert entity @n[type=minecraft:interaction,tag=ward.interaction.hover_enter,tag=!ward.interaction.hover_enter.trap,tag=ward.interaction.hover_enter.lazy]
+assert not entity @n[type=minecraft:interaction,tag=ward.interaction.hover_enter.trap,tag=ward.interaction.hover_enter.target]
+tag @e remove ward.interaction.hover_enter.source
+tag @e remove ward.interaction.hover_enter.target
+tag @e remove ward.interaction.hover_enter.interpreted
+tag @e remove ward.interaction.hover_enter.lazy
 await delay 2t
-tp @s ~.5 ~ ~.5 180 0
-await entity @s[tag=bs.ward.source]
-execute unless entity @n[type=minecraft:interaction,tag=bs.ward,tag=!bs.ward.trap,tag=bs.ward.target,distance=..2] run fail "Failed to run callback on target entity"
-execute unless entity @n[type=minecraft:interaction,tag=bs.ward,tag=!bs.ward.trap,tag=bs.ward.interpreted,distance=..2] run fail "Failed to run callback using an interpreted selector"
-execute if entity @n[type=minecraft:interaction,tag=bs.ward,tag=!bs.ward.trap,tag=bs.ward.lazy,distance=..2] run fail "Failed to run callback using a lazy selector"
-execute unless entity @s[tag=bs.ward.lazy] run fail "Failed to run callback using a lazy selector"
+assert not entity @s[tag=ward.interaction.hover_enter.source]
 
-## === INPUT ERRORS ===
+# A resolved selector keeps its entity, a lazy one finds the new one
+tag @e remove ward.interaction.hover_enter.executor
+tag @s add ward.interaction.hover_enter.executor
+tp @s ~4.5 ~1 ~4.5 0 0
+await delay 2t
+tag @e remove ward.interaction.hover_enter.source
+tag @e remove ward.interaction.hover_enter.target
+tag @e remove ward.interaction.hover_enter.interpreted
+tag @e remove ward.interaction.hover_enter.lazy
+tp @s ~4.5 ~1 ~4.5 180 0
+await entity @s[tag=ward.interaction.hover_enter.source]
+assert entity @n[type=minecraft:interaction,tag=ward.interaction.hover_enter,tag=!ward.interaction.hover_enter.trap,tag=ward.interaction.hover_enter.interpreted]
+assert not entity @n[type=minecraft:interaction,tag=ward.interaction.hover_enter,tag=!ward.interaction.hover_enter.trap,tag=ward.interaction.hover_enter.lazy]
+assert entity @s[tag=ward.interaction.hover_enter.lazy]
 
-execute store success score #s bs.ctx run function #bs.interaction:on_hover_enter { run: "", executor: "source" }
-execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when function is called on a non interaction entity"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store success score #s bs.ctx run function #bs.interaction:on_hover_enter { run: "", executor: "target" }
-execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when the command is invalid"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store success score #s bs.ctx run function #bs.interaction:on_hover_enter { run: "help", executor: { selector: "¯\\_(ツ)_/¯" } }
-execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when the selector is invalid"
-execute as @n[type=minecraft:interaction,tag=bs.ward,distance=..2] store success score #s bs.ctx run function #bs.interaction:on_hover_enter { run: "help", executor: { selector: "@n[type=minecraft:allay,tag=bs.is_never_gonna_be_released]", lazy: false } }
-execute unless score #s bs.ctx matches 0 run fail "Failed to return an error when the selector is interpreted and points to no entity"
+# The current entity must be an interaction, and a resolved selector must find an entity
+assert not run function #bs.interaction:on_hover_enter.in {run:"say ward",executor:"source",with:{}}
+assert not run execute as @n[type=minecraft:interaction,tag=ward.interaction.hover_enter] run function #bs.interaction:on_hover_enter.in {run:"say ward",executor:"@n[type=minecraft:allay,tag=ward.interaction.hover_enter.none]",with:{lazy:false}}

@@ -12,11 +12,31 @@
 #
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
+
 # @dummy
 
-setblock ~ ~1 ~ minecraft:bookshelf
-function #bs.schedule:schedule {run:"execute if block ~ ~1 ~ minecraft:bookshelf run scoreboard players set @s bs.data 1",with:{}}
-await score @s bs.data matches 1
+# The command runs as the entity that scheduled it
+data modify storage bs.schedule:schedule in set value {run:"tag @s add ward.schedule.context.as",time:1,id:"ward.schedule.context"}
+function #bs.schedule:schedule/append
+await entity @s[tag=ward.schedule.context.as]
 
-execute in minecraft:the_nether run function #bs.schedule:schedule {run:"execute if dimension minecraft:the_nether run scoreboard players set @s bs.data 2",with:{}}
-await score @s bs.data matches 2
+# The command runs at the position it was scheduled from
+setblock ~ ~1 ~ minecraft:bookshelf
+data modify storage bs.schedule:schedule in set value {run:"execute if block ~ ~1 ~ minecraft:bookshelf run tag @s add ward.schedule.context.at",time:1,id:"ward.schedule.context"}
+function #bs.schedule:schedule/append
+await entity @s[tag=ward.schedule.context.at]
+
+# The command runs with the rotation it was scheduled with
+data modify storage bs.schedule:schedule in set value {run:"execute positioned ^ ^ ^1 if block ~ ~ ~ minecraft:bookshelf run tag @s add ward.schedule.context.rotated",time:1,id:"ward.schedule.context"}
+execute rotated 0 -90 run function #bs.schedule:schedule/append
+await entity @s[tag=ward.schedule.context.rotated]
+
+# The command runs in the dimension it was scheduled from
+data modify storage bs.schedule:schedule in set value {run:"execute if dimension minecraft:the_nether run tag @s add ward.schedule.context.in",time:1,id:"ward.schedule.context"}
+execute in minecraft:the_nether run function #bs.schedule:schedule/append
+await entity @s[tag=ward.schedule.context.in]
+
+# The command runs at the position it was scheduled from, in another dimension too
+data modify storage bs.schedule:schedule in set value {run:'execute if predicate {type:"minecraft:location_check",predicate:{dimension:"minecraft:the_nether",position:{x:{min:79.9,max:80.1},y:{min:63.9,max:64.1},z:{min:79.9,max:80.1}}}} run tag @s add ward.schedule.context.nether',time:1,id:"ward.schedule.context"}
+execute in minecraft:the_nether positioned 80.0 64.0 80.0 run function #bs.schedule:schedule/append
+await entity @s[tag=ward.schedule.context.nether]

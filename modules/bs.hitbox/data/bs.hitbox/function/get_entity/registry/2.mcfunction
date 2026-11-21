@@ -13,7 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-# area_effect_cloud group
-data modify storage bs:out hitbox set value {width:0,height:0.5}
-execute store result score #w bs.ctx run data get entity @s Radius 20000000
-execute store result storage bs:out hitbox.width double .0000001 run scoreboard players get #w bs.ctx
+# minecraft:armor_stand
+execute at @s unless entity @s[dx=0] run return 0
+execute at @s positioned ~.1000001 ~ ~ unless entity @s[dx=0] positioned ~-.1000001 ~.2000001 ~ unless entity @s[dx=0] positioned ~.0999999 ~-.0000002 ~.0999999 if entity @s[dx=0] run return run function bs.hitbox:get_entity/sleeping
+execute store result score #s bs.ctx run attribute @s minecraft:scale get 1000000
+execute store success score #d bs.ctx if data entity @s {Small:1b}
+data modify storage bs.hitbox:get_entity out set value [[0f,0f,0f,0f,0f,0f,1f]]
+execute store result storage bs.hitbox:get_entity out[0][0] float -.0000005 store result storage bs.hitbox:get_entity out[0][2] float -.0000005 store result storage bs.hitbox:get_entity out[0][3] float .0000005 store result storage bs.hitbox:get_entity out[0][5] float .0000005 run compute entity @s integer {type:"from_float",input:{type:"round",input:{type:"mul",inputs:[{type:"conditional",condition:{type:"int_value_check",value:{type:"score",target:{type:"fixed",name:"#d"},score:"bs.ctx"},test:1},on_true:250000,on_false:500000},{type:"div",left:{type:"from_int",input:{type:"score",target:{type:"fixed",name:"#s"},score:"bs.ctx"}},right:1000000.0}]}}}
+data modify storage bs.hitbox:get_entity out[0][4] set compute entity @s float {type:"mul",inputs:[{type:"conditional",condition:{type:"int_value_check",value:{type:"score",target:{type:"fixed",name:"#d"},score:"bs.ctx"},test:1},on_true:0.9875,on_false:1.975},{type:"div",left:{type:"from_int",input:{type:"score",target:{type:"fixed",name:"#s"},score:"bs.ctx"}},right:1000000.0}]}
+return 1

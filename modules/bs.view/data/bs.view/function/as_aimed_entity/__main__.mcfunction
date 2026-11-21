@@ -1,0 +1,23 @@
+# ------------------------------------------------------------------------------------------------------------
+# Copyright (c) 2026 Gunivers
+#
+# This file is part of the Bookshelf project (https://github.com/mcbookshelf/bookshelf).
+#
+# This source code is subject to the terms of the Mozilla Public License, v. 2.0.
+# If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#
+# Conditions:
+# - You may use this file in compliance with the MPL v2.0
+# - Any modifications must be documented and disclosed under the same license
+#
+# For more details, refer to the MPL v2.0.
+# ------------------------------------------------------------------------------------------------------------
+
+data modify storage bs.raycast:cast in set value {blocks:"#bs.hitbox:get_block/outline",entities:"#bs.hitbox:get_entity/targetable",on_entity:"function bs.view:utils/aimed with storage bs.view:as_aimed_entity in"}
+data modify storage bs.raycast:cast in merge from storage bs.view:as_aimed_entity in
+
+tag @s add bs.raycast.omit
+scoreboard players set #view.hit bs.data 0
+execute at @s anchored eyes positioned ^ ^ ^ run function #bs.raycast:cast
+tag @s remove bs.raycast.omit
+return run execute if score #view.hit bs.data matches 1

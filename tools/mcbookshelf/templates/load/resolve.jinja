@@ -12,5 +12,5 @@ execute unless score #{{ module }}.major_versions load.status matches 2.. \
   run return 1
 
 # Format module specific errors
-function #bs.load:process/errors/{{ module[3:] }}
+function #bs.load:process/errors/{{ short }}
 return fail

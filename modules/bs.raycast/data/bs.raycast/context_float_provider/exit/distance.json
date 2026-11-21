@@ -1,0 +1,15 @@
+{
+  "type": "div",
+  "left": {
+    "type": "from_int",
+    "input": {
+      "type": "score",
+      "score": "bs.data",
+      "target": {
+        "type": "fixed",
+        "name": "#raycast.exit"
+      }
+    }
+  },
+  "right": 16384.0
+}

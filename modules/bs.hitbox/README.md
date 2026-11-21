@@ -36,10 +36,10 @@ Work with the hitboxes of blocks and entities.
 
 ### ✨ Features
 
-- Get the exact hitbox of any block or entity
-- Check if entities are within block collision or interaction boxes
-- Fluid and non-fluid block hitbox providers for other modules
-- Override an entity's dimensions with a custom size
+- Get the exact boxes of any block or entity
+- Check if a position or an entity is inside a block, or a position inside an entity
+- Block and entity providers, with or without fluids, for other modules
+- Write your own providers to change or add boxes
 
 📚 [Documentation](https://docs.mcbookshelf.dev/en/latest/modules/hitbox.html)
 

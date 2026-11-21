@@ -140,7 +140,7 @@ We can use the `bs.view` module, specifically the `at_aimed_block` function, whi
 `@function paintbrush:use`
 ```mcfunction
 advancement revoke @s only paintbrush:use
-function #bs.view:at_aimed_block { run: "function paintbrush:replace_block", with: {} }
+function #bs.view:at_aimed_block.in { run: "function paintbrush:replace_block", with: {} }
 ```
 
 **➔ create the `replace_block` function**
@@ -294,7 +294,7 @@ schedule function paintbrush:tick 1t
 ```mcfunction
 scoreboard players reset @s use_brush
 advancement revoke @s only paintbrush:use
-function #bs.view:at_aimed_block { run: "function paintbrush:replace_block", with: {} }
+function #bs.view:at_aimed_block.in { run: "function paintbrush:replace_block", with: {} }
 ```
 
 And… That's it! You can now paint blocks with the painter tool, and as you can see, this is really simple to do!
