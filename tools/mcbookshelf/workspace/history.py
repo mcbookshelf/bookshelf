@@ -1,12 +1,14 @@
 import re
 import subprocess
-from collections.abc import Callable
+from collections.abc import Callable, Iterable
+from pathlib import Path
 
 from mcbookshelf import constants, meta
 from mcbookshelf.meta import Bundle, Module
 from mcbookshelf.workspace import Workspace, cached, select
 
 RELEASE_TAG = re.compile(r"^v\d+\.\d+\.\d+\+\S+$")
+GAME_VERSION = re.compile(r'^GAME_VERSION = "([^"-]+)', re.MULTILINE)
 DOCS_OR_RELEASE_TAG = re.compile(r"^v\d+\.\d+\.\d+(\+\S+)?$")
 
 
@@ -54,6 +56,40 @@ def members_at(ws: Workspace, tag: str, name: str) -> dict[str, str]:
         return {}
     members = select(bundle, modules_at(ws, tag).values())
     return {m.id: m.version for m in members}
+
+
+@cached
+def last_changes(_ws: Workspace, name: str) -> dict[str, tuple[str, str]]:
+    """The commit which last changed each file of a module and its date, by path in the module."""
+    if _git("rev-parse", "--is-shallow-repository").strip() == "true":
+        raise ValueError("features are dated from the git history: fetch it in full")
+    directory = f"modules/{name}"
+    log = _git("-c", "core.quotepath=off", "log", "--format=%x00%H %cs", "--name-only", directory)
+    changes: dict[str, tuple[str, str]] = {}
+    for entry in log.split("\0")[1:]:
+        head, *paths = entry.splitlines()
+        commit, date = head.split()
+        for path in filter(None, paths):
+            changes.setdefault(path.removeprefix(f"{directory}/"), (commit, date.replace("-", "/")))
+    return changes
+
+
+def last_change(ws: Workspace, name: str, paths: Iterable[str]) -> tuple[str, str | None] | None:
+    """When some files of a module last changed: the date, and the game version targeted then."""
+    changes = last_changes(ws, name)
+    found = [changes[path] for path in paths if path in changes]
+    if not found:
+        return None
+    commit, date = max(found, key=lambda change: change[1])
+    return date, game_version_at(ws, commit)
+
+
+@cached
+def game_version_at(_ws: Workspace, commit: str) -> str | None:
+    """The game version the repository targeted at a commit, a snapshot as its release."""
+    path = Path(constants.__file__).relative_to(constants.ROOT_DIR).as_posix()
+    match = GAME_VERSION.search(file_at(commit, path) or "")
+    return match[1] if match else None
 
 
 def file_at(tag: str, path: str) -> str | None:

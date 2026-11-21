@@ -26,7 +26,10 @@ class Diagnostics:
     items: list[Diagnostic] = field(default_factory=list)
 
     def error(self, message: str, line: int | None = None) -> None:
-        self.items.append(Diagnostic(message, self.file, line))
+        """Report an error once: lines pasted in several features are checked in each."""
+        diagnostic = Diagnostic(message, self.file, line)
+        if diagnostic not in self.items:
+            self.items.append(diagnostic)
 
 
 class MetadataError(Exception):

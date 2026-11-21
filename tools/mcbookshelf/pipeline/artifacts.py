@@ -8,15 +8,16 @@ import orjson
 from beet import Context
 
 from mcbookshelf import constants, workspace
-from mcbookshelf.meta import Feature, Module, Stamp
+from mcbookshelf.meta import Feature, Module
 from mcbookshelf.meta.mcdoc import render_module
 from mcbookshelf.pipeline.config import build_of
 from mcbookshelf.references import Owner
 from mcbookshelf.releases import BundleEntry, FeatureEntry, Manifest, ModuleEntry, VersionStamp
-from mcbookshelf.workspace import Workspace, release
-from mcbookshelf.workspace.ownership import Ownership, OwnershipError, analyze, pack_files
+from mcbookshelf.workspace import Workspace, history, release
+from mcbookshelf.workspace.ownership import Ownership, OwnershipError, analyze, pack_files, sources
 
 MANIFEST_VERSION = 3
+PLUGIN = "plugin.py"
 STUB_DESCRIPTION = "Bookshelf API, for editor completion only."
 EMPTY_STRUCTURE = gzip.compress(b"\x0a\x00\x00\x00", mtime=0)
 
@@ -87,8 +88,14 @@ def _stub(ctx: Context) -> str:
     return f"{ctx.data.name}.stub.zip"
 
 
-def _stamp(stamp: Stamp) -> VersionStamp:
-    return VersionStamp(date=stamp.date, minecraft_version=stamp.minecraft_version)
+def _updated(ws: Workspace, feature: Feature, owner: Owner) -> VersionStamp:
+    """When a feature last changed: the last commit on its sources, or on the plugin making it."""
+    created = feature.created
+    paths = sources(ws, feature.module).shipped(owner) or [PLUGIN]
+    change = history.last_change(ws, feature.module, paths)
+    if change is None or change[0] <= created.date:
+        return VersionStamp(date=created.date, minecraft_version=created.minecraft_version)
+    return VersionStamp(date=change[0], minecraft_version=change[1] or created.minecraft_version)
 
 
 def _shipped(module: Module, ctx: Context) -> tuple[Feature, ...]:
@@ -133,12 +140,13 @@ def _module(ws: Workspace, analysis: Ownership, ctx: Context) -> ModuleEntry:
         dependencies=_ids(analysis.dependencies(analysis.shared)),
         weak_dependencies=list(module.weak_dependencies),
         files=analysis.files.get(analysis.shared, []),
-        features=[_feature(analysis, f) for f in _shipped(module, ctx)],
+        features=[_feature(ws, analysis, f) for f in _shipped(module, ctx)],
     )
 
 
-def _feature(analysis: Ownership, feature: Feature) -> FeatureEntry:
+def _feature(ws: Workspace, analysis: Ownership, feature: Feature) -> FeatureEntry:
     owner = Owner(analysis.module.id, feature.name)
+    created = feature.created
     return FeatureEntry(
         id=feature.id,
         kind=feature.resource,
@@ -146,8 +154,8 @@ def _feature(analysis: Ownership, feature: Feature) -> FeatureEntry:
         aliases=list(feature.aliases),
         authors=list(feature.authors),
         contributors=list(feature.contributors),
-        created=_stamp(feature.created),
-        updated=_stamp(feature.updated),
+        created=VersionStamp(date=created.date, minecraft_version=created.minecraft_version),
+        updated=_updated(ws, feature, owner),
         dependencies=_ids(analysis.needs(owner)),
         files=analysis.shipped(owner),
     )
