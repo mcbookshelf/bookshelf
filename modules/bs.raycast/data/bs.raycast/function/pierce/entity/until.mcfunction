@@ -13,7 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute as B5-0-0-0-C1 unless function bs.raycast:pierce/block/until run return fail
+execute as B5-0-0-0-E9E9F78 unless function bs.raycast:pierce/block/until run return fail
 scoreboard players operation #raycast.next bs.data = #raycast.entity bs.data
 scoreboard players operation #raycast.next bs.data /= 64 bs.const
 return 1

@@ -18,7 +18,7 @@ execute unless data storage bs.raycast:cast in.blocks unless data storage bs.ray
 data modify storage bs.raycast: ray set value {max_distance:16,_block:"bs.raycast:cast/block/check",_entity:"bs.raycast:cast/entity/check",_nearest:"bs.raycast:cast/entity/react",_react:"bs.raycast:cast/react",selector:"",_shift_x:0,_shift_z:0}
 data modify storage bs.raycast: ray merge from storage bs.raycast:cast in
 
-kill B5-0-0-0-C1
-summon minecraft:marker ~ ~ ~ {UUID:[I;181,0,0,193],Tags:["bs.raycast.omit"]}
-execute as B5-0-0-0-C1 run function bs.raycast:cast/init
+kill B5-0-0-0-E9E9F78
+summon minecraft:marker ~ ~ ~ {UUID:[I;181,0,0,245276536],Tags:["bs.raycast.omit"]}
+execute as B5-0-0-0-E9E9F78 run function bs.raycast:cast/init
 return run execute if score #raycast.max bs.data matches -2147483648

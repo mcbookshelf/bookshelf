@@ -14,5 +14,5 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute if score #raycast.max bs.data matches -2147483648 run return fail
-execute if score #raycast.block bs.data < @s bs.raycast.hit as B5-0-0-0-C1 run return run function bs.raycast:cast/custom/block
+execute if score #raycast.block bs.data < @s bs.raycast.hit as B5-0-0-0-E9E9F78 run return run function bs.raycast:cast/custom/block
 return run execute unless score #raycast.lx bs.data <= #raycast.next bs.data unless score #raycast.ly bs.data <= #raycast.next bs.data unless score #raycast.lz bs.data <= #raycast.next bs.data run function bs.raycast:cast/custom/entity

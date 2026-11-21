@@ -14,6 +14,6 @@
 # ------------------------------------------------------------------------------------------------------------
 
 execute store result storage bs.raycast: ray._entry double 0.00000095367431640625 run scoreboard players operation #raycast.hit bs.data = @s bs.raycast.hit
-execute at B5-0-0-0-C1 store result score #p bs.ctx run function bs.raycast:utils/at_entry with storage bs.raycast: ray
+execute at B5-0-0-0-E9E9F78 store result score #p bs.ctx run function bs.raycast:utils/at_entry with storage bs.raycast: ray
 execute if score #p bs.ctx matches 0 run return run function bs.raycast:pierce/stop
 return 1

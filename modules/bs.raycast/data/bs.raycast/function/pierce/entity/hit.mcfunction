@@ -16,8 +16,8 @@
 tag @s add bs.raycast.done
 scoreboard players set @s bs.raycast.hit 2147483647
 $execute unless function $(entities) run return fail
-execute positioned as @s as B5-0-0-0-C1 run function bs.raycast:utils/position
-tp B5-0-0-0-C1 ~ ~ ~
+execute positioned as @s as B5-0-0-0-E9E9F78 run function bs.raycast:utils/position
+tp B5-0-0-0-E9E9F78 ~ ~ ~
 execute store result score #raycast.ex bs.data store result score @s bs.raycast.x run data get storage bs.raycast: pos[0] 16384
 execute store result score #raycast.ey bs.data store result score @s bs.raycast.y run data get storage bs.raycast: pos[1] 16384
 execute store result score #raycast.ez bs.data store result score @s bs.raycast.z run data get storage bs.raycast: pos[2] 16384

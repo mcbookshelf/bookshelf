@@ -134,20 +134,19 @@ tp @s ~ -1000000 ~
 kill @s
 ```
 
-If you must select a temporary entity from another place, give it a fixed UUID. Each module that needs one has its own UUID, `B5-0-0-0-C<n>`. A feature can then call a feature of another module, and the two don't use the same entity:
+If you must select a temporary entity from another place, give it a fixed UUID. Each module that needs one has its own UUID. A feature can then call a feature of another module, and the two don't use the same entity.
 
-| UUID | Int array | Module |
-|------|-----------|--------|
-| `B5-0-0-0-C0` | `[I;181,0,0,192]` | `bs.hitbox` |
-| `B5-0-0-0-C1` | `[I;181,0,0,193]` | `bs.raycast` |
-| `B5-0-0-0-C2` | `[I;181,0,0,194]` | `bs.view` |
+The UUID is `B5-0-0-0-` and a last group of your choice:
+
+- Pick up to 7 hex digits at random, for example `B5-0-0-0-3FA91C2`. You don't need to check which ones other modules use.
+- In the data of the entity, the UUID is `[I;181,0,0,<n>]`, where `<n>` is the last group as a decimal number: `3FA91C2` is `66752962`. With 7 digits or fewer, this number is never negative.
 
 An entity that you summon in a chunk whose entities aren't loaded can't be selected, but it still takes its UUID. Summon the entity only in a loaded chunk. Kill the entity of a previous call first: the command limit can stop a call before it kills its entity.
 
 ```{code-block} mcfunction
 :force:
 execute unless loaded ~ ~ ~ run return fail
-kill B5-0-0-0-C1
-summon minecraft:marker ~ ~ ~ {UUID:[I;181,0,0,193]}
-execute as B5-0-0-0-C1 run function bs.raycast:...
+kill B5-0-0-0-3FA91C2
+summon minecraft:marker ~ ~ ~ {UUID:[I;181,0,0,66752962]}
+execute as B5-0-0-0-3FA91C2 run function bs.<module>:...
 ```
