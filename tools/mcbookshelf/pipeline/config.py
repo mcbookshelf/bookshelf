@@ -158,7 +158,6 @@ def _meta(name: str, members: tuple[str, ...], build: Build) -> dict[str, Any]:
     ws = workspace.current()
     meta = {"build": build, "autosave": {"link": False}, "line_endings": {"newline": "\n"}}
     if build.minify:
-        # The functions lose their license header, so the pack carries the license itself.
         meta["copy_files"] = {"data_pack": {"LICENSE": str(constants.ROOT_DIR / "LICENSE")}}
     if members:
         meta["members"] = list(members)

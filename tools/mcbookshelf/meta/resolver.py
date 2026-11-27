@@ -45,7 +45,6 @@ class TypeResolver:
     ) -> syntax.Type | None:
         """Build the type of a line from what is written on it and the fields under it."""
         if value is None:
-            # nothing after the colon: a struct, or nothing at all
             return self.struct(fields, line) if fields else None
         words = _structs(value)
         if words > 1:

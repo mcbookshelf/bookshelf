@@ -23,8 +23,13 @@ from mcbookshelf.minecraft.number import (
 from mcbookshelf.pipeline.plugins import Generated, generator
 
 UNITS = 1024
+CELLS = 2**20
 PRIME = 46337
-DIMS = {1: (1.0, 0.0, 3.16), 2: (0.5, 15 / 71, 99.0), 3: (0.5, 1 / 6, 107.0)}
+OCTAVES = 16
+RADIUS = {1: 1.0, 2: 0.5, 3: 0.5}
+SCALE = {1: 3.16, 2: 99.0, 3: 107.0}
+SKEW = {2: (15, 41), 3: (1, 3)}
+UNSKEW = {1: (0, 1), 2: (15, 71), 3: (1, 6)}
 COORDS = [score("bs.ctx", f"#{axis}") for axis in "xyz"]
 OFFSETS = [score("bs.ctx", f"#{axis}") for axis in "uvw"]
 SEED = score("bs.ctx", "#h")
@@ -35,8 +40,10 @@ def beet_default(ctx: Context) -> Generated:
     module: Module = ctx.meta["module"]
     yield f"{module.id}:geometric", geometric(storage(f"{module.id}:geometric", "in.probability"))
     yield f"{module.id}:poisson", poisson(storage(f"{module.id}:poisson", "in.lambda"))
-    yield from simplex_noise(f"{module.id}:_simplex_noise", clamped=True)
-    yield from simplex_noise(f"{module.id}:_fractal_noise", clamped=False)
+    for name, clamped in (("simplex_noise", True), ("fractal_noise", False)):
+        yield from grid_position(f"{module.id}:_{name}", f"{module.id}:{name}")
+        yield from simplex_noise(f"{module.id}:_{name}", clamped=clamped)
+    yield from fractal_octaves(f"{module.id}:_fractal_noise")
     yield from weighted_choice(module.id)
 
 
@@ -108,6 +115,39 @@ def weighted_choice(module: str) -> Generated:
     yield f"{folder}/index", min_(reached(0, len(blocks)) % size, length - 1)
 
 
+def grid_position(folder: str, source: str) -> Generated:
+    """The position in grid units, its skew to the simplex grid, and the offset in the cell."""
+    size = storage(source, "in.size", "int")
+    for index, axis in enumerate("xyz"):
+        position = storage(source, f"in.pos[{index}]", "int")
+        cell = ((position // size).floor_mod(CELLS) + CELLS // 2).floor_mod(CELLS) - CELLS // 2
+        yield f"{folder}/{axis}", UNITS * cell + (UNITS * position.floor_mod(size)) // size
+    for dims in (2, 3):
+        total = add(*COORDS[:dims])
+        numerator, denominator = SKEW[dims]
+        skew = total // denominator
+        if numerator > 1:
+            # split, for the product to stay in the range of an int
+            skew = numerator * skew + (numerator * total.floor_mod(denominator)) // denominator
+        yield f"{folder}/{dims}d/s", skew
+        fractions = [coord.floor_mod(UNITS) for coord in COORDS[:dims]]
+        numerator, denominator = UNSKEW[dims]
+        unskew = (numerator * add(*fractions)) // denominator
+        for axis, fraction in zip("uvw", fractions, strict=False):
+            yield f"{folder}/{dims}d/{axis}", fraction - unskew
+
+
+def fractal_octaves(folder: str) -> Generated:
+    """The total in `#t` after each octave: its noise, scaled by the persistence in `#p`."""
+    total = score("bs.ctx", "#t")
+    persistence = score("bs.ctx", "#p").to_float() / 1000.0
+    for dims in (1, 2, 3):
+        noise = ref(f"{folder}/{dims}d/noise")
+        for octave in range(OCTAVES):
+            amplitude = persistence ** float(octave) if octave else 1.0
+            yield f"{folder}/{dims}d/t{octave}", total + (1e6 * amplitude * noise).to_int()
+
+
 def corner_hash(steps: tuple[int, ...]) -> Expression:
     """Hash of the corner of the cell that is `steps` cells further on each axis."""
     def mix(value: Expression, salt: Operand) -> Expression:
@@ -125,9 +165,10 @@ def corner_hash(steps: tuple[int, ...]) -> Expression:
 def corner_noise(steps: tuple[int, ...], hashed: Expression) -> Expression:
     """What a corner adds: its falloff times its gradient along the offset from it."""
     dims = len(steps)
-    radius, unskew, _ = DIMS[dims]
+    radius = RADIUS[dims]
+    numerator, denominator = UNSKEW[dims]
     first = OFFSETS[:dims] if dims > 1 else [COORDS[0].floor_mod(UNITS)]
-    skew = sum(steps) * unskew
+    skew = sum(steps) * (numerator / denominator)
     offset = [
         axis.to_float() + (skew - step) * UNITS
         for axis, step in zip(first, steps, strict=True)
@@ -180,5 +221,5 @@ def simplex_noise(folder: str, *, clamped: bool) -> Generated:
                 yield name, hashed
                 hashed = ref(name, "int")
             corners[steps] = corner_noise(steps, hashed)
-        noise = add(*simplex_corners(dims, corners)) * (DIMS[dims][2] / UNITS**9)
+        noise = add(*simplex_corners(dims, corners)) * (SCALE[dims] / UNITS**9)
         yield f"{folder}/{dims}d/noise", clamp(noise, -1.0, 1.0) if clamped else noise

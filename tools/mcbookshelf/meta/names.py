@@ -65,7 +65,6 @@ class Names:
                 self.report.error(f"unknown name '${name}'", line)
             return None
 
-        # a definition without a type is lines
         shape = "lines" if definition.type is None else "a type"
         if shape != wanted:
             declared = f"it is declared on line {definition.line}"

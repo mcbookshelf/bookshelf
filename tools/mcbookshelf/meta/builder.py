@@ -190,7 +190,6 @@ class _Builder:
         *,
         shared: bool,
     ) -> model.Feature:
-        # a metadata line replaces the same one written before it: the head, then the pasted lines
         metadata = {line.key: line for line in node.lines if isinstance(line, syntax.Metadata)}
         valued = tuple(line for line in metadata.values() if line.key in rules.FEATURE_METADATA)
         values = self.properties(valued, rules.FEATURE_METADATA, node.line, MISSING_METADATA)

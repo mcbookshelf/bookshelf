@@ -201,7 +201,7 @@ class _Transform(Transformer[Token, Any]):
     def field(self, meta: Meta, items: list[Any]) -> syntax.Field:
         return syntax.Field(
             name=_name(items[0]),
-            type=_type(items),
+            type=next(i for i in items if isinstance(i, syntax.Type.__value__)),
             optional=any(_is(i, "OPTIONAL") for i in items),
             description=_description(items),
             fields=_fields(items),

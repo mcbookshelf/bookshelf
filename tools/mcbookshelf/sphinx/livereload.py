@@ -9,6 +9,7 @@ from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from queue import Empty, Queue
+from typing import cast
 
 import watchfiles
 
@@ -144,8 +145,6 @@ class Server(ThreadingHTTPServer):
 
 class Handler(SimpleHTTPRequestHandler):
 
-    server: Server
-
     def do_GET(self) -> None:
         route = self.path.partition("?")[0]
         if route == EVENTS:
@@ -174,7 +173,8 @@ class Handler(SimpleHTTPRequestHandler):
     def stream(self) -> None:
         """Send each change as an event, with a comment now and then to notice a closed page."""
         changes: Queue[str] = Queue()
-        self.server.pages.add(changes)
+        pages = cast("Server", self.server).pages
+        pages.add(changes)
         self.send_response(200)
         self.send_header("Content-Type", "text/event-stream")
         self.end_headers()
@@ -188,7 +188,7 @@ class Handler(SimpleHTTPRequestHandler):
         except OSError:
             pass
         finally:
-            self.server.pages.discard(changes)
+            pages.discard(changes)
 
     def end_headers(self) -> None:
         self.send_header("Cache-Control", "no-cache")

@@ -44,7 +44,6 @@ class Expander:
         for line in lines:
             _texts(line, check)
 
-        # the leftmost list changes last
         for items in product(*(self.names.lists[name].items.items() for name in names)):
             chosen = dict(zip(names, items, strict=True))
 
@@ -99,7 +98,6 @@ class Expander:
             item, values = chosen[name]
             if key is None:
                 return item
-            # a dot which opens no key of the list is text
             keys = self.names.lists[name].keys
             return values.get(key, match[0]) if key in keys else f"{item}.{key}"
 
