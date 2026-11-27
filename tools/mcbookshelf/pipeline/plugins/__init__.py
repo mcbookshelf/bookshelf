@@ -20,7 +20,7 @@ from beet import (
 from mcbookshelf import constants, minecraft
 from mcbookshelf.minecraft.condition import Condition
 from mcbookshelf.minecraft.number import Expression
-from mcbookshelf.releases import prune
+from mcbookshelf.packs import prune
 from mcbookshelf.templates import header
 
 __all__ = ["ensure_function", "ensure_function_tag", "generator", "include", "prune"]

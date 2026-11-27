@@ -2,13 +2,13 @@
 
 ## Unreleased
 
-- ⚠️ Inputs and outputs were completely reworked to follow new conventions
-- ⚠️ `#bs.view:can_see_ata` is renamed to `#bs.view:can_see`, and `#bs.view:in_view_ata` to `#bs.view:in_view`
-- ⚠️ `with` takes the options of each function instead of any `#bs.raycast:run` setting: `blocks` and `entities` are hitbox providers, `selector` filters the entities, and `max_distance` is 16 by default. `ignored_blocks`, `ignored_entities` and `hitbox_shape` are removed: use a provider or a `selector` instead
-- ⚠️ The aimed functions aim at the outline of the blocks and at the entities a player can target by default, and `#bs.view:at_block_placement` places against the blocks as the game does, with `#bs.hitbox:get_block/interaction`
-- ⚠️ The `#bs.view:can_see_through` block tag is removed: `#bs.view:can_see` uses the collision of the blocks by default, as the line of sight of mobs, so glass and leaves hide a position while flowers and torches do not. Pass another `blocks` provider to change it
-- ⚠️ `#bs.view:as_aimed_entity` runs its command at the aimed entity instead of the entity that aims
-- ✨ The aimed functions and `#bs.view:at_block_placement` return whether the entity aims at something
+- ⚠️ Inputs and outputs were completely reworked to follow new conventions ([#608](https://github.com/mcbookshelf/bookshelf/pull/608))
+- ⚠️ `#bs.view:can_see_ata` is renamed to `#bs.view:can_see`, and `#bs.view:in_view_ata` to `#bs.view:in_view` ([#608](https://github.com/mcbookshelf/bookshelf/pull/608))
+- ⚠️ `with` takes the options of each function instead of any `#bs.raycast:run` setting: `blocks` and `entities` are hitbox providers, `selector` filters the entities, and `max_distance` is 16 by default. `ignored_blocks`, `ignored_entities` and `hitbox_shape` are removed: use a provider or a `selector` instead ([#608](https://github.com/mcbookshelf/bookshelf/pull/608))
+- ⚠️ The aimed functions aim at the outline of the blocks and at the entities a player can target by default, and `#bs.view:at_block_placement` places against the blocks as the game does, with `#bs.hitbox:get_block/interaction` ([#608](https://github.com/mcbookshelf/bookshelf/pull/608))
+- ⚠️ The `#bs.view:can_see_through` block tag is removed: `#bs.view:can_see` uses the collision of the blocks by default, as the line of sight of mobs, so glass and leaves hide a position while flowers and torches do not. Pass another `blocks` provider to change it ([#608](https://github.com/mcbookshelf/bookshelf/pull/608))
+- ⚠️ `#bs.view:as_aimed_entity` runs its command at the aimed entity instead of the entity that aims ([#608](https://github.com/mcbookshelf/bookshelf/pull/608))
+- ✨ The aimed functions and `#bs.view:at_block_placement` return whether the entity aims at something ([#608](https://github.com/mcbookshelf/bookshelf/pull/608))
 
 ## `v3.2.0`
 

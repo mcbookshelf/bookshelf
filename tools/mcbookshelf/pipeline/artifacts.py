@@ -8,11 +8,7 @@ import orjson
 from beet import Context
 
 from mcbookshelf import constants, workspace
-from mcbookshelf.meta import Bundle, Feature, Module
-from mcbookshelf.meta.mcdoc import render_module
-from mcbookshelf.pipeline.config import build_of
-from mcbookshelf.references import Owner
-from mcbookshelf.releases import (
+from mcbookshelf.manifest import (
     BundleEntry,
     FeatureEntry,
     Manifest,
@@ -20,6 +16,10 @@ from mcbookshelf.releases import (
     PackEntry,
     VersionStamp,
 )
+from mcbookshelf.meta import Bundle, Feature, Module
+from mcbookshelf.meta.mcdoc import render_module
+from mcbookshelf.pipeline.config import build_of
+from mcbookshelf.references import Owner
 from mcbookshelf.workspace import Workspace, history, release
 from mcbookshelf.workspace.ownership import Ownership, OwnershipError, analyze, pack_files, sources
 

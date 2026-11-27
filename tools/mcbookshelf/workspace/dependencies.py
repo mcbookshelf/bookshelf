@@ -35,12 +35,12 @@ def required(ws: Workspace, name: str) -> dict[str, set[Owner]]:
         found = analysis.dependencies(owner)
         weak = analysis.module.weak_dependencies
         shared = {analysis.shared, *analysis.parents(owner)} if owner.feature else set()
-        targets = {o for o in references.strong(found, weak) if o.module != name}
+        targets = {o for o in references.without_weak(found, weak) if o.module != name}
         return {o for o in shared if o.module != name} | {o for t in targets for o in whole(t)}
 
     start = {o for owner in _targets(ws, name) for o in whole(owner)}
     used: dict[str, set[Owner]] = defaultdict(set)
-    for owner in references.required(start, requires):
+    for owner in references.closure(start, requires):
         used[owner.module].add(owner)
     return dict(sorted(used.items()))
 
@@ -48,5 +48,5 @@ def required(ws: Workspace, name: str) -> dict[str, set[Owner]]:
 def _targets(ws: Workspace, name: str) -> set[Owner]:
     """The owners of other modules the sources reference, unless declared weak."""
     analysis = ownership.sources(ws, name)
-    targets = references.strong(analysis.targets, analysis.module.weak_dependencies)
+    targets = references.without_weak(analysis.targets, analysis.module.weak_dependencies)
     return {target for target in targets if target.module != name}

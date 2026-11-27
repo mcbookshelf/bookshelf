@@ -4,8 +4,17 @@ from collections.abc import Generator, Iterable, Iterator, Mapping
 
 from beet import Context
 
-from mcbookshelf.references import Index, Owner, Reason, Reference, parse, required, strong
-from mcbookshelf.releases import FeatureEntry, ModuleEntry, Releases
+from mcbookshelf.manifest import FeatureEntry, ModuleEntry
+from mcbookshelf.references import (
+    Index,
+    Owner,
+    Reason,
+    Reference,
+    closure,
+    scan,
+    without_weak,
+)
+from mcbookshelf.releases import Releases, ResolutionError
 
 logger = logging.getLogger(__name__)
 
@@ -17,12 +26,16 @@ def beet_default(ctx: Context) -> Generator[None]:
     yield
     releases = ctx.inject(Releases)
     index = Index.from_modules(releases.modules)
-    wanted = set(ctx.meta.get("bookshelf", {}).get("include", ()))
+    included = ctx.meta.get("bookshelf", {}).get("include", ())
+    wanted = {Owner.parse(entry) for entry in included}
+    known = {Owner(name) for name in releases.modules} | set(_features_by_owner(releases.modules))
+    if unknown := sorted(owner.id for owner in wanted - known):
+        raise ResolutionError(f"'include' names nothing Bookshelf has: {', '.join(unknown)}")
     reported = set()
     for path, reference in references_in(ctx):
         match index.resolve(reference):
             case Owner() as owner:
-                wanted.add(owner.id)
+                wanted.add(owner)
             case Reason.UNKNOWN_MODULE:
                 pass
             case reason:
@@ -33,12 +46,11 @@ def beet_default(ctx: Context) -> Generator[None]:
         ctx.data.merge(releases.module(module_id, paths))
 
 
-def plan(modules: Mapping[str, ModuleEntry], wanted: Iterable[str]) -> Imports:
+def plan(modules: Mapping[str, ModuleEntry], wanted: Iterable[Owner]) -> Imports:
     """Plan which files to import from each module: what is wanted, and what that needs."""
     features = _features_by_owner(modules)
-    start: set[Owner] = set()
-    for owner in map(Owner.parse, wanted):
-        start.add(owner)
+    start = set(wanted)
+    for owner in tuple(start):
         if owner.feature is None and owner.module in modules:
             start.update(Owner.parse(f["id"]) for f in modules[owner.module]["features"])
 
@@ -48,14 +60,14 @@ def plan(modules: Mapping[str, ModuleEntry], wanted: Iterable[str]) -> Imports:
             return set()
         weak = module["weak_dependencies"]
         if owner.feature is None:
-            return strong(map(Owner.parse, module["dependencies"]), weak)
+            return without_weak(map(Owner.parse, module["dependencies"]), weak)
         if not (found := features.get(owner)):
             return set()
         ids = [i for f in found for i in f["dependencies"]]
-        return {Owner(owner.module), *strong(map(Owner.parse, ids), weak)}
+        return {Owner(owner.module), *without_weak(map(Owner.parse, ids), weak)}
 
     imports: Imports = defaultdict(set)
-    for owner in required(start, requires):
+    for owner in closure(start, requires):
         if owner.module in modules and owner.feature is None:
             imports[owner.module].update(modules[owner.module]["files"])
         for feature in features.get(owner, ()):
@@ -68,7 +80,7 @@ def references_in(ctx: Context) -> Iterator[tuple[str, Reference]]:
     for path, file in ctx.data.list_files():
         text = getattr(file, "text", None)
         if isinstance(text, str):
-            for reference in parse(text):
+            for reference in scan(text):
                 yield path, reference
 
 

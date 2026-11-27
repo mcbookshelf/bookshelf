@@ -15,7 +15,7 @@ from mcbookshelf.references import (
     groups,
     longest_prefix,
     parents,
-    parse,
+    scan,
 )
 from mcbookshelf.workspace import Workspace, cached, history
 
@@ -176,7 +176,7 @@ def analyze(ws: Workspace, name: str, files: Iterable[FileText] | None = None) -
         owned[owner].append(path)
         if text is None or location.hook:
             continue
-        for reference in parse(text):
+        for reference in scan(text):
             resolution = known.resolve(reference)
             occurrences[owner].append(Occurrence(path, reference, resolution))
     files_by_owner = {owner: sorted(paths) for owner, paths in owned.items()}

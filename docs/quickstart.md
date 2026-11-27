@@ -37,15 +37,36 @@ If you use the [beet](https://github.com/mcbeet/beet) pipeline, install `mcbooks
 ```shell
 pip install mcbookshelf
 ```
-Then, reference Bookshelf bundles or modules in your beet config:
+Then, require the modules you need in your beet config. Each one is merged into your data pack with its dependencies:
 
 :::{code-block} yaml
 :caption: beet.yml
 require:
-  - bookshelf.bundle.<name_of_bundle>
-  - bookshelf.bundle.dev
-  - bookshelf.module.<name_of_module>
-  - bookshelf.module.raycast
+  - mcbookshelf.module.<name_of_module>
+  - mcbookshelf.module.raycast
+:::
+
+To import only what your project uses, require `mcbookshelf.auto` instead. It reads the files of your data pack and merges the Bookshelf features they reference:
+
+:::{code-block} yaml
+:caption: beet.yml
+require:
+  - mcbookshelf.auto
+:::
+
+Both read these options, all of them optional:
+
+:::{code-block} yaml
+:caption: beet.yml
+meta:
+  bookshelf:
+    version: 5.0.0        # the Bookshelf release to use, the latest by default
+    minecraft: "26.3"     # only a release made for this Minecraft version
+    modules:
+      bs.raycast: 5.0.1   # one module at another version
+    include:              # for `mcbookshelf.auto`: what to import even when nothing references it
+      - bs.raycast        # a whole module
+      - bs.raycast:cast   # or one feature
 :::
 
 ::::
@@ -69,7 +90,7 @@ To work with the source code, you must first build Bookshelf.
 
 2. Build the modules:
    ```shell
-   uv run modules build
+   uv run build
    ```
 
 Built modules appear in the `build` folder.
