@@ -21,13 +21,13 @@ def bump(*, check: bool) -> None:
 
     errors = 0
     for expectation in bumps.expectations(ws, tag):
-        where = f"{expectation.name}: {expectation.current} → {expectation.expected}"
+        change = f"{expectation.name}: {expectation.current} → {expectation.expected}"
         if check:
             errors += 1
-            ui.console.print(f"✗ {where} ({expectation.reason})", style="red")
+            ui.console.print(f"✗ {change} ({expectation.reason})", style="red")
         else:
             bumps.apply(ws, expectation)
-            ui.console.print(f"✓ {where} ({expectation.reason})", style="green")
+            ui.console.print(f"✓ {change} ({expectation.reason})", style="green")
     if check:
         for problem in bumps.problems(ws, tag):
             errors += 1

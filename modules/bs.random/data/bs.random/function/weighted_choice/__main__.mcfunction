@@ -13,9 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-scoreboard players set #i bs.ctx -1
-data modify storage bs.random:weighted_choice _table set value {pools:[{rolls:1,entries:[]}]}
-data modify storage bs.random:weighted_choice _options set from storage bs.random:weighted_choice in.options
-data modify storage bs.random:weighted_choice _weights set from storage bs.random:weighted_choice in.weights
-execute if data storage bs.random:weighted_choice _options[-1] run function bs.random:weighted_choice/loop
-return run function bs.random:weighted_choice/pick with storage bs.random:weighted_choice
+execute store result score #n bs.ctx run data get storage bs.random:weighted_choice in.weights
+execute store result storage bs.random: i int 1 run compute default integer bs.random:_weighted_choice/index
+function bs.random:weighted_choice/get with storage bs.random:
+return run data get storage bs.random: i

@@ -8,9 +8,7 @@ from beet import DataPack, Function, FunctionTag, ProjectCache
 from beet.contrib.link import LinkManager
 
 from mcbookshelf import constants
-from mcbookshelf.minecraft import snbt
-
-from .plugins.update_mcmeta import formats
+from mcbookshelf.minecraft import fetch_version, snbt
 
 POLLER = "bs.livereload"
 TRIGGER = "bs.livereload-"
@@ -21,7 +19,7 @@ def livereload() -> Generator[Callable[[], None]]:
     """Reload the linked world after each rebuild, when its poller notices a new trigger pack."""
     with ProjectCache(constants.BEET_CACHE_DIR, constants.BEET_CACHE_DIR / "generated") as cache:
         world = LinkManager(cache).data_pack
-        version = formats(cache["version"])["data_pack_version"]
+        version = fetch_version(cache["version"])["data_pack_version"]
     if not world:
         yield lambda: None
         return

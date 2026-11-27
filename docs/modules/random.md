@@ -57,6 +57,23 @@ function #bs.random:weighted_choice.in {options:["Apple","Banana","Strawberry"],
 data get storage bs.random:weighted_choice out
 ```
 
+````{admonition} Longer lists
+:class: tip
+
+This function takes at most 256 values. For more, write an integer provider of your own with a `weighted_list` that gives the index of a value, then read your list at that index. Its weights are written in the provider, so they cannot change from one call to the next.
+
+```json
+{
+  "type": "weighted_list",
+  "distribution": [
+    {"data": 0, "weight": 5},
+    {"data": 1, "weight": 3},
+    {"data": 2, "weight": 2}
+  ]
+}
+```
+````
+
 ::::
 :::::
 
@@ -66,42 +83,127 @@ data get storage bs.random:weighted_choice out
 
 Noise gives values that change smoothly from one position to the next, for terrain, textures or any natural looking variation. The same seed and position always give the same value.
 
-:::::{tab-set}
-::::{tab-item} Simplex noise
+Each noise has a function for 1, 2 and 3 dimensions: a line, a surface such as the ground, or a volume such as caves. `pos` holds as many coordinates.
 
-```{feature} bs.random:simplex_noise_2d
+#### Simplex noise
+
+:::::{tab-set}
+::::{tab-item} 1D
+
+```{feature} function bs.random:simplex_noise/1d
+```
+
+*Example: get the noise at your x position, with cells of 16 blocks*
+
+```mcfunction
+# Once
+data modify storage bs.random:simplex_noise in set value {pos:[0],size:16,seed:42}
+execute store result storage bs.random:simplex_noise in.pos[0] int 1 run data get entity @s Pos[0]
+function #bs.random:simplex_noise/1d
+
+# See the result
+data get storage bs.random:simplex_noise out
+```
+
+::::
+::::{tab-item} 2D
+
+```{feature} function bs.random:simplex_noise/2d
 ```
 
 *Example: get the noise at the block you stand on, with cells of 16 blocks*
 
 ```mcfunction
 # Once
-execute store result storage bs.random:simplex_noise_2d in.x int 1 run data get entity @s Pos[0]
-execute store result storage bs.random:simplex_noise_2d in.y int 1 run data get entity @s Pos[2]
-data modify storage bs.random:simplex_noise_2d in merge value {size:16,seed:42}
-function #bs.random:simplex_noise_2d
+data modify storage bs.random:simplex_noise in set value {pos:[0,0],size:16,seed:42}
+execute store result storage bs.random:simplex_noise in.pos[0] int 1 run data get entity @s Pos[0]
+execute store result storage bs.random:simplex_noise in.pos[1] int 1 run data get entity @s Pos[2]
+function #bs.random:simplex_noise/2d
 
 # See the result
-data get storage bs.random:simplex_noise_2d out
+data get storage bs.random:simplex_noise out
 ```
 
 ::::
-::::{tab-item} Fractal noise
+::::{tab-item} 3D
 
-```{feature} bs.random:fractal_noise_2d
+```{feature} function bs.random:simplex_noise/3d
+```
+
+*Example: get the noise at your position, height included, with cells of 16 blocks*
+
+```mcfunction
+# Once
+data modify storage bs.random:simplex_noise in set value {pos:[0,0,0],size:16,seed:42}
+execute store result storage bs.random:simplex_noise in.pos[0] int 1 run data get entity @s Pos[0]
+execute store result storage bs.random:simplex_noise in.pos[1] int 1 run data get entity @s Pos[1]
+execute store result storage bs.random:simplex_noise in.pos[2] int 1 run data get entity @s Pos[2]
+function #bs.random:simplex_noise/3d
+
+# See the result
+data get storage bs.random:simplex_noise out
+```
+
+::::
+:::::
+
+#### Fractal noise
+
+:::::{tab-set}
+::::{tab-item} 1D
+
+```{feature} function bs.random:fractal_noise/1d
+```
+
+*Example: get a detailed noise at your x position, with 4 layers*
+
+```mcfunction
+# Once
+data modify storage bs.random:fractal_noise in set value {pos:[0],size:64,seed:42,octaves:4,persistence:0.5,lacunarity:2.0}
+execute store result storage bs.random:fractal_noise in.pos[0] int 1 run data get entity @s Pos[0]
+function #bs.random:fractal_noise/1d
+
+# See the result
+data get storage bs.random:fractal_noise out
+```
+
+::::
+::::{tab-item} 2D
+
+```{feature} function bs.random:fractal_noise/2d
 ```
 
 *Example: get a detailed noise at the block you stand on, with 4 layers*
 
 ```mcfunction
 # Once
-execute store result storage bs.random:fractal_noise_2d in.x int 1 run data get entity @s Pos[0]
-execute store result storage bs.random:fractal_noise_2d in.y int 1 run data get entity @s Pos[2]
-data modify storage bs.random:fractal_noise_2d in merge value {size:64,seed:42,octaves:4,persistence:0.5,lacunarity:2.0}
-function #bs.random:fractal_noise_2d
+data modify storage bs.random:fractal_noise in set value {pos:[0,0],size:64,seed:42,octaves:4,persistence:0.5,lacunarity:2.0}
+execute store result storage bs.random:fractal_noise in.pos[0] int 1 run data get entity @s Pos[0]
+execute store result storage bs.random:fractal_noise in.pos[1] int 1 run data get entity @s Pos[2]
+function #bs.random:fractal_noise/2d
 
 # See the result
-data get storage bs.random:fractal_noise_2d out
+data get storage bs.random:fractal_noise out
+```
+
+::::
+::::{tab-item} 3D
+
+```{feature} function bs.random:fractal_noise/3d
+```
+
+*Example: get a detailed noise at your position, height included, with 4 layers*
+
+```mcfunction
+# Once
+data modify storage bs.random:fractal_noise in set value {pos:[0,0,0],size:64,seed:42,octaves:4,persistence:0.5,lacunarity:2.0}
+execute store result storage bs.random:fractal_noise in.pos[0] int 1 run data get entity @s Pos[0]
+execute store result storage bs.random:fractal_noise in.pos[1] int 1 run data get entity @s Pos[1]
+execute store result storage bs.random:fractal_noise in.pos[2] int 1 run data get entity @s Pos[2]
+function #bs.random:fractal_noise/3d
+
+# See the result
+data get storage bs.random:fractal_noise out
 ```
 
 ::::
@@ -131,9 +233,9 @@ Call the function once per cell, from a loop of your own. Each call is cheap, so
 
 ---
 
-## Integer providers
+## Number providers
 
-The following integer providers are available in this module. Each one gives a new random value every time it is computed.
+The following number providers are available in this module. `normal` is a float provider, `uniform` is both an integer and a float provider, and the others are integer providers. Each one gives a new random value every time it is computed.
 
 ---
 
@@ -142,7 +244,7 @@ The following integer providers are available in this module. Each one gives a n
 :::::{tab-set}
 ::::{tab-item} Uniform
 
-```{feature} bs.random:uniform
+```{feature} context_int_provider bs.random:uniform
 ```
 
 *Example: roll a number from 1 to 100*
@@ -151,6 +253,20 @@ The following integer providers are available in this module. Each one gives a n
 # Once
 data modify storage bs.random:uniform in set value {min:1,max:100}
 data modify storage bs.random:uniform out set compute default integer bs.random:uniform
+
+# See the result
+data get storage bs.random:uniform out
+```
+
+```{feature} context_float_provider bs.random:uniform
+```
+
+*Example: get a fraction from 0 to 1*
+
+```mcfunction
+# Once
+data modify storage bs.random:uniform in set value {min:0.0,max:1.0}
+data modify storage bs.random:uniform out set compute default float bs.random:uniform
 
 # See the result
 data get storage bs.random:uniform out
@@ -222,7 +338,7 @@ It counts the trials needed to get the first success, such as the number of roll
 ```mcfunction
 # Once
 data modify storage bs.random:normal in set value {mean:10.0,spread:3.0}
-data modify storage bs.random:normal out set compute default integer bs.random:normal
+data modify storage bs.random:normal out set compute default float bs.random:normal
 
 # See the result
 data get storage bs.random:normal out
@@ -232,7 +348,7 @@ data get storage bs.random:normal out
 :color: info
 :icon: question
 
-Also known as the Gaussian distribution, it gives values clustered around the mean in a bell-shaped curve, as natural variations and measurement errors often are. About 68% of the values fall within one spread of the mean.
+Also known as the Gaussian distribution, it gives values clustered around the mean in a bell-shaped curve, as natural variations and measurement errors often are. About 68% of the values fall within one spread of the mean. Bookshelf adds 12 random numbers to get this curve: values far from the mean are a little rarer than in theory, and none is more than 6 spreads away.
 ```
 
 ::::

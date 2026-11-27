@@ -5,15 +5,27 @@ from collections.abc import Callable, Iterable, Sequence
 from functools import cache, wraps
 from pathlib import Path
 
-from beet import Context, Function, FunctionTag, NamespaceFile, ProjectConfig, subproject
+from beet import (
+    Context,
+    ContextFloatProvider,
+    ContextIntProvider,
+    Function,
+    FunctionTag,
+    NamespaceFile,
+    Predicate,
+    ProjectConfig,
+    subproject,
+)
 
 from mcbookshelf import constants, minecraft
+from mcbookshelf.minecraft.condition import Condition
+from mcbookshelf.minecraft.number import Expression
 from mcbookshelf.releases import prune
 from mcbookshelf.templates import header
 
 __all__ = ["ensure_function", "ensure_function_tag", "generator", "include", "prune"]
 
-type Generated = Iterable[tuple[str, NamespaceFile]]
+type Generated = Iterable[tuple[str, NamespaceFile | Expression | Condition]]
 
 
 def ensure_function(ctx: Context, key: str, lines: Sequence[str] = ()) -> Function:
@@ -45,12 +57,12 @@ def generator(plugin: Callable[[Context], Generated]) -> Callable[[Context], Non
     def wrapper(ctx: Context) -> None:
         name = hashlib.sha1(plugin.__module__.encode()).hexdigest()  # noqa: S324
         path = ctx.cache["gen"].directory / name
-        fingerprint = _fingerprint(source)
-        if path.is_file() and (data := path.read_bytes()).startswith(fingerprint):
-            files = pickle.loads(data[len(fingerprint):])  # noqa: S301
+        key = _cache_key(source)
+        if path.is_file() and (data := path.read_bytes()).startswith(key):
+            files = pickle.loads(data[len(key):])  # noqa: S301
         else:
-            files = list(plugin(ctx))
-            path.write_bytes(fingerprint + pickle.dumps(files))
+            files = [(location, _file(value)) for location, value in plugin(ctx)]
+            path.write_bytes(key + pickle.dumps(files))
         for location, file in files:
             if isinstance(file, Function) and location in ctx.data.functions:
                 ctx.data.functions[location].lines.extend(file.lines)
@@ -60,8 +72,20 @@ def generator(plugin: Callable[[Context], Generated]) -> Callable[[Context], Non
     return wrapper
 
 
+def _file(value: NamespaceFile | Expression | Condition) -> NamespaceFile:
+    """The file of what a plugin yields: an expression is a provider of its kind."""
+    match value:
+        case Expression(kind="int"):
+            return ContextIntProvider(value.json())
+        case Expression():
+            return ContextFloatProvider(value.json())
+        case Condition():
+            return Predicate(value.json())
+    return value
+
+
 @cache
-def _fingerprint(source: str) -> bytes:
+def _cache_key(source: str) -> bytes:
     digest = hashlib.sha256(constants.GAME_VERSION.encode())
     for file in (*sorted(Path(minecraft.__file__).parent.glob("*.py")), Path(source)):
         digest.update(file.read_bytes())

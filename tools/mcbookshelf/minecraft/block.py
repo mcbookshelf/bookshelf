@@ -7,9 +7,8 @@ from math import prod
 from beet import Cache
 
 from mcbookshelf import constants
-from mcbookshelf.minecraft import condition
-from mcbookshelf.minecraft.data import fetch
-from mcbookshelf.minecraft.math import Expression, add, btree, cond, const
+from mcbookshelf.minecraft import condition, fetch_blocks
+from mcbookshelf.minecraft.number import Expression, add, btree, cond, const
 
 type Box = tuple[float, float, float, float, float, float]
 type Shape = tuple[Box, ...]
@@ -87,7 +86,7 @@ def get_blocks(cache: Cache, version: str = constants.GAME_VERSION) -> dict[str,
             instrument=data["instrument"],
             sounds=tuple(sorted(data["sounds"].items())),
         )
-        for block_id, data in sorted(fetch(cache, "blocks", version).items())
+        for block_id, data in sorted(fetch_blocks(cache, version).items())
     }
 
 

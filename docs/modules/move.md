@@ -348,7 +348,7 @@ Flags are particularly useful when using a [hitbox provider](hitbox.md#available
    - No tag is set, so collisions with other solid shapes are processed normally.  
    - The entity stops or bounces off as expected, like a normal solid collision.
 
-If you need help with custom collisions, you can ask us on our [discord server](https://discord.gg/MkXytNjmBt)!
+If you need help with custom collisions, you can ask us on our [discord server](https://discord.gg/aV5SF3JsAZ)!
 
 ---
 

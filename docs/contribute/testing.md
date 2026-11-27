@@ -18,10 +18,14 @@ uv run test <module1> ...
 The command builds the modules and runs their tests. You don't need to open the game. The first run downloads the server.
 
 :::{list-table}
+*   - `--watch`, `-w`
+    - Run the tests again each time a file of a module changes
 *   - `--coverage`
     - Report which lines of the modules the tests ran
 *   - `--coverage-report <FORMAT[:PATH]>`
     - Write the coverage as `lcov` or `html`. The path is optional
+*   - `--coverage-min <PERCENT>`
+    - Fail if the coverage is below this percentage
 *   - `--verbose`
     - List every test, even in a large run
 *   - `--reporter <live|github>`
@@ -29,6 +33,8 @@ The command builds the modules and runs their tests. You don't need to open the 
 *   - `--junit-xml <PATH>`
     - Write the results as JUnit XML
 :::
+
+Use watch mode while you write a module: `uv run test <module> --watch`. The command stays open and tests again after each change. Press `a` or `Enter` to run every test again. Press `p` to run only the tests that match a selector, such as `bs.xp:add_*`. Press `q` to quit.
 
 ---
 

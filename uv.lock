@@ -200,11 +200,11 @@ wheels = [
 
 [[package]]
 name = "click"
-version = "8.5.0"
+version = "8.5.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/c7/0e/7fa0ef50764b67090eca4114772a2abf8b6148198475e54c660b97caeee6/click-8.5.0.tar.gz", hash = "sha256:ba0d2089de75ea0310e2dde03160e6ca10009947fb95a182f9b54021bb272e34", size = 382235, upload-time = "2026-08-26T13:33:14.56Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/45/37/edbf1b0707709013c0cf2e8317e03d97ed29bf4cac709fe328904ae92a38/click-8.5.1.tar.gz", hash = "sha256:9bbfada76703fd1d784b83eea012e3e8c6a001a876543ef104fa56aaaeb072b4", size = 399151, upload-time = "2026-11-06T17:37:01.021Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl", hash = "sha256:255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360", size = 125251, upload-time = "2026-08-26T13:33:12.928Z" },
+    { url = "https://files.pythonhosted.org/packages/31/7d/164b7ffc8624fe9efb4221bf9af485d5c1e41b9ae118045d2b6dc5457d8b/click-8.5.1-py3-none-any.whl", hash = "sha256:8bb5376d2006950386f8c6427613334a2acadc5f559cb80e638d00b4df957e37", size = 126163, upload-time = "2026-11-06T17:36:59.287Z" },
 ]
 
 [[package]]
@@ -759,13 +759,13 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "click", specifier = ">=8.5.0" },
+    { name = "click", specifier = ">=8.5.1" },
     { name = "httpx", extras = ["http2"], specifier = ">=0.28.1" },
     { name = "jinja2", specifier = ">=3.1.6" },
     { name = "lark", specifier = ">=1.3.1" },
     { name = "lectern", specifier = ">=0.37.0" },
     { name = "mcbookshelf", editable = "." },
-    { name = "mcward", extras = ["beet"], specifier = ">=1.5.0" },
+    { name = "mcward", extras = ["beet"], specifier = ">=2.0.0" },
     { name = "orjson", specifier = ">=3.13.0" },
     { name = "rich", specifier = ">=15.0.0" },
     { name = "watchfiles", specifier = ">=1.3.0" },
@@ -773,14 +773,16 @@ requires-dist = [
 
 [[package]]
 name = "mcward"
-version = "1.5.0"
+version = "2.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "mcward-core" },
+    { name = "httpx" },
+    { name = "platformdirs" },
+    { name = "psutil" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/84/52/1d813afd3a8ac74e70e592abf92997440de60739924db1aa58411d13d15a/mcward-1.5.0.tar.gz", hash = "sha256:e70071dddaba90a6433ed71e42567851ffdd80d9118ea3ea57c5cf36333665ae", size = 2418098, upload-time = "2026-10-22T14:31:04.662Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/9b/2e/7721ca4c507f71e1df7260706b8b624cb8366a06f726d510d32b78a953ec/mcward-2.0.0.tar.gz", hash = "sha256:c0a4ea13bd0cf9dadb3c2851223ba02a7b9927f3bcf13c7c754ef7598eb8a296", size = 68406, upload-time = "2026-11-17T16:48:36.685Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/cb/6b/568666a50293ec2d0e94b6e38448eb806d20f33c425b37e5611167e61809/mcward-1.5.0-py3-none-any.whl", hash = "sha256:9ff4ec3c1ed66ae444cc047f79abdc7e8e7f81e1b170bee90469838f9bee76bf", size = 8118, upload-time = "2026-10-22T14:31:00.5Z" },
+    { url = "https://files.pythonhosted.org/packages/a0/12/27c514102c69e7819486e2e79bd70f044da6eadd277f8c4ffae63682bc1b/mcward-2.0.0-py3-none-any.whl", hash = "sha256:866a29bf1d083e34b37d6217f6b6baacc92775c3a8e740bdc51c58ae1b405a76", size = 43558, upload-time = "2026-11-17T16:48:33.215Z" },
 ]
 
 [package.optional-dependencies]
@@ -790,46 +792,33 @@ beet = [
 
 [[package]]
 name = "mcward-beet"
-version = "1.4.0"
+version = "2.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beet" },
+    { name = "mcward" },
     { name = "mcward-cli" },
-    { name = "mcward-core" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/73/4a/b3a8fd58f753529c69e6b7a60d256743c806f0102731875a48d789814465/mcward_beet-1.4.0.tar.gz", hash = "sha256:02b2b3f58edcf00cd25bf5559dc3fcaf98e760b6225bba1a1eadcf1dfe519398", size = 13150, upload-time = "2026-10-06T10:22:31.196Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b3/7a/ddf814a1a5a8742347e82fabc0763b0cacfc71bddbc903998dc351b78bcd/mcward_beet-2.0.0.tar.gz", hash = "sha256:ca17fb62aceb539b613c413da73a82d1c2112f65879cd703255d7203981c7abe", size = 19552, upload-time = "2026-11-17T16:48:37.424Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/80/c5/8cec923d25e4072f88c75146a65675a10b092a832ee49eb0284fd4ff4ab9/mcward_beet-1.4.0-py3-none-any.whl", hash = "sha256:04b9c92272a4655f166df64e56799fa76d55ba9d276c7ee654a220f79994fdba", size = 13537, upload-time = "2026-10-06T10:22:26.756Z" },
+    { url = "https://files.pythonhosted.org/packages/d1/75/0d0e2dc88d0982b0c7a423f77e84f9eca859655db996e093ecc01b0234fc/mcward_beet-2.0.0-py3-none-any.whl", hash = "sha256:31129563fed2eb52cbd92c938a4a652a363776f80bed49f2b15a7ca266f57e75", size = 19087, upload-time = "2026-11-17T16:48:34.312Z" },
 ]
 
 [[package]]
 name = "mcward-cli"
-version = "1.4.0"
+version = "2.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
-    { name = "mcward-core" },
+    { name = "mcward" },
     { name = "questionary" },
     { name = "rich" },
     { name = "rich-click" },
+    { name = "watchfiles" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c3/b4/bede6150947def196e653b589f8eec12499f00985299197879a5958024ec/mcward_cli-1.4.0.tar.gz", hash = "sha256:fe4e83063ca4b9937ecf07b211e5c5417980def4dd27ba72c3c58a34daed3c73", size = 36329, upload-time = "2026-10-06T10:22:31.783Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/07/b8/479a61c29a66cb1f4eba1bf95558ba8c7a4bb20c6aeda536fef8aa804dc0/mcward_cli-2.0.0.tar.gz", hash = "sha256:155db645d82572f8040765db889f19d7ce285ac76514639e56167608f9326208", size = 43749, upload-time = "2026-11-17T16:48:38.48Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/18/2f/272908d89222a761eebb4b16425f8b6a8ccbec518ff262505b47c9bf799d/mcward_cli-1.4.0-py3-none-any.whl", hash = "sha256:7b1f973330912c8f9ebfbbf9a2a5f9ae09ee10d473061397e8db0f81daba0d1c", size = 33097, upload-time = "2026-10-06T10:22:27.605Z" },
-]
-
-[[package]]
-name = "mcward-core"
-version = "1.4.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "httpx" },
-    { name = "platformdirs" },
-    { name = "psutil" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/f2/b6/1d92c31e7affa262edde305c12ecd49ce49218d9138d4398d55d8fd5bcae/mcward_core-1.4.0.tar.gz", hash = "sha256:964bdb94b0bf932bbf75299b384f376e2d32237d18b57a75e0fba5ffd00da8e7", size = 51506, upload-time = "2026-10-06T10:22:32.615Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/ce/1e/a808131ee47f7e8942dab47dd3c88c00153ef15eee9d421499c58ef8df81/mcward_core-1.4.0-py3-none-any.whl", hash = "sha256:af3d16b577363c97649fda79884acd4fab61ecd2292410b2c22db3b727a61b25", size = 32870, upload-time = "2026-10-06T10:22:28.448Z" },
+    { url = "https://files.pythonhosted.org/packages/98/2a/1cfff7293fd1e7049c4e4eb030c837957b95a9c554d874386b30f7b10d4a/mcward_cli-2.0.0-py3-none-any.whl", hash = "sha256:5b32b7abdfc045f8aca025a868a58f3e747bac25ee06c913059bc572185c2d13", size = 37410, upload-time = "2026-11-17T16:48:35.588Z" },
 ]
 
 [[package]]

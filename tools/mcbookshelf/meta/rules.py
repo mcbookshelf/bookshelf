@@ -58,19 +58,20 @@ def stamp(value: str) -> tuple[str, str]:
     return match[1], match[2]
 
 
-BUNDLE_PROPERTIES = {
+PACK_PROPERTIES = {
     "name": Field(str, required=True),
     "slug": Field(slug, required=True),
     "version": Field(version, required=True),
-    "tags": Field(tags, required=True, default=()),
     "documentation": Field(str),
 }
 
+BUNDLE_PROPERTIES = {
+    **PACK_PROPERTIES,
+    "tags": Field(tags, required=True, default=()),
+}
+
 MODULE_PROPERTIES = {
-    "name": Field(str, required=True),
-    "slug": Field(slug, required=True),
-    "version": Field(version, required=True),
-    "documentation": Field(str),
+    **PACK_PROPERTIES,
     "tags": Field(tags, default=()),
     "weak_dependencies": Field(names, default=()),
 }
@@ -114,6 +115,8 @@ CONTEXTS = frozenset({Kind.EXECUTOR, Kind.POSITION, Kind.ROTATION, Kind.DIMENSIO
 INPUTS = frozenset({Kind.STATE, Kind.ARGUMENTS, Kind.MACRO, Kind.STORAGE})
 OUTPUTS = frozenset({Kind.STATE, Kind.SUCCESS, Kind.RESULT, Kind.STORAGE})
 
+READS = frozenset({Kind.STATE, Kind.STORAGE})
+
 CONTEXT_ONLY = frozenset({
     PrimitiveKind.ENTITY,
     PrimitiveKind.PLAYER,
@@ -150,20 +153,20 @@ REGISTRIES = {
     "predicate": Registry(
         "predicate",
         contexts=CONTEXTS,
-        inputs=frozenset({Kind.STATE, Kind.STORAGE}),
+        inputs=READS,
         outputs=frozenset({Kind.SUCCESS}),
         requires=Kind.SUCCESS,
     ),
     "loot_table": Registry(
         "loot_table",
         contexts=CONTEXTS,
-        inputs=frozenset({Kind.STATE, Kind.STORAGE}),
+        inputs=READS,
         outputs=frozenset({Kind.STATE}),
     ),
     "context_int_provider": Registry(
         "context_int_provider",
         contexts=CONTEXTS,
-        inputs=frozenset({Kind.STATE, Kind.STORAGE}),
+        inputs=READS,
         outputs=frozenset({Kind.RESULT}),
         requires=Kind.RESULT,
         result=PrimitiveKind.INT,
@@ -171,7 +174,7 @@ REGISTRIES = {
     "context_float_provider": Registry(
         "context_float_provider",
         contexts=CONTEXTS,
-        inputs=frozenset({Kind.STATE, Kind.STORAGE}),
+        inputs=READS,
         outputs=frozenset({Kind.RESULT}),
         requires=Kind.RESULT,
         result=PrimitiveKind.FLOAT,

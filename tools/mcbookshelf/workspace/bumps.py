@@ -90,9 +90,10 @@ def _plan_bundle(ws: Workspace, tag: str, name: str, plan: Plan) -> Iterator[Exp
     if before is None:
         return
     bundle = ws.load_bundle(name)
-    was = history.members_at(ws, tag, name)
-    now = {member: _planned_version(ws, member, plan) for member in ws.members(name)}
-    strongest = _strongest(_member_moves(was, now))
+    members_before = history.members_at(ws, tag, name)
+    members = ws.members(name)
+    members_after = {member: _planned_version(ws, member, plan) for member in members}
+    strongest = _strongest(_member_moves(members_before, members_after))
     expected = str(Version.parse(before.version).bump(strongest.bump))
     if Version.parse(bundle.version) < Version.parse(expected):
         yield Expectation(name, bundle.version, expected, strongest.reason)
@@ -129,15 +130,15 @@ def _sources_move(ws: Workspace, tag: str, name: str) -> Move:
     return Move(Bump.PATCH, f"{paths[0]} changed") if paths else UNCHANGED
 
 
-def _member_moves(was: dict[str, str], now: dict[str, str]) -> Iterator[Move]:
-    for member in sorted(was.keys() | now.keys()):
-        if member not in now:
+def _member_moves(before: dict[str, str], after: dict[str, str]) -> Iterator[Move]:
+    for member in sorted(before.keys() | after.keys()):
+        if member not in after:
             yield Move(Bump.MAJOR, f"{member} left the bundle")
-        elif member not in was:
+        elif member not in before:
             yield Move(Bump.MINOR, f"{member} joined the bundle")
         else:
-            level = Version.parse(was[member]).change(Version.parse(now[member]))
-            yield Move(level, f"`{member}` moved to `v{now[member]}`")
+            level = Version.parse(before[member]).change(Version.parse(after[member]))
+            yield Move(level, f"`{member}` moved to `v{after[member]}`")
 
 
 def _strongest(moves: Iterable[Move]) -> Move:

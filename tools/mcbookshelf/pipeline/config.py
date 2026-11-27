@@ -21,10 +21,27 @@ class Build:
     versioned: bool = False
     link: bool = False
     experimental: bool = True
+    stub: bool = False
 
     @property
     def nested(self) -> Build:
-        return replace(self, zipped=False, link=False)
+        return replace(self, zipped=False, link=False, stub=False)
+
+
+MODULE_PLUGINS = (
+    f"{PLUGINS}.setup_templates",
+    f"{PLUGINS}.run_plugins",
+    f"{PLUGINS}.gen_entry",
+    f"{PLUGINS}.gen_help",
+    f"{PLUGINS}.update_tests",
+    f"{PLUGINS}.gen_load",
+    f"{PLUGINS}.gen_unload",
+    f"{PLUGINS}.include_deps",
+    f"{PLUGINS}.update_mcmeta",
+    f"{PLUGINS}.update_tags",
+)
+
+BUNDLE_PLUGINS = (f"{PLUGINS}.make_bundle", f"{PLUGINS}.update_mcmeta")
 
 
 def module_config(name: str, options: Build, *, output: Path | None = None) -> ProjectConfig:
@@ -39,18 +56,7 @@ def module_config(name: str, options: Build, *, output: Path | None = None) -> P
         load=True,
         build=options,
         output=output,
-        pipeline=(
-            f"{PLUGINS}.load_templates",
-            f"{PLUGINS}.load_plugins",
-            f"{PLUGINS}.gen_entry",
-            f"{PLUGINS}.gen_help",
-            f"{PLUGINS}.gen_test",
-            f"{PLUGINS}.gen_load",
-            f"{PLUGINS}.gen_unload",
-            f"{PLUGINS}.include_deps",
-            f"{PLUGINS}.update_mcmeta",
-            f"{PLUGINS}.update_tags",
-        ),
+        pipeline=MODULE_PLUGINS,
     )
 
 
@@ -66,7 +72,7 @@ def bundle_config(name: str, options: Build, *, output: Path | None = None) -> P
         build=options,
         output=output,
         members=ws.members(name),
-        pipeline=(f"{PLUGINS}.make_bundle", f"{PLUGINS}.update_mcmeta"),
+        pipeline=BUNDLE_PLUGINS,
     )
 
 
@@ -93,7 +99,7 @@ def ward_config(names: Iterable[str]) -> ProjectConfig:
         version=release.version(workspace.current()),
         build=Build(),
         members=tuple(names),
-        pipeline=(f"{PLUGINS}.make_bundle", f"{PLUGINS}.update_mcmeta"),
+        pipeline=BUNDLE_PLUGINS,
     )
 
 
@@ -184,4 +190,6 @@ def _plugins(build: Build) -> list[str]:
         ))
     if not build.experimental:
         plugins.append(f"{PLUGINS}.strip_experimental")
+    if build.stub:
+        plugins.append(f"{PLUGINS}.save_stub")
     return plugins

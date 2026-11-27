@@ -2,7 +2,7 @@
 
 ## Can anyone use Bookshelf?
 
-Anyone can use Bookshelf in a project. If you can, a mention of Bookshelf is always welcome as it helps keep the open source world a respectful place. You can also share your projects on the [Discord](https://discord.gg/MkXytNjmBt) server. This shows others how you use Bookshelf and helps keep the community active.
+Anyone can use Bookshelf in a project. If you can, a mention of Bookshelf is always welcome as it helps keep the open source world a respectful place. You can also share your projects on the [Discord](https://discord.gg/aV5SF3JsAZ) server. This shows others how you use Bookshelf and helps keep the community active.
 
 ## Is it compatible with other datapacks?
 
@@ -32,7 +32,7 @@ You can use Bookshelf in any map or datapack. You can modify it, share your chan
 
 ---
 
-```{button-link} https://discord.gg/MkXytNjmBt
+```{button-link} https://discord.gg/aV5SF3JsAZ
 :color: primary
 :shadow:
 :align: center

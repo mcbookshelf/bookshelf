@@ -13,7 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-
 # The index matches the value chosen
 function #bs.random:choice.in {options:[0,1,2,3,4]}
 execute store result score #i bs.ctx run function #bs.random:choice

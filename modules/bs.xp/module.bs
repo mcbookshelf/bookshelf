@@ -5,31 +5,31 @@ slug bookshelf-xp
 version 5.0.0
 tags runtime
 authors Aksiome, Leirof
-since 2022/04/14 1.18.2
-
-$updated: output state > the experience bar is updated
 
 
 feature function add_levels > Add levels to players.
+  since 2022/04/14 1.18.2
   @executor: player[] > players to add levels to
   input arguments
     levels: int > levels to add, negative to remove
-  $updated
+  output state > the experience bar is updated
 
 feature function add_points > Add experience points to players.
+  since 2022/04/14 1.18.2
   @executor: player[] > players to add points to
   input arguments
     points: int > points to add, negative to remove
-  $updated
+  output state > the experience bar is updated
 
 feature function add_progress > Add progress to the experience bar.
   since 2023/08/31 1.20.1
   @executor: player[] > players to add bar progress to
   input arguments
     progress: float @ -1..1 > fraction of the bar to add, negative to remove
-  $updated
+  output state > the experience bar is updated
 
 feature function get_progress > Get the fill progress of the experience bar.
+  since 2022/04/14 1.18.2
   @executor: player > player to get the bar progress from
   output storage: float @ 0..1 > fraction of the bar filled
 
@@ -44,29 +44,34 @@ feature function get_required_points > Get the number of points the current leve
   output storage: int @ 0.. > points needed to fill the current level
 
 feature function get_total_points > Get the total number of points a player has, levels included.
+  since 2022/04/14 1.18.2
   @executor: player > player to get the total points from
   output storage: int @ 0.. > total number of points, levels included
 
 feature function set_levels > Set the level of players.
+  since 2022/04/14 1.18.2
   @executor: player[] > players to set the levels of
   input arguments
     levels: int @ 0.. > level to set
-  $updated
+  output state > the experience bar is updated
 
 feature function set_points > Set the experience points of players.
+  since 2022/04/14 1.18.2
   @executor: player[] > players to set the points of
   input arguments
     points: int @ 0.. > points to set within the current level
-  $updated
+  output state > the experience bar is updated
 
 feature function set_progress > Set the fill progress of the experience bar.
+  since 2022/04/14 1.18.2
   @executor: player[] > players to set the bar progress of
   input arguments
     progress: float @ 0..1 > fraction of the bar to fill
-  $updated
+  output state > the experience bar is updated
 
 feature function set_total_points > Set the total experience points of players.
+  since 2022/04/14 1.18.2
   @executor: player[] > players to set the total points of
   input arguments
     points: int @ 0.. > total number of points to set, levels included
-  $updated
+  output state > the experience bar is updated

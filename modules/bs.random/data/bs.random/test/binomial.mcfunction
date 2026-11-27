@@ -13,7 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-
 # Every trial succeeds with a probability of 1, and none with 0
 data modify storage bs.random:binomial in set value {trials:5,probability:1.0}
 assert result 5 run compute default integer bs.random:binomial

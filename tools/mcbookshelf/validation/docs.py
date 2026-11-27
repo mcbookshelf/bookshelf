@@ -15,9 +15,9 @@ def check_documentation(ws: Workspace, name: str) -> Iterator[Issue]:
         return
     page = constants.DOCS_DIR / module.documentation.removeprefix(f"{constants.DOCS_PAGES_URL}/")
     page = page.with_suffix(".md")
-    shown = page.relative_to(constants.ROOT_DIR).as_posix()
+    page_path = page.relative_to(constants.ROOT_DIR).as_posix()
     if not page.is_file():
-        yield Issue("documentation page is missing", shown)
+        yield Issue("documentation page is missing", page_path)
         return
 
     documented = set()
@@ -31,7 +31,7 @@ def check_documentation(ws: Workspace, name: str) -> Iterator[Issue]:
         try:
             feature = module.find(feature_name, resource)
         except LookupError as error:
-            yield Issue(str(error), shown, line)
+            yield Issue(str(error), page_path, line)
             continue
         documented.add(feature)
 
@@ -39,4 +39,4 @@ def check_documentation(ws: Workspace, name: str) -> Iterator[Issue]:
         if feature not in documented:
             anchor = f"#{feature.anchor} resolves to nothing"
             message = f"'{feature.name}' has no {{feature}} directive: {anchor}"
-            yield Issue(message, shown)
+            yield Issue(message, page_path)

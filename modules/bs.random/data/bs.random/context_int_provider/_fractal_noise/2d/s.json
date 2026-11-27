@@ -1,0 +1,71 @@
+{
+  "type": "add",
+  "inputs": [
+    {
+      "type": "mul",
+      "inputs": [
+        15,
+        {
+          "type": "floor_div",
+          "left": {
+            "type": "add",
+            "inputs": [
+              {
+                "type": "score",
+                "score": "bs.ctx",
+                "target": {
+                  "type": "fixed",
+                  "name": "#x"
+                }
+              },
+              {
+                "type": "score",
+                "score": "bs.ctx",
+                "target": {
+                  "type": "fixed",
+                  "name": "#y"
+                }
+              }
+            ]
+          },
+          "right": 41
+        }
+      ]
+    },
+    {
+      "type": "floor_div",
+      "left": {
+        "type": "mul",
+        "inputs": [
+          15,
+          {
+            "type": "floor_mod",
+            "left": {
+              "type": "add",
+              "inputs": [
+                {
+                  "type": "score",
+                  "score": "bs.ctx",
+                  "target": {
+                    "type": "fixed",
+                    "name": "#x"
+                  }
+                },
+                {
+                  "type": "score",
+                  "score": "bs.ctx",
+                  "target": {
+                    "type": "fixed",
+                    "name": "#y"
+                  }
+                }
+              ]
+            },
+            "right": 41
+          }
+        ]
+      },
+      "right": 41
+    }
+  ]
+}

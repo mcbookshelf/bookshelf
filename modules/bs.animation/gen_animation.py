@@ -4,16 +4,16 @@ from typing import TYPE_CHECKING
 
 from beet import Context, JsonFile, NamespaceFileScope
 
-from mcbookshelf.minecraft.math import (
+from mcbookshelf.minecraft.number import (
     Expression,
+    Kind,
     Operand,
-    float_storage,
-    int_storage,
+    storage,
     switch,
 )
 
 if TYPE_CHECKING:
-    from collections.abc import Callable, ClassVar
+    from collections.abc import ClassVar
 
 
 class ContextFloatProvider(JsonFile):
@@ -57,14 +57,10 @@ def beet_default(ctx: Context) -> None:
 
     ns = ctx.directory.name
 
-    def read(
-        key: str,
-        fallback: Operand | None = None,
-        fn: Callable[[str, str, Operand | None], Expression] = float_storage,
-    ) -> Expression:
-        return fn(f"{ns}:", f"stack[-1].{key}", fallback)
+    def read(key: str, fallback: Operand | None = None, kind: Kind = "float") -> Expression:
+        return storage(f"{ns}:", f"stack[-1].{key}", kind, fallback)
 
-    k = read("_[0].k", fn=int_storage)
+    k = read("_[0].k", kind="int")
     t = read("_[0].t", fallback=0.0)
 
     n = read("_[0].n")

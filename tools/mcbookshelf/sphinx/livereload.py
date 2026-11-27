@@ -43,7 +43,6 @@ def serve(
                     paths = sorted(path for _, path in batch)
                     server.announce(change(build(paths), paths))
             finally:
-                # Asked to stop first: its thread fails on a socket closed under it
                 server.shutdown()
         finally:
             worker.stop()
@@ -86,7 +85,6 @@ class Worker:
         """Start a new worker and wait for its first build, on an empty state when `fresh`."""
         self.stop()
         command = [sys.executable, "-m", "mcbookshelf.sphinx.worker", *self.arguments]
-        # In a group of its own, the worker is not interrupted with this process
         group = subprocess.CREATE_NEW_PROCESS_GROUP if sys.platform == "win32" else 0
         self.process = subprocess.Popen(
             [*command, "fresh" if fresh else "kept"], cwd=constants.DOCS_DIR, encoding="utf-8",
@@ -122,7 +120,6 @@ class Worker:
         results.put("")
 
     def _result(self) -> Result | None:
-        # Waited for in short steps, as a wait with no timeout cannot be interrupted on Windows
         while True:
             try:
                 line = self.results.get(timeout=0.2)
@@ -194,7 +191,6 @@ class Handler(SimpleHTTPRequestHandler):
             self.server.pages.discard(changes)
 
     def end_headers(self) -> None:
-        # Kept by the browser but checked on each use: a reload only loads what changed
         self.send_header("Cache-Control", "no-cache")
         super().end_headers()
 

@@ -1,0 +1,60 @@
+{
+  "type": "sub",
+  "left": {
+    "type": "floor_mod",
+    "left": {
+      "type": "score",
+      "score": "bs.ctx",
+      "target": {
+        "type": "fixed",
+        "name": "#x"
+      }
+    },
+    "right": 1024
+  },
+  "right": {
+    "type": "floor_div",
+    "left": {
+      "type": "add",
+      "inputs": [
+        {
+          "type": "floor_mod",
+          "left": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#x"
+            }
+          },
+          "right": 1024
+        },
+        {
+          "type": "floor_mod",
+          "left": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#y"
+            }
+          },
+          "right": 1024
+        },
+        {
+          "type": "floor_mod",
+          "left": {
+            "type": "score",
+            "score": "bs.ctx",
+            "target": {
+              "type": "fixed",
+              "name": "#z"
+            }
+          },
+          "right": 1024
+        }
+      ]
+    },
+    "right": 6
+  }
+}

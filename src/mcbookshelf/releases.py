@@ -1,20 +1,19 @@
-import json
 import logging
 import re
 import time
 from collections.abc import Callable, Iterable
-from importlib.metadata import version as package_version
 from pathlib import Path
-from typing import Any, NotRequired, TypedDict
+from typing import NotRequired, TypedDict
 from zipfile import BadZipFile, ZipFile
 
 from beet import Cache, Context, DataPack
+
+from mcbookshelf.downloads import download, read_json
 
 logger = logging.getLogger(__name__)
 
 API = "https://api.mcbookshelf.dev/v2"
 LISTING_TTL = 24 * 60 * 60
-USER_AGENT = f"mcbookshelf/bookshelf/{package_version('mcbookshelf')}"
 
 
 class DownloadEntry(TypedDict):
@@ -129,10 +128,10 @@ class Releases:
         """Download and load a module pack, preferring Modrinth over GitHub."""
         self._check_dependencies(name)
         entry = self.modules[name]
-        download = entry.get("download", {})
-        for url in filter(None, (download.get("modrinth"), download.get("github"))):
+        links = entry.get("download", {})
+        for url in filter(None, (links.get("modrinth"), links.get("github"))):
             try:
-                return load_pack(_download(self.cache, url, _check_zip), paths)
+                return load_pack(download(self.cache, url, _check_zip), paths)
             except (OSError, BadZipFile) as error:
                 logger.debug("Could not download %s (%s).", url, error)
         raise ResolutionError(f"{name} {entry['version']} cannot be downloaded")
@@ -140,9 +139,9 @@ class Releases:
     def _base(self, version: str | None, minecraft: str | None) -> str:
         entry = self._find(version, minecraft)
         if entry is None:
-            asked = [f"version {version}"] if version else []
-            asked += [f"Minecraft {minecraft}"] if minecraft else []
-            raise ResolutionError(f"no Bookshelf version matches {' and '.join(asked)}")
+            criteria = [f"version {version}"] if version else []
+            criteria += [f"Minecraft {minecraft}"] if minecraft else []
+            raise ResolutionError(f"no Bookshelf version matches {' and '.join(criteria)}")
         return entry["tag"]
 
     def _pins(self, pins: dict[str, str], minecraft: str | None) -> dict[str, str]:
@@ -157,7 +156,7 @@ class Releases:
 
     def _modules(self) -> dict[str, ModuleEntry]:
         tags = {self.base, *self.pins.values()}
-        manifests = {tag: _fetch(self.cache, f"{API}/versions/{tag}") for tag in tags}
+        manifests = {tag: download(self.cache, f"{API}/versions/{tag}", read_json) for tag in tags}
         modules = dict(manifests[self.base]["modules"])
         for name, tag in self.pins.items():
             modules[name] = manifests[tag]["modules"][name]
@@ -166,17 +165,18 @@ class Releases:
     def _check_dependencies(self, name: str) -> None:
         tag = self.pins.get(name, self.base)
         built_with = next(v["modules"] for v in self.versions if v["tag"] == tag)
-        own = self.modules[name]
-        for dependency in {d.partition(":")[0] for d in own["dependencies"]}:
+        module = self.modules[name]
+        for dependency in {d.partition(":")[0] for d in module["dependencies"]}:
             if dependency not in self.modules:
                 raise ResolutionError(
-                    f"{name} {own['version']} needs {dependency}, but no version resolved ships it",
+                    f"{name} {module['version']} needs {dependency}, "
+                    "but no version resolved ships it",
                 )
             expected = built_with.get(dependency)
             actual = self.modules[dependency]["version"]
             if expected != actual:
                 raise ResolutionError(
-                    f"{name} {own['version']} was built with {dependency} {expected}, "
+                    f"{name} {module['version']} was built with {dependency} {expected}, "
                     f"but {dependency} resolved to {actual}",
                 )
 
@@ -205,23 +205,15 @@ def _listing(cache: Cache) -> list[VersionEntry]:
         refresh = cache.get_path(f"{url}?refresh")
         refresh.unlink(missing_ok=True)
         try:
-            _download(cache, url, _read_json, refresh)
+            download(cache, url, read_json, refresh)
             refresh.replace(path)
         except (OSError, ValueError) as error:
             logger.warning("Could not refresh Bookshelf versions, cached ones used (%s)", error)
-    return sorted(_download(cache, url, _read_json), key=_release_order, reverse=True)
+    return sorted(download(cache, url, read_json), key=_release_order, reverse=True)
 
 
 def _release_order(entry: VersionEntry) -> tuple[tuple[int, ...], str]:
     return tuple(int(part) for part in re.findall(r"\d+", entry["version"])), entry["date"]
-
-
-def _fetch(cache: Cache, url: str) -> Any:  # noqa: ANN401
-    return _download(cache, url, _read_json)
-
-
-def _read_json(path: Path) -> Any:  # noqa: ANN401
-    return json.loads(path.read_text("utf-8"))
 
 
 def _check_zip(path: Path) -> Path:
@@ -229,17 +221,3 @@ def _check_zip(path: Path) -> Path:
         if (member := archive.testzip()) is not None:
             raise BadZipFile(f"{member} is corrupt in {path.name}")
     return path
-
-
-def _download[T](
-    cache: Cache,
-    url: str,
-    read: Callable[[Path], T],
-    path: Path | None = None,
-) -> T:
-    path = path or cache.get_path(url)
-    try:
-        return read(cache.download(url, path, headers={"User-Agent": USER_AGENT}))
-    except Exception:
-        path.unlink(missing_ok=True)
-        raise

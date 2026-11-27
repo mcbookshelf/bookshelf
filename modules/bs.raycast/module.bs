@@ -8,16 +8,9 @@ authors Aksiome
 
 $run: #[command(slash="forbidden",empty="forbidden")] string
 $provider: #[id(registry="function",tags="allowed")] string
-$blocks: $provider > [block provider](hitbox.md#block-providers) of the blocks the ray hits, such as `#bs.hitbox:get_block/collision`: without it, the ray goes through blocks
 $entities: $provider > [entity provider](hitbox.md#entity-providers) of the entities the ray hits, such as `#bs.hitbox:get_entity/sized`: without it, the ray goes through entities
 $selector: string > selector arguments the entities must match, such as `tag=my_pack.target`
 $max_distance: number @ 0..2047 > distance the ray travels at most, 16 by default
-
-$ray:
-  contributors Bafy78
-  @position > origin of the ray
-  @rotation > direction of the ray
-  @dimension > dimension of the ray
 
 $face[bottom, east, north, south, top, west]
 $flag[1, 2, 4, 8]
@@ -38,10 +31,13 @@ $point[exit]:
 
 
 feature function cast > Cast a ray and check if it hits a block or an entity.
+  contributors Bafy78
   since 2023/10/09 1.20.2
-  $ray
+  @position > origin of the ray
+  @rotation > direction of the ray
+  @dimension > dimension of the ray
   input arguments
-    blocks?: $blocks
+    blocks?: $provider > [block provider](hitbox.md#block-providers) of the blocks the ray hits, such as `#bs.hitbox:get_block/collision`: without it, the ray goes through blocks
     entities?: $entities
     selector?: $selector
     max_distance?: $max_distance
@@ -51,8 +47,11 @@ feature function cast > Cast a ray and check if it hits a block or an entity.
   output success > whether a block or an entity stops the ray
 
 feature function pierce > Cast a ray that goes through every block and entity it hits, until a command stops it.
+  contributors Bafy78
   since 2026/10/25 26.3
-  $ray
+  @position > origin of the ray
+  @rotation > direction of the ray
+  @dimension > dimension of the ray
   input arguments
     blocks?: $provider
     entities?: $entities

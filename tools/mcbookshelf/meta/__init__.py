@@ -32,11 +32,9 @@ __all__ = [
 
 def load_module(file: Path) -> model.Module:
     """Load a `module.bs` file."""
-    document = parse(file.read_text("utf-8"), file)
-    return build_module(document, file.parent.name, file)
+    return build_module(parse(file.read_text("utf-8"), file), file.parent.name, file)
 
 
 def load_bundle(file: Path) -> model.Bundle:
     """Load a `bundle.bs` file."""
-    document = parse(file.read_text("utf-8"), file)
-    return build_bundle(document, file.parent.name, file)
+    return build_bundle(parse(file.read_text("utf-8"), file), file.parent.name, file)

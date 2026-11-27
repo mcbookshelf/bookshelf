@@ -13,7 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-
 # The first trial succeeds with a probability of 1
 data modify storage bs.random:geometric in set value {probability:1.0}
 assert result 1 run compute default integer bs.random:geometric

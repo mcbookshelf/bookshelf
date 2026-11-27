@@ -80,8 +80,8 @@ class Workspace:
         bundle = self.load_bundle(name)
         selected = select(bundle, (self.load_module(m) for m in self.modules()))
         if not selected:
-            where = meta.diagnostics.locate(self.file(name), None)
-            raise ValueError(f"{where}: no module carries the tags {', '.join(bundle.tags)}")
+            location = meta.diagnostics.locate(self.file(name), None)
+            raise ValueError(f"{location}: no module carries the tags {', '.join(bundle.tags)}")
         return tuple(m.id for m in selected)
 
     @cached

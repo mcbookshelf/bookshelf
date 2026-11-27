@@ -1,0 +1,69 @@
+{
+  "type": "add",
+  "inputs": [
+    {
+      "type": "mul",
+      "inputs": [
+        1024,
+        {
+          "type": "sub",
+          "left": {
+            "type": "floor_mod",
+            "left": {
+              "type": "add",
+              "inputs": [
+                524288,
+                {
+                  "type": "floor_mod",
+                  "left": {
+                    "type": "floor_div",
+                    "left": {
+                      "type": "storage",
+                      "storage": "bs.random:fractal_noise",
+                      "path": "in.pos[2]"
+                    },
+                    "right": {
+                      "type": "storage",
+                      "storage": "bs.random:fractal_noise",
+                      "path": "in.size"
+                    }
+                  },
+                  "right": 1048576
+                }
+              ]
+            },
+            "right": 1048576
+          },
+          "right": 524288
+        }
+      ]
+    },
+    {
+      "type": "floor_div",
+      "left": {
+        "type": "mul",
+        "inputs": [
+          1024,
+          {
+            "type": "floor_mod",
+            "left": {
+              "type": "storage",
+              "storage": "bs.random:fractal_noise",
+              "path": "in.pos[2]"
+            },
+            "right": {
+              "type": "storage",
+              "storage": "bs.random:fractal_noise",
+              "path": "in.size"
+            }
+          }
+        ]
+      },
+      "right": {
+        "type": "storage",
+        "storage": "bs.random:fractal_noise",
+        "path": "in.size"
+      }
+    }
+  ]
+}

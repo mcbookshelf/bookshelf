@@ -3,7 +3,7 @@ from asyncio import gather
 
 from httpx import AsyncBaseTransport, AsyncClient
 
-from mcbookshelf import constants, releases
+from mcbookshelf import constants, downloads
 
 from . import Pack, PublishError, gather_errors
 
@@ -25,7 +25,7 @@ async def publish(
     token: str,
     transport: AsyncBaseTransport | None = None,
 ) -> list[Exception]:
-    headers = {"Authorization": token, "User-Agent": releases.USER_AGENT}
+    headers = {"Authorization": token, "User-Agent": downloads.USER_AGENT}
     async with AsyncClient(
         base_url=API,
         headers=headers,

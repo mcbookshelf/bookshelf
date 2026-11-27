@@ -103,7 +103,7 @@ From there, you can explore the documentation for individual modules, try out ex
 Next, check out the [modules](modules/index.md) documentation to see each module in detail and learn how to use them.
 
 :::{note}
-This section is in progress. If you have ideas to improve it, share them on the [Discord](https://discord.gg/MkXytNjmBt) server.
+This section is in progress. If you have ideas to improve it, share them on the [Discord](https://discord.gg/aV5SF3JsAZ) server.
 :::
 
 ---

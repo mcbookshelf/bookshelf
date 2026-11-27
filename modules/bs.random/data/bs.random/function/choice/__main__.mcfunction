@@ -13,8 +13,7 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute store result score #i bs.ctx run random value 0..2147483646
-execute store result score #l bs.ctx run data get storage bs.random:choice in.options
-execute store result storage bs.random:choice _i int 1 run scoreboard players operation #i bs.ctx %= #l bs.ctx
-function bs.random:choice/get with storage bs.random:choice
-return run scoreboard players get #i bs.ctx
+execute store result score #n bs.ctx run data get storage bs.random:choice in.options
+execute store result storage bs.random: i int 1 run compute default integer {type:"uniform",min:0,max:{type:"sub",left:{type:"score",score:"bs.ctx",target:{type:"fixed",name:"#n"}},right:1}}
+function bs.random:choice/get with storage bs.random:
+return run data get storage bs.random: i

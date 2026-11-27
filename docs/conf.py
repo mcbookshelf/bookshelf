@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+from mcbookshelf import constants
 from mcbookshelf.sphinx import switcher
 
 switcher.write(Path(__file__).parent / "_static" / "switcher.json")
@@ -87,13 +88,13 @@ html_theme_options = {
         "external-links.html",
     ],
     "external_links": [
-        "https://discord.gg/MkXytNjmBt",
+        constants.DISCORD_URL,
         {
             "name": "Support us",
-            "url": "https://www.helloasso.com/associations/altearn/formulaires/6/en",
+            "url": constants.DONATION_URL,
             "icon": "heart-fill",
         },
-        "https://github.com/mcbookshelf/bookshelf",
+        constants.GITHUB_URL,
     ],
 }
 

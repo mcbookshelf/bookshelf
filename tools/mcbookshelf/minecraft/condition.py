@@ -130,10 +130,10 @@ def _unite(a: dict[str, Json], b: dict[str, Json]) -> dict[str, Json] | None:
     """What either object allows, when they differ by one "one of" list only."""
     if a.keys() != b.keys():
         return None
-    differ = [key for key in a if a[key] != b[key]]
-    if len(differ) != 1:
+    changed_keys = [key for key in a if a[key] != b[key]]
+    if len(changed_keys) != 1:
         return None
-    key = differ[0]
+    key = changed_keys[0]
     first, second = a[key], b[key]
     if isinstance(first, dict) and isinstance(second, dict):
         nested = _unite(first, second)

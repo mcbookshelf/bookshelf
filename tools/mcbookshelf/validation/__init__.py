@@ -1,6 +1,6 @@
 from mcbookshelf import constants, workspace
 from mcbookshelf.meta import MetadataError
-from mcbookshelf.validation import docs, layout, metadata
+from mcbookshelf.validation import changelog, docs, layout
 from mcbookshelf.validation.issue import Issue
 
 __all__ = ["Issue", "check_module"]
@@ -20,7 +20,7 @@ def check_module(name: str) -> list[Issue]:
         layout.check_references,
         layout.check_private,
         layout.check_requirements,
-        metadata.check_changelog,
+        changelog.check_changelog,
         docs.check_documentation,
     )
     return [issue for check in checks for issue in check(ws, name)]

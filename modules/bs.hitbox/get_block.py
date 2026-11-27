@@ -2,21 +2,20 @@ import struct
 from collections.abc import Callable, Iterable, Iterator
 from itertools import product
 
-from beet import BlockTag, Context, ContextIntProvider, Function
+from beet import BlockTag, Context, Function
 
 from mcbookshelf.minecraft import condition, snbt
 from mcbookshelf.minecraft.block import Block, Shape, State, block_table, changing, get_blocks
-from mcbookshelf.minecraft.math import (
+from mcbookshelf.minecraft.number import (
     Expression,
     add,
     btree,
     clamp,
     cond,
     const,
-    fixed_target,
-    int_storage,
     ref,
     score,
+    storage,
 )
 from mcbookshelf.pipeline.plugins import Generated, generator
 
@@ -70,24 +69,22 @@ def beet_default(ctx: Context) -> Generated:
     load = f"data modify storage bs.hitbox: table set value {shapes}"
     yield "bs.hitbox:get_block/__load__", Function(["", load])
 
-    x = score("bs.ctx", fixed_target("#x"))
-    z = score("bs.ctx", fixed_target("#z"))
+    x, z = score("bs.ctx", "#x"), score("bs.ctx", "#z")
     seed = add(*(cond(_seed_bit(x, i).eq(_seed_bit(z, i)), 0, 2**i) for i in range(28)))
-    yield "bs.hitbox:_get_block/seed", ContextIntProvider(seed.json())
+    yield "bs.hitbox:_get_block/seed", seed
 
     for axis, index, factor in (("x", 0, 3129871), ("z", 2, 116129781)):
-        position = int_storage("bs.hitbox:", f"pos[{index}]").floor_mod(2**28)
-        seed = _safe_mul(position, factor, 28)
-        yield f"bs.hitbox:_get_block/seed_{axis}", ContextIntProvider(seed.json())
+        position = storage("bs.hitbox:", f"pos[{index}]", "int").floor_mod(2**28)
+        yield f"bs.hitbox:_get_block/seed_{axis}", _safe_mul(position, factor, 28)
 
     for name, value in _offsets():
-        yield f"{OFFSET}/{name}".rstrip("/"), ContextIntProvider(value.json())
+        yield f"{OFFSET}/{name}".rstrip("/"), value
 
     for name, value in SHAPES.items():
         offset = [b for b in blocks if b.has_shape_offset and all(value(s) for s in b.states)]
         first = btree(offset, lambda b, value=value: _first_offset(b, value, groups), _block)
         index = cond(_block(offset), add(first, ref(OFFSET, "int")), providers[name])
-        yield f"bs.hitbox:_get_block/{name}/index", ContextIntProvider(index.json())
+        yield f"bs.hitbox:_get_block/{name}/index", index
 
     for tag, test in TAGS.items():
         yield f"bs.hitbox:{tag}", BlockTag({"values": [b.id for b in blocks if test(b)]})
@@ -102,7 +99,7 @@ def _block(blocks: Iterable[Block]) -> condition.Condition:
 
 
 def _seed_bit(value: Expression, i: int) -> Expression:
-    return (value // 2**i if i else value).floor_mod(2)
+    return (value // 2**i).floor_mod(2)
 
 
 def _first_offset(block: Block, value: Callable[[State], Shape], starts: Groups) -> Expression:
@@ -122,7 +119,7 @@ def _first_offset(block: Block, value: Callable[[State], Shape], starts: Groups)
 
 def _offsets() -> Iterator[tuple[str, Expression]]:
     """The offset to use, from the seed in `#s`: x uses its bits 16 to 19, and z 24 to 27."""
-    seed = score("bs.ctx", fixed_target("#s"))
+    seed = score("bs.ctx", "#s")
     for axis, bits in (("x", 20), ("z", 28)):
         # The 4 highest bits of (part * part * 42317861 + part * 11) modulo 2^bits
         part = seed.floor_mod(2**bits) if axis == "x" else seed

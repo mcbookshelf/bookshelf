@@ -17,7 +17,6 @@ METADATA = (constants.MODULE_FILE, constants.BUNDLE_FILE)
 
 def main(source: str, output: str, builder: str, language: str, fresh: str) -> None:
     results, sys.stdout = sys.stdout, sys.stderr
-    # Set up first, so that no extension does it to log what its libraries have to say
     logging.basicConfig(level=logging.ERROR)
     nocolor()
     warnings = StringIO()

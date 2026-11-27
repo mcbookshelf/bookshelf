@@ -4,8 +4,6 @@ name Interaction
 slug bookshelf-interaction
 version 5.0.0
 tags runtime
-authors Aksiome, theogiraudet
-since 2024/03/30 24w13a
 
 $event:
   @executor > interaction to listen on
@@ -19,18 +17,28 @@ $event:
 
 
 feature function on_left_click > Run a command when a player left clicks the interaction.
+  authors Aksiome, theogiraudet
+  since 2024/03/30 24w13a
   $event
 
 feature function on_right_click > Run a command when a player right clicks the interaction.
+  authors Aksiome, theogiraudet
+  since 2024/03/30 24w13a
   $event
 
 feature function on_hover > Run a command every tick while a player looks at the interaction.
+  authors Aksiome, theogiraudet
+  since 2024/03/30 24w13a
   $event
 
 feature function on_hover_enter > Run a command when a player starts looking at the interaction.
+  authors Aksiome, theogiraudet
+  since 2024/03/30 24w13a
   $event
 
 feature function on_hover_leave > Run a command when a player stops looking at the interaction, or logs out while looking at it.
+  authors Aksiome, theogiraudet
+  since 2024/03/30 24w13a
   $event
 
 feature function clear_events > Clear the events of an interaction.

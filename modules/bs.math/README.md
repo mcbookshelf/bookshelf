@@ -20,7 +20,7 @@
   &nbsp;
   <a href="https://github.com/mcbookshelf/bookshelf/releases/latest"><img src="https://img.shields.io/github/v/release/mcbookshelf/bookshelf?colorA=363a4f&colorB=926bd1&style=for-the-badge&logo=github&logoColor=cad3f5"></a>
   &nbsp;
-  <a href="https://discord.gg/MkXytNjmBt"><img src="https://img.shields.io/discord/1247513995376726116?style=for-the-badge&color=%237289DA&labelColor=363a4f&logo=discord&logoColor=cad3f5"></a>
+  <a href="https://discord.gg/aV5SF3JsAZ"><img src="https://img.shields.io/discord/1247513995376726116?style=for-the-badge&color=%237289DA&labelColor=363a4f&logo=discord&logoColor=cad3f5"></a>
 </div>
 
 <br/>
@@ -54,5 +54,5 @@ This module is part of the Bookshelf library:
 
 ## Get involved
 
-💬 Join our [Discord](https://discord.gg/MkXytNjmBt) \
+💬 Join our [Discord](https://discord.gg/aV5SF3JsAZ) \
 🛠 Learn how to [contribute](https://docs.mcbookshelf.dev/en/latest/contribute/)

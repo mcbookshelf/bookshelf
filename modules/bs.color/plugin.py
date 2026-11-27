@@ -1,15 +1,14 @@
-from beet import Context, ContextFloatProvider, ContextIntProvider
+from beet import Context
 
 from mcbookshelf.meta import Module
-from mcbookshelf.minecraft.math import (
+from mcbookshelf.minecraft.number import (
     Expression,
     add,
     clamp,
     cond,
-    float_storage,
-    int_storage,
     mul,
     ref,
+    storage,
 )
 from mcbookshelf.pipeline.plugins import Generated, generator
 
@@ -33,32 +32,30 @@ def beet_default(ctx: Context) -> Generated:
     module: Module = ctx.meta["module"]
 
     def inputs(name: str) -> tuple[Expression, Expression, Expression]:
-        storage = f"{module.id}:{name}"
-        ratio = clamp(float_storage(storage, "in.ratio"), 0.0, 1.0)
-        return int_storage(storage, "in.from"), int_storage(storage, "in.to"), ratio
+        source = f"{module.id}:{name}"
+        ratio = clamp(storage(source, "in.ratio"), 0.0, 1.0)
+        return storage(source, "in.from", "int"), storage(source, "in.to", "int"), ratio
 
-    yield f"{module.id}:mix", ContextIntProvider(mix(*inputs("mix")).json())
+    yield f"{module.id}:mix", mix(*inputs("mix"))
 
     start, end, ratio = inputs("mix_oklab")
     private = f"{module.id}:_mix_oklab"
     for name, color in (("from", start), ("to", end)):
         for cone, value in zip(CONES, cones(color), strict=True):
-            yield f"{private}/{name}_{cone}", ContextFloatProvider(value.json())
+            yield f"{private}/{name}_{cone}", value
     for cone in CONES:
-        mixed = between(ref(f"{private}/from_{cone}"), ref(f"{private}/to_{cone}"), ratio) ** 3
-        yield f"{private}/{cone}", ContextFloatProvider(mixed.json())
+        mixed = between(ref(f"{private}/from_{cone}"), ref(f"{private}/to_{cone}"), ratio)
+        yield f"{private}/{cone}", mixed**3
     long, medium, short = (ref(f"{private}/{cone}") for cone in CONES)
     for name, (x, y, z) in zip(CHANNELS, FROM_LMS, strict=True):
-        value = x * long + y * medium + z * short
-        yield f"{private}/{name}", ContextFloatProvider(value.json())
+        yield f"{private}/{name}", x * long + y * medium + z * short
     red, green, blue = (curved(ref(f"{private}/{name}")) for name in CHANNELS)
-    packed = pack(red, green, blue, mixed_byte(start, end, ratio, 24))
-    yield f"{module.id}:mix_oklab", ContextIntProvider(packed.json())
+    yield f"{module.id}:mix_oklab", pack(red, green, blue, mixed_byte(start, end, ratio, 24))
 
 
 def channel(color: Expression, shift: int) -> Expression:
     """One of the four bytes of a color, from 0 to 255."""
-    return (color // 2**shift if shift else color).floor_mod(256)
+    return (color // 2**shift).floor_mod(256)
 
 
 def between(a: Expression, b: Expression, ratio: Expression) -> Expression:

@@ -1,11 +1,17 @@
+import sys
 from collections.abc import Generator, Iterable
 from contextlib import contextmanager
 from dataclasses import dataclass, field
+from io import TextIOWrapper
 
 from rich.console import Console, RenderableType
 from rich.markup import escape
 from rich.progress import Progress, SpinnerColumn, Task, TaskID, TextColumn, TimeElapsedColumn
 from rich.text import Text
+
+for stream in (sys.stdout, sys.stderr):
+    if isinstance(stream, TextIOWrapper):
+        stream.reconfigure(encoding="utf-8")
 
 console = Console(highlight=False, emoji=False)
 

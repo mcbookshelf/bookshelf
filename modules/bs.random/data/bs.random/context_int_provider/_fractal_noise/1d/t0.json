@@ -1,0 +1,23 @@
+{
+  "type": "add",
+  "inputs": [
+    {
+      "type": "score",
+      "score": "bs.ctx",
+      "target": {
+        "type": "fixed",
+        "name": "#t"
+      }
+    },
+    {
+      "type": "from_float",
+      "input": {
+        "type": "mul",
+        "inputs": [
+          1000000.0,
+          "bs.random:_fractal_noise/1d/noise"
+        ]
+      }
+    }
+  ]
+}

@@ -13,7 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-
 # No event happens with a lambda of 0
 data modify storage bs.random:poisson in set value {lambda:0.0}
 assert result 0 run compute default integer bs.random:poisson
