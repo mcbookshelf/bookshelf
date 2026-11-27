@@ -9,9 +9,6 @@ metadata: META_KEY TEXT _NL
 
 // --- definitions ---------------------------------------------------------- --
 
-// after the name comes what it is: a type, with its fields under it for a struct, or lines.
-// One line can follow the name directly, since no line starts like a type: a paste aside,
-// '$a: $b' being a type
 definition: VARIABLE ":" type _end fields?                           -> alias
           | VARIABLE ":" (metadata | context | slot)                 -> block
           | VARIABLE ":" _NL _INDENT (DOC _NL)? _line+ _DEDENT      -> block
@@ -28,7 +25,6 @@ feature: KW_FEATURE REGISTRY FEATURE_ID _end (_INDENT (DOC _NL)? _line* _DEDENT)
 _line: metadata | context | slot | paste
 
 context: CONTEXT (":" type)? _end
-// a colon announces a type: fields under a line without one make it a struct
 slot: ROLE KIND [RESOURCE_LOCATION] [path] (":" type)? _end fields?
 paste: VARIABLE _NL
 
@@ -37,10 +33,8 @@ field: name OPTIONAL? ":" type _end fields?
 
 path: name ("/" name)*
 
-// a doc is written at the end of its line, or on the next one
 _end: DOC? _NL | _NL DOC _NL
 
-// a language word is a name wherever a name is expected
 ?name: ID | INT | REGISTRY | ROLE | KIND | KW_FEATURE | HEAD_KEY | META_KEY | FLAG
      | STRUCT_TYPE | int_type | float_type | plain_type
 
@@ -55,8 +49,6 @@ member: ATTRIBUTE* base
 reference: VARIABLE
 struct: STRUCT_TYPE
 
-// the array words are named here directly, not through int_type: after `int @ 0..1` the
-// parser must still be able to go either way, and an extra reduction would force it to choose
 primitive: (array_int_type | SHORT_TYPE | STRING_TYPE) ("@" int_range)?
          | float_type ("@" float_range)?
          | plain_type
@@ -85,7 +77,6 @@ tuple_type: "[" type "," (type ("," type)*)? "]"
 
 ?number: INT | FLOAT
 
-// a '<' on a side excludes that bound
 _range: RANGE | RANGE_ABOVE | RANGE_BELOW | RANGE_BETWEEN
 _min_range: RANGE | RANGE_ABOVE
 _max_range: RANGE | RANGE_BELOW
@@ -95,7 +86,6 @@ RANGE_ABOVE: "<.."
 RANGE_BELOW: "..<"
 RANGE_BETWEEN: "<..<"
 
-// one terminal per type word, composed by the rules above
 INT_TYPE: /int\b/
 BYTE_TYPE: /byte\b/
 LONG_TYPE: /long\b/
@@ -131,7 +121,8 @@ KIND: /(state|result|success|macro|storage|arguments)\b/
 
 REGISTRY: /(context_float_provider|context_int_provider|function|loot_table|predicate|structure|block_tag|entity_type_tag)\b/
 
-ID: /[_A-Za-z][_A-Za-z0-9-]*/
+// any run of letters, digits, '_' and '-' that does not start with '-': '2d' and '007' are names.
+ID: /(?!(?:0|[1-9][0-9]*)(?![_A-Za-z0-9-]))[_A-Za-z0-9][_A-Za-z0-9-]*/
 
 // a '$' name, defined before the features: it holds no '-', so '$axis-aligned' is '$axis'
 VARIABLE: /\$[_A-Za-z][_A-Za-z0-9]*/
@@ -145,8 +136,7 @@ RESOURCE_LOCATION.2: /[a-z0-9_-]+(\.[a-z0-9_-]+)+:[a-z0-9_.\/-]+/
 // an mcdoc attribute, passed through as written
 ATTRIBUTE: /#\[(?:[^\[\]]|\[(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*\])*\]/
 
-// a documentation continues on every following line that starts with '>', the blank and
-// comment lines in between left out
+// a documentation continues on every following line that starts with '>'
 DOC: />[^\r\n]*((\r?\n[ \t]*(#[^\r\n]*)?)*\r?\n[ \t]*>[^\r\n]*)*/
 
 INT: /-?(0|[1-9][0-9]*)/

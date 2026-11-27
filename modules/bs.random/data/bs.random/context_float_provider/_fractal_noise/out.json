@@ -1,0 +1,137 @@
+{
+  "type": "min",
+  "inputs": [
+    {
+      "type": "max",
+      "inputs": [
+        {
+          "type": "div",
+          "left": {
+            "type": "from_int",
+            "input": {
+              "type": "score",
+              "score": "bs.ctx",
+              "target": {
+                "type": "fixed",
+                "name": "#t"
+              }
+            }
+          },
+          "right": {
+            "type": "mul",
+            "inputs": [
+              1000000.0,
+              {
+                "type": "conditional",
+                "condition": {
+                  "type": "int_value_check",
+                  "value": {
+                    "type": "score",
+                    "score": "bs.ctx",
+                    "target": {
+                      "type": "fixed",
+                      "name": "#p"
+                    }
+                  },
+                  "test": 1000
+                },
+                "on_true": {
+                  "type": "from_int",
+                  "input": {
+                    "type": "min",
+                    "inputs": [
+                      {
+                        "type": "max",
+                        "inputs": [
+                          {
+                            "type": "score",
+                            "score": "bs.ctx",
+                            "target": {
+                              "type": "fixed",
+                              "name": "#o"
+                            }
+                          },
+                          1
+                        ]
+                      },
+                      16
+                    ]
+                  }
+                },
+                "on_false": {
+                  "type": "div",
+                  "left": {
+                    "type": "sub",
+                    "left": 1.0,
+                    "right": {
+                      "type": "pow",
+                      "base": {
+                        "type": "div",
+                        "left": {
+                          "type": "from_int",
+                          "input": {
+                            "type": "score",
+                            "score": "bs.ctx",
+                            "target": {
+                              "type": "fixed",
+                              "name": "#p"
+                            }
+                          }
+                        },
+                        "right": 1000.0
+                      },
+                      "exponent": {
+                        "type": "from_int",
+                        "input": {
+                          "type": "min",
+                          "inputs": [
+                            {
+                              "type": "max",
+                              "inputs": [
+                                {
+                                  "type": "score",
+                                  "score": "bs.ctx",
+                                  "target": {
+                                    "type": "fixed",
+                                    "name": "#o"
+                                  }
+                                },
+                                1
+                              ]
+                            },
+                            16
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "right": {
+                    "type": "sub",
+                    "left": 1.0,
+                    "right": {
+                      "type": "div",
+                      "left": {
+                        "type": "from_int",
+                        "input": {
+                          "type": "score",
+                          "score": "bs.ctx",
+                          "target": {
+                            "type": "fixed",
+                            "name": "#p"
+                          }
+                        }
+                      },
+                      "right": 1000.0
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        -1.0
+      ]
+    },
+    1.0
+  ]
+}

@@ -10,7 +10,6 @@ def beet_default(ctx: Context) -> Generator[None]:
 
     for pack in ctx.packs:
         for _, file in pack.list_files(extend=JsonFileBase[dict[str, Any]]):
-            # Swap the codec, not just the text: plugins running after re-serialize with it.
             file.decoder = lambda obj: orjson.loads(obj.encode())
             file.encoder = lambda obj: orjson.dumps(obj).decode()
             file.set_content(file.data)

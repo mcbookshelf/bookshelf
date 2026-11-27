@@ -1,0 +1,13 @@
+{
+  "type": "uniform",
+  "min": {
+    "type": "storage",
+    "storage": "bs.random:uniform",
+    "path": "in.min"
+  },
+  "max": {
+    "type": "storage",
+    "storage": "bs.random:uniform",
+    "path": "in.max"
+  }
+}

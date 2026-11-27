@@ -96,11 +96,11 @@ def note(ws: Workspace, name: str, line: str) -> None:
     """Add a line under `Unreleased`."""
     changelog = read(ws, name)
     lines = changelog.lines
-    at = changelog.unreleased() + 1
-    while at < len(lines) and lines[at] == "":
-        del lines[at]
-    joins_list = at < len(lines) and lines[at].startswith("- ")
-    lines[at:at] = ["", f"- {line}"] if joins_list else ["", f"- {line}", ""]
+    index = changelog.unreleased() + 1
+    while index < len(lines) and lines[index] == "":
+        del lines[index]
+    joins_list = index < len(lines) and lines[index].startswith("- ")
+    lines[index:index] = ["", f"- {line}"] if joins_list else ["", f"- {line}", ""]
     changelog.save()
 
 

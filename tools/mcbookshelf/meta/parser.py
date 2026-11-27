@@ -116,10 +116,6 @@ class _Transform(Transformer[Token, Any]):
     def document(self, _meta: Meta, items: list[Any]) -> syntax.Module:
         return syntax.Module(description=_description(items), lines=_nodes(items), line=1)
 
-    def property(self, meta: Meta, items: list[Token]) -> syntax.Property:
-        key, value = items
-        return syntax.Property(key=str(key), value=str(value).strip(), line=meta.line)
-
     def metadata(self, meta: Meta, items: list[Token]) -> syntax.Metadata:
         key, *value = items
         text = str(value[0]).strip() if value else None
@@ -158,6 +154,8 @@ class _Transform(Transformer[Token, Any]):
     def item_property(self, meta: Meta, items: list[Token]) -> syntax.Property:
         key, value = items
         return syntax.Property(key=str(key), value=str(value).strip(), line=meta.line)
+
+    property = item_property
 
     def feature(self, meta: Meta, items: list[Any]) -> syntax.Feature:
         _, registry, id_, *rest = items
@@ -203,7 +201,7 @@ class _Transform(Transformer[Token, Any]):
     def field(self, meta: Meta, items: list[Any]) -> syntax.Field:
         return syntax.Field(
             name=_name(items[0]),
-            type=_type(items),
+            type=next(i for i in items if isinstance(i, syntax.Type.__value__)),
             optional=any(_is(i, "OPTIONAL") for i in items),
             description=_description(items),
             fields=_fields(items),
@@ -233,11 +231,6 @@ class _Transform(Transformer[Token, Any]):
     def array(self, meta: Meta, items: list[Any]) -> syntax.Array:
         element, *size = items
         return syntax.Array(element=element, size=size[0] if size else None, line=meta.line)
-
-    def array_element(self, meta: Meta, items: list[Any]) -> syntax.Primitive:
-        name, *bound = items
-        kind = syntax.PrimitiveKind(str(name))
-        return syntax.Primitive(kind=kind, range=bound[0] if bound else None, line=meta.line)
 
     def list_type(self, meta: Meta, items: list[Any]) -> syntax.List:
         element, *range_ = items
@@ -269,3 +262,5 @@ class _Transform(Transformer[Token, Any]):
         kind = syntax.PrimitiveKind(str(name))
         bounds = range_[0] if range_ else None
         return syntax.Primitive(kind=kind, range=bounds, line=meta.line)
+
+    array_element = primitive

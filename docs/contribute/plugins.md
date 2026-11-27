@@ -22,19 +22,21 @@ A plugin is a Python file at the root of the module that defines a `beet_default
 
 ```{code-block} python
 :caption: modules/bs.bitwise/plugin.py
-from beet import Context, ContextIntProvider
+from beet import Context
 
 from mcbookshelf.meta import Module
-from mcbookshelf.minecraft.math import int_storage
+from mcbookshelf.minecraft.number import storage
 from mcbookshelf.pipeline.plugins import Generated, generator
 
 
 @generator
 def beet_default(ctx: Context) -> Generated:
     module: Module = ctx.meta["module"]
-    n = int_storage(f"{module.id}:not", "in.n")
-    yield f"{module.id}:not", ContextIntProvider((-1 - n).json())
+    n = storage(f"{module.id}:not", "in.n", "int")
+    yield f"{module.id}:not", -1 - n
 ```
+
+A number provider or a condition is yielded as it is: it becomes an int or float provider file, or a predicate.
 
 To read the content of `module.bs`, use `ctx.meta["module"]`.
 
@@ -49,9 +51,9 @@ The `mcbookshelf.minecraft` package holds the code that plugins share. Put any l
     - Gets the blocks of the Minecraft version and their states. Builds lookup tables by block state
 *   - `entity`
     - Gets the entities of the Minecraft version and their dimensions
-*   - `data`
-    - Downloads any other data file of the Minecraft version
-*   - `math`
+*   - `fetch_*`
+    - Download the raw data files of the Minecraft version, one function per file
+*   - `number`
     - Builds number providers from Python expressions
 *   - `condition`
     - Builds predicates that you combine with `&`, `|`, and `~`

@@ -7,9 +7,8 @@ from math import prod
 from beet import Cache
 
 from mcbookshelf import constants
-from mcbookshelf.minecraft import condition
-from mcbookshelf.minecraft.data import fetch
-from mcbookshelf.minecraft.math import Expression, add, btree, cond, const
+from mcbookshelf.minecraft import condition, fetch_blocks
+from mcbookshelf.minecraft.number import Expression, add, btree, cond, const
 
 type Box = tuple[float, float, float, float, float, float]
 type Shape = tuple[Box, ...]
@@ -66,8 +65,8 @@ def get_blocks(cache: Cache, version: str = constants.GAME_VERSION) -> dict[str,
             states=tuple(
                 State(
                     properties=tuple(sorted(state["properties"].items())),
-                    shape=tuple(map(tuple, state["shape"])),
-                    collision_shape=tuple(map(tuple, state["collision_shape"])),
+                    shape=_shape(state["shape"]),
+                    collision_shape=_shape(state["collision_shape"]),
                     fluid=state["fluid"].get("id"),
                     luminance=state["luminance"],
                     is_conductive=state["is_conductive"],
@@ -87,7 +86,7 @@ def get_blocks(cache: Cache, version: str = constants.GAME_VERSION) -> dict[str,
             instrument=data["instrument"],
             sounds=tuple(sorted(data["sounds"].items())),
         )
-        for block_id, data in sorted(fetch(cache, "blocks", version).items())
+        for block_id, data in sorted(fetch_blocks(cache, version).items())
     }
 
 
@@ -167,6 +166,11 @@ def _split[T](
             else:
                 stateful[name].append(block)
     return constant, stateful
+
+
+def _shape(boxes: list[list[float]]) -> Shape:
+    """The boxes of a shape as read from the data, each with its six bounds."""
+    return tuple((x1, y1, z1, x2, y2, z2) for x1, y1, z1, x2, y2, z2 in boxes)
 
 
 def _ordered(options: list[str]) -> tuple[str, ...]:

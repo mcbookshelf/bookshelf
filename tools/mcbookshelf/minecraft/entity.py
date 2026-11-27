@@ -5,9 +5,9 @@ from typing import Any
 from beet import Cache
 
 from mcbookshelf import constants
+from mcbookshelf.minecraft import fetch_entities
 from mcbookshelf.minecraft.condition import Condition, cube_size
-from mcbookshelf.minecraft.data import fetch
-from mcbookshelf.minecraft.math import Expression, btree, const, first
+from mcbookshelf.minecraft.number import Expression, btree, const, first
 
 type Size = tuple[float, float]
 
@@ -67,7 +67,7 @@ def get_entities(
             _variants(data.get("dimensions", ())),
             **{field: data.get(field, False) for field in FLAGS},
         )
-        for entity_id, data in fetch(cache, "entities", version).items()
+        for entity_id, data in fetch_entities(cache, version).items()
     }
 
 

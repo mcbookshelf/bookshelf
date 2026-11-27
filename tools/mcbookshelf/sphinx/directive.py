@@ -1,7 +1,6 @@
 import os
 
 from docutils import nodes
-from docutils.statemachine import StringList
 
 from mcbookshelf import constants, workspace
 from mcbookshelf.meta import Feature
@@ -80,10 +79,10 @@ class FeatureDirective(SphinxDirective):
         if switch:
             signature += nodes.raw("", self.switch(form), format="html")
         content = addnodes.desc_content()
-        content += self.parse(markdown.render(feature, macro=macro))
+        content += self.parse_text_to_nodes(markdown.render(feature, macro=macro))
         if feature.resource == "structure":
             content += self.viewer(feature)
-        content += self.extra()
+        content += self.parse_content_to_nodes()
         desc += signature
         desc += content
         return desc
@@ -108,18 +107,3 @@ class FeatureDirective(SphinxDirective):
             for form in FORMS
         )
         return f'<span class="bs-switch" role="group">{buttons}</span>'
-
-    def parse(self, text: str) -> list[nodes.Node]:
-        source = self.get_source_info()[0] or ""
-        lines = text.split("\n")
-        body = StringList(lines, items=[(source, i) for i in range(len(lines))])
-        container = nodes.container()
-        self.state.nested_parse(body, self.content_offset, container)
-        return list(container.children)
-
-    def extra(self) -> list[nodes.Node]:
-        if not self.content:
-            return []
-        container = nodes.container()
-        self.state.nested_parse(self.content, self.content_offset, container)
-        return list(container.children)

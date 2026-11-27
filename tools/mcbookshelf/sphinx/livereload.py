@@ -9,6 +9,7 @@ from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from queue import Empty, Queue
+from typing import cast
 
 import watchfiles
 
@@ -43,7 +44,6 @@ def serve(
                     paths = sorted(path for _, path in batch)
                     server.announce(change(build(paths), paths))
             finally:
-                # Asked to stop first: its thread fails on a socket closed under it
                 server.shutdown()
         finally:
             worker.stop()
@@ -86,7 +86,6 @@ class Worker:
         """Start a new worker and wait for its first build, on an empty state when `fresh`."""
         self.stop()
         command = [sys.executable, "-m", "mcbookshelf.sphinx.worker", *self.arguments]
-        # In a group of its own, the worker is not interrupted with this process
         group = subprocess.CREATE_NEW_PROCESS_GROUP if sys.platform == "win32" else 0
         self.process = subprocess.Popen(
             [*command, "fresh" if fresh else "kept"], cwd=constants.DOCS_DIR, encoding="utf-8",
@@ -122,7 +121,6 @@ class Worker:
         results.put("")
 
     def _result(self) -> Result | None:
-        # Waited for in short steps, as a wait with no timeout cannot be interrupted on Windows
         while True:
             try:
                 line = self.results.get(timeout=0.2)
@@ -146,8 +144,6 @@ class Server(ThreadingHTTPServer):
 
 
 class Handler(SimpleHTTPRequestHandler):
-
-    server: Server
 
     def do_GET(self) -> None:
         route = self.path.partition("?")[0]
@@ -177,7 +173,8 @@ class Handler(SimpleHTTPRequestHandler):
     def stream(self) -> None:
         """Send each change as an event, with a comment now and then to notice a closed page."""
         changes: Queue[str] = Queue()
-        self.server.pages.add(changes)
+        pages = cast("Server", self.server).pages
+        pages.add(changes)
         self.send_response(200)
         self.send_header("Content-Type", "text/event-stream")
         self.end_headers()
@@ -191,10 +188,9 @@ class Handler(SimpleHTTPRequestHandler):
         except OSError:
             pass
         finally:
-            self.server.pages.discard(changes)
+            pages.discard(changes)
 
     def end_headers(self) -> None:
-        # Kept by the browser but checked on each use: a reload only loads what changed
         self.send_header("Cache-Control", "no-cache")
         super().end_headers()
 

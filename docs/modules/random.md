@@ -17,261 +17,362 @@ Generate random values, weighted picks, and noise patterns.
 
 ---
 
-## 🔧 Functions
+## Functions
 
-You can find below all functions available in this module.
+The following functions are available in this module.
 
 ---
 
-### Random Choice
+### Random choice
 
 :::::{tab-set}
 ::::{tab-item} Choice
 
-```{function} #bs.random:choice
-
-Select a random value from a list.
-
-:Inputs:
-  **Storage `bs:in random.choice.options`**: {nbt}`list` The list of values to choose from.
-
-:Outputs:
-  **Storage `bs:out random.choice`**: {nbt}`any` The randomly selected value.
-
-  **Return**: The index of the chosen value.
+```{feature} bs.random:choice
 ```
 
-*Example: Pick a random fruit from the list:*
+*Example: pick a random fruit*
 
 ```mcfunction
-# Populate list with values
-data modify storage bs:in random.choice.options set value ["Apple", "Banana", "Strawberry", "Blueberry", "Mango", "Watermelon"]
+# Once
+function #bs.random:choice.in {options:["Apple","Banana","Strawberry","Blueberry","Mango","Watermelon"]}
 
-# Randomly select one
-function #bs.random:choice
-
-# Display the result
-tellraw @a [{"text":"Value: ","color":"dark_gray"},{"nbt":"random.choice","storage":"bs:out","color":"gold"}]
+# See the result
+data get storage bs.random:choice out
 ```
 
 ::::
-::::{tab-item} Weighted Choice
+::::{tab-item} Weighted choice
 
-```{function} #bs.random:weighted_choice
-
-Select a random value from a list based on specified weights.
-
-:Inputs:
-  **Storage `bs:in random.weighted_choice.options`**: {nbt}`list` The list of values to choose from.
-
-  **Storage `bs:in random.weighted_choice.weights`**: {nbt}`list` The corresponding weights for each value.
-
-:Outputs:
-  **Storage `bs:out random.weighted_choice`**: {nbt}`any` The randomly selected value based on the weights.
-
-  **Return**: The index of the chosen value.
+```{feature} bs.random:weighted_choice
 ```
 
-*Example: Pick a random fruit from the list based on weights:*
+*Example: pick a random fruit, apples being the most likely*
 
 ```mcfunction
-# Populate list with values
-data modify storage bs:in random.weighted_choice.options set value ["Apple", "Banana", "Strawberry"]
+# Once
+function #bs.random:weighted_choice.in {options:["Apple","Banana","Strawberry"],weights:[5,3,2]}
 
-# Populate list with weights
-data modify storage bs:in random.weighted_choice.weights set value [5, 3, 2]
-
-# Randomly select one based on weights
-function #bs.random:weighted_choice
-
-# Display the result
-tellraw @a [{"text":"Value: ","color":"dark_gray"},{"nbt":"random.weighted_choice","storage":"bs:out","color":"gold"}]
+# See the result
+data get storage bs.random:weighted_choice out
 ```
 
-:::::
+````{admonition} Longer lists
+:class: tip
 
-> **Credits**: Aksiome, SBtree
+This function takes at most 256 values. For more, write an integer provider of your own with a `weighted_list` that gives the index of a value, then read your list at that index. Its weights are written in the provider, so they cannot change from one call to the next.
+
+```json
+{
+  "type": "weighted_list",
+  "distribution": [
+    {"data": 0, "weight": 5},
+    {"data": 1, "weight": 3},
+    {"data": 2, "weight": 2}
+  ]
+}
+```
+````
+
+::::
+:::::
 
 ---
 
-### Random Distributions
+### Noise
+
+Noise gives values that change smoothly from one position to the next, for terrain, textures or any natural looking variation. The same seed and position always give the same value.
+
+Each noise has a function for 1, 2 and 3 dimensions: a line, a surface such as the ground, or a volume such as caves. `pos` holds as many coordinates.
+
+#### Simplex noise
+
+:::::{tab-set}
+::::{tab-item} 1D
+
+```{feature} function bs.random:simplex_noise/1d
+```
+
+*Example: get the noise at your x position, with cells of 16 blocks*
+
+```mcfunction
+# Once
+data modify storage bs.random:simplex_noise in set value {pos:[0],size:16,seed:42}
+execute store result storage bs.random:simplex_noise in.pos[0] int 1 run data get entity @s Pos[0]
+function #bs.random:simplex_noise/1d
+
+# See the result
+data get storage bs.random:simplex_noise out
+```
+
+::::
+::::{tab-item} 2D
+
+```{feature} function bs.random:simplex_noise/2d
+```
+
+*Example: get the noise at the block you stand on, with cells of 16 blocks*
+
+```mcfunction
+# Once
+data modify storage bs.random:simplex_noise in set value {pos:[0,0],size:16,seed:42}
+execute store result storage bs.random:simplex_noise in.pos[0] int 1 run data get entity @s Pos[0]
+execute store result storage bs.random:simplex_noise in.pos[1] int 1 run data get entity @s Pos[2]
+function #bs.random:simplex_noise/2d
+
+# See the result
+data get storage bs.random:simplex_noise out
+```
+
+::::
+::::{tab-item} 3D
+
+```{feature} function bs.random:simplex_noise/3d
+```
+
+*Example: get the noise at your position, height included, with cells of 16 blocks*
+
+```mcfunction
+# Once
+data modify storage bs.random:simplex_noise in set value {pos:[0,0,0],size:16,seed:42}
+execute store result storage bs.random:simplex_noise in.pos[0] int 1 run data get entity @s Pos[0]
+execute store result storage bs.random:simplex_noise in.pos[1] int 1 run data get entity @s Pos[1]
+execute store result storage bs.random:simplex_noise in.pos[2] int 1 run data get entity @s Pos[2]
+function #bs.random:simplex_noise/3d
+
+# See the result
+data get storage bs.random:simplex_noise out
+```
+
+::::
+:::::
+
+#### Fractal noise
+
+:::::{tab-set}
+::::{tab-item} 1D
+
+```{feature} function bs.random:fractal_noise/1d
+```
+
+*Example: get a detailed noise at your x position, with 4 layers*
+
+```mcfunction
+# Once
+data modify storage bs.random:fractal_noise in set value {pos:[0],size:64,seed:42,octaves:4,persistence:0.5,lacunarity:2.0}
+execute store result storage bs.random:fractal_noise in.pos[0] int 1 run data get entity @s Pos[0]
+function #bs.random:fractal_noise/1d
+
+# See the result
+data get storage bs.random:fractal_noise out
+```
+
+::::
+::::{tab-item} 2D
+
+```{feature} function bs.random:fractal_noise/2d
+```
+
+*Example: get a detailed noise at the block you stand on, with 4 layers*
+
+```mcfunction
+# Once
+data modify storage bs.random:fractal_noise in set value {pos:[0,0],size:64,seed:42,octaves:4,persistence:0.5,lacunarity:2.0}
+execute store result storage bs.random:fractal_noise in.pos[0] int 1 run data get entity @s Pos[0]
+execute store result storage bs.random:fractal_noise in.pos[1] int 1 run data get entity @s Pos[2]
+function #bs.random:fractal_noise/2d
+
+# See the result
+data get storage bs.random:fractal_noise out
+```
+
+::::
+::::{tab-item} 3D
+
+```{feature} function bs.random:fractal_noise/3d
+```
+
+*Example: get a detailed noise at your position, height included, with 4 layers*
+
+```mcfunction
+# Once
+data modify storage bs.random:fractal_noise in set value {pos:[0,0,0],size:64,seed:42,octaves:4,persistence:0.5,lacunarity:2.0}
+execute store result storage bs.random:fractal_noise in.pos[0] int 1 run data get entity @s Pos[0]
+execute store result storage bs.random:fractal_noise in.pos[1] int 1 run data get entity @s Pos[1]
+execute store result storage bs.random:fractal_noise in.pos[2] int 1 run data get entity @s Pos[2]
+function #bs.random:fractal_noise/3d
+
+# See the result
+data get storage bs.random:fractal_noise out
+```
+
+::::
+:::::
+
+::::{grid} 1 2 2 2
+:::{grid-item-card} Simplex noise
+:margin: 0 3 0 0
+:text-align: center
+
+![](/_imgs/modules/random/simplex_noise.png)
+:::
+
+:::{grid-item-card} Fractal noise
+:margin: 0 3 0 0
+:text-align: center
+
+![](/_imgs/modules/random/fractal_noise.png)
+:::
+::::
+
+```{admonition} Fill a grid of noise
+:class: tip
+
+Call the function once per cell, from a loop of your own. Each call is cheap, so a whole area can be filled in a single tick.
+```
+
+---
+
+## Number providers
+
+The following number providers are available in this module. `normal` is a float provider, `uniform` is both an integer and a float provider, and the others are integer providers. Each one gives a new random value every time it is computed.
+
+---
+
+### Distributions
 
 :::::{tab-set}
 ::::{tab-item} Uniform
 
-```{function} #bs.random:uniform {min:<min>,max:<max>}
-
-Generate a random number uniformly distributed between `min` and `max`.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`int` **min**: The lower bound.
-    - {nbt}`int` **max**: The upper bound.
-  :::
-
-:Outputs:
-  **Return | Score `$random.uniform bs.out`**: A random integer in range [`min`, `max`].
+```{feature} context_int_provider bs.random:uniform
 ```
 
-*Example: Generate a random number between 1 and 100:*
+*Example: roll a number from 1 to 100*
 
 ```mcfunction
-# Generate random number
-function #bs.random:uniform {min:1,max:100}
+# Once
+data modify storage bs.random:uniform in set value {min:1,max:100}
+data modify storage bs.random:uniform out set compute default integer bs.random:uniform
 
-# Display the result
-tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.uniform", "objective": "bs.out"}, "color": "gold"}]
+# See the result
+data get storage bs.random:uniform out
 ```
 
-```{dropdown} What is a Uniform Distribution?
+```{feature} context_float_provider bs.random:uniform
+```
+
+*Example: get a fraction from 0 to 1*
+
+```mcfunction
+# Once
+data modify storage bs.random:uniform in set value {min:0.0,max:1.0}
+data modify storage bs.random:uniform out set compute default float bs.random:uniform
+
+# See the result
+data get storage bs.random:uniform out
+```
+
+```{dropdown} What is a uniform distribution?
 :color: info
 :icon: question
 
-Every outcome has an equal probability of occurring. It's like rolling a fair die where each number (1 through 6) has the same probability.
+Every outcome has the same probability, like a fair die where each face is as likely as the others.
 ```
 
 ::::
 ::::{tab-item} Binomial
 
-```{function} #bs.random:binomial {trials:<trials>,probability:<probability>}
-
-Generate a random number with a binomial distribution using the specified `trials` and `probability`.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`int` **trials**: The number of Bernoulli trials. Maximum accepted value is 1000.
-    - {nbt}`double` **probability**: The probability of success of each Bernoulli trial, in range [0,1].
-  :::
-
-:Outputs:
-  **Return | Score `$random.binomial bs.out`**: A random integer in range [0, `trials`].
+```{feature} bs.random:binomial
 ```
 
-*Example: Generate a random number with 10 trials and a 20% success chance:*
+*Example: count the successes out of 10 trials of 20%*
 
 ```mcfunction
-# Generate random number
-function #bs.random:binomial {trials:10,probability:0.2}
+# Once
+data modify storage bs.random:binomial in set value {trials:10,probability:0.2}
+data modify storage bs.random:binomial out set compute default integer bs.random:binomial
 
-# Display the result
-tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.binomial", "objective": "bs.out"}, "color": "gold"}]
+# See the result
+data get storage bs.random:binomial out
 ```
 
-```{dropdown} What is a Binomial Distribution?
+```{dropdown} What is a binomial distribution?
 :color: info
 :icon: question
 
-Used when you have a fixed number of trials, each with two possible outcomes (success or failure). It calculates the probability of obtaining a specific number of successes. For example, flipping a coin 10 times and counting the number of heads.
+It counts the successes out of a fixed number of trials, each with two outcomes, such as the heads out of 10 coin flips.
 ```
 
 ::::
 ::::{tab-item} Geometric
 
-```{function} #bs.random:geometric {probability:<probability>}
-
-Generate a random number following a geometric distribution with the given `probability`.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`double` **probability**: The probability of stopping at each trial, in range [0,1].
-  :::
-
-:Outputs:
-  **Return | Score `$random.geometric bs.out`**: A random integer in range [0, 1000].
+```{feature} bs.random:geometric
 ```
 
-*Example: Generate a random number with a 2% chance of stopping:*
+*Example: count the trials until the first success, with 2% of success each*
 
 ```mcfunction
-# Generate random number
-function #bs.random:geometric {probability:0.02}
+# Once
+data modify storage bs.random:geometric in set value {probability:0.02}
+data modify storage bs.random:geometric out set compute default integer bs.random:geometric
 
-# Display the result
-tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.geometric", "objective": "bs.out"}, "color": "gold"}]
+# See the result
+data get storage bs.random:geometric out
 ```
 
-```{dropdown} What is a Geometric Distribution?
+```{dropdown} What is a geometric distribution?
 :color: info
 :icon: question
 
-Measures the number of trials required to achieve the first success in a sequence of independent and identical trials. For example, the number of dice rolls needed to obtain a six.
+It counts the trials needed to get the first success, such as the number of rolls needed to get a six.
 ```
 
 ::::
 ::::{tab-item} Normal
 
-```{function} #bs.random:normal {mean:<mean>,spread:<spread>}
-
-Generate a random number following a normal (Gaussian) distribution with specified `mean` and `spread` (standard deviation).
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`double` **mean**: The average (center) value of the distribution.
-    - {nbt}`double` **spread**: The standard deviation controlling how spread out the values are.
-  :::
-
-:Outputs:
-  **Return | Score `$random.normal bs.out`**: A random integer centered near `mean`.
+```{feature} bs.random:normal
 ```
 
-*Example: Generate a random number with mean 10 and spread 3:*
+*Example: get a number around 10, with a spread of 3*
 
 ```mcfunction
-# Generate random number
-function #bs.random:normal {mean:10,spread:3}
+# Once
+data modify storage bs.random:normal in set value {mean:10.0,spread:3.0}
+data modify storage bs.random:normal out set compute default float bs.random:normal
 
-# Display the result
-tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.normal", "objective": "bs.out"}, "color": "gold"}]
+# See the result
+data get storage bs.random:normal out
 ```
 
-```{dropdown} What is a Normal Distribution?
+```{dropdown} What is a normal distribution?
 :color: info
 :icon: question
 
-Also known as the Gaussian distribution, it produces values clustered around the mean with a bell-shaped probability curve. Widely used to model natural variations and measurement errors.
+Also known as the Gaussian distribution, it gives values clustered around the mean in a bell-shaped curve, as natural variations and measurement errors often are. About 68% of the values fall within one spread of the mean. Bookshelf adds 12 random numbers to get this curve: values far from the mean are a little rarer than in theory, and none is more than 6 spreads away.
 ```
 
 ::::
 ::::{tab-item} Poisson
 
-```{function} #bs.random:poisson {lambda:<lambda>}
-
-Generate a random number following a Poisson distribution with the expected value `lambda`.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`double` **lambda**: The expected value in range [0,10].
-  :::
-
-:Outputs:
-  **Return | Score `$random.poisson bs.out`**: A random integer, biased towards the `lambda` value.
+```{feature} bs.random:poisson
 ```
 
-*Example: Generate a random number biased towards 5:*
+*Example: count the events in an interval where 5 happen on average*
 
 ```mcfunction
-# Generate random number
-function #bs.random:poisson {lambda:5}
+# Once
+data modify storage bs.random:poisson in set value {lambda:5.0}
+data modify storage bs.random:poisson out set compute default integer bs.random:poisson
 
-# Display the result
-tellraw @a [{"text": "Number: ", "color": "dark_gray"},{"score":{"name":"$random.poisson", "objective": "bs.out"}, "color": "gold"}]
+# See the result
+data get storage bs.random:poisson out
 ```
 
-```{dropdown} What is a Poisson Distribution?
+```{dropdown} What is a Poisson distribution?
 :color: info
 :icon: question
 
-A Poisson distribution generates values that cluster around an average value, **λ (lambda)**. Results tend to concentrate near this average, making it ideal for modeling random events occurring at a consistent rate.
+It counts how many events happen in an interval when they happen at a steady rate, given the average count, **λ (lambda)**. Results cluster around lambda.
 ```
 
 ::::
@@ -286,240 +387,6 @@ A Poisson distribution generates values that cluster around an average value, **
 :align: center
 :class: only-light
 ```
-
-> **Credits**: Aksiome, SBtree
-
----
-
-### Noise Algorithms
-
-:::::{tab-set}
-::::{tab-item} Simplex Noise
-
-```{function} #bs.random:simplex_noise_2d
-
-Compute the simplex noise value at given coordinates. Simplex noise is a type of gradient noise, similar to Perlin noise, used for textures or procedural generation.
-
-:Inputs:
-  **Score `$random.simplex_noise_2d.seed bs.in`**: The seed used for generation.
-
-  **Scores `$random.simplex_noise_2d.[x,y] bs.in`**: Coordinates, scaled by 1000 (e.g., for a cell size of 16, multiply by 1000/16).
-
-:Outputs:
-  **Return | Score `$random.simplex_noise_2d bs.out`**: The noise value in range [-1000,1000]
-```
-
-*Example: Generate a random noise value:*
-
-```mcfunction
-# Generate random noise value
-scoreboard players set $random.simplex_noise_2d.x bs.in 15589
-scoreboard players set $random.simplex_noise_2d.y bs.in 812
-execute store result score $random.simplex_noise_2d.seed bs.in run random value -1000000000..1000000000
-function #bs.random:simplex_noise_2d
-```
-
-::::
-::::{tab-item} Fractal Noise
-
-```{function} #bs.random:fractal_noise_2d
-
-Generate fractal noise by combining multiple noise layers at different scales, often used for terrain generation.
-
-:Inputs:
-  **Score `$random.fractal_noise_2d.seed bs.in`**: The seed used for generation.
-
-  **Scores `$random.fractal_noise_2d.[x,y] bs.in`**: Coordinates, scaled by 1000 (e.g., for a cell size of 16, multiply by 1000/16).
-
-  **Score `$random.fractal_noise_2d.octaves bs.in`**: Number of noise layers to combine (more octaves = more detail).
-
-  **Score `$random.fractal_noise_2d.persistence bs.in`**: Contribution of each octave to the total noise, scaled by 1000.
-
-  **Score `$random.fractal_noise_2d.lacunarity bs.in`**: Increase in frequency for each octave, scaled by 1000.
-
-:Outputs:
-  **Return | Score `$random.fractal_noise_2d bs.out`**: The noise value in range [-1000,1000]
-```
-
-*Example: Generate a random noise value:*
-
-```mcfunction
-# Generate random noise value
-scoreboard players set $random.fractal_noise_2d.x bs.in 15589
-scoreboard players set $random.fractal_noise_2d.y bs.in 812
-scoreboard players set $random.fractal_noise_2d.octaves bs.in 4
-scoreboard players set $random.fractal_noise_2d.persistence bs.in 500
-scoreboard players set $random.fractal_noise_2d.lacunarity bs.in 2000
-execute store result score $random.fractal_noise_2d.seed bs.in run random value -1000000000..1000000000
-function #bs.random:fractal_noise_2d
-```
-
-::::
-:::::
-
-> **Credits**: Aksiome, SBtree
-
----
-
-### Noise Matrices
-
-:::::{tab-set}
-::::{tab-item} White Noise 1D
-
-```{function} #bs.random:white_noise_mat_1d {length:<length>,with:{}}
-
-Generate a 1-dimensional array of white noise values.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`int` **length**: Length of the array to generate.
-    - {nbt}`compound` **with**:
-      - {nbt}`number` **scale**: Scalar for the function's output (default: 1).
-  :::
-
-:Outputs:
-  **Storage `bs:out random.white_noise_mat_1d`**: {nbt}`list` Array of values between 0 and {scale}.
-```
-
-*Example: Generate 4 random values:*
-
-```mcfunction
-# Generate random noise
-function #bs.random:white_noise_mat_1d {length:4,with:{}}
-
-# Display the result
-tellraw @a [{"text": "Noise: ", "color": "dark_gray"},{"nbt":"white_noise_mat_1d","storage":"bs:out", "color": "gold"}]
-```
-
-::::
-::::{tab-item} White Noise 2D
-
-```{function} #bs.random:white_noise_mat_2d {width:<width>,height:<height>,with:{}}
-
-Generate a 2-dimensional array of white noise values.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`int` **width**: Width of the array to generate.
-    - {nbt}`int` **height**: Height of the array to generate.
-    - {nbt}`compound` **with**:
-      - {nbt}`number` **scale**: Scalar for the function's output (default: 1).
-  :::
-
-:Outputs:
-  **Storage `bs:out random.white_noise_mat_2d`**: {nbt}`list` 2D array of values between 0 and {scale}.
-```
-
-*Example: Generate a 4x4 random noise pattern:*
-
-```mcfunction
-# Generate random noise
-function #bs.random:white_noise_mat_2d {width:4,height:4,with:{}}
-
-# Display the result
-tellraw @a [{"text": "Noise: ", "color": "dark_gray"},{"nbt":"white_noise_mat_2d","storage":"bs:out", "color": "gold"}]
-```
-::::
-::::{tab-item} Simplex Noise 2D
-
-```{function} #bs.random:simplex_noise_mat_2d {width:<width>,height:<height>,with:{}}
-
-Generate a 2D simplex noise texture of size `width` by `height`. Simplex noise is a gradient noise often used for textures.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`int` **width**: Width of the array to generate.
-    - {nbt}`int` **height**: Height of the array to generate.
-    - {nbt}`compound` **with**:
-      - {nbt}`int` **size**: Size of the noise "cell" (default: 16). Lower size means more detail.
-      - {nbt}`int` **seed**: Seed for the noise generation, allowing for reproducibility (default: random).
-      - {nbt}`number` **scale**: Scalar for the function's output (default: 1).
-  :::
-
-:Outputs:
-  **Storage `bs:out random.simplex_noise_mat_2d`**: 2D array of values between {-scale} and {scale}.
-```
-
-*Example: Generate a 16×16 simplex noise pattern:*
-
-```mcfunction
-# Generate random noise
-function #bs.random:simplex_noise_mat_2d {width:16,height:16,with:{size:8}}
-
-# Display the result
-tellraw @a [{"text": "Noise: ", "color": "dark_gray"},{"nbt":"simplex_noise_mat_2d","storage":"bs:out", "color": "gold"}]
-```
-
-::::
-::::{tab-item} Fractal Noise 2D
-
-```{function} #bs.random:fractal_noise_mat_2d {width:<width>,height:<height>,with:{}}
-
-Generate a 2D fractal noise texture of size `width` by `height`. Fractal noise combines multiple layers of noise for detailed textures.
-
-:Inputs:
-  **Function macro**:
-  :::{treeview}
-  - {nbt}`compound` Arguments
-    - {nbt}`int` **width**: Width of the array to generate.
-    - {nbt}`int` **height**: Height of the array to generate.
-    - {nbt}`compound` **with**:
-      - {nbt}`int` **size**: Size of the noise "cell" (default: 16). Lower size means more detail.
-      - {nbt}`int` **seed**: Seed for the noise generation, allowing for reproducibility (default: random).
-      - {nbt}`int` **octaves**: Number of noise layers (default: 4). More octaves = more detail.
-      - {nbt}`double` **persistence**: Contribution of each octave (default: 0.5). Higher means more detail.
-      - {nbt}`double` **lacunarity**: Increase in frequency for each octave (default: 2.0). Higher means more rapid frequency increase.
-      - {nbt}`number` **scale**: Scalar for the function's output (default: 1).
-  :::
-
-:Outputs:
-  **Storage `bs:out random.fractal_noise_mat_2d`**: 2D array of values between {-scale} and {scale}.
-```
-
-*Example: Generate a 16×16 fractal noise pattern:*
-
-```mcfunction
-# Generate random noise
-function #bs.random:fractal_noise_mat_2d {width:16,height:16,with:{size:8}}
-
-# Display the result
-tellraw @a [{"text": "Noise: ", "color": "dark_gray"},{"nbt":"fractal_noise_mat_2d","storage":"bs:out", "color": "gold"}]
-```
-
-::::
-:::::
-
-::::{grid} 1 3 3 3
-:::{grid-item-card} White Noise
-:margin: 0 3 0 0
-:text-align: center
-
-![](/_imgs/modules/random/white_noise.png)
-
-:::
-
-:::{grid-item-card} Simplex Noise
-:margin: 0 3 0 0
-:text-align: center
-
-![](/_imgs/modules/random/simplex_noise.png)
-:::
-
-:::{grid-item-card} Fractal Noise
-:margin: 0 3 0 0
-:text-align: center
-
-![](/_imgs/modules/random/fractal_noise.png)
-:::
-::::
-
-> **Credits**: Aksiome, SBtree
 
 ---
 

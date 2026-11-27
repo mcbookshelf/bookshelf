@@ -32,7 +32,7 @@ class Diagnostics:
             self.items.append(diagnostic)
 
 
-class MetadataError(Exception):
+class MetadataError(ValueError):
     """A metadata file that does not load: every error found in it."""
 
     def __init__(self, diagnostics: Diagnostic | list[Diagnostic]) -> None:

@@ -13,13 +13,6 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-setblock -30000000 0 1606 minecraft:air
-forceload remove -30000000 1600
-
-scoreboard objectives remove bs.const
 scoreboard objectives remove bs.ctx
-scoreboard objectives remove bs.out
-scoreboard objectives remove bs.in
 
-data remove storage bs:in random
-data remove storage bs:out random
+data remove storage bs.random: i

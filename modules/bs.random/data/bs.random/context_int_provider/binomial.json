@@ -1,0 +1,13 @@
+{
+  "type": "binomial",
+  "n": {
+    "type": "storage",
+    "storage": "bs.random:binomial",
+    "path": "in.trials"
+  },
+  "p": {
+    "type": "storage",
+    "storage": "bs.random:binomial",
+    "path": "in.probability"
+  }
+}

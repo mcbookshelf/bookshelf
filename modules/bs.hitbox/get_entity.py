@@ -1,7 +1,7 @@
 from collections.abc import Callable, Iterable
-from typing import Literal
+from typing import Any, Literal
 
-from beet import Context, ContextIntProvider, EntityTypeTag, Predicate
+from beet import Context, EntityTypeTag
 
 from mcbookshelf.minecraft.condition import (
     Condition,
@@ -18,13 +18,12 @@ from mcbookshelf.minecraft.entity import (
     cube_size_provider,
     get_entities,
 )
-from mcbookshelf.minecraft.math import (
+from mcbookshelf.minecraft.number import (
     Expression,
     btree,
     cond,
     const,
     first,
-    fixed_target,
     ref,
     score,
 )
@@ -61,14 +60,14 @@ def beet_default(ctx: Context) -> Generated:
     living = sorted(entity.id for entity in entities if entity.living)
     yield f"{PRIVATE}/living", EntityTypeTag({"values": living})
     tree = btree(sized, lambda e: packed[e.id], lambda found: entity_type(e.id for e in found))
-    yield f"{PRIVATE}/dimensions", ContextIntProvider(tree.json())
-    yield f"{PRIVATE}/cube_size", ContextIntProvider(cube_size_provider().json())
-    yield f"{PRIVATE}/width", ContextIntProvider(unpack("width").json())
-    yield f"{PRIVATE}/height", ContextIntProvider(unpack("height").json())
+    yield f"{PRIVATE}/dimensions", tree
+    yield f"{PRIVATE}/cube_size", cube_size_provider()
+    yield f"{PRIVATE}/width", unpack("width")
+    yield f"{PRIVATE}/height", unpack("height")
 
     for name, keep in VARIANTS.items():
         kept = {entity.id for entity in sized if keep(entity)}
-        yield f"{PUBLIC}/{name}", Predicate(candidates(kept, name).json())
+        yield f"{PUBLIC}/{name}", candidates(kept, name)
 
 
 def candidates(kept: set[str], name: str) -> Condition:
@@ -94,6 +93,9 @@ def dimensions(entities: Iterable[Entity]) -> dict[str, Expression]:
         value = ref(f"{PRIVATE}/cube_size", "int") * -(coarse * (FIELD + 1))
         return lambda _: value
 
+    def trait(key: str, test: Callable[[Any], Condition]) -> Callable[[Entity], Expression]:
+        return lambda entity: by_trait(entity, key, test, lambda found: pack(*found))
+
     special = {
         "minecraft:area_effect_cloud": registry(1),
         "minecraft:armor_stand": registry(2),
@@ -107,8 +109,8 @@ def dimensions(entities: Iterable[Entity]) -> dict[str, Expression]:
         "minecraft:painting": registry(7),
         "minecraft:phantom": registry(8),
         "minecraft:player": player,
-        "minecraft:pufferfish": pufferfish,
-        "minecraft:salmon": salmon,
+        "minecraft:pufferfish": trait("puff_state", lambda state: nbt(f"{{PuffState:{state}}}")),
+        "minecraft:salmon": trait("type", lambda name: component("minecraft:salmon/size", name)),
         "minecraft:slime": cube(0.52),
         "minecraft:magma_cube": cube(0.52),
         "minecraft:sulfur_cube": cube(0.49),
@@ -132,16 +134,6 @@ def mannequin(_: Entity) -> Expression:
     )
 
 
-def pufferfish(entity: Entity) -> Expression:
-    test = lambda state: nbt(f"{{PuffState:{state}}}")  # noqa: E731
-    return by_trait(entity, "puff_state", test, lambda found: pack(*found))
-
-
-def salmon(entity: Entity) -> Expression:
-    test = lambda name: component("minecraft:salmon/size", name)  # noqa: E731
-    return by_trait(entity, "type", test, lambda found: pack(*found))
-
-
 def default(entity: Entity) -> Expression:
     adult, baby = entity.ages()
     if adult == baby:
@@ -161,9 +153,9 @@ def pack(width: float, height: float) -> Expression:
 
 def unpack(field: Literal["width", "height"]) -> Expression:
     """The scaled width or height of the packed size in `#d bs.ctx`, in MICRO steps."""
-    value = score("bs.ctx", fixed_target("#d"))
+    value = score("bs.ctx", "#d")
     steps = abs(value) // FIELD if field == "width" else abs(value) % FIELD
     micro = steps * cond(value.le(-1), MICRO * COARSE // UNIT, MICRO // UNIT)
-    stored = score("bs.ctx", fixed_target("#s"))
+    stored = score("bs.ctx", "#s")
     scale = cond(stored.ge(1), stored.to_float() / MICRO, 1.0)
     return (micro.to_float() * scale).round().to_int()

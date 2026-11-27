@@ -8,7 +8,7 @@ import orjson
 from httpx import Response
 
 from mcbookshelf import constants, workspace
-from mcbookshelf.releases import BundleEntry, Manifest, ModuleEntry
+from mcbookshelf.manifest import BundleEntry, Manifest, ModuleEntry
 from mcbookshelf.workspace import Workspace, changelog, release
 
 

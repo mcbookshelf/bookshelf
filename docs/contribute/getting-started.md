@@ -14,6 +14,8 @@ This page shows you how to build the modules on your computer and try them in Mi
 :class: tip
 
 If you use VS Code, install the recommended `mcbookshelf.vscode-bsdoc` extension. It helps you edit [module.bs files](project:metadata.md).
+
+Spyglass knows the files the build generates, such as function tags and number providers, and the types of the module storages, from `stub/`. In VS Code, the workspace runs `uv run stub --watch` when it opens (allow automatic tasks once), which updates it whenever a module changes. Elsewhere, run `uv run stub` once, and again when you change what a module generates.
 ```
 
 ---

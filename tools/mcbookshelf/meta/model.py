@@ -57,10 +57,6 @@ class Bundle:
     tags: tuple[str, ...]
 
     @property
-    def short(self) -> str:
-        return self.id[4:]
-
-    @property
     def suite(self) -> bool:
         return "*" in self.tags
 

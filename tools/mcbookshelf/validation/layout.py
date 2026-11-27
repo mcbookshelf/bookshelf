@@ -31,7 +31,7 @@ def check_headers(ws: Workspace, name: str) -> Iterator[Issue]:
     """Every function starts with the license header of the current year."""
     expected = templates.header().splitlines()
     for path, text in ownership.source_files(ws, name):
-        if not path.endswith(".mcfunction"):
+        if text is None or not path.endswith(".mcfunction"):
             continue
         lines = text.splitlines()
         if lines[: len(expected)] == expected:

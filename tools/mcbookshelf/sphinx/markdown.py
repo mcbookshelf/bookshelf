@@ -20,6 +20,14 @@ PLACES = {
     syntax.Kind.DIMENSION: "in <dimension>",
 }
 
+NAMED = (
+    syntax.PrimitiveKind.PLAYER,
+    syntax.PrimitiveKind.ENTITY,
+    syntax.PrimitiveKind.OVERWORLD,
+    syntax.PrimitiveKind.NETHER,
+    syntax.PrimitiveKind.END,
+)
+
 ARRAYS = (syntax.PrimitiveKind.INT, syntax.PrimitiveKind.BYTE, syntax.PrimitiveKind.LONG)
 
 ICONS = {
@@ -48,7 +56,6 @@ def render(feature: Feature, *, macro: bool = False) -> str:
             slots = [s for s in slots if s.target is None]
         if not slots and not (role is Role.INPUT and arguments is not None):
             continue
-        # What a function returns reads last, after what it writes
         entries = [_slot(slot, role) for slot in sorted(slots, key=lambda s: s.target is None)]
         if role is Role.INPUT and arguments is not None:
             described = feature.macro.description if feature.macro else None
@@ -105,17 +112,8 @@ def _execution(kind: syntax.Kind, value: syntax.Type) -> str:
             return f"as <{plural}>"
         case syntax.Array(element=element):
             return _execution(kind, element)
-        case syntax.Primitive(kind=who) if who in (
-            syntax.PrimitiveKind.PLAYER,
-            syntax.PrimitiveKind.ENTITY,
-        ):
-            return f"{EXECUTION[kind]} <{who}>"
-        case syntax.Primitive(kind=where) if where in (
-            syntax.PrimitiveKind.OVERWORLD,
-            syntax.PrimitiveKind.NETHER,
-            syntax.PrimitiveKind.END,
-        ):
-            return f"{EXECUTION[kind]} <{where}>"
+        case syntax.Primitive(kind=name) if name in NAMED:
+            return f"{EXECUTION[kind]} <{name}>"
     return PLACES[kind]
 
 

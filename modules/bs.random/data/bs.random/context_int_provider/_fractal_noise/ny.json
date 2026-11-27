@@ -1,0 +1,120 @@
+{
+  "type": "sub",
+  "left": {
+    "type": "floor_mod",
+    "left": {
+      "type": "add",
+      "inputs": [
+        536870912,
+        {
+          "type": "floor_mod",
+          "left": {
+            "type": "add",
+            "inputs": [
+              {
+                "type": "mul",
+                "inputs": [
+                  1024,
+                  {
+                    "type": "floor_mod",
+                    "left": {
+                      "type": "mul",
+                      "inputs": [
+                        {
+                          "type": "floor_div",
+                          "left": {
+                            "type": "score",
+                            "score": "bs.ctx",
+                            "target": {
+                              "type": "fixed",
+                              "name": "#y"
+                            }
+                          },
+                          "right": 1024
+                        },
+                        {
+                          "type": "floor_div",
+                          "left": {
+                            "type": "score",
+                            "score": "bs.ctx",
+                            "target": {
+                              "type": "fixed",
+                              "name": "#l"
+                            }
+                          },
+                          "right": 1024
+                        }
+                      ]
+                    },
+                    "right": 1048576
+                  }
+                ]
+              },
+              {
+                "type": "mul",
+                "inputs": [
+                  {
+                    "type": "floor_div",
+                    "left": {
+                      "type": "score",
+                      "score": "bs.ctx",
+                      "target": {
+                        "type": "fixed",
+                        "name": "#y"
+                      }
+                    },
+                    "right": 1024
+                  },
+                  {
+                    "type": "floor_mod",
+                    "left": {
+                      "type": "score",
+                      "score": "bs.ctx",
+                      "target": {
+                        "type": "fixed",
+                        "name": "#l"
+                      }
+                    },
+                    "right": 1024
+                  }
+                ]
+              },
+              {
+                "type": "floor_div",
+                "left": {
+                  "type": "mul",
+                  "inputs": [
+                    {
+                      "type": "floor_mod",
+                      "left": {
+                        "type": "score",
+                        "score": "bs.ctx",
+                        "target": {
+                          "type": "fixed",
+                          "name": "#y"
+                        }
+                      },
+                      "right": 1024
+                    },
+                    {
+                      "type": "score",
+                      "score": "bs.ctx",
+                      "target": {
+                        "type": "fixed",
+                        "name": "#l"
+                      }
+                    }
+                  ]
+                },
+                "right": 1024
+              }
+            ]
+          },
+          "right": 1073741824
+        }
+      ]
+    },
+    "right": 1073741824
+  },
+  "right": 536870912
+}

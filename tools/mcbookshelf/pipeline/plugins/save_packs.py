@@ -11,6 +11,7 @@ from beet import Context, DataPack, ResourcePack
 from beet.contrib.autosave import Autosave
 from beet.contrib.link import LinkManager
 
+from mcbookshelf import constants
 from mcbookshelf.pipeline.config import build_of
 
 WORKERS = 8
@@ -30,22 +31,23 @@ def save(ctx: Context) -> None:
     for pack, world in zip(ctx.packs, linked, strict=True):
         if not pack:
             continue
+        stamp = ctx.meta.get("fingerprint") if isinstance(pack, DataPack) else None
         if pack.zipped:
             target = pack.save(directory, overwrite=True)
         else:
             target = Path(directory).resolve() / (pack.name or pack.default_name)
-            write(pack, target, target.parent)
+            write(pack, target, target.parent, stamp)
             pack.path = target.parent
         if link and world:
             copy = Path(world) / target.name
             if pack.zipped:
                 shutil.copyfile(target, copy)
             else:
-                write(pack, copy, Path(world).parent / ".trash")
+                write(pack, copy, Path(world).parent / ".trash", stamp)
 
 
-def write(pack: DataPack | ResourcePack, target: Path, trash: Path) -> None:
-    """Replace the folder instantly by moving it and purging in a thread."""
+def write(pack: DataPack | ResourcePack, target: Path, trash: Path, stamp: str | None) -> None:
+    """Replace the folder instantly by moving it and purging in a thread, then fingerprint it."""
     if target.exists():
         try:
             staged_trash = staging(target, trash) / f".bookshelf-trash-{uuid4().hex}"
@@ -60,6 +62,8 @@ def write(pack: DataPack | ResourcePack, target: Path, trash: Path) -> None:
 
     with ThreadPoolExecutor(WORKERS) as pool:
         list(pool.map(lambda entry: entry[1].dump(target, entry[0]), files))
+    if stamp is not None:
+        (target / constants.FINGERPRINT_FILE).write_bytes(stamp.encode())
 
 
 def staging(target: Path, trash: Path) -> Path:

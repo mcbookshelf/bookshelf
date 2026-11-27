@@ -4,8 +4,6 @@ name Schedule
 slug bookshelf-schedule
 version 5.0.0
 tags runtime
-authors Aksiome, theogiraudet
-since 2019/07/31 1.14
 
 $schedule:
   @executor > entity to run the command as, if any
@@ -16,36 +14,47 @@ $schedule:
     id: string > id to cancel the command with
     run: #[command(slash="forbidden",empty="forbidden")] string
     > command to schedule
-    time: #[match_regex="^(?:\d+(?:\.\d*)?|\.\d+)(?:[dst])?$"] string | int
+    time: #[match_regex="^(?:\\d+(?:\\.\\d*)?|\\.\\d+)(?:[dst])?$"] string | int
     > delay in ticks, or as a [minecraft:time](https://minecraft.wiki/w/Argument_types#time) string such as `10s`, at least one tick
   output state > the command is added to the queue
   output success > whether the command is scheduled
 
-$cancel:
+
+feature function cancel/all > Cancel the scheduled commands with an id, for every entity.
+  authors Aksiome, theogiraudet
+  since 2023/09/10 1.20.2
   input arguments
     id: string > id of the commands to cancel
   output state > the matching commands are removed from the queue
   output success > whether a command was cancelled
 
-
-feature function cancel/all > Cancel the scheduled commands with an id, for every entity.
-  since 2023/09/10 1.20.2
-  $cancel
-
 feature function cancel/one > Cancel the scheduled commands with an id, for one entity.
+  authors Aksiome, theogiraudet
+  since 2019/07/31 1.14
   @executor > entity to cancel the commands of
-  $cancel
+  input arguments
+    id: string > id of the commands to cancel
+  output state > the matching commands are removed from the queue
+  output success > whether a command was cancelled
 
 feature function clear > Cancel every scheduled command.
+  authors Aksiome, theogiraudet
+  since 2019/07/31 1.14
   output state > the queue is emptied
 
 feature function schedule/append > Schedule a command, alongside the ones already scheduled.
+  authors Aksiome, theogiraudet
+  since 2019/07/31 1.14
   $schedule
 
 feature function schedule/replace > Schedule a command, cancelling the ones the entity scheduled with the same id.
+  authors Aksiome, theogiraudet
+  since 2019/07/31 1.14
   $schedule
 
 feature function schedule/replace_tick > Schedule a command, replacing the one the entity scheduled with the same id for the same tick.
+  authors Aksiome, theogiraudet
+  since 2019/07/31 1.14
   $schedule
 
 feature function schedule/unique > Schedule a command, unless the entity already scheduled one with the same id.

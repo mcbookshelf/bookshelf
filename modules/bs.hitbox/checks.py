@@ -1,17 +1,17 @@
 from collections.abc import Callable
 
-from beet import Context, ContextFloatProvider, ContextIntProvider, Predicate
+from beet import Context
 
 from mcbookshelf.minecraft import condition
-from mcbookshelf.minecraft.math import (
+from mcbookshelf.minecraft.number import (
     Expression,
     cond,
-    fixed_target,
-    float_storage,
+    counted,
     max_,
     min_,
     ref,
     score,
+    storage,
 )
 from mcbookshelf.pipeline.plugins import Generated, generator
 
@@ -22,35 +22,30 @@ MARGIN = 2**-16
 
 @generator
 def beet_default(_: Context) -> Generated:
-    overlap = blocks(lambda box: entities(lambda entity: overlaps(entity, box)))
-    yield "bs.hitbox:_is_in_block/inside", Predicate(blocks(contains).json())
-    yield "bs.hitbox:_is_in_entity/inside", Predicate(entities(holds).json())
-    yield "bs.hitbox:_overlaps/cube", Predicate(entities(in_cube).json())
-    yield "bs.hitbox:_overlaps/overlap", Predicate(overlap.json())
+    yield "bs.hitbox:_is_in_block/inside", blocks(contains)
+    yield "bs.hitbox:_is_in_entity/inside", entities(holds)
+    yield "bs.hitbox:_overlaps/cube", entities(in_cube)
+    yield "bs.hitbox:_overlaps/overlap", blocks(lambda box: entities(lambda e: overlaps(e, box)))
     for axis, name in enumerate("xyz"):
         first, last = cells(axis)
-        yield f"bs.hitbox:_overlaps/blocks/min_{name}", ContextIntProvider(first.json())
-        yield f"bs.hitbox:_overlaps/blocks/max_{name}", ContextIntProvider(last.json())
+        yield f"bs.hitbox:_overlaps/blocks/min_{name}", first
+        yield f"bs.hitbox:_overlaps/blocks/max_{name}", last
         for entity in range(ENTITY_BOXES):
             start, end = span(entity, axis)
-            yield cell_bound(entity, axis), ContextFloatProvider(start.json())
-            yield cell_bound(entity, axis + 3), ContextFloatProvider(end.json())
-
-
-def ctx(name: str) -> Expression:
-    return score("bs.ctx", fixed_target(name))
+            yield cell_bound(entity, axis), start
+            yield cell_bound(entity, axis + 3), end
 
 
 def rel(axis: int) -> Expression:
-    return float_storage("bs.hitbox:", f"rel[{axis}]")
+    return storage("bs.hitbox:", f"rel[{axis}]")
 
 
 def block_bound(box: int, index: int) -> Expression:
-    return float_storage("bs.hitbox:get_block", f"out[{box}][{index}]")
+    return storage("bs.hitbox:get_block", f"out[{box}][{index}]")
 
 
 def entity_bound(box: int, index: int) -> Expression:
-    return float_storage("bs.hitbox:get_entity", f"out[{box}][{index}]")
+    return storage("bs.hitbox:get_entity", f"out[{box}][{index}]")
 
 
 def cell_bound(entity: int, index: int) -> str:
@@ -60,10 +55,13 @@ def cell_bound(entity: int, index: int) -> str:
 
 def chain(count: str, size: int, test: Callable[[int], condition.Condition]) -> condition.Condition:
     """Whether one of the first boxes passes the test, stopping past the box count."""
-    found = test(size - 1)
-    for box in reversed(range(size - 1)):
-        found = test(box) | (ctx(count).ge(box + 2) & found)
-    return found
+    boxes = score("bs.ctx", count)
+    return counted(
+        boxes,
+        range(size),
+        test,
+        lambda first, has_more, rest: first | (has_more & rest),
+    )
 
 
 def blocks(test: Callable[[int], condition.Condition]) -> condition.Condition:
@@ -79,7 +77,7 @@ def entities(test: Callable[[int], condition.Condition]) -> condition.Condition:
 def contains(box: int) -> condition.Condition:
     """Whether the position in `#x`, `#y` and `#z`, in 2^-14 steps, is in the block box."""
     def check(axis: int) -> condition.Condition:
-        steps = ctx(f"#{'xyz'[axis]}").floor_mod(16384)
+        steps = score("bs.ctx", f"#{'xyz'[axis]}").floor_mod(16384)
         position = steps.to_float() / 16384 + 2**-15
         return position.between(block_bound(box, axis), block_bound(box, axis + 3))
 
@@ -95,7 +93,7 @@ def holds(box: int) -> condition.Condition:
 
 def span(entity: int, axis: int) -> tuple[Expression, Expression]:
     """Where the entity box starts and ends in the cell `#i`, `#j` and `#k`, `rel` being cell 0."""
-    corner = rel(axis) + ctx(f"#{'ijk'[axis]}").to_float()
+    corner = rel(axis) + score("bs.ctx", f"#{'ijk'[axis]}").to_float()
     start = entity_bound(entity, axis) - corner
     end = entity_bound(entity, axis + 3) - corner
     return start + MARGIN, end - MARGIN
@@ -123,11 +121,12 @@ def in_cube(entity: int) -> condition.Condition:
 
 def extreme(index: int, pick: Callable[..., Expression]) -> Expression:
     """The lowest or highest bound among the `#m` entity boxes."""
-    value = entity_bound(ENTITY_BOXES - 1, index)
-    for entity in reversed(range(ENTITY_BOXES - 1)):
-        here = entity_bound(entity, index)
-        value = cond(ctx("#m").ge(entity + 2), pick(here, value), here)
-    return value
+    return counted(
+        score("bs.ctx", "#m"),
+        range(ENTITY_BOXES),
+        lambda entity: entity_bound(entity, index),
+        lambda first, has_more, rest: cond(has_more, pick(first, rest), first),
+    )
 
 
 def cells(axis: int) -> tuple[Expression, Expression]:

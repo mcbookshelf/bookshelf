@@ -2,21 +2,21 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from itertools import product
 
-from beet import Context, ContextFloatProvider, ContextIntProvider
+from beet import Context
 
 from mcbookshelf.minecraft.condition import Condition
-from mcbookshelf.minecraft.math import (
+from mcbookshelf.minecraft.number import (
     Expression,
     add,
     btree,
     cond,
     context_target,
-    fixed_target,
-    float_storage,
+    counted,
     max_,
     min_,
     ref,
     score,
+    storage,
 )
 from mcbookshelf.pipeline.plugins import Generated, generator
 
@@ -46,7 +46,7 @@ class Boxes:
     size: int
 
     def bound(self, box: int, index: int) -> Expression:
-        return float_storage(self.storage, f"out[{box}][{index}]")
+        return storage(self.storage, f"out[{box}][{index}]")
 
     def flag(self, box: int) -> Expression:
         return self.bound(box, 6).to_int()
@@ -82,7 +82,7 @@ def beet_default(_: Context) -> Generated:
         yield from block_box(box)
     for box in range(ENTITY_BOXES):
         yield from entity_box(box)
-    yield "bs.raycast:_e/hit", provider(ENTITY.fold(min_, ENTITY.hit, MISS))
+    yield "bs.raycast:_e/hit", ENTITY.fold(min_, ENTITY.hit, MISS)
     yield from cast()
     yield from sweep()
     for boxes in (BLOCK, ENTITY):
@@ -94,41 +94,41 @@ def beet_default(_: Context) -> Generated:
 def mirrors() -> Generated:
     """The scores read the most, and the values of the ray as floats."""
     for name, mirror in MIRRORS.items():
-        yield f"bs.raycast:{mirror}", provider(data(name))
+        yield f"bs.raycast:{mirror}", data(name)
     for name in ("lx", "ly", "lz", "dx", "dy", "dz", "max"):
-        yield f"bs.raycast:_{name}", float_provider(data(name).to_float())
+        yield f"bs.raycast:_{name}", data(name).to_float()
     for a in "xyz":
-        yield f"bs.raycast:_o{a}", float_provider((ctx(f"e{a}") - ctx(a)).to_float() / 16384.0)
-        yield f"bs.raycast:_p{a}", float_provider(ray(f"l{a}") - ray(f"d{a}"))
+        yield f"bs.raycast:_o{a}", (ctx(f"e{a}") - ctx(a)).to_float() / 16384.0
+        yield f"bs.raycast:_p{a}", ray(f"l{a}") - ray(f"d{a}")
 
 
 def block_box(box: int) -> Generated:
     """The slabs of a box of the block, by axis and sign, then its hit and exit for each octant."""
     for axis, sign, enter in product(range(3), (0, 1), (True, False)):
         slab = block_slab(box, axis, sign, enter=enter)
-        yield BLOCK.slab_id(box, axis, enter=enter, sign="pn"[sign]), float_provider(slab)
+        yield BLOCK.slab_id(box, axis, enter=enter, sign="pn"[sign]), slab
     flag = BLOCK.flag(box)
     hits = octants(lambda o: hit(block_slabs(box, o), block_slabs(box, o, enter=False), flag))
-    yield f"bs.raycast:_b/{box}", provider(hits)
+    yield f"bs.raycast:_b/{box}", hits
     exits = octants(lambda o: min_(*block_slabs(box, o, enter=False)).to_int())
-    yield f"bs.raycast:_pierce/b/{box}", provider(exits)
+    yield f"bs.raycast:_pierce/b/{box}", exits
 
 
 def entity_box(box: int) -> Generated:
     """The slabs of a box of the entity, then its hit and exit."""
     for axis, enter in product(range(3), (True, False)):
         slab = entity_slab(box, axis, enter=enter)
-        yield ENTITY.slab_id(box, axis, enter=enter), float_provider(slab)
+        yield ENTITY.slab_id(box, axis, enter=enter), slab
     left = entity_slabs(box, enter=False)
-    yield f"bs.raycast:_e/{box}", provider(hit(entity_slabs(box), left, ENTITY.flag(box)))
-    yield f"bs.raycast:_pierce/e/{box}", provider(min_(*left).to_int())
+    yield f"bs.raycast:_e/{box}", hit(entity_slabs(box), left, ENTITY.flag(box))
+    yield f"bs.raycast:_pierce/e/{box}", min_(*left).to_int()
 
 
 def cast() -> Generated:
     """The nearest box of the block, and the length the ray stops at."""
-    yield "bs.raycast:_cast/hit", provider(BLOCK.fold(min_, BLOCK.hit, MISS))
+    yield "bs.raycast:_cast/hit", BLOCK.fold(min_, BLOCK.hit, MISS)
     nearest = ref("bs.raycast:_cast/hit", "int")
-    yield "bs.raycast:_cast/stop", provider(cond(nearest.le(MISS - 1), -(2**31), ctx("max")))
+    yield "bs.raycast:_cast/stop", cond(nearest.le(MISS - 1), -(2**31), ctx("max"))
 
 
 def sweep() -> Generated:
@@ -139,89 +139,81 @@ def sweep() -> Generated:
         entry, exit_ = ctx(f"entry{j}"), ctx(f"exit{j}")
         return cond(entry.le(limit), cond(exit_.ge(limit + 1), exit_, -MISS), -entry)
 
-    yield "bs.raycast:_pierce/start", provider(fold(min_, lambda j: ctx(f"entry{j}"), MISS, count))
-    yield "bs.raycast:_pierce/grow", provider(fold(max_, grown, -MISS, count))
+    yield "bs.raycast:_pierce/start", fold(min_, lambda j: ctx(f"entry{j}"), MISS, count)
+    yield "bs.raycast:_pierce/grow", fold(max_, grown, -MISS, count)
 
 
 def pierce(boxes: Boxes) -> Generated:
     """The boxes the ray crosses as a mask, and the keys of the first one left, for the table."""
     path = f"bs.raycast:_pierce/{boxes.kind}"
     mask = boxes.fold(add, lambda k: cond(crosses(boxes.hit(k)), bit(k), 0), 0)
-    yield f"{path}/mask", provider(mask)
-    yield f"{path}/in", provider(boxes.first(lambda k: entry_key(boxes.hit(k))))
-    yield f"{path}/out", provider(boxes.first(lambda k: exit_key(boxes.flag(k), boxes.exit(k))))
+    yield f"{path}/mask", mask
+    yield f"{path}/in", boxes.first(lambda k: entry_key(boxes.hit(k)))
+    yield f"{path}/out", boxes.first(lambda k: exit_key(boxes.flag(k), boxes.exit(k)))
 
 
 def pierce_block() -> Generated:
     """The hit of a block with every flag, the exit of a single box, and the shapes of the table."""
     flagged = BLOCK.fold(add, lambda k: cond(marked(k), digit(BLOCK.flag(k)), 0), 0)
-    yield "bs.raycast:_pierce/b/flags", provider(flagged)
+    yield "bs.raycast:_pierce/b/flags", flagged
     nearest = BLOCK.fold(min_, lambda k: cond(marked(k), BLOCK.hit(k), MISS), MISS)
-    yield "bs.raycast:_pierce/b/near", provider(nearest)
-    yield "bs.raycast:_pierce/b/all", provider(ctx("block") // 16 * 16 + flags())
-    yield "bs.raycast:_pierce/b/exit", provider(BLOCK.first(BLOCK.exit))
+    yield "bs.raycast:_pierce/b/near", nearest
+    yield "bs.raycast:_pierce/b/all", ctx("block") // 16 * 16 + flags()
+    yield "bs.raycast:_pierce/b/exit", BLOCK.first(BLOCK.exit)
 
     shapes = ctx("shapes")
     starts, ends = lambda i: ctx(f"start{i}"), lambda i: ctx(f"end{i}")
-    later, _ = next_and_exit(starts, ends, ctx("block"), shapes, BLOCK_BOXES)
-    yield "bs.raycast:_pierce/b/next", provider(later)
+    next_entry, _ = next_and_exit(starts, ends, ctx("block"), shapes, BLOCK_BOXES)
+    yield "bs.raycast:_pierce/b/next", next_entry
 
     _, shaped = next_and_exit(starts, ends, ctx("hit"), shapes, BLOCK_BOXES)
     cell = min_(ctx("lx"), ctx("ly"), ctx("lz"))
     left = cond(shapes.le(-1), cell, cond(shapes.eq(0), ctx("end0"), shaped))
-    yield "bs.raycast:_pierce/b/leave", provider(left)
+    yield "bs.raycast:_pierce/b/leave", left
 
 
 def pierce_entity() -> Generated:
     """The exit of an entity with a single shape, and the shapes kept on its scores."""
     left = ENTITY.fold(max_, lambda k: cond(crosses(ENTITY.hit(k)), ENTITY.exit(k), -1), -1)
-    yield "bs.raycast:_pierce/e/exit", provider(left)
+    yield "bs.raycast:_pierce/e/exit", left
 
-    shapes, at = own("shapes"), own("hit")
+    shapes, hit_score = own("shapes"), own("hit")
     starts, ends = lambda i: own(f"s{i}"), lambda i: own(f"e{i}")
-    later, left = next_and_exit(starts, ends, at, shapes, ENTITY_BOXES)
-    yield "bs.raycast:_pierce/e/next", provider(later)
-    yield "bs.raycast:_pierce/e/leave", provider(left)
+    next_entry, left = next_and_exit(starts, ends, hit_score, shapes, ENTITY_BOXES)
+    yield "bs.raycast:_pierce/e/next", next_entry
+    yield "bs.raycast:_pierce/e/leave", left
 
     digits = fold(add, lambda i: digit(starts(i) // FLAGS), 0, -shapes, ENTITY_BOXES)
-    yield "bs.raycast:_pierce/e/flags", provider(digits)
+    yield "bs.raycast:_pierce/e/flags", digits
     first = fold(min_, lambda i: starts(i).floor_mod(FLAGS), MISS, -shapes, ENTITY_BOXES)
-    yield "bs.raycast:_pierce/e/hit", provider(first * 16 + flags())
+    yield "bs.raycast:_pierce/e/hit", first * 16 + flags()
 
 
 def next_and_exit(
     starts: Term,
     ends: Term,
-    at: Expression,
+    hit_score: Expression,
     count: Expression,
     size: int,
 ) -> tuple[Expression, Expression]:
     """The entry of the next shape after the hit, MISS without one, and the exit of the hit one."""
 
-    def later(i: int) -> Expression:
+    def next_entry(i: int) -> Expression:
         entry = order(starts(i))
-        return cond(entry.le(at), MISS, entry)
+        return cond(entry.le(hit_score), MISS, entry)
 
     def left(i: int) -> Expression:
-        return cond(order(starts(i)).eq(at), leave(ends(i)), -1)
+        return cond(order(starts(i)).eq(hit_score), leave(ends(i)), -1)
 
-    entry = cond(count.le(0), MISS, fold(min_, later, MISS, count, size))
+    entry = cond(count.le(0), MISS, fold(min_, next_entry, MISS, count, size))
     return entry, fold(max_, left, -1, count, size)
-
-
-def provider(expression: Expression) -> ContextIntProvider:
-    return ContextIntProvider(expression.json())
-
-
-def float_provider(expression: Expression) -> ContextFloatProvider:
-    return ContextFloatProvider(expression.json())
 
 
 def data(name: str) -> Expression:
     """The score #raycast.<name>, or its letter in the contextual objective."""
     if name in CONTEXT:
-        return score("bs.ctx", fixed_target(CONTEXT[name]))
-    return score("bs.data", fixed_target(f"#raycast.{name}"))
+        return score("bs.ctx", CONTEXT[name])
+    return score("bs.data", f"#raycast.{name}")
 
 
 def ctx(name: str) -> Expression:
@@ -249,10 +241,11 @@ def fold(
     size: int = BLOCK_BOXES,
 ) -> Expression:
     """Pick among the first `count` terms."""
-    value = term(size - 1)
-    for i in reversed(range(size - 1)):
-        value = pick(term(i), cond(count.ge(i + 2), value, empty))
-    return value
+
+    def step(first: Expression, has_more: Condition, rest: Expression) -> Expression:
+        return pick(first, cond(has_more, rest, empty))
+
+    return counted(count, range(size), term, step)
 
 
 def octants(value: Term) -> Expression:

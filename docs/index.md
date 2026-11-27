@@ -62,7 +62,7 @@ Bookshelf focuses on ease of use. Each module is simple, works for any skill lev
 
 ## 🤝 Contribution
 
-Have questions or want to talk about the project? Join the [Discord](https://discord.gg/MkXytNjmBt) server.
+Have questions or want to talk about the project? Join the [Discord](https://discord.gg/aV5SF3JsAZ) server.
 
 Want to help? See the [contribution](https://docs.mcbookshelf.dev/en/latest/contribute/index.html) section.
 

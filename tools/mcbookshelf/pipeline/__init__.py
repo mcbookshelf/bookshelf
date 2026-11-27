@@ -7,6 +7,7 @@ from mcbookshelf import constants, workspace
 
 from .artifacts import write_manifest, write_stub
 from .config import Build, bundle_config, example_config, module_config
+from .fingerprint import fingerprint
 
 type Report = Callable[[str, str | None], None]
 
@@ -19,7 +20,10 @@ def build(
 ) -> Context | None:
     """Build one module, bundle or example and report the outcome."""
     try:
+        ws = workspace.current()
         config = config_for(name, options, output=output)
+        if name in ws.modules() and (options.stub or (output and not options.zipped)):
+            config.meta["fingerprint"] = fingerprint(ws, name, options)
         with ProjectBuilder(project(config), root=True).build() as ctx:
             pass
     except Exception as error:  # noqa: BLE001
@@ -30,7 +34,7 @@ def build(
 
 
 def describe(error: BaseException) -> str:
-    """The message of an error, from under the exceptions beet wraps plugin errors in."""
+    """The message of an error under the ones beet wraps it in: alone for a ValueError, expected."""
     while isinstance(error, WrappedException) and error.__cause__ is not None:
         error = error.__cause__
     message = str(error)

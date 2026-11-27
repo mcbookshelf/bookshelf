@@ -1,16 +1,16 @@
-from beet import Context, ContextIntProvider
+from beet import Context
 
 from mcbookshelf.meta import Module
-from mcbookshelf.minecraft.math import (
+from mcbookshelf.minecraft.number import (
     Expression,
     add,
     btree,
     cond,
     const,
-    int_storage,
     max_,
     min_,
     mul,
+    storage,
 )
 from mcbookshelf.pipeline.plugins import Generated, generator
 
@@ -22,7 +22,7 @@ def beet_default(ctx: Context) -> Generated:
     module: Module = ctx.meta["module"]
 
     def read(feature: str, key: str) -> Expression:
-        return int_storage(f"{module.id}:{feature}", f"in.{key}")
+        return storage(f"{module.id}:{feature}", f"in.{key}", "int")
 
     for name, provider in {
         "not": bitwise_not(read("not", "n")),
@@ -34,11 +34,11 @@ def beet_default(ctx: Context) -> Generated:
         "shift_left": shift_left(read("shift_left", "n"), read("shift_left", "by")),
         "shift_right": shift_right(read("shift_right", "n"), read("shift_right", "by")),
     }.items():
-        yield f"{module.id}:{name}", ContextIntProvider(provider.json())
+        yield f"{module.id}:{name}", provider
 
 
 def bit(x: Expression, i: int) -> Expression:
-    return (x // 2**i if i else x).floor_mod(2)
+    return (x // 2**i).floor_mod(2)
 
 
 def sign(x: Expression) -> Expression:
@@ -80,11 +80,11 @@ def bit_length(n: Expression) -> Expression:
     return cond(n.le(-1), 32, by_length)
 
 
-def shift_left(n: Expression, by: Expression) -> Expression:
-    kept = 2 ** min_(by, 30) * n.floor_mod(2 ** (31 - by))
-    top = mul(INT_MIN, (n // 2 ** (31 - by)).floor_mod(2))
-    return cond(by.le(0), n, kept + top)
+def shift_left(n: Expression, amount: Expression) -> Expression:
+    kept = 2 ** min_(amount, 30) * n.floor_mod(2 ** (31 - amount))
+    top = mul(INT_MIN, (n // 2 ** (31 - amount)).floor_mod(2))
+    return cond(amount.le(0), n, kept + top)
 
 
-def shift_right(n: Expression, by: Expression) -> Expression:
-    return cond(by.ge(31), sign(n), n // 2**by)
+def shift_right(n: Expression, amount: Expression) -> Expression:
+    return cond(amount.ge(31), sign(n), n // 2**amount)

@@ -13,10 +13,11 @@ This page lists the commands of the project. Type `uv run` before each command.
 | **Command** | **Description** | **Arguments and options** |
 |-------------|-----------------|---------------------------|
 | **🔨 `build`** | Build modules, bundles, or examples. | `[names...]`: what to build. The default is all modules. |
-| **👀 `watch`** | Build, then build again when a file changes. Reload the linked world. | `[names...]`: what to build. The default is all modules. |
+| **👀 `watch`** | Build, then build again what changed when a file changes. Reload the linked world. | `[names...]`: what to build. The default is all modules. |
+| **🧩 `stub`** | Write the files the modules generate, for the editor to know them, without building their packs. | `[names...]`: the modules. The default is all modules.<br>`--watch`: update it again when a module changes. |
 | **🔗 `link`** | [Link the packs to Minecraft](#contribute-linking-to-minecraft). | `[world]`, `--minecraft`, `--data-pack`, `--resource-pack` |
 | **🔍 `check`** | [Check modules](project:validation.md) and list every issue. | `[modules...]`: the modules to check. The default is all modules. |
-| **🧪 `test`** | Build modules and [run their tests](#contribute-running-tests). | `[modules...]`: the modules to test. The default is all modules.<br>`--coverage`, `--coverage-report`, `--verbose`, `--reporter`, `--junit-xml` |
+| **🧪 `test`** | Build modules and [run their tests](#contribute-running-tests). | `[modules...]`: the modules to test. The default is all modules.<br>`--watch`, `--coverage`, `--coverage-report`, `--coverage-min`, `--verbose`, `--reporter`, `--junit-xml` |
 
 ---
 

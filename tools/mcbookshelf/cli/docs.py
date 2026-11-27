@@ -59,17 +59,16 @@ def watch(output_dir: str, builder: str, lang: str, host: str, port: int, *, bro
 
     def build(paths: list[str]) -> dict[str, object]:
         """Build with a spinner, then leave one line: when, what changed, how it went."""
-        # Named by the files left: a save also touches folders and short-lived files
         files = ", ".join(sorted({Path(p).name for p in paths if Path(p).is_file()})) or "docs"
         start = perf_counter()
         with ui.console.status(f"[bright_black]building {escape(files)}…"):
             result = worker.build(paths)
-        took = f"{perf_counter() - start:.1f}s"
+        duration = f"{perf_counter() - start:.1f}s"
         error = cast("str", result.get("error", ""))
         warnings = cast("str", result.get("warnings", ""))
         mark = "[red]✗" if error else "[yellow]![/]" if warnings else "[green]✓[/]"
         line = f"[bright_black]{strftime('%H:%M:%S')}[/] {mark} {escape(files)}"
-        ui.console.print(f"{line} [bright_black]{took}[/]", soft_wrap=True)
+        ui.console.print(f"{line} [bright_black]{duration}[/]", soft_wrap=True)
         for text, style in ((error, "red"), (warnings, "yellow")):
             for detail in text.replace(f"{constants.DOCS_DIR}{os.sep}", "").splitlines():
                 ui.console.print(f"         {detail}", style=style, soft_wrap=True, markup=False)
